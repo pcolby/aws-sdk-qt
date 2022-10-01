@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeSourceRegionsResponse
- * \brief The DescribeSourceRegionsResponse class provides an interace for RDS DescribeSourceRegions responses.
+ * \class QtAws::Rds::DescribeSourceRegionsResponse
+ * \brief The DescribeSourceRegionsResponse class provides an interace for Rds DescribeSourceRegions responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeSourceRegionsRequest * DescribeSourceRegionsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeSourceRegions \a response.
+ * Parses a successful Rds DescribeSourceRegions \a response.
  */
 void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeSourceRegionsResponsePrivate
+ * \class QtAws::Rds::DescribeSourceRegionsResponsePrivate
  * \brief The DescribeSourceRegionsResponsePrivate class provides private implementation for DescribeSourceRegionsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeSourceRegions response element from \a xml.
+ * Parses a Rds DescribeSourceRegions response element from \a xml.
  */
 void DescribeSourceRegionsResponsePrivate::parseDescribeSourceRegionsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeSourceRegionsResponsePrivate::parseDescribeSourceRegionsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

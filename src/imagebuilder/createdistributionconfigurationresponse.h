@@ -24,11 +24,11 @@
 #include "createdistributionconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class CreateDistributionConfigurationResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT CreateDistributionConfigurationResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT CreateDistributionConfigurationResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

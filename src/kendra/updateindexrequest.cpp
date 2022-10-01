@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateIndexRequest
- * \brief The UpdateIndexRequest class provides an interface for kendra UpdateIndex requests.
+ * \class QtAws::Kendra::UpdateIndexRequest
+ * \brief The UpdateIndexRequest class provides an interface for Kendra UpdateIndex requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateIndex
+ * \sa KendraClient::updateIndex
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateIndexRequest::UpdateIndexRequest(const UpdateIndexRequest &other)
-    : kendraRequest(new UpdateIndexRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UpdateIndexRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateIndexRequest::UpdateIndexRequest(const UpdateIndexRequest &other)
  * Constructs a UpdateIndexRequest object.
  */
 UpdateIndexRequest::UpdateIndexRequest()
-    : kendraRequest(new UpdateIndexRequestPrivate(kendraRequest::UpdateIndexAction, this))
+    : KendraRequest(new UpdateIndexRequestPrivate(KendraRequest::UpdateIndexAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateIndexRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::kendra::UpdateIndexRequestPrivate
+ * \class QtAws::Kendra::UpdateIndexRequestPrivate
  * \brief The UpdateIndexRequestPrivate class provides private implementation for UpdateIndexRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UpdateIndexRequestPrivate object for kendra \a action,
+ * Constructs a UpdateIndexRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UpdateIndexRequestPrivate::UpdateIndexRequestPrivate(
-    const kendraRequest::Action action, UpdateIndexRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UpdateIndexRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateIndexRequestPrivate::UpdateIndexRequestPrivate(
  */
 UpdateIndexRequestPrivate::UpdateIndexRequestPrivate(
     const UpdateIndexRequestPrivate &other, UpdateIndexRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

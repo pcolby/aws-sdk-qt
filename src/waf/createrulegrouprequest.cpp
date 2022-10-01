@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateRuleGroupRequest
- * \brief The CreateRuleGroupRequest class provides an interface for WAF CreateRuleGroup requests.
+ * \class QtAws::Waf::CreateRuleGroupRequest
+ * \brief The CreateRuleGroupRequest class provides an interface for Waf CreateRuleGroup requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * CreateRuleGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::WAF::CreateRuleGroupRequestPrivate
+ * \class QtAws::Waf::CreateRuleGroupRequestPrivate
  * \brief The CreateRuleGroupRequestPrivate class provides private implementation for CreateRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

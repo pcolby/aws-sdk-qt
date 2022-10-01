@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::GetSMSAttributesRequest
- * \brief The GetSMSAttributesRequest class provides an interface for SNS GetSMSAttributes requests.
+ * \class QtAws::Sns::GetSMSAttributesRequest
+ * \brief The GetSMSAttributesRequest class provides an interface for Sns GetSMSAttributes requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SNS::GetSMSAttributesRequestPrivate
+ * \class QtAws::Sns::GetSMSAttributesRequestPrivate
  * \brief The GetSMSAttributesRequestPrivate class provides private implementation for GetSMSAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

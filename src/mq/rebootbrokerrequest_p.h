@@ -24,7 +24,7 @@
 #include "rebootbrokerrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class RebootBrokerRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

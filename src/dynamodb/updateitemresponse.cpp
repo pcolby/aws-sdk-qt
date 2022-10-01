@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateItemResponse
- * \brief The UpdateItemResponse class provides an interace for DynamoDB UpdateItem responses.
+ * \class QtAws::DynamoDb::UpdateItemResponse
+ * \brief The UpdateItemResponse class provides an interace for DynamoDb UpdateItem responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateItem
+ * \sa DynamoDbClient::updateItem
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateItemResponse::UpdateItemResponse(
         const UpdateItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateItemResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateItemResponsePrivate(this), parent)
 {
     setRequest(new UpdateItemRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateItemRequest * UpdateItemResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateItem \a response.
+ * Parses a successful DynamoDb UpdateItem \a response.
  */
 void UpdateItemResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateItemResponsePrivate
+ * \class QtAws::DynamoDb::UpdateItemResponsePrivate
  * \brief The UpdateItemResponsePrivate class provides private implementation for UpdateItemResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateItemResponsePrivate object with public implementation \a q.
  */
 UpdateItemResponsePrivate::UpdateItemResponsePrivate(
-    UpdateItemResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateItemResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateItem response element from \a xml.
+ * Parses a DynamoDb UpdateItem response element from \a xml.
  */
 void UpdateItemResponsePrivate::parseUpdateItemResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateItemResponsePrivate::parseUpdateItemResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCompletedRequest
- * \brief The RespondActivityTaskCompletedRequest class provides an interface for SWF RespondActivityTaskCompleted requests.
+ * \class QtAws::Swf::RespondActivityTaskCompletedRequest
+ * \brief The RespondActivityTaskCompletedRequest class provides an interface for Swf RespondActivityTaskCompleted requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCompletedRequest::response
 }
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCompletedRequestPrivate
+ * \class QtAws::Swf::RespondActivityTaskCompletedRequestPrivate
  * \brief The RespondActivityTaskCompletedRequestPrivate class provides private implementation for RespondActivityTaskCompletedRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestP
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

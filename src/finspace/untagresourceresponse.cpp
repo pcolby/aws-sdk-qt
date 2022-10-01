@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for finspace UntagResource responses.
+ * \class QtAws::Finspace::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for Finspace UntagResource responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::untagResource
+ * \sa FinspaceClient::untagResource
  */
 
 /*!
@@ -45,7 +45,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new UntagResourceResponsePrivate(this), parent)
+    : FinspaceResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace UntagResource \a response.
+ * Parses a successful Finspace UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::UntagResourceResponsePrivate
+ * \class QtAws::Finspace::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : finspaceResponsePrivate(q)
+    UntagResourceResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace UntagResource response element from \a xml.
+ * Parses a Finspace UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

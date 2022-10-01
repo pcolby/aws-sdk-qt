@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterSnapshotAttributeRequest
- * \brief The ModifyDBClusterSnapshotAttributeRequest class provides an interface for DocDB ModifyDBClusterSnapshotAttribute requests.
+ * \class QtAws::DocDb::ModifyDBClusterSnapshotAttributeRequest
+ * \brief The ModifyDBClusterSnapshotAttributeRequest class provides an interface for DocDb ModifyDBClusterSnapshotAttribute requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBClusterSnapshotAttribute
+ * \sa DocDbClient::modifyDBClusterSnapshotAttribute
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest(const ModifyDBClusterSnapshotAttributeRequest &other)
-    : DocDBRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest
  * Constructs a ModifyDBClusterSnapshotAttributeRequest object.
  */
 ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest()
-    : DocDBRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(DocDBRequest::ModifyDBClusterSnapshotAttributeAction, this))
+    : DocDbRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(DocDbRequest::ModifyDBClusterSnapshotAttributeAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterSnapshotAttributeRequest::resp
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterSnapshotAttributeRequestPrivate
+ * \class QtAws::DocDb::ModifyDBClusterSnapshotAttributeRequestPrivate
  * \brief The ModifyDBClusterSnapshotAttributeRequestPrivate class provides private implementation for ModifyDBClusterSnapshotAttributeRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ModifyDBClusterSnapshotAttributeRequestPrivate object for DocDB \a action,
+ * Constructs a ModifyDBClusterSnapshotAttributeRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
-    const DocDBRequest::Action action, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ModifyDBClusterSnapshotAttributeRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttribute
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
     const ModifyDBClusterSnapshotAttributeRequestPrivate &other, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

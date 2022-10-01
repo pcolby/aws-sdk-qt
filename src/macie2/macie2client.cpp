@@ -25,6 +25,8 @@
 #include "acceptinvitationresponse.h"
 #include "batchgetcustomdataidentifiersrequest.h"
 #include "batchgetcustomdataidentifiersresponse.h"
+#include "createallowlistrequest.h"
+#include "createallowlistresponse.h"
 #include "createclassificationjobrequest.h"
 #include "createclassificationjobresponse.h"
 #include "createcustomdataidentifierrequest.h"
@@ -39,6 +41,8 @@
 #include "createsamplefindingsresponse.h"
 #include "declineinvitationsrequest.h"
 #include "declineinvitationsresponse.h"
+#include "deleteallowlistrequest.h"
+#include "deleteallowlistresponse.h"
 #include "deletecustomdataidentifierrequest.h"
 #include "deletecustomdataidentifierresponse.h"
 #include "deletefindingsfilterrequest.h"
@@ -69,6 +73,8 @@
 #include "enableorganizationadminaccountresponse.h"
 #include "getadministratoraccountrequest.h"
 #include "getadministratoraccountresponse.h"
+#include "getallowlistrequest.h"
+#include "getallowlistresponse.h"
 #include "getbucketstatisticsrequest.h"
 #include "getbucketstatisticsresponse.h"
 #include "getclassificationexportconfigurationrequest.h"
@@ -91,10 +97,18 @@
 #include "getmasteraccountresponse.h"
 #include "getmemberrequest.h"
 #include "getmemberresponse.h"
+#include "getrevealconfigurationrequest.h"
+#include "getrevealconfigurationresponse.h"
+#include "getsensitivedataoccurrencesrequest.h"
+#include "getsensitivedataoccurrencesresponse.h"
+#include "getsensitivedataoccurrencesavailabilityrequest.h"
+#include "getsensitivedataoccurrencesavailabilityresponse.h"
 #include "getusagestatisticsrequest.h"
 #include "getusagestatisticsresponse.h"
 #include "getusagetotalsrequest.h"
 #include "getusagetotalsresponse.h"
+#include "listallowlistsrequest.h"
+#include "listallowlistsresponse.h"
 #include "listclassificationjobsrequest.h"
 #include "listclassificationjobsresponse.h"
 #include "listcustomdataidentifiersrequest.h"
@@ -105,6 +119,8 @@
 #include "listfindingsfiltersresponse.h"
 #include "listinvitationsrequest.h"
 #include "listinvitationsresponse.h"
+#include "listmanageddataidentifiersrequest.h"
+#include "listmanageddataidentifiersresponse.h"
 #include "listmembersrequest.h"
 #include "listmembersresponse.h"
 #include "listorganizationadminaccountsrequest.h"
@@ -123,6 +139,8 @@
 #include "testcustomdataidentifierresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateallowlistrequest.h"
+#include "updateallowlistresponse.h"
 #include "updateclassificationjobrequest.h"
 #include "updateclassificationjobresponse.h"
 #include "updatefindingsfilterrequest.h"
@@ -133,6 +151,8 @@
 #include "updatemembersessionresponse.h"
 #include "updateorganizationconfigurationrequest.h"
 #include "updateorganizationconfigurationresponse.h"
+#include "updaterevealconfigurationrequest.h"
+#include "updaterevealconfigurationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -244,6 +264,19 @@ BatchGetCustomDataIdentifiersResponse * Macie2Client::batchGetCustomDataIdentifi
 
 /*!
  * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * CreateAllowListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates and defines the settings for an allow
+ */
+CreateAllowListResponse * Macie2Client::createAllowList(const CreateAllowListRequest &request)
+{
+    return qobject_cast<CreateAllowListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
  * CreateClassificationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -335,6 +368,19 @@ DeclineInvitationsResponse * Macie2Client::declineInvitations(const DeclineInvit
 
 /*!
  * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * DeleteAllowListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an allow
+ */
+DeleteAllowListResponse * Macie2Client::deleteAllowList(const DeleteAllowListRequest &request)
+{
+    return qobject_cast<DeleteAllowListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
  * DeleteCustomDataIdentifierResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -417,7 +463,7 @@ DescribeClassificationJobResponse * Macie2Client::describeClassificationJob(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the Amazon Macie configuration settings for an AWS
+ * Retrieves the Amazon Macie configuration settings for an organization in
  */
 DescribeOrganizationConfigurationResponse * Macie2Client::describeOrganizationConfiguration(const DescribeOrganizationConfigurationRequest &request)
 {
@@ -430,7 +476,7 @@ DescribeOrganizationConfigurationResponse * Macie2Client::describeOrganizationCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables an Amazon Macie account and deletes Macie resources for the
+ * Disables Amazon Macie and deletes all settings and resources for a Macie
  */
 DisableMacieResponse * Macie2Client::disableMacie(const DisableMacieRequest &request)
 {
@@ -443,7 +489,7 @@ DisableMacieResponse * Macie2Client::disableMacie(const DisableMacieRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables an account as the delegated Amazon Macie administrator account for an AWS
+ * Disables an account as the delegated Amazon Macie administrator account for an organization in
  */
 DisableOrganizationAdminAccountResponse * Macie2Client::disableOrganizationAdminAccount(const DisableOrganizationAdminAccountRequest &request)
 {
@@ -509,7 +555,7 @@ EnableMacieResponse * Macie2Client::enableMacie(const EnableMacieRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Designates an account as the delegated Amazon Macie administrator account for an AWS
+ * Designates an account as the delegated Amazon Macie administrator account for an organization in
  */
 EnableOrganizationAdminAccountResponse * Macie2Client::enableOrganizationAdminAccount(const EnableOrganizationAdminAccountRequest &request)
 {
@@ -531,11 +577,24 @@ GetAdministratorAccountResponse * Macie2Client::getAdministratorAccount(const Ge
 
 /*!
  * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * GetAllowListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the settings and status of an allow
+ */
+GetAllowListResponse * Macie2Client::getAllowList(const GetAllowListRequest &request)
+{
+    return qobject_cast<GetAllowListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
  * GetBucketStatisticsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves (queries) aggregated statistical data for all the S3 buckets that Amazon Macie monitors and
+ * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and
  */
 GetBucketStatisticsResponse * Macie2Client::getBucketStatistics(const GetBucketStatisticsRequest &request)
 {
@@ -613,7 +672,7 @@ GetFindingsFilterResponse * Macie2Client::getFindingsFilter(const GetFindingsFil
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the configuration settings for publishing findings to AWS Security
+ * Retrieves the configuration settings for publishing findings to Security
  */
 GetFindingsPublicationConfigurationResponse * Macie2Client::getFindingsPublicationConfiguration(const GetFindingsPublicationConfigurationRequest &request)
 {
@@ -675,6 +734,45 @@ GetMemberResponse * Macie2Client::getMember(const GetMemberRequest &request)
 
 /*!
  * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * GetRevealConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by
+ */
+GetRevealConfigurationResponse * Macie2Client::getRevealConfiguration(const GetRevealConfigurationRequest &request)
+{
+    return qobject_cast<GetRevealConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * GetSensitiveDataOccurrencesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves occurrences of sensitive data reported by a
+ */
+GetSensitiveDataOccurrencesResponse * Macie2Client::getSensitiveDataOccurrences(const GetSensitiveDataOccurrencesRequest &request)
+{
+    return qobject_cast<GetSensitiveDataOccurrencesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * GetSensitiveDataOccurrencesAvailabilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Checks whether occurrences of sensitive data can be retrieved for a
+ */
+GetSensitiveDataOccurrencesAvailabilityResponse * Macie2Client::getSensitiveDataOccurrencesAvailability(const GetSensitiveDataOccurrencesAvailabilityRequest &request)
+{
+    return qobject_cast<GetSensitiveDataOccurrencesAvailabilityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
  * GetUsageStatisticsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -697,6 +795,19 @@ GetUsageStatisticsResponse * Macie2Client::getUsageStatistics(const GetUsageStat
 GetUsageTotalsResponse * Macie2Client::getUsageTotals(const GetUsageTotalsRequest &request)
 {
     return qobject_cast<GetUsageTotalsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * ListAllowListsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a subset of information about all the allow lists for an
+ */
+ListAllowListsResponse * Macie2Client::listAllowLists(const ListAllowListsRequest &request)
+{
+    return qobject_cast<ListAllowListsResponse *>(send(request));
 }
 
 /*!
@@ -757,11 +868,24 @@ ListFindingsFiltersResponse * Macie2Client::listFindingsFilters(const ListFindin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about all the Amazon Macie membership invitations that were received by an
+ * Retrieves information about the Amazon Macie membership invitations that were received by an
  */
 ListInvitationsResponse * Macie2Client::listInvitations(const ListInvitationsRequest &request)
 {
     return qobject_cast<ListInvitationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * ListManagedDataIdentifiersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about all the managed data identifiers that Amazon Macie currently
+ */
+ListManagedDataIdentifiersResponse * Macie2Client::listManagedDataIdentifiers(const ListManagedDataIdentifiersRequest &request)
+{
+    return qobject_cast<ListManagedDataIdentifiersResponse *>(send(request));
 }
 
 /*!
@@ -783,7 +907,7 @@ ListMembersResponse * Macie2Client::listMembers(const ListMembersRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the delegated Amazon Macie administrator account for an AWS
+ * Retrieves information about the delegated Amazon Macie administrator account for an organization in
  */
 ListOrganizationAdminAccountsResponse * Macie2Client::listOrganizationAdminAccounts(const ListOrganizationAdminAccountsRequest &request)
 {
@@ -796,8 +920,7 @@ ListOrganizationAdminAccountsResponse * Macie2Client::listOrganizationAdminAccou
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the tags (keys and values) that are associated with a classification job, custom data identifier, findings
- * filter, or member
+ * Retrieves the tags (keys and values) that are associated with an Amazon Macie
  */
 ListTagsForResourceResponse * Macie2Client::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -823,7 +946,7 @@ PutClassificationExportConfigurationResponse * Macie2Client::putClassificationEx
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the configuration settings for publishing findings to AWS Security
+ * Updates the configuration settings for publishing findings to Security
  */
 PutFindingsPublicationConfigurationResponse * Macie2Client::putFindingsPublicationConfiguration(const PutFindingsPublicationConfigurationRequest &request)
 {
@@ -836,7 +959,8 @@ PutFindingsPublicationConfigurationResponse * Macie2Client::putFindingsPublicati
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves (queries) statistical data and other information about AWS resources that Amazon Macie monitors and
+ * Retrieves (queries) statistical data and other information about Amazon Web Services resources that Amazon Macie
+ * monitors and
  */
 SearchResourcesResponse * Macie2Client::searchResources(const SearchResourcesRequest &request)
 {
@@ -849,8 +973,7 @@ SearchResourcesResponse * Macie2Client::searchResources(const SearchResourcesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or updates one or more tags (keys and values) that are associated with a classification job, custom data
- * identifier, findings filter, or member
+ * Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie
  */
 TagResourceResponse * Macie2Client::tagResource(const TagResourceRequest &request)
 {
@@ -876,11 +999,24 @@ TestCustomDataIdentifierResponse * Macie2Client::testCustomDataIdentifier(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags (keys and values) from a classification job, custom data identifier, findings filter, or member
+ * Removes one or more tags (keys and values) from an Amazon Macie
  */
 UntagResourceResponse * Macie2Client::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * UpdateAllowListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the settings for an allow
+ */
+UpdateAllowListResponse * Macie2Client::updateAllowList(const UpdateAllowListRequest &request)
+{
+    return qobject_cast<UpdateAllowListResponse *>(send(request));
 }
 
 /*!
@@ -915,7 +1051,7 @@ UpdateFindingsFilterResponse * Macie2Client::updateFindingsFilter(const UpdateFi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Suspends or re-enables an Amazon Macie account, or updates the configuration settings for a Macie
+ * Suspends or re-enables Amazon Macie, or updates the configuration settings for a Macie
  */
 UpdateMacieSessionResponse * Macie2Client::updateMacieSession(const UpdateMacieSessionRequest &request)
 {
@@ -928,7 +1064,7 @@ UpdateMacieSessionResponse * Macie2Client::updateMacieSession(const UpdateMacieS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables an Amazon Macie administrator to suspend or re-enable a member
+ * Enables an Amazon Macie administrator to suspend or re-enable Macie for a member
  */
 UpdateMemberSessionResponse * Macie2Client::updateMemberSession(const UpdateMemberSessionRequest &request)
 {
@@ -941,11 +1077,24 @@ UpdateMemberSessionResponse * Macie2Client::updateMemberSession(const UpdateMemb
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the Amazon Macie configuration settings for an AWS
+ * Updates the Amazon Macie configuration settings for an organization in
  */
 UpdateOrganizationConfigurationResponse * Macie2Client::updateOrganizationConfiguration(const UpdateOrganizationConfigurationRequest &request)
 {
     return qobject_cast<UpdateOrganizationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Macie2Client service, and returns a pointer to an
+ * UpdateRevealConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the status and configuration settings for retrieving occurrences of sensitive data reported by
+ */
+UpdateRevealConfigurationResponse * Macie2Client::updateRevealConfiguration(const UpdateRevealConfigurationRequest &request)
+{
+    return qobject_cast<UpdateRevealConfigurationResponse *>(send(request));
 }
 
 /*!

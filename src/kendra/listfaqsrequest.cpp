@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListFaqsRequest
- * \brief The ListFaqsRequest class provides an interface for kendra ListFaqs requests.
+ * \class QtAws::Kendra::ListFaqsRequest
+ * \brief The ListFaqsRequest class provides an interface for Kendra ListFaqs requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listFaqs
+ * \sa KendraClient::listFaqs
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListFaqsRequest::ListFaqsRequest(const ListFaqsRequest &other)
-    : kendraRequest(new ListFaqsRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new ListFaqsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListFaqsRequest::ListFaqsRequest(const ListFaqsRequest &other)
  * Constructs a ListFaqsRequest object.
  */
 ListFaqsRequest::ListFaqsRequest()
-    : kendraRequest(new ListFaqsRequestPrivate(kendraRequest::ListFaqsAction, this))
+    : KendraRequest(new ListFaqsRequestPrivate(KendraRequest::ListFaqsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListFaqsRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::kendra::ListFaqsRequestPrivate
+ * \class QtAws::Kendra::ListFaqsRequestPrivate
  * \brief The ListFaqsRequestPrivate class provides private implementation for ListFaqsRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a ListFaqsRequestPrivate object for kendra \a action,
+ * Constructs a ListFaqsRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 ListFaqsRequestPrivate::ListFaqsRequestPrivate(
-    const kendraRequest::Action action, ListFaqsRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, ListFaqsRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListFaqsRequestPrivate::ListFaqsRequestPrivate(
  */
 ListFaqsRequestPrivate::ListFaqsRequestPrivate(
     const ListFaqsRequestPrivate &other, ListFaqsRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

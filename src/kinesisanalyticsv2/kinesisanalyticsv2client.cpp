@@ -89,7 +89,7 @@
 
 /*!
  * \namespace QtAws::KinesisAnalyticsV2
- * \brief Contains classess for accessing Amazon Kinesis Analytics (Kinesis Analytics V2).
+ * \brief Contains classess for accessing Amazon Kinesis Analytics.
  *
  * \inmodule QtAwsKinesisAnalyticsV2
  *
@@ -101,7 +101,7 @@ namespace KinesisAnalyticsV2 {
 
 /*!
  * \class QtAws::KinesisAnalyticsV2::KinesisAnalyticsV2Client
- * \brief The KinesisAnalyticsV2Client class provides access to the Amazon Kinesis Analytics (Kinesis Analytics V2) service.
+ * \brief The KinesisAnalyticsV2Client class provides access to the Amazon Kinesis Analytics service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsKinesisAnalyticsV2
@@ -208,7 +208,7 @@ AddApplicationInputResponse * KinesisAnalyticsV2Client::addApplicationInput(cons
  *
  * Adds an <a>InputProcessingConfiguration</a> to a SQL-based Kinesis Data Analytics application. An input processor
  * pre-processes records on the input stream before the application's SQL code executes. Currently, the only input
- * processor available is <a href="https://docs.aws.amazon.com/lambda/">AWS
+ * processor available is <a href="https://docs.aws.amazon.com/lambda/">Amazon
  */
 AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsV2Client::addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request)
 {
@@ -226,7 +226,7 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsV2Client::a
  * application>
  *
  * If you want Kinesis Data Analytics to deliver data from an in-application stream within your application to an external
- * destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda function), you
+ * destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an Amazon Lambda function), you
  * add the relevant configuration to your application using this operation. You can configure one or more outputs for your
  * application. Each output configuration maps an in-application stream and an external
  *

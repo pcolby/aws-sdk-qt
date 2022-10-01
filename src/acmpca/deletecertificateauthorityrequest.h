@@ -23,11 +23,11 @@
 #include "acmpcarequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class DeleteCertificateAuthorityRequestPrivate;
 
-class QTAWSACMPCA_EXPORT DeleteCertificateAuthorityRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT DeleteCertificateAuthorityRequest : public AcmPcaRequest {
 
 public:
     DeleteCertificateAuthorityRequest(const DeleteCertificateAuthorityRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

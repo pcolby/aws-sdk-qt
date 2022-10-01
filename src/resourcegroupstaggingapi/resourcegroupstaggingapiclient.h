@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIClientPrivate;
+class ResourceGroupsTaggingApiClientPrivate;
 class DescribeReportCreationRequest;
 class DescribeReportCreationResponse;
 class GetComplianceSummaryRequest;
@@ -47,17 +47,17 @@ class TagResourcesResponse;
 class UntagResourcesRequest;
 class UntagResourcesResponse;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ResourceGroupsTaggingAPIClient(
+    ResourceGroupsTaggingApiClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ResourceGroupsTaggingAPIClient(
+    explicit ResourceGroupsTaggingApiClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -73,12 +73,12 @@ public slots:
     UntagResourcesResponse * untagResources(const UntagResourcesRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingAPIClient)
-    Q_DISABLE_COPY(ResourceGroupsTaggingAPIClient)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiClient)
+    Q_DISABLE_COPY(ResourceGroupsTaggingApiClient)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

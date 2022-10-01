@@ -24,14 +24,14 @@
 #include "deletetimelineeventrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class DeleteTimelineEventRequest;
 
-class DeleteTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
+class DeleteTimelineEventRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    DeleteTimelineEventRequestPrivate(const SSMIncidentsRequest::Action action,
+    DeleteTimelineEventRequestPrivate(const SsmIncidentsRequest::Action action,
                                    DeleteTimelineEventRequest * const q);
     DeleteTimelineEventRequestPrivate(const DeleteTimelineEventRequestPrivate &other,
                                    DeleteTimelineEventRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

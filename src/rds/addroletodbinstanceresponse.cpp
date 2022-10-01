@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddRoleToDBInstanceResponse
- * \brief The AddRoleToDBInstanceResponse class provides an interace for RDS AddRoleToDBInstance responses.
+ * \class QtAws::Rds::AddRoleToDBInstanceResponse
+ * \brief The AddRoleToDBInstanceResponse class provides an interace for Rds AddRoleToDBInstance responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const AddRoleToDBInstanceRequest * AddRoleToDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS AddRoleToDBInstance \a response.
+ * Parses a successful Rds AddRoleToDBInstance \a response.
  */
 void AddRoleToDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void AddRoleToDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::AddRoleToDBInstanceResponsePrivate
+ * \class QtAws::Rds::AddRoleToDBInstanceResponsePrivate
  * \brief The AddRoleToDBInstanceResponsePrivate class provides private implementation for AddRoleToDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ AddRoleToDBInstanceResponsePrivate::AddRoleToDBInstanceResponsePrivate(
 }
 
 /*!
- * Parses a RDS AddRoleToDBInstance response element from \a xml.
+ * Parses a Rds AddRoleToDBInstance response element from \a xml.
  */
 void AddRoleToDBInstanceResponsePrivate::parseAddRoleToDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void AddRoleToDBInstanceResponsePrivate::parseAddRoleToDBInstanceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

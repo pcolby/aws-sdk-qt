@@ -23,22 +23,22 @@
 #include "ec2request_p.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::RejectVpcEndpointConnectionsRequest
- * \brief The RejectVpcEndpointConnectionsRequest class provides an interface for EC2 RejectVpcEndpointConnections requests.
+ * \class QtAws::Ec2::RejectVpcEndpointConnectionsRequest
+ * \brief The RejectVpcEndpointConnectionsRequest class provides an interface for Ec2 RejectVpcEndpointConnections requests.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -61,8 +61,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  *
  * \sa Ec2Client::rejectVpcEndpointConnections
  */
@@ -105,11 +105,11 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
 }
 
 /*!
- * \class QtAws::EC2::RejectVpcEndpointConnectionsRequestPrivate
+ * \class QtAws::Ec2::RejectVpcEndpointConnectionsRequestPrivate
  * \brief The RejectVpcEndpointConnectionsRequestPrivate class provides private implementation for RejectVpcEndpointConnectionsRequest.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -136,5 +136,5 @@ RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestP
 
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

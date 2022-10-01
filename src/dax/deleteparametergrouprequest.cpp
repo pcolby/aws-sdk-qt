@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DeleteParameterGroupRequest
- * \brief The DeleteParameterGroupRequest class provides an interface for DAX DeleteParameterGroup requests.
+ * \class QtAws::Dax::DeleteParameterGroupRequest
+ * \brief The DeleteParameterGroupRequest class provides an interface for Dax DeleteParameterGroup requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DAX::DeleteParameterGroupRequestPrivate
+ * \class QtAws::Dax::DeleteParameterGroupRequestPrivate
  * \brief The DeleteParameterGroupRequestPrivate class provides private implementation for DeleteParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

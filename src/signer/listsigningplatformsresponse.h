@@ -24,11 +24,11 @@
 #include "listsigningplatformsrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListSigningPlatformsResponsePrivate;
 
-class QTAWSSIGNER_EXPORT ListSigningPlatformsResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT ListSigningPlatformsResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

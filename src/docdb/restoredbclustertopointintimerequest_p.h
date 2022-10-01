@@ -24,14 +24,14 @@
 #include "restoredbclustertopointintimerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RestoreDBClusterToPointInTimeRequest;
 
-class RestoreDBClusterToPointInTimeRequestPrivate : public DocDBRequestPrivate {
+class RestoreDBClusterToPointInTimeRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    RestoreDBClusterToPointInTimeRequestPrivate(const DocDBRequest::Action action,
+    RestoreDBClusterToPointInTimeRequestPrivate(const DocDbRequest::Action action,
                                    RestoreDBClusterToPointInTimeRequest * const q);
     RestoreDBClusterToPointInTimeRequestPrivate(const RestoreDBClusterToPointInTimeRequestPrivate &other,
                                    RestoreDBClusterToPointInTimeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

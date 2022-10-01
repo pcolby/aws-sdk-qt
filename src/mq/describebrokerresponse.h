@@ -24,7 +24,7 @@
 #include "describebrokerrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class DescribeBrokerResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMACHINELEARNING_LIBRARY)
 
 add_library(QtAwsMachineLearning
+  qtawsmachinelearningglobal.h
+  machinelearningclient.h
+  machinelearningclient_p.h
+  machinelearningrequest.h
+  machinelearningrequest_p.h
+  machinelearningresponse.h
+  machinelearningresponse_p.h
   addtagsrequest.h
   addtagsrequest_p.h
   addtagsresponse.h
@@ -93,17 +100,10 @@ add_library(QtAwsMachineLearning
   getmlmodelrequest_p.h
   getmlmodelresponse.h
   getmlmodelresponse_p.h
-  machinelearningclient.h
-  machinelearningclient_p.h
-  machinelearningrequest.h
-  machinelearningrequest_p.h
-  machinelearningresponse.h
-  machinelearningresponse_p.h
   predictrequest.h
   predictrequest_p.h
   predictresponse.h
   predictresponse_p.h
-  qtawsmachinelearningglobal.h
   updatebatchpredictionrequest.h
   updatebatchpredictionrequest_p.h
   updatebatchpredictionresponse.h
@@ -120,6 +120,9 @@ add_library(QtAwsMachineLearning
   updatemlmodelrequest_p.h
   updatemlmodelresponse.h
   updatemlmodelresponse_p.h
+  machinelearningclient.cpp
+  machinelearningrequest.cpp
+  machinelearningresponse.cpp
   addtagsrequest.cpp
   addtagsresponse.cpp
   createbatchpredictionrequest.cpp
@@ -166,9 +169,6 @@ add_library(QtAwsMachineLearning
   getevaluationresponse.cpp
   getmlmodelrequest.cpp
   getmlmodelresponse.cpp
-  machinelearningclient.cpp
-  machinelearningrequest.cpp
-  machinelearningresponse.cpp
   predictrequest.cpp
   predictresponse.cpp
   updatebatchpredictionrequest.cpp

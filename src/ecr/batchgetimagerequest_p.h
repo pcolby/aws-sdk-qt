@@ -24,7 +24,7 @@
 #include "batchgetimagerequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class BatchGetImageRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

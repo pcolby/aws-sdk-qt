@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSGLACIER_LIBRARY)
 
 add_library(QtAwsGlacier
+  qtawsglacierglobal.h
+  glacierclient.h
+  glacierclient_p.h
+  glacierrequest.h
+  glacierrequest_p.h
+  glacierresponse.h
+  glacierresponse_p.h
   abortmultipartuploadrequest.h
   abortmultipartuploadrequest_p.h
   abortmultipartuploadresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsGlacier
   deletearchiverequest_p.h
   deletearchiveresponse.h
   deletearchiveresponse_p.h
+  deletevaultrequest.h
+  deletevaultrequest_p.h
+  deletevaultresponse.h
+  deletevaultresponse_p.h
   deletevaultaccesspolicyrequest.h
   deletevaultaccesspolicyrequest_p.h
   deletevaultaccesspolicyresponse.h
@@ -37,10 +48,6 @@ add_library(QtAwsGlacier
   deletevaultnotificationsrequest_p.h
   deletevaultnotificationsresponse.h
   deletevaultnotificationsresponse_p.h
-  deletevaultrequest.h
-  deletevaultrequest_p.h
-  deletevaultresponse.h
-  deletevaultresponse_p.h
   describejobrequest.h
   describejobrequest_p.h
   describejobresponse.h
@@ -69,12 +76,6 @@ add_library(QtAwsGlacier
   getvaultnotificationsrequest_p.h
   getvaultnotificationsresponse.h
   getvaultnotificationsresponse_p.h
-  glacierclient.h
-  glacierclient_p.h
-  glacierrequest.h
-  glacierrequest_p.h
-  glacierresponse.h
-  glacierresponse_p.h
   initiatejobrequest.h
   initiatejobrequest_p.h
   initiatejobresponse.h
@@ -115,7 +116,6 @@ add_library(QtAwsGlacier
   purchaseprovisionedcapacityrequest_p.h
   purchaseprovisionedcapacityresponse.h
   purchaseprovisionedcapacityresponse_p.h
-  qtawsglacierglobal.h
   removetagsfromvaultrequest.h
   removetagsfromvaultrequest_p.h
   removetagsfromvaultresponse.h
@@ -140,6 +140,9 @@ add_library(QtAwsGlacier
   uploadmultipartpartrequest_p.h
   uploadmultipartpartresponse.h
   uploadmultipartpartresponse_p.h
+  glacierclient.cpp
+  glacierrequest.cpp
+  glacierresponse.cpp
   abortmultipartuploadrequest.cpp
   abortmultipartuploadresponse.cpp
   abortvaultlockrequest.cpp
@@ -154,12 +157,12 @@ add_library(QtAwsGlacier
   createvaultresponse.cpp
   deletearchiverequest.cpp
   deletearchiveresponse.cpp
+  deletevaultrequest.cpp
+  deletevaultresponse.cpp
   deletevaultaccesspolicyrequest.cpp
   deletevaultaccesspolicyresponse.cpp
   deletevaultnotificationsrequest.cpp
   deletevaultnotificationsresponse.cpp
-  deletevaultrequest.cpp
-  deletevaultresponse.cpp
   describejobrequest.cpp
   describejobresponse.cpp
   describevaultrequest.cpp
@@ -174,9 +177,6 @@ add_library(QtAwsGlacier
   getvaultlockresponse.cpp
   getvaultnotificationsrequest.cpp
   getvaultnotificationsresponse.cpp
-  glacierclient.cpp
-  glacierrequest.cpp
-  glacierresponse.cpp
   initiatejobrequest.cpp
   initiatejobresponse.cpp
   initiatemultipartuploadrequest.cpp

@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyClusterRequest
- * \brief The ModifyClusterRequest class provides an interface for CloudHSMV2 ModifyCluster requests.
+ * \class QtAws::CloudHsmV2::ModifyClusterRequest
+ * \brief The ModifyClusterRequest class provides an interface for CloudHsmV2 ModifyCluster requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::modifyCluster
+ * \sa CloudHsmV2Client::modifyCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyClusterRequest::ModifyClusterRequest(const ModifyClusterRequest &other)
-    : CloudHSMV2Request(new ModifyClusterRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new ModifyClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ModifyClusterRequest::ModifyClusterRequest(const ModifyClusterRequest &other)
  * Constructs a ModifyClusterRequest object.
  */
 ModifyClusterRequest::ModifyClusterRequest()
-    : CloudHSMV2Request(new ModifyClusterRequestPrivate(CloudHSMV2Request::ModifyClusterAction, this))
+    : CloudHsmV2Request(new ModifyClusterRequestPrivate(CloudHsmV2Request::ModifyClusterAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyClusterRequestPrivate
+ * \class QtAws::CloudHsmV2::ModifyClusterRequestPrivate
  * \brief The ModifyClusterRequestPrivate class provides private implementation for ModifyClusterRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a ModifyClusterRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a ModifyClusterRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
-    const CloudHSMV2Request::Action action, ModifyClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, ModifyClusterRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const ModifyClusterRequestPrivate &other, ModifyClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

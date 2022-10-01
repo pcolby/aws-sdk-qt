@@ -24,28 +24,28 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
-class kendraRequest;
+class KendraRequest;
 
-class kendraRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KendraRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    kendraRequest::Action action; ///< kendra action to be performed.
-    QString apiVersion;        ///< kendra API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< kendra request (query string) parameters. @todo?
+    KendraRequest::Action action; ///< Kendra action to be performed.
+    QString apiVersion;        ///< Kendra API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Kendra request (query string) parameters. @todo?
 
-    kendraRequestPrivate(const kendraRequest::Action action, kendraRequest * const q);
-    kendraRequestPrivate(const kendraRequestPrivate &other, kendraRequest * const q);
+    KendraRequestPrivate(const KendraRequest::Action action, KendraRequest * const q);
+    KendraRequestPrivate(const KendraRequestPrivate &other, KendraRequest * const q);
 
-    static QString toString(const kendraRequest::Action &action);
+    static QString toString(const KendraRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(kendraRequest)
+    Q_DECLARE_PUBLIC(KendraRequest)
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

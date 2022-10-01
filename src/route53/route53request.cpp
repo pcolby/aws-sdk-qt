@@ -38,8 +38,10 @@ namespace Route53 {
  *
  * \value ActivateKeySigningKeyAction Route53 ActivateKeySigningKey action.
  * \value AssociateVPCWithHostedZoneAction Route53 AssociateVPCWithHostedZone action.
+ * \value ChangeCidrCollectionAction Route53 ChangeCidrCollection action.
  * \value ChangeResourceRecordSetsAction Route53 ChangeResourceRecordSets action.
  * \value ChangeTagsForResourceAction Route53 ChangeTagsForResource action.
+ * \value CreateCidrCollectionAction Route53 CreateCidrCollection action.
  * \value CreateHealthCheckAction Route53 CreateHealthCheck action.
  * \value CreateHostedZoneAction Route53 CreateHostedZone action.
  * \value CreateKeySigningKeyAction Route53 CreateKeySigningKey action.
@@ -50,6 +52,7 @@ namespace Route53 {
  * \value CreateTrafficPolicyVersionAction Route53 CreateTrafficPolicyVersion action.
  * \value CreateVPCAssociationAuthorizationAction Route53 CreateVPCAssociationAuthorization action.
  * \value DeactivateKeySigningKeyAction Route53 DeactivateKeySigningKey action.
+ * \value DeleteCidrCollectionAction Route53 DeleteCidrCollection action.
  * \value DeleteHealthCheckAction Route53 DeleteHealthCheck action.
  * \value DeleteHostedZoneAction Route53 DeleteHostedZone action.
  * \value DeleteKeySigningKeyAction Route53 DeleteKeySigningKey action.
@@ -79,6 +82,9 @@ namespace Route53 {
  * \value GetTrafficPolicyAction Route53 GetTrafficPolicy action.
  * \value GetTrafficPolicyInstanceAction Route53 GetTrafficPolicyInstance action.
  * \value GetTrafficPolicyInstanceCountAction Route53 GetTrafficPolicyInstanceCount action.
+ * \value ListCidrBlocksAction Route53 ListCidrBlocks action.
+ * \value ListCidrCollectionsAction Route53 ListCidrCollections action.
+ * \value ListCidrLocationsAction Route53 ListCidrLocations action.
  * \value ListGeoLocationsAction Route53 ListGeoLocations action.
  * \value ListHealthChecksAction Route53 ListHealthChecks action.
  * \value ListHostedZonesAction Route53 ListHostedZones action.
@@ -307,7 +313,7 @@ QNetworkRequest Route53Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Route53RequestPrivate::Route53RequestPrivate(const Route53Request::Action action, Route53Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-04-01"))
 {
 
 }
@@ -343,8 +349,10 @@ QString Route53RequestPrivate::toString(const Route53Request::Action &action)
     switch (action) {
         ActionToString(ActivateKeySigningKey);
         ActionToString(AssociateVPCWithHostedZone);
+        ActionToString(ChangeCidrCollection);
         ActionToString(ChangeResourceRecordSets);
         ActionToString(ChangeTagsForResource);
+        ActionToString(CreateCidrCollection);
         ActionToString(CreateHealthCheck);
         ActionToString(CreateHostedZone);
         ActionToString(CreateKeySigningKey);
@@ -355,6 +363,7 @@ QString Route53RequestPrivate::toString(const Route53Request::Action &action)
         ActionToString(CreateTrafficPolicyVersion);
         ActionToString(CreateVPCAssociationAuthorization);
         ActionToString(DeactivateKeySigningKey);
+        ActionToString(DeleteCidrCollection);
         ActionToString(DeleteHealthCheck);
         ActionToString(DeleteHostedZone);
         ActionToString(DeleteKeySigningKey);
@@ -384,6 +393,9 @@ QString Route53RequestPrivate::toString(const Route53Request::Action &action)
         ActionToString(GetTrafficPolicy);
         ActionToString(GetTrafficPolicyInstance);
         ActionToString(GetTrafficPolicyInstanceCount);
+        ActionToString(ListCidrBlocks);
+        ActionToString(ListCidrCollections);
+        ActionToString(ListCidrLocations);
         ActionToString(ListGeoLocations);
         ActionToString(ListHealthChecks);
         ActionToString(ListHostedZones);

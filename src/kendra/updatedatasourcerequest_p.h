@@ -24,14 +24,14 @@
 #include "updatedatasourcerequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class UpdateDataSourceRequest;
 
-class UpdateDataSourceRequestPrivate : public kendraRequestPrivate {
+class UpdateDataSourceRequestPrivate : public KendraRequestPrivate {
 
 public:
-    UpdateDataSourceRequestPrivate(const kendraRequest::Action action,
+    UpdateDataSourceRequestPrivate(const KendraRequest::Action action,
                                    UpdateDataSourceRequest * const q);
     UpdateDataSourceRequestPrivate(const UpdateDataSourceRequestPrivate &other,
                                    UpdateDataSourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

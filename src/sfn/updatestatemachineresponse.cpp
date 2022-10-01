@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::UpdateStateMachineResponse
- * \brief The UpdateStateMachineResponse class provides an interace for SFN UpdateStateMachine responses.
+ * \class QtAws::Sfn::UpdateStateMachineResponse
+ * \brief The UpdateStateMachineResponse class provides an interace for Sfn UpdateStateMachine responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const UpdateStateMachineRequest * UpdateStateMachineResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN UpdateStateMachine \a response.
+ * Parses a successful Sfn UpdateStateMachine \a response.
  */
 void UpdateStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void UpdateStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::UpdateStateMachineResponsePrivate
+ * \class QtAws::Sfn::UpdateStateMachineResponsePrivate
  * \brief The UpdateStateMachineResponsePrivate class provides private implementation for UpdateStateMachineResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ UpdateStateMachineResponsePrivate::UpdateStateMachineResponsePrivate(
 }
 
 /*!
- * Parses a SFN UpdateStateMachine response element from \a xml.
+ * Parses a Sfn UpdateStateMachine response element from \a xml.
  */
 void UpdateStateMachineResponsePrivate::parseUpdateStateMachineResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateStateMachineResponsePrivate::parseUpdateStateMachineResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

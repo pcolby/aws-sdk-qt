@@ -21,65 +21,73 @@
 #include "wafv2request_p.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 /*!
- * \class QtAws::WAFV2::Wafv2Request
- * \brief The Wafv2Request class provides an interface for WAFV2 requests.
+ * \class QtAws::Wafv2::Wafv2Request
+ * \brief The Wafv2Request class provides an interface for Wafv2 requests.
  *
- * \inmodule QtAwsWAFV2
+ * \inmodule QtAwsWafv2
  */
 
 /*!
  * \enum Wafv2Request::Action
  *
- * This enum describes the actions that can be performed as WAFV2
+ * This enum describes the actions that can be performed as Wafv2
  * requests.
  *
- * \value AssociateWebACLAction WAFV2 AssociateWebACL action.
- * \value CheckCapacityAction WAFV2 CheckCapacity action.
- * \value CreateIPSetAction WAFV2 CreateIPSet action.
- * \value CreateRegexPatternSetAction WAFV2 CreateRegexPatternSet action.
- * \value CreateRuleGroupAction WAFV2 CreateRuleGroup action.
- * \value CreateWebACLAction WAFV2 CreateWebACL action.
- * \value DeleteFirewallManagerRuleGroupsAction WAFV2 DeleteFirewallManagerRuleGroups action.
- * \value DeleteIPSetAction WAFV2 DeleteIPSet action.
- * \value DeleteLoggingConfigurationAction WAFV2 DeleteLoggingConfiguration action.
- * \value DeletePermissionPolicyAction WAFV2 DeletePermissionPolicy action.
- * \value DeleteRegexPatternSetAction WAFV2 DeleteRegexPatternSet action.
- * \value DeleteRuleGroupAction WAFV2 DeleteRuleGroup action.
- * \value DeleteWebACLAction WAFV2 DeleteWebACL action.
- * \value DescribeManagedRuleGroupAction WAFV2 DescribeManagedRuleGroup action.
- * \value DisassociateWebACLAction WAFV2 DisassociateWebACL action.
- * \value GetIPSetAction WAFV2 GetIPSet action.
- * \value GetLoggingConfigurationAction WAFV2 GetLoggingConfiguration action.
- * \value GetPermissionPolicyAction WAFV2 GetPermissionPolicy action.
- * \value GetRateBasedStatementManagedKeysAction WAFV2 GetRateBasedStatementManagedKeys action.
- * \value GetRegexPatternSetAction WAFV2 GetRegexPatternSet action.
- * \value GetRuleGroupAction WAFV2 GetRuleGroup action.
- * \value GetSampledRequestsAction WAFV2 GetSampledRequests action.
- * \value GetWebACLAction WAFV2 GetWebACL action.
- * \value GetWebACLForResourceAction WAFV2 GetWebACLForResource action.
- * \value ListAvailableManagedRuleGroupsAction WAFV2 ListAvailableManagedRuleGroups action.
- * \value ListIPSetsAction WAFV2 ListIPSets action.
- * \value ListLoggingConfigurationsAction WAFV2 ListLoggingConfigurations action.
- * \value ListRegexPatternSetsAction WAFV2 ListRegexPatternSets action.
- * \value ListResourcesForWebACLAction WAFV2 ListResourcesForWebACL action.
- * \value ListRuleGroupsAction WAFV2 ListRuleGroups action.
- * \value ListTagsForResourceAction WAFV2 ListTagsForResource action.
- * \value ListWebACLsAction WAFV2 ListWebACLs action.
- * \value PutLoggingConfigurationAction WAFV2 PutLoggingConfiguration action.
- * \value PutPermissionPolicyAction WAFV2 PutPermissionPolicy action.
- * \value TagResourceAction WAFV2 TagResource action.
- * \value UntagResourceAction WAFV2 UntagResource action.
- * \value UpdateIPSetAction WAFV2 UpdateIPSet action.
- * \value UpdateRegexPatternSetAction WAFV2 UpdateRegexPatternSet action.
- * \value UpdateRuleGroupAction WAFV2 UpdateRuleGroup action.
- * \value UpdateWebACLAction WAFV2 UpdateWebACL action.
+ * \value AssociateWebACLAction Wafv2 AssociateWebACL action.
+ * \value CheckCapacityAction Wafv2 CheckCapacity action.
+ * \value CreateIPSetAction Wafv2 CreateIPSet action.
+ * \value CreateRegexPatternSetAction Wafv2 CreateRegexPatternSet action.
+ * \value CreateRuleGroupAction Wafv2 CreateRuleGroup action.
+ * \value CreateWebACLAction Wafv2 CreateWebACL action.
+ * \value DeleteFirewallManagerRuleGroupsAction Wafv2 DeleteFirewallManagerRuleGroups action.
+ * \value DeleteIPSetAction Wafv2 DeleteIPSet action.
+ * \value DeleteLoggingConfigurationAction Wafv2 DeleteLoggingConfiguration action.
+ * \value DeletePermissionPolicyAction Wafv2 DeletePermissionPolicy action.
+ * \value DeleteRegexPatternSetAction Wafv2 DeleteRegexPatternSet action.
+ * \value DeleteRuleGroupAction Wafv2 DeleteRuleGroup action.
+ * \value DeleteWebACLAction Wafv2 DeleteWebACL action.
+ * \value DescribeManagedRuleGroupAction Wafv2 DescribeManagedRuleGroup action.
+ * \value DisassociateWebACLAction Wafv2 DisassociateWebACL action.
+ * \value GenerateMobileSdkReleaseUrlAction Wafv2 GenerateMobileSdkReleaseUrl action.
+ * \value GetIPSetAction Wafv2 GetIPSet action.
+ * \value GetLoggingConfigurationAction Wafv2 GetLoggingConfiguration action.
+ * \value GetManagedRuleSetAction Wafv2 GetManagedRuleSet action.
+ * \value GetMobileSdkReleaseAction Wafv2 GetMobileSdkRelease action.
+ * \value GetPermissionPolicyAction Wafv2 GetPermissionPolicy action.
+ * \value GetRateBasedStatementManagedKeysAction Wafv2 GetRateBasedStatementManagedKeys action.
+ * \value GetRegexPatternSetAction Wafv2 GetRegexPatternSet action.
+ * \value GetRuleGroupAction Wafv2 GetRuleGroup action.
+ * \value GetSampledRequestsAction Wafv2 GetSampledRequests action.
+ * \value GetWebACLAction Wafv2 GetWebACL action.
+ * \value GetWebACLForResourceAction Wafv2 GetWebACLForResource action.
+ * \value ListAvailableManagedRuleGroupVersionsAction Wafv2 ListAvailableManagedRuleGroupVersions action.
+ * \value ListAvailableManagedRuleGroupsAction Wafv2 ListAvailableManagedRuleGroups action.
+ * \value ListIPSetsAction Wafv2 ListIPSets action.
+ * \value ListLoggingConfigurationsAction Wafv2 ListLoggingConfigurations action.
+ * \value ListManagedRuleSetsAction Wafv2 ListManagedRuleSets action.
+ * \value ListMobileSdkReleasesAction Wafv2 ListMobileSdkReleases action.
+ * \value ListRegexPatternSetsAction Wafv2 ListRegexPatternSets action.
+ * \value ListResourcesForWebACLAction Wafv2 ListResourcesForWebACL action.
+ * \value ListRuleGroupsAction Wafv2 ListRuleGroups action.
+ * \value ListTagsForResourceAction Wafv2 ListTagsForResource action.
+ * \value ListWebACLsAction Wafv2 ListWebACLs action.
+ * \value PutLoggingConfigurationAction Wafv2 PutLoggingConfiguration action.
+ * \value PutManagedRuleSetVersionsAction Wafv2 PutManagedRuleSetVersions action.
+ * \value PutPermissionPolicyAction Wafv2 PutPermissionPolicy action.
+ * \value TagResourceAction Wafv2 TagResource action.
+ * \value UntagResourceAction Wafv2 UntagResource action.
+ * \value UpdateIPSetAction Wafv2 UpdateIPSet action.
+ * \value UpdateManagedRuleSetVersionExpiryDateAction Wafv2 UpdateManagedRuleSetVersionExpiryDate action.
+ * \value UpdateRegexPatternSetAction Wafv2 UpdateRegexPatternSet action.
+ * \value UpdateRuleGroupAction Wafv2 UpdateRuleGroup action.
+ * \value UpdateWebACLAction Wafv2 UpdateWebACL action.
  */
 
 /*!
- * Constructs a Wafv2Request object for WAFV2 \a action.
+ * Constructs a Wafv2Request object for Wafv2 \a action.
  */
 Wafv2Request::Wafv2Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new Wafv2RequestPrivate(action, this))
@@ -120,7 +128,7 @@ Wafv2Request::Wafv2Request(Wafv2RequestPrivate * const d) : QtAws::Core::AwsAbst
 }
 
 /*!
- * Returns the WAFV2 action to be performed by this request.
+ * Returns the Wafv2 action to be performed by this request.
  */
 Wafv2Request::Action Wafv2Request::action() const
 {
@@ -129,7 +137,7 @@ Wafv2Request::Action Wafv2Request::action() const
 }
 
 /*!
- * Returns the name of the WAFV2 action to be performed by this request.
+ * Returns the name of the Wafv2 action to be performed by this request.
  */
 QString Wafv2Request::actionString() const
 {
@@ -137,7 +145,7 @@ QString Wafv2Request::actionString() const
 }
 
 /*!
- * Returns the WAFV2 API version implemented by this request.
+ * Returns the Wafv2 API version implemented by this request.
  */
 QString Wafv2Request::apiVersion() const
 {
@@ -146,7 +154,7 @@ QString Wafv2Request::apiVersion() const
 }
 
 /*!
- * Sets the WAFV2 action to be performed by this request to \a action.
+ * Sets the Wafv2 action to be performed by this request to \a action.
  */
 void Wafv2Request::setAction(const Action action)
 {
@@ -155,7 +163,7 @@ void Wafv2Request::setAction(const Action action)
 }
 
 /*!
- * Sets the WAFV2 API version to include in this request to \a version.
+ * Sets the Wafv2 API version to include in this request to \a version.
  */
 void Wafv2Request::setApiVersion(const QString &version)
 {
@@ -180,15 +188,15 @@ bool Wafv2Request::operator==(const Wafv2Request &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid WAFV2 queue name.
+ * Returns \c tue if \a queueName is a valid Wafv2 queue name.
  *
- * @par From WAFV2 FAQs:
+ * @par From Wafv2 FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid WAFV2 queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Wafv2 queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -255,10 +263,10 @@ void Wafv2Request::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the WAFV2 request using the given
+ * Returns a network request for the Wafv2 request using the given
  * \a endpoint.
  *
- * This WAFV2 implementation builds request URLs by combining the
+ * This Wafv2 implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -271,19 +279,19 @@ QNetworkRequest Wafv2Request::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::WAFV2::Wafv2RequestPrivate
+ * \class QtAws::Wafv2::Wafv2RequestPrivate
  * \brief The Wafv2RequestPrivate class provides private implementation for Wafv2Request.
  * \internal
  *
- * \inmodule QtAwsWAFV2
+ * \inmodule QtAwsWafv2
  */
 
 /*!
- * Constructs a Wafv2RequestPrivate object for WAFV2 \a action,
+ * Constructs a Wafv2RequestPrivate object for Wafv2 \a action,
  * with public implementation \a q.
  */
 Wafv2RequestPrivate::Wafv2RequestPrivate(const Wafv2Request::Action action, Wafv2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-07-29"))
 {
 
 }
@@ -309,7 +317,7 @@ Wafv2RequestPrivate::Wafv2RequestPrivate(const Wafv2RequestPrivate &other,
  * invalid.
  *
  * This function converts Wafv2Request::Action enumerator values to their respective
- * string representations, appropriate for use with the WAFV2 service's Action
+ * string representations, appropriate for use with the Wafv2 service's Action
  * query parameters.
  */
 QString Wafv2RequestPrivate::toString(const Wafv2Request::Action &action)
@@ -332,8 +340,11 @@ QString Wafv2RequestPrivate::toString(const Wafv2Request::Action &action)
         ActionToString(DeleteWebACL);
         ActionToString(DescribeManagedRuleGroup);
         ActionToString(DisassociateWebACL);
+        ActionToString(GenerateMobileSdkReleaseUrl);
         ActionToString(GetIPSet);
         ActionToString(GetLoggingConfiguration);
+        ActionToString(GetManagedRuleSet);
+        ActionToString(GetMobileSdkRelease);
         ActionToString(GetPermissionPolicy);
         ActionToString(GetRateBasedStatementManagedKeys);
         ActionToString(GetRegexPatternSet);
@@ -341,19 +352,24 @@ QString Wafv2RequestPrivate::toString(const Wafv2Request::Action &action)
         ActionToString(GetSampledRequests);
         ActionToString(GetWebACL);
         ActionToString(GetWebACLForResource);
+        ActionToString(ListAvailableManagedRuleGroupVersions);
         ActionToString(ListAvailableManagedRuleGroups);
         ActionToString(ListIPSets);
         ActionToString(ListLoggingConfigurations);
+        ActionToString(ListManagedRuleSets);
+        ActionToString(ListMobileSdkReleases);
         ActionToString(ListRegexPatternSets);
         ActionToString(ListResourcesForWebACL);
         ActionToString(ListRuleGroups);
         ActionToString(ListTagsForResource);
         ActionToString(ListWebACLs);
         ActionToString(PutLoggingConfiguration);
+        ActionToString(PutManagedRuleSetVersions);
         ActionToString(PutPermissionPolicy);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateIPSet);
+        ActionToString(UpdateManagedRuleSetVersionExpiryDate);
         ActionToString(UpdateRegexPatternSet);
         ActionToString(UpdateRuleGroup);
         ActionToString(UpdateWebACL);
@@ -364,5 +380,5 @@ QString Wafv2RequestPrivate::toString(const Wafv2Request::Action &action)
     return QString();
 }
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws

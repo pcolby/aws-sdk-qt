@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class StsResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

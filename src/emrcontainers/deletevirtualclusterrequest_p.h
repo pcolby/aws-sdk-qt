@@ -24,14 +24,14 @@
 #include "deletevirtualclusterrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class DeleteVirtualClusterRequest;
 
-class DeleteVirtualClusterRequestPrivate : public EMRContainersRequestPrivate {
+class DeleteVirtualClusterRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    DeleteVirtualClusterRequestPrivate(const EMRContainersRequest::Action action,
+    DeleteVirtualClusterRequestPrivate(const EmrcontainersRequest::Action action,
                                    DeleteVirtualClusterRequest * const q);
     DeleteVirtualClusterRequestPrivate(const DeleteVirtualClusterRequestPrivate &other,
                                    DeleteVirtualClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

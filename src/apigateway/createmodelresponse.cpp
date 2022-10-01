@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateModelResponse
- * \brief The CreateModelResponse class provides an interace for APIGateway CreateModel responses.
+ * \class QtAws::ApiGateway::CreateModelResponse
+ * \brief The CreateModelResponse class provides an interace for ApiGateway CreateModel responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createModel
+ * \sa ApiGatewayClient::createModel
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateModelResponse::CreateModelResponse(
         const CreateModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateModelResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateModelResponsePrivate(this), parent)
 {
     setRequest(new CreateModelRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateModelRequest * CreateModelResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateModel \a response.
+ * Parses a successful ApiGateway CreateModel \a response.
  */
 void CreateModelResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateModelResponsePrivate
+ * \class QtAws::ApiGateway::CreateModelResponsePrivate
  * \brief The CreateModelResponsePrivate class provides private implementation for CreateModelResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateModelResponsePrivate object with public implementation \a q.
  */
 CreateModelResponsePrivate::CreateModelResponsePrivate(
-    CreateModelResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateModelResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateModel response element from \a xml.
+ * Parses a ApiGateway CreateModel response element from \a xml.
  */
 void CreateModelResponsePrivate::parseCreateModelResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateModelResponsePrivate::parseCreateModelResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

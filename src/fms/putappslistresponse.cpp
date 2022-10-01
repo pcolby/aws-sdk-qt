@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::PutAppsListResponse
- * \brief The PutAppsListResponse class provides an interace for FMS PutAppsList responses.
+ * \class QtAws::Fms::PutAppsListResponse
+ * \brief The PutAppsListResponse class provides an interace for Fms PutAppsList responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const PutAppsListRequest * PutAppsListResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS PutAppsList \a response.
+ * Parses a successful Fms PutAppsList \a response.
  */
 void PutAppsListResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void PutAppsListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::PutAppsListResponsePrivate
+ * \class QtAws::Fms::PutAppsListResponsePrivate
  * \brief The PutAppsListResponsePrivate class provides private implementation for PutAppsListResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ PutAppsListResponsePrivate::PutAppsListResponsePrivate(
 }
 
 /*!
- * Parses a FMS PutAppsList response element from \a xml.
+ * Parses a Fms PutAppsList response element from \a xml.
  */
 void PutAppsListResponsePrivate::parsePutAppsListResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void PutAppsListResponsePrivate::parsePutAppsListResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

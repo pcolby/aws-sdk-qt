@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::GetEnvironmentResponse
- * \brief The GetEnvironmentResponse class provides an interace for finspace GetEnvironment responses.
+ * \class QtAws::Finspace::GetEnvironmentResponse
+ * \brief The GetEnvironmentResponse class provides an interace for Finspace GetEnvironment responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::getEnvironment
+ * \sa FinspaceClient::getEnvironment
  */
 
 /*!
@@ -45,7 +45,7 @@ GetEnvironmentResponse::GetEnvironmentResponse(
         const GetEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new GetEnvironmentResponsePrivate(this), parent)
+    : FinspaceResponse(new GetEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new GetEnvironmentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const GetEnvironmentRequest * GetEnvironmentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace GetEnvironment \a response.
+ * Parses a successful Finspace GetEnvironment \a response.
  */
 void GetEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void GetEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::GetEnvironmentResponsePrivate
+ * \class QtAws::Finspace::GetEnvironmentResponsePrivate
  * \brief The GetEnvironmentResponsePrivate class provides private implementation for GetEnvironmentResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a GetEnvironmentResponsePrivate object with public implementation \a q.
  */
 GetEnvironmentResponsePrivate::GetEnvironmentResponsePrivate(
-    GetEnvironmentResponse * const q) : finspaceResponsePrivate(q)
+    GetEnvironmentResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace GetEnvironment response element from \a xml.
+ * Parses a Finspace GetEnvironment response element from \a xml.
  */
 void GetEnvironmentResponsePrivate::parseGetEnvironmentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetEnvironmentResponsePrivate::parseGetEnvironmentResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

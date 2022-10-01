@@ -72,8 +72,14 @@ class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateHttpNamespaceRequest;
+class UpdateHttpNamespaceResponse;
 class UpdateInstanceCustomHealthStatusRequest;
 class UpdateInstanceCustomHealthStatusResponse;
+class UpdatePrivateDnsNamespaceRequest;
+class UpdatePrivateDnsNamespaceResponse;
+class UpdatePublicDnsNamespaceRequest;
+class UpdatePublicDnsNamespaceResponse;
 class UpdateServiceRequest;
 class UpdateServiceResponse;
 
@@ -114,7 +120,10 @@ public slots:
     RegisterInstanceResponse * registerInstance(const RegisterInstanceRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateHttpNamespaceResponse * updateHttpNamespace(const UpdateHttpNamespaceRequest &request);
     UpdateInstanceCustomHealthStatusResponse * updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request);
+    UpdatePrivateDnsNamespaceResponse * updatePrivateDnsNamespace(const UpdatePrivateDnsNamespaceRequest &request);
+    UpdatePublicDnsNamespaceResponse * updatePublicDnsNamespace(const UpdatePublicDnsNamespaceRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 
 private:

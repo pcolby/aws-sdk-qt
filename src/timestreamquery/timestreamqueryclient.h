@@ -32,10 +32,30 @@ namespace TimestreamQuery {
 class TimestreamQueryClientPrivate;
 class CancelQueryRequest;
 class CancelQueryResponse;
+class CreateScheduledQueryRequest;
+class CreateScheduledQueryResponse;
+class DeleteScheduledQueryRequest;
+class DeleteScheduledQueryResponse;
 class DescribeEndpointsRequest;
 class DescribeEndpointsResponse;
+class DescribeScheduledQueryRequest;
+class DescribeScheduledQueryResponse;
+class ExecuteScheduledQueryRequest;
+class ExecuteScheduledQueryResponse;
+class ListScheduledQueriesRequest;
+class ListScheduledQueriesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class PrepareQueryRequest;
+class PrepareQueryResponse;
 class QueryRequest;
 class QueryResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
+class UpdateScheduledQueryRequest;
+class UpdateScheduledQueryResponse;
 
 class QTAWSTIMESTREAMQUERY_EXPORT TimestreamQueryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -54,8 +74,18 @@ public:
 
 public slots:
     CancelQueryResponse * cancelQuery(const CancelQueryRequest &request);
+    CreateScheduledQueryResponse * createScheduledQuery(const CreateScheduledQueryRequest &request);
+    DeleteScheduledQueryResponse * deleteScheduledQuery(const DeleteScheduledQueryRequest &request);
     DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
+    DescribeScheduledQueryResponse * describeScheduledQuery(const DescribeScheduledQueryRequest &request);
+    ExecuteScheduledQueryResponse * executeScheduledQuery(const ExecuteScheduledQueryRequest &request);
+    ListScheduledQueriesResponse * listScheduledQueries(const ListScheduledQueriesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    PrepareQueryResponse * prepareQuery(const PrepareQueryRequest &request);
     QueryResponse * query(const QueryRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateScheduledQueryResponse * updateScheduledQuery(const UpdateScheduledQueryRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(TimestreamQueryClient)

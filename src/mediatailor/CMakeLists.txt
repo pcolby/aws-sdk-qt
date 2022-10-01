@@ -1,10 +1,29 @@
 add_compile_definitions(QTAWSMEDIATAILOR_LIBRARY)
 
 add_library(QtAwsMediaTailor
+  qtawsmediatailorglobal.h
+  mediatailorclient.h
+  mediatailorclient_p.h
+  mediatailorrequest.h
+  mediatailorrequest_p.h
+  mediatailorresponse.h
+  mediatailorresponse_p.h
+  configurelogsforplaybackconfigurationrequest.h
+  configurelogsforplaybackconfigurationrequest_p.h
+  configurelogsforplaybackconfigurationresponse.h
+  configurelogsforplaybackconfigurationresponse_p.h
   createchannelrequest.h
   createchannelrequest_p.h
   createchannelresponse.h
   createchannelresponse_p.h
+  createlivesourcerequest.h
+  createlivesourcerequest_p.h
+  createlivesourceresponse.h
+  createlivesourceresponse_p.h
+  createprefetchschedulerequest.h
+  createprefetchschedulerequest_p.h
+  createprefetchscheduleresponse.h
+  createprefetchscheduleresponse_p.h
   createprogramrequest.h
   createprogramrequest_p.h
   createprogramresponse.h
@@ -17,18 +36,26 @@ add_library(QtAwsMediaTailor
   createvodsourcerequest_p.h
   createvodsourceresponse.h
   createvodsourceresponse_p.h
-  deletechannelpolicyrequest.h
-  deletechannelpolicyrequest_p.h
-  deletechannelpolicyresponse.h
-  deletechannelpolicyresponse_p.h
   deletechannelrequest.h
   deletechannelrequest_p.h
   deletechannelresponse.h
   deletechannelresponse_p.h
+  deletechannelpolicyrequest.h
+  deletechannelpolicyrequest_p.h
+  deletechannelpolicyresponse.h
+  deletechannelpolicyresponse_p.h
+  deletelivesourcerequest.h
+  deletelivesourcerequest_p.h
+  deletelivesourceresponse.h
+  deletelivesourceresponse_p.h
   deleteplaybackconfigurationrequest.h
   deleteplaybackconfigurationrequest_p.h
   deleteplaybackconfigurationresponse.h
   deleteplaybackconfigurationresponse_p.h
+  deleteprefetchschedulerequest.h
+  deleteprefetchschedulerequest_p.h
+  deleteprefetchscheduleresponse.h
+  deleteprefetchscheduleresponse_p.h
   deleteprogramrequest.h
   deleteprogramrequest_p.h
   deleteprogramresponse.h
@@ -45,6 +72,10 @@ add_library(QtAwsMediaTailor
   describechannelrequest_p.h
   describechannelresponse.h
   describechannelresponse_p.h
+  describelivesourcerequest.h
+  describelivesourcerequest_p.h
+  describelivesourceresponse.h
+  describelivesourceresponse_p.h
   describeprogramrequest.h
   describeprogramrequest_p.h
   describeprogramresponse.h
@@ -69,14 +100,30 @@ add_library(QtAwsMediaTailor
   getplaybackconfigurationrequest_p.h
   getplaybackconfigurationresponse.h
   getplaybackconfigurationresponse_p.h
+  getprefetchschedulerequest.h
+  getprefetchschedulerequest_p.h
+  getprefetchscheduleresponse.h
+  getprefetchscheduleresponse_p.h
+  listalertsrequest.h
+  listalertsrequest_p.h
+  listalertsresponse.h
+  listalertsresponse_p.h
   listchannelsrequest.h
   listchannelsrequest_p.h
   listchannelsresponse.h
   listchannelsresponse_p.h
+  listlivesourcesrequest.h
+  listlivesourcesrequest_p.h
+  listlivesourcesresponse.h
+  listlivesourcesresponse_p.h
   listplaybackconfigurationsrequest.h
   listplaybackconfigurationsrequest_p.h
   listplaybackconfigurationsresponse.h
   listplaybackconfigurationsresponse_p.h
+  listprefetchschedulesrequest.h
+  listprefetchschedulesrequest_p.h
+  listprefetchschedulesresponse.h
+  listprefetchschedulesresponse_p.h
   listsourcelocationsrequest.h
   listsourcelocationsrequest_p.h
   listsourcelocationsresponse.h
@@ -89,12 +136,6 @@ add_library(QtAwsMediaTailor
   listvodsourcesrequest_p.h
   listvodsourcesresponse.h
   listvodsourcesresponse_p.h
-  mediatailorclient.h
-  mediatailorclient_p.h
-  mediatailorrequest.h
-  mediatailorrequest_p.h
-  mediatailorresponse.h
-  mediatailorresponse_p.h
   putchannelpolicyrequest.h
   putchannelpolicyrequest_p.h
   putchannelpolicyresponse.h
@@ -103,7 +144,6 @@ add_library(QtAwsMediaTailor
   putplaybackconfigurationrequest_p.h
   putplaybackconfigurationresponse.h
   putplaybackconfigurationresponse_p.h
-  qtawsmediatailorglobal.h
   startchannelrequest.h
   startchannelrequest_p.h
   startchannelresponse.h
@@ -124,6 +164,10 @@ add_library(QtAwsMediaTailor
   updatechannelrequest_p.h
   updatechannelresponse.h
   updatechannelresponse_p.h
+  updatelivesourcerequest.h
+  updatelivesourcerequest_p.h
+  updatelivesourceresponse.h
+  updatelivesourceresponse_p.h
   updatesourcelocationrequest.h
   updatesourcelocationrequest_p.h
   updatesourcelocationresponse.h
@@ -132,20 +176,33 @@ add_library(QtAwsMediaTailor
   updatevodsourcerequest_p.h
   updatevodsourceresponse.h
   updatevodsourceresponse_p.h
+  mediatailorclient.cpp
+  mediatailorrequest.cpp
+  mediatailorresponse.cpp
+  configurelogsforplaybackconfigurationrequest.cpp
+  configurelogsforplaybackconfigurationresponse.cpp
   createchannelrequest.cpp
   createchannelresponse.cpp
+  createlivesourcerequest.cpp
+  createlivesourceresponse.cpp
+  createprefetchschedulerequest.cpp
+  createprefetchscheduleresponse.cpp
   createprogramrequest.cpp
   createprogramresponse.cpp
   createsourcelocationrequest.cpp
   createsourcelocationresponse.cpp
   createvodsourcerequest.cpp
   createvodsourceresponse.cpp
-  deletechannelpolicyrequest.cpp
-  deletechannelpolicyresponse.cpp
   deletechannelrequest.cpp
   deletechannelresponse.cpp
+  deletechannelpolicyrequest.cpp
+  deletechannelpolicyresponse.cpp
+  deletelivesourcerequest.cpp
+  deletelivesourceresponse.cpp
   deleteplaybackconfigurationrequest.cpp
   deleteplaybackconfigurationresponse.cpp
+  deleteprefetchschedulerequest.cpp
+  deleteprefetchscheduleresponse.cpp
   deleteprogramrequest.cpp
   deleteprogramresponse.cpp
   deletesourcelocationrequest.cpp
@@ -154,6 +211,8 @@ add_library(QtAwsMediaTailor
   deletevodsourceresponse.cpp
   describechannelrequest.cpp
   describechannelresponse.cpp
+  describelivesourcerequest.cpp
+  describelivesourceresponse.cpp
   describeprogramrequest.cpp
   describeprogramresponse.cpp
   describesourcelocationrequest.cpp
@@ -166,19 +225,24 @@ add_library(QtAwsMediaTailor
   getchannelscheduleresponse.cpp
   getplaybackconfigurationrequest.cpp
   getplaybackconfigurationresponse.cpp
+  getprefetchschedulerequest.cpp
+  getprefetchscheduleresponse.cpp
+  listalertsrequest.cpp
+  listalertsresponse.cpp
   listchannelsrequest.cpp
   listchannelsresponse.cpp
+  listlivesourcesrequest.cpp
+  listlivesourcesresponse.cpp
   listplaybackconfigurationsrequest.cpp
   listplaybackconfigurationsresponse.cpp
+  listprefetchschedulesrequest.cpp
+  listprefetchschedulesresponse.cpp
   listsourcelocationsrequest.cpp
   listsourcelocationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listvodsourcesrequest.cpp
   listvodsourcesresponse.cpp
-  mediatailorclient.cpp
-  mediatailorrequest.cpp
-  mediatailorresponse.cpp
   putchannelpolicyrequest.cpp
   putchannelpolicyresponse.cpp
   putplaybackconfigurationrequest.cpp
@@ -193,6 +257,8 @@ add_library(QtAwsMediaTailor
   untagresourceresponse.cpp
   updatechannelrequest.cpp
   updatechannelresponse.cpp
+  updatelivesourcerequest.cpp
+  updatelivesourceresponse.cpp
   updatesourcelocationrequest.cpp
   updatesourcelocationresponse.cpp
   updatevodsourcerequest.cpp

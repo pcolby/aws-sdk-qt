@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceResponse
- * \brief The PinpointSMSVoiceResponse class provides an interface for PinpointSMSVoice responses.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceResponse
+ * \brief The PinpointSmsVoiceResponse class provides an interface for PinpointSmsVoice responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a PinpointSMSVoiceResponse object with parent \a parent.
+ * Constructs a PinpointSmsVoiceResponse object with parent \a parent.
  */
-PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new PinpointSMSVoiceResponsePrivate(this), parent)
+PinpointSmsVoiceResponse::PinpointSmsVoiceResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new PinpointSmsVoiceResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a PinpointSMSVoiceResponse object with private implementation \a d,
+ * Constructs a PinpointSmsVoiceResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from PinpointSMSVoiceResponsePrivate.
+ * implementation that inherits from PinpointSmsVoiceResponsePrivate.
  */
-PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(PinpointSMSVoiceResponsePrivate * const d, QObject * const parent)
+PinpointSmsVoiceResponse::PinpointSmsVoiceResponse(PinpointSmsVoiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(PinpointSMSVoiceResponsePriva
 /*!
  * \reimp
  */
-void PinpointSMSVoiceResponse::parseFailure(QIODevice &response)
+void PinpointSmsVoiceResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(PinpointSMSVoiceResponse);
+    //Q_D(PinpointSmsVoiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void PinpointSMSVoiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceResponsePrivate
- * \brief The PinpointSMSVoiceResponsePrivate class provides private implementation for PinpointSMSVoiceResponse.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceResponsePrivate
+ * \brief The PinpointSmsVoiceResponsePrivate class provides private implementation for PinpointSmsVoiceResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a PinpointSMSVoiceResponsePrivate object with public implementation \a q.
+ * Constructs a PinpointSmsVoiceResponsePrivate object with public implementation \a q.
  */
-PinpointSMSVoiceResponsePrivate::PinpointSMSVoiceResponsePrivate(
-    PinpointSMSVoiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+PinpointSmsVoiceResponsePrivate::PinpointSmsVoiceResponsePrivate(
+    PinpointSmsVoiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

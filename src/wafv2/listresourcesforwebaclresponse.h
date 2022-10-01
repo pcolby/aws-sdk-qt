@@ -24,7 +24,7 @@
 #include "listresourcesforwebaclrequest.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class ListResourcesForWebACLResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

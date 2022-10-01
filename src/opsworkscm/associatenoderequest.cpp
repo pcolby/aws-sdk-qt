@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::AssociateNodeRequest
- * \brief The AssociateNodeRequest class provides an interface for OpsWorksCM AssociateNode requests.
+ * \class QtAws::OpsWorksCm::AssociateNodeRequest
+ * \brief The AssociateNodeRequest class provides an interface for OpsWorksCm AssociateNode requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::associateNode
+ * \sa OpsWorksCmClient::associateNode
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AssociateNodeRequest::AssociateNodeRequest(const AssociateNodeRequest &other)
-    : OpsWorksCMRequest(new AssociateNodeRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new AssociateNodeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ AssociateNodeRequest::AssociateNodeRequest(const AssociateNodeRequest &other)
  * Constructs a AssociateNodeRequest object.
  */
 AssociateNodeRequest::AssociateNodeRequest()
-    : OpsWorksCMRequest(new AssociateNodeRequestPrivate(OpsWorksCMRequest::AssociateNodeAction, this))
+    : OpsWorksCmRequest(new AssociateNodeRequestPrivate(OpsWorksCmRequest::AssociateNodeAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::OpsWorksCM::AssociateNodeRequestPrivate
+ * \class QtAws::OpsWorksCm::AssociateNodeRequestPrivate
  * \brief The AssociateNodeRequestPrivate class provides private implementation for AssociateNodeRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a AssociateNodeRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a AssociateNodeRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
-    const OpsWorksCMRequest::Action action, AssociateNodeRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, AssociateNodeRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const AssociateNodeRequestPrivate &other, AssociateNodeRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

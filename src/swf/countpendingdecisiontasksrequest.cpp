@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::CountPendingDecisionTasksRequest
- * \brief The CountPendingDecisionTasksRequest class provides an interface for SWF CountPendingDecisionTasks requests.
+ * \class QtAws::Swf::CountPendingDecisionTasksRequest
+ * \brief The CountPendingDecisionTasksRequest class provides an interface for Swf CountPendingDecisionTasks requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
 }
 
 /*!
- * \class QtAws::SWF::CountPendingDecisionTasksRequestPrivate
+ * \class QtAws::Swf::CountPendingDecisionTasksRequestPrivate
  * \brief The CountPendingDecisionTasksRequestPrivate class provides private implementation for CountPendingDecisionTasksRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

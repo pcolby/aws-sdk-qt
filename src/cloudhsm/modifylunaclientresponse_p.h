@@ -23,11 +23,11 @@
 #include "cloudhsmresponse_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ModifyLunaClientResponse;
 
-class ModifyLunaClientResponsePrivate : public CloudHSMResponsePrivate {
+class ModifyLunaClientResponsePrivate : public CloudHsmResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

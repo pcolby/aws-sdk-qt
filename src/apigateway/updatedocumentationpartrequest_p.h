@@ -24,14 +24,14 @@
 #include "updatedocumentationpartrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateDocumentationPartRequest;
 
-class UpdateDocumentationPartRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateDocumentationPartRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UpdateDocumentationPartRequestPrivate(const APIGatewayRequest::Action action,
+    UpdateDocumentationPartRequestPrivate(const ApiGatewayRequest::Action action,
                                    UpdateDocumentationPartRequest * const q);
     UpdateDocumentationPartRequestPrivate(const UpdateDocumentationPartRequestPrivate &other,
                                    UpdateDocumentationPartRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

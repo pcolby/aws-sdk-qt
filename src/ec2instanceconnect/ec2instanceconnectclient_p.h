@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
-class EC2InstanceConnectClient;
+class Ec2InstanceConnectClient;
 
-class EC2InstanceConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Ec2InstanceConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q);
+    explicit Ec2InstanceConnectClientPrivate(Ec2InstanceConnectClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(EC2InstanceConnectClient)
-    Q_DISABLE_COPY(EC2InstanceConnectClientPrivate)
+    Q_DECLARE_PUBLIC(Ec2InstanceConnectClient)
+    Q_DISABLE_COPY(Ec2InstanceConnectClientPrivate)
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

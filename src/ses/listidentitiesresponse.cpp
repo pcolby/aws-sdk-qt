@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListIdentitiesResponse
- * \brief The ListIdentitiesResponse class provides an interace for SES ListIdentities responses.
+ * \class QtAws::Ses::ListIdentitiesResponse
+ * \brief The ListIdentitiesResponse class provides an interace for Ses ListIdentities responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const ListIdentitiesRequest * ListIdentitiesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES ListIdentities \a response.
+ * Parses a successful Ses ListIdentities \a response.
  */
 void ListIdentitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void ListIdentitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::ListIdentitiesResponsePrivate
+ * \class QtAws::Ses::ListIdentitiesResponsePrivate
  * \brief The ListIdentitiesResponsePrivate class provides private implementation for ListIdentitiesResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ ListIdentitiesResponsePrivate::ListIdentitiesResponsePrivate(
 }
 
 /*!
- * Parses a SES ListIdentities response element from \a xml.
+ * Parses a Ses ListIdentities response element from \a xml.
  */
 void ListIdentitiesResponsePrivate::parseListIdentitiesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ListIdentitiesResponsePrivate::parseListIdentitiesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

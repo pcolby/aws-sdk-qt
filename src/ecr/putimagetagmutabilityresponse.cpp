@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutImageTagMutabilityResponse
- * \brief The PutImageTagMutabilityResponse class provides an interace for ECR PutImageTagMutability responses.
+ * \class QtAws::Ecr::PutImageTagMutabilityResponse
+ * \brief The PutImageTagMutabilityResponse class provides an interace for Ecr PutImageTagMutability responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putImageTagMutability
  */
@@ -68,7 +74,7 @@ const PutImageTagMutabilityRequest * PutImageTagMutabilityResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ECR PutImageTagMutability \a response.
+ * Parses a successful Ecr PutImageTagMutability \a response.
  */
 void PutImageTagMutabilityResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void PutImageTagMutabilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::PutImageTagMutabilityResponsePrivate
+ * \class QtAws::Ecr::PutImageTagMutabilityResponsePrivate
  * \brief The PutImageTagMutabilityResponsePrivate class provides private implementation for PutImageTagMutabilityResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ PutImageTagMutabilityResponsePrivate::PutImageTagMutabilityResponsePrivate(
 }
 
 /*!
- * Parses a ECR PutImageTagMutability response element from \a xml.
+ * Parses a Ecr PutImageTagMutability response element from \a xml.
  */
 void PutImageTagMutabilityResponsePrivate::parsePutImageTagMutabilityResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void PutImageTagMutabilityResponsePrivate::parsePutImageTagMutabilityResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

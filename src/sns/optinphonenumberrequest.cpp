@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::OptInPhoneNumberRequest
- * \brief The OptInPhoneNumberRequest class provides an interface for SNS OptInPhoneNumber requests.
+ * \class QtAws::Sns::OptInPhoneNumberRequest
+ * \brief The OptInPhoneNumberRequest class provides an interface for Sns OptInPhoneNumber requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SNS::OptInPhoneNumberRequestPrivate
+ * \class QtAws::Sns::OptInPhoneNumberRequestPrivate
  * \brief The OptInPhoneNumberRequestPrivate class provides private implementation for OptInPhoneNumberRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBSecurityGroupResponse
- * \brief The DeleteDBSecurityGroupResponse class provides an interace for RDS DeleteDBSecurityGroup responses.
+ * \class QtAws::Rds::DeleteDBSecurityGroupResponse
+ * \brief The DeleteDBSecurityGroupResponse class provides an interace for Rds DeleteDBSecurityGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteDBSecurityGroup \a response.
+ * Parses a successful Rds DeleteDBSecurityGroup \a response.
  */
 void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBSecurityGroupResponsePrivate
+ * \class QtAws::Rds::DeleteDBSecurityGroupResponsePrivate
  * \brief The DeleteDBSecurityGroupResponsePrivate class provides private implementation for DeleteDBSecurityGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteDBSecurityGroup response element from \a xml.
+ * Parses a Rds DeleteDBSecurityGroup response element from \a xml.
  */
 void DeleteDBSecurityGroupResponsePrivate::parseDeleteDBSecurityGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteDBSecurityGroupResponsePrivate::parseDeleteDBSecurityGroupResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

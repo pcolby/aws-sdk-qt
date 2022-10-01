@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class StsClientPrivate;
 class AssumeRoleRequest;
@@ -78,7 +78,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

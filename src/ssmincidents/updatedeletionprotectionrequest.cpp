@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateDeletionProtectionRequest
- * \brief The UpdateDeletionProtectionRequest class provides an interface for SSMIncidents UpdateDeletionProtection requests.
+ * \class QtAws::SsmIncidents::UpdateDeletionProtectionRequest
+ * \brief The UpdateDeletionProtectionRequest class provides an interface for SsmIncidents UpdateDeletionProtection requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateDeletionProtection
+ * \sa SsmIncidentsClient::updateDeletionProtection
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDeletionProtectionRequest::UpdateDeletionProtectionRequest(const UpdateDeletionProtectionRequest &other)
-    : SSMIncidentsRequest(new UpdateDeletionProtectionRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new UpdateDeletionProtectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ UpdateDeletionProtectionRequest::UpdateDeletionProtectionRequest(const UpdateDel
  * Constructs a UpdateDeletionProtectionRequest object.
  */
 UpdateDeletionProtectionRequest::UpdateDeletionProtectionRequest()
-    : SSMIncidentsRequest(new UpdateDeletionProtectionRequestPrivate(SSMIncidentsRequest::UpdateDeletionProtectionAction, this))
+    : SsmIncidentsRequest(new UpdateDeletionProtectionRequestPrivate(SsmIncidentsRequest::UpdateDeletionProtectionAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDeletionProtectionRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateDeletionProtectionRequestPrivate
+ * \class QtAws::SsmIncidents::UpdateDeletionProtectionRequestPrivate
  * \brief The UpdateDeletionProtectionRequestPrivate class provides private implementation for UpdateDeletionProtectionRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a UpdateDeletionProtectionRequestPrivate object for SSMIncidents \a action,
+ * Constructs a UpdateDeletionProtectionRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 UpdateDeletionProtectionRequestPrivate::UpdateDeletionProtectionRequestPrivate(
-    const SSMIncidentsRequest::Action action, UpdateDeletionProtectionRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, UpdateDeletionProtectionRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ UpdateDeletionProtectionRequestPrivate::UpdateDeletionProtectionRequestPrivate(
  */
 UpdateDeletionProtectionRequestPrivate::UpdateDeletionProtectionRequestPrivate(
     const UpdateDeletionProtectionRequestPrivate &other, UpdateDeletionProtectionRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

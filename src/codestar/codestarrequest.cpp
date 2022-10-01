@@ -261,7 +261,7 @@ QNetworkRequest CodeStarRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action action, CodeStarRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-04-19"))
 {
 
 }

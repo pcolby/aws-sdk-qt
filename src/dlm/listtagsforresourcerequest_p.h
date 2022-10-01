@@ -24,7 +24,7 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class ListTagsForResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

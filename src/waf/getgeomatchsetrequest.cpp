@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetGeoMatchSetRequest
- * \brief The GetGeoMatchSetRequest class provides an interface for WAF GetGeoMatchSet requests.
+ * \class QtAws::Waf::GetGeoMatchSetRequest
+ * \brief The GetGeoMatchSetRequest class provides an interface for Waf GetGeoMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::WAF::GetGeoMatchSetRequestPrivate
+ * \class QtAws::Waf::GetGeoMatchSetRequestPrivate
  * \brief The GetGeoMatchSetRequestPrivate class provides private implementation for GetGeoMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

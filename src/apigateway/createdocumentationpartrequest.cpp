@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationPartRequest
- * \brief The CreateDocumentationPartRequest class provides an interface for APIGateway CreateDocumentationPart requests.
+ * \class QtAws::ApiGateway::CreateDocumentationPartRequest
+ * \brief The CreateDocumentationPartRequest class provides an interface for ApiGateway CreateDocumentationPart requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDocumentationPart
+ * \sa ApiGatewayClient::createDocumentationPart
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocumentationPartRequest &other)
-    : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateDocumentationPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocum
  * Constructs a CreateDocumentationPartRequest object.
  */
 CreateDocumentationPartRequest::CreateDocumentationPartRequest()
-    : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(APIGatewayRequest::CreateDocumentationPartAction, this))
+    : ApiGatewayRequest(new CreateDocumentationPartRequestPrivate(ApiGatewayRequest::CreateDocumentationPartAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationPartRequest::response(QNet
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationPartRequestPrivate
+ * \class QtAws::ApiGateway::CreateDocumentationPartRequestPrivate
  * \brief The CreateDocumentationPartRequestPrivate class provides private implementation for CreateDocumentationPartRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateDocumentationPartRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateDocumentationPartRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
-    const APIGatewayRequest::Action action, CreateDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateDocumentationPartRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
  */
 CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
     const CreateDocumentationPartRequestPrivate &other, CreateDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

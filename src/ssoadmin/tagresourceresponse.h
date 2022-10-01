@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class TagResourceResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT TagResourceResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT TagResourceResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

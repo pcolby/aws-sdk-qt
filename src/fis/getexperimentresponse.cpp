@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::GetExperimentResponse
- * \brief The GetExperimentResponse class provides an interace for FIS GetExperiment responses.
+ * \class QtAws::Fis::GetExperimentResponse
+ * \brief The GetExperimentResponse class provides an interace for Fis GetExperiment responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::getExperiment
  */
@@ -64,7 +64,7 @@ const GetExperimentRequest * GetExperimentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS GetExperiment \a response.
+ * Parses a successful Fis GetExperiment \a response.
  */
 void GetExperimentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void GetExperimentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::GetExperimentResponsePrivate
+ * \class QtAws::Fis::GetExperimentResponsePrivate
  * \brief The GetExperimentResponsePrivate class provides private implementation for GetExperimentResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ GetExperimentResponsePrivate::GetExperimentResponsePrivate(
 }
 
 /*!
- * Parses a FIS GetExperiment response element from \a xml.
+ * Parses a Fis GetExperiment response element from \a xml.
  */
 void GetExperimentResponsePrivate::parseGetExperimentResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetExperimentResponsePrivate::parseGetExperimentResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

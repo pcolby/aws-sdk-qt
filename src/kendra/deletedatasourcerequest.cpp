@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteDataSourceRequest
- * \brief The DeleteDataSourceRequest class provides an interface for kendra DeleteDataSource requests.
+ * \class QtAws::Kendra::DeleteDataSourceRequest
+ * \brief The DeleteDataSourceRequest class provides an interface for Kendra DeleteDataSource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteDataSource
+ * \sa KendraClient::deleteDataSource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &other)
-    : kendraRequest(new DeleteDataSourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DeleteDataSourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &
  * Constructs a DeleteDataSourceRequest object.
  */
 DeleteDataSourceRequest::DeleteDataSourceRequest()
-    : kendraRequest(new DeleteDataSourceRequestPrivate(kendraRequest::DeleteDataSourceAction, this))
+    : KendraRequest(new DeleteDataSourceRequestPrivate(KendraRequest::DeleteDataSourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::kendra::DeleteDataSourceRequestPrivate
+ * \class QtAws::Kendra::DeleteDataSourceRequestPrivate
  * \brief The DeleteDataSourceRequestPrivate class provides private implementation for DeleteDataSourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DeleteDataSourceRequestPrivate object for kendra \a action,
+ * Constructs a DeleteDataSourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
-    const kendraRequest::Action action, DeleteDataSourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DeleteDataSourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::CreateRepositoryRequest
- * \brief The CreateRepositoryRequest class provides an interface for ECRPublic CreateRepository requests.
+ * \class QtAws::EcrPublic::CreateRepositoryRequest
+ * \brief The CreateRepositoryRequest class provides an interface for EcrPublic CreateRepository requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::createRepository
+ * \sa EcrPublicClient::createRepository
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &other)
-    : ECRPublicRequest(new CreateRepositoryRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new CreateRepositoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &
  * Constructs a CreateRepositoryRequest object.
  */
 CreateRepositoryRequest::CreateRepositoryRequest()
-    : ECRPublicRequest(new CreateRepositoryRequestPrivate(ECRPublicRequest::CreateRepositoryAction, this))
+    : EcrPublicRequest(new CreateRepositoryRequestPrivate(EcrPublicRequest::CreateRepositoryAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ECRPublic::CreateRepositoryRequestPrivate
+ * \class QtAws::EcrPublic::CreateRepositoryRequestPrivate
  * \brief The CreateRepositoryRequestPrivate class provides private implementation for CreateRepositoryRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a CreateRepositoryRequestPrivate object for ECRPublic \a action,
+ * Constructs a CreateRepositoryRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
-    const ECRPublicRequest::Action action, CreateRepositoryRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, CreateRepositoryRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const CreateRepositoryRequestPrivate &other, CreateRepositoryRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

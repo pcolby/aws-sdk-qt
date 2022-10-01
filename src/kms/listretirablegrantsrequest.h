@@ -23,7 +23,7 @@
 #include "kmsrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class ListRetirableGrantsRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

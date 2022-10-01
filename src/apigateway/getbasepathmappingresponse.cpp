@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetBasePathMappingResponse
- * \brief The GetBasePathMappingResponse class provides an interace for APIGateway GetBasePathMapping responses.
+ * \class QtAws::ApiGateway::GetBasePathMappingResponse
+ * \brief The GetBasePathMappingResponse class provides an interace for ApiGateway GetBasePathMapping responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getBasePathMapping
+ * \sa ApiGatewayClient::getBasePathMapping
  */
 
 /*!
@@ -49,7 +49,7 @@ GetBasePathMappingResponse::GetBasePathMappingResponse(
         const GetBasePathMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetBasePathMappingResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetBasePathMappingResponsePrivate(this), parent)
 {
     setRequest(new GetBasePathMappingRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetBasePathMappingRequest * GetBasePathMappingResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetBasePathMapping \a response.
+ * Parses a successful ApiGateway GetBasePathMapping \a response.
  */
 void GetBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetBasePathMappingResponsePrivate
+ * \class QtAws::ApiGateway::GetBasePathMappingResponsePrivate
  * \brief The GetBasePathMappingResponsePrivate class provides private implementation for GetBasePathMappingResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetBasePathMappingResponsePrivate object with public implementation \a q.
  */
 GetBasePathMappingResponsePrivate::GetBasePathMappingResponsePrivate(
-    GetBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
+    GetBasePathMappingResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetBasePathMapping response element from \a xml.
+ * Parses a ApiGateway GetBasePathMapping response element from \a xml.
  */
 void GetBasePathMappingResponsePrivate::parseGetBasePathMappingResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetBasePathMappingResponsePrivate::parseGetBasePathMappingResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

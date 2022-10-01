@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListStepsResponse
- * \brief The ListStepsResponse class provides an interace for EMR ListSteps responses.
+ * \class QtAws::Emr::ListStepsResponse
+ * \brief The ListStepsResponse class provides an interace for Emr ListSteps responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listSteps
  */
@@ -64,7 +64,7 @@ const ListStepsRequest * ListStepsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR ListSteps \a response.
+ * Parses a successful Emr ListSteps \a response.
  */
 void ListStepsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListStepsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ListStepsResponsePrivate
+ * \class QtAws::Emr::ListStepsResponsePrivate
  * \brief The ListStepsResponsePrivate class provides private implementation for ListStepsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ListStepsResponsePrivate::ListStepsResponsePrivate(
 }
 
 /*!
- * Parses a EMR ListSteps response element from \a xml.
+ * Parses a Emr ListSteps response element from \a xml.
  */
 void ListStepsResponsePrivate::parseListStepsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListStepsResponsePrivate::parseListStepsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

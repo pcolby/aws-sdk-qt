@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::GetExecutionHistoryRequest
- * \brief The GetExecutionHistoryRequest class provides an interface for SFN GetExecutionHistory requests.
+ * \class QtAws::Sfn::GetExecutionHistoryRequest
+ * \brief The GetExecutionHistoryRequest class provides an interface for Sfn GetExecutionHistory requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SFN::GetExecutionHistoryRequestPrivate
+ * \class QtAws::Sfn::GetExecutionHistoryRequestPrivate
  * \brief The GetExecutionHistoryRequestPrivate class provides private implementation for GetExecutionHistoryRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

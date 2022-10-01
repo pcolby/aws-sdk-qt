@@ -24,7 +24,7 @@
 #include "describedimensionkeysrequest.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class DescribeDimensionKeysRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

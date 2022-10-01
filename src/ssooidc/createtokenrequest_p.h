@@ -24,14 +24,14 @@
 #include "createtokenrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class CreateTokenRequest;
 
-class CreateTokenRequestPrivate : public SsooidcRequestPrivate {
+class CreateTokenRequestPrivate : public SsoOidcRequestPrivate {
 
 public:
-    CreateTokenRequestPrivate(const SsooidcRequest::Action action,
+    CreateTokenRequestPrivate(const SsoOidcRequest::Action action,
                                    CreateTokenRequest * const q);
     CreateTokenRequestPrivate(const CreateTokenRequestPrivate &other,
                                    CreateTokenRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

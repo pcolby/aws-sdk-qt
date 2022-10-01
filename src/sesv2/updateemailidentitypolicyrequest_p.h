@@ -24,14 +24,14 @@
 #include "updateemailidentitypolicyrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class UpdateEmailIdentityPolicyRequest;
 
-class UpdateEmailIdentityPolicyRequestPrivate : public Sesv2RequestPrivate {
+class UpdateEmailIdentityPolicyRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    UpdateEmailIdentityPolicyRequestPrivate(const Sesv2Request::Action action,
+    UpdateEmailIdentityPolicyRequestPrivate(const SESv2Request::Action action,
                                    UpdateEmailIdentityPolicyRequest * const q);
     UpdateEmailIdentityPolicyRequestPrivate(const UpdateEmailIdentityPolicyRequestPrivate &other,
                                    UpdateEmailIdentityPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

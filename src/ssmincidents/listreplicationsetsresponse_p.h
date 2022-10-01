@@ -23,11 +23,11 @@
 #include "ssmincidentsresponse_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class ListReplicationSetsResponse;
 
-class ListReplicationSetsResponsePrivate : public SSMIncidentsResponsePrivate {
+class ListReplicationSetsResponsePrivate : public SsmIncidentsResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

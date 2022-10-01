@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListContainerRecipesRequest
- * \brief The ListContainerRecipesRequest class provides an interface for imagebuilder ListContainerRecipes requests.
+ * \class QtAws::ImageBuilder::ListContainerRecipesRequest
+ * \brief The ListContainerRecipesRequest class provides an interface for ImageBuilder ListContainerRecipes requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listContainerRecipes
+ * \sa ImageBuilderClient::listContainerRecipes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListContainerRecipesRequest::ListContainerRecipesRequest(const ListContainerRecipesRequest &other)
-    : imagebuilderRequest(new ListContainerRecipesRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListContainerRecipesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListContainerRecipesRequest::ListContainerRecipesRequest(const ListContainerReci
  * Constructs a ListContainerRecipesRequest object.
  */
 ListContainerRecipesRequest::ListContainerRecipesRequest()
-    : imagebuilderRequest(new ListContainerRecipesRequestPrivate(imagebuilderRequest::ListContainerRecipesAction, this))
+    : ImageBuilderRequest(new ListContainerRecipesRequestPrivate(ImageBuilderRequest::ListContainerRecipesAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListContainerRecipesRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::imagebuilder::ListContainerRecipesRequestPrivate
+ * \class QtAws::ImageBuilder::ListContainerRecipesRequestPrivate
  * \brief The ListContainerRecipesRequestPrivate class provides private implementation for ListContainerRecipesRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListContainerRecipesRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListContainerRecipesRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListContainerRecipesRequestPrivate::ListContainerRecipesRequestPrivate(
-    const imagebuilderRequest::Action action, ListContainerRecipesRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListContainerRecipesRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListContainerRecipesRequestPrivate::ListContainerRecipesRequestPrivate(
  */
 ListContainerRecipesRequestPrivate::ListContainerRecipesRequestPrivate(
     const ListContainerRecipesRequestPrivate &other, ListContainerRecipesRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

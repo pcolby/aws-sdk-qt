@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsBlockListRequest
- * \brief The UpdateQuerySuggestionsBlockListRequest class provides an interface for kendra UpdateQuerySuggestionsBlockList requests.
+ * \class QtAws::Kendra::UpdateQuerySuggestionsBlockListRequest
+ * \brief The UpdateQuerySuggestionsBlockListRequest class provides an interface for Kendra UpdateQuerySuggestionsBlockList requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateQuerySuggestionsBlockList
+ * \sa KendraClient::updateQuerySuggestionsBlockList
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateQuerySuggestionsBlockListRequest::UpdateQuerySuggestionsBlockListRequest(const UpdateQuerySuggestionsBlockListRequest &other)
-    : kendraRequest(new UpdateQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UpdateQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateQuerySuggestionsBlockListRequest::UpdateQuerySuggestionsBlockListRequest(c
  * Constructs a UpdateQuerySuggestionsBlockListRequest object.
  */
 UpdateQuerySuggestionsBlockListRequest::UpdateQuerySuggestionsBlockListRequest()
-    : kendraRequest(new UpdateQuerySuggestionsBlockListRequestPrivate(kendraRequest::UpdateQuerySuggestionsBlockListAction, this))
+    : KendraRequest(new UpdateQuerySuggestionsBlockListRequestPrivate(KendraRequest::UpdateQuerySuggestionsBlockListAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateQuerySuggestionsBlockListRequest::respo
 }
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsBlockListRequestPrivate
+ * \class QtAws::Kendra::UpdateQuerySuggestionsBlockListRequestPrivate
  * \brief The UpdateQuerySuggestionsBlockListRequestPrivate class provides private implementation for UpdateQuerySuggestionsBlockListRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UpdateQuerySuggestionsBlockListRequestPrivate object for kendra \a action,
+ * Constructs a UpdateQuerySuggestionsBlockListRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UpdateQuerySuggestionsBlockListRequestPrivate::UpdateQuerySuggestionsBlockListRequestPrivate(
-    const kendraRequest::Action action, UpdateQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UpdateQuerySuggestionsBlockListRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateQuerySuggestionsBlockListRequestPrivate::UpdateQuerySuggestionsBlockListRe
  */
 UpdateQuerySuggestionsBlockListRequestPrivate::UpdateQuerySuggestionsBlockListRequestPrivate(
     const UpdateQuerySuggestionsBlockListRequestPrivate &other, UpdateQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

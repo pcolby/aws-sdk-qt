@@ -24,14 +24,14 @@
 #include "addsourceidentifiertosubscriptionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class AddSourceIdentifierToSubscriptionRequest;
 
-class AddSourceIdentifierToSubscriptionRequestPrivate : public DocDBRequestPrivate {
+class AddSourceIdentifierToSubscriptionRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    AddSourceIdentifierToSubscriptionRequestPrivate(const DocDBRequest::Action action,
+    AddSourceIdentifierToSubscriptionRequestPrivate(const DocDbRequest::Action action,
                                    AddSourceIdentifierToSubscriptionRequest * const q);
     AddSourceIdentifierToSubscriptionRequestPrivate(const AddSourceIdentifierToSubscriptionRequestPrivate &other,
                                    AddSourceIdentifierToSubscriptionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -31,6 +31,8 @@
 #include "createanomalydetectorresponse.h"
 #include "createmetricsetrequest.h"
 #include "createmetricsetresponse.h"
+#include "deactivateanomalydetectorrequest.h"
+#include "deactivateanomalydetectorresponse.h"
 #include "deletealertrequest.h"
 #include "deletealertresponse.h"
 #include "deleteanomalydetectorrequest.h"
@@ -43,8 +45,12 @@
 #include "describeanomalydetectorresponse.h"
 #include "describemetricsetrequest.h"
 #include "describemetricsetresponse.h"
+#include "detectmetricsetconfigrequest.h"
+#include "detectmetricsetconfigresponse.h"
 #include "getanomalygrouprequest.h"
 #include "getanomalygroupresponse.h"
+#include "getdataqualitymetricsrequest.h"
+#include "getdataqualitymetricsresponse.h"
 #include "getfeedbackrequest.h"
 #include "getfeedbackresponse.h"
 #include "getsampledatarequest.h"
@@ -53,6 +59,8 @@
 #include "listalertsresponse.h"
 #include "listanomalydetectorsrequest.h"
 #include "listanomalydetectorsresponse.h"
+#include "listanomalygrouprelatedmetricsrequest.h"
+#include "listanomalygrouprelatedmetricsresponse.h"
 #include "listanomalygroupsummariesrequest.h"
 #include "listanomalygroupsummariesresponse.h"
 #include "listanomalygrouptimeseriesrequest.h"
@@ -67,6 +75,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatealertrequest.h"
+#include "updatealertresponse.h"
 #include "updateanomalydetectorrequest.h"
 #include "updateanomalydetectorresponse.h"
 #include "updatemetricsetrequest.h"
@@ -77,7 +87,7 @@
 
 /*!
  * \namespace QtAws::LookoutMetrics
- * \brief Contains classess for accessing Amazon Lookout for Metrics (LookoutMetrics).
+ * \brief Contains classess for accessing Amazon Lookout for Metrics.
  *
  * \inmodule QtAwsLookoutMetrics
  *
@@ -89,7 +99,7 @@ namespace LookoutMetrics {
 
 /*!
  * \class QtAws::LookoutMetrics::LookoutMetricsClient
- * \brief The LookoutMetricsClient class provides access to the Amazon Lookout for Metrics (LookoutMetrics) service.
+ * \brief The LookoutMetricsClient class provides access to the Amazon Lookout for Metrics service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsLookoutMetrics
@@ -219,6 +229,19 @@ CreateMetricSetResponse * LookoutMetricsClient::createMetricSet(const CreateMetr
 
 /*!
  * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
+ * DeactivateAnomalyDetectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deactivates an anomaly
+ */
+DeactivateAnomalyDetectorResponse * LookoutMetricsClient::deactivateAnomalyDetector(const DeactivateAnomalyDetectorRequest &request)
+{
+    return qobject_cast<DeactivateAnomalyDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
  * DeleteAlertResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -313,6 +336,19 @@ DescribeMetricSetResponse * LookoutMetricsClient::describeMetricSet(const Descri
 
 /*!
  * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
+ * DetectMetricSetConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detects an Amazon S3 dataset's file format, interval, and
+ */
+DetectMetricSetConfigResponse * LookoutMetricsClient::detectMetricSetConfig(const DetectMetricSetConfigRequest &request)
+{
+    return qobject_cast<DetectMetricSetConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
  * GetAnomalyGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -322,6 +358,19 @@ DescribeMetricSetResponse * LookoutMetricsClient::describeMetricSet(const Descri
 GetAnomalyGroupResponse * LookoutMetricsClient::getAnomalyGroup(const GetAnomalyGroupRequest &request)
 {
     return qobject_cast<GetAnomalyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
+ * GetDataQualityMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details about the requested data quality
+ */
+GetDataQualityMetricsResponse * LookoutMetricsClient::getDataQualityMetrics(const GetDataQualityMetricsRequest &request)
+{
+    return qobject_cast<GetDataQualityMetricsResponse *>(send(request));
 }
 
 /*!
@@ -384,6 +433,19 @@ ListAlertsResponse * LookoutMetricsClient::listAlerts(const ListAlertsRequest &r
 ListAnomalyDetectorsResponse * LookoutMetricsClient::listAnomalyDetectors(const ListAnomalyDetectorsRequest &request)
 {
     return qobject_cast<ListAnomalyDetectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
+ * ListAnomalyGroupRelatedMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of measures that are potential causes or effects of an anomaly
+ */
+ListAnomalyGroupRelatedMetricsResponse * LookoutMetricsClient::listAnomalyGroupRelatedMetrics(const ListAnomalyGroupRelatedMetricsRequest &request)
+{
+    return qobject_cast<ListAnomalyGroupRelatedMetricsResponse *>(send(request));
 }
 
 /*!
@@ -483,6 +545,19 @@ TagResourceResponse * LookoutMetricsClient::tagResource(const TagResourceRequest
 UntagResourceResponse * LookoutMetricsClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutMetricsClient service, and returns a pointer to an
+ * UpdateAlertResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Make changes to an existing
+ */
+UpdateAlertResponse * LookoutMetricsClient::updateAlert(const UpdateAlertRequest &request)
+{
+    return qobject_cast<UpdateAlertResponse *>(send(request));
 }
 
 /*!

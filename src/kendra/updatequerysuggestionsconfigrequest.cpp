@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsConfigRequest
- * \brief The UpdateQuerySuggestionsConfigRequest class provides an interface for kendra UpdateQuerySuggestionsConfig requests.
+ * \class QtAws::Kendra::UpdateQuerySuggestionsConfigRequest
+ * \brief The UpdateQuerySuggestionsConfigRequest class provides an interface for Kendra UpdateQuerySuggestionsConfig requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateQuerySuggestionsConfig
+ * \sa KendraClient::updateQuerySuggestionsConfig
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateQuerySuggestionsConfigRequest::UpdateQuerySuggestionsConfigRequest(const UpdateQuerySuggestionsConfigRequest &other)
-    : kendraRequest(new UpdateQuerySuggestionsConfigRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UpdateQuerySuggestionsConfigRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateQuerySuggestionsConfigRequest::UpdateQuerySuggestionsConfigRequest(const U
  * Constructs a UpdateQuerySuggestionsConfigRequest object.
  */
 UpdateQuerySuggestionsConfigRequest::UpdateQuerySuggestionsConfigRequest()
-    : kendraRequest(new UpdateQuerySuggestionsConfigRequestPrivate(kendraRequest::UpdateQuerySuggestionsConfigAction, this))
+    : KendraRequest(new UpdateQuerySuggestionsConfigRequestPrivate(KendraRequest::UpdateQuerySuggestionsConfigAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateQuerySuggestionsConfigRequest::response
 }
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsConfigRequestPrivate
+ * \class QtAws::Kendra::UpdateQuerySuggestionsConfigRequestPrivate
  * \brief The UpdateQuerySuggestionsConfigRequestPrivate class provides private implementation for UpdateQuerySuggestionsConfigRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UpdateQuerySuggestionsConfigRequestPrivate object for kendra \a action,
+ * Constructs a UpdateQuerySuggestionsConfigRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UpdateQuerySuggestionsConfigRequestPrivate::UpdateQuerySuggestionsConfigRequestPrivate(
-    const kendraRequest::Action action, UpdateQuerySuggestionsConfigRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UpdateQuerySuggestionsConfigRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateQuerySuggestionsConfigRequestPrivate::UpdateQuerySuggestionsConfigRequestP
  */
 UpdateQuerySuggestionsConfigRequestPrivate::UpdateQuerySuggestionsConfigRequestPrivate(
     const UpdateQuerySuggestionsConfigRequestPrivate &other, UpdateQuerySuggestionsConfigRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -29,6 +29,8 @@
 #include "cancelmailboxexportjobresponse.h"
 #include "createaliasrequest.h"
 #include "createaliasresponse.h"
+#include "createavailabilityconfigurationrequest.h"
+#include "createavailabilityconfigurationresponse.h"
 #include "creategrouprequest.h"
 #include "creategroupresponse.h"
 #include "createmobiledeviceaccessrulerequest.h"
@@ -43,10 +45,16 @@
 #include "deleteaccesscontrolruleresponse.h"
 #include "deletealiasrequest.h"
 #include "deletealiasresponse.h"
+#include "deleteavailabilityconfigurationrequest.h"
+#include "deleteavailabilityconfigurationresponse.h"
+#include "deleteemailmonitoringconfigurationrequest.h"
+#include "deleteemailmonitoringconfigurationresponse.h"
 #include "deletegrouprequest.h"
 #include "deletegroupresponse.h"
 #include "deletemailboxpermissionsrequest.h"
 #include "deletemailboxpermissionsresponse.h"
+#include "deletemobiledeviceaccessoverriderequest.h"
+#include "deletemobiledeviceaccessoverrideresponse.h"
 #include "deletemobiledeviceaccessrulerequest.h"
 #include "deletemobiledeviceaccessruleresponse.h"
 #include "deleteorganizationrequest.h"
@@ -59,8 +67,14 @@
 #include "deleteuserresponse.h"
 #include "deregisterfromworkmailrequest.h"
 #include "deregisterfromworkmailresponse.h"
+#include "deregistermaildomainrequest.h"
+#include "deregistermaildomainresponse.h"
+#include "describeemailmonitoringconfigurationrequest.h"
+#include "describeemailmonitoringconfigurationresponse.h"
 #include "describegrouprequest.h"
 #include "describegroupresponse.h"
+#include "describeinbounddmarcsettingsrequest.h"
+#include "describeinbounddmarcsettingsresponse.h"
 #include "describemailboxexportjobrequest.h"
 #include "describemailboxexportjobresponse.h"
 #include "describeorganizationrequest.h"
@@ -77,22 +91,32 @@
 #include "getaccesscontroleffectresponse.h"
 #include "getdefaultretentionpolicyrequest.h"
 #include "getdefaultretentionpolicyresponse.h"
+#include "getmaildomainrequest.h"
+#include "getmaildomainresponse.h"
 #include "getmailboxdetailsrequest.h"
 #include "getmailboxdetailsresponse.h"
 #include "getmobiledeviceaccesseffectrequest.h"
 #include "getmobiledeviceaccesseffectresponse.h"
+#include "getmobiledeviceaccessoverriderequest.h"
+#include "getmobiledeviceaccessoverrideresponse.h"
 #include "listaccesscontrolrulesrequest.h"
 #include "listaccesscontrolrulesresponse.h"
 #include "listaliasesrequest.h"
 #include "listaliasesresponse.h"
+#include "listavailabilityconfigurationsrequest.h"
+#include "listavailabilityconfigurationsresponse.h"
 #include "listgroupmembersrequest.h"
 #include "listgroupmembersresponse.h"
 #include "listgroupsrequest.h"
 #include "listgroupsresponse.h"
+#include "listmaildomainsrequest.h"
+#include "listmaildomainsresponse.h"
 #include "listmailboxexportjobsrequest.h"
 #include "listmailboxexportjobsresponse.h"
 #include "listmailboxpermissionsrequest.h"
 #include "listmailboxpermissionsresponse.h"
+#include "listmobiledeviceaccessoverridesrequest.h"
+#include "listmobiledeviceaccessoverridesresponse.h"
 #include "listmobiledeviceaccessrulesrequest.h"
 #include "listmobiledeviceaccessrulesresponse.h"
 #include "listorganizationsrequest.h"
@@ -107,10 +131,18 @@
 #include "listusersresponse.h"
 #include "putaccesscontrolrulerequest.h"
 #include "putaccesscontrolruleresponse.h"
+#include "putemailmonitoringconfigurationrequest.h"
+#include "putemailmonitoringconfigurationresponse.h"
+#include "putinbounddmarcsettingsrequest.h"
+#include "putinbounddmarcsettingsresponse.h"
 #include "putmailboxpermissionsrequest.h"
 #include "putmailboxpermissionsresponse.h"
+#include "putmobiledeviceaccessoverriderequest.h"
+#include "putmobiledeviceaccessoverrideresponse.h"
 #include "putretentionpolicyrequest.h"
 #include "putretentionpolicyresponse.h"
+#include "registermaildomainrequest.h"
+#include "registermaildomainresponse.h"
 #include "registertoworkmailrequest.h"
 #include "registertoworkmailresponse.h"
 #include "resetpasswordrequest.h"
@@ -119,8 +151,14 @@
 #include "startmailboxexportjobresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
+#include "testavailabilityconfigurationrequest.h"
+#include "testavailabilityconfigurationresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateavailabilityconfigurationrequest.h"
+#include "updateavailabilityconfigurationresponse.h"
+#include "updatedefaultmaildomainrequest.h"
+#include "updatedefaultmaildomainresponse.h"
 #include "updatemailboxquotarequest.h"
 #include "updatemailboxquotaresponse.h"
 #include "updatemobiledeviceaccessrulerequest.h"
@@ -299,6 +337,19 @@ CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &requ
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateAvailabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an <code>AvailabilityConfiguration</code> for the given WorkMail organization and
+ */
+CreateAvailabilityConfigurationResponse * WorkMailClient::createAvailabilityConfiguration(const CreateAvailabilityConfigurationRequest &request)
+{
+    return qobject_cast<CreateAvailabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * CreateGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -387,6 +438,11 @@ CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an access control rule for the specified WorkMail
+ *
+ * organization> <note>
+ *
+ * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back an
+ * HTTP 200 response with an empty HTTP
  */
 DeleteAccessControlRuleResponse * WorkMailClient::deleteAccessControlRule(const DeleteAccessControlRuleRequest &request)
 {
@@ -404,6 +460,32 @@ DeleteAccessControlRuleResponse * WorkMailClient::deleteAccessControlRule(const 
 DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &request)
 {
     return qobject_cast<DeleteAliasResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteAvailabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the <code>AvailabilityConfiguration</code> for the given WorkMail organization and
+ */
+DeleteAvailabilityConfigurationResponse * WorkMailClient::deleteAvailabilityConfiguration(const DeleteAvailabilityConfigurationRequest &request)
+{
+    return qobject_cast<DeleteAvailabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteEmailMonitoringConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the email monitoring configuration for a specified
+ */
+DeleteEmailMonitoringConfigurationResponse * WorkMailClient::deleteEmailMonitoringConfiguration(const DeleteEmailMonitoringConfigurationRequest &request)
+{
+    return qobject_cast<DeleteEmailMonitoringConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -434,11 +516,34 @@ DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(cons
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteMobileDeviceAccessOverrideResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the mobile device access override for the given WorkMail organization, user, and
+ *
+ * device> <note>
+ *
+ * Deleting already deleted and non-existing overrides does not produce an error. In those cases, the service sends back an
+ * HTTP 200 response with an empty HTTP
+ */
+DeleteMobileDeviceAccessOverrideResponse * WorkMailClient::deleteMobileDeviceAccessOverride(const DeleteMobileDeviceAccessOverrideRequest &request)
+{
+    return qobject_cast<DeleteMobileDeviceAccessOverrideResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * DeleteMobileDeviceAccessRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a mobile device access rule for the specified Amazon WorkMail
+ *
+ * organization> <note>
+ *
+ * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back an
+ * HTTP 200 response with an empty HTTP
  */
 DeleteMobileDeviceAccessRuleResponse * WorkMailClient::deleteMobileDeviceAccessRule(const DeleteMobileDeviceAccessRuleRequest &request)
 {
@@ -523,6 +628,34 @@ DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const De
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeregisterMailDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a domain from Amazon WorkMail, stops email routing to WorkMail, and removes the authorization allowing WorkMail
+ * use. SES keeps the domain because other applications may use it. You must first remove any email address used by
+ * WorkMail entities before you remove the
+ */
+DeregisterMailDomainResponse * WorkMailClient::deregisterMailDomain(const DeregisterMailDomainRequest &request)
+{
+    return qobject_cast<DeregisterMailDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeEmailMonitoringConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the current email monitoring configuration for a specified
+ */
+DescribeEmailMonitoringConfigurationResponse * WorkMailClient::describeEmailMonitoringConfiguration(const DescribeEmailMonitoringConfigurationRequest &request)
+{
+    return qobject_cast<DescribeEmailMonitoringConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * DescribeGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -532,6 +665,19 @@ DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const De
 DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest &request)
 {
     return qobject_cast<DescribeGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeInboundDmarcSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the settings in a DMARC policy for a specified
+ */
+DescribeInboundDmarcSettingsResponse * WorkMailClient::describeInboundDmarcSettings(const DescribeInboundDmarcSettingsRequest &request)
+{
+    return qobject_cast<DescribeInboundDmarcSettingsResponse *>(send(request));
 }
 
 /*!
@@ -641,6 +787,19 @@ GetDefaultRetentionPolicyResponse * WorkMailClient::getDefaultRetentionPolicy(co
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetMailDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details for a mail domain, including domain records required to configure your domain with recommended
+ */
+GetMailDomainResponse * WorkMailClient::getMailDomain(const GetMailDomainRequest &request)
+{
+    return qobject_cast<GetMailDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * GetMailboxDetailsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -665,6 +824,19 @@ GetMailboxDetailsResponse * WorkMailClient::getMailboxDetails(const GetMailboxDe
 GetMobileDeviceAccessEffectResponse * WorkMailClient::getMobileDeviceAccessEffect(const GetMobileDeviceAccessEffectRequest &request)
 {
     return qobject_cast<GetMobileDeviceAccessEffectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetMobileDeviceAccessOverrideResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the mobile device access override for the given WorkMail organization, user, and
+ */
+GetMobileDeviceAccessOverrideResponse * WorkMailClient::getMobileDeviceAccessOverride(const GetMobileDeviceAccessOverrideRequest &request)
+{
+    return qobject_cast<GetMobileDeviceAccessOverrideResponse *>(send(request));
 }
 
 /*!
@@ -695,6 +867,19 @@ ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &requ
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListAvailabilityConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail
+ */
+ListAvailabilityConfigurationsResponse * WorkMailClient::listAvailabilityConfigurations(const ListAvailabilityConfigurationsRequest &request)
+{
+    return qobject_cast<ListAvailabilityConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListGroupMembersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -721,6 +906,19 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListMailDomainsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the mail domains in a given Amazon WorkMail
+ */
+ListMailDomainsResponse * WorkMailClient::listMailDomains(const ListMailDomainsRequest &request)
+{
+    return qobject_cast<ListMailDomainsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListMailboxExportJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -743,6 +941,19 @@ ListMailboxExportJobsResponse * WorkMailClient::listMailboxExportJobs(const List
 ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const ListMailboxPermissionsRequest &request)
 {
     return qobject_cast<ListMailboxPermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListMobileDeviceAccessOverridesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or
+ */
+ListMobileDeviceAccessOverridesResponse * WorkMailClient::listMobileDeviceAccessOverrides(const ListMobileDeviceAccessOverridesRequest &request)
+{
+    return qobject_cast<ListMobileDeviceAccessOverridesResponse *>(send(request));
 }
 
 /*!
@@ -841,6 +1052,32 @@ PutAccessControlRuleResponse * WorkMailClient::putAccessControlRule(const PutAcc
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutEmailMonitoringConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates the email monitoring configuration for a specified
+ */
+PutEmailMonitoringConfigurationResponse * WorkMailClient::putEmailMonitoringConfiguration(const PutEmailMonitoringConfigurationRequest &request)
+{
+    return qobject_cast<PutEmailMonitoringConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutInboundDmarcSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables or disables a DMARC policy for a given
+ */
+PutInboundDmarcSettingsResponse * WorkMailClient::putInboundDmarcSettings(const PutInboundDmarcSettingsRequest &request)
+{
+    return qobject_cast<PutInboundDmarcSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * PutMailboxPermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -854,6 +1091,19 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutMobileDeviceAccessOverrideResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a mobile device access override for the given WorkMail organization, user, and
+ */
+PutMobileDeviceAccessOverrideResponse * WorkMailClient::putMobileDeviceAccessOverride(const PutMobileDeviceAccessOverrideRequest &request)
+{
+    return qobject_cast<PutMobileDeviceAccessOverrideResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * PutRetentionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -863,6 +1113,21 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
 PutRetentionPolicyResponse * WorkMailClient::putRetentionPolicy(const PutRetentionPolicyRequest &request)
 {
     return qobject_cast<PutRetentionPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * RegisterMailDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers a new domain in Amazon WorkMail and SES, and configures it for use by WorkMail. Emails received by SES for
+ * this domain are routed to the specified WorkMail organization, and WorkMail has permanent permission to use the
+ * specified domain for sending your users'
+ */
+RegisterMailDomainResponse * WorkMailClient::registerMailDomain(const RegisterMailDomainRequest &request)
+{
+    return qobject_cast<RegisterMailDomainResponse *>(send(request));
 }
 
 /*!
@@ -931,6 +1196,28 @@ TagResourceResponse * WorkMailClient::tagResource(const TagResourceRequest &requ
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * TestAvailabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Performs a test on an availability provider to ensure that access is allowed. For EWS, it verifies the provided
+ * credentials can be used to successfully log in. For Lambda, it verifies that the Lambda function can be invoked and that
+ * the resource access policy was configured to deny anonymous access. An anonymous invocation is one done without
+ * providing either a <code>SourceArn</code> or <code>SourceAccount</code>
+ *
+ * header> <note>
+ *
+ * The request must contain either one provider definition (<code>EwsProvider</code> or <code>LambdaProvider</code>) or the
+ * <code>DomainName</code> parameter. If the <code>DomainName</code> parameter is provided, the configuration stored under
+ * the <code>DomainName</code> will be tested.
+ */
+TestAvailabilityConfigurationResponse * WorkMailClient::testAvailabilityConfiguration(const TestAvailabilityConfigurationRequest &request)
+{
+    return qobject_cast<TestAvailabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -940,6 +1227,33 @@ TagResourceResponse * WorkMailClient::tagResource(const TagResourceRequest &requ
 UntagResourceResponse * WorkMailClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdateAvailabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing <code>AvailabilityConfiguration</code> for the given WorkMail organization and
+ */
+UpdateAvailabilityConfigurationResponse * WorkMailClient::updateAvailabilityConfiguration(const UpdateAvailabilityConfigurationRequest &request)
+{
+    return qobject_cast<UpdateAvailabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdateDefaultMailDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the default mail domain for an organization. The default mail domain is used by the WorkMail AWS Console to
+ * suggest an email address when enabling a mail user. You can only have one default
+ */
+UpdateDefaultMailDomainResponse * WorkMailClient::updateDefaultMailDomain(const UpdateDefaultMailDomainRequest &request)
+{
+    return qobject_cast<UpdateDefaultMailDomainResponse *>(send(request));
 }
 
 /*!

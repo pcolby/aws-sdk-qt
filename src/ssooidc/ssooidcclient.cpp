@@ -32,23 +32,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SSOOIDC
+ * \namespace QtAws::SsoOidc
  * \brief Contains classess for accessing AWS SSO OIDC.
  *
- * \inmodule QtAwsSsooidc
+ * \inmodule QtAwsSsoOidc
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::SsooidcClient
- * \brief The SsooidcClient class provides access to the AWS SSO OIDC service.
+ * \class QtAws::SsoOidc::SsoOidcClient
+ * \brief The SsoOidcClient class provides access to the AWS SSO OIDC service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -75,21 +75,21 @@ namespace SSOOIDC {
  */
 
 /*!
- * \brief Constructs a SsooidcClient object.
+ * \brief Constructs a SsoOidcClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-SsooidcClient::SsooidcClient(
+SsoOidcClient::SsoOidcClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsooidcClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsoOidcClientPrivate(this), parent)
 {
-    Q_D(SsooidcClient);
+    Q_D(SsoOidcClient);
     d->apiVersion = QStringLiteral("2019-06-10");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("oidc");
@@ -100,7 +100,7 @@ SsooidcClient::SsooidcClient(
 }
 
 /*!
- * \overload SsooidcClient()
+ * \overload SsoOidcClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -110,14 +110,14 @@ SsooidcClient::SsooidcClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-SsooidcClient::SsooidcClient(
+SsoOidcClient::SsoOidcClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsooidcClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsoOidcClientPrivate(this), parent)
 {
-    Q_D(SsooidcClient);
+    Q_D(SsoOidcClient);
     d->apiVersion = QStringLiteral("2019-06-10");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -128,7 +128,7 @@ SsooidcClient::SsooidcClient(
 }
 
 /*!
- * Sends \a request to the SsooidcClient service, and returns a pointer to an
+ * Sends \a request to the SsoOidcClient service, and returns a pointer to an
  * CreateTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -136,13 +136,13 @@ SsooidcClient::SsooidcClient(
  * Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term
  * credentials for the assigned roles in the AWS
  */
-CreateTokenResponse * SsooidcClient::createToken(const CreateTokenRequest &request)
+CreateTokenResponse * SsoOidcClient::createToken(const CreateTokenRequest &request)
 {
     return qobject_cast<CreateTokenResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SsooidcClient service, and returns a pointer to an
+ * Sends \a request to the SsoOidcClient service, and returns a pointer to an
  * RegisterClientResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -150,41 +150,41 @@ CreateTokenResponse * SsooidcClient::createToken(const CreateTokenRequest &reque
  * Registers a client with AWS SSO. This allows clients to initiate device authorization. The output should be persisted
  * for reuse through many authentication
  */
-RegisterClientResponse * SsooidcClient::registerClient(const RegisterClientRequest &request)
+RegisterClientResponse * SsoOidcClient::registerClient(const RegisterClientRequest &request)
 {
     return qobject_cast<RegisterClientResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SsooidcClient service, and returns a pointer to an
+ * Sends \a request to the SsoOidcClient service, and returns a pointer to an
  * StartDeviceAuthorizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Initiates device authorization by requesting a pair of verification codes from the authorization
  */
-StartDeviceAuthorizationResponse * SsooidcClient::startDeviceAuthorization(const StartDeviceAuthorizationRequest &request)
+StartDeviceAuthorizationResponse * SsoOidcClient::startDeviceAuthorization(const StartDeviceAuthorizationRequest &request)
 {
     return qobject_cast<StartDeviceAuthorizationResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::SSOOIDC::SsooidcClientPrivate
- * \brief The SsooidcClientPrivate class provides private implementation for SsooidcClient.
+ * \class QtAws::SsoOidc::SsoOidcClientPrivate
+ * \brief The SsoOidcClientPrivate class provides private implementation for SsoOidcClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a SsooidcClientPrivate object with public implementation \a q.
+ * Constructs a SsoOidcClientPrivate object with public implementation \a q.
  */
-SsooidcClientPrivate::SsooidcClientPrivate(SsooidcClient * const q)
+SsoOidcClientPrivate::SsoOidcClientPrivate(SsoOidcClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ResetDBClusterParameterGroupResponse
- * \brief The ResetDBClusterParameterGroupResponse class provides an interace for DocDB ResetDBClusterParameterGroup responses.
+ * \class QtAws::DocDb::ResetDBClusterParameterGroupResponse
+ * \brief The ResetDBClusterParameterGroupResponse class provides an interace for DocDb ResetDBClusterParameterGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::resetDBClusterParameterGroup
+ * \sa DocDbClient::resetDBClusterParameterGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
         const ResetDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
+    : DocDbResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ResetDBClusterParameterGroupRequest * ResetDBClusterParameterGroupResponse
 
 /*!
  * \reimp
- * Parses a successful DocDB ResetDBClusterParameterGroup \a response.
+ * Parses a successful DocDb ResetDBClusterParameterGroup \a response.
  */
 void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ResetDBClusterParameterGroupResponsePrivate
+ * \class QtAws::DocDb::ResetDBClusterParameterGroupResponsePrivate
  * \brief The ResetDBClusterParameterGroupResponsePrivate class provides private implementation for ResetDBClusterParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ResetDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponsePrivate(
-    ResetDBClusterParameterGroupResponse * const q) : DocDBResponsePrivate(q)
+    ResetDBClusterParameterGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ResetDBClusterParameterGroup response element from \a xml.
+ * Parses a DocDb ResetDBClusterParameterGroup response element from \a xml.
  */
 void ResetDBClusterParameterGroupResponsePrivate::parseResetDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ResetDBClusterParameterGroupResponsePrivate::parseResetDBClusterParameterGr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

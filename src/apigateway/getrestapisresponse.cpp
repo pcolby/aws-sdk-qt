@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetRestApisResponse
- * \brief The GetRestApisResponse class provides an interace for APIGateway GetRestApis responses.
+ * \class QtAws::ApiGateway::GetRestApisResponse
+ * \brief The GetRestApisResponse class provides an interace for ApiGateway GetRestApis responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getRestApis
+ * \sa ApiGatewayClient::getRestApis
  */
 
 /*!
@@ -49,7 +49,7 @@ GetRestApisResponse::GetRestApisResponse(
         const GetRestApisRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetRestApisResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetRestApisResponsePrivate(this), parent)
 {
     setRequest(new GetRestApisRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetRestApisRequest * GetRestApisResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetRestApis \a response.
+ * Parses a successful ApiGateway GetRestApis \a response.
  */
 void GetRestApisResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetRestApisResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetRestApisResponsePrivate
+ * \class QtAws::ApiGateway::GetRestApisResponsePrivate
  * \brief The GetRestApisResponsePrivate class provides private implementation for GetRestApisResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetRestApisResponsePrivate object with public implementation \a q.
  */
 GetRestApisResponsePrivate::GetRestApisResponsePrivate(
-    GetRestApisResponse * const q) : APIGatewayResponsePrivate(q)
+    GetRestApisResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetRestApis response element from \a xml.
+ * Parses a ApiGateway GetRestApis response element from \a xml.
  */
 void GetRestApisResponsePrivate::parseGetRestApisResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetRestApisResponsePrivate::parseGetRestApisResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSFSX_LIBRARY)
 
 add_library(QtAwsFSx
+  qtawsfsxglobal.h
+  fsxclient.h
+  fsxclient_p.h
+  fsxrequest.h
+  fsxrequest_p.h
+  fsxresponse.h
+  fsxresponse_p.h
   associatefilesystemaliasesrequest.h
   associatefilesystemaliasesrequest_p.h
   associatefilesystemaliasesresponse.h
@@ -17,30 +24,70 @@ add_library(QtAwsFSx
   createbackuprequest_p.h
   createbackupresponse.h
   createbackupresponse_p.h
+  createdatarepositoryassociationrequest.h
+  createdatarepositoryassociationrequest_p.h
+  createdatarepositoryassociationresponse.h
+  createdatarepositoryassociationresponse_p.h
   createdatarepositorytaskrequest.h
   createdatarepositorytaskrequest_p.h
   createdatarepositorytaskresponse.h
   createdatarepositorytaskresponse_p.h
-  createfilesystemfrombackuprequest.h
-  createfilesystemfrombackuprequest_p.h
-  createfilesystemfrombackupresponse.h
-  createfilesystemfrombackupresponse_p.h
   createfilesystemrequest.h
   createfilesystemrequest_p.h
   createfilesystemresponse.h
   createfilesystemresponse_p.h
+  createfilesystemfrombackuprequest.h
+  createfilesystemfrombackuprequest_p.h
+  createfilesystemfrombackupresponse.h
+  createfilesystemfrombackupresponse_p.h
+  createsnapshotrequest.h
+  createsnapshotrequest_p.h
+  createsnapshotresponse.h
+  createsnapshotresponse_p.h
+  createstoragevirtualmachinerequest.h
+  createstoragevirtualmachinerequest_p.h
+  createstoragevirtualmachineresponse.h
+  createstoragevirtualmachineresponse_p.h
+  createvolumerequest.h
+  createvolumerequest_p.h
+  createvolumeresponse.h
+  createvolumeresponse_p.h
+  createvolumefrombackuprequest.h
+  createvolumefrombackuprequest_p.h
+  createvolumefrombackupresponse.h
+  createvolumefrombackupresponse_p.h
   deletebackuprequest.h
   deletebackuprequest_p.h
   deletebackupresponse.h
   deletebackupresponse_p.h
+  deletedatarepositoryassociationrequest.h
+  deletedatarepositoryassociationrequest_p.h
+  deletedatarepositoryassociationresponse.h
+  deletedatarepositoryassociationresponse_p.h
   deletefilesystemrequest.h
   deletefilesystemrequest_p.h
   deletefilesystemresponse.h
   deletefilesystemresponse_p.h
+  deletesnapshotrequest.h
+  deletesnapshotrequest_p.h
+  deletesnapshotresponse.h
+  deletesnapshotresponse_p.h
+  deletestoragevirtualmachinerequest.h
+  deletestoragevirtualmachinerequest_p.h
+  deletestoragevirtualmachineresponse.h
+  deletestoragevirtualmachineresponse_p.h
+  deletevolumerequest.h
+  deletevolumerequest_p.h
+  deletevolumeresponse.h
+  deletevolumeresponse_p.h
   describebackupsrequest.h
   describebackupsrequest_p.h
   describebackupsresponse.h
   describebackupsresponse_p.h
+  describedatarepositoryassociationsrequest.h
+  describedatarepositoryassociationsrequest_p.h
+  describedatarepositoryassociationsresponse.h
+  describedatarepositoryassociationsresponse_p.h
   describedatarepositorytasksrequest.h
   describedatarepositorytasksrequest_p.h
   describedatarepositorytasksresponse.h
@@ -53,21 +100,34 @@ add_library(QtAwsFSx
   describefilesystemsrequest_p.h
   describefilesystemsresponse.h
   describefilesystemsresponse_p.h
+  describesnapshotsrequest.h
+  describesnapshotsrequest_p.h
+  describesnapshotsresponse.h
+  describesnapshotsresponse_p.h
+  describestoragevirtualmachinesrequest.h
+  describestoragevirtualmachinesrequest_p.h
+  describestoragevirtualmachinesresponse.h
+  describestoragevirtualmachinesresponse_p.h
+  describevolumesrequest.h
+  describevolumesrequest_p.h
+  describevolumesresponse.h
+  describevolumesresponse_p.h
   disassociatefilesystemaliasesrequest.h
   disassociatefilesystemaliasesrequest_p.h
   disassociatefilesystemaliasesresponse.h
   disassociatefilesystemaliasesresponse_p.h
-  fsxclient.h
-  fsxclient_p.h
-  fsxrequest.h
-  fsxrequest_p.h
-  fsxresponse.h
-  fsxresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsfsxglobal.h
+  releasefilesystemnfsv3locksrequest.h
+  releasefilesystemnfsv3locksrequest_p.h
+  releasefilesystemnfsv3locksresponse.h
+  releasefilesystemnfsv3locksresponse_p.h
+  restorevolumefromsnapshotrequest.h
+  restorevolumefromsnapshotrequest_p.h
+  restorevolumefromsnapshotresponse.h
+  restorevolumefromsnapshotresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -76,10 +136,29 @@ add_library(QtAwsFSx
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatedatarepositoryassociationrequest.h
+  updatedatarepositoryassociationrequest_p.h
+  updatedatarepositoryassociationresponse.h
+  updatedatarepositoryassociationresponse_p.h
   updatefilesystemrequest.h
   updatefilesystemrequest_p.h
   updatefilesystemresponse.h
   updatefilesystemresponse_p.h
+  updatesnapshotrequest.h
+  updatesnapshotrequest_p.h
+  updatesnapshotresponse.h
+  updatesnapshotresponse_p.h
+  updatestoragevirtualmachinerequest.h
+  updatestoragevirtualmachinerequest_p.h
+  updatestoragevirtualmachineresponse.h
+  updatestoragevirtualmachineresponse_p.h
+  updatevolumerequest.h
+  updatevolumerequest_p.h
+  updatevolumeresponse.h
+  updatevolumeresponse_p.h
+  fsxclient.cpp
+  fsxrequest.cpp
+  fsxresponse.cpp
   associatefilesystemaliasesrequest.cpp
   associatefilesystemaliasesresponse.cpp
   canceldatarepositorytaskrequest.cpp
@@ -88,37 +167,72 @@ add_library(QtAwsFSx
   copybackupresponse.cpp
   createbackuprequest.cpp
   createbackupresponse.cpp
+  createdatarepositoryassociationrequest.cpp
+  createdatarepositoryassociationresponse.cpp
   createdatarepositorytaskrequest.cpp
   createdatarepositorytaskresponse.cpp
-  createfilesystemfrombackuprequest.cpp
-  createfilesystemfrombackupresponse.cpp
   createfilesystemrequest.cpp
   createfilesystemresponse.cpp
+  createfilesystemfrombackuprequest.cpp
+  createfilesystemfrombackupresponse.cpp
+  createsnapshotrequest.cpp
+  createsnapshotresponse.cpp
+  createstoragevirtualmachinerequest.cpp
+  createstoragevirtualmachineresponse.cpp
+  createvolumerequest.cpp
+  createvolumeresponse.cpp
+  createvolumefrombackuprequest.cpp
+  createvolumefrombackupresponse.cpp
   deletebackuprequest.cpp
   deletebackupresponse.cpp
+  deletedatarepositoryassociationrequest.cpp
+  deletedatarepositoryassociationresponse.cpp
   deletefilesystemrequest.cpp
   deletefilesystemresponse.cpp
+  deletesnapshotrequest.cpp
+  deletesnapshotresponse.cpp
+  deletestoragevirtualmachinerequest.cpp
+  deletestoragevirtualmachineresponse.cpp
+  deletevolumerequest.cpp
+  deletevolumeresponse.cpp
   describebackupsrequest.cpp
   describebackupsresponse.cpp
+  describedatarepositoryassociationsrequest.cpp
+  describedatarepositoryassociationsresponse.cpp
   describedatarepositorytasksrequest.cpp
   describedatarepositorytasksresponse.cpp
   describefilesystemaliasesrequest.cpp
   describefilesystemaliasesresponse.cpp
   describefilesystemsrequest.cpp
   describefilesystemsresponse.cpp
+  describesnapshotsrequest.cpp
+  describesnapshotsresponse.cpp
+  describestoragevirtualmachinesrequest.cpp
+  describestoragevirtualmachinesresponse.cpp
+  describevolumesrequest.cpp
+  describevolumesresponse.cpp
   disassociatefilesystemaliasesrequest.cpp
   disassociatefilesystemaliasesresponse.cpp
-  fsxclient.cpp
-  fsxrequest.cpp
-  fsxresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  releasefilesystemnfsv3locksrequest.cpp
+  releasefilesystemnfsv3locksresponse.cpp
+  restorevolumefromsnapshotrequest.cpp
+  restorevolumefromsnapshotresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatedatarepositoryassociationrequest.cpp
+  updatedatarepositoryassociationresponse.cpp
   updatefilesystemrequest.cpp
-  updatefilesystemresponse.cpp)
+  updatefilesystemresponse.cpp
+  updatesnapshotrequest.cpp
+  updatesnapshotresponse.cpp
+  updatestoragevirtualmachinerequest.cpp
+  updatestoragevirtualmachineresponse.cpp
+  updatevolumerequest.cpp
+  updatevolumeresponse.cpp)
 
 target_link_libraries(QtAwsFSx
   PRIVATE QtAwsCore

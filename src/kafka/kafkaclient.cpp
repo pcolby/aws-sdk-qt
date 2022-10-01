@@ -27,6 +27,8 @@
 #include "batchdisassociatescramsecretresponse.h"
 #include "createclusterrequest.h"
 #include "createclusterresponse.h"
+#include "createclusterv2request.h"
+#include "createclusterv2response.h"
 #include "createconfigurationrequest.h"
 #include "createconfigurationresponse.h"
 #include "deleteclusterrequest.h"
@@ -37,6 +39,8 @@
 #include "describeclusterresponse.h"
 #include "describeclusteroperationrequest.h"
 #include "describeclusteroperationresponse.h"
+#include "describeclusterv2request.h"
+#include "describeclusterv2response.h"
 #include "describeconfigurationrequest.h"
 #include "describeconfigurationresponse.h"
 #include "describeconfigurationrevisionrequest.h"
@@ -49,6 +53,8 @@
 #include "listclusteroperationsresponse.h"
 #include "listclustersrequest.h"
 #include "listclustersresponse.h"
+#include "listclustersv2request.h"
+#include "listclustersv2response.h"
 #include "listconfigurationrevisionsrequest.h"
 #include "listconfigurationrevisionsresponse.h"
 #include "listconfigurationsrequest.h"
@@ -79,8 +85,12 @@
 #include "updateclusterkafkaversionresponse.h"
 #include "updateconfigurationrequest.h"
 #include "updateconfigurationresponse.h"
+#include "updateconnectivityrequest.h"
+#include "updateconnectivityresponse.h"
 #include "updatemonitoringrequest.h"
 #include "updatemonitoringresponse.h"
+#include "updatesecurityrequest.h"
+#include "updatesecurityresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -201,6 +211,19 @@ CreateClusterResponse * KafkaClient::createCluster(const CreateClusterRequest &r
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * CreateClusterV2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new MSK
+ */
+CreateClusterV2Response * KafkaClient::createClusterV2(const CreateClusterV2Request &request)
+{
+    return qobject_cast<CreateClusterV2Response *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * CreateConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -262,6 +285,19 @@ DescribeClusterResponse * KafkaClient::describeCluster(const DescribeClusterRequ
 DescribeClusterOperationResponse * KafkaClient::describeClusterOperation(const DescribeClusterOperationRequest &request)
 {
     return qobject_cast<DescribeClusterOperationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * DescribeClusterV2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the
+ */
+DescribeClusterV2Response * KafkaClient::describeClusterV2(const DescribeClusterV2Request &request)
+{
+    return qobject_cast<DescribeClusterV2Response *>(send(request));
 }
 
 /*!
@@ -344,6 +380,19 @@ ListClustersResponse * KafkaClient::listClusters(const ListClustersRequest &requ
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * ListClustersV2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all the MSK clusters in the current
+ */
+ListClustersV2Response * KafkaClient::listClustersV2(const ListClustersV2Request &request)
+{
+    return qobject_cast<ListClustersV2Response *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * ListConfigurationRevisionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -374,7 +423,7 @@ ListConfigurationsResponse * KafkaClient::listConfigurations(const ListConfigura
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of Kafka
+ * Returns a list of Apache Kafka
  */
 ListKafkaVersionsResponse * KafkaClient::listKafkaVersions(const ListKafkaVersionsRequest &request)
 {
@@ -538,6 +587,19 @@ UpdateConfigurationResponse * KafkaClient::updateConfiguration(const UpdateConfi
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateConnectivityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the cluster's connectivity
+ */
+UpdateConnectivityResponse * KafkaClient::updateConnectivity(const UpdateConnectivityRequest &request)
+{
+    return qobject_cast<UpdateConnectivityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * UpdateMonitoringResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -548,6 +610,20 @@ UpdateConfigurationResponse * KafkaClient::updateConfiguration(const UpdateConfi
 UpdateMonitoringResponse * KafkaClient::updateMonitoring(const UpdateMonitoringRequest &request)
 {
     return qobject_cast<UpdateMonitoringResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateSecurityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the security settings for the cluster. You can use this operation to specify encryption and authentication on
+ * existing
+ */
+UpdateSecurityResponse * KafkaClient::updateSecurity(const UpdateSecurityRequest &request)
+{
+    return qobject_cast<UpdateSecurityResponse *>(send(request));
 }
 
 /*!

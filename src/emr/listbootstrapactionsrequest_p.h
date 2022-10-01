@@ -24,7 +24,7 @@
 #include "listbootstrapactionsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class ListBootstrapActionsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

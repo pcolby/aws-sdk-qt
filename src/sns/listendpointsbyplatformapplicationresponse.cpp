@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListEndpointsByPlatformApplicationResponse
- * \brief The ListEndpointsByPlatformApplicationResponse class provides an interace for SNS ListEndpointsByPlatformApplication responses.
+ * \class QtAws::Sns::ListEndpointsByPlatformApplicationResponse
+ * \brief The ListEndpointsByPlatformApplicationResponse class provides an interace for Sns ListEndpointsByPlatformApplication responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplica
 
 /*!
  * \reimp
- * Parses a successful SNS ListEndpointsByPlatformApplication \a response.
+ * Parses a successful Sns ListEndpointsByPlatformApplication \a response.
  */
 void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::SNS::ListEndpointsByPlatformApplicationResponsePrivate
+ * \class QtAws::Sns::ListEndpointsByPlatformApplicationResponsePrivate
  * \brief The ListEndpointsByPlatformApplicationResponsePrivate class provides private implementation for ListEndpointsByPlatformApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplic
 }
 
 /*!
- * Parses a SNS ListEndpointsByPlatformApplication response element from \a xml.
+ * Parses a Sns ListEndpointsByPlatformApplication response element from \a xml.
  */
 void ListEndpointsByPlatformApplicationResponsePrivate::parseListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ListEndpointsByPlatformApplicationResponsePrivate::parseListEndpointsByPlat
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

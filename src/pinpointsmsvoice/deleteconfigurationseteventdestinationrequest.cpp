@@ -23,23 +23,23 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetEventDestinationRequest
- * \brief The DeleteConfigurationSetEventDestinationRequest class provides an interface for PinpointSMSVoice DeleteConfigurationSetEventDestination requests.
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetEventDestinationRequest
+ * \brief The DeleteConfigurationSetEventDestinationRequest class provides an interface for PinpointSmsVoice DeleteConfigurationSetEventDestination requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::deleteConfigurationSetEventDestination
+ * \sa PinpointSmsVoiceClient::deleteConfigurationSetEventDestination
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest(const DeleteConfigurationSetEventDestinationRequest &other)
-    : PinpointSMSVoiceRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
+    : PinpointSmsVoiceRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestin
  * Constructs a DeleteConfigurationSetEventDestinationRequest object.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest()
-    : PinpointSMSVoiceRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(PinpointSMSVoiceRequest::DeleteConfigurationSetEventDestinationAction, this))
+    : PinpointSmsVoiceRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(PinpointSmsVoiceRequest::DeleteConfigurationSetEventDestinationAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetEventDestinationRequestPrivate
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetEventDestinationRequestPrivate
  * \brief The DeleteConfigurationSetEventDestinationRequestPrivate class provides private implementation for DeleteConfigurationSetEventDestinationRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
-    const PinpointSMSVoiceRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(action, q)
+    const PinpointSmsVoiceRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)
+    : PinpointSmsVoiceRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEven
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
     const DeleteConfigurationSetEventDestinationRequestPrivate &other, DeleteConfigurationSetEventDestinationRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(other, q)
+    : PinpointSmsVoiceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

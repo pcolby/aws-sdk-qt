@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DisassociateWebACLRequest
- * \brief The DisassociateWebACLRequest class provides an interface for WAFRegional DisassociateWebACL requests.
+ * \class QtAws::WafRegional::DisassociateWebACLRequest
+ * \brief The DisassociateWebACLRequest class provides an interface for WafRegional DisassociateWebACL requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::disassociateWebACL
+ * \sa WafRegionalClient::disassociateWebACL
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DisassociateWebACLRequest::DisassociateWebACLRequest(const DisassociateWebACLRequest &other)
-    : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DisassociateWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DisassociateWebACLRequest::DisassociateWebACLRequest(const DisassociateWebACLReq
  * Constructs a DisassociateWebACLRequest object.
  */
 DisassociateWebACLRequest::DisassociateWebACLRequest()
-    : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(WAFRegionalRequest::DisassociateWebACLAction, this))
+    : WafRegionalRequest(new DisassociateWebACLRequestPrivate(WafRegionalRequest::DisassociateWebACLAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAFRegional::DisassociateWebACLRequestPrivate
+ * \class QtAws::WafRegional::DisassociateWebACLRequestPrivate
  * \brief The DisassociateWebACLRequestPrivate class provides private implementation for DisassociateWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DisassociateWebACLRequestPrivate object for WAFRegional \a action,
+ * Constructs a DisassociateWebACLRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
-    const WAFRegionalRequest::Action action, DisassociateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DisassociateWebACLRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const DisassociateWebACLRequestPrivate &other, DisassociateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

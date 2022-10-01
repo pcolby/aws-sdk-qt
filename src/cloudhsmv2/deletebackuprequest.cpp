@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteBackupRequest
- * \brief The DeleteBackupRequest class provides an interface for CloudHSMV2 DeleteBackup requests.
+ * \class QtAws::CloudHsmV2::DeleteBackupRequest
+ * \brief The DeleteBackupRequest class provides an interface for CloudHsmV2 DeleteBackup requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::deleteBackup
+ * \sa CloudHsmV2Client::deleteBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
-    : CloudHSMV2Request(new DeleteBackupRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new DeleteBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
  * Constructs a DeleteBackupRequest object.
  */
 DeleteBackupRequest::DeleteBackupRequest()
-    : CloudHSMV2Request(new DeleteBackupRequestPrivate(CloudHSMV2Request::DeleteBackupAction, this))
+    : CloudHsmV2Request(new DeleteBackupRequestPrivate(CloudHsmV2Request::DeleteBackupAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteBackupRequestPrivate
+ * \class QtAws::CloudHsmV2::DeleteBackupRequestPrivate
  * \brief The DeleteBackupRequestPrivate class provides private implementation for DeleteBackupRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a DeleteBackupRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a DeleteBackupRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
-    const CloudHSMV2Request::Action action, DeleteBackupRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, DeleteBackupRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DeleteBackupRequestPrivate &other, DeleteBackupRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

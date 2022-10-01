@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DeleteTableResponse
- * \brief The DeleteTableResponse class provides an interace for DynamoDB DeleteTable responses.
+ * \class QtAws::DynamoDb::DeleteTableResponse
+ * \brief The DeleteTableResponse class provides an interace for DynamoDb DeleteTable responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::deleteTable
+ * \sa DynamoDbClient::deleteTable
  */
 
 /*!
@@ -63,7 +63,7 @@ DeleteTableResponse::DeleteTableResponse(
         const DeleteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DeleteTableResponsePrivate(this), parent)
+    : DynamoDbResponse(new DeleteTableResponsePrivate(this), parent)
 {
     setRequest(new DeleteTableRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DeleteTableRequest * DeleteTableResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DeleteTable \a response.
+ * Parses a successful DynamoDb DeleteTable \a response.
  */
 void DeleteTableResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DeleteTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DeleteTableResponsePrivate
+ * \class QtAws::DynamoDb::DeleteTableResponsePrivate
  * \brief The DeleteTableResponsePrivate class provides private implementation for DeleteTableResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DeleteTableResponsePrivate object with public implementation \a q.
  */
 DeleteTableResponsePrivate::DeleteTableResponsePrivate(
-    DeleteTableResponse * const q) : DynamoDBResponsePrivate(q)
+    DeleteTableResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DeleteTable response element from \a xml.
+ * Parses a DynamoDb DeleteTable response element from \a xml.
  */
 void DeleteTableResponsePrivate::parseDeleteTableResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DeleteTableResponsePrivate::parseDeleteTableResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

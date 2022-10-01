@@ -24,11 +24,11 @@
 #include "getworkinglocationrequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class GetWorkingLocationResponsePrivate;
 
-class QTAWSFINSPACEDATA_EXPORT GetWorkingLocationResponse : public FinSpaceDataResponse {
+class QTAWSFINSPACEDATA_EXPORT GetWorkingLocationResponse : public FinspaceDataResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

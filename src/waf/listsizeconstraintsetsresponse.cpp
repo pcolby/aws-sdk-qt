@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListSizeConstraintSetsResponse
- * \brief The ListSizeConstraintSetsResponse class provides an interace for WAF ListSizeConstraintSets responses.
+ * \class QtAws::Waf::ListSizeConstraintSetsResponse
+ * \brief The ListSizeConstraintSetsResponse class provides an interace for Waf ListSizeConstraintSets responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful WAF ListSizeConstraintSets \a response.
+ * Parses a successful Waf ListSizeConstraintSets \a response.
  */
 void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListSizeConstraintSetsResponsePrivate
+ * \class QtAws::Waf::ListSizeConstraintSetsResponsePrivate
  * \brief The ListSizeConstraintSetsResponsePrivate class provides private implementation for ListSizeConstraintSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListSizeConstraintSets response element from \a xml.
+ * Parses a Waf ListSizeConstraintSets response element from \a xml.
  */
 void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

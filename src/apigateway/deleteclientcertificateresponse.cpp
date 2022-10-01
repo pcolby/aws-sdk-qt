@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteClientCertificateResponse
- * \brief The DeleteClientCertificateResponse class provides an interace for APIGateway DeleteClientCertificate responses.
+ * \class QtAws::ApiGateway::DeleteClientCertificateResponse
+ * \brief The DeleteClientCertificateResponse class provides an interace for ApiGateway DeleteClientCertificate responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteClientCertificate
+ * \sa ApiGatewayClient::deleteClientCertificate
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteClientCertificateResponse::DeleteClientCertificateResponse(
         const DeleteClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteClientCertificateResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteClientCertificateRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteClientCertificateRequest * DeleteClientCertificateResponse::request(
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteClientCertificate \a response.
+ * Parses a successful ApiGateway DeleteClientCertificate \a response.
  */
 void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteClientCertificateResponsePrivate
+ * \class QtAws::ApiGateway::DeleteClientCertificateResponsePrivate
  * \brief The DeleteClientCertificateResponsePrivate class provides private implementation for DeleteClientCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteClientCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponsePrivate(
-    DeleteClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteClientCertificateResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteClientCertificate response element from \a xml.
+ * Parses a ApiGateway DeleteClientCertificate response element from \a xml.
  */
 void DeleteClientCertificateResponsePrivate::parseDeleteClientCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteClientCertificateResponsePrivate::parseDeleteClientCertificateRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

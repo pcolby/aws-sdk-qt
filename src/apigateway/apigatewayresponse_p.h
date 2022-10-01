@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayResponse;
+class ApiGatewayResponse;
 
-class APIGatewayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApiGatewayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit APIGatewayResponsePrivate(APIGatewayResponse * const q);
+    explicit ApiGatewayResponsePrivate(ApiGatewayResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(APIGatewayResponse)
-    Q_DISABLE_COPY(APIGatewayResponsePrivate)
+    Q_DECLARE_PUBLIC(ApiGatewayResponse)
+    Q_DISABLE_COPY(ApiGatewayResponsePrivate)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

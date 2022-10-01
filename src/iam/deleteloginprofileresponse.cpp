@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteLoginProfileResponse
- * \brief The DeleteLoginProfileResponse class provides an interace for IAM DeleteLoginProfile responses.
+ * \class QtAws::Iam::DeleteLoginProfileResponse
+ * \brief The DeleteLoginProfileResponse class provides an interace for Iam DeleteLoginProfile responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteLoginProfile
  */
@@ -68,7 +68,7 @@ const DeleteLoginProfileRequest * DeleteLoginProfileResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteLoginProfile \a response.
+ * Parses a successful Iam DeleteLoginProfile \a response.
  */
 void DeleteLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteLoginProfileResponsePrivate
+ * \class QtAws::Iam::DeleteLoginProfileResponsePrivate
  * \brief The DeleteLoginProfileResponsePrivate class provides private implementation for DeleteLoginProfileResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteLoginProfileResponsePrivate::DeleteLoginProfileResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeleteLoginProfile response element from \a xml.
+ * Parses a Iam DeleteLoginProfile response element from \a xml.
  */
 void DeleteLoginProfileResponsePrivate::parseDeleteLoginProfileResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteLoginProfileResponsePrivate::parseDeleteLoginProfileResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

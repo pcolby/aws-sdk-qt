@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeClustersResponse
- * \brief The DescribeClustersResponse class provides an interace for DAX DescribeClusters responses.
+ * \class QtAws::Dax::DescribeClustersResponse
+ * \brief The DescribeClustersResponse class provides an interace for Dax DescribeClusters responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX DescribeClusters \a response.
+ * Parses a successful Dax DescribeClusters \a response.
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DescribeClustersResponsePrivate
+ * \class QtAws::Dax::DescribeClustersResponsePrivate
  * \brief The DescribeClustersResponsePrivate class provides private implementation for DescribeClustersResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 }
 
 /*!
- * Parses a DAX DescribeClusters response element from \a xml.
+ * Parses a Dax DescribeClusters response element from \a xml.
  */
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

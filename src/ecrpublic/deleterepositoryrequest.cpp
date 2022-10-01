@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryRequest
- * \brief The DeleteRepositoryRequest class provides an interface for ECRPublic DeleteRepository requests.
+ * \class QtAws::EcrPublic::DeleteRepositoryRequest
+ * \brief The DeleteRepositoryRequest class provides an interface for EcrPublic DeleteRepository requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::deleteRepository
+ * \sa EcrPublicClient::deleteRepository
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &other)
-    : ECRPublicRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &
  * Constructs a DeleteRepositoryRequest object.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest()
-    : ECRPublicRequest(new DeleteRepositoryRequestPrivate(ECRPublicRequest::DeleteRepositoryAction, this))
+    : EcrPublicRequest(new DeleteRepositoryRequestPrivate(EcrPublicRequest::DeleteRepositoryAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryRequestPrivate
+ * \class QtAws::EcrPublic::DeleteRepositoryRequestPrivate
  * \brief The DeleteRepositoryRequestPrivate class provides private implementation for DeleteRepositoryRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a DeleteRepositoryRequestPrivate object for ECRPublic \a action,
+ * Constructs a DeleteRepositoryRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
-    const ECRPublicRequest::Action action, DeleteRepositoryRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, DeleteRepositoryRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const DeleteRepositoryRequestPrivate &other, DeleteRepositoryRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

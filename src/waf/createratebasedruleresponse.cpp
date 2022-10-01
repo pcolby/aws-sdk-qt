@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateRateBasedRuleResponse
- * \brief The CreateRateBasedRuleResponse class provides an interace for WAF CreateRateBasedRule responses.
+ * \class QtAws::Waf::CreateRateBasedRuleResponse
+ * \brief The CreateRateBasedRuleResponse class provides an interace for Waf CreateRateBasedRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateRateBasedRule \a response.
+ * Parses a successful Waf CreateRateBasedRule \a response.
  */
 void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateRateBasedRuleResponsePrivate
+ * \class QtAws::Waf::CreateRateBasedRuleResponsePrivate
  * \brief The CreateRateBasedRuleResponsePrivate class provides private implementation for CreateRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateRateBasedRule response element from \a xml.
+ * Parses a Waf CreateRateBasedRule response element from \a xml.
  */
 void CreateRateBasedRuleResponsePrivate::parseCreateRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateRateBasedRuleResponsePrivate::parseCreateRateBasedRuleResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::mgnResponse
- * \brief The mgnResponse class provides an interface for mgn responses.
+ * \class QtAws::Mgn::MgnResponse
+ * \brief The MgnResponse class provides an interface for Mgn responses.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a mgnResponse object with parent \a parent.
+ * Constructs a MgnResponse object with parent \a parent.
  */
-mgnResponse::mgnResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new mgnResponsePrivate(this), parent)
+MgnResponse::MgnResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new MgnResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a mgnResponse object with private implementation \a d,
+ * Constructs a MgnResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from mgnResponsePrivate.
+ * implementation that inherits from MgnResponsePrivate.
  */
-mgnResponse::mgnResponse(mgnResponsePrivate * const d, QObject * const parent)
+MgnResponse::MgnResponse(MgnResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ mgnResponse::mgnResponse(mgnResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void mgnResponse::parseFailure(QIODevice &response)
+void MgnResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(mgnResponse);
+    //Q_D(MgnResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void mgnResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::mgn::mgnResponsePrivate
- * \brief The mgnResponsePrivate class provides private implementation for mgnResponse.
+ * \class QtAws::Mgn::MgnResponsePrivate
+ * \brief The MgnResponsePrivate class provides private implementation for MgnResponse.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a mgnResponsePrivate object with public implementation \a q.
+ * Constructs a MgnResponsePrivate object with public implementation \a q.
  */
-mgnResponsePrivate::mgnResponsePrivate(
-    mgnResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+MgnResponsePrivate::MgnResponsePrivate(
+    MgnResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

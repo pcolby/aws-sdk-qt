@@ -309,7 +309,7 @@ QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryRequest::Action action, CloudDirectoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-11"))
 {
 
 }

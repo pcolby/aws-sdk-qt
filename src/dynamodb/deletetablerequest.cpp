@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DeleteTableRequest
- * \brief The DeleteTableRequest class provides an interface for DynamoDB DeleteTable requests.
+ * \class QtAws::DynamoDb::DeleteTableRequest
+ * \brief The DeleteTableRequest class provides an interface for DynamoDb DeleteTable requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::deleteTable
+ * \sa DynamoDbClient::deleteTable
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
-    : DynamoDBRequest(new DeleteTableRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DeleteTableRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
  * Constructs a DeleteTableRequest object.
  */
 DeleteTableRequest::DeleteTableRequest()
-    : DynamoDBRequest(new DeleteTableRequestPrivate(DynamoDBRequest::DeleteTableAction, this))
+    : DynamoDbRequest(new DeleteTableRequestPrivate(DynamoDbRequest::DeleteTableAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::DynamoDB::DeleteTableRequestPrivate
+ * \class QtAws::DynamoDb::DeleteTableRequestPrivate
  * \brief The DeleteTableRequestPrivate class provides private implementation for DeleteTableRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DeleteTableRequestPrivate object for DynamoDB \a action,
+ * Constructs a DeleteTableRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DeleteTableRequestPrivate::DeleteTableRequestPrivate(
-    const DynamoDBRequest::Action action, DeleteTableRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DeleteTableRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DeleteTableRequestPrivate::DeleteTableRequestPrivate(
  */
 DeleteTableRequestPrivate::DeleteTableRequestPrivate(
     const DeleteTableRequestPrivate &other, DeleteTableRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

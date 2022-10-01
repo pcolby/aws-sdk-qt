@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateIntegrationResponseResponse
- * \brief The UpdateIntegrationResponseResponse class provides an interace for APIGateway UpdateIntegrationResponse responses.
+ * \class QtAws::ApiGateway::UpdateIntegrationResponseResponse
+ * \brief The UpdateIntegrationResponseResponse class provides an interace for ApiGateway UpdateIntegrationResponse responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateIntegrationResponse
+ * \sa ApiGatewayClient::updateIntegrationResponse
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateIntegrationResponseResponse::UpdateIntegrationResponseResponse(
         const UpdateIntegrationResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateIntegrationResponseResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateIntegrationResponseResponsePrivate(this), parent)
 {
     setRequest(new UpdateIntegrationResponseRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::requ
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateIntegrationResponse \a response.
+ * Parses a successful ApiGateway UpdateIntegrationResponse \a response.
  */
 void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateIntegrationResponseResponsePrivate
+ * \class QtAws::ApiGateway::UpdateIntegrationResponseResponsePrivate
  * \brief The UpdateIntegrationResponseResponsePrivate class provides private implementation for UpdateIntegrationResponseResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateIntegrationResponseResponsePrivate object with public implementation \a q.
  */
 UpdateIntegrationResponseResponsePrivate::UpdateIntegrationResponseResponsePrivate(
-    UpdateIntegrationResponseResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateIntegrationResponseResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateIntegrationResponse response element from \a xml.
+ * Parses a ApiGateway UpdateIntegrationResponse response element from \a xml.
  */
 void UpdateIntegrationResponseResponsePrivate::parseUpdateIntegrationResponseResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateIntegrationResponseResponsePrivate::parseUpdateIntegrationResponseRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -247,7 +247,7 @@ QNetworkRequest SageMakerFeatureStoreRuntimeRequest::unsignedRequest(const QUrl 
  * with public implementation \a q.
  */
 SageMakerFeatureStoreRuntimeRequestPrivate::SageMakerFeatureStoreRuntimeRequestPrivate(const SageMakerFeatureStoreRuntimeRequest::Action action, SageMakerFeatureStoreRuntimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-07-01"))
 {
 
 }

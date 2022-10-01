@@ -24,11 +24,11 @@
 #include "createipsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateIPSetResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT CreateIPSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT CreateIPSetResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

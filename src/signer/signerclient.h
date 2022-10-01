@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerClientPrivate;
+class SignerClientPrivate;
 class AddProfilePermissionRequest;
 class AddProfilePermissionResponse;
 class CancelSigningProfileRequest;
@@ -65,17 +65,17 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWSSIGNER_EXPORT signerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSIGNER_EXPORT SignerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    signerClient(
+    SignerClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit signerClient(
+    explicit SignerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -100,12 +100,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(signerClient)
-    Q_DISABLE_COPY(signerClient)
+    Q_DECLARE_PRIVATE(SignerClient)
+    Q_DISABLE_COPY(SignerClient)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

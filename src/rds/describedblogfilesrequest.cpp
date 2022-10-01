@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBLogFilesRequest
- * \brief The DescribeDBLogFilesRequest class provides an interface for RDS DescribeDBLogFiles requests.
+ * \class QtAws::Rds::DescribeDBLogFilesRequest
+ * \brief The DescribeDBLogFilesRequest class provides an interface for Rds DescribeDBLogFiles requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBLogFilesRequestPrivate
+ * \class QtAws::Rds::DescribeDBLogFilesRequestPrivate
  * \brief The DescribeDBLogFilesRequestPrivate class provides private implementation for DescribeDBLogFilesRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

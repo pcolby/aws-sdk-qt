@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::BatchExecuteStatementRequest
- * \brief The BatchExecuteStatementRequest class provides an interface for DynamoDB BatchExecuteStatement requests.
+ * \class QtAws::DynamoDb::BatchExecuteStatementRequest
+ * \brief The BatchExecuteStatementRequest class provides an interface for DynamoDb BatchExecuteStatement requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::batchExecuteStatement
+ * \sa DynamoDbClient::batchExecuteStatement
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchExecuteStatementRequest::BatchExecuteStatementRequest(const BatchExecuteStatementRequest &other)
-    : DynamoDBRequest(new BatchExecuteStatementRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new BatchExecuteStatementRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ BatchExecuteStatementRequest::BatchExecuteStatementRequest(const BatchExecuteSta
  * Constructs a BatchExecuteStatementRequest object.
  */
 BatchExecuteStatementRequest::BatchExecuteStatementRequest()
-    : DynamoDBRequest(new BatchExecuteStatementRequestPrivate(DynamoDBRequest::BatchExecuteStatementAction, this))
+    : DynamoDbRequest(new BatchExecuteStatementRequestPrivate(DynamoDbRequest::BatchExecuteStatementAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * BatchExecuteStatementRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::DynamoDB::BatchExecuteStatementRequestPrivate
+ * \class QtAws::DynamoDb::BatchExecuteStatementRequestPrivate
  * \brief The BatchExecuteStatementRequestPrivate class provides private implementation for BatchExecuteStatementRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a BatchExecuteStatementRequestPrivate object for DynamoDB \a action,
+ * Constructs a BatchExecuteStatementRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 BatchExecuteStatementRequestPrivate::BatchExecuteStatementRequestPrivate(
-    const DynamoDBRequest::Action action, BatchExecuteStatementRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, BatchExecuteStatementRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ BatchExecuteStatementRequestPrivate::BatchExecuteStatementRequestPrivate(
  */
 BatchExecuteStatementRequestPrivate::BatchExecuteStatementRequestPrivate(
     const BatchExecuteStatementRequestPrivate &other, BatchExecuteStatementRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

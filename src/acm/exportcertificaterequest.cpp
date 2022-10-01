@@ -23,19 +23,19 @@
 #include "acmrequest_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::ExportCertificateRequest
- * \brief The ExportCertificateRequest class provides an interface for ACM ExportCertificate requests.
+ * \class QtAws::Acm::ExportCertificateRequest
+ * \brief The ExportCertificateRequest class provides an interface for Acm ExportCertificate requests.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::exportCertificate
  */
@@ -78,11 +78,11 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ACM::ExportCertificateRequestPrivate
+ * \class QtAws::Acm::ExportCertificateRequestPrivate
  * \brief The ExportCertificateRequestPrivate class provides private implementation for ExportCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -109,5 +109,5 @@ ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
 
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

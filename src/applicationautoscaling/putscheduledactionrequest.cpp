@@ -35,53 +35,61 @@ namespace ApplicationAutoScaling {
  * 
  *  resources> <ul> <li>
  * 
- *  Amazon ECS
- * 
- *  service> </li> <li>
- * 
- *  Amazon EC2 Spot Fleet
- * 
- *  request> </li> <li>
- * 
- *  Amazon EMR
- * 
- *  cluster> </li> <li>
- * 
  *  Amazon AppStream 2.0
  * 
  *  fleet> </li> <li>
- * 
- *  Amazon DynamoDB tables and global secondary indexes throughput
- * 
- *  capacit> </li> <li>
  * 
  *  Amazon Aurora
  * 
  *  Replica> </li> <li>
  * 
- *  Amazon SageMaker endpoint
- * 
- *  variant> </li> <li>
- * 
- *  Custom resources provided by your own applications or
- * 
- *  service> </li> <li>
- * 
  *  Amazon Comprehend document classification and entity recognizer
  * 
  *  endpoint> </li> <li>
  * 
- *  AWS Lambda function provisioned
+ *  Amazon DynamoDB tables and global secondary indexes throughput
  * 
- *  concurrenc> </li> <li>
+ *  capacit> </li> <li>
+ * 
+ *  Amazon ECS
+ * 
+ *  service> </li> <li>
+ * 
+ *  Amazon ElastiCache for Redis clusters (replication
+ * 
+ *  groups> </li> <li>
+ * 
+ *  Amazon EMR
+ * 
+ *  cluster> </li> <li>
  * 
  *  Amazon Keyspaces (for Apache Cassandra)
  * 
  *  table> </li> <li>
  * 
+ *  Lambda function provisioned
+ * 
+ *  concurrenc> </li> <li>
+ * 
  *  Amazon Managed Streaming for Apache Kafka broker
  * 
- *  storag> </li> </ul>
+ *  storag> </li> <li>
+ * 
+ *  Amazon Neptune
+ * 
+ *  cluster> </li> <li>
+ * 
+ *  Amazon SageMaker endpoint
+ * 
+ *  variant> </li> <li>
+ * 
+ *  Spot Fleets (Amazon
+ * 
+ *  EC2> </li> <li>
+ * 
+ *  Custom resources provided by your own applications or
+ * 
+ *  service> </li> </ul>
  * 
  *  <b>API Summary</b>
  * 
@@ -91,8 +99,9 @@ namespace ApplicationAutoScaling {
  * 
  *  </p <ul> <li>
  * 
- *  Register and manage scalable targets - Register AWS or custom resources as scalable targets (a resource that Application
- *  Auto Scaling can scale), set minimum and maximum capacity limits, and retrieve information on existing scalable
+ *  Register and manage scalable targets - Register Amazon Web Services or custom resources as scalable targets (a resource
+ *  that Application Auto Scaling can scale), set minimum and maximum capacity limits, and retrieve information on existing
+ *  scalable
  * 
  *  targets> </li> <li>
  * 

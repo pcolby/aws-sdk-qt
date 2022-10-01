@@ -1,0 +1,90 @@
+add_compile_definitions(QTAWSCHIMESDKMEDIAPIPELINES_LIBRARY)
+
+add_library(QtAwsChimeSdkMediaPipelines
+  qtawschimesdkmediapipelinesglobal.h
+  chimesdkmediapipelinesclient.h
+  chimesdkmediapipelinesclient_p.h
+  chimesdkmediapipelinesrequest.h
+  chimesdkmediapipelinesrequest_p.h
+  chimesdkmediapipelinesresponse.h
+  chimesdkmediapipelinesresponse_p.h
+  createmediacapturepipelinerequest.h
+  createmediacapturepipelinerequest_p.h
+  createmediacapturepipelineresponse.h
+  createmediacapturepipelineresponse_p.h
+  createmediaconcatenationpipelinerequest.h
+  createmediaconcatenationpipelinerequest_p.h
+  createmediaconcatenationpipelineresponse.h
+  createmediaconcatenationpipelineresponse_p.h
+  createmedialiveconnectorpipelinerequest.h
+  createmedialiveconnectorpipelinerequest_p.h
+  createmedialiveconnectorpipelineresponse.h
+  createmedialiveconnectorpipelineresponse_p.h
+  deletemediacapturepipelinerequest.h
+  deletemediacapturepipelinerequest_p.h
+  deletemediacapturepipelineresponse.h
+  deletemediacapturepipelineresponse_p.h
+  deletemediapipelinerequest.h
+  deletemediapipelinerequest_p.h
+  deletemediapipelineresponse.h
+  deletemediapipelineresponse_p.h
+  getmediacapturepipelinerequest.h
+  getmediacapturepipelinerequest_p.h
+  getmediacapturepipelineresponse.h
+  getmediacapturepipelineresponse_p.h
+  getmediapipelinerequest.h
+  getmediapipelinerequest_p.h
+  getmediapipelineresponse.h
+  getmediapipelineresponse_p.h
+  listmediacapturepipelinesrequest.h
+  listmediacapturepipelinesrequest_p.h
+  listmediacapturepipelinesresponse.h
+  listmediacapturepipelinesresponse_p.h
+  listmediapipelinesrequest.h
+  listmediapipelinesrequest_p.h
+  listmediapipelinesresponse.h
+  listmediapipelinesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  chimesdkmediapipelinesclient.cpp
+  chimesdkmediapipelinesrequest.cpp
+  chimesdkmediapipelinesresponse.cpp
+  createmediacapturepipelinerequest.cpp
+  createmediacapturepipelineresponse.cpp
+  createmediaconcatenationpipelinerequest.cpp
+  createmediaconcatenationpipelineresponse.cpp
+  createmedialiveconnectorpipelinerequest.cpp
+  createmedialiveconnectorpipelineresponse.cpp
+  deletemediacapturepipelinerequest.cpp
+  deletemediacapturepipelineresponse.cpp
+  deletemediapipelinerequest.cpp
+  deletemediapipelineresponse.cpp
+  getmediacapturepipelinerequest.cpp
+  getmediacapturepipelineresponse.cpp
+  getmediapipelinerequest.cpp
+  getmediapipelineresponse.cpp
+  listmediacapturepipelinesrequest.cpp
+  listmediacapturepipelinesresponse.cpp
+  listmediapipelinesrequest.cpp
+  listmediapipelinesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
+
+target_link_libraries(QtAwsChimeSdkMediaPipelines
+  PRIVATE QtAwsCore
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -24,11 +24,11 @@
 #include "listeventtypesrequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class ListEventTypesResponsePrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT ListEventTypesResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT ListEventTypesResponse : public CodestarNotificationsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

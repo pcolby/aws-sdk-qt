@@ -23,11 +23,11 @@
 #include "ssmincidentsrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class CreateReplicationSetRequestPrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT CreateReplicationSetRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT CreateReplicationSetRequest : public SsmIncidentsRequest {
 
 public:
     CreateReplicationSetRequest(const CreateReplicationSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

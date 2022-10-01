@@ -21,60 +21,60 @@
 #include "smsrequest_p.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::SmsRequest
- * \brief The SmsRequest class provides an interface for SMS requests.
+ * \class QtAws::Sms::SmsRequest
+ * \brief The SmsRequest class provides an interface for Sms requests.
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
  * \enum SmsRequest::Action
  *
- * This enum describes the actions that can be performed as SMS
+ * This enum describes the actions that can be performed as Sms
  * requests.
  *
- * \value CreateAppAction SMS CreateApp action.
- * \value CreateReplicationJobAction SMS CreateReplicationJob action.
- * \value DeleteAppAction SMS DeleteApp action.
- * \value DeleteAppLaunchConfigurationAction SMS DeleteAppLaunchConfiguration action.
- * \value DeleteAppReplicationConfigurationAction SMS DeleteAppReplicationConfiguration action.
- * \value DeleteAppValidationConfigurationAction SMS DeleteAppValidationConfiguration action.
- * \value DeleteReplicationJobAction SMS DeleteReplicationJob action.
- * \value DeleteServerCatalogAction SMS DeleteServerCatalog action.
- * \value DisassociateConnectorAction SMS DisassociateConnector action.
- * \value GenerateChangeSetAction SMS GenerateChangeSet action.
- * \value GenerateTemplateAction SMS GenerateTemplate action.
- * \value GetAppAction SMS GetApp action.
- * \value GetAppLaunchConfigurationAction SMS GetAppLaunchConfiguration action.
- * \value GetAppReplicationConfigurationAction SMS GetAppReplicationConfiguration action.
- * \value GetAppValidationConfigurationAction SMS GetAppValidationConfiguration action.
- * \value GetAppValidationOutputAction SMS GetAppValidationOutput action.
- * \value GetConnectorsAction SMS GetConnectors action.
- * \value GetReplicationJobsAction SMS GetReplicationJobs action.
- * \value GetReplicationRunsAction SMS GetReplicationRuns action.
- * \value GetServersAction SMS GetServers action.
- * \value ImportAppCatalogAction SMS ImportAppCatalog action.
- * \value ImportServerCatalogAction SMS ImportServerCatalog action.
- * \value LaunchAppAction SMS LaunchApp action.
- * \value ListAppsAction SMS ListApps action.
- * \value NotifyAppValidationOutputAction SMS NotifyAppValidationOutput action.
- * \value PutAppLaunchConfigurationAction SMS PutAppLaunchConfiguration action.
- * \value PutAppReplicationConfigurationAction SMS PutAppReplicationConfiguration action.
- * \value PutAppValidationConfigurationAction SMS PutAppValidationConfiguration action.
- * \value StartAppReplicationAction SMS StartAppReplication action.
- * \value StartOnDemandAppReplicationAction SMS StartOnDemandAppReplication action.
- * \value StartOnDemandReplicationRunAction SMS StartOnDemandReplicationRun action.
- * \value StopAppReplicationAction SMS StopAppReplication action.
- * \value TerminateAppAction SMS TerminateApp action.
- * \value UpdateAppAction SMS UpdateApp action.
- * \value UpdateReplicationJobAction SMS UpdateReplicationJob action.
+ * \value CreateAppAction Sms CreateApp action.
+ * \value CreateReplicationJobAction Sms CreateReplicationJob action.
+ * \value DeleteAppAction Sms DeleteApp action.
+ * \value DeleteAppLaunchConfigurationAction Sms DeleteAppLaunchConfiguration action.
+ * \value DeleteAppReplicationConfigurationAction Sms DeleteAppReplicationConfiguration action.
+ * \value DeleteAppValidationConfigurationAction Sms DeleteAppValidationConfiguration action.
+ * \value DeleteReplicationJobAction Sms DeleteReplicationJob action.
+ * \value DeleteServerCatalogAction Sms DeleteServerCatalog action.
+ * \value DisassociateConnectorAction Sms DisassociateConnector action.
+ * \value GenerateChangeSetAction Sms GenerateChangeSet action.
+ * \value GenerateTemplateAction Sms GenerateTemplate action.
+ * \value GetAppAction Sms GetApp action.
+ * \value GetAppLaunchConfigurationAction Sms GetAppLaunchConfiguration action.
+ * \value GetAppReplicationConfigurationAction Sms GetAppReplicationConfiguration action.
+ * \value GetAppValidationConfigurationAction Sms GetAppValidationConfiguration action.
+ * \value GetAppValidationOutputAction Sms GetAppValidationOutput action.
+ * \value GetConnectorsAction Sms GetConnectors action.
+ * \value GetReplicationJobsAction Sms GetReplicationJobs action.
+ * \value GetReplicationRunsAction Sms GetReplicationRuns action.
+ * \value GetServersAction Sms GetServers action.
+ * \value ImportAppCatalogAction Sms ImportAppCatalog action.
+ * \value ImportServerCatalogAction Sms ImportServerCatalog action.
+ * \value LaunchAppAction Sms LaunchApp action.
+ * \value ListAppsAction Sms ListApps action.
+ * \value NotifyAppValidationOutputAction Sms NotifyAppValidationOutput action.
+ * \value PutAppLaunchConfigurationAction Sms PutAppLaunchConfiguration action.
+ * \value PutAppReplicationConfigurationAction Sms PutAppReplicationConfiguration action.
+ * \value PutAppValidationConfigurationAction Sms PutAppValidationConfiguration action.
+ * \value StartAppReplicationAction Sms StartAppReplication action.
+ * \value StartOnDemandAppReplicationAction Sms StartOnDemandAppReplication action.
+ * \value StartOnDemandReplicationRunAction Sms StartOnDemandReplicationRun action.
+ * \value StopAppReplicationAction Sms StopAppReplication action.
+ * \value TerminateAppAction Sms TerminateApp action.
+ * \value UpdateAppAction Sms UpdateApp action.
+ * \value UpdateReplicationJobAction Sms UpdateReplicationJob action.
  */
 
 /*!
- * Constructs a SmsRequest object for SMS \a action.
+ * Constructs a SmsRequest object for Sms \a action.
  */
 SmsRequest::SmsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SmsRequestPrivate(action, this))
@@ -115,7 +115,7 @@ SmsRequest::SmsRequest(SmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SMS action to be performed by this request.
+ * Returns the Sms action to be performed by this request.
  */
 SmsRequest::Action SmsRequest::action() const
 {
@@ -124,7 +124,7 @@ SmsRequest::Action SmsRequest::action() const
 }
 
 /*!
- * Returns the name of the SMS action to be performed by this request.
+ * Returns the name of the Sms action to be performed by this request.
  */
 QString SmsRequest::actionString() const
 {
@@ -132,7 +132,7 @@ QString SmsRequest::actionString() const
 }
 
 /*!
- * Returns the SMS API version implemented by this request.
+ * Returns the Sms API version implemented by this request.
  */
 QString SmsRequest::apiVersion() const
 {
@@ -141,7 +141,7 @@ QString SmsRequest::apiVersion() const
 }
 
 /*!
- * Sets the SMS action to be performed by this request to \a action.
+ * Sets the Sms action to be performed by this request to \a action.
  */
 void SmsRequest::setAction(const Action action)
 {
@@ -150,7 +150,7 @@ void SmsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SMS API version to include in this request to \a version.
+ * Sets the Sms API version to include in this request to \a version.
  */
 void SmsRequest::setApiVersion(const QString &version)
 {
@@ -175,15 +175,15 @@ bool SmsRequest::operator==(const SmsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SMS queue name.
+ * Returns \c tue if \a queueName is a valid Sms queue name.
  *
- * @par From SMS FAQs:
+ * @par From Sms FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SMS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Sms queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -250,10 +250,10 @@ void SmsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SMS request using the given
+ * Returns a network request for the Sms request using the given
  * \a endpoint.
  *
- * This SMS implementation builds request URLs by combining the
+ * This Sms implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -266,19 +266,19 @@ QNetworkRequest SmsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SMS::SmsRequestPrivate
+ * \class QtAws::Sms::SmsRequestPrivate
  * \brief The SmsRequestPrivate class provides private implementation for SmsRequest.
  * \internal
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
- * Constructs a SmsRequestPrivate object for SMS \a action,
+ * Constructs a SmsRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 SmsRequestPrivate::SmsRequestPrivate(const SmsRequest::Action action, SmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-10-24"))
 {
 
 }
@@ -304,7 +304,7 @@ SmsRequestPrivate::SmsRequestPrivate(const SmsRequestPrivate &other,
  * invalid.
  *
  * This function converts SmsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SMS service's Action
+ * string representations, appropriate for use with the Sms service's Action
  * query parameters.
  */
 QString SmsRequestPrivate::toString(const SmsRequest::Action &action)
@@ -354,5 +354,5 @@ QString SmsRequestPrivate::toString(const SmsRequest::Action &action)
     return QString();
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

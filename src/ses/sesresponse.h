@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SesResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

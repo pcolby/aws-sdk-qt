@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteLoggingConfigurationResponse
- * \brief The DeleteLoggingConfigurationResponse class provides an interace for WAFRegional DeleteLoggingConfiguration responses.
+ * \class QtAws::WafRegional::DeleteLoggingConfigurationResponse
+ * \brief The DeleteLoggingConfigurationResponse class provides an interace for WafRegional DeleteLoggingConfiguration responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteLoggingConfiguration
+ * \sa WafRegionalClient::deleteLoggingConfiguration
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteLoggingConfigurationResponse::DeleteLoggingConfigurationResponse(
         const DeleteLoggingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteLoggingConfigurationResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteLoggingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoggingConfigurationRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteLoggingConfigurationRequest * DeleteLoggingConfigurationResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteLoggingConfiguration \a response.
+ * Parses a successful WafRegional DeleteLoggingConfiguration \a response.
  */
 void DeleteLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteLoggingConfigurationResponsePrivate
+ * \class QtAws::WafRegional::DeleteLoggingConfigurationResponsePrivate
  * \brief The DeleteLoggingConfigurationResponsePrivate class provides private implementation for DeleteLoggingConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteLoggingConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteLoggingConfigurationResponsePrivate::DeleteLoggingConfigurationResponsePrivate(
-    DeleteLoggingConfigurationResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteLoggingConfigurationResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteLoggingConfiguration response element from \a xml.
+ * Parses a WafRegional DeleteLoggingConfiguration response element from \a xml.
  */
 void DeleteLoggingConfigurationResponsePrivate::parseDeleteLoggingConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteLoggingConfigurationResponsePrivate::parseDeleteLoggingConfigurationR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

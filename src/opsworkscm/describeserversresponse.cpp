@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeServersResponse
- * \brief The DescribeServersResponse class provides an interace for OpsWorksCM DescribeServers responses.
+ * \class QtAws::OpsWorksCm::DescribeServersResponse
+ * \brief The DescribeServersResponse class provides an interace for OpsWorksCm DescribeServers responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeServers
+ * \sa OpsWorksCmClient::describeServers
  */
 
 /*!
@@ -123,7 +123,7 @@ DescribeServersResponse::DescribeServersResponse(
         const DescribeServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DescribeServersResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DescribeServersResponsePrivate(this), parent)
 {
     setRequest(new DescribeServersRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DescribeServersRequest * DescribeServersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DescribeServers \a response.
+ * Parses a successful OpsWorksCm DescribeServers \a response.
  */
 void DescribeServersResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DescribeServersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeServersResponsePrivate
+ * \class QtAws::OpsWorksCm::DescribeServersResponsePrivate
  * \brief The DescribeServersResponsePrivate class provides private implementation for DescribeServersResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DescribeServersResponsePrivate object with public implementation \a q.
  */
 DescribeServersResponsePrivate::DescribeServersResponsePrivate(
-    DescribeServersResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DescribeServersResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DescribeServers response element from \a xml.
+ * Parses a OpsWorksCm DescribeServers response element from \a xml.
  */
 void DescribeServersResponsePrivate::parseDescribeServersResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DescribeServersResponsePrivate::parseDescribeServersResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

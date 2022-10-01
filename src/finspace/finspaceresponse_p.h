@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
-class finspaceResponse;
+class FinspaceResponse;
 
-class finspaceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FinspaceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit finspaceResponsePrivate(finspaceResponse * const q);
+    explicit FinspaceResponsePrivate(FinspaceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(finspaceResponse)
-    Q_DISABLE_COPY(finspaceResponsePrivate)
+    Q_DECLARE_PUBLIC(FinspaceResponse)
+    Q_DISABLE_COPY(FinspaceResponsePrivate)
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

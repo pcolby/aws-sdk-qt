@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::ListPoliciesResponse
- * \brief The ListPoliciesResponse class provides an interace for FMS ListPolicies responses.
+ * \class QtAws::Fms::ListPoliciesResponse
+ * \brief The ListPoliciesResponse class provides an interace for Fms ListPolicies responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const ListPoliciesRequest * ListPoliciesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS ListPolicies \a response.
+ * Parses a successful Fms ListPolicies \a response.
  */
 void ListPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void ListPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::ListPoliciesResponsePrivate
+ * \class QtAws::Fms::ListPoliciesResponsePrivate
  * \brief The ListPoliciesResponsePrivate class provides private implementation for ListPoliciesResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
 }
 
 /*!
- * Parses a FMS ListPolicies response element from \a xml.
+ * Parses a Fms ListPolicies response element from \a xml.
  */
 void ListPoliciesResponsePrivate::parseListPoliciesResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void ListPoliciesResponsePrivate::parseListPoliciesResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

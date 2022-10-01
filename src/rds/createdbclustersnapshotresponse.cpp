@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBClusterSnapshotResponse
- * \brief The CreateDBClusterSnapshotResponse class provides an interace for RDS CreateDBClusterSnapshot responses.
+ * \class QtAws::Rds::CreateDBClusterSnapshotResponse
+ * \brief The CreateDBClusterSnapshotResponse class provides an interace for Rds CreateDBClusterSnapshot responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBClusterSnapshotRequest * CreateDBClusterSnapshotResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBClusterSnapshot \a response.
+ * Parses a successful Rds CreateDBClusterSnapshot \a response.
  */
 void CreateDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBClusterSnapshotResponsePrivate
+ * \class QtAws::Rds::CreateDBClusterSnapshotResponsePrivate
  * \brief The CreateDBClusterSnapshotResponsePrivate class provides private implementation for CreateDBClusterSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBClusterSnapshot response element from \a xml.
+ * Parses a Rds CreateDBClusterSnapshot response element from \a xml.
  */
 void CreateDBClusterSnapshotResponsePrivate::parseCreateDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBClusterSnapshotResponsePrivate::parseCreateDBClusterSnapshotRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

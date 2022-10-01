@@ -24,7 +24,7 @@
 #include "putimagescanningconfigurationrequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class PutImageScanningConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetRateBasedRuleManagedKeysRequest
- * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for WAF GetRateBasedRuleManagedKeys requests.
+ * \class QtAws::Waf::GetRateBasedRuleManagedKeysRequest
+ * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for Waf GetRateBasedRuleManagedKeys requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
 }
 
 /*!
- * \class QtAws::WAF::GetRateBasedRuleManagedKeysRequestPrivate
+ * \class QtAws::Waf::GetRateBasedRuleManagedKeysRequestPrivate
  * \brief The GetRateBasedRuleManagedKeysRequestPrivate class provides private implementation for GetRateBasedRuleManagedKeysRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

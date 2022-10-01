@@ -57,7 +57,10 @@ namespace ServiceDiscovery {
  * \value RegisterInstanceAction ServiceDiscovery RegisterInstance action.
  * \value TagResourceAction ServiceDiscovery TagResource action.
  * \value UntagResourceAction ServiceDiscovery UntagResource action.
+ * \value UpdateHttpNamespaceAction ServiceDiscovery UpdateHttpNamespace action.
  * \value UpdateInstanceCustomHealthStatusAction ServiceDiscovery UpdateInstanceCustomHealthStatus action.
+ * \value UpdatePrivateDnsNamespaceAction ServiceDiscovery UpdatePrivateDnsNamespace action.
+ * \value UpdatePublicDnsNamespaceAction ServiceDiscovery UpdatePublicDnsNamespace action.
  * \value UpdateServiceAction ServiceDiscovery UpdateService action.
  */
 
@@ -266,7 +269,7 @@ QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequest::Action action, ServiceDiscoveryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-03-14"))
 {
 
 }
@@ -321,7 +324,10 @@ QString ServiceDiscoveryRequestPrivate::toString(const ServiceDiscoveryRequest::
         ActionToString(RegisterInstance);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateHttpNamespace);
         ActionToString(UpdateInstanceCustomHealthStatus);
+        ActionToString(UpdatePrivateDnsNamespace);
+        ActionToString(UpdatePublicDnsNamespace);
         ActionToString(UpdateService);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

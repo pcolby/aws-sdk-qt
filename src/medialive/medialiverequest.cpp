@@ -42,6 +42,7 @@ namespace MediaLive {
  * \value BatchStopAction MediaLive BatchStop action.
  * \value BatchUpdateScheduleAction MediaLive BatchUpdateSchedule action.
  * \value CancelInputDeviceTransferAction MediaLive CancelInputDeviceTransfer action.
+ * \value ClaimDeviceAction MediaLive ClaimDevice action.
  * \value CreateChannelAction MediaLive CreateChannel action.
  * \value CreateInputAction MediaLive CreateInput action.
  * \value CreateInputSecurityGroupAction MediaLive CreateInputSecurityGroup action.
@@ -78,8 +79,10 @@ namespace MediaLive {
  * \value ListReservationsAction MediaLive ListReservations action.
  * \value ListTagsForResourceAction MediaLive ListTagsForResource action.
  * \value PurchaseOfferingAction MediaLive PurchaseOffering action.
+ * \value RebootInputDeviceAction MediaLive RebootInputDevice action.
  * \value RejectInputDeviceTransferAction MediaLive RejectInputDeviceTransfer action.
  * \value StartChannelAction MediaLive StartChannel action.
+ * \value StartInputDeviceMaintenanceWindowAction MediaLive StartInputDeviceMaintenanceWindow action.
  * \value StartMultiplexAction MediaLive StartMultiplex action.
  * \value StopChannelAction MediaLive StopChannel action.
  * \value StopMultiplexAction MediaLive StopMultiplex action.
@@ -299,7 +302,7 @@ QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action action, MediaLiveRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-14"))
 {
 
 }
@@ -339,6 +342,7 @@ QString MediaLiveRequestPrivate::toString(const MediaLiveRequest::Action &action
         ActionToString(BatchStop);
         ActionToString(BatchUpdateSchedule);
         ActionToString(CancelInputDeviceTransfer);
+        ActionToString(ClaimDevice);
         ActionToString(CreateChannel);
         ActionToString(CreateInput);
         ActionToString(CreateInputSecurityGroup);
@@ -375,8 +379,10 @@ QString MediaLiveRequestPrivate::toString(const MediaLiveRequest::Action &action
         ActionToString(ListReservations);
         ActionToString(ListTagsForResource);
         ActionToString(PurchaseOffering);
+        ActionToString(RebootInputDevice);
         ActionToString(RejectInputDeviceTransfer);
         ActionToString(StartChannel);
+        ActionToString(StartInputDeviceMaintenanceWindow);
         ActionToString(StartMultiplex);
         ActionToString(StopChannel);
         ActionToString(StopMultiplex);

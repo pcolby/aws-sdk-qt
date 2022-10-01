@@ -24,7 +24,7 @@
 #include "describeexecutionrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class DescribeExecutionResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

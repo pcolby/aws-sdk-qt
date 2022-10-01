@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class QldbClient;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "getimagepipelinerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class GetImagePipelineRequest;
 
-class GetImagePipelineRequestPrivate : public imagebuilderRequestPrivate {
+class GetImagePipelineRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    GetImagePipelineRequestPrivate(const imagebuilderRequest::Action action,
+    GetImagePipelineRequestPrivate(const ImageBuilderRequest::Action action,
                                    GetImagePipelineRequest * const q);
     GetImagePipelineRequestPrivate(const GetImagePipelineRequestPrivate &other,
                                    GetImagePipelineRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

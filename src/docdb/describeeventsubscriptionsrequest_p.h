@@ -24,14 +24,14 @@
 #include "describeeventsubscriptionsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeEventSubscriptionsRequest;
 
-class DescribeEventSubscriptionsRequestPrivate : public DocDBRequestPrivate {
+class DescribeEventSubscriptionsRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeEventSubscriptionsRequestPrivate(const DocDBRequest::Action action,
+    DescribeEventSubscriptionsRequestPrivate(const DocDbRequest::Action action,
                                    DescribeEventSubscriptionsRequest * const q);
     DescribeEventSubscriptionsRequestPrivate(const DescribeEventSubscriptionsRequestPrivate &other,
                                    DescribeEventSubscriptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

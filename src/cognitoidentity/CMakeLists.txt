@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCOGNITOIDENTITY_LIBRARY)
 
 add_library(QtAwsCognitoIdentity
+  qtawscognitoidentityglobal.h
   cognitoidentityclient.h
   cognitoidentityclient_p.h
   cognitoidentityrequest.h
@@ -19,34 +20,34 @@ add_library(QtAwsCognitoIdentity
   deleteidentitypoolrequest_p.h
   deleteidentitypoolresponse.h
   deleteidentitypoolresponse_p.h
-  describeidentitypoolrequest.h
-  describeidentitypoolrequest_p.h
-  describeidentitypoolresponse.h
-  describeidentitypoolresponse_p.h
   describeidentityrequest.h
   describeidentityrequest_p.h
   describeidentityresponse.h
   describeidentityresponse_p.h
+  describeidentitypoolrequest.h
+  describeidentitypoolrequest_p.h
+  describeidentitypoolresponse.h
+  describeidentitypoolresponse_p.h
   getcredentialsforidentityrequest.h
   getcredentialsforidentityrequest_p.h
   getcredentialsforidentityresponse.h
   getcredentialsforidentityresponse_p.h
-  getidentitypoolrolesrequest.h
-  getidentitypoolrolesrequest_p.h
-  getidentitypoolrolesresponse.h
-  getidentitypoolrolesresponse_p.h
   getidrequest.h
   getidrequest_p.h
   getidresponse.h
   getidresponse_p.h
-  getopenidtokenfordeveloperidentityrequest.h
-  getopenidtokenfordeveloperidentityrequest_p.h
-  getopenidtokenfordeveloperidentityresponse.h
-  getopenidtokenfordeveloperidentityresponse_p.h
+  getidentitypoolrolesrequest.h
+  getidentitypoolrolesrequest_p.h
+  getidentitypoolrolesresponse.h
+  getidentitypoolrolesresponse_p.h
   getopenidtokenrequest.h
   getopenidtokenrequest_p.h
   getopenidtokenresponse.h
   getopenidtokenresponse_p.h
+  getopenidtokenfordeveloperidentityrequest.h
+  getopenidtokenfordeveloperidentityrequest_p.h
+  getopenidtokenfordeveloperidentityresponse.h
+  getopenidtokenfordeveloperidentityresponse_p.h
   getprincipaltagattributemaprequest.h
   getprincipaltagattributemaprequest_p.h
   getprincipaltagattributemapresponse.h
@@ -71,7 +72,6 @@ add_library(QtAwsCognitoIdentity
   mergedeveloperidentitiesrequest_p.h
   mergedeveloperidentitiesresponse.h
   mergedeveloperidentitiesresponse_p.h
-  qtawscognitoidentityglobal.h
   setidentitypoolrolesrequest.h
   setidentitypoolrolesrequest_p.h
   setidentitypoolrolesresponse.h
@@ -109,20 +109,20 @@ add_library(QtAwsCognitoIdentity
   deleteidentitiesresponse.cpp
   deleteidentitypoolrequest.cpp
   deleteidentitypoolresponse.cpp
-  describeidentitypoolrequest.cpp
-  describeidentitypoolresponse.cpp
   describeidentityrequest.cpp
   describeidentityresponse.cpp
+  describeidentitypoolrequest.cpp
+  describeidentitypoolresponse.cpp
   getcredentialsforidentityrequest.cpp
   getcredentialsforidentityresponse.cpp
-  getidentitypoolrolesrequest.cpp
-  getidentitypoolrolesresponse.cpp
   getidrequest.cpp
   getidresponse.cpp
-  getopenidtokenfordeveloperidentityrequest.cpp
-  getopenidtokenfordeveloperidentityresponse.cpp
+  getidentitypoolrolesrequest.cpp
+  getidentitypoolrolesresponse.cpp
   getopenidtokenrequest.cpp
   getopenidtokenresponse.cpp
+  getopenidtokenfordeveloperidentityrequest.cpp
+  getopenidtokenfordeveloperidentityresponse.cpp
   getprincipaltagattributemaprequest.cpp
   getprincipaltagattributemapresponse.cpp
   listidentitiesrequest.cpp

@@ -24,14 +24,14 @@
 #include "restoreserverrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class RestoreServerRequest;
 
-class RestoreServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class RestoreServerRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    RestoreServerRequestPrivate(const OpsWorksCMRequest::Action action,
+    RestoreServerRequestPrivate(const OpsWorksCmRequest::Action action,
                                    RestoreServerRequest * const q);
     RestoreServerRequestPrivate(const RestoreServerRequestPrivate &other,
                                    RestoreServerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

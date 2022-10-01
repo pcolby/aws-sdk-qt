@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateUsageRequest
- * \brief The UpdateUsageRequest class provides an interface for APIGateway UpdateUsage requests.
+ * \class QtAws::ApiGateway::UpdateUsageRequest
+ * \brief The UpdateUsageRequest class provides an interface for ApiGateway UpdateUsage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateUsage
+ * \sa ApiGatewayClient::updateUsage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateUsageRequest::UpdateUsageRequest(const UpdateUsageRequest &other)
-    : APIGatewayRequest(new UpdateUsageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateUsageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateUsageRequest::UpdateUsageRequest(const UpdateUsageRequest &other)
  * Constructs a UpdateUsageRequest object.
  */
 UpdateUsageRequest::UpdateUsageRequest()
-    : APIGatewayRequest(new UpdateUsageRequestPrivate(APIGatewayRequest::UpdateUsageAction, this))
+    : ApiGatewayRequest(new UpdateUsageRequestPrivate(ApiGatewayRequest::UpdateUsageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateUsageRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateUsageRequestPrivate
+ * \class QtAws::ApiGateway::UpdateUsageRequestPrivate
  * \brief The UpdateUsageRequestPrivate class provides private implementation for UpdateUsageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateUsageRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateUsageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateUsageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateUsageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
  */
 UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
     const UpdateUsageRequestPrivate &other, UpdateUsageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

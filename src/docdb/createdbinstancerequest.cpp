@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateDBInstanceRequest
- * \brief The CreateDBInstanceRequest class provides an interface for DocDB CreateDBInstance requests.
+ * \class QtAws::DocDb::CreateDBInstanceRequest
+ * \brief The CreateDBInstanceRequest class provides an interface for DocDb CreateDBInstance requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createDBInstance
+ * \sa DocDbClient::createDBInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &other)
-    : DocDBRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &
  * Constructs a CreateDBInstanceRequest object.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest()
-    : DocDBRequest(new CreateDBInstanceRequestPrivate(DocDBRequest::CreateDBInstanceAction, this))
+    : DocDbRequest(new CreateDBInstanceRequestPrivate(DocDbRequest::CreateDBInstanceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DocDB::CreateDBInstanceRequestPrivate
+ * \class QtAws::DocDb::CreateDBInstanceRequestPrivate
  * \brief The CreateDBInstanceRequestPrivate class provides private implementation for CreateDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a CreateDBInstanceRequestPrivate object for DocDB \a action,
+ * Constructs a CreateDBInstanceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
-    const DocDBRequest::Action action, CreateDBInstanceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, CreateDBInstanceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
     const CreateDBInstanceRequestPrivate &other, CreateDBInstanceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

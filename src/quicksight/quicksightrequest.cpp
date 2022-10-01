@@ -38,10 +38,13 @@ namespace QuickSight {
  *
  * \value CancelIngestionAction QuickSight CancelIngestion action.
  * \value CreateAccountCustomizationAction QuickSight CreateAccountCustomization action.
+ * \value CreateAccountSubscriptionAction QuickSight CreateAccountSubscription action.
  * \value CreateAnalysisAction QuickSight CreateAnalysis action.
  * \value CreateDashboardAction QuickSight CreateDashboard action.
  * \value CreateDataSetAction QuickSight CreateDataSet action.
  * \value CreateDataSourceAction QuickSight CreateDataSource action.
+ * \value CreateFolderAction QuickSight CreateFolder action.
+ * \value CreateFolderMembershipAction QuickSight CreateFolderMembership action.
  * \value CreateGroupAction QuickSight CreateGroup action.
  * \value CreateGroupMembershipAction QuickSight CreateGroupMembership action.
  * \value CreateIAMPolicyAssignmentAction QuickSight CreateIAMPolicyAssignment action.
@@ -56,6 +59,8 @@ namespace QuickSight {
  * \value DeleteDashboardAction QuickSight DeleteDashboard action.
  * \value DeleteDataSetAction QuickSight DeleteDataSet action.
  * \value DeleteDataSourceAction QuickSight DeleteDataSource action.
+ * \value DeleteFolderAction QuickSight DeleteFolder action.
+ * \value DeleteFolderMembershipAction QuickSight DeleteFolderMembership action.
  * \value DeleteGroupAction QuickSight DeleteGroup action.
  * \value DeleteGroupMembershipAction QuickSight DeleteGroupMembership action.
  * \value DeleteIAMPolicyAssignmentAction QuickSight DeleteIAMPolicyAssignment action.
@@ -68,6 +73,7 @@ namespace QuickSight {
  * \value DeleteUserByPrincipalIdAction QuickSight DeleteUserByPrincipalId action.
  * \value DescribeAccountCustomizationAction QuickSight DescribeAccountCustomization action.
  * \value DescribeAccountSettingsAction QuickSight DescribeAccountSettings action.
+ * \value DescribeAccountSubscriptionAction QuickSight DescribeAccountSubscription action.
  * \value DescribeAnalysisAction QuickSight DescribeAnalysis action.
  * \value DescribeAnalysisPermissionsAction QuickSight DescribeAnalysisPermissions action.
  * \value DescribeDashboardAction QuickSight DescribeDashboard action.
@@ -76,9 +82,14 @@ namespace QuickSight {
  * \value DescribeDataSetPermissionsAction QuickSight DescribeDataSetPermissions action.
  * \value DescribeDataSourceAction QuickSight DescribeDataSource action.
  * \value DescribeDataSourcePermissionsAction QuickSight DescribeDataSourcePermissions action.
+ * \value DescribeFolderAction QuickSight DescribeFolder action.
+ * \value DescribeFolderPermissionsAction QuickSight DescribeFolderPermissions action.
+ * \value DescribeFolderResolvedPermissionsAction QuickSight DescribeFolderResolvedPermissions action.
  * \value DescribeGroupAction QuickSight DescribeGroup action.
+ * \value DescribeGroupMembershipAction QuickSight DescribeGroupMembership action.
  * \value DescribeIAMPolicyAssignmentAction QuickSight DescribeIAMPolicyAssignment action.
  * \value DescribeIngestionAction QuickSight DescribeIngestion action.
+ * \value DescribeIpRestrictionAction QuickSight DescribeIpRestriction action.
  * \value DescribeNamespaceAction QuickSight DescribeNamespace action.
  * \value DescribeTemplateAction QuickSight DescribeTemplate action.
  * \value DescribeTemplateAliasAction QuickSight DescribeTemplateAlias action.
@@ -87,6 +98,8 @@ namespace QuickSight {
  * \value DescribeThemeAliasAction QuickSight DescribeThemeAlias action.
  * \value DescribeThemePermissionsAction QuickSight DescribeThemePermissions action.
  * \value DescribeUserAction QuickSight DescribeUser action.
+ * \value GenerateEmbedUrlForAnonymousUserAction QuickSight GenerateEmbedUrlForAnonymousUser action.
+ * \value GenerateEmbedUrlForRegisteredUserAction QuickSight GenerateEmbedUrlForRegisteredUser action.
  * \value GetDashboardEmbedUrlAction QuickSight GetDashboardEmbedUrl action.
  * \value GetSessionEmbedUrlAction QuickSight GetSessionEmbedUrl action.
  * \value ListAnalysesAction QuickSight ListAnalyses action.
@@ -94,6 +107,8 @@ namespace QuickSight {
  * \value ListDashboardsAction QuickSight ListDashboards action.
  * \value ListDataSetsAction QuickSight ListDataSets action.
  * \value ListDataSourcesAction QuickSight ListDataSources action.
+ * \value ListFolderMembersAction QuickSight ListFolderMembers action.
+ * \value ListFoldersAction QuickSight ListFolders action.
  * \value ListGroupMembershipsAction QuickSight ListGroupMemberships action.
  * \value ListGroupsAction QuickSight ListGroups action.
  * \value ListIAMPolicyAssignmentsAction QuickSight ListIAMPolicyAssignments action.
@@ -113,6 +128,8 @@ namespace QuickSight {
  * \value RestoreAnalysisAction QuickSight RestoreAnalysis action.
  * \value SearchAnalysesAction QuickSight SearchAnalyses action.
  * \value SearchDashboardsAction QuickSight SearchDashboards action.
+ * \value SearchFoldersAction QuickSight SearchFolders action.
+ * \value SearchGroupsAction QuickSight SearchGroups action.
  * \value TagResourceAction QuickSight TagResource action.
  * \value UntagResourceAction QuickSight UntagResource action.
  * \value UpdateAccountCustomizationAction QuickSight UpdateAccountCustomization action.
@@ -126,8 +143,12 @@ namespace QuickSight {
  * \value UpdateDataSetPermissionsAction QuickSight UpdateDataSetPermissions action.
  * \value UpdateDataSourceAction QuickSight UpdateDataSource action.
  * \value UpdateDataSourcePermissionsAction QuickSight UpdateDataSourcePermissions action.
+ * \value UpdateFolderAction QuickSight UpdateFolder action.
+ * \value UpdateFolderPermissionsAction QuickSight UpdateFolderPermissions action.
  * \value UpdateGroupAction QuickSight UpdateGroup action.
  * \value UpdateIAMPolicyAssignmentAction QuickSight UpdateIAMPolicyAssignment action.
+ * \value UpdateIpRestrictionAction QuickSight UpdateIpRestriction action.
+ * \value UpdatePublicSharingSettingsAction QuickSight UpdatePublicSharingSettings action.
  * \value UpdateTemplateAction QuickSight UpdateTemplate action.
  * \value UpdateTemplateAliasAction QuickSight UpdateTemplateAlias action.
  * \value UpdateTemplatePermissionsAction QuickSight UpdateTemplatePermissions action.
@@ -342,7 +363,7 @@ QNetworkRequest QuickSightRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 QuickSightRequestPrivate::QuickSightRequestPrivate(const QuickSightRequest::Action action, QuickSightRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-04-01"))
 {
 
 }
@@ -378,10 +399,13 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
     switch (action) {
         ActionToString(CancelIngestion);
         ActionToString(CreateAccountCustomization);
+        ActionToString(CreateAccountSubscription);
         ActionToString(CreateAnalysis);
         ActionToString(CreateDashboard);
         ActionToString(CreateDataSet);
         ActionToString(CreateDataSource);
+        ActionToString(CreateFolder);
+        ActionToString(CreateFolderMembership);
         ActionToString(CreateGroup);
         ActionToString(CreateGroupMembership);
         ActionToString(CreateIAMPolicyAssignment);
@@ -396,6 +420,8 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(DeleteDashboard);
         ActionToString(DeleteDataSet);
         ActionToString(DeleteDataSource);
+        ActionToString(DeleteFolder);
+        ActionToString(DeleteFolderMembership);
         ActionToString(DeleteGroup);
         ActionToString(DeleteGroupMembership);
         ActionToString(DeleteIAMPolicyAssignment);
@@ -408,6 +434,7 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(DeleteUserByPrincipalId);
         ActionToString(DescribeAccountCustomization);
         ActionToString(DescribeAccountSettings);
+        ActionToString(DescribeAccountSubscription);
         ActionToString(DescribeAnalysis);
         ActionToString(DescribeAnalysisPermissions);
         ActionToString(DescribeDashboard);
@@ -416,9 +443,14 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(DescribeDataSetPermissions);
         ActionToString(DescribeDataSource);
         ActionToString(DescribeDataSourcePermissions);
+        ActionToString(DescribeFolder);
+        ActionToString(DescribeFolderPermissions);
+        ActionToString(DescribeFolderResolvedPermissions);
         ActionToString(DescribeGroup);
+        ActionToString(DescribeGroupMembership);
         ActionToString(DescribeIAMPolicyAssignment);
         ActionToString(DescribeIngestion);
+        ActionToString(DescribeIpRestriction);
         ActionToString(DescribeNamespace);
         ActionToString(DescribeTemplate);
         ActionToString(DescribeTemplateAlias);
@@ -427,6 +459,8 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(DescribeThemeAlias);
         ActionToString(DescribeThemePermissions);
         ActionToString(DescribeUser);
+        ActionToString(GenerateEmbedUrlForAnonymousUser);
+        ActionToString(GenerateEmbedUrlForRegisteredUser);
         ActionToString(GetDashboardEmbedUrl);
         ActionToString(GetSessionEmbedUrl);
         ActionToString(ListAnalyses);
@@ -434,6 +468,8 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(ListDashboards);
         ActionToString(ListDataSets);
         ActionToString(ListDataSources);
+        ActionToString(ListFolderMembers);
+        ActionToString(ListFolders);
         ActionToString(ListGroupMemberships);
         ActionToString(ListGroups);
         ActionToString(ListIAMPolicyAssignments);
@@ -453,6 +489,8 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(RestoreAnalysis);
         ActionToString(SearchAnalyses);
         ActionToString(SearchDashboards);
+        ActionToString(SearchFolders);
+        ActionToString(SearchGroups);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAccountCustomization);
@@ -466,8 +504,12 @@ QString QuickSightRequestPrivate::toString(const QuickSightRequest::Action &acti
         ActionToString(UpdateDataSetPermissions);
         ActionToString(UpdateDataSource);
         ActionToString(UpdateDataSourcePermissions);
+        ActionToString(UpdateFolder);
+        ActionToString(UpdateFolderPermissions);
         ActionToString(UpdateGroup);
         ActionToString(UpdateIAMPolicyAssignment);
+        ActionToString(UpdateIpRestriction);
+        ActionToString(UpdatePublicSharingSettings);
         ActionToString(UpdateTemplate);
         ActionToString(UpdateTemplateAlias);
         ActionToString(UpdateTemplatePermissions);

@@ -21,40 +21,40 @@
 #include "acmrequest_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::AcmRequest
- * \brief The AcmRequest class provides an interface for ACM requests.
+ * \class QtAws::Acm::AcmRequest
+ * \brief The AcmRequest class provides an interface for Acm requests.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
  * \enum AcmRequest::Action
  *
- * This enum describes the actions that can be performed as ACM
+ * This enum describes the actions that can be performed as Acm
  * requests.
  *
- * \value AddTagsToCertificateAction ACM AddTagsToCertificate action.
- * \value DeleteCertificateAction ACM DeleteCertificate action.
- * \value DescribeCertificateAction ACM DescribeCertificate action.
- * \value ExportCertificateAction ACM ExportCertificate action.
- * \value GetAccountConfigurationAction ACM GetAccountConfiguration action.
- * \value GetCertificateAction ACM GetCertificate action.
- * \value ImportCertificateAction ACM ImportCertificate action.
- * \value ListCertificatesAction ACM ListCertificates action.
- * \value ListTagsForCertificateAction ACM ListTagsForCertificate action.
- * \value PutAccountConfigurationAction ACM PutAccountConfiguration action.
- * \value RemoveTagsFromCertificateAction ACM RemoveTagsFromCertificate action.
- * \value RenewCertificateAction ACM RenewCertificate action.
- * \value RequestCertificateAction ACM RequestCertificate action.
- * \value ResendValidationEmailAction ACM ResendValidationEmail action.
- * \value UpdateCertificateOptionsAction ACM UpdateCertificateOptions action.
+ * \value AddTagsToCertificateAction Acm AddTagsToCertificate action.
+ * \value DeleteCertificateAction Acm DeleteCertificate action.
+ * \value DescribeCertificateAction Acm DescribeCertificate action.
+ * \value ExportCertificateAction Acm ExportCertificate action.
+ * \value GetAccountConfigurationAction Acm GetAccountConfiguration action.
+ * \value GetCertificateAction Acm GetCertificate action.
+ * \value ImportCertificateAction Acm ImportCertificate action.
+ * \value ListCertificatesAction Acm ListCertificates action.
+ * \value ListTagsForCertificateAction Acm ListTagsForCertificate action.
+ * \value PutAccountConfigurationAction Acm PutAccountConfiguration action.
+ * \value RemoveTagsFromCertificateAction Acm RemoveTagsFromCertificate action.
+ * \value RenewCertificateAction Acm RenewCertificate action.
+ * \value RequestCertificateAction Acm RequestCertificate action.
+ * \value ResendValidationEmailAction Acm ResendValidationEmail action.
+ * \value UpdateCertificateOptionsAction Acm UpdateCertificateOptions action.
  */
 
 /*!
- * Constructs a AcmRequest object for ACM \a action.
+ * Constructs a AcmRequest object for Acm \a action.
  */
 AcmRequest::AcmRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AcmRequestPrivate(action, this))
@@ -95,7 +95,7 @@ AcmRequest::AcmRequest(AcmRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the ACM action to be performed by this request.
+ * Returns the Acm action to be performed by this request.
  */
 AcmRequest::Action AcmRequest::action() const
 {
@@ -104,7 +104,7 @@ AcmRequest::Action AcmRequest::action() const
 }
 
 /*!
- * Returns the name of the ACM action to be performed by this request.
+ * Returns the name of the Acm action to be performed by this request.
  */
 QString AcmRequest::actionString() const
 {
@@ -112,7 +112,7 @@ QString AcmRequest::actionString() const
 }
 
 /*!
- * Returns the ACM API version implemented by this request.
+ * Returns the Acm API version implemented by this request.
  */
 QString AcmRequest::apiVersion() const
 {
@@ -121,7 +121,7 @@ QString AcmRequest::apiVersion() const
 }
 
 /*!
- * Sets the ACM action to be performed by this request to \a action.
+ * Sets the Acm action to be performed by this request to \a action.
  */
 void AcmRequest::setAction(const Action action)
 {
@@ -130,7 +130,7 @@ void AcmRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the ACM API version to include in this request to \a version.
+ * Sets the Acm API version to include in this request to \a version.
  */
 void AcmRequest::setApiVersion(const QString &version)
 {
@@ -155,15 +155,15 @@ bool AcmRequest::operator==(const AcmRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ACM queue name.
+ * Returns \c tue if \a queueName is a valid Acm queue name.
  *
- * @par From ACM FAQs:
+ * @par From Acm FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ACM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Acm queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -230,10 +230,10 @@ void AcmRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the ACM request using the given
+ * Returns a network request for the Acm request using the given
  * \a endpoint.
  *
- * This ACM implementation builds request URLs by combining the
+ * This Acm implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -246,19 +246,19 @@ QNetworkRequest AcmRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::ACM::AcmRequestPrivate
+ * \class QtAws::Acm::AcmRequestPrivate
  * \brief The AcmRequestPrivate class provides private implementation for AcmRequest.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
- * Constructs a AcmRequestPrivate object for ACM \a action,
+ * Constructs a AcmRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 AcmRequestPrivate::AcmRequestPrivate(const AcmRequest::Action action, AcmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-12-08"))
 {
 
 }
@@ -284,7 +284,7 @@ AcmRequestPrivate::AcmRequestPrivate(const AcmRequestPrivate &other,
  * invalid.
  *
  * This function converts AcmRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ACM service's Action
+ * string representations, appropriate for use with the Acm service's Action
  * query parameters.
  */
 QString AcmRequestPrivate::toString(const AcmRequest::Action &action)
@@ -314,5 +314,5 @@ QString AcmRequestPrivate::toString(const AcmRequest::Action &action)
     return QString();
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

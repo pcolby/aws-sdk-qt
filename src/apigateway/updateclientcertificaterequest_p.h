@@ -24,14 +24,14 @@
 #include "updateclientcertificaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateClientCertificateRequest;
 
-class UpdateClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateClientCertificateRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UpdateClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
+    UpdateClientCertificateRequestPrivate(const ApiGatewayRequest::Action action,
                                    UpdateClientCertificateRequest * const q);
     UpdateClientCertificateRequestPrivate(const UpdateClientCertificateRequestPrivate &other,
                                    UpdateClientCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

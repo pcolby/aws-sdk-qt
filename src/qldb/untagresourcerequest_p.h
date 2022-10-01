@@ -24,7 +24,7 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class UntagResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

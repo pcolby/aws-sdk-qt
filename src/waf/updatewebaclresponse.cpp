@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateWebACLResponse
- * \brief The UpdateWebACLResponse class provides an interace for WAF UpdateWebACL responses.
+ * \class QtAws::Waf::UpdateWebACLResponse
+ * \brief The UpdateWebACLResponse class provides an interace for Waf UpdateWebACL responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateWebACL \a response.
+ * Parses a successful Waf UpdateWebACL \a response.
  */
 void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateWebACLResponsePrivate
+ * \class QtAws::Waf::UpdateWebACLResponsePrivate
  * \brief The UpdateWebACLResponsePrivate class provides private implementation for UpdateWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateWebACL response element from \a xml.
+ * Parses a Waf UpdateWebACL response element from \a xml.
  */
 void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

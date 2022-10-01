@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::AddTagsResponse
- * \brief The AddTagsResponse class provides an interace for EMR AddTags responses.
+ * \class QtAws::Emr::AddTagsResponse
+ * \brief The AddTagsResponse class provides an interace for Emr AddTags responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::addTags
  */
@@ -64,7 +64,7 @@ const AddTagsRequest * AddTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR AddTags \a response.
+ * Parses a successful Emr AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::AddTagsResponsePrivate
+ * \class QtAws::Emr::AddTagsResponsePrivate
  * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * Parses a EMR AddTags response element from \a xml.
+ * Parses a Emr AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

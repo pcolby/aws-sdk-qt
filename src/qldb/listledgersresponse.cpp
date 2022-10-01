@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ListLedgersResponse
- * \brief The ListLedgersResponse class provides an interace for QLDB ListLedgers responses.
+ * \class QtAws::Qldb::ListLedgersResponse
+ * \brief The ListLedgersResponse class provides an interace for Qldb ListLedgers responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const ListLedgersRequest * ListLedgersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB ListLedgers \a response.
+ * Parses a successful Qldb ListLedgers \a response.
  */
 void ListLedgersResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void ListLedgersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::ListLedgersResponsePrivate
+ * \class QtAws::Qldb::ListLedgersResponsePrivate
  * \brief The ListLedgersResponsePrivate class provides private implementation for ListLedgersResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ ListLedgersResponsePrivate::ListLedgersResponsePrivate(
 }
 
 /*!
- * Parses a QLDB ListLedgers response element from \a xml.
+ * Parses a Qldb ListLedgers response element from \a xml.
  */
 void ListLedgersResponsePrivate::parseListLedgersResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListLedgersResponsePrivate::parseListLedgersResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class SsmRequestPrivate;
 
 class QTAWSSSM_EXPORT SsmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSM.
+    /// Actions supported by Ssm.
     enum Action {
         AddTagsToResourceAction,
         AssociateOpsItemRelatedItemAction,
@@ -210,7 +210,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

@@ -21,71 +21,75 @@
 #include "kmsrequest_p.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 /*!
- * \class QtAws::KMS::KmsRequest
- * \brief The KmsRequest class provides an interface for KMS requests.
+ * \class QtAws::Kms::KmsRequest
+ * \brief The KmsRequest class provides an interface for Kms requests.
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  */
 
 /*!
  * \enum KmsRequest::Action
  *
- * This enum describes the actions that can be performed as KMS
+ * This enum describes the actions that can be performed as Kms
  * requests.
  *
- * \value CancelKeyDeletionAction KMS CancelKeyDeletion action.
- * \value ConnectCustomKeyStoreAction KMS ConnectCustomKeyStore action.
- * \value CreateAliasAction KMS CreateAlias action.
- * \value CreateCustomKeyStoreAction KMS CreateCustomKeyStore action.
- * \value CreateGrantAction KMS CreateGrant action.
- * \value CreateKeyAction KMS CreateKey action.
- * \value DecryptAction KMS Decrypt action.
- * \value DeleteAliasAction KMS DeleteAlias action.
- * \value DeleteCustomKeyStoreAction KMS DeleteCustomKeyStore action.
- * \value DeleteImportedKeyMaterialAction KMS DeleteImportedKeyMaterial action.
- * \value DescribeCustomKeyStoresAction KMS DescribeCustomKeyStores action.
- * \value DescribeKeyAction KMS DescribeKey action.
- * \value DisableKeyAction KMS DisableKey action.
- * \value DisableKeyRotationAction KMS DisableKeyRotation action.
- * \value DisconnectCustomKeyStoreAction KMS DisconnectCustomKeyStore action.
- * \value EnableKeyAction KMS EnableKey action.
- * \value EnableKeyRotationAction KMS EnableKeyRotation action.
- * \value EncryptAction KMS Encrypt action.
- * \value GenerateDataKeyAction KMS GenerateDataKey action.
- * \value GenerateDataKeyPairAction KMS GenerateDataKeyPair action.
- * \value GenerateDataKeyPairWithoutPlaintextAction KMS GenerateDataKeyPairWithoutPlaintext action.
- * \value GenerateDataKeyWithoutPlaintextAction KMS GenerateDataKeyWithoutPlaintext action.
- * \value GenerateRandomAction KMS GenerateRandom action.
- * \value GetKeyPolicyAction KMS GetKeyPolicy action.
- * \value GetKeyRotationStatusAction KMS GetKeyRotationStatus action.
- * \value GetParametersForImportAction KMS GetParametersForImport action.
- * \value GetPublicKeyAction KMS GetPublicKey action.
- * \value ImportKeyMaterialAction KMS ImportKeyMaterial action.
- * \value ListAliasesAction KMS ListAliases action.
- * \value ListGrantsAction KMS ListGrants action.
- * \value ListKeyPoliciesAction KMS ListKeyPolicies action.
- * \value ListKeysAction KMS ListKeys action.
- * \value ListResourceTagsAction KMS ListResourceTags action.
- * \value ListRetirableGrantsAction KMS ListRetirableGrants action.
- * \value PutKeyPolicyAction KMS PutKeyPolicy action.
- * \value ReEncryptAction KMS ReEncrypt action.
- * \value RetireGrantAction KMS RetireGrant action.
- * \value RevokeGrantAction KMS RevokeGrant action.
- * \value ScheduleKeyDeletionAction KMS ScheduleKeyDeletion action.
- * \value SignAction KMS Sign action.
- * \value TagResourceAction KMS TagResource action.
- * \value UntagResourceAction KMS UntagResource action.
- * \value UpdateAliasAction KMS UpdateAlias action.
- * \value UpdateCustomKeyStoreAction KMS UpdateCustomKeyStore action.
- * \value UpdateKeyDescriptionAction KMS UpdateKeyDescription action.
- * \value VerifyAction KMS Verify action.
+ * \value CancelKeyDeletionAction Kms CancelKeyDeletion action.
+ * \value ConnectCustomKeyStoreAction Kms ConnectCustomKeyStore action.
+ * \value CreateAliasAction Kms CreateAlias action.
+ * \value CreateCustomKeyStoreAction Kms CreateCustomKeyStore action.
+ * \value CreateGrantAction Kms CreateGrant action.
+ * \value CreateKeyAction Kms CreateKey action.
+ * \value DecryptAction Kms Decrypt action.
+ * \value DeleteAliasAction Kms DeleteAlias action.
+ * \value DeleteCustomKeyStoreAction Kms DeleteCustomKeyStore action.
+ * \value DeleteImportedKeyMaterialAction Kms DeleteImportedKeyMaterial action.
+ * \value DescribeCustomKeyStoresAction Kms DescribeCustomKeyStores action.
+ * \value DescribeKeyAction Kms DescribeKey action.
+ * \value DisableKeyAction Kms DisableKey action.
+ * \value DisableKeyRotationAction Kms DisableKeyRotation action.
+ * \value DisconnectCustomKeyStoreAction Kms DisconnectCustomKeyStore action.
+ * \value EnableKeyAction Kms EnableKey action.
+ * \value EnableKeyRotationAction Kms EnableKeyRotation action.
+ * \value EncryptAction Kms Encrypt action.
+ * \value GenerateDataKeyAction Kms GenerateDataKey action.
+ * \value GenerateDataKeyPairAction Kms GenerateDataKeyPair action.
+ * \value GenerateDataKeyPairWithoutPlaintextAction Kms GenerateDataKeyPairWithoutPlaintext action.
+ * \value GenerateDataKeyWithoutPlaintextAction Kms GenerateDataKeyWithoutPlaintext action.
+ * \value GenerateMacAction Kms GenerateMac action.
+ * \value GenerateRandomAction Kms GenerateRandom action.
+ * \value GetKeyPolicyAction Kms GetKeyPolicy action.
+ * \value GetKeyRotationStatusAction Kms GetKeyRotationStatus action.
+ * \value GetParametersForImportAction Kms GetParametersForImport action.
+ * \value GetPublicKeyAction Kms GetPublicKey action.
+ * \value ImportKeyMaterialAction Kms ImportKeyMaterial action.
+ * \value ListAliasesAction Kms ListAliases action.
+ * \value ListGrantsAction Kms ListGrants action.
+ * \value ListKeyPoliciesAction Kms ListKeyPolicies action.
+ * \value ListKeysAction Kms ListKeys action.
+ * \value ListResourceTagsAction Kms ListResourceTags action.
+ * \value ListRetirableGrantsAction Kms ListRetirableGrants action.
+ * \value PutKeyPolicyAction Kms PutKeyPolicy action.
+ * \value ReEncryptAction Kms ReEncrypt action.
+ * \value ReplicateKeyAction Kms ReplicateKey action.
+ * \value RetireGrantAction Kms RetireGrant action.
+ * \value RevokeGrantAction Kms RevokeGrant action.
+ * \value ScheduleKeyDeletionAction Kms ScheduleKeyDeletion action.
+ * \value SignAction Kms Sign action.
+ * \value TagResourceAction Kms TagResource action.
+ * \value UntagResourceAction Kms UntagResource action.
+ * \value UpdateAliasAction Kms UpdateAlias action.
+ * \value UpdateCustomKeyStoreAction Kms UpdateCustomKeyStore action.
+ * \value UpdateKeyDescriptionAction Kms UpdateKeyDescription action.
+ * \value UpdatePrimaryRegionAction Kms UpdatePrimaryRegion action.
+ * \value VerifyAction Kms Verify action.
+ * \value VerifyMacAction Kms VerifyMac action.
  */
 
 /*!
- * Constructs a KmsRequest object for KMS \a action.
+ * Constructs a KmsRequest object for Kms \a action.
  */
 KmsRequest::KmsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KmsRequestPrivate(action, this))
@@ -126,7 +130,7 @@ KmsRequest::KmsRequest(KmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the KMS action to be performed by this request.
+ * Returns the Kms action to be performed by this request.
  */
 KmsRequest::Action KmsRequest::action() const
 {
@@ -135,7 +139,7 @@ KmsRequest::Action KmsRequest::action() const
 }
 
 /*!
- * Returns the name of the KMS action to be performed by this request.
+ * Returns the name of the Kms action to be performed by this request.
  */
 QString KmsRequest::actionString() const
 {
@@ -143,7 +147,7 @@ QString KmsRequest::actionString() const
 }
 
 /*!
- * Returns the KMS API version implemented by this request.
+ * Returns the Kms API version implemented by this request.
  */
 QString KmsRequest::apiVersion() const
 {
@@ -152,7 +156,7 @@ QString KmsRequest::apiVersion() const
 }
 
 /*!
- * Sets the KMS action to be performed by this request to \a action.
+ * Sets the Kms action to be performed by this request to \a action.
  */
 void KmsRequest::setAction(const Action action)
 {
@@ -161,7 +165,7 @@ void KmsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the KMS API version to include in this request to \a version.
+ * Sets the Kms API version to include in this request to \a version.
  */
 void KmsRequest::setApiVersion(const QString &version)
 {
@@ -186,15 +190,15 @@ bool KmsRequest::operator==(const KmsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid KMS queue name.
+ * Returns \c tue if \a queueName is a valid Kms queue name.
  *
- * @par From KMS FAQs:
+ * @par From Kms FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid KMS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Kms queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -261,10 +265,10 @@ void KmsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the KMS request using the given
+ * Returns a network request for the Kms request using the given
  * \a endpoint.
  *
- * This KMS implementation builds request URLs by combining the
+ * This Kms implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -277,19 +281,19 @@ QNetworkRequest KmsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::KMS::KmsRequestPrivate
+ * \class QtAws::Kms::KmsRequestPrivate
  * \brief The KmsRequestPrivate class provides private implementation for KmsRequest.
  * \internal
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  */
 
 /*!
- * Constructs a KmsRequestPrivate object for KMS \a action,
+ * Constructs a KmsRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 KmsRequestPrivate::KmsRequestPrivate(const KmsRequest::Action action, KmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-11-01"))
 {
 
 }
@@ -315,7 +319,7 @@ KmsRequestPrivate::KmsRequestPrivate(const KmsRequestPrivate &other,
  * invalid.
  *
  * This function converts KmsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the KMS service's Action
+ * string representations, appropriate for use with the Kms service's Action
  * query parameters.
  */
 QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
@@ -345,6 +349,7 @@ QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
         ActionToString(GenerateDataKeyPair);
         ActionToString(GenerateDataKeyPairWithoutPlaintext);
         ActionToString(GenerateDataKeyWithoutPlaintext);
+        ActionToString(GenerateMac);
         ActionToString(GenerateRandom);
         ActionToString(GetKeyPolicy);
         ActionToString(GetKeyRotationStatus);
@@ -359,6 +364,7 @@ QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
         ActionToString(ListRetirableGrants);
         ActionToString(PutKeyPolicy);
         ActionToString(ReEncrypt);
+        ActionToString(ReplicateKey);
         ActionToString(RetireGrant);
         ActionToString(RevokeGrant);
         ActionToString(ScheduleKeyDeletion);
@@ -368,7 +374,9 @@ QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
         ActionToString(UpdateAlias);
         ActionToString(UpdateCustomKeyStore);
         ActionToString(UpdateKeyDescription);
+        ActionToString(UpdatePrimaryRegion);
         ActionToString(Verify);
+        ActionToString(VerifyMac);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
@@ -376,5 +384,5 @@ QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
     return QString();
 }
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws

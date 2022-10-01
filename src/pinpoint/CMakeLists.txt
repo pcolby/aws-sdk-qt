@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSPINPOINT_LIBRARY)
 
 add_library(QtAwsPinpoint
+  qtawspinpointglobal.h
+  pinpointclient.h
+  pinpointclient_p.h
+  pinpointrequest.h
+  pinpointrequest_p.h
+  pinpointresponse.h
+  pinpointresponse_p.h
   createapprequest.h
   createapprequest_p.h
   createappresponse.h
@@ -21,6 +28,10 @@ add_library(QtAwsPinpoint
   createimportjobrequest_p.h
   createimportjobresponse.h
   createimportjobresponse_p.h
+  createinapptemplaterequest.h
+  createinapptemplaterequest_p.h
+  createinapptemplateresponse.h
+  createinapptemplateresponse_p.h
   createjourneyrequest.h
   createjourneyrequest_p.h
   createjourneyresponse.h
@@ -97,6 +108,10 @@ add_library(QtAwsPinpoint
   deletegcmchannelrequest_p.h
   deletegcmchannelresponse.h
   deletegcmchannelresponse_p.h
+  deleteinapptemplaterequest.h
+  deleteinapptemplaterequest_p.h
+  deleteinapptemplateresponse.h
+  deleteinapptemplateresponse_p.h
   deletejourneyrequest.h
   deletejourneyrequest_p.h
   deletejourneyresponse.h
@@ -153,6 +168,10 @@ add_library(QtAwsPinpoint
   getapnsvoipsandboxchannelrequest_p.h
   getapnsvoipsandboxchannelresponse.h
   getapnsvoipsandboxchannelresponse_p.h
+  getapprequest.h
+  getapprequest_p.h
+  getappresponse.h
+  getappresponse_p.h
   getapplicationdaterangekpirequest.h
   getapplicationdaterangekpirequest_p.h
   getapplicationdaterangekpiresponse.h
@@ -161,10 +180,6 @@ add_library(QtAwsPinpoint
   getapplicationsettingsrequest_p.h
   getapplicationsettingsresponse.h
   getapplicationsettingsresponse_p.h
-  getapprequest.h
-  getapprequest_p.h
-  getappresponse.h
-  getappresponse_p.h
   getappsrequest.h
   getappsrequest_p.h
   getappsresponse.h
@@ -173,6 +188,10 @@ add_library(QtAwsPinpoint
   getbaiduchannelrequest_p.h
   getbaiduchannelresponse.h
   getbaiduchannelresponse_p.h
+  getcampaignrequest.h
+  getcampaignrequest_p.h
+  getcampaignresponse.h
+  getcampaignresponse_p.h
   getcampaignactivitiesrequest.h
   getcampaignactivitiesrequest_p.h
   getcampaignactivitiesresponse.h
@@ -181,14 +200,6 @@ add_library(QtAwsPinpoint
   getcampaigndaterangekpirequest_p.h
   getcampaigndaterangekpiresponse.h
   getcampaigndaterangekpiresponse_p.h
-  getcampaignrequest.h
-  getcampaignrequest_p.h
-  getcampaignresponse.h
-  getcampaignresponse_p.h
-  getcampaignsrequest.h
-  getcampaignsrequest_p.h
-  getcampaignsresponse.h
-  getcampaignsresponse_p.h
   getcampaignversionrequest.h
   getcampaignversionrequest_p.h
   getcampaignversionresponse.h
@@ -197,6 +208,10 @@ add_library(QtAwsPinpoint
   getcampaignversionsrequest_p.h
   getcampaignversionsresponse.h
   getcampaignversionsresponse_p.h
+  getcampaignsrequest.h
+  getcampaignsrequest_p.h
+  getcampaignsresponse.h
+  getcampaignsresponse_p.h
   getchannelsrequest.h
   getchannelsrequest_p.h
   getchannelsresponse.h
@@ -237,6 +252,18 @@ add_library(QtAwsPinpoint
   getimportjobsrequest_p.h
   getimportjobsresponse.h
   getimportjobsresponse_p.h
+  getinappmessagesrequest.h
+  getinappmessagesrequest_p.h
+  getinappmessagesresponse.h
+  getinappmessagesresponse_p.h
+  getinapptemplaterequest.h
+  getinapptemplaterequest_p.h
+  getinapptemplateresponse.h
+  getinapptemplateresponse_p.h
+  getjourneyrequest.h
+  getjourneyrequest_p.h
+  getjourneyresponse.h
+  getjourneyresponse_p.h
   getjourneydaterangekpirequest.h
   getjourneydaterangekpirequest_p.h
   getjourneydaterangekpiresponse.h
@@ -249,10 +276,6 @@ add_library(QtAwsPinpoint
   getjourneyexecutionmetricsrequest_p.h
   getjourneyexecutionmetricsresponse.h
   getjourneyexecutionmetricsresponse_p.h
-  getjourneyrequest.h
-  getjourneyrequest_p.h
-  getjourneyresponse.h
-  getjourneyresponse_p.h
   getpushtemplaterequest.h
   getpushtemplaterequest_p.h
   getpushtemplateresponse.h
@@ -265,6 +288,10 @@ add_library(QtAwsPinpoint
   getrecommenderconfigurationsrequest_p.h
   getrecommenderconfigurationsresponse.h
   getrecommenderconfigurationsresponse_p.h
+  getsegmentrequest.h
+  getsegmentrequest_p.h
+  getsegmentresponse.h
+  getsegmentresponse_p.h
   getsegmentexportjobsrequest.h
   getsegmentexportjobsrequest_p.h
   getsegmentexportjobsresponse.h
@@ -273,14 +300,6 @@ add_library(QtAwsPinpoint
   getsegmentimportjobsrequest_p.h
   getsegmentimportjobsresponse.h
   getsegmentimportjobsresponse_p.h
-  getsegmentrequest.h
-  getsegmentrequest_p.h
-  getsegmentresponse.h
-  getsegmentresponse_p.h
-  getsegmentsrequest.h
-  getsegmentsrequest_p.h
-  getsegmentsresponse.h
-  getsegmentsresponse_p.h
   getsegmentversionrequest.h
   getsegmentversionrequest_p.h
   getsegmentversionresponse.h
@@ -289,6 +308,10 @@ add_library(QtAwsPinpoint
   getsegmentversionsrequest_p.h
   getsegmentversionsresponse.h
   getsegmentversionsresponse_p.h
+  getsegmentsrequest.h
+  getsegmentsrequest_p.h
+  getsegmentsresponse.h
+  getsegmentsresponse_p.h
   getsmschannelrequest.h
   getsmschannelrequest_p.h
   getsmschannelresponse.h
@@ -317,33 +340,26 @@ add_library(QtAwsPinpoint
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  listtemplatesrequest.h
-  listtemplatesrequest_p.h
-  listtemplatesresponse.h
-  listtemplatesresponse_p.h
   listtemplateversionsrequest.h
   listtemplateversionsrequest_p.h
   listtemplateversionsresponse.h
   listtemplateversionsresponse_p.h
+  listtemplatesrequest.h
+  listtemplatesrequest_p.h
+  listtemplatesresponse.h
+  listtemplatesresponse_p.h
   phonenumbervalidaterequest.h
   phonenumbervalidaterequest_p.h
   phonenumbervalidateresponse.h
   phonenumbervalidateresponse_p.h
-  pinpointclient.h
-  pinpointclient_p.h
-  pinpointrequest.h
-  pinpointrequest_p.h
-  pinpointresponse.h
-  pinpointresponse_p.h
-  puteventsrequest.h
-  puteventsrequest_p.h
-  puteventsresponse.h
-  puteventsresponse_p.h
   puteventstreamrequest.h
   puteventstreamrequest_p.h
   puteventstreamresponse.h
   puteventstreamresponse_p.h
-  qtawspinpointglobal.h
+  puteventsrequest.h
+  puteventsrequest_p.h
+  puteventsresponse.h
+  puteventsresponse_p.h
   removeattributesrequest.h
   removeattributesrequest_p.h
   removeattributesresponse.h
@@ -352,6 +368,10 @@ add_library(QtAwsPinpoint
   sendmessagesrequest_p.h
   sendmessagesresponse.h
   sendmessagesresponse_p.h
+  sendotpmessagerequest.h
+  sendotpmessagerequest_p.h
+  sendotpmessageresponse.h
+  sendotpmessageresponse_p.h
   sendusersmessagesrequest.h
   sendusersmessagesrequest_p.h
   sendusersmessagesresponse.h
@@ -416,6 +436,10 @@ add_library(QtAwsPinpoint
   updategcmchannelrequest_p.h
   updategcmchannelresponse.h
   updategcmchannelresponse_p.h
+  updateinapptemplaterequest.h
+  updateinapptemplaterequest_p.h
+  updateinapptemplateresponse.h
+  updateinapptemplateresponse_p.h
   updatejourneyrequest.h
   updatejourneyrequest_p.h
   updatejourneyresponse.h
@@ -456,6 +480,13 @@ add_library(QtAwsPinpoint
   updatevoicetemplaterequest_p.h
   updatevoicetemplateresponse.h
   updatevoicetemplateresponse_p.h
+  verifyotpmessagerequest.h
+  verifyotpmessagerequest_p.h
+  verifyotpmessageresponse.h
+  verifyotpmessageresponse_p.h
+  pinpointclient.cpp
+  pinpointrequest.cpp
+  pinpointresponse.cpp
   createapprequest.cpp
   createappresponse.cpp
   createcampaignrequest.cpp
@@ -466,6 +497,8 @@ add_library(QtAwsPinpoint
   createexportjobresponse.cpp
   createimportjobrequest.cpp
   createimportjobresponse.cpp
+  createinapptemplaterequest.cpp
+  createinapptemplateresponse.cpp
   createjourneyrequest.cpp
   createjourneyresponse.cpp
   createpushtemplaterequest.cpp
@@ -504,6 +537,8 @@ add_library(QtAwsPinpoint
   deleteeventstreamresponse.cpp
   deletegcmchannelrequest.cpp
   deletegcmchannelresponse.cpp
+  deleteinapptemplaterequest.cpp
+  deleteinapptemplateresponse.cpp
   deletejourneyrequest.cpp
   deletejourneyresponse.cpp
   deletepushtemplaterequest.cpp
@@ -532,28 +567,28 @@ add_library(QtAwsPinpoint
   getapnsvoipchannelresponse.cpp
   getapnsvoipsandboxchannelrequest.cpp
   getapnsvoipsandboxchannelresponse.cpp
+  getapprequest.cpp
+  getappresponse.cpp
   getapplicationdaterangekpirequest.cpp
   getapplicationdaterangekpiresponse.cpp
   getapplicationsettingsrequest.cpp
   getapplicationsettingsresponse.cpp
-  getapprequest.cpp
-  getappresponse.cpp
   getappsrequest.cpp
   getappsresponse.cpp
   getbaiduchannelrequest.cpp
   getbaiduchannelresponse.cpp
+  getcampaignrequest.cpp
+  getcampaignresponse.cpp
   getcampaignactivitiesrequest.cpp
   getcampaignactivitiesresponse.cpp
   getcampaigndaterangekpirequest.cpp
   getcampaigndaterangekpiresponse.cpp
-  getcampaignrequest.cpp
-  getcampaignresponse.cpp
-  getcampaignsrequest.cpp
-  getcampaignsresponse.cpp
   getcampaignversionrequest.cpp
   getcampaignversionresponse.cpp
   getcampaignversionsrequest.cpp
   getcampaignversionsresponse.cpp
+  getcampaignsrequest.cpp
+  getcampaignsresponse.cpp
   getchannelsrequest.cpp
   getchannelsresponse.cpp
   getemailchannelrequest.cpp
@@ -574,32 +609,36 @@ add_library(QtAwsPinpoint
   getimportjobresponse.cpp
   getimportjobsrequest.cpp
   getimportjobsresponse.cpp
+  getinappmessagesrequest.cpp
+  getinappmessagesresponse.cpp
+  getinapptemplaterequest.cpp
+  getinapptemplateresponse.cpp
+  getjourneyrequest.cpp
+  getjourneyresponse.cpp
   getjourneydaterangekpirequest.cpp
   getjourneydaterangekpiresponse.cpp
   getjourneyexecutionactivitymetricsrequest.cpp
   getjourneyexecutionactivitymetricsresponse.cpp
   getjourneyexecutionmetricsrequest.cpp
   getjourneyexecutionmetricsresponse.cpp
-  getjourneyrequest.cpp
-  getjourneyresponse.cpp
   getpushtemplaterequest.cpp
   getpushtemplateresponse.cpp
   getrecommenderconfigurationrequest.cpp
   getrecommenderconfigurationresponse.cpp
   getrecommenderconfigurationsrequest.cpp
   getrecommenderconfigurationsresponse.cpp
+  getsegmentrequest.cpp
+  getsegmentresponse.cpp
   getsegmentexportjobsrequest.cpp
   getsegmentexportjobsresponse.cpp
   getsegmentimportjobsrequest.cpp
   getsegmentimportjobsresponse.cpp
-  getsegmentrequest.cpp
-  getsegmentresponse.cpp
-  getsegmentsrequest.cpp
-  getsegmentsresponse.cpp
   getsegmentversionrequest.cpp
   getsegmentversionresponse.cpp
   getsegmentversionsrequest.cpp
   getsegmentversionsresponse.cpp
+  getsegmentsrequest.cpp
+  getsegmentsresponse.cpp
   getsmschannelrequest.cpp
   getsmschannelresponse.cpp
   getsmstemplaterequest.cpp
@@ -614,23 +653,22 @@ add_library(QtAwsPinpoint
   listjourneysresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  listtemplatesrequest.cpp
-  listtemplatesresponse.cpp
   listtemplateversionsrequest.cpp
   listtemplateversionsresponse.cpp
+  listtemplatesrequest.cpp
+  listtemplatesresponse.cpp
   phonenumbervalidaterequest.cpp
   phonenumbervalidateresponse.cpp
-  pinpointclient.cpp
-  pinpointrequest.cpp
-  pinpointresponse.cpp
-  puteventsrequest.cpp
-  puteventsresponse.cpp
   puteventstreamrequest.cpp
   puteventstreamresponse.cpp
+  puteventsrequest.cpp
+  puteventsresponse.cpp
   removeattributesrequest.cpp
   removeattributesresponse.cpp
   sendmessagesrequest.cpp
   sendmessagesresponse.cpp
+  sendotpmessagerequest.cpp
+  sendotpmessageresponse.cpp
   sendusersmessagesrequest.cpp
   sendusersmessagesresponse.cpp
   tagresourcerequest.cpp
@@ -663,6 +701,8 @@ add_library(QtAwsPinpoint
   updateendpointsbatchresponse.cpp
   updategcmchannelrequest.cpp
   updategcmchannelresponse.cpp
+  updateinapptemplaterequest.cpp
+  updateinapptemplateresponse.cpp
   updatejourneyrequest.cpp
   updatejourneyresponse.cpp
   updatejourneystaterequest.cpp
@@ -682,7 +722,9 @@ add_library(QtAwsPinpoint
   updatevoicechannelrequest.cpp
   updatevoicechannelresponse.cpp
   updatevoicetemplaterequest.cpp
-  updatevoicetemplateresponse.cpp)
+  updatevoicetemplateresponse.cpp
+  verifyotpmessagerequest.cpp
+  verifyotpmessageresponse.cpp)
 
 target_link_libraries(QtAwsPinpoint
   PRIVATE QtAwsCore

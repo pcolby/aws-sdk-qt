@@ -24,14 +24,14 @@
 #include "listdedicatedippoolsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListDedicatedIpPoolsRequest;
 
-class ListDedicatedIpPoolsRequestPrivate : public Sesv2RequestPrivate {
+class ListDedicatedIpPoolsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListDedicatedIpPoolsRequestPrivate(const Sesv2Request::Action action,
+    ListDedicatedIpPoolsRequestPrivate(const SESv2Request::Action action,
                                    ListDedicatedIpPoolsRequest * const q);
     ListDedicatedIpPoolsRequestPrivate(const ListDedicatedIpPoolsRequestPrivate &other,
                                    ListDedicatedIpPoolsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

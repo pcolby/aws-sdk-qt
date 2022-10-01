@@ -24,7 +24,7 @@
 #include "detachvpngatewayrequest.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class DetachVpnGatewayResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

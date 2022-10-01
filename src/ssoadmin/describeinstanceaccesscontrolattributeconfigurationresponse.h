@@ -24,11 +24,11 @@
 #include "describeinstanceaccesscontrolattributeconfigurationrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DescribeInstanceAccessControlAttributeConfigurationResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT DescribeInstanceAccessControlAttributeConfigurationResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DescribeInstanceAccessControlAttributeConfigurationResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

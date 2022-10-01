@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for imagebuilder ListTagsForResource requests.
+ * \class QtAws::ImageBuilder::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for ImageBuilder ListTagsForResource requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listTagsForResource
+ * \sa ImageBuilderClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : imagebuilderRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : imagebuilderRequest(new ListTagsForResourceRequestPrivate(imagebuilderRequest::ListTagsForResourceAction, this))
+    : ImageBuilderRequest(new ListTagsForResourceRequestPrivate(ImageBuilderRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::imagebuilder::ListTagsForResourceRequestPrivate
+ * \class QtAws::ImageBuilder::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const imagebuilderRequest::Action action, ListTagsForResourceRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListTagsForResourceRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

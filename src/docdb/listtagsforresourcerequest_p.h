@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public DocDBRequestPrivate {
+class ListTagsForResourceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const DocDBRequest::Action action,
+    ListTagsForResourceRequestPrivate(const DocDbRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

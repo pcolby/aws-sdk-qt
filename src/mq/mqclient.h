@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class MqClientPrivate;
 class CreateBrokerRequest;
@@ -120,7 +120,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

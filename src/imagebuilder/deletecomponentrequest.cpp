@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteComponentRequest
- * \brief The DeleteComponentRequest class provides an interface for imagebuilder DeleteComponent requests.
+ * \class QtAws::ImageBuilder::DeleteComponentRequest
+ * \brief The DeleteComponentRequest class provides an interface for ImageBuilder DeleteComponent requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteComponent
+ * \sa ImageBuilderClient::deleteComponent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteComponentRequest::DeleteComponentRequest(const DeleteComponentRequest &other)
-    : imagebuilderRequest(new DeleteComponentRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new DeleteComponentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DeleteComponentRequest::DeleteComponentRequest(const DeleteComponentRequest &oth
  * Constructs a DeleteComponentRequest object.
  */
 DeleteComponentRequest::DeleteComponentRequest()
-    : imagebuilderRequest(new DeleteComponentRequestPrivate(imagebuilderRequest::DeleteComponentAction, this))
+    : ImageBuilderRequest(new DeleteComponentRequestPrivate(ImageBuilderRequest::DeleteComponentAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * DeleteComponentRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteComponentRequestPrivate
+ * \class QtAws::ImageBuilder::DeleteComponentRequestPrivate
  * \brief The DeleteComponentRequestPrivate class provides private implementation for DeleteComponentRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a DeleteComponentRequestPrivate object for imagebuilder \a action,
+ * Constructs a DeleteComponentRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 DeleteComponentRequestPrivate::DeleteComponentRequestPrivate(
-    const imagebuilderRequest::Action action, DeleteComponentRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, DeleteComponentRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ DeleteComponentRequestPrivate::DeleteComponentRequestPrivate(
  */
 DeleteComponentRequestPrivate::DeleteComponentRequestPrivate(
     const DeleteComponentRequestPrivate &other, DeleteComponentRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

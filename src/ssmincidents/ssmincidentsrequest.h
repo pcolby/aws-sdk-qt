@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
-class SSMIncidentsRequestPrivate;
+class SsmIncidentsRequestPrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT SSMIncidentsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSMINCIDENTS_EXPORT SsmIncidentsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSMIncidents.
+    /// Actions supported by SsmIncidents.
     enum Action {
         CreateReplicationSetAction,
         CreateResponsePlanAction,
@@ -71,9 +71,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SSMIncidentsRequest(const Action action);
-    SSMIncidentsRequest(const SSMIncidentsRequest &other);
-    SSMIncidentsRequest &operator=(const SSMIncidentsRequest &other);
+    SsmIncidentsRequest(const Action action);
+    SsmIncidentsRequest(const SsmIncidentsRequest &other);
+    SsmIncidentsRequest &operator=(const SsmIncidentsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -82,12 +82,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SSMIncidentsRequest &other) const;
+    virtual bool operator==(const SsmIncidentsRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
+    explicit SsmIncidentsRequest(SsmIncidentsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -100,11 +100,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SSMIncidentsRequest)
+    Q_DECLARE_PRIVATE(SsmIncidentsRequest)
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

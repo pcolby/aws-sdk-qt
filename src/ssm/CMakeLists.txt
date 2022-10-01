@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSSM_LIBRARY)
 
 add_library(QtAwsSsm
+  qtawsssmglobal.h
+  ssmclient.h
+  ssmclient_p.h
+  ssmrequest.h
+  ssmrequest_p.h
+  ssmresponse.h
+  ssmresponse_p.h
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsSsm
   createactivationrequest_p.h
   createactivationresponse.h
   createactivationresponse_p.h
-  createassociationbatchrequest.h
-  createassociationbatchrequest_p.h
-  createassociationbatchresponse.h
-  createassociationbatchresponse_p.h
   createassociationrequest.h
   createassociationrequest_p.h
   createassociationresponse.h
   createassociationresponse_p.h
+  createassociationbatchrequest.h
+  createassociationbatchrequest_p.h
+  createassociationbatchresponse.h
+  createassociationbatchresponse_p.h
   createdocumentrequest.h
   createdocumentrequest_p.h
   createdocumentresponse.h
@@ -113,18 +120,18 @@ add_library(QtAwsSsm
   describeactivationsrequest_p.h
   describeactivationsresponse.h
   describeactivationsresponse_p.h
-  describeassociationexecutionsrequest.h
-  describeassociationexecutionsrequest_p.h
-  describeassociationexecutionsresponse.h
-  describeassociationexecutionsresponse_p.h
-  describeassociationexecutiontargetsrequest.h
-  describeassociationexecutiontargetsrequest_p.h
-  describeassociationexecutiontargetsresponse.h
-  describeassociationexecutiontargetsresponse_p.h
   describeassociationrequest.h
   describeassociationrequest_p.h
   describeassociationresponse.h
   describeassociationresponse_p.h
+  describeassociationexecutiontargetsrequest.h
+  describeassociationexecutiontargetsrequest_p.h
+  describeassociationexecutiontargetsresponse.h
+  describeassociationexecutiontargetsresponse_p.h
+  describeassociationexecutionsrequest.h
+  describeassociationexecutionsrequest_p.h
+  describeassociationexecutionsresponse.h
+  describeassociationexecutionsresponse_p.h
   describeautomationexecutionsrequest.h
   describeautomationexecutionsrequest_p.h
   describeautomationexecutionsresponse.h
@@ -137,14 +144,14 @@ add_library(QtAwsSsm
   describeavailablepatchesrequest_p.h
   describeavailablepatchesresponse.h
   describeavailablepatchesresponse_p.h
-  describedocumentpermissionrequest.h
-  describedocumentpermissionrequest_p.h
-  describedocumentpermissionresponse.h
-  describedocumentpermissionresponse_p.h
   describedocumentrequest.h
   describedocumentrequest_p.h
   describedocumentresponse.h
   describedocumentresponse_p.h
+  describedocumentpermissionrequest.h
+  describedocumentpermissionrequest_p.h
+  describedocumentpermissionresponse.h
+  describedocumentpermissionresponse_p.h
   describeeffectiveinstanceassociationsrequest.h
   describeeffectiveinstanceassociationsrequest_p.h
   describeeffectiveinstanceassociationsresponse.h
@@ -161,26 +168,22 @@ add_library(QtAwsSsm
   describeinstanceinformationrequest_p.h
   describeinstanceinformationresponse.h
   describeinstanceinformationresponse_p.h
-  describeinstancepatchesrequest.h
-  describeinstancepatchesrequest_p.h
-  describeinstancepatchesresponse.h
-  describeinstancepatchesresponse_p.h
-  describeinstancepatchstatesforpatchgrouprequest.h
-  describeinstancepatchstatesforpatchgrouprequest_p.h
-  describeinstancepatchstatesforpatchgroupresponse.h
-  describeinstancepatchstatesforpatchgroupresponse_p.h
   describeinstancepatchstatesrequest.h
   describeinstancepatchstatesrequest_p.h
   describeinstancepatchstatesresponse.h
   describeinstancepatchstatesresponse_p.h
+  describeinstancepatchstatesforpatchgrouprequest.h
+  describeinstancepatchstatesforpatchgrouprequest_p.h
+  describeinstancepatchstatesforpatchgroupresponse.h
+  describeinstancepatchstatesforpatchgroupresponse_p.h
+  describeinstancepatchesrequest.h
+  describeinstancepatchesrequest_p.h
+  describeinstancepatchesresponse.h
+  describeinstancepatchesresponse_p.h
   describeinventorydeletionsrequest.h
   describeinventorydeletionsrequest_p.h
   describeinventorydeletionsresponse.h
   describeinventorydeletionsresponse_p.h
-  describemaintenancewindowexecutionsrequest.h
-  describemaintenancewindowexecutionsrequest_p.h
-  describemaintenancewindowexecutionsresponse.h
-  describemaintenancewindowexecutionsresponse_p.h
   describemaintenancewindowexecutiontaskinvocationsrequest.h
   describemaintenancewindowexecutiontaskinvocationsrequest_p.h
   describemaintenancewindowexecutiontaskinvocationsresponse.h
@@ -189,18 +192,14 @@ add_library(QtAwsSsm
   describemaintenancewindowexecutiontasksrequest_p.h
   describemaintenancewindowexecutiontasksresponse.h
   describemaintenancewindowexecutiontasksresponse_p.h
+  describemaintenancewindowexecutionsrequest.h
+  describemaintenancewindowexecutionsrequest_p.h
+  describemaintenancewindowexecutionsresponse.h
+  describemaintenancewindowexecutionsresponse_p.h
   describemaintenancewindowschedulerequest.h
   describemaintenancewindowschedulerequest_p.h
   describemaintenancewindowscheduleresponse.h
   describemaintenancewindowscheduleresponse_p.h
-  describemaintenancewindowsfortargetrequest.h
-  describemaintenancewindowsfortargetrequest_p.h
-  describemaintenancewindowsfortargetresponse.h
-  describemaintenancewindowsfortargetresponse_p.h
-  describemaintenancewindowsrequest.h
-  describemaintenancewindowsrequest_p.h
-  describemaintenancewindowsresponse.h
-  describemaintenancewindowsresponse_p.h
   describemaintenancewindowtargetsrequest.h
   describemaintenancewindowtargetsrequest_p.h
   describemaintenancewindowtargetsresponse.h
@@ -209,6 +208,14 @@ add_library(QtAwsSsm
   describemaintenancewindowtasksrequest_p.h
   describemaintenancewindowtasksresponse.h
   describemaintenancewindowtasksresponse_p.h
+  describemaintenancewindowsrequest.h
+  describemaintenancewindowsrequest_p.h
+  describemaintenancewindowsresponse.h
+  describemaintenancewindowsresponse_p.h
+  describemaintenancewindowsfortargetrequest.h
+  describemaintenancewindowsfortargetrequest_p.h
+  describemaintenancewindowsfortargetresponse.h
+  describemaintenancewindowsfortargetresponse_p.h
   describeopsitemsrequest.h
   describeopsitemsrequest_p.h
   describeopsitemsresponse.h
@@ -221,14 +228,14 @@ add_library(QtAwsSsm
   describepatchbaselinesrequest_p.h
   describepatchbaselinesresponse.h
   describepatchbaselinesresponse_p.h
-  describepatchgroupsrequest.h
-  describepatchgroupsrequest_p.h
-  describepatchgroupsresponse.h
-  describepatchgroupsresponse_p.h
   describepatchgroupstaterequest.h
   describepatchgroupstaterequest_p.h
   describepatchgroupstateresponse.h
   describepatchgroupstateresponse_p.h
+  describepatchgroupsrequest.h
+  describepatchgroupsrequest_p.h
+  describepatchgroupsresponse.h
+  describepatchgroupsresponse_p.h
   describepatchpropertiesrequest.h
   describepatchpropertiesrequest_p.h
   describepatchpropertiesresponse.h
@@ -277,22 +284,22 @@ add_library(QtAwsSsm
   getinventoryschemarequest_p.h
   getinventoryschemaresponse.h
   getinventoryschemaresponse_p.h
-  getmaintenancewindowexecutionrequest.h
-  getmaintenancewindowexecutionrequest_p.h
-  getmaintenancewindowexecutionresponse.h
-  getmaintenancewindowexecutionresponse_p.h
-  getmaintenancewindowexecutiontaskinvocationrequest.h
-  getmaintenancewindowexecutiontaskinvocationrequest_p.h
-  getmaintenancewindowexecutiontaskinvocationresponse.h
-  getmaintenancewindowexecutiontaskinvocationresponse_p.h
-  getmaintenancewindowexecutiontaskrequest.h
-  getmaintenancewindowexecutiontaskrequest_p.h
-  getmaintenancewindowexecutiontaskresponse.h
-  getmaintenancewindowexecutiontaskresponse_p.h
   getmaintenancewindowrequest.h
   getmaintenancewindowrequest_p.h
   getmaintenancewindowresponse.h
   getmaintenancewindowresponse_p.h
+  getmaintenancewindowexecutionrequest.h
+  getmaintenancewindowexecutionrequest_p.h
+  getmaintenancewindowexecutionresponse.h
+  getmaintenancewindowexecutionresponse_p.h
+  getmaintenancewindowexecutiontaskrequest.h
+  getmaintenancewindowexecutiontaskrequest_p.h
+  getmaintenancewindowexecutiontaskresponse.h
+  getmaintenancewindowexecutiontaskresponse_p.h
+  getmaintenancewindowexecutiontaskinvocationrequest.h
+  getmaintenancewindowexecutiontaskinvocationrequest_p.h
+  getmaintenancewindowexecutiontaskinvocationresponse.h
+  getmaintenancewindowexecutiontaskinvocationresponse_p.h
   getmaintenancewindowtaskrequest.h
   getmaintenancewindowtaskrequest_p.h
   getmaintenancewindowtaskresponse.h
@@ -309,30 +316,30 @@ add_library(QtAwsSsm
   getopssummaryrequest_p.h
   getopssummaryresponse.h
   getopssummaryresponse_p.h
-  getparameterhistoryrequest.h
-  getparameterhistoryrequest_p.h
-  getparameterhistoryresponse.h
-  getparameterhistoryresponse_p.h
   getparameterrequest.h
   getparameterrequest_p.h
   getparameterresponse.h
   getparameterresponse_p.h
-  getparametersbypathrequest.h
-  getparametersbypathrequest_p.h
-  getparametersbypathresponse.h
-  getparametersbypathresponse_p.h
+  getparameterhistoryrequest.h
+  getparameterhistoryrequest_p.h
+  getparameterhistoryresponse.h
+  getparameterhistoryresponse_p.h
   getparametersrequest.h
   getparametersrequest_p.h
   getparametersresponse.h
   getparametersresponse_p.h
-  getpatchbaselineforpatchgrouprequest.h
-  getpatchbaselineforpatchgrouprequest_p.h
-  getpatchbaselineforpatchgroupresponse.h
-  getpatchbaselineforpatchgroupresponse_p.h
+  getparametersbypathrequest.h
+  getparametersbypathrequest_p.h
+  getparametersbypathresponse.h
+  getparametersbypathresponse_p.h
   getpatchbaselinerequest.h
   getpatchbaselinerequest_p.h
   getpatchbaselineresponse.h
   getpatchbaselineresponse_p.h
+  getpatchbaselineforpatchgrouprequest.h
+  getpatchbaselineforpatchgrouprequest_p.h
+  getpatchbaselineforpatchgroupresponse.h
+  getpatchbaselineforpatchgroupresponse_p.h
   getservicesettingrequest.h
   getservicesettingrequest_p.h
   getservicesettingresponse.h
@@ -341,14 +348,14 @@ add_library(QtAwsSsm
   labelparameterversionrequest_p.h
   labelparameterversionresponse.h
   labelparameterversionresponse_p.h
-  listassociationsrequest.h
-  listassociationsrequest_p.h
-  listassociationsresponse.h
-  listassociationsresponse_p.h
   listassociationversionsrequest.h
   listassociationversionsrequest_p.h
   listassociationversionsresponse.h
   listassociationversionsresponse_p.h
+  listassociationsrequest.h
+  listassociationsrequest_p.h
+  listassociationsresponse.h
+  listassociationsresponse_p.h
   listcommandinvocationsrequest.h
   listcommandinvocationsrequest_p.h
   listcommandinvocationsresponse.h
@@ -369,14 +376,14 @@ add_library(QtAwsSsm
   listdocumentmetadatahistoryrequest_p.h
   listdocumentmetadatahistoryresponse.h
   listdocumentmetadatahistoryresponse_p.h
-  listdocumentsrequest.h
-  listdocumentsrequest_p.h
-  listdocumentsresponse.h
-  listdocumentsresponse_p.h
   listdocumentversionsrequest.h
   listdocumentversionsrequest_p.h
   listdocumentversionsresponse.h
   listdocumentversionsresponse_p.h
+  listdocumentsrequest.h
+  listdocumentsrequest_p.h
+  listdocumentsresponse.h
+  listdocumentsresponse_p.h
   listinventoryentriesrequest.h
   listinventoryentriesrequest_p.h
   listinventoryentriesresponse.h
@@ -421,7 +428,6 @@ add_library(QtAwsSsm
   putparameterrequest_p.h
   putparameterresponse.h
   putparameterresponse_p.h
-  qtawsssmglobal.h
   registerdefaultpatchbaselinerequest.h
   registerdefaultpatchbaselinerequest_p.h
   registerdefaultpatchbaselineresponse.h
@@ -458,12 +464,6 @@ add_library(QtAwsSsm
   sendcommandrequest_p.h
   sendcommandresponse.h
   sendcommandresponse_p.h
-  ssmclient.h
-  ssmclient_p.h
-  ssmrequest.h
-  ssmrequest_p.h
-  ssmresponse.h
-  ssmresponse_p.h
   startassociationsoncerequest.h
   startassociationsoncerequest_p.h
   startassociationsonceresponse.h
@@ -500,6 +500,10 @@ add_library(QtAwsSsm
   updateassociationstatusrequest_p.h
   updateassociationstatusresponse.h
   updateassociationstatusresponse_p.h
+  updatedocumentrequest.h
+  updatedocumentrequest_p.h
+  updatedocumentresponse.h
+  updatedocumentresponse_p.h
   updatedocumentdefaultversionrequest.h
   updatedocumentdefaultversionrequest_p.h
   updatedocumentdefaultversionresponse.h
@@ -508,10 +512,6 @@ add_library(QtAwsSsm
   updatedocumentmetadatarequest_p.h
   updatedocumentmetadataresponse.h
   updatedocumentmetadataresponse_p.h
-  updatedocumentrequest.h
-  updatedocumentrequest_p.h
-  updatedocumentresponse.h
-  updatedocumentresponse_p.h
   updatemaintenancewindowrequest.h
   updatemaintenancewindowrequest_p.h
   updatemaintenancewindowresponse.h
@@ -548,6 +548,9 @@ add_library(QtAwsSsm
   updateservicesettingrequest_p.h
   updateservicesettingresponse.h
   updateservicesettingresponse_p.h
+  ssmclient.cpp
+  ssmrequest.cpp
+  ssmresponse.cpp
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
   associateopsitemrelateditemrequest.cpp
@@ -558,10 +561,10 @@ add_library(QtAwsSsm
   cancelmaintenancewindowexecutionresponse.cpp
   createactivationrequest.cpp
   createactivationresponse.cpp
-  createassociationbatchrequest.cpp
-  createassociationbatchresponse.cpp
   createassociationrequest.cpp
   createassociationresponse.cpp
+  createassociationbatchrequest.cpp
+  createassociationbatchresponse.cpp
   createdocumentrequest.cpp
   createdocumentresponse.cpp
   createmaintenancewindowrequest.cpp
@@ -604,22 +607,22 @@ add_library(QtAwsSsm
   deregistertaskfrommaintenancewindowresponse.cpp
   describeactivationsrequest.cpp
   describeactivationsresponse.cpp
-  describeassociationexecutionsrequest.cpp
-  describeassociationexecutionsresponse.cpp
-  describeassociationexecutiontargetsrequest.cpp
-  describeassociationexecutiontargetsresponse.cpp
   describeassociationrequest.cpp
   describeassociationresponse.cpp
+  describeassociationexecutiontargetsrequest.cpp
+  describeassociationexecutiontargetsresponse.cpp
+  describeassociationexecutionsrequest.cpp
+  describeassociationexecutionsresponse.cpp
   describeautomationexecutionsrequest.cpp
   describeautomationexecutionsresponse.cpp
   describeautomationstepexecutionsrequest.cpp
   describeautomationstepexecutionsresponse.cpp
   describeavailablepatchesrequest.cpp
   describeavailablepatchesresponse.cpp
-  describedocumentpermissionrequest.cpp
-  describedocumentpermissionresponse.cpp
   describedocumentrequest.cpp
   describedocumentresponse.cpp
+  describedocumentpermissionrequest.cpp
+  describedocumentpermissionresponse.cpp
   describeeffectiveinstanceassociationsrequest.cpp
   describeeffectiveinstanceassociationsresponse.cpp
   describeeffectivepatchesforpatchbaselinerequest.cpp
@@ -628,40 +631,40 @@ add_library(QtAwsSsm
   describeinstanceassociationsstatusresponse.cpp
   describeinstanceinformationrequest.cpp
   describeinstanceinformationresponse.cpp
-  describeinstancepatchesrequest.cpp
-  describeinstancepatchesresponse.cpp
-  describeinstancepatchstatesforpatchgrouprequest.cpp
-  describeinstancepatchstatesforpatchgroupresponse.cpp
   describeinstancepatchstatesrequest.cpp
   describeinstancepatchstatesresponse.cpp
+  describeinstancepatchstatesforpatchgrouprequest.cpp
+  describeinstancepatchstatesforpatchgroupresponse.cpp
+  describeinstancepatchesrequest.cpp
+  describeinstancepatchesresponse.cpp
   describeinventorydeletionsrequest.cpp
   describeinventorydeletionsresponse.cpp
-  describemaintenancewindowexecutionsrequest.cpp
-  describemaintenancewindowexecutionsresponse.cpp
   describemaintenancewindowexecutiontaskinvocationsrequest.cpp
   describemaintenancewindowexecutiontaskinvocationsresponse.cpp
   describemaintenancewindowexecutiontasksrequest.cpp
   describemaintenancewindowexecutiontasksresponse.cpp
+  describemaintenancewindowexecutionsrequest.cpp
+  describemaintenancewindowexecutionsresponse.cpp
   describemaintenancewindowschedulerequest.cpp
   describemaintenancewindowscheduleresponse.cpp
-  describemaintenancewindowsfortargetrequest.cpp
-  describemaintenancewindowsfortargetresponse.cpp
-  describemaintenancewindowsrequest.cpp
-  describemaintenancewindowsresponse.cpp
   describemaintenancewindowtargetsrequest.cpp
   describemaintenancewindowtargetsresponse.cpp
   describemaintenancewindowtasksrequest.cpp
   describemaintenancewindowtasksresponse.cpp
+  describemaintenancewindowsrequest.cpp
+  describemaintenancewindowsresponse.cpp
+  describemaintenancewindowsfortargetrequest.cpp
+  describemaintenancewindowsfortargetresponse.cpp
   describeopsitemsrequest.cpp
   describeopsitemsresponse.cpp
   describeparametersrequest.cpp
   describeparametersresponse.cpp
   describepatchbaselinesrequest.cpp
   describepatchbaselinesresponse.cpp
-  describepatchgroupsrequest.cpp
-  describepatchgroupsresponse.cpp
   describepatchgroupstaterequest.cpp
   describepatchgroupstateresponse.cpp
+  describepatchgroupsrequest.cpp
+  describepatchgroupsresponse.cpp
   describepatchpropertiesrequest.cpp
   describepatchpropertiesresponse.cpp
   describesessionsrequest.cpp
@@ -686,14 +689,14 @@ add_library(QtAwsSsm
   getinventoryresponse.cpp
   getinventoryschemarequest.cpp
   getinventoryschemaresponse.cpp
-  getmaintenancewindowexecutionrequest.cpp
-  getmaintenancewindowexecutionresponse.cpp
-  getmaintenancewindowexecutiontaskinvocationrequest.cpp
-  getmaintenancewindowexecutiontaskinvocationresponse.cpp
-  getmaintenancewindowexecutiontaskrequest.cpp
-  getmaintenancewindowexecutiontaskresponse.cpp
   getmaintenancewindowrequest.cpp
   getmaintenancewindowresponse.cpp
+  getmaintenancewindowexecutionrequest.cpp
+  getmaintenancewindowexecutionresponse.cpp
+  getmaintenancewindowexecutiontaskrequest.cpp
+  getmaintenancewindowexecutiontaskresponse.cpp
+  getmaintenancewindowexecutiontaskinvocationrequest.cpp
+  getmaintenancewindowexecutiontaskinvocationresponse.cpp
   getmaintenancewindowtaskrequest.cpp
   getmaintenancewindowtaskresponse.cpp
   getopsitemrequest.cpp
@@ -702,26 +705,26 @@ add_library(QtAwsSsm
   getopsmetadataresponse.cpp
   getopssummaryrequest.cpp
   getopssummaryresponse.cpp
-  getparameterhistoryrequest.cpp
-  getparameterhistoryresponse.cpp
   getparameterrequest.cpp
   getparameterresponse.cpp
-  getparametersbypathrequest.cpp
-  getparametersbypathresponse.cpp
+  getparameterhistoryrequest.cpp
+  getparameterhistoryresponse.cpp
   getparametersrequest.cpp
   getparametersresponse.cpp
-  getpatchbaselineforpatchgrouprequest.cpp
-  getpatchbaselineforpatchgroupresponse.cpp
+  getparametersbypathrequest.cpp
+  getparametersbypathresponse.cpp
   getpatchbaselinerequest.cpp
   getpatchbaselineresponse.cpp
+  getpatchbaselineforpatchgrouprequest.cpp
+  getpatchbaselineforpatchgroupresponse.cpp
   getservicesettingrequest.cpp
   getservicesettingresponse.cpp
   labelparameterversionrequest.cpp
   labelparameterversionresponse.cpp
-  listassociationsrequest.cpp
-  listassociationsresponse.cpp
   listassociationversionsrequest.cpp
   listassociationversionsresponse.cpp
+  listassociationsrequest.cpp
+  listassociationsresponse.cpp
   listcommandinvocationsrequest.cpp
   listcommandinvocationsresponse.cpp
   listcommandsrequest.cpp
@@ -732,10 +735,10 @@ add_library(QtAwsSsm
   listcompliancesummariesresponse.cpp
   listdocumentmetadatahistoryrequest.cpp
   listdocumentmetadatahistoryresponse.cpp
-  listdocumentsrequest.cpp
-  listdocumentsresponse.cpp
   listdocumentversionsrequest.cpp
   listdocumentversionsresponse.cpp
+  listdocumentsrequest.cpp
+  listdocumentsresponse.cpp
   listinventoryentriesrequest.cpp
   listinventoryentriesresponse.cpp
   listopsitemeventsrequest.cpp
@@ -776,9 +779,6 @@ add_library(QtAwsSsm
   sendautomationsignalresponse.cpp
   sendcommandrequest.cpp
   sendcommandresponse.cpp
-  ssmclient.cpp
-  ssmrequest.cpp
-  ssmresponse.cpp
   startassociationsoncerequest.cpp
   startassociationsonceresponse.cpp
   startautomationexecutionrequest.cpp
@@ -797,12 +797,12 @@ add_library(QtAwsSsm
   updateassociationresponse.cpp
   updateassociationstatusrequest.cpp
   updateassociationstatusresponse.cpp
+  updatedocumentrequest.cpp
+  updatedocumentresponse.cpp
   updatedocumentdefaultversionrequest.cpp
   updatedocumentdefaultversionresponse.cpp
   updatedocumentmetadatarequest.cpp
   updatedocumentmetadataresponse.cpp
-  updatedocumentrequest.cpp
-  updatedocumentresponse.cpp
   updatemaintenancewindowrequest.cpp
   updatemaintenancewindowresponse.cpp
   updatemaintenancewindowtargetrequest.cpp

@@ -213,8 +213,8 @@ CreateBatchPredictionResponse * MachineLearningClient::createBatchPrediction(con
  * Amazon Machine Learning (Amazon ML) immediately returns and sets the <code>DataSource</code> status to
  * <code>PENDING</code>. After the <code>DataSource</code> is created and ready for use, Amazon ML sets the
  * <code>Status</code> parameter to <code>COMPLETED</code>. <code>DataSource</code> in the <code>COMPLETED</code> or
- * <code>PENDING</code> state can be used only to perform <code>&gt;CreateMLModel</code>&gt;,
- * <code>CreateEvaluation</code>, or <code>CreateBatchPrediction</code> operations.
+ * <code>PENDING</code> state can be used only to perform <code>>CreateMLModel</code>>, <code>CreateEvaluation</code>, or
+ * <code>CreateBatchPrediction</code> operations.
  *
  * </p
  *

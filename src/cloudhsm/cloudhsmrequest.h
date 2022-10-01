@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
-class CloudHSMRequestPrivate;
+class CloudHsmRequestPrivate;
 
-class QTAWSCLOUDHSM_EXPORT CloudHSMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDHSM_EXPORT CloudHsmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by CloudHSM.
+    /// Actions supported by CloudHsm.
     enum Action {
         AddTagsToResourceAction,
         CreateHapgAction,
@@ -62,9 +62,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    CloudHSMRequest(const Action action);
-    CloudHSMRequest(const CloudHSMRequest &other);
-    CloudHSMRequest &operator=(const CloudHSMRequest &other);
+    CloudHsmRequest(const Action action);
+    CloudHsmRequest(const CloudHsmRequest &other);
+    CloudHsmRequest &operator=(const CloudHsmRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -73,12 +73,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CloudHSMRequest &other) const;
+    virtual bool operator==(const CloudHsmRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit CloudHSMRequest(CloudHSMRequestPrivate * const d);
+    explicit CloudHsmRequest(CloudHsmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -91,11 +91,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CloudHSMRequest)
+    Q_DECLARE_PRIVATE(CloudHsmRequest)
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

@@ -23,11 +23,11 @@
 #include "signerrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListSigningPlatformsRequestPrivate;
 
-class QTAWSSIGNER_EXPORT ListSigningPlatformsRequest : public signerRequest {
+class QTAWSSIGNER_EXPORT ListSigningPlatformsRequest : public SignerRequest {
 
 public:
     ListSigningPlatformsRequest(const ListSigningPlatformsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DescribePageRequest
- * \brief The DescribePageRequest class provides an interface for SSMContacts DescribePage requests.
+ * \class QtAws::SsmContacts::DescribePageRequest
+ * \brief The DescribePageRequest class provides an interface for SsmContacts DescribePage requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::describePage
+ * \sa SsmContactsClient::describePage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribePageRequest::DescribePageRequest(const DescribePageRequest &other)
-    : SSMContactsRequest(new DescribePageRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new DescribePageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ DescribePageRequest::DescribePageRequest(const DescribePageRequest &other)
  * Constructs a DescribePageRequest object.
  */
 DescribePageRequest::DescribePageRequest()
-    : SSMContactsRequest(new DescribePageRequestPrivate(SSMContactsRequest::DescribePageAction, this))
+    : SsmContactsRequest(new DescribePageRequestPrivate(SsmContactsRequest::DescribePageAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DescribePageRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::SSMContacts::DescribePageRequestPrivate
+ * \class QtAws::SsmContacts::DescribePageRequestPrivate
  * \brief The DescribePageRequestPrivate class provides private implementation for DescribePageRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a DescribePageRequestPrivate object for SSMContacts \a action,
+ * Constructs a DescribePageRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 DescribePageRequestPrivate::DescribePageRequestPrivate(
-    const SSMContactsRequest::Action action, DescribePageRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, DescribePageRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ DescribePageRequestPrivate::DescribePageRequestPrivate(
  */
 DescribePageRequestPrivate::DescribePageRequestPrivate(
     const DescribePageRequestPrivate &other, DescribePageRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

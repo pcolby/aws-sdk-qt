@@ -21,77 +21,78 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::imagebuilderRequest
- * \brief The imagebuilderRequest class provides an interface for imagebuilder requests.
+ * \class QtAws::ImageBuilder::ImageBuilderRequest
+ * \brief The ImageBuilderRequest class provides an interface for ImageBuilder requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * \enum imagebuilderRequest::Action
+ * \enum ImageBuilderRequest::Action
  *
- * This enum describes the actions that can be performed as imagebuilder
+ * This enum describes the actions that can be performed as ImageBuilder
  * requests.
  *
- * \value CancelImageCreationAction imagebuilder CancelImageCreation action.
- * \value CreateComponentAction imagebuilder CreateComponent action.
- * \value CreateContainerRecipeAction imagebuilder CreateContainerRecipe action.
- * \value CreateDistributionConfigurationAction imagebuilder CreateDistributionConfiguration action.
- * \value CreateImageAction imagebuilder CreateImage action.
- * \value CreateImagePipelineAction imagebuilder CreateImagePipeline action.
- * \value CreateImageRecipeAction imagebuilder CreateImageRecipe action.
- * \value CreateInfrastructureConfigurationAction imagebuilder CreateInfrastructureConfiguration action.
- * \value DeleteComponentAction imagebuilder DeleteComponent action.
- * \value DeleteContainerRecipeAction imagebuilder DeleteContainerRecipe action.
- * \value DeleteDistributionConfigurationAction imagebuilder DeleteDistributionConfiguration action.
- * \value DeleteImageAction imagebuilder DeleteImage action.
- * \value DeleteImagePipelineAction imagebuilder DeleteImagePipeline action.
- * \value DeleteImageRecipeAction imagebuilder DeleteImageRecipe action.
- * \value DeleteInfrastructureConfigurationAction imagebuilder DeleteInfrastructureConfiguration action.
- * \value GetComponentAction imagebuilder GetComponent action.
- * \value GetComponentPolicyAction imagebuilder GetComponentPolicy action.
- * \value GetContainerRecipeAction imagebuilder GetContainerRecipe action.
- * \value GetContainerRecipePolicyAction imagebuilder GetContainerRecipePolicy action.
- * \value GetDistributionConfigurationAction imagebuilder GetDistributionConfiguration action.
- * \value GetImageAction imagebuilder GetImage action.
- * \value GetImagePipelineAction imagebuilder GetImagePipeline action.
- * \value GetImagePolicyAction imagebuilder GetImagePolicy action.
- * \value GetImageRecipeAction imagebuilder GetImageRecipe action.
- * \value GetImageRecipePolicyAction imagebuilder GetImageRecipePolicy action.
- * \value GetInfrastructureConfigurationAction imagebuilder GetInfrastructureConfiguration action.
- * \value ImportComponentAction imagebuilder ImportComponent action.
- * \value ListComponentBuildVersionsAction imagebuilder ListComponentBuildVersions action.
- * \value ListComponentsAction imagebuilder ListComponents action.
- * \value ListContainerRecipesAction imagebuilder ListContainerRecipes action.
- * \value ListDistributionConfigurationsAction imagebuilder ListDistributionConfigurations action.
- * \value ListImageBuildVersionsAction imagebuilder ListImageBuildVersions action.
- * \value ListImagePackagesAction imagebuilder ListImagePackages action.
- * \value ListImagePipelineImagesAction imagebuilder ListImagePipelineImages action.
- * \value ListImagePipelinesAction imagebuilder ListImagePipelines action.
- * \value ListImageRecipesAction imagebuilder ListImageRecipes action.
- * \value ListImagesAction imagebuilder ListImages action.
- * \value ListInfrastructureConfigurationsAction imagebuilder ListInfrastructureConfigurations action.
- * \value ListTagsForResourceAction imagebuilder ListTagsForResource action.
- * \value PutComponentPolicyAction imagebuilder PutComponentPolicy action.
- * \value PutContainerRecipePolicyAction imagebuilder PutContainerRecipePolicy action.
- * \value PutImagePolicyAction imagebuilder PutImagePolicy action.
- * \value PutImageRecipePolicyAction imagebuilder PutImageRecipePolicy action.
- * \value StartImagePipelineExecutionAction imagebuilder StartImagePipelineExecution action.
- * \value TagResourceAction imagebuilder TagResource action.
- * \value UntagResourceAction imagebuilder UntagResource action.
- * \value UpdateDistributionConfigurationAction imagebuilder UpdateDistributionConfiguration action.
- * \value UpdateImagePipelineAction imagebuilder UpdateImagePipeline action.
- * \value UpdateInfrastructureConfigurationAction imagebuilder UpdateInfrastructureConfiguration action.
+ * \value CancelImageCreationAction ImageBuilder CancelImageCreation action.
+ * \value CreateComponentAction ImageBuilder CreateComponent action.
+ * \value CreateContainerRecipeAction ImageBuilder CreateContainerRecipe action.
+ * \value CreateDistributionConfigurationAction ImageBuilder CreateDistributionConfiguration action.
+ * \value CreateImageAction ImageBuilder CreateImage action.
+ * \value CreateImagePipelineAction ImageBuilder CreateImagePipeline action.
+ * \value CreateImageRecipeAction ImageBuilder CreateImageRecipe action.
+ * \value CreateInfrastructureConfigurationAction ImageBuilder CreateInfrastructureConfiguration action.
+ * \value DeleteComponentAction ImageBuilder DeleteComponent action.
+ * \value DeleteContainerRecipeAction ImageBuilder DeleteContainerRecipe action.
+ * \value DeleteDistributionConfigurationAction ImageBuilder DeleteDistributionConfiguration action.
+ * \value DeleteImageAction ImageBuilder DeleteImage action.
+ * \value DeleteImagePipelineAction ImageBuilder DeleteImagePipeline action.
+ * \value DeleteImageRecipeAction ImageBuilder DeleteImageRecipe action.
+ * \value DeleteInfrastructureConfigurationAction ImageBuilder DeleteInfrastructureConfiguration action.
+ * \value GetComponentAction ImageBuilder GetComponent action.
+ * \value GetComponentPolicyAction ImageBuilder GetComponentPolicy action.
+ * \value GetContainerRecipeAction ImageBuilder GetContainerRecipe action.
+ * \value GetContainerRecipePolicyAction ImageBuilder GetContainerRecipePolicy action.
+ * \value GetDistributionConfigurationAction ImageBuilder GetDistributionConfiguration action.
+ * \value GetImageAction ImageBuilder GetImage action.
+ * \value GetImagePipelineAction ImageBuilder GetImagePipeline action.
+ * \value GetImagePolicyAction ImageBuilder GetImagePolicy action.
+ * \value GetImageRecipeAction ImageBuilder GetImageRecipe action.
+ * \value GetImageRecipePolicyAction ImageBuilder GetImageRecipePolicy action.
+ * \value GetInfrastructureConfigurationAction ImageBuilder GetInfrastructureConfiguration action.
+ * \value ImportComponentAction ImageBuilder ImportComponent action.
+ * \value ImportVmImageAction ImageBuilder ImportVmImage action.
+ * \value ListComponentBuildVersionsAction ImageBuilder ListComponentBuildVersions action.
+ * \value ListComponentsAction ImageBuilder ListComponents action.
+ * \value ListContainerRecipesAction ImageBuilder ListContainerRecipes action.
+ * \value ListDistributionConfigurationsAction ImageBuilder ListDistributionConfigurations action.
+ * \value ListImageBuildVersionsAction ImageBuilder ListImageBuildVersions action.
+ * \value ListImagePackagesAction ImageBuilder ListImagePackages action.
+ * \value ListImagePipelineImagesAction ImageBuilder ListImagePipelineImages action.
+ * \value ListImagePipelinesAction ImageBuilder ListImagePipelines action.
+ * \value ListImageRecipesAction ImageBuilder ListImageRecipes action.
+ * \value ListImagesAction ImageBuilder ListImages action.
+ * \value ListInfrastructureConfigurationsAction ImageBuilder ListInfrastructureConfigurations action.
+ * \value ListTagsForResourceAction ImageBuilder ListTagsForResource action.
+ * \value PutComponentPolicyAction ImageBuilder PutComponentPolicy action.
+ * \value PutContainerRecipePolicyAction ImageBuilder PutContainerRecipePolicy action.
+ * \value PutImagePolicyAction ImageBuilder PutImagePolicy action.
+ * \value PutImageRecipePolicyAction ImageBuilder PutImageRecipePolicy action.
+ * \value StartImagePipelineExecutionAction ImageBuilder StartImagePipelineExecution action.
+ * \value TagResourceAction ImageBuilder TagResource action.
+ * \value UntagResourceAction ImageBuilder UntagResource action.
+ * \value UpdateDistributionConfigurationAction ImageBuilder UpdateDistributionConfiguration action.
+ * \value UpdateImagePipelineAction ImageBuilder UpdateImagePipeline action.
+ * \value UpdateInfrastructureConfigurationAction ImageBuilder UpdateInfrastructureConfiguration action.
  */
 
 /*!
- * Constructs a imagebuilderRequest object for imagebuilder \a action.
+ * Constructs a ImageBuilderRequest object for ImageBuilder \a action.
  */
-imagebuilderRequest::imagebuilderRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new imagebuilderRequestPrivate(action, this))
+ImageBuilderRequest::ImageBuilderRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new ImageBuilderRequestPrivate(action, this))
 {
 
 }
@@ -99,18 +100,18 @@ imagebuilderRequest::imagebuilderRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-imagebuilderRequest::imagebuilderRequest(const imagebuilderRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new imagebuilderRequestPrivate(*other.d_func(), this))
+ImageBuilderRequest::ImageBuilderRequest(const ImageBuilderRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new ImageBuilderRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the imagebuilderRequest object to be equal to \a other.
+ * Sets the ImageBuilderRequest object to be equal to \a other.
  */
-imagebuilderRequest& imagebuilderRequest::operator=(const imagebuilderRequest &other)
+ImageBuilderRequest& ImageBuilderRequest::operator=(const ImageBuilderRequest &other)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -118,57 +119,57 @@ imagebuilderRequest& imagebuilderRequest::operator=(const imagebuilderRequest &o
 }
 
 /*!
- * Constructs aa imagebuilderRequest object with private implementation \a d.
+ * Constructs aa ImageBuilderRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from imagebuilderRequestPrivate.
+ * implementation that inherits from ImageBuilderRequestPrivate.
  */
-imagebuilderRequest::imagebuilderRequest(imagebuilderRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ImageBuilderRequest::ImageBuilderRequest(ImageBuilderRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the imagebuilder action to be performed by this request.
+ * Returns the ImageBuilder action to be performed by this request.
  */
-imagebuilderRequest::Action imagebuilderRequest::action() const
+ImageBuilderRequest::Action ImageBuilderRequest::action() const
 {
-    Q_D(const imagebuilderRequest);
+    Q_D(const ImageBuilderRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the imagebuilder action to be performed by this request.
+ * Returns the name of the ImageBuilder action to be performed by this request.
  */
-QString imagebuilderRequest::actionString() const
+QString ImageBuilderRequest::actionString() const
 {
-    return imagebuilderRequestPrivate::toString(action());
+    return ImageBuilderRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the imagebuilder API version implemented by this request.
+ * Returns the ImageBuilder API version implemented by this request.
  */
-QString imagebuilderRequest::apiVersion() const
+QString ImageBuilderRequest::apiVersion() const
 {
-    Q_D(const imagebuilderRequest);
+    Q_D(const ImageBuilderRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the imagebuilder action to be performed by this request to \a action.
+ * Sets the ImageBuilder action to be performed by this request to \a action.
  */
-void imagebuilderRequest::setAction(const Action action)
+void ImageBuilderRequest::setAction(const Action action)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->action = action;
 }
 
 /*!
- * Sets the imagebuilder API version to include in this request to \a version.
+ * Sets the ImageBuilder API version to include in this request to \a version.
  */
-void imagebuilderRequest::setApiVersion(const QString &version)
+void ImageBuilderRequest::setApiVersion(const QString &version)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->apiVersion = version;
 }
 
@@ -180,7 +181,7 @@ void imagebuilderRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool imagebuilderRequest::operator==(const imagebuilderRequest &other) const
+bool ImageBuilderRequest::operator==(const ImageBuilderRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -189,19 +190,19 @@ bool imagebuilderRequest::operator==(const imagebuilderRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid imagebuilder queue name.
+ * Returns \c tue if \a queueName is a valid ImageBuilder queue name.
  *
- * @par From imagebuilder FAQs:
+ * @par From ImageBuilder FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid imagebuilder queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid ImageBuilder queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool imagebuilderRequest::isValidQueueName(const QString &queueName)
+/*bool ImageBuilderRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -211,45 +212,45 @@ bool imagebuilderRequest::operator==(const imagebuilderRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int imagebuilderRequest::clearParameter(const QString &name)
+int ImageBuilderRequest::clearParameter(const QString &name)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void imagebuilderRequest::clearParameters()
+void ImageBuilderRequest::clearParameters()
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant imagebuilderRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant ImageBuilderRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const imagebuilderRequest);
+    Q_D(const ImageBuilderRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &imagebuilderRequest::parameters() const
+const QVariantMap &ImageBuilderRequest::parameters() const
 {
-    Q_D(const imagebuilderRequest);
+    Q_D(const ImageBuilderRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void imagebuilderRequest::setParameter(const QString &name, const QVariant &value)
+void ImageBuilderRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->parameters.insert(name, value);
 }
 
@@ -257,42 +258,42 @@ void imagebuilderRequest::setParameter(const QString &name, const QVariant &valu
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void imagebuilderRequest::setParameters(const QVariantMap &parameters)
+void ImageBuilderRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(imagebuilderRequest);
+    Q_D(ImageBuilderRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the imagebuilder request using the given
+ * Returns a network request for the ImageBuilder request using the given
  * \a endpoint.
  *
- * This imagebuilder implementation builds request URLs by combining the
+ * This ImageBuilder implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest imagebuilderRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest ImageBuilderRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const imagebuilderRequest);
+    //Q_D(const ImageBuilderRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::imagebuilder::imagebuilderRequestPrivate
- * \brief The imagebuilderRequestPrivate class provides private implementation for imagebuilderRequest.
+ * \class QtAws::ImageBuilder::ImageBuilderRequestPrivate
+ * \brief The ImageBuilderRequestPrivate class provides private implementation for ImageBuilderRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a imagebuilderRequestPrivate object for imagebuilder \a action,
+ * Constructs a ImageBuilderRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
-imagebuilderRequestPrivate::imagebuilderRequestPrivate(const imagebuilderRequest::Action action, imagebuilderRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+ImageBuilderRequestPrivate::ImageBuilderRequestPrivate(const ImageBuilderRequest::Action action, ImageBuilderRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-12-02"))
 {
 
 }
@@ -303,10 +304,10 @@ imagebuilderRequestPrivate::imagebuilderRequestPrivate(const imagebuilderRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the imagebuilderRequest class's copy constructor.
+ * This is required to support the ImageBuilderRequest class's copy constructor.
  */
-imagebuilderRequestPrivate::imagebuilderRequestPrivate(const imagebuilderRequestPrivate &other,
-                                     imagebuilderRequest * const q)
+ImageBuilderRequestPrivate::ImageBuilderRequestPrivate(const ImageBuilderRequestPrivate &other,
+                                     ImageBuilderRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -317,14 +318,14 @@ imagebuilderRequestPrivate::imagebuilderRequestPrivate(const imagebuilderRequest
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts imagebuilderRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the imagebuilder service's Action
+ * This function converts ImageBuilderRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the ImageBuilder service's Action
  * query parameters.
  */
-QString imagebuilderRequestPrivate::toString(const imagebuilderRequest::Action &action)
+QString ImageBuilderRequestPrivate::toString(const ImageBuilderRequest::Action &action)
 {
     #define ActionToString(action) \
-        case imagebuilderRequest::action##Action: return QStringLiteral(#action)
+        case ImageBuilderRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CancelImageCreation);
         ActionToString(CreateComponent);
@@ -353,6 +354,7 @@ QString imagebuilderRequestPrivate::toString(const imagebuilderRequest::Action &
         ActionToString(GetImageRecipePolicy);
         ActionToString(GetInfrastructureConfiguration);
         ActionToString(ImportComponent);
+        ActionToString(ImportVmImage);
         ActionToString(ListComponentBuildVersions);
         ActionToString(ListComponents);
         ActionToString(ListContainerRecipes);
@@ -382,5 +384,5 @@ QString imagebuilderRequestPrivate::toString(const imagebuilderRequest::Action &
     return QString();
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for finspace TagResource requests.
+ * \class QtAws::Finspace::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Finspace TagResource requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::tagResource
+ * \sa FinspaceClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : finspaceRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : finspaceRequest(new TagResourceRequestPrivate(finspaceRequest::TagResourceAction, this))
+    : FinspaceRequest(new TagResourceRequestPrivate(FinspaceRequest::TagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::finspace::TagResourceRequestPrivate
+ * \class QtAws::Finspace::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for finspace \a action,
+ * Constructs a TagResourceRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const finspaceRequest::Action action, TagResourceRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, TagResourceRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

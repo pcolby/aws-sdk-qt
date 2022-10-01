@@ -24,7 +24,7 @@
 #include "requestcancelworkflowexecutionrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class RequestCancelWorkflowExecutionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

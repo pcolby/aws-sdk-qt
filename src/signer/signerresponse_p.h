@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerResponse;
+class SignerResponse;
 
-class signerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SignerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit signerResponsePrivate(signerResponse * const q);
+    explicit SignerResponsePrivate(SignerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(signerResponse)
-    Q_DISABLE_COPY(signerResponsePrivate)
+    Q_DECLARE_PUBLIC(SignerResponse)
+    Q_DISABLE_COPY(SignerResponsePrivate)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

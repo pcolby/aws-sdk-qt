@@ -23,7 +23,7 @@
 #include "ec2request.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class DeleteVpnConnectionRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

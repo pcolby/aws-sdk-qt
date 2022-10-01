@@ -24,11 +24,11 @@
 #include "failoverdbclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class FailoverDBClusterResponsePrivate;
 
-class QTAWSDOCDB_EXPORT FailoverDBClusterResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT FailoverDBClusterResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

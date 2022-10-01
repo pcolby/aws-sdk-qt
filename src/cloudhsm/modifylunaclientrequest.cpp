@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ModifyLunaClientRequest
- * \brief The ModifyLunaClientRequest class provides an interface for CloudHSM ModifyLunaClient requests.
+ * \class QtAws::CloudHsm::ModifyLunaClientRequest
+ * \brief The ModifyLunaClientRequest class provides an interface for CloudHsm ModifyLunaClient requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::modifyLunaClient
+ * \sa CloudHsmClient::modifyLunaClient
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyLunaClientRequest::ModifyLunaClientRequest(const ModifyLunaClientRequest &other)
-    : CloudHSMRequest(new ModifyLunaClientRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new ModifyLunaClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ ModifyLunaClientRequest::ModifyLunaClientRequest(const ModifyLunaClientRequest &
  * Constructs a ModifyLunaClientRequest object.
  */
 ModifyLunaClientRequest::ModifyLunaClientRequest()
-    : CloudHSMRequest(new ModifyLunaClientRequestPrivate(CloudHSMRequest::ModifyLunaClientAction, this))
+    : CloudHsmRequest(new ModifyLunaClientRequestPrivate(CloudHsmRequest::ModifyLunaClientAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * ModifyLunaClientRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::CloudHSM::ModifyLunaClientRequestPrivate
+ * \class QtAws::CloudHsm::ModifyLunaClientRequestPrivate
  * \brief The ModifyLunaClientRequestPrivate class provides private implementation for ModifyLunaClientRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a ModifyLunaClientRequestPrivate object for CloudHSM \a action,
+ * Constructs a ModifyLunaClientRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
-    const CloudHSMRequest::Action action, ModifyLunaClientRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, ModifyLunaClientRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
  */
 ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
     const ModifyLunaClientRequestPrivate &other, ModifyLunaClientRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

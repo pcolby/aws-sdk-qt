@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetChangeTokenRequest
- * \brief The GetChangeTokenRequest class provides an interface for WAF GetChangeToken requests.
+ * \class QtAws::Waf::GetChangeTokenRequest
+ * \brief The GetChangeTokenRequest class provides an interface for Waf GetChangeToken requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::WAF::GetChangeTokenRequestPrivate
+ * \class QtAws::Waf::GetChangeTokenRequestPrivate
  * \brief The GetChangeTokenRequestPrivate class provides private implementation for GetChangeTokenRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

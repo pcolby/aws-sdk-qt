@@ -36,6 +36,8 @@ class DeleteEndpointRequest;
 class DeleteEndpointResponse;
 class ListEndpointsRequest;
 class ListEndpointsResponse;
+class ListSharedEndpointsRequest;
+class ListSharedEndpointsResponse;
 
 class QTAWSS3OUTPOSTS_EXPORT S3OutpostsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -56,6 +58,7 @@ public slots:
     CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
     DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
     ListEndpointsResponse * listEndpoints(const ListEndpointsRequest &request);
+    ListSharedEndpointsResponse * listSharedEndpoints(const ListSharedEndpointsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(S3OutpostsClient)

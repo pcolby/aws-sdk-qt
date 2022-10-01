@@ -24,11 +24,11 @@
 #include "createvpclinkrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateVpcLinkResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT CreateVpcLinkResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT CreateVpcLinkResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

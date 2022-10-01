@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteHsmRequest
- * \brief The DeleteHsmRequest class provides an interface for CloudHSMV2 DeleteHsm requests.
+ * \class QtAws::CloudHsmV2::DeleteHsmRequest
+ * \brief The DeleteHsmRequest class provides an interface for CloudHsmV2 DeleteHsm requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::deleteHsm
+ * \sa CloudHsmV2Client::deleteHsm
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteHsmRequest::DeleteHsmRequest(const DeleteHsmRequest &other)
-    : CloudHSMV2Request(new DeleteHsmRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new DeleteHsmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DeleteHsmRequest::DeleteHsmRequest(const DeleteHsmRequest &other)
  * Constructs a DeleteHsmRequest object.
  */
 DeleteHsmRequest::DeleteHsmRequest()
-    : CloudHSMV2Request(new DeleteHsmRequestPrivate(CloudHSMV2Request::DeleteHsmAction, this))
+    : CloudHsmV2Request(new DeleteHsmRequestPrivate(CloudHsmV2Request::DeleteHsmAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteHsmRequestPrivate
+ * \class QtAws::CloudHsmV2::DeleteHsmRequestPrivate
  * \brief The DeleteHsmRequestPrivate class provides private implementation for DeleteHsmRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a DeleteHsmRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a DeleteHsmRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
-    const CloudHSMV2Request::Action action, DeleteHsmRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, DeleteHsmRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const DeleteHsmRequestPrivate &other, DeleteHsmRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

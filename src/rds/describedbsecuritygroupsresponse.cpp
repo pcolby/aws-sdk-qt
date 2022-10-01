@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBSecurityGroupsResponse
- * \brief The DescribeDBSecurityGroupsResponse class provides an interace for RDS DescribeDBSecurityGroups responses.
+ * \class QtAws::Rds::DescribeDBSecurityGroupsResponse
+ * \brief The DescribeDBSecurityGroupsResponse class provides an interace for Rds DescribeDBSecurityGroups responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBSecurityGroupsRequest * DescribeDBSecurityGroupsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBSecurityGroups \a response.
+ * Parses a successful Rds DescribeDBSecurityGroups \a response.
  */
 void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBSecurityGroupsResponsePrivate
+ * \class QtAws::Rds::DescribeDBSecurityGroupsResponsePrivate
  * \brief The DescribeDBSecurityGroupsResponsePrivate class provides private implementation for DescribeDBSecurityGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate
 }
 
 /*!
- * Parses a RDS DescribeDBSecurityGroups response element from \a xml.
+ * Parses a Rds DescribeDBSecurityGroups response element from \a xml.
  */
 void DescribeDBSecurityGroupsResponsePrivate::parseDescribeDBSecurityGroupsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBSecurityGroupsResponsePrivate::parseDescribeDBSecurityGroupsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

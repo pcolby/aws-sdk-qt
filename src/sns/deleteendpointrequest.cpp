@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeleteEndpointRequest
- * \brief The DeleteEndpointRequest class provides an interface for SNS DeleteEndpoint requests.
+ * \class QtAws::Sns::DeleteEndpointRequest
+ * \brief The DeleteEndpointRequest class provides an interface for Sns DeleteEndpoint requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SNS::DeleteEndpointRequestPrivate
+ * \class QtAws::Sns::DeleteEndpointRequestPrivate
  * \brief The DeleteEndpointRequestPrivate class provides private implementation for DeleteEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "updateserverrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class UpdateServerResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT UpdateServerResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT UpdateServerResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "deletedbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBInstanceResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DeleteDBInstanceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DeleteDBInstanceResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

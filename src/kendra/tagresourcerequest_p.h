@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public kendraRequestPrivate {
+class TagResourceRequestPrivate : public KendraRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const kendraRequest::Action action,
+    TagResourceRequestPrivate(const KendraRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

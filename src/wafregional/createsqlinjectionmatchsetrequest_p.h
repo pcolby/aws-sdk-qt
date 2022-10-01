@@ -24,14 +24,14 @@
 #include "createsqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateSqlInjectionMatchSetRequest;
 
-class CreateSqlInjectionMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateSqlInjectionMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateSqlInjectionMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateSqlInjectionMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateSqlInjectionMatchSetRequest * const q);
     CreateSqlInjectionMatchSetRequestPrivate(const CreateSqlInjectionMatchSetRequestPrivate &other,
                                    CreateSqlInjectionMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

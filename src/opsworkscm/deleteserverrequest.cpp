@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteServerRequest
- * \brief The DeleteServerRequest class provides an interface for OpsWorksCM DeleteServer requests.
+ * \class QtAws::OpsWorksCm::DeleteServerRequest
+ * \brief The DeleteServerRequest class provides an interface for OpsWorksCm DeleteServer requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::deleteServer
+ * \sa OpsWorksCmClient::deleteServer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteServerRequest::DeleteServerRequest(const DeleteServerRequest &other)
-    : OpsWorksCMRequest(new DeleteServerRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DeleteServerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DeleteServerRequest::DeleteServerRequest(const DeleteServerRequest &other)
  * Constructs a DeleteServerRequest object.
  */
 DeleteServerRequest::DeleteServerRequest()
-    : OpsWorksCMRequest(new DeleteServerRequestPrivate(OpsWorksCMRequest::DeleteServerAction, this))
+    : OpsWorksCmRequest(new DeleteServerRequestPrivate(OpsWorksCmRequest::DeleteServerAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteServerRequestPrivate
+ * \class QtAws::OpsWorksCm::DeleteServerRequestPrivate
  * \brief The DeleteServerRequestPrivate class provides private implementation for DeleteServerRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DeleteServerRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DeleteServerRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
-    const OpsWorksCMRequest::Action action, DeleteServerRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DeleteServerRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DeleteServerRequestPrivate::DeleteServerRequestPrivate(
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const DeleteServerRequestPrivate &other, DeleteServerRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

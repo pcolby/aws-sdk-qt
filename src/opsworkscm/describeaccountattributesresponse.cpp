@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeAccountAttributesResponse
- * \brief The DescribeAccountAttributesResponse class provides an interace for OpsWorksCM DescribeAccountAttributes responses.
+ * \class QtAws::OpsWorksCm::DescribeAccountAttributesResponse
+ * \brief The DescribeAccountAttributesResponse class provides an interace for OpsWorksCm DescribeAccountAttributes responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeAccountAttributes
+ * \sa OpsWorksCmClient::describeAccountAttributes
  */
 
 /*!
@@ -123,7 +123,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DescribeAccountAttributes \a response.
+ * Parses a successful OpsWorksCm DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeAccountAttributesResponsePrivate
+ * \class QtAws::OpsWorksCm::DescribeAccountAttributesResponsePrivate
  * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
-    DescribeAccountAttributesResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DescribeAccountAttributesResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DescribeAccountAttributes response element from \a xml.
+ * Parses a OpsWorksCm DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

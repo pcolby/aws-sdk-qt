@@ -39,19 +39,27 @@ namespace Backup {
  * \value CreateBackupPlanAction Backup CreateBackupPlan action.
  * \value CreateBackupSelectionAction Backup CreateBackupSelection action.
  * \value CreateBackupVaultAction Backup CreateBackupVault action.
+ * \value CreateFrameworkAction Backup CreateFramework action.
+ * \value CreateReportPlanAction Backup CreateReportPlan action.
  * \value DeleteBackupPlanAction Backup DeleteBackupPlan action.
  * \value DeleteBackupSelectionAction Backup DeleteBackupSelection action.
  * \value DeleteBackupVaultAction Backup DeleteBackupVault action.
  * \value DeleteBackupVaultAccessPolicyAction Backup DeleteBackupVaultAccessPolicy action.
+ * \value DeleteBackupVaultLockConfigurationAction Backup DeleteBackupVaultLockConfiguration action.
  * \value DeleteBackupVaultNotificationsAction Backup DeleteBackupVaultNotifications action.
+ * \value DeleteFrameworkAction Backup DeleteFramework action.
  * \value DeleteRecoveryPointAction Backup DeleteRecoveryPoint action.
+ * \value DeleteReportPlanAction Backup DeleteReportPlan action.
  * \value DescribeBackupJobAction Backup DescribeBackupJob action.
  * \value DescribeBackupVaultAction Backup DescribeBackupVault action.
  * \value DescribeCopyJobAction Backup DescribeCopyJob action.
+ * \value DescribeFrameworkAction Backup DescribeFramework action.
  * \value DescribeGlobalSettingsAction Backup DescribeGlobalSettings action.
  * \value DescribeProtectedResourceAction Backup DescribeProtectedResource action.
  * \value DescribeRecoveryPointAction Backup DescribeRecoveryPoint action.
  * \value DescribeRegionSettingsAction Backup DescribeRegionSettings action.
+ * \value DescribeReportJobAction Backup DescribeReportJob action.
+ * \value DescribeReportPlanAction Backup DescribeReportPlan action.
  * \value DescribeRestoreJobAction Backup DescribeRestoreJob action.
  * \value DisassociateRecoveryPointAction Backup DisassociateRecoveryPoint action.
  * \value ExportBackupPlanTemplateAction Backup ExportBackupPlanTemplate action.
@@ -70,23 +78,30 @@ namespace Backup {
  * \value ListBackupSelectionsAction Backup ListBackupSelections action.
  * \value ListBackupVaultsAction Backup ListBackupVaults action.
  * \value ListCopyJobsAction Backup ListCopyJobs action.
+ * \value ListFrameworksAction Backup ListFrameworks action.
  * \value ListProtectedResourcesAction Backup ListProtectedResources action.
  * \value ListRecoveryPointsByBackupVaultAction Backup ListRecoveryPointsByBackupVault action.
  * \value ListRecoveryPointsByResourceAction Backup ListRecoveryPointsByResource action.
+ * \value ListReportJobsAction Backup ListReportJobs action.
+ * \value ListReportPlansAction Backup ListReportPlans action.
  * \value ListRestoreJobsAction Backup ListRestoreJobs action.
  * \value ListTagsAction Backup ListTags action.
  * \value PutBackupVaultAccessPolicyAction Backup PutBackupVaultAccessPolicy action.
+ * \value PutBackupVaultLockConfigurationAction Backup PutBackupVaultLockConfiguration action.
  * \value PutBackupVaultNotificationsAction Backup PutBackupVaultNotifications action.
  * \value StartBackupJobAction Backup StartBackupJob action.
  * \value StartCopyJobAction Backup StartCopyJob action.
+ * \value StartReportJobAction Backup StartReportJob action.
  * \value StartRestoreJobAction Backup StartRestoreJob action.
  * \value StopBackupJobAction Backup StopBackupJob action.
  * \value TagResourceAction Backup TagResource action.
  * \value UntagResourceAction Backup UntagResource action.
  * \value UpdateBackupPlanAction Backup UpdateBackupPlan action.
+ * \value UpdateFrameworkAction Backup UpdateFramework action.
  * \value UpdateGlobalSettingsAction Backup UpdateGlobalSettings action.
  * \value UpdateRecoveryPointLifecycleAction Backup UpdateRecoveryPointLifecycle action.
  * \value UpdateRegionSettingsAction Backup UpdateRegionSettings action.
+ * \value UpdateReportPlanAction Backup UpdateReportPlan action.
  */
 
 /*!
@@ -294,7 +309,7 @@ QNetworkRequest BackupRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BackupRequestPrivate::BackupRequestPrivate(const BackupRequest::Action action, BackupRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-15"))
 {
 
 }
@@ -331,19 +346,27 @@ QString BackupRequestPrivate::toString(const BackupRequest::Action &action)
         ActionToString(CreateBackupPlan);
         ActionToString(CreateBackupSelection);
         ActionToString(CreateBackupVault);
+        ActionToString(CreateFramework);
+        ActionToString(CreateReportPlan);
         ActionToString(DeleteBackupPlan);
         ActionToString(DeleteBackupSelection);
         ActionToString(DeleteBackupVault);
         ActionToString(DeleteBackupVaultAccessPolicy);
+        ActionToString(DeleteBackupVaultLockConfiguration);
         ActionToString(DeleteBackupVaultNotifications);
+        ActionToString(DeleteFramework);
         ActionToString(DeleteRecoveryPoint);
+        ActionToString(DeleteReportPlan);
         ActionToString(DescribeBackupJob);
         ActionToString(DescribeBackupVault);
         ActionToString(DescribeCopyJob);
+        ActionToString(DescribeFramework);
         ActionToString(DescribeGlobalSettings);
         ActionToString(DescribeProtectedResource);
         ActionToString(DescribeRecoveryPoint);
         ActionToString(DescribeRegionSettings);
+        ActionToString(DescribeReportJob);
+        ActionToString(DescribeReportPlan);
         ActionToString(DescribeRestoreJob);
         ActionToString(DisassociateRecoveryPoint);
         ActionToString(ExportBackupPlanTemplate);
@@ -362,23 +385,30 @@ QString BackupRequestPrivate::toString(const BackupRequest::Action &action)
         ActionToString(ListBackupSelections);
         ActionToString(ListBackupVaults);
         ActionToString(ListCopyJobs);
+        ActionToString(ListFrameworks);
         ActionToString(ListProtectedResources);
         ActionToString(ListRecoveryPointsByBackupVault);
         ActionToString(ListRecoveryPointsByResource);
+        ActionToString(ListReportJobs);
+        ActionToString(ListReportPlans);
         ActionToString(ListRestoreJobs);
         ActionToString(ListTags);
         ActionToString(PutBackupVaultAccessPolicy);
+        ActionToString(PutBackupVaultLockConfiguration);
         ActionToString(PutBackupVaultNotifications);
         ActionToString(StartBackupJob);
         ActionToString(StartCopyJob);
+        ActionToString(StartReportJob);
         ActionToString(StartRestoreJob);
         ActionToString(StopBackupJob);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateBackupPlan);
+        ActionToString(UpdateFramework);
         ActionToString(UpdateGlobalSettings);
         ActionToString(UpdateRecoveryPointLifecycle);
         ActionToString(UpdateRegionSettings);
+        ActionToString(UpdateReportPlan);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

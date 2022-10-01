@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DescribeJournalS3ExportResponse
- * \brief The DescribeJournalS3ExportResponse class provides an interace for QLDB DescribeJournalS3Export responses.
+ * \class QtAws::Qldb::DescribeJournalS3ExportResponse
+ * \brief The DescribeJournalS3ExportResponse class provides an interace for Qldb DescribeJournalS3Export responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const DescribeJournalS3ExportRequest * DescribeJournalS3ExportResponse::request(
 
 /*!
  * \reimp
- * Parses a successful QLDB DescribeJournalS3Export \a response.
+ * Parses a successful Qldb DescribeJournalS3Export \a response.
  */
 void DescribeJournalS3ExportResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void DescribeJournalS3ExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::DescribeJournalS3ExportResponsePrivate
+ * \class QtAws::Qldb::DescribeJournalS3ExportResponsePrivate
  * \brief The DescribeJournalS3ExportResponsePrivate class provides private implementation for DescribeJournalS3ExportResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ DescribeJournalS3ExportResponsePrivate::DescribeJournalS3ExportResponsePrivate(
 }
 
 /*!
- * Parses a QLDB DescribeJournalS3Export response element from \a xml.
+ * Parses a Qldb DescribeJournalS3Export response element from \a xml.
  */
 void DescribeJournalS3ExportResponsePrivate::parseDescribeJournalS3ExportResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeJournalS3ExportResponsePrivate::parseDescribeJournalS3ExportRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

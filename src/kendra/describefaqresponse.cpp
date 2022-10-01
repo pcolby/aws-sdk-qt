@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeFaqResponse
- * \brief The DescribeFaqResponse class provides an interace for kendra DescribeFaq responses.
+ * \class QtAws::Kendra::DescribeFaqResponse
+ * \brief The DescribeFaqResponse class provides an interace for Kendra DescribeFaq responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeFaq
+ * \sa KendraClient::describeFaq
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeFaqResponse::DescribeFaqResponse(
         const DescribeFaqRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DescribeFaqResponsePrivate(this), parent)
+    : KendraResponse(new DescribeFaqResponsePrivate(this), parent)
 {
     setRequest(new DescribeFaqRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeFaqRequest * DescribeFaqResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DescribeFaq \a response.
+ * Parses a successful Kendra DescribeFaq \a response.
  */
 void DescribeFaqResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeFaqResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DescribeFaqResponsePrivate
+ * \class QtAws::Kendra::DescribeFaqResponsePrivate
  * \brief The DescribeFaqResponsePrivate class provides private implementation for DescribeFaqResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DescribeFaqResponsePrivate object with public implementation \a q.
  */
 DescribeFaqResponsePrivate::DescribeFaqResponsePrivate(
-    DescribeFaqResponse * const q) : kendraResponsePrivate(q)
+    DescribeFaqResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DescribeFaq response element from \a xml.
+ * Parses a Kendra DescribeFaq response element from \a xml.
  */
 void DescribeFaqResponsePrivate::parseDescribeFaqResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeFaqResponsePrivate::parseDescribeFaqResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

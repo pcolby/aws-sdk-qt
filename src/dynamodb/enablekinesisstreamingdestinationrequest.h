@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class EnableKinesisStreamingDestinationRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT EnableKinesisStreamingDestinationRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT EnableKinesisStreamingDestinationRequest : public DynamoDbRequest {
 
 public:
     EnableKinesisStreamingDestinationRequest(const EnableKinesisStreamingDestinationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

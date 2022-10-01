@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListIPSetsRequest
- * \brief The ListIPSetsRequest class provides an interface for WAF ListIPSets requests.
+ * \class QtAws::Waf::ListIPSetsRequest
+ * \brief The ListIPSetsRequest class provides an interface for Waf ListIPSets requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::WAF::ListIPSetsRequestPrivate
+ * \class QtAws::Waf::ListIPSetsRequestPrivate
  * \brief The ListIPSetsRequestPrivate class provides private implementation for ListIPSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for finspace UntagResource requests.
+ * \class QtAws::Finspace::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for Finspace UntagResource requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::untagResource
+ * \sa FinspaceClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : finspaceRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : finspaceRequest(new UntagResourceRequestPrivate(finspaceRequest::UntagResourceAction, this))
+    : FinspaceRequest(new UntagResourceRequestPrivate(FinspaceRequest::UntagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::finspace::UntagResourceRequestPrivate
+ * \class QtAws::Finspace::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for finspace \a action,
+ * Constructs a UntagResourceRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const finspaceRequest::Action action, UntagResourceRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, UntagResourceRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

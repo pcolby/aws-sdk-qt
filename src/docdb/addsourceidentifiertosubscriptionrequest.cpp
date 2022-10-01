@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::AddSourceIdentifierToSubscriptionRequest
- * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for DocDB AddSourceIdentifierToSubscription requests.
+ * \class QtAws::DocDb::AddSourceIdentifierToSubscriptionRequest
+ * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for DocDb AddSourceIdentifierToSubscription requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::addSourceIdentifierToSubscription
+ * \sa DocDbClient::addSourceIdentifierToSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other)
-    : DocDBRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionReque
  * Constructs a AddSourceIdentifierToSubscriptionRequest object.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest()
-    : DocDBRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(DocDBRequest::AddSourceIdentifierToSubscriptionAction, this))
+    : DocDbRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(DocDbRequest::AddSourceIdentifierToSubscriptionAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
 }
 
 /*!
- * \class QtAws::DocDB::AddSourceIdentifierToSubscriptionRequestPrivate
+ * \class QtAws::DocDb::AddSourceIdentifierToSubscriptionRequestPrivate
  * \brief The AddSourceIdentifierToSubscriptionRequestPrivate class provides private implementation for AddSourceIdentifierToSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for DocDB \a action,
+ * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
-    const DocDBRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const AddSourceIdentifierToSubscriptionRequestPrivate &other, AddSourceIdentifierToSubscriptionRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

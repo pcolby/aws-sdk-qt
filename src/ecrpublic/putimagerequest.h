@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class PutImageRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT PutImageRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT PutImageRequest : public EcrPublicRequest {
 
 public:
     PutImageRequest(const PutImageRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

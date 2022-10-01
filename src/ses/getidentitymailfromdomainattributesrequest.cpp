@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetIdentityMailFromDomainAttributesRequest
- * \brief The GetIdentityMailFromDomainAttributesRequest class provides an interface for SES GetIdentityMailFromDomainAttributes requests.
+ * \class QtAws::Ses::GetIdentityMailFromDomainAttributesRequest
+ * \brief The GetIdentityMailFromDomainAttributesRequest class provides an interface for Ses GetIdentityMailFromDomainAttributes requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
 }
 
 /*!
- * \class QtAws::SES::GetIdentityMailFromDomainAttributesRequestPrivate
+ * \class QtAws::Ses::GetIdentityMailFromDomainAttributesRequestPrivate
  * \brief The GetIdentityMailFromDomainAttributesRequestPrivate class provides private implementation for GetIdentityMailFromDomainAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

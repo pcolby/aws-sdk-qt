@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class MwaaResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

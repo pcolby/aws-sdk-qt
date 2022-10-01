@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for CodeStarNotifications ListTagsForResource requests.
+ * \class QtAws::CodestarNotifications::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for CodestarNotifications ListTagsForResource requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::listTagsForResource
+ * \sa CodestarNotificationsClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : CodeStarNotificationsRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : CodeStarNotificationsRequest(new ListTagsForResourceRequestPrivate(CodeStarNotificationsRequest::ListTagsForResourceAction, this))
+    : CodestarNotificationsRequest(new ListTagsForResourceRequestPrivate(CodestarNotificationsRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::ListTagsForResourceRequestPrivate
+ * \class QtAws::CodestarNotifications::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, ListTagsForResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, ListTagsForResourceRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

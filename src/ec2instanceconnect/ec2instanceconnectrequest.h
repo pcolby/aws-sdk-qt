@@ -30,23 +30,23 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
-class EC2InstanceConnectRequestPrivate;
+class Ec2InstanceConnectRequestPrivate;
 
-class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEC2INSTANCECONNECT_EXPORT Ec2InstanceConnectRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EC2InstanceConnect.
+    /// Actions supported by Ec2InstanceConnect.
     enum Action {
         SendSSHPublicKeyAction,
         SendSerialConsoleSSHPublicKeyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    EC2InstanceConnectRequest(const Action action);
-    EC2InstanceConnectRequest(const EC2InstanceConnectRequest &other);
-    EC2InstanceConnectRequest &operator=(const EC2InstanceConnectRequest &other);
+    Ec2InstanceConnectRequest(const Action action);
+    Ec2InstanceConnectRequest(const Ec2InstanceConnectRequest &other);
+    Ec2InstanceConnectRequest &operator=(const Ec2InstanceConnectRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -55,12 +55,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EC2InstanceConnectRequest &other) const;
+    virtual bool operator==(const Ec2InstanceConnectRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit EC2InstanceConnectRequest(EC2InstanceConnectRequestPrivate * const d);
+    explicit Ec2InstanceConnectRequest(Ec2InstanceConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -73,11 +73,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(EC2InstanceConnectRequest)
+    Q_DECLARE_PRIVATE(Ec2InstanceConnectRequest)
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

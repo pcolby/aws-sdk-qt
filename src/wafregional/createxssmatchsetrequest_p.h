@@ -24,14 +24,14 @@
 #include "createxssmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateXssMatchSetRequest;
 
-class CreateXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateXssMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateXssMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateXssMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateXssMatchSetRequest * const q);
     CreateXssMatchSetRequestPrivate(const CreateXssMatchSetRequestPrivate &other,
                                    CreateXssMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

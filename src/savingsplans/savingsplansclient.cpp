@@ -45,7 +45,7 @@
 
 /*!
  * \namespace QtAws::SavingsPlans
- * \brief Contains classess for accessing AWS Savings Plans (SavingsPlans).
+ * \brief Contains classess for accessing AWS Savings Plans.
  *
  * \inmodule QtAwsSavingsPlans
  *
@@ -57,7 +57,7 @@ namespace SavingsPlans {
 
 /*!
  * \class QtAws::SavingsPlans::SavingsPlansClient
- * \brief The SavingsPlansClient class provides access to the AWS Savings Plans (SavingsPlans) service.
+ * \brief The SavingsPlansClient class provides access to the AWS Savings Plans service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsSavingsPlans

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateRestApiResponse
- * \brief The UpdateRestApiResponse class provides an interace for APIGateway UpdateRestApi responses.
+ * \class QtAws::ApiGateway::UpdateRestApiResponse
+ * \brief The UpdateRestApiResponse class provides an interace for ApiGateway UpdateRestApi responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateRestApi
+ * \sa ApiGatewayClient::updateRestApi
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateRestApiResponse::UpdateRestApiResponse(
         const UpdateRestApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateRestApiResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateRestApiResponsePrivate(this), parent)
 {
     setRequest(new UpdateRestApiRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateRestApiRequest * UpdateRestApiResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateRestApi \a response.
+ * Parses a successful ApiGateway UpdateRestApi \a response.
  */
 void UpdateRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateRestApiResponsePrivate
+ * \class QtAws::ApiGateway::UpdateRestApiResponsePrivate
  * \brief The UpdateRestApiResponsePrivate class provides private implementation for UpdateRestApiResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateRestApiResponsePrivate object with public implementation \a q.
  */
 UpdateRestApiResponsePrivate::UpdateRestApiResponsePrivate(
-    UpdateRestApiResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateRestApiResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateRestApi response element from \a xml.
+ * Parses a ApiGateway UpdateRestApi response element from \a xml.
  */
 void UpdateRestApiResponsePrivate::parseUpdateRestApiResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateRestApiResponsePrivate::parseUpdateRestApiResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

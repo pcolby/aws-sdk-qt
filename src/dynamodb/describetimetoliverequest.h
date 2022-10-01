@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeTimeToLiveRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeTimeToLiveRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeTimeToLiveRequest : public DynamoDbRequest {
 
 public:
     DescribeTimeToLiveRequest(const DescribeTimeToLiveRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

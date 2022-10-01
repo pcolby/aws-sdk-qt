@@ -35,6 +35,8 @@
 #include "batchupdatefindingsresponse.h"
 #include "createactiontargetrequest.h"
 #include "createactiontargetresponse.h"
+#include "createfindingaggregatorrequest.h"
+#include "createfindingaggregatorresponse.h"
 #include "createinsightrequest.h"
 #include "createinsightresponse.h"
 #include "createmembersrequest.h"
@@ -43,6 +45,8 @@
 #include "declineinvitationsresponse.h"
 #include "deleteactiontargetrequest.h"
 #include "deleteactiontargetresponse.h"
+#include "deletefindingaggregatorrequest.h"
+#include "deletefindingaggregatorresponse.h"
 #include "deleteinsightrequest.h"
 #include "deleteinsightresponse.h"
 #include "deleteinvitationsrequest.h"
@@ -83,6 +87,8 @@
 #include "getadministratoraccountresponse.h"
 #include "getenabledstandardsrequest.h"
 #include "getenabledstandardsresponse.h"
+#include "getfindingaggregatorrequest.h"
+#include "getfindingaggregatorresponse.h"
 #include "getfindingsrequest.h"
 #include "getfindingsresponse.h"
 #include "getinsightresultsrequest.h"
@@ -99,6 +105,8 @@
 #include "invitemembersresponse.h"
 #include "listenabledproductsforimportrequest.h"
 #include "listenabledproductsforimportresponse.h"
+#include "listfindingaggregatorsrequest.h"
+#include "listfindingaggregatorsresponse.h"
 #include "listinvitationsrequest.h"
 #include "listinvitationsresponse.h"
 #include "listmembersrequest.h"
@@ -113,6 +121,8 @@
 #include "untagresourceresponse.h"
 #include "updateactiontargetrequest.h"
 #include "updateactiontargetresponse.h"
+#include "updatefindingaggregatorrequest.h"
+#include "updatefindingaggregatorresponse.h"
 #include "updatefindingsrequest.h"
 #include "updatefindingsresponse.h"
 #include "updateinsightrequest.h"
@@ -146,25 +156,25 @@ namespace SecurityHub {
  * \ingroup aws-clients
  * \inmodule QtAwsSecurityHub
  *
- *  Security Hub provides you with a comprehensive view of the security state of your AWS environment and resources. It also
- *  provides you with the readiness status of your environment based on controls from supported security standards. Security
- *  Hub collects security data from AWS accounts, services, and integrated third-party products and helps you analyze
- *  security trends in your environment to identify the highest priority security issues. For more information about
- *  Security Hub, see the <i> <a
- *  href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">AWS Security Hub User Guide</a>
+ *  Security Hub provides you with a comprehensive view of the security state of your Amazon Web Services environment and
+ *  resources. It also provides you with the readiness status of your environment based on controls from supported security
+ *  standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated third-party
+ *  products and helps you analyze security trends in your environment to identify the highest priority security issues. For
+ *  more information about Security Hub, see the <a
+ *  href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"> <i>Security HubUser Guide</i>
  * 
- *  </i>>
+ *  </a>>
  * 
- *  When you use operations in the Security Hub API, the requests are executed only in the AWS Region that is currently
- *  active or in the specific AWS Region that you specify in your request. Any configuration or settings change that results
- *  from the operation is applied only to that Region. To make the same change in other Regions, execute the same command
- *  for each Region to apply the change
+ *  When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region that
+ *  is currently active or in the specific Amazon Web Services Region that you specify in your request. Any configuration or
+ *  settings change that results from the operation is applied only to that Region. To make the same change in other
+ *  Regions, execute the same command for each Region to apply the change
  * 
  *  to>
  * 
- *  For example, if your Region is set to <code>us-west-2</code>, when you use <code> <a>CreateMembers</a> </code> to add a
- *  member account to Security Hub, the association of the member account with the administrator account is created only in
- *  the <code>us-west-2</code> Region. Security Hub must be enabled for the member account in the same Region that the
+ *  For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
+ *  account to Security Hub, the association of the member account with the administrator account is created only in the
+ *  <code>us-west-2</code> Region. Security Hub must be enabled for the member account in the same Region that the
  *  invitation was sent
  * 
  *  from>
@@ -173,23 +183,27 @@ namespace SecurityHub {
  * 
  *  operations> <ul> <li>
  * 
- *  <code> <a>BatchEnableStandards</a> </code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of
- *  1 request per
+ *  <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1 request
+ *  per
  * 
  *  second> </li> <li>
  * 
- *  <code> <a>GetFindings</a> </code> - <code>RateLimit</code> of 3 requests per second. <code>BurstLimit</code> of 6
+ *  <code>GetFindings</code> - <code>RateLimit</code> of 3 requests per second. <code>BurstLimit</code> of 6 requests per
+ * 
+ *  second> </li> <li>
+ * 
+ *  <code>BatchImportFindings</code> - <code>RateLimit</code> of 10 requests per second. <code>BurstLimit</code> of 30
  *  requests per
  * 
  *  second> </li> <li>
  * 
- *  <code> <a>UpdateFindings</a> </code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
+ *  <code>BatchUpdateFindings</code> - <code>RateLimit</code> of 10 requests per second. <code>BurstLimit</code> of 30
  *  requests per
  * 
  *  second> </li> <li>
  * 
- *  <code> <a>UpdateStandardsControl</a> </code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code>
- *  of 5 requests per
+ *  <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
+ *  requests per
  * 
  *  second> </li> <li>
  * 
@@ -318,7 +332,7 @@ AcceptInvitationResponse * SecurityHubClient::acceptInvitation(const AcceptInvit
  *
  * For more information, see <a
  * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security Standards</a>
- * section of the <i>AWS Security Hub User
+ * section of the <i>Security Hub User
  */
 BatchDisableStandardsResponse * SecurityHubClient::batchDisableStandards(const BatchDisableStandardsRequest &request)
 {
@@ -332,13 +346,13 @@ BatchDisableStandardsResponse * SecurityHubClient::batchDisableStandards(const B
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables the standards specified by the provided <code>StandardsArn</code>. To obtain the ARN for a standard, use the
- * <code> <a>DescribeStandards</a> </code>
+ * <code>DescribeStandards</code>
  *
  * operation>
  *
  * For more information, see the <a
  * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security Standards</a>
- * section of the <i>AWS Security Hub User
+ * section of the <i>Security Hub User
  */
 BatchEnableStandardsResponse * SecurityHubClient::batchEnableStandards(const BatchEnableStandardsRequest &request)
 {
@@ -351,10 +365,28 @@ BatchEnableStandardsResponse * SecurityHubClient::batchEnableStandards(const Bat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports security findings generated from an integrated product into Security Hub. This action is requested by the
- * integrated product to import its findings into Security
+ * Imports security findings generated by a finding provider into Security Hub. This action is requested by the finding
+ * provider to import its findings into Security
  *
  * Hub>
+ *
+ * <code>BatchImportFindings</code> must be called by one of the
+ *
+ * following> <ul> <li>
+ *
+ * The Amazon Web Services account that is associated with a finding if you are using the <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-custom-providers.html#securityhub-custom-providers-bfi-reqs">default
+ * product ARN</a> or are a partner sending findings from within a customer's Amazon Web Services account. In these cases,
+ * the identifier of the account that you are calling <code>BatchImportFindings</code> from needs to be the same as the
+ * <code>AwsAccountId</code> attribute for the
+ *
+ * finding> </li> <li>
+ *
+ * An Amazon Web Services account that Security Hub has allow-listed for an official partner integration. In this case, you
+ * can call <code>BatchImportFindings</code> from the allow-listed account and send findings from different customer
+ * accounts in the same
+ *
+ * batch> </li> </ul>
  *
  * The maximum allowed size for a finding is 240 Kb. An error is returned for any finding larger than 240
  *
@@ -471,7 +503,7 @@ BatchImportFindingsResponse * SecurityHubClient::batchImportFindings(const Batch
  * You can configure IAM policies to restrict access to fields and field values. For example, you might not want member
  * accounts to be able to suppress findings or change the finding severity. See <a
  * href="https://docs.aws.amazon.com/securityhub/latest/userguide/finding-update-batchupdatefindings.html#batchupdatefindings-configure-access">Configuring
- * access to BatchUpdateFindings</a> in the <i>AWS Security Hub User
+ * access to BatchUpdateFindings</a> in the <i>Security Hub User
  */
 BatchUpdateFindingsResponse * SecurityHubClient::batchUpdateFindings(const BatchUpdateFindingsRequest &request)
 {
@@ -493,6 +525,25 @@ BatchUpdateFindingsResponse * SecurityHubClient::batchUpdateFindings(const Batch
 CreateActionTargetResponse * SecurityHubClient::createActionTarget(const CreateActionTargetRequest &request)
 {
     return qobject_cast<CreateActionTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * CreateFindingAggregatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Used to enable finding aggregation. Must be called from the aggregation
+ *
+ * Region>
+ *
+ * For more details about cross-Region replication, see <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/finding-aggregation.html">Configuring finding
+ * aggregation</a> in the <i>Security Hub User Guide</i>.
+ */
+CreateFindingAggregatorResponse * SecurityHubClient::createFindingAggregator(const CreateFindingAggregatorRequest &request)
+{
+    return qobject_cast<CreateFindingAggregatorResponse *>(send(request));
 }
 
 /*!
@@ -529,42 +580,51 @@ CreateInsightResponse * SecurityHubClient::createInsight(const CreateInsightRequ
  *
  * members>
  *
- * For accounts that are part of an organization, <code>CreateMembers</code> is only used in the following
+ * For accounts that are managed using Organizations, <code>CreateMembers</code> is only used in the following
  *
  * cases> <ul> <li>
  *
- * Security Hub is not configured to automatically add new accounts in an
+ * Security Hub is not configured to automatically add new organization
  *
- * organization> </li> <li>
+ * accounts> </li> <li>
  *
  * The account was disassociated or deleted in Security
  *
  * Hub> </li> </ul>
  *
- * This action can only be used by an account that has Security Hub enabled. To enable Security Hub, you can use the <code>
- * <a>EnableSecurityHub</a> </code>
+ * This action can only be used by an account that has Security Hub enabled. To enable Security Hub, you can use the
+ * <code>EnableSecurityHub</code>
  *
  * operation>
  *
  * For accounts that are not organization members, you create the account association and then send an invitation to the
- * member account. To send the invitation, you use the <code> <a>InviteMembers</a> </code> operation. If the account owner
- * accepts the invitation, the account becomes a member account in Security
+ * member account. To send the invitation, you use the <code>InviteMembers</code> operation. If the account owner accepts
+ * the invitation, the account becomes a member account in Security
  *
  * Hub>
  *
- * Accounts that are part of an organization do not receive an invitation. They automatically become a member account in
- * Security
+ * Accounts that are managed using Organizations do not receive an invitation. They automatically become a member account
+ * in Security
  *
- * Hub>
+ * Hub> <ul> <li>
+ *
+ * If the organization account does not have Security Hub enabled, then Security Hub and the default standards are
+ * automatically enabled. Note that Security Hub cannot be enabled automatically for the organization management account.
+ * The organization management account must enable Security Hub before the administrator account enables it as a member
+ *
+ * account> </li> <li>
+ *
+ * For organization accounts that already have Security Hub enabled, Security Hub does not make any other changes to those
+ * accounts. It does not change their enabled standards or
+ *
+ * controls> </li> </ul>
  *
  * A permissions policy is added that permits the administrator account to view the findings generated in the member
- * account. When Security Hub is enabled in a member account, the member account findings are also visible to the
- * administrator account.
  *
- * </p
+ * account>
  *
- * To remove the association between the administrator and member accounts, use the <code>
- * <a>DisassociateFromMasterAccount</a> </code> or <code> <a>DisassociateMembers</a> </code>
+ * To remove the association between the administrator and member accounts, use the
+ * <code>DisassociateFromMasterAccount</code> or <code>DisassociateMembers</code>
  */
 CreateMembersResponse * SecurityHubClient::createMembers(const CreateMembersRequest &request)
 {
@@ -608,6 +668,24 @@ DeleteActionTargetResponse * SecurityHubClient::deleteActionTarget(const DeleteA
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * DeleteFindingAggregatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a finding aggregator. When you delete the finding aggregator, you stop finding
+ *
+ * aggregation>
+ *
+ * When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still visible
+ * from the aggregation Region. New findings and finding updates are not aggregated.
+ */
+DeleteFindingAggregatorResponse * SecurityHubClient::deleteFindingAggregator(const DeleteFindingAggregatorRequest &request)
+{
+    return qobject_cast<DeleteFindingAggregatorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * DeleteInsightResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -625,7 +703,7 @@ DeleteInsightResponse * SecurityHubClient::deleteInsight(const DeleteInsightRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes invitations received by the AWS account to become a member
+ * Deletes invitations received by the Amazon Web Services account to become a member
  *
  * account>
  *
@@ -921,11 +999,11 @@ EnableOrganizationAdminAccountResponse * SecurityHubClient::enableOrganizationAd
  *
  * standards> <ul> <li>
  *
- * CIS AWS
+ * CIS Amazon Web Services
  *
  * Foundation> </li> <li>
  *
- * AWS Foundational Security Best
+ * Amazon Web Services Foundational Security Best
  *
  * Practice> </li> </ul>
  *
@@ -937,13 +1015,14 @@ EnableOrganizationAdminAccountResponse * SecurityHubClient::enableOrganizationAd
  *
  * <code>false</code>>
  *
- * After you enable Security Hub, to enable a standard, use the <code> <a>BatchEnableStandards</a> </code> operation. To
- * disable a standard, use the <code> <a>BatchDisableStandards</a> </code>
+ * After you enable Security Hub, to enable a standard, use the <code>BatchEnableStandards</code> operation. To disable a
+ * standard, use the <code>BatchDisableStandards</code>
  *
  * operation>
  *
- * To learn more, see <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">Setting
- * Up AWS Security Hub</a> in the <i>AWS Security Hub User
+ * To learn more, see the <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">setup information</a> in the
+ * <i>Security Hub User
  */
 EnableSecurityHubResponse * SecurityHubClient::enableSecurityHub(const EnableSecurityHubRequest &request)
 {
@@ -982,11 +1061,29 @@ GetEnabledStandardsResponse * SecurityHubClient::getEnabledStandards(const GetEn
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * GetFindingAggregatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the current finding aggregation
+ */
+GetFindingAggregatorResponse * SecurityHubClient::getFindingAggregator(const GetFindingAggregatorRequest &request)
+{
+    return qobject_cast<GetFindingAggregatorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * GetFindingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of findings that match the specified
+ *
+ * criteria>
+ *
+ * If finding aggregation is enabled, then when you call <code>GetFindings</code> from the aggregation Region, the results
+ * include all of the matching findings from both the aggregation Region and the linked
  */
 GetFindingsResponse * SecurityHubClient::getFindings(const GetFindingsRequest &request)
 {
@@ -1089,8 +1186,8 @@ GetMembersResponse * SecurityHubClient::getMembers(const GetMembersRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Invites other AWS accounts to become member accounts for the Security Hub administrator account that the invitation is
- * sent
+ * Invites other Amazon Web Services accounts to become member accounts for the Security Hub administrator account that the
+ * invitation is sent
  *
  * from>
  *
@@ -1099,8 +1196,8 @@ GetMembersResponse * SecurityHubClient::getMembers(const GetMembersRequest &requ
  *
  * invitations>
  *
- * Before you can use this action to invite a member, you must first use the <code> <a>CreateMembers</a> </code> action to
- * create the member account in Security
+ * Before you can use this action to invite a member, you must first use the <code>CreateMembers</code> action to create
+ * the member account in Security
  *
  * Hub>
  *
@@ -1127,16 +1224,30 @@ ListEnabledProductsForImportResponse * SecurityHubClient::listEnabledProductsFor
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * ListFindingAggregatorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * If finding aggregation is enabled, then <code>ListFindingAggregators</code> returns the ARN of the finding aggregator.
+ * You can run this operation from any
+ */
+ListFindingAggregatorsResponse * SecurityHubClient::listFindingAggregators(const ListFindingAggregatorsRequest &request)
+{
+    return qobject_cast<ListFindingAggregatorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * ListInvitationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all Security Hub membership invitations that were sent to the current AWS
+ * Lists all Security Hub membership invitations that were sent to the current Amazon Web Services
  *
  * account>
  *
  * This operation is only used by accounts that are managed by invitation. Accounts that are managed using the integration
- * with AWS Organizations do not receive
+ * with Organizations do not receive
  */
 ListInvitationsResponse * SecurityHubClient::listInvitations(const ListInvitationsRequest &request)
 {
@@ -1223,6 +1334,24 @@ UntagResourceResponse * SecurityHubClient::untagResource(const UntagResourceRequ
 UpdateActionTargetResponse * SecurityHubClient::updateActionTarget(const UpdateActionTargetRequest &request)
 {
     return qobject_cast<UpdateActionTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * UpdateFindingAggregatorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the finding aggregation configuration. Used to update the Region linking mode and the list of included or
+ * excluded Regions. You cannot use <code>UpdateFindingAggregator</code> to change the aggregation
+ *
+ * Region>
+ *
+ * You must run <code>UpdateFindingAggregator</code> from the current aggregation Region.
+ */
+UpdateFindingAggregatorResponse * SecurityHubClient::updateFindingAggregator(const UpdateFindingAggregatorRequest &request)
+{
+    return qobject_cast<UpdateFindingAggregatorResponse *>(send(request));
 }
 
 /*!

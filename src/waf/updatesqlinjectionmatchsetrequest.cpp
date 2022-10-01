@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateSqlInjectionMatchSetRequest
- * \brief The UpdateSqlInjectionMatchSetRequest class provides an interface for WAF UpdateSqlInjectionMatchSet requests.
+ * \class QtAws::Waf::UpdateSqlInjectionMatchSetRequest
+ * \brief The UpdateSqlInjectionMatchSetRequest class provides an interface for Waf UpdateSqlInjectionMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAF::UpdateSqlInjectionMatchSetRequestPrivate
+ * \class QtAws::Waf::UpdateSqlInjectionMatchSetRequestPrivate
  * \brief The UpdateSqlInjectionMatchSetRequestPrivate class provides private implementation for UpdateSqlInjectionMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPriva
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

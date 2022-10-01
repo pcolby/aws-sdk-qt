@@ -23,7 +23,7 @@
 #include "wafv2response_p.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class UpdateRuleGroupResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

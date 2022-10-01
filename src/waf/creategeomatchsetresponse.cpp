@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateGeoMatchSetResponse
- * \brief The CreateGeoMatchSetResponse class provides an interace for WAF CreateGeoMatchSet responses.
+ * \class QtAws::Waf::CreateGeoMatchSetResponse
+ * \brief The CreateGeoMatchSetResponse class provides an interace for Waf CreateGeoMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateGeoMatchSet \a response.
+ * Parses a successful Waf CreateGeoMatchSet \a response.
  */
 void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateGeoMatchSetResponsePrivate
+ * \class QtAws::Waf::CreateGeoMatchSetResponsePrivate
  * \brief The CreateGeoMatchSetResponsePrivate class provides private implementation for CreateGeoMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateGeoMatchSet response element from \a xml.
+ * Parses a Waf CreateGeoMatchSet response element from \a xml.
  */
 void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

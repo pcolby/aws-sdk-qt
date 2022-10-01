@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsResponsePrivate;
+class CodestarNotificationsResponsePrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT CodeStarNotificationsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT CodestarNotificationsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    CodeStarNotificationsResponse(QObject * const parent = 0);
+    CodestarNotificationsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    CodeStarNotificationsResponse(CodeStarNotificationsResponsePrivate * const d, QObject * const parent);
+    CodestarNotificationsResponse(CodestarNotificationsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CodeStarNotificationsResponse)
-    Q_DISABLE_COPY(CodeStarNotificationsResponse)
+    Q_DECLARE_PRIVATE(CodestarNotificationsResponse)
+    Q_DISABLE_COPY(CodestarNotificationsResponse)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

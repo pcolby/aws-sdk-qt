@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListPageReceiptsRequest
- * \brief The ListPageReceiptsRequest class provides an interface for SSMContacts ListPageReceipts requests.
+ * \class QtAws::SsmContacts::ListPageReceiptsRequest
+ * \brief The ListPageReceiptsRequest class provides an interface for SsmContacts ListPageReceipts requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listPageReceipts
+ * \sa SsmContactsClient::listPageReceipts
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListPageReceiptsRequest::ListPageReceiptsRequest(const ListPageReceiptsRequest &other)
-    : SSMContactsRequest(new ListPageReceiptsRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new ListPageReceiptsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ ListPageReceiptsRequest::ListPageReceiptsRequest(const ListPageReceiptsRequest &
  * Constructs a ListPageReceiptsRequest object.
  */
 ListPageReceiptsRequest::ListPageReceiptsRequest()
-    : SSMContactsRequest(new ListPageReceiptsRequestPrivate(SSMContactsRequest::ListPageReceiptsAction, this))
+    : SsmContactsRequest(new ListPageReceiptsRequestPrivate(SsmContactsRequest::ListPageReceiptsAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListPageReceiptsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SSMContacts::ListPageReceiptsRequestPrivate
+ * \class QtAws::SsmContacts::ListPageReceiptsRequestPrivate
  * \brief The ListPageReceiptsRequestPrivate class provides private implementation for ListPageReceiptsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a ListPageReceiptsRequestPrivate object for SSMContacts \a action,
+ * Constructs a ListPageReceiptsRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 ListPageReceiptsRequestPrivate::ListPageReceiptsRequestPrivate(
-    const SSMContactsRequest::Action action, ListPageReceiptsRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, ListPageReceiptsRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ ListPageReceiptsRequestPrivate::ListPageReceiptsRequestPrivate(
  */
 ListPageReceiptsRequestPrivate::ListPageReceiptsRequestPrivate(
     const ListPageReceiptsRequestPrivate &other, ListPageReceiptsRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

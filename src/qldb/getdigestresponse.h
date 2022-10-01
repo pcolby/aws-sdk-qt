@@ -24,7 +24,7 @@
 #include "getdigestrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class GetDigestResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

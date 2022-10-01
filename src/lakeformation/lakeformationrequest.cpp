@@ -37,28 +37,50 @@ namespace LakeFormation {
  * requests.
  *
  * \value AddLFTagsToResourceAction LakeFormation AddLFTagsToResource action.
+ * \value AssumeDecoratedRoleWithSAMLAction LakeFormation AssumeDecoratedRoleWithSAML action.
  * \value BatchGrantPermissionsAction LakeFormation BatchGrantPermissions action.
  * \value BatchRevokePermissionsAction LakeFormation BatchRevokePermissions action.
+ * \value CancelTransactionAction LakeFormation CancelTransaction action.
+ * \value CommitTransactionAction LakeFormation CommitTransaction action.
+ * \value CreateDataCellsFilterAction LakeFormation CreateDataCellsFilter action.
  * \value CreateLFTagAction LakeFormation CreateLFTag action.
+ * \value DeleteDataCellsFilterAction LakeFormation DeleteDataCellsFilter action.
  * \value DeleteLFTagAction LakeFormation DeleteLFTag action.
+ * \value DeleteObjectsOnCancelAction LakeFormation DeleteObjectsOnCancel action.
  * \value DeregisterResourceAction LakeFormation DeregisterResource action.
  * \value DescribeResourceAction LakeFormation DescribeResource action.
+ * \value DescribeTransactionAction LakeFormation DescribeTransaction action.
+ * \value ExtendTransactionAction LakeFormation ExtendTransaction action.
  * \value GetDataLakeSettingsAction LakeFormation GetDataLakeSettings action.
  * \value GetEffectivePermissionsForPathAction LakeFormation GetEffectivePermissionsForPath action.
  * \value GetLFTagAction LakeFormation GetLFTag action.
+ * \value GetQueryStateAction LakeFormation GetQueryState action.
+ * \value GetQueryStatisticsAction LakeFormation GetQueryStatistics action.
  * \value GetResourceLFTagsAction LakeFormation GetResourceLFTags action.
+ * \value GetTableObjectsAction LakeFormation GetTableObjects action.
+ * \value GetTemporaryGluePartitionCredentialsAction LakeFormation GetTemporaryGluePartitionCredentials action.
+ * \value GetTemporaryGlueTableCredentialsAction LakeFormation GetTemporaryGlueTableCredentials action.
+ * \value GetWorkUnitResultsAction LakeFormation GetWorkUnitResults action.
+ * \value GetWorkUnitsAction LakeFormation GetWorkUnits action.
  * \value GrantPermissionsAction LakeFormation GrantPermissions action.
+ * \value ListDataCellsFilterAction LakeFormation ListDataCellsFilter action.
  * \value ListLFTagsAction LakeFormation ListLFTags action.
  * \value ListPermissionsAction LakeFormation ListPermissions action.
  * \value ListResourcesAction LakeFormation ListResources action.
+ * \value ListTableStorageOptimizersAction LakeFormation ListTableStorageOptimizers action.
+ * \value ListTransactionsAction LakeFormation ListTransactions action.
  * \value PutDataLakeSettingsAction LakeFormation PutDataLakeSettings action.
  * \value RegisterResourceAction LakeFormation RegisterResource action.
  * \value RemoveLFTagsFromResourceAction LakeFormation RemoveLFTagsFromResource action.
  * \value RevokePermissionsAction LakeFormation RevokePermissions action.
  * \value SearchDatabasesByLFTagsAction LakeFormation SearchDatabasesByLFTags action.
  * \value SearchTablesByLFTagsAction LakeFormation SearchTablesByLFTags action.
+ * \value StartQueryPlanningAction LakeFormation StartQueryPlanning action.
+ * \value StartTransactionAction LakeFormation StartTransaction action.
  * \value UpdateLFTagAction LakeFormation UpdateLFTag action.
  * \value UpdateResourceAction LakeFormation UpdateResource action.
+ * \value UpdateTableObjectsAction LakeFormation UpdateTableObjects action.
+ * \value UpdateTableStorageOptimizerAction LakeFormation UpdateTableStorageOptimizer action.
  */
 
 /*!
@@ -266,7 +288,7 @@ QNetworkRequest LakeFormationRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 LakeFormationRequestPrivate::LakeFormationRequestPrivate(const LakeFormationRequest::Action action, LakeFormationRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-03-31"))
 {
 
 }
@@ -301,28 +323,50 @@ QString LakeFormationRequestPrivate::toString(const LakeFormationRequest::Action
         case LakeFormationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddLFTagsToResource);
+        ActionToString(AssumeDecoratedRoleWithSAML);
         ActionToString(BatchGrantPermissions);
         ActionToString(BatchRevokePermissions);
+        ActionToString(CancelTransaction);
+        ActionToString(CommitTransaction);
+        ActionToString(CreateDataCellsFilter);
         ActionToString(CreateLFTag);
+        ActionToString(DeleteDataCellsFilter);
         ActionToString(DeleteLFTag);
+        ActionToString(DeleteObjectsOnCancel);
         ActionToString(DeregisterResource);
         ActionToString(DescribeResource);
+        ActionToString(DescribeTransaction);
+        ActionToString(ExtendTransaction);
         ActionToString(GetDataLakeSettings);
         ActionToString(GetEffectivePermissionsForPath);
         ActionToString(GetLFTag);
+        ActionToString(GetQueryState);
+        ActionToString(GetQueryStatistics);
         ActionToString(GetResourceLFTags);
+        ActionToString(GetTableObjects);
+        ActionToString(GetTemporaryGluePartitionCredentials);
+        ActionToString(GetTemporaryGlueTableCredentials);
+        ActionToString(GetWorkUnitResults);
+        ActionToString(GetWorkUnits);
         ActionToString(GrantPermissions);
+        ActionToString(ListDataCellsFilter);
         ActionToString(ListLFTags);
         ActionToString(ListPermissions);
         ActionToString(ListResources);
+        ActionToString(ListTableStorageOptimizers);
+        ActionToString(ListTransactions);
         ActionToString(PutDataLakeSettings);
         ActionToString(RegisterResource);
         ActionToString(RemoveLFTagsFromResource);
         ActionToString(RevokePermissions);
         ActionToString(SearchDatabasesByLFTags);
         ActionToString(SearchTablesByLFTags);
+        ActionToString(StartQueryPlanning);
+        ActionToString(StartTransaction);
         ActionToString(UpdateLFTag);
         ActionToString(UpdateResource);
+        ActionToString(UpdateTableObjects);
+        ActionToString(UpdateTableStorageOptimizer);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

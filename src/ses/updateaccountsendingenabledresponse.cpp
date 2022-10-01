@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateAccountSendingEnabledResponse
- * \brief The UpdateAccountSendingEnabledResponse class provides an interace for SES UpdateAccountSendingEnabled responses.
+ * \class QtAws::Ses::UpdateAccountSendingEnabledResponse
+ * \brief The UpdateAccountSendingEnabledResponse class provides an interace for Ses UpdateAccountSendingEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const UpdateAccountSendingEnabledRequest * UpdateAccountSendingEnabledResponse::
 
 /*!
  * \reimp
- * Parses a successful SES UpdateAccountSendingEnabled \a response.
+ * Parses a successful Ses UpdateAccountSendingEnabled \a response.
  */
 void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::UpdateAccountSendingEnabledResponsePrivate
+ * \class QtAws::Ses::UpdateAccountSendingEnabledResponsePrivate
  * \brief The UpdateAccountSendingEnabledResponsePrivate class provides private implementation for UpdateAccountSendingEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponseP
 }
 
 /*!
- * Parses a SES UpdateAccountSendingEnabled response element from \a xml.
+ * Parses a Ses UpdateAccountSendingEnabled response element from \a xml.
  */
 void UpdateAccountSendingEnabledResponsePrivate::parseUpdateAccountSendingEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateAccountSendingEnabledResponsePrivate::parseUpdateAccountSendingEnable
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

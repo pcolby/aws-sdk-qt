@@ -24,11 +24,11 @@
 #include "batchchecklayeravailabilityrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class BatchCheckLayerAvailabilityResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT BatchCheckLayerAvailabilityResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT BatchCheckLayerAvailabilityResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

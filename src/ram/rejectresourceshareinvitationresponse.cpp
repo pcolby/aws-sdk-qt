@@ -25,23 +25,32 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 /*!
- * \class QtAws::RAM::RejectResourceShareInvitationResponse
- * \brief The RejectResourceShareInvitationResponse class provides an interace for RAM RejectResourceShareInvitation responses.
+ * \class QtAws::Ram::RejectResourceShareInvitationResponse
+ * \brief The RejectResourceShareInvitationResponse class provides an interace for Ram RejectResourceShareInvitation responses.
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  *
- *  Use AWS Resource Access Manager to share AWS resources between AWS accounts. To share a resource, you create a resource
- *  share, associate the resource with the resource share, and specify the principals that can access the resources
- *  associated with the resource share. The following principals are supported: AWS accounts, organizational units (OU) from
- *  AWS Organizations, and organizations from AWS
+ *  This is the <i>Resource Access Manager API Reference</i>. This documentation provides descriptions and syntax for each
+ *  of the actions and data types in RAM. RAM is a service that helps you securely share your Amazon Web Services resources
+ *  across Amazon Web Services accounts. If you have multiple Amazon Web Services accounts, you can use RAM to share those
+ *  resources with other accounts. If you use Organizations to manage your accounts, then you share your resources with your
+ *  organization or organizational units (OUs). For supported resource types, you can also share resources with individual
+ *  Identity and Access Management (IAM) roles an users.
  * 
- *  Organizations>
+ *  </p
  * 
- *  For more information, see the <a href="https://docs.aws.amazon.com/ram/latest/userguide/">AWS Resource Access Manager
- *  User
+ *  To learn more about RAM, see the following
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/ram">Resource Access Manager product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/ram/latest/userguide/">Resource Access Manager User Guide</a>
  *
  * \sa RamClient::rejectResourceShareInvitation
  */
@@ -70,7 +79,7 @@ const RejectResourceShareInvitationRequest * RejectResourceShareInvitationRespon
 
 /*!
  * \reimp
- * Parses a successful RAM RejectResourceShareInvitation \a response.
+ * Parses a successful Ram RejectResourceShareInvitation \a response.
  */
 void RejectResourceShareInvitationResponse::parseSuccess(QIODevice &response)
 {
@@ -80,11 +89,11 @@ void RejectResourceShareInvitationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RAM::RejectResourceShareInvitationResponsePrivate
+ * \class QtAws::Ram::RejectResourceShareInvitationResponsePrivate
  * \brief The RejectResourceShareInvitationResponsePrivate class provides private implementation for RejectResourceShareInvitationResponse.
  * \internal
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
@@ -97,7 +106,7 @@ RejectResourceShareInvitationResponsePrivate::RejectResourceShareInvitationRespo
 }
 
 /*!
- * Parses a RAM RejectResourceShareInvitation response element from \a xml.
+ * Parses a Ram RejectResourceShareInvitation response element from \a xml.
  */
 void RejectResourceShareInvitationResponsePrivate::parseRejectResourceShareInvitationResponse(QXmlStreamReader &xml)
 {
@@ -105,5 +114,5 @@ void RejectResourceShareInvitationResponsePrivate::parseRejectResourceShareInvit
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws

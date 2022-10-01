@@ -23,23 +23,23 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetRequest
- * \brief The DeleteConfigurationSetRequest class provides an interface for PinpointSMSVoice DeleteConfigurationSet requests.
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetRequest
+ * \brief The DeleteConfigurationSetRequest class provides an interface for PinpointSmsVoice DeleteConfigurationSet requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::deleteConfigurationSet
+ * \sa PinpointSmsVoiceClient::deleteConfigurationSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other)
-    : PinpointSMSVoiceRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
+    : PinpointSmsVoiceRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigu
  * Constructs a DeleteConfigurationSetRequest object.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
-    : PinpointSMSVoiceRequest(new DeleteConfigurationSetRequestPrivate(PinpointSMSVoiceRequest::DeleteConfigurationSetAction, this))
+    : PinpointSmsVoiceRequest(new DeleteConfigurationSetRequestPrivate(PinpointSmsVoiceRequest::DeleteConfigurationSetAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetRequestPrivate
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetRequestPrivate
  * \brief The DeleteConfigurationSetRequestPrivate class provides private implementation for DeleteConfigurationSetRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a DeleteConfigurationSetRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a DeleteConfigurationSetRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
-    const PinpointSMSVoiceRequest::Action action, DeleteConfigurationSetRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(action, q)
+    const PinpointSmsVoiceRequest::Action action, DeleteConfigurationSetRequest * const q)
+    : PinpointSmsVoiceRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const DeleteConfigurationSetRequestPrivate &other, DeleteConfigurationSetRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(other, q)
+    : PinpointSmsVoiceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

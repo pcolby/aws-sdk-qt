@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 /*!
- * \class QtAws::ECS::EcsResponse
- * \brief The EcsResponse class provides an interface for ECS responses.
+ * \class QtAws::Ecs::EcsResponse
+ * \brief The EcsResponse class provides an interface for Ecs responses.
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  */
 
 /*!
@@ -76,11 +76,11 @@ void EcsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECS::EcsResponsePrivate
+ * \class QtAws::Ecs::EcsResponsePrivate
  * \brief The EcsResponsePrivate class provides private implementation for EcsResponse.
  * \internal
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  */
 
 /*!
@@ -92,5 +92,5 @@ EcsResponsePrivate::EcsResponsePrivate(
 
 }
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws

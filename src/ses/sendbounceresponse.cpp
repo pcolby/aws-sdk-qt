@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendBounceResponse
- * \brief The SendBounceResponse class provides an interace for SES SendBounce responses.
+ * \class QtAws::Ses::SendBounceResponse
+ * \brief The SendBounceResponse class provides an interace for Ses SendBounce responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SendBounceRequest * SendBounceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES SendBounce \a response.
+ * Parses a successful Ses SendBounce \a response.
  */
 void SendBounceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SendBounceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SendBounceResponsePrivate
+ * \class QtAws::Ses::SendBounceResponsePrivate
  * \brief The SendBounceResponsePrivate class provides private implementation for SendBounceResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SendBounceResponsePrivate::SendBounceResponsePrivate(
 }
 
 /*!
- * Parses a SES SendBounce response element from \a xml.
+ * Parses a Ses SendBounce response element from \a xml.
  */
 void SendBounceResponsePrivate::parseSendBounceResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SendBounceResponsePrivate::parseSendBounceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

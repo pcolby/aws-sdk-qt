@@ -24,7 +24,7 @@
 #include "applypendingmaintenanceactionrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class ApplyPendingMaintenanceActionResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

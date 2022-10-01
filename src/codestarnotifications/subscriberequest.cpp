@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::SubscribeRequest
- * \brief The SubscribeRequest class provides an interface for CodeStarNotifications Subscribe requests.
+ * \class QtAws::CodestarNotifications::SubscribeRequest
+ * \brief The SubscribeRequest class provides an interface for CodestarNotifications Subscribe requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::subscribe
+ * \sa CodestarNotificationsClient::subscribe
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
-    : CodeStarNotificationsRequest(new SubscribeRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new SubscribeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
  * Constructs a SubscribeRequest object.
  */
 SubscribeRequest::SubscribeRequest()
-    : CodeStarNotificationsRequest(new SubscribeRequestPrivate(CodeStarNotificationsRequest::SubscribeAction, this))
+    : CodestarNotificationsRequest(new SubscribeRequestPrivate(CodestarNotificationsRequest::SubscribeAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::SubscribeRequestPrivate
+ * \class QtAws::CodestarNotifications::SubscribeRequestPrivate
  * \brief The SubscribeRequestPrivate class provides private implementation for SubscribeRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a SubscribeRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a SubscribeRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, SubscribeRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, SubscribeRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ SubscribeRequestPrivate::SubscribeRequestPrivate(
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SubscribeRequestPrivate &other, SubscribeRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

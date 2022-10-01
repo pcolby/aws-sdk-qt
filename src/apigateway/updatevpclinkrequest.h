@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateVpcLinkRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT UpdateVpcLinkRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT UpdateVpcLinkRequest : public ApiGatewayRequest {
 
 public:
     UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

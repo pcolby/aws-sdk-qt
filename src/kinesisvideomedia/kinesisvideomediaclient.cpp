@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::KinesisVideoMedia
- * \brief Contains classess for accessing Amazon Kinesis Video Streams Media (Kinesis Video Media).
+ * \brief Contains classess for accessing Amazon Kinesis Video Streams Media.
  *
  * \inmodule QtAwsKinesisVideoMedia
  *
@@ -41,7 +41,7 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaClient
- * \brief The KinesisVideoMediaClient class provides access to the Amazon Kinesis Video Streams Media (Kinesis Video Media) service.
+ * \brief The KinesisVideoMediaClient class provides access to the Amazon Kinesis Video Streams Media service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsKinesisVideoMedia

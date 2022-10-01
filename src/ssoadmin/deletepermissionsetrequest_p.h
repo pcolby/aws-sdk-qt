@@ -24,14 +24,14 @@
 #include "deletepermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DeletePermissionSetRequest;
 
-class DeletePermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class DeletePermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DeletePermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    DeletePermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    DeletePermissionSetRequest * const q);
     DeletePermissionSetRequestPrivate(const DeletePermissionSetRequestPrivate &other,
                                    DeletePermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

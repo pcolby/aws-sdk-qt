@@ -39,13 +39,21 @@ class QTAWSSYNTHETICS_EXPORT SyntheticsRequest : public QtAws::Core::AwsAbstract
 public:
     /// Actions supported by Synthetics.
     enum Action {
+        AssociateResourceAction,
         CreateCanaryAction,
+        CreateGroupAction,
         DeleteCanaryAction,
+        DeleteGroupAction,
         DescribeCanariesAction,
         DescribeCanariesLastRunAction,
         DescribeRuntimeVersionsAction,
+        DisassociateResourceAction,
         GetCanaryAction,
         GetCanaryRunsAction,
+        GetGroupAction,
+        ListAssociatedGroupsAction,
+        ListGroupResourcesAction,
+        ListGroupsAction,
         ListTagsForResourceAction,
         StartCanaryAction,
         StopCanaryAction,

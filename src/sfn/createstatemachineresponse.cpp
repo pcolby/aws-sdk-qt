@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::CreateStateMachineResponse
- * \brief The CreateStateMachineResponse class provides an interace for SFN CreateStateMachine responses.
+ * \class QtAws::Sfn::CreateStateMachineResponse
+ * \brief The CreateStateMachineResponse class provides an interace for Sfn CreateStateMachine responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const CreateStateMachineRequest * CreateStateMachineResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN CreateStateMachine \a response.
+ * Parses a successful Sfn CreateStateMachine \a response.
  */
 void CreateStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void CreateStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::CreateStateMachineResponsePrivate
+ * \class QtAws::Sfn::CreateStateMachineResponsePrivate
  * \brief The CreateStateMachineResponsePrivate class provides private implementation for CreateStateMachineResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ CreateStateMachineResponsePrivate::CreateStateMachineResponsePrivate(
 }
 
 /*!
- * Parses a SFN CreateStateMachine response element from \a xml.
+ * Parses a Sfn CreateStateMachine response element from \a xml.
  */
 void CreateStateMachineResponsePrivate::parseCreateStateMachineResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void CreateStateMachineResponsePrivate::parseCreateStateMachineResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

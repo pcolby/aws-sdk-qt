@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetRevisionRequest
- * \brief The GetRevisionRequest class provides an interface for QLDB GetRevision requests.
+ * \class QtAws::Qldb::GetRevisionRequest
+ * \brief The GetRevisionRequest class provides an interface for Qldb GetRevision requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * GetRevisionRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::QLDB::GetRevisionRequestPrivate
+ * \class QtAws::Qldb::GetRevisionRequestPrivate
  * \brief The GetRevisionRequestPrivate class provides private implementation for GetRevisionRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ GetRevisionRequestPrivate::GetRevisionRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

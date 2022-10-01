@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMACIE_LIBRARY)
 
 add_library(QtAwsMacie
+  qtawsmacieglobal.h
+  macieclient.h
+  macieclient_p.h
+  macierequest.h
+  macierequest_p.h
+  macieresponse.h
+  macieresponse_p.h
   associatememberaccountrequest.h
   associatememberaccountrequest_p.h
   associatememberaccountresponse.h
@@ -25,17 +32,13 @@ add_library(QtAwsMacie
   lists3resourcesrequest_p.h
   lists3resourcesresponse.h
   lists3resourcesresponse_p.h
-  macieclient.h
-  macieclient_p.h
-  macierequest.h
-  macierequest_p.h
-  macieresponse.h
-  macieresponse_p.h
-  qtawsmacieglobal.h
   updates3resourcesrequest.h
   updates3resourcesrequest_p.h
   updates3resourcesresponse.h
   updates3resourcesresponse_p.h
+  macieclient.cpp
+  macierequest.cpp
+  macieresponse.cpp
   associatememberaccountrequest.cpp
   associatememberaccountresponse.cpp
   associates3resourcesrequest.cpp
@@ -48,9 +51,6 @@ add_library(QtAwsMacie
   listmemberaccountsresponse.cpp
   lists3resourcesrequest.cpp
   lists3resourcesresponse.cpp
-  macieclient.cpp
-  macierequest.cpp
-  macieresponse.cpp
   updates3resourcesrequest.cpp
   updates3resourcesresponse.cpp)
 

@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UntagUserResponse
- * \brief The UntagUserResponse class provides an interace for IAM UntagUser responses.
+ * \class QtAws::Iam::UntagUserResponse
+ * \brief The UntagUserResponse class provides an interace for Iam UntagUser responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::untagUser
  */
@@ -68,7 +68,7 @@ const UntagUserRequest * UntagUserResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UntagUser \a response.
+ * Parses a successful Iam UntagUser \a response.
  */
 void UntagUserResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UntagUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UntagUserResponsePrivate
+ * \class QtAws::Iam::UntagUserResponsePrivate
  * \brief The UntagUserResponsePrivate class provides private implementation for UntagUserResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UntagUserResponsePrivate::UntagUserResponsePrivate(
 }
 
 /*!
- * Parses a IAM UntagUser response element from \a xml.
+ * Parses a Iam UntagUser response element from \a xml.
  */
 void UntagUserResponsePrivate::parseUntagUserResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UntagUserResponsePrivate::parseUntagUserResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

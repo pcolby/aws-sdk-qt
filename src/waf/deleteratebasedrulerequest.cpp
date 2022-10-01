@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteRateBasedRuleRequest
- * \brief The DeleteRateBasedRuleRequest class provides an interface for WAF DeleteRateBasedRule requests.
+ * \class QtAws::Waf::DeleteRateBasedRuleRequest
+ * \brief The DeleteRateBasedRuleRequest class provides an interface for Waf DeleteRateBasedRule requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::DeleteRateBasedRuleRequestPrivate
+ * \class QtAws::Waf::DeleteRateBasedRuleRequestPrivate
  * \brief The DeleteRateBasedRuleRequestPrivate class provides private implementation for DeleteRateBasedRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

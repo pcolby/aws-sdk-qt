@@ -24,14 +24,14 @@
 #include "updatecontinuousbackupsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateContinuousBackupsRequest;
 
-class UpdateContinuousBackupsRequestPrivate : public DynamoDBRequestPrivate {
+class UpdateContinuousBackupsRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    UpdateContinuousBackupsRequestPrivate(const DynamoDBRequest::Action action,
+    UpdateContinuousBackupsRequestPrivate(const DynamoDbRequest::Action action,
                                    UpdateContinuousBackupsRequest * const q);
     UpdateContinuousBackupsRequestPrivate(const UpdateContinuousBackupsRequestPrivate &other,
                                    UpdateContinuousBackupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

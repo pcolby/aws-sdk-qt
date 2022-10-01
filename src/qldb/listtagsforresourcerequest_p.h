@@ -24,7 +24,7 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class ListTagsForResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

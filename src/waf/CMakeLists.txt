@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWAF_LIBRARY)
 
 add_library(QtAwsWaf
+  qtawswafglobal.h
+  wafclient.h
+  wafclient_p.h
+  wafrequest.h
+  wafrequest_p.h
+  wafresponse.h
+  wafresponse_p.h
   createbytematchsetrequest.h
   createbytematchsetrequest_p.h
   createbytematchsetresponse.h
@@ -25,14 +32,14 @@ add_library(QtAwsWaf
   createregexpatternsetrequest_p.h
   createregexpatternsetresponse.h
   createregexpatternsetresponse_p.h
-  createrulegrouprequest.h
-  createrulegrouprequest_p.h
-  createrulegroupresponse.h
-  createrulegroupresponse_p.h
   createrulerequest.h
   createrulerequest_p.h
   createruleresponse.h
   createruleresponse_p.h
+  createrulegrouprequest.h
+  createrulegrouprequest_p.h
+  createrulegroupresponse.h
+  createrulegroupresponse_p.h
   createsizeconstraintsetrequest.h
   createsizeconstraintsetrequest_p.h
   createsizeconstraintsetresponse.h
@@ -41,14 +48,14 @@ add_library(QtAwsWaf
   createsqlinjectionmatchsetrequest_p.h
   createsqlinjectionmatchsetresponse.h
   createsqlinjectionmatchsetresponse_p.h
-  createwebaclmigrationstackrequest.h
-  createwebaclmigrationstackrequest_p.h
-  createwebaclmigrationstackresponse.h
-  createwebaclmigrationstackresponse_p.h
   createwebaclrequest.h
   createwebaclrequest_p.h
   createwebaclresponse.h
   createwebaclresponse_p.h
+  createwebaclmigrationstackrequest.h
+  createwebaclmigrationstackrequest_p.h
+  createwebaclmigrationstackresponse.h
+  createwebaclmigrationstackresponse_p.h
   createxssmatchsetrequest.h
   createxssmatchsetrequest_p.h
   createxssmatchsetresponse.h
@@ -85,14 +92,14 @@ add_library(QtAwsWaf
   deleteregexpatternsetrequest_p.h
   deleteregexpatternsetresponse.h
   deleteregexpatternsetresponse_p.h
-  deleterulegrouprequest.h
-  deleterulegrouprequest_p.h
-  deleterulegroupresponse.h
-  deleterulegroupresponse_p.h
   deleterulerequest.h
   deleterulerequest_p.h
   deleteruleresponse.h
   deleteruleresponse_p.h
+  deleterulegrouprequest.h
+  deleterulegrouprequest_p.h
+  deleterulegroupresponse.h
+  deleterulegroupresponse_p.h
   deletesizeconstraintsetrequest.h
   deletesizeconstraintsetrequest_p.h
   deletesizeconstraintsetresponse.h
@@ -137,14 +144,14 @@ add_library(QtAwsWaf
   getpermissionpolicyrequest_p.h
   getpermissionpolicyresponse.h
   getpermissionpolicyresponse_p.h
-  getratebasedrulemanagedkeysrequest.h
-  getratebasedrulemanagedkeysrequest_p.h
-  getratebasedrulemanagedkeysresponse.h
-  getratebasedrulemanagedkeysresponse_p.h
   getratebasedrulerequest.h
   getratebasedrulerequest_p.h
   getratebasedruleresponse.h
   getratebasedruleresponse_p.h
+  getratebasedrulemanagedkeysrequest.h
+  getratebasedrulemanagedkeysrequest_p.h
+  getratebasedrulemanagedkeysresponse.h
+  getratebasedrulemanagedkeysresponse_p.h
   getregexmatchsetrequest.h
   getregexmatchsetrequest_p.h
   getregexmatchsetresponse.h
@@ -153,14 +160,14 @@ add_library(QtAwsWaf
   getregexpatternsetrequest_p.h
   getregexpatternsetresponse.h
   getregexpatternsetresponse_p.h
-  getrulegrouprequest.h
-  getrulegrouprequest_p.h
-  getrulegroupresponse.h
-  getrulegroupresponse_p.h
   getrulerequest.h
   getrulerequest_p.h
   getruleresponse.h
   getruleresponse_p.h
+  getrulegrouprequest.h
+  getrulegrouprequest_p.h
+  getrulegroupresponse.h
+  getrulegroupresponse_p.h
   getsampledrequestsrequest.h
   getsampledrequestsrequest_p.h
   getsampledrequestsresponse.h
@@ -253,7 +260,6 @@ add_library(QtAwsWaf
   putpermissionpolicyrequest_p.h
   putpermissionpolicyresponse.h
   putpermissionpolicyresponse_p.h
-  qtawswafglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -286,14 +292,14 @@ add_library(QtAwsWaf
   updateregexpatternsetrequest_p.h
   updateregexpatternsetresponse.h
   updateregexpatternsetresponse_p.h
-  updaterulegrouprequest.h
-  updaterulegrouprequest_p.h
-  updaterulegroupresponse.h
-  updaterulegroupresponse_p.h
   updaterulerequest.h
   updaterulerequest_p.h
   updateruleresponse.h
   updateruleresponse_p.h
+  updaterulegrouprequest.h
+  updaterulegrouprequest_p.h
+  updaterulegroupresponse.h
+  updaterulegroupresponse_p.h
   updatesizeconstraintsetrequest.h
   updatesizeconstraintsetrequest_p.h
   updatesizeconstraintsetresponse.h
@@ -310,12 +316,9 @@ add_library(QtAwsWaf
   updatexssmatchsetrequest_p.h
   updatexssmatchsetresponse.h
   updatexssmatchsetresponse_p.h
-  wafclient.h
-  wafclient_p.h
-  wafrequest.h
-  wafrequest_p.h
-  wafresponse.h
-  wafresponse_p.h
+  wafclient.cpp
+  wafrequest.cpp
+  wafresponse.cpp
   createbytematchsetrequest.cpp
   createbytematchsetresponse.cpp
   creategeomatchsetrequest.cpp
@@ -328,18 +331,18 @@ add_library(QtAwsWaf
   createregexmatchsetresponse.cpp
   createregexpatternsetrequest.cpp
   createregexpatternsetresponse.cpp
-  createrulegrouprequest.cpp
-  createrulegroupresponse.cpp
   createrulerequest.cpp
   createruleresponse.cpp
+  createrulegrouprequest.cpp
+  createrulegroupresponse.cpp
   createsizeconstraintsetrequest.cpp
   createsizeconstraintsetresponse.cpp
   createsqlinjectionmatchsetrequest.cpp
   createsqlinjectionmatchsetresponse.cpp
-  createwebaclmigrationstackrequest.cpp
-  createwebaclmigrationstackresponse.cpp
   createwebaclrequest.cpp
   createwebaclresponse.cpp
+  createwebaclmigrationstackrequest.cpp
+  createwebaclmigrationstackresponse.cpp
   createxssmatchsetrequest.cpp
   createxssmatchsetresponse.cpp
   deletebytematchsetrequest.cpp
@@ -358,10 +361,10 @@ add_library(QtAwsWaf
   deleteregexmatchsetresponse.cpp
   deleteregexpatternsetrequest.cpp
   deleteregexpatternsetresponse.cpp
-  deleterulegrouprequest.cpp
-  deleterulegroupresponse.cpp
   deleterulerequest.cpp
   deleteruleresponse.cpp
+  deleterulegrouprequest.cpp
+  deleterulegroupresponse.cpp
   deletesizeconstraintsetrequest.cpp
   deletesizeconstraintsetresponse.cpp
   deletesqlinjectionmatchsetrequest.cpp
@@ -384,18 +387,18 @@ add_library(QtAwsWaf
   getloggingconfigurationresponse.cpp
   getpermissionpolicyrequest.cpp
   getpermissionpolicyresponse.cpp
-  getratebasedrulemanagedkeysrequest.cpp
-  getratebasedrulemanagedkeysresponse.cpp
   getratebasedrulerequest.cpp
   getratebasedruleresponse.cpp
+  getratebasedrulemanagedkeysrequest.cpp
+  getratebasedrulemanagedkeysresponse.cpp
   getregexmatchsetrequest.cpp
   getregexmatchsetresponse.cpp
   getregexpatternsetrequest.cpp
   getregexpatternsetresponse.cpp
-  getrulegrouprequest.cpp
-  getrulegroupresponse.cpp
   getrulerequest.cpp
   getruleresponse.cpp
+  getrulegrouprequest.cpp
+  getrulegroupresponse.cpp
   getsampledrequestsrequest.cpp
   getsampledrequestsresponse.cpp
   getsizeconstraintsetrequest.cpp
@@ -458,10 +461,10 @@ add_library(QtAwsWaf
   updateregexmatchsetresponse.cpp
   updateregexpatternsetrequest.cpp
   updateregexpatternsetresponse.cpp
-  updaterulegrouprequest.cpp
-  updaterulegroupresponse.cpp
   updaterulerequest.cpp
   updateruleresponse.cpp
+  updaterulegrouprequest.cpp
+  updaterulegroupresponse.cpp
   updatesizeconstraintsetrequest.cpp
   updatesizeconstraintsetresponse.cpp
   updatesqlinjectionmatchsetrequest.cpp
@@ -469,10 +472,7 @@ add_library(QtAwsWaf
   updatewebaclrequest.cpp
   updatewebaclresponse.cpp
   updatexssmatchsetrequest.cpp
-  updatexssmatchsetresponse.cpp
-  wafclient.cpp
-  wafrequest.cpp
-  wafresponse.cpp)
+  updatexssmatchsetresponse.cpp)
 
 target_link_libraries(QtAwsWaf
   PRIVATE QtAwsCore

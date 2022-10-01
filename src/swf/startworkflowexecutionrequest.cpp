@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::StartWorkflowExecutionRequest
- * \brief The StartWorkflowExecutionRequest class provides an interface for SWF StartWorkflowExecution requests.
+ * \class QtAws::Swf::StartWorkflowExecutionRequest
+ * \brief The StartWorkflowExecutionRequest class provides an interface for Swf StartWorkflowExecution requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SWF::StartWorkflowExecutionRequestPrivate
+ * \class QtAws::Swf::StartWorkflowExecutionRequestPrivate
  * \brief The StartWorkflowExecutionRequestPrivate class provides private implementation for StartWorkflowExecutionRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

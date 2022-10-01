@@ -21,36 +21,36 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::finspaceRequest
- * \brief The finspaceRequest class provides an interface for finspace requests.
+ * \class QtAws::Finspace::FinspaceRequest
+ * \brief The FinspaceRequest class provides an interface for Finspace requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * \enum finspaceRequest::Action
+ * \enum FinspaceRequest::Action
  *
- * This enum describes the actions that can be performed as finspace
+ * This enum describes the actions that can be performed as Finspace
  * requests.
  *
- * \value CreateEnvironmentAction finspace CreateEnvironment action.
- * \value DeleteEnvironmentAction finspace DeleteEnvironment action.
- * \value GetEnvironmentAction finspace GetEnvironment action.
- * \value ListEnvironmentsAction finspace ListEnvironments action.
- * \value ListTagsForResourceAction finspace ListTagsForResource action.
- * \value TagResourceAction finspace TagResource action.
- * \value UntagResourceAction finspace UntagResource action.
- * \value UpdateEnvironmentAction finspace UpdateEnvironment action.
+ * \value CreateEnvironmentAction Finspace CreateEnvironment action.
+ * \value DeleteEnvironmentAction Finspace DeleteEnvironment action.
+ * \value GetEnvironmentAction Finspace GetEnvironment action.
+ * \value ListEnvironmentsAction Finspace ListEnvironments action.
+ * \value ListTagsForResourceAction Finspace ListTagsForResource action.
+ * \value TagResourceAction Finspace TagResource action.
+ * \value UntagResourceAction Finspace UntagResource action.
+ * \value UpdateEnvironmentAction Finspace UpdateEnvironment action.
  */
 
 /*!
- * Constructs a finspaceRequest object for finspace \a action.
+ * Constructs a FinspaceRequest object for Finspace \a action.
  */
-finspaceRequest::finspaceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new finspaceRequestPrivate(action, this))
+FinspaceRequest::FinspaceRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new FinspaceRequestPrivate(action, this))
 {
 
 }
@@ -58,18 +58,18 @@ finspaceRequest::finspaceRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-finspaceRequest::finspaceRequest(const finspaceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new finspaceRequestPrivate(*other.d_func(), this))
+FinspaceRequest::FinspaceRequest(const FinspaceRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new FinspaceRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the finspaceRequest object to be equal to \a other.
+ * Sets the FinspaceRequest object to be equal to \a other.
  */
-finspaceRequest& finspaceRequest::operator=(const finspaceRequest &other)
+FinspaceRequest& FinspaceRequest::operator=(const FinspaceRequest &other)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -77,57 +77,57 @@ finspaceRequest& finspaceRequest::operator=(const finspaceRequest &other)
 }
 
 /*!
- * Constructs aa finspaceRequest object with private implementation \a d.
+ * Constructs aa FinspaceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from finspaceRequestPrivate.
+ * implementation that inherits from FinspaceRequestPrivate.
  */
-finspaceRequest::finspaceRequest(finspaceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+FinspaceRequest::FinspaceRequest(FinspaceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the finspace action to be performed by this request.
+ * Returns the Finspace action to be performed by this request.
  */
-finspaceRequest::Action finspaceRequest::action() const
+FinspaceRequest::Action FinspaceRequest::action() const
 {
-    Q_D(const finspaceRequest);
+    Q_D(const FinspaceRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the finspace action to be performed by this request.
+ * Returns the name of the Finspace action to be performed by this request.
  */
-QString finspaceRequest::actionString() const
+QString FinspaceRequest::actionString() const
 {
-    return finspaceRequestPrivate::toString(action());
+    return FinspaceRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the finspace API version implemented by this request.
+ * Returns the Finspace API version implemented by this request.
  */
-QString finspaceRequest::apiVersion() const
+QString FinspaceRequest::apiVersion() const
 {
-    Q_D(const finspaceRequest);
+    Q_D(const FinspaceRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the finspace action to be performed by this request to \a action.
+ * Sets the Finspace action to be performed by this request to \a action.
  */
-void finspaceRequest::setAction(const Action action)
+void FinspaceRequest::setAction(const Action action)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->action = action;
 }
 
 /*!
- * Sets the finspace API version to include in this request to \a version.
+ * Sets the Finspace API version to include in this request to \a version.
  */
-void finspaceRequest::setApiVersion(const QString &version)
+void FinspaceRequest::setApiVersion(const QString &version)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->apiVersion = version;
 }
 
@@ -139,7 +139,7 @@ void finspaceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool finspaceRequest::operator==(const finspaceRequest &other) const
+bool FinspaceRequest::operator==(const FinspaceRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -148,19 +148,19 @@ bool finspaceRequest::operator==(const finspaceRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid finspace queue name.
+ * Returns \c tue if \a queueName is a valid Finspace queue name.
  *
- * @par From finspace FAQs:
+ * @par From Finspace FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid finspace queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Finspace queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool finspaceRequest::isValidQueueName(const QString &queueName)
+/*bool FinspaceRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -170,45 +170,45 @@ bool finspaceRequest::operator==(const finspaceRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int finspaceRequest::clearParameter(const QString &name)
+int FinspaceRequest::clearParameter(const QString &name)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void finspaceRequest::clearParameters()
+void FinspaceRequest::clearParameters()
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant finspaceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant FinspaceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const finspaceRequest);
+    Q_D(const FinspaceRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &finspaceRequest::parameters() const
+const QVariantMap &FinspaceRequest::parameters() const
 {
-    Q_D(const finspaceRequest);
+    Q_D(const FinspaceRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void finspaceRequest::setParameter(const QString &name, const QVariant &value)
+void FinspaceRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->parameters.insert(name, value);
 }
 
@@ -216,42 +216,42 @@ void finspaceRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void finspaceRequest::setParameters(const QVariantMap &parameters)
+void FinspaceRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(finspaceRequest);
+    Q_D(FinspaceRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the finspace request using the given
+ * Returns a network request for the Finspace request using the given
  * \a endpoint.
  *
- * This finspace implementation builds request URLs by combining the
+ * This Finspace implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest finspaceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest FinspaceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const finspaceRequest);
+    //Q_D(const FinspaceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::finspace::finspaceRequestPrivate
- * \brief The finspaceRequestPrivate class provides private implementation for finspaceRequest.
+ * \class QtAws::Finspace::FinspaceRequestPrivate
+ * \brief The FinspaceRequestPrivate class provides private implementation for FinspaceRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a finspaceRequestPrivate object for finspace \a action,
+ * Constructs a FinspaceRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
-finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequest::Action action, finspaceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+FinspaceRequestPrivate::FinspaceRequestPrivate(const FinspaceRequest::Action action, FinspaceRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2021-03-12"))
 {
 
 }
@@ -262,10 +262,10 @@ finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequest::Action act
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the finspaceRequest class's copy constructor.
+ * This is required to support the FinspaceRequest class's copy constructor.
  */
-finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequestPrivate &other,
-                                     finspaceRequest * const q)
+FinspaceRequestPrivate::FinspaceRequestPrivate(const FinspaceRequestPrivate &other,
+                                     FinspaceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -276,14 +276,14 @@ finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequestPrivate &oth
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts finspaceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the finspace service's Action
+ * This function converts FinspaceRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the Finspace service's Action
  * query parameters.
  */
-QString finspaceRequestPrivate::toString(const finspaceRequest::Action &action)
+QString FinspaceRequestPrivate::toString(const FinspaceRequest::Action &action)
 {
     #define ActionToString(action) \
-        case finspaceRequest::action##Action: return QStringLiteral(#action)
+        case FinspaceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateEnvironment);
         ActionToString(DeleteEnvironment);
@@ -300,5 +300,5 @@ QString finspaceRequestPrivate::toString(const finspaceRequest::Action &action)
     return QString();
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

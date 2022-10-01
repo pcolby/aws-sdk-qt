@@ -24,7 +24,7 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class ListTagsForResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

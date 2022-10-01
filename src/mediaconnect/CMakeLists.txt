@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIACONNECT_LIBRARY)
 
 add_library(QtAwsMediaConnect
+  qtawsmediaconnectglobal.h
+  mediaconnectclient.h
+  mediaconnectclient_p.h
+  mediaconnectrequest.h
+  mediaconnectrequest_p.h
+  mediaconnectresponse.h
+  mediaconnectresponse_p.h
   addflowmediastreamsrequest.h
   addflowmediastreamsrequest_p.h
   addflowmediastreamsresponse.h
@@ -61,17 +68,10 @@ add_library(QtAwsMediaConnect
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mediaconnectclient.h
-  mediaconnectclient_p.h
-  mediaconnectrequest.h
-  mediaconnectrequest_p.h
-  mediaconnectresponse.h
-  mediaconnectresponse_p.h
   purchaseofferingrequest.h
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
-  qtawsmediaconnectglobal.h
   removeflowmediastreamrequest.h
   removeflowmediastreamrequest_p.h
   removeflowmediastreamresponse.h
@@ -108,6 +108,10 @@ add_library(QtAwsMediaConnect
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateflowrequest.h
+  updateflowrequest_p.h
+  updateflowresponse.h
+  updateflowresponse_p.h
   updateflowentitlementrequest.h
   updateflowentitlementrequest_p.h
   updateflowentitlementresponse.h
@@ -120,14 +124,13 @@ add_library(QtAwsMediaConnect
   updateflowoutputrequest_p.h
   updateflowoutputresponse.h
   updateflowoutputresponse_p.h
-  updateflowrequest.h
-  updateflowrequest_p.h
-  updateflowresponse.h
-  updateflowresponse_p.h
   updateflowsourcerequest.h
   updateflowsourcerequest_p.h
   updateflowsourceresponse.h
   updateflowsourceresponse_p.h
+  mediaconnectclient.cpp
+  mediaconnectrequest.cpp
+  mediaconnectresponse.cpp
   addflowmediastreamsrequest.cpp
   addflowmediastreamsresponse.cpp
   addflowoutputsrequest.cpp
@@ -158,9 +161,6 @@ add_library(QtAwsMediaConnect
   listreservationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mediaconnectclient.cpp
-  mediaconnectrequest.cpp
-  mediaconnectresponse.cpp
   purchaseofferingrequest.cpp
   purchaseofferingresponse.cpp
   removeflowmediastreamrequest.cpp
@@ -181,14 +181,14 @@ add_library(QtAwsMediaConnect
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateflowrequest.cpp
+  updateflowresponse.cpp
   updateflowentitlementrequest.cpp
   updateflowentitlementresponse.cpp
   updateflowmediastreamrequest.cpp
   updateflowmediastreamresponse.cpp
   updateflowoutputrequest.cpp
   updateflowoutputresponse.cpp
-  updateflowrequest.cpp
-  updateflowresponse.cpp
   updateflowsourcerequest.cpp
   updateflowsourceresponse.cpp)
 

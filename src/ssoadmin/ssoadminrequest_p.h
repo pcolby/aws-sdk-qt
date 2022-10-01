@@ -24,28 +24,28 @@
 #include "ssoadminrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
-class SSOAdminRequest;
+class SsoAdminRequest;
 
-class SSOAdminRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsoAdminRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SSOAdminRequest::Action action; ///< SSOAdmin action to be performed.
-    QString apiVersion;        ///< SSOAdmin API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSOAdmin request (query string) parameters. @todo?
+    SsoAdminRequest::Action action; ///< SsoAdmin action to be performed.
+    QString apiVersion;        ///< SsoAdmin API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SsoAdmin request (query string) parameters. @todo?
 
-    SSOAdminRequestPrivate(const SSOAdminRequest::Action action, SSOAdminRequest * const q);
-    SSOAdminRequestPrivate(const SSOAdminRequestPrivate &other, SSOAdminRequest * const q);
+    SsoAdminRequestPrivate(const SsoAdminRequest::Action action, SsoAdminRequest * const q);
+    SsoAdminRequestPrivate(const SsoAdminRequestPrivate &other, SsoAdminRequest * const q);
 
-    static QString toString(const SSOAdminRequest::Action &action);
+    static QString toString(const SsoAdminRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SSOAdminRequest)
+    Q_DECLARE_PUBLIC(SsoAdminRequest)
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

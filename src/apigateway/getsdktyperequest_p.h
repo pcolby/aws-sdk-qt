@@ -24,14 +24,14 @@
 #include "getsdktyperequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetSdkTypeRequest;
 
-class GetSdkTypeRequestPrivate : public APIGatewayRequestPrivate {
+class GetSdkTypeRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetSdkTypeRequestPrivate(const APIGatewayRequest::Action action,
+    GetSdkTypeRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetSdkTypeRequest * const q);
     GetSdkTypeRequestPrivate(const GetSdkTypeRequestPrivate &other,
                                    GetSdkTypeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

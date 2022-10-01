@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class AcmClient;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

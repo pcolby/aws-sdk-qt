@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GenerateClientCertificateRequest
- * \brief The GenerateClientCertificateRequest class provides an interface for APIGateway GenerateClientCertificate requests.
+ * \class QtAws::ApiGateway::GenerateClientCertificateRequest
+ * \brief The GenerateClientCertificateRequest class provides an interface for ApiGateway GenerateClientCertificate requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::generateClientCertificate
+ * \sa ApiGatewayClient::generateClientCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GenerateClientCertificateRequest::GenerateClientCertificateRequest(const GenerateClientCertificateRequest &other)
-    : APIGatewayRequest(new GenerateClientCertificateRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GenerateClientCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GenerateClientCertificateRequest::GenerateClientCertificateRequest(const Generat
  * Constructs a GenerateClientCertificateRequest object.
  */
 GenerateClientCertificateRequest::GenerateClientCertificateRequest()
-    : APIGatewayRequest(new GenerateClientCertificateRequestPrivate(APIGatewayRequest::GenerateClientCertificateAction, this))
+    : ApiGatewayRequest(new GenerateClientCertificateRequestPrivate(ApiGatewayRequest::GenerateClientCertificateAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GenerateClientCertificateRequest::response(QN
 }
 
 /*!
- * \class QtAws::APIGateway::GenerateClientCertificateRequestPrivate
+ * \class QtAws::ApiGateway::GenerateClientCertificateRequestPrivate
  * \brief The GenerateClientCertificateRequestPrivate class provides private implementation for GenerateClientCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GenerateClientCertificateRequestPrivate object for APIGateway \a action,
+ * Constructs a GenerateClientCertificateRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GenerateClientCertificateRequestPrivate::GenerateClientCertificateRequestPrivate(
-    const APIGatewayRequest::Action action, GenerateClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GenerateClientCertificateRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GenerateClientCertificateRequestPrivate::GenerateClientCertificateRequestPrivate
  */
 GenerateClientCertificateRequestPrivate::GenerateClientCertificateRequestPrivate(
     const GenerateClientCertificateRequestPrivate &other, GenerateClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

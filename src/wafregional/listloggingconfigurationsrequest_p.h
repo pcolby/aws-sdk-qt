@@ -24,14 +24,14 @@
 #include "listloggingconfigurationsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListLoggingConfigurationsRequest;
 
-class ListLoggingConfigurationsRequestPrivate : public WAFRegionalRequestPrivate {
+class ListLoggingConfigurationsRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListLoggingConfigurationsRequestPrivate(const WAFRegionalRequest::Action action,
+    ListLoggingConfigurationsRequestPrivate(const WafRegionalRequest::Action action,
                                    ListLoggingConfigurationsRequest * const q);
     ListLoggingConfigurationsRequestPrivate(const ListLoggingConfigurationsRequestPrivate &other,
                                    ListLoggingConfigurationsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

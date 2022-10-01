@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateAuthorizerResponse
- * \brief The CreateAuthorizerResponse class provides an interace for APIGateway CreateAuthorizer responses.
+ * \class QtAws::ApiGateway::CreateAuthorizerResponse
+ * \brief The CreateAuthorizerResponse class provides an interace for ApiGateway CreateAuthorizer responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createAuthorizer
+ * \sa ApiGatewayClient::createAuthorizer
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateAuthorizerResponse::CreateAuthorizerResponse(
         const CreateAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateAuthorizerResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new CreateAuthorizerRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateAuthorizer \a response.
+ * Parses a successful ApiGateway CreateAuthorizer \a response.
  */
 void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateAuthorizerResponsePrivate
+ * \class QtAws::ApiGateway::CreateAuthorizerResponsePrivate
  * \brief The CreateAuthorizerResponsePrivate class provides private implementation for CreateAuthorizerResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateAuthorizerResponsePrivate object with public implementation \a q.
  */
 CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
-    CreateAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateAuthorizerResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateAuthorizer response element from \a xml.
+ * Parses a ApiGateway CreateAuthorizer response element from \a xml.
  */
 void CreateAuthorizerResponsePrivate::parseCreateAuthorizerResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateAuthorizerResponsePrivate::parseCreateAuthorizerResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

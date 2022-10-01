@@ -24,11 +24,11 @@
 #include "deletedocumentationversionrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteDocumentationVersionResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteDocumentationVersionResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteDocumentationVersionResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

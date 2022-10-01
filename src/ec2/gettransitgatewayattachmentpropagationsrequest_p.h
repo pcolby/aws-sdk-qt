@@ -24,7 +24,7 @@
 #include "gettransitgatewayattachmentpropagationsrequest.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class GetTransitGatewayAttachmentPropagationsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

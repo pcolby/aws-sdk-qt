@@ -24,16 +24,16 @@
 #include "ivsrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class IvsRequest;
 
 class IvsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    IvsRequest::Action action; ///< IVS action to be performed.
-    QString apiVersion;        ///< IVS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< IVS request (query string) parameters. @todo?
+    IvsRequest::Action action; ///< Ivs action to be performed.
+    QString apiVersion;        ///< Ivs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ivs request (query string) parameters. @todo?
 
     IvsRequestPrivate(const IvsRequest::Action action, IvsRequest * const q);
     IvsRequestPrivate(const IvsRequestPrivate &other, IvsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

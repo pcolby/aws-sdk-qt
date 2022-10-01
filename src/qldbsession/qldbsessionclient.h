@@ -27,23 +27,23 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionClientPrivate;
+class QldbSessionClientPrivate;
 class SendCommandRequest;
 class SendCommandResponse;
 
-class QTAWSQLDBSESSION_EXPORT QLDBSessionClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSQLDBSESSION_EXPORT QldbSessionClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    QLDBSessionClient(
+    QldbSessionClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit QLDBSessionClient(
+    explicit QldbSessionClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -52,12 +52,12 @@ public slots:
     SendCommandResponse * sendCommand(const SendCommandRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(QLDBSessionClient)
-    Q_DISABLE_COPY(QLDBSessionClient)
+    Q_DECLARE_PRIVATE(QldbSessionClient)
+    Q_DISABLE_COPY(QldbSessionClient)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

@@ -24,28 +24,28 @@
 #include "signerrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerRequest;
+class SignerRequest;
 
-class signerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SignerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    signerRequest::Action action; ///< signer action to be performed.
-    QString apiVersion;        ///< signer API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< signer request (query string) parameters. @todo?
+    SignerRequest::Action action; ///< Signer action to be performed.
+    QString apiVersion;        ///< Signer API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Signer request (query string) parameters. @todo?
 
-    signerRequestPrivate(const signerRequest::Action action, signerRequest * const q);
-    signerRequestPrivate(const signerRequestPrivate &other, signerRequest * const q);
+    SignerRequestPrivate(const SignerRequest::Action action, SignerRequest * const q);
+    SignerRequestPrivate(const SignerRequestPrivate &other, SignerRequest * const q);
 
-    static QString toString(const signerRequest::Action &action);
+    static QString toString(const SignerRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(signerRequest)
+    Q_DECLARE_PUBLIC(SignerRequest)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

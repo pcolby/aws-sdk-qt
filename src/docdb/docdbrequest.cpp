@@ -21,81 +21,81 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DocDBRequest
- * \brief The DocDBRequest class provides an interface for DocDB requests.
+ * \class QtAws::DocDb::DocDbRequest
+ * \brief The DocDbRequest class provides an interface for DocDb requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * \enum DocDBRequest::Action
+ * \enum DocDbRequest::Action
  *
- * This enum describes the actions that can be performed as DocDB
+ * This enum describes the actions that can be performed as DocDb
  * requests.
  *
- * \value AddSourceIdentifierToSubscriptionAction DocDB AddSourceIdentifierToSubscription action.
- * \value AddTagsToResourceAction DocDB AddTagsToResource action.
- * \value ApplyPendingMaintenanceActionAction DocDB ApplyPendingMaintenanceAction action.
- * \value CopyDBClusterParameterGroupAction DocDB CopyDBClusterParameterGroup action.
- * \value CopyDBClusterSnapshotAction DocDB CopyDBClusterSnapshot action.
- * \value CreateDBClusterAction DocDB CreateDBCluster action.
- * \value CreateDBClusterParameterGroupAction DocDB CreateDBClusterParameterGroup action.
- * \value CreateDBClusterSnapshotAction DocDB CreateDBClusterSnapshot action.
- * \value CreateDBInstanceAction DocDB CreateDBInstance action.
- * \value CreateDBSubnetGroupAction DocDB CreateDBSubnetGroup action.
- * \value CreateEventSubscriptionAction DocDB CreateEventSubscription action.
- * \value CreateGlobalClusterAction DocDB CreateGlobalCluster action.
- * \value DeleteDBClusterAction DocDB DeleteDBCluster action.
- * \value DeleteDBClusterParameterGroupAction DocDB DeleteDBClusterParameterGroup action.
- * \value DeleteDBClusterSnapshotAction DocDB DeleteDBClusterSnapshot action.
- * \value DeleteDBInstanceAction DocDB DeleteDBInstance action.
- * \value DeleteDBSubnetGroupAction DocDB DeleteDBSubnetGroup action.
- * \value DeleteEventSubscriptionAction DocDB DeleteEventSubscription action.
- * \value DeleteGlobalClusterAction DocDB DeleteGlobalCluster action.
- * \value DescribeCertificatesAction DocDB DescribeCertificates action.
- * \value DescribeDBClusterParameterGroupsAction DocDB DescribeDBClusterParameterGroups action.
- * \value DescribeDBClusterParametersAction DocDB DescribeDBClusterParameters action.
- * \value DescribeDBClusterSnapshotAttributesAction DocDB DescribeDBClusterSnapshotAttributes action.
- * \value DescribeDBClusterSnapshotsAction DocDB DescribeDBClusterSnapshots action.
- * \value DescribeDBClustersAction DocDB DescribeDBClusters action.
- * \value DescribeDBEngineVersionsAction DocDB DescribeDBEngineVersions action.
- * \value DescribeDBInstancesAction DocDB DescribeDBInstances action.
- * \value DescribeDBSubnetGroupsAction DocDB DescribeDBSubnetGroups action.
- * \value DescribeEngineDefaultClusterParametersAction DocDB DescribeEngineDefaultClusterParameters action.
- * \value DescribeEventCategoriesAction DocDB DescribeEventCategories action.
- * \value DescribeEventSubscriptionsAction DocDB DescribeEventSubscriptions action.
- * \value DescribeEventsAction DocDB DescribeEvents action.
- * \value DescribeGlobalClustersAction DocDB DescribeGlobalClusters action.
- * \value DescribeOrderableDBInstanceOptionsAction DocDB DescribeOrderableDBInstanceOptions action.
- * \value DescribePendingMaintenanceActionsAction DocDB DescribePendingMaintenanceActions action.
- * \value FailoverDBClusterAction DocDB FailoverDBCluster action.
- * \value ListTagsForResourceAction DocDB ListTagsForResource action.
- * \value ModifyDBClusterAction DocDB ModifyDBCluster action.
- * \value ModifyDBClusterParameterGroupAction DocDB ModifyDBClusterParameterGroup action.
- * \value ModifyDBClusterSnapshotAttributeAction DocDB ModifyDBClusterSnapshotAttribute action.
- * \value ModifyDBInstanceAction DocDB ModifyDBInstance action.
- * \value ModifyDBSubnetGroupAction DocDB ModifyDBSubnetGroup action.
- * \value ModifyEventSubscriptionAction DocDB ModifyEventSubscription action.
- * \value ModifyGlobalClusterAction DocDB ModifyGlobalCluster action.
- * \value RebootDBInstanceAction DocDB RebootDBInstance action.
- * \value RemoveFromGlobalClusterAction DocDB RemoveFromGlobalCluster action.
- * \value RemoveSourceIdentifierFromSubscriptionAction DocDB RemoveSourceIdentifierFromSubscription action.
- * \value RemoveTagsFromResourceAction DocDB RemoveTagsFromResource action.
- * \value ResetDBClusterParameterGroupAction DocDB ResetDBClusterParameterGroup action.
- * \value RestoreDBClusterFromSnapshotAction DocDB RestoreDBClusterFromSnapshot action.
- * \value RestoreDBClusterToPointInTimeAction DocDB RestoreDBClusterToPointInTime action.
- * \value StartDBClusterAction DocDB StartDBCluster action.
- * \value StopDBClusterAction DocDB StopDBCluster action.
+ * \value AddSourceIdentifierToSubscriptionAction DocDb AddSourceIdentifierToSubscription action.
+ * \value AddTagsToResourceAction DocDb AddTagsToResource action.
+ * \value ApplyPendingMaintenanceActionAction DocDb ApplyPendingMaintenanceAction action.
+ * \value CopyDBClusterParameterGroupAction DocDb CopyDBClusterParameterGroup action.
+ * \value CopyDBClusterSnapshotAction DocDb CopyDBClusterSnapshot action.
+ * \value CreateDBClusterAction DocDb CreateDBCluster action.
+ * \value CreateDBClusterParameterGroupAction DocDb CreateDBClusterParameterGroup action.
+ * \value CreateDBClusterSnapshotAction DocDb CreateDBClusterSnapshot action.
+ * \value CreateDBInstanceAction DocDb CreateDBInstance action.
+ * \value CreateDBSubnetGroupAction DocDb CreateDBSubnetGroup action.
+ * \value CreateEventSubscriptionAction DocDb CreateEventSubscription action.
+ * \value CreateGlobalClusterAction DocDb CreateGlobalCluster action.
+ * \value DeleteDBClusterAction DocDb DeleteDBCluster action.
+ * \value DeleteDBClusterParameterGroupAction DocDb DeleteDBClusterParameterGroup action.
+ * \value DeleteDBClusterSnapshotAction DocDb DeleteDBClusterSnapshot action.
+ * \value DeleteDBInstanceAction DocDb DeleteDBInstance action.
+ * \value DeleteDBSubnetGroupAction DocDb DeleteDBSubnetGroup action.
+ * \value DeleteEventSubscriptionAction DocDb DeleteEventSubscription action.
+ * \value DeleteGlobalClusterAction DocDb DeleteGlobalCluster action.
+ * \value DescribeCertificatesAction DocDb DescribeCertificates action.
+ * \value DescribeDBClusterParameterGroupsAction DocDb DescribeDBClusterParameterGroups action.
+ * \value DescribeDBClusterParametersAction DocDb DescribeDBClusterParameters action.
+ * \value DescribeDBClusterSnapshotAttributesAction DocDb DescribeDBClusterSnapshotAttributes action.
+ * \value DescribeDBClusterSnapshotsAction DocDb DescribeDBClusterSnapshots action.
+ * \value DescribeDBClustersAction DocDb DescribeDBClusters action.
+ * \value DescribeDBEngineVersionsAction DocDb DescribeDBEngineVersions action.
+ * \value DescribeDBInstancesAction DocDb DescribeDBInstances action.
+ * \value DescribeDBSubnetGroupsAction DocDb DescribeDBSubnetGroups action.
+ * \value DescribeEngineDefaultClusterParametersAction DocDb DescribeEngineDefaultClusterParameters action.
+ * \value DescribeEventCategoriesAction DocDb DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction DocDb DescribeEventSubscriptions action.
+ * \value DescribeEventsAction DocDb DescribeEvents action.
+ * \value DescribeGlobalClustersAction DocDb DescribeGlobalClusters action.
+ * \value DescribeOrderableDBInstanceOptionsAction DocDb DescribeOrderableDBInstanceOptions action.
+ * \value DescribePendingMaintenanceActionsAction DocDb DescribePendingMaintenanceActions action.
+ * \value FailoverDBClusterAction DocDb FailoverDBCluster action.
+ * \value ListTagsForResourceAction DocDb ListTagsForResource action.
+ * \value ModifyDBClusterAction DocDb ModifyDBCluster action.
+ * \value ModifyDBClusterParameterGroupAction DocDb ModifyDBClusterParameterGroup action.
+ * \value ModifyDBClusterSnapshotAttributeAction DocDb ModifyDBClusterSnapshotAttribute action.
+ * \value ModifyDBInstanceAction DocDb ModifyDBInstance action.
+ * \value ModifyDBSubnetGroupAction DocDb ModifyDBSubnetGroup action.
+ * \value ModifyEventSubscriptionAction DocDb ModifyEventSubscription action.
+ * \value ModifyGlobalClusterAction DocDb ModifyGlobalCluster action.
+ * \value RebootDBInstanceAction DocDb RebootDBInstance action.
+ * \value RemoveFromGlobalClusterAction DocDb RemoveFromGlobalCluster action.
+ * \value RemoveSourceIdentifierFromSubscriptionAction DocDb RemoveSourceIdentifierFromSubscription action.
+ * \value RemoveTagsFromResourceAction DocDb RemoveTagsFromResource action.
+ * \value ResetDBClusterParameterGroupAction DocDb ResetDBClusterParameterGroup action.
+ * \value RestoreDBClusterFromSnapshotAction DocDb RestoreDBClusterFromSnapshot action.
+ * \value RestoreDBClusterToPointInTimeAction DocDb RestoreDBClusterToPointInTime action.
+ * \value StartDBClusterAction DocDb StartDBCluster action.
+ * \value StopDBClusterAction DocDb StopDBCluster action.
  */
 
 /*!
- * Constructs a DocDBRequest object for DocDB \a action.
+ * Constructs a DocDbRequest object for DocDb \a action.
  */
-DocDBRequest::DocDBRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DocDBRequestPrivate(action, this))
+DocDbRequest::DocDbRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new DocDbRequestPrivate(action, this))
 {
 
 }
@@ -103,18 +103,18 @@ DocDBRequest::DocDBRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-DocDBRequest::DocDBRequest(const DocDBRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DocDBRequestPrivate(*other.d_func(), this))
+DocDbRequest::DocDbRequest(const DocDbRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new DocDbRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the DocDBRequest object to be equal to \a other.
+ * Sets the DocDbRequest object to be equal to \a other.
  */
-DocDBRequest& DocDBRequest::operator=(const DocDBRequest &other)
+DocDbRequest& DocDbRequest::operator=(const DocDbRequest &other)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -122,57 +122,57 @@ DocDBRequest& DocDBRequest::operator=(const DocDBRequest &other)
 }
 
 /*!
- * Constructs aa DocDBRequest object with private implementation \a d.
+ * Constructs aa DocDbRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DocDBRequestPrivate.
+ * implementation that inherits from DocDbRequestPrivate.
  */
-DocDBRequest::DocDBRequest(DocDBRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DocDbRequest::DocDbRequest(DocDbRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the DocDB action to be performed by this request.
+ * Returns the DocDb action to be performed by this request.
  */
-DocDBRequest::Action DocDBRequest::action() const
+DocDbRequest::Action DocDbRequest::action() const
 {
-    Q_D(const DocDBRequest);
+    Q_D(const DocDbRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the DocDB action to be performed by this request.
+ * Returns the name of the DocDb action to be performed by this request.
  */
-QString DocDBRequest::actionString() const
+QString DocDbRequest::actionString() const
 {
-    return DocDBRequestPrivate::toString(action());
+    return DocDbRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the DocDB API version implemented by this request.
+ * Returns the DocDb API version implemented by this request.
  */
-QString DocDBRequest::apiVersion() const
+QString DocDbRequest::apiVersion() const
 {
-    Q_D(const DocDBRequest);
+    Q_D(const DocDbRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the DocDB action to be performed by this request to \a action.
+ * Sets the DocDb action to be performed by this request to \a action.
  */
-void DocDBRequest::setAction(const Action action)
+void DocDbRequest::setAction(const Action action)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->action = action;
 }
 
 /*!
- * Sets the DocDB API version to include in this request to \a version.
+ * Sets the DocDb API version to include in this request to \a version.
  */
-void DocDBRequest::setApiVersion(const QString &version)
+void DocDbRequest::setApiVersion(const QString &version)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->apiVersion = version;
 }
 
@@ -184,7 +184,7 @@ void DocDBRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool DocDBRequest::operator==(const DocDBRequest &other) const
+bool DocDbRequest::operator==(const DocDbRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -193,19 +193,19 @@ bool DocDBRequest::operator==(const DocDBRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid DocDB queue name.
+ * Returns \c tue if \a queueName is a valid DocDb queue name.
  *
- * @par From DocDB FAQs:
+ * @par From DocDb FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid DocDB queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid DocDb queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool DocDBRequest::isValidQueueName(const QString &queueName)
+/*bool DocDbRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -215,45 +215,45 @@ bool DocDBRequest::operator==(const DocDBRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int DocDBRequest::clearParameter(const QString &name)
+int DocDbRequest::clearParameter(const QString &name)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void DocDBRequest::clearParameters()
+void DocDbRequest::clearParameters()
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant DocDBRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant DocDbRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const DocDBRequest);
+    Q_D(const DocDbRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &DocDBRequest::parameters() const
+const QVariantMap &DocDbRequest::parameters() const
 {
-    Q_D(const DocDBRequest);
+    Q_D(const DocDbRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void DocDBRequest::setParameter(const QString &name, const QVariant &value)
+void DocDbRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->parameters.insert(name, value);
 }
 
@@ -261,42 +261,42 @@ void DocDBRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void DocDBRequest::setParameters(const QVariantMap &parameters)
+void DocDbRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(DocDBRequest);
+    Q_D(DocDbRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the DocDB request using the given
+ * Returns a network request for the DocDb request using the given
  * \a endpoint.
  *
- * This DocDB implementation builds request URLs by combining the
+ * This DocDb implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest DocDBRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest DocDbRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const DocDBRequest);
+    //Q_D(const DocDbRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::DocDB::DocDBRequestPrivate
- * \brief The DocDBRequestPrivate class provides private implementation for DocDBRequest.
+ * \class QtAws::DocDb::DocDbRequestPrivate
+ * \brief The DocDbRequestPrivate class provides private implementation for DocDbRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DocDBRequestPrivate object for DocDB \a action,
+ * Constructs a DocDbRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
-DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequest::Action action, DocDBRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+DocDbRequestPrivate::DocDbRequestPrivate(const DocDbRequest::Action action, DocDbRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-10-31"))
 {
 
 }
@@ -307,10 +307,10 @@ DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequest::Action action, DocD
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the DocDBRequest class's copy constructor.
+ * This is required to support the DocDbRequest class's copy constructor.
  */
-DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequestPrivate &other,
-                                     DocDBRequest * const q)
+DocDbRequestPrivate::DocDbRequestPrivate(const DocDbRequestPrivate &other,
+                                     DocDbRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -321,14 +321,14 @@ DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts DocDBRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the DocDB service's Action
+ * This function converts DocDbRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the DocDb service's Action
  * query parameters.
  */
-QString DocDBRequestPrivate::toString(const DocDBRequest::Action &action)
+QString DocDbRequestPrivate::toString(const DocDbRequest::Action &action)
 {
     #define ActionToString(action) \
-        case DocDBRequest::action##Action: return QStringLiteral(#action)
+        case DocDbRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddSourceIdentifierToSubscription);
         ActionToString(AddTagsToResource);
@@ -390,5 +390,5 @@ QString DocDBRequestPrivate::toString(const DocDBRequest::Action &action)
     return QString();
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

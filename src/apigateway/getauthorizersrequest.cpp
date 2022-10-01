@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetAuthorizersRequest
- * \brief The GetAuthorizersRequest class provides an interface for APIGateway GetAuthorizers requests.
+ * \class QtAws::ApiGateway::GetAuthorizersRequest
+ * \brief The GetAuthorizersRequest class provides an interface for ApiGateway GetAuthorizers requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getAuthorizers
+ * \sa ApiGatewayClient::getAuthorizers
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetAuthorizersRequest::GetAuthorizersRequest(const GetAuthorizersRequest &other)
-    : APIGatewayRequest(new GetAuthorizersRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetAuthorizersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetAuthorizersRequest::GetAuthorizersRequest(const GetAuthorizersRequest &other)
  * Constructs a GetAuthorizersRequest object.
  */
 GetAuthorizersRequest::GetAuthorizersRequest()
-    : APIGatewayRequest(new GetAuthorizersRequestPrivate(APIGatewayRequest::GetAuthorizersAction, this))
+    : ApiGatewayRequest(new GetAuthorizersRequestPrivate(ApiGatewayRequest::GetAuthorizersAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::GetAuthorizersRequestPrivate
+ * \class QtAws::ApiGateway::GetAuthorizersRequestPrivate
  * \brief The GetAuthorizersRequestPrivate class provides private implementation for GetAuthorizersRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetAuthorizersRequestPrivate object for APIGateway \a action,
+ * Constructs a GetAuthorizersRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
-    const APIGatewayRequest::Action action, GetAuthorizersRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetAuthorizersRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
  */
 GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
     const GetAuthorizersRequestPrivate &other, GetAuthorizersRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRateBasedRuleResponse
- * \brief The UpdateRateBasedRuleResponse class provides an interace for WAFRegional UpdateRateBasedRule responses.
+ * \class QtAws::WafRegional::UpdateRateBasedRuleResponse
+ * \brief The UpdateRateBasedRuleResponse class provides an interace for WafRegional UpdateRateBasedRule responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRateBasedRule
+ * \sa WafRegionalClient::updateRateBasedRule
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
         const UpdateRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRateBasedRuleRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateRateBasedRule \a response.
+ * Parses a successful WafRegional UpdateRateBasedRule \a response.
  */
 void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRateBasedRuleResponsePrivate
+ * \class QtAws::WafRegional::UpdateRateBasedRuleResponsePrivate
  * \brief The UpdateRateBasedRuleResponsePrivate class provides private implementation for UpdateRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
-    UpdateRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateRateBasedRuleResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateRateBasedRule response element from \a xml.
+ * Parses a WafRegional UpdateRateBasedRule response element from \a xml.
  */
 void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

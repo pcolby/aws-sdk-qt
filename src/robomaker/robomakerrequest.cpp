@@ -300,7 +300,7 @@ QNetworkRequest RoboMakerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RoboMakerRequestPrivate::RoboMakerRequestPrivate(const RoboMakerRequest::Action action, RoboMakerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-06-29"))
 {
 
 }

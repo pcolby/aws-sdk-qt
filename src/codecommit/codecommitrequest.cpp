@@ -320,7 +320,7 @@ QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Action action, CodeCommitRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-04-13"))
 {
 
 }

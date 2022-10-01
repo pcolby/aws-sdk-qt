@@ -24,7 +24,7 @@
 #include "listloggingconfigurationsrequest.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class ListLoggingConfigurationsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

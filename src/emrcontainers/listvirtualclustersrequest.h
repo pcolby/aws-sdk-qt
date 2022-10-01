@@ -23,11 +23,11 @@
 #include "emrcontainersrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class ListVirtualClustersRequestPrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT ListVirtualClustersRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT ListVirtualClustersRequest : public EmrcontainersRequest {
 
 public:
     ListVirtualClustersRequest(const ListVirtualClustersRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

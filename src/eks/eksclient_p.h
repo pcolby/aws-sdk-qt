@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class EksClient;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

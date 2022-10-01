@@ -336,7 +336,7 @@ QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBusinessRequest::Action action, AlexaForBusinessRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-09"))
 {
 
 }

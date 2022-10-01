@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for SSMContacts TagResource requests.
+ * \class QtAws::SsmContacts::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for SsmContacts TagResource requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::tagResource
+ * \sa SsmContactsClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : SSMContactsRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : SSMContactsRequest(new TagResourceRequestPrivate(SSMContactsRequest::TagResourceAction, this))
+    : SsmContactsRequest(new TagResourceRequestPrivate(SsmContactsRequest::TagResourceAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SSMContacts::TagResourceRequestPrivate
+ * \class QtAws::SsmContacts::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for SSMContacts \a action,
+ * Constructs a TagResourceRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const SSMContactsRequest::Action action, TagResourceRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, TagResourceRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

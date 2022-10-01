@@ -21,162 +21,162 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RdsRequest
- * \brief The RdsRequest class provides an interface for RDS requests.
+ * \class QtAws::Rds::RdsRequest
+ * \brief The RdsRequest class provides an interface for Rds requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
  * \enum RdsRequest::Action
  *
- * This enum describes the actions that can be performed as RDS
+ * This enum describes the actions that can be performed as Rds
  * requests.
  *
- * \value AddRoleToDBClusterAction RDS AddRoleToDBCluster action.
- * \value AddRoleToDBInstanceAction RDS AddRoleToDBInstance action.
- * \value AddSourceIdentifierToSubscriptionAction RDS AddSourceIdentifierToSubscription action.
- * \value AddTagsToResourceAction RDS AddTagsToResource action.
- * \value ApplyPendingMaintenanceActionAction RDS ApplyPendingMaintenanceAction action.
- * \value AuthorizeDBSecurityGroupIngressAction RDS AuthorizeDBSecurityGroupIngress action.
- * \value BacktrackDBClusterAction RDS BacktrackDBCluster action.
- * \value CancelExportTaskAction RDS CancelExportTask action.
- * \value CopyDBClusterParameterGroupAction RDS CopyDBClusterParameterGroup action.
- * \value CopyDBClusterSnapshotAction RDS CopyDBClusterSnapshot action.
- * \value CopyDBParameterGroupAction RDS CopyDBParameterGroup action.
- * \value CopyDBSnapshotAction RDS CopyDBSnapshot action.
- * \value CopyOptionGroupAction RDS CopyOptionGroup action.
- * \value CreateCustomAvailabilityZoneAction RDS CreateCustomAvailabilityZone action.
- * \value CreateDBClusterAction RDS CreateDBCluster action.
- * \value CreateDBClusterEndpointAction RDS CreateDBClusterEndpoint action.
- * \value CreateDBClusterParameterGroupAction RDS CreateDBClusterParameterGroup action.
- * \value CreateDBClusterSnapshotAction RDS CreateDBClusterSnapshot action.
- * \value CreateDBInstanceAction RDS CreateDBInstance action.
- * \value CreateDBInstanceReadReplicaAction RDS CreateDBInstanceReadReplica action.
- * \value CreateDBParameterGroupAction RDS CreateDBParameterGroup action.
- * \value CreateDBProxyAction RDS CreateDBProxy action.
- * \value CreateDBProxyEndpointAction RDS CreateDBProxyEndpoint action.
- * \value CreateDBSecurityGroupAction RDS CreateDBSecurityGroup action.
- * \value CreateDBSnapshotAction RDS CreateDBSnapshot action.
- * \value CreateDBSubnetGroupAction RDS CreateDBSubnetGroup action.
- * \value CreateEventSubscriptionAction RDS CreateEventSubscription action.
- * \value CreateGlobalClusterAction RDS CreateGlobalCluster action.
- * \value CreateOptionGroupAction RDS CreateOptionGroup action.
- * \value DeleteCustomAvailabilityZoneAction RDS DeleteCustomAvailabilityZone action.
- * \value DeleteDBClusterAction RDS DeleteDBCluster action.
- * \value DeleteDBClusterEndpointAction RDS DeleteDBClusterEndpoint action.
- * \value DeleteDBClusterParameterGroupAction RDS DeleteDBClusterParameterGroup action.
- * \value DeleteDBClusterSnapshotAction RDS DeleteDBClusterSnapshot action.
- * \value DeleteDBInstanceAction RDS DeleteDBInstance action.
- * \value DeleteDBInstanceAutomatedBackupAction RDS DeleteDBInstanceAutomatedBackup action.
- * \value DeleteDBParameterGroupAction RDS DeleteDBParameterGroup action.
- * \value DeleteDBProxyAction RDS DeleteDBProxy action.
- * \value DeleteDBProxyEndpointAction RDS DeleteDBProxyEndpoint action.
- * \value DeleteDBSecurityGroupAction RDS DeleteDBSecurityGroup action.
- * \value DeleteDBSnapshotAction RDS DeleteDBSnapshot action.
- * \value DeleteDBSubnetGroupAction RDS DeleteDBSubnetGroup action.
- * \value DeleteEventSubscriptionAction RDS DeleteEventSubscription action.
- * \value DeleteGlobalClusterAction RDS DeleteGlobalCluster action.
- * \value DeleteInstallationMediaAction RDS DeleteInstallationMedia action.
- * \value DeleteOptionGroupAction RDS DeleteOptionGroup action.
- * \value DeregisterDBProxyTargetsAction RDS DeregisterDBProxyTargets action.
- * \value DescribeAccountAttributesAction RDS DescribeAccountAttributes action.
- * \value DescribeCertificatesAction RDS DescribeCertificates action.
- * \value DescribeCustomAvailabilityZonesAction RDS DescribeCustomAvailabilityZones action.
- * \value DescribeDBClusterBacktracksAction RDS DescribeDBClusterBacktracks action.
- * \value DescribeDBClusterEndpointsAction RDS DescribeDBClusterEndpoints action.
- * \value DescribeDBClusterParameterGroupsAction RDS DescribeDBClusterParameterGroups action.
- * \value DescribeDBClusterParametersAction RDS DescribeDBClusterParameters action.
- * \value DescribeDBClusterSnapshotAttributesAction RDS DescribeDBClusterSnapshotAttributes action.
- * \value DescribeDBClusterSnapshotsAction RDS DescribeDBClusterSnapshots action.
- * \value DescribeDBClustersAction RDS DescribeDBClusters action.
- * \value DescribeDBEngineVersionsAction RDS DescribeDBEngineVersions action.
- * \value DescribeDBInstanceAutomatedBackupsAction RDS DescribeDBInstanceAutomatedBackups action.
- * \value DescribeDBInstancesAction RDS DescribeDBInstances action.
- * \value DescribeDBLogFilesAction RDS DescribeDBLogFiles action.
- * \value DescribeDBParameterGroupsAction RDS DescribeDBParameterGroups action.
- * \value DescribeDBParametersAction RDS DescribeDBParameters action.
- * \value DescribeDBProxiesAction RDS DescribeDBProxies action.
- * \value DescribeDBProxyEndpointsAction RDS DescribeDBProxyEndpoints action.
- * \value DescribeDBProxyTargetGroupsAction RDS DescribeDBProxyTargetGroups action.
- * \value DescribeDBProxyTargetsAction RDS DescribeDBProxyTargets action.
- * \value DescribeDBSecurityGroupsAction RDS DescribeDBSecurityGroups action.
- * \value DescribeDBSnapshotAttributesAction RDS DescribeDBSnapshotAttributes action.
- * \value DescribeDBSnapshotsAction RDS DescribeDBSnapshots action.
- * \value DescribeDBSubnetGroupsAction RDS DescribeDBSubnetGroups action.
- * \value DescribeEngineDefaultClusterParametersAction RDS DescribeEngineDefaultClusterParameters action.
- * \value DescribeEngineDefaultParametersAction RDS DescribeEngineDefaultParameters action.
- * \value DescribeEventCategoriesAction RDS DescribeEventCategories action.
- * \value DescribeEventSubscriptionsAction RDS DescribeEventSubscriptions action.
- * \value DescribeEventsAction RDS DescribeEvents action.
- * \value DescribeExportTasksAction RDS DescribeExportTasks action.
- * \value DescribeGlobalClustersAction RDS DescribeGlobalClusters action.
- * \value DescribeInstallationMediaAction RDS DescribeInstallationMedia action.
- * \value DescribeOptionGroupOptionsAction RDS DescribeOptionGroupOptions action.
- * \value DescribeOptionGroupsAction RDS DescribeOptionGroups action.
- * \value DescribeOrderableDBInstanceOptionsAction RDS DescribeOrderableDBInstanceOptions action.
- * \value DescribePendingMaintenanceActionsAction RDS DescribePendingMaintenanceActions action.
- * \value DescribeReservedDBInstancesAction RDS DescribeReservedDBInstances action.
- * \value DescribeReservedDBInstancesOfferingsAction RDS DescribeReservedDBInstancesOfferings action.
- * \value DescribeSourceRegionsAction RDS DescribeSourceRegions action.
- * \value DescribeValidDBInstanceModificationsAction RDS DescribeValidDBInstanceModifications action.
- * \value DownloadDBLogFilePortionAction RDS DownloadDBLogFilePortion action.
- * \value FailoverDBClusterAction RDS FailoverDBCluster action.
- * \value FailoverGlobalClusterAction RDS FailoverGlobalCluster action.
- * \value ImportInstallationMediaAction RDS ImportInstallationMedia action.
- * \value ListTagsForResourceAction RDS ListTagsForResource action.
- * \value ModifyCertificatesAction RDS ModifyCertificates action.
- * \value ModifyCurrentDBClusterCapacityAction RDS ModifyCurrentDBClusterCapacity action.
- * \value ModifyDBClusterAction RDS ModifyDBCluster action.
- * \value ModifyDBClusterEndpointAction RDS ModifyDBClusterEndpoint action.
- * \value ModifyDBClusterParameterGroupAction RDS ModifyDBClusterParameterGroup action.
- * \value ModifyDBClusterSnapshotAttributeAction RDS ModifyDBClusterSnapshotAttribute action.
- * \value ModifyDBInstanceAction RDS ModifyDBInstance action.
- * \value ModifyDBParameterGroupAction RDS ModifyDBParameterGroup action.
- * \value ModifyDBProxyAction RDS ModifyDBProxy action.
- * \value ModifyDBProxyEndpointAction RDS ModifyDBProxyEndpoint action.
- * \value ModifyDBProxyTargetGroupAction RDS ModifyDBProxyTargetGroup action.
- * \value ModifyDBSnapshotAction RDS ModifyDBSnapshot action.
- * \value ModifyDBSnapshotAttributeAction RDS ModifyDBSnapshotAttribute action.
- * \value ModifyDBSubnetGroupAction RDS ModifyDBSubnetGroup action.
- * \value ModifyEventSubscriptionAction RDS ModifyEventSubscription action.
- * \value ModifyGlobalClusterAction RDS ModifyGlobalCluster action.
- * \value ModifyOptionGroupAction RDS ModifyOptionGroup action.
- * \value PromoteReadReplicaAction RDS PromoteReadReplica action.
- * \value PromoteReadReplicaDBClusterAction RDS PromoteReadReplicaDBCluster action.
- * \value PurchaseReservedDBInstancesOfferingAction RDS PurchaseReservedDBInstancesOffering action.
- * \value RebootDBInstanceAction RDS RebootDBInstance action.
- * \value RegisterDBProxyTargetsAction RDS RegisterDBProxyTargets action.
- * \value RemoveFromGlobalClusterAction RDS RemoveFromGlobalCluster action.
- * \value RemoveRoleFromDBClusterAction RDS RemoveRoleFromDBCluster action.
- * \value RemoveRoleFromDBInstanceAction RDS RemoveRoleFromDBInstance action.
- * \value RemoveSourceIdentifierFromSubscriptionAction RDS RemoveSourceIdentifierFromSubscription action.
- * \value RemoveTagsFromResourceAction RDS RemoveTagsFromResource action.
- * \value ResetDBClusterParameterGroupAction RDS ResetDBClusterParameterGroup action.
- * \value ResetDBParameterGroupAction RDS ResetDBParameterGroup action.
- * \value RestoreDBClusterFromS3Action RDS RestoreDBClusterFromS3 action.
- * \value RestoreDBClusterFromSnapshotAction RDS RestoreDBClusterFromSnapshot action.
- * \value RestoreDBClusterToPointInTimeAction RDS RestoreDBClusterToPointInTime action.
- * \value RestoreDBInstanceFromDBSnapshotAction RDS RestoreDBInstanceFromDBSnapshot action.
- * \value RestoreDBInstanceFromS3Action RDS RestoreDBInstanceFromS3 action.
- * \value RestoreDBInstanceToPointInTimeAction RDS RestoreDBInstanceToPointInTime action.
- * \value RevokeDBSecurityGroupIngressAction RDS RevokeDBSecurityGroupIngress action.
- * \value StartActivityStreamAction RDS StartActivityStream action.
- * \value StartDBClusterAction RDS StartDBCluster action.
- * \value StartDBInstanceAction RDS StartDBInstance action.
- * \value StartDBInstanceAutomatedBackupsReplicationAction RDS StartDBInstanceAutomatedBackupsReplication action.
- * \value StartExportTaskAction RDS StartExportTask action.
- * \value StopActivityStreamAction RDS StopActivityStream action.
- * \value StopDBClusterAction RDS StopDBCluster action.
- * \value StopDBInstanceAction RDS StopDBInstance action.
- * \value StopDBInstanceAutomatedBackupsReplicationAction RDS StopDBInstanceAutomatedBackupsReplication action.
+ * \value AddRoleToDBClusterAction Rds AddRoleToDBCluster action.
+ * \value AddRoleToDBInstanceAction Rds AddRoleToDBInstance action.
+ * \value AddSourceIdentifierToSubscriptionAction Rds AddSourceIdentifierToSubscription action.
+ * \value AddTagsToResourceAction Rds AddTagsToResource action.
+ * \value ApplyPendingMaintenanceActionAction Rds ApplyPendingMaintenanceAction action.
+ * \value AuthorizeDBSecurityGroupIngressAction Rds AuthorizeDBSecurityGroupIngress action.
+ * \value BacktrackDBClusterAction Rds BacktrackDBCluster action.
+ * \value CancelExportTaskAction Rds CancelExportTask action.
+ * \value CopyDBClusterParameterGroupAction Rds CopyDBClusterParameterGroup action.
+ * \value CopyDBClusterSnapshotAction Rds CopyDBClusterSnapshot action.
+ * \value CopyDBParameterGroupAction Rds CopyDBParameterGroup action.
+ * \value CopyDBSnapshotAction Rds CopyDBSnapshot action.
+ * \value CopyOptionGroupAction Rds CopyOptionGroup action.
+ * \value CreateCustomDBEngineVersionAction Rds CreateCustomDBEngineVersion action.
+ * \value CreateDBClusterAction Rds CreateDBCluster action.
+ * \value CreateDBClusterEndpointAction Rds CreateDBClusterEndpoint action.
+ * \value CreateDBClusterParameterGroupAction Rds CreateDBClusterParameterGroup action.
+ * \value CreateDBClusterSnapshotAction Rds CreateDBClusterSnapshot action.
+ * \value CreateDBInstanceAction Rds CreateDBInstance action.
+ * \value CreateDBInstanceReadReplicaAction Rds CreateDBInstanceReadReplica action.
+ * \value CreateDBParameterGroupAction Rds CreateDBParameterGroup action.
+ * \value CreateDBProxyAction Rds CreateDBProxy action.
+ * \value CreateDBProxyEndpointAction Rds CreateDBProxyEndpoint action.
+ * \value CreateDBSecurityGroupAction Rds CreateDBSecurityGroup action.
+ * \value CreateDBSnapshotAction Rds CreateDBSnapshot action.
+ * \value CreateDBSubnetGroupAction Rds CreateDBSubnetGroup action.
+ * \value CreateEventSubscriptionAction Rds CreateEventSubscription action.
+ * \value CreateGlobalClusterAction Rds CreateGlobalCluster action.
+ * \value CreateOptionGroupAction Rds CreateOptionGroup action.
+ * \value DeleteCustomDBEngineVersionAction Rds DeleteCustomDBEngineVersion action.
+ * \value DeleteDBClusterAction Rds DeleteDBCluster action.
+ * \value DeleteDBClusterEndpointAction Rds DeleteDBClusterEndpoint action.
+ * \value DeleteDBClusterParameterGroupAction Rds DeleteDBClusterParameterGroup action.
+ * \value DeleteDBClusterSnapshotAction Rds DeleteDBClusterSnapshot action.
+ * \value DeleteDBInstanceAction Rds DeleteDBInstance action.
+ * \value DeleteDBInstanceAutomatedBackupAction Rds DeleteDBInstanceAutomatedBackup action.
+ * \value DeleteDBParameterGroupAction Rds DeleteDBParameterGroup action.
+ * \value DeleteDBProxyAction Rds DeleteDBProxy action.
+ * \value DeleteDBProxyEndpointAction Rds DeleteDBProxyEndpoint action.
+ * \value DeleteDBSecurityGroupAction Rds DeleteDBSecurityGroup action.
+ * \value DeleteDBSnapshotAction Rds DeleteDBSnapshot action.
+ * \value DeleteDBSubnetGroupAction Rds DeleteDBSubnetGroup action.
+ * \value DeleteEventSubscriptionAction Rds DeleteEventSubscription action.
+ * \value DeleteGlobalClusterAction Rds DeleteGlobalCluster action.
+ * \value DeleteOptionGroupAction Rds DeleteOptionGroup action.
+ * \value DeregisterDBProxyTargetsAction Rds DeregisterDBProxyTargets action.
+ * \value DescribeAccountAttributesAction Rds DescribeAccountAttributes action.
+ * \value DescribeCertificatesAction Rds DescribeCertificates action.
+ * \value DescribeDBClusterBacktracksAction Rds DescribeDBClusterBacktracks action.
+ * \value DescribeDBClusterEndpointsAction Rds DescribeDBClusterEndpoints action.
+ * \value DescribeDBClusterParameterGroupsAction Rds DescribeDBClusterParameterGroups action.
+ * \value DescribeDBClusterParametersAction Rds DescribeDBClusterParameters action.
+ * \value DescribeDBClusterSnapshotAttributesAction Rds DescribeDBClusterSnapshotAttributes action.
+ * \value DescribeDBClusterSnapshotsAction Rds DescribeDBClusterSnapshots action.
+ * \value DescribeDBClustersAction Rds DescribeDBClusters action.
+ * \value DescribeDBEngineVersionsAction Rds DescribeDBEngineVersions action.
+ * \value DescribeDBInstanceAutomatedBackupsAction Rds DescribeDBInstanceAutomatedBackups action.
+ * \value DescribeDBInstancesAction Rds DescribeDBInstances action.
+ * \value DescribeDBLogFilesAction Rds DescribeDBLogFiles action.
+ * \value DescribeDBParameterGroupsAction Rds DescribeDBParameterGroups action.
+ * \value DescribeDBParametersAction Rds DescribeDBParameters action.
+ * \value DescribeDBProxiesAction Rds DescribeDBProxies action.
+ * \value DescribeDBProxyEndpointsAction Rds DescribeDBProxyEndpoints action.
+ * \value DescribeDBProxyTargetGroupsAction Rds DescribeDBProxyTargetGroups action.
+ * \value DescribeDBProxyTargetsAction Rds DescribeDBProxyTargets action.
+ * \value DescribeDBSecurityGroupsAction Rds DescribeDBSecurityGroups action.
+ * \value DescribeDBSnapshotAttributesAction Rds DescribeDBSnapshotAttributes action.
+ * \value DescribeDBSnapshotsAction Rds DescribeDBSnapshots action.
+ * \value DescribeDBSubnetGroupsAction Rds DescribeDBSubnetGroups action.
+ * \value DescribeEngineDefaultClusterParametersAction Rds DescribeEngineDefaultClusterParameters action.
+ * \value DescribeEngineDefaultParametersAction Rds DescribeEngineDefaultParameters action.
+ * \value DescribeEventCategoriesAction Rds DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction Rds DescribeEventSubscriptions action.
+ * \value DescribeEventsAction Rds DescribeEvents action.
+ * \value DescribeExportTasksAction Rds DescribeExportTasks action.
+ * \value DescribeGlobalClustersAction Rds DescribeGlobalClusters action.
+ * \value DescribeOptionGroupOptionsAction Rds DescribeOptionGroupOptions action.
+ * \value DescribeOptionGroupsAction Rds DescribeOptionGroups action.
+ * \value DescribeOrderableDBInstanceOptionsAction Rds DescribeOrderableDBInstanceOptions action.
+ * \value DescribePendingMaintenanceActionsAction Rds DescribePendingMaintenanceActions action.
+ * \value DescribeReservedDBInstancesAction Rds DescribeReservedDBInstances action.
+ * \value DescribeReservedDBInstancesOfferingsAction Rds DescribeReservedDBInstancesOfferings action.
+ * \value DescribeSourceRegionsAction Rds DescribeSourceRegions action.
+ * \value DescribeValidDBInstanceModificationsAction Rds DescribeValidDBInstanceModifications action.
+ * \value DownloadDBLogFilePortionAction Rds DownloadDBLogFilePortion action.
+ * \value FailoverDBClusterAction Rds FailoverDBCluster action.
+ * \value FailoverGlobalClusterAction Rds FailoverGlobalCluster action.
+ * \value ListTagsForResourceAction Rds ListTagsForResource action.
+ * \value ModifyActivityStreamAction Rds ModifyActivityStream action.
+ * \value ModifyCertificatesAction Rds ModifyCertificates action.
+ * \value ModifyCurrentDBClusterCapacityAction Rds ModifyCurrentDBClusterCapacity action.
+ * \value ModifyCustomDBEngineVersionAction Rds ModifyCustomDBEngineVersion action.
+ * \value ModifyDBClusterAction Rds ModifyDBCluster action.
+ * \value ModifyDBClusterEndpointAction Rds ModifyDBClusterEndpoint action.
+ * \value ModifyDBClusterParameterGroupAction Rds ModifyDBClusterParameterGroup action.
+ * \value ModifyDBClusterSnapshotAttributeAction Rds ModifyDBClusterSnapshotAttribute action.
+ * \value ModifyDBInstanceAction Rds ModifyDBInstance action.
+ * \value ModifyDBParameterGroupAction Rds ModifyDBParameterGroup action.
+ * \value ModifyDBProxyAction Rds ModifyDBProxy action.
+ * \value ModifyDBProxyEndpointAction Rds ModifyDBProxyEndpoint action.
+ * \value ModifyDBProxyTargetGroupAction Rds ModifyDBProxyTargetGroup action.
+ * \value ModifyDBSnapshotAction Rds ModifyDBSnapshot action.
+ * \value ModifyDBSnapshotAttributeAction Rds ModifyDBSnapshotAttribute action.
+ * \value ModifyDBSubnetGroupAction Rds ModifyDBSubnetGroup action.
+ * \value ModifyEventSubscriptionAction Rds ModifyEventSubscription action.
+ * \value ModifyGlobalClusterAction Rds ModifyGlobalCluster action.
+ * \value ModifyOptionGroupAction Rds ModifyOptionGroup action.
+ * \value PromoteReadReplicaAction Rds PromoteReadReplica action.
+ * \value PromoteReadReplicaDBClusterAction Rds PromoteReadReplicaDBCluster action.
+ * \value PurchaseReservedDBInstancesOfferingAction Rds PurchaseReservedDBInstancesOffering action.
+ * \value RebootDBClusterAction Rds RebootDBCluster action.
+ * \value RebootDBInstanceAction Rds RebootDBInstance action.
+ * \value RegisterDBProxyTargetsAction Rds RegisterDBProxyTargets action.
+ * \value RemoveFromGlobalClusterAction Rds RemoveFromGlobalCluster action.
+ * \value RemoveRoleFromDBClusterAction Rds RemoveRoleFromDBCluster action.
+ * \value RemoveRoleFromDBInstanceAction Rds RemoveRoleFromDBInstance action.
+ * \value RemoveSourceIdentifierFromSubscriptionAction Rds RemoveSourceIdentifierFromSubscription action.
+ * \value RemoveTagsFromResourceAction Rds RemoveTagsFromResource action.
+ * \value ResetDBClusterParameterGroupAction Rds ResetDBClusterParameterGroup action.
+ * \value ResetDBParameterGroupAction Rds ResetDBParameterGroup action.
+ * \value RestoreDBClusterFromS3Action Rds RestoreDBClusterFromS3 action.
+ * \value RestoreDBClusterFromSnapshotAction Rds RestoreDBClusterFromSnapshot action.
+ * \value RestoreDBClusterToPointInTimeAction Rds RestoreDBClusterToPointInTime action.
+ * \value RestoreDBInstanceFromDBSnapshotAction Rds RestoreDBInstanceFromDBSnapshot action.
+ * \value RestoreDBInstanceFromS3Action Rds RestoreDBInstanceFromS3 action.
+ * \value RestoreDBInstanceToPointInTimeAction Rds RestoreDBInstanceToPointInTime action.
+ * \value RevokeDBSecurityGroupIngressAction Rds RevokeDBSecurityGroupIngress action.
+ * \value StartActivityStreamAction Rds StartActivityStream action.
+ * \value StartDBClusterAction Rds StartDBCluster action.
+ * \value StartDBInstanceAction Rds StartDBInstance action.
+ * \value StartDBInstanceAutomatedBackupsReplicationAction Rds StartDBInstanceAutomatedBackupsReplication action.
+ * \value StartExportTaskAction Rds StartExportTask action.
+ * \value StopActivityStreamAction Rds StopActivityStream action.
+ * \value StopDBClusterAction Rds StopDBCluster action.
+ * \value StopDBInstanceAction Rds StopDBInstance action.
+ * \value StopDBInstanceAutomatedBackupsReplicationAction Rds StopDBInstanceAutomatedBackupsReplication action.
+ * \value SwitchoverReadReplicaAction Rds SwitchoverReadReplica action.
  */
 
 /*!
- * Constructs a RdsRequest object for RDS \a action.
+ * Constructs a RdsRequest object for Rds \a action.
  */
 RdsRequest::RdsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RdsRequestPrivate(action, this))
@@ -217,7 +217,7 @@ RdsRequest::RdsRequest(RdsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the RDS action to be performed by this request.
+ * Returns the Rds action to be performed by this request.
  */
 RdsRequest::Action RdsRequest::action() const
 {
@@ -226,7 +226,7 @@ RdsRequest::Action RdsRequest::action() const
 }
 
 /*!
- * Returns the name of the RDS action to be performed by this request.
+ * Returns the name of the Rds action to be performed by this request.
  */
 QString RdsRequest::actionString() const
 {
@@ -234,7 +234,7 @@ QString RdsRequest::actionString() const
 }
 
 /*!
- * Returns the RDS API version implemented by this request.
+ * Returns the Rds API version implemented by this request.
  */
 QString RdsRequest::apiVersion() const
 {
@@ -243,7 +243,7 @@ QString RdsRequest::apiVersion() const
 }
 
 /*!
- * Sets the RDS action to be performed by this request to \a action.
+ * Sets the Rds action to be performed by this request to \a action.
  */
 void RdsRequest::setAction(const Action action)
 {
@@ -252,7 +252,7 @@ void RdsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the RDS API version to include in this request to \a version.
+ * Sets the Rds API version to include in this request to \a version.
  */
 void RdsRequest::setApiVersion(const QString &version)
 {
@@ -277,15 +277,15 @@ bool RdsRequest::operator==(const RdsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid RDS queue name.
+ * Returns \c tue if \a queueName is a valid Rds queue name.
  *
- * @par From RDS FAQs:
+ * @par From Rds FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid RDS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Rds queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -352,10 +352,10 @@ void RdsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the RDS request using the given
+ * Returns a network request for the Rds request using the given
  * \a endpoint.
  *
- * This RDS implementation builds request URLs by combining the
+ * This Rds implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -368,19 +368,19 @@ QNetworkRequest RdsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::RDS::RdsRequestPrivate
+ * \class QtAws::Rds::RdsRequestPrivate
  * \brief The RdsRequestPrivate class provides private implementation for RdsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
- * Constructs a RdsRequestPrivate object for RDS \a action,
+ * Constructs a RdsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RdsRequestPrivate::RdsRequestPrivate(const RdsRequest::Action action, RdsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-10-31"))
 {
 
 }
@@ -406,7 +406,7 @@ RdsRequestPrivate::RdsRequestPrivate(const RdsRequestPrivate &other,
  * invalid.
  *
  * This function converts RdsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the RDS service's Action
+ * string representations, appropriate for use with the Rds service's Action
  * query parameters.
  */
 QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
@@ -427,7 +427,7 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(CopyDBParameterGroup);
         ActionToString(CopyDBSnapshot);
         ActionToString(CopyOptionGroup);
-        ActionToString(CreateCustomAvailabilityZone);
+        ActionToString(CreateCustomDBEngineVersion);
         ActionToString(CreateDBCluster);
         ActionToString(CreateDBClusterEndpoint);
         ActionToString(CreateDBClusterParameterGroup);
@@ -443,7 +443,7 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(CreateEventSubscription);
         ActionToString(CreateGlobalCluster);
         ActionToString(CreateOptionGroup);
-        ActionToString(DeleteCustomAvailabilityZone);
+        ActionToString(DeleteCustomDBEngineVersion);
         ActionToString(DeleteDBCluster);
         ActionToString(DeleteDBClusterEndpoint);
         ActionToString(DeleteDBClusterParameterGroup);
@@ -458,12 +458,10 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(DeleteDBSubnetGroup);
         ActionToString(DeleteEventSubscription);
         ActionToString(DeleteGlobalCluster);
-        ActionToString(DeleteInstallationMedia);
         ActionToString(DeleteOptionGroup);
         ActionToString(DeregisterDBProxyTargets);
         ActionToString(DescribeAccountAttributes);
         ActionToString(DescribeCertificates);
-        ActionToString(DescribeCustomAvailabilityZones);
         ActionToString(DescribeDBClusterBacktracks);
         ActionToString(DescribeDBClusterEndpoints);
         ActionToString(DescribeDBClusterParameterGroups);
@@ -492,7 +490,6 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(DescribeEvents);
         ActionToString(DescribeExportTasks);
         ActionToString(DescribeGlobalClusters);
-        ActionToString(DescribeInstallationMedia);
         ActionToString(DescribeOptionGroupOptions);
         ActionToString(DescribeOptionGroups);
         ActionToString(DescribeOrderableDBInstanceOptions);
@@ -504,10 +501,11 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(DownloadDBLogFilePortion);
         ActionToString(FailoverDBCluster);
         ActionToString(FailoverGlobalCluster);
-        ActionToString(ImportInstallationMedia);
         ActionToString(ListTagsForResource);
+        ActionToString(ModifyActivityStream);
         ActionToString(ModifyCertificates);
         ActionToString(ModifyCurrentDBClusterCapacity);
+        ActionToString(ModifyCustomDBEngineVersion);
         ActionToString(ModifyDBCluster);
         ActionToString(ModifyDBClusterEndpoint);
         ActionToString(ModifyDBClusterParameterGroup);
@@ -526,6 +524,7 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(PromoteReadReplica);
         ActionToString(PromoteReadReplicaDBCluster);
         ActionToString(PurchaseReservedDBInstancesOffering);
+        ActionToString(RebootDBCluster);
         ActionToString(RebootDBInstance);
         ActionToString(RegisterDBProxyTargets);
         ActionToString(RemoveFromGlobalCluster);
@@ -551,6 +550,7 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
         ActionToString(StopDBCluster);
         ActionToString(StopDBInstance);
         ActionToString(StopDBInstanceAutomatedBackupsReplication);
+        ActionToString(SwitchoverReadReplica);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
@@ -558,5 +558,5 @@ QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
     return QString();
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

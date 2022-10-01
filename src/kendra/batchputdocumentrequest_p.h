@@ -24,14 +24,14 @@
 #include "batchputdocumentrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class BatchPutDocumentRequest;
 
-class BatchPutDocumentRequestPrivate : public kendraRequestPrivate {
+class BatchPutDocumentRequestPrivate : public KendraRequestPrivate {
 
 public:
-    BatchPutDocumentRequestPrivate(const kendraRequest::Action action,
+    BatchPutDocumentRequestPrivate(const KendraRequest::Action action,
                                    BatchPutDocumentRequest * const q);
     BatchPutDocumentRequestPrivate(const BatchPutDocumentRequestPrivate &other,
                                    BatchPutDocumentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

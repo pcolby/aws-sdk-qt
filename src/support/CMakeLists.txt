@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSUPPORT_LIBRARY)
 
 add_library(QtAwsSupport
+  qtawssupportglobal.h
+  supportclient.h
+  supportclient_p.h
+  supportrequest.h
+  supportrequest_p.h
+  supportresponse.h
+  supportresponse_p.h
   addattachmentstosetrequest.h
   addattachmentstosetrequest_p.h
   addattachmentstosetresponse.h
@@ -41,15 +48,14 @@ add_library(QtAwsSupport
   describetrustedadvisorcheckresultrequest_p.h
   describetrustedadvisorcheckresultresponse.h
   describetrustedadvisorcheckresultresponse_p.h
-  describetrustedadvisorchecksrequest.h
-  describetrustedadvisorchecksrequest_p.h
-  describetrustedadvisorchecksresponse.h
-  describetrustedadvisorchecksresponse_p.h
   describetrustedadvisorchecksummariesrequest.h
   describetrustedadvisorchecksummariesrequest_p.h
   describetrustedadvisorchecksummariesresponse.h
   describetrustedadvisorchecksummariesresponse_p.h
-  qtawssupportglobal.h
+  describetrustedadvisorchecksrequest.h
+  describetrustedadvisorchecksrequest_p.h
+  describetrustedadvisorchecksresponse.h
+  describetrustedadvisorchecksresponse_p.h
   refreshtrustedadvisorcheckrequest.h
   refreshtrustedadvisorcheckrequest_p.h
   refreshtrustedadvisorcheckresponse.h
@@ -58,12 +64,9 @@ add_library(QtAwsSupport
   resolvecaserequest_p.h
   resolvecaseresponse.h
   resolvecaseresponse_p.h
-  supportclient.h
-  supportclient_p.h
-  supportrequest.h
-  supportrequest_p.h
-  supportresponse.h
-  supportresponse_p.h
+  supportclient.cpp
+  supportrequest.cpp
+  supportresponse.cpp
   addattachmentstosetrequest.cpp
   addattachmentstosetresponse.cpp
   addcommunicationtocaserequest.cpp
@@ -84,17 +87,14 @@ add_library(QtAwsSupport
   describetrustedadvisorcheckrefreshstatusesresponse.cpp
   describetrustedadvisorcheckresultrequest.cpp
   describetrustedadvisorcheckresultresponse.cpp
-  describetrustedadvisorchecksrequest.cpp
-  describetrustedadvisorchecksresponse.cpp
   describetrustedadvisorchecksummariesrequest.cpp
   describetrustedadvisorchecksummariesresponse.cpp
+  describetrustedadvisorchecksrequest.cpp
+  describetrustedadvisorchecksresponse.cpp
   refreshtrustedadvisorcheckrequest.cpp
   refreshtrustedadvisorcheckresponse.cpp
   resolvecaserequest.cpp
-  resolvecaseresponse.cpp
-  supportclient.cpp
-  supportrequest.cpp
-  supportresponse.cpp)
+  resolvecaseresponse.cpp)
 
 target_link_libraries(QtAwsSupport
   PRIVATE QtAwsCore

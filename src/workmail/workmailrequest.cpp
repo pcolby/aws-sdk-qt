@@ -40,6 +40,7 @@ namespace WorkMail {
  * \value AssociateMemberToGroupAction WorkMail AssociateMemberToGroup action.
  * \value CancelMailboxExportJobAction WorkMail CancelMailboxExportJob action.
  * \value CreateAliasAction WorkMail CreateAlias action.
+ * \value CreateAvailabilityConfigurationAction WorkMail CreateAvailabilityConfiguration action.
  * \value CreateGroupAction WorkMail CreateGroup action.
  * \value CreateMobileDeviceAccessRuleAction WorkMail CreateMobileDeviceAccessRule action.
  * \value CreateOrganizationAction WorkMail CreateOrganization action.
@@ -47,15 +48,21 @@ namespace WorkMail {
  * \value CreateUserAction WorkMail CreateUser action.
  * \value DeleteAccessControlRuleAction WorkMail DeleteAccessControlRule action.
  * \value DeleteAliasAction WorkMail DeleteAlias action.
+ * \value DeleteAvailabilityConfigurationAction WorkMail DeleteAvailabilityConfiguration action.
+ * \value DeleteEmailMonitoringConfigurationAction WorkMail DeleteEmailMonitoringConfiguration action.
  * \value DeleteGroupAction WorkMail DeleteGroup action.
  * \value DeleteMailboxPermissionsAction WorkMail DeleteMailboxPermissions action.
+ * \value DeleteMobileDeviceAccessOverrideAction WorkMail DeleteMobileDeviceAccessOverride action.
  * \value DeleteMobileDeviceAccessRuleAction WorkMail DeleteMobileDeviceAccessRule action.
  * \value DeleteOrganizationAction WorkMail DeleteOrganization action.
  * \value DeleteResourceAction WorkMail DeleteResource action.
  * \value DeleteRetentionPolicyAction WorkMail DeleteRetentionPolicy action.
  * \value DeleteUserAction WorkMail DeleteUser action.
  * \value DeregisterFromWorkMailAction WorkMail DeregisterFromWorkMail action.
+ * \value DeregisterMailDomainAction WorkMail DeregisterMailDomain action.
+ * \value DescribeEmailMonitoringConfigurationAction WorkMail DescribeEmailMonitoringConfiguration action.
  * \value DescribeGroupAction WorkMail DescribeGroup action.
+ * \value DescribeInboundDmarcSettingsAction WorkMail DescribeInboundDmarcSettings action.
  * \value DescribeMailboxExportJobAction WorkMail DescribeMailboxExportJob action.
  * \value DescribeOrganizationAction WorkMail DescribeOrganization action.
  * \value DescribeResourceAction WorkMail DescribeResource action.
@@ -64,14 +71,19 @@ namespace WorkMail {
  * \value DisassociateMemberFromGroupAction WorkMail DisassociateMemberFromGroup action.
  * \value GetAccessControlEffectAction WorkMail GetAccessControlEffect action.
  * \value GetDefaultRetentionPolicyAction WorkMail GetDefaultRetentionPolicy action.
+ * \value GetMailDomainAction WorkMail GetMailDomain action.
  * \value GetMailboxDetailsAction WorkMail GetMailboxDetails action.
  * \value GetMobileDeviceAccessEffectAction WorkMail GetMobileDeviceAccessEffect action.
+ * \value GetMobileDeviceAccessOverrideAction WorkMail GetMobileDeviceAccessOverride action.
  * \value ListAccessControlRulesAction WorkMail ListAccessControlRules action.
  * \value ListAliasesAction WorkMail ListAliases action.
+ * \value ListAvailabilityConfigurationsAction WorkMail ListAvailabilityConfigurations action.
  * \value ListGroupMembersAction WorkMail ListGroupMembers action.
  * \value ListGroupsAction WorkMail ListGroups action.
+ * \value ListMailDomainsAction WorkMail ListMailDomains action.
  * \value ListMailboxExportJobsAction WorkMail ListMailboxExportJobs action.
  * \value ListMailboxPermissionsAction WorkMail ListMailboxPermissions action.
+ * \value ListMobileDeviceAccessOverridesAction WorkMail ListMobileDeviceAccessOverrides action.
  * \value ListMobileDeviceAccessRulesAction WorkMail ListMobileDeviceAccessRules action.
  * \value ListOrganizationsAction WorkMail ListOrganizations action.
  * \value ListResourceDelegatesAction WorkMail ListResourceDelegates action.
@@ -79,13 +91,20 @@ namespace WorkMail {
  * \value ListTagsForResourceAction WorkMail ListTagsForResource action.
  * \value ListUsersAction WorkMail ListUsers action.
  * \value PutAccessControlRuleAction WorkMail PutAccessControlRule action.
+ * \value PutEmailMonitoringConfigurationAction WorkMail PutEmailMonitoringConfiguration action.
+ * \value PutInboundDmarcSettingsAction WorkMail PutInboundDmarcSettings action.
  * \value PutMailboxPermissionsAction WorkMail PutMailboxPermissions action.
+ * \value PutMobileDeviceAccessOverrideAction WorkMail PutMobileDeviceAccessOverride action.
  * \value PutRetentionPolicyAction WorkMail PutRetentionPolicy action.
+ * \value RegisterMailDomainAction WorkMail RegisterMailDomain action.
  * \value RegisterToWorkMailAction WorkMail RegisterToWorkMail action.
  * \value ResetPasswordAction WorkMail ResetPassword action.
  * \value StartMailboxExportJobAction WorkMail StartMailboxExportJob action.
  * \value TagResourceAction WorkMail TagResource action.
+ * \value TestAvailabilityConfigurationAction WorkMail TestAvailabilityConfiguration action.
  * \value UntagResourceAction WorkMail UntagResource action.
+ * \value UpdateAvailabilityConfigurationAction WorkMail UpdateAvailabilityConfiguration action.
+ * \value UpdateDefaultMailDomainAction WorkMail UpdateDefaultMailDomain action.
  * \value UpdateMailboxQuotaAction WorkMail UpdateMailboxQuota action.
  * \value UpdateMobileDeviceAccessRuleAction WorkMail UpdateMobileDeviceAccessRule action.
  * \value UpdatePrimaryEmailAddressAction WorkMail UpdatePrimaryEmailAddress action.
@@ -297,7 +316,7 @@ QNetworkRequest WorkMailRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WorkMailRequestPrivate::WorkMailRequestPrivate(const WorkMailRequest::Action action, WorkMailRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-01"))
 {
 
 }
@@ -335,6 +354,7 @@ QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
         ActionToString(AssociateMemberToGroup);
         ActionToString(CancelMailboxExportJob);
         ActionToString(CreateAlias);
+        ActionToString(CreateAvailabilityConfiguration);
         ActionToString(CreateGroup);
         ActionToString(CreateMobileDeviceAccessRule);
         ActionToString(CreateOrganization);
@@ -342,15 +362,21 @@ QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
         ActionToString(CreateUser);
         ActionToString(DeleteAccessControlRule);
         ActionToString(DeleteAlias);
+        ActionToString(DeleteAvailabilityConfiguration);
+        ActionToString(DeleteEmailMonitoringConfiguration);
         ActionToString(DeleteGroup);
         ActionToString(DeleteMailboxPermissions);
+        ActionToString(DeleteMobileDeviceAccessOverride);
         ActionToString(DeleteMobileDeviceAccessRule);
         ActionToString(DeleteOrganization);
         ActionToString(DeleteResource);
         ActionToString(DeleteRetentionPolicy);
         ActionToString(DeleteUser);
         ActionToString(DeregisterFromWorkMail);
+        ActionToString(DeregisterMailDomain);
+        ActionToString(DescribeEmailMonitoringConfiguration);
         ActionToString(DescribeGroup);
+        ActionToString(DescribeInboundDmarcSettings);
         ActionToString(DescribeMailboxExportJob);
         ActionToString(DescribeOrganization);
         ActionToString(DescribeResource);
@@ -359,14 +385,19 @@ QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
         ActionToString(DisassociateMemberFromGroup);
         ActionToString(GetAccessControlEffect);
         ActionToString(GetDefaultRetentionPolicy);
+        ActionToString(GetMailDomain);
         ActionToString(GetMailboxDetails);
         ActionToString(GetMobileDeviceAccessEffect);
+        ActionToString(GetMobileDeviceAccessOverride);
         ActionToString(ListAccessControlRules);
         ActionToString(ListAliases);
+        ActionToString(ListAvailabilityConfigurations);
         ActionToString(ListGroupMembers);
         ActionToString(ListGroups);
+        ActionToString(ListMailDomains);
         ActionToString(ListMailboxExportJobs);
         ActionToString(ListMailboxPermissions);
+        ActionToString(ListMobileDeviceAccessOverrides);
         ActionToString(ListMobileDeviceAccessRules);
         ActionToString(ListOrganizations);
         ActionToString(ListResourceDelegates);
@@ -374,13 +405,20 @@ QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
         ActionToString(ListTagsForResource);
         ActionToString(ListUsers);
         ActionToString(PutAccessControlRule);
+        ActionToString(PutEmailMonitoringConfiguration);
+        ActionToString(PutInboundDmarcSettings);
         ActionToString(PutMailboxPermissions);
+        ActionToString(PutMobileDeviceAccessOverride);
         ActionToString(PutRetentionPolicy);
+        ActionToString(RegisterMailDomain);
         ActionToString(RegisterToWorkMail);
         ActionToString(ResetPassword);
         ActionToString(StartMailboxExportJob);
         ActionToString(TagResource);
+        ActionToString(TestAvailabilityConfiguration);
         ActionToString(UntagResource);
+        ActionToString(UpdateAvailabilityConfiguration);
+        ActionToString(UpdateDefaultMailDomain);
         ActionToString(UpdateMailboxQuota);
         ActionToString(UpdateMobileDeviceAccessRule);
         ActionToString(UpdatePrimaryEmailAddress);

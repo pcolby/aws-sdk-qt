@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCODEPIPELINE_LIBRARY)
 
 add_library(QtAwsCodePipeline
+  qtawscodepipelineglobal.h
+  codepipelineclient.h
+  codepipelineclient_p.h
+  codepipelinerequest.h
+  codepipelinerequest_p.h
+  codepipelineresponse.h
+  codepipelineresponse_p.h
   acknowledgejobrequest.h
   acknowledgejobrequest_p.h
   acknowledgejobresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsCodePipeline
   acknowledgethirdpartyjobrequest_p.h
   acknowledgethirdpartyjobresponse.h
   acknowledgethirdpartyjobresponse_p.h
-  codepipelineclient.h
-  codepipelineclient_p.h
-  codepipelinerequest.h
-  codepipelinerequest_p.h
-  codepipelineresponse.h
-  codepipelineresponse_p.h
   createcustomactiontyperequest.h
   createcustomactiontyperequest_p.h
   createcustomactiontyperesponse.h
@@ -55,14 +56,14 @@ add_library(QtAwsCodePipeline
   getjobdetailsrequest_p.h
   getjobdetailsresponse.h
   getjobdetailsresponse_p.h
-  getpipelineexecutionrequest.h
-  getpipelineexecutionrequest_p.h
-  getpipelineexecutionresponse.h
-  getpipelineexecutionresponse_p.h
   getpipelinerequest.h
   getpipelinerequest_p.h
   getpipelineresponse.h
   getpipelineresponse_p.h
+  getpipelineexecutionrequest.h
+  getpipelineexecutionrequest_p.h
+  getpipelineexecutionresponse.h
+  getpipelineexecutionresponse_p.h
   getpipelinestaterequest.h
   getpipelinestaterequest_p.h
   getpipelinestateresponse.h
@@ -131,7 +132,6 @@ add_library(QtAwsCodePipeline
   putwebhookrequest_p.h
   putwebhookresponse.h
   putwebhookresponse_p.h
-  qtawscodepipelineglobal.h
   registerwebhookwiththirdpartyrequest.h
   registerwebhookwiththirdpartyrequest_p.h
   registerwebhookwiththirdpartyresponse.h
@@ -164,13 +164,13 @@ add_library(QtAwsCodePipeline
   updatepipelinerequest_p.h
   updatepipelineresponse.h
   updatepipelineresponse_p.h
+  codepipelineclient.cpp
+  codepipelinerequest.cpp
+  codepipelineresponse.cpp
   acknowledgejobrequest.cpp
   acknowledgejobresponse.cpp
   acknowledgethirdpartyjobrequest.cpp
   acknowledgethirdpartyjobresponse.cpp
-  codepipelineclient.cpp
-  codepipelinerequest.cpp
-  codepipelineresponse.cpp
   createcustomactiontyperequest.cpp
   createcustomactiontyperesponse.cpp
   createpipelinerequest.cpp
@@ -191,10 +191,10 @@ add_library(QtAwsCodePipeline
   getactiontyperesponse.cpp
   getjobdetailsrequest.cpp
   getjobdetailsresponse.cpp
-  getpipelineexecutionrequest.cpp
-  getpipelineexecutionresponse.cpp
   getpipelinerequest.cpp
   getpipelineresponse.cpp
+  getpipelineexecutionrequest.cpp
+  getpipelineexecutionresponse.cpp
   getpipelinestaterequest.cpp
   getpipelinestateresponse.cpp
   getthirdpartyjobdetailsrequest.cpp

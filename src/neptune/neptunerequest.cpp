@@ -51,6 +51,7 @@ namespace Neptune {
  * \value CreateDBParameterGroupAction Neptune CreateDBParameterGroup action.
  * \value CreateDBSubnetGroupAction Neptune CreateDBSubnetGroup action.
  * \value CreateEventSubscriptionAction Neptune CreateEventSubscription action.
+ * \value CreateGlobalClusterAction Neptune CreateGlobalCluster action.
  * \value DeleteDBClusterAction Neptune DeleteDBCluster action.
  * \value DeleteDBClusterEndpointAction Neptune DeleteDBClusterEndpoint action.
  * \value DeleteDBClusterParameterGroupAction Neptune DeleteDBClusterParameterGroup action.
@@ -59,6 +60,7 @@ namespace Neptune {
  * \value DeleteDBParameterGroupAction Neptune DeleteDBParameterGroup action.
  * \value DeleteDBSubnetGroupAction Neptune DeleteDBSubnetGroup action.
  * \value DeleteEventSubscriptionAction Neptune DeleteEventSubscription action.
+ * \value DeleteGlobalClusterAction Neptune DeleteGlobalCluster action.
  * \value DescribeDBClusterEndpointsAction Neptune DescribeDBClusterEndpoints action.
  * \value DescribeDBClusterParameterGroupsAction Neptune DescribeDBClusterParameterGroups action.
  * \value DescribeDBClusterParametersAction Neptune DescribeDBClusterParameters action.
@@ -75,10 +77,12 @@ namespace Neptune {
  * \value DescribeEventCategoriesAction Neptune DescribeEventCategories action.
  * \value DescribeEventSubscriptionsAction Neptune DescribeEventSubscriptions action.
  * \value DescribeEventsAction Neptune DescribeEvents action.
+ * \value DescribeGlobalClustersAction Neptune DescribeGlobalClusters action.
  * \value DescribeOrderableDBInstanceOptionsAction Neptune DescribeOrderableDBInstanceOptions action.
  * \value DescribePendingMaintenanceActionsAction Neptune DescribePendingMaintenanceActions action.
  * \value DescribeValidDBInstanceModificationsAction Neptune DescribeValidDBInstanceModifications action.
  * \value FailoverDBClusterAction Neptune FailoverDBCluster action.
+ * \value FailoverGlobalClusterAction Neptune FailoverGlobalCluster action.
  * \value ListTagsForResourceAction Neptune ListTagsForResource action.
  * \value ModifyDBClusterAction Neptune ModifyDBCluster action.
  * \value ModifyDBClusterEndpointAction Neptune ModifyDBClusterEndpoint action.
@@ -88,8 +92,10 @@ namespace Neptune {
  * \value ModifyDBParameterGroupAction Neptune ModifyDBParameterGroup action.
  * \value ModifyDBSubnetGroupAction Neptune ModifyDBSubnetGroup action.
  * \value ModifyEventSubscriptionAction Neptune ModifyEventSubscription action.
+ * \value ModifyGlobalClusterAction Neptune ModifyGlobalCluster action.
  * \value PromoteReadReplicaDBClusterAction Neptune PromoteReadReplicaDBCluster action.
  * \value RebootDBInstanceAction Neptune RebootDBInstance action.
+ * \value RemoveFromGlobalClusterAction Neptune RemoveFromGlobalCluster action.
  * \value RemoveRoleFromDBClusterAction Neptune RemoveRoleFromDBCluster action.
  * \value RemoveSourceIdentifierFromSubscriptionAction Neptune RemoveSourceIdentifierFromSubscription action.
  * \value RemoveTagsFromResourceAction Neptune RemoveTagsFromResource action.
@@ -306,7 +312,7 @@ QNetworkRequest NeptuneRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 NeptuneRequestPrivate::NeptuneRequestPrivate(const NeptuneRequest::Action action, NeptuneRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-10-31"))
 {
 
 }
@@ -355,6 +361,7 @@ QString NeptuneRequestPrivate::toString(const NeptuneRequest::Action &action)
         ActionToString(CreateDBParameterGroup);
         ActionToString(CreateDBSubnetGroup);
         ActionToString(CreateEventSubscription);
+        ActionToString(CreateGlobalCluster);
         ActionToString(DeleteDBCluster);
         ActionToString(DeleteDBClusterEndpoint);
         ActionToString(DeleteDBClusterParameterGroup);
@@ -363,6 +370,7 @@ QString NeptuneRequestPrivate::toString(const NeptuneRequest::Action &action)
         ActionToString(DeleteDBParameterGroup);
         ActionToString(DeleteDBSubnetGroup);
         ActionToString(DeleteEventSubscription);
+        ActionToString(DeleteGlobalCluster);
         ActionToString(DescribeDBClusterEndpoints);
         ActionToString(DescribeDBClusterParameterGroups);
         ActionToString(DescribeDBClusterParameters);
@@ -379,10 +387,12 @@ QString NeptuneRequestPrivate::toString(const NeptuneRequest::Action &action)
         ActionToString(DescribeEventCategories);
         ActionToString(DescribeEventSubscriptions);
         ActionToString(DescribeEvents);
+        ActionToString(DescribeGlobalClusters);
         ActionToString(DescribeOrderableDBInstanceOptions);
         ActionToString(DescribePendingMaintenanceActions);
         ActionToString(DescribeValidDBInstanceModifications);
         ActionToString(FailoverDBCluster);
+        ActionToString(FailoverGlobalCluster);
         ActionToString(ListTagsForResource);
         ActionToString(ModifyDBCluster);
         ActionToString(ModifyDBClusterEndpoint);
@@ -392,8 +402,10 @@ QString NeptuneRequestPrivate::toString(const NeptuneRequest::Action &action)
         ActionToString(ModifyDBParameterGroup);
         ActionToString(ModifyDBSubnetGroup);
         ActionToString(ModifyEventSubscription);
+        ActionToString(ModifyGlobalCluster);
         ActionToString(PromoteReadReplicaDBCluster);
         ActionToString(RebootDBInstance);
+        ActionToString(RemoveFromGlobalCluster);
         ActionToString(RemoveRoleFromDBCluster);
         ActionToString(RemoveSourceIdentifierFromSubscription);
         ActionToString(RemoveTagsFromResource);

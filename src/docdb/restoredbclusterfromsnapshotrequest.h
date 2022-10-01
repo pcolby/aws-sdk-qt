@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RestoreDBClusterFromSnapshotRequestPrivate;
 
-class QTAWSDOCDB_EXPORT RestoreDBClusterFromSnapshotRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RestoreDBClusterFromSnapshotRequest : public DocDbRequest {
 
 public:
     RestoreDBClusterFromSnapshotRequest(const RestoreDBClusterFromSnapshotRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

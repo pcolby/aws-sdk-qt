@@ -24,7 +24,7 @@
 #include "disabletransitgatewayroutetablepropagationrequest.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class DisableTransitGatewayRouteTablePropagationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

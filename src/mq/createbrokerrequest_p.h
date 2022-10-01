@@ -24,7 +24,7 @@
 #include "createbrokerrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class CreateBrokerRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "getnotificationchannelrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class GetNotificationChannelRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

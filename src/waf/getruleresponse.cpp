@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetRuleResponse
- * \brief The GetRuleResponse class provides an interace for WAF GetRule responses.
+ * \class QtAws::Waf::GetRuleResponse
+ * \brief The GetRuleResponse class provides an interace for Waf GetRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetRuleRequest * GetRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetRule \a response.
+ * Parses a successful Waf GetRule \a response.
  */
 void GetRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetRuleResponsePrivate
+ * \class QtAws::Waf::GetRuleResponsePrivate
  * \brief The GetRuleResponsePrivate class provides private implementation for GetRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetRuleResponsePrivate::GetRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetRule response element from \a xml.
+ * Parses a Waf GetRule response element from \a xml.
  */
 void GetRuleResponsePrivate::parseGetRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetRuleResponsePrivate::parseGetRuleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

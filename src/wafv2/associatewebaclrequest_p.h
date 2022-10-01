@@ -24,7 +24,7 @@
 #include "associatewebaclrequest.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class AssociateWebACLRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

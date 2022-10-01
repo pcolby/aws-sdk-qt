@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMTURK_LIBRARY)
 
 add_library(QtAwsMTurk
+  qtawsmturkglobal.h
+  mturkclient.h
+  mturkclient_p.h
+  mturkrequest.h
+  mturkrequest_p.h
+  mturkresponse.h
+  mturkresponse_p.h
   acceptqualificationrequestrequest.h
   acceptqualificationrequestrequest_p.h
   acceptqualificationrequestresponse.h
@@ -85,14 +92,14 @@ add_library(QtAwsMTurk
   listbonuspaymentsrequest_p.h
   listbonuspaymentsresponse.h
   listbonuspaymentsresponse_p.h
-  listhitsforqualificationtyperequest.h
-  listhitsforqualificationtyperequest_p.h
-  listhitsforqualificationtyperesponse.h
-  listhitsforqualificationtyperesponse_p.h
   listhitsrequest.h
   listhitsrequest_p.h
   listhitsresponse.h
   listhitsresponse_p.h
+  listhitsforqualificationtyperequest.h
+  listhitsforqualificationtyperequest_p.h
+  listhitsforqualificationtyperesponse.h
+  listhitsforqualificationtyperesponse_p.h
   listqualificationrequestsrequest.h
   listqualificationrequestsrequest_p.h
   listqualificationrequestsresponse.h
@@ -101,14 +108,14 @@ add_library(QtAwsMTurk
   listqualificationtypesrequest_p.h
   listqualificationtypesresponse.h
   listqualificationtypesresponse_p.h
-  listreviewablehitsrequest.h
-  listreviewablehitsrequest_p.h
-  listreviewablehitsresponse.h
-  listreviewablehitsresponse_p.h
   listreviewpolicyresultsforhitrequest.h
   listreviewpolicyresultsforhitrequest_p.h
   listreviewpolicyresultsforhitresponse.h
   listreviewpolicyresultsforhitresponse_p.h
+  listreviewablehitsrequest.h
+  listreviewablehitsrequest_p.h
+  listreviewablehitsresponse.h
+  listreviewablehitsresponse_p.h
   listworkerblocksrequest.h
   listworkerblocksrequest_p.h
   listworkerblocksresponse.h
@@ -117,17 +124,10 @@ add_library(QtAwsMTurk
   listworkerswithqualificationtyperequest_p.h
   listworkerswithqualificationtyperesponse.h
   listworkerswithqualificationtyperesponse_p.h
-  mturkclient.h
-  mturkclient_p.h
-  mturkrequest.h
-  mturkrequest_p.h
-  mturkresponse.h
-  mturkresponse_p.h
   notifyworkersrequest.h
   notifyworkersrequest_p.h
   notifyworkersresponse.h
   notifyworkersresponse_p.h
-  qtawsmturkglobal.h
   rejectassignmentrequest.h
   rejectassignmentrequest_p.h
   rejectassignmentresponse.h
@@ -164,6 +164,9 @@ add_library(QtAwsMTurk
   updatequalificationtyperequest_p.h
   updatequalificationtyperesponse.h
   updatequalificationtyperesponse_p.h
+  mturkclient.cpp
+  mturkrequest.cpp
+  mturkresponse.cpp
   acceptqualificationrequestrequest.cpp
   acceptqualificationrequestresponse.cpp
   approveassignmentrequest.cpp
@@ -206,25 +209,22 @@ add_library(QtAwsMTurk
   listassignmentsforhitresponse.cpp
   listbonuspaymentsrequest.cpp
   listbonuspaymentsresponse.cpp
-  listhitsforqualificationtyperequest.cpp
-  listhitsforqualificationtyperesponse.cpp
   listhitsrequest.cpp
   listhitsresponse.cpp
+  listhitsforqualificationtyperequest.cpp
+  listhitsforqualificationtyperesponse.cpp
   listqualificationrequestsrequest.cpp
   listqualificationrequestsresponse.cpp
   listqualificationtypesrequest.cpp
   listqualificationtypesresponse.cpp
-  listreviewablehitsrequest.cpp
-  listreviewablehitsresponse.cpp
   listreviewpolicyresultsforhitrequest.cpp
   listreviewpolicyresultsforhitresponse.cpp
+  listreviewablehitsrequest.cpp
+  listreviewablehitsresponse.cpp
   listworkerblocksrequest.cpp
   listworkerblocksresponse.cpp
   listworkerswithqualificationtyperequest.cpp
   listworkerswithqualificationtyperesponse.cpp
-  mturkclient.cpp
-  mturkrequest.cpp
-  mturkresponse.cpp
   notifyworkersrequest.cpp
   notifyworkersresponse.cpp
   rejectassignmentrequest.cpp

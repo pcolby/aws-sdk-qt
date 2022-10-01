@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DescribeConfigurationSetRequest
- * \brief The DescribeConfigurationSetRequest class provides an interface for SES DescribeConfigurationSet requests.
+ * \class QtAws::Ses::DescribeConfigurationSetRequest
+ * \brief The DescribeConfigurationSetRequest class provides an interface for Ses DescribeConfigurationSet requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SES::DescribeConfigurationSetRequestPrivate
+ * \class QtAws::Ses::DescribeConfigurationSetRequestPrivate
  * \brief The DescribeConfigurationSetRequestPrivate class provides private implementation for DescribeConfigurationSetRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

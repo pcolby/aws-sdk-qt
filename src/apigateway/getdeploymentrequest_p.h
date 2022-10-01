@@ -24,14 +24,14 @@
 #include "getdeploymentrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetDeploymentRequest;
 
-class GetDeploymentRequestPrivate : public APIGatewayRequestPrivate {
+class GetDeploymentRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetDeploymentRequestPrivate(const APIGatewayRequest::Action action,
+    GetDeploymentRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetDeploymentRequest * const q);
     GetDeploymentRequestPrivate(const GetDeploymentRequestPrivate &other,
                                    GetDeploymentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

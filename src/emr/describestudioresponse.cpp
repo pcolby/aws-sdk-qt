@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeStudioResponse
- * \brief The DescribeStudioResponse class provides an interace for EMR DescribeStudio responses.
+ * \class QtAws::Emr::DescribeStudioResponse
+ * \brief The DescribeStudioResponse class provides an interace for Emr DescribeStudio responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeStudio
  */
@@ -64,7 +64,7 @@ const DescribeStudioRequest * DescribeStudioResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeStudio \a response.
+ * Parses a successful Emr DescribeStudio \a response.
  */
 void DescribeStudioResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeStudioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeStudioResponsePrivate
+ * \class QtAws::Emr::DescribeStudioResponsePrivate
  * \brief The DescribeStudioResponsePrivate class provides private implementation for DescribeStudioResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeStudioResponsePrivate::DescribeStudioResponsePrivate(
 }
 
 /*!
- * Parses a EMR DescribeStudio response element from \a xml.
+ * Parses a Emr DescribeStudio response element from \a xml.
  */
 void DescribeStudioResponsePrivate::parseDescribeStudioResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeStudioResponsePrivate::parseDescribeStudioResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

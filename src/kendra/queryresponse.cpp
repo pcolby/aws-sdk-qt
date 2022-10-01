@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::QueryResponse
- * \brief The QueryResponse class provides an interace for kendra Query responses.
+ * \class QtAws::Kendra::QueryResponse
+ * \brief The QueryResponse class provides an interace for Kendra Query responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::query
+ * \sa KendraClient::query
  */
 
 /*!
@@ -45,7 +45,7 @@ QueryResponse::QueryResponse(
         const QueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new QueryResponsePrivate(this), parent)
+    : KendraResponse(new QueryResponsePrivate(this), parent)
 {
     setRequest(new QueryRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const QueryRequest * QueryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra Query \a response.
+ * Parses a successful Kendra Query \a response.
  */
 void QueryResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void QueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::QueryResponsePrivate
+ * \class QtAws::Kendra::QueryResponsePrivate
  * \brief The QueryResponsePrivate class provides private implementation for QueryResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a QueryResponsePrivate object with public implementation \a q.
  */
 QueryResponsePrivate::QueryResponsePrivate(
-    QueryResponse * const q) : kendraResponsePrivate(q)
+    QueryResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra Query response element from \a xml.
+ * Parses a Kendra Query response element from \a xml.
  */
 void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

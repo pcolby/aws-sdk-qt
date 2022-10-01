@@ -24,7 +24,7 @@
 #include "pollfordecisiontaskrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class PollForDecisionTaskResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

@@ -1,42 +1,54 @@
 add_compile_definitions(QTAWSIOTDATAPLANE_LIBRARY)
 
 add_library(QtAwsIoTDataPlane
-  deletethingshadowrequest.h
-  deletethingshadowrequest_p.h
-  deletethingshadowresponse.h
-  deletethingshadowresponse_p.h
-  getthingshadowrequest.h
-  getthingshadowrequest_p.h
-  getthingshadowresponse.h
-  getthingshadowresponse_p.h
+  qtawsiotdataplaneglobal.h
   iotdataplaneclient.h
   iotdataplaneclient_p.h
   iotdataplanerequest.h
   iotdataplanerequest_p.h
   iotdataplaneresponse.h
   iotdataplaneresponse_p.h
+  deletethingshadowrequest.h
+  deletethingshadowrequest_p.h
+  deletethingshadowresponse.h
+  deletethingshadowresponse_p.h
+  getretainedmessagerequest.h
+  getretainedmessagerequest_p.h
+  getretainedmessageresponse.h
+  getretainedmessageresponse_p.h
+  getthingshadowrequest.h
+  getthingshadowrequest_p.h
+  getthingshadowresponse.h
+  getthingshadowresponse_p.h
   listnamedshadowsforthingrequest.h
   listnamedshadowsforthingrequest_p.h
   listnamedshadowsforthingresponse.h
   listnamedshadowsforthingresponse_p.h
+  listretainedmessagesrequest.h
+  listretainedmessagesrequest_p.h
+  listretainedmessagesresponse.h
+  listretainedmessagesresponse_p.h
   publishrequest.h
   publishrequest_p.h
   publishresponse.h
   publishresponse_p.h
-  qtawsiotdataplaneglobal.h
   updatethingshadowrequest.h
   updatethingshadowrequest_p.h
   updatethingshadowresponse.h
   updatethingshadowresponse_p.h
-  deletethingshadowrequest.cpp
-  deletethingshadowresponse.cpp
-  getthingshadowrequest.cpp
-  getthingshadowresponse.cpp
   iotdataplaneclient.cpp
   iotdataplanerequest.cpp
   iotdataplaneresponse.cpp
+  deletethingshadowrequest.cpp
+  deletethingshadowresponse.cpp
+  getretainedmessagerequest.cpp
+  getretainedmessageresponse.cpp
+  getthingshadowrequest.cpp
+  getthingshadowresponse.cpp
   listnamedshadowsforthingrequest.cpp
   listnamedshadowsforthingresponse.cpp
+  listretainedmessagesrequest.cpp
+  listretainedmessagesresponse.cpp
   publishrequest.cpp
   publishresponse.cpp
   updatethingshadowrequest.cpp

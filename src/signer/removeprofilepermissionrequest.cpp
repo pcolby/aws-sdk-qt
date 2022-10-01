@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::RemoveProfilePermissionRequest
- * \brief The RemoveProfilePermissionRequest class provides an interface for signer RemoveProfilePermission requests.
+ * \class QtAws::Signer::RemoveProfilePermissionRequest
+ * \brief The RemoveProfilePermissionRequest class provides an interface for Signer RemoveProfilePermission requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::removeProfilePermission
+ * \sa SignerClient::removeProfilePermission
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveProfilePermissionRequest::RemoveProfilePermissionRequest(const RemoveProfilePermissionRequest &other)
-    : signerRequest(new RemoveProfilePermissionRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new RemoveProfilePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ RemoveProfilePermissionRequest::RemoveProfilePermissionRequest(const RemoveProfi
  * Constructs a RemoveProfilePermissionRequest object.
  */
 RemoveProfilePermissionRequest::RemoveProfilePermissionRequest()
-    : signerRequest(new RemoveProfilePermissionRequestPrivate(signerRequest::RemoveProfilePermissionAction, this))
+    : SignerRequest(new RemoveProfilePermissionRequestPrivate(SignerRequest::RemoveProfilePermissionAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * RemoveProfilePermissionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::signer::RemoveProfilePermissionRequestPrivate
+ * \class QtAws::Signer::RemoveProfilePermissionRequestPrivate
  * \brief The RemoveProfilePermissionRequestPrivate class provides private implementation for RemoveProfilePermissionRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a RemoveProfilePermissionRequestPrivate object for signer \a action,
+ * Constructs a RemoveProfilePermissionRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 RemoveProfilePermissionRequestPrivate::RemoveProfilePermissionRequestPrivate(
-    const signerRequest::Action action, RemoveProfilePermissionRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, RemoveProfilePermissionRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ RemoveProfilePermissionRequestPrivate::RemoveProfilePermissionRequestPrivate(
  */
 RemoveProfilePermissionRequestPrivate::RemoveProfilePermissionRequestPrivate(
     const RemoveProfilePermissionRequestPrivate &other, RemoveProfilePermissionRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

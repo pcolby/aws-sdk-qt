@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RebootDBInstanceResponse
- * \brief The RebootDBInstanceResponse class provides an interace for RDS RebootDBInstance responses.
+ * \class QtAws::Rds::RebootDBInstanceResponse
+ * \brief The RebootDBInstanceResponse class provides an interace for Rds RebootDBInstance responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS RebootDBInstance \a response.
+ * Parses a successful Rds RebootDBInstance \a response.
  */
 void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RebootDBInstanceResponsePrivate
+ * \class QtAws::Rds::RebootDBInstanceResponsePrivate
  * \brief The RebootDBInstanceResponsePrivate class provides private implementation for RebootDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
 }
 
 /*!
- * Parses a RDS RebootDBInstance response element from \a xml.
+ * Parses a Rds RebootDBInstance response element from \a xml.
  */
 void RebootDBInstanceResponsePrivate::parseRebootDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RebootDBInstanceResponsePrivate::parseRebootDBInstanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

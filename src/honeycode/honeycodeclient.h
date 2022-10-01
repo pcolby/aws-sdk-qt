@@ -50,10 +50,16 @@ class ListTableRowsRequest;
 class ListTableRowsResponse;
 class ListTablesRequest;
 class ListTablesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class QueryTableRowsRequest;
 class QueryTableRowsResponse;
 class StartTableDataImportJobRequest;
 class StartTableDataImportJobResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWSHONEYCODE_EXPORT HoneycodeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -81,8 +87,11 @@ public slots:
     ListTableColumnsResponse * listTableColumns(const ListTableColumnsRequest &request);
     ListTableRowsResponse * listTableRows(const ListTableRowsRequest &request);
     ListTablesResponse * listTables(const ListTablesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     QueryTableRowsResponse * queryTableRows(const QueryTableRowsRequest &request);
     StartTableDataImportJobResponse * startTableDataImportJob(const StartTableDataImportJobRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(HoneycodeClient)

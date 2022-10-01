@@ -42,42 +42,42 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ResourceGroupsTaggingAPI
+ * \namespace QtAws::ResourceGroupsTaggingApi
  * \brief Contains classess for accessing AWS Resource Groups Tagging API.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient
- * \brief The ResourceGroupsTaggingAPIClient class provides access to the AWS Resource Groups Tagging API service.
+ * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiClient
+ * \brief The ResourceGroupsTaggingApiClient class provides access to the AWS Resource Groups Tagging API service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  */
 
 /*!
- * \brief Constructs a ResourceGroupsTaggingAPIClient object.
+ * \brief Constructs a ResourceGroupsTaggingApiClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
+ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingApiClientPrivate(this), parent)
 {
-    Q_D(ResourceGroupsTaggingAPIClient);
+    Q_D(ResourceGroupsTaggingApiClient);
     d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("tagging");
@@ -88,7 +88,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
 }
 
 /*!
- * \overload ResourceGroupsTaggingAPIClient()
+ * \overload ResourceGroupsTaggingApiClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -98,14 +98,14 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
+ResourceGroupsTaggingApiClient::ResourceGroupsTaggingApiClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingApiClientPrivate(this), parent)
 {
-    Q_D(ResourceGroupsTaggingAPIClient);
+    Q_D(ResourceGroupsTaggingApiClient);
     d->apiVersion = QStringLiteral("2017-01-26");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -116,7 +116,7 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * DescribeReportCreationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -127,13 +127,13 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
  *
  * You can call this operation only from the organization's management account and from the us-east-1
  */
-DescribeReportCreationResponse * ResourceGroupsTaggingAPIClient::describeReportCreation(const DescribeReportCreationRequest &request)
+DescribeReportCreationResponse * ResourceGroupsTaggingApiClient::describeReportCreation(const DescribeReportCreationRequest &request)
 {
     return qobject_cast<DescribeReportCreationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * GetComplianceSummaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -144,7 +144,7 @@ DescribeReportCreationResponse * ResourceGroupsTaggingAPIClient::describeReportC
  *
  * For more information on tag policies, see <a
  * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html">Tag
- * Policies</a> in the <i>AWS Organizations User Guide.</i>
+ * Policies</a> in the <i>Organizations User Guide.</i>
  *
  * </p
  *
@@ -158,18 +158,19 @@ DescribeReportCreationResponse * ResourceGroupsTaggingAPIClient::describeReportC
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetComplianceSummaryResponse * ResourceGroupsTaggingAPIClient::getComplianceSummary(const GetComplianceSummaryRequest &request)
+GetComplianceSummaryResponse * ResourceGroupsTaggingApiClient::getComplianceSummary(const GetComplianceSummaryRequest &request)
 {
     return qobject_cast<GetComplianceSummaryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * GetResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all the tagged or previously tagged resources that are located in the specified Region for the AWS
+ * Returns all the tagged or previously tagged resources that are located in the specified Amazon Web Services Region for
+ * the
  *
  * account>
  *
@@ -184,7 +185,7 @@ GetComplianceSummaryResponse * ResourceGroupsTaggingAPIClient::getComplianceSumm
  *
  * Information about compliance with the account's effective tag policy. For more information on tag policies, see <a
  * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html">Tag
- * Policies</a> in the <i>AWS Organizations User Guide.</i>
+ * Policies</a> in the <i>Organizations User Guide.</i>
  *
  * </p </li> </ul>
  *
@@ -194,18 +195,18 @@ GetComplianceSummaryResponse * ResourceGroupsTaggingAPIClient::getComplianceSumm
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetResourcesRequest &request)
+GetResourcesResponse * ResourceGroupsTaggingApiClient::getResources(const GetResourcesRequest &request)
 {
     return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * GetTagKeysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all tag keys currently in use in the specified Region for the calling AWS
+ * Returns all tag keys currently in use in the specified Amazon Web Services Region for the calling
  *
  * account>
  *
@@ -215,18 +216,18 @@ GetResourcesResponse * ResourceGroupsTaggingAPIClient::getResources(const GetRes
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeysRequest &request)
+GetTagKeysResponse * ResourceGroupsTaggingApiClient::getTagKeys(const GetTagKeysRequest &request)
 {
     return qobject_cast<GetTagKeysResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * GetTagValuesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all tag values for the specified key that are used in the specified AWS Region for the calling AWS
+ * Returns all tag values for the specified key that are used in the specified Amazon Web Services Region for the calling
  *
  * account>
  *
@@ -236,13 +237,13 @@ GetTagKeysResponse * ResourceGroupsTaggingAPIClient::getTagKeys(const GetTagKeys
  * recieve a <code>null</code> value. A null value for <code>PaginationToken</code> indicates that there are no more
  * results waiting to be
  */
-GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTagValuesRequest &request)
+GetTagValuesResponse * ResourceGroupsTaggingApiClient::getTagValues(const GetTagValuesRequest &request)
 {
     return qobject_cast<GetTagValuesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * StartReportCreationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -262,13 +263,13 @@ GetTagValuesResponse * ResourceGroupsTaggingAPIClient::getTagValues(const GetTag
  *
  * You can call this operation only from the organization's management account and from the us-east-1
  */
-StartReportCreationResponse * ResourceGroupsTaggingAPIClient::startReportCreation(const StartReportCreationRequest &request)
+StartReportCreationResponse * ResourceGroupsTaggingApiClient::startReportCreation(const StartReportCreationRequest &request)
 {
     return qobject_cast<StartReportCreationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * TagResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -279,17 +280,18 @@ StartReportCreationResponse * ResourceGroupsTaggingAPIClient::startReportCreatio
  *
  * Not all resources can have tags. For a list of services with resources that support tagging using this operation, see <a
  * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services that
- * support the Resource Groups Tagging
+ * support the Resource Groups Tagging API</a>. If the resource doesn't yet support this operation, the resource's service
+ * might support tagging using its own API operations. For more information, refer to the documentation for that
  *
- * API</a>> </li> <li>
+ * service> </li> <li>
  *
  * Each resource can have up to 50 tags. For other limits, see <a
  * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html#tag-conventions">Tag Naming and Usage
- * Conventions</a> in the <i>AWS General Reference.</i>
+ * Conventions</a> in the <i>Amazon Web Services General Reference.</i>
  *
  * </p </li> <li>
  *
- * You can only tag resources that are located in the specified AWS Region for the AWS
+ * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web Services
  *
  * account> </li> <li>
  *
@@ -300,14 +302,32 @@ StartReportCreationResponse * ResourceGroupsTaggingAPIClient::startReportCreatio
  *
  * Do not store personally identifiable information (PII) or other confidential or sensitive information in tags. We use
  * tags to provide you with billing and administration services. Tags are not intended to be used for private or sensitive
+ *
+ * data> </b>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the tagging
+ * permission defined by the service that created the resource. For example, to tag an Amazon EC2 instance using the
+ * <code>TagResources</code> operation, you must have both of the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>tag:TagResource</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>ec2:CreateTags</code>
  */
-TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagResourcesRequest &request)
+TagResourcesResponse * ResourceGroupsTaggingApiClient::tagResources(const TagResourcesRequest &request)
 {
     return qobject_cast<TagResourcesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ResourceGroupsTaggingAPIClient service, and returns a pointer to an
+ * Sends \a request to the ResourceGroupsTaggingApiClient service, and returns a pointer to an
  * UntagResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -323,30 +343,49 @@ TagResourcesResponse * ResourceGroupsTaggingAPIClient::tagResources(const TagRes
  *
  * untag> </li> <li>
  *
- * You can only tag resources that are located in the specified AWS Region for the calling AWS
+ * You can only tag resources that are located in the specified Amazon Web Services Region for the calling Amazon Web
+ * Services
+ *
+ * account> </li> </ul>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * In addition to the <code>tag:UntagResources</code> permission required by this operation, you must also have the remove
+ * tags permission defined by the service that created the resource. For example, to remove the tags from an Amazon EC2
+ * instance using the <code>UntagResources</code> operation, you must have both of the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>tag:UntagResource</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>ec2:DeleteTags</code>
  */
-UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const UntagResourcesRequest &request)
+UntagResourcesResponse * ResourceGroupsTaggingApiClient::untagResources(const UntagResourcesRequest &request)
 {
     return qobject_cast<UntagResourcesResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClientPrivate
- * \brief The ResourceGroupsTaggingAPIClientPrivate class provides private implementation for ResourceGroupsTaggingAPIClient.
+ * \class QtAws::ResourceGroupsTaggingApi::ResourceGroupsTaggingApiClientPrivate
+ * \brief The ResourceGroupsTaggingApiClientPrivate class provides private implementation for ResourceGroupsTaggingApiClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingAPIClientPrivate object with public implementation \a q.
+ * Constructs a ResourceGroupsTaggingApiClientPrivate object with public implementation \a q.
  */
-ResourceGroupsTaggingAPIClientPrivate::ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q)
+ResourceGroupsTaggingApiClientPrivate::ResourceGroupsTaggingApiClientPrivate(ResourceGroupsTaggingApiClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

@@ -21,47 +21,47 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::MqRequest
- * \brief The MqRequest class provides an interface for MQ requests.
+ * \class QtAws::Mq::MqRequest
+ * \brief The MqRequest class provides an interface for Mq requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
  * \enum MqRequest::Action
  *
- * This enum describes the actions that can be performed as MQ
+ * This enum describes the actions that can be performed as Mq
  * requests.
  *
- * \value CreateBrokerAction MQ CreateBroker action.
- * \value CreateConfigurationAction MQ CreateConfiguration action.
- * \value CreateTagsAction MQ CreateTags action.
- * \value CreateUserAction MQ CreateUser action.
- * \value DeleteBrokerAction MQ DeleteBroker action.
- * \value DeleteTagsAction MQ DeleteTags action.
- * \value DeleteUserAction MQ DeleteUser action.
- * \value DescribeBrokerAction MQ DescribeBroker action.
- * \value DescribeBrokerEngineTypesAction MQ DescribeBrokerEngineTypes action.
- * \value DescribeBrokerInstanceOptionsAction MQ DescribeBrokerInstanceOptions action.
- * \value DescribeConfigurationAction MQ DescribeConfiguration action.
- * \value DescribeConfigurationRevisionAction MQ DescribeConfigurationRevision action.
- * \value DescribeUserAction MQ DescribeUser action.
- * \value ListBrokersAction MQ ListBrokers action.
- * \value ListConfigurationRevisionsAction MQ ListConfigurationRevisions action.
- * \value ListConfigurationsAction MQ ListConfigurations action.
- * \value ListTagsAction MQ ListTags action.
- * \value ListUsersAction MQ ListUsers action.
- * \value RebootBrokerAction MQ RebootBroker action.
- * \value UpdateBrokerAction MQ UpdateBroker action.
- * \value UpdateConfigurationAction MQ UpdateConfiguration action.
- * \value UpdateUserAction MQ UpdateUser action.
+ * \value CreateBrokerAction Mq CreateBroker action.
+ * \value CreateConfigurationAction Mq CreateConfiguration action.
+ * \value CreateTagsAction Mq CreateTags action.
+ * \value CreateUserAction Mq CreateUser action.
+ * \value DeleteBrokerAction Mq DeleteBroker action.
+ * \value DeleteTagsAction Mq DeleteTags action.
+ * \value DeleteUserAction Mq DeleteUser action.
+ * \value DescribeBrokerAction Mq DescribeBroker action.
+ * \value DescribeBrokerEngineTypesAction Mq DescribeBrokerEngineTypes action.
+ * \value DescribeBrokerInstanceOptionsAction Mq DescribeBrokerInstanceOptions action.
+ * \value DescribeConfigurationAction Mq DescribeConfiguration action.
+ * \value DescribeConfigurationRevisionAction Mq DescribeConfigurationRevision action.
+ * \value DescribeUserAction Mq DescribeUser action.
+ * \value ListBrokersAction Mq ListBrokers action.
+ * \value ListConfigurationRevisionsAction Mq ListConfigurationRevisions action.
+ * \value ListConfigurationsAction Mq ListConfigurations action.
+ * \value ListTagsAction Mq ListTags action.
+ * \value ListUsersAction Mq ListUsers action.
+ * \value RebootBrokerAction Mq RebootBroker action.
+ * \value UpdateBrokerAction Mq UpdateBroker action.
+ * \value UpdateConfigurationAction Mq UpdateConfiguration action.
+ * \value UpdateUserAction Mq UpdateUser action.
  */
 
 /*!
- * Constructs a MqRequest object for MQ \a action.
+ * Constructs a MqRequest object for Mq \a action.
  */
 MqRequest::MqRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MqRequestPrivate(action, this))
@@ -102,7 +102,7 @@ MqRequest::MqRequest(MqRequestPrivate * const d) : QtAws::Core::AwsAbstractReque
 }
 
 /*!
- * Returns the MQ action to be performed by this request.
+ * Returns the Mq action to be performed by this request.
  */
 MqRequest::Action MqRequest::action() const
 {
@@ -111,7 +111,7 @@ MqRequest::Action MqRequest::action() const
 }
 
 /*!
- * Returns the name of the MQ action to be performed by this request.
+ * Returns the name of the Mq action to be performed by this request.
  */
 QString MqRequest::actionString() const
 {
@@ -119,7 +119,7 @@ QString MqRequest::actionString() const
 }
 
 /*!
- * Returns the MQ API version implemented by this request.
+ * Returns the Mq API version implemented by this request.
  */
 QString MqRequest::apiVersion() const
 {
@@ -128,7 +128,7 @@ QString MqRequest::apiVersion() const
 }
 
 /*!
- * Sets the MQ action to be performed by this request to \a action.
+ * Sets the Mq action to be performed by this request to \a action.
  */
 void MqRequest::setAction(const Action action)
 {
@@ -137,7 +137,7 @@ void MqRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the MQ API version to include in this request to \a version.
+ * Sets the Mq API version to include in this request to \a version.
  */
 void MqRequest::setApiVersion(const QString &version)
 {
@@ -162,15 +162,15 @@ bool MqRequest::operator==(const MqRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid MQ queue name.
+ * Returns \c tue if \a queueName is a valid Mq queue name.
  *
- * @par From MQ FAQs:
+ * @par From Mq FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid MQ queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Mq queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -237,10 +237,10 @@ void MqRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the MQ request using the given
+ * Returns a network request for the Mq request using the given
  * \a endpoint.
  *
- * This MQ implementation builds request URLs by combining the
+ * This Mq implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -253,19 +253,19 @@ QNetworkRequest MqRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::MQ::MqRequestPrivate
+ * \class QtAws::Mq::MqRequestPrivate
  * \brief The MqRequestPrivate class provides private implementation for MqRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
- * Constructs a MqRequestPrivate object for MQ \a action,
+ * Constructs a MqRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 MqRequestPrivate::MqRequestPrivate(const MqRequest::Action action, MqRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-27"))
 {
 
 }
@@ -291,7 +291,7 @@ MqRequestPrivate::MqRequestPrivate(const MqRequestPrivate &other,
  * invalid.
  *
  * This function converts MqRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the MQ service's Action
+ * string representations, appropriate for use with the Mq service's Action
  * query parameters.
  */
 QString MqRequestPrivate::toString(const MqRequest::Action &action)
@@ -328,5 +328,5 @@ QString MqRequestPrivate::toString(const MqRequest::Action &action)
     return QString();
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

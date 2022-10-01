@@ -24,14 +24,14 @@
 #include "getsharditeratorrequest.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class GetShardIteratorRequest;
 
-class GetShardIteratorRequestPrivate : public DynamoDBStreamsRequestPrivate {
+class GetShardIteratorRequestPrivate : public DynamoDbStreamsRequestPrivate {
 
 public:
-    GetShardIteratorRequestPrivate(const DynamoDBStreamsRequest::Action action,
+    GetShardIteratorRequestPrivate(const DynamoDbStreamsRequest::Action action,
                                    GetShardIteratorRequest * const q);
     GetShardIteratorRequestPrivate(const GetShardIteratorRequestPrivate &other,
                                    GetShardIteratorRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

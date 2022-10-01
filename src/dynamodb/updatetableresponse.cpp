@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateTableResponse
- * \brief The UpdateTableResponse class provides an interace for DynamoDB UpdateTable responses.
+ * \class QtAws::DynamoDb::UpdateTableResponse
+ * \brief The UpdateTableResponse class provides an interace for DynamoDb UpdateTable responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateTable
+ * \sa DynamoDbClient::updateTable
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateTableResponse::UpdateTableResponse(
         const UpdateTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateTableResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateTableResponsePrivate(this), parent)
 {
     setRequest(new UpdateTableRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateTableRequest * UpdateTableResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateTable \a response.
+ * Parses a successful DynamoDb UpdateTable \a response.
  */
 void UpdateTableResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateTableResponsePrivate
+ * \class QtAws::DynamoDb::UpdateTableResponsePrivate
  * \brief The UpdateTableResponsePrivate class provides private implementation for UpdateTableResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateTableResponsePrivate object with public implementation \a q.
  */
 UpdateTableResponsePrivate::UpdateTableResponsePrivate(
-    UpdateTableResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateTableResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateTable response element from \a xml.
+ * Parses a DynamoDb UpdateTable response element from \a xml.
  */
 void UpdateTableResponsePrivate::parseUpdateTableResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateTableResponsePrivate::parseUpdateTableResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

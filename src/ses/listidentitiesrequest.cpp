@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListIdentitiesRequest
- * \brief The ListIdentitiesRequest class provides an interface for SES ListIdentities requests.
+ * \class QtAws::Ses::ListIdentitiesRequest
+ * \brief The ListIdentitiesRequest class provides an interface for Ses ListIdentities requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * ListIdentitiesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SES::ListIdentitiesRequestPrivate
+ * \class QtAws::Ses::ListIdentitiesRequestPrivate
  * \brief The ListIdentitiesRequestPrivate class provides private implementation for ListIdentitiesRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

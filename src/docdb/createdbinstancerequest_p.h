@@ -24,14 +24,14 @@
 #include "createdbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateDBInstanceRequest;
 
-class CreateDBInstanceRequestPrivate : public DocDBRequestPrivate {
+class CreateDBInstanceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    CreateDBInstanceRequestPrivate(const DocDBRequest::Action action,
+    CreateDBInstanceRequestPrivate(const DocDbRequest::Action action,
                                    CreateDBInstanceRequest * const q);
     CreateDBInstanceRequestPrivate(const CreateDBInstanceRequestPrivate &other,
                                    CreateDBInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

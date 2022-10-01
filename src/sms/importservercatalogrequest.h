@@ -23,7 +23,7 @@
 #include "smsrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class ImportServerCatalogRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

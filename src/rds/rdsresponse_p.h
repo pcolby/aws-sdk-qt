@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class RdsResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

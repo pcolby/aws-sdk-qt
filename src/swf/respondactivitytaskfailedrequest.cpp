@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskFailedRequest
- * \brief The RespondActivityTaskFailedRequest class provides an interface for SWF RespondActivityTaskFailed requests.
+ * \class QtAws::Swf::RespondActivityTaskFailedRequest
+ * \brief The RespondActivityTaskFailedRequest class provides an interface for Swf RespondActivityTaskFailed requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QN
 }
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskFailedRequestPrivate
+ * \class QtAws::Swf::RespondActivityTaskFailedRequestPrivate
  * \brief The RespondActivityTaskFailedRequestPrivate class provides private implementation for RespondActivityTaskFailedRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

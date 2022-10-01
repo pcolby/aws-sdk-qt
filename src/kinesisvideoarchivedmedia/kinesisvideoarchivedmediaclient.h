@@ -36,6 +36,8 @@ class GetDASHStreamingSessionURLRequest;
 class GetDASHStreamingSessionURLResponse;
 class GetHLSStreamingSessionURLRequest;
 class GetHLSStreamingSessionURLResponse;
+class GetImagesRequest;
+class GetImagesResponse;
 class GetMediaForFragmentListRequest;
 class GetMediaForFragmentListResponse;
 class ListFragmentsRequest;
@@ -60,6 +62,7 @@ public slots:
     GetClipResponse * getClip(const GetClipRequest &request);
     GetDASHStreamingSessionURLResponse * getDASHStreamingSessionURL(const GetDASHStreamingSessionURLRequest &request);
     GetHLSStreamingSessionURLResponse * getHLSStreamingSessionURL(const GetHLSStreamingSessionURLRequest &request);
+    GetImagesResponse * getImages(const GetImagesRequest &request);
     GetMediaForFragmentListResponse * getMediaForFragmentList(const GetMediaForFragmentListRequest &request);
     ListFragmentsResponse * listFragments(const ListFragmentsRequest &request);
 

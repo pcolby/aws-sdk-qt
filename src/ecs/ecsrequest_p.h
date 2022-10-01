@@ -24,16 +24,16 @@
 #include "ecsrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class EcsRequest;
 
 class EcsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EcsRequest::Action action; ///< ECS action to be performed.
-    QString apiVersion;        ///< ECS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ECS request (query string) parameters. @todo?
+    EcsRequest::Action action; ///< Ecs action to be performed.
+    QString apiVersion;        ///< Ecs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ecs request (query string) parameters. @todo?
 
     EcsRequestPrivate(const EcsRequest::Action action, EcsRequest * const q);
     EcsRequestPrivate(const EcsRequestPrivate &other, EcsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

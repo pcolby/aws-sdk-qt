@@ -37,11 +37,15 @@ namespace Textract {
  * requests.
  *
  * \value AnalyzeDocumentAction Textract AnalyzeDocument action.
+ * \value AnalyzeExpenseAction Textract AnalyzeExpense action.
+ * \value AnalyzeIDAction Textract AnalyzeID action.
  * \value DetectDocumentTextAction Textract DetectDocumentText action.
  * \value GetDocumentAnalysisAction Textract GetDocumentAnalysis action.
  * \value GetDocumentTextDetectionAction Textract GetDocumentTextDetection action.
+ * \value GetExpenseAnalysisAction Textract GetExpenseAnalysis action.
  * \value StartDocumentAnalysisAction Textract StartDocumentAnalysis action.
  * \value StartDocumentTextDetectionAction Textract StartDocumentTextDetection action.
+ * \value StartExpenseAnalysisAction Textract StartExpenseAnalysis action.
  */
 
 /*!
@@ -249,7 +253,7 @@ QNetworkRequest TextractRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 TextractRequestPrivate::TextractRequestPrivate(const TextractRequest::Action action, TextractRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-06-27"))
 {
 
 }
@@ -284,11 +288,15 @@ QString TextractRequestPrivate::toString(const TextractRequest::Action &action)
         case TextractRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AnalyzeDocument);
+        ActionToString(AnalyzeExpense);
+        ActionToString(AnalyzeID);
         ActionToString(DetectDocumentText);
         ActionToString(GetDocumentAnalysis);
         ActionToString(GetDocumentTextDetection);
+        ActionToString(GetExpenseAnalysis);
         ActionToString(StartDocumentAnalysis);
         ActionToString(StartDocumentTextDetection);
+        ActionToString(StartExpenseAnalysis);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

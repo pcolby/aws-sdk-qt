@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::GetStudioSessionMappingResponse
- * \brief The GetStudioSessionMappingResponse class provides an interace for EMR GetStudioSessionMapping responses.
+ * \class QtAws::Emr::GetStudioSessionMappingResponse
+ * \brief The GetStudioSessionMappingResponse class provides an interace for Emr GetStudioSessionMapping responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::getStudioSessionMapping
  */
@@ -64,7 +64,7 @@ const GetStudioSessionMappingRequest * GetStudioSessionMappingResponse::request(
 
 /*!
  * \reimp
- * Parses a successful EMR GetStudioSessionMapping \a response.
+ * Parses a successful Emr GetStudioSessionMapping \a response.
  */
 void GetStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void GetStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::GetStudioSessionMappingResponsePrivate
+ * \class QtAws::Emr::GetStudioSessionMappingResponsePrivate
  * \brief The GetStudioSessionMappingResponsePrivate class provides private implementation for GetStudioSessionMappingResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ GetStudioSessionMappingResponsePrivate::GetStudioSessionMappingResponsePrivate(
 }
 
 /*!
- * Parses a EMR GetStudioSessionMapping response element from \a xml.
+ * Parses a Emr GetStudioSessionMapping response element from \a xml.
  */
 void GetStudioSessionMappingResponsePrivate::parseGetStudioSessionMappingResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetStudioSessionMappingResponsePrivate::parseGetStudioSessionMappingRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

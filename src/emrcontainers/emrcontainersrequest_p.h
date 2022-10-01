@@ -24,28 +24,28 @@
 #include "emrcontainersrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
-class EMRContainersRequest;
+class EmrcontainersRequest;
 
-class EMRContainersRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EmrcontainersRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EMRContainersRequest::Action action; ///< EMRContainers action to be performed.
-    QString apiVersion;        ///< EMRContainers API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EMRContainers request (query string) parameters. @todo?
+    EmrcontainersRequest::Action action; ///< Emrcontainers action to be performed.
+    QString apiVersion;        ///< Emrcontainers API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Emrcontainers request (query string) parameters. @todo?
 
-    EMRContainersRequestPrivate(const EMRContainersRequest::Action action, EMRContainersRequest * const q);
-    EMRContainersRequestPrivate(const EMRContainersRequestPrivate &other, EMRContainersRequest * const q);
+    EmrcontainersRequestPrivate(const EmrcontainersRequest::Action action, EmrcontainersRequest * const q);
+    EmrcontainersRequestPrivate(const EmrcontainersRequestPrivate &other, EmrcontainersRequest * const q);
 
-    static QString toString(const EMRContainersRequest::Action &action);
+    static QString toString(const EmrcontainersRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(EMRContainersRequest)
+    Q_DECLARE_PUBLIC(EmrcontainersRequest)
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class UntagResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

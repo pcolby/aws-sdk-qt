@@ -44,6 +44,7 @@ namespace LicenseManager {
  * \value CreateGrantVersionAction LicenseManager CreateGrantVersion action.
  * \value CreateLicenseAction LicenseManager CreateLicense action.
  * \value CreateLicenseConfigurationAction LicenseManager CreateLicenseConfiguration action.
+ * \value CreateLicenseConversionTaskForResourceAction LicenseManager CreateLicenseConversionTaskForResource action.
  * \value CreateLicenseManagerReportGeneratorAction LicenseManager CreateLicenseManagerReportGenerator action.
  * \value CreateLicenseVersionAction LicenseManager CreateLicenseVersion action.
  * \value CreateTokenAction LicenseManager CreateToken action.
@@ -57,6 +58,7 @@ namespace LicenseManager {
  * \value GetGrantAction LicenseManager GetGrant action.
  * \value GetLicenseAction LicenseManager GetLicense action.
  * \value GetLicenseConfigurationAction LicenseManager GetLicenseConfiguration action.
+ * \value GetLicenseConversionTaskAction LicenseManager GetLicenseConversionTask action.
  * \value GetLicenseManagerReportGeneratorAction LicenseManager GetLicenseManagerReportGenerator action.
  * \value GetLicenseUsageAction LicenseManager GetLicenseUsage action.
  * \value GetServiceSettingsAction LicenseManager GetServiceSettings action.
@@ -64,6 +66,7 @@ namespace LicenseManager {
  * \value ListDistributedGrantsAction LicenseManager ListDistributedGrants action.
  * \value ListFailuresForLicenseConfigurationOperationsAction LicenseManager ListFailuresForLicenseConfigurationOperations action.
  * \value ListLicenseConfigurationsAction LicenseManager ListLicenseConfigurations action.
+ * \value ListLicenseConversionTasksAction LicenseManager ListLicenseConversionTasks action.
  * \value ListLicenseManagerReportGeneratorsAction LicenseManager ListLicenseManagerReportGenerators action.
  * \value ListLicenseSpecificationsForResourceAction LicenseManager ListLicenseSpecificationsForResource action.
  * \value ListLicenseVersionsAction LicenseManager ListLicenseVersions action.
@@ -288,7 +291,7 @@ QNetworkRequest LicenseManagerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 LicenseManagerRequestPrivate::LicenseManagerRequestPrivate(const LicenseManagerRequest::Action action, LicenseManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-08-01"))
 {
 
 }
@@ -330,6 +333,7 @@ QString LicenseManagerRequestPrivate::toString(const LicenseManagerRequest::Acti
         ActionToString(CreateGrantVersion);
         ActionToString(CreateLicense);
         ActionToString(CreateLicenseConfiguration);
+        ActionToString(CreateLicenseConversionTaskForResource);
         ActionToString(CreateLicenseManagerReportGenerator);
         ActionToString(CreateLicenseVersion);
         ActionToString(CreateToken);
@@ -343,6 +347,7 @@ QString LicenseManagerRequestPrivate::toString(const LicenseManagerRequest::Acti
         ActionToString(GetGrant);
         ActionToString(GetLicense);
         ActionToString(GetLicenseConfiguration);
+        ActionToString(GetLicenseConversionTask);
         ActionToString(GetLicenseManagerReportGenerator);
         ActionToString(GetLicenseUsage);
         ActionToString(GetServiceSettings);
@@ -350,6 +355,7 @@ QString LicenseManagerRequestPrivate::toString(const LicenseManagerRequest::Acti
         ActionToString(ListDistributedGrants);
         ActionToString(ListFailuresForLicenseConfigurationOperations);
         ActionToString(ListLicenseConfigurations);
+        ActionToString(ListLicenseConversionTasks);
         ActionToString(ListLicenseManagerReportGenerators);
         ActionToString(ListLicenseSpecificationsForResource);
         ActionToString(ListLicenseVersions);

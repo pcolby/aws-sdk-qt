@@ -65,12 +65,10 @@ namespace S3 {
  * \value GetBucketEncryptionAction S3 GetBucketEncryption action.
  * \value GetBucketIntelligentTieringConfigurationAction S3 GetBucketIntelligentTieringConfiguration action.
  * \value GetBucketInventoryConfigurationAction S3 GetBucketInventoryConfiguration action.
- * \value GetBucketLifecycleAction S3 GetBucketLifecycle action.
  * \value GetBucketLifecycleConfigurationAction S3 GetBucketLifecycleConfiguration action.
  * \value GetBucketLocationAction S3 GetBucketLocation action.
  * \value GetBucketLoggingAction S3 GetBucketLogging action.
  * \value GetBucketMetricsConfigurationAction S3 GetBucketMetricsConfiguration action.
- * \value GetBucketNotificationAction S3 GetBucketNotification action.
  * \value GetBucketNotificationConfigurationAction S3 GetBucketNotificationConfiguration action.
  * \value GetBucketOwnershipControlsAction S3 GetBucketOwnershipControls action.
  * \value GetBucketPolicyAction S3 GetBucketPolicy action.
@@ -82,6 +80,7 @@ namespace S3 {
  * \value GetBucketWebsiteAction S3 GetBucketWebsite action.
  * \value GetObjectAction S3 GetObject action.
  * \value GetObjectAclAction S3 GetObjectAcl action.
+ * \value GetObjectAttributesAction S3 GetObjectAttributes action.
  * \value GetObjectLegalHoldAction S3 GetObjectLegalHold action.
  * \value GetObjectLockConfigurationAction S3 GetObjectLockConfiguration action.
  * \value GetObjectRetentionAction S3 GetObjectRetention action.
@@ -107,11 +106,9 @@ namespace S3 {
  * \value PutBucketEncryptionAction S3 PutBucketEncryption action.
  * \value PutBucketIntelligentTieringConfigurationAction S3 PutBucketIntelligentTieringConfiguration action.
  * \value PutBucketInventoryConfigurationAction S3 PutBucketInventoryConfiguration action.
- * \value PutBucketLifecycleAction S3 PutBucketLifecycle action.
  * \value PutBucketLifecycleConfigurationAction S3 PutBucketLifecycleConfiguration action.
  * \value PutBucketLoggingAction S3 PutBucketLogging action.
  * \value PutBucketMetricsConfigurationAction S3 PutBucketMetricsConfiguration action.
- * \value PutBucketNotificationAction S3 PutBucketNotification action.
  * \value PutBucketNotificationConfigurationAction S3 PutBucketNotificationConfiguration action.
  * \value PutBucketOwnershipControlsAction S3 PutBucketOwnershipControls action.
  * \value PutBucketPolicyAction S3 PutBucketPolicy action.
@@ -339,7 +336,7 @@ QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2006-03-01"))
 {
 
 }
@@ -402,12 +399,10 @@ QString S3RequestPrivate::toString(const S3Request::Action &action)
         ActionToString(GetBucketEncryption);
         ActionToString(GetBucketIntelligentTieringConfiguration);
         ActionToString(GetBucketInventoryConfiguration);
-        ActionToString(GetBucketLifecycle);
         ActionToString(GetBucketLifecycleConfiguration);
         ActionToString(GetBucketLocation);
         ActionToString(GetBucketLogging);
         ActionToString(GetBucketMetricsConfiguration);
-        ActionToString(GetBucketNotification);
         ActionToString(GetBucketNotificationConfiguration);
         ActionToString(GetBucketOwnershipControls);
         ActionToString(GetBucketPolicy);
@@ -419,6 +414,7 @@ QString S3RequestPrivate::toString(const S3Request::Action &action)
         ActionToString(GetBucketWebsite);
         ActionToString(GetObject);
         ActionToString(GetObjectAcl);
+        ActionToString(GetObjectAttributes);
         ActionToString(GetObjectLegalHold);
         ActionToString(GetObjectLockConfiguration);
         ActionToString(GetObjectRetention);
@@ -444,11 +440,9 @@ QString S3RequestPrivate::toString(const S3Request::Action &action)
         ActionToString(PutBucketEncryption);
         ActionToString(PutBucketIntelligentTieringConfiguration);
         ActionToString(PutBucketInventoryConfiguration);
-        ActionToString(PutBucketLifecycle);
         ActionToString(PutBucketLifecycleConfiguration);
         ActionToString(PutBucketLogging);
         ActionToString(PutBucketMetricsConfiguration);
-        ActionToString(PutBucketNotification);
         ActionToString(PutBucketNotificationConfiguration);
         ActionToString(PutBucketOwnershipControls);
         ActionToString(PutBucketPolicy);

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteWebACLResponse
- * \brief The DeleteWebACLResponse class provides an interace for WAFRegional DeleteWebACL responses.
+ * \class QtAws::WafRegional::DeleteWebACLResponse
+ * \brief The DeleteWebACLResponse class provides an interace for WafRegional DeleteWebACL responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteWebACL
+ * \sa WafRegionalClient::deleteWebACL
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteWebACLResponse::DeleteWebACLResponse(
         const DeleteWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteWebACLResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteWebACLResponsePrivate(this), parent)
 {
     setRequest(new DeleteWebACLRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteWebACLRequest * DeleteWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteWebACL \a response.
+ * Parses a successful WafRegional DeleteWebACL \a response.
  */
 void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteWebACLResponsePrivate
+ * \class QtAws::WafRegional::DeleteWebACLResponsePrivate
  * \brief The DeleteWebACLResponsePrivate class provides private implementation for DeleteWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteWebACLResponsePrivate object with public implementation \a q.
  */
 DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
-    DeleteWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteWebACLResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteWebACL response element from \a xml.
+ * Parses a WafRegional DeleteWebACL response element from \a xml.
  */
 void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

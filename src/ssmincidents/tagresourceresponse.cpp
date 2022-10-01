@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for SSMIncidents TagResource responses.
+ * \class QtAws::SsmIncidents::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for SsmIncidents TagResource responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::tagResource
+ * \sa SsmIncidentsClient::tagResource
  */
 
 /*!
@@ -54,7 +54,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new TagResourceResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents TagResource \a response.
+ * Parses a successful SsmIncidents TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::TagResourceResponsePrivate
+ * \class QtAws::SsmIncidents::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : SSMIncidentsResponsePrivate(q)
+    TagResourceResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents TagResource response element from \a xml.
+ * Parses a SsmIncidents TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

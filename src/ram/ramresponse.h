@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class RamResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

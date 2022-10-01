@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DeleteLifecyclePolicyResponse
- * \brief The DeleteLifecyclePolicyResponse class provides an interace for ECR DeleteLifecyclePolicy responses.
+ * \class QtAws::Ecr::DeleteLifecyclePolicyResponse
+ * \brief The DeleteLifecyclePolicyResponse class provides an interace for Ecr DeleteLifecyclePolicy responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::deleteLifecyclePolicy
  */
@@ -68,7 +74,7 @@ const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ECR DeleteLifecyclePolicy \a response.
+ * Parses a successful Ecr DeleteLifecyclePolicy \a response.
  */
 void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DeleteLifecyclePolicyResponsePrivate
+ * \class QtAws::Ecr::DeleteLifecyclePolicyResponsePrivate
  * \brief The DeleteLifecyclePolicyResponsePrivate class provides private implementation for DeleteLifecyclePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
 }
 
 /*!
- * Parses a ECR DeleteLifecyclePolicy response element from \a xml.
+ * Parses a Ecr DeleteLifecyclePolicy response element from \a xml.
  */
 void DeleteLifecyclePolicyResponsePrivate::parseDeleteLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DeleteLifecyclePolicyResponsePrivate::parseDeleteLifecyclePolicyResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

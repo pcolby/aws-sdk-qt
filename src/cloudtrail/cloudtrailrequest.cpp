@@ -37,22 +37,40 @@ namespace CloudTrail {
  * requests.
  *
  * \value AddTagsAction CloudTrail AddTags action.
+ * \value CancelQueryAction CloudTrail CancelQuery action.
+ * \value CreateEventDataStoreAction CloudTrail CreateEventDataStore action.
  * \value CreateTrailAction CloudTrail CreateTrail action.
+ * \value DeleteEventDataStoreAction CloudTrail DeleteEventDataStore action.
  * \value DeleteTrailAction CloudTrail DeleteTrail action.
+ * \value DescribeQueryAction CloudTrail DescribeQuery action.
  * \value DescribeTrailsAction CloudTrail DescribeTrails action.
+ * \value GetChannelAction CloudTrail GetChannel action.
+ * \value GetEventDataStoreAction CloudTrail GetEventDataStore action.
  * \value GetEventSelectorsAction CloudTrail GetEventSelectors action.
+ * \value GetImportAction CloudTrail GetImport action.
  * \value GetInsightSelectorsAction CloudTrail GetInsightSelectors action.
+ * \value GetQueryResultsAction CloudTrail GetQueryResults action.
  * \value GetTrailAction CloudTrail GetTrail action.
  * \value GetTrailStatusAction CloudTrail GetTrailStatus action.
+ * \value ListChannelsAction CloudTrail ListChannels action.
+ * \value ListEventDataStoresAction CloudTrail ListEventDataStores action.
+ * \value ListImportFailuresAction CloudTrail ListImportFailures action.
+ * \value ListImportsAction CloudTrail ListImports action.
  * \value ListPublicKeysAction CloudTrail ListPublicKeys action.
+ * \value ListQueriesAction CloudTrail ListQueries action.
  * \value ListTagsAction CloudTrail ListTags action.
  * \value ListTrailsAction CloudTrail ListTrails action.
  * \value LookupEventsAction CloudTrail LookupEvents action.
  * \value PutEventSelectorsAction CloudTrail PutEventSelectors action.
  * \value PutInsightSelectorsAction CloudTrail PutInsightSelectors action.
  * \value RemoveTagsAction CloudTrail RemoveTags action.
+ * \value RestoreEventDataStoreAction CloudTrail RestoreEventDataStore action.
+ * \value StartImportAction CloudTrail StartImport action.
  * \value StartLoggingAction CloudTrail StartLogging action.
+ * \value StartQueryAction CloudTrail StartQuery action.
+ * \value StopImportAction CloudTrail StopImport action.
  * \value StopLoggingAction CloudTrail StopLogging action.
+ * \value UpdateEventDataStoreAction CloudTrail UpdateEventDataStore action.
  * \value UpdateTrailAction CloudTrail UpdateTrail action.
  */
 
@@ -261,7 +279,7 @@ QNetworkRequest CloudTrailRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudTrailRequestPrivate::CloudTrailRequestPrivate(const CloudTrailRequest::Action action, CloudTrailRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-11-01"))
 {
 
 }
@@ -296,22 +314,40 @@ QString CloudTrailRequestPrivate::toString(const CloudTrailRequest::Action &acti
         case CloudTrailRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddTags);
+        ActionToString(CancelQuery);
+        ActionToString(CreateEventDataStore);
         ActionToString(CreateTrail);
+        ActionToString(DeleteEventDataStore);
         ActionToString(DeleteTrail);
+        ActionToString(DescribeQuery);
         ActionToString(DescribeTrails);
+        ActionToString(GetChannel);
+        ActionToString(GetEventDataStore);
         ActionToString(GetEventSelectors);
+        ActionToString(GetImport);
         ActionToString(GetInsightSelectors);
+        ActionToString(GetQueryResults);
         ActionToString(GetTrail);
         ActionToString(GetTrailStatus);
+        ActionToString(ListChannels);
+        ActionToString(ListEventDataStores);
+        ActionToString(ListImportFailures);
+        ActionToString(ListImports);
         ActionToString(ListPublicKeys);
+        ActionToString(ListQueries);
         ActionToString(ListTags);
         ActionToString(ListTrails);
         ActionToString(LookupEvents);
         ActionToString(PutEventSelectors);
         ActionToString(PutInsightSelectors);
         ActionToString(RemoveTags);
+        ActionToString(RestoreEventDataStore);
+        ActionToString(StartImport);
         ActionToString(StartLogging);
+        ActionToString(StartQuery);
+        ActionToString(StopImport);
         ActionToString(StopLogging);
+        ActionToString(UpdateEventDataStore);
         ActionToString(UpdateTrail);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

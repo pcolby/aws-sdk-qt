@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIRequestPrivate;
+class ResourceGroupsTaggingApiRequestPrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ResourceGroupsTaggingAPI.
+    /// Actions supported by ResourceGroupsTaggingApi.
     enum Action {
         DescribeReportCreationAction,
         GetComplianceSummaryAction,
@@ -50,9 +50,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ResourceGroupsTaggingAPIRequest(const Action action);
-    ResourceGroupsTaggingAPIRequest(const ResourceGroupsTaggingAPIRequest &other);
-    ResourceGroupsTaggingAPIRequest &operator=(const ResourceGroupsTaggingAPIRequest &other);
+    ResourceGroupsTaggingApiRequest(const Action action);
+    ResourceGroupsTaggingApiRequest(const ResourceGroupsTaggingApiRequest &other);
+    ResourceGroupsTaggingApiRequest &operator=(const ResourceGroupsTaggingApiRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -61,12 +61,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ResourceGroupsTaggingAPIRequest &other) const;
+    virtual bool operator==(const ResourceGroupsTaggingApiRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ResourceGroupsTaggingAPIRequest(ResourceGroupsTaggingAPIRequestPrivate * const d);
+    explicit ResourceGroupsTaggingApiRequest(ResourceGroupsTaggingApiRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -79,11 +79,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingAPIRequest)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiRequest)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

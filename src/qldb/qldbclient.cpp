@@ -66,7 +66,7 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::QLDB
+ * \namespace QtAws::Qldb
  * \brief Contains classess for accessing Amazon QLDB.
  *
  * \inmodule QtAwsQldb
@@ -75,14 +75,14 @@
  */
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::QldbClient
+ * \class QtAws::Qldb::QldbClient
  * \brief The QldbClient class provides access to the Amazon QLDB service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  */
@@ -164,7 +164,7 @@ CancelJournalKinesisStreamResponse * QldbClient::cancelJournalKinesisStream(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new ledger in your AWS account in the current
+ * Creates a new ledger in your Amazon Web Services account in the current
  */
 CreateLedgerResponse * QldbClient::createLedger(const CreateLedgerRequest &request)
 {
@@ -243,7 +243,7 @@ DescribeJournalS3ExportResponse * QldbClient::describeJournalS3Export(const Desc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a ledger, including its state and when it was
+ * Returns information about a ledger, including its state, permissions mode, encryption at rest settings, and when it was
  */
 DescribeLedgerResponse * QldbClient::describeLedger(const DescribeLedgerRequest &request)
 {
@@ -257,9 +257,17 @@ DescribeLedgerResponse * QldbClient::describeLedger(const DescribeLedgerRequest 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Exports journal contents within a date and time range from a ledger into a specified Amazon Simple Storage Service
- * (Amazon S3) bucket. The data is written as files in Amazon Ion
+ * (Amazon S3) bucket. A journal export job can write the data objects in either the text or binary representation of
+ * Amazon Ion format, or in <i>JSON Lines</i> text
  *
  * format>
+ *
+ * In JSON Lines format, each journal block in the exported data object is a valid JSON object that is delimited by a
+ * newline. You can use this format to easily integrate JSON exports with analytics tools such as Glue and Amazon Athena
+ * because these services can parse newline-delimited JSON automatically. For more information about the format, see <a
+ * href="https://jsonlines.org/">JSON
+ *
+ * Lines</a>>
  *
  * If the ledger with the given <code>Name</code> doesn't exist, then throws
  *
@@ -368,7 +376,8 @@ ListJournalKinesisStreamsForLedgerResponse * QldbClient::listJournalKinesisStrea
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of journal export job descriptions for all ledgers that are associated with the current AWS account and
+ * Returns an array of journal export job descriptions for all ledgers that are associated with the current Amazon Web
+ * Services account and
  *
  * Region>
  *
@@ -416,7 +425,7 @@ ListJournalS3ExportsForLedgerResponse * QldbClient::listJournalS3ExportsForLedge
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of ledger summaries that are associated with the current AWS account and
+ * Returns an array of ledger summaries that are associated with the current Amazon Web Services account and
  *
  * Region>
  *
@@ -520,12 +529,12 @@ UpdateLedgerPermissionsModeResponse * QldbClient::updateLedgerPermissionsMode(co
 }
 
 /*!
- * \class QtAws::QLDB::QldbClientPrivate
+ * \class QtAws::Qldb::QldbClientPrivate
  * \brief The QldbClientPrivate class provides private implementation for QldbClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -537,5 +546,5 @@ QldbClientPrivate::QldbClientPrivate(QldbClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

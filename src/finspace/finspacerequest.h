@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
-class finspaceRequestPrivate;
+class FinspaceRequestPrivate;
 
-class QTAWSFINSPACE_EXPORT finspaceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFINSPACE_EXPORT FinspaceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by finspace.
+    /// Actions supported by Finspace.
     enum Action {
         CreateEnvironmentAction,
         DeleteEnvironmentAction,
@@ -50,9 +50,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    finspaceRequest(const Action action);
-    finspaceRequest(const finspaceRequest &other);
-    finspaceRequest &operator=(const finspaceRequest &other);
+    FinspaceRequest(const Action action);
+    FinspaceRequest(const FinspaceRequest &other);
+    FinspaceRequest &operator=(const FinspaceRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -61,12 +61,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const finspaceRequest &other) const;
+    virtual bool operator==(const FinspaceRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit finspaceRequest(finspaceRequestPrivate * const d);
+    explicit FinspaceRequest(FinspaceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -79,11 +79,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(finspaceRequest)
+    Q_DECLARE_PRIVATE(FinspaceRequest)
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

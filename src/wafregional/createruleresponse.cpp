@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateRuleResponse
- * \brief The CreateRuleResponse class provides an interace for WAFRegional CreateRule responses.
+ * \class QtAws::WafRegional::CreateRuleResponse
+ * \brief The CreateRuleResponse class provides an interace for WafRegional CreateRule responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createRule
+ * \sa WafRegionalClient::createRule
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateRuleResponse::CreateRuleResponse(
         const CreateRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateRuleResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateRuleResponsePrivate(this), parent)
 {
     setRequest(new CreateRuleRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateRuleRequest * CreateRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateRule \a response.
+ * Parses a successful WafRegional CreateRule \a response.
  */
 void CreateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateRuleResponsePrivate
+ * \class QtAws::WafRegional::CreateRuleResponsePrivate
  * \brief The CreateRuleResponsePrivate class provides private implementation for CreateRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateRuleResponsePrivate object with public implementation \a q.
  */
 CreateRuleResponsePrivate::CreateRuleResponsePrivate(
-    CreateRuleResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateRuleResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateRule response element from \a xml.
+ * Parses a WafRegional CreateRule response element from \a xml.
  */
 void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

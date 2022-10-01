@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DescribeJobRunResponse
- * \brief The DescribeJobRunResponse class provides an interace for EMRContainers DescribeJobRun responses.
+ * \class QtAws::Emrcontainers::DescribeJobRunResponse
+ * \brief The DescribeJobRunResponse class provides an interace for Emrcontainers DescribeJobRun responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::describeJobRun
+ * \sa EmrcontainersClient::describeJobRun
  */
 
 /*!
@@ -72,7 +72,7 @@ DescribeJobRunResponse::DescribeJobRunResponse(
         const DescribeJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new DescribeJobRunResponsePrivate(this), parent)
+    : EmrcontainersResponse(new DescribeJobRunResponsePrivate(this), parent)
 {
     setRequest(new DescribeJobRunRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const DescribeJobRunRequest * DescribeJobRunResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers DescribeJobRun \a response.
+ * Parses a successful Emrcontainers DescribeJobRun \a response.
  */
 void DescribeJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void DescribeJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::DescribeJobRunResponsePrivate
+ * \class QtAws::Emrcontainers::DescribeJobRunResponsePrivate
  * \brief The DescribeJobRunResponsePrivate class provides private implementation for DescribeJobRunResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a DescribeJobRunResponsePrivate object with public implementation \a q.
  */
 DescribeJobRunResponsePrivate::DescribeJobRunResponsePrivate(
-    DescribeJobRunResponse * const q) : EMRContainersResponsePrivate(q)
+    DescribeJobRunResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers DescribeJobRun response element from \a xml.
+ * Parses a Emrcontainers DescribeJobRun response element from \a xml.
  */
 void DescribeJobRunResponsePrivate::parseDescribeJobRunResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void DescribeJobRunResponsePrivate::parseDescribeJobRunResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "describeactivationsrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DescribeActivationsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

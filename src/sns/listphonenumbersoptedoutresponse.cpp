@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListPhoneNumbersOptedOutResponse
- * \brief The ListPhoneNumbersOptedOutResponse class provides an interace for SNS ListPhoneNumbersOptedOut responses.
+ * \class QtAws::Sns::ListPhoneNumbersOptedOutResponse
+ * \brief The ListPhoneNumbersOptedOutResponse class provides an interace for Sns ListPhoneNumbersOptedOut responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SNS ListPhoneNumbersOptedOut \a response.
+ * Parses a successful Sns ListPhoneNumbersOptedOut \a response.
  */
 void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::ListPhoneNumbersOptedOutResponsePrivate
+ * \class QtAws::Sns::ListPhoneNumbersOptedOutResponsePrivate
  * \brief The ListPhoneNumbersOptedOutResponsePrivate class provides private implementation for ListPhoneNumbersOptedOutResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate
 }
 
 /*!
- * Parses a SNS ListPhoneNumbersOptedOut response element from \a xml.
+ * Parses a Sns ListPhoneNumbersOptedOut response element from \a xml.
  */
 void ListPhoneNumbersOptedOutResponsePrivate::parseListPhoneNumbersOptedOutResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ListPhoneNumbersOptedOutResponsePrivate::parseListPhoneNumbersOptedOutRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

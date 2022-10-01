@@ -24,11 +24,11 @@
 #include "deletepermissionrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class DeletePermissionResponsePrivate;
 
-class QTAWSACMPCA_EXPORT DeletePermissionResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT DeletePermissionResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

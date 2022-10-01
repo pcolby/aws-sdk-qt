@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::VerifySMSSandboxPhoneNumberResponse
- * \brief The VerifySMSSandboxPhoneNumberResponse class provides an interace for SNS VerifySMSSandboxPhoneNumber responses.
+ * \class QtAws::Sns::VerifySMSSandboxPhoneNumberResponse
+ * \brief The VerifySMSSandboxPhoneNumberResponse class provides an interace for Sns VerifySMSSandboxPhoneNumber responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const VerifySMSSandboxPhoneNumberRequest * VerifySMSSandboxPhoneNumberResponse::
 
 /*!
  * \reimp
- * Parses a successful SNS VerifySMSSandboxPhoneNumber \a response.
+ * Parses a successful Sns VerifySMSSandboxPhoneNumber \a response.
  */
 void VerifySMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void VerifySMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::VerifySMSSandboxPhoneNumberResponsePrivate
+ * \class QtAws::Sns::VerifySMSSandboxPhoneNumberResponsePrivate
  * \brief The VerifySMSSandboxPhoneNumberResponsePrivate class provides private implementation for VerifySMSSandboxPhoneNumberResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ VerifySMSSandboxPhoneNumberResponsePrivate::VerifySMSSandboxPhoneNumberResponseP
 }
 
 /*!
- * Parses a SNS VerifySMSSandboxPhoneNumber response element from \a xml.
+ * Parses a Sns VerifySMSSandboxPhoneNumber response element from \a xml.
  */
 void VerifySMSSandboxPhoneNumberResponsePrivate::parseVerifySMSSandboxPhoneNumberResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void VerifySMSSandboxPhoneNumberResponsePrivate::parseVerifySMSSandboxPhoneNumbe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -33,10 +33,20 @@
 #include "describefhirimportjobresponse.h"
 #include "listfhirdatastoresrequest.h"
 #include "listfhirdatastoresresponse.h"
+#include "listfhirexportjobsrequest.h"
+#include "listfhirexportjobsresponse.h"
+#include "listfhirimportjobsrequest.h"
+#include "listfhirimportjobsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "startfhirexportjobrequest.h"
 #include "startfhirexportjobresponse.h"
 #include "startfhirimportjobrequest.h"
 #include "startfhirimportjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -176,7 +186,7 @@ DescribeFHIRExportJobResponse * HealthLakeClient::describeFHIRExportJob(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the
+ * Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job.
  */
 DescribeFHIRImportJobResponse * HealthLakeClient::describeFHIRImportJob(const DescribeFHIRImportJobRequest &request)
 {
@@ -194,6 +204,45 @@ DescribeFHIRImportJobResponse * HealthLakeClient::describeFHIRImportJob(const De
 ListFHIRDatastoresResponse * HealthLakeClient::listFHIRDatastores(const ListFHIRDatastoresRequest &request)
 {
     return qobject_cast<ListFHIRDatastoresResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HealthLakeClient service, and returns a pointer to an
+ * ListFHIRExportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all FHIR export jobs associated with an account and their statuses.
+ */
+ListFHIRExportJobsResponse * HealthLakeClient::listFHIRExportJobs(const ListFHIRExportJobsRequest &request)
+{
+    return qobject_cast<ListFHIRExportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HealthLakeClient service, and returns a pointer to an
+ * ListFHIRImportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all FHIR import jobs associated with an account and their statuses.
+ */
+ListFHIRImportJobsResponse * HealthLakeClient::listFHIRImportJobs(const ListFHIRImportJobsRequest &request)
+{
+    return qobject_cast<ListFHIRImportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HealthLakeClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all existing tags associated with a Data Store.
+ */
+ListTagsForResourceResponse * HealthLakeClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -220,6 +269,32 @@ StartFHIRExportJobResponse * HealthLakeClient::startFHIRExportJob(const StartFHI
 StartFHIRImportJobResponse * HealthLakeClient::startFHIRImportJob(const StartFHIRImportJobRequest &request)
 {
     return qobject_cast<StartFHIRImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HealthLakeClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a user specifed key and value tag to a Data Store.
+ */
+TagResourceResponse * HealthLakeClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HealthLakeClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from a Data Store.
+ */
+UntagResourceResponse * HealthLakeClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

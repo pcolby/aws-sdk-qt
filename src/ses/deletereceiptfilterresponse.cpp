@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteReceiptFilterResponse
- * \brief The DeleteReceiptFilterResponse class provides an interace for SES DeleteReceiptFilter responses.
+ * \class QtAws::Ses::DeleteReceiptFilterResponse
+ * \brief The DeleteReceiptFilterResponse class provides an interace for Ses DeleteReceiptFilter responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteReceiptFilterRequest * DeleteReceiptFilterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES DeleteReceiptFilter \a response.
+ * Parses a successful Ses DeleteReceiptFilter \a response.
  */
 void DeleteReceiptFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteReceiptFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::DeleteReceiptFilterResponsePrivate
+ * \class QtAws::Ses::DeleteReceiptFilterResponsePrivate
  * \brief The DeleteReceiptFilterResponsePrivate class provides private implementation for DeleteReceiptFilterResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponsePrivate(
 }
 
 /*!
- * Parses a SES DeleteReceiptFilter response element from \a xml.
+ * Parses a Ses DeleteReceiptFilter response element from \a xml.
  */
 void DeleteReceiptFilterResponsePrivate::parseDeleteReceiptFilterResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteReceiptFilterResponsePrivate::parseDeleteReceiptFilterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

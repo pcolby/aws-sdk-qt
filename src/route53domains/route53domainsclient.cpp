@@ -29,6 +29,8 @@
 #include "checkdomainavailabilityresponse.h"
 #include "checkdomaintransferabilityrequest.h"
 #include "checkdomaintransferabilityresponse.h"
+#include "deletedomainrequest.h"
+#include "deletedomainresponse.h"
 #include "deletetagsfordomainrequest.h"
 #include "deletetagsfordomainresponse.h"
 #include "disabledomainautorenewrequest.h"
@@ -51,6 +53,8 @@
 #include "listdomainsresponse.h"
 #include "listoperationsrequest.h"
 #include "listoperationsresponse.h"
+#include "listpricesrequest.h"
+#include "listpricesresponse.h"
 #include "listtagsfordomainrequest.h"
 #include "listtagsfordomainresponse.h"
 #include "registerdomainrequest.h"
@@ -162,11 +166,17 @@ Route53DomainsClient::Route53DomainsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Accepts the transfer of a domain from another AWS account to the current AWS account. You initiate a transfer between
- * AWS accounts using <a
- * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html">TransferDomainToAnotherAwsAccount</a>.
+ * Accepts the transfer of a domain from another Amazon Web Services account to the currentAmazon Web Services account. You
+ * initiate a transfer between Amazon Web Services accounts using <a
  *
- * </p
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html">TransferDomainToAnotherAwsAccount</a>>
+ *
+ * If you use the CLI command at <a
+ * href="https://docs.aws.amazon.com/cli/latest/reference/route53domains/accept-domain-transfer-from-another-aws-account.html">accept-domain-transfer-from-another-aws-account</a>,
+ * use JSON format as input instead of text because otherwise CLI will throw an error from domain transfer input that
+ * includes single
+ *
+ * quotes>
  *
  * Use either <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_ListOperations.html">ListOperations</a> or <a
@@ -187,13 +197,13 @@ AcceptDomainTransferFromAnotherAwsAccountResponse * Route53DomainsClient::accept
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels the transfer of a domain from the current AWS account to another AWS account. You initiate a transfer between
- * AWS accounts using <a
+ * Cancels the transfer of a domain from the current Amazon Web Services account to another Amazon Web Services account.
+ * You initiate a transfer betweenAmazon Web Services accounts using <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html">TransferDomainToAnotherAwsAccount</a>.
  *
  * </p <b>
  *
- * You must cancel the transfer before the other AWS account accepts the transfer using <a
+ * You must cancel the transfer before the other Amazon Web Services account accepts the transfer using <a
  *
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_AcceptDomainTransferFromAnotherAwsAccount.html">AcceptDomainTransferFromAnotherAwsAccount</a>>
  * </b>
@@ -236,6 +246,39 @@ CheckDomainAvailabilityResponse * Route53DomainsClient::checkDomainAvailability(
 CheckDomainTransferabilityResponse * Route53DomainsClient::checkDomainTransferability(const CheckDomainTransferabilityRequest &request)
 {
     return qobject_cast<CheckDomainTransferabilityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53DomainsClient service, and returns a pointer to an
+ * DeleteDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation deletes the specified domain. This action is permanent. For more information, see <a
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-delete.html">Deleting a domain name
+ *
+ * registration</a>>
+ *
+ * To transfer the domain registration to another registrar, use the transfer process that’s provided by the registrar to
+ * which you want to transfer the registration. Otherwise, the following
+ *
+ * apply> <ol> <li>
+ *
+ * You can’t get a refund for the cost of a deleted domain
+ *
+ * registration> </li> <li>
+ *
+ * The registry for the top-level domain might hold the domain name for a brief time before releasing it for other users to
+ * register (varies by registry).
+ *
+ * </p </li> <li>
+ *
+ * When the registration has been deleted, we'll send you a confirmation to the registrant contact. The email will come
+ * from <code>noreply@domainnameverification.net</code> or
+ */
+DeleteDomainResponse * Route53DomainsClient::deleteDomain(const DeleteDomainRequest &request)
+{
+    return qobject_cast<DeleteDomainResponse *>(send(request));
 }
 
 /*!
@@ -291,7 +334,7 @@ DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferL
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration
- * expires. The cost of renewing your domain registration is billed to your AWS
+ * expires. The cost of renewing your domain registration is billed to your Amazon Web Services
  *
  * account>
  *
@@ -344,8 +387,8 @@ GetContactReachabilityStatusResponse * Route53DomainsClient::getContactReachabil
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation returns detailed information about a specified domain that is associated with the current AWS account.
- * Contact information for the domain is also returned as part of the
+ * This operation returns detailed information about a specified domain that is associated with the current Amazon Web
+ * Services account. Contact information for the domain is also returned as part of the
  */
 GetDomainDetailResponse * Route53DomainsClient::getDomainDetail(const GetDomainDetailRequest &request)
 {
@@ -384,7 +427,8 @@ GetOperationDetailResponse * Route53DomainsClient::getOperationDetail(const GetO
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation returns all the domain names registered with Amazon Route 53 for the current AWS
+ * This operation returns all the domain names registered with Amazon Route 53 for the current Amazon Web Services account
+ * if no filtering conditions are
  */
 ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest &request)
 {
@@ -399,10 +443,43 @@ ListDomainsResponse * Route53DomainsClient::listDomains(const ListDomainsRequest
  *
  * Returns information about all of the operations that return an operation ID and that have ever been performed on domains
  * that were registered by the current account.
+ *
+ * </p
+ *
+ * This command runs only in the us-east-1
  */
 ListOperationsResponse * Route53DomainsClient::listOperations(const ListOperationsRequest &request)
 {
     return qobject_cast<ListOperationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53DomainsClient service, and returns a pointer to an
+ * ListPricesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the following prices for either all the TLDs supported by Route 53, or the specified
+ *
+ * TLD> <ul> <li>
+ *
+ * Registratio> </li> <li>
+ *
+ * Transfe> </li> <li>
+ *
+ * Owner
+ *
+ * chang> </li> <li>
+ *
+ * Domain
+ *
+ * renewa> </li> <li>
+ *
+ * Domain
+ */
+ListPricesResponse * Route53DomainsClient::listPrices(const ListPricesRequest &request)
+{
+    return qobject_cast<ListPricesResponse *>(send(request));
 }
 
 /*!
@@ -450,16 +527,20 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
  *
  * Optionally enables privacy protection, so WHOIS queries return contact information either for Amazon Registrar (for
  * .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If you don't enable privacy
- * protection, WHOIS queries return the information that you entered for the registrant, admin, and tech
+ * protection, WHOIS queries return the information that you entered for the administrative, registrant, and technical
  *
- * contacts> </li> <li>
+ * contacts> <note>
+ *
+ * You must specify the same privacy setting for the administrative, registrant, and technical
+ *
+ * contacts> </note> </li> <li>
  *
  * If registration is successful, returns an operation ID that you can use to track the progress and completion of the
  * action. If the request is not completed successfully, the domain registrant is notified by
  *
  * email> </li> <li>
  *
- * Charges your AWS account an amount based on the top-level domain. For more information, see <a
+ * Charges your Amazon Web Services account an amount based on the top-level domain. For more information, see <a
  * href="http://aws.amazon.com/route53/pricing/">Amazon Route 53
  */
 RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDomainRequest &request)
@@ -473,8 +554,8 @@ RegisterDomainResponse * Route53DomainsClient::registerDomain(const RegisterDoma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Rejects the transfer of a domain from another AWS account to the current AWS account. You initiate a transfer between
- * AWS accounts using <a
+ * Rejects the transfer of a domain from another Amazon Web Services account to the current Amazon Web Services account.
+ * You initiate a transfer betweenAmazon Web Services accounts using <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html">TransferDomainToAnotherAwsAccount</a>.
  *
  * </p
@@ -498,7 +579,8 @@ RejectDomainTransferFromAnotherAwsAccountResponse * Route53DomainsClient::reject
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation renews a domain for the specified number of years. The cost of renewing your domain is billed to your AWS
+ * This operation renews a domain for the specified number of years. The cost of renewing your domain is billed to your
+ * Amazon Web Services
  *
  * account>
  *
@@ -562,7 +644,7 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
  *
  * Guide</i>> </li> <li>
  *
- * For information about how to transfer a domain from one AWS account to another, see <a
+ * For information about how to transfer a domain from one Amazon Web Services account to another, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_TransferDomainToAnotherAwsAccount.html">TransferDomainToAnotherAwsAccount</a>.
  *
  * </p </li> <li>
@@ -599,12 +681,12 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Transfers a domain from the current AWS account to another AWS account. Note the
+ * Transfers a domain from the current Amazon Web Services account to another Amazon Web Services account. Note the
  *
  * following> <ul> <li>
  *
- * The AWS account that you're transferring the domain to must accept the transfer. If the other account doesn't accept the
- * transfer within 3 days, we cancel the transfer. See <a
+ * The Amazon Web Services account that you're transferring the domain to must accept the transfer. If the other account
+ * doesn't accept the transfer within 3 days, we cancel the transfer. See <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_AcceptDomainTransferFromAnotherAwsAccount.html">AcceptDomainTransferFromAnotherAwsAccount</a>.
  *
  * </p </li> <li>
@@ -619,11 +701,12 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
  *
  * </p </li> </ul> <b>
  *
- * When you transfer a domain from one AWS account to another, Route 53 doesn't transfer the hosted zone that is associated
- * with the domain. DNS resolution isn't affected if the domain and the hosted zone are owned by separate accounts, so
- * transferring the hosted zone is optional. For information about transferring the hosted zone to another AWS account, see
- * <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-migrating.html">Migrating a Hosted Zone
- * to a Different AWS Account</a> in the <i>Amazon Route 53 Developer
+ * When you transfer a domain from one Amazon Web Services account to another, Route 53 doesn't transfer the hosted zone
+ * that is associated with the domain. DNS resolution isn't affected if the domain and the hosted zone are owned by
+ * separate accounts, so transferring the hosted zone is optional. For information about transferring the hosted zone to
+ * another Amazon Web Services account, see <a
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-migrating.html">Migrating a Hosted Zone to
+ * a Different Amazon Web Services Account</a> in the <i>Amazon Route 53 Developer
  *
  * Guide</i>> </b>
  *
@@ -669,10 +752,14 @@ UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const Up
  * information such as email address is replaced either with contact information for Amazon Registrar (for .com, .net, and
  * .org domains) or with contact information for our registrar associate,
  *
- * Gandi>
+ * Gandi> <note>
  *
- * This operation affects only the contact information for the specified contact type (registrant, administrator, or tech).
- * If the request succeeds, Amazon Route 53 returns an operation ID that you can use with <a
+ * You must specify the same privacy setting for the administrative, registrant, and technical
+ *
+ * contacts> </note>
+ *
+ * This operation affects only the contact information for the specified contact type (administrative, registrant, or
+ * technical). If the request succeeds, Amazon Route 53 returns an operation ID that you can use with <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetOperationDetail.html">GetOperationDetail</a>
  * to track the progress and completion of the action. If the request doesn't complete successfully, the domain registrant
  * will be notified by
@@ -732,7 +819,7 @@ UpdateTagsForDomainResponse * Route53DomainsClient::updateTagsForDomain(const Up
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all the domain-related billing records for the current AWS account for a specified
+ * Returns all the domain-related billing records for the current Amazon Web Services account for a specified
  */
 ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest &request)
 {

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBSnapshotAttributeRequest
- * \brief The ModifyDBSnapshotAttributeRequest class provides an interface for RDS ModifyDBSnapshotAttribute requests.
+ * \class QtAws::Rds::ModifyDBSnapshotAttributeRequest
+ * \brief The ModifyDBSnapshotAttributeRequest class provides an interface for Rds ModifyDBSnapshotAttribute requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotAttributeRequest::response(QN
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBSnapshotAttributeRequestPrivate
+ * \class QtAws::Rds::ModifyDBSnapshotAttributeRequestPrivate
  * \brief The ModifyDBSnapshotAttributeRequestPrivate class provides private implementation for ModifyDBSnapshotAttributeRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

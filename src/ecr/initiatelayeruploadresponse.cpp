@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::InitiateLayerUploadResponse
- * \brief The InitiateLayerUploadResponse class provides an interace for ECR InitiateLayerUpload responses.
+ * \class QtAws::Ecr::InitiateLayerUploadResponse
+ * \brief The InitiateLayerUploadResponse class provides an interace for Ecr InitiateLayerUpload responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::initiateLayerUpload
  */
@@ -68,7 +74,7 @@ const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR InitiateLayerUpload \a response.
+ * Parses a successful Ecr InitiateLayerUpload \a response.
  */
 void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::InitiateLayerUploadResponsePrivate
+ * \class QtAws::Ecr::InitiateLayerUploadResponsePrivate
  * \brief The InitiateLayerUploadResponsePrivate class provides private implementation for InitiateLayerUploadResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
 }
 
 /*!
- * Parses a ECR InitiateLayerUpload response element from \a xml.
+ * Parses a Ecr InitiateLayerUpload response element from \a xml.
  */
 void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

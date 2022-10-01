@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSECR_LIBRARY)
 
 add_library(QtAwsEcr
+  qtawsecrglobal.h
+  ecrclient.h
+  ecrclient_p.h
+  ecrrequest.h
+  ecrrequest_p.h
+  ecrresponse.h
+  ecrresponse_p.h
   batchchecklayeravailabilityrequest.h
   batchchecklayeravailabilityrequest_p.h
   batchchecklayeravailabilityresponse.h
@@ -13,10 +20,18 @@ add_library(QtAwsEcr
   batchgetimagerequest_p.h
   batchgetimageresponse.h
   batchgetimageresponse_p.h
+  batchgetrepositoryscanningconfigurationrequest.h
+  batchgetrepositoryscanningconfigurationrequest_p.h
+  batchgetrepositoryscanningconfigurationresponse.h
+  batchgetrepositoryscanningconfigurationresponse_p.h
   completelayeruploadrequest.h
   completelayeruploadrequest_p.h
   completelayeruploadresponse.h
   completelayeruploadresponse_p.h
+  createpullthroughcacherulerequest.h
+  createpullthroughcacherulerequest_p.h
+  createpullthroughcacheruleresponse.h
+  createpullthroughcacheruleresponse_p.h
   createrepositoryrequest.h
   createrepositoryrequest_p.h
   createrepositoryresponse.h
@@ -25,18 +40,26 @@ add_library(QtAwsEcr
   deletelifecyclepolicyrequest_p.h
   deletelifecyclepolicyresponse.h
   deletelifecyclepolicyresponse_p.h
+  deletepullthroughcacherulerequest.h
+  deletepullthroughcacherulerequest_p.h
+  deletepullthroughcacheruleresponse.h
+  deletepullthroughcacheruleresponse_p.h
   deleteregistrypolicyrequest.h
   deleteregistrypolicyrequest_p.h
   deleteregistrypolicyresponse.h
   deleteregistrypolicyresponse_p.h
-  deleterepositorypolicyrequest.h
-  deleterepositorypolicyrequest_p.h
-  deleterepositorypolicyresponse.h
-  deleterepositorypolicyresponse_p.h
   deleterepositoryrequest.h
   deleterepositoryrequest_p.h
   deleterepositoryresponse.h
   deleterepositoryresponse_p.h
+  deleterepositorypolicyrequest.h
+  deleterepositorypolicyrequest_p.h
+  deleterepositorypolicyresponse.h
+  deleterepositorypolicyresponse_p.h
+  describeimagereplicationstatusrequest.h
+  describeimagereplicationstatusrequest_p.h
+  describeimagereplicationstatusresponse.h
+  describeimagereplicationstatusresponse_p.h
   describeimagescanfindingsrequest.h
   describeimagescanfindingsrequest_p.h
   describeimagescanfindingsresponse.h
@@ -45,6 +68,10 @@ add_library(QtAwsEcr
   describeimagesrequest_p.h
   describeimagesresponse.h
   describeimagesresponse_p.h
+  describepullthroughcacherulesrequest.h
+  describepullthroughcacherulesrequest_p.h
+  describepullthroughcacherulesresponse.h
+  describepullthroughcacherulesresponse_p.h
   describeregistryrequest.h
   describeregistryrequest_p.h
   describeregistryresponse.h
@@ -53,12 +80,6 @@ add_library(QtAwsEcr
   describerepositoriesrequest_p.h
   describerepositoriesresponse.h
   describerepositoriesresponse_p.h
-  ecrclient.h
-  ecrclient_p.h
-  ecrrequest.h
-  ecrrequest_p.h
-  ecrresponse.h
-  ecrresponse_p.h
   getauthorizationtokenrequest.h
   getauthorizationtokenrequest_p.h
   getauthorizationtokenresponse.h
@@ -67,18 +88,22 @@ add_library(QtAwsEcr
   getdownloadurlforlayerrequest_p.h
   getdownloadurlforlayerresponse.h
   getdownloadurlforlayerresponse_p.h
-  getlifecyclepolicypreviewrequest.h
-  getlifecyclepolicypreviewrequest_p.h
-  getlifecyclepolicypreviewresponse.h
-  getlifecyclepolicypreviewresponse_p.h
   getlifecyclepolicyrequest.h
   getlifecyclepolicyrequest_p.h
   getlifecyclepolicyresponse.h
   getlifecyclepolicyresponse_p.h
+  getlifecyclepolicypreviewrequest.h
+  getlifecyclepolicypreviewrequest_p.h
+  getlifecyclepolicypreviewresponse.h
+  getlifecyclepolicypreviewresponse_p.h
   getregistrypolicyrequest.h
   getregistrypolicyrequest_p.h
   getregistrypolicyresponse.h
   getregistrypolicyresponse_p.h
+  getregistryscanningconfigurationrequest.h
+  getregistryscanningconfigurationrequest_p.h
+  getregistryscanningconfigurationresponse.h
+  getregistryscanningconfigurationresponse_p.h
   getrepositorypolicyrequest.h
   getrepositorypolicyrequest_p.h
   getrepositorypolicyresponse.h
@@ -115,11 +140,14 @@ add_library(QtAwsEcr
   putregistrypolicyrequest_p.h
   putregistrypolicyresponse.h
   putregistrypolicyresponse_p.h
+  putregistryscanningconfigurationrequest.h
+  putregistryscanningconfigurationrequest_p.h
+  putregistryscanningconfigurationresponse.h
+  putregistryscanningconfigurationresponse_p.h
   putreplicationconfigurationrequest.h
   putreplicationconfigurationrequest_p.h
   putreplicationconfigurationresponse.h
   putreplicationconfigurationresponse_p.h
-  qtawsecrglobal.h
   setrepositorypolicyrequest.h
   setrepositorypolicyrequest_p.h
   setrepositorypolicyresponse.h
@@ -144,45 +172,57 @@ add_library(QtAwsEcr
   uploadlayerpartrequest_p.h
   uploadlayerpartresponse.h
   uploadlayerpartresponse_p.h
+  ecrclient.cpp
+  ecrrequest.cpp
+  ecrresponse.cpp
   batchchecklayeravailabilityrequest.cpp
   batchchecklayeravailabilityresponse.cpp
   batchdeleteimagerequest.cpp
   batchdeleteimageresponse.cpp
   batchgetimagerequest.cpp
   batchgetimageresponse.cpp
+  batchgetrepositoryscanningconfigurationrequest.cpp
+  batchgetrepositoryscanningconfigurationresponse.cpp
   completelayeruploadrequest.cpp
   completelayeruploadresponse.cpp
+  createpullthroughcacherulerequest.cpp
+  createpullthroughcacheruleresponse.cpp
   createrepositoryrequest.cpp
   createrepositoryresponse.cpp
   deletelifecyclepolicyrequest.cpp
   deletelifecyclepolicyresponse.cpp
+  deletepullthroughcacherulerequest.cpp
+  deletepullthroughcacheruleresponse.cpp
   deleteregistrypolicyrequest.cpp
   deleteregistrypolicyresponse.cpp
-  deleterepositorypolicyrequest.cpp
-  deleterepositorypolicyresponse.cpp
   deleterepositoryrequest.cpp
   deleterepositoryresponse.cpp
+  deleterepositorypolicyrequest.cpp
+  deleterepositorypolicyresponse.cpp
+  describeimagereplicationstatusrequest.cpp
+  describeimagereplicationstatusresponse.cpp
   describeimagescanfindingsrequest.cpp
   describeimagescanfindingsresponse.cpp
   describeimagesrequest.cpp
   describeimagesresponse.cpp
+  describepullthroughcacherulesrequest.cpp
+  describepullthroughcacherulesresponse.cpp
   describeregistryrequest.cpp
   describeregistryresponse.cpp
   describerepositoriesrequest.cpp
   describerepositoriesresponse.cpp
-  ecrclient.cpp
-  ecrrequest.cpp
-  ecrresponse.cpp
   getauthorizationtokenrequest.cpp
   getauthorizationtokenresponse.cpp
   getdownloadurlforlayerrequest.cpp
   getdownloadurlforlayerresponse.cpp
-  getlifecyclepolicypreviewrequest.cpp
-  getlifecyclepolicypreviewresponse.cpp
   getlifecyclepolicyrequest.cpp
   getlifecyclepolicyresponse.cpp
+  getlifecyclepolicypreviewrequest.cpp
+  getlifecyclepolicypreviewresponse.cpp
   getregistrypolicyrequest.cpp
   getregistrypolicyresponse.cpp
+  getregistryscanningconfigurationrequest.cpp
+  getregistryscanningconfigurationresponse.cpp
   getrepositorypolicyrequest.cpp
   getrepositorypolicyresponse.cpp
   initiatelayeruploadrequest.cpp
@@ -201,6 +241,8 @@ add_library(QtAwsEcr
   putlifecyclepolicyresponse.cpp
   putregistrypolicyrequest.cpp
   putregistrypolicyresponse.cpp
+  putregistryscanningconfigurationrequest.cpp
+  putregistryscanningconfigurationresponse.cpp
   putreplicationconfigurationrequest.cpp
   putreplicationconfigurationresponse.cpp
   setrepositorypolicyrequest.cpp

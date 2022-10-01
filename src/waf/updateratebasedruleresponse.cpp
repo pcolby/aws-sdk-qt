@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRateBasedRuleResponse
- * \brief The UpdateRateBasedRuleResponse class provides an interace for WAF UpdateRateBasedRule responses.
+ * \class QtAws::Waf::UpdateRateBasedRuleResponse
+ * \brief The UpdateRateBasedRuleResponse class provides an interace for Waf UpdateRateBasedRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateRateBasedRule \a response.
+ * Parses a successful Waf UpdateRateBasedRule \a response.
  */
 void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateRateBasedRuleResponsePrivate
+ * \class QtAws::Waf::UpdateRateBasedRuleResponsePrivate
  * \brief The UpdateRateBasedRuleResponsePrivate class provides private implementation for UpdateRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateRateBasedRule response element from \a xml.
+ * Parses a Waf UpdateRateBasedRule response element from \a xml.
  */
 void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

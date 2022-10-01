@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateRestApiRequest
- * \brief The UpdateRestApiRequest class provides an interface for APIGateway UpdateRestApi requests.
+ * \class QtAws::ApiGateway::UpdateRestApiRequest
+ * \brief The UpdateRestApiRequest class provides an interface for ApiGateway UpdateRestApi requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateRestApi
+ * \sa ApiGatewayClient::updateRestApi
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateRestApiRequest::UpdateRestApiRequest(const UpdateRestApiRequest &other)
-    : APIGatewayRequest(new UpdateRestApiRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateRestApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRestApiRequest::UpdateRestApiRequest(const UpdateRestApiRequest &other)
  * Constructs a UpdateRestApiRequest object.
  */
 UpdateRestApiRequest::UpdateRestApiRequest()
-    : APIGatewayRequest(new UpdateRestApiRequestPrivate(APIGatewayRequest::UpdateRestApiAction, this))
+    : ApiGatewayRequest(new UpdateRestApiRequestPrivate(ApiGatewayRequest::UpdateRestApiAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateRestApiRequestPrivate
+ * \class QtAws::ApiGateway::UpdateRestApiRequestPrivate
  * \brief The UpdateRestApiRequestPrivate class provides private implementation for UpdateRestApiRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateRestApiRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateRestApiRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateRestApiRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateRestApiRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
  */
 UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
     const UpdateRestApiRequestPrivate &other, UpdateRestApiRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

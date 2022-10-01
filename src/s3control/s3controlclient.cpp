@@ -29,6 +29,8 @@
 #include "createbucketresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
+#include "createmultiregionaccesspointrequest.h"
+#include "createmultiregionaccesspointresponse.h"
 #include "deleteaccesspointrequest.h"
 #include "deleteaccesspointresponse.h"
 #include "deleteaccesspointforobjectlambdarequest.h"
@@ -47,6 +49,8 @@
 #include "deletebuckettaggingresponse.h"
 #include "deletejobtaggingrequest.h"
 #include "deletejobtaggingresponse.h"
+#include "deletemultiregionaccesspointrequest.h"
+#include "deletemultiregionaccesspointresponse.h"
 #include "deletepublicaccessblockrequest.h"
 #include "deletepublicaccessblockresponse.h"
 #include "deletestoragelensconfigurationrequest.h"
@@ -55,6 +59,8 @@
 #include "deletestoragelensconfigurationtaggingresponse.h"
 #include "describejobrequest.h"
 #include "describejobresponse.h"
+#include "describemultiregionaccesspointoperationrequest.h"
+#include "describemultiregionaccesspointoperationresponse.h"
 #include "getaccesspointrequest.h"
 #include "getaccesspointresponse.h"
 #include "getaccesspointconfigurationforobjectlambdarequest.h"
@@ -77,8 +83,16 @@
 #include "getbucketpolicyresponse.h"
 #include "getbuckettaggingrequest.h"
 #include "getbuckettaggingresponse.h"
+#include "getbucketversioningrequest.h"
+#include "getbucketversioningresponse.h"
 #include "getjobtaggingrequest.h"
 #include "getjobtaggingresponse.h"
+#include "getmultiregionaccesspointrequest.h"
+#include "getmultiregionaccesspointresponse.h"
+#include "getmultiregionaccesspointpolicyrequest.h"
+#include "getmultiregionaccesspointpolicyresponse.h"
+#include "getmultiregionaccesspointpolicystatusrequest.h"
+#include "getmultiregionaccesspointpolicystatusresponse.h"
 #include "getpublicaccessblockrequest.h"
 #include "getpublicaccessblockresponse.h"
 #include "getstoragelensconfigurationrequest.h"
@@ -91,6 +105,8 @@
 #include "listaccesspointsforobjectlambdaresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listmultiregionaccesspointsrequest.h"
+#include "listmultiregionaccesspointsresponse.h"
 #include "listregionalbucketsrequest.h"
 #include "listregionalbucketsresponse.h"
 #include "liststoragelensconfigurationsrequest.h"
@@ -107,8 +123,12 @@
 #include "putbucketpolicyresponse.h"
 #include "putbuckettaggingrequest.h"
 #include "putbuckettaggingresponse.h"
+#include "putbucketversioningrequest.h"
+#include "putbucketversioningresponse.h"
 #include "putjobtaggingrequest.h"
 #include "putjobtaggingresponse.h"
+#include "putmultiregionaccesspointpolicyrequest.h"
+#include "putmultiregionaccesspointpolicyresponse.h"
 #include "putpublicaccessblockrequest.h"
 #include "putpublicaccessblockresponse.h"
 #include "putstoragelensconfigurationrequest.h"
@@ -142,7 +162,7 @@ namespace S3Control {
  * \ingroup aws-clients
  * \inmodule QtAwsS3Control
  *
- *  AWS S3 Control provides access to Amazon S3 control plane actions.
+ *  Amazon Web Services S3 Control provides access to Amazon S3 control plane actions.
  */
 
 /*!
@@ -208,7 +228,9 @@ S3ControlClient::S3ControlClient(
  * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing Data Access with Amazon S3
  * Access Points</a> in the <i>Amazon S3 User
  *
- * Guide</i>> <p/> <note>
+ * Guide</i>>
+ *
+ * </p <note>
  *
  * S3 on Outposts only supports VPC-style access points.
  *
@@ -220,12 +242,15 @@ S3ControlClient::S3ControlClient(
  * Guide</i>> </note>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPoint.html#API_control_CreateAccessPoint_Examples">Examples</a>
  *
- * section> <p/>
+ * section>
+ *
+ * </p
  *
  * The following actions are related to
  *
@@ -364,14 +389,16 @@ CreateBucketResponse * S3ControlClient::createBucket(const CreateBucketRequest &
  *
  * You can use S3 Batch Operations to perform large-scale batch actions on Amazon S3 objects. Batch Operations can run a
  * single action on lists of Amazon S3 objects that you specify. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 Batch Operations</a> in the <i>Amazon S3
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the <i>Amazon S3
  * User
  *
  * Guide</i>>
  *
  * This action creates a S3 Batch Operations
  *
- * job> <p/>
+ * job>
+ *
+ * </p
  *
  * Related actions
  *
@@ -402,6 +429,58 @@ CreateJobResponse * S3ControlClient::createJob(const CreateJobRequest &request)
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * CreateMultiRegionAccessPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Multi-Region Access Point and associates it with the specified buckets. For more information about creating
+ * Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html">Creating Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * This request is asynchronous, meaning that you might receive a response before the command has completed. When this
+ * request provides a response, it provides a token that you can use to monitor the status of the request with
+ *
+ * <code>DescribeMultiRegionAccessPointOperation</code>>
+ *
+ * The following actions are related to
+ *
+ * <code>CreateMultiRegionAccessPoint</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+ */
+CreateMultiRegionAccessPointResponse * S3ControlClient::createMultiRegionAccessPoint(const CreateMultiRegionAccessPointRequest &request)
+{
+    return qobject_cast<CreateMultiRegionAccessPointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * DeleteAccessPointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -411,9 +490,10 @@ CreateJobResponse * S3ControlClient::createJob(const CreateJobRequest &request)
  * point>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPoint.html#API_control_DeleteAccessPoint_Examples">Examples</a>
  *
  * section>
@@ -477,12 +557,15 @@ DeleteAccessPointForObjectLambdaResponse * S3ControlClient::deleteAccessPointFor
  *
  * Deletes the access point policy for the specified access
  *
- * point> <p/>
+ * point>
+ *
+ * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicy.html#API_control_DeleteAccessPointPolicy_Examples">Examples</a>
  *
  * section>
@@ -551,9 +634,10 @@ DeleteAccessPointPolicyForObjectLambdaResponse * S3ControlClient::deleteAccessPo
  * Guide</i>>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucket.html#API_control_DeleteBucket_Examples">Examples</a>
  *
  * section> <p class="title"> <b>Related Resources</b>
@@ -605,9 +689,10 @@ DeleteBucketResponse * S3ControlClient::deleteBucket(const DeleteBucketRequest &
  * others>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketLifecycleConfiguration.html#API_control_DeleteBucketLifecycleConfiguration_Examples">Examples</a>
  *
  * section>
@@ -650,9 +735,9 @@ DeleteBucketLifecycleConfigurationResponse * S3ControlClient::deleteBucketLifecy
  * </p </note>
  *
  * This implementation of the DELETE action uses the policy subresource to delete the policy of a specified Amazon S3 on
- * Outposts bucket. If you are using an identity other than the root user of the AWS account that owns the bucket, the
- * calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions on the specified Outposts bucket
- * and belong to the bucket owner's account to use this action. For more information, see <a
+ * Outposts bucket. If you are using an identity other than the root user of the Amazon Web Services account that owns the
+ * bucket, the calling identity must have the <code>s3-outposts:DeleteBucketPolicy</code> permissions on the specified
+ * Outposts bucket and belong to the bucket owner's account to use this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a> in
  * <i>Amazon S3 User
  *
@@ -664,8 +749,8 @@ DeleteBucketLifecycleConfigurationResponse * S3ControlClient::deleteBucketLifecy
  *
  * </p <b>
  *
- * As a security precaution, the root user of the AWS account that owns a bucket can always use this action, even if the
- * policy explicitly denies the root user the ability to perform this
+ * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+ * action, even if the policy explicitly denies the root user the ability to perform this
  *
  * action> </b>
  *
@@ -676,9 +761,10 @@ DeleteBucketLifecycleConfigurationResponse * S3ControlClient::deleteBucketLifecy
  * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketPolicy.html#API_control_DeleteBucketPolicy_Examples">Examples</a>
  *
  * section>
@@ -724,9 +810,10 @@ DeleteBucketPolicyResponse * S3ControlClient::deleteBucketPolicy(const DeleteBuc
  * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketTagging.html#API_control_DeleteBucketTagging_Examples">Examples</a>
  *
  * section>
@@ -757,7 +844,9 @@ DeleteBucketTaggingResponse * S3ControlClient::deleteBucketTagging(const DeleteB
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
  * access and labeling jobs using tags</a> in the <i>Amazon S3 User
  *
- * Guide</i>> <p/>
+ * Guide</i>>
+ *
+ * </p
  *
  * Related actions
  *
@@ -780,12 +869,62 @@ DeleteJobTaggingResponse * S3ControlClient::deleteJobTagging(const DeleteJobTagg
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * DeleteMultiRegionAccessPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a Multi-Region Access Point. This action does not delete the buckets associated with the Multi-Region Access
+ * Point, only the Multi-Region Access Point
+ *
+ * itself>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * This request is asynchronous, meaning that you might receive a response before the command has completed. When this
+ * request provides a response, it provides a token that you can use to monitor the status of the request with
+ *
+ * <code>DescribeMultiRegionAccessPointOperation</code>>
+ *
+ * The following actions are related to
+ *
+ * <code>DeleteMultiRegionAccessPoint</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+ */
+DeleteMultiRegionAccessPointResponse * S3ControlClient::deleteMultiRegionAccessPoint(const DeleteMultiRegionAccessPointRequest &request)
+{
+    return qobject_cast<DeleteMultiRegionAccessPointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * DeletePublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the <code>PublicAccessBlock</code> configuration for an AWS account. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3 block
+ * Removes the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more information, see
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3 block
  * public
  *
  * access</a>>
@@ -856,10 +995,12 @@ DeleteStorageLensConfigurationTaggingResponse * S3ControlClient::deleteStorageLe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the configuration parameters and status for a Batch Operations job. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 Batch Operations</a> in the <i>Amazon S3
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the <i>Amazon S3
  * User
  *
- * Guide</i>> <p/>
+ * Guide</i>>
+ *
+ * </p
  *
  * Related actions
  *
@@ -886,18 +1027,61 @@ DescribeJobResponse * S3ControlClient::describeJob(const DescribeJobRequest &req
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * DescribeMultiRegionAccessPointOperationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the status of an asynchronous request to manage a Multi-Region Access Point. For more information about
+ * managing Multi-Region Access Points and how asynchronous requests work, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>GetMultiRegionAccessPoint</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+ */
+DescribeMultiRegionAccessPointOperationResponse * S3ControlClient::describeMultiRegionAccessPointOperation(const DescribeMultiRegionAccessPointOperationRequest &request)
+{
+    return qobject_cast<DescribeMultiRegionAccessPointOperationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * GetAccessPointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns configuration information about the specified access
  *
- * point> <p/>
+ * point>
+ *
+ * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPoint.html#API_control_GetAccessPoint_Examples">Examples</a>
  *
  * section>
@@ -1069,10 +1253,10 @@ GetAccessPointPolicyStatusForObjectLambdaResponse * S3ControlClient::getAccessPo
  *
  * Guide</i>>
  *
- * If you are using an identity other than the root user of the AWS account that owns the Outposts bucket, the calling
- * identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket and belong to the
- * Outposts bucket owner's account in order to use this action. Only users from Outposts bucket owner account with the
- * right permissions can perform actions on an Outposts bucket.
+ * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts bucket,
+ * the calling identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified Outposts bucket and
+ * belong to the Outposts bucket owner's account in order to use this action. Only users from Outposts bucket owner account
+ * with the right permissions can perform actions on an Outposts bucket.
  *
  * </p
  *
@@ -1086,9 +1270,10 @@ GetAccessPointPolicyStatusForObjectLambdaResponse * S3ControlClient::getAccessPo
  * Outposts>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucket.html#API_control_GetBucket_Examples">Examples</a>
  *
  * section> <ul> <li>
@@ -1142,9 +1327,10 @@ GetBucketResponse * S3ControlClient::getBucket(const GetBucketRequest &request)
  * Resources</a>>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html#API_control_GetBucketLifecycleConfiguration_Examples">Examples</a>
  *
  * section>
@@ -1206,9 +1392,9 @@ GetBucketLifecycleConfigurationResponse * S3ControlClient::getBucketLifecycleCon
  *
  * Guide</i>>
  *
- * If you are using an identity other than the root user of the AWS account that owns the bucket, the calling identity must
- * have the <code>GetBucketPolicy</code> permissions on the specified bucket and belong to the bucket owner's account in
- * order to use this
+ * If you are using an identity other than the root user of the Amazon Web Services account that owns the bucket, the
+ * calling identity must have the <code>GetBucketPolicy</code> permissions on the specified bucket and belong to the bucket
+ * owner's account in order to use this
  *
  * action>
  *
@@ -1218,8 +1404,8 @@ GetBucketLifecycleConfigurationResponse * S3ControlClient::getBucketLifecycleCon
  *
  * error> <b>
  *
- * As a security precaution, the root user of the AWS account that owns a bucket can always use this action, even if the
- * policy explicitly denies the root user the ability to perform this
+ * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+ * action, even if the policy explicitly denies the root user the ability to perform this
  *
  * action> </b>
  *
@@ -1229,9 +1415,10 @@ GetBucketLifecycleConfigurationResponse * S3ControlClient::getBucketLifecycleCon
  * Policies</a>>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketPolicy.html#API_control_GetBucketPolicy_Examples">Examples</a>
  *
  * section>
@@ -1293,9 +1480,10 @@ GetBucketPolicyResponse * S3ControlClient::getBucketPolicy(const GetBucketPolicy
  * bucket> </li> </ul> </li> </ul>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketTagging.html#API_control_GetBucketTagging_Examples">Examples</a>
  *
  * section>
@@ -1317,6 +1505,66 @@ GetBucketTaggingResponse * S3ControlClient::getBucketTagging(const GetBucketTagg
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * GetBucketVersioningResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This operation returns the versioning state only for S3 on Outposts buckets. To return the versioning state for an S3
+ * bucket, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketVersioning.html">GetBucketVersioning</a> in the
+ * <i>Amazon S3 API Reference</i>.
+ *
+ * </p </note>
+ *
+ * Returns the versioning state for an S3 on Outposts bucket. With versioning, you can save multiple distinct copies of
+ * your data and recover from unintended user actions and application
+ *
+ * failures>
+ *
+ * If you've never set versioning on your bucket, it has no versioning state. In that case, the
+ * <code>GetBucketVersioning</code> request does not return a versioning state
+ *
+ * value>
+ *
+ * For more information about versioning, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html">Versioning</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketVersioning.html#API_control_GetBucketVersioning_Examples">Examples</a>
+ *
+ * section>
+ *
+ * The following operations are related to <code>GetBucketVersioning</code> for S3 on
+ *
+ * Outposts> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketVersioning.html">PutBucketVersioning</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
+ */
+GetBucketVersioningResponse * S3ControlClient::getBucketVersioning(const GetBucketVersioningRequest &request)
+{
+    return qobject_cast<GetBucketVersioningResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * GetJobTaggingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1326,7 +1574,9 @@ GetBucketTaggingResponse * S3ControlClient::getBucketTagging(const GetBucketTagg
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
  * access and labeling jobs using tags</a> in the <i>Amazon S3 User
  *
- * Guide</i>> <p/>
+ * Guide</i>>
+ *
+ * </p
  *
  * Related actions
  *
@@ -1349,12 +1599,124 @@ GetJobTaggingResponse * S3ControlClient::getJobTagging(const GetJobTaggingReques
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * GetMultiRegionAccessPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns configuration information about the specified Multi-Region Access
+ *
+ * Point>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>GetMultiRegionAccessPoint</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListMultiRegionAccessPoints.html">ListMultiRegionAccessPoints</a>
+ */
+GetMultiRegionAccessPointResponse * S3ControlClient::getMultiRegionAccessPoint(const GetMultiRegionAccessPointRequest &request)
+{
+    return qobject_cast<GetMultiRegionAccessPointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * GetMultiRegionAccessPointPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the access control policy of the specified Multi-Region Access
+ *
+ * Point>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>GetMultiRegionAccessPointPolicy</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+ */
+GetMultiRegionAccessPointPolicyResponse * S3ControlClient::getMultiRegionAccessPointPolicy(const GetMultiRegionAccessPointPolicyRequest &request)
+{
+    return qobject_cast<GetMultiRegionAccessPointPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * GetMultiRegionAccessPointPolicyStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Indicates whether the specified Multi-Region Access Point has an access control policy that allows public
+ *
+ * access>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>GetMultiRegionAccessPointPolicyStatus</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutMultiRegionAccessPointPolicy.html">PutMultiRegionAccessPointPolicy</a>
+ */
+GetMultiRegionAccessPointPolicyStatusResponse * S3ControlClient::getMultiRegionAccessPointPolicyStatus(const GetMultiRegionAccessPointPolicyStatusRequest &request)
+{
+    return qobject_cast<GetMultiRegionAccessPointPolicyStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * GetPublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the <code>PublicAccessBlock</code> configuration for an AWS account. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3 block
+ * Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For more information, see
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3 block
  * public
  *
  * access</a>>
@@ -1429,12 +1791,15 @@ GetStorageLensConfigurationTaggingResponse * S3ControlClient::getStorageLensConf
  * <code>maxResults</code>, whichever is less), the response will include a continuation token that you can use to list the
  * additional access
  *
- * points> <p/>
+ * points>
+ *
+ * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPoint.html#API_control_GetAccessPoint_Examples">Examples</a>
  *
  * section>
@@ -1464,9 +1829,9 @@ ListAccessPointsResponse * S3ControlClient::listAccessPoints(const ListAccessPoi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the access points associated with the Object Lambda Access Point. You can retrieve up to 1000 access
- * points per call. If there are more than 1,000 access points (or the number specified in <code>maxResults</code>,
- * whichever is less), the response will include a continuation token that you can use to list the additional access
+ * Returns some or all (up to 1,000) access points associated with the Object Lambda Access Point per call. If there are
+ * more access points than what can be returned in one call, the response will include a continuation token that you can
+ * use to list the additional access
  *
  * points>
  *
@@ -1498,15 +1863,18 @@ ListAccessPointsForObjectLambdaResponse * S3ControlClient::listAccessPointsForOb
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists current S3 Batch Operations jobs and jobs that have ended within the last 30 days for the AWS account making the
- * request. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3
- * Batch Operations</a> in the <i>Amazon S3 User
+ * Lists current S3 Batch Operations jobs and jobs that have ended within the last 30 days for the Amazon Web Services
+ * account making the request. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the <i>Amazon S3
+ * User
  *
  * Guide</i>>
  *
  * Related actions
  *
- * include> <p/> <ul> <li>
+ * include>
+ *
+ * </p <ul> <li>
  *
  * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
  *
@@ -1525,6 +1893,52 @@ ListAccessPointsForObjectLambdaResponse * S3ControlClient::listAccessPointsForOb
 ListJobsResponse * S3ControlClient::listJobs(const ListJobsRequest &request)
 {
     return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * ListMultiRegionAccessPointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the Multi-Region Access Points currently associated with the specified Amazon Web Services account.
+ * Each call can return up to 100 Multi-Region Access Points, the maximum number of Multi-Region Access Points that can be
+ * associated with a single
+ *
+ * account>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>ListMultiRegionAccessPoint</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateMultiRegionAccessPoint.html">CreateMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteMultiRegionAccessPoint.html">DeleteMultiRegionAccessPoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DescribeMultiRegionAccessPointOperation.html">DescribeMultiRegionAccessPointOperation</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPoint.html">GetMultiRegionAccessPoint</a>
+ */
+ListMultiRegionAccessPointsResponse * S3ControlClient::listMultiRegionAccessPoints(const ListMultiRegionAccessPointsRequest &request)
+{
+    return qobject_cast<ListMultiRegionAccessPointsResponse *>(send(request));
 }
 
 /*!
@@ -1601,12 +2015,15 @@ PutAccessPointConfigurationForObjectLambdaResponse * S3ControlClient::putAccessP
  * Associates an access policy with the specified access point. Each access point can have only one policy, so a request
  * made to this API replaces any existing policy associated with the specified access
  *
- * point> <p/>
+ * point>
+ *
+ * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicy.html#API_control_PutAccessPointPolicy_Examples">Examples</a>
  *
  * section>
@@ -1675,12 +2092,15 @@ PutAccessPointPolicyForObjectLambdaResponse * S3ControlClient::putAccessPointPol
  * Outposts buckets only support lifecycle configurations that delete/expire objects after a certain period of time and
  * abort incomplete multipart
  *
- * uploads> <p/>
+ * uploads>
+ *
+ * </p
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html#API_control_PutBucketLifecycleConfiguration_Examples">Examples</a>
  *
  * section>
@@ -1722,9 +2142,9 @@ PutBucketLifecycleConfigurationResponse * S3ControlClient::putBucketLifecycleCon
  *
  * Guide</i>>
  *
- * If you are using an identity other than the root user of the AWS account that owns the Outposts bucket, the calling
- * identity must have the <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and belong to the
- * bucket owner's account in order to use this
+ * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts bucket,
+ * the calling identity must have the <code>PutBucketPolicy</code> permissions on the specified Outposts bucket and belong
+ * to the bucket owner's account in order to use this
  *
  * action>
  *
@@ -1734,8 +2154,8 @@ PutBucketLifecycleConfigurationResponse * S3ControlClient::putBucketLifecycleCon
  *
  * error> <b>
  *
- * As a security precaution, the root user of the AWS account that owns a bucket can always use this action, even if the
- * policy explicitly denies the root user the ability to perform this action.
+ * As a security precaution, the root user of the Amazon Web Services account that owns a bucket can always use this
+ * action, even if the policy explicitly denies the root user the ability to perform this action.
  *
  * </p </b>
  *
@@ -1745,9 +2165,10 @@ PutBucketLifecycleConfigurationResponse * S3ControlClient::putBucketLifecycleCon
  * Policies</a>>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketPolicy.html#API_control_PutBucketPolicy_Examples">Examples</a>
  *
  * section>
@@ -1787,12 +2208,12 @@ PutBucketPolicyResponse * S3ControlClient::putBucketPolicy(const PutBucketPolicy
  *
  * Guide</i>>
  *
- * Use tags to organize your AWS bill to reflect your own cost structure. To do this, sign up to get your AWS account bill
- * with tag key values included. Then, to see the cost of combined resources, organize your billing information according
- * to resources with the same tag key values. For example, you can tag several resources with a specific application name,
- * and then organize your billing information to see the total cost of that application across several services. For more
- * information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost
- * allocation and
+ * Use tags to organize your Amazon Web Services bill to reflect your own cost structure. To do this, sign up to get your
+ * Amazon Web Services account bill with tag key values included. Then, to see the cost of combined resources, organize
+ * your billing information according to resources with the same tag key values. For example, you can tag several resources
+ * with a specific application name, and then organize your billing information to see the total cost of that application
+ * across several services. For more information, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Cost allocation and
  *
  * tagging</a>> <note>
  *
@@ -1824,7 +2245,7 @@ PutBucketPolicyResponse * S3ControlClient::putBucketPolicy(const PutBucketPolicy
  * information about tag restrictions, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html"> User-Defined Tag
  * Restrictions</a> and <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/aws-tag-restrictions.html">
- * AWS-Generated Cost Allocation Tag
+ * Amazon Web Services-Generated Cost Allocation Tag
  *
  * Restrictions</a>> </li> </ul> </li> <li>
  *
@@ -1853,9 +2274,10 @@ PutBucketPolicyResponse * S3ControlClient::putBucketPolicy(const PutBucketPolicy
  * bucket> </li> </ul> </li> </ul>
  *
  * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
- * <code>x-amz-outpost-id</code> to be passed with the request and an S3 on Outposts endpoint hostname prefix instead of
- * <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that uses the S3 on Outposts
- * endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived using the access point ARN, see the <a
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketTagging.html#API_control_PutBucketTagging_Examples">Examples</a>
  *
  * section>
@@ -1877,6 +2299,91 @@ PutBucketTaggingResponse * S3ControlClient::putBucketTagging(const PutBucketTagg
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * PutBucketVersioningResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This operation sets the versioning state only for S3 on Outposts buckets. To set the versioning state for an S3 bucket,
+ * see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketVersioning.html">PutBucketVersioning</a> in
+ * the <i>Amazon S3 API Reference</i>.
+ *
+ * </p </note>
+ *
+ * Sets the versioning state for an S3 on Outposts bucket. With versioning, you can save multiple distinct copies of your
+ * data and recover from unintended user actions and application
+ *
+ * failures>
+ *
+ * You can set the versioning state to one of the
+ *
+ * following> <ul> <li>
+ *
+ * <b>Enabled</b> - Enables versioning for the objects in the bucket. All objects added to the bucket receive a unique
+ * version
+ *
+ * ID> </li> <li>
+ *
+ * <b>Suspended</b> - Suspends versioning for the objects in the bucket. All objects added to the bucket receive the
+ * version ID
+ *
+ * <code>null</code>> </li> </ul>
+ *
+ * If you've never set versioning on your bucket, it has no versioning state. In that case, a <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketVersioning.html"> GetBucketVersioning</a>
+ * request does not return a versioning state
+ *
+ * value>
+ *
+ * When you enable S3 Versioning, for each object in your bucket, you have a current version and zero or more noncurrent
+ * versions. You can configure your bucket S3 Lifecycle rules to expire noncurrent versions after a specified time period.
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsLifecycleManaging.html"> Creating and managing a
+ * lifecycle configuration for your S3 on Outposts bucket</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * If you have an object expiration lifecycle policy in your non-versioned bucket and you want to maintain the same
+ * permanent delete behavior when you enable versioning, you must add a noncurrent expiration policy. The noncurrent
+ * expiration lifecycle policy will manage the deletes of the noncurrent object versions in the version-enabled bucket. For
+ * more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html">Versioning</a> in
+ * the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * All Amazon S3 on Outposts REST API requests for this action require an additional parameter of
+ * <code>x-amz-outpost-id</code> to be passed with the request. In addition, you must use an S3 on Outposts endpoint
+ * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on Outposts that
+ * uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by using the access point
+ * ARN, see the <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketVersioning.html#API_control_PutBucketVersioning_Examples">Examples</a>
+ *
+ * section>
+ *
+ * The following operations are related to <code>PutBucketVersioning</code> for S3 on
+ *
+ * Outposts> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketVersioning.html">GetBucketVersioning</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html">PutBucketLifecycleConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html">GetBucketLifecycleConfiguration</a>
+ */
+PutBucketVersioningResponse * S3ControlClient::putBucketVersioning(const PutBucketVersioningRequest &request)
+{
+    return qobject_cast<PutBucketVersioningResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * PutJobTaggingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1893,7 +2400,9 @@ PutBucketTaggingResponse * S3ControlClient::putBucketTagging(const PutBucketTagg
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags">Controlling
  * access and labeling jobs using tags</a> in the <i>Amazon S3 User Guide</i>.
  *
- * </p <p/> <note> <ul> <li>
+ * </p
+ *
+ * </p <note> <ul> <li>
  *
  * If you send this request with an empty tag set, Amazon S3 deletes the existing tag set on the Batch Operations job. If
  * you use this method, you are charged for a Tier 1 Request (PUT). For more information, see <a
@@ -1929,9 +2438,11 @@ PutBucketTaggingResponse * S3ControlClient::putBucketTagging(const PutBucketTagg
  *
  * For tagging-related restrictions related to characters and encodings, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag
- * Restrictions</a> in the <i>AWS Billing and Cost Management User
+ * Restrictions</a> in the <i>Billing and Cost Management User
  *
- * Guide</i>> </li> </ul> </li> </ul> </note> <p/>
+ * Guide</i>> </li> </ul> </li> </ul> </note>
+ *
+ * </p
  *
  * To use this action, you must have permission to perform the <code>s3:PutJobTagging</code>
  *
@@ -1941,7 +2452,7 @@ PutBucketTaggingResponse * S3ControlClient::putBucketTagging(const PutBucketTagg
  *
  * include> <ul> <li>
  *
- * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreatJob</a>
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html">CreateJob</a>
  *
  * </p </li> <li>
  *
@@ -1958,11 +2469,48 @@ PutJobTaggingResponse * S3ControlClient::putJobTagging(const PutJobTaggingReques
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * PutMultiRegionAccessPointPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates an access control policy with the specified Multi-Region Access Point. Each Multi-Region Access Point can
+ * have only one policy, so a request made to this action replaces any existing policy that is associated with the
+ * specified Multi-Region Access
+ *
+ * Point>
+ *
+ * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions around
+ * managing Multi-Region Access Points, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing Multi-Region
+ * Access Points</a> in the <i>Amazon S3 User
+ *
+ * Guide</i>>
+ *
+ * The following actions are related to
+ *
+ * <code>PutMultiRegionAccessPointPolicy</code>> <ul> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicy.html">GetMultiRegionAccessPointPolicy</a>
+ *
+ * </p </li> <li>
+ *
+ * <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetMultiRegionAccessPointPolicyStatus.html">GetMultiRegionAccessPointPolicyStatus</a>
+ */
+PutMultiRegionAccessPointPolicyResponse * S3ControlClient::putMultiRegionAccessPointPolicy(const PutMultiRegionAccessPointPolicyRequest &request)
+{
+    return qobject_cast<PutMultiRegionAccessPointPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * PutPublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or modifies the <code>PublicAccessBlock</code> configuration for an AWS account. For more information, see <a
+ * Creates or modifies the <code>PublicAccessBlock</code> configuration for an Amazon Web Services account. For this
+ * operation, users must have the <code>s3:PutAccountPublicAccessBlock</code> permission. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html"> Using Amazon S3 block
  * public
  *
@@ -2034,10 +2582,12 @@ PutStorageLensConfigurationTaggingResponse * S3ControlClient::putStorageLensConf
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an existing S3 Batch Operations job's priority. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 Batch Operations</a> in the <i>Amazon S3
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the <i>Amazon S3
  * User
  *
- * Guide</i>> <p/>
+ * Guide</i>>
+ *
+ * </p
  *
  * Related actions
  *
@@ -2069,10 +2619,12 @@ UpdateJobPriorityResponse * S3ControlClient::updateJobPriority(const UpdateJobPr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the status for the specified job. Use this action to confirm that you want to run a job or to cancel an existing
- * job. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-basics.html">S3 Batch
+ * job. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch
  * Operations</a> in the <i>Amazon S3 User
  *
- * Guide</i>> <p/>
+ * Guide</i>>
+ *
+ * </p
  *
  * Related actions
  *

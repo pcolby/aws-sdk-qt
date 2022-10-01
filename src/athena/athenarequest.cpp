@@ -37,6 +37,7 @@ namespace Athena {
  * requests.
  *
  * \value BatchGetNamedQueryAction Athena BatchGetNamedQuery action.
+ * \value BatchGetPreparedStatementAction Athena BatchGetPreparedStatement action.
  * \value BatchGetQueryExecutionAction Athena BatchGetQueryExecution action.
  * \value CreateDataCatalogAction Athena CreateDataCatalog action.
  * \value CreateNamedQueryAction Athena CreateNamedQuery action.
@@ -52,6 +53,7 @@ namespace Athena {
  * \value GetPreparedStatementAction Athena GetPreparedStatement action.
  * \value GetQueryExecutionAction Athena GetQueryExecution action.
  * \value GetQueryResultsAction Athena GetQueryResults action.
+ * \value GetQueryRuntimeStatisticsAction Athena GetQueryRuntimeStatistics action.
  * \value GetTableMetadataAction Athena GetTableMetadata action.
  * \value GetWorkGroupAction Athena GetWorkGroup action.
  * \value ListDataCatalogsAction Athena ListDataCatalogs action.
@@ -68,6 +70,7 @@ namespace Athena {
  * \value TagResourceAction Athena TagResource action.
  * \value UntagResourceAction Athena UntagResource action.
  * \value UpdateDataCatalogAction Athena UpdateDataCatalog action.
+ * \value UpdateNamedQueryAction Athena UpdateNamedQuery action.
  * \value UpdatePreparedStatementAction Athena UpdatePreparedStatement action.
  * \value UpdateWorkGroupAction Athena UpdateWorkGroup action.
  */
@@ -277,7 +280,7 @@ QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, AthenaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-05-18"))
 {
 
 }
@@ -312,6 +315,7 @@ QString AthenaRequestPrivate::toString(const AthenaRequest::Action &action)
         case AthenaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(BatchGetNamedQuery);
+        ActionToString(BatchGetPreparedStatement);
         ActionToString(BatchGetQueryExecution);
         ActionToString(CreateDataCatalog);
         ActionToString(CreateNamedQuery);
@@ -327,6 +331,7 @@ QString AthenaRequestPrivate::toString(const AthenaRequest::Action &action)
         ActionToString(GetPreparedStatement);
         ActionToString(GetQueryExecution);
         ActionToString(GetQueryResults);
+        ActionToString(GetQueryRuntimeStatistics);
         ActionToString(GetTableMetadata);
         ActionToString(GetWorkGroup);
         ActionToString(ListDataCatalogs);
@@ -343,6 +348,7 @@ QString AthenaRequestPrivate::toString(const AthenaRequest::Action &action)
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateDataCatalog);
+        ActionToString(UpdateNamedQuery);
         ActionToString(UpdatePreparedStatement);
         ActionToString(UpdateWorkGroup);
         default:

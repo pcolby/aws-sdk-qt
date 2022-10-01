@@ -25,27 +25,37 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::DeleteAppResponse
- * \brief The DeleteAppResponse class provides an interace for SMS DeleteApp responses.
+ * \class QtAws::Sms::DeleteAppResponse
+ * \brief The DeleteAppResponse class provides an interace for Sms DeleteApp responses.
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  *
- *  <fullname>AWS Server Migration Service</fullname>
+ *  <b>
  * 
- *  AWS Server Migration Service (AWS SMS) makes it easier and faster for you to migrate your on-premises workloads to AWS.
- *  To learn more about AWS SMS, see the following
+ *  <b>Product update</b>
+ * 
+ *  </p
+ * 
+ *  We recommend <a href="http://aws.amazon.com/application-migration-service">Amazon Web Services Application Migration
+ *  Service</a> (Amazon Web Services MGN) as the primary migration service for lift-and-shift migrations. If Amazon Web
+ *  Services MGN is unavailable in a specific Amazon Web Services Region, you can use the Server Migration Service APIs
+ *  through March
+ * 
+ *  2023> </b>
+ * 
+ *  Server Migration Service (Server Migration Service) makes it easier and faster for you to migrate your on-premises
+ *  workloads to Amazon Web Services. To learn more about Server Migration Service, see the following
  * 
  *  resources> <ul> <li>
  * 
- *  <a href="http://aws.amazon.com/server-migration-service/">AWS Server Migration Service product page</a>
+ *  <a href="http://aws.amazon.com/server-migration-service/">Server Migration Service product page</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">AWS Server Migration Service User
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">Server Migration Service User Guide</a>
  *
  * \sa SmsClient::deleteApp
  */
@@ -74,7 +84,7 @@ const DeleteAppRequest * DeleteAppResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SMS DeleteApp \a response.
+ * Parses a successful Sms DeleteApp \a response.
  */
 void DeleteAppResponse::parseSuccess(QIODevice &response)
 {
@@ -84,11 +94,11 @@ void DeleteAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SMS::DeleteAppResponsePrivate
+ * \class QtAws::Sms::DeleteAppResponsePrivate
  * \brief The DeleteAppResponsePrivate class provides private implementation for DeleteAppResponse.
  * \internal
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -101,7 +111,7 @@ DeleteAppResponsePrivate::DeleteAppResponsePrivate(
 }
 
 /*!
- * Parses a SMS DeleteApp response element from \a xml.
+ * Parses a Sms DeleteApp response element from \a xml.
  */
 void DeleteAppResponsePrivate::parseDeleteAppResponse(QXmlStreamReader &xml)
 {
@@ -109,5 +119,5 @@ void DeleteAppResponsePrivate::parseDeleteAppResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

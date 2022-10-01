@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class FmsClient;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

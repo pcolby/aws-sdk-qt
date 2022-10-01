@@ -1,12 +1,17 @@
 add_compile_definitions(QTAWSCOMPUTEOPTIMIZER_LIBRARY)
 
 add_library(QtAwsComputeOptimizer
+  qtawscomputeoptimizerglobal.h
   computeoptimizerclient.h
   computeoptimizerclient_p.h
   computeoptimizerrequest.h
   computeoptimizerrequest_p.h
   computeoptimizerresponse.h
   computeoptimizerresponse_p.h
+  deleterecommendationpreferencesrequest.h
+  deleterecommendationpreferencesrequest_p.h
+  deleterecommendationpreferencesresponse.h
+  deleterecommendationpreferencesresponse_p.h
   describerecommendationexportjobsrequest.h
   describerecommendationexportjobsrequest_p.h
   describerecommendationexportjobsresponse.h
@@ -43,19 +48,34 @@ add_library(QtAwsComputeOptimizer
   getec2recommendationprojectedmetricsrequest_p.h
   getec2recommendationprojectedmetricsresponse.h
   getec2recommendationprojectedmetricsresponse_p.h
+  geteffectiverecommendationpreferencesrequest.h
+  geteffectiverecommendationpreferencesrequest_p.h
+  geteffectiverecommendationpreferencesresponse.h
+  geteffectiverecommendationpreferencesresponse_p.h
   getenrollmentstatusrequest.h
   getenrollmentstatusrequest_p.h
   getenrollmentstatusresponse.h
   getenrollmentstatusresponse_p.h
+  getenrollmentstatusesfororganizationrequest.h
+  getenrollmentstatusesfororganizationrequest_p.h
+  getenrollmentstatusesfororganizationresponse.h
+  getenrollmentstatusesfororganizationresponse_p.h
   getlambdafunctionrecommendationsrequest.h
   getlambdafunctionrecommendationsrequest_p.h
   getlambdafunctionrecommendationsresponse.h
   getlambdafunctionrecommendationsresponse_p.h
+  getrecommendationpreferencesrequest.h
+  getrecommendationpreferencesrequest_p.h
+  getrecommendationpreferencesresponse.h
+  getrecommendationpreferencesresponse_p.h
   getrecommendationsummariesrequest.h
   getrecommendationsummariesrequest_p.h
   getrecommendationsummariesresponse.h
   getrecommendationsummariesresponse_p.h
-  qtawscomputeoptimizerglobal.h
+  putrecommendationpreferencesrequest.h
+  putrecommendationpreferencesrequest_p.h
+  putrecommendationpreferencesresponse.h
+  putrecommendationpreferencesresponse_p.h
   updateenrollmentstatusrequest.h
   updateenrollmentstatusrequest_p.h
   updateenrollmentstatusresponse.h
@@ -63,6 +83,8 @@ add_library(QtAwsComputeOptimizer
   computeoptimizerclient.cpp
   computeoptimizerrequest.cpp
   computeoptimizerresponse.cpp
+  deleterecommendationpreferencesrequest.cpp
+  deleterecommendationpreferencesresponse.cpp
   describerecommendationexportjobsrequest.cpp
   describerecommendationexportjobsresponse.cpp
   exportautoscalinggrouprecommendationsrequest.cpp
@@ -81,12 +103,20 @@ add_library(QtAwsComputeOptimizer
   getec2instancerecommendationsresponse.cpp
   getec2recommendationprojectedmetricsrequest.cpp
   getec2recommendationprojectedmetricsresponse.cpp
+  geteffectiverecommendationpreferencesrequest.cpp
+  geteffectiverecommendationpreferencesresponse.cpp
   getenrollmentstatusrequest.cpp
   getenrollmentstatusresponse.cpp
+  getenrollmentstatusesfororganizationrequest.cpp
+  getenrollmentstatusesfororganizationresponse.cpp
   getlambdafunctionrecommendationsrequest.cpp
   getlambdafunctionrecommendationsresponse.cpp
+  getrecommendationpreferencesrequest.cpp
+  getrecommendationpreferencesresponse.cpp
   getrecommendationsummariesrequest.cpp
   getrecommendationsummariesresponse.cpp
+  putrecommendationpreferencesrequest.cpp
+  putrecommendationpreferencesresponse.cpp
   updateenrollmentstatusrequest.cpp
   updateenrollmentstatusresponse.cpp)
 

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSHONEYCODE_LIBRARY)
 
 add_library(QtAwsHoneycode
+  qtawshoneycodeglobal.h
+  honeycodeclient.h
+  honeycodeclient_p.h
+  honeycoderequest.h
+  honeycoderequest_p.h
+  honeycoderesponse.h
+  honeycoderesponse_p.h
   batchcreatetablerowsrequest.h
   batchcreatetablerowsrequest_p.h
   batchcreatetablerowsresponse.h
@@ -25,12 +32,6 @@ add_library(QtAwsHoneycode
   getscreendatarequest_p.h
   getscreendataresponse.h
   getscreendataresponse_p.h
-  honeycodeclient.h
-  honeycodeclient_p.h
-  honeycoderequest.h
-  honeycoderequest_p.h
-  honeycoderesponse.h
-  honeycoderesponse_p.h
   invokescreenautomationrequest.h
   invokescreenautomationrequest_p.h
   invokescreenautomationresponse.h
@@ -47,7 +48,10 @@ add_library(QtAwsHoneycode
   listtablesrequest_p.h
   listtablesresponse.h
   listtablesresponse_p.h
-  qtawshoneycodeglobal.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   querytablerowsrequest.h
   querytablerowsrequest_p.h
   querytablerowsresponse.h
@@ -56,6 +60,17 @@ add_library(QtAwsHoneycode
   starttabledataimportjobrequest_p.h
   starttabledataimportjobresponse.h
   starttabledataimportjobresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  honeycodeclient.cpp
+  honeycoderequest.cpp
+  honeycoderesponse.cpp
   batchcreatetablerowsrequest.cpp
   batchcreatetablerowsresponse.cpp
   batchdeletetablerowsrequest.cpp
@@ -68,9 +83,6 @@ add_library(QtAwsHoneycode
   describetabledataimportjobresponse.cpp
   getscreendatarequest.cpp
   getscreendataresponse.cpp
-  honeycodeclient.cpp
-  honeycoderequest.cpp
-  honeycoderesponse.cpp
   invokescreenautomationrequest.cpp
   invokescreenautomationresponse.cpp
   listtablecolumnsrequest.cpp
@@ -79,10 +91,16 @@ add_library(QtAwsHoneycode
   listtablerowsresponse.cpp
   listtablesrequest.cpp
   listtablesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   querytablerowsrequest.cpp
   querytablerowsresponse.cpp
   starttabledataimportjobrequest.cpp
-  starttabledataimportjobresponse.cpp)
+  starttabledataimportjobresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 target_link_libraries(QtAwsHoneycode
   PRIVATE QtAwsCore

@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetSuppressionOptionsRequestPrivate;
 
-class QTAWSSESV2_EXPORT PutConfigurationSetSuppressionOptionsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutConfigurationSetSuppressionOptionsRequest : public SESv2Request {
 
 public:
     PutConfigurationSetSuppressionOptionsRequest(const PutConfigurationSetSuppressionOptionsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

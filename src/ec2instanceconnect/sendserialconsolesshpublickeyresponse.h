@@ -24,11 +24,11 @@
 #include "sendserialconsolesshpublickeyrequest.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 class SendSerialConsoleSSHPublicKeyResponsePrivate;
 
-class QTAWSEC2INSTANCECONNECT_EXPORT SendSerialConsoleSSHPublicKeyResponse : public EC2InstanceConnectResponse {
+class QTAWSEC2INSTANCECONNECT_EXPORT SendSerialConsoleSSHPublicKeyResponse : public Ec2InstanceConnectResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

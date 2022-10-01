@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::OptInPhoneNumberResponse
- * \brief The OptInPhoneNumberResponse class provides an interace for SNS OptInPhoneNumber responses.
+ * \class QtAws::Sns::OptInPhoneNumberResponse
+ * \brief The OptInPhoneNumberResponse class provides an interace for Sns OptInPhoneNumber responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const OptInPhoneNumberRequest * OptInPhoneNumberResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS OptInPhoneNumber \a response.
+ * Parses a successful Sns OptInPhoneNumber \a response.
  */
 void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::OptInPhoneNumberResponsePrivate
+ * \class QtAws::Sns::OptInPhoneNumberResponsePrivate
  * \brief The OptInPhoneNumberResponsePrivate class provides private implementation for OptInPhoneNumberResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
 }
 
 /*!
- * Parses a SNS OptInPhoneNumber response element from \a xml.
+ * Parses a Sns OptInPhoneNumber response element from \a xml.
  */
 void OptInPhoneNumberResponsePrivate::parseOptInPhoneNumberResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void OptInPhoneNumberResponsePrivate::parseOptInPhoneNumberResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

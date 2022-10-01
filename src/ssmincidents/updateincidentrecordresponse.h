@@ -24,11 +24,11 @@
 #include "updateincidentrecordrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class UpdateIncidentRecordResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT UpdateIncidentRecordResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT UpdateIncidentRecordResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

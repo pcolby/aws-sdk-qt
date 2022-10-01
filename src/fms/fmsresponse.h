@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class FmsResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

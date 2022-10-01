@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWORKLINK_LIBRARY)
 
 add_library(QtAwsWorkLink
+  qtawsworklinkglobal.h
+  worklinkclient.h
+  worklinkclient_p.h
+  worklinkrequest.h
+  worklinkrequest_p.h
+  worklinkresponse.h
+  worklinkresponse_p.h
   associatedomainrequest.h
   associatedomainrequest_p.h
   associatedomainresponse.h
@@ -29,14 +36,14 @@ add_library(QtAwsWorkLink
   describecompanynetworkconfigurationrequest_p.h
   describecompanynetworkconfigurationresponse.h
   describecompanynetworkconfigurationresponse_p.h
-  describedevicepolicyconfigurationrequest.h
-  describedevicepolicyconfigurationrequest_p.h
-  describedevicepolicyconfigurationresponse.h
-  describedevicepolicyconfigurationresponse_p.h
   describedevicerequest.h
   describedevicerequest_p.h
   describedeviceresponse.h
   describedeviceresponse_p.h
+  describedevicepolicyconfigurationrequest.h
+  describedevicepolicyconfigurationrequest_p.h
+  describedevicepolicyconfigurationresponse.h
+  describedevicepolicyconfigurationresponse_p.h
   describedomainrequest.h
   describedomainrequest_p.h
   describedomainresponse.h
@@ -89,7 +96,6 @@ add_library(QtAwsWorkLink
   listwebsitecertificateauthoritiesrequest_p.h
   listwebsitecertificateauthoritiesresponse.h
   listwebsitecertificateauthoritiesresponse_p.h
-  qtawsworklinkglobal.h
   restoredomainaccessrequest.h
   restoredomainaccessrequest_p.h
   restoredomainaccessresponse.h
@@ -134,12 +140,9 @@ add_library(QtAwsWorkLink
   updateidentityproviderconfigurationrequest_p.h
   updateidentityproviderconfigurationresponse.h
   updateidentityproviderconfigurationresponse_p.h
-  worklinkclient.h
-  worklinkclient_p.h
-  worklinkrequest.h
-  worklinkrequest_p.h
-  worklinkresponse.h
-  worklinkresponse_p.h
+  worklinkclient.cpp
+  worklinkrequest.cpp
+  worklinkresponse.cpp
   associatedomainrequest.cpp
   associatedomainresponse.cpp
   associatewebsiteauthorizationproviderrequest.cpp
@@ -154,10 +157,10 @@ add_library(QtAwsWorkLink
   describeauditstreamconfigurationresponse.cpp
   describecompanynetworkconfigurationrequest.cpp
   describecompanynetworkconfigurationresponse.cpp
-  describedevicepolicyconfigurationrequest.cpp
-  describedevicepolicyconfigurationresponse.cpp
   describedevicerequest.cpp
   describedeviceresponse.cpp
+  describedevicepolicyconfigurationrequest.cpp
+  describedevicepolicyconfigurationresponse.cpp
   describedomainrequest.cpp
   describedomainresponse.cpp
   describefleetmetadatarequest.cpp
@@ -205,10 +208,7 @@ add_library(QtAwsWorkLink
   updatefleetmetadatarequest.cpp
   updatefleetmetadataresponse.cpp
   updateidentityproviderconfigurationrequest.cpp
-  updateidentityproviderconfigurationresponse.cpp
-  worklinkclient.cpp
-  worklinkrequest.cpp
-  worklinkresponse.cpp)
+  updateidentityproviderconfigurationresponse.cpp)
 
 target_link_libraries(QtAwsWorkLink
   PRIVATE QtAwsCore

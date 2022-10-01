@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateResponsePlanResponse
- * \brief The UpdateResponsePlanResponse class provides an interace for SSMIncidents UpdateResponsePlan responses.
+ * \class QtAws::SsmIncidents::UpdateResponsePlanResponse
+ * \brief The UpdateResponsePlanResponse class provides an interace for SsmIncidents UpdateResponsePlan responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateResponsePlan
+ * \sa SsmIncidentsClient::updateResponsePlan
  */
 
 /*!
@@ -54,7 +54,7 @@ UpdateResponsePlanResponse::UpdateResponsePlanResponse(
         const UpdateResponsePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new UpdateResponsePlanResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new UpdateResponsePlanResponsePrivate(this), parent)
 {
     setRequest(new UpdateResponsePlanRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const UpdateResponsePlanRequest * UpdateResponsePlanResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents UpdateResponsePlan \a response.
+ * Parses a successful SsmIncidents UpdateResponsePlan \a response.
  */
 void UpdateResponsePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void UpdateResponsePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateResponsePlanResponsePrivate
+ * \class QtAws::SsmIncidents::UpdateResponsePlanResponsePrivate
  * \brief The UpdateResponsePlanResponsePrivate class provides private implementation for UpdateResponsePlanResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a UpdateResponsePlanResponsePrivate object with public implementation \a q.
  */
 UpdateResponsePlanResponsePrivate::UpdateResponsePlanResponsePrivate(
-    UpdateResponsePlanResponse * const q) : SSMIncidentsResponsePrivate(q)
+    UpdateResponsePlanResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents UpdateResponsePlan response element from \a xml.
+ * Parses a SsmIncidents UpdateResponsePlan response element from \a xml.
  */
 void UpdateResponsePlanResponsePrivate::parseUpdateResponsePlanResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateResponsePlanResponsePrivate::parseUpdateResponsePlanResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

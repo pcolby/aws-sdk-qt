@@ -63,6 +63,8 @@
 #include "getmetricwidgetimageresponse.h"
 #include "listdashboardsrequest.h"
 #include "listdashboardsresponse.h"
+#include "listmanagedinsightrulesrequest.h"
+#include "listmanagedinsightrulesresponse.h"
 #include "listmetricstreamsrequest.h"
 #include "listmetricstreamsresponse.h"
 #include "listmetricsrequest.h"
@@ -77,6 +79,8 @@
 #include "putdashboardresponse.h"
 #include "putinsightrulerequest.h"
 #include "putinsightruleresponse.h"
+#include "putmanagedinsightrulesrequest.h"
+#include "putmanagedinsightrulesresponse.h"
 #include "putmetricalarmrequest.h"
 #include "putmetricalarmresponse.h"
 #include "putmetricdatarequest.h"
@@ -116,8 +120,9 @@ namespace CloudWatch {
  * \ingroup aws-clients
  * \inmodule QtAwsCloudWatch
  *
- *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
- *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ *  Amazon CloudWatch monitors your Amazon Web Services (Amazon Web Services) resources and the applications you run on
+ *  Amazon Web Services in real time. You can use CloudWatch to collect and track metrics, which are the variables you want
+ *  to measure for your resources and
  * 
  *  applications>
  * 
@@ -128,8 +133,9 @@ namespace CloudWatch {
  * 
  *  money>
  * 
- *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
- *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *  In addition to monitoring the built-in metrics that come with Amazon Web Services, you can monitor your own custom
+ *  metrics. With CloudWatch, you gain system-wide visibility into resource utilization, application performance, and
+ *  operational
  */
 
 /*!
@@ -226,7 +232,10 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified anomaly detection model from your
+ * Deletes the specified anomaly detection model from your account. For more information about how to delete an anomaly
+ * detection model, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Anomaly_Detection_Alarm.html#Delete_Anomaly_Detection_Model">Deleting
+ * an anomaly detection model</a> in the <i>CloudWatch User Guide</i>.
  */
 DeleteAnomalyDetectorResponse * CloudWatchClient::deleteAnomalyDetector(const DeleteAnomalyDetectorRequest &request)
 {
@@ -290,6 +299,12 @@ DeleteMetricStreamResponse * CloudWatchClient::deleteMetricStream(const DeleteMe
  * returned>
  *
  * CloudWatch retains the history of an alarm even if you delete the
+ *
+ * alarm>
+ *
+ * To use this operation and return information about a composite alarm, you must be signed on with the
+ * <code>cloudwatch:DescribeAlarmHistory</code> permission that is scoped to <code>*</code>. You can't return information
+ * about composite alarms if your <code>cloudwatch:DescribeAlarmHistory</code> permission has a narrower
  */
 DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const DescribeAlarmHistoryRequest &request)
 {
@@ -304,6 +319,12 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
  *
  * Retrieves the specified alarms. You can filter the results by specifying a prefix for the alarm name, the alarm state,
  * or a prefix for any
+ *
+ * action>
+ *
+ * To use this operation and return information about composite alarms, you must be signed on with the
+ * <code>cloudwatch:DescribeAlarms</code> permission that is scoped to <code>*</code>. You can't return information about
+ * composite alarms if your <code>cloudwatch:DescribeAlarms</code> permission has a narrower
  */
 DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRequest &request)
 {
@@ -334,8 +355,11 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the anomaly detection models that you have created in your account. You can list all models in your account or
- * filter the results to only the models that are related to a certain namespace, metric name, or metric
+ * Lists the anomaly detection models that you have created in your account. For single metric anomaly detectors, you can
+ * list all of the models in your account or filter the results to only the models that are related to a certain namespace,
+ * metric name, or metric dimension. For metric math anomaly detectors, you can list them by adding
+ * <code>METRIC_MATH</code> to the <code>AnomalyDetectorTypes</code> array. This will return all metric math anomaly
+ * detectors in your
  */
 DescribeAnomalyDetectorsResponse * CloudWatchClient::describeAnomalyDetectors(const DescribeAnomalyDetectorsRequest &request)
 {
@@ -493,15 +517,28 @@ GetInsightRuleReportResponse * CloudWatchClient::getInsightRuleReport(const GetI
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can use the <code>GetMetricData</code> API to retrieve as many as 500 different metrics in a single request, with a
- * total of as many as 100,800 data points. You can also optionally perform math expressions on the values of the returned
- * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
- * could divide the Errors metric by the Invocations metric to get an error rate time series. For more information about
- * metric math expressions, see <a
+ * You can use the <code>GetMetricData</code> API to retrieve CloudWatch metric values. The operation can also include a
+ * CloudWatch Metrics Insights query, and one or more metric math
+ *
+ * functions>
+ *
+ * A <code>GetMetricData</code> operation that does not include a query can retrieve as many as 500 different metrics in a
+ * single request, with a total of as many as 100,800 data points. You can also optionally perform metric math expressions
+ * on the values of the returned statistics, to create new time series that represent new insights into your data. For
+ * example, using Lambda metrics, you could divide the Errors metric by the Invocations metric to get an error rate time
+ * series. For more information about metric math expressions, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Metric
  * Math Syntax and Functions</a> in the <i>Amazon CloudWatch User
  *
  * Guide</i>>
+ *
+ * If you include a Metrics Insights query, each <code>GetMetricData</code> operation can include only one query. But the
+ * same <code>GetMetricData</code> operation can also retrieve other metrics. Metrics Insights queries can query only the
+ * most recent three hours of metric data. For more information about Metrics Insights, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/query_with_cloudwatch-metrics-insights.html">Query
+ * your metrics with CloudWatch Metrics
+ *
+ * Insights</a>>
  *
  * Calls to the <code>GetMetricData</code> API have a different pricing structure than calls to
  * <code>GetMetricStatistics</code>. For more information about pricing, see <a
@@ -541,6 +578,18 @@ GetInsightRuleReportResponse * CloudWatchClient::getInsightRuleReport(const GetI
  * corresponding units that were specified when the data was reported to CloudWatch. If you specify a unit, the operation
  * returns only data that was collected with that unit specified. If you specify a unit that does not match the data
  * collected, the results of the operation are null. CloudWatch does not perform unit
+ *
+ * conversions>
+ *
+ * <b>Using Metrics Insights queries with metric math</b>
+ *
+ * </p
+ *
+ * You can't mix a Metric Insights query and metric math syntax in the same expression, but you can reference results from
+ * a Metrics Insights query within other Metric math expressions. A Metrics Insights query without a <b>GROUP BY</b> clause
+ * returns a single time-series (TS), and can be used as input for a metric math expression that expects a single time
+ * series. A Metrics Insights query with a <b>GROUP BY</b> clause returns an array of time-series (TS[]), and can be used
+ * as input for a metric math expression that expects an array of time series.
  */
 GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataRequest &request)
 {
@@ -619,7 +668,7 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
  *
  * 2016>
  *
- * For information about metrics and dimensions supported by AWS services, see the <a
+ * For information about metrics and dimensions supported by Amazon Web Services services, see the <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">Amazon CloudWatch Metrics
  * and Dimensions Reference</a> in the <i>Amazon CloudWatch User
  */
@@ -692,6 +741,19 @@ GetMetricWidgetImageResponse * CloudWatchClient::getMetricWidgetImage(const GetM
 ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRequest &request)
 {
     return qobject_cast<ListDashboardsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * ListManagedInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list that contains the number of managed Contributor Insights rules in your account.
+ */
+ListManagedInsightRulesResponse * CloudWatchClient::listManagedInsightRules(const ListManagedInsightRulesRequest &request)
+{
+    return qobject_cast<ListManagedInsightRulesResponse *>(send(request));
 }
 
 /*!
@@ -784,7 +846,9 @@ PutAnomalyDetectorResponse * CloudWatchClient::putAnomalyDetector(const PutAnoma
  *
  * met>
  *
- * The alarms specified in a composite alarm's rule expression can include metric alarms and other composite
+ * The alarms specified in a composite alarm's rule expression can include metric alarms and other composite alarms. The
+ * rule expression of a composite alarm can include as many as 100 underlying alarms. Any single alarm can be included in
+ * the rule expressions of as many as 150 composite
  *
  * alarms>
  *
@@ -825,6 +889,12 @@ PutAnomalyDetectorResponse * CloudWatchClient::putAnomalyDetector(const PutAnoma
  * configuration of the
  *
  * alarm>
+ *
+ * To use this operation, you must be signed on with the <code>cloudwatch:PutCompositeAlarm</code> permission that is
+ * scoped to <code>*</code>. You can't create a composite alarms if your <code>cloudwatch:PutCompositeAlarm</code>
+ * permission has a narrower
+ *
+ * scope>
  *
  * If you are an IAM user, you must have <code>iam:CreateServiceLinkedRole</code> to create a composite alarm that has
  * Systems Manager OpsItem
@@ -889,6 +959,24 @@ PutInsightRuleResponse * CloudWatchClient::putInsightRule(const PutInsightRuleRe
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutManagedInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a managed Contributor Insights rule for a specified Amazon Web Services resource. When you enable a managed
+ * rule, you create a Contributor Insights rule that collects data from Amazon Web Services services. You cannot edit these
+ * rules with <code>PutInsightRule</code>. The rules can be enabled, disabled, and deleted using
+ * <code>EnableInsightRules</code>, <code>DisableInsightRules</code>, and <code>DeleteInsightRules</code>. If a previously
+ * created managed rule is currently disabled, a subsequent call to this API will re-enable it. Use
+ * <code>ListManagedInsightRules</code> to describe all available rules.
+ */
+PutManagedInsightRulesResponse * CloudWatchClient::putManagedInsightRules(const PutManagedInsightRulesRequest &request)
+{
+    return qobject_cast<PutManagedInsightRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * PutMetricAlarmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -923,12 +1011,38 @@ PutInsightRuleResponse * CloudWatchClient::putInsightRule(const PutInsightRuleRe
  *
  * actions> </li> </ul>
  *
- * The first time you create an alarm in the AWS Management Console, the CLI, or by using the PutMetricAlarm API,
- * CloudWatch creates the necessary service-linked role for you. The service-linked roles are called
+ * The first time you create an alarm in the Amazon Web Services Management Console, the CLI, or by using the
+ * PutMetricAlarm API, CloudWatch creates the necessary service-linked role for you. The service-linked roles are called
  * <code>AWSServiceRoleForCloudWatchEvents</code> and <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For more
  * information, see <a
- * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">AWS
- * service-linked
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">Amazon
+ * Web Services service-linked
+ *
+ * role</a>>
+ *
+ * <b>Cross-account alarms</b>
+ *
+ * </p
+ *
+ * You can set an alarm on metrics in the current account, or in another account. To create a cross-account alarm that
+ * watches a metric in a different account, you must have completed the following
+ *
+ * pre-requisites> <ul> <li>
+ *
+ * The account where the metrics are located (the <i>sharing account</i>) must already have a sharing role named
+ * <b>CloudWatch-CrossAccountSharingRole</b>. If it does not already have this role, you must create it using the
+ * instructions in <b>Set up a sharing account</b> in <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Cross-Account-Cross-Region.html#enable-cross-account-cross-Region">
+ * Cross-account cross-Region CloudWatch console</a>. The policy for that role must grant access to the ID of the account
+ * where you are creating the alarm.
+ *
+ * </p </li> <li>
+ *
+ * The account where you are creating the alarm (the <i>monitoring account</i>) must already have a service-linked role
+ * named <b>AWSServiceRoleForCloudWatchCrossAccount</b> to allow CloudWatch to assume the sharing role in the sharing
+ * account. If it does not, you must create it following the directions in <b>Set up a monitoring account</b> in <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Cross-Account-Cross-Region.html#enable-cross-account-cross-Region">
+ * Cross-account cross-Region CloudWatch
  */
 PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRequest &request)
 {
@@ -955,8 +1069,8 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * data>
  *
- * Each <code>PutMetricData</code> request is limited to 40 KB in size for HTTP POST requests. You can send a payload
- * compressed by gzip. Each request is also limited to no more than 20 different
+ * Each <code>PutMetricData</code> request is limited to 1 MB in size for HTTP POST requests. You can send a payload
+ * compressed by gzip. Each request is also limited to no more than 1000 different
  *
  * metrics>
  *
@@ -966,7 +1080,7 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * supported>
  *
- * You can use up to 10 dimensions per metric to further clarify what data the metric collects. Each dimension consists of
+ * You can use up to 30 dimensions per metric to further clarify what data the metric collects. Each dimension consists of
  * a Name and Value pair. For more information about specifying dimensions, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publishing Metrics</a> in
  * the <i>Amazon CloudWatch User
@@ -1010,13 +1124,13 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a metric stream. Metric streams can automatically stream CloudWatch metrics to AWS destinations
- * including Amazon S3 and to many third-party
+ * Creates or updates a metric stream. Metric streams can automatically stream CloudWatch metrics to Amazon Web Services
+ * destinations including Amazon S3 and to many third-party
  *
  * solutions>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Metric-Streams.html">
- * Using Metric
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html"> Using Metric
  *
  * Streams</a>>
  *
@@ -1040,6 +1154,14 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
  * Stream metrics from only the metric namespaces that you list in
  *
  * <code>IncludeFilters</code>> </li> </ul>
+ *
+ * By default, a metric stream always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
+ * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can use the
+ * <code>StatisticsConfigurations</code> parameter to have the metric stream also send additional statistics in the stream.
+ * Streaming additional statistics incurs additional costs. For more information, see <a
+ * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
+ *
+ * </p
  *
  * When you use <code>PutMetricStream</code> to create a new metric stream, the stream is created in the
  * <code>running</code> state. If you use it to update an existing stream, the state of the stream is not
@@ -1122,7 +1244,7 @@ StopMetricStreamsResponse * CloudWatchClient::stopMetricStreams(const StopMetric
  *
  * values>
  *
- * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+ * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
  *
  * characters>
  *

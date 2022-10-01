@@ -24,14 +24,14 @@
 #include "deletexssmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteXssMatchSetRequest;
 
-class DeleteXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteXssMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteXssMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteXssMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteXssMatchSetRequest * const q);
     DeleteXssMatchSetRequestPrivate(const DeleteXssMatchSetRequestPrivate &other,
                                    DeleteXssMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

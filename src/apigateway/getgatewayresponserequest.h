@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetGatewayResponseRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetGatewayResponseRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT GetGatewayResponseRequest : public ApiGatewayRequest {
 
 public:
     GetGatewayResponseRequest(const GetGatewayResponseRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

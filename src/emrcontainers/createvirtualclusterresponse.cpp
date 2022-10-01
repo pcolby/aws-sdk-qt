@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CreateVirtualClusterResponse
- * \brief The CreateVirtualClusterResponse class provides an interace for EMRContainers CreateVirtualCluster responses.
+ * \class QtAws::Emrcontainers::CreateVirtualClusterResponse
+ * \brief The CreateVirtualClusterResponse class provides an interace for Emrcontainers CreateVirtualCluster responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::createVirtualCluster
+ * \sa EmrcontainersClient::createVirtualCluster
  */
 
 /*!
@@ -72,7 +72,7 @@ CreateVirtualClusterResponse::CreateVirtualClusterResponse(
         const CreateVirtualClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new CreateVirtualClusterResponsePrivate(this), parent)
+    : EmrcontainersResponse(new CreateVirtualClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateVirtualClusterRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const CreateVirtualClusterRequest * CreateVirtualClusterResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMRContainers CreateVirtualCluster \a response.
+ * Parses a successful Emrcontainers CreateVirtualCluster \a response.
  */
 void CreateVirtualClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void CreateVirtualClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::CreateVirtualClusterResponsePrivate
+ * \class QtAws::Emrcontainers::CreateVirtualClusterResponsePrivate
  * \brief The CreateVirtualClusterResponsePrivate class provides private implementation for CreateVirtualClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a CreateVirtualClusterResponsePrivate object with public implementation \a q.
  */
 CreateVirtualClusterResponsePrivate::CreateVirtualClusterResponsePrivate(
-    CreateVirtualClusterResponse * const q) : EMRContainersResponsePrivate(q)
+    CreateVirtualClusterResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers CreateVirtualCluster response element from \a xml.
+ * Parses a Emrcontainers CreateVirtualCluster response element from \a xml.
  */
 void CreateVirtualClusterResponsePrivate::parseCreateVirtualClusterResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void CreateVirtualClusterResponsePrivate::parseCreateVirtualClusterResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

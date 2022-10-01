@@ -24,7 +24,7 @@
 #include "sendtaskfailurerequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class SendTaskFailureResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

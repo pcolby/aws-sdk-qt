@@ -24,7 +24,7 @@
 #include "getenvironmentrequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class GetEnvironmentRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationPartRequest
- * \brief The GetDocumentationPartRequest class provides an interface for APIGateway GetDocumentationPart requests.
+ * \class QtAws::ApiGateway::GetDocumentationPartRequest
+ * \brief The GetDocumentationPartRequest class provides an interface for ApiGateway GetDocumentationPart requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDocumentationPart
+ * \sa ApiGatewayClient::getDocumentationPart
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDocumentationPartRequest::GetDocumentationPartRequest(const GetDocumentationPartRequest &other)
-    : APIGatewayRequest(new GetDocumentationPartRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetDocumentationPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetDocumentationPartRequest::GetDocumentationPartRequest(const GetDocumentationP
  * Constructs a GetDocumentationPartRequest object.
  */
 GetDocumentationPartRequest::GetDocumentationPartRequest()
-    : APIGatewayRequest(new GetDocumentationPartRequestPrivate(APIGatewayRequest::GetDocumentationPartAction, this))
+    : ApiGatewayRequest(new GetDocumentationPartRequestPrivate(ApiGatewayRequest::GetDocumentationPartAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationPartRequestPrivate
+ * \class QtAws::ApiGateway::GetDocumentationPartRequestPrivate
  * \brief The GetDocumentationPartRequestPrivate class provides private implementation for GetDocumentationPartRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetDocumentationPartRequestPrivate object for APIGateway \a action,
+ * Constructs a GetDocumentationPartRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
-    const APIGatewayRequest::Action action, GetDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetDocumentationPartRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
  */
 GetDocumentationPartRequestPrivate::GetDocumentationPartRequestPrivate(
     const GetDocumentationPartRequestPrivate &other, GetDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

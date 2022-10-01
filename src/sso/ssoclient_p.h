@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class SsoClient;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

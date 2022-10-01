@@ -23,11 +23,11 @@
 #include "signerresponse_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListSigningPlatformsResponse;
 
-class ListSigningPlatformsResponsePrivate : public signerResponsePrivate {
+class ListSigningPlatformsResponsePrivate : public SignerResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

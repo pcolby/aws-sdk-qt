@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeAccountAttributesRequest
- * \brief The DescribeAccountAttributesRequest class provides an interface for RDS DescribeAccountAttributes requests.
+ * \class QtAws::Rds::DescribeAccountAttributesRequest
+ * \brief The DescribeAccountAttributesRequest class provides an interface for Rds DescribeAccountAttributes requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * \class QtAws::RDS::DescribeAccountAttributesRequestPrivate
+ * \class QtAws::Rds::DescribeAccountAttributesRequestPrivate
  * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

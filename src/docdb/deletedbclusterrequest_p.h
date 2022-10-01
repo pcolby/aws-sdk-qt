@@ -24,14 +24,14 @@
 #include "deletedbclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBClusterRequest;
 
-class DeleteDBClusterRequestPrivate : public DocDBRequestPrivate {
+class DeleteDBClusterRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteDBClusterRequestPrivate(const DocDBRequest::Action action,
+    DeleteDBClusterRequestPrivate(const DocDbRequest::Action action,
                                    DeleteDBClusterRequest * const q);
     DeleteDBClusterRequestPrivate(const DeleteDBClusterRequestPrivate &other,
                                    DeleteDBClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "batchexecutestatementrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class BatchExecuteStatementRequest;
 
-class BatchExecuteStatementRequestPrivate : public DynamoDBRequestPrivate {
+class BatchExecuteStatementRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    BatchExecuteStatementRequestPrivate(const DynamoDBRequest::Action action,
+    BatchExecuteStatementRequestPrivate(const DynamoDbRequest::Action action,
                                    BatchExecuteStatementRequest * const q);
     BatchExecuteStatementRequestPrivate(const BatchExecuteStatementRequestPrivate &other,
                                    BatchExecuteStatementRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

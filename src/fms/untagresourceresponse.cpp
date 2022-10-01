@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for FMS UntagResource responses.
+ * \class QtAws::Fms::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for Fms UntagResource responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS UntagResource \a response.
+ * Parses a successful Fms UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::UntagResourceResponsePrivate
+ * \class QtAws::Fms::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 }
 
 /*!
- * Parses a FMS UntagResource response element from \a xml.
+ * Parses a Fms UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

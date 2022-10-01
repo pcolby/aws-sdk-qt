@@ -30,24 +30,29 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnRequestPrivate;
+class MgnRequestPrivate;
 
-class QTAWSMGN_EXPORT mgnRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMGN_EXPORT MgnRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by mgn.
+    /// Actions supported by Mgn.
     enum Action {
         ChangeServerLifeCycleStateAction,
+        CreateLaunchConfigurationTemplateAction,
         CreateReplicationConfigurationTemplateAction,
         DeleteJobAction,
+        DeleteLaunchConfigurationTemplateAction,
         DeleteReplicationConfigurationTemplateAction,
         DeleteSourceServerAction,
+        DeleteVcenterClientAction,
         DescribeJobLogItemsAction,
         DescribeJobsAction,
+        DescribeLaunchConfigurationTemplatesAction,
         DescribeReplicationConfigurationTemplatesAction,
         DescribeSourceServersAction,
+        DescribeVcenterClientsAction,
         DisconnectFromServiceAction,
         FinalizeCutoverAction,
         GetLaunchConfigurationAction,
@@ -57,19 +62,22 @@ public:
         MarkAsArchivedAction,
         RetryDataReplicationAction,
         StartCutoverAction,
+        StartReplicationAction,
         StartTestAction,
         TagResourceAction,
         TerminateTargetInstancesAction,
         UntagResourceAction,
         UpdateLaunchConfigurationAction,
+        UpdateLaunchConfigurationTemplateAction,
         UpdateReplicationConfigurationAction,
         UpdateReplicationConfigurationTemplateAction,
+        UpdateSourceServerReplicationTypeAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    mgnRequest(const Action action);
-    mgnRequest(const mgnRequest &other);
-    mgnRequest &operator=(const mgnRequest &other);
+    MgnRequest(const Action action);
+    MgnRequest(const MgnRequest &other);
+    MgnRequest &operator=(const MgnRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -78,12 +86,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const mgnRequest &other) const;
+    virtual bool operator==(const MgnRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit mgnRequest(mgnRequestPrivate * const d);
+    explicit MgnRequest(MgnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -96,11 +104,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(mgnRequest)
+    Q_DECLARE_PRIVATE(MgnRequest)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

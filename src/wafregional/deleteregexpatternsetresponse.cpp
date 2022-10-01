@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteRegexPatternSetResponse
- * \brief The DeleteRegexPatternSetResponse class provides an interace for WAFRegional DeleteRegexPatternSet responses.
+ * \class QtAws::WafRegional::DeleteRegexPatternSetResponse
+ * \brief The DeleteRegexPatternSetResponse class provides an interace for WafRegional DeleteRegexPatternSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteRegexPatternSet
+ * \sa WafRegionalClient::deleteRegexPatternSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
         const DeleteRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteRegexPatternSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteRegexPatternSet \a response.
+ * Parses a successful WafRegional DeleteRegexPatternSet \a response.
  */
 void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteRegexPatternSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteRegexPatternSetResponsePrivate
  * \brief The DeleteRegexPatternSetResponsePrivate class provides private implementation for DeleteRegexPatternSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
-    DeleteRegexPatternSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteRegexPatternSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteRegexPatternSet response element from \a xml.
+ * Parses a WafRegional DeleteRegexPatternSet response element from \a xml.
  */
 void DeleteRegexPatternSetResponsePrivate::parseDeleteRegexPatternSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteRegexPatternSetResponsePrivate::parseDeleteRegexPatternSetResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

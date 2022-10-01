@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionResponse
- * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for RDS RemoveSourceIdentifierFromSubscription responses.
+ * \class QtAws::Rds::RemoveSourceIdentifierFromSubscriptionResponse
+ * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for Rds RemoveSourceIdentifierFromSubscription responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFrom
 
 /*!
  * \reimp
- * Parses a successful RDS RemoveSourceIdentifierFromSubscription \a response.
+ * Parses a successful Rds RemoveSourceIdentifierFromSubscription \a response.
  */
 void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionResponsePrivate
+ * \class QtAws::Rds::RemoveSourceIdentifierFromSubscriptionResponsePrivate
  * \brief The RemoveSourceIdentifierFromSubscriptionResponsePrivate class provides private implementation for RemoveSourceIdentifierFromSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFro
 }
 
 /*!
- * Parses a RDS RemoveSourceIdentifierFromSubscription response element from \a xml.
+ * Parses a Rds RemoveSourceIdentifierFromSubscription response element from \a xml.
  */
 void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIde
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

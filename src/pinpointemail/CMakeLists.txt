@@ -1,14 +1,21 @@
 add_compile_definitions(QTAWSPINPOINTEMAIL_LIBRARY)
 
 add_library(QtAwsPinpointEmail
-  createconfigurationseteventdestinationrequest.h
-  createconfigurationseteventdestinationrequest_p.h
-  createconfigurationseteventdestinationresponse.h
-  createconfigurationseteventdestinationresponse_p.h
+  qtawspinpointemailglobal.h
+  pinpointemailclient.h
+  pinpointemailclient_p.h
+  pinpointemailrequest.h
+  pinpointemailrequest_p.h
+  pinpointemailresponse.h
+  pinpointemailresponse_p.h
   createconfigurationsetrequest.h
   createconfigurationsetrequest_p.h
   createconfigurationsetresponse.h
   createconfigurationsetresponse_p.h
+  createconfigurationseteventdestinationrequest.h
+  createconfigurationseteventdestinationrequest_p.h
+  createconfigurationseteventdestinationresponse.h
+  createconfigurationseteventdestinationresponse_p.h
   creatededicatedippoolrequest.h
   creatededicatedippoolrequest_p.h
   creatededicatedippoolresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsPinpointEmail
   createemailidentityrequest_p.h
   createemailidentityresponse.h
   createemailidentityresponse_p.h
-  deleteconfigurationseteventdestinationrequest.h
-  deleteconfigurationseteventdestinationrequest_p.h
-  deleteconfigurationseteventdestinationresponse.h
-  deleteconfigurationseteventdestinationresponse_p.h
   deleteconfigurationsetrequest.h
   deleteconfigurationsetrequest_p.h
   deleteconfigurationsetresponse.h
   deleteconfigurationsetresponse_p.h
+  deleteconfigurationseteventdestinationrequest.h
+  deleteconfigurationseteventdestinationrequest_p.h
+  deleteconfigurationseteventdestinationresponse.h
+  deleteconfigurationseteventdestinationresponse_p.h
   deletededicatedippoolrequest.h
   deletededicatedippoolrequest_p.h
   deletededicatedippoolresponse.h
@@ -45,14 +52,14 @@ add_library(QtAwsPinpointEmail
   getblacklistreportsrequest_p.h
   getblacklistreportsresponse.h
   getblacklistreportsresponse_p.h
-  getconfigurationseteventdestinationsrequest.h
-  getconfigurationseteventdestinationsrequest_p.h
-  getconfigurationseteventdestinationsresponse.h
-  getconfigurationseteventdestinationsresponse_p.h
   getconfigurationsetrequest.h
   getconfigurationsetrequest_p.h
   getconfigurationsetresponse.h
   getconfigurationsetresponse_p.h
+  getconfigurationseteventdestinationsrequest.h
+  getconfigurationseteventdestinationsrequest_p.h
+  getconfigurationseteventdestinationsresponse.h
+  getconfigurationseteventdestinationsresponse_p.h
   getdedicatediprequest.h
   getdedicatediprequest_p.h
   getdedicatedipresponse.h
@@ -105,12 +112,6 @@ add_library(QtAwsPinpointEmail
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  pinpointemailclient.h
-  pinpointemailclient_p.h
-  pinpointemailrequest.h
-  pinpointemailrequest_p.h
-  pinpointemailresponse.h
-  pinpointemailresponse_p.h
   putaccountdedicatedipwarmupattributesrequest.h
   putaccountdedicatedipwarmupattributesrequest_p.h
   putaccountdedicatedipwarmupattributesresponse.h
@@ -159,7 +160,6 @@ add_library(QtAwsPinpointEmail
   putemailidentitymailfromattributesrequest_p.h
   putemailidentitymailfromattributesresponse.h
   putemailidentitymailfromattributesresponse_p.h
-  qtawspinpointemailglobal.h
   sendemailrequest.h
   sendemailrequest_p.h
   sendemailresponse.h
@@ -176,20 +176,23 @@ add_library(QtAwsPinpointEmail
   updateconfigurationseteventdestinationrequest_p.h
   updateconfigurationseteventdestinationresponse.h
   updateconfigurationseteventdestinationresponse_p.h
-  createconfigurationseteventdestinationrequest.cpp
-  createconfigurationseteventdestinationresponse.cpp
+  pinpointemailclient.cpp
+  pinpointemailrequest.cpp
+  pinpointemailresponse.cpp
   createconfigurationsetrequest.cpp
   createconfigurationsetresponse.cpp
+  createconfigurationseteventdestinationrequest.cpp
+  createconfigurationseteventdestinationresponse.cpp
   creatededicatedippoolrequest.cpp
   creatededicatedippoolresponse.cpp
   createdeliverabilitytestreportrequest.cpp
   createdeliverabilitytestreportresponse.cpp
   createemailidentityrequest.cpp
   createemailidentityresponse.cpp
-  deleteconfigurationseteventdestinationrequest.cpp
-  deleteconfigurationseteventdestinationresponse.cpp
   deleteconfigurationsetrequest.cpp
   deleteconfigurationsetresponse.cpp
+  deleteconfigurationseteventdestinationrequest.cpp
+  deleteconfigurationseteventdestinationresponse.cpp
   deletededicatedippoolrequest.cpp
   deletededicatedippoolresponse.cpp
   deleteemailidentityrequest.cpp
@@ -198,10 +201,10 @@ add_library(QtAwsPinpointEmail
   getaccountresponse.cpp
   getblacklistreportsrequest.cpp
   getblacklistreportsresponse.cpp
-  getconfigurationseteventdestinationsrequest.cpp
-  getconfigurationseteventdestinationsresponse.cpp
   getconfigurationsetrequest.cpp
   getconfigurationsetresponse.cpp
+  getconfigurationseteventdestinationsrequest.cpp
+  getconfigurationseteventdestinationsresponse.cpp
   getdedicatediprequest.cpp
   getdedicatedipresponse.cpp
   getdedicatedipsrequest.cpp
@@ -228,9 +231,6 @@ add_library(QtAwsPinpointEmail
   listemailidentitiesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  pinpointemailclient.cpp
-  pinpointemailrequest.cpp
-  pinpointemailresponse.cpp
   putaccountdedicatedipwarmupattributesrequest.cpp
   putaccountdedicatedipwarmupattributesresponse.cpp
   putaccountsendingattributesrequest.cpp

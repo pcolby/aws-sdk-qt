@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::StopNotebookExecutionResponse
- * \brief The StopNotebookExecutionResponse class provides an interace for EMR StopNotebookExecution responses.
+ * \class QtAws::Emr::StopNotebookExecutionResponse
+ * \brief The StopNotebookExecutionResponse class provides an interace for Emr StopNotebookExecution responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::stopNotebookExecution
  */
@@ -64,7 +64,7 @@ const StopNotebookExecutionRequest * StopNotebookExecutionResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful EMR StopNotebookExecution \a response.
+ * Parses a successful Emr StopNotebookExecution \a response.
  */
 void StopNotebookExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void StopNotebookExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::StopNotebookExecutionResponsePrivate
+ * \class QtAws::Emr::StopNotebookExecutionResponsePrivate
  * \brief The StopNotebookExecutionResponsePrivate class provides private implementation for StopNotebookExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ StopNotebookExecutionResponsePrivate::StopNotebookExecutionResponsePrivate(
 }
 
 /*!
- * Parses a EMR StopNotebookExecution response element from \a xml.
+ * Parses a Emr StopNotebookExecution response element from \a xml.
  */
 void StopNotebookExecutionResponsePrivate::parseStopNotebookExecutionResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void StopNotebookExecutionResponsePrivate::parseStopNotebookExecutionResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

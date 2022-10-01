@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesRequest
- * \brief The UpdateServerEngineAttributesRequest class provides an interface for OpsWorksCM UpdateServerEngineAttributes requests.
+ * \class QtAws::OpsWorksCm::UpdateServerEngineAttributesRequest
+ * \brief The UpdateServerEngineAttributesRequest class provides an interface for OpsWorksCm UpdateServerEngineAttributes requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::updateServerEngineAttributes
+ * \sa OpsWorksCmClient::updateServerEngineAttributes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest(const UpdateServerEngineAttributesRequest &other)
-    : OpsWorksCMRequest(new UpdateServerEngineAttributesRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new UpdateServerEngineAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest(const U
  * Constructs a UpdateServerEngineAttributesRequest object.
  */
 UpdateServerEngineAttributesRequest::UpdateServerEngineAttributesRequest()
-    : OpsWorksCMRequest(new UpdateServerEngineAttributesRequestPrivate(OpsWorksCMRequest::UpdateServerEngineAttributesAction, this))
+    : OpsWorksCmRequest(new UpdateServerEngineAttributesRequestPrivate(OpsWorksCmRequest::UpdateServerEngineAttributesAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response
 }
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesRequestPrivate
+ * \class QtAws::OpsWorksCm::UpdateServerEngineAttributesRequestPrivate
  * \brief The UpdateServerEngineAttributesRequestPrivate class provides private implementation for UpdateServerEngineAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a UpdateServerEngineAttributesRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a UpdateServerEngineAttributesRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
-    const OpsWorksCMRequest::Action action, UpdateServerEngineAttributesRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, UpdateServerEngineAttributesRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestP
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const UpdateServerEngineAttributesRequestPrivate &other, UpdateServerEngineAttributesRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

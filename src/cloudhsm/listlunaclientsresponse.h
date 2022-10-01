@@ -24,11 +24,11 @@
 #include "listlunaclientsrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ListLunaClientsResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT ListLunaClientsResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT ListLunaClientsResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

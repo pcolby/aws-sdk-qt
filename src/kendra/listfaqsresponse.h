@@ -24,11 +24,11 @@
 #include "listfaqsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListFaqsResponsePrivate;
 
-class QTAWSKENDRA_EXPORT ListFaqsResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ListFaqsResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

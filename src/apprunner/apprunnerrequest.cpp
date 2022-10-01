@@ -39,19 +39,27 @@ namespace AppRunner {
  * \value AssociateCustomDomainAction AppRunner AssociateCustomDomain action.
  * \value CreateAutoScalingConfigurationAction AppRunner CreateAutoScalingConfiguration action.
  * \value CreateConnectionAction AppRunner CreateConnection action.
+ * \value CreateObservabilityConfigurationAction AppRunner CreateObservabilityConfiguration action.
  * \value CreateServiceAction AppRunner CreateService action.
+ * \value CreateVpcConnectorAction AppRunner CreateVpcConnector action.
  * \value DeleteAutoScalingConfigurationAction AppRunner DeleteAutoScalingConfiguration action.
  * \value DeleteConnectionAction AppRunner DeleteConnection action.
+ * \value DeleteObservabilityConfigurationAction AppRunner DeleteObservabilityConfiguration action.
  * \value DeleteServiceAction AppRunner DeleteService action.
+ * \value DeleteVpcConnectorAction AppRunner DeleteVpcConnector action.
  * \value DescribeAutoScalingConfigurationAction AppRunner DescribeAutoScalingConfiguration action.
  * \value DescribeCustomDomainsAction AppRunner DescribeCustomDomains action.
+ * \value DescribeObservabilityConfigurationAction AppRunner DescribeObservabilityConfiguration action.
  * \value DescribeServiceAction AppRunner DescribeService action.
+ * \value DescribeVpcConnectorAction AppRunner DescribeVpcConnector action.
  * \value DisassociateCustomDomainAction AppRunner DisassociateCustomDomain action.
  * \value ListAutoScalingConfigurationsAction AppRunner ListAutoScalingConfigurations action.
  * \value ListConnectionsAction AppRunner ListConnections action.
+ * \value ListObservabilityConfigurationsAction AppRunner ListObservabilityConfigurations action.
  * \value ListOperationsAction AppRunner ListOperations action.
  * \value ListServicesAction AppRunner ListServices action.
  * \value ListTagsForResourceAction AppRunner ListTagsForResource action.
+ * \value ListVpcConnectorsAction AppRunner ListVpcConnectors action.
  * \value PauseServiceAction AppRunner PauseService action.
  * \value ResumeServiceAction AppRunner ResumeService action.
  * \value StartDeploymentAction AppRunner StartDeployment action.
@@ -265,7 +273,7 @@ QNetworkRequest AppRunnerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppRunnerRequestPrivate::AppRunnerRequestPrivate(const AppRunnerRequest::Action action, AppRunnerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-05-15"))
 {
 
 }
@@ -302,19 +310,27 @@ QString AppRunnerRequestPrivate::toString(const AppRunnerRequest::Action &action
         ActionToString(AssociateCustomDomain);
         ActionToString(CreateAutoScalingConfiguration);
         ActionToString(CreateConnection);
+        ActionToString(CreateObservabilityConfiguration);
         ActionToString(CreateService);
+        ActionToString(CreateVpcConnector);
         ActionToString(DeleteAutoScalingConfiguration);
         ActionToString(DeleteConnection);
+        ActionToString(DeleteObservabilityConfiguration);
         ActionToString(DeleteService);
+        ActionToString(DeleteVpcConnector);
         ActionToString(DescribeAutoScalingConfiguration);
         ActionToString(DescribeCustomDomains);
+        ActionToString(DescribeObservabilityConfiguration);
         ActionToString(DescribeService);
+        ActionToString(DescribeVpcConnector);
         ActionToString(DisassociateCustomDomain);
         ActionToString(ListAutoScalingConfigurations);
         ActionToString(ListConnections);
+        ActionToString(ListObservabilityConfigurations);
         ActionToString(ListOperations);
         ActionToString(ListServices);
         ActionToString(ListTagsForResource);
+        ActionToString(ListVpcConnectors);
         ActionToString(PauseService);
         ActionToString(ResumeService);
         ActionToString(StartDeployment);

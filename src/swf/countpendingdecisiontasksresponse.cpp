@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::CountPendingDecisionTasksResponse
- * \brief The CountPendingDecisionTasksResponse class provides an interace for SWF CountPendingDecisionTasks responses.
+ * \class QtAws::Swf::CountPendingDecisionTasksResponse
+ * \brief The CountPendingDecisionTasksResponse class provides an interace for Swf CountPendingDecisionTasks responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const CountPendingDecisionTasksRequest * CountPendingDecisionTasksResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SWF CountPendingDecisionTasks \a response.
+ * Parses a successful Swf CountPendingDecisionTasks \a response.
  */
 void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::CountPendingDecisionTasksResponsePrivate
+ * \class QtAws::Swf::CountPendingDecisionTasksResponsePrivate
  * \brief The CountPendingDecisionTasksResponsePrivate class provides private implementation for CountPendingDecisionTasksResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponsePriva
 }
 
 /*!
- * Parses a SWF CountPendingDecisionTasks response element from \a xml.
+ * Parses a Swf CountPendingDecisionTasks response element from \a xml.
  */
 void CountPendingDecisionTasksResponsePrivate::parseCountPendingDecisionTasksResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void CountPendingDecisionTasksResponsePrivate::parseCountPendingDecisionTasksRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

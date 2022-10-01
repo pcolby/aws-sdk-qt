@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchPutDocumentRequest
- * \brief The BatchPutDocumentRequest class provides an interface for kendra BatchPutDocument requests.
+ * \class QtAws::Kendra::BatchPutDocumentRequest
+ * \brief The BatchPutDocumentRequest class provides an interface for Kendra BatchPutDocument requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchPutDocument
+ * \sa KendraClient::batchPutDocument
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchPutDocumentRequest::BatchPutDocumentRequest(const BatchPutDocumentRequest &other)
-    : kendraRequest(new BatchPutDocumentRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new BatchPutDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ BatchPutDocumentRequest::BatchPutDocumentRequest(const BatchPutDocumentRequest &
  * Constructs a BatchPutDocumentRequest object.
  */
 BatchPutDocumentRequest::BatchPutDocumentRequest()
-    : kendraRequest(new BatchPutDocumentRequestPrivate(kendraRequest::BatchPutDocumentAction, this))
+    : KendraRequest(new BatchPutDocumentRequestPrivate(KendraRequest::BatchPutDocumentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * BatchPutDocumentRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::kendra::BatchPutDocumentRequestPrivate
+ * \class QtAws::Kendra::BatchPutDocumentRequestPrivate
  * \brief The BatchPutDocumentRequestPrivate class provides private implementation for BatchPutDocumentRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a BatchPutDocumentRequestPrivate object for kendra \a action,
+ * Constructs a BatchPutDocumentRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 BatchPutDocumentRequestPrivate::BatchPutDocumentRequestPrivate(
-    const kendraRequest::Action action, BatchPutDocumentRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, BatchPutDocumentRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ BatchPutDocumentRequestPrivate::BatchPutDocumentRequestPrivate(
  */
 BatchPutDocumentRequestPrivate::BatchPutDocumentRequestPrivate(
     const BatchPutDocumentRequestPrivate &other, BatchPutDocumentRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

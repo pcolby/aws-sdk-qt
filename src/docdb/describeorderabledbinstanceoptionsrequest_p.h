@@ -24,14 +24,14 @@
 #include "describeorderabledbinstanceoptionsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeOrderableDBInstanceOptionsRequest;
 
-class DescribeOrderableDBInstanceOptionsRequestPrivate : public DocDBRequestPrivate {
+class DescribeOrderableDBInstanceOptionsRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeOrderableDBInstanceOptionsRequestPrivate(const DocDBRequest::Action action,
+    DescribeOrderableDBInstanceOptionsRequestPrivate(const DocDbRequest::Action action,
                                    DescribeOrderableDBInstanceOptionsRequest * const q);
     DescribeOrderableDBInstanceOptionsRequestPrivate(const DescribeOrderableDBInstanceOptionsRequestPrivate &other,
                                    DescribeOrderableDBInstanceOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

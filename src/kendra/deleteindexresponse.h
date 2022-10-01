@@ -24,11 +24,11 @@
 #include "deleteindexrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteIndexResponsePrivate;
 
-class QTAWSKENDRA_EXPORT DeleteIndexResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DeleteIndexResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSBATCH_LIBRARY)
 
 add_library(QtAwsBatch
+  qtawsbatchglobal.h
   batchclient.h
   batchclient_p.h
   batchrequest.h
@@ -19,6 +20,10 @@ add_library(QtAwsBatch
   createjobqueuerequest_p.h
   createjobqueueresponse.h
   createjobqueueresponse_p.h
+  createschedulingpolicyrequest.h
+  createschedulingpolicyrequest_p.h
+  createschedulingpolicyresponse.h
+  createschedulingpolicyresponse_p.h
   deletecomputeenvironmentrequest.h
   deletecomputeenvironmentrequest_p.h
   deletecomputeenvironmentresponse.h
@@ -27,6 +32,10 @@ add_library(QtAwsBatch
   deletejobqueuerequest_p.h
   deletejobqueueresponse.h
   deletejobqueueresponse_p.h
+  deleteschedulingpolicyrequest.h
+  deleteschedulingpolicyrequest_p.h
+  deleteschedulingpolicyresponse.h
+  deleteschedulingpolicyresponse_p.h
   deregisterjobdefinitionrequest.h
   deregisterjobdefinitionrequest_p.h
   deregisterjobdefinitionresponse.h
@@ -47,15 +56,22 @@ add_library(QtAwsBatch
   describejobsrequest_p.h
   describejobsresponse.h
   describejobsresponse_p.h
+  describeschedulingpoliciesrequest.h
+  describeschedulingpoliciesrequest_p.h
+  describeschedulingpoliciesresponse.h
+  describeschedulingpoliciesresponse_p.h
   listjobsrequest.h
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  listschedulingpoliciesrequest.h
+  listschedulingpoliciesrequest_p.h
+  listschedulingpoliciesresponse.h
+  listschedulingpoliciesresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsbatchglobal.h
   registerjobdefinitionrequest.h
   registerjobdefinitionrequest_p.h
   registerjobdefinitionresponse.h
@@ -84,6 +100,10 @@ add_library(QtAwsBatch
   updatejobqueuerequest_p.h
   updatejobqueueresponse.h
   updatejobqueueresponse_p.h
+  updateschedulingpolicyrequest.h
+  updateschedulingpolicyrequest_p.h
+  updateschedulingpolicyresponse.h
+  updateschedulingpolicyresponse_p.h
   batchclient.cpp
   batchrequest.cpp
   batchresponse.cpp
@@ -93,10 +113,14 @@ add_library(QtAwsBatch
   createcomputeenvironmentresponse.cpp
   createjobqueuerequest.cpp
   createjobqueueresponse.cpp
+  createschedulingpolicyrequest.cpp
+  createschedulingpolicyresponse.cpp
   deletecomputeenvironmentrequest.cpp
   deletecomputeenvironmentresponse.cpp
   deletejobqueuerequest.cpp
   deletejobqueueresponse.cpp
+  deleteschedulingpolicyrequest.cpp
+  deleteschedulingpolicyresponse.cpp
   deregisterjobdefinitionrequest.cpp
   deregisterjobdefinitionresponse.cpp
   describecomputeenvironmentsrequest.cpp
@@ -107,8 +131,12 @@ add_library(QtAwsBatch
   describejobqueuesresponse.cpp
   describejobsrequest.cpp
   describejobsresponse.cpp
+  describeschedulingpoliciesrequest.cpp
+  describeschedulingpoliciesresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
+  listschedulingpoliciesrequest.cpp
+  listschedulingpoliciesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   registerjobdefinitionrequest.cpp
@@ -124,7 +152,9 @@ add_library(QtAwsBatch
   updatecomputeenvironmentrequest.cpp
   updatecomputeenvironmentresponse.cpp
   updatejobqueuerequest.cpp
-  updatejobqueueresponse.cpp)
+  updatejobqueueresponse.cpp
+  updateschedulingpolicyrequest.cpp
+  updateschedulingpolicyresponse.cpp)
 
 target_link_libraries(QtAwsBatch
   PRIVATE QtAwsCore

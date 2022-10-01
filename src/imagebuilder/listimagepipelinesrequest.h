@@ -23,11 +23,11 @@
 #include "imagebuilderrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ListImagePipelinesRequestPrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT ListImagePipelinesRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ListImagePipelinesRequest : public ImageBuilderRequest {
 
 public:
     ListImagePipelinesRequest(const ListImagePipelinesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

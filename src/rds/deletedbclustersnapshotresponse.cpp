@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBClusterSnapshotResponse
- * \brief The DeleteDBClusterSnapshotResponse class provides an interace for RDS DeleteDBClusterSnapshot responses.
+ * \class QtAws::Rds::DeleteDBClusterSnapshotResponse
+ * \brief The DeleteDBClusterSnapshotResponse class provides an interace for Rds DeleteDBClusterSnapshot responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteDBClusterSnapshot \a response.
+ * Parses a successful Rds DeleteDBClusterSnapshot \a response.
  */
 void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBClusterSnapshotResponsePrivate
+ * \class QtAws::Rds::DeleteDBClusterSnapshotResponsePrivate
  * \brief The DeleteDBClusterSnapshotResponsePrivate class provides private implementation for DeleteDBClusterSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteDBClusterSnapshot response element from \a xml.
+ * Parses a Rds DeleteDBClusterSnapshot response element from \a xml.
  */
 void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

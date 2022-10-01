@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::UpdateImagePipelineResponse
- * \brief The UpdateImagePipelineResponse class provides an interace for imagebuilder UpdateImagePipeline responses.
+ * \class QtAws::ImageBuilder::UpdateImagePipelineResponse
+ * \brief The UpdateImagePipelineResponse class provides an interace for ImageBuilder UpdateImagePipeline responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::updateImagePipeline
+ * \sa ImageBuilderClient::updateImagePipeline
  */
 
 /*!
@@ -47,7 +47,7 @@ UpdateImagePipelineResponse::UpdateImagePipelineResponse(
         const UpdateImagePipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new UpdateImagePipelineResponsePrivate(this), parent)
+    : ImageBuilderResponse(new UpdateImagePipelineResponsePrivate(this), parent)
 {
     setRequest(new UpdateImagePipelineRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const UpdateImagePipelineRequest * UpdateImagePipelineResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder UpdateImagePipeline \a response.
+ * Parses a successful ImageBuilder UpdateImagePipeline \a response.
  */
 void UpdateImagePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void UpdateImagePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::UpdateImagePipelineResponsePrivate
+ * \class QtAws::ImageBuilder::UpdateImagePipelineResponsePrivate
  * \brief The UpdateImagePipelineResponsePrivate class provides private implementation for UpdateImagePipelineResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a UpdateImagePipelineResponsePrivate object with public implementation \a q.
  */
 UpdateImagePipelineResponsePrivate::UpdateImagePipelineResponsePrivate(
-    UpdateImagePipelineResponse * const q) : imagebuilderResponsePrivate(q)
+    UpdateImagePipelineResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder UpdateImagePipeline response element from \a xml.
+ * Parses a ImageBuilder UpdateImagePipeline response element from \a xml.
  */
 void UpdateImagePipelineResponsePrivate::parseUpdateImagePipelineResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void UpdateImagePipelineResponsePrivate::parseUpdateImagePipelineResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

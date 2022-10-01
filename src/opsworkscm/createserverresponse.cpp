@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::CreateServerResponse
- * \brief The CreateServerResponse class provides an interace for OpsWorksCM CreateServer responses.
+ * \class QtAws::OpsWorksCm::CreateServerResponse
+ * \brief The CreateServerResponse class provides an interace for OpsWorksCm CreateServer responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::createServer
+ * \sa OpsWorksCmClient::createServer
  */
 
 /*!
@@ -123,7 +123,7 @@ CreateServerResponse::CreateServerResponse(
         const CreateServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new CreateServerResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new CreateServerResponsePrivate(this), parent)
 {
     setRequest(new CreateServerRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const CreateServerRequest * CreateServerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM CreateServer \a response.
+ * Parses a successful OpsWorksCm CreateServer \a response.
  */
 void CreateServerResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void CreateServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::CreateServerResponsePrivate
+ * \class QtAws::OpsWorksCm::CreateServerResponsePrivate
  * \brief The CreateServerResponsePrivate class provides private implementation for CreateServerResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a CreateServerResponsePrivate object with public implementation \a q.
  */
 CreateServerResponsePrivate::CreateServerResponsePrivate(
-    CreateServerResponse * const q) : OpsWorksCMResponsePrivate(q)
+    CreateServerResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM CreateServer response element from \a xml.
+ * Parses a OpsWorksCm CreateServer response element from \a xml.
  */
 void CreateServerResponsePrivate::parseCreateServerResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void CreateServerResponsePrivate::parseCreateServerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

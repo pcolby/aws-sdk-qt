@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ModifyInstanceGroupsResponse
- * \brief The ModifyInstanceGroupsResponse class provides an interace for EMR ModifyInstanceGroups responses.
+ * \class QtAws::Emr::ModifyInstanceGroupsResponse
+ * \brief The ModifyInstanceGroupsResponse class provides an interace for Emr ModifyInstanceGroups responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::modifyInstanceGroups
  */
@@ -64,7 +64,7 @@ const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMR ModifyInstanceGroups \a response.
+ * Parses a successful Emr ModifyInstanceGroups \a response.
  */
 void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ModifyInstanceGroupsResponsePrivate
+ * \class QtAws::Emr::ModifyInstanceGroupsResponsePrivate
  * \brief The ModifyInstanceGroupsResponsePrivate class provides private implementation for ModifyInstanceGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
 }
 
 /*!
- * Parses a EMR ModifyInstanceGroups response element from \a xml.
+ * Parses a Emr ModifyInstanceGroups response element from \a xml.
  */
 void ModifyInstanceGroupsResponsePrivate::parseModifyInstanceGroupsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ModifyInstanceGroupsResponsePrivate::parseModifyInstanceGroupsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

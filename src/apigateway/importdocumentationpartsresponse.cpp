@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::ImportDocumentationPartsResponse
- * \brief The ImportDocumentationPartsResponse class provides an interace for APIGateway ImportDocumentationParts responses.
+ * \class QtAws::ApiGateway::ImportDocumentationPartsResponse
+ * \brief The ImportDocumentationPartsResponse class provides an interace for ApiGateway ImportDocumentationParts responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::importDocumentationParts
+ * \sa ApiGatewayClient::importDocumentationParts
  */
 
 /*!
@@ -49,7 +49,7 @@ ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
         const ImportDocumentationPartsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new ImportDocumentationPartsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new ImportDocumentationPartsResponsePrivate(this), parent)
 {
     setRequest(new ImportDocumentationPartsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful APIGateway ImportDocumentationParts \a response.
+ * Parses a successful ApiGateway ImportDocumentationParts \a response.
  */
 void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::ImportDocumentationPartsResponsePrivate
+ * \class QtAws::ApiGateway::ImportDocumentationPartsResponsePrivate
  * \brief The ImportDocumentationPartsResponsePrivate class provides private implementation for ImportDocumentationPartsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a ImportDocumentationPartsResponsePrivate object with public implementation \a q.
  */
 ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate(
-    ImportDocumentationPartsResponse * const q) : APIGatewayResponsePrivate(q)
+    ImportDocumentationPartsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway ImportDocumentationParts response element from \a xml.
+ * Parses a ApiGateway ImportDocumentationParts response element from \a xml.
  */
 void ImportDocumentationPartsResponsePrivate::parseImportDocumentationPartsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void ImportDocumentationPartsResponsePrivate::parseImportDocumentationPartsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

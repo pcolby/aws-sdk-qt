@@ -31,7 +31,7 @@ namespace S3Control {
  *
  * \inmodule QtAwsS3Control
  *
- *  AWS S3 Control provides access to Amazon S3 control plane actions.
+ *  Amazon Web Services S3 Control provides access to Amazon S3 control plane actions.
  *
  * \sa S3ControlClient::getBucketTagging
  */

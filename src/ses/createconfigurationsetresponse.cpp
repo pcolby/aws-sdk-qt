@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateConfigurationSetResponse
- * \brief The CreateConfigurationSetResponse class provides an interace for SES CreateConfigurationSet responses.
+ * \class QtAws::Ses::CreateConfigurationSetResponse
+ * \brief The CreateConfigurationSetResponse class provides an interace for Ses CreateConfigurationSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SES CreateConfigurationSet \a response.
+ * Parses a successful Ses CreateConfigurationSet \a response.
  */
 void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::CreateConfigurationSetResponsePrivate
+ * \class QtAws::Ses::CreateConfigurationSetResponsePrivate
  * \brief The CreateConfigurationSetResponsePrivate class provides private implementation for CreateConfigurationSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
 }
 
 /*!
- * Parses a SES CreateConfigurationSet response element from \a xml.
+ * Parses a Ses CreateConfigurationSet response element from \a xml.
  */
 void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

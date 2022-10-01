@@ -24,14 +24,14 @@
 #include "detachmanagedpolicyfrompermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DetachManagedPolicyFromPermissionSetRequest;
 
-class DetachManagedPolicyFromPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class DetachManagedPolicyFromPermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DetachManagedPolicyFromPermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    DetachManagedPolicyFromPermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    DetachManagedPolicyFromPermissionSetRequest * const q);
     DetachManagedPolicyFromPermissionSetRequestPrivate(const DetachManagedPolicyFromPermissionSetRequestPrivate &other,
                                    DetachManagedPolicyFromPermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

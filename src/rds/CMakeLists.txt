@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSRDS_LIBRARY)
 
 add_library(QtAwsRds
+  qtawsrdsglobal.h
+  rdsclient.h
+  rdsclient_p.h
+  rdsrequest.h
+  rdsrequest_p.h
+  rdsresponse.h
+  rdsresponse_p.h
   addroletodbclusterrequest.h
   addroletodbclusterrequest_p.h
   addroletodbclusterresponse.h
@@ -53,10 +60,14 @@ add_library(QtAwsRds
   copyoptiongrouprequest_p.h
   copyoptiongroupresponse.h
   copyoptiongroupresponse_p.h
-  createcustomavailabilityzonerequest.h
-  createcustomavailabilityzonerequest_p.h
-  createcustomavailabilityzoneresponse.h
-  createcustomavailabilityzoneresponse_p.h
+  createcustomdbengineversionrequest.h
+  createcustomdbengineversionrequest_p.h
+  createcustomdbengineversionresponse.h
+  createcustomdbengineversionresponse_p.h
+  createdbclusterrequest.h
+  createdbclusterrequest_p.h
+  createdbclusterresponse.h
+  createdbclusterresponse_p.h
   createdbclusterendpointrequest.h
   createdbclusterendpointrequest_p.h
   createdbclusterendpointresponse.h
@@ -65,34 +76,30 @@ add_library(QtAwsRds
   createdbclusterparametergrouprequest_p.h
   createdbclusterparametergroupresponse.h
   createdbclusterparametergroupresponse_p.h
-  createdbclusterrequest.h
-  createdbclusterrequest_p.h
-  createdbclusterresponse.h
-  createdbclusterresponse_p.h
   createdbclustersnapshotrequest.h
   createdbclustersnapshotrequest_p.h
   createdbclustersnapshotresponse.h
   createdbclustersnapshotresponse_p.h
-  createdbinstancereadreplicarequest.h
-  createdbinstancereadreplicarequest_p.h
-  createdbinstancereadreplicaresponse.h
-  createdbinstancereadreplicaresponse_p.h
   createdbinstancerequest.h
   createdbinstancerequest_p.h
   createdbinstanceresponse.h
   createdbinstanceresponse_p.h
+  createdbinstancereadreplicarequest.h
+  createdbinstancereadreplicarequest_p.h
+  createdbinstancereadreplicaresponse.h
+  createdbinstancereadreplicaresponse_p.h
   createdbparametergrouprequest.h
   createdbparametergrouprequest_p.h
   createdbparametergroupresponse.h
   createdbparametergroupresponse_p.h
-  createdbproxyendpointrequest.h
-  createdbproxyendpointrequest_p.h
-  createdbproxyendpointresponse.h
-  createdbproxyendpointresponse_p.h
   createdbproxyrequest.h
   createdbproxyrequest_p.h
   createdbproxyresponse.h
   createdbproxyresponse_p.h
+  createdbproxyendpointrequest.h
+  createdbproxyendpointrequest_p.h
+  createdbproxyendpointresponse.h
+  createdbproxyendpointresponse_p.h
   createdbsecuritygrouprequest.h
   createdbsecuritygrouprequest_p.h
   createdbsecuritygroupresponse.h
@@ -117,10 +124,14 @@ add_library(QtAwsRds
   createoptiongrouprequest_p.h
   createoptiongroupresponse.h
   createoptiongroupresponse_p.h
-  deletecustomavailabilityzonerequest.h
-  deletecustomavailabilityzonerequest_p.h
-  deletecustomavailabilityzoneresponse.h
-  deletecustomavailabilityzoneresponse_p.h
+  deletecustomdbengineversionrequest.h
+  deletecustomdbengineversionrequest_p.h
+  deletecustomdbengineversionresponse.h
+  deletecustomdbengineversionresponse_p.h
+  deletedbclusterrequest.h
+  deletedbclusterrequest_p.h
+  deletedbclusterresponse.h
+  deletedbclusterresponse_p.h
   deletedbclusterendpointrequest.h
   deletedbclusterendpointrequest_p.h
   deletedbclusterendpointresponse.h
@@ -129,34 +140,30 @@ add_library(QtAwsRds
   deletedbclusterparametergrouprequest_p.h
   deletedbclusterparametergroupresponse.h
   deletedbclusterparametergroupresponse_p.h
-  deletedbclusterrequest.h
-  deletedbclusterrequest_p.h
-  deletedbclusterresponse.h
-  deletedbclusterresponse_p.h
   deletedbclustersnapshotrequest.h
   deletedbclustersnapshotrequest_p.h
   deletedbclustersnapshotresponse.h
   deletedbclustersnapshotresponse_p.h
-  deletedbinstanceautomatedbackuprequest.h
-  deletedbinstanceautomatedbackuprequest_p.h
-  deletedbinstanceautomatedbackupresponse.h
-  deletedbinstanceautomatedbackupresponse_p.h
   deletedbinstancerequest.h
   deletedbinstancerequest_p.h
   deletedbinstanceresponse.h
   deletedbinstanceresponse_p.h
+  deletedbinstanceautomatedbackuprequest.h
+  deletedbinstanceautomatedbackuprequest_p.h
+  deletedbinstanceautomatedbackupresponse.h
+  deletedbinstanceautomatedbackupresponse_p.h
   deletedbparametergrouprequest.h
   deletedbparametergrouprequest_p.h
   deletedbparametergroupresponse.h
   deletedbparametergroupresponse_p.h
-  deletedbproxyendpointrequest.h
-  deletedbproxyendpointrequest_p.h
-  deletedbproxyendpointresponse.h
-  deletedbproxyendpointresponse_p.h
   deletedbproxyrequest.h
   deletedbproxyrequest_p.h
   deletedbproxyresponse.h
   deletedbproxyresponse_p.h
+  deletedbproxyendpointrequest.h
+  deletedbproxyendpointrequest_p.h
+  deletedbproxyendpointresponse.h
+  deletedbproxyendpointresponse_p.h
   deletedbsecuritygrouprequest.h
   deletedbsecuritygrouprequest_p.h
   deletedbsecuritygroupresponse.h
@@ -177,10 +184,6 @@ add_library(QtAwsRds
   deleteglobalclusterrequest_p.h
   deleteglobalclusterresponse.h
   deleteglobalclusterresponse_p.h
-  deleteinstallationmediarequest.h
-  deleteinstallationmediarequest_p.h
-  deleteinstallationmediaresponse.h
-  deleteinstallationmediaresponse_p.h
   deleteoptiongrouprequest.h
   deleteoptiongrouprequest_p.h
   deleteoptiongroupresponse.h
@@ -197,10 +200,6 @@ add_library(QtAwsRds
   describecertificatesrequest_p.h
   describecertificatesresponse.h
   describecertificatesresponse_p.h
-  describecustomavailabilityzonesrequest.h
-  describecustomavailabilityzonesrequest_p.h
-  describecustomavailabilityzonesresponse.h
-  describecustomavailabilityzonesresponse_p.h
   describedbclusterbacktracksrequest.h
   describedbclusterbacktracksrequest_p.h
   describedbclusterbacktracksresponse.h
@@ -297,14 +296,14 @@ add_library(QtAwsRds
   describeeventcategoriesrequest_p.h
   describeeventcategoriesresponse.h
   describeeventcategoriesresponse_p.h
-  describeeventsrequest.h
-  describeeventsrequest_p.h
-  describeeventsresponse.h
-  describeeventsresponse_p.h
   describeeventsubscriptionsrequest.h
   describeeventsubscriptionsrequest_p.h
   describeeventsubscriptionsresponse.h
   describeeventsubscriptionsresponse_p.h
+  describeeventsrequest.h
+  describeeventsrequest_p.h
+  describeeventsresponse.h
+  describeeventsresponse_p.h
   describeexporttasksrequest.h
   describeexporttasksrequest_p.h
   describeexporttasksresponse.h
@@ -313,10 +312,6 @@ add_library(QtAwsRds
   describeglobalclustersrequest_p.h
   describeglobalclustersresponse.h
   describeglobalclustersresponse_p.h
-  describeinstallationmediarequest.h
-  describeinstallationmediarequest_p.h
-  describeinstallationmediaresponse.h
-  describeinstallationmediaresponse_p.h
   describeoptiongroupoptionsrequest.h
   describeoptiongroupoptionsrequest_p.h
   describeoptiongroupoptionsresponse.h
@@ -333,14 +328,14 @@ add_library(QtAwsRds
   describependingmaintenanceactionsrequest_p.h
   describependingmaintenanceactionsresponse.h
   describependingmaintenanceactionsresponse_p.h
-  describereserveddbinstancesofferingsrequest.h
-  describereserveddbinstancesofferingsrequest_p.h
-  describereserveddbinstancesofferingsresponse.h
-  describereserveddbinstancesofferingsresponse_p.h
   describereserveddbinstancesrequest.h
   describereserveddbinstancesrequest_p.h
   describereserveddbinstancesresponse.h
   describereserveddbinstancesresponse_p.h
+  describereserveddbinstancesofferingsrequest.h
+  describereserveddbinstancesofferingsrequest_p.h
+  describereserveddbinstancesofferingsresponse.h
+  describereserveddbinstancesofferingsresponse_p.h
   describesourceregionsrequest.h
   describesourceregionsrequest_p.h
   describesourceregionsresponse.h
@@ -361,14 +356,14 @@ add_library(QtAwsRds
   failoverglobalclusterrequest_p.h
   failoverglobalclusterresponse.h
   failoverglobalclusterresponse_p.h
-  importinstallationmediarequest.h
-  importinstallationmediarequest_p.h
-  importinstallationmediaresponse.h
-  importinstallationmediaresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  modifyactivitystreamrequest.h
+  modifyactivitystreamrequest_p.h
+  modifyactivitystreamresponse.h
+  modifyactivitystreamresponse_p.h
   modifycertificatesrequest.h
   modifycertificatesrequest_p.h
   modifycertificatesresponse.h
@@ -377,6 +372,14 @@ add_library(QtAwsRds
   modifycurrentdbclustercapacityrequest_p.h
   modifycurrentdbclustercapacityresponse.h
   modifycurrentdbclustercapacityresponse_p.h
+  modifycustomdbengineversionrequest.h
+  modifycustomdbengineversionrequest_p.h
+  modifycustomdbengineversionresponse.h
+  modifycustomdbengineversionresponse_p.h
+  modifydbclusterrequest.h
+  modifydbclusterrequest_p.h
+  modifydbclusterresponse.h
+  modifydbclusterresponse_p.h
   modifydbclusterendpointrequest.h
   modifydbclusterendpointrequest_p.h
   modifydbclusterendpointresponse.h
@@ -385,10 +388,6 @@ add_library(QtAwsRds
   modifydbclusterparametergrouprequest_p.h
   modifydbclusterparametergroupresponse.h
   modifydbclusterparametergroupresponse_p.h
-  modifydbclusterrequest.h
-  modifydbclusterrequest_p.h
-  modifydbclusterresponse.h
-  modifydbclusterresponse_p.h
   modifydbclustersnapshotattributerequest.h
   modifydbclustersnapshotattributerequest_p.h
   modifydbclustersnapshotattributeresponse.h
@@ -401,26 +400,26 @@ add_library(QtAwsRds
   modifydbparametergrouprequest_p.h
   modifydbparametergroupresponse.h
   modifydbparametergroupresponse_p.h
-  modifydbproxyendpointrequest.h
-  modifydbproxyendpointrequest_p.h
-  modifydbproxyendpointresponse.h
-  modifydbproxyendpointresponse_p.h
   modifydbproxyrequest.h
   modifydbproxyrequest_p.h
   modifydbproxyresponse.h
   modifydbproxyresponse_p.h
+  modifydbproxyendpointrequest.h
+  modifydbproxyendpointrequest_p.h
+  modifydbproxyendpointresponse.h
+  modifydbproxyendpointresponse_p.h
   modifydbproxytargetgrouprequest.h
   modifydbproxytargetgrouprequest_p.h
   modifydbproxytargetgroupresponse.h
   modifydbproxytargetgroupresponse_p.h
-  modifydbsnapshotattributerequest.h
-  modifydbsnapshotattributerequest_p.h
-  modifydbsnapshotattributeresponse.h
-  modifydbsnapshotattributeresponse_p.h
   modifydbsnapshotrequest.h
   modifydbsnapshotrequest_p.h
   modifydbsnapshotresponse.h
   modifydbsnapshotresponse_p.h
+  modifydbsnapshotattributerequest.h
+  modifydbsnapshotattributerequest_p.h
+  modifydbsnapshotattributeresponse.h
+  modifydbsnapshotattributeresponse_p.h
   modifydbsubnetgrouprequest.h
   modifydbsubnetgrouprequest_p.h
   modifydbsubnetgroupresponse.h
@@ -437,25 +436,22 @@ add_library(QtAwsRds
   modifyoptiongrouprequest_p.h
   modifyoptiongroupresponse.h
   modifyoptiongroupresponse_p.h
-  promotereadreplicadbclusterrequest.h
-  promotereadreplicadbclusterrequest_p.h
-  promotereadreplicadbclusterresponse.h
-  promotereadreplicadbclusterresponse_p.h
   promotereadreplicarequest.h
   promotereadreplicarequest_p.h
   promotereadreplicaresponse.h
   promotereadreplicaresponse_p.h
+  promotereadreplicadbclusterrequest.h
+  promotereadreplicadbclusterrequest_p.h
+  promotereadreplicadbclusterresponse.h
+  promotereadreplicadbclusterresponse_p.h
   purchasereserveddbinstancesofferingrequest.h
   purchasereserveddbinstancesofferingrequest_p.h
   purchasereserveddbinstancesofferingresponse.h
   purchasereserveddbinstancesofferingresponse_p.h
-  qtawsrdsglobal.h
-  rdsclient.h
-  rdsclient_p.h
-  rdsrequest.h
-  rdsrequest_p.h
-  rdsresponse.h
-  rdsresponse_p.h
+  rebootdbclusterrequest.h
+  rebootdbclusterrequest_p.h
+  rebootdbclusterresponse.h
+  rebootdbclusterresponse_p.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h
@@ -528,14 +524,14 @@ add_library(QtAwsRds
   startdbclusterrequest_p.h
   startdbclusterresponse.h
   startdbclusterresponse_p.h
-  startdbinstanceautomatedbackupsreplicationrequest.h
-  startdbinstanceautomatedbackupsreplicationrequest_p.h
-  startdbinstanceautomatedbackupsreplicationresponse.h
-  startdbinstanceautomatedbackupsreplicationresponse_p.h
   startdbinstancerequest.h
   startdbinstancerequest_p.h
   startdbinstanceresponse.h
   startdbinstanceresponse_p.h
+  startdbinstanceautomatedbackupsreplicationrequest.h
+  startdbinstanceautomatedbackupsreplicationrequest_p.h
+  startdbinstanceautomatedbackupsreplicationresponse.h
+  startdbinstanceautomatedbackupsreplicationresponse_p.h
   startexporttaskrequest.h
   startexporttaskrequest_p.h
   startexporttaskresponse.h
@@ -548,14 +544,21 @@ add_library(QtAwsRds
   stopdbclusterrequest_p.h
   stopdbclusterresponse.h
   stopdbclusterresponse_p.h
-  stopdbinstanceautomatedbackupsreplicationrequest.h
-  stopdbinstanceautomatedbackupsreplicationrequest_p.h
-  stopdbinstanceautomatedbackupsreplicationresponse.h
-  stopdbinstanceautomatedbackupsreplicationresponse_p.h
   stopdbinstancerequest.h
   stopdbinstancerequest_p.h
   stopdbinstanceresponse.h
   stopdbinstanceresponse_p.h
+  stopdbinstanceautomatedbackupsreplicationrequest.h
+  stopdbinstanceautomatedbackupsreplicationrequest_p.h
+  stopdbinstanceautomatedbackupsreplicationresponse.h
+  stopdbinstanceautomatedbackupsreplicationresponse_p.h
+  switchoverreadreplicarequest.h
+  switchoverreadreplicarequest_p.h
+  switchoverreadreplicaresponse.h
+  switchoverreadreplicaresponse_p.h
+  rdsclient.cpp
+  rdsrequest.cpp
+  rdsresponse.cpp
   addroletodbclusterrequest.cpp
   addroletodbclusterresponse.cpp
   addroletodbinstancerequest.cpp
@@ -582,26 +585,26 @@ add_library(QtAwsRds
   copydbsnapshotresponse.cpp
   copyoptiongrouprequest.cpp
   copyoptiongroupresponse.cpp
-  createcustomavailabilityzonerequest.cpp
-  createcustomavailabilityzoneresponse.cpp
+  createcustomdbengineversionrequest.cpp
+  createcustomdbengineversionresponse.cpp
+  createdbclusterrequest.cpp
+  createdbclusterresponse.cpp
   createdbclusterendpointrequest.cpp
   createdbclusterendpointresponse.cpp
   createdbclusterparametergrouprequest.cpp
   createdbclusterparametergroupresponse.cpp
-  createdbclusterrequest.cpp
-  createdbclusterresponse.cpp
   createdbclustersnapshotrequest.cpp
   createdbclustersnapshotresponse.cpp
-  createdbinstancereadreplicarequest.cpp
-  createdbinstancereadreplicaresponse.cpp
   createdbinstancerequest.cpp
   createdbinstanceresponse.cpp
+  createdbinstancereadreplicarequest.cpp
+  createdbinstancereadreplicaresponse.cpp
   createdbparametergrouprequest.cpp
   createdbparametergroupresponse.cpp
-  createdbproxyendpointrequest.cpp
-  createdbproxyendpointresponse.cpp
   createdbproxyrequest.cpp
   createdbproxyresponse.cpp
+  createdbproxyendpointrequest.cpp
+  createdbproxyendpointresponse.cpp
   createdbsecuritygrouprequest.cpp
   createdbsecuritygroupresponse.cpp
   createdbsnapshotrequest.cpp
@@ -614,26 +617,26 @@ add_library(QtAwsRds
   createglobalclusterresponse.cpp
   createoptiongrouprequest.cpp
   createoptiongroupresponse.cpp
-  deletecustomavailabilityzonerequest.cpp
-  deletecustomavailabilityzoneresponse.cpp
+  deletecustomdbengineversionrequest.cpp
+  deletecustomdbengineversionresponse.cpp
+  deletedbclusterrequest.cpp
+  deletedbclusterresponse.cpp
   deletedbclusterendpointrequest.cpp
   deletedbclusterendpointresponse.cpp
   deletedbclusterparametergrouprequest.cpp
   deletedbclusterparametergroupresponse.cpp
-  deletedbclusterrequest.cpp
-  deletedbclusterresponse.cpp
   deletedbclustersnapshotrequest.cpp
   deletedbclustersnapshotresponse.cpp
-  deletedbinstanceautomatedbackuprequest.cpp
-  deletedbinstanceautomatedbackupresponse.cpp
   deletedbinstancerequest.cpp
   deletedbinstanceresponse.cpp
+  deletedbinstanceautomatedbackuprequest.cpp
+  deletedbinstanceautomatedbackupresponse.cpp
   deletedbparametergrouprequest.cpp
   deletedbparametergroupresponse.cpp
-  deletedbproxyendpointrequest.cpp
-  deletedbproxyendpointresponse.cpp
   deletedbproxyrequest.cpp
   deletedbproxyresponse.cpp
+  deletedbproxyendpointrequest.cpp
+  deletedbproxyendpointresponse.cpp
   deletedbsecuritygrouprequest.cpp
   deletedbsecuritygroupresponse.cpp
   deletedbsnapshotrequest.cpp
@@ -644,8 +647,6 @@ add_library(QtAwsRds
   deleteeventsubscriptionresponse.cpp
   deleteglobalclusterrequest.cpp
   deleteglobalclusterresponse.cpp
-  deleteinstallationmediarequest.cpp
-  deleteinstallationmediaresponse.cpp
   deleteoptiongrouprequest.cpp
   deleteoptiongroupresponse.cpp
   deregisterdbproxytargetsrequest.cpp
@@ -654,8 +655,6 @@ add_library(QtAwsRds
   describeaccountattributesresponse.cpp
   describecertificatesrequest.cpp
   describecertificatesresponse.cpp
-  describecustomavailabilityzonesrequest.cpp
-  describecustomavailabilityzonesresponse.cpp
   describedbclusterbacktracksrequest.cpp
   describedbclusterbacktracksresponse.cpp
   describedbclusterendpointsrequest.cpp
@@ -704,16 +703,14 @@ add_library(QtAwsRds
   describeenginedefaultparametersresponse.cpp
   describeeventcategoriesrequest.cpp
   describeeventcategoriesresponse.cpp
-  describeeventsrequest.cpp
-  describeeventsresponse.cpp
   describeeventsubscriptionsrequest.cpp
   describeeventsubscriptionsresponse.cpp
+  describeeventsrequest.cpp
+  describeeventsresponse.cpp
   describeexporttasksrequest.cpp
   describeexporttasksresponse.cpp
   describeglobalclustersrequest.cpp
   describeglobalclustersresponse.cpp
-  describeinstallationmediarequest.cpp
-  describeinstallationmediaresponse.cpp
   describeoptiongroupoptionsrequest.cpp
   describeoptiongroupoptionsresponse.cpp
   describeoptiongroupsrequest.cpp
@@ -722,10 +719,10 @@ add_library(QtAwsRds
   describeorderabledbinstanceoptionsresponse.cpp
   describependingmaintenanceactionsrequest.cpp
   describependingmaintenanceactionsresponse.cpp
-  describereserveddbinstancesofferingsrequest.cpp
-  describereserveddbinstancesofferingsresponse.cpp
   describereserveddbinstancesrequest.cpp
   describereserveddbinstancesresponse.cpp
+  describereserveddbinstancesofferingsrequest.cpp
+  describereserveddbinstancesofferingsresponse.cpp
   describesourceregionsrequest.cpp
   describesourceregionsresponse.cpp
   describevaliddbinstancemodificationsrequest.cpp
@@ -736,36 +733,38 @@ add_library(QtAwsRds
   failoverdbclusterresponse.cpp
   failoverglobalclusterrequest.cpp
   failoverglobalclusterresponse.cpp
-  importinstallationmediarequest.cpp
-  importinstallationmediaresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  modifyactivitystreamrequest.cpp
+  modifyactivitystreamresponse.cpp
   modifycertificatesrequest.cpp
   modifycertificatesresponse.cpp
   modifycurrentdbclustercapacityrequest.cpp
   modifycurrentdbclustercapacityresponse.cpp
+  modifycustomdbengineversionrequest.cpp
+  modifycustomdbengineversionresponse.cpp
+  modifydbclusterrequest.cpp
+  modifydbclusterresponse.cpp
   modifydbclusterendpointrequest.cpp
   modifydbclusterendpointresponse.cpp
   modifydbclusterparametergrouprequest.cpp
   modifydbclusterparametergroupresponse.cpp
-  modifydbclusterrequest.cpp
-  modifydbclusterresponse.cpp
   modifydbclustersnapshotattributerequest.cpp
   modifydbclustersnapshotattributeresponse.cpp
   modifydbinstancerequest.cpp
   modifydbinstanceresponse.cpp
   modifydbparametergrouprequest.cpp
   modifydbparametergroupresponse.cpp
-  modifydbproxyendpointrequest.cpp
-  modifydbproxyendpointresponse.cpp
   modifydbproxyrequest.cpp
   modifydbproxyresponse.cpp
+  modifydbproxyendpointrequest.cpp
+  modifydbproxyendpointresponse.cpp
   modifydbproxytargetgrouprequest.cpp
   modifydbproxytargetgroupresponse.cpp
-  modifydbsnapshotattributerequest.cpp
-  modifydbsnapshotattributeresponse.cpp
   modifydbsnapshotrequest.cpp
   modifydbsnapshotresponse.cpp
+  modifydbsnapshotattributerequest.cpp
+  modifydbsnapshotattributeresponse.cpp
   modifydbsubnetgrouprequest.cpp
   modifydbsubnetgroupresponse.cpp
   modifyeventsubscriptionrequest.cpp
@@ -774,15 +773,14 @@ add_library(QtAwsRds
   modifyglobalclusterresponse.cpp
   modifyoptiongrouprequest.cpp
   modifyoptiongroupresponse.cpp
-  promotereadreplicadbclusterrequest.cpp
-  promotereadreplicadbclusterresponse.cpp
   promotereadreplicarequest.cpp
   promotereadreplicaresponse.cpp
+  promotereadreplicadbclusterrequest.cpp
+  promotereadreplicadbclusterresponse.cpp
   purchasereserveddbinstancesofferingrequest.cpp
   purchasereserveddbinstancesofferingresponse.cpp
-  rdsclient.cpp
-  rdsrequest.cpp
-  rdsresponse.cpp
+  rebootdbclusterrequest.cpp
+  rebootdbclusterresponse.cpp
   rebootdbinstancerequest.cpp
   rebootdbinstanceresponse.cpp
   registerdbproxytargetsrequest.cpp
@@ -819,20 +817,22 @@ add_library(QtAwsRds
   startactivitystreamresponse.cpp
   startdbclusterrequest.cpp
   startdbclusterresponse.cpp
-  startdbinstanceautomatedbackupsreplicationrequest.cpp
-  startdbinstanceautomatedbackupsreplicationresponse.cpp
   startdbinstancerequest.cpp
   startdbinstanceresponse.cpp
+  startdbinstanceautomatedbackupsreplicationrequest.cpp
+  startdbinstanceautomatedbackupsreplicationresponse.cpp
   startexporttaskrequest.cpp
   startexporttaskresponse.cpp
   stopactivitystreamrequest.cpp
   stopactivitystreamresponse.cpp
   stopdbclusterrequest.cpp
   stopdbclusterresponse.cpp
+  stopdbinstancerequest.cpp
+  stopdbinstanceresponse.cpp
   stopdbinstanceautomatedbackupsreplicationrequest.cpp
   stopdbinstanceautomatedbackupsreplicationresponse.cpp
-  stopdbinstancerequest.cpp
-  stopdbinstanceresponse.cpp)
+  switchoverreadreplicarequest.cpp
+  switchoverreadreplicaresponse.cpp)
 
 target_link_libraries(QtAwsRds
   PRIVATE QtAwsCore

@@ -23,23 +23,23 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetEventDestinationRequest
- * \brief The CreateConfigurationSetEventDestinationRequest class provides an interface for PinpointSMSVoice CreateConfigurationSetEventDestination requests.
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetEventDestinationRequest
+ * \brief The CreateConfigurationSetEventDestinationRequest class provides an interface for PinpointSmsVoice CreateConfigurationSetEventDestination requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::createConfigurationSetEventDestination
+ * \sa PinpointSmsVoiceClient::createConfigurationSetEventDestination
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestinationRequest(const CreateConfigurationSetEventDestinationRequest &other)
-    : PinpointSMSVoiceRequest(new CreateConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
+    : PinpointSmsVoiceRequest(new CreateConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestin
  * Constructs a CreateConfigurationSetEventDestinationRequest object.
  */
 CreateConfigurationSetEventDestinationRequest::CreateConfigurationSetEventDestinationRequest()
-    : PinpointSMSVoiceRequest(new CreateConfigurationSetEventDestinationRequestPrivate(PinpointSMSVoiceRequest::CreateConfigurationSetEventDestinationAction, this))
+    : PinpointSmsVoiceRequest(new CreateConfigurationSetEventDestinationRequestPrivate(PinpointSmsVoiceRequest::CreateConfigurationSetEventDestinationAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetEventDestinationRequest
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetEventDestinationRequestPrivate
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetEventDestinationRequestPrivate
  * \brief The CreateConfigurationSetEventDestinationRequestPrivate class provides private implementation for CreateConfigurationSetEventDestinationRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a CreateConfigurationSetEventDestinationRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a CreateConfigurationSetEventDestinationRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
-    const PinpointSMSVoiceRequest::Action action, CreateConfigurationSetEventDestinationRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(action, q)
+    const PinpointSmsVoiceRequest::Action action, CreateConfigurationSetEventDestinationRequest * const q)
+    : PinpointSmsVoiceRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEven
  */
 CreateConfigurationSetEventDestinationRequestPrivate::CreateConfigurationSetEventDestinationRequestPrivate(
     const CreateConfigurationSetEventDestinationRequestPrivate &other, CreateConfigurationSetEventDestinationRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(other, q)
+    : PinpointSmsVoiceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

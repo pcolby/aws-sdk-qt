@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledResponse
- * \brief The UpdateConfigurationSetReputationMetricsEnabledResponse class provides an interace for SES UpdateConfigurationSetReputationMetricsEnabled responses.
+ * \class QtAws::Ses::UpdateConfigurationSetReputationMetricsEnabledResponse
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledResponse class provides an interace for Ses UpdateConfigurationSetReputationMetricsEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfiguratio
 
 /*!
  * \reimp
- * Parses a successful SES UpdateConfigurationSetReputationMetricsEnabled \a response.
+ * Parses a successful Ses UpdateConfigurationSetReputationMetricsEnabled \a response.
  */
 void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODev
 }
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate
+ * \class QtAws::Ses::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate
  * \brief The UpdateConfigurationSetReputationMetricsEnabledResponsePrivate class provides private implementation for UpdateConfigurationSetReputationMetricsEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurati
 }
 
 /*!
- * Parses a SES UpdateConfigurationSetReputationMetricsEnabled response element from \a xml.
+ * Parses a Ses UpdateConfigurationSetReputationMetricsEnabled response element from \a xml.
  */
 void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::parseUpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::parseUpdateC
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

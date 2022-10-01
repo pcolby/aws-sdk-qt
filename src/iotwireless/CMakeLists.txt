@@ -1,10 +1,29 @@
 add_compile_definitions(QTAWSIOTWIRELESS_LIBRARY)
 
 add_library(QtAwsIoTWireless
+  qtawsiotwirelessglobal.h
+  iotwirelessclient.h
+  iotwirelessclient_p.h
+  iotwirelessrequest.h
+  iotwirelessrequest_p.h
+  iotwirelessresponse.h
+  iotwirelessresponse_p.h
   associateawsaccountwithpartneraccountrequest.h
   associateawsaccountwithpartneraccountrequest_p.h
   associateawsaccountwithpartneraccountresponse.h
   associateawsaccountwithpartneraccountresponse_p.h
+  associatemulticastgroupwithfuotataskrequest.h
+  associatemulticastgroupwithfuotataskrequest_p.h
+  associatemulticastgroupwithfuotataskresponse.h
+  associatemulticastgroupwithfuotataskresponse_p.h
+  associatewirelessdevicewithfuotataskrequest.h
+  associatewirelessdevicewithfuotataskrequest_p.h
+  associatewirelessdevicewithfuotataskresponse.h
+  associatewirelessdevicewithfuotataskresponse_p.h
+  associatewirelessdevicewithmulticastgrouprequest.h
+  associatewirelessdevicewithmulticastgrouprequest_p.h
+  associatewirelessdevicewithmulticastgroupresponse.h
+  associatewirelessdevicewithmulticastgroupresponse_p.h
   associatewirelessdevicewiththingrequest.h
   associatewirelessdevicewiththingrequest_p.h
   associatewirelessdevicewiththingresponse.h
@@ -17,6 +36,10 @@ add_library(QtAwsIoTWireless
   associatewirelessgatewaywiththingrequest_p.h
   associatewirelessgatewaywiththingresponse.h
   associatewirelessgatewaywiththingresponse_p.h
+  cancelmulticastgroupsessionrequest.h
+  cancelmulticastgroupsessionrequest_p.h
+  cancelmulticastgroupsessionresponse.h
+  cancelmulticastgroupsessionresponse_p.h
   createdestinationrequest.h
   createdestinationrequest_p.h
   createdestinationresponse.h
@@ -25,6 +48,18 @@ add_library(QtAwsIoTWireless
   createdeviceprofilerequest_p.h
   createdeviceprofileresponse.h
   createdeviceprofileresponse_p.h
+  createfuotataskrequest.h
+  createfuotataskrequest_p.h
+  createfuotataskresponse.h
+  createfuotataskresponse_p.h
+  createmulticastgrouprequest.h
+  createmulticastgrouprequest_p.h
+  createmulticastgroupresponse.h
+  createmulticastgroupresponse_p.h
+  createnetworkanalyzerconfigurationrequest.h
+  createnetworkanalyzerconfigurationrequest_p.h
+  createnetworkanalyzerconfigurationresponse.h
+  createnetworkanalyzerconfigurationresponse_p.h
   createserviceprofilerequest.h
   createserviceprofilerequest_p.h
   createserviceprofileresponse.h
@@ -37,14 +72,14 @@ add_library(QtAwsIoTWireless
   createwirelessgatewayrequest_p.h
   createwirelessgatewayresponse.h
   createwirelessgatewayresponse_p.h
-  createwirelessgatewaytaskdefinitionrequest.h
-  createwirelessgatewaytaskdefinitionrequest_p.h
-  createwirelessgatewaytaskdefinitionresponse.h
-  createwirelessgatewaytaskdefinitionresponse_p.h
   createwirelessgatewaytaskrequest.h
   createwirelessgatewaytaskrequest_p.h
   createwirelessgatewaytaskresponse.h
   createwirelessgatewaytaskresponse_p.h
+  createwirelessgatewaytaskdefinitionrequest.h
+  createwirelessgatewaytaskdefinitionrequest_p.h
+  createwirelessgatewaytaskdefinitionresponse.h
+  createwirelessgatewaytaskdefinitionresponse_p.h
   deletedestinationrequest.h
   deletedestinationrequest_p.h
   deletedestinationresponse.h
@@ -53,6 +88,22 @@ add_library(QtAwsIoTWireless
   deletedeviceprofilerequest_p.h
   deletedeviceprofileresponse.h
   deletedeviceprofileresponse_p.h
+  deletefuotataskrequest.h
+  deletefuotataskrequest_p.h
+  deletefuotataskresponse.h
+  deletefuotataskresponse_p.h
+  deletemulticastgrouprequest.h
+  deletemulticastgrouprequest_p.h
+  deletemulticastgroupresponse.h
+  deletemulticastgroupresponse_p.h
+  deletenetworkanalyzerconfigurationrequest.h
+  deletenetworkanalyzerconfigurationrequest_p.h
+  deletenetworkanalyzerconfigurationresponse.h
+  deletenetworkanalyzerconfigurationresponse_p.h
+  deletequeuedmessagesrequest.h
+  deletequeuedmessagesrequest_p.h
+  deletequeuedmessagesresponse.h
+  deletequeuedmessagesresponse_p.h
   deleteserviceprofilerequest.h
   deleteserviceprofilerequest_p.h
   deleteserviceprofileresponse.h
@@ -65,18 +116,30 @@ add_library(QtAwsIoTWireless
   deletewirelessgatewayrequest_p.h
   deletewirelessgatewayresponse.h
   deletewirelessgatewayresponse_p.h
-  deletewirelessgatewaytaskdefinitionrequest.h
-  deletewirelessgatewaytaskdefinitionrequest_p.h
-  deletewirelessgatewaytaskdefinitionresponse.h
-  deletewirelessgatewaytaskdefinitionresponse_p.h
   deletewirelessgatewaytaskrequest.h
   deletewirelessgatewaytaskrequest_p.h
   deletewirelessgatewaytaskresponse.h
   deletewirelessgatewaytaskresponse_p.h
+  deletewirelessgatewaytaskdefinitionrequest.h
+  deletewirelessgatewaytaskdefinitionrequest_p.h
+  deletewirelessgatewaytaskdefinitionresponse.h
+  deletewirelessgatewaytaskdefinitionresponse_p.h
   disassociateawsaccountfrompartneraccountrequest.h
   disassociateawsaccountfrompartneraccountrequest_p.h
   disassociateawsaccountfrompartneraccountresponse.h
   disassociateawsaccountfrompartneraccountresponse_p.h
+  disassociatemulticastgroupfromfuotataskrequest.h
+  disassociatemulticastgroupfromfuotataskrequest_p.h
+  disassociatemulticastgroupfromfuotataskresponse.h
+  disassociatemulticastgroupfromfuotataskresponse_p.h
+  disassociatewirelessdevicefromfuotataskrequest.h
+  disassociatewirelessdevicefromfuotataskrequest_p.h
+  disassociatewirelessdevicefromfuotataskresponse.h
+  disassociatewirelessdevicefromfuotataskresponse_p.h
+  disassociatewirelessdevicefrommulticastgrouprequest.h
+  disassociatewirelessdevicefrommulticastgrouprequest_p.h
+  disassociatewirelessdevicefrommulticastgroupresponse.h
+  disassociatewirelessdevicefrommulticastgroupresponse_p.h
   disassociatewirelessdevicefromthingrequest.h
   disassociatewirelessdevicefromthingrequest_p.h
   disassociatewirelessdevicefromthingresponse.h
@@ -97,14 +160,46 @@ add_library(QtAwsIoTWireless
   getdeviceprofilerequest_p.h
   getdeviceprofileresponse.h
   getdeviceprofileresponse_p.h
+  geteventconfigurationbyresourcetypesrequest.h
+  geteventconfigurationbyresourcetypesrequest_p.h
+  geteventconfigurationbyresourcetypesresponse.h
+  geteventconfigurationbyresourcetypesresponse_p.h
+  getfuotataskrequest.h
+  getfuotataskrequest_p.h
+  getfuotataskresponse.h
+  getfuotataskresponse_p.h
   getloglevelsbyresourcetypesrequest.h
   getloglevelsbyresourcetypesrequest_p.h
   getloglevelsbyresourcetypesresponse.h
   getloglevelsbyresourcetypesresponse_p.h
+  getmulticastgrouprequest.h
+  getmulticastgrouprequest_p.h
+  getmulticastgroupresponse.h
+  getmulticastgroupresponse_p.h
+  getmulticastgroupsessionrequest.h
+  getmulticastgroupsessionrequest_p.h
+  getmulticastgroupsessionresponse.h
+  getmulticastgroupsessionresponse_p.h
+  getnetworkanalyzerconfigurationrequest.h
+  getnetworkanalyzerconfigurationrequest_p.h
+  getnetworkanalyzerconfigurationresponse.h
+  getnetworkanalyzerconfigurationresponse_p.h
   getpartneraccountrequest.h
   getpartneraccountrequest_p.h
   getpartneraccountresponse.h
   getpartneraccountresponse_p.h
+  getpositionrequest.h
+  getpositionrequest_p.h
+  getpositionresponse.h
+  getpositionresponse_p.h
+  getpositionconfigurationrequest.h
+  getpositionconfigurationrequest_p.h
+  getpositionconfigurationresponse.h
+  getpositionconfigurationresponse_p.h
+  getresourceeventconfigurationrequest.h
+  getresourceeventconfigurationrequest_p.h
+  getresourceeventconfigurationresponse.h
+  getresourceeventconfigurationresponse_p.h
   getresourceloglevelrequest.h
   getresourceloglevelrequest_p.h
   getresourceloglevelresponse.h
@@ -125,6 +220,10 @@ add_library(QtAwsIoTWireless
   getwirelessdevicestatisticsrequest_p.h
   getwirelessdevicestatisticsresponse.h
   getwirelessdevicestatisticsresponse_p.h
+  getwirelessgatewayrequest.h
+  getwirelessgatewayrequest_p.h
+  getwirelessgatewayresponse.h
+  getwirelessgatewayresponse_p.h
   getwirelessgatewaycertificaterequest.h
   getwirelessgatewaycertificaterequest_p.h
   getwirelessgatewaycertificateresponse.h
@@ -133,28 +232,18 @@ add_library(QtAwsIoTWireless
   getwirelessgatewayfirmwareinformationrequest_p.h
   getwirelessgatewayfirmwareinformationresponse.h
   getwirelessgatewayfirmwareinformationresponse_p.h
-  getwirelessgatewayrequest.h
-  getwirelessgatewayrequest_p.h
-  getwirelessgatewayresponse.h
-  getwirelessgatewayresponse_p.h
   getwirelessgatewaystatisticsrequest.h
   getwirelessgatewaystatisticsrequest_p.h
   getwirelessgatewaystatisticsresponse.h
   getwirelessgatewaystatisticsresponse_p.h
-  getwirelessgatewaytaskdefinitionrequest.h
-  getwirelessgatewaytaskdefinitionrequest_p.h
-  getwirelessgatewaytaskdefinitionresponse.h
-  getwirelessgatewaytaskdefinitionresponse_p.h
   getwirelessgatewaytaskrequest.h
   getwirelessgatewaytaskrequest_p.h
   getwirelessgatewaytaskresponse.h
   getwirelessgatewaytaskresponse_p.h
-  iotwirelessclient.h
-  iotwirelessclient_p.h
-  iotwirelessrequest.h
-  iotwirelessrequest_p.h
-  iotwirelessresponse.h
-  iotwirelessresponse_p.h
+  getwirelessgatewaytaskdefinitionrequest.h
+  getwirelessgatewaytaskdefinitionrequest_p.h
+  getwirelessgatewaytaskdefinitionresponse.h
+  getwirelessgatewaytaskdefinitionresponse_p.h
   listdestinationsrequest.h
   listdestinationsrequest_p.h
   listdestinationsresponse.h
@@ -163,10 +252,38 @@ add_library(QtAwsIoTWireless
   listdeviceprofilesrequest_p.h
   listdeviceprofilesresponse.h
   listdeviceprofilesresponse_p.h
+  listeventconfigurationsrequest.h
+  listeventconfigurationsrequest_p.h
+  listeventconfigurationsresponse.h
+  listeventconfigurationsresponse_p.h
+  listfuotatasksrequest.h
+  listfuotatasksrequest_p.h
+  listfuotatasksresponse.h
+  listfuotatasksresponse_p.h
+  listmulticastgroupsrequest.h
+  listmulticastgroupsrequest_p.h
+  listmulticastgroupsresponse.h
+  listmulticastgroupsresponse_p.h
+  listmulticastgroupsbyfuotataskrequest.h
+  listmulticastgroupsbyfuotataskrequest_p.h
+  listmulticastgroupsbyfuotataskresponse.h
+  listmulticastgroupsbyfuotataskresponse_p.h
+  listnetworkanalyzerconfigurationsrequest.h
+  listnetworkanalyzerconfigurationsrequest_p.h
+  listnetworkanalyzerconfigurationsresponse.h
+  listnetworkanalyzerconfigurationsresponse_p.h
   listpartneraccountsrequest.h
   listpartneraccountsrequest_p.h
   listpartneraccountsresponse.h
   listpartneraccountsresponse_p.h
+  listpositionconfigurationsrequest.h
+  listpositionconfigurationsrequest_p.h
+  listpositionconfigurationsresponse.h
+  listpositionconfigurationsresponse_p.h
+  listqueuedmessagesrequest.h
+  listqueuedmessagesrequest_p.h
+  listqueuedmessagesresponse.h
+  listqueuedmessagesresponse_p.h
   listserviceprofilesrequest.h
   listserviceprofilesrequest_p.h
   listserviceprofilesresponse.h
@@ -179,19 +296,22 @@ add_library(QtAwsIoTWireless
   listwirelessdevicesrequest_p.h
   listwirelessdevicesresponse.h
   listwirelessdevicesresponse_p.h
-  listwirelessgatewaysrequest.h
-  listwirelessgatewaysrequest_p.h
-  listwirelessgatewaysresponse.h
-  listwirelessgatewaysresponse_p.h
   listwirelessgatewaytaskdefinitionsrequest.h
   listwirelessgatewaytaskdefinitionsrequest_p.h
   listwirelessgatewaytaskdefinitionsresponse.h
   listwirelessgatewaytaskdefinitionsresponse_p.h
+  listwirelessgatewaysrequest.h
+  listwirelessgatewaysrequest_p.h
+  listwirelessgatewaysresponse.h
+  listwirelessgatewaysresponse_p.h
+  putpositionconfigurationrequest.h
+  putpositionconfigurationrequest_p.h
+  putpositionconfigurationresponse.h
+  putpositionconfigurationresponse_p.h
   putresourceloglevelrequest.h
   putresourceloglevelrequest_p.h
   putresourceloglevelresponse.h
   putresourceloglevelresponse_p.h
-  qtawsiotwirelessglobal.h
   resetallresourceloglevelsrequest.h
   resetallresourceloglevelsrequest_p.h
   resetallresourceloglevelsresponse.h
@@ -200,10 +320,30 @@ add_library(QtAwsIoTWireless
   resetresourceloglevelrequest_p.h
   resetresourceloglevelresponse.h
   resetresourceloglevelresponse_p.h
+  senddatatomulticastgrouprequest.h
+  senddatatomulticastgrouprequest_p.h
+  senddatatomulticastgroupresponse.h
+  senddatatomulticastgroupresponse_p.h
   senddatatowirelessdevicerequest.h
   senddatatowirelessdevicerequest_p.h
   senddatatowirelessdeviceresponse.h
   senddatatowirelessdeviceresponse_p.h
+  startbulkassociatewirelessdevicewithmulticastgrouprequest.h
+  startbulkassociatewirelessdevicewithmulticastgrouprequest_p.h
+  startbulkassociatewirelessdevicewithmulticastgroupresponse.h
+  startbulkassociatewirelessdevicewithmulticastgroupresponse_p.h
+  startbulkdisassociatewirelessdevicefrommulticastgrouprequest.h
+  startbulkdisassociatewirelessdevicefrommulticastgrouprequest_p.h
+  startbulkdisassociatewirelessdevicefrommulticastgroupresponse.h
+  startbulkdisassociatewirelessdevicefrommulticastgroupresponse_p.h
+  startfuotataskrequest.h
+  startfuotataskrequest_p.h
+  startfuotataskresponse.h
+  startfuotataskresponse_p.h
+  startmulticastgroupsessionrequest.h
+  startmulticastgroupsessionrequest_p.h
+  startmulticastgroupsessionresponse.h
+  startmulticastgroupsessionresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -220,14 +360,38 @@ add_library(QtAwsIoTWireless
   updatedestinationrequest_p.h
   updatedestinationresponse.h
   updatedestinationresponse_p.h
+  updateeventconfigurationbyresourcetypesrequest.h
+  updateeventconfigurationbyresourcetypesrequest_p.h
+  updateeventconfigurationbyresourcetypesresponse.h
+  updateeventconfigurationbyresourcetypesresponse_p.h
+  updatefuotataskrequest.h
+  updatefuotataskrequest_p.h
+  updatefuotataskresponse.h
+  updatefuotataskresponse_p.h
   updateloglevelsbyresourcetypesrequest.h
   updateloglevelsbyresourcetypesrequest_p.h
   updateloglevelsbyresourcetypesresponse.h
   updateloglevelsbyresourcetypesresponse_p.h
+  updatemulticastgrouprequest.h
+  updatemulticastgrouprequest_p.h
+  updatemulticastgroupresponse.h
+  updatemulticastgroupresponse_p.h
+  updatenetworkanalyzerconfigurationrequest.h
+  updatenetworkanalyzerconfigurationrequest_p.h
+  updatenetworkanalyzerconfigurationresponse.h
+  updatenetworkanalyzerconfigurationresponse_p.h
   updatepartneraccountrequest.h
   updatepartneraccountrequest_p.h
   updatepartneraccountresponse.h
   updatepartneraccountresponse_p.h
+  updatepositionrequest.h
+  updatepositionrequest_p.h
+  updatepositionresponse.h
+  updatepositionresponse_p.h
+  updateresourceeventconfigurationrequest.h
+  updateresourceeventconfigurationrequest_p.h
+  updateresourceeventconfigurationresponse.h
+  updateresourceeventconfigurationresponse_p.h
   updatewirelessdevicerequest.h
   updatewirelessdevicerequest_p.h
   updatewirelessdeviceresponse.h
@@ -236,44 +400,75 @@ add_library(QtAwsIoTWireless
   updatewirelessgatewayrequest_p.h
   updatewirelessgatewayresponse.h
   updatewirelessgatewayresponse_p.h
+  iotwirelessclient.cpp
+  iotwirelessrequest.cpp
+  iotwirelessresponse.cpp
   associateawsaccountwithpartneraccountrequest.cpp
   associateawsaccountwithpartneraccountresponse.cpp
+  associatemulticastgroupwithfuotataskrequest.cpp
+  associatemulticastgroupwithfuotataskresponse.cpp
+  associatewirelessdevicewithfuotataskrequest.cpp
+  associatewirelessdevicewithfuotataskresponse.cpp
+  associatewirelessdevicewithmulticastgrouprequest.cpp
+  associatewirelessdevicewithmulticastgroupresponse.cpp
   associatewirelessdevicewiththingrequest.cpp
   associatewirelessdevicewiththingresponse.cpp
   associatewirelessgatewaywithcertificaterequest.cpp
   associatewirelessgatewaywithcertificateresponse.cpp
   associatewirelessgatewaywiththingrequest.cpp
   associatewirelessgatewaywiththingresponse.cpp
+  cancelmulticastgroupsessionrequest.cpp
+  cancelmulticastgroupsessionresponse.cpp
   createdestinationrequest.cpp
   createdestinationresponse.cpp
   createdeviceprofilerequest.cpp
   createdeviceprofileresponse.cpp
+  createfuotataskrequest.cpp
+  createfuotataskresponse.cpp
+  createmulticastgrouprequest.cpp
+  createmulticastgroupresponse.cpp
+  createnetworkanalyzerconfigurationrequest.cpp
+  createnetworkanalyzerconfigurationresponse.cpp
   createserviceprofilerequest.cpp
   createserviceprofileresponse.cpp
   createwirelessdevicerequest.cpp
   createwirelessdeviceresponse.cpp
   createwirelessgatewayrequest.cpp
   createwirelessgatewayresponse.cpp
-  createwirelessgatewaytaskdefinitionrequest.cpp
-  createwirelessgatewaytaskdefinitionresponse.cpp
   createwirelessgatewaytaskrequest.cpp
   createwirelessgatewaytaskresponse.cpp
+  createwirelessgatewaytaskdefinitionrequest.cpp
+  createwirelessgatewaytaskdefinitionresponse.cpp
   deletedestinationrequest.cpp
   deletedestinationresponse.cpp
   deletedeviceprofilerequest.cpp
   deletedeviceprofileresponse.cpp
+  deletefuotataskrequest.cpp
+  deletefuotataskresponse.cpp
+  deletemulticastgrouprequest.cpp
+  deletemulticastgroupresponse.cpp
+  deletenetworkanalyzerconfigurationrequest.cpp
+  deletenetworkanalyzerconfigurationresponse.cpp
+  deletequeuedmessagesrequest.cpp
+  deletequeuedmessagesresponse.cpp
   deleteserviceprofilerequest.cpp
   deleteserviceprofileresponse.cpp
   deletewirelessdevicerequest.cpp
   deletewirelessdeviceresponse.cpp
   deletewirelessgatewayrequest.cpp
   deletewirelessgatewayresponse.cpp
-  deletewirelessgatewaytaskdefinitionrequest.cpp
-  deletewirelessgatewaytaskdefinitionresponse.cpp
   deletewirelessgatewaytaskrequest.cpp
   deletewirelessgatewaytaskresponse.cpp
+  deletewirelessgatewaytaskdefinitionrequest.cpp
+  deletewirelessgatewaytaskdefinitionresponse.cpp
   disassociateawsaccountfrompartneraccountrequest.cpp
   disassociateawsaccountfrompartneraccountresponse.cpp
+  disassociatemulticastgroupfromfuotataskrequest.cpp
+  disassociatemulticastgroupfromfuotataskresponse.cpp
+  disassociatewirelessdevicefromfuotataskrequest.cpp
+  disassociatewirelessdevicefromfuotataskresponse.cpp
+  disassociatewirelessdevicefrommulticastgrouprequest.cpp
+  disassociatewirelessdevicefrommulticastgroupresponse.cpp
   disassociatewirelessdevicefromthingrequest.cpp
   disassociatewirelessdevicefromthingresponse.cpp
   disassociatewirelessgatewayfromcertificaterequest.cpp
@@ -284,10 +479,26 @@ add_library(QtAwsIoTWireless
   getdestinationresponse.cpp
   getdeviceprofilerequest.cpp
   getdeviceprofileresponse.cpp
+  geteventconfigurationbyresourcetypesrequest.cpp
+  geteventconfigurationbyresourcetypesresponse.cpp
+  getfuotataskrequest.cpp
+  getfuotataskresponse.cpp
   getloglevelsbyresourcetypesrequest.cpp
   getloglevelsbyresourcetypesresponse.cpp
+  getmulticastgrouprequest.cpp
+  getmulticastgroupresponse.cpp
+  getmulticastgroupsessionrequest.cpp
+  getmulticastgroupsessionresponse.cpp
+  getnetworkanalyzerconfigurationrequest.cpp
+  getnetworkanalyzerconfigurationresponse.cpp
   getpartneraccountrequest.cpp
   getpartneraccountresponse.cpp
+  getpositionrequest.cpp
+  getpositionresponse.cpp
+  getpositionconfigurationrequest.cpp
+  getpositionconfigurationresponse.cpp
+  getresourceeventconfigurationrequest.cpp
+  getresourceeventconfigurationresponse.cpp
   getresourceloglevelrequest.cpp
   getresourceloglevelresponse.cpp
   getserviceendpointrequest.cpp
@@ -298,45 +509,68 @@ add_library(QtAwsIoTWireless
   getwirelessdeviceresponse.cpp
   getwirelessdevicestatisticsrequest.cpp
   getwirelessdevicestatisticsresponse.cpp
+  getwirelessgatewayrequest.cpp
+  getwirelessgatewayresponse.cpp
   getwirelessgatewaycertificaterequest.cpp
   getwirelessgatewaycertificateresponse.cpp
   getwirelessgatewayfirmwareinformationrequest.cpp
   getwirelessgatewayfirmwareinformationresponse.cpp
-  getwirelessgatewayrequest.cpp
-  getwirelessgatewayresponse.cpp
   getwirelessgatewaystatisticsrequest.cpp
   getwirelessgatewaystatisticsresponse.cpp
-  getwirelessgatewaytaskdefinitionrequest.cpp
-  getwirelessgatewaytaskdefinitionresponse.cpp
   getwirelessgatewaytaskrequest.cpp
   getwirelessgatewaytaskresponse.cpp
-  iotwirelessclient.cpp
-  iotwirelessrequest.cpp
-  iotwirelessresponse.cpp
+  getwirelessgatewaytaskdefinitionrequest.cpp
+  getwirelessgatewaytaskdefinitionresponse.cpp
   listdestinationsrequest.cpp
   listdestinationsresponse.cpp
   listdeviceprofilesrequest.cpp
   listdeviceprofilesresponse.cpp
+  listeventconfigurationsrequest.cpp
+  listeventconfigurationsresponse.cpp
+  listfuotatasksrequest.cpp
+  listfuotatasksresponse.cpp
+  listmulticastgroupsrequest.cpp
+  listmulticastgroupsresponse.cpp
+  listmulticastgroupsbyfuotataskrequest.cpp
+  listmulticastgroupsbyfuotataskresponse.cpp
+  listnetworkanalyzerconfigurationsrequest.cpp
+  listnetworkanalyzerconfigurationsresponse.cpp
   listpartneraccountsrequest.cpp
   listpartneraccountsresponse.cpp
+  listpositionconfigurationsrequest.cpp
+  listpositionconfigurationsresponse.cpp
+  listqueuedmessagesrequest.cpp
+  listqueuedmessagesresponse.cpp
   listserviceprofilesrequest.cpp
   listserviceprofilesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listwirelessdevicesrequest.cpp
   listwirelessdevicesresponse.cpp
-  listwirelessgatewaysrequest.cpp
-  listwirelessgatewaysresponse.cpp
   listwirelessgatewaytaskdefinitionsrequest.cpp
   listwirelessgatewaytaskdefinitionsresponse.cpp
+  listwirelessgatewaysrequest.cpp
+  listwirelessgatewaysresponse.cpp
+  putpositionconfigurationrequest.cpp
+  putpositionconfigurationresponse.cpp
   putresourceloglevelrequest.cpp
   putresourceloglevelresponse.cpp
   resetallresourceloglevelsrequest.cpp
   resetallresourceloglevelsresponse.cpp
   resetresourceloglevelrequest.cpp
   resetresourceloglevelresponse.cpp
+  senddatatomulticastgrouprequest.cpp
+  senddatatomulticastgroupresponse.cpp
   senddatatowirelessdevicerequest.cpp
   senddatatowirelessdeviceresponse.cpp
+  startbulkassociatewirelessdevicewithmulticastgrouprequest.cpp
+  startbulkassociatewirelessdevicewithmulticastgroupresponse.cpp
+  startbulkdisassociatewirelessdevicefrommulticastgrouprequest.cpp
+  startbulkdisassociatewirelessdevicefrommulticastgroupresponse.cpp
+  startfuotataskrequest.cpp
+  startfuotataskresponse.cpp
+  startmulticastgroupsessionrequest.cpp
+  startmulticastgroupsessionresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   testwirelessdevicerequest.cpp
@@ -345,10 +579,22 @@ add_library(QtAwsIoTWireless
   untagresourceresponse.cpp
   updatedestinationrequest.cpp
   updatedestinationresponse.cpp
+  updateeventconfigurationbyresourcetypesrequest.cpp
+  updateeventconfigurationbyresourcetypesresponse.cpp
+  updatefuotataskrequest.cpp
+  updatefuotataskresponse.cpp
   updateloglevelsbyresourcetypesrequest.cpp
   updateloglevelsbyresourcetypesresponse.cpp
+  updatemulticastgrouprequest.cpp
+  updatemulticastgroupresponse.cpp
+  updatenetworkanalyzerconfigurationrequest.cpp
+  updatenetworkanalyzerconfigurationresponse.cpp
   updatepartneraccountrequest.cpp
   updatepartneraccountresponse.cpp
+  updatepositionrequest.cpp
+  updatepositionresponse.cpp
+  updateresourceeventconfigurationrequest.cpp
+  updateresourceeventconfigurationresponse.cpp
   updatewirelessdevicerequest.cpp
   updatewirelessdeviceresponse.cpp
   updatewirelessgatewayrequest.cpp

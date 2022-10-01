@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCLOUDHSMV2_LIBRARY)
 
-add_library(QtAwsCloudHSMV2
+add_library(QtAwsCloudHsmV2
+  qtawscloudhsmv2global.h
   cloudhsmv2client.h
   cloudhsmv2client_p.h
   cloudhsmv2request.h
@@ -55,7 +56,6 @@ add_library(QtAwsCloudHSMV2
   modifyclusterrequest_p.h
   modifyclusterresponse.h
   modifyclusterresponse_p.h
-  qtawscloudhsmv2global.h
   restorebackuprequest.h
   restorebackuprequest_p.h
   restorebackupresponse.h
@@ -102,7 +102,7 @@ add_library(QtAwsCloudHSMV2
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-target_link_libraries(QtAwsCloudHSMV2
+target_link_libraries(QtAwsCloudHsmV2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -24,7 +24,7 @@
 #include "associateaddressrequest.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class AssociateAddressRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

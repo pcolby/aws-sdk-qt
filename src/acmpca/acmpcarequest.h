@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaRequestPrivate;
+class AcmPcaRequestPrivate;
 
-class QTAWSACMPCA_EXPORT AcmpcaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSACMPCA_EXPORT AcmPcaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ACMPCA.
+    /// Actions supported by AcmPca.
     enum Action {
         CreateCertificateAuthorityAction,
         CreateCertificateAuthorityAuditReportAction,
@@ -65,9 +65,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    AcmpcaRequest(const Action action);
-    AcmpcaRequest(const AcmpcaRequest &other);
-    AcmpcaRequest &operator=(const AcmpcaRequest &other);
+    AcmPcaRequest(const Action action);
+    AcmPcaRequest(const AcmPcaRequest &other);
+    AcmPcaRequest &operator=(const AcmPcaRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -76,12 +76,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const AcmpcaRequest &other) const;
+    virtual bool operator==(const AcmPcaRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit AcmpcaRequest(AcmpcaRequestPrivate * const d);
+    explicit AcmPcaRequest(AcmPcaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -94,11 +94,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(AcmpcaRequest)
+    Q_DECLARE_PRIVATE(AcmPcaRequest)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

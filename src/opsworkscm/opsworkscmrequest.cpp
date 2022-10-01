@@ -21,47 +21,47 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMRequest
- * \brief The OpsWorksCMRequest class provides an interface for OpsWorksCM requests.
+ * \class QtAws::OpsWorksCm::OpsWorksCmRequest
+ * \brief The OpsWorksCmRequest class provides an interface for OpsWorksCm requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * \enum OpsWorksCMRequest::Action
+ * \enum OpsWorksCmRequest::Action
  *
- * This enum describes the actions that can be performed as OpsWorksCM
+ * This enum describes the actions that can be performed as OpsWorksCm
  * requests.
  *
- * \value AssociateNodeAction OpsWorksCM AssociateNode action.
- * \value CreateBackupAction OpsWorksCM CreateBackup action.
- * \value CreateServerAction OpsWorksCM CreateServer action.
- * \value DeleteBackupAction OpsWorksCM DeleteBackup action.
- * \value DeleteServerAction OpsWorksCM DeleteServer action.
- * \value DescribeAccountAttributesAction OpsWorksCM DescribeAccountAttributes action.
- * \value DescribeBackupsAction OpsWorksCM DescribeBackups action.
- * \value DescribeEventsAction OpsWorksCM DescribeEvents action.
- * \value DescribeNodeAssociationStatusAction OpsWorksCM DescribeNodeAssociationStatus action.
- * \value DescribeServersAction OpsWorksCM DescribeServers action.
- * \value DisassociateNodeAction OpsWorksCM DisassociateNode action.
- * \value ExportServerEngineAttributeAction OpsWorksCM ExportServerEngineAttribute action.
- * \value ListTagsForResourceAction OpsWorksCM ListTagsForResource action.
- * \value RestoreServerAction OpsWorksCM RestoreServer action.
- * \value StartMaintenanceAction OpsWorksCM StartMaintenance action.
- * \value TagResourceAction OpsWorksCM TagResource action.
- * \value UntagResourceAction OpsWorksCM UntagResource action.
- * \value UpdateServerAction OpsWorksCM UpdateServer action.
- * \value UpdateServerEngineAttributesAction OpsWorksCM UpdateServerEngineAttributes action.
+ * \value AssociateNodeAction OpsWorksCm AssociateNode action.
+ * \value CreateBackupAction OpsWorksCm CreateBackup action.
+ * \value CreateServerAction OpsWorksCm CreateServer action.
+ * \value DeleteBackupAction OpsWorksCm DeleteBackup action.
+ * \value DeleteServerAction OpsWorksCm DeleteServer action.
+ * \value DescribeAccountAttributesAction OpsWorksCm DescribeAccountAttributes action.
+ * \value DescribeBackupsAction OpsWorksCm DescribeBackups action.
+ * \value DescribeEventsAction OpsWorksCm DescribeEvents action.
+ * \value DescribeNodeAssociationStatusAction OpsWorksCm DescribeNodeAssociationStatus action.
+ * \value DescribeServersAction OpsWorksCm DescribeServers action.
+ * \value DisassociateNodeAction OpsWorksCm DisassociateNode action.
+ * \value ExportServerEngineAttributeAction OpsWorksCm ExportServerEngineAttribute action.
+ * \value ListTagsForResourceAction OpsWorksCm ListTagsForResource action.
+ * \value RestoreServerAction OpsWorksCm RestoreServer action.
+ * \value StartMaintenanceAction OpsWorksCm StartMaintenance action.
+ * \value TagResourceAction OpsWorksCm TagResource action.
+ * \value UntagResourceAction OpsWorksCm UntagResource action.
+ * \value UpdateServerAction OpsWorksCm UpdateServer action.
+ * \value UpdateServerEngineAttributesAction OpsWorksCm UpdateServerEngineAttributes action.
  */
 
 /*!
- * Constructs a OpsWorksCMRequest object for OpsWorksCM \a action.
+ * Constructs a OpsWorksCmRequest object for OpsWorksCm \a action.
  */
-OpsWorksCMRequest::OpsWorksCMRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new OpsWorksCMRequestPrivate(action, this))
+OpsWorksCmRequest::OpsWorksCmRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new OpsWorksCmRequestPrivate(action, this))
 {
 
 }
@@ -69,18 +69,18 @@ OpsWorksCMRequest::OpsWorksCMRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-OpsWorksCMRequest::OpsWorksCMRequest(const OpsWorksCMRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new OpsWorksCMRequestPrivate(*other.d_func(), this))
+OpsWorksCmRequest::OpsWorksCmRequest(const OpsWorksCmRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new OpsWorksCmRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the OpsWorksCMRequest object to be equal to \a other.
+ * Sets the OpsWorksCmRequest object to be equal to \a other.
  */
-OpsWorksCMRequest& OpsWorksCMRequest::operator=(const OpsWorksCMRequest &other)
+OpsWorksCmRequest& OpsWorksCmRequest::operator=(const OpsWorksCmRequest &other)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -88,57 +88,57 @@ OpsWorksCMRequest& OpsWorksCMRequest::operator=(const OpsWorksCMRequest &other)
 }
 
 /*!
- * Constructs aa OpsWorksCMRequest object with private implementation \a d.
+ * Constructs aa OpsWorksCmRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from OpsWorksCMRequestPrivate.
+ * implementation that inherits from OpsWorksCmRequestPrivate.
  */
-OpsWorksCMRequest::OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+OpsWorksCmRequest::OpsWorksCmRequest(OpsWorksCmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the OpsWorksCM action to be performed by this request.
+ * Returns the OpsWorksCm action to be performed by this request.
  */
-OpsWorksCMRequest::Action OpsWorksCMRequest::action() const
+OpsWorksCmRequest::Action OpsWorksCmRequest::action() const
 {
-    Q_D(const OpsWorksCMRequest);
+    Q_D(const OpsWorksCmRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the OpsWorksCM action to be performed by this request.
+ * Returns the name of the OpsWorksCm action to be performed by this request.
  */
-QString OpsWorksCMRequest::actionString() const
+QString OpsWorksCmRequest::actionString() const
 {
-    return OpsWorksCMRequestPrivate::toString(action());
+    return OpsWorksCmRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the OpsWorksCM API version implemented by this request.
+ * Returns the OpsWorksCm API version implemented by this request.
  */
-QString OpsWorksCMRequest::apiVersion() const
+QString OpsWorksCmRequest::apiVersion() const
 {
-    Q_D(const OpsWorksCMRequest);
+    Q_D(const OpsWorksCmRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the OpsWorksCM action to be performed by this request to \a action.
+ * Sets the OpsWorksCm action to be performed by this request to \a action.
  */
-void OpsWorksCMRequest::setAction(const Action action)
+void OpsWorksCmRequest::setAction(const Action action)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->action = action;
 }
 
 /*!
- * Sets the OpsWorksCM API version to include in this request to \a version.
+ * Sets the OpsWorksCm API version to include in this request to \a version.
  */
-void OpsWorksCMRequest::setApiVersion(const QString &version)
+void OpsWorksCmRequest::setApiVersion(const QString &version)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->apiVersion = version;
 }
 
@@ -150,7 +150,7 @@ void OpsWorksCMRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool OpsWorksCMRequest::operator==(const OpsWorksCMRequest &other) const
+bool OpsWorksCmRequest::operator==(const OpsWorksCmRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -159,19 +159,19 @@ bool OpsWorksCMRequest::operator==(const OpsWorksCMRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid OpsWorksCM queue name.
+ * Returns \c tue if \a queueName is a valid OpsWorksCm queue name.
  *
- * @par From OpsWorksCM FAQs:
+ * @par From OpsWorksCm FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid OpsWorksCM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid OpsWorksCm queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool OpsWorksCMRequest::isValidQueueName(const QString &queueName)
+/*bool OpsWorksCmRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -181,45 +181,45 @@ bool OpsWorksCMRequest::operator==(const OpsWorksCMRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int OpsWorksCMRequest::clearParameter(const QString &name)
+int OpsWorksCmRequest::clearParameter(const QString &name)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void OpsWorksCMRequest::clearParameters()
+void OpsWorksCmRequest::clearParameters()
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant OpsWorksCMRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant OpsWorksCmRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const OpsWorksCMRequest);
+    Q_D(const OpsWorksCmRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &OpsWorksCMRequest::parameters() const
+const QVariantMap &OpsWorksCmRequest::parameters() const
 {
-    Q_D(const OpsWorksCMRequest);
+    Q_D(const OpsWorksCmRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void OpsWorksCMRequest::setParameter(const QString &name, const QVariant &value)
+void OpsWorksCmRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->parameters.insert(name, value);
 }
 
@@ -227,42 +227,42 @@ void OpsWorksCMRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void OpsWorksCMRequest::setParameters(const QVariantMap &parameters)
+void OpsWorksCmRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(OpsWorksCMRequest);
+    Q_D(OpsWorksCmRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the OpsWorksCM request using the given
+ * Returns a network request for the OpsWorksCm request using the given
  * \a endpoint.
  *
- * This OpsWorksCM implementation builds request URLs by combining the
+ * This OpsWorksCm implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest OpsWorksCMRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest OpsWorksCmRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const OpsWorksCMRequest);
+    //Q_D(const OpsWorksCmRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMRequestPrivate
- * \brief The OpsWorksCMRequestPrivate class provides private implementation for OpsWorksCMRequest.
+ * \class QtAws::OpsWorksCm::OpsWorksCmRequestPrivate
+ * \brief The OpsWorksCmRequestPrivate class provides private implementation for OpsWorksCmRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a OpsWorksCMRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a OpsWorksCmRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
-OpsWorksCMRequestPrivate::OpsWorksCMRequestPrivate(const OpsWorksCMRequest::Action action, OpsWorksCMRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+OpsWorksCmRequestPrivate::OpsWorksCmRequestPrivate(const OpsWorksCmRequest::Action action, OpsWorksCmRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-11-01"))
 {
 
 }
@@ -273,10 +273,10 @@ OpsWorksCMRequestPrivate::OpsWorksCMRequestPrivate(const OpsWorksCMRequest::Acti
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the OpsWorksCMRequest class's copy constructor.
+ * This is required to support the OpsWorksCmRequest class's copy constructor.
  */
-OpsWorksCMRequestPrivate::OpsWorksCMRequestPrivate(const OpsWorksCMRequestPrivate &other,
-                                     OpsWorksCMRequest * const q)
+OpsWorksCmRequestPrivate::OpsWorksCmRequestPrivate(const OpsWorksCmRequestPrivate &other,
+                                     OpsWorksCmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -287,14 +287,14 @@ OpsWorksCMRequestPrivate::OpsWorksCMRequestPrivate(const OpsWorksCMRequestPrivat
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts OpsWorksCMRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the OpsWorksCM service's Action
+ * This function converts OpsWorksCmRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the OpsWorksCm service's Action
  * query parameters.
  */
-QString OpsWorksCMRequestPrivate::toString(const OpsWorksCMRequest::Action &action)
+QString OpsWorksCmRequestPrivate::toString(const OpsWorksCmRequest::Action &action)
 {
     #define ActionToString(action) \
-        case OpsWorksCMRequest::action##Action: return QStringLiteral(#action)
+        case OpsWorksCmRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AssociateNode);
         ActionToString(CreateBackup);
@@ -322,5 +322,5 @@ QString OpsWorksCMRequestPrivate::toString(const OpsWorksCMRequest::Action &acti
     return QString();
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

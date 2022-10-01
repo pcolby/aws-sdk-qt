@@ -24,14 +24,14 @@
 #include "updateratebasedrulerequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UpdateRateBasedRuleRequest;
 
-class UpdateRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
+class UpdateRateBasedRuleRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    UpdateRateBasedRuleRequestPrivate(const WAFRegionalRequest::Action action,
+    UpdateRateBasedRuleRequestPrivate(const WafRegionalRequest::Action action,
                                    UpdateRateBasedRuleRequest * const q);
     UpdateRateBasedRuleRequestPrivate(const UpdateRateBasedRuleRequestPrivate &other,
                                    UpdateRateBasedRuleRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "getresourcepoliciesrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class GetResourcePoliciesResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT GetResourcePoliciesResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT GetResourcePoliciesResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

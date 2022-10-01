@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DeleteLifecyclePolicyRequest
- * \brief The DeleteLifecyclePolicyRequest class provides an interface for ECR DeleteLifecyclePolicy requests.
+ * \class QtAws::Ecr::DeleteLifecyclePolicyRequest
+ * \brief The DeleteLifecyclePolicyRequest class provides an interface for Ecr DeleteLifecyclePolicy requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::deleteLifecyclePolicy
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::ECR::DeleteLifecyclePolicyRequestPrivate
+ * \class QtAws::Ecr::DeleteLifecyclePolicyRequestPrivate
  * \brief The DeleteLifecyclePolicyRequestPrivate class provides private implementation for DeleteLifecyclePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

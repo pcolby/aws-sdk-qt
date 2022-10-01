@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::UpdateDistributionConfigurationRequest
- * \brief The UpdateDistributionConfigurationRequest class provides an interface for imagebuilder UpdateDistributionConfiguration requests.
+ * \class QtAws::ImageBuilder::UpdateDistributionConfigurationRequest
+ * \brief The UpdateDistributionConfigurationRequest class provides an interface for ImageBuilder UpdateDistributionConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::updateDistributionConfiguration
+ * \sa ImageBuilderClient::updateDistributionConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDistributionConfigurationRequest::UpdateDistributionConfigurationRequest(const UpdateDistributionConfigurationRequest &other)
-    : imagebuilderRequest(new UpdateDistributionConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new UpdateDistributionConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ UpdateDistributionConfigurationRequest::UpdateDistributionConfigurationRequest(c
  * Constructs a UpdateDistributionConfigurationRequest object.
  */
 UpdateDistributionConfigurationRequest::UpdateDistributionConfigurationRequest()
-    : imagebuilderRequest(new UpdateDistributionConfigurationRequestPrivate(imagebuilderRequest::UpdateDistributionConfigurationAction, this))
+    : ImageBuilderRequest(new UpdateDistributionConfigurationRequestPrivate(ImageBuilderRequest::UpdateDistributionConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionConfigurationRequest::respo
 }
 
 /*!
- * \class QtAws::imagebuilder::UpdateDistributionConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::UpdateDistributionConfigurationRequestPrivate
  * \brief The UpdateDistributionConfigurationRequestPrivate class provides private implementation for UpdateDistributionConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a UpdateDistributionConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a UpdateDistributionConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 UpdateDistributionConfigurationRequestPrivate::UpdateDistributionConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, UpdateDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, UpdateDistributionConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ UpdateDistributionConfigurationRequestPrivate::UpdateDistributionConfigurationRe
  */
 UpdateDistributionConfigurationRequestPrivate::UpdateDistributionConfigurationRequestPrivate(
     const UpdateDistributionConfigurationRequestPrivate &other, UpdateDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

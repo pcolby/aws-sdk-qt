@@ -24,7 +24,7 @@
 #include "listsnapshotblocksrequest.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class ListSnapshotBlocksRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

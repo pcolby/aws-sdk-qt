@@ -24,14 +24,14 @@
 #include "deleteconfigurationseteventdestinationrequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class DeleteConfigurationSetEventDestinationRequest;
 
-class DeleteConfigurationSetEventDestinationRequestPrivate : public PinpointSMSVoiceRequestPrivate {
+class DeleteConfigurationSetEventDestinationRequestPrivate : public PinpointSmsVoiceRequestPrivate {
 
 public:
-    DeleteConfigurationSetEventDestinationRequestPrivate(const PinpointSMSVoiceRequest::Action action,
+    DeleteConfigurationSetEventDestinationRequestPrivate(const PinpointSmsVoiceRequest::Action action,
                                    DeleteConfigurationSetEventDestinationRequest * const q);
     DeleteConfigurationSetEventDestinationRequestPrivate(const DeleteConfigurationSetEventDestinationRequestPrivate &other,
                                    DeleteConfigurationSetEventDestinationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

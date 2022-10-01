@@ -24,11 +24,11 @@
 #include "addsourceidentifiertosubscriptionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class AddSourceIdentifierToSubscriptionResponsePrivate;
 
-class QTAWSDOCDB_EXPORT AddSourceIdentifierToSubscriptionResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT AddSourceIdentifierToSubscriptionResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

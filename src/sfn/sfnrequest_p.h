@@ -24,16 +24,16 @@
 #include "sfnrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class SfnRequest;
 
 class SfnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SfnRequest::Action action; ///< SFN action to be performed.
-    QString apiVersion;        ///< SFN API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SFN request (query string) parameters. @todo?
+    SfnRequest::Action action; ///< Sfn action to be performed.
+    QString apiVersion;        ///< Sfn API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sfn request (query string) parameters. @todo?
 
     SfnRequestPrivate(const SfnRequest::Action action, SfnRequest * const q);
     SfnRequestPrivate(const SfnRequestPrivate &other, SfnRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

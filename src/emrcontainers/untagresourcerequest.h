@@ -23,11 +23,11 @@
 #include "emrcontainersrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT UntagResourceRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT UntagResourceRequest : public EmrcontainersRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

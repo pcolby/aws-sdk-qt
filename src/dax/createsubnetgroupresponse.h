@@ -24,7 +24,7 @@
 #include "createsubnetgrouprequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class CreateSubnetGroupResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

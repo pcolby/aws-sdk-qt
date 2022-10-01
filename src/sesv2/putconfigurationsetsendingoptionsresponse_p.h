@@ -23,11 +23,11 @@
 #include "sesv2response_p.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetSendingOptionsResponse;
 
-class PutConfigurationSetSendingOptionsResponsePrivate : public Sesv2ResponsePrivate {
+class PutConfigurationSetSendingOptionsResponsePrivate : public SESv2ResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

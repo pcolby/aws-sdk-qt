@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeUpdateResponse
- * \brief The DescribeUpdateResponse class provides an interace for EKS DescribeUpdate responses.
+ * \class QtAws::Eks::DescribeUpdateResponse
+ * \brief The DescribeUpdateResponse class provides an interace for Eks DescribeUpdate responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeUpdateRequest * DescribeUpdateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeUpdate \a response.
+ * Parses a successful Eks DescribeUpdate \a response.
  */
 void DescribeUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeUpdateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeUpdateResponsePrivate
+ * \class QtAws::Eks::DescribeUpdateResponsePrivate
  * \brief The DescribeUpdateResponsePrivate class provides private implementation for DescribeUpdateResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeUpdateResponsePrivate::DescribeUpdateResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeUpdate response element from \a xml.
+ * Parses a Eks DescribeUpdate response element from \a xml.
  */
 void DescribeUpdateResponsePrivate::parseDescribeUpdateResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeUpdateResponsePrivate::parseDescribeUpdateResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

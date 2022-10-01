@@ -33,7 +33,8 @@ namespace XRay {
  *
  * \inmodule QtAwsXRay
  *
- *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *  Amazon Web Services X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by
+ *  processing those
  *
  * \sa XRayClient::getTraceSummaries
  */

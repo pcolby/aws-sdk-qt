@@ -24,14 +24,14 @@
 #include "disassociatewebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DisassociateWebACLRequest;
 
-class DisassociateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class DisassociateWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DisassociateWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    DisassociateWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    DisassociateWebACLRequest * const q);
     DisassociateWebACLRequestPrivate(const DisassociateWebACLRequestPrivate &other,
                                    DisassociateWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

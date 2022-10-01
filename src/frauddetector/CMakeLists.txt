@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSFRAUDDETECTOR_LIBRARY)
 
 add_library(QtAwsFraudDetector
+  qtawsfrauddetectorglobal.h
+  frauddetectorclient.h
+  frauddetectorclient_p.h
+  frauddetectorrequest.h
+  frauddetectorrequest_p.h
+  frauddetectorresponse.h
+  frauddetectorresponse_p.h
   batchcreatevariablerequest.h
   batchcreatevariablerequest_p.h
   batchcreatevariableresponse.h
@@ -9,10 +16,18 @@ add_library(QtAwsFraudDetector
   batchgetvariablerequest_p.h
   batchgetvariableresponse.h
   batchgetvariableresponse_p.h
+  cancelbatchimportjobrequest.h
+  cancelbatchimportjobrequest_p.h
+  cancelbatchimportjobresponse.h
+  cancelbatchimportjobresponse_p.h
   cancelbatchpredictionjobrequest.h
   cancelbatchpredictionjobrequest_p.h
   cancelbatchpredictionjobresponse.h
   cancelbatchpredictionjobresponse_p.h
+  createbatchimportjobrequest.h
+  createbatchimportjobrequest_p.h
+  createbatchimportjobresponse.h
+  createbatchimportjobresponse_p.h
   createbatchpredictionjobrequest.h
   createbatchpredictionjobrequest_p.h
   createbatchpredictionjobresponse.h
@@ -37,6 +52,10 @@ add_library(QtAwsFraudDetector
   createvariablerequest_p.h
   createvariableresponse.h
   createvariableresponse_p.h
+  deletebatchimportjobrequest.h
+  deletebatchimportjobrequest_p.h
+  deletebatchimportjobresponse.h
+  deletebatchimportjobresponse_p.h
   deletebatchpredictionjobrequest.h
   deletebatchpredictionjobrequest_p.h
   deletebatchpredictionjobresponse.h
@@ -61,6 +80,10 @@ add_library(QtAwsFraudDetector
   deleteeventtyperequest_p.h
   deleteeventtyperesponse.h
   deleteeventtyperesponse_p.h
+  deleteeventsbyeventtyperequest.h
+  deleteeventsbyeventtyperequest_p.h
+  deleteeventsbyeventtyperesponse.h
+  deleteeventsbyeventtyperesponse_p.h
   deleteexternalmodelrequest.h
   deleteexternalmodelrequest_p.h
   deleteexternalmodelresponse.h
@@ -97,32 +120,42 @@ add_library(QtAwsFraudDetector
   describemodelversionsrequest_p.h
   describemodelversionsresponse.h
   describemodelversionsresponse_p.h
-  frauddetectorclient.h
-  frauddetectorclient_p.h
-  frauddetectorrequest.h
-  frauddetectorrequest_p.h
-  frauddetectorresponse.h
-  frauddetectorresponse_p.h
+  getbatchimportjobsrequest.h
+  getbatchimportjobsrequest_p.h
+  getbatchimportjobsresponse.h
+  getbatchimportjobsresponse_p.h
   getbatchpredictionjobsrequest.h
   getbatchpredictionjobsrequest_p.h
   getbatchpredictionjobsresponse.h
   getbatchpredictionjobsresponse_p.h
-  getdetectorsrequest.h
-  getdetectorsrequest_p.h
-  getdetectorsresponse.h
-  getdetectorsresponse_p.h
+  getdeleteeventsbyeventtypestatusrequest.h
+  getdeleteeventsbyeventtypestatusrequest_p.h
+  getdeleteeventsbyeventtypestatusresponse.h
+  getdeleteeventsbyeventtypestatusresponse_p.h
   getdetectorversionrequest.h
   getdetectorversionrequest_p.h
   getdetectorversionresponse.h
   getdetectorversionresponse_p.h
+  getdetectorsrequest.h
+  getdetectorsrequest_p.h
+  getdetectorsresponse.h
+  getdetectorsresponse_p.h
   getentitytypesrequest.h
   getentitytypesrequest_p.h
   getentitytypesresponse.h
   getentitytypesresponse_p.h
+  geteventrequest.h
+  geteventrequest_p.h
+  geteventresponse.h
+  geteventresponse_p.h
   geteventpredictionrequest.h
   geteventpredictionrequest_p.h
   geteventpredictionresponse.h
   geteventpredictionresponse_p.h
+  geteventpredictionmetadatarequest.h
+  geteventpredictionmetadatarequest_p.h
+  geteventpredictionmetadataresponse.h
+  geteventpredictionmetadataresponse_p.h
   geteventtypesrequest.h
   geteventtypesrequest_p.h
   geteventtypesresponse.h
@@ -139,14 +172,14 @@ add_library(QtAwsFraudDetector
   getlabelsrequest_p.h
   getlabelsresponse.h
   getlabelsresponse_p.h
-  getmodelsrequest.h
-  getmodelsrequest_p.h
-  getmodelsresponse.h
-  getmodelsresponse_p.h
   getmodelversionrequest.h
   getmodelversionrequest_p.h
   getmodelversionresponse.h
   getmodelversionresponse_p.h
+  getmodelsrequest.h
+  getmodelsrequest_p.h
+  getmodelsresponse.h
+  getmodelsresponse_p.h
   getoutcomesrequest.h
   getoutcomesrequest_p.h
   getoutcomesresponse.h
@@ -159,6 +192,10 @@ add_library(QtAwsFraudDetector
   getvariablesrequest_p.h
   getvariablesresponse.h
   getvariablesresponse_p.h
+  listeventpredictionsrequest.h
+  listeventpredictionsrequest_p.h
+  listeventpredictionsresponse.h
+  listeventpredictionsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -191,7 +228,10 @@ add_library(QtAwsFraudDetector
   putoutcomerequest_p.h
   putoutcomeresponse.h
   putoutcomeresponse_p.h
-  qtawsfrauddetectorglobal.h
+  sendeventrequest.h
+  sendeventrequest_p.h
+  sendeventresponse.h
+  sendeventresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -200,18 +240,22 @@ add_library(QtAwsFraudDetector
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updatedetectorversionmetadatarequest.h
-  updatedetectorversionmetadatarequest_p.h
-  updatedetectorversionmetadataresponse.h
-  updatedetectorversionmetadataresponse_p.h
   updatedetectorversionrequest.h
   updatedetectorversionrequest_p.h
   updatedetectorversionresponse.h
   updatedetectorversionresponse_p.h
+  updatedetectorversionmetadatarequest.h
+  updatedetectorversionmetadatarequest_p.h
+  updatedetectorversionmetadataresponse.h
+  updatedetectorversionmetadataresponse_p.h
   updatedetectorversionstatusrequest.h
   updatedetectorversionstatusrequest_p.h
   updatedetectorversionstatusresponse.h
   updatedetectorversionstatusresponse_p.h
+  updateeventlabelrequest.h
+  updateeventlabelrequest_p.h
+  updateeventlabelresponse.h
+  updateeventlabelresponse_p.h
   updatemodelrequest.h
   updatemodelrequest_p.h
   updatemodelresponse.h
@@ -236,12 +280,19 @@ add_library(QtAwsFraudDetector
   updatevariablerequest_p.h
   updatevariableresponse.h
   updatevariableresponse_p.h
+  frauddetectorclient.cpp
+  frauddetectorrequest.cpp
+  frauddetectorresponse.cpp
   batchcreatevariablerequest.cpp
   batchcreatevariableresponse.cpp
   batchgetvariablerequest.cpp
   batchgetvariableresponse.cpp
+  cancelbatchimportjobrequest.cpp
+  cancelbatchimportjobresponse.cpp
   cancelbatchpredictionjobrequest.cpp
   cancelbatchpredictionjobresponse.cpp
+  createbatchimportjobrequest.cpp
+  createbatchimportjobresponse.cpp
   createbatchpredictionjobrequest.cpp
   createbatchpredictionjobresponse.cpp
   createdetectorversionrequest.cpp
@@ -254,6 +305,8 @@ add_library(QtAwsFraudDetector
   createruleresponse.cpp
   createvariablerequest.cpp
   createvariableresponse.cpp
+  deletebatchimportjobrequest.cpp
+  deletebatchimportjobresponse.cpp
   deletebatchpredictionjobrequest.cpp
   deletebatchpredictionjobresponse.cpp
   deletedetectorrequest.cpp
@@ -266,6 +319,8 @@ add_library(QtAwsFraudDetector
   deleteeventresponse.cpp
   deleteeventtyperequest.cpp
   deleteeventtyperesponse.cpp
+  deleteeventsbyeventtyperequest.cpp
+  deleteeventsbyeventtyperesponse.cpp
   deleteexternalmodelrequest.cpp
   deleteexternalmodelresponse.cpp
   deletelabelrequest.cpp
@@ -284,19 +339,24 @@ add_library(QtAwsFraudDetector
   describedetectorresponse.cpp
   describemodelversionsrequest.cpp
   describemodelversionsresponse.cpp
-  frauddetectorclient.cpp
-  frauddetectorrequest.cpp
-  frauddetectorresponse.cpp
+  getbatchimportjobsrequest.cpp
+  getbatchimportjobsresponse.cpp
   getbatchpredictionjobsrequest.cpp
   getbatchpredictionjobsresponse.cpp
-  getdetectorsrequest.cpp
-  getdetectorsresponse.cpp
+  getdeleteeventsbyeventtypestatusrequest.cpp
+  getdeleteeventsbyeventtypestatusresponse.cpp
   getdetectorversionrequest.cpp
   getdetectorversionresponse.cpp
+  getdetectorsrequest.cpp
+  getdetectorsresponse.cpp
   getentitytypesrequest.cpp
   getentitytypesresponse.cpp
+  geteventrequest.cpp
+  geteventresponse.cpp
   geteventpredictionrequest.cpp
   geteventpredictionresponse.cpp
+  geteventpredictionmetadatarequest.cpp
+  geteventpredictionmetadataresponse.cpp
   geteventtypesrequest.cpp
   geteventtypesresponse.cpp
   getexternalmodelsrequest.cpp
@@ -305,16 +365,18 @@ add_library(QtAwsFraudDetector
   getkmsencryptionkeyresponse.cpp
   getlabelsrequest.cpp
   getlabelsresponse.cpp
-  getmodelsrequest.cpp
-  getmodelsresponse.cpp
   getmodelversionrequest.cpp
   getmodelversionresponse.cpp
+  getmodelsrequest.cpp
+  getmodelsresponse.cpp
   getoutcomesrequest.cpp
   getoutcomesresponse.cpp
   getrulesrequest.cpp
   getrulesresponse.cpp
   getvariablesrequest.cpp
   getvariablesresponse.cpp
+  listeventpredictionsrequest.cpp
+  listeventpredictionsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putdetectorrequest.cpp
@@ -331,16 +393,20 @@ add_library(QtAwsFraudDetector
   putlabelresponse.cpp
   putoutcomerequest.cpp
   putoutcomeresponse.cpp
+  sendeventrequest.cpp
+  sendeventresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updatedetectorversionmetadatarequest.cpp
-  updatedetectorversionmetadataresponse.cpp
   updatedetectorversionrequest.cpp
   updatedetectorversionresponse.cpp
+  updatedetectorversionmetadatarequest.cpp
+  updatedetectorversionmetadataresponse.cpp
   updatedetectorversionstatusrequest.cpp
   updatedetectorversionstatusresponse.cpp
+  updateeventlabelrequest.cpp
+  updateeventlabelresponse.cpp
   updatemodelrequest.cpp
   updatemodelresponse.cpp
   updatemodelversionrequest.cpp

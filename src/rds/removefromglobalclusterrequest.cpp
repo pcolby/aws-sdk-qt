@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveFromGlobalClusterRequest
- * \brief The RemoveFromGlobalClusterRequest class provides an interface for RDS RemoveFromGlobalCluster requests.
+ * \class QtAws::Rds::RemoveFromGlobalClusterRequest
+ * \brief The RemoveFromGlobalClusterRequest class provides an interface for Rds RemoveFromGlobalCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RemoveFromGlobalClusterRequest::response(QNet
 }
 
 /*!
- * \class QtAws::RDS::RemoveFromGlobalClusterRequestPrivate
+ * \class QtAws::Rds::RemoveFromGlobalClusterRequestPrivate
  * \brief The RemoveFromGlobalClusterRequestPrivate class provides private implementation for RemoveFromGlobalClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RemoveFromGlobalClusterRequestPrivate::RemoveFromGlobalClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

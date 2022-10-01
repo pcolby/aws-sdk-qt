@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSHEALTH_LIBRARY)
 
 add_library(QtAwsHealth
+  qtawshealthglobal.h
+  healthclient.h
+  healthclient_p.h
+  healthrequest.h
+  healthrequest_p.h
+  healthresponse.h
+  healthresponse_p.h
   describeaffectedaccountsfororganizationrequest.h
   describeaffectedaccountsfororganizationrequest_p.h
   describeaffectedaccountsfororganizationresponse.h
   describeaffectedaccountsfororganizationresponse_p.h
-  describeaffectedentitiesfororganizationrequest.h
-  describeaffectedentitiesfororganizationrequest_p.h
-  describeaffectedentitiesfororganizationresponse.h
-  describeaffectedentitiesfororganizationresponse_p.h
   describeaffectedentitiesrequest.h
   describeaffectedentitiesrequest_p.h
   describeaffectedentitiesresponse.h
   describeaffectedentitiesresponse_p.h
+  describeaffectedentitiesfororganizationrequest.h
+  describeaffectedentitiesfororganizationrequest_p.h
+  describeaffectedentitiesfororganizationresponse.h
+  describeaffectedentitiesfororganizationresponse_p.h
   describeentityaggregatesrequest.h
   describeentityaggregatesrequest_p.h
   describeentityaggregatesresponse.h
@@ -21,26 +28,26 @@ add_library(QtAwsHealth
   describeeventaggregatesrequest_p.h
   describeeventaggregatesresponse.h
   describeeventaggregatesresponse_p.h
-  describeeventdetailsfororganizationrequest.h
-  describeeventdetailsfororganizationrequest_p.h
-  describeeventdetailsfororganizationresponse.h
-  describeeventdetailsfororganizationresponse_p.h
   describeeventdetailsrequest.h
   describeeventdetailsrequest_p.h
   describeeventdetailsresponse.h
   describeeventdetailsresponse_p.h
-  describeeventsfororganizationrequest.h
-  describeeventsfororganizationrequest_p.h
-  describeeventsfororganizationresponse.h
-  describeeventsfororganizationresponse_p.h
-  describeeventsrequest.h
-  describeeventsrequest_p.h
-  describeeventsresponse.h
-  describeeventsresponse_p.h
+  describeeventdetailsfororganizationrequest.h
+  describeeventdetailsfororganizationrequest_p.h
+  describeeventdetailsfororganizationresponse.h
+  describeeventdetailsfororganizationresponse_p.h
   describeeventtypesrequest.h
   describeeventtypesrequest_p.h
   describeeventtypesresponse.h
   describeeventtypesresponse_p.h
+  describeeventsrequest.h
+  describeeventsrequest_p.h
+  describeeventsresponse.h
+  describeeventsresponse_p.h
+  describeeventsfororganizationrequest.h
+  describeeventsfororganizationrequest_p.h
+  describeeventsfororganizationresponse.h
+  describeeventsfororganizationresponse_p.h
   describehealthservicestatusfororganizationrequest.h
   describehealthservicestatusfororganizationrequest_p.h
   describehealthservicestatusfororganizationresponse.h
@@ -53,42 +60,35 @@ add_library(QtAwsHealth
   enablehealthserviceaccessfororganizationrequest_p.h
   enablehealthserviceaccessfororganizationresponse.h
   enablehealthserviceaccessfororganizationresponse_p.h
-  healthclient.h
-  healthclient_p.h
-  healthrequest.h
-  healthrequest_p.h
-  healthresponse.h
-  healthresponse_p.h
-  qtawshealthglobal.h
+  healthclient.cpp
+  healthrequest.cpp
+  healthresponse.cpp
   describeaffectedaccountsfororganizationrequest.cpp
   describeaffectedaccountsfororganizationresponse.cpp
-  describeaffectedentitiesfororganizationrequest.cpp
-  describeaffectedentitiesfororganizationresponse.cpp
   describeaffectedentitiesrequest.cpp
   describeaffectedentitiesresponse.cpp
+  describeaffectedentitiesfororganizationrequest.cpp
+  describeaffectedentitiesfororganizationresponse.cpp
   describeentityaggregatesrequest.cpp
   describeentityaggregatesresponse.cpp
   describeeventaggregatesrequest.cpp
   describeeventaggregatesresponse.cpp
-  describeeventdetailsfororganizationrequest.cpp
-  describeeventdetailsfororganizationresponse.cpp
   describeeventdetailsrequest.cpp
   describeeventdetailsresponse.cpp
-  describeeventsfororganizationrequest.cpp
-  describeeventsfororganizationresponse.cpp
-  describeeventsrequest.cpp
-  describeeventsresponse.cpp
+  describeeventdetailsfororganizationrequest.cpp
+  describeeventdetailsfororganizationresponse.cpp
   describeeventtypesrequest.cpp
   describeeventtypesresponse.cpp
+  describeeventsrequest.cpp
+  describeeventsresponse.cpp
+  describeeventsfororganizationrequest.cpp
+  describeeventsfororganizationresponse.cpp
   describehealthservicestatusfororganizationrequest.cpp
   describehealthservicestatusfororganizationresponse.cpp
   disablehealthserviceaccessfororganizationrequest.cpp
   disablehealthserviceaccessfororganizationresponse.cpp
   enablehealthserviceaccessfororganizationrequest.cpp
-  enablehealthserviceaccessfororganizationresponse.cpp
-  healthclient.cpp
-  healthrequest.cpp
-  healthresponse.cpp)
+  enablehealthserviceaccessfororganizationresponse.cpp)
 
 target_link_libraries(QtAwsHealth
   PRIVATE QtAwsCore

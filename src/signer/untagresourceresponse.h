@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSSIGNER_EXPORT UntagResourceResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT UntagResourceResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

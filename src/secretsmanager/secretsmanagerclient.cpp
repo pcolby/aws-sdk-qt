@@ -88,14 +88,15 @@ namespace SecretsManager {
  * \ingroup aws-clients
  * \inmodule QtAwsSecretsManager
  *
- *  <fullname>AWS Secrets Manager API Reference</fullname>
+ *  <fullname>Amazon Web Services Secrets Manager</fullname>
  * 
- *  AWS Secrets Manager provides a service to enable you to store, manage, and retrieve,
+ *  Amazon Web Services Secrets Manager provides a service to enable you to store, manage, and retrieve,
  * 
  *  secrets>
  * 
  *  This guide provides descriptions of the Secrets Manager API. For more information about using this service, see the <a
- *  href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">AWS Secrets Manager User
+ *  href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">Amazon Web Services Secrets Manager
+ *  User
  * 
  *  Guide</a>>
  * 
@@ -105,65 +106,34 @@ namespace SecretsManager {
  * 
  *  This version of the Secrets Manager API Reference documents the Secrets Manager API version
  * 
- *  2017-10-17> <note>
+ *  2017-10-17>
  * 
- *  As an alternative to using the API, you can use one of the AWS SDKs, which consist of libraries and sample code for
- *  various programming languages and platforms such as Java, Ruby, .NET, iOS, and Android. The SDKs provide a convenient
- *  way to create programmatic access to AWS Secrets Manager. For example, the SDKs provide cryptographically signing
- *  requests, managing errors, and retrying requests automatically. For more information about the AWS SDKs, including
- *  downloading and installing them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
- * 
- *  Services</a>> </note>
- * 
- *  We recommend you use the AWS SDKs to make programmatic API calls to Secrets Manager. However, you also can use the
- *  Secrets Manager HTTP Query API to make direct calls to the Secrets Manager web service. To learn more about the Secrets
- *  Manager HTTP Query API, see <a
- *  href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/query-requests.html">Making Query Requests</a> in the
- *  <i>AWS Secrets Manager User Guide</i>.
- * 
- *  </p
- * 
- *  Secrets Manager API supports GET and POST requests for all actions, and doesn't require you to use GET for some actions
- *  and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for operations that
- *  require larger sizes, use a POST
- * 
- *  request>
- * 
- *  <b>Support and Feedback for AWS Secrets Manager</b>
+ *  <b>Support and Feedback for Amazon Web Services Secrets Manager</b>
  * 
  *  </p
  * 
  *  We welcome your feedback. Send your comments to <a
  *  href="mailto:awssecretsmanager-feedback@amazon.com">awssecretsmanager-feedback@amazon.com</a>, or post your feedback and
- *  questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=296">AWS Secrets Manager Discussion Forum</a>.
- *  For more information about the AWS Discussion Forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
+ *  questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=296">Amazon Web Services Secrets Manager
+ *  Discussion Forum</a>. For more information about the Amazon Web Services Discussion Forums, see <a
+ *  href="http://forums.aws.amazon.com/help.jspa">Forums
  * 
  *  Help</a>>
- * 
- *  <b>How examples are presented</b>
- * 
- *  </p
- * 
- *  The JSON that AWS Secrets Manager expects as your request parameters and the service returns as a response to HTTP query
- *  requests contain single, long strings without line breaks or white space formatting. The JSON shown in the examples
- *  displays the code formatted with both line breaks and white space to improve readability. When example input parameters
- *  can also cause long strings extending beyond the screen, you can insert line breaks to enhance readability. You should
- *  always submit the input as a single JSON text
- * 
- *  string>
  * 
  *  <b>Logging API Requests</b>
  * 
  *  </p
  * 
- *  AWS Secrets Manager supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- *  files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine the requests
- *  successfully made to Secrets Manager, who made the request, when it was made, and so on. For more about AWS Secrets
- *  Manager and support for AWS CloudTrail, see <a
- *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/monitoring.html#monitoring_cloudtrail">Logging AWS
- *  Secrets Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about
- *  CloudTrail, including enabling it and find your log files, see the <a
- *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
+ *  Amazon Web Services Secrets Manager supports Amazon Web Services CloudTrail, a service that records Amazon Web Services
+ *  API calls for your Amazon Web Services account and delivers log files to an Amazon S3 bucket. By using information
+ *  that's collected by Amazon Web Services CloudTrail, you can determine the requests successfully made to Secrets Manager,
+ *  who made the request, when it was made, and so on. For more about Amazon Web Services Secrets Manager and support for
+ *  Amazon Web Services CloudTrail, see <a
+ *  href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/monitoring.html#monitoring_cloudtrail">Logging Amazon
+ *  Web Services Secrets Manager Events with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Secrets
+ *  Manager User Guide</i>. To learn more about CloudTrail, including enabling it and find your log files, see the <a
+ *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">Amazon Web Services
+ *  CloudTrail User
  */
 
 /*!
@@ -225,67 +195,28 @@ SecretsManagerClient::SecretsManagerClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables automatic scheduled rotation and cancels the rotation of a secret if currently in
+ * Turns off automatic rotation, and if a rotation is currently in progress, cancels the
  *
- * progress>
+ * rotation>
  *
- * To re-enable scheduled rotation, call <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
- * greater than 0. This immediately rotates your secret and then enables the automatic
+ * If you cancel a rotation in progress, it can leave the <code>VersionStage</code> labels in an unexpected state. You
+ * might need to remove the staging label <code>AWSPENDING</code> from the partially created version. You also need to
+ * determine whether to roll back to the previous version of the secret by moving the staging label <code>AWSCURRENT</code>
+ * to the version that has <code>AWSPENDING</code>. To determine which version has a specific staging label, call
+ * <a>ListSecretVersionIds</a>. Then use <a>UpdateSecretVersionStage</a> to change staging labels. For more information,
+ * see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
  *
- * schedule> <note>
+ * works</a>>
  *
- * If you cancel a rotation while in progress, it can leave the <code>VersionStage</code> labels in an unexpected state.
- * Depending on the step of the rotation in progress, you might need to remove the staging label <code>AWSPENDING</code>
- * from the partially created version, specified by the <code>VersionId</code> response value. You should also evaluate the
- * partially rotated new version to see if it should be deleted, which you can do by removing all staging labels from the
- * new version <code>VersionStage</code>
+ * To turn on automatic rotation again, call
  *
- * field> </note>
+ * <a>RotateSecret</a>>
  *
- * To successfully start a rotation, the staging label <code>AWSPENDING</code> must be in one of the following
- *
- * states> <ul> <li>
- *
- * Not attached to any version at
- *
- * al> </li> <li>
- *
- * Attached to the same version as the staging label <code>AWSCURRENT</code>
- *
- * </p </li> </ul>
- *
- * If the staging label <code>AWSPENDING</code> attached to a different version than the version with
- * <code>AWSCURRENT</code> then the attempt to rotate
- *
- * fails>
- *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:CancelRotateSecre> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To configure rotation for a secret or to manually trigger a rotation, use
- *
- * <a>RotateSecret</a>> </li> <li>
- *
- * To get the rotation configuration details for a secret, use
- *
- * <a>DescribeSecret</a>> </li> <li>
- *
- * To list all of the currently available secrets, use
- *
- * <a>ListSecrets</a>> </li> <li>
- *
- * To list all of the versions currently associated with a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:CancelRotateSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const CancelRotateSecretRequest &request)
 {
@@ -298,99 +229,56 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new secret. A secret in Secrets Manager consists of both the protected secret data and the important
- * information needed to manage the
+ * Creates a new secret. A <i>secret</i> can be a password, a set of credentials such as a user name and password, an OAuth
+ * token, or other secret information that you store in an encrypted form in Secrets Manager. The secret also includes the
+ * connection information to access a database or other service, which Secrets Manager doesn't encrypt. A secret in Secrets
+ * Manager consists of both the protected secret data and the important information needed to manage the
  *
  * secret>
  *
- * Secrets Manager stores the encrypted secret data in one of a collection of "versions" associated with the secret. Each
- * version contains a copy of the encrypted secret data. Each version is associated with one or more "staging labels" that
- * identify where the version is in the rotation cycle. The <code>SecretVersionsToStages</code> field of the secret
- * contains the mapping of staging labels to the active versions of the secret. Versions without a staging label are
- * considered deprecated and not included in the
+ * For information about creating a secret in the console, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html">Create a
  *
- * list>
+ * secret</a>>
  *
- * You provide the secret data to be encrypted by putting text in either the <code>SecretString</code> parameter or binary
- * data in the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
- * <code>SecretBinary</code> then Secrets Manager also creates an initial secret version and automatically attaches the
- * staging label <code>AWSCURRENT</code> to the new
+ * To create a secret, you can provide the secret value to be encrypted in either the <code>SecretString</code> parameter
+ * or the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
+ * <code>SecretBinary</code> then Secrets Manager creates an initial secret version and automatically attaches the staging
+ * label <code>AWSCURRENT</code> to
  *
- * version> <note> <ul> <li>
+ * it>
  *
- * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
- * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
- * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
- * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
- * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
- * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make sure the
+ * JSON you store in the <code>SecretString</code> matches the <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html">JSON structure
+ * of a database
  *
- * result> </li> <li>
+ * secret</a>>
  *
- * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
- * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
- * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
- * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
- * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
- * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
- * kms:GenerateDataKey and kms:Decrypt
+ * If you don't specify an KMS encryption key, Secrets Manager uses the Amazon Web Services managed key
+ * <code>aws/secretsmanager</code>. If this key doesn't already exist in your account, then Secrets Manager creates it for
+ * you automatically. All users and roles in the Amazon Web Services account automatically have access to use
+ * <code>aws/secretsmanager</code>. Creating <code>aws/secretsmanager</code> can result in a one-time significant delay in
+ * returning the
  *
- * operations> </li> </ul> </note>
+ * result>
  *
+ * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't use
+ * <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed KMS key.
  *
  * </p
  *
- * <b>Minimum permissions</b>
+ * <b>Required permissions: </b> <code>secretsmanager:CreateSecret</code>. If you include tags in the secret, you also need
+ * <code>secretsmanager:TagResource</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  *
  * </p
  *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:CreateSecre> </li> <li>
- *
- * kms:GenerateDataKey - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account default AWS managed CMK for Secrets
- *
- * Manager> </li> <li>
- *
- * kms:Decrypt - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account default AWS managed CMK for Secrets
- *
- * Manager> </li> <li>
- *
- * secretsmanager:TagResource - needed only if you include the <code>Tags</code> parameter.
- *
- * </p </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To delete a secret, use
- *
- * <a>DeleteSecret</a>> </li> <li>
- *
- * To modify an existing secret, use
- *
- * <a>UpdateSecret</a>> </li> <li>
- *
- * To create a new version of a secret, use
- *
- * <a>PutSecretValue</a>> </li> <li>
- *
- * To retrieve the encrypted secure string and secure binary values, use
- *
- * <a>GetSecretValue</a>> </li> <li>
- *
- * To retrieve all other details for a secret, use <a>DescribeSecret</a>. This does not include the encrypted secure string
- * and secure binary
- *
- * values> </li> <li>
- *
- * To retrieve the list of secret versions associated with the current secret, use <a>DescribeSecret</a> and examine the
- * <code>SecretVersionsToStages</code> response
+ * To encrypt the secret with a KMS key other than <code>aws/secretsmanager</code>, you need
+ * <code>kms:GenerateDataKey</code> and <code>kms:Decrypt</code> permission to the key.
  */
 CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequest &request)
 {
@@ -403,33 +291,15 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the resource-based permission policy attached to the
+ * Deletes the resource-based permission policy attached to the secret. To attach a policy to a secret, use
  *
- * secret>
+ * <a>PutResourcePolicy</a>>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:DeleteResourcePolic> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To attach a resource policy to a secret, use
- *
- * <a>PutResourcePolicy</a>> </li> <li>
- *
- * To retrieve the current resource-based policy attached to a secret, use
- *
- * <a>GetResourcePolicy</a>> </li> <li>
- *
- * To list all of the currently available secrets, use
+ * <b>Required permissions: </b> <code>secretsmanager:DeleteResourcePolicy</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 DeleteResourcePolicyResponse * SecretsManagerClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
 {
@@ -442,53 +312,51 @@ DeleteResourcePolicyResponse * SecretsManagerClient::deleteResourcePolicy(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an entire secret and all of the versions. You can optionally include a recovery window during which you can
- * restore the secret. If you don't specify a recovery window value, the operation defaults to 30 days. Secrets Manager
- * attaches a <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of
- * the recovery window, Secrets Manager deletes the secret
+ * Deletes a secret and all of its versions. You can specify a recovery window during which you can restore the secret. The
+ * minimum recovery window is 7 days. The default recovery window is 30 days. Secrets Manager attaches a
+ * <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of the recovery
+ * window, Secrets Manager deletes the secret
  *
  * permanently>
+ *
+ * You can't delete a primary secret that is replicated to other Regions. You must first delete the replicas using
+ * <a>RemoveRegionsFromReplication</a>, and then delete the primary secret. When you delete a replica, it is deleted
+ *
+ * immediately>
+ *
+ * You can't directly delete a version of a secret. Instead, you remove all staging labels from the version using
+ * <a>UpdateSecretVersionStage</a>. This marks the version as deprecated, and then Secrets Manager can automatically delete
+ * the version in the
+ *
+ * background>
+ *
+ * To determine whether an application still uses a secret, you can create an Amazon CloudWatch alarm to alert you to any
+ * attempts to access a secret during the recovery window. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/monitoring_cloudwatch_deleted-secrets.html"> Monitor
+ * secrets scheduled for
+ *
+ * deletion</a>>
+ *
+ * Secrets Manager performs the permanent secret deletion at the end of the waiting period as a background task with low
+ * priority. There is no guarantee of a specific time after the recovery window for the permanent delete to
+ *
+ * occur>
  *
  * At any time before recovery window ends, you can use <a>RestoreSecret</a> to remove the <code>DeletionDate</code> and
  * cancel the deletion of the
  *
  * secret>
  *
- * You cannot access the encrypted secret information in any secret scheduled for deletion. If you need to access that
- * information, you must cancel the deletion with <a>RestoreSecret</a> and then retrieve the
+ * When a secret is scheduled for deletion, you cannot retrieve the secret value. You must first cancel the deletion with
+ * <a>RestoreSecret</a> and then you can retrieve the
  *
- * information> <note> <ul> <li>
+ * secret>
  *
- * There is no explicit operation to delete a version of a secret. Instead, remove all staging labels from the
- * <code>VersionStage</code> field of a version. That marks the version as deprecated and allows Secrets Manager to delete
- * it as needed. Versions without any staging labels do not show up in <a>ListSecretVersionIds</a> unless you specify
- *
- * <code>IncludeDeprecated</code>> </li> <li>
- *
- * The permanent secret deletion at the end of the waiting period is performed as a background task with low priority.
- * There is no guarantee of a specific time after the recovery window for the actual delete operation to
- *
- * occur> </li> </ul> </note>
- *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:DeleteSecre> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To create a secret, use
- *
- * <a>CreateSecret</a>> </li> <li>
- *
- * To cancel deletion of a version of a secret before the recovery window has expired, use
+ * <b>Required permissions: </b> <code>secretsmanager:DeleteSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequest &request)
 {
@@ -501,38 +369,16 @@ DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details of a secret. It does not include the encrypted fields. Secrets Manager only returns fields
- * populated with a value in the response.
+ * Retrieves the details of a secret. It does not include the encrypted secret value. Secrets Manager only returns fields
+ * that have a value in the response.
  *
  * </p
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:DescribeSecre> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To create a secret, use
- *
- * <a>CreateSecret</a>> </li> <li>
- *
- * To modify a secret, use
- *
- * <a>UpdateSecret</a>> </li> <li>
- *
- * To retrieve the encrypted secret information in a version of the secret, use
- *
- * <a>GetSecretValue</a>> </li> <li>
- *
- * To list all of the secrets in the AWS account, use
+ * <b>Required permissions: </b> <code>secretsmanager:DescribeSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecretRequest &request)
 {
@@ -545,19 +391,16 @@ DescribeSecretResponse * SecretsManagerClient::describeSecret(const DescribeSecr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Generates a random password of the specified complexity. This operation is intended for use in the Lambda rotation
- * function. Per best practice, we recommend that you specify the maximum length and include every character type that the
+ * Generates a random password. We recommend that you specify the maximum length and include every character type that the
  * system you are generating a password for can
  *
  * support>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
+ * <b>Required permissions: </b> <code>secretsmanager:GetRandomPassword</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRandomPasswordRequest &request)
 {
@@ -570,35 +413,18 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the JSON text of the resource-based policy document attached to the specified secret. The JSON request string
- * input and response output displays formatted code with white space and line breaks for better readability. Submit your
- * input as a single line JSON
+ * Retrieves the JSON text of the resource-based policy document attached to the secret. For more information about
+ * permissions policies attached to a secret, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-policies.html">Permissions
+ * policies attached to a
  *
- * string>
+ * secret</a>>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:GetResourcePolic> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To attach a resource policy to a secret, use
- *
- * <a>PutResourcePolicy</a>> </li> <li>
- *
- * To delete the resource-based policy attached to a secret, use
- *
- * <a>DeleteResourcePolicy</a>> </li> <li>
- *
- * To list all of the currently available secrets, use
+ * <b>Required permissions: </b> <code>secretsmanager:GetResourcePolicy</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 GetResourcePolicyResponse * SecretsManagerClient::getResourcePolicy(const GetResourcePolicyRequest &request)
 {
@@ -616,30 +442,24 @@ GetResourcePolicyResponse * SecretsManagerClient::getResourcePolicy(const GetRes
  *
  * content>
  *
- * <b>Minimum permissions</b>
+ * We recommend that you cache your secret values by using client-side caching. Caching secrets improves speed and reduces
+ * your costs. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html">Cache secrets for your
  *
- * </p
+ * applications</a>>
  *
- * To run this command, you must have the following
+ * To retrieve the previous version of a secret, use <code>VersionStage</code> and specify AWSPREVIOUS. To revert to the
+ * previous version of a secret, call <a
  *
- * permissions> <ul> <li>
+ * href="https://docs.aws.amazon.com/cli/latest/reference/secretsmanager/update-secret-version-stage.html">UpdateSecretVersionStage</a>>
  *
- * secretsmanager:GetSecretValu> </li> <li>
- *
- * kms:Decrypt - required only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account's default AWS managed CMK for Secrets
- *
- * Manager> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To create a new version of the secret with different encrypted information, use
- *
- * <a>PutSecretValue</a>> </li> <li>
- *
- * To retrieve the non-encrypted details for the secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:GetSecretValue</code>. If the secret is encrypted using a
+ * customer-managed key instead of the Amazon Web Services managed key <code>aws/secretsmanager</code>, then you also need
+ * <code>kms:Decrypt</code> permissions for that key. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretValueRequest &request)
 {
@@ -652,34 +472,22 @@ GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretVal
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the versions attached to the specified secret. The output does not include the <code>SecretString</code> or
- * <code>SecretBinary</code> fields. By default, the list includes only versions that have at least one staging label in
- * <code>VersionStage</code>
+ * Lists the versions of a secret. Secrets Manager uses staging labels to indicate the different versions of a secret. For
+ * more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/getting-started.html#term_version"> Secrets Manager
+ * concepts:
  *
- * attached> <note>
+ * Versions</a>>
  *
- * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can occasionally return an empty or shorter than expected list of results even when there more results become
- * available. When this happens, the <code>NextToken</code> response parameter contains a value to pass to the next call to
- * the same API to request the next part of the
+ * To list the secrets in the account, use
  *
- * list> </note>
+ * <a>ListSecrets</a>>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:ListSecretVersionId> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To list the secrets in an account, use
+ * <b>Required permissions: </b> <code>secretsmanager:ListSecretVersionIds</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const ListSecretVersionIdsRequest &request)
 {
@@ -692,34 +500,34 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the secrets that are stored by Secrets Manager in the AWS account. To list the versions currently stored
- * for a specific secret, use <a>ListSecretVersionIds</a>. The encrypted fields <code>SecretString</code> and
- * <code>SecretBinary</code> are not included in the output. To get that information, call the <a>GetSecretValue</a>
+ * Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account, not including secrets that are
+ * marked for deletion. To see secrets marked for deletion, use the Secrets Manager
  *
- * operation> <note>
+ * console>
  *
- * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can occasionally return an empty or shorter than expected list of results even when there more results become
- * available. When this happens, the <code>NextToken</code> response parameter contains a value to pass to the next call to
- * the same API to request the next part of the
+ * ListSecrets is eventually consistent, however it might not reflect changes from the last five minutes. To get the latest
+ * information for a specific secret, use
  *
- * list> </note>
+ * <a>DescribeSecret</a>>
  *
- * <b>Minimum permissions</b>
+ * To list the versions of a secret, use
  *
- * </p
+ * <a>ListSecretVersionIds</a>>
  *
- * To run this command, you must have the following
+ * To get the secret value from <code>SecretString</code> or <code>SecretBinary</code>, call
  *
- * permissions> <ul> <li>
+ * <a>GetSecretValue</a>>
  *
- * secretsmanager:ListSecret> </li> </ul>
+ * For information about finding secrets in the console, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_search-secret.html">Find secrets in Secrets
  *
- * <b>Related operations</b>
+ * Manager</a>>
  *
- * </p <ul> <li>
- *
- * To list the versions attached to a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:ListSecrets</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest &request)
 {
@@ -732,41 +540,23 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches the contents of the specified resource-based permission policy to a secret. A resource-based policy is
- * optional. Alternatively, you can use IAM identity-based policies that specify the secret's Amazon Resource Name (ARN) in
- * the policy statement's <code>Resources</code> element. You can also use a combination of both identity-based and
- * resource-based policies. The affected users and roles receive the permissions that are permitted by all of the relevant
- * policies. For more information, see <a
- * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">Using
- * Resource-Based Policies for AWS Secrets Manager</a>. For the complete description of the AWS policy syntax and grammar,
- * see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
- * the <i>IAM User
- *
- * Guide</i>>
- *
- * <b>Minimum permissions</b>
+ * Attaches a resource-based permission policy to a secret. A resource-based policy is optional. For more information, see
+ * <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control for Secrets Manager</a>
  *
  * </p
  *
- * To run this command, you must have the following
+ * For information about attaching a policy in the console, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">Attach a
+ * permissions policy to a
  *
- * permissions> <ul> <li>
+ * secret</a>>
  *
- * secretsmanager:PutResourcePolic> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To retrieve the resource policy attached to a secret, use
- *
- * <a>GetResourcePolicy</a>> </li> <li>
- *
- * To delete the resource-based policy attached to a secret, use
- *
- * <a>DeleteResourcePolicy</a>> </li> <li>
- *
- * To list all of the currently available secrets, use
+ * <b>Required permissions: </b> <code>secretsmanager:PutResourcePolicy</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
@@ -779,91 +569,43 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stores a new encrypted secret value in the specified secret. To do this, the operation creates a new version and
- * attaches it to the secret. The version can contain a new <code>SecretString</code> value or a new
- * <code>SecretBinary</code> value. You can also specify the staging labels that are initially attached to the new
+ * Creates a new version with a new encrypted secret value and attaches it to the secret. The version can contain a new
+ * <code>SecretString</code> value or a new <code>SecretBinary</code> value.
  *
- * version> <note>
+ * </p
  *
- * The Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with the
- * <code>SecretBinary</code> field you must use the AWS CLI or one of the AWS
+ * We recommend you avoid calling <code>PutSecretValue</code> at a sustained rate of more than once every 10 minutes. When
+ * you update the secret value, Secrets Manager creates a new version of the secret. Secrets Manager removes outdated
+ * versions when there are more than 100, but it does not remove versions created less than 24 hours ago. If you call
+ * <code>PutSecretValue</code> more than once every 10 minutes, you create more versions than Secrets Manager removes, and
+ * you will reach the quota for secret
  *
- * SDKs> </note> <ul> <li>
+ * versions>
  *
- * If this operation creates the first version for the secret then Secrets Manager automatically attaches the staging label
- * <code>AWSCURRENT</code> to the new
+ * You can specify the staging labels to attach to the new version in <code>VersionStages</code>. If you don't include
+ * <code>VersionStages</code>, then Secrets Manager automatically moves the staging label <code>AWSCURRENT</code> to this
+ * version. If this operation creates the first version for the secret, then Secrets Manager automatically attaches the
+ * staging label <code>AWSCURRENT</code> to it
  *
- * version> </li> <li>
- *
- * If you do not specify a value for VersionStages then Secrets Manager automatically moves the staging label
- * <code>AWSCURRENT</code> to this new
- *
- * version> </li> <li>
+ * >
  *
  * If this operation moves the staging label <code>AWSCURRENT</code> from another version to this version, then Secrets
  * Manager also automatically moves the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code>
  * was removed
  *
- * from> </li> <li>
+ * from>
  *
- * This operation is idempotent. If a version with a <code>VersionId</code> with the same value as the
- * <code>ClientRequestToken</code> parameter already exists and you specify the same secret data, the operation succeeds
- * but does nothing. However, if the secret data is different, then the operation fails because you cannot modify an
- * existing version; you can only create new
+ * This operation is idempotent. If you call this operation with a <code>ClientRequestToken</code> that matches an existing
+ * version's VersionId, and you specify the same secret data, the operation succeeds but does nothing. However, if the
+ * secret data is different, then the operation fails because you can't modify an existing version; you can only create new
  *
- * ones> </li> </ul> <note> <ul> <li>
+ * ones>
  *
- * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
- * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
- * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
- * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
- * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
- * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
- *
- * result> </li> <li>
- *
- * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
- * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
- * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
- * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
- * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
- * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
- * kms:GenerateDataKey and kms:Decrypt
- *
- * operations> </li> </ul> </note>
- *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:PutSecretValu> </li> <li>
- *
- * kms:GenerateDataKey - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account's default AWS managed CMK for Secrets
- *
- * Manager> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To retrieve the encrypted value you store in the version of a secret, use
- *
- * <a>GetSecretValue</a>> </li> <li>
- *
- * To create a secret, use
- *
- * <a>CreateSecret</a>> </li> <li>
- *
- * To get the details for a secret, use
- *
- * <a>DescribeSecret</a>> </li> <li>
- *
- * To list the versions attached to a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:PutSecretValue</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretValueRequest &request)
 {
@@ -876,7 +618,15 @@ PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretVal
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Remove regions from
+ * For a secret that is replicated to other Regions, deletes the secret replicas from the Regions you
+ *
+ * specify>
+ *
+ * <b>Required permissions: </b> <code>secretsmanager:RemoveRegionsFromReplication</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 RemoveRegionsFromReplicationResponse * SecretsManagerClient::removeRegionsFromReplication(const RemoveRegionsFromReplicationRequest &request)
 {
@@ -889,7 +639,16 @@ RemoveRegionsFromReplicationResponse * SecretsManagerClient::removeRegionsFromRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Converts an existing secret to a multi-Region secret and begins replication the secret to a list of new regions.
+ * Replicates the secret to a new Regions. See <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create-manage-multi-region-secrets.html">Multi-Region
+ *
+ * secrets</a>>
+ *
+ * <b>Required permissions: </b> <code>secretsmanager:ReplicateSecretToRegions</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 ReplicateSecretToRegionsResponse * SecretsManagerClient::replicateSecretToRegions(const ReplicateSecretToRegionsRequest &request)
 {
@@ -902,26 +661,16 @@ ReplicateSecretToRegionsResponse * SecretsManagerClient::replicateSecretToRegion
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels the scheduled deletion of a secret by removing the <code>DeletedDate</code> time stamp. This makes the secret
- * accessible to query once
+ * Cancels the scheduled deletion of a secret by removing the <code>DeletedDate</code> time stamp. You can access a secret
+ * again after it has been
  *
- * again>
+ * restored>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:RestoreSecre> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To delete a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:RestoreSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretRequest &request)
 {
@@ -934,79 +683,56 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Configures and starts the asynchronous process of rotating this secret. If you include the configuration parameters, the
- * operation sets those values for the secret and then immediately starts a rotation. If you do not include the
- * configuration parameters, the operation starts a rotation with the values already stored in the secret. After the
- * rotation completes, the protected service and its clients all use the new version of the secret.
+ * Configures and starts the asynchronous process of rotating the secret. For more information about rotation, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotate
+ *
+ * secrets</a>>
+ *
+ * If you include the configuration parameters, the operation sets the values for the secret and then immediately starts a
+ * rotation. If you don't include the configuration parameters, the operation starts a rotation with the values already
+ * stored in the secret.
  *
  * </p
  *
- * This required configuration information includes the ARN of an AWS Lambda function and the time between scheduled
- * rotations. The Lambda rotation function creates a new version of the secret and creates or updates the credentials on
- * the protected service to match. After testing the new credentials, the function marks the new secret with the staging
- * label <code>AWSCURRENT</code> so that your clients all immediately begin to use the new version. For more information
- * about rotating secrets and how to configure a Lambda function to rotate the secrets for your protected service, see <a
- * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotating Secrets in AWS Secrets
- * Manager</a> in the <i>AWS Secrets Manager User
+ * For database credentials you want to rotate, for Secrets Manager to be able to rotate the secret, you must make sure the
+ * secret value is in the <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html"> JSON structure
+ * of a database secret</a>. In particular, if you want to use the <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users">
+ * alternating users strategy</a>, your secret must contain the ARN of a superuser
  *
- * Guide</i>>
+ * secret>
  *
- * Secrets Manager schedules the next rotation when the previous one completes. Secrets Manager schedules the date by
- * adding the rotation interval (number of days) to the actual date of the last rotation. The service chooses the hour
- * within that 24-hour date window randomly. The minute is also chosen somewhat randomly, but weighted towards the top of
- * the hour and influenced by a variety of factors that help distribute
+ * To configure rotation, you also need the ARN of an Amazon Web Services Lambda function and the schedule for the
+ * rotation. The Lambda rotation function creates a new version of the secret and creates or updates the credentials on the
+ * database or service to match. After testing the new credentials, the function marks the new secret version with the
+ * staging label <code>AWSCURRENT</code>. Then anyone who retrieves the secret gets the new version. For more information,
+ * see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
  *
- * load>
+ * works</a>>
  *
- * The rotation function must end with the versions of the secret in one of two
+ * You can create the Lambda rotation function based on the <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html">rotation
+ * function templates</a> that Secrets Manager provides. Choose a template that matches your <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html">Rotation
  *
- * states> <ul> <li>
+ * strategy</a>>
  *
- * The <code>AWSPENDING</code> and <code>AWSCURRENT</code> staging labels are attached to the same version of the secret,
- *
- * o> </li> <li>
- *
- * The <code>AWSPENDING</code> staging label is not attached to any version of the
- *
- * secret> </li> </ul>
- *
- * If the <code>AWSPENDING</code> staging label is present but not attached to the same version as <code>AWSCURRENT</code>
- * then any later invocation of <code>RotateSecret</code> assumes that a previous rotation request is still in progress and
- * returns an
+ * When rotation is successful, the <code>AWSPENDING</code> staging label might be attached to the same version as the
+ * <code>AWSCURRENT</code> version, or it might not be attached to any version. If the <code>AWSPENDING</code> staging
+ * label is present but not attached to the same version as <code>AWSCURRENT</code>, then any later invocation of
+ * <code>RotateSecret</code> assumes that a previous rotation request is still in progress and returns an
  *
  * error>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:RotateSecre> </li> <li>
- *
- * lambda:InvokeFunction (on the function specified in the secret's
- *
- * metadata> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To list the secrets in your account, use
- *
- * <a>ListSecrets</a>> </li> <li>
- *
- * To get the details for a version of a secret, use
- *
- * <a>DescribeSecret</a>> </li> <li>
- *
- * To create a new version of a secret, use
- *
- * <a>CreateSecret</a>> </li> <li>
- *
- * To attach staging labels to or remove staging labels from a version of a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:RotateSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>. You also need <code>lambda:InvokeFunction</code> permissions on the rotation function.
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions-function.html">
+ * Permissions for
  */
 RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequest &request)
 {
@@ -1019,7 +745,20 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the secret from replication and promotes the secret to a regional secret in the replica
+ * Removes the link between the replica secret and the primary secret and promotes the replica to a primary secret in the
+ * replica
+ *
+ * Region>
+ *
+ * You must call this operation from the Region in which you want to promote the replica to a primary
+ *
+ * secret>
+ *
+ * <b>Required permissions: </b> <code>secretsmanager:StopReplicationToReplica</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 StopReplicationToReplicaResponse * SecretsManagerClient::stopReplicationToReplica(const StopReplicationToReplicaRequest &request)
 {
@@ -1032,25 +771,24 @@ StopReplicationToReplicaResponse * SecretsManagerClient::stopReplicationToReplic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches one or more tags, each consisting of a key name and a value, to the specified secret. Tags are part of the
- * secret's overall metadata, and are not associated with any specific version of the secret. This operation only appends
- * tags to the existing list of tags. To remove tags, you must use
+ * Attaches tags to a secret. Tags consist of a key name and a value. Tags are part of the secret's metadata. They are not
+ * associated with specific versions of the secret. This operation appends tags to the existing list of
  *
- * <a>UntagResource</a>>
+ * tags>
  *
- * The following basic restrictions apply to
+ * The following restrictions apply to
  *
  * tags> <ul> <li>
  *
- * Maximum number of tags per
+ * Maximum number of tags per secret:
  *
- * secret—5> </li> <li>
+ * 5> </li> <li>
  *
- * Maximum key length—127 Unicode characters in
+ * Maximum key length: 127 Unicode characters in
  *
  * UTF-> </li> <li>
  *
- * Maximum value length—255 Unicode characters in
+ * Maximum value length: 255 Unicode characters in
  *
  * UTF-> </li> <li>
  *
@@ -1058,14 +796,15 @@ StopReplicationToReplicaResponse * SecretsManagerClient::stopReplicationToReplic
  *
  * sensitive> </li> <li>
  *
- * Do not use the <code>aws:</code> prefix in your tag names or values because AWS reserves it for AWS use. You can't edit
- * or delete tag names or values with this prefix. Tags with this prefix do not count against your tags per secret
+ * Do not use the <code>aws:</code> prefix in your tag names or values because Amazon Web Services reserves it for Amazon
+ * Web Services use. You can't edit or delete tag names or values with this prefix. Tags with this prefix do not count
+ * against your tags per secret
  *
  * limit> </li> <li>
  *
- * If you use your tagging schema across multiple services and resources, remember other services might have restrictions
- * on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
- * following special characters: + - = . _ : /
+ * If you use your tagging schema across multiple services and resources, other services might have restrictions on allowed
+ * characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the following
+ * special characters: + - = . _ : /
  *
  * @> </li> </ul> <b>
  *
@@ -1075,25 +814,11 @@ StopReplicationToReplicaResponse * SecretsManagerClient::stopReplicationToReplic
  *
  * error> </b>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:TagResourc> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To remove one or more tags from the collection attached to a secret, use
- *
- * <a>UntagResource</a>> </li> <li>
- *
- * To view the list of tags attached to a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:TagResource</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest &request)
 {
@@ -1106,7 +831,7 @@ TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags from the specified
+ * Removes specific tags from a
  *
  * secret>
  *
@@ -1121,25 +846,11 @@ TagResourceResponse * SecretsManagerClient::tagResource(const TagResourceRequest
  *
  * error> </b>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:UntagResourc> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To add one or more tags to the collection attached to a secret, use
- *
- * <a>TagResource</a>> </li> <li>
- *
- * To view the list of tags attached to a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:UntagResource</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1152,87 +863,40 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies many of the details of the specified secret. If you include a <code>ClientRequestToken</code> and <i>either</i>
- * <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached to the
+ * Modifies the details of a secret, including metadata and the secret value. To change the secret value, you can also use
  *
- * secret>
+ * <a>PutSecretValue</a>>
  *
- * To modify the rotation configuration of a secret, use <a>RotateSecret</a>
+ * To change the rotation configuration of a secret, use <a>RotateSecret</a>
  *
- * instead> <note>
+ * instead>
  *
- * The Secrets Manager console uses only the <code>SecretString</code> parameter and therefore limits you to encrypting and
- * storing only a text string. To encrypt and store binary data as part of the version of a secret, you must use either the
- * AWS CLI or one of the AWS
+ * We recommend you avoid calling <code>UpdateSecret</code> at a sustained rate of more than once every 10 minutes. When
+ * you call <code>UpdateSecret</code> to update the secret value, Secrets Manager creates a new version of the secret.
+ * Secrets Manager removes outdated versions when there are more than 100, but it does not remove versions created less
+ * than 24 hours ago. If you update the secret value more than once every 10 minutes, you create more versions than Secrets
+ * Manager removes, and you will reach the quota for secret
  *
- * SDKs> </note> <ul> <li>
- *
- * If a version with a <code>VersionId</code> with the same value as the <code>ClientRequestToken</code> parameter already
- * exists, the operation results in an error. You cannot modify an existing version, you can only create a new
- *
- * version> </li> <li>
+ * versions>
  *
  * If you include <code>SecretString</code> or <code>SecretBinary</code> to create a new secret version, Secrets Manager
  * automatically attaches the staging label <code>AWSCURRENT</code> to the new version.
  *
- * </p </li> </ul> <note> <ul> <li>
- *
- * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
- * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
- * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
- * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
- * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
- * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
- *
- * result> </li> <li>
- *
- * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
- * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
- * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
- * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
- * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
- * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
- * kms:GenerateDataKey and kms:Decrypt
- *
- * operations> </li> </ul> </note>
- *
- * <b>Minimum permissions</b>
- *
  * </p
  *
- * To run this command, you must have the following
+ * If you call this operation with a <code>ClientRequestToken</code> that matches an existing version's
+ * <code>VersionId</code>, the operation results in an error. You can't modify an existing version, you can only create a
+ * new version. To remove a version, remove all staging labels from it. See
  *
- * permissions> <ul> <li>
+ * <a>UpdateSecretVersionStage</a>>
  *
- * secretsmanager:UpdateSecre> </li> <li>
- *
- * kms:GenerateDataKey - needed only if you use a custom AWS KMS key to encrypt the secret. You do not need this permission
- * to use the account's AWS managed CMK for Secrets
- *
- * Manager> </li> <li>
- *
- * kms:Decrypt - needed only if you use a custom AWS KMS key to encrypt the secret. You do not need this permission to use
- * the account's AWS managed CMK for Secrets
- *
- * Manager> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To create a new secret, use
- *
- * <a>CreateSecret</a>> </li> <li>
- *
- * To add only a new version to an existing secret, use
- *
- * <a>PutSecretValue</a>> </li> <li>
- *
- * To get the details for a secret, use
- *
- * <a>DescribeSecret</a>> </li> <li>
- *
- * To list the versions contained in a secret, use
+ * <b>Required permissions: </b> <code>secretsmanager:UpdateSecret</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>. If you use a customer managed key, you must also have <code>kms:GenerateDataKey</code>
+ * and <code>kms:Decrypt</code> permissions on the key. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/security-encryption.html"> Secret encryption and
  */
 UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequest &request)
 {
@@ -1245,19 +909,19 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the staging labels attached to a version of a secret. Staging labels are used to track a version as it
- * progresses through the secret rotation process. You can attach a staging label to only one version of a secret at a
- * time. If a staging label to be added is already attached to another version, then it is moved--removed from the other
- * version first and then attached to this one. For more information about staging labels, see <a
- * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_staging-label">Staging
- * Labels</a> in the <i>AWS Secrets Manager User Guide</i>.
+ * Modifies the staging labels attached to a version of a secret. Secrets Manager uses staging labels to track a version as
+ * it progresses through the secret rotation process. Each staging label can be attached to only one version at a time. To
+ * add a staging label to a version when it is already attached to another version, Secrets Manager first removes it from
+ * the other version first and then attaches it to this one. For more information about versions and staging labels, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/getting-started.html#term_version">Concepts:
+ * Version</a>.
  *
  * </p
  *
  * The staging labels that you specify in the <code>VersionStage</code> parameter are added to the existing list of staging
- * labels--they don't replace
+ * labels for the version.
  *
- * it>
+ * </p
  *
  * You can move the <code>AWSCURRENT</code> staging label to this version by including it in this
  *
@@ -1273,22 +937,11 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
  *
  * Manager>
  *
- * <b>Minimum permissions</b>
- *
- * </p
- *
- * To run this command, you must have the following
- *
- * permissions> <ul> <li>
- *
- * secretsmanager:UpdateSecretVersionStag> </li> </ul>
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To get the list of staging labels that are currently associated with a version of a secret, use <code>
- * <a>DescribeSecret</a> </code> and examine the <code>SecretVersionsToStages</code> response value.
+ * <b>Required permissions: </b> <code>secretsmanager:UpdateSecretVersionStage</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStage(const UpdateSecretVersionStageRequest &request)
 {
@@ -1301,21 +954,21 @@ UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStag
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Validates that the resource policy does not grant a wide range of IAM principals access to your secret. The JSON request
- * string input and response output displays formatted code with white space and line breaks for better readability. Submit
- * your input as a single line JSON string. A resource-based policy is optional for
+ * Validates that a resource policy does not grant a wide range of principals access to your secret. A resource-based
+ * policy is optional for
  *
  * secrets>
  *
  * The API performs three checks when validating the
  *
- * secret> <ul> <li>
+ * policy> <ul> <li>
  *
  * Sends a call to <a
  * href="https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/">Zelkova</a>,
- * an automated reasoning engine, to ensure your Resource Policy does not allow broad access to your
+ * an automated reasoning engine, to ensure your resource policy does not allow broad access to your secret, for example
+ * policies that use a wildcard for the
  *
- * secret> </li> <li>
+ * principal> </li> <li>
  *
  * Checks for correct syntax in a
  *
@@ -1325,19 +978,11 @@ UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStag
  *
  * caller> </li> </ul>
  *
- * <b>Minimum Permissions</b>
- *
- * </p
- *
- * You must have the permissions required to access the following
- *
- * APIs> <ul> <li>
- *
- * <code>secretsmanager:PutResourcePolicy</code>
- *
- * </p </li> <li>
- *
- * <code>secretsmanager:ValidateResourcePolicy</code>
+ * <b>Required permissions: </b> <code>secretsmanager:ValidateResourcePolicy</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions">
+ * IAM policy actions for Secrets Manager</a> and <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+ * control in Secrets Manager</a>.
  */
 ValidateResourcePolicyResponse * SecretsManagerClient::validateResourcePolicy(const ValidateResourcePolicyRequest &request)
 {

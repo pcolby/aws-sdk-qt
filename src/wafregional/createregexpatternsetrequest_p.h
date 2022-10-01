@@ -24,14 +24,14 @@
 #include "createregexpatternsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateRegexPatternSetRequest;
 
-class CreateRegexPatternSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateRegexPatternSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateRegexPatternSetRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateRegexPatternSetRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateRegexPatternSetRequest * const q);
     CreateRegexPatternSetRequestPrivate(const CreateRegexPatternSetRequestPrivate &other,
                                    CreateRegexPatternSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

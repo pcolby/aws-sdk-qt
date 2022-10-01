@@ -56,44 +56,44 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::CloudHSMV2
+ * \namespace QtAws::CloudHsmV2
  * \brief Contains classess for accessing AWS CloudHSM V2.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CloudHSMV2Client
- * \brief The CloudHSMV2Client class provides access to the AWS CloudHSM V2 service.
+ * \class QtAws::CloudHsmV2::CloudHsmV2Client
+ * \brief The CloudHsmV2Client class provides access to the AWS CloudHSM V2 service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  */
 
 /*!
- * \brief Constructs a CloudHSMV2Client object.
+ * \brief Constructs a CloudHsmV2Client object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-CloudHSMV2Client::CloudHSMV2Client(
+CloudHsmV2Client::CloudHsmV2Client(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHsmV2ClientPrivate(this), parent)
 {
-    Q_D(CloudHSMV2Client);
+    Q_D(CloudHsmV2Client);
     d->apiVersion = QStringLiteral("2017-04-28");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cloudhsmv2");
@@ -104,7 +104,7 @@ CloudHSMV2Client::CloudHSMV2Client(
 }
 
 /*!
- * \overload CloudHSMV2Client()
+ * \overload CloudHsmV2Client()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -114,14 +114,14 @@ CloudHSMV2Client::CloudHSMV2Client(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-CloudHSMV2Client::CloudHSMV2Client(
+CloudHsmV2Client::CloudHsmV2Client(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHsmV2ClientPrivate(this), parent)
 {
-    Q_D(CloudHSMV2Client);
+    Q_D(CloudHsmV2Client);
     d->apiVersion = QStringLiteral("2017-04-28");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -132,46 +132,46 @@ CloudHSMV2Client::CloudHSMV2Client(
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * CopyBackupToRegionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Copy an AWS CloudHSM cluster backup to a different
  */
-CopyBackupToRegionResponse * CloudHSMV2Client::copyBackupToRegion(const CopyBackupToRegionRequest &request)
+CopyBackupToRegionResponse * CloudHsmV2Client::copyBackupToRegion(const CopyBackupToRegionRequest &request)
 {
     return qobject_cast<CopyBackupToRegionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * CreateClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new AWS CloudHSM
  */
-CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterRequest &request)
+CreateClusterResponse * CloudHsmV2Client::createCluster(const CreateClusterRequest &request)
 {
     return qobject_cast<CreateClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * CreateHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new hardware security module (HSM) in the specified AWS CloudHSM
  */
-CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
+CreateHsmResponse * CloudHsmV2Client::createHsm(const CreateHsmRequest &request)
 {
     return qobject_cast<CreateHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * DeleteBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -179,13 +179,13 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
  * Deletes a specified AWS CloudHSM backup. A backup can be restored up to 7 days after the DeleteBackup request is made.
  * For more information on restoring a backup, see
  */
-DeleteBackupResponse * CloudHSMV2Client::deleteBackup(const DeleteBackupRequest &request)
+DeleteBackupResponse * CloudHsmV2Client::deleteBackup(const DeleteBackupRequest &request)
 {
     return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * DeleteClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -193,13 +193,13 @@ DeleteBackupResponse * CloudHSMV2Client::deleteBackup(const DeleteBackupRequest 
  * Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To
  * see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use
  */
-DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterRequest &request)
+DeleteClusterResponse * CloudHsmV2Client::deleteCluster(const DeleteClusterRequest &request)
 {
     return qobject_cast<DeleteClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * DeleteHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -208,13 +208,13 @@ DeleteClusterResponse * CloudHSMV2Client::deleteCluster(const DeleteClusterReque
  * network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values,
  * use
  */
-DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
+DeleteHsmResponse * CloudHsmV2Client::deleteHsm(const DeleteHsmRequest &request)
 {
     return qobject_cast<DeleteHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * DescribeBackupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -228,13 +228,13 @@ DeleteHsmResponse * CloudHSMV2Client::deleteHsm(const DeleteHsmRequest &request)
  * <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or
  * an empty or null value), that means there are no more backups to
  */
-DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackupsRequest &request)
+DescribeBackupsResponse * CloudHsmV2Client::describeBackups(const DescribeBackupsRequest &request)
 {
     return qobject_cast<DescribeBackupsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * DescribeClustersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -248,13 +248,13 @@ DescribeBackupsResponse * CloudHSMV2Client::describeBackups(const DescribeBackup
  * <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code>
  * (or an empty or null value), that means there are no more clusters to
  */
-DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClustersRequest &request)
+DescribeClustersResponse * CloudHsmV2Client::describeClusters(const DescribeClustersRequest &request)
 {
     return qobject_cast<DescribeClustersResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * InitializeClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -263,13 +263,13 @@ DescribeClustersResponse * CloudHSMV2Client::describeClusters(const DescribeClus
  * and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request
  * (CSR) with your issuing CA. To get the cluster's CSR, use
  */
-InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const InitializeClusterRequest &request)
+InitializeClusterResponse * CloudHsmV2Client::initializeCluster(const InitializeClusterRequest &request)
 {
     return qobject_cast<InitializeClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * ListTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -283,39 +283,39 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
  * <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty
  * or null value), that means there are no more tags to
  */
-ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
+ListTagsResponse * CloudHsmV2Client::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * ModifyBackupAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies attributes for AWS CloudHSM
  */
-ModifyBackupAttributesResponse * CloudHSMV2Client::modifyBackupAttributes(const ModifyBackupAttributesRequest &request)
+ModifyBackupAttributesResponse * CloudHsmV2Client::modifyBackupAttributes(const ModifyBackupAttributesRequest &request)
 {
     return qobject_cast<ModifyBackupAttributesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * ModifyClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies AWS CloudHSM
  */
-ModifyClusterResponse * CloudHSMV2Client::modifyCluster(const ModifyClusterRequest &request)
+ModifyClusterResponse * CloudHsmV2Client::modifyCluster(const ModifyClusterRequest &request)
 {
     return qobject_cast<ModifyClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * RestoreBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -323,54 +323,54 @@ ModifyClusterResponse * CloudHSMV2Client::modifyCluster(const ModifyClusterReque
  * Restores a specified AWS CloudHSM backup that is in the <code>PENDING_DELETION</code> state. For mor information on
  * deleting a backup, see
  */
-RestoreBackupResponse * CloudHSMV2Client::restoreBackup(const RestoreBackupRequest &request)
+RestoreBackupResponse * CloudHsmV2Client::restoreBackup(const RestoreBackupRequest &request)
 {
     return qobject_cast<RestoreBackupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds or overwrites one or more tags for the specified AWS CloudHSM
  */
-TagResourceResponse * CloudHSMV2Client::tagResource(const TagResourceRequest &request)
+TagResourceResponse * CloudHsmV2Client::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * Sends \a request to the CloudHsmV2Client service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the specified tag or tags from the specified AWS CloudHSM
  */
-UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * CloudHsmV2Client::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CloudHSMV2ClientPrivate
- * \brief The CloudHSMV2ClientPrivate class provides private implementation for CloudHSMV2Client.
+ * \class QtAws::CloudHsmV2::CloudHsmV2ClientPrivate
+ * \brief The CloudHsmV2ClientPrivate class provides private implementation for CloudHsmV2Client.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a CloudHSMV2ClientPrivate object with public implementation \a q.
+ * Constructs a CloudHsmV2ClientPrivate object with public implementation \a q.
  */
-CloudHSMV2ClientPrivate::CloudHSMV2ClientPrivate(CloudHSMV2Client * const q)
+CloudHsmV2ClientPrivate::CloudHsmV2ClientPrivate(CloudHsmV2Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

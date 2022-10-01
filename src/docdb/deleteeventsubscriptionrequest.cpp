@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteEventSubscriptionRequest
- * \brief The DeleteEventSubscriptionRequest class provides an interface for DocDB DeleteEventSubscription requests.
+ * \class QtAws::DocDb::DeleteEventSubscriptionRequest
+ * \brief The DeleteEventSubscriptionRequest class provides an interface for DocDb DeleteEventSubscription requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteEventSubscription
+ * \sa DocDbClient::deleteEventSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
-    : DocDBRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEvent
  * Constructs a DeleteEventSubscriptionRequest object.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
-    : DocDBRequest(new DeleteEventSubscriptionRequestPrivate(DocDBRequest::DeleteEventSubscriptionAction, this))
+    : DocDbRequest(new DeleteEventSubscriptionRequestPrivate(DocDbRequest::DeleteEventSubscriptionAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DocDB::DeleteEventSubscriptionRequestPrivate
+ * \class QtAws::DocDb::DeleteEventSubscriptionRequestPrivate
  * \brief The DeleteEventSubscriptionRequestPrivate class provides private implementation for DeleteEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DeleteEventSubscriptionRequestPrivate object for DocDB \a action,
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
-    const DocDBRequest::Action action, DeleteEventSubscriptionRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DeleteEventSubscriptionRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

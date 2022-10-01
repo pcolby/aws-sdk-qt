@@ -24,7 +24,7 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class ListTagsForResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

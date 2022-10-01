@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingResponse
- * \brief The PurchaseReservedDBInstancesOfferingResponse class provides an interace for RDS PurchaseReservedDBInstancesOffering responses.
+ * \class QtAws::Rds::PurchaseReservedDBInstancesOfferingResponse
+ * \brief The PurchaseReservedDBInstancesOfferingResponse class provides an interace for Rds PurchaseReservedDBInstancesOffering responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const PurchaseReservedDBInstancesOfferingRequest * PurchaseReservedDBInstancesOf
 
 /*!
  * \reimp
- * Parses a successful RDS PurchaseReservedDBInstancesOffering \a response.
+ * Parses a successful Rds PurchaseReservedDBInstancesOffering \a response.
  */
 void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
- * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingResponsePrivate
+ * \class QtAws::Rds::PurchaseReservedDBInstancesOfferingResponsePrivate
  * \brief The PurchaseReservedDBInstancesOfferingResponsePrivate class provides private implementation for PurchaseReservedDBInstancesOfferingResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesO
 }
 
 /*!
- * Parses a RDS PurchaseReservedDBInstancesOffering response element from \a xml.
+ * Parses a Rds PurchaseReservedDBInstancesOffering response element from \a xml.
  */
 void PurchaseReservedDBInstancesOfferingResponsePrivate::parsePurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void PurchaseReservedDBInstancesOfferingResponsePrivate::parsePurchaseReservedDB
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

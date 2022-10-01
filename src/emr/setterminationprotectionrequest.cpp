@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::SetTerminationProtectionRequest
- * \brief The SetTerminationProtectionRequest class provides an interface for EMR SetTerminationProtection requests.
+ * \class QtAws::Emr::SetTerminationProtectionRequest
+ * \brief The SetTerminationProtectionRequest class provides an interface for Emr SetTerminationProtection requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::setTerminationProtection
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
 }
 
 /*!
- * \class QtAws::EMR::SetTerminationProtectionRequestPrivate
+ * \class QtAws::Emr::SetTerminationProtectionRequestPrivate
  * \brief The SetTerminationProtectionRequestPrivate class provides private implementation for SetTerminationProtectionRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

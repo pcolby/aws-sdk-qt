@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateCustomVerificationEmailTemplateRequest
- * \brief The CreateCustomVerificationEmailTemplateRequest class provides an interface for SES CreateCustomVerificationEmailTemplate requests.
+ * \class QtAws::Ses::CreateCustomVerificationEmailTemplateRequest
+ * \brief The CreateCustomVerificationEmailTemplateRequest class provides an interface for Ses CreateCustomVerificationEmailTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * CreateCustomVerificationEmailTemplateRequest:
 }
 
 /*!
- * \class QtAws::SES::CreateCustomVerificationEmailTemplateRequestPrivate
+ * \class QtAws::Ses::CreateCustomVerificationEmailTemplateRequestPrivate
  * \brief The CreateCustomVerificationEmailTemplateRequestPrivate class provides private implementation for CreateCustomVerificationEmailTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ CreateCustomVerificationEmailTemplateRequestPrivate::CreateCustomVerificationEma
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

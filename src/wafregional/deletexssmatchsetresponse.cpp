@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteXssMatchSetResponse
- * \brief The DeleteXssMatchSetResponse class provides an interace for WAFRegional DeleteXssMatchSet responses.
+ * \class QtAws::WafRegional::DeleteXssMatchSetResponse
+ * \brief The DeleteXssMatchSetResponse class provides an interace for WafRegional DeleteXssMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteXssMatchSet
+ * \sa WafRegionalClient::deleteXssMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteXssMatchSetResponse::DeleteXssMatchSetResponse(
         const DeleteXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteXssMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteXssMatchSetRequest * DeleteXssMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteXssMatchSet \a response.
+ * Parses a successful WafRegional DeleteXssMatchSet \a response.
  */
 void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteXssMatchSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteXssMatchSetResponsePrivate
  * \brief The DeleteXssMatchSetResponsePrivate class provides private implementation for DeleteXssMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteXssMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
-    DeleteXssMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteXssMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteXssMatchSet response element from \a xml.
+ * Parses a WafRegional DeleteXssMatchSet response element from \a xml.
  */
 void DeleteXssMatchSetResponsePrivate::parseDeleteXssMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteXssMatchSetResponsePrivate::parseDeleteXssMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

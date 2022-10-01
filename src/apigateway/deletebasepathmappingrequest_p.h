@@ -24,14 +24,14 @@
 #include "deletebasepathmappingrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteBasePathMappingRequest;
 
-class DeleteBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteBasePathMappingRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteBasePathMappingRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteBasePathMappingRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteBasePathMappingRequest * const q);
     DeleteBasePathMappingRequestPrivate(const DeleteBasePathMappingRequestPrivate &other,
                                    DeleteBasePathMappingRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

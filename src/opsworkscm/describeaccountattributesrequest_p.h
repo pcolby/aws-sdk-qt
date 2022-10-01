@@ -24,14 +24,14 @@
 #include "describeaccountattributesrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeAccountAttributesRequest;
 
-class DescribeAccountAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeAccountAttributesRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DescribeAccountAttributesRequestPrivate(const OpsWorksCMRequest::Action action,
+    DescribeAccountAttributesRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DescribeAccountAttributesRequest * const q);
     DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
                                    DescribeAccountAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateEventSubscriptionResponse
- * \brief The CreateEventSubscriptionResponse class provides an interace for RDS CreateEventSubscription responses.
+ * \class QtAws::Rds::CreateEventSubscriptionResponse
+ * \brief The CreateEventSubscriptionResponse class provides an interace for Rds CreateEventSubscription responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS CreateEventSubscription \a response.
+ * Parses a successful Rds CreateEventSubscription \a response.
  */
 void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateEventSubscriptionResponsePrivate
+ * \class QtAws::Rds::CreateEventSubscriptionResponsePrivate
  * \brief The CreateEventSubscriptionResponsePrivate class provides private implementation for CreateEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateEventSubscription response element from \a xml.
+ * Parses a Rds CreateEventSubscription response element from \a xml.
  */
 void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

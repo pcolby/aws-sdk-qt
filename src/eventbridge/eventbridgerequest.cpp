@@ -41,6 +41,7 @@ namespace EventBridge {
  * \value CreateApiDestinationAction EventBridge CreateApiDestination action.
  * \value CreateArchiveAction EventBridge CreateArchive action.
  * \value CreateConnectionAction EventBridge CreateConnection action.
+ * \value CreateEndpointAction EventBridge CreateEndpoint action.
  * \value CreateEventBusAction EventBridge CreateEventBus action.
  * \value CreatePartnerEventSourceAction EventBridge CreatePartnerEventSource action.
  * \value DeactivateEventSourceAction EventBridge DeactivateEventSource action.
@@ -48,12 +49,14 @@ namespace EventBridge {
  * \value DeleteApiDestinationAction EventBridge DeleteApiDestination action.
  * \value DeleteArchiveAction EventBridge DeleteArchive action.
  * \value DeleteConnectionAction EventBridge DeleteConnection action.
+ * \value DeleteEndpointAction EventBridge DeleteEndpoint action.
  * \value DeleteEventBusAction EventBridge DeleteEventBus action.
  * \value DeletePartnerEventSourceAction EventBridge DeletePartnerEventSource action.
  * \value DeleteRuleAction EventBridge DeleteRule action.
  * \value DescribeApiDestinationAction EventBridge DescribeApiDestination action.
  * \value DescribeArchiveAction EventBridge DescribeArchive action.
  * \value DescribeConnectionAction EventBridge DescribeConnection action.
+ * \value DescribeEndpointAction EventBridge DescribeEndpoint action.
  * \value DescribeEventBusAction EventBridge DescribeEventBus action.
  * \value DescribeEventSourceAction EventBridge DescribeEventSource action.
  * \value DescribePartnerEventSourceAction EventBridge DescribePartnerEventSource action.
@@ -64,6 +67,7 @@ namespace EventBridge {
  * \value ListApiDestinationsAction EventBridge ListApiDestinations action.
  * \value ListArchivesAction EventBridge ListArchives action.
  * \value ListConnectionsAction EventBridge ListConnections action.
+ * \value ListEndpointsAction EventBridge ListEndpoints action.
  * \value ListEventBusesAction EventBridge ListEventBuses action.
  * \value ListEventSourcesAction EventBridge ListEventSources action.
  * \value ListPartnerEventSourceAccountsAction EventBridge ListPartnerEventSourceAccounts action.
@@ -87,6 +91,7 @@ namespace EventBridge {
  * \value UpdateApiDestinationAction EventBridge UpdateApiDestination action.
  * \value UpdateArchiveAction EventBridge UpdateArchive action.
  * \value UpdateConnectionAction EventBridge UpdateConnection action.
+ * \value UpdateEndpointAction EventBridge UpdateEndpoint action.
  */
 
 /*!
@@ -294,7 +299,7 @@ QNetworkRequest EventBridgeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EventBridgeRequestPrivate::EventBridgeRequestPrivate(const EventBridgeRequest::Action action, EventBridgeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-10-07"))
 {
 
 }
@@ -333,6 +338,7 @@ QString EventBridgeRequestPrivate::toString(const EventBridgeRequest::Action &ac
         ActionToString(CreateApiDestination);
         ActionToString(CreateArchive);
         ActionToString(CreateConnection);
+        ActionToString(CreateEndpoint);
         ActionToString(CreateEventBus);
         ActionToString(CreatePartnerEventSource);
         ActionToString(DeactivateEventSource);
@@ -340,12 +346,14 @@ QString EventBridgeRequestPrivate::toString(const EventBridgeRequest::Action &ac
         ActionToString(DeleteApiDestination);
         ActionToString(DeleteArchive);
         ActionToString(DeleteConnection);
+        ActionToString(DeleteEndpoint);
         ActionToString(DeleteEventBus);
         ActionToString(DeletePartnerEventSource);
         ActionToString(DeleteRule);
         ActionToString(DescribeApiDestination);
         ActionToString(DescribeArchive);
         ActionToString(DescribeConnection);
+        ActionToString(DescribeEndpoint);
         ActionToString(DescribeEventBus);
         ActionToString(DescribeEventSource);
         ActionToString(DescribePartnerEventSource);
@@ -356,6 +364,7 @@ QString EventBridgeRequestPrivate::toString(const EventBridgeRequest::Action &ac
         ActionToString(ListApiDestinations);
         ActionToString(ListArchives);
         ActionToString(ListConnections);
+        ActionToString(ListEndpoints);
         ActionToString(ListEventBuses);
         ActionToString(ListEventSources);
         ActionToString(ListPartnerEventSourceAccounts);
@@ -379,6 +388,7 @@ QString EventBridgeRequestPrivate::toString(const EventBridgeRequest::Action &ac
         ActionToString(UpdateApiDestination);
         ActionToString(UpdateArchive);
         ActionToString(UpdateConnection);
+        ActionToString(UpdateEndpoint);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

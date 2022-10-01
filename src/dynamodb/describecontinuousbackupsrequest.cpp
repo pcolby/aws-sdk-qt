@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeContinuousBackupsRequest
- * \brief The DescribeContinuousBackupsRequest class provides an interface for DynamoDB DescribeContinuousBackups requests.
+ * \class QtAws::DynamoDb::DescribeContinuousBackupsRequest
+ * \brief The DescribeContinuousBackupsRequest class provides an interface for DynamoDb DescribeContinuousBackups requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeContinuousBackups
+ * \sa DynamoDbClient::describeContinuousBackups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest(const DescribeContinuousBackupsRequest &other)
-    : DynamoDBRequest(new DescribeContinuousBackupsRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeContinuousBackupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest(const Describ
  * Constructs a DescribeContinuousBackupsRequest object.
  */
 DescribeContinuousBackupsRequest::DescribeContinuousBackupsRequest()
-    : DynamoDBRequest(new DescribeContinuousBackupsRequestPrivate(DynamoDBRequest::DescribeContinuousBackupsAction, this))
+    : DynamoDbRequest(new DescribeContinuousBackupsRequestPrivate(DynamoDbRequest::DescribeContinuousBackupsAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeContinuousBackupsRequest::response(QN
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeContinuousBackupsRequestPrivate
+ * \class QtAws::DynamoDb::DescribeContinuousBackupsRequestPrivate
  * \brief The DescribeContinuousBackupsRequestPrivate class provides private implementation for DescribeContinuousBackupsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeContinuousBackupsRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeContinuousBackupsRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeContinuousBackupsRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeContinuousBackupsRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DescribeContinuousBackupsRequestPrivate &other, DescribeContinuousBackupsRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

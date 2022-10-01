@@ -27,13 +27,15 @@
 #include "deleteendpointresponse.h"
 #include "listendpointsrequest.h"
 #include "listendpointsresponse.h"
+#include "listsharedendpointsrequest.h"
+#include "listsharedendpointsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 /*!
  * \namespace QtAws::S3Outposts
- * \brief Contains classess for accessing Amazon S3 on Outposts ( S3 Outposts).
+ * \brief Contains classess for accessing Amazon S3 on Outposts.
  *
  * \inmodule QtAwsS3Outposts
  *
@@ -45,7 +47,7 @@ namespace S3Outposts {
 
 /*!
  * \class QtAws::S3Outposts::S3OutpostsClient
- * \brief The S3OutpostsClient class provides access to the Amazon S3 on Outposts ( S3 Outposts) service.
+ * \brief The S3OutpostsClient class provides access to the Amazon S3 on Outposts service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsS3Outposts
@@ -112,15 +114,15 @@ S3OutpostsClient::S3OutpostsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * S3 on Outposts access points simplify managing data access at scale for shared datasets in Amazon S3 on Outposts. S3 on
- * Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual private cloud
- * (VPC).
+ * Creates an endpoint and associates it with the specified
+ *
+ * Outpost> <note>
+ *
+ * It can take up to 5 minutes for this action to
+ *
+ * finish> </note>
  *
  * </p
- *
- * This action creates an endpoint and associates it with the specified Outpost.
- *
- * </p <p/>
  *
  * Related actions
  *
@@ -143,15 +145,15 @@ CreateEndpointResponse * S3OutpostsClient::createEndpoint(const CreateEndpointRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * S3 on Outposts access points simplify managing data access at scale for shared datasets in Amazon S3 on Outposts. S3 on
- * Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual private cloud
- * (VPC).
+ * Deletes an
+ *
+ * endpoint> <note>
+ *
+ * It can take up to 5 minutes for this action to
+ *
+ * finish> </note>
  *
  * </p
- *
- * This action deletes an endpoint.
- *
- * </p <p/>
  *
  * Related actions
  *
@@ -174,15 +176,9 @@ DeleteEndpointResponse * S3OutpostsClient::deleteEndpoint(const DeleteEndpointRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * S3 on Outposts access points simplify managing data access at scale for shared datasets in Amazon S3 on Outposts. S3 on
- * Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual private cloud
- * (VPC).
+ * Lists endpoints associated with the specified Outpost.
  *
  * </p
- *
- * This action lists endpoints associated with the Outpost.
- *
- * </p <p/>
  *
  * Related actions
  *
@@ -197,6 +193,31 @@ DeleteEndpointResponse * S3OutpostsClient::deleteEndpoint(const DeleteEndpointRe
 ListEndpointsResponse * S3OutpostsClient::listEndpoints(const ListEndpointsRequest &request)
 {
     return qobject_cast<ListEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3OutpostsClient service, and returns a pointer to an
+ * ListSharedEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all endpoints associated with an Outpost that has been shared by Amazon Web Services Resource Access Manager
+ *
+ * (RAM)>
+ *
+ * Related actions
+ *
+ * include> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+ */
+ListSharedEndpointsResponse * S3OutpostsClient::listSharedEndpoints(const ListSharedEndpointsRequest &request)
+{
+    return qobject_cast<ListSharedEndpointsResponse *>(send(request));
 }
 
 /*!

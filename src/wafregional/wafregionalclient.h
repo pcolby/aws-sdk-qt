@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalClientPrivate;
+class WafRegionalClientPrivate;
 class AssociateWebACLRequest;
 class AssociateWebACLResponse;
 class CreateByteMatchSetRequest;
@@ -193,17 +193,17 @@ class UpdateWebACLResponse;
 class UpdateXssMatchSetRequest;
 class UpdateXssMatchSetResponse;
 
-class QTAWSWAFREGIONAL_EXPORT WAFRegionalClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWAFREGIONAL_EXPORT WafRegionalClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    WAFRegionalClient(
+    WafRegionalClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit WAFRegionalClient(
+    explicit WafRegionalClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -292,12 +292,12 @@ public slots:
     UpdateXssMatchSetResponse * updateXssMatchSet(const UpdateXssMatchSetRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(WAFRegionalClient)
-    Q_DISABLE_COPY(WAFRegionalClient)
+    Q_DECLARE_PRIVATE(WafRegionalClient)
+    Q_DISABLE_COPY(WafRegionalClient)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

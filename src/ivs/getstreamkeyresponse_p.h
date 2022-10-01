@@ -23,7 +23,7 @@
 #include "ivsresponse_p.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class GetStreamKeyResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

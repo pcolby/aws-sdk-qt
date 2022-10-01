@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::StartMaintenanceResponse
- * \brief The StartMaintenanceResponse class provides an interace for OpsWorksCM StartMaintenance responses.
+ * \class QtAws::OpsWorksCm::StartMaintenanceResponse
+ * \brief The StartMaintenanceResponse class provides an interace for OpsWorksCm StartMaintenance responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::startMaintenance
+ * \sa OpsWorksCmClient::startMaintenance
  */
 
 /*!
@@ -123,7 +123,7 @@ StartMaintenanceResponse::StartMaintenanceResponse(
         const StartMaintenanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new StartMaintenanceResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new StartMaintenanceResponsePrivate(this), parent)
 {
     setRequest(new StartMaintenanceRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const StartMaintenanceRequest * StartMaintenanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM StartMaintenance \a response.
+ * Parses a successful OpsWorksCm StartMaintenance \a response.
  */
 void StartMaintenanceResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void StartMaintenanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::StartMaintenanceResponsePrivate
+ * \class QtAws::OpsWorksCm::StartMaintenanceResponsePrivate
  * \brief The StartMaintenanceResponsePrivate class provides private implementation for StartMaintenanceResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a StartMaintenanceResponsePrivate object with public implementation \a q.
  */
 StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
-    StartMaintenanceResponse * const q) : OpsWorksCMResponsePrivate(q)
+    StartMaintenanceResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM StartMaintenance response element from \a xml.
+ * Parses a OpsWorksCm StartMaintenance response element from \a xml.
  */
 void StartMaintenanceResponsePrivate::parseStartMaintenanceResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void StartMaintenanceResponsePrivate::parseStartMaintenanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

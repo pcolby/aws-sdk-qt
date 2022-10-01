@@ -24,14 +24,14 @@
 #include "batchwriteitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class BatchWriteItemRequest;
 
-class BatchWriteItemRequestPrivate : public DynamoDBRequestPrivate {
+class BatchWriteItemRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    BatchWriteItemRequestPrivate(const DynamoDBRequest::Action action,
+    BatchWriteItemRequestPrivate(const DynamoDbRequest::Action action,
                                    BatchWriteItemRequest * const q);
     BatchWriteItemRequestPrivate(const BatchWriteItemRequestPrivate &other,
                                    BatchWriteItemRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

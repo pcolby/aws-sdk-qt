@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::CreatePolicyVersionResponse
- * \brief The CreatePolicyVersionResponse class provides an interace for IAM CreatePolicyVersion responses.
+ * \class QtAws::Iam::CreatePolicyVersionResponse
+ * \brief The CreatePolicyVersionResponse class provides an interace for Iam CreatePolicyVersion responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::createPolicyVersion
  */
@@ -68,7 +68,7 @@ const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM CreatePolicyVersion \a response.
+ * Parses a successful Iam CreatePolicyVersion \a response.
  */
 void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::CreatePolicyVersionResponsePrivate
+ * \class QtAws::Iam::CreatePolicyVersionResponsePrivate
  * \brief The CreatePolicyVersionResponsePrivate class provides private implementation for CreatePolicyVersionResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
 }
 
 /*!
- * Parses a IAM CreatePolicyVersion response element from \a xml.
+ * Parses a Iam CreatePolicyVersion response element from \a xml.
  */
 void CreatePolicyVersionResponsePrivate::parseCreatePolicyVersionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void CreatePolicyVersionResponsePrivate::parseCreatePolicyVersionResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

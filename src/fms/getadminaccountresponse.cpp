@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::GetAdminAccountResponse
- * \brief The GetAdminAccountResponse class provides an interace for FMS GetAdminAccount responses.
+ * \class QtAws::Fms::GetAdminAccountResponse
+ * \brief The GetAdminAccountResponse class provides an interace for Fms GetAdminAccount responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const GetAdminAccountRequest * GetAdminAccountResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS GetAdminAccount \a response.
+ * Parses a successful Fms GetAdminAccount \a response.
  */
 void GetAdminAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void GetAdminAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::GetAdminAccountResponsePrivate
+ * \class QtAws::Fms::GetAdminAccountResponsePrivate
  * \brief The GetAdminAccountResponsePrivate class provides private implementation for GetAdminAccountResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
 }
 
 /*!
- * Parses a FMS GetAdminAccount response element from \a xml.
+ * Parses a Fms GetAdminAccount response element from \a xml.
  */
 void GetAdminAccountResponsePrivate::parseGetAdminAccountResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void GetAdminAccountResponsePrivate::parseGetAdminAccountResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

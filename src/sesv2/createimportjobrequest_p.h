@@ -24,14 +24,14 @@
 #include "createimportjobrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateImportJobRequest;
 
-class CreateImportJobRequestPrivate : public Sesv2RequestPrivate {
+class CreateImportJobRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    CreateImportJobRequestPrivate(const Sesv2Request::Action action,
+    CreateImportJobRequestPrivate(const SESv2Request::Action action,
                                    CreateImportJobRequest * const q);
     CreateImportJobRequestPrivate(const CreateImportJobRequestPrivate &other,
                                    CreateImportJobRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

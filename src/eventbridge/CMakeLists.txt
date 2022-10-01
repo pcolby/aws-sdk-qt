@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSEVENTBRIDGE_LIBRARY)
 
 add_library(QtAwsEventBridge
+  qtawseventbridgeglobal.h
+  eventbridgeclient.h
+  eventbridgeclient_p.h
+  eventbridgerequest.h
+  eventbridgerequest_p.h
+  eventbridgeresponse.h
+  eventbridgeresponse_p.h
   activateeventsourcerequest.h
   activateeventsourcerequest_p.h
   activateeventsourceresponse.h
@@ -21,6 +28,10 @@ add_library(QtAwsEventBridge
   createconnectionrequest_p.h
   createconnectionresponse.h
   createconnectionresponse_p.h
+  createendpointrequest.h
+  createendpointrequest_p.h
+  createendpointresponse.h
+  createendpointresponse_p.h
   createeventbusrequest.h
   createeventbusrequest_p.h
   createeventbusresponse.h
@@ -49,6 +60,10 @@ add_library(QtAwsEventBridge
   deleteconnectionrequest_p.h
   deleteconnectionresponse.h
   deleteconnectionresponse_p.h
+  deleteendpointrequest.h
+  deleteendpointrequest_p.h
+  deleteendpointresponse.h
+  deleteendpointresponse_p.h
   deleteeventbusrequest.h
   deleteeventbusrequest_p.h
   deleteeventbusresponse.h
@@ -73,6 +88,10 @@ add_library(QtAwsEventBridge
   describeconnectionrequest_p.h
   describeconnectionresponse.h
   describeconnectionresponse_p.h
+  describeendpointrequest.h
+  describeendpointrequest_p.h
+  describeendpointresponse.h
+  describeendpointresponse_p.h
   describeeventbusrequest.h
   describeeventbusrequest_p.h
   describeeventbusresponse.h
@@ -101,12 +120,6 @@ add_library(QtAwsEventBridge
   enablerulerequest_p.h
   enableruleresponse.h
   enableruleresponse_p.h
-  eventbridgeclient.h
-  eventbridgeclient_p.h
-  eventbridgerequest.h
-  eventbridgerequest_p.h
-  eventbridgeresponse.h
-  eventbridgeresponse_p.h
   listapidestinationsrequest.h
   listapidestinationsrequest_p.h
   listapidestinationsresponse.h
@@ -119,6 +132,10 @@ add_library(QtAwsEventBridge
   listconnectionsrequest_p.h
   listconnectionsresponse.h
   listconnectionsresponse_p.h
+  listendpointsrequest.h
+  listendpointsrequest_p.h
+  listendpointsresponse.h
+  listendpointsresponse_p.h
   listeventbusesrequest.h
   listeventbusesrequest_p.h
   listeventbusesresponse.h
@@ -175,7 +192,6 @@ add_library(QtAwsEventBridge
   puttargetsrequest_p.h
   puttargetsresponse.h
   puttargetsresponse_p.h
-  qtawseventbridgeglobal.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h
@@ -212,6 +228,13 @@ add_library(QtAwsEventBridge
   updateconnectionrequest_p.h
   updateconnectionresponse.h
   updateconnectionresponse_p.h
+  updateendpointrequest.h
+  updateendpointrequest_p.h
+  updateendpointresponse.h
+  updateendpointresponse_p.h
+  eventbridgeclient.cpp
+  eventbridgerequest.cpp
+  eventbridgeresponse.cpp
   activateeventsourcerequest.cpp
   activateeventsourceresponse.cpp
   cancelreplayrequest.cpp
@@ -222,6 +245,8 @@ add_library(QtAwsEventBridge
   createarchiveresponse.cpp
   createconnectionrequest.cpp
   createconnectionresponse.cpp
+  createendpointrequest.cpp
+  createendpointresponse.cpp
   createeventbusrequest.cpp
   createeventbusresponse.cpp
   createpartnereventsourcerequest.cpp
@@ -236,6 +261,8 @@ add_library(QtAwsEventBridge
   deletearchiveresponse.cpp
   deleteconnectionrequest.cpp
   deleteconnectionresponse.cpp
+  deleteendpointrequest.cpp
+  deleteendpointresponse.cpp
   deleteeventbusrequest.cpp
   deleteeventbusresponse.cpp
   deletepartnereventsourcerequest.cpp
@@ -248,6 +275,8 @@ add_library(QtAwsEventBridge
   describearchiveresponse.cpp
   describeconnectionrequest.cpp
   describeconnectionresponse.cpp
+  describeendpointrequest.cpp
+  describeendpointresponse.cpp
   describeeventbusrequest.cpp
   describeeventbusresponse.cpp
   describeeventsourcerequest.cpp
@@ -262,15 +291,14 @@ add_library(QtAwsEventBridge
   disableruleresponse.cpp
   enablerulerequest.cpp
   enableruleresponse.cpp
-  eventbridgeclient.cpp
-  eventbridgerequest.cpp
-  eventbridgeresponse.cpp
   listapidestinationsrequest.cpp
   listapidestinationsresponse.cpp
   listarchivesrequest.cpp
   listarchivesresponse.cpp
   listconnectionsrequest.cpp
   listconnectionsresponse.cpp
+  listendpointsrequest.cpp
+  listendpointsresponse.cpp
   listeventbusesrequest.cpp
   listeventbusesresponse.cpp
   listeventsourcesrequest.cpp
@@ -316,7 +344,9 @@ add_library(QtAwsEventBridge
   updatearchiverequest.cpp
   updatearchiveresponse.cpp
   updateconnectionrequest.cpp
-  updateconnectionresponse.cpp)
+  updateconnectionresponse.cpp
+  updateendpointrequest.cpp
+  updateendpointresponse.cpp)
 
 target_link_libraries(QtAwsEventBridge
   PRIVATE QtAwsCore

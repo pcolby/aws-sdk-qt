@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for EMRContainers ListTagsForResource responses.
+ * \class QtAws::Emrcontainers::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for Emrcontainers ListTagsForResource responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::listTagsForResource
+ * \sa EmrcontainersClient::listTagsForResource
  */
 
 /*!
@@ -72,7 +72,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : EmrcontainersResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers ListTagsForResource \a response.
+ * Parses a successful Emrcontainers ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::ListTagsForResourceResponsePrivate
+ * \class QtAws::Emrcontainers::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : EMRContainersResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers ListTagsForResource response element from \a xml.
+ * Parses a Emrcontainers ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ListJournalS3ExportsRequest
- * \brief The ListJournalS3ExportsRequest class provides an interface for QLDB ListJournalS3Exports requests.
+ * \class QtAws::Qldb::ListJournalS3ExportsRequest
+ * \brief The ListJournalS3ExportsRequest class provides an interface for Qldb ListJournalS3Exports requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * ListJournalS3ExportsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::QLDB::ListJournalS3ExportsRequestPrivate
+ * \class QtAws::Qldb::ListJournalS3ExportsRequestPrivate
  * \brief The ListJournalS3ExportsRequestPrivate class provides private implementation for ListJournalS3ExportsRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ ListJournalS3ExportsRequestPrivate::ListJournalS3ExportsRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

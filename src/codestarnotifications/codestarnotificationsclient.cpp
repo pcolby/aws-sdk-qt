@@ -52,23 +52,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::CodeStarNotifications
+ * \namespace QtAws::CodestarNotifications
  * \brief Contains classess for accessing AWS CodeStar Notifications.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsClient
- * \brief The CodeStarNotificationsClient class provides access to the AWS CodeStar Notifications service.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsClient
+ * \brief The CodestarNotificationsClient class provides access to the AWS CodeStar Notifications service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -111,7 +111,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -143,25 +143,27 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  */
 
 /*!
- * \brief Constructs a CodeStarNotificationsClient object.
+ * \brief Constructs a CodestarNotificationsClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-CodeStarNotificationsClient::CodeStarNotificationsClient(
+CodestarNotificationsClient::CodestarNotificationsClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarNotificationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodestarNotificationsClientPrivate(this), parent)
 {
-    Q_D(CodeStarNotificationsClient);
+    Q_D(CodestarNotificationsClient);
     d->apiVersion = QStringLiteral("2019-10-15");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("codestar-notifications");
@@ -172,7 +174,7 @@ CodeStarNotificationsClient::CodeStarNotificationsClient(
 }
 
 /*!
- * \overload CodeStarNotificationsClient()
+ * \overload CodestarNotificationsClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -182,14 +184,14 @@ CodeStarNotificationsClient::CodeStarNotificationsClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-CodeStarNotificationsClient::CodeStarNotificationsClient(
+CodestarNotificationsClient::CodestarNotificationsClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarNotificationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CodestarNotificationsClientPrivate(this), parent)
 {
-    Q_D(CodeStarNotificationsClient);
+    Q_D(CodestarNotificationsClient);
     d->apiVersion = QStringLiteral("2019-10-15");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -200,166 +202,166 @@ CodeStarNotificationsClient::CodeStarNotificationsClient(
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * CreateNotificationRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a notification rule for a resource. The rule specifies the events you want notifications about and the targets
- * (such as SNS topics) where you want to receive
+ * (such as Chatbot topics or Chatbot clients configured for Slack) where you want to receive
  */
-CreateNotificationRuleResponse * CodeStarNotificationsClient::createNotificationRule(const CreateNotificationRuleRequest &request)
+CreateNotificationRuleResponse * CodestarNotificationsClient::createNotificationRule(const CreateNotificationRuleRequest &request)
 {
     return qobject_cast<CreateNotificationRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * DeleteNotificationRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a notification rule for a
  */
-DeleteNotificationRuleResponse * CodeStarNotificationsClient::deleteNotificationRule(const DeleteNotificationRuleRequest &request)
+DeleteNotificationRuleResponse * CodestarNotificationsClient::deleteNotificationRule(const DeleteNotificationRuleRequest &request)
 {
     return qobject_cast<DeleteNotificationRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * DeleteTargetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specified target for
  */
-DeleteTargetResponse * CodeStarNotificationsClient::deleteTarget(const DeleteTargetRequest &request)
+DeleteTargetResponse * CodestarNotificationsClient::deleteTarget(const DeleteTargetRequest &request)
 {
     return qobject_cast<DeleteTargetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * DescribeNotificationRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about a specified notification
  */
-DescribeNotificationRuleResponse * CodeStarNotificationsClient::describeNotificationRule(const DescribeNotificationRuleRequest &request)
+DescribeNotificationRuleResponse * CodestarNotificationsClient::describeNotificationRule(const DescribeNotificationRuleRequest &request)
 {
     return qobject_cast<DescribeNotificationRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * ListEventTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the event types available for configuring
  */
-ListEventTypesResponse * CodeStarNotificationsClient::listEventTypes(const ListEventTypesRequest &request)
+ListEventTypesResponse * CodestarNotificationsClient::listEventTypes(const ListEventTypesRequest &request)
 {
     return qobject_cast<ListEventTypesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * ListNotificationRulesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the notification rules for an AWS
+ * Returns a list of the notification rules for an Amazon Web Services
  */
-ListNotificationRulesResponse * CodeStarNotificationsClient::listNotificationRules(const ListNotificationRulesRequest &request)
+ListNotificationRulesResponse * CodestarNotificationsClient::listNotificationRules(const ListNotificationRulesRequest &request)
 {
     return qobject_cast<ListNotificationRulesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of the tags associated with a notification
  */
-ListTagsForResourceResponse * CodeStarNotificationsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * CodestarNotificationsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * ListTargetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the notification rule targets for an AWS
+ * Returns a list of the notification rule targets for an Amazon Web Services
  */
-ListTargetsResponse * CodeStarNotificationsClient::listTargets(const ListTargetsRequest &request)
+ListTargetsResponse * CodestarNotificationsClient::listTargets(const ListTargetsRequest &request)
 {
     return qobject_cast<ListTargetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * SubscribeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an association between a notification rule and an SNS topic so that the associated target can receive
- * notifications when the events described in the rule are
+ * Creates an association between a notification rule and an Chatbot topic or Chatbot client so that the associated target
+ * can receive notifications when the events described in the rule are
  */
-SubscribeResponse * CodeStarNotificationsClient::subscribe(const SubscribeRequest &request)
+SubscribeResponse * CodestarNotificationsClient::subscribe(const SubscribeRequest &request)
 {
     return qobject_cast<SubscribeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates a set of provided tags with a notification
  */
-TagResourceResponse * CodeStarNotificationsClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * CodestarNotificationsClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * UnsubscribeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes an association between a notification rule and an Amazon SNS topic so that subscribers to that topic stop
- * receiving notifications when the events described in the rule are
+ * Removes an association between a notification rule and an Chatbot topic so that subscribers to that topic stop receiving
+ * notifications when the events described in the rule are
  */
-UnsubscribeResponse * CodeStarNotificationsClient::unsubscribe(const UnsubscribeRequest &request)
+UnsubscribeResponse * CodestarNotificationsClient::unsubscribe(const UnsubscribeRequest &request)
 {
     return qobject_cast<UnsubscribeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the association between one or more provided tags and a notification
  */
-UntagResourceResponse * CodeStarNotificationsClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * CodestarNotificationsClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CodeStarNotificationsClient service, and returns a pointer to an
+ * Sends \a request to the CodestarNotificationsClient service, and returns a pointer to an
  * UpdateNotificationRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -371,28 +373,28 @@ UntagResourceResponse * CodeStarNotificationsClient::untagResource(const UntagRe
  *
  * To add or remove tags for a notification rule, you must use <a>TagResource</a> and
  */
-UpdateNotificationRuleResponse * CodeStarNotificationsClient::updateNotificationRule(const UpdateNotificationRuleRequest &request)
+UpdateNotificationRuleResponse * CodestarNotificationsClient::updateNotificationRule(const UpdateNotificationRuleRequest &request)
 {
     return qobject_cast<UpdateNotificationRuleResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsClientPrivate
- * \brief The CodeStarNotificationsClientPrivate class provides private implementation for CodeStarNotificationsClient.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsClientPrivate
+ * \brief The CodestarNotificationsClientPrivate class provides private implementation for CodestarNotificationsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a CodeStarNotificationsClientPrivate object with public implementation \a q.
+ * Constructs a CodestarNotificationsClientPrivate object with public implementation \a q.
  */
-CodeStarNotificationsClientPrivate::CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q)
+CodestarNotificationsClientPrivate::CodestarNotificationsClientPrivate(CodestarNotificationsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

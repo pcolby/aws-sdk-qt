@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
+class UntagResourceRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const CloudHSMV2Request::Action action,
+    UntagResourceRequestPrivate(const CloudHsmV2Request::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

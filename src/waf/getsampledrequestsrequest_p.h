@@ -24,7 +24,7 @@
 #include "getsampledrequestsrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class GetSampledRequestsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

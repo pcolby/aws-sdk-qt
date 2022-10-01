@@ -24,14 +24,14 @@
 #include "createsizeconstraintsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateSizeConstraintSetRequest;
 
-class CreateSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateSizeConstraintSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateSizeConstraintSetRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateSizeConstraintSetRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateSizeConstraintSetRequest * const q);
     CreateSizeConstraintSetRequestPrivate(const CreateSizeConstraintSetRequestPrivate &other,
                                    CreateSizeConstraintSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

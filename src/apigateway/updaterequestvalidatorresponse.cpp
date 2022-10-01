@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateRequestValidatorResponse
- * \brief The UpdateRequestValidatorResponse class provides an interace for APIGateway UpdateRequestValidator responses.
+ * \class QtAws::ApiGateway::UpdateRequestValidatorResponse
+ * \brief The UpdateRequestValidatorResponse class provides an interace for ApiGateway UpdateRequestValidator responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateRequestValidator
+ * \sa ApiGatewayClient::updateRequestValidator
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
         const UpdateRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateRequestValidatorResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new UpdateRequestValidatorRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateRequestValidator \a response.
+ * Parses a successful ApiGateway UpdateRequestValidator \a response.
  */
 void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateRequestValidatorResponsePrivate
+ * \class QtAws::ApiGateway::UpdateRequestValidatorResponsePrivate
  * \brief The UpdateRequestValidatorResponsePrivate class provides private implementation for UpdateRequestValidatorResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateRequestValidatorResponsePrivate object with public implementation \a q.
  */
 UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
-    UpdateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateRequestValidatorResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateRequestValidator response element from \a xml.
+ * Parses a ApiGateway UpdateRequestValidator response element from \a xml.
  */
 void UpdateRequestValidatorResponsePrivate::parseUpdateRequestValidatorResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateRequestValidatorResponsePrivate::parseUpdateRequestValidatorResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DeleteClusterResponse
- * \brief The DeleteClusterResponse class provides an interace for EKS DeleteCluster responses.
+ * \class QtAws::Eks::DeleteClusterResponse
+ * \brief The DeleteClusterResponse class provides an interace for Eks DeleteCluster responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DeleteCluster \a response.
+ * Parses a successful Eks DeleteCluster \a response.
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DeleteClusterResponsePrivate
+ * \class QtAws::Eks::DeleteClusterResponsePrivate
  * \brief The DeleteClusterResponsePrivate class provides private implementation for DeleteClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 }
 
 /*!
- * Parses a EKS DeleteCluster response element from \a xml.
+ * Parses a Eks DeleteCluster response element from \a xml.
  */
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

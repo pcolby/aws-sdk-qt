@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for kendra UntagResource requests.
+ * \class QtAws::Kendra::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for Kendra UntagResource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::untagResource
+ * \sa KendraClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : kendraRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : kendraRequest(new UntagResourceRequestPrivate(kendraRequest::UntagResourceAction, this))
+    : KendraRequest(new UntagResourceRequestPrivate(KendraRequest::UntagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::kendra::UntagResourceRequestPrivate
+ * \class QtAws::Kendra::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for kendra \a action,
+ * Constructs a UntagResourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const kendraRequest::Action action, UntagResourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UntagResourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

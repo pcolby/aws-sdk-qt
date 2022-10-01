@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateIPSetResponse
- * \brief The UpdateIPSetResponse class provides an interace for WAF UpdateIPSet responses.
+ * \class QtAws::Waf::UpdateIPSetResponse
+ * \brief The UpdateIPSetResponse class provides an interace for Waf UpdateIPSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateIPSet \a response.
+ * Parses a successful Waf UpdateIPSet \a response.
  */
 void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateIPSetResponsePrivate
+ * \class QtAws::Waf::UpdateIPSetResponsePrivate
  * \brief The UpdateIPSetResponsePrivate class provides private implementation for UpdateIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateIPSet response element from \a xml.
+ * Parses a Waf UpdateIPSet response element from \a xml.
  */
 void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

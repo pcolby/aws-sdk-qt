@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSDOCDB_EXPORT ListTagsForResourceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT ListTagsForResourceResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "untagqueuerequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class UntagQueueResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

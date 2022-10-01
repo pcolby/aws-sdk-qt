@@ -24,7 +24,7 @@
 #include "createstatemachinerequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class CreateStateMachineRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

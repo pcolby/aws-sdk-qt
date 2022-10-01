@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListComponentBuildVersionsRequest
- * \brief The ListComponentBuildVersionsRequest class provides an interface for imagebuilder ListComponentBuildVersions requests.
+ * \class QtAws::ImageBuilder::ListComponentBuildVersionsRequest
+ * \brief The ListComponentBuildVersionsRequest class provides an interface for ImageBuilder ListComponentBuildVersions requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listComponentBuildVersions
+ * \sa ImageBuilderClient::listComponentBuildVersions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListComponentBuildVersionsRequest::ListComponentBuildVersionsRequest(const ListComponentBuildVersionsRequest &other)
-    : imagebuilderRequest(new ListComponentBuildVersionsRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListComponentBuildVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListComponentBuildVersionsRequest::ListComponentBuildVersionsRequest(const ListC
  * Constructs a ListComponentBuildVersionsRequest object.
  */
 ListComponentBuildVersionsRequest::ListComponentBuildVersionsRequest()
-    : imagebuilderRequest(new ListComponentBuildVersionsRequestPrivate(imagebuilderRequest::ListComponentBuildVersionsAction, this))
+    : ImageBuilderRequest(new ListComponentBuildVersionsRequestPrivate(ImageBuilderRequest::ListComponentBuildVersionsAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListComponentBuildVersionsRequest::response(Q
 }
 
 /*!
- * \class QtAws::imagebuilder::ListComponentBuildVersionsRequestPrivate
+ * \class QtAws::ImageBuilder::ListComponentBuildVersionsRequestPrivate
  * \brief The ListComponentBuildVersionsRequestPrivate class provides private implementation for ListComponentBuildVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListComponentBuildVersionsRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListComponentBuildVersionsRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListComponentBuildVersionsRequestPrivate::ListComponentBuildVersionsRequestPrivate(
-    const imagebuilderRequest::Action action, ListComponentBuildVersionsRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListComponentBuildVersionsRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListComponentBuildVersionsRequestPrivate::ListComponentBuildVersionsRequestPriva
  */
 ListComponentBuildVersionsRequestPrivate::ListComponentBuildVersionsRequestPrivate(
     const ListComponentBuildVersionsRequestPrivate &other, ListComponentBuildVersionsRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

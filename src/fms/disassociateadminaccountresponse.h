@@ -24,7 +24,7 @@
 #include "disassociateadminaccountrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class DisassociateAdminAccountResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

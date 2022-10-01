@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::BatchDeleteImageResponse
- * \brief The BatchDeleteImageResponse class provides an interace for ECRPublic BatchDeleteImage responses.
+ * \class QtAws::EcrPublic::BatchDeleteImageResponse
+ * \brief The BatchDeleteImageResponse class provides an interace for EcrPublic BatchDeleteImage responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::batchDeleteImage
+ * \sa EcrPublicClient::batchDeleteImage
  */
 
 /*!
@@ -52,7 +52,7 @@ BatchDeleteImageResponse::BatchDeleteImageResponse(
         const BatchDeleteImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new BatchDeleteImageResponsePrivate(this), parent)
+    : EcrPublicResponse(new BatchDeleteImageResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteImageRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic BatchDeleteImage \a response.
+ * Parses a successful EcrPublic BatchDeleteImage \a response.
  */
 void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::BatchDeleteImageResponsePrivate
+ * \class QtAws::EcrPublic::BatchDeleteImageResponsePrivate
  * \brief The BatchDeleteImageResponsePrivate class provides private implementation for BatchDeleteImageResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a BatchDeleteImageResponsePrivate object with public implementation \a q.
  */
 BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
-    BatchDeleteImageResponse * const q) : ECRPublicResponsePrivate(q)
+    BatchDeleteImageResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic BatchDeleteImage response element from \a xml.
+ * Parses a EcrPublic BatchDeleteImage response element from \a xml.
  */
 void BatchDeleteImageResponsePrivate::parseBatchDeleteImageResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void BatchDeleteImageResponsePrivate::parseBatchDeleteImageResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

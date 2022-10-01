@@ -24,11 +24,11 @@
 #include "deletemanagedendpointrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class DeleteManagedEndpointResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT DeleteManagedEndpointResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT DeleteManagedEndpointResponse : public EmrcontainersResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

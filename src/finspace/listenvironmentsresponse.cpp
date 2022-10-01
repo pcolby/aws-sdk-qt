@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::ListEnvironmentsResponse
- * \brief The ListEnvironmentsResponse class provides an interace for finspace ListEnvironments responses.
+ * \class QtAws::Finspace::ListEnvironmentsResponse
+ * \brief The ListEnvironmentsResponse class provides an interace for Finspace ListEnvironments responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::listEnvironments
+ * \sa FinspaceClient::listEnvironments
  */
 
 /*!
@@ -45,7 +45,7 @@ ListEnvironmentsResponse::ListEnvironmentsResponse(
         const ListEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new ListEnvironmentsResponsePrivate(this), parent)
+    : FinspaceResponse(new ListEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new ListEnvironmentsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace ListEnvironments \a response.
+ * Parses a successful Finspace ListEnvironments \a response.
  */
 void ListEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListEnvironmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::ListEnvironmentsResponsePrivate
+ * \class QtAws::Finspace::ListEnvironmentsResponsePrivate
  * \brief The ListEnvironmentsResponsePrivate class provides private implementation for ListEnvironmentsResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a ListEnvironmentsResponsePrivate object with public implementation \a q.
  */
 ListEnvironmentsResponsePrivate::ListEnvironmentsResponsePrivate(
-    ListEnvironmentsResponse * const q) : finspaceResponsePrivate(q)
+    ListEnvironmentsResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace ListEnvironments response element from \a xml.
+ * Parses a Finspace ListEnvironments response element from \a xml.
  */
 void ListEnvironmentsResponsePrivate::parseListEnvironmentsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListEnvironmentsResponsePrivate::parseListEnvironmentsResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

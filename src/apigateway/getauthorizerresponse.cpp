@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetAuthorizerResponse
- * \brief The GetAuthorizerResponse class provides an interace for APIGateway GetAuthorizer responses.
+ * \class QtAws::ApiGateway::GetAuthorizerResponse
+ * \brief The GetAuthorizerResponse class provides an interace for ApiGateway GetAuthorizer responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getAuthorizer
+ * \sa ApiGatewayClient::getAuthorizer
  */
 
 /*!
@@ -49,7 +49,7 @@ GetAuthorizerResponse::GetAuthorizerResponse(
         const GetAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetAuthorizerResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizerRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetAuthorizerRequest * GetAuthorizerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetAuthorizer \a response.
+ * Parses a successful ApiGateway GetAuthorizer \a response.
  */
 void GetAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetAuthorizerResponsePrivate
+ * \class QtAws::ApiGateway::GetAuthorizerResponsePrivate
  * \brief The GetAuthorizerResponsePrivate class provides private implementation for GetAuthorizerResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetAuthorizerResponsePrivate object with public implementation \a q.
  */
 GetAuthorizerResponsePrivate::GetAuthorizerResponsePrivate(
-    GetAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
+    GetAuthorizerResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetAuthorizer response element from \a xml.
+ * Parses a ApiGateway GetAuthorizer response element from \a xml.
  */
 void GetAuthorizerResponsePrivate::parseGetAuthorizerResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetAuthorizerResponsePrivate::parseGetAuthorizerResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

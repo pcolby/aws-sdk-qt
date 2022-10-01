@@ -24,7 +24,7 @@
 #include "describeeffectiveinstanceassociationsrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DescribeEffectiveInstanceAssociationsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

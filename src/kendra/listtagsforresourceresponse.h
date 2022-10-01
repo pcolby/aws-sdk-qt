@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSKENDRA_EXPORT ListTagsForResourceResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ListTagsForResourceResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

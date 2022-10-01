@@ -24,14 +24,14 @@
 #include "updateipsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UpdateIPSetRequest;
 
-class UpdateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
+class UpdateIPSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    UpdateIPSetRequestPrivate(const WAFRegionalRequest::Action action,
+    UpdateIPSetRequestPrivate(const WafRegionalRequest::Action action,
                                    UpdateIPSetRequest * const q);
     UpdateIPSetRequestPrivate(const UpdateIPSetRequestPrivate &other,
                                    UpdateIPSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

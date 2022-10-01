@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeExportTasksResponse
- * \brief The DescribeExportTasksResponse class provides an interace for RDS DescribeExportTasks responses.
+ * \class QtAws::Rds::DescribeExportTasksResponse
+ * \brief The DescribeExportTasksResponse class provides an interace for Rds DescribeExportTasks responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeExportTasks \a response.
+ * Parses a successful Rds DescribeExportTasks \a response.
  */
 void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeExportTasksResponsePrivate
+ * \class QtAws::Rds::DescribeExportTasksResponsePrivate
  * \brief The DescribeExportTasksResponsePrivate class provides private implementation for DescribeExportTasksResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeExportTasks response element from \a xml.
+ * Parses a Rds DescribeExportTasks response element from \a xml.
  */
 void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

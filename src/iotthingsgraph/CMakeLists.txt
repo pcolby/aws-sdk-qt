@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTTHINGSGRAPH_LIBRARY)
 
 add_library(QtAwsIoTThingsGraph
+  qtawsiotthingsgraphglobal.h
+  iotthingsgraphclient.h
+  iotthingsgraphclient_p.h
+  iotthingsgraphrequest.h
+  iotthingsgraphrequest_p.h
+  iotthingsgraphresponse.h
+  iotthingsgraphresponse_p.h
   associateentitytothingrequest.h
   associateentitytothingrequest_p.h
   associateentitytothingresponse.h
@@ -85,12 +92,6 @@ add_library(QtAwsIoTThingsGraph
   getuploadstatusrequest_p.h
   getuploadstatusresponse.h
   getuploadstatusresponse_p.h
-  iotthingsgraphclient.h
-  iotthingsgraphclient_p.h
-  iotthingsgraphrequest.h
-  iotthingsgraphrequest_p.h
-  iotthingsgraphresponse.h
-  iotthingsgraphresponse_p.h
   listflowexecutionmessagesrequest.h
   listflowexecutionmessagesrequest_p.h
   listflowexecutionmessagesresponse.h
@@ -99,7 +100,6 @@ add_library(QtAwsIoTThingsGraph
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsiotthingsgraphglobal.h
   searchentitiesrequest.h
   searchentitiesrequest_p.h
   searchentitiesresponse.h
@@ -148,6 +148,9 @@ add_library(QtAwsIoTThingsGraph
   uploadentitydefinitionsrequest_p.h
   uploadentitydefinitionsresponse.h
   uploadentitydefinitionsresponse_p.h
+  iotthingsgraphclient.cpp
+  iotthingsgraphrequest.cpp
+  iotthingsgraphresponse.cpp
   associateentitytothingrequest.cpp
   associateentitytothingresponse.cpp
   createflowtemplaterequest.cpp
@@ -190,9 +193,6 @@ add_library(QtAwsIoTThingsGraph
   getsystemtemplaterevisionsresponse.cpp
   getuploadstatusrequest.cpp
   getuploadstatusresponse.cpp
-  iotthingsgraphclient.cpp
-  iotthingsgraphrequest.cpp
-  iotthingsgraphresponse.cpp
   listflowexecutionmessagesrequest.cpp
   listflowexecutionmessagesresponse.cpp
   listtagsforresourcerequest.cpp

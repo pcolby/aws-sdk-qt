@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayClient;
+class ApiGatewayClient;
 
-class APIGatewayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApiGatewayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit APIGatewayClientPrivate(APIGatewayClient * const q);
+    explicit ApiGatewayClientPrivate(ApiGatewayClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(APIGatewayClient)
-    Q_DISABLE_COPY(APIGatewayClientPrivate)
+    Q_DECLARE_PUBLIC(ApiGatewayClient)
+    Q_DISABLE_COPY(ApiGatewayClientPrivate)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

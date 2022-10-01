@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSERVICEQUOTAS_LIBRARY)
 
 add_library(QtAwsServiceQuotas
+  qtawsservicequotasglobal.h
+  servicequotasclient.h
+  servicequotasclient_p.h
+  servicequotasrequest.h
+  servicequotasrequest_p.h
+  servicequotasresponse.h
+  servicequotasresponse_p.h
   associateservicequotatemplaterequest.h
   associateservicequotatemplaterequest_p.h
   associateservicequotatemplateresponse.h
@@ -13,38 +20,38 @@ add_library(QtAwsServiceQuotas
   disassociateservicequotatemplaterequest_p.h
   disassociateservicequotatemplateresponse.h
   disassociateservicequotatemplateresponse_p.h
-  getassociationforservicequotatemplaterequest.h
-  getassociationforservicequotatemplaterequest_p.h
-  getassociationforservicequotatemplateresponse.h
-  getassociationforservicequotatemplateresponse_p.h
   getawsdefaultservicequotarequest.h
   getawsdefaultservicequotarequest_p.h
   getawsdefaultservicequotaresponse.h
   getawsdefaultservicequotaresponse_p.h
+  getassociationforservicequotatemplaterequest.h
+  getassociationforservicequotatemplaterequest_p.h
+  getassociationforservicequotatemplateresponse.h
+  getassociationforservicequotatemplateresponse_p.h
   getrequestedservicequotachangerequest.h
   getrequestedservicequotachangerequest_p.h
   getrequestedservicequotachangeresponse.h
   getrequestedservicequotachangeresponse_p.h
-  getservicequotaincreaserequestfromtemplaterequest.h
-  getservicequotaincreaserequestfromtemplaterequest_p.h
-  getservicequotaincreaserequestfromtemplateresponse.h
-  getservicequotaincreaserequestfromtemplateresponse_p.h
   getservicequotarequest.h
   getservicequotarequest_p.h
   getservicequotaresponse.h
   getservicequotaresponse_p.h
+  getservicequotaincreaserequestfromtemplaterequest.h
+  getservicequotaincreaserequestfromtemplaterequest_p.h
+  getservicequotaincreaserequestfromtemplateresponse.h
+  getservicequotaincreaserequestfromtemplateresponse_p.h
   listawsdefaultservicequotasrequest.h
   listawsdefaultservicequotasrequest_p.h
   listawsdefaultservicequotasresponse.h
   listawsdefaultservicequotasresponse_p.h
-  listrequestedservicequotachangehistorybyquotarequest.h
-  listrequestedservicequotachangehistorybyquotarequest_p.h
-  listrequestedservicequotachangehistorybyquotaresponse.h
-  listrequestedservicequotachangehistorybyquotaresponse_p.h
   listrequestedservicequotachangehistoryrequest.h
   listrequestedservicequotachangehistoryrequest_p.h
   listrequestedservicequotachangehistoryresponse.h
   listrequestedservicequotachangehistoryresponse_p.h
+  listrequestedservicequotachangehistorybyquotarequest.h
+  listrequestedservicequotachangehistorybyquotarequest_p.h
+  listrequestedservicequotachangehistorybyquotaresponse.h
+  listrequestedservicequotachangehistorybyquotaresponse_p.h
   listservicequotaincreaserequestsintemplaterequest.h
   listservicequotaincreaserequestsintemplaterequest_p.h
   listservicequotaincreaserequestsintemplateresponse.h
@@ -65,17 +72,10 @@ add_library(QtAwsServiceQuotas
   putservicequotaincreaserequestintotemplaterequest_p.h
   putservicequotaincreaserequestintotemplateresponse.h
   putservicequotaincreaserequestintotemplateresponse_p.h
-  qtawsservicequotasglobal.h
   requestservicequotaincreaserequest.h
   requestservicequotaincreaserequest_p.h
   requestservicequotaincreaseresponse.h
   requestservicequotaincreaseresponse_p.h
-  servicequotasclient.h
-  servicequotasclient_p.h
-  servicequotasrequest.h
-  servicequotasrequest_p.h
-  servicequotasresponse.h
-  servicequotasresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -84,28 +84,31 @@ add_library(QtAwsServiceQuotas
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  servicequotasclient.cpp
+  servicequotasrequest.cpp
+  servicequotasresponse.cpp
   associateservicequotatemplaterequest.cpp
   associateservicequotatemplateresponse.cpp
   deleteservicequotaincreaserequestfromtemplaterequest.cpp
   deleteservicequotaincreaserequestfromtemplateresponse.cpp
   disassociateservicequotatemplaterequest.cpp
   disassociateservicequotatemplateresponse.cpp
-  getassociationforservicequotatemplaterequest.cpp
-  getassociationforservicequotatemplateresponse.cpp
   getawsdefaultservicequotarequest.cpp
   getawsdefaultservicequotaresponse.cpp
+  getassociationforservicequotatemplaterequest.cpp
+  getassociationforservicequotatemplateresponse.cpp
   getrequestedservicequotachangerequest.cpp
   getrequestedservicequotachangeresponse.cpp
-  getservicequotaincreaserequestfromtemplaterequest.cpp
-  getservicequotaincreaserequestfromtemplateresponse.cpp
   getservicequotarequest.cpp
   getservicequotaresponse.cpp
+  getservicequotaincreaserequestfromtemplaterequest.cpp
+  getservicequotaincreaserequestfromtemplateresponse.cpp
   listawsdefaultservicequotasrequest.cpp
   listawsdefaultservicequotasresponse.cpp
-  listrequestedservicequotachangehistorybyquotarequest.cpp
-  listrequestedservicequotachangehistorybyquotaresponse.cpp
   listrequestedservicequotachangehistoryrequest.cpp
   listrequestedservicequotachangehistoryresponse.cpp
+  listrequestedservicequotachangehistorybyquotarequest.cpp
+  listrequestedservicequotachangehistorybyquotaresponse.cpp
   listservicequotaincreaserequestsintemplaterequest.cpp
   listservicequotaincreaserequestsintemplateresponse.cpp
   listservicequotasrequest.cpp
@@ -118,9 +121,6 @@ add_library(QtAwsServiceQuotas
   putservicequotaincreaserequestintotemplateresponse.cpp
   requestservicequotaincreaserequest.cpp
   requestservicequotaincreaseresponse.cpp
-  servicequotasclient.cpp
-  servicequotasrequest.cpp
-  servicequotasresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

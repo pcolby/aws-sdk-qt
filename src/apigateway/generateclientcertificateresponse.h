@@ -24,11 +24,11 @@
 #include "generateclientcertificaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GenerateClientCertificateResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GenerateClientCertificateResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GenerateClientCertificateResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

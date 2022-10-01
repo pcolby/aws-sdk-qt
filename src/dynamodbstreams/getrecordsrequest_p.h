@@ -24,14 +24,14 @@
 #include "getrecordsrequest.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class GetRecordsRequest;
 
-class GetRecordsRequestPrivate : public DynamoDBStreamsRequestPrivate {
+class GetRecordsRequestPrivate : public DynamoDbStreamsRequestPrivate {
 
 public:
-    GetRecordsRequestPrivate(const DynamoDBStreamsRequest::Action action,
+    GetRecordsRequestPrivate(const DynamoDbStreamsRequest::Action action,
                                    GetRecordsRequest * const q);
     GetRecordsRequestPrivate(const GetRecordsRequestPrivate &other,
                                    GetRecordsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

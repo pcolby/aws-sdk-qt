@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for SSMIncidents UntagResource responses.
+ * \class QtAws::SsmIncidents::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for SsmIncidents UntagResource responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::untagResource
+ * \sa SsmIncidentsClient::untagResource
  */
 
 /*!
@@ -54,7 +54,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new UntagResourceResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents UntagResource \a response.
+ * Parses a successful SsmIncidents UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::UntagResourceResponsePrivate
+ * \class QtAws::SsmIncidents::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : SSMIncidentsResponsePrivate(q)
+    UntagResourceResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents UntagResource response element from \a xml.
+ * Parses a SsmIncidents UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

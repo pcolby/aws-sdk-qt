@@ -24,14 +24,14 @@
 #include "acceptpagerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class AcceptPageRequest;
 
-class AcceptPageRequestPrivate : public SSMContactsRequestPrivate {
+class AcceptPageRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    AcceptPageRequestPrivate(const SSMContactsRequest::Action action,
+    AcceptPageRequestPrivate(const SsmContactsRequest::Action action,
                                    AcceptPageRequest * const q);
     AcceptPageRequestPrivate(const AcceptPageRequestPrivate &other,
                                    AcceptPageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

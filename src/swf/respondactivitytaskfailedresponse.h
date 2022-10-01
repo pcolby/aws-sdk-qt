@@ -24,7 +24,7 @@
 #include "respondactivitytaskfailedrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class RespondActivityTaskFailedResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

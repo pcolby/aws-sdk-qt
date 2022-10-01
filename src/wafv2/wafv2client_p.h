@@ -25,7 +25,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class Wafv2Client;
 
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

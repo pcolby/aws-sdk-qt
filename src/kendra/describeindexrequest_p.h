@@ -24,14 +24,14 @@
 #include "describeindexrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DescribeIndexRequest;
 
-class DescribeIndexRequestPrivate : public kendraRequestPrivate {
+class DescribeIndexRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DescribeIndexRequestPrivate(const kendraRequest::Action action,
+    DescribeIndexRequestPrivate(const KendraRequest::Action action,
                                    DescribeIndexRequest * const q);
     DescribeIndexRequestPrivate(const DescribeIndexRequestPrivate &other,
                                    DescribeIndexRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

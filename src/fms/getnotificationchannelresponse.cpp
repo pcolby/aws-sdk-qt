@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::GetNotificationChannelResponse
- * \brief The GetNotificationChannelResponse class provides an interace for FMS GetNotificationChannel responses.
+ * \class QtAws::Fms::GetNotificationChannelResponse
+ * \brief The GetNotificationChannelResponse class provides an interace for Fms GetNotificationChannel responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const GetNotificationChannelRequest * GetNotificationChannelResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful FMS GetNotificationChannel \a response.
+ * Parses a successful Fms GetNotificationChannel \a response.
  */
 void GetNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void GetNotificationChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::GetNotificationChannelResponsePrivate
+ * \class QtAws::Fms::GetNotificationChannelResponsePrivate
  * \brief The GetNotificationChannelResponsePrivate class provides private implementation for GetNotificationChannelResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ GetNotificationChannelResponsePrivate::GetNotificationChannelResponsePrivate(
 }
 
 /*!
- * Parses a FMS GetNotificationChannel response element from \a xml.
+ * Parses a Fms GetNotificationChannel response element from \a xml.
  */
 void GetNotificationChannelResponsePrivate::parseGetNotificationChannelResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void GetNotificationChannelResponsePrivate::parseGetNotificationChannelResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

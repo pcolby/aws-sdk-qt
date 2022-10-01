@@ -24,7 +24,7 @@
 #include "stoptaskrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class StopTaskRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

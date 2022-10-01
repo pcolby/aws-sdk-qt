@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::StartImageScanRequest
- * \brief The StartImageScanRequest class provides an interface for ECR StartImageScan requests.
+ * \class QtAws::Ecr::StartImageScanRequest
+ * \brief The StartImageScanRequest class provides an interface for Ecr StartImageScan requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::startImageScan
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * StartImageScanRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::ECR::StartImageScanRequestPrivate
+ * \class QtAws::Ecr::StartImageScanRequestPrivate
  * \brief The StartImageScanRequestPrivate class provides private implementation for StartImageScanRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ StartImageScanRequestPrivate::StartImageScanRequestPrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

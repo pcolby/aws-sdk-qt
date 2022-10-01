@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::SendActivationCodeRequest
- * \brief The SendActivationCodeRequest class provides an interface for SSMContacts SendActivationCode requests.
+ * \class QtAws::SsmContacts::SendActivationCodeRequest
+ * \brief The SendActivationCodeRequest class provides an interface for SsmContacts SendActivationCode requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::sendActivationCode
+ * \sa SsmContactsClient::sendActivationCode
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SendActivationCodeRequest::SendActivationCodeRequest(const SendActivationCodeRequest &other)
-    : SSMContactsRequest(new SendActivationCodeRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new SendActivationCodeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ SendActivationCodeRequest::SendActivationCodeRequest(const SendActivationCodeReq
  * Constructs a SendActivationCodeRequest object.
  */
 SendActivationCodeRequest::SendActivationCodeRequest()
-    : SSMContactsRequest(new SendActivationCodeRequestPrivate(SSMContactsRequest::SendActivationCodeAction, this))
+    : SsmContactsRequest(new SendActivationCodeRequestPrivate(SsmContactsRequest::SendActivationCodeAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * SendActivationCodeRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SSMContacts::SendActivationCodeRequestPrivate
+ * \class QtAws::SsmContacts::SendActivationCodeRequestPrivate
  * \brief The SendActivationCodeRequestPrivate class provides private implementation for SendActivationCodeRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a SendActivationCodeRequestPrivate object for SSMContacts \a action,
+ * Constructs a SendActivationCodeRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 SendActivationCodeRequestPrivate::SendActivationCodeRequestPrivate(
-    const SSMContactsRequest::Action action, SendActivationCodeRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, SendActivationCodeRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ SendActivationCodeRequestPrivate::SendActivationCodeRequestPrivate(
  */
 SendActivationCodeRequestPrivate::SendActivationCodeRequestPrivate(
     const SendActivationCodeRequestPrivate &other, SendActivationCodeRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

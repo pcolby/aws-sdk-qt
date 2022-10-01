@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 class FisClientPrivate;
 class CreateExperimentTemplateRequest;
@@ -40,6 +40,8 @@ class GetExperimentRequest;
 class GetExperimentResponse;
 class GetExperimentTemplateRequest;
 class GetExperimentTemplateResponse;
+class GetTargetResourceTypeRequest;
+class GetTargetResourceTypeResponse;
 class ListActionsRequest;
 class ListActionsResponse;
 class ListExperimentTemplatesRequest;
@@ -48,6 +50,8 @@ class ListExperimentsRequest;
 class ListExperimentsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class ListTargetResourceTypesRequest;
+class ListTargetResourceTypesResponse;
 class StartExperimentRequest;
 class StartExperimentResponse;
 class StopExperimentRequest;
@@ -80,10 +84,12 @@ public slots:
     GetActionResponse * getAction(const GetActionRequest &request);
     GetExperimentResponse * getExperiment(const GetExperimentRequest &request);
     GetExperimentTemplateResponse * getExperimentTemplate(const GetExperimentTemplateRequest &request);
+    GetTargetResourceTypeResponse * getTargetResourceType(const GetTargetResourceTypeRequest &request);
     ListActionsResponse * listActions(const ListActionsRequest &request);
     ListExperimentTemplatesResponse * listExperimentTemplates(const ListExperimentTemplatesRequest &request);
     ListExperimentsResponse * listExperiments(const ListExperimentsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListTargetResourceTypesResponse * listTargetResourceTypes(const ListTargetResourceTypesRequest &request);
     StartExperimentResponse * startExperiment(const StartExperimentRequest &request);
     StopExperimentResponse * stopExperiment(const StopExperimentRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
@@ -96,7 +102,7 @@ private:
 
 };
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws
 
 #endif

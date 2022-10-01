@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::CreateChangesetResponse
- * \brief The CreateChangesetResponse class provides an interace for FinSpaceData CreateChangeset responses.
+ * \class QtAws::FinspaceData::CreateChangesetResponse
+ * \brief The CreateChangesetResponse class provides an interace for FinspaceData CreateChangeset responses.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::createChangeset
+ * \sa FinspaceDataClient::createChangeset
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateChangesetResponse::CreateChangesetResponse(
         const CreateChangesetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FinSpaceDataResponse(new CreateChangesetResponsePrivate(this), parent)
+    : FinspaceDataResponse(new CreateChangesetResponsePrivate(this), parent)
 {
     setRequest(new CreateChangesetRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateChangesetRequest * CreateChangesetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FinSpaceData CreateChangeset \a response.
+ * Parses a successful FinspaceData CreateChangeset \a response.
  */
 void CreateChangesetResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateChangesetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FinSpaceData::CreateChangesetResponsePrivate
+ * \class QtAws::FinspaceData::CreateChangesetResponsePrivate
  * \brief The CreateChangesetResponsePrivate class provides private implementation for CreateChangesetResponse.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
  * Constructs a CreateChangesetResponsePrivate object with public implementation \a q.
  */
 CreateChangesetResponsePrivate::CreateChangesetResponsePrivate(
-    CreateChangesetResponse * const q) : FinSpaceDataResponsePrivate(q)
+    CreateChangesetResponse * const q) : FinspaceDataResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a FinSpaceData CreateChangeset response element from \a xml.
+ * Parses a FinspaceData CreateChangeset response element from \a xml.
  */
 void CreateChangesetResponsePrivate::parseCreateChangesetResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateChangesetResponsePrivate::parseCreateChangesetResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

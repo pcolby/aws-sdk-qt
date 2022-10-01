@@ -1,0 +1,111 @@
+/*
+    Copyright 2013-2021 Paul Colby
+
+    This file is part of QtAws.
+
+    QtAws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QtAws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "publishreciperequest.h"
+#include "publishreciperequest_p.h"
+#include "publishreciperesponse.h"
+#include "databrewrequest_p.h"
+
+namespace QtAws {
+namespace DataBrew {
+
+/*!
+ * \class QtAws::DataBrew::PublishRecipeRequest
+ * \brief The PublishRecipeRequest class provides an interface for DataBrew PublishRecipe requests.
+ *
+ * \inmodule QtAwsDataBrew
+ *
+ *  Glue DataBrew is a visual, cloud-scale data-preparation service. DataBrew simplifies data preparation tasks, targeting
+ *  data issues that are hard to spot and time-consuming to fix. DataBrew empowers users of all technical levels to
+ *  visualize the data and perform one-click data transformations, with no coding
+ *
+ * \sa DataBrewClient::publishRecipe
+ */
+
+/*!
+ * Constructs a copy of \a other.
+ */
+PublishRecipeRequest::PublishRecipeRequest(const PublishRecipeRequest &other)
+    : DataBrewRequest(new PublishRecipeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/*!
+ * Constructs a PublishRecipeRequest object.
+ */
+PublishRecipeRequest::PublishRecipeRequest()
+    : DataBrewRequest(new PublishRecipeRequestPrivate(DataBrewRequest::PublishRecipeAction, this))
+{
+
+}
+
+/*!
+ * \reimp
+ */
+bool PublishRecipeRequest::isValid() const
+{
+    return false;
+}
+
+
+/*!
+ * Returns a PublishRecipeResponse object to process \a reply.
+ *
+ * \sa QtAws::Core::AwsAbstractClient::send
+ */
+QtAws::Core::AwsAbstractResponse * PublishRecipeRequest::response(QNetworkReply * const reply) const
+{
+    return new PublishRecipeResponse(*this, reply);
+}
+
+/*!
+ * \class QtAws::DataBrew::PublishRecipeRequestPrivate
+ * \brief The PublishRecipeRequestPrivate class provides private implementation for PublishRecipeRequest.
+ * \internal
+ *
+ * \inmodule QtAwsDataBrew
+ */
+
+/*!
+ * Constructs a PublishRecipeRequestPrivate object for DataBrew \a action,
+ * with public implementation \a q.
+ */
+PublishRecipeRequestPrivate::PublishRecipeRequestPrivate(
+    const DataBrewRequest::Action action, PublishRecipeRequest * const q)
+    : DataBrewRequestPrivate(action, q)
+{
+
+}
+
+/*!
+ * Constructs a copy of \a other, with public implementation \a q.
+ *
+ * This copy-like constructor exists for the benefit of the PublishRecipeRequest
+ * class' copy constructor.
+ */
+PublishRecipeRequestPrivate::PublishRecipeRequestPrivate(
+    const PublishRecipeRequestPrivate &other, PublishRecipeRequest * const q)
+    : DataBrewRequestPrivate(other, q)
+{
+
+}
+
+} // namespace DataBrew
+} // namespace QtAws

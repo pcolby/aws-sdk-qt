@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsClient;
+class SsmContactsClient;
 
-class SSMContactsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsmContactsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit SSMContactsClientPrivate(SSMContactsClient * const q);
+    explicit SsmContactsClientPrivate(SsmContactsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SSMContactsClient)
-    Q_DISABLE_COPY(SSMContactsClientPrivate)
+    Q_DECLARE_PUBLIC(SsmContactsClient)
+    Q_DISABLE_COPY(SsmContactsClientPrivate)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

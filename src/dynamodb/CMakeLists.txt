@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDYNAMODB_LIBRARY)
 
-add_library(QtAwsDynamoDB
+add_library(QtAwsDynamoDb
+  qtawsdynamodbglobal.h
+  dynamodbclient.h
+  dynamodbclient_p.h
+  dynamodbrequest.h
+  dynamodbrequest_p.h
+  dynamodbresponse.h
+  dynamodbresponse_p.h
   batchexecutestatementrequest.h
   batchexecutestatementrequest_p.h
   batchexecutestatementresponse.h
@@ -65,6 +72,10 @@ add_library(QtAwsDynamoDB
   describeglobaltablesettingsrequest_p.h
   describeglobaltablesettingsresponse.h
   describeglobaltablesettingsresponse_p.h
+  describeimportrequest.h
+  describeimportrequest_p.h
+  describeimportresponse.h
+  describeimportresponse_p.h
   describekinesisstreamingdestinationrequest.h
   describekinesisstreamingdestinationrequest_p.h
   describekinesisstreamingdestinationresponse.h
@@ -73,14 +84,14 @@ add_library(QtAwsDynamoDB
   describelimitsrequest_p.h
   describelimitsresponse.h
   describelimitsresponse_p.h
-  describetablereplicaautoscalingrequest.h
-  describetablereplicaautoscalingrequest_p.h
-  describetablereplicaautoscalingresponse.h
-  describetablereplicaautoscalingresponse_p.h
   describetablerequest.h
   describetablerequest_p.h
   describetableresponse.h
   describetableresponse_p.h
+  describetablereplicaautoscalingrequest.h
+  describetablereplicaautoscalingrequest_p.h
+  describetablereplicaautoscalingresponse.h
+  describetablereplicaautoscalingresponse_p.h
   describetimetoliverequest.h
   describetimetoliverequest_p.h
   describetimetoliveresponse.h
@@ -89,12 +100,6 @@ add_library(QtAwsDynamoDB
   disablekinesisstreamingdestinationrequest_p.h
   disablekinesisstreamingdestinationresponse.h
   disablekinesisstreamingdestinationresponse_p.h
-  dynamodbclient.h
-  dynamodbclient_p.h
-  dynamodbrequest.h
-  dynamodbrequest_p.h
-  dynamodbresponse.h
-  dynamodbresponse_p.h
   enablekinesisstreamingdestinationrequest.h
   enablekinesisstreamingdestinationrequest_p.h
   enablekinesisstreamingdestinationresponse.h
@@ -115,6 +120,10 @@ add_library(QtAwsDynamoDB
   getitemrequest_p.h
   getitemresponse.h
   getitemresponse_p.h
+  importtablerequest.h
+  importtablerequest_p.h
+  importtableresponse.h
+  importtableresponse_p.h
   listbackupsrequest.h
   listbackupsrequest_p.h
   listbackupsresponse.h
@@ -131,6 +140,10 @@ add_library(QtAwsDynamoDB
   listglobaltablesrequest_p.h
   listglobaltablesresponse.h
   listglobaltablesresponse_p.h
+  listimportsrequest.h
+  listimportsrequest_p.h
+  listimportsresponse.h
+  listimportsresponse_p.h
   listtablesrequest.h
   listtablesrequest_p.h
   listtablesresponse.h
@@ -143,7 +156,6 @@ add_library(QtAwsDynamoDB
   putitemrequest_p.h
   putitemresponse.h
   putitemresponse_p.h
-  qtawsdynamodbglobal.h
   queryrequest.h
   queryrequest_p.h
   queryresponse.h
@@ -196,18 +208,21 @@ add_library(QtAwsDynamoDB
   updateitemrequest_p.h
   updateitemresponse.h
   updateitemresponse_p.h
-  updatetablereplicaautoscalingrequest.h
-  updatetablereplicaautoscalingrequest_p.h
-  updatetablereplicaautoscalingresponse.h
-  updatetablereplicaautoscalingresponse_p.h
   updatetablerequest.h
   updatetablerequest_p.h
   updatetableresponse.h
   updatetableresponse_p.h
+  updatetablereplicaautoscalingrequest.h
+  updatetablereplicaautoscalingrequest_p.h
+  updatetablereplicaautoscalingresponse.h
+  updatetablereplicaautoscalingresponse_p.h
   updatetimetoliverequest.h
   updatetimetoliverequest_p.h
   updatetimetoliveresponse.h
   updatetimetoliveresponse_p.h
+  dynamodbclient.cpp
+  dynamodbrequest.cpp
+  dynamodbresponse.cpp
   batchexecutestatementrequest.cpp
   batchexecutestatementresponse.cpp
   batchgetitemrequest.cpp
@@ -240,21 +255,20 @@ add_library(QtAwsDynamoDB
   describeglobaltableresponse.cpp
   describeglobaltablesettingsrequest.cpp
   describeglobaltablesettingsresponse.cpp
+  describeimportrequest.cpp
+  describeimportresponse.cpp
   describekinesisstreamingdestinationrequest.cpp
   describekinesisstreamingdestinationresponse.cpp
   describelimitsrequest.cpp
   describelimitsresponse.cpp
-  describetablereplicaautoscalingrequest.cpp
-  describetablereplicaautoscalingresponse.cpp
   describetablerequest.cpp
   describetableresponse.cpp
+  describetablereplicaautoscalingrequest.cpp
+  describetablereplicaautoscalingresponse.cpp
   describetimetoliverequest.cpp
   describetimetoliveresponse.cpp
   disablekinesisstreamingdestinationrequest.cpp
   disablekinesisstreamingdestinationresponse.cpp
-  dynamodbclient.cpp
-  dynamodbrequest.cpp
-  dynamodbresponse.cpp
   enablekinesisstreamingdestinationrequest.cpp
   enablekinesisstreamingdestinationresponse.cpp
   executestatementrequest.cpp
@@ -265,6 +279,8 @@ add_library(QtAwsDynamoDB
   exporttabletopointintimeresponse.cpp
   getitemrequest.cpp
   getitemresponse.cpp
+  importtablerequest.cpp
+  importtableresponse.cpp
   listbackupsrequest.cpp
   listbackupsresponse.cpp
   listcontributorinsightsrequest.cpp
@@ -273,6 +289,8 @@ add_library(QtAwsDynamoDB
   listexportsresponse.cpp
   listglobaltablesrequest.cpp
   listglobaltablesresponse.cpp
+  listimportsrequest.cpp
+  listimportsresponse.cpp
   listtablesrequest.cpp
   listtablesresponse.cpp
   listtagsofresourcerequest.cpp
@@ -305,14 +323,14 @@ add_library(QtAwsDynamoDB
   updateglobaltablesettingsresponse.cpp
   updateitemrequest.cpp
   updateitemresponse.cpp
-  updatetablereplicaautoscalingrequest.cpp
-  updatetablereplicaautoscalingresponse.cpp
   updatetablerequest.cpp
   updatetableresponse.cpp
+  updatetablereplicaautoscalingrequest.cpp
+  updatetablereplicaautoscalingresponse.cpp
   updatetimetoliverequest.cpp
   updatetimetoliveresponse.cpp)
 
-target_link_libraries(QtAwsDynamoDB
+target_link_libraries(QtAwsDynamoDb
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

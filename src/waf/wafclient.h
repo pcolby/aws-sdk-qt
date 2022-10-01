@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class WafClientPrivate;
 class CreateByteMatchSetRequest;
@@ -285,7 +285,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

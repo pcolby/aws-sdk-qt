@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::PutRepositoryCatalogDataRequest
- * \brief The PutRepositoryCatalogDataRequest class provides an interface for ECRPublic PutRepositoryCatalogData requests.
+ * \class QtAws::EcrPublic::PutRepositoryCatalogDataRequest
+ * \brief The PutRepositoryCatalogDataRequest class provides an interface for EcrPublic PutRepositoryCatalogData requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::putRepositoryCatalogData
+ * \sa EcrPublicClient::putRepositoryCatalogData
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutRepositoryCatalogDataRequest::PutRepositoryCatalogDataRequest(const PutRepositoryCatalogDataRequest &other)
-    : ECRPublicRequest(new PutRepositoryCatalogDataRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new PutRepositoryCatalogDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ PutRepositoryCatalogDataRequest::PutRepositoryCatalogDataRequest(const PutReposi
  * Constructs a PutRepositoryCatalogDataRequest object.
  */
 PutRepositoryCatalogDataRequest::PutRepositoryCatalogDataRequest()
-    : ECRPublicRequest(new PutRepositoryCatalogDataRequestPrivate(ECRPublicRequest::PutRepositoryCatalogDataAction, this))
+    : EcrPublicRequest(new PutRepositoryCatalogDataRequestPrivate(EcrPublicRequest::PutRepositoryCatalogDataAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * PutRepositoryCatalogDataRequest::response(QNe
 }
 
 /*!
- * \class QtAws::ECRPublic::PutRepositoryCatalogDataRequestPrivate
+ * \class QtAws::EcrPublic::PutRepositoryCatalogDataRequestPrivate
  * \brief The PutRepositoryCatalogDataRequestPrivate class provides private implementation for PutRepositoryCatalogDataRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a PutRepositoryCatalogDataRequestPrivate object for ECRPublic \a action,
+ * Constructs a PutRepositoryCatalogDataRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 PutRepositoryCatalogDataRequestPrivate::PutRepositoryCatalogDataRequestPrivate(
-    const ECRPublicRequest::Action action, PutRepositoryCatalogDataRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, PutRepositoryCatalogDataRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ PutRepositoryCatalogDataRequestPrivate::PutRepositoryCatalogDataRequestPrivate(
  */
 PutRepositoryCatalogDataRequestPrivate::PutRepositoryCatalogDataRequestPrivate(
     const PutRepositoryCatalogDataRequestPrivate &other, PutRepositoryCatalogDataRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

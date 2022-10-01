@@ -24,14 +24,14 @@
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class RemoveTagsFromResourceRequest;
 
-class RemoveTagsFromResourceRequestPrivate : public CloudHSMRequestPrivate {
+class RemoveTagsFromResourceRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    RemoveTagsFromResourceRequestPrivate(const CloudHSMRequest::Action action,
+    RemoveTagsFromResourceRequestPrivate(const CloudHsmRequest::Action action,
                                    RemoveTagsFromResourceRequest * const q);
     RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
                                    RemoveTagsFromResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

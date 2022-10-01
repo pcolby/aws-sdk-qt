@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteThesaurusRequest
- * \brief The DeleteThesaurusRequest class provides an interface for kendra DeleteThesaurus requests.
+ * \class QtAws::Kendra::DeleteThesaurusRequest
+ * \brief The DeleteThesaurusRequest class provides an interface for Kendra DeleteThesaurus requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteThesaurus
+ * \sa KendraClient::deleteThesaurus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteThesaurusRequest::DeleteThesaurusRequest(const DeleteThesaurusRequest &other)
-    : kendraRequest(new DeleteThesaurusRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DeleteThesaurusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteThesaurusRequest::DeleteThesaurusRequest(const DeleteThesaurusRequest &oth
  * Constructs a DeleteThesaurusRequest object.
  */
 DeleteThesaurusRequest::DeleteThesaurusRequest()
-    : kendraRequest(new DeleteThesaurusRequestPrivate(kendraRequest::DeleteThesaurusAction, this))
+    : KendraRequest(new DeleteThesaurusRequestPrivate(KendraRequest::DeleteThesaurusAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteThesaurusRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::kendra::DeleteThesaurusRequestPrivate
+ * \class QtAws::Kendra::DeleteThesaurusRequestPrivate
  * \brief The DeleteThesaurusRequestPrivate class provides private implementation for DeleteThesaurusRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DeleteThesaurusRequestPrivate object for kendra \a action,
+ * Constructs a DeleteThesaurusRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DeleteThesaurusRequestPrivate::DeleteThesaurusRequestPrivate(
-    const kendraRequest::Action action, DeleteThesaurusRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DeleteThesaurusRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteThesaurusRequestPrivate::DeleteThesaurusRequestPrivate(
  */
 DeleteThesaurusRequestPrivate::DeleteThesaurusRequestPrivate(
     const DeleteThesaurusRequestPrivate &other, DeleteThesaurusRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

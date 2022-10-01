@@ -27,11 +27,13 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class FmsClientPrivate;
 class AssociateAdminAccountRequest;
 class AssociateAdminAccountResponse;
+class AssociateThirdPartyFirewallRequest;
+class AssociateThirdPartyFirewallResponse;
 class DeleteAppsListRequest;
 class DeleteAppsListResponse;
 class DeleteNotificationChannelRequest;
@@ -42,6 +44,8 @@ class DeleteProtocolsListRequest;
 class DeleteProtocolsListResponse;
 class DisassociateAdminAccountRequest;
 class DisassociateAdminAccountResponse;
+class DisassociateThirdPartyFirewallRequest;
+class DisassociateThirdPartyFirewallResponse;
 class GetAdminAccountRequest;
 class GetAdminAccountResponse;
 class GetAppsListRequest;
@@ -56,6 +60,8 @@ class GetProtectionStatusRequest;
 class GetProtectionStatusResponse;
 class GetProtocolsListRequest;
 class GetProtocolsListResponse;
+class GetThirdPartyFirewallAssociationStatusRequest;
+class GetThirdPartyFirewallAssociationStatusResponse;
 class GetViolationDetailsRequest;
 class GetViolationDetailsResponse;
 class ListAppsListsRequest;
@@ -70,6 +76,8 @@ class ListProtocolsListsRequest;
 class ListProtocolsListsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class ListThirdPartyFirewallFirewallPoliciesRequest;
+class ListThirdPartyFirewallFirewallPoliciesResponse;
 class PutAppsListRequest;
 class PutAppsListResponse;
 class PutNotificationChannelRequest;
@@ -100,11 +108,13 @@ public:
 
 public slots:
     AssociateAdminAccountResponse * associateAdminAccount(const AssociateAdminAccountRequest &request);
+    AssociateThirdPartyFirewallResponse * associateThirdPartyFirewall(const AssociateThirdPartyFirewallRequest &request);
     DeleteAppsListResponse * deleteAppsList(const DeleteAppsListRequest &request);
     DeleteNotificationChannelResponse * deleteNotificationChannel(const DeleteNotificationChannelRequest &request);
     DeletePolicyResponse * deletePolicy(const DeletePolicyRequest &request);
     DeleteProtocolsListResponse * deleteProtocolsList(const DeleteProtocolsListRequest &request);
     DisassociateAdminAccountResponse * disassociateAdminAccount(const DisassociateAdminAccountRequest &request);
+    DisassociateThirdPartyFirewallResponse * disassociateThirdPartyFirewall(const DisassociateThirdPartyFirewallRequest &request);
     GetAdminAccountResponse * getAdminAccount(const GetAdminAccountRequest &request);
     GetAppsListResponse * getAppsList(const GetAppsListRequest &request);
     GetComplianceDetailResponse * getComplianceDetail(const GetComplianceDetailRequest &request);
@@ -112,6 +122,7 @@ public slots:
     GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
     GetProtectionStatusResponse * getProtectionStatus(const GetProtectionStatusRequest &request);
     GetProtocolsListResponse * getProtocolsList(const GetProtocolsListRequest &request);
+    GetThirdPartyFirewallAssociationStatusResponse * getThirdPartyFirewallAssociationStatus(const GetThirdPartyFirewallAssociationStatusRequest &request);
     GetViolationDetailsResponse * getViolationDetails(const GetViolationDetailsRequest &request);
     ListAppsListsResponse * listAppsLists(const ListAppsListsRequest &request);
     ListComplianceStatusResponse * listComplianceStatus(const ListComplianceStatusRequest &request);
@@ -119,6 +130,7 @@ public slots:
     ListPoliciesResponse * listPolicies(const ListPoliciesRequest &request);
     ListProtocolsListsResponse * listProtocolsLists(const ListProtocolsListsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListThirdPartyFirewallFirewallPoliciesResponse * listThirdPartyFirewallFirewallPolicies(const ListThirdPartyFirewallFirewallPoliciesRequest &request);
     PutAppsListResponse * putAppsList(const PutAppsListRequest &request);
     PutNotificationChannelResponse * putNotificationChannel(const PutNotificationChannelRequest &request);
     PutPolicyResponse * putPolicy(const PutPolicyRequest &request);
@@ -132,7 +144,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

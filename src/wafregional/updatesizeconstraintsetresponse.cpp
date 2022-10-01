@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateSizeConstraintSetResponse
- * \brief The UpdateSizeConstraintSetResponse class provides an interace for WAFRegional UpdateSizeConstraintSet responses.
+ * \class QtAws::WafRegional::UpdateSizeConstraintSetResponse
+ * \brief The UpdateSizeConstraintSetResponse class provides an interace for WafRegional UpdateSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateSizeConstraintSet
+ * \sa WafRegionalClient::updateSizeConstraintSet
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
         const UpdateSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateSizeConstraintSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateSizeConstraintSet \a response.
+ * Parses a successful WafRegional UpdateSizeConstraintSet \a response.
  */
 void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateSizeConstraintSetResponsePrivate
+ * \class QtAws::WafRegional::UpdateSizeConstraintSetResponsePrivate
  * \brief The UpdateSizeConstraintSetResponsePrivate class provides private implementation for UpdateSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
-    UpdateSizeConstraintSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateSizeConstraintSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateSizeConstraintSet response element from \a xml.
+ * Parses a WafRegional UpdateSizeConstraintSet response element from \a xml.
  */
 void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

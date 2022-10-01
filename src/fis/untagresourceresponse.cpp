@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for FIS UntagResource responses.
+ * \class QtAws::Fis::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for Fis UntagResource responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::untagResource
  */
@@ -64,7 +64,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS UntagResource \a response.
+ * Parses a successful Fis UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::UntagResourceResponsePrivate
+ * \class QtAws::Fis::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 }
 
 /*!
- * Parses a FIS UntagResource response element from \a xml.
+ * Parses a Fis UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

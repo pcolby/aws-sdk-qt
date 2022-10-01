@@ -24,28 +24,28 @@
 #include "ssmcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsRequest;
+class SsmContactsRequest;
 
-class SSMContactsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsmContactsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SSMContactsRequest::Action action; ///< SSMContacts action to be performed.
-    QString apiVersion;        ///< SSMContacts API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSMContacts request (query string) parameters. @todo?
+    SsmContactsRequest::Action action; ///< SsmContacts action to be performed.
+    QString apiVersion;        ///< SsmContacts API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SsmContacts request (query string) parameters. @todo?
 
-    SSMContactsRequestPrivate(const SSMContactsRequest::Action action, SSMContactsRequest * const q);
-    SSMContactsRequestPrivate(const SSMContactsRequestPrivate &other, SSMContactsRequest * const q);
+    SsmContactsRequestPrivate(const SsmContactsRequest::Action action, SsmContactsRequest * const q);
+    SsmContactsRequestPrivate(const SsmContactsRequestPrivate &other, SsmContactsRequest * const q);
 
-    static QString toString(const SSMContactsRequest::Action &action);
+    static QString toString(const SsmContactsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SSMContactsRequest)
+    Q_DECLARE_PUBLIC(SsmContactsRequest)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

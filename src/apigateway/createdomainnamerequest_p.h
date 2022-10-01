@@ -24,14 +24,14 @@
 #include "createdomainnamerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateDomainNameRequest;
 
-class CreateDomainNameRequestPrivate : public APIGatewayRequestPrivate {
+class CreateDomainNameRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateDomainNameRequestPrivate(const APIGatewayRequest::Action action,
+    CreateDomainNameRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateDomainNameRequest * const q);
     CreateDomainNameRequestPrivate(const CreateDomainNameRequestPrivate &other,
                                    CreateDomainNameRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

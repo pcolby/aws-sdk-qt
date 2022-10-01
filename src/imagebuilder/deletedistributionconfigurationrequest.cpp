@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteDistributionConfigurationRequest
- * \brief The DeleteDistributionConfigurationRequest class provides an interface for imagebuilder DeleteDistributionConfiguration requests.
+ * \class QtAws::ImageBuilder::DeleteDistributionConfigurationRequest
+ * \brief The DeleteDistributionConfigurationRequest class provides an interface for ImageBuilder DeleteDistributionConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteDistributionConfiguration
+ * \sa ImageBuilderClient::deleteDistributionConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDistributionConfigurationRequest::DeleteDistributionConfigurationRequest(const DeleteDistributionConfigurationRequest &other)
-    : imagebuilderRequest(new DeleteDistributionConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new DeleteDistributionConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DeleteDistributionConfigurationRequest::DeleteDistributionConfigurationRequest(c
  * Constructs a DeleteDistributionConfigurationRequest object.
  */
 DeleteDistributionConfigurationRequest::DeleteDistributionConfigurationRequest()
-    : imagebuilderRequest(new DeleteDistributionConfigurationRequestPrivate(imagebuilderRequest::DeleteDistributionConfigurationAction, this))
+    : ImageBuilderRequest(new DeleteDistributionConfigurationRequestPrivate(ImageBuilderRequest::DeleteDistributionConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionConfigurationRequest::respo
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteDistributionConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::DeleteDistributionConfigurationRequestPrivate
  * \brief The DeleteDistributionConfigurationRequestPrivate class provides private implementation for DeleteDistributionConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a DeleteDistributionConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a DeleteDistributionConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 DeleteDistributionConfigurationRequestPrivate::DeleteDistributionConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, DeleteDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, DeleteDistributionConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ DeleteDistributionConfigurationRequestPrivate::DeleteDistributionConfigurationRe
  */
 DeleteDistributionConfigurationRequestPrivate::DeleteDistributionConfigurationRequestPrivate(
     const DeleteDistributionConfigurationRequestPrivate &other, DeleteDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDIRECTCONNECT_LIBRARY)
 
 add_library(QtAwsDirectConnect
+  qtawsdirectconnectglobal.h
+  directconnectclient.h
+  directconnectclient_p.h
+  directconnectrequest.h
+  directconnectrequest_p.h
+  directconnectresponse.h
+  directconnectresponse_p.h
   acceptdirectconnectgatewayassociationproposalrequest.h
   acceptdirectconnectgatewayassociationproposalrequest_p.h
   acceptdirectconnectgatewayassociationproposalresponse.h
@@ -45,6 +52,10 @@ add_library(QtAwsDirectConnect
   confirmconnectionrequest_p.h
   confirmconnectionresponse.h
   confirmconnectionresponse_p.h
+  confirmcustomeragreementrequest.h
+  confirmcustomeragreementrequest_p.h
+  confirmcustomeragreementresponse.h
+  confirmcustomeragreementresponse_p.h
   confirmprivatevirtualinterfacerequest.h
   confirmprivatevirtualinterfacerequest_p.h
   confirmprivatevirtualinterfaceresponse.h
@@ -65,18 +76,18 @@ add_library(QtAwsDirectConnect
   createconnectionrequest_p.h
   createconnectionresponse.h
   createconnectionresponse_p.h
-  createdirectconnectgatewayassociationproposalrequest.h
-  createdirectconnectgatewayassociationproposalrequest_p.h
-  createdirectconnectgatewayassociationproposalresponse.h
-  createdirectconnectgatewayassociationproposalresponse_p.h
-  createdirectconnectgatewayassociationrequest.h
-  createdirectconnectgatewayassociationrequest_p.h
-  createdirectconnectgatewayassociationresponse.h
-  createdirectconnectgatewayassociationresponse_p.h
   createdirectconnectgatewayrequest.h
   createdirectconnectgatewayrequest_p.h
   createdirectconnectgatewayresponse.h
   createdirectconnectgatewayresponse_p.h
+  createdirectconnectgatewayassociationrequest.h
+  createdirectconnectgatewayassociationrequest_p.h
+  createdirectconnectgatewayassociationresponse.h
+  createdirectconnectgatewayassociationresponse_p.h
+  createdirectconnectgatewayassociationproposalrequest.h
+  createdirectconnectgatewayassociationproposalrequest_p.h
+  createdirectconnectgatewayassociationproposalresponse.h
+  createdirectconnectgatewayassociationproposalresponse_p.h
   createinterconnectrequest.h
   createinterconnectrequest_p.h
   createinterconnectresponse.h
@@ -105,18 +116,18 @@ add_library(QtAwsDirectConnect
   deleteconnectionrequest_p.h
   deleteconnectionresponse.h
   deleteconnectionresponse_p.h
-  deletedirectconnectgatewayassociationproposalrequest.h
-  deletedirectconnectgatewayassociationproposalrequest_p.h
-  deletedirectconnectgatewayassociationproposalresponse.h
-  deletedirectconnectgatewayassociationproposalresponse_p.h
-  deletedirectconnectgatewayassociationrequest.h
-  deletedirectconnectgatewayassociationrequest_p.h
-  deletedirectconnectgatewayassociationresponse.h
-  deletedirectconnectgatewayassociationresponse_p.h
   deletedirectconnectgatewayrequest.h
   deletedirectconnectgatewayrequest_p.h
   deletedirectconnectgatewayresponse.h
   deletedirectconnectgatewayresponse_p.h
+  deletedirectconnectgatewayassociationrequest.h
+  deletedirectconnectgatewayassociationrequest_p.h
+  deletedirectconnectgatewayassociationresponse.h
+  deletedirectconnectgatewayassociationresponse_p.h
+  deletedirectconnectgatewayassociationproposalrequest.h
+  deletedirectconnectgatewayassociationproposalrequest_p.h
+  deletedirectconnectgatewayassociationproposalresponse.h
+  deletedirectconnectgatewayassociationproposalresponse_p.h
   deleteinterconnectrequest.h
   deleteinterconnectrequest_p.h
   deleteinterconnectresponse.h
@@ -133,14 +144,18 @@ add_library(QtAwsDirectConnect
   describeconnectionloarequest_p.h
   describeconnectionloaresponse.h
   describeconnectionloaresponse_p.h
-  describeconnectionsoninterconnectrequest.h
-  describeconnectionsoninterconnectrequest_p.h
-  describeconnectionsoninterconnectresponse.h
-  describeconnectionsoninterconnectresponse_p.h
   describeconnectionsrequest.h
   describeconnectionsrequest_p.h
   describeconnectionsresponse.h
   describeconnectionsresponse_p.h
+  describeconnectionsoninterconnectrequest.h
+  describeconnectionsoninterconnectrequest_p.h
+  describeconnectionsoninterconnectresponse.h
+  describeconnectionsoninterconnectresponse_p.h
+  describecustomermetadatarequest.h
+  describecustomermetadatarequest_p.h
+  describecustomermetadataresponse.h
+  describecustomermetadataresponse_p.h
   describedirectconnectgatewayassociationproposalsrequest.h
   describedirectconnectgatewayassociationproposalsrequest_p.h
   describedirectconnectgatewayassociationproposalsresponse.h
@@ -181,6 +196,10 @@ add_library(QtAwsDirectConnect
   describelocationsrequest_p.h
   describelocationsresponse.h
   describelocationsresponse_p.h
+  describerouterconfigurationrequest.h
+  describerouterconfigurationrequest_p.h
+  describerouterconfigurationresponse.h
+  describerouterconfigurationresponse_p.h
   describetagsrequest.h
   describetagsrequest_p.h
   describetagsresponse.h
@@ -193,12 +212,6 @@ add_library(QtAwsDirectConnect
   describevirtualinterfacesrequest_p.h
   describevirtualinterfacesresponse.h
   describevirtualinterfacesresponse_p.h
-  directconnectclient.h
-  directconnectclient_p.h
-  directconnectrequest.h
-  directconnectrequest_p.h
-  directconnectresponse.h
-  directconnectresponse_p.h
   disassociateconnectionfromlagrequest.h
   disassociateconnectionfromlagrequest_p.h
   disassociateconnectionfromlagresponse.h
@@ -211,7 +224,6 @@ add_library(QtAwsDirectConnect
   listvirtualinterfacetesthistoryrequest_p.h
   listvirtualinterfacetesthistoryresponse.h
   listvirtualinterfacetesthistoryresponse_p.h
-  qtawsdirectconnectglobal.h
   startbgpfailovertestrequest.h
   startbgpfailovertestrequest_p.h
   startbgpfailovertestresponse.h
@@ -232,6 +244,10 @@ add_library(QtAwsDirectConnect
   updateconnectionrequest_p.h
   updateconnectionresponse.h
   updateconnectionresponse_p.h
+  updatedirectconnectgatewayrequest.h
+  updatedirectconnectgatewayrequest_p.h
+  updatedirectconnectgatewayresponse.h
+  updatedirectconnectgatewayresponse_p.h
   updatedirectconnectgatewayassociationrequest.h
   updatedirectconnectgatewayassociationrequest_p.h
   updatedirectconnectgatewayassociationresponse.h
@@ -244,6 +260,9 @@ add_library(QtAwsDirectConnect
   updatevirtualinterfaceattributesrequest_p.h
   updatevirtualinterfaceattributesresponse.h
   updatevirtualinterfaceattributesresponse_p.h
+  directconnectclient.cpp
+  directconnectrequest.cpp
+  directconnectresponse.cpp
   acceptdirectconnectgatewayassociationproposalrequest.cpp
   acceptdirectconnectgatewayassociationproposalresponse.cpp
   allocateconnectiononinterconnectrequest.cpp
@@ -266,6 +285,8 @@ add_library(QtAwsDirectConnect
   associatevirtualinterfaceresponse.cpp
   confirmconnectionrequest.cpp
   confirmconnectionresponse.cpp
+  confirmcustomeragreementrequest.cpp
+  confirmcustomeragreementresponse.cpp
   confirmprivatevirtualinterfacerequest.cpp
   confirmprivatevirtualinterfaceresponse.cpp
   confirmpublicvirtualinterfacerequest.cpp
@@ -276,12 +297,12 @@ add_library(QtAwsDirectConnect
   createbgppeerresponse.cpp
   createconnectionrequest.cpp
   createconnectionresponse.cpp
-  createdirectconnectgatewayassociationproposalrequest.cpp
-  createdirectconnectgatewayassociationproposalresponse.cpp
-  createdirectconnectgatewayassociationrequest.cpp
-  createdirectconnectgatewayassociationresponse.cpp
   createdirectconnectgatewayrequest.cpp
   createdirectconnectgatewayresponse.cpp
+  createdirectconnectgatewayassociationrequest.cpp
+  createdirectconnectgatewayassociationresponse.cpp
+  createdirectconnectgatewayassociationproposalrequest.cpp
+  createdirectconnectgatewayassociationproposalresponse.cpp
   createinterconnectrequest.cpp
   createinterconnectresponse.cpp
   createlagrequest.cpp
@@ -296,12 +317,12 @@ add_library(QtAwsDirectConnect
   deletebgppeerresponse.cpp
   deleteconnectionrequest.cpp
   deleteconnectionresponse.cpp
-  deletedirectconnectgatewayassociationproposalrequest.cpp
-  deletedirectconnectgatewayassociationproposalresponse.cpp
-  deletedirectconnectgatewayassociationrequest.cpp
-  deletedirectconnectgatewayassociationresponse.cpp
   deletedirectconnectgatewayrequest.cpp
   deletedirectconnectgatewayresponse.cpp
+  deletedirectconnectgatewayassociationrequest.cpp
+  deletedirectconnectgatewayassociationresponse.cpp
+  deletedirectconnectgatewayassociationproposalrequest.cpp
+  deletedirectconnectgatewayassociationproposalresponse.cpp
   deleteinterconnectrequest.cpp
   deleteinterconnectresponse.cpp
   deletelagrequest.cpp
@@ -310,10 +331,12 @@ add_library(QtAwsDirectConnect
   deletevirtualinterfaceresponse.cpp
   describeconnectionloarequest.cpp
   describeconnectionloaresponse.cpp
-  describeconnectionsoninterconnectrequest.cpp
-  describeconnectionsoninterconnectresponse.cpp
   describeconnectionsrequest.cpp
   describeconnectionsresponse.cpp
+  describeconnectionsoninterconnectrequest.cpp
+  describeconnectionsoninterconnectresponse.cpp
+  describecustomermetadatarequest.cpp
+  describecustomermetadataresponse.cpp
   describedirectconnectgatewayassociationproposalsrequest.cpp
   describedirectconnectgatewayassociationproposalsresponse.cpp
   describedirectconnectgatewayassociationsrequest.cpp
@@ -334,15 +357,14 @@ add_library(QtAwsDirectConnect
   describeloaresponse.cpp
   describelocationsrequest.cpp
   describelocationsresponse.cpp
+  describerouterconfigurationrequest.cpp
+  describerouterconfigurationresponse.cpp
   describetagsrequest.cpp
   describetagsresponse.cpp
   describevirtualgatewaysrequest.cpp
   describevirtualgatewaysresponse.cpp
   describevirtualinterfacesrequest.cpp
   describevirtualinterfacesresponse.cpp
-  directconnectclient.cpp
-  directconnectrequest.cpp
-  directconnectresponse.cpp
   disassociateconnectionfromlagrequest.cpp
   disassociateconnectionfromlagresponse.cpp
   disassociatemacseckeyrequest.cpp
@@ -359,6 +381,8 @@ add_library(QtAwsDirectConnect
   untagresourceresponse.cpp
   updateconnectionrequest.cpp
   updateconnectionresponse.cpp
+  updatedirectconnectgatewayrequest.cpp
+  updatedirectconnectgatewayresponse.cpp
   updatedirectconnectgatewayassociationrequest.cpp
   updatedirectconnectgatewayassociationresponse.cpp
   updatelagrequest.cpp

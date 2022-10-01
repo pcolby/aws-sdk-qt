@@ -29,6 +29,10 @@
 #include "deletesignalingchannelresponse.h"
 #include "deletestreamrequest.h"
 #include "deletestreamresponse.h"
+#include "describeimagegenerationconfigurationrequest.h"
+#include "describeimagegenerationconfigurationresponse.h"
+#include "describenotificationconfigurationrequest.h"
+#include "describenotificationconfigurationresponse.h"
 #include "describesignalingchannelrequest.h"
 #include "describesignalingchannelresponse.h"
 #include "describestreamrequest.h"
@@ -55,6 +59,10 @@
 #include "untagstreamresponse.h"
 #include "updatedataretentionrequest.h"
 #include "updatedataretentionresponse.h"
+#include "updateimagegenerationconfigurationrequest.h"
+#include "updateimagegenerationconfigurationresponse.h"
+#include "updatenotificationconfigurationrequest.h"
+#include "updatenotificationconfigurationresponse.h"
 #include "updatesignalingchannelrequest.h"
 #include "updatesignalingchannelresponse.h"
 #include "updatestreamrequest.h"
@@ -231,6 +239,32 @@ DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamReques
 
 /*!
  * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DescribeImageGenerationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the <code>ImageGenerationConfiguration</code> for a given Kinesis video
+ */
+DescribeImageGenerationConfigurationResponse * KinesisVideoClient::describeImageGenerationConfiguration(const DescribeImageGenerationConfigurationRequest &request)
+{
+    return qobject_cast<DescribeImageGenerationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DescribeNotificationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the <code>NotificationConfiguration</code> for a given Kinesis video
+ */
+DescribeNotificationConfigurationResponse * KinesisVideoClient::describeNotificationConfiguration(const DescribeNotificationConfigurationRequest &request)
+{
+    return qobject_cast<DescribeNotificationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
  * DescribeSignalingChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -372,10 +406,10 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds one or more tags to a signaling channel. A <i>tag</i> is a key-value pair (the value is optional) that you can
- * define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value
- * that you specify in the request. For more information, see <a
+ * define and assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value is replaced
+ * with the value that you specify in the request. For more information, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
- * in the <i>AWS Billing and Cost Management User
+ * in the <i>Billing and Cost Management and Cost Management User
  */
 TagResourceResponse * KinesisVideoClient::tagResource(const TagResourceRequest &request)
 {
@@ -389,10 +423,10 @@ TagResourceResponse * KinesisVideoClient::tagResource(const TagResourceRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define and
- * assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you
- * specify in the request. For more information, see <a
+ * assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value is replaced with the
+ * value that you specify in the request. For more information, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
- * in the <i>AWS Billing and Cost Management User Guide</i>.
+ * in the <i>Billing and Cost Management and Cost Management User Guide</i>.
  *
  * </p
  *
@@ -404,7 +438,7 @@ TagResourceResponse * KinesisVideoClient::tagResource(const TagResourceRequest &
  *
  * action>
  *
- * Kinesis video streams support up to 50
+ * A Kinesis video stream can support up to 50
  */
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
@@ -479,6 +513,32 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
     return qobject_cast<UpdateDataRetentionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UpdateImageGenerationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the <code>StreamInfo</code> and <code>ImageProcessingConfiguration</code>
+ */
+UpdateImageGenerationConfigurationResponse * KinesisVideoClient::updateImageGenerationConfiguration(const UpdateImageGenerationConfigurationRequest &request)
+{
+    return qobject_cast<UpdateImageGenerationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UpdateNotificationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the notification information for a
+ */
+UpdateNotificationConfigurationResponse * KinesisVideoClient::updateNotificationConfiguration(const UpdateNotificationConfigurationRequest &request)
+{
+    return qobject_cast<UpdateNotificationConfigurationResponse *>(send(request));
 }
 
 /*!

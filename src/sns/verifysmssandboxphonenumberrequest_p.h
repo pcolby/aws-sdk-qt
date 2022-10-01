@@ -24,7 +24,7 @@
 #include "verifysmssandboxphonenumberrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class VerifySMSSandboxPhoneNumberRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

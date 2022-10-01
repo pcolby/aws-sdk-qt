@@ -24,7 +24,7 @@
 #include "describedbclusterparametersrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class DescribeDBClusterParametersRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

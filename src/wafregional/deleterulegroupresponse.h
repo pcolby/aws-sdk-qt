@@ -24,11 +24,11 @@
 #include "deleterulegrouprequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteRuleGroupResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteRuleGroupResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT DeleteRuleGroupResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeDataSourceResponse
- * \brief The DescribeDataSourceResponse class provides an interace for kendra DescribeDataSource responses.
+ * \class QtAws::Kendra::DescribeDataSourceResponse
+ * \brief The DescribeDataSourceResponse class provides an interace for Kendra DescribeDataSource responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeDataSource
+ * \sa KendraClient::describeDataSource
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDataSourceResponse::DescribeDataSourceResponse(
         const DescribeDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DescribeDataSourceResponsePrivate(this), parent)
+    : KendraResponse(new DescribeDataSourceResponsePrivate(this), parent)
 {
     setRequest(new DescribeDataSourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDataSourceRequest * DescribeDataSourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DescribeDataSource \a response.
+ * Parses a successful Kendra DescribeDataSource \a response.
  */
 void DescribeDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DescribeDataSourceResponsePrivate
+ * \class QtAws::Kendra::DescribeDataSourceResponsePrivate
  * \brief The DescribeDataSourceResponsePrivate class provides private implementation for DescribeDataSourceResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DescribeDataSourceResponsePrivate object with public implementation \a q.
  */
 DescribeDataSourceResponsePrivate::DescribeDataSourceResponsePrivate(
-    DescribeDataSourceResponse * const q) : kendraResponsePrivate(q)
+    DescribeDataSourceResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DescribeDataSource response element from \a xml.
+ * Parses a Kendra DescribeDataSource response element from \a xml.
  */
 void DescribeDataSourceResponsePrivate::parseDescribeDataSourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDataSourceResponsePrivate::parseDescribeDataSourceResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

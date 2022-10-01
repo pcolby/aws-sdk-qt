@@ -23,11 +23,11 @@
 #include "apigatewayresponse_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateResourceResponse;
 
-class CreateResourceResponsePrivate : public APIGatewayResponsePrivate {
+class CreateResourceResponsePrivate : public ApiGatewayResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

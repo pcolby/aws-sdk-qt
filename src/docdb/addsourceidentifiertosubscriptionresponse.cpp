@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::AddSourceIdentifierToSubscriptionResponse
- * \brief The AddSourceIdentifierToSubscriptionResponse class provides an interace for DocDB AddSourceIdentifierToSubscription responses.
+ * \class QtAws::DocDb::AddSourceIdentifierToSubscriptionResponse
+ * \brief The AddSourceIdentifierToSubscriptionResponse class provides an interace for DocDb AddSourceIdentifierToSubscription responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::addSourceIdentifierToSubscription
+ * \sa DocDbClient::addSourceIdentifierToSubscription
  */
 
 /*!
@@ -45,7 +45,7 @@ AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResp
         const AddSourceIdentifierToSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
+    : DocDbResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new AddSourceIdentifierToSubscriptionRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscripti
 
 /*!
  * \reimp
- * Parses a successful DocDB AddSourceIdentifierToSubscription \a response.
+ * Parses a successful DocDb AddSourceIdentifierToSubscription \a response.
  */
 void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::DocDB::AddSourceIdentifierToSubscriptionResponsePrivate
+ * \class QtAws::DocDb::AddSourceIdentifierToSubscriptionResponsePrivate
  * \brief The AddSourceIdentifierToSubscriptionResponsePrivate class provides private implementation for AddSourceIdentifierToSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a AddSourceIdentifierToSubscriptionResponsePrivate object with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscriptionResponsePrivate(
-    AddSourceIdentifierToSubscriptionResponse * const q) : DocDBResponsePrivate(q)
+    AddSourceIdentifierToSubscriptionResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB AddSourceIdentifierToSubscription response element from \a xml.
+ * Parses a DocDb AddSourceIdentifierToSubscription response element from \a xml.
  */
 void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierT
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

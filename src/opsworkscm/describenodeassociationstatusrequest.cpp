@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusRequest
- * \brief The DescribeNodeAssociationStatusRequest class provides an interface for OpsWorksCM DescribeNodeAssociationStatus requests.
+ * \class QtAws::OpsWorksCm::DescribeNodeAssociationStatusRequest
+ * \brief The DescribeNodeAssociationStatusRequest class provides an interface for OpsWorksCm DescribeNodeAssociationStatus requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeNodeAssociationStatus
+ * \sa OpsWorksCmClient::describeNodeAssociationStatus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest(const DescribeNodeAssociationStatusRequest &other)
-    : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DescribeNodeAssociationStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest(const
  * Constructs a DescribeNodeAssociationStatusRequest object.
  */
 DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest()
-    : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(OpsWorksCMRequest::DescribeNodeAssociationStatusAction, this))
+    : OpsWorksCmRequest(new DescribeNodeAssociationStatusRequestPrivate(OpsWorksCmRequest::DescribeNodeAssociationStatusAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DescribeNodeAssociationStatusRequest::respons
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusRequestPrivate
+ * \class QtAws::OpsWorksCm::DescribeNodeAssociationStatusRequestPrivate
  * \brief The DescribeNodeAssociationStatusRequestPrivate class provides private implementation for DescribeNodeAssociationStatusRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DescribeNodeAssociationStatusRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DescribeNodeAssociationStatusRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
-    const OpsWorksCMRequest::Action action, DescribeNodeAssociationStatusRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DescribeNodeAssociationStatusRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusReques
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const DescribeNodeAssociationStatusRequestPrivate &other, DescribeNodeAssociationStatusRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

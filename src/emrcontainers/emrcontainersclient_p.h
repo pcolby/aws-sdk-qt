@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
-class EMRContainersClient;
+class EmrcontainersClient;
 
-class EMRContainersClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EmrcontainersClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit EMRContainersClientPrivate(EMRContainersClient * const q);
+    explicit EmrcontainersClientPrivate(EmrcontainersClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(EMRContainersClient)
-    Q_DISABLE_COPY(EMRContainersClientPrivate)
+    Q_DECLARE_PUBLIC(EmrcontainersClient)
+    Q_DISABLE_COPY(EmrcontainersClientPrivate)
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

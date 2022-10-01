@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceResponsePrivate;
+class PinpointSmsVoiceResponsePrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSmsVoiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    PinpointSMSVoiceResponse(QObject * const parent = 0);
+    PinpointSmsVoiceResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    PinpointSMSVoiceResponse(PinpointSMSVoiceResponsePrivate * const d, QObject * const parent);
+    PinpointSmsVoiceResponse(PinpointSmsVoiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(PinpointSMSVoiceResponse)
-    Q_DISABLE_COPY(PinpointSMSVoiceResponse)
+    Q_DECLARE_PRIVATE(PinpointSmsVoiceResponse)
+    Q_DISABLE_COPY(PinpointSmsVoiceResponse)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBInstanceResponse
- * \brief The DeleteDBInstanceResponse class provides an interace for DocDB DeleteDBInstance responses.
+ * \class QtAws::DocDb::DeleteDBInstanceResponse
+ * \brief The DeleteDBInstanceResponse class provides an interace for DocDb DeleteDBInstance responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBInstance
+ * \sa DocDbClient::deleteDBInstance
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
         const DeleteDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteDBInstanceResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBInstanceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteDBInstance \a response.
+ * Parses a successful DocDb DeleteDBInstance \a response.
  */
 void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBInstanceResponsePrivate
+ * \class QtAws::DocDb::DeleteDBInstanceResponsePrivate
  * \brief The DeleteDBInstanceResponsePrivate class provides private implementation for DeleteDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteDBInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
-    DeleteDBInstanceResponse * const q) : DocDBResponsePrivate(q)
+    DeleteDBInstanceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteDBInstance response element from \a xml.
+ * Parses a DocDb DeleteDBInstance response element from \a xml.
  */
 void DeleteDBInstanceResponsePrivate::parseDeleteDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteDBInstanceResponsePrivate::parseDeleteDBInstanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

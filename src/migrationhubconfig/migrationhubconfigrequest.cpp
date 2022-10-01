@@ -246,7 +246,7 @@ QNetworkRequest MigrationHubConfigRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 MigrationHubConfigRequestPrivate::MigrationHubConfigRequestPrivate(const MigrationHubConfigRequest::Action action, MigrationHubConfigRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-06-30"))
 {
 
 }

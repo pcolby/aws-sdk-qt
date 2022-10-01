@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeleteSMSSandboxPhoneNumberResponse
- * \brief The DeleteSMSSandboxPhoneNumberResponse class provides an interace for SNS DeleteSMSSandboxPhoneNumber responses.
+ * \class QtAws::Sns::DeleteSMSSandboxPhoneNumberResponse
+ * \brief The DeleteSMSSandboxPhoneNumberResponse class provides an interace for Sns DeleteSMSSandboxPhoneNumber responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const DeleteSMSSandboxPhoneNumberRequest * DeleteSMSSandboxPhoneNumberResponse::
 
 /*!
  * \reimp
- * Parses a successful SNS DeleteSMSSandboxPhoneNumber \a response.
+ * Parses a successful Sns DeleteSMSSandboxPhoneNumber \a response.
  */
 void DeleteSMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void DeleteSMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::DeleteSMSSandboxPhoneNumberResponsePrivate
+ * \class QtAws::Sns::DeleteSMSSandboxPhoneNumberResponsePrivate
  * \brief The DeleteSMSSandboxPhoneNumberResponsePrivate class provides private implementation for DeleteSMSSandboxPhoneNumberResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ DeleteSMSSandboxPhoneNumberResponsePrivate::DeleteSMSSandboxPhoneNumberResponseP
 }
 
 /*!
- * Parses a SNS DeleteSMSSandboxPhoneNumber response element from \a xml.
+ * Parses a Sns DeleteSMSSandboxPhoneNumber response element from \a xml.
  */
 void DeleteSMSSandboxPhoneNumberResponsePrivate::parseDeleteSMSSandboxPhoneNumberResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void DeleteSMSSandboxPhoneNumberResponsePrivate::parseDeleteSMSSandboxPhoneNumbe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

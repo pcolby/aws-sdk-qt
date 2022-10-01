@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateByteMatchSetResponse
- * \brief The CreateByteMatchSetResponse class provides an interace for WAFRegional CreateByteMatchSet responses.
+ * \class QtAws::WafRegional::CreateByteMatchSetResponse
+ * \brief The CreateByteMatchSetResponse class provides an interace for WafRegional CreateByteMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createByteMatchSet
+ * \sa WafRegionalClient::createByteMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateByteMatchSetResponse::CreateByteMatchSetResponse(
         const CreateByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateByteMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateByteMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateByteMatchSet \a response.
+ * Parses a successful WafRegional CreateByteMatchSet \a response.
  */
 void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateByteMatchSetResponsePrivate
+ * \class QtAws::WafRegional::CreateByteMatchSetResponsePrivate
  * \brief The CreateByteMatchSetResponsePrivate class provides private implementation for CreateByteMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateByteMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
-    CreateByteMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateByteMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateByteMatchSet response element from \a xml.
+ * Parses a WafRegional CreateByteMatchSet response element from \a xml.
  */
 void CreateByteMatchSetResponsePrivate::parseCreateByteMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateByteMatchSetResponsePrivate::parseCreateByteMatchSetResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

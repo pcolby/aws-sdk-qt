@@ -24,14 +24,14 @@
 #include "deletegeomatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteGeoMatchSetRequest;
 
-class DeleteGeoMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteGeoMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteGeoMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteGeoMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteGeoMatchSetRequest * const q);
     DeleteGeoMatchSetRequestPrivate(const DeleteGeoMatchSetRequestPrivate &other,
                                    DeleteGeoMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

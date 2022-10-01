@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetIncidentRecordRequest
- * \brief The GetIncidentRecordRequest class provides an interface for SSMIncidents GetIncidentRecord requests.
+ * \class QtAws::SsmIncidents::GetIncidentRecordRequest
+ * \brief The GetIncidentRecordRequest class provides an interface for SsmIncidents GetIncidentRecord requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getIncidentRecord
+ * \sa SsmIncidentsClient::getIncidentRecord
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetIncidentRecordRequest::GetIncidentRecordRequest(const GetIncidentRecordRequest &other)
-    : SSMIncidentsRequest(new GetIncidentRecordRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new GetIncidentRecordRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ GetIncidentRecordRequest::GetIncidentRecordRequest(const GetIncidentRecordReques
  * Constructs a GetIncidentRecordRequest object.
  */
 GetIncidentRecordRequest::GetIncidentRecordRequest()
-    : SSMIncidentsRequest(new GetIncidentRecordRequestPrivate(SSMIncidentsRequest::GetIncidentRecordAction, this))
+    : SsmIncidentsRequest(new GetIncidentRecordRequestPrivate(SsmIncidentsRequest::GetIncidentRecordAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetIncidentRecordRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetIncidentRecordRequestPrivate
+ * \class QtAws::SsmIncidents::GetIncidentRecordRequestPrivate
  * \brief The GetIncidentRecordRequestPrivate class provides private implementation for GetIncidentRecordRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a GetIncidentRecordRequestPrivate object for SSMIncidents \a action,
+ * Constructs a GetIncidentRecordRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 GetIncidentRecordRequestPrivate::GetIncidentRecordRequestPrivate(
-    const SSMIncidentsRequest::Action action, GetIncidentRecordRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, GetIncidentRecordRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ GetIncidentRecordRequestPrivate::GetIncidentRecordRequestPrivate(
  */
 GetIncidentRecordRequestPrivate::GetIncidentRecordRequestPrivate(
     const GetIncidentRecordRequestPrivate &other, GetIncidentRecordRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

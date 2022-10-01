@@ -24,11 +24,11 @@
 #include "getimagereciperequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class GetImageRecipeResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT GetImageRecipeResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT GetImageRecipeResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

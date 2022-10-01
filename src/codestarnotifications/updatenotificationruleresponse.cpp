@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::UpdateNotificationRuleResponse
- * \brief The UpdateNotificationRuleResponse class provides an interace for CodeStarNotifications UpdateNotificationRule responses.
+ * \class QtAws::CodestarNotifications::UpdateNotificationRuleResponse
+ * \brief The UpdateNotificationRuleResponse class provides an interace for CodestarNotifications UpdateNotificationRule responses.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -74,7 +74,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -106,9 +106,11 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::updateNotificationRule
+ * \sa CodestarNotificationsClient::updateNotificationRule
  */
 
 /*!
@@ -118,7 +120,7 @@ UpdateNotificationRuleResponse::UpdateNotificationRuleResponse(
         const UpdateNotificationRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarNotificationsResponse(new UpdateNotificationRuleResponsePrivate(this), parent)
+    : CodestarNotificationsResponse(new UpdateNotificationRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateNotificationRuleRequest(request));
     setReply(reply);
@@ -135,7 +137,7 @@ const UpdateNotificationRuleRequest * UpdateNotificationRuleResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CodeStarNotifications UpdateNotificationRule \a response.
+ * Parses a successful CodestarNotifications UpdateNotificationRule \a response.
  */
 void UpdateNotificationRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -145,24 +147,24 @@ void UpdateNotificationRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::UpdateNotificationRuleResponsePrivate
+ * \class QtAws::CodestarNotifications::UpdateNotificationRuleResponsePrivate
  * \brief The UpdateNotificationRuleResponsePrivate class provides private implementation for UpdateNotificationRuleResponse.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
  * Constructs a UpdateNotificationRuleResponsePrivate object with public implementation \a q.
  */
 UpdateNotificationRuleResponsePrivate::UpdateNotificationRuleResponsePrivate(
-    UpdateNotificationRuleResponse * const q) : CodeStarNotificationsResponsePrivate(q)
+    UpdateNotificationRuleResponse * const q) : CodestarNotificationsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CodeStarNotifications UpdateNotificationRule response element from \a xml.
+ * Parses a CodestarNotifications UpdateNotificationRule response element from \a xml.
  */
 void UpdateNotificationRuleResponsePrivate::parseUpdateNotificationRuleResponse(QXmlStreamReader &xml)
 {
@@ -170,5 +172,5 @@ void UpdateNotificationRuleResponsePrivate::parseUpdateNotificationRuleResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

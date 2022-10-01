@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetActiveReceiptRuleSetRequest
- * \brief The SetActiveReceiptRuleSetRequest class provides an interface for SES SetActiveReceiptRuleSet requests.
+ * \class QtAws::Ses::SetActiveReceiptRuleSetRequest
+ * \brief The SetActiveReceiptRuleSetRequest class provides an interface for Ses SetActiveReceiptRuleSet requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * SetActiveReceiptRuleSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::SES::SetActiveReceiptRuleSetRequestPrivate
+ * \class QtAws::Ses::SetActiveReceiptRuleSetRequestPrivate
  * \brief The SetActiveReceiptRuleSetRequestPrivate class provides private implementation for SetActiveReceiptRuleSetRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ SetActiveReceiptRuleSetRequestPrivate::SetActiveReceiptRuleSetRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

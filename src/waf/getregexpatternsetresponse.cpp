@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetRegexPatternSetResponse
- * \brief The GetRegexPatternSetResponse class provides an interace for WAF GetRegexPatternSet responses.
+ * \class QtAws::Waf::GetRegexPatternSetResponse
+ * \brief The GetRegexPatternSetResponse class provides an interace for Waf GetRegexPatternSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetRegexPatternSet \a response.
+ * Parses a successful Waf GetRegexPatternSet \a response.
  */
 void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetRegexPatternSetResponsePrivate
+ * \class QtAws::Waf::GetRegexPatternSetResponsePrivate
  * \brief The GetRegexPatternSetResponsePrivate class provides private implementation for GetRegexPatternSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetRegexPatternSet response element from \a xml.
+ * Parses a Waf GetRegexPatternSet response element from \a xml.
  */
 void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

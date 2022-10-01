@@ -24,7 +24,7 @@
 #include "getpublickeyrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class GetPublicKeyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

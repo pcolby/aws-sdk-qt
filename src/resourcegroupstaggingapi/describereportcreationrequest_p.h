@@ -24,14 +24,14 @@
 #include "describereportcreationrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 class DescribeReportCreationRequest;
 
-class DescribeReportCreationRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class DescribeReportCreationRequestPrivate : public ResourceGroupsTaggingApiRequestPrivate {
 
 public:
-    DescribeReportCreationRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,
+    DescribeReportCreationRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action,
                                    DescribeReportCreationRequest * const q);
     DescribeReportCreationRequestPrivate(const DescribeReportCreationRequestPrivate &other,
                                    DescribeReportCreationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

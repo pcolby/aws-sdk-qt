@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotRequest
- * \brief The RestoreDBInstanceFromDBSnapshotRequest class provides an interface for RDS RestoreDBInstanceFromDBSnapshot requests.
+ * \class QtAws::Rds::RestoreDBInstanceFromDBSnapshotRequest
+ * \brief The RestoreDBInstanceFromDBSnapshotRequest class provides an interface for Rds RestoreDBInstanceFromDBSnapshot requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::respo
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotRequestPrivate
+ * \class QtAws::Rds::RestoreDBInstanceFromDBSnapshotRequestPrivate
  * \brief The RestoreDBInstanceFromDBSnapshotRequestPrivate class provides private implementation for RestoreDBInstanceFromDBSnapshotRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRe
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

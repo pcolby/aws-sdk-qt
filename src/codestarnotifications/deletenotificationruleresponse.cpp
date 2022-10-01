@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::DeleteNotificationRuleResponse
- * \brief The DeleteNotificationRuleResponse class provides an interace for CodeStarNotifications DeleteNotificationRule responses.
+ * \class QtAws::CodestarNotifications::DeleteNotificationRuleResponse
+ * \brief The DeleteNotificationRuleResponse class provides an interace for CodestarNotifications DeleteNotificationRule responses.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -74,7 +74,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -106,9 +106,11 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::deleteNotificationRule
+ * \sa CodestarNotificationsClient::deleteNotificationRule
  */
 
 /*!
@@ -118,7 +120,7 @@ DeleteNotificationRuleResponse::DeleteNotificationRuleResponse(
         const DeleteNotificationRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarNotificationsResponse(new DeleteNotificationRuleResponsePrivate(this), parent)
+    : CodestarNotificationsResponse(new DeleteNotificationRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotificationRuleRequest(request));
     setReply(reply);
@@ -135,7 +137,7 @@ const DeleteNotificationRuleRequest * DeleteNotificationRuleResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CodeStarNotifications DeleteNotificationRule \a response.
+ * Parses a successful CodestarNotifications DeleteNotificationRule \a response.
  */
 void DeleteNotificationRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -145,24 +147,24 @@ void DeleteNotificationRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::DeleteNotificationRuleResponsePrivate
+ * \class QtAws::CodestarNotifications::DeleteNotificationRuleResponsePrivate
  * \brief The DeleteNotificationRuleResponsePrivate class provides private implementation for DeleteNotificationRuleResponse.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
  * Constructs a DeleteNotificationRuleResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationRuleResponsePrivate::DeleteNotificationRuleResponsePrivate(
-    DeleteNotificationRuleResponse * const q) : CodeStarNotificationsResponsePrivate(q)
+    DeleteNotificationRuleResponse * const q) : CodestarNotificationsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CodeStarNotifications DeleteNotificationRule response element from \a xml.
+ * Parses a CodestarNotifications DeleteNotificationRule response element from \a xml.
  */
 void DeleteNotificationRuleResponsePrivate::parseDeleteNotificationRuleResponse(QXmlStreamReader &xml)
 {
@@ -170,5 +172,5 @@ void DeleteNotificationRuleResponsePrivate::parseDeleteNotificationRuleResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

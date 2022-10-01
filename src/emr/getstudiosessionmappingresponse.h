@@ -24,7 +24,7 @@
 #include "getstudiosessionmappingrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class GetStudioSessionMappingResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

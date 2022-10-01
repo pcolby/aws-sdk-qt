@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterFromSnapshotResponse
- * \brief The RestoreDBClusterFromSnapshotResponse class provides an interace for DocDB RestoreDBClusterFromSnapshot responses.
+ * \class QtAws::DocDb::RestoreDBClusterFromSnapshotResponse
+ * \brief The RestoreDBClusterFromSnapshotResponse class provides an interace for DocDb RestoreDBClusterFromSnapshot responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::restoreDBClusterFromSnapshot
+ * \sa DocDbClient::restoreDBClusterFromSnapshot
  */
 
 /*!
@@ -45,7 +45,7 @@ RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
         const RestoreDBClusterFromSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new RestoreDBClusterFromSnapshotResponsePrivate(this), parent)
+    : DocDbResponse(new RestoreDBClusterFromSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterFromSnapshotRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse
 
 /*!
  * \reimp
- * Parses a successful DocDB RestoreDBClusterFromSnapshot \a response.
+ * Parses a successful DocDb RestoreDBClusterFromSnapshot \a response.
  */
 void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterFromSnapshotResponsePrivate
+ * \class QtAws::DocDb::RestoreDBClusterFromSnapshotResponsePrivate
  * \brief The RestoreDBClusterFromSnapshotResponsePrivate class provides private implementation for RestoreDBClusterFromSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a RestoreDBClusterFromSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponsePrivate(
-    RestoreDBClusterFromSnapshotResponse * const q) : DocDBResponsePrivate(q)
+    RestoreDBClusterFromSnapshotResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB RestoreDBClusterFromSnapshot response element from \a xml.
+ * Parses a DocDb RestoreDBClusterFromSnapshot response element from \a xml.
  */
 void RestoreDBClusterFromSnapshotResponsePrivate::parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void RestoreDBClusterFromSnapshotResponsePrivate::parseRestoreDBClusterFromSnaps
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteEventSubscriptionRequest
- * \brief The DeleteEventSubscriptionRequest class provides an interface for RDS DeleteEventSubscription requests.
+ * \class QtAws::Rds::DeleteEventSubscriptionRequest
+ * \brief The DeleteEventSubscriptionRequest class provides an interface for Rds DeleteEventSubscription requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::RDS::DeleteEventSubscriptionRequestPrivate
+ * \class QtAws::Rds::DeleteEventSubscriptionRequestPrivate
  * \brief The DeleteEventSubscriptionRequestPrivate class provides private implementation for DeleteEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

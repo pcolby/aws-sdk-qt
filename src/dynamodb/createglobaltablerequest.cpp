@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::CreateGlobalTableRequest
- * \brief The CreateGlobalTableRequest class provides an interface for DynamoDB CreateGlobalTable requests.
+ * \class QtAws::DynamoDb::CreateGlobalTableRequest
+ * \brief The CreateGlobalTableRequest class provides an interface for DynamoDb CreateGlobalTable requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::createGlobalTable
+ * \sa DynamoDbClient::createGlobalTable
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateGlobalTableRequest::CreateGlobalTableRequest(const CreateGlobalTableRequest &other)
-    : DynamoDBRequest(new CreateGlobalTableRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new CreateGlobalTableRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ CreateGlobalTableRequest::CreateGlobalTableRequest(const CreateGlobalTableReques
  * Constructs a CreateGlobalTableRequest object.
  */
 CreateGlobalTableRequest::CreateGlobalTableRequest()
-    : DynamoDBRequest(new CreateGlobalTableRequestPrivate(DynamoDBRequest::CreateGlobalTableAction, this))
+    : DynamoDbRequest(new CreateGlobalTableRequestPrivate(DynamoDbRequest::CreateGlobalTableAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * CreateGlobalTableRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DynamoDB::CreateGlobalTableRequestPrivate
+ * \class QtAws::DynamoDb::CreateGlobalTableRequestPrivate
  * \brief The CreateGlobalTableRequestPrivate class provides private implementation for CreateGlobalTableRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a CreateGlobalTableRequestPrivate object for DynamoDB \a action,
+ * Constructs a CreateGlobalTableRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
-    const DynamoDBRequest::Action action, CreateGlobalTableRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, CreateGlobalTableRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
  */
 CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
     const CreateGlobalTableRequestPrivate &other, CreateGlobalTableRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

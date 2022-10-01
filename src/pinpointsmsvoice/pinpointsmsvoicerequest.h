@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceRequestPrivate;
+class PinpointSmsVoiceRequestPrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSmsVoiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by PinpointSMSVoice.
+    /// Actions supported by PinpointSmsVoice.
     enum Action {
         CreateConfigurationSetAction,
         CreateConfigurationSetEventDestinationAction,
@@ -50,9 +50,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    PinpointSMSVoiceRequest(const Action action);
-    PinpointSMSVoiceRequest(const PinpointSMSVoiceRequest &other);
-    PinpointSMSVoiceRequest &operator=(const PinpointSMSVoiceRequest &other);
+    PinpointSmsVoiceRequest(const Action action);
+    PinpointSmsVoiceRequest(const PinpointSmsVoiceRequest &other);
+    PinpointSmsVoiceRequest &operator=(const PinpointSmsVoiceRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -61,12 +61,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const PinpointSMSVoiceRequest &other) const;
+    virtual bool operator==(const PinpointSmsVoiceRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit PinpointSMSVoiceRequest(PinpointSMSVoiceRequestPrivate * const d);
+    explicit PinpointSmsVoiceRequest(PinpointSmsVoiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -79,11 +79,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(PinpointSMSVoiceRequest)
+    Q_DECLARE_PRIVATE(PinpointSmsVoiceRequest)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

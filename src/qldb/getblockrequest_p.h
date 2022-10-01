@@ -24,7 +24,7 @@
 #include "getblockrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class GetBlockRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for SWF ListTagsForResource responses.
+ * \class QtAws::Swf::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for Swf ListTagsForResource responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF ListTagsForResource \a response.
+ * Parses a successful Swf ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::ListTagsForResourceResponsePrivate
+ * \class QtAws::Swf::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 }
 
 /*!
- * Parses a SWF ListTagsForResource response element from \a xml.
+ * Parses a Swf ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

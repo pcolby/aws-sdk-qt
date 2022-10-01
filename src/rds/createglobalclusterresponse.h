@@ -24,7 +24,7 @@
 #include "createglobalclusterrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class CreateGlobalClusterResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

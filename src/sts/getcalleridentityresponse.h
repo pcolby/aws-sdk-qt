@@ -24,7 +24,7 @@
 #include "getcalleridentityrequest.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class GetCallerIdentityResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

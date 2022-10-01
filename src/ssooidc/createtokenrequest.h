@@ -23,11 +23,11 @@
 #include "ssooidcrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class CreateTokenRequestPrivate;
 
-class QTAWSSSOOIDC_EXPORT CreateTokenRequest : public SsooidcRequest {
+class QTAWSSSOOIDC_EXPORT CreateTokenRequest : public SsoOidcRequest {
 
 public:
     CreateTokenRequest(const CreateTokenRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

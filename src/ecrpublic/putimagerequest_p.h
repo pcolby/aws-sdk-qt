@@ -24,14 +24,14 @@
 #include "putimagerequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class PutImageRequest;
 
-class PutImageRequestPrivate : public ECRPublicRequestPrivate {
+class PutImageRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    PutImageRequestPrivate(const ECRPublicRequest::Action action,
+    PutImageRequestPrivate(const EcrPublicRequest::Action action,
                                    PutImageRequest * const q);
     PutImageRequestPrivate(const PutImageRequestPrivate &other,
                                    PutImageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

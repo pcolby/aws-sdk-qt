@@ -252,7 +252,7 @@ QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, MobileRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-01"))
 {
 
 }

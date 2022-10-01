@@ -23,11 +23,11 @@
 #include "dynamodbresponse_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class EnableKinesisStreamingDestinationResponse;
 
-class EnableKinesisStreamingDestinationResponsePrivate : public DynamoDBResponsePrivate {
+class EnableKinesisStreamingDestinationResponsePrivate : public DynamoDbResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

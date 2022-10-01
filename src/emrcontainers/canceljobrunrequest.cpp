@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CancelJobRunRequest
- * \brief The CancelJobRunRequest class provides an interface for EMRContainers CancelJobRun requests.
+ * \class QtAws::Emrcontainers::CancelJobRunRequest
+ * \brief The CancelJobRunRequest class provides an interface for Emrcontainers CancelJobRun requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::cancelJobRun
+ * \sa EmrcontainersClient::cancelJobRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CancelJobRunRequest::CancelJobRunRequest(const CancelJobRunRequest &other)
-    : EMRContainersRequest(new CancelJobRunRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new CancelJobRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ CancelJobRunRequest::CancelJobRunRequest(const CancelJobRunRequest &other)
  * Constructs a CancelJobRunRequest object.
  */
 CancelJobRunRequest::CancelJobRunRequest()
-    : EMRContainersRequest(new CancelJobRunRequestPrivate(EMRContainersRequest::CancelJobRunAction, this))
+    : EmrcontainersRequest(new CancelJobRunRequestPrivate(EmrcontainersRequest::CancelJobRunAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * CancelJobRunRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::EMRContainers::CancelJobRunRequestPrivate
+ * \class QtAws::Emrcontainers::CancelJobRunRequestPrivate
  * \brief The CancelJobRunRequestPrivate class provides private implementation for CancelJobRunRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a CancelJobRunRequestPrivate object for EMRContainers \a action,
+ * Constructs a CancelJobRunRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 CancelJobRunRequestPrivate::CancelJobRunRequestPrivate(
-    const EMRContainersRequest::Action action, CancelJobRunRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, CancelJobRunRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ CancelJobRunRequestPrivate::CancelJobRunRequestPrivate(
  */
 CancelJobRunRequestPrivate::CancelJobRunRequestPrivate(
     const CancelJobRunRequestPrivate &other, CancelJobRunRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

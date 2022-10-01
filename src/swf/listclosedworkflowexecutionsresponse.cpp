@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListClosedWorkflowExecutionsResponse
- * \brief The ListClosedWorkflowExecutionsResponse class provides an interace for SWF ListClosedWorkflowExecutions responses.
+ * \class QtAws::Swf::ListClosedWorkflowExecutionsResponse
+ * \brief The ListClosedWorkflowExecutionsResponse class provides an interace for Swf ListClosedWorkflowExecutions responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse
 
 /*!
  * \reimp
- * Parses a successful SWF ListClosedWorkflowExecutions \a response.
+ * Parses a successful Swf ListClosedWorkflowExecutions \a response.
  */
 void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::ListClosedWorkflowExecutionsResponsePrivate
+ * \class QtAws::Swf::ListClosedWorkflowExecutionsResponsePrivate
  * \brief The ListClosedWorkflowExecutionsResponsePrivate class provides private implementation for ListClosedWorkflowExecutionsResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRespons
 }
 
 /*!
- * Parses a SWF ListClosedWorkflowExecutions response element from \a xml.
+ * Parses a Swf ListClosedWorkflowExecutions response element from \a xml.
  */
 void ListClosedWorkflowExecutionsResponsePrivate::parseListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void ListClosedWorkflowExecutionsResponsePrivate::parseListClosedWorkflowExecuti
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

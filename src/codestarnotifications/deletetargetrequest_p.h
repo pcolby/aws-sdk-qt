@@ -24,14 +24,14 @@
 #include "deletetargetrequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class DeleteTargetRequest;
 
-class DeleteTargetRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class DeleteTargetRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    DeleteTargetRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    DeleteTargetRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    DeleteTargetRequest * const q);
     DeleteTargetRequestPrivate(const DeleteTargetRequestPrivate &other,
                                    DeleteTargetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

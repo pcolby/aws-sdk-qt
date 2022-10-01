@@ -23,11 +23,11 @@
 #include "imagebuilderresponse_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class PutContainerRecipePolicyResponse;
 
-class PutContainerRecipePolicyResponsePrivate : public imagebuilderResponsePrivate {
+class PutContainerRecipePolicyResponsePrivate : public ImageBuilderResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

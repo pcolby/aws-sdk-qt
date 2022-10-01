@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DownloadDBLogFilePortionResponse
- * \brief The DownloadDBLogFilePortionResponse class provides an interace for RDS DownloadDBLogFilePortion responses.
+ * \class QtAws::Rds::DownloadDBLogFilePortionResponse
+ * \brief The DownloadDBLogFilePortionResponse class provides an interace for Rds DownloadDBLogFilePortion responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS DownloadDBLogFilePortion \a response.
+ * Parses a successful Rds DownloadDBLogFilePortion \a response.
  */
 void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DownloadDBLogFilePortionResponsePrivate
+ * \class QtAws::Rds::DownloadDBLogFilePortionResponsePrivate
  * \brief The DownloadDBLogFilePortionResponsePrivate class provides private implementation for DownloadDBLogFilePortionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate
 }
 
 /*!
- * Parses a RDS DownloadDBLogFilePortion response element from \a xml.
+ * Parses a Rds DownloadDBLogFilePortion response element from \a xml.
  */
 void DownloadDBLogFilePortionResponsePrivate::parseDownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DownloadDBLogFilePortionResponsePrivate::parseDownloadDBLogFilePortionRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "putconfigurationsetsuppressionoptionsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetSuppressionOptionsRequest;
 
-class PutConfigurationSetSuppressionOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetSuppressionOptionsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutConfigurationSetSuppressionOptionsRequestPrivate(const Sesv2Request::Action action,
+    PutConfigurationSetSuppressionOptionsRequestPrivate(const SESv2Request::Action action,
                                    PutConfigurationSetSuppressionOptionsRequest * const q);
     PutConfigurationSetSuppressionOptionsRequestPrivate(const PutConfigurationSetSuppressionOptionsRequestPrivate &other,
                                    PutConfigurationSetSuppressionOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

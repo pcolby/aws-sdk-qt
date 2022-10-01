@@ -259,7 +259,7 @@ QNetworkRequest IoT1ClickProjectsRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 IoT1ClickProjectsRequestPrivate::IoT1ClickProjectsRequestPrivate(const IoT1ClickProjectsRequest::Action action, IoT1ClickProjectsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-14"))
 {
 
 }

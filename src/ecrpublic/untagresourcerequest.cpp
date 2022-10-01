@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for ECRPublic UntagResource requests.
+ * \class QtAws::EcrPublic::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for EcrPublic UntagResource requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::untagResource
+ * \sa EcrPublicClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : ECRPublicRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : ECRPublicRequest(new UntagResourceRequestPrivate(ECRPublicRequest::UntagResourceAction, this))
+    : EcrPublicRequest(new UntagResourceRequestPrivate(EcrPublicRequest::UntagResourceAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::ECRPublic::UntagResourceRequestPrivate
+ * \class QtAws::EcrPublic::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for ECRPublic \a action,
+ * Constructs a UntagResourceRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const ECRPublicRequest::Action action, UntagResourceRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, UntagResourceRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

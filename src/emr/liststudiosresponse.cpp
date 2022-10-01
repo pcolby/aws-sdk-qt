@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListStudiosResponse
- * \brief The ListStudiosResponse class provides an interace for EMR ListStudios responses.
+ * \class QtAws::Emr::ListStudiosResponse
+ * \brief The ListStudiosResponse class provides an interace for Emr ListStudios responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listStudios
  */
@@ -64,7 +64,7 @@ const ListStudiosRequest * ListStudiosResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR ListStudios \a response.
+ * Parses a successful Emr ListStudios \a response.
  */
 void ListStudiosResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListStudiosResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ListStudiosResponsePrivate
+ * \class QtAws::Emr::ListStudiosResponsePrivate
  * \brief The ListStudiosResponsePrivate class provides private implementation for ListStudiosResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ListStudiosResponsePrivate::ListStudiosResponsePrivate(
 }
 
 /*!
- * Parses a EMR ListStudios response element from \a xml.
+ * Parses a Emr ListStudios response element from \a xml.
  */
 void ListStudiosResponsePrivate::parseListStudiosResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListStudiosResponsePrivate::parseListStudiosResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

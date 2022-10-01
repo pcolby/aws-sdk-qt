@@ -23,11 +23,11 @@
 #include "imagebuilderrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteImageRecipeRequestPrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT DeleteImageRecipeRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT DeleteImageRecipeRequest : public ImageBuilderRequest {
 
 public:
     DeleteImageRecipeRequest(const DeleteImageRecipeRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

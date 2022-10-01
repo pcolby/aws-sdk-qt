@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::GetSessionTokenResponse
- * \brief The GetSessionTokenResponse class provides an interace for STS GetSessionToken responses.
+ * \class QtAws::Sts::GetSessionTokenResponse
+ * \brief The GetSessionTokenResponse class provides an interace for Sts GetSessionToken responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::getSessionToken
@@ -67,7 +67,7 @@ const GetSessionTokenRequest * GetSessionTokenResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS GetSessionToken \a response.
+ * Parses a successful Sts GetSessionToken \a response.
  */
 void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::GetSessionTokenResponsePrivate
+ * \class QtAws::Sts::GetSessionTokenResponsePrivate
  * \brief The GetSessionTokenResponsePrivate class provides private implementation for GetSessionTokenResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
 }
 
 /*!
- * Parses a STS GetSessionToken response element from \a xml.
+ * Parses a Sts GetSessionToken response element from \a xml.
  */
 void GetSessionTokenResponsePrivate::parseGetSessionTokenResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetSessionTokenResponsePrivate::parseGetSessionTokenResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::GetActivityTaskResponse
- * \brief The GetActivityTaskResponse class provides an interace for SFN GetActivityTask responses.
+ * \class QtAws::Sfn::GetActivityTaskResponse
+ * \brief The GetActivityTaskResponse class provides an interace for Sfn GetActivityTask responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const GetActivityTaskRequest * GetActivityTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN GetActivityTask \a response.
+ * Parses a successful Sfn GetActivityTask \a response.
  */
 void GetActivityTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void GetActivityTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::GetActivityTaskResponsePrivate
+ * \class QtAws::Sfn::GetActivityTaskResponsePrivate
  * \brief The GetActivityTaskResponsePrivate class provides private implementation for GetActivityTaskResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
 }
 
 /*!
- * Parses a SFN GetActivityTask response element from \a xml.
+ * Parses a Sfn GetActivityTask response element from \a xml.
  */
 void GetActivityTaskResponsePrivate::parseGetActivityTaskResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void GetActivityTaskResponsePrivate::parseGetActivityTaskResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

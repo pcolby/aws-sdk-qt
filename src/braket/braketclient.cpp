@@ -21,18 +21,26 @@
 #include "braketclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "canceljobrequest.h"
+#include "canceljobresponse.h"
 #include "cancelquantumtaskrequest.h"
 #include "cancelquantumtaskresponse.h"
+#include "createjobrequest.h"
+#include "createjobresponse.h"
 #include "createquantumtaskrequest.h"
 #include "createquantumtaskresponse.h"
 #include "getdevicerequest.h"
 #include "getdeviceresponse.h"
+#include "getjobrequest.h"
+#include "getjobresponse.h"
 #include "getquantumtaskrequest.h"
 #include "getquantumtaskresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "searchdevicesrequest.h"
 #include "searchdevicesresponse.h"
+#include "searchjobsrequest.h"
+#include "searchjobsresponse.h"
 #include "searchquantumtasksrequest.h"
 #include "searchquantumtasksresponse.h"
 #include "tagresourcerequest.h"
@@ -63,6 +71,14 @@ namespace Braket {
  * \inmodule QtAwsBraket
  *
  *  The Amazon Braket API Reference provides information about the operations and structures supported in Amazon
+ * 
+ *  Braket>
+ * 
+ *  Additional
+ * 
+ *  Resources> <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/braket/latest/developerguide/what-is-braket.html">Amazon Braket Developer Guide</a>
  */
 
 /*!
@@ -83,7 +99,7 @@ BraketClient::BraketClient(
     Q_D(BraketClient);
     d->apiVersion = QStringLiteral("2019-09-01");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("braket");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("Braket");
@@ -112,10 +128,23 @@ BraketClient::BraketClient(
     d->apiVersion = QStringLiteral("2019-09-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("braket");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Braket");
     d->serviceName = QStringLiteral("braket");
+}
+
+/*!
+ * Sends \a request to the BraketClient service, and returns a pointer to an
+ * CancelJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an Amazon Braket
+ */
+CancelJobResponse * BraketClient::cancelJob(const CancelJobRequest &request)
+{
+    return qobject_cast<CancelJobResponse *>(send(request));
 }
 
 /*!
@@ -129,6 +158,19 @@ BraketClient::BraketClient(
 CancelQuantumTaskResponse * BraketClient::cancelQuantumTask(const CancelQuantumTaskRequest &request)
 {
     return qobject_cast<CancelQuantumTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BraketClient service, and returns a pointer to an
+ * CreateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon Braket
+ */
+CreateJobResponse * BraketClient::createJob(const CreateJobRequest &request)
+{
+    return qobject_cast<CreateJobResponse *>(send(request));
 }
 
 /*!
@@ -151,10 +193,31 @@ CreateQuantumTaskResponse * BraketClient::createQuantumTask(const CreateQuantumT
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the devices available in Amazon
+ *
+ * Braket> <note>
+ *
+ * For backwards compatibility with older versions of BraketSchemas, OpenQASM information is omitted from GetDevice API
+ * calls. To get this information the user-agent needs to present a recent version of the BraketSchemas (1.8.0 or later).
+ * The Braket SDK automatically reports this for you. If you do not see OpenQASM results in the GetDevice response when
+ * using a Braket SDK, you may need to set AWS_EXECUTION_ENV environment variable to configure user-agent. See the code
+ * examples provided below for how to do this for the AWS CLI, Boto3, and the Go, Java, and JavaScript/TypeScript
  */
 GetDeviceResponse * BraketClient::getDevice(const GetDeviceRequest &request)
 {
     return qobject_cast<GetDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BraketClient service, and returns a pointer to an
+ * GetJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the specified Amazon Braket
+ */
+GetJobResponse * BraketClient::getJob(const GetJobRequest &request)
+{
+    return qobject_cast<GetJobResponse *>(send(request));
 }
 
 /*!
@@ -194,6 +257,19 @@ ListTagsForResourceResponse * BraketClient::listTagsForResource(const ListTagsFo
 SearchDevicesResponse * BraketClient::searchDevices(const SearchDevicesRequest &request)
 {
     return qobject_cast<SearchDevicesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BraketClient service, and returns a pointer to an
+ * SearchJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches for Amazon Braket jobs that match the specified filter
+ */
+SearchJobsResponse * BraketClient::searchJobs(const SearchJobsRequest &request)
+{
+    return qobject_cast<SearchJobsResponse *>(send(request));
 }
 
 /*!

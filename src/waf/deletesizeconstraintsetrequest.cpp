@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteSizeConstraintSetRequest
- * \brief The DeleteSizeConstraintSetRequest class provides an interface for WAF DeleteSizeConstraintSet requests.
+ * \class QtAws::Waf::DeleteSizeConstraintSetRequest
+ * \brief The DeleteSizeConstraintSetRequest class provides an interface for Waf DeleteSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAF::DeleteSizeConstraintSetRequestPrivate
+ * \class QtAws::Waf::DeleteSizeConstraintSetRequestPrivate
  * \brief The DeleteSizeConstraintSetRequestPrivate class provides private implementation for DeleteSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

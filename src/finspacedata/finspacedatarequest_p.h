@@ -24,28 +24,28 @@
 #include "finspacedatarequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
-class FinSpaceDataRequest;
+class FinspaceDataRequest;
 
-class FinSpaceDataRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FinspaceDataRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    FinSpaceDataRequest::Action action; ///< FinSpaceData action to be performed.
-    QString apiVersion;        ///< FinSpaceData API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< FinSpaceData request (query string) parameters. @todo?
+    FinspaceDataRequest::Action action; ///< FinspaceData action to be performed.
+    QString apiVersion;        ///< FinspaceData API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< FinspaceData request (query string) parameters. @todo?
 
-    FinSpaceDataRequestPrivate(const FinSpaceDataRequest::Action action, FinSpaceDataRequest * const q);
-    FinSpaceDataRequestPrivate(const FinSpaceDataRequestPrivate &other, FinSpaceDataRequest * const q);
+    FinspaceDataRequestPrivate(const FinspaceDataRequest::Action action, FinspaceDataRequest * const q);
+    FinspaceDataRequestPrivate(const FinspaceDataRequestPrivate &other, FinspaceDataRequest * const q);
 
-    static QString toString(const FinSpaceDataRequest::Action &action);
+    static QString toString(const FinspaceDataRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(FinSpaceDataRequest)
+    Q_DECLARE_PUBLIC(FinspaceDataRequest)
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

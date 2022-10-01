@@ -280,7 +280,7 @@ QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action action, InspectorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-02-16"))
 {
 
 }

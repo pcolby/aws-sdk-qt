@@ -24,7 +24,7 @@
 #include "listrulegroupsrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class ListRuleGroupsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

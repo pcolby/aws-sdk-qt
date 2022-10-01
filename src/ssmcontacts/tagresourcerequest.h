@@ -23,11 +23,11 @@
 #include "ssmcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class TagResourceRequestPrivate;
 
-class QTAWSSSMCONTACTS_EXPORT TagResourceRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT TagResourceRequest : public SsmContactsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

@@ -21,33 +21,33 @@
 #include "dlmrequest_p.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::DlmRequest
- * \brief The DlmRequest class provides an interface for DLM requests.
+ * \class QtAws::Dlm::DlmRequest
+ * \brief The DlmRequest class provides an interface for Dlm requests.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
  * \enum DlmRequest::Action
  *
- * This enum describes the actions that can be performed as DLM
+ * This enum describes the actions that can be performed as Dlm
  * requests.
  *
- * \value CreateLifecyclePolicyAction DLM CreateLifecyclePolicy action.
- * \value DeleteLifecyclePolicyAction DLM DeleteLifecyclePolicy action.
- * \value GetLifecyclePoliciesAction DLM GetLifecyclePolicies action.
- * \value GetLifecyclePolicyAction DLM GetLifecyclePolicy action.
- * \value ListTagsForResourceAction DLM ListTagsForResource action.
- * \value TagResourceAction DLM TagResource action.
- * \value UntagResourceAction DLM UntagResource action.
- * \value UpdateLifecyclePolicyAction DLM UpdateLifecyclePolicy action.
+ * \value CreateLifecyclePolicyAction Dlm CreateLifecyclePolicy action.
+ * \value DeleteLifecyclePolicyAction Dlm DeleteLifecyclePolicy action.
+ * \value GetLifecyclePoliciesAction Dlm GetLifecyclePolicies action.
+ * \value GetLifecyclePolicyAction Dlm GetLifecyclePolicy action.
+ * \value ListTagsForResourceAction Dlm ListTagsForResource action.
+ * \value TagResourceAction Dlm TagResource action.
+ * \value UntagResourceAction Dlm UntagResource action.
+ * \value UpdateLifecyclePolicyAction Dlm UpdateLifecyclePolicy action.
  */
 
 /*!
- * Constructs a DlmRequest object for DLM \a action.
+ * Constructs a DlmRequest object for Dlm \a action.
  */
 DlmRequest::DlmRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DlmRequestPrivate(action, this))
@@ -88,7 +88,7 @@ DlmRequest::DlmRequest(DlmRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the DLM action to be performed by this request.
+ * Returns the Dlm action to be performed by this request.
  */
 DlmRequest::Action DlmRequest::action() const
 {
@@ -97,7 +97,7 @@ DlmRequest::Action DlmRequest::action() const
 }
 
 /*!
- * Returns the name of the DLM action to be performed by this request.
+ * Returns the name of the Dlm action to be performed by this request.
  */
 QString DlmRequest::actionString() const
 {
@@ -105,7 +105,7 @@ QString DlmRequest::actionString() const
 }
 
 /*!
- * Returns the DLM API version implemented by this request.
+ * Returns the Dlm API version implemented by this request.
  */
 QString DlmRequest::apiVersion() const
 {
@@ -114,7 +114,7 @@ QString DlmRequest::apiVersion() const
 }
 
 /*!
- * Sets the DLM action to be performed by this request to \a action.
+ * Sets the Dlm action to be performed by this request to \a action.
  */
 void DlmRequest::setAction(const Action action)
 {
@@ -123,7 +123,7 @@ void DlmRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the DLM API version to include in this request to \a version.
+ * Sets the Dlm API version to include in this request to \a version.
  */
 void DlmRequest::setApiVersion(const QString &version)
 {
@@ -148,15 +148,15 @@ bool DlmRequest::operator==(const DlmRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid DLM queue name.
+ * Returns \c tue if \a queueName is a valid Dlm queue name.
  *
- * @par From DLM FAQs:
+ * @par From Dlm FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid DLM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Dlm queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -223,10 +223,10 @@ void DlmRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the DLM request using the given
+ * Returns a network request for the Dlm request using the given
  * \a endpoint.
  *
- * This DLM implementation builds request URLs by combining the
+ * This Dlm implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -239,19 +239,19 @@ QNetworkRequest DlmRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::DLM::DlmRequestPrivate
+ * \class QtAws::Dlm::DlmRequestPrivate
  * \brief The DlmRequestPrivate class provides private implementation for DlmRequest.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
- * Constructs a DlmRequestPrivate object for DLM \a action,
+ * Constructs a DlmRequestPrivate object for Dlm \a action,
  * with public implementation \a q.
  */
 DlmRequestPrivate::DlmRequestPrivate(const DlmRequest::Action action, DlmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-01-12"))
 {
 
 }
@@ -277,7 +277,7 @@ DlmRequestPrivate::DlmRequestPrivate(const DlmRequestPrivate &other,
  * invalid.
  *
  * This function converts DlmRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the DLM service's Action
+ * string representations, appropriate for use with the Dlm service's Action
  * query parameters.
  */
 QString DlmRequestPrivate::toString(const DlmRequest::Action &action)
@@ -300,5 +300,5 @@ QString DlmRequestPrivate::toString(const DlmRequest::Action &action)
     return QString();
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

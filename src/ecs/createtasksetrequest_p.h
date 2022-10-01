@@ -24,7 +24,7 @@
 #include "createtasksetrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class CreateTaskSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

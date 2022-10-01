@@ -81,6 +81,7 @@ public:
         StopBuildAction,
         StopBuildBatchAction,
         UpdateProjectAction,
+        UpdateProjectVisibilityAction,
         UpdateReportGroupAction,
         UpdateWebhookAction,
     };

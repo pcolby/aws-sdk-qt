@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
-class EC2InstanceConnectResponsePrivate;
+class Ec2InstanceConnectResponsePrivate;
 
-class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEC2INSTANCECONNECT_EXPORT Ec2InstanceConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    EC2InstanceConnectResponse(QObject * const parent = 0);
+    Ec2InstanceConnectResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    EC2InstanceConnectResponse(EC2InstanceConnectResponsePrivate * const d, QObject * const parent);
+    Ec2InstanceConnectResponse(Ec2InstanceConnectResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(EC2InstanceConnectResponse)
-    Q_DISABLE_COPY(EC2InstanceConnectResponse)
+    Q_DECLARE_PRIVATE(Ec2InstanceConnectResponse)
+    Q_DISABLE_COPY(Ec2InstanceConnectResponse)
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

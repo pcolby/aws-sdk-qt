@@ -1,10 +1,25 @@
 add_compile_definitions(QTAWSTEXTRACT_LIBRARY)
 
 add_library(QtAwsTextract
+  qtawstextractglobal.h
+  textractclient.h
+  textractclient_p.h
+  textractrequest.h
+  textractrequest_p.h
+  textractresponse.h
+  textractresponse_p.h
   analyzedocumentrequest.h
   analyzedocumentrequest_p.h
   analyzedocumentresponse.h
   analyzedocumentresponse_p.h
+  analyzeexpenserequest.h
+  analyzeexpenserequest_p.h
+  analyzeexpenseresponse.h
+  analyzeexpenseresponse_p.h
+  analyzeidrequest.h
+  analyzeidrequest_p.h
+  analyzeidresponse.h
+  analyzeidresponse_p.h
   detectdocumenttextrequest.h
   detectdocumenttextrequest_p.h
   detectdocumenttextresponse.h
@@ -17,7 +32,10 @@ add_library(QtAwsTextract
   getdocumenttextdetectionrequest_p.h
   getdocumenttextdetectionresponse.h
   getdocumenttextdetectionresponse_p.h
-  qtawstextractglobal.h
+  getexpenseanalysisrequest.h
+  getexpenseanalysisrequest_p.h
+  getexpenseanalysisresponse.h
+  getexpenseanalysisresponse_p.h
   startdocumentanalysisrequest.h
   startdocumentanalysisrequest_p.h
   startdocumentanalysisresponse.h
@@ -26,27 +44,33 @@ add_library(QtAwsTextract
   startdocumenttextdetectionrequest_p.h
   startdocumenttextdetectionresponse.h
   startdocumenttextdetectionresponse_p.h
-  textractclient.h
-  textractclient_p.h
-  textractrequest.h
-  textractrequest_p.h
-  textractresponse.h
-  textractresponse_p.h
+  startexpenseanalysisrequest.h
+  startexpenseanalysisrequest_p.h
+  startexpenseanalysisresponse.h
+  startexpenseanalysisresponse_p.h
+  textractclient.cpp
+  textractrequest.cpp
+  textractresponse.cpp
   analyzedocumentrequest.cpp
   analyzedocumentresponse.cpp
+  analyzeexpenserequest.cpp
+  analyzeexpenseresponse.cpp
+  analyzeidrequest.cpp
+  analyzeidresponse.cpp
   detectdocumenttextrequest.cpp
   detectdocumenttextresponse.cpp
   getdocumentanalysisrequest.cpp
   getdocumentanalysisresponse.cpp
   getdocumenttextdetectionrequest.cpp
   getdocumenttextdetectionresponse.cpp
+  getexpenseanalysisrequest.cpp
+  getexpenseanalysisresponse.cpp
   startdocumentanalysisrequest.cpp
   startdocumentanalysisresponse.cpp
   startdocumenttextdetectionrequest.cpp
   startdocumenttextdetectionresponse.cpp
-  textractclient.cpp
-  textractrequest.cpp
-  textractresponse.cpp)
+  startexpenseanalysisrequest.cpp
+  startexpenseanalysisresponse.cpp)
 
 target_link_libraries(QtAwsTextract
   PRIVATE QtAwsCore

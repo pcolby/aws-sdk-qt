@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateSizeConstraintSetRequest
- * \brief The UpdateSizeConstraintSetRequest class provides an interface for WAFRegional UpdateSizeConstraintSet requests.
+ * \class QtAws::WafRegional::UpdateSizeConstraintSetRequest
+ * \brief The UpdateSizeConstraintSetRequest class provides an interface for WafRegional UpdateSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateSizeConstraintSet
+ * \sa WafRegionalClient::updateSizeConstraintSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other)
-    : WAFRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest(const UpdateSizeC
  * Constructs a UpdateSizeConstraintSetRequest object.
  */
 UpdateSizeConstraintSetRequest::UpdateSizeConstraintSetRequest()
-    : WAFRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(WAFRegionalRequest::UpdateSizeConstraintSetAction, this))
+    : WafRegionalRequest(new UpdateSizeConstraintSetRequestPrivate(WafRegionalRequest::UpdateSizeConstraintSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateSizeConstraintSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateSizeConstraintSetRequestPrivate
  * \brief The UpdateSizeConstraintSetRequestPrivate class provides private implementation for UpdateSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateSizeConstraintSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateSizeConstraintSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateSizeConstraintSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const UpdateSizeConstraintSetRequestPrivate &other, UpdateSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

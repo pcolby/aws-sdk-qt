@@ -24,14 +24,14 @@
 #include "deleteinfrastructureconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteInfrastructureConfigurationRequest;
 
-class DeleteInfrastructureConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class DeleteInfrastructureConfigurationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    DeleteInfrastructureConfigurationRequestPrivate(const imagebuilderRequest::Action action,
+    DeleteInfrastructureConfigurationRequestPrivate(const ImageBuilderRequest::Action action,
                                    DeleteInfrastructureConfigurationRequest * const q);
     DeleteInfrastructureConfigurationRequestPrivate(const DeleteInfrastructureConfigurationRequestPrivate &other,
                                    DeleteInfrastructureConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

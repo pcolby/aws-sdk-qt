@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListIndicesRequest
- * \brief The ListIndicesRequest class provides an interface for kendra ListIndices requests.
+ * \class QtAws::Kendra::ListIndicesRequest
+ * \brief The ListIndicesRequest class provides an interface for Kendra ListIndices requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listIndices
+ * \sa KendraClient::listIndices
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListIndicesRequest::ListIndicesRequest(const ListIndicesRequest &other)
-    : kendraRequest(new ListIndicesRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new ListIndicesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListIndicesRequest::ListIndicesRequest(const ListIndicesRequest &other)
  * Constructs a ListIndicesRequest object.
  */
 ListIndicesRequest::ListIndicesRequest()
-    : kendraRequest(new ListIndicesRequestPrivate(kendraRequest::ListIndicesAction, this))
+    : KendraRequest(new ListIndicesRequestPrivate(KendraRequest::ListIndicesAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListIndicesRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::kendra::ListIndicesRequestPrivate
+ * \class QtAws::Kendra::ListIndicesRequestPrivate
  * \brief The ListIndicesRequestPrivate class provides private implementation for ListIndicesRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a ListIndicesRequestPrivate object for kendra \a action,
+ * Constructs a ListIndicesRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
-    const kendraRequest::Action action, ListIndicesRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, ListIndicesRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListIndicesRequestPrivate::ListIndicesRequestPrivate(
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const ListIndicesRequestPrivate &other, ListIndicesRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

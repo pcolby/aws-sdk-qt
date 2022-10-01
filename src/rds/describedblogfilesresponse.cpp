@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBLogFilesResponse
- * \brief The DescribeDBLogFilesResponse class provides an interace for RDS DescribeDBLogFiles responses.
+ * \class QtAws::Rds::DescribeDBLogFilesResponse
+ * \brief The DescribeDBLogFilesResponse class provides an interace for Rds DescribeDBLogFiles responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBLogFiles \a response.
+ * Parses a successful Rds DescribeDBLogFiles \a response.
  */
 void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBLogFilesResponsePrivate
+ * \class QtAws::Rds::DescribeDBLogFilesResponsePrivate
  * \brief The DescribeDBLogFilesResponsePrivate class provides private implementation for DescribeDBLogFilesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeDBLogFiles response element from \a xml.
+ * Parses a Rds DescribeDBLogFiles response element from \a xml.
  */
 void DescribeDBLogFilesResponsePrivate::parseDescribeDBLogFilesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBLogFilesResponsePrivate::parseDescribeDBLogFilesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

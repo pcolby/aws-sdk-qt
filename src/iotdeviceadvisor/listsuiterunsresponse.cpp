@@ -25,23 +25,23 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::ListSuiteRunsResponse
- * \brief The ListSuiteRunsResponse class provides an interace for IoTDeviceAdvisor ListSuiteRuns responses.
+ * \class QtAws::IotDeviceAdvisor::ListSuiteRunsResponse
+ * \brief The ListSuiteRunsResponse class provides an interace for IotDeviceAdvisor ListSuiteRuns responses.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::listSuiteRuns
+ * \sa IotDeviceAdvisorClient::listSuiteRuns
  */
 
 /*!
@@ -51,7 +51,7 @@ ListSuiteRunsResponse::ListSuiteRunsResponse(
         const ListSuiteRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTDeviceAdvisorResponse(new ListSuiteRunsResponsePrivate(this), parent)
+    : IotDeviceAdvisorResponse(new ListSuiteRunsResponsePrivate(this), parent)
 {
     setRequest(new ListSuiteRunsRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const ListSuiteRunsRequest * ListSuiteRunsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoTDeviceAdvisor ListSuiteRuns \a response.
+ * Parses a successful IotDeviceAdvisor ListSuiteRuns \a response.
  */
 void ListSuiteRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void ListSuiteRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::ListSuiteRunsResponsePrivate
+ * \class QtAws::IotDeviceAdvisor::ListSuiteRunsResponsePrivate
  * \brief The ListSuiteRunsResponsePrivate class provides private implementation for ListSuiteRunsResponse.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
  * Constructs a ListSuiteRunsResponsePrivate object with public implementation \a q.
  */
 ListSuiteRunsResponsePrivate::ListSuiteRunsResponsePrivate(
-    ListSuiteRunsResponse * const q) : IoTDeviceAdvisorResponsePrivate(q)
+    ListSuiteRunsResponse * const q) : IotDeviceAdvisorResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoTDeviceAdvisor ListSuiteRuns response element from \a xml.
+ * Parses a IotDeviceAdvisor ListSuiteRuns response element from \a xml.
  */
 void ListSuiteRunsResponsePrivate::parseListSuiteRunsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ListSuiteRunsResponsePrivate::parseListSuiteRunsResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

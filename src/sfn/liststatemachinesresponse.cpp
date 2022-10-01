@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::ListStateMachinesResponse
- * \brief The ListStateMachinesResponse class provides an interace for SFN ListStateMachines responses.
+ * \class QtAws::Sfn::ListStateMachinesResponse
+ * \brief The ListStateMachinesResponse class provides an interace for Sfn ListStateMachines responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const ListStateMachinesRequest * ListStateMachinesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN ListStateMachines \a response.
+ * Parses a successful Sfn ListStateMachines \a response.
  */
 void ListStateMachinesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void ListStateMachinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::ListStateMachinesResponsePrivate
+ * \class QtAws::Sfn::ListStateMachinesResponsePrivate
  * \brief The ListStateMachinesResponsePrivate class provides private implementation for ListStateMachinesResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
 }
 
 /*!
- * Parses a SFN ListStateMachines response element from \a xml.
+ * Parses a Sfn ListStateMachines response element from \a xml.
  */
 void ListStateMachinesResponsePrivate::parseListStateMachinesResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ListStateMachinesResponsePrivate::parseListStateMachinesResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

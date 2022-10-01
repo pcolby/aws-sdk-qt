@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class AcmResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

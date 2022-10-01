@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeOptionGroupOptionsResponse
- * \brief The DescribeOptionGroupOptionsResponse class provides an interace for RDS DescribeOptionGroupOptions responses.
+ * \class QtAws::Rds::DescribeOptionGroupOptionsResponse
+ * \brief The DescribeOptionGroupOptionsResponse class provides an interace for Rds DescribeOptionGroupOptions responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeOptionGroupOptionsRequest * DescribeOptionGroupOptionsResponse::re
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeOptionGroupOptions \a response.
+ * Parses a successful Rds DescribeOptionGroupOptions \a response.
  */
 void DescribeOptionGroupOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeOptionGroupOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeOptionGroupOptionsResponsePrivate
+ * \class QtAws::Rds::DescribeOptionGroupOptionsResponsePrivate
  * \brief The DescribeOptionGroupOptionsResponsePrivate class provides private implementation for DescribeOptionGroupOptionsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeOptionGroupOptionsResponsePrivate::DescribeOptionGroupOptionsResponsePri
 }
 
 /*!
- * Parses a RDS DescribeOptionGroupOptions response element from \a xml.
+ * Parses a Rds DescribeOptionGroupOptions response element from \a xml.
  */
 void DescribeOptionGroupOptionsResponsePrivate::parseDescribeOptionGroupOptionsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeOptionGroupOptionsResponsePrivate::parseDescribeOptionGroupOptionsR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class WafResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

@@ -266,7 +266,7 @@ QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdentityRequest::Action action, CognitoIdentityRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-06-30"))
 {
 
 }

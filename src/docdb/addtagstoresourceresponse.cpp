@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::AddTagsToResourceResponse
- * \brief The AddTagsToResourceResponse class provides an interace for DocDB AddTagsToResource responses.
+ * \class QtAws::DocDb::AddTagsToResourceResponse
+ * \brief The AddTagsToResourceResponse class provides an interace for DocDb AddTagsToResource responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::addTagsToResource
+ * \sa DocDbClient::addTagsToResource
  */
 
 /*!
@@ -45,7 +45,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new AddTagsToResourceResponsePrivate(this), parent)
+    : DocDbResponse(new AddTagsToResourceResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB AddTagsToResource \a response.
+ * Parses a successful DocDb AddTagsToResource \a response.
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::AddTagsToResourceResponsePrivate
+ * \class QtAws::DocDb::AddTagsToResourceResponsePrivate
  * \brief The AddTagsToResourceResponsePrivate class provides private implementation for AddTagsToResourceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a AddTagsToResourceResponsePrivate object with public implementation \a q.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
-    AddTagsToResourceResponse * const q) : DocDBResponsePrivate(q)
+    AddTagsToResourceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB AddTagsToResource response element from \a xml.
+ * Parses a DocDb AddTagsToResource response element from \a xml.
  */
 void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

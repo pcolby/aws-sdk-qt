@@ -24,14 +24,14 @@
 #include "updateserverengineattributesrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class UpdateServerEngineAttributesRequest;
 
-class UpdateServerEngineAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
+class UpdateServerEngineAttributesRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    UpdateServerEngineAttributesRequestPrivate(const OpsWorksCMRequest::Action action,
+    UpdateServerEngineAttributesRequestPrivate(const OpsWorksCmRequest::Action action,
                                    UpdateServerEngineAttributesRequest * const q);
     UpdateServerEngineAttributesRequestPrivate(const UpdateServerEngineAttributesRequestPrivate &other,
                                    UpdateServerEngineAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

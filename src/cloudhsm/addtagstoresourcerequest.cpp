@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::AddTagsToResourceRequest
- * \brief The AddTagsToResourceRequest class provides an interface for CloudHSM AddTagsToResource requests.
+ * \class QtAws::CloudHsm::AddTagsToResourceRequest
+ * \brief The AddTagsToResourceRequest class provides an interface for CloudHsm AddTagsToResource requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::addTagsToResource
+ * \sa CloudHsmClient::addTagsToResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
-    : CloudHSMRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
  * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
-    : CloudHSMRequest(new AddTagsToResourceRequestPrivate(CloudHSMRequest::AddTagsToResourceAction, this))
+    : CloudHsmRequest(new AddTagsToResourceRequestPrivate(CloudHsmRequest::AddTagsToResourceAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::CloudHSM::AddTagsToResourceRequestPrivate
+ * \class QtAws::CloudHsm::AddTagsToResourceRequestPrivate
  * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a AddTagsToResourceRequestPrivate object for CloudHSM \a action,
+ * Constructs a AddTagsToResourceRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
-    const CloudHSMRequest::Action action, AddTagsToResourceRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, AddTagsToResourceRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

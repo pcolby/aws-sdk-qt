@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddTagsToResourceResponse
- * \brief The AddTagsToResourceResponse class provides an interace for RDS AddTagsToResource responses.
+ * \class QtAws::Rds::AddTagsToResourceResponse
+ * \brief The AddTagsToResourceResponse class provides an interace for Rds AddTagsToResource responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS AddTagsToResource \a response.
+ * Parses a successful Rds AddTagsToResource \a response.
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::AddTagsToResourceResponsePrivate
+ * \class QtAws::Rds::AddTagsToResourceResponsePrivate
  * \brief The AddTagsToResourceResponsePrivate class provides private implementation for AddTagsToResourceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
 }
 
 /*!
- * Parses a RDS AddTagsToResource response element from \a xml.
+ * Parses a Rds AddTagsToResource response element from \a xml.
  */
 void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

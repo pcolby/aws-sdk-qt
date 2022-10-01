@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CreateSMSSandboxPhoneNumberRequest
- * \brief The CreateSMSSandboxPhoneNumberRequest class provides an interface for SNS CreateSMSSandboxPhoneNumber requests.
+ * \class QtAws::Sns::CreateSMSSandboxPhoneNumberRequest
+ * \brief The CreateSMSSandboxPhoneNumberRequest class provides an interface for Sns CreateSMSSandboxPhoneNumber requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * CreateSMSSandboxPhoneNumberRequest::response(
 }
 
 /*!
- * \class QtAws::SNS::CreateSMSSandboxPhoneNumberRequestPrivate
+ * \class QtAws::Sns::CreateSMSSandboxPhoneNumberRequestPrivate
  * \brief The CreateSMSSandboxPhoneNumberRequestPrivate class provides private implementation for CreateSMSSandboxPhoneNumberRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ CreateSMSSandboxPhoneNumberRequestPrivate::CreateSMSSandboxPhoneNumberRequestPri
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

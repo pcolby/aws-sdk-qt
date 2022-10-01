@@ -24,7 +24,7 @@
 #include "addtagsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class AddTagsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

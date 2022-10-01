@@ -23,17 +23,17 @@
 #include "fisrequest_p.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for FIS TagResource requests.
+ * \class QtAws::Fis::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Fis TagResource requests.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::tagResource
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::FIS::TagResourceRequestPrivate
+ * \class QtAws::Fis::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -107,5 +107,5 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

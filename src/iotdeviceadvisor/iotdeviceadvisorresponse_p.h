@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorResponse;
+class IotDeviceAdvisorResponse;
 
-class IoTDeviceAdvisorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IotDeviceAdvisorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit IoTDeviceAdvisorResponsePrivate(IoTDeviceAdvisorResponse * const q);
+    explicit IotDeviceAdvisorResponsePrivate(IotDeviceAdvisorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(IoTDeviceAdvisorResponse)
-    Q_DISABLE_COPY(IoTDeviceAdvisorResponsePrivate)
+    Q_DECLARE_PUBLIC(IotDeviceAdvisorResponse)
+    Q_DISABLE_COPY(IotDeviceAdvisorResponsePrivate)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

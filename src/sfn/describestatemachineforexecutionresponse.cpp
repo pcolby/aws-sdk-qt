@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DescribeStateMachineForExecutionResponse
- * \brief The DescribeStateMachineForExecutionResponse class provides an interace for SFN DescribeStateMachineForExecution responses.
+ * \class QtAws::Sfn::DescribeStateMachineForExecutionResponse
+ * \brief The DescribeStateMachineForExecutionResponse class provides an interace for Sfn DescribeStateMachineForExecution responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const DescribeStateMachineForExecutionRequest * DescribeStateMachineForExecution
 
 /*!
  * \reimp
- * Parses a successful SFN DescribeStateMachineForExecution \a response.
+ * Parses a successful Sfn DescribeStateMachineForExecution \a response.
  */
 void DescribeStateMachineForExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void DescribeStateMachineForExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::DescribeStateMachineForExecutionResponsePrivate
+ * \class QtAws::Sfn::DescribeStateMachineForExecutionResponsePrivate
  * \brief The DescribeStateMachineForExecutionResponsePrivate class provides private implementation for DescribeStateMachineForExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutio
 }
 
 /*!
- * Parses a SFN DescribeStateMachineForExecution response element from \a xml.
+ * Parses a Sfn DescribeStateMachineForExecution response element from \a xml.
  */
 void DescribeStateMachineForExecutionResponsePrivate::parseDescribeStateMachineForExecutionResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeStateMachineForExecutionResponsePrivate::parseDescribeStateMachineF
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

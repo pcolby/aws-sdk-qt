@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSFINSPACE_LIBRARY)
 
-add_library(QtAwsfinspace
+add_library(QtAwsFinspace
+  qtawsfinspaceglobal.h
+  finspaceclient.h
+  finspaceclient_p.h
+  finspacerequest.h
+  finspacerequest_p.h
+  finspaceresponse.h
+  finspaceresponse_p.h
   createenvironmentrequest.h
   createenvironmentrequest_p.h
   createenvironmentresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsfinspace
   deleteenvironmentrequest_p.h
   deleteenvironmentresponse.h
   deleteenvironmentresponse_p.h
-  finspaceclient.h
-  finspaceclient_p.h
-  finspacerequest.h
-  finspacerequest_p.h
-  finspaceresponse.h
-  finspaceresponse_p.h
   getenvironmentrequest.h
   getenvironmentrequest_p.h
   getenvironmentresponse.h
@@ -27,7 +28,6 @@ add_library(QtAwsfinspace
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsfinspaceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -40,13 +40,13 @@ add_library(QtAwsfinspace
   updateenvironmentrequest_p.h
   updateenvironmentresponse.h
   updateenvironmentresponse_p.h
+  finspaceclient.cpp
+  finspacerequest.cpp
+  finspaceresponse.cpp
   createenvironmentrequest.cpp
   createenvironmentresponse.cpp
   deleteenvironmentrequest.cpp
   deleteenvironmentresponse.cpp
-  finspaceclient.cpp
-  finspacerequest.cpp
-  finspaceresponse.cpp
   getenvironmentrequest.cpp
   getenvironmentresponse.cpp
   listenvironmentsrequest.cpp
@@ -60,7 +60,7 @@ add_library(QtAwsfinspace
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp)
 
-target_link_libraries(QtAwsfinspace
+target_link_libraries(QtAwsFinspace
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

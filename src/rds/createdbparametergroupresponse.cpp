@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBParameterGroupResponse
- * \brief The CreateDBParameterGroupResponse class provides an interace for RDS CreateDBParameterGroup responses.
+ * \class QtAws::Rds::CreateDBParameterGroupResponse
+ * \brief The CreateDBParameterGroupResponse class provides an interace for Rds CreateDBParameterGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBParameterGroup \a response.
+ * Parses a successful Rds CreateDBParameterGroup \a response.
  */
 void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBParameterGroupResponsePrivate
+ * \class QtAws::Rds::CreateDBParameterGroupResponsePrivate
  * \brief The CreateDBParameterGroupResponsePrivate class provides private implementation for CreateDBParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBParameterGroup response element from \a xml.
+ * Parses a Rds CreateDBParameterGroup response element from \a xml.
  */
 void CreateDBParameterGroupResponsePrivate::parseCreateDBParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBParameterGroupResponsePrivate::parseCreateDBParameterGroupResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

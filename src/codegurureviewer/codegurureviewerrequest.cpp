@@ -257,7 +257,7 @@ QNetworkRequest CodeGuruReviewerRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 CodeGuruReviewerRequestPrivate::CodeGuruReviewerRequestPrivate(const CodeGuruReviewerRequest::Action action, CodeGuruReviewerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-09-19"))
 {
 
 }

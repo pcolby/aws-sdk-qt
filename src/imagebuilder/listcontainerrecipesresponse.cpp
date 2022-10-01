@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListContainerRecipesResponse
- * \brief The ListContainerRecipesResponse class provides an interace for imagebuilder ListContainerRecipes responses.
+ * \class QtAws::ImageBuilder::ListContainerRecipesResponse
+ * \brief The ListContainerRecipesResponse class provides an interace for ImageBuilder ListContainerRecipes responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listContainerRecipes
+ * \sa ImageBuilderClient::listContainerRecipes
  */
 
 /*!
@@ -47,7 +47,7 @@ ListContainerRecipesResponse::ListContainerRecipesResponse(
         const ListContainerRecipesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ListContainerRecipesResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ListContainerRecipesResponsePrivate(this), parent)
 {
     setRequest(new ListContainerRecipesRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ListContainerRecipesRequest * ListContainerRecipesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ListContainerRecipes \a response.
+ * Parses a successful ImageBuilder ListContainerRecipes \a response.
  */
 void ListContainerRecipesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ListContainerRecipesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ListContainerRecipesResponsePrivate
+ * \class QtAws::ImageBuilder::ListContainerRecipesResponsePrivate
  * \brief The ListContainerRecipesResponsePrivate class provides private implementation for ListContainerRecipesResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ListContainerRecipesResponsePrivate object with public implementation \a q.
  */
 ListContainerRecipesResponsePrivate::ListContainerRecipesResponsePrivate(
-    ListContainerRecipesResponse * const q) : imagebuilderResponsePrivate(q)
+    ListContainerRecipesResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ListContainerRecipes response element from \a xml.
+ * Parses a ImageBuilder ListContainerRecipes response element from \a xml.
  */
 void ListContainerRecipesResponsePrivate::parseListContainerRecipesResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListContainerRecipesResponsePrivate::parseListContainerRecipesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT UntagResourceResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT UntagResourceResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

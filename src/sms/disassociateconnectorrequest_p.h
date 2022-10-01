@@ -24,7 +24,7 @@
 #include "disassociateconnectorrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class DisassociateConnectorRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

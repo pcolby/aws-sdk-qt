@@ -23,11 +23,11 @@
 #include "imagebuilderresponse_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class CancelImageCreationResponse;
 
-class CancelImageCreationResponsePrivate : public imagebuilderResponsePrivate {
+class CancelImageCreationResponsePrivate : public ImageBuilderResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

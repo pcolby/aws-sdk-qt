@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for SSMContacts ListTagsForResource requests.
+ * \class QtAws::SsmContacts::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for SsmContacts ListTagsForResource requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listTagsForResource
+ * \sa SsmContactsClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : SSMContactsRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : SSMContactsRequest(new ListTagsForResourceRequestPrivate(SSMContactsRequest::ListTagsForResourceAction, this))
+    : SsmContactsRequest(new ListTagsForResourceRequestPrivate(SsmContactsRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMContacts::ListTagsForResourceRequestPrivate
+ * \class QtAws::SsmContacts::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for SSMContacts \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const SSMContactsRequest::Action action, ListTagsForResourceRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, ListTagsForResourceRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

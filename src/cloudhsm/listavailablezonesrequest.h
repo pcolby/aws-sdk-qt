@@ -23,11 +23,11 @@
 #include "cloudhsmrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ListAvailableZonesRequestPrivate;
 
-class QTAWSCLOUDHSM_EXPORT ListAvailableZonesRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT ListAvailableZonesRequest : public CloudHsmRequest {
 
 public:
     ListAvailableZonesRequest(const ListAvailableZonesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

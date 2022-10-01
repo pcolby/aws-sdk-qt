@@ -25,31 +25,31 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 /*!
- * \class QtAws::ECS::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for ECS UntagResource responses.
+ * \class QtAws::Ecs::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for Ecs UntagResource responses.
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  *
  *  <fullname>Amazon Elastic Container Service</fullname>
  * 
- *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
- *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
- *  that is managed by Amazon ECS by launching your services or tasks on AWS Fargate. For more control, you can host your
- *  tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you
+ *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service. It makes it easy
+ *  to run, stop, and manage Docker containers. You can host your cluster on a serverless infrastructure that's managed by
+ *  Amazon ECS by launching your services or tasks on Fargate. For more control, you can host your tasks on a cluster of
+ *  Amazon Elastic Compute Cloud (Amazon EC2) or External (on-premises) instances that you
  * 
  *  manage>
  * 
- *  Amazon ECS makes it easy to launch and stop container-based applications with simple API calls, allows you to get the
- *  state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ *  Amazon ECS makes it easy to launch and stop container-based applications with simple API calls. This makes it easy to
+ *  get the state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2
  * 
  *  features>
  * 
  *  You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs,
- *  isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster
- *  management and configuration management systems or worry about scaling your management
+ *  isolation policies, and availability requirements. With Amazon ECS, you don't need to operate your own cluster
+ *  management and configuration management systems. You also don't need to worry about scaling your management
  *
  * \sa EcsClient::untagResource
  */
@@ -78,7 +78,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECS UntagResource \a response.
+ * Parses a successful Ecs UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -88,11 +88,11 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECS::UntagResourceResponsePrivate
+ * \class QtAws::Ecs::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  */
 
 /*!
@@ -105,7 +105,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 }
 
 /*!
- * Parses a ECS UntagResource response element from \a xml.
+ * Parses a Ecs UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -113,5 +113,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws

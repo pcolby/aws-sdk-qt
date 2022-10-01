@@ -24,7 +24,7 @@
 #include "canceljournalkinesisstreamrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class CancelJournalKinesisStreamRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

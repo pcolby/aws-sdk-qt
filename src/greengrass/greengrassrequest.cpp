@@ -335,7 +335,7 @@ QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Action action, GreengrassRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-06-07"))
 {
 
 }

@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public SSMContactsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const SSMContactsRequest::Action action,
+    ListTagsForResourceRequestPrivate(const SsmContactsRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

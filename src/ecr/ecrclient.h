@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class EcrClientPrivate;
 class BatchCheckLayerAvailabilityRequest;
@@ -36,22 +36,32 @@ class BatchDeleteImageRequest;
 class BatchDeleteImageResponse;
 class BatchGetImageRequest;
 class BatchGetImageResponse;
+class BatchGetRepositoryScanningConfigurationRequest;
+class BatchGetRepositoryScanningConfigurationResponse;
 class CompleteLayerUploadRequest;
 class CompleteLayerUploadResponse;
+class CreatePullThroughCacheRuleRequest;
+class CreatePullThroughCacheRuleResponse;
 class CreateRepositoryRequest;
 class CreateRepositoryResponse;
 class DeleteLifecyclePolicyRequest;
 class DeleteLifecyclePolicyResponse;
+class DeletePullThroughCacheRuleRequest;
+class DeletePullThroughCacheRuleResponse;
 class DeleteRegistryPolicyRequest;
 class DeleteRegistryPolicyResponse;
 class DeleteRepositoryRequest;
 class DeleteRepositoryResponse;
 class DeleteRepositoryPolicyRequest;
 class DeleteRepositoryPolicyResponse;
+class DescribeImageReplicationStatusRequest;
+class DescribeImageReplicationStatusResponse;
 class DescribeImageScanFindingsRequest;
 class DescribeImageScanFindingsResponse;
 class DescribeImagesRequest;
 class DescribeImagesResponse;
+class DescribePullThroughCacheRulesRequest;
+class DescribePullThroughCacheRulesResponse;
 class DescribeRegistryRequest;
 class DescribeRegistryResponse;
 class DescribeRepositoriesRequest;
@@ -66,6 +76,8 @@ class GetLifecyclePolicyPreviewRequest;
 class GetLifecyclePolicyPreviewResponse;
 class GetRegistryPolicyRequest;
 class GetRegistryPolicyResponse;
+class GetRegistryScanningConfigurationRequest;
+class GetRegistryScanningConfigurationResponse;
 class GetRepositoryPolicyRequest;
 class GetRepositoryPolicyResponse;
 class InitiateLayerUploadRequest;
@@ -84,6 +96,8 @@ class PutLifecyclePolicyRequest;
 class PutLifecyclePolicyResponse;
 class PutRegistryPolicyRequest;
 class PutRegistryPolicyResponse;
+class PutRegistryScanningConfigurationRequest;
+class PutRegistryScanningConfigurationResponse;
 class PutReplicationConfigurationRequest;
 class PutReplicationConfigurationResponse;
 class SetRepositoryPolicyRequest;
@@ -118,14 +132,19 @@ public slots:
     BatchCheckLayerAvailabilityResponse * batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request);
     BatchDeleteImageResponse * batchDeleteImage(const BatchDeleteImageRequest &request);
     BatchGetImageResponse * batchGetImage(const BatchGetImageRequest &request);
+    BatchGetRepositoryScanningConfigurationResponse * batchGetRepositoryScanningConfiguration(const BatchGetRepositoryScanningConfigurationRequest &request);
     CompleteLayerUploadResponse * completeLayerUpload(const CompleteLayerUploadRequest &request);
+    CreatePullThroughCacheRuleResponse * createPullThroughCacheRule(const CreatePullThroughCacheRuleRequest &request);
     CreateRepositoryResponse * createRepository(const CreateRepositoryRequest &request);
     DeleteLifecyclePolicyResponse * deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request);
+    DeletePullThroughCacheRuleResponse * deletePullThroughCacheRule(const DeletePullThroughCacheRuleRequest &request);
     DeleteRegistryPolicyResponse * deleteRegistryPolicy(const DeleteRegistryPolicyRequest &request);
     DeleteRepositoryResponse * deleteRepository(const DeleteRepositoryRequest &request);
     DeleteRepositoryPolicyResponse * deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request);
+    DescribeImageReplicationStatusResponse * describeImageReplicationStatus(const DescribeImageReplicationStatusRequest &request);
     DescribeImageScanFindingsResponse * describeImageScanFindings(const DescribeImageScanFindingsRequest &request);
     DescribeImagesResponse * describeImages(const DescribeImagesRequest &request);
+    DescribePullThroughCacheRulesResponse * describePullThroughCacheRules(const DescribePullThroughCacheRulesRequest &request);
     DescribeRegistryResponse * describeRegistry(const DescribeRegistryRequest &request);
     DescribeRepositoriesResponse * describeRepositories(const DescribeRepositoriesRequest &request);
     GetAuthorizationTokenResponse * getAuthorizationToken(const GetAuthorizationTokenRequest &request);
@@ -133,6 +152,7 @@ public slots:
     GetLifecyclePolicyResponse * getLifecyclePolicy(const GetLifecyclePolicyRequest &request);
     GetLifecyclePolicyPreviewResponse * getLifecyclePolicyPreview(const GetLifecyclePolicyPreviewRequest &request);
     GetRegistryPolicyResponse * getRegistryPolicy(const GetRegistryPolicyRequest &request);
+    GetRegistryScanningConfigurationResponse * getRegistryScanningConfiguration(const GetRegistryScanningConfigurationRequest &request);
     GetRepositoryPolicyResponse * getRepositoryPolicy(const GetRepositoryPolicyRequest &request);
     InitiateLayerUploadResponse * initiateLayerUpload(const InitiateLayerUploadRequest &request);
     ListImagesResponse * listImages(const ListImagesRequest &request);
@@ -142,6 +162,7 @@ public slots:
     PutImageTagMutabilityResponse * putImageTagMutability(const PutImageTagMutabilityRequest &request);
     PutLifecyclePolicyResponse * putLifecyclePolicy(const PutLifecyclePolicyRequest &request);
     PutRegistryPolicyResponse * putRegistryPolicy(const PutRegistryPolicyRequest &request);
+    PutRegistryScanningConfigurationResponse * putRegistryScanningConfiguration(const PutRegistryScanningConfigurationRequest &request);
     PutReplicationConfigurationResponse * putReplicationConfiguration(const PutReplicationConfigurationRequest &request);
     SetRepositoryPolicyResponse * setRepositoryPolicy(const SetRepositoryPolicyRequest &request);
     StartImageScanResponse * startImageScan(const StartImageScanRequest &request);
@@ -156,7 +177,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

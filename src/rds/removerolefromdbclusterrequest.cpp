@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBClusterRequest
- * \brief The RemoveRoleFromDBClusterRequest class provides an interface for RDS RemoveRoleFromDBCluster requests.
+ * \class QtAws::Rds::RemoveRoleFromDBClusterRequest
+ * \brief The RemoveRoleFromDBClusterRequest class provides an interface for Rds RemoveRoleFromDBCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNet
 }
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBClusterRequestPrivate
+ * \class QtAws::Rds::RemoveRoleFromDBClusterRequestPrivate
  * \brief The RemoveRoleFromDBClusterRequestPrivate class provides private implementation for RemoveRoleFromDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

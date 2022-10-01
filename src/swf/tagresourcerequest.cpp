@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for SWF TagResource requests.
+ * \class QtAws::Swf::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Swf TagResource requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SWF::TagResourceRequestPrivate
+ * \class QtAws::Swf::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

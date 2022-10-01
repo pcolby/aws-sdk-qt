@@ -24,7 +24,7 @@
 #include "updateclusterversionrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class UpdateClusterVersionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

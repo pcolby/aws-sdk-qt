@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
-class EMRContainersRequestPrivate;
+class EmrcontainersRequestPrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT EMRContainersRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEMRCONTAINERS_EXPORT EmrcontainersRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EMRContainers.
+    /// Actions supported by Emrcontainers.
     enum Action {
         CancelJobRunAction,
         CreateManagedEndpointAction,
@@ -57,9 +57,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    EMRContainersRequest(const Action action);
-    EMRContainersRequest(const EMRContainersRequest &other);
-    EMRContainersRequest &operator=(const EMRContainersRequest &other);
+    EmrcontainersRequest(const Action action);
+    EmrcontainersRequest(const EmrcontainersRequest &other);
+    EmrcontainersRequest &operator=(const EmrcontainersRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -68,12 +68,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EMRContainersRequest &other) const;
+    virtual bool operator==(const EmrcontainersRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit EMRContainersRequest(EMRContainersRequestPrivate * const d);
+    explicit EmrcontainersRequest(EmrcontainersRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -86,11 +86,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(EMRContainersRequest)
+    Q_DECLARE_PRIVATE(EmrcontainersRequest)
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

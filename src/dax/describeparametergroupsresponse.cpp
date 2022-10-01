@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeParameterGroupsResponse
- * \brief The DescribeParameterGroupsResponse class provides an interace for DAX DescribeParameterGroups responses.
+ * \class QtAws::Dax::DescribeParameterGroupsResponse
+ * \brief The DescribeParameterGroupsResponse class provides an interace for Dax DescribeParameterGroups responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DAX DescribeParameterGroups \a response.
+ * Parses a successful Dax DescribeParameterGroups \a response.
  */
 void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DescribeParameterGroupsResponsePrivate
+ * \class QtAws::Dax::DescribeParameterGroupsResponsePrivate
  * \brief The DescribeParameterGroupsResponsePrivate class provides private implementation for DescribeParameterGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponsePrivate(
 }
 
 /*!
- * Parses a DAX DescribeParameterGroups response element from \a xml.
+ * Parses a Dax DescribeParameterGroups response element from \a xml.
  */
 void DescribeParameterGroupsResponsePrivate::parseDescribeParameterGroupsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DescribeParameterGroupsResponsePrivate::parseDescribeParameterGroupsRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

@@ -23,21 +23,21 @@
 #include "iamrequest_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::PutRolePolicyRequest
- * \brief The PutRolePolicyRequest class provides an interface for IAM PutRolePolicy requests.
+ * \class QtAws::Iam::PutRolePolicyRequest
+ * \brief The PutRolePolicyRequest class provides an interface for Iam PutRolePolicy requests.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::putRolePolicy
  */
@@ -80,11 +80,11 @@ QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::IAM::PutRolePolicyRequestPrivate
+ * \class QtAws::Iam::PutRolePolicyRequestPrivate
  * \brief The PutRolePolicyRequestPrivate class provides private implementation for PutRolePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -111,5 +111,5 @@ PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
 
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

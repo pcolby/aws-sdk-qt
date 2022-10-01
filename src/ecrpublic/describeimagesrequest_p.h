@@ -24,14 +24,14 @@
 #include "describeimagesrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DescribeImagesRequest;
 
-class DescribeImagesRequestPrivate : public ECRPublicRequestPrivate {
+class DescribeImagesRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    DescribeImagesRequestPrivate(const ECRPublicRequest::Action action,
+    DescribeImagesRequestPrivate(const EcrPublicRequest::Action action,
                                    DescribeImagesRequest * const q);
     DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
                                    DescribeImagesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

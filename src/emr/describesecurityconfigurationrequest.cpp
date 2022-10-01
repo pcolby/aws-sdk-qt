@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeSecurityConfigurationRequest
- * \brief The DescribeSecurityConfigurationRequest class provides an interface for EMR DescribeSecurityConfiguration requests.
+ * \class QtAws::Emr::DescribeSecurityConfigurationRequest
+ * \brief The DescribeSecurityConfigurationRequest class provides an interface for Emr DescribeSecurityConfiguration requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeSecurityConfiguration
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::respons
 }
 
 /*!
- * \class QtAws::EMR::DescribeSecurityConfigurationRequestPrivate
+ * \class QtAws::Emr::DescribeSecurityConfigurationRequestPrivate
  * \brief The DescribeSecurityConfigurationRequestPrivate class provides private implementation for DescribeSecurityConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

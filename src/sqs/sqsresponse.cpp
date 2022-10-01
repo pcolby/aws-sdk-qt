@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 /*!
- * \class QtAws::SQS::SqsResponse
- * \brief The SqsResponse class provides an interface for SQS responses.
+ * \class QtAws::Sqs::SqsResponse
+ * \brief The SqsResponse class provides an interface for Sqs responses.
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  */
 
 /*!
@@ -76,11 +76,11 @@ void SqsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SQS::SqsResponsePrivate
+ * \class QtAws::Sqs::SqsResponsePrivate
  * \brief The SqsResponsePrivate class provides private implementation for SqsResponse.
  * \internal
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  */
 
 /*!
@@ -92,5 +92,5 @@ SqsResponsePrivate::SqsResponsePrivate(
 
 }
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws

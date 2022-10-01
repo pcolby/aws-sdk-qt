@@ -23,7 +23,7 @@
 #include "emrresponse_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class ListInstancesResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

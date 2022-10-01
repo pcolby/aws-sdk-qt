@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ImportComponentRequest
- * \brief The ImportComponentRequest class provides an interface for imagebuilder ImportComponent requests.
+ * \class QtAws::ImageBuilder::ImportComponentRequest
+ * \brief The ImportComponentRequest class provides an interface for ImageBuilder ImportComponent requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::importComponent
+ * \sa ImageBuilderClient::importComponent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ImportComponentRequest::ImportComponentRequest(const ImportComponentRequest &other)
-    : imagebuilderRequest(new ImportComponentRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ImportComponentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ImportComponentRequest::ImportComponentRequest(const ImportComponentRequest &oth
  * Constructs a ImportComponentRequest object.
  */
 ImportComponentRequest::ImportComponentRequest()
-    : imagebuilderRequest(new ImportComponentRequestPrivate(imagebuilderRequest::ImportComponentAction, this))
+    : ImageBuilderRequest(new ImportComponentRequestPrivate(ImageBuilderRequest::ImportComponentAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ImportComponentRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::imagebuilder::ImportComponentRequestPrivate
+ * \class QtAws::ImageBuilder::ImportComponentRequestPrivate
  * \brief The ImportComponentRequestPrivate class provides private implementation for ImportComponentRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ImportComponentRequestPrivate object for imagebuilder \a action,
+ * Constructs a ImportComponentRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ImportComponentRequestPrivate::ImportComponentRequestPrivate(
-    const imagebuilderRequest::Action action, ImportComponentRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ImportComponentRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ImportComponentRequestPrivate::ImportComponentRequestPrivate(
  */
 ImportComponentRequestPrivate::ImportComponentRequestPrivate(
     const ImportComponentRequestPrivate &other, ImportComponentRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

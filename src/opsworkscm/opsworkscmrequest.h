@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMRequestPrivate;
+class OpsWorksCmRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT OpsWorksCMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by OpsWorksCM.
+    /// Actions supported by OpsWorksCm.
     enum Action {
         AssociateNodeAction,
         CreateBackupAction,
@@ -61,9 +61,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    OpsWorksCMRequest(const Action action);
-    OpsWorksCMRequest(const OpsWorksCMRequest &other);
-    OpsWorksCMRequest &operator=(const OpsWorksCMRequest &other);
+    OpsWorksCmRequest(const Action action);
+    OpsWorksCmRequest(const OpsWorksCmRequest &other);
+    OpsWorksCmRequest &operator=(const OpsWorksCmRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -72,12 +72,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const OpsWorksCMRequest &other) const;
+    virtual bool operator==(const OpsWorksCmRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d);
+    explicit OpsWorksCmRequest(OpsWorksCmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -90,11 +90,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(OpsWorksCMRequest)
+    Q_DECLARE_PRIVATE(OpsWorksCmRequest)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

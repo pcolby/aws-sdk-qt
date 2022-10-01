@@ -24,7 +24,7 @@
 #include "listbytematchsetsrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class ListByteMatchSetsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSSMCONTACTS_LIBRARY)
 
-add_library(QtAwsSSMContacts
+add_library(QtAwsSsmContacts
+  qtawsssmcontactsglobal.h
+  ssmcontactsclient.h
+  ssmcontactsclient_p.h
+  ssmcontactsrequest.h
+  ssmcontactsrequest_p.h
+  ssmcontactsresponse.h
+  ssmcontactsresponse_p.h
   acceptpagerequest.h
   acceptpagerequest_p.h
   acceptpageresponse.h
@@ -9,26 +16,26 @@ add_library(QtAwsSSMContacts
   activatecontactchannelrequest_p.h
   activatecontactchannelresponse.h
   activatecontactchannelresponse_p.h
-  createcontactchannelrequest.h
-  createcontactchannelrequest_p.h
-  createcontactchannelresponse.h
-  createcontactchannelresponse_p.h
   createcontactrequest.h
   createcontactrequest_p.h
   createcontactresponse.h
   createcontactresponse_p.h
+  createcontactchannelrequest.h
+  createcontactchannelrequest_p.h
+  createcontactchannelresponse.h
+  createcontactchannelresponse_p.h
   deactivatecontactchannelrequest.h
   deactivatecontactchannelrequest_p.h
   deactivatecontactchannelresponse.h
   deactivatecontactchannelresponse_p.h
-  deletecontactchannelrequest.h
-  deletecontactchannelrequest_p.h
-  deletecontactchannelresponse.h
-  deletecontactchannelresponse_p.h
   deletecontactrequest.h
   deletecontactrequest_p.h
   deletecontactresponse.h
   deletecontactresponse_p.h
+  deletecontactchannelrequest.h
+  deletecontactchannelrequest_p.h
+  deletecontactchannelresponse.h
+  deletecontactchannelresponse_p.h
   describeengagementrequest.h
   describeengagementrequest_p.h
   describeengagementresponse.h
@@ -37,6 +44,10 @@ add_library(QtAwsSSMContacts
   describepagerequest_p.h
   describepageresponse.h
   describepageresponse_p.h
+  getcontactrequest.h
+  getcontactrequest_p.h
+  getcontactresponse.h
+  getcontactresponse_p.h
   getcontactchannelrequest.h
   getcontactchannelrequest_p.h
   getcontactchannelresponse.h
@@ -45,10 +56,6 @@ add_library(QtAwsSSMContacts
   getcontactpolicyrequest_p.h
   getcontactpolicyresponse.h
   getcontactpolicyresponse_p.h
-  getcontactrequest.h
-  getcontactrequest_p.h
-  getcontactresponse.h
-  getcontactresponse_p.h
   listcontactchannelsrequest.h
   listcontactchannelsrequest_p.h
   listcontactchannelsresponse.h
@@ -81,17 +88,10 @@ add_library(QtAwsSSMContacts
   putcontactpolicyrequest_p.h
   putcontactpolicyresponse.h
   putcontactpolicyresponse_p.h
-  qtawsssmcontactsglobal.h
   sendactivationcoderequest.h
   sendactivationcoderequest_p.h
   sendactivationcoderesponse.h
   sendactivationcoderesponse_p.h
-  ssmcontactsclient.h
-  ssmcontactsclient_p.h
-  ssmcontactsrequest.h
-  ssmcontactsrequest_p.h
-  ssmcontactsresponse.h
-  ssmcontactsresponse_p.h
   startengagementrequest.h
   startengagementrequest_p.h
   startengagementresponse.h
@@ -108,38 +108,41 @@ add_library(QtAwsSSMContacts
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updatecontactchannelrequest.h
-  updatecontactchannelrequest_p.h
-  updatecontactchannelresponse.h
-  updatecontactchannelresponse_p.h
   updatecontactrequest.h
   updatecontactrequest_p.h
   updatecontactresponse.h
   updatecontactresponse_p.h
+  updatecontactchannelrequest.h
+  updatecontactchannelrequest_p.h
+  updatecontactchannelresponse.h
+  updatecontactchannelresponse_p.h
+  ssmcontactsclient.cpp
+  ssmcontactsrequest.cpp
+  ssmcontactsresponse.cpp
   acceptpagerequest.cpp
   acceptpageresponse.cpp
   activatecontactchannelrequest.cpp
   activatecontactchannelresponse.cpp
-  createcontactchannelrequest.cpp
-  createcontactchannelresponse.cpp
   createcontactrequest.cpp
   createcontactresponse.cpp
+  createcontactchannelrequest.cpp
+  createcontactchannelresponse.cpp
   deactivatecontactchannelrequest.cpp
   deactivatecontactchannelresponse.cpp
-  deletecontactchannelrequest.cpp
-  deletecontactchannelresponse.cpp
   deletecontactrequest.cpp
   deletecontactresponse.cpp
+  deletecontactchannelrequest.cpp
+  deletecontactchannelresponse.cpp
   describeengagementrequest.cpp
   describeengagementresponse.cpp
   describepagerequest.cpp
   describepageresponse.cpp
+  getcontactrequest.cpp
+  getcontactresponse.cpp
   getcontactchannelrequest.cpp
   getcontactchannelresponse.cpp
   getcontactpolicyrequest.cpp
   getcontactpolicyresponse.cpp
-  getcontactrequest.cpp
-  getcontactresponse.cpp
   listcontactchannelsrequest.cpp
   listcontactchannelsresponse.cpp
   listcontactsrequest.cpp
@@ -158,9 +161,6 @@ add_library(QtAwsSSMContacts
   putcontactpolicyresponse.cpp
   sendactivationcoderequest.cpp
   sendactivationcoderesponse.cpp
-  ssmcontactsclient.cpp
-  ssmcontactsrequest.cpp
-  ssmcontactsresponse.cpp
   startengagementrequest.cpp
   startengagementresponse.cpp
   stopengagementrequest.cpp
@@ -169,12 +169,12 @@ add_library(QtAwsSSMContacts
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updatecontactchannelrequest.cpp
-  updatecontactchannelresponse.cpp
   updatecontactrequest.cpp
-  updatecontactresponse.cpp)
+  updatecontactresponse.cpp
+  updatecontactchannelrequest.cpp
+  updatecontactchannelresponse.cpp)
 
-target_link_libraries(QtAwsSSMContacts
+target_link_libraries(QtAwsSsmContacts
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

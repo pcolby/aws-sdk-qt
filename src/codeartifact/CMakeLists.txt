@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCODEARTIFACT_LIBRARY)
 
 add_library(QtAwsCodeArtifact
-  associateexternalconnectionrequest.h
-  associateexternalconnectionrequest_p.h
-  associateexternalconnectionresponse.h
-  associateexternalconnectionresponse_p.h
+  qtawscodeartifactglobal.h
   codeartifactclient.h
   codeartifactclient_p.h
   codeartifactrequest.h
   codeartifactrequest_p.h
   codeartifactresponse.h
   codeartifactresponse_p.h
+  associateexternalconnectionrequest.h
+  associateexternalconnectionrequest_p.h
+  associateexternalconnectionresponse.h
+  associateexternalconnectionresponse_p.h
   copypackageversionsrequest.h
   copypackageversionsrequest_p.h
   copypackageversionsresponse.h
@@ -23,30 +24,34 @@ add_library(QtAwsCodeArtifact
   createrepositoryrequest_p.h
   createrepositoryresponse.h
   createrepositoryresponse_p.h
-  deletedomainpermissionspolicyrequest.h
-  deletedomainpermissionspolicyrequest_p.h
-  deletedomainpermissionspolicyresponse.h
-  deletedomainpermissionspolicyresponse_p.h
   deletedomainrequest.h
   deletedomainrequest_p.h
   deletedomainresponse.h
   deletedomainresponse_p.h
+  deletedomainpermissionspolicyrequest.h
+  deletedomainpermissionspolicyrequest_p.h
+  deletedomainpermissionspolicyresponse.h
+  deletedomainpermissionspolicyresponse_p.h
   deletepackageversionsrequest.h
   deletepackageversionsrequest_p.h
   deletepackageversionsresponse.h
   deletepackageversionsresponse_p.h
-  deleterepositorypermissionspolicyrequest.h
-  deleterepositorypermissionspolicyrequest_p.h
-  deleterepositorypermissionspolicyresponse.h
-  deleterepositorypermissionspolicyresponse_p.h
   deleterepositoryrequest.h
   deleterepositoryrequest_p.h
   deleterepositoryresponse.h
   deleterepositoryresponse_p.h
+  deleterepositorypermissionspolicyrequest.h
+  deleterepositorypermissionspolicyrequest_p.h
+  deleterepositorypermissionspolicyresponse.h
+  deleterepositorypermissionspolicyresponse_p.h
   describedomainrequest.h
   describedomainrequest_p.h
   describedomainresponse.h
   describedomainresponse_p.h
+  describepackagerequest.h
+  describepackagerequest_p.h
+  describepackageresponse.h
+  describepackageresponse_p.h
   describepackageversionrequest.h
   describepackageversionrequest_p.h
   describepackageversionresponse.h
@@ -91,10 +96,6 @@ add_library(QtAwsCodeArtifact
   listdomainsrequest_p.h
   listdomainsresponse.h
   listdomainsresponse_p.h
-  listpackagesrequest.h
-  listpackagesrequest_p.h
-  listpackagesresponse.h
-  listpackagesresponse_p.h
   listpackageversionassetsrequest.h
   listpackageversionassetsrequest_p.h
   listpackageversionassetsresponse.h
@@ -107,14 +108,18 @@ add_library(QtAwsCodeArtifact
   listpackageversionsrequest_p.h
   listpackageversionsresponse.h
   listpackageversionsresponse_p.h
-  listrepositoriesindomainrequest.h
-  listrepositoriesindomainrequest_p.h
-  listrepositoriesindomainresponse.h
-  listrepositoriesindomainresponse_p.h
+  listpackagesrequest.h
+  listpackagesrequest_p.h
+  listpackagesresponse.h
+  listpackagesresponse_p.h
   listrepositoriesrequest.h
   listrepositoriesrequest_p.h
   listrepositoriesresponse.h
   listrepositoriesresponse_p.h
+  listrepositoriesindomainrequest.h
+  listrepositoriesindomainrequest_p.h
+  listrepositoriesindomainresponse.h
+  listrepositoriesindomainresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -123,11 +128,14 @@ add_library(QtAwsCodeArtifact
   putdomainpermissionspolicyrequest_p.h
   putdomainpermissionspolicyresponse.h
   putdomainpermissionspolicyresponse_p.h
+  putpackageoriginconfigurationrequest.h
+  putpackageoriginconfigurationrequest_p.h
+  putpackageoriginconfigurationresponse.h
+  putpackageoriginconfigurationresponse_p.h
   putrepositorypermissionspolicyrequest.h
   putrepositorypermissionspolicyrequest_p.h
   putrepositorypermissionspolicyresponse.h
   putrepositorypermissionspolicyresponse_p.h
-  qtawscodeartifactglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -144,29 +152,31 @@ add_library(QtAwsCodeArtifact
   updaterepositoryrequest_p.h
   updaterepositoryresponse.h
   updaterepositoryresponse_p.h
-  associateexternalconnectionrequest.cpp
-  associateexternalconnectionresponse.cpp
   codeartifactclient.cpp
   codeartifactrequest.cpp
   codeartifactresponse.cpp
+  associateexternalconnectionrequest.cpp
+  associateexternalconnectionresponse.cpp
   copypackageversionsrequest.cpp
   copypackageversionsresponse.cpp
   createdomainrequest.cpp
   createdomainresponse.cpp
   createrepositoryrequest.cpp
   createrepositoryresponse.cpp
-  deletedomainpermissionspolicyrequest.cpp
-  deletedomainpermissionspolicyresponse.cpp
   deletedomainrequest.cpp
   deletedomainresponse.cpp
+  deletedomainpermissionspolicyrequest.cpp
+  deletedomainpermissionspolicyresponse.cpp
   deletepackageversionsrequest.cpp
   deletepackageversionsresponse.cpp
-  deleterepositorypermissionspolicyrequest.cpp
-  deleterepositorypermissionspolicyresponse.cpp
   deleterepositoryrequest.cpp
   deleterepositoryresponse.cpp
+  deleterepositorypermissionspolicyrequest.cpp
+  deleterepositorypermissionspolicyresponse.cpp
   describedomainrequest.cpp
   describedomainresponse.cpp
+  describepackagerequest.cpp
+  describepackageresponse.cpp
   describepackageversionrequest.cpp
   describepackageversionresponse.cpp
   describerepositoryrequest.cpp
@@ -189,22 +199,24 @@ add_library(QtAwsCodeArtifact
   getrepositorypermissionspolicyresponse.cpp
   listdomainsrequest.cpp
   listdomainsresponse.cpp
-  listpackagesrequest.cpp
-  listpackagesresponse.cpp
   listpackageversionassetsrequest.cpp
   listpackageversionassetsresponse.cpp
   listpackageversiondependenciesrequest.cpp
   listpackageversiondependenciesresponse.cpp
   listpackageversionsrequest.cpp
   listpackageversionsresponse.cpp
-  listrepositoriesindomainrequest.cpp
-  listrepositoriesindomainresponse.cpp
+  listpackagesrequest.cpp
+  listpackagesresponse.cpp
   listrepositoriesrequest.cpp
   listrepositoriesresponse.cpp
+  listrepositoriesindomainrequest.cpp
+  listrepositoriesindomainresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putdomainpermissionspolicyrequest.cpp
   putdomainpermissionspolicyresponse.cpp
+  putpackageoriginconfigurationrequest.cpp
+  putpackageoriginconfigurationresponse.cpp
   putrepositorypermissionspolicyrequest.cpp
   putrepositorypermissionspolicyresponse.cpp
   tagresourcerequest.cpp

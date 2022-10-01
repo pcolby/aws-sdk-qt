@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupResponse
- * \brief The ListActivatedRulesInRuleGroupResponse class provides an interace for WAFRegional ListActivatedRulesInRuleGroup responses.
+ * \class QtAws::WafRegional::ListActivatedRulesInRuleGroupResponse
+ * \brief The ListActivatedRulesInRuleGroupResponse class provides an interace for WafRegional ListActivatedRulesInRuleGroup responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listActivatedRulesInRuleGroup
+ * \sa WafRegionalClient::listActivatedRulesInRuleGroup
  */
 
 /*!
@@ -67,7 +67,7 @@ ListActivatedRulesInRuleGroupResponse::ListActivatedRulesInRuleGroupResponse(
         const ListActivatedRulesInRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new ListActivatedRulesInRuleGroupRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListActivatedRulesInRuleGroupRequest * ListActivatedRulesInRuleGroupRespon
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListActivatedRulesInRuleGroup \a response.
+ * Parses a successful WafRegional ListActivatedRulesInRuleGroup \a response.
  */
 void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupResponsePrivate
+ * \class QtAws::WafRegional::ListActivatedRulesInRuleGroupResponsePrivate
  * \brief The ListActivatedRulesInRuleGroupResponsePrivate class provides private implementation for ListActivatedRulesInRuleGroupResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListActivatedRulesInRuleGroupResponsePrivate object with public implementation \a q.
  */
 ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponsePrivate(
-    ListActivatedRulesInRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListActivatedRulesInRuleGroupResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListActivatedRulesInRuleGroup response element from \a xml.
+ * Parses a WafRegional ListActivatedRulesInRuleGroup response element from \a xml.
  */
 void ListActivatedRulesInRuleGroupResponsePrivate::parseListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListActivatedRulesInRuleGroupResponsePrivate::parseListActivatedRulesInRule
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

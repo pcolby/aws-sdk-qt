@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribePendingMaintenanceActionsResponse
- * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for RDS DescribePendingMaintenanceActions responses.
+ * \class QtAws::Rds::DescribePendingMaintenanceActionsResponse
+ * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for Rds DescribePendingMaintenanceActions responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActio
 
 /*!
  * \reimp
- * Parses a successful RDS DescribePendingMaintenanceActions \a response.
+ * Parses a successful Rds DescribePendingMaintenanceActions \a response.
  */
 void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::RDS::DescribePendingMaintenanceActionsResponsePrivate
+ * \class QtAws::Rds::DescribePendingMaintenanceActionsResponsePrivate
  * \brief The DescribePendingMaintenanceActionsResponsePrivate class provides private implementation for DescribePendingMaintenanceActionsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActi
 }
 
 /*!
- * Parses a RDS DescribePendingMaintenanceActions response element from \a xml.
+ * Parses a Rds DescribePendingMaintenanceActions response element from \a xml.
  */
 void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaint
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

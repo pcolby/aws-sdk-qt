@@ -24,7 +24,7 @@
 #include "deletemessagerequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class DeleteMessageRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

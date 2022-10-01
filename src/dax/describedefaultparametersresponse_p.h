@@ -23,7 +23,7 @@
 #include "daxresponse_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DescribeDefaultParametersResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

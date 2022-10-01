@@ -24,7 +24,7 @@
 #include "addpermissionrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class AddPermissionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

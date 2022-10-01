@@ -24,11 +24,11 @@
 #include "describebackupsrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DescribeBackupsResponsePrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT DescribeBackupsResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT DescribeBackupsResponse : public CloudHsmV2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

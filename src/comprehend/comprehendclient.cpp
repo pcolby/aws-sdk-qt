@@ -31,6 +31,8 @@
 #include "batchdetectsentimentresponse.h"
 #include "batchdetectsyntaxrequest.h"
 #include "batchdetectsyntaxresponse.h"
+#include "batchdetecttargetedsentimentrequest.h"
+#include "batchdetecttargetedsentimentresponse.h"
 #include "classifydocumentrequest.h"
 #include "classifydocumentresponse.h"
 #include "containspiientitiesrequest.h"
@@ -47,6 +49,8 @@
 #include "deleteendpointresponse.h"
 #include "deleteentityrecognizerrequest.h"
 #include "deleteentityrecognizerresponse.h"
+#include "deleteresourcepolicyrequest.h"
+#include "deleteresourcepolicyresponse.h"
 #include "describedocumentclassificationjobrequest.h"
 #include "describedocumentclassificationjobresponse.h"
 #include "describedocumentclassifierrequest.h"
@@ -65,8 +69,12 @@
 #include "describekeyphrasesdetectionjobresponse.h"
 #include "describepiientitiesdetectionjobrequest.h"
 #include "describepiientitiesdetectionjobresponse.h"
+#include "describeresourcepolicyrequest.h"
+#include "describeresourcepolicyresponse.h"
 #include "describesentimentdetectionjobrequest.h"
 #include "describesentimentdetectionjobresponse.h"
+#include "describetargetedsentimentdetectionjobrequest.h"
+#include "describetargetedsentimentdetectionjobresponse.h"
 #include "describetopicsdetectionjobrequest.h"
 #include "describetopicsdetectionjobresponse.h"
 #include "detectdominantlanguagerequest.h"
@@ -81,8 +89,14 @@
 #include "detectsentimentresponse.h"
 #include "detectsyntaxrequest.h"
 #include "detectsyntaxresponse.h"
+#include "detecttargetedsentimentrequest.h"
+#include "detecttargetedsentimentresponse.h"
+#include "importmodelrequest.h"
+#include "importmodelresponse.h"
 #include "listdocumentclassificationjobsrequest.h"
 #include "listdocumentclassificationjobsresponse.h"
+#include "listdocumentclassifiersummariesrequest.h"
+#include "listdocumentclassifiersummariesresponse.h"
 #include "listdocumentclassifiersrequest.h"
 #include "listdocumentclassifiersresponse.h"
 #include "listdominantlanguagedetectionjobsrequest.h"
@@ -91,6 +105,8 @@
 #include "listendpointsresponse.h"
 #include "listentitiesdetectionjobsrequest.h"
 #include "listentitiesdetectionjobsresponse.h"
+#include "listentityrecognizersummariesrequest.h"
+#include "listentityrecognizersummariesresponse.h"
 #include "listentityrecognizersrequest.h"
 #include "listentityrecognizersresponse.h"
 #include "listeventsdetectionjobsrequest.h"
@@ -103,8 +119,12 @@
 #include "listsentimentdetectionjobsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtargetedsentimentdetectionjobsrequest.h"
+#include "listtargetedsentimentdetectionjobsresponse.h"
 #include "listtopicsdetectionjobsrequest.h"
 #include "listtopicsdetectionjobsresponse.h"
+#include "putresourcepolicyrequest.h"
+#include "putresourcepolicyresponse.h"
 #include "startdocumentclassificationjobrequest.h"
 #include "startdocumentclassificationjobresponse.h"
 #include "startdominantlanguagedetectionjobrequest.h"
@@ -119,6 +139,8 @@
 #include "startpiientitiesdetectionjobresponse.h"
 #include "startsentimentdetectionjobrequest.h"
 #include "startsentimentdetectionjobresponse.h"
+#include "starttargetedsentimentdetectionjobrequest.h"
+#include "starttargetedsentimentdetectionjobresponse.h"
 #include "starttopicsdetectionjobrequest.h"
 #include "starttopicsdetectionjobresponse.h"
 #include "stopdominantlanguagedetectionjobrequest.h"
@@ -133,6 +155,8 @@
 #include "stoppiientitiesdetectionjobresponse.h"
 #include "stopsentimentdetectionjobrequest.h"
 #include "stopsentimentdetectionjobresponse.h"
+#include "stoptargetedsentimentdetectionjobrequest.h"
+#include "stoptargetedsentimentdetectionjobresponse.h"
 #include "stoptrainingdocumentclassifierrequest.h"
 #include "stoptrainingdocumentclassifierresponse.h"
 #include "stoptrainingentityrecognizerrequest.h"
@@ -246,7 +270,8 @@ BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLangu
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Inspects the text of a batch of documents for named entities and returns information about them. For more information
- * about named entities, see <a>how-entities</a>
+ * about named entities, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-entities.html">Entities</a> in
+ * the Comprehend Developer Guide.
  */
 BatchDetectEntitiesResponse * ComprehendClient::batchDetectEntities(const BatchDetectEntitiesRequest &request)
 {
@@ -287,11 +312,30 @@ BatchDetectSentimentResponse * ComprehendClient::batchDetectSentiment(const Batc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Inspects the text of a batch of documents for the syntax and part of speech of the words in the document and returns
- * information about them. For more information, see
+ * information about them. For more information, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide.
  */
 BatchDetectSyntaxResponse * ComprehendClient::batchDetectSyntax(const BatchDetectSyntaxRequest &request)
 {
     return qobject_cast<BatchDetectSyntaxResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * BatchDetectTargetedSentimentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Inspects a batch of documents and returns a sentiment analysis for each entity identified in the
+ *
+ * documents>
+ *
+ * For more information about targeted sentiment, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted
+ */
+BatchDetectTargetedSentimentResponse * ComprehendClient::batchDetectTargetedSentiment(const BatchDetectTargetedSentimentRequest &request)
+{
+    return qobject_cast<BatchDetectTargetedSentimentResponse *>(send(request));
 }
 
 /*!
@@ -330,7 +374,9 @@ ContainsPiiEntitiesResponse * ComprehendClient::containsPiiEntities(const Contai
  *
  * Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of
  * training documents that labeled with the categories that you want to use. After the classifier is trained you can use it
- * to categorize a set of labeled documents into the categories. For more information, see
+ * to categorize a set of labeled documents into the categories. For more information, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html">Document Classification</a> in
+ * the Comprehend Developer Guide.
  */
 CreateDocumentClassifierResponse * ComprehendClient::createDocumentClassifier(const CreateDocumentClassifierRequest &request)
 {
@@ -343,7 +389,8 @@ CreateDocumentClassifierResponse * ComprehendClient::createDocumentClassifier(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a model-specific endpoint for synchronous inference for a previously trained custom model
+ * Creates a model-specific endpoint for synchronous inference for a previously trained custom model For information about
+ * endpoints, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing
  */
 CreateEndpointResponse * ComprehendClient::createEndpoint(const CreateEndpointRequest &request)
 {
@@ -394,7 +441,8 @@ DeleteDocumentClassifierResponse * ComprehendClient::deleteDocumentClassifier(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a model-specific endpoint for a previously-trained custom model. All endpoints must be deleted in order for the
- * model to be
+ * model to be deleted. For information about endpoints, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing
  */
 DeleteEndpointResponse * ComprehendClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -422,6 +470,19 @@ DeleteEndpointResponse * ComprehendClient::deleteEndpoint(const DeleteEndpointRe
 DeleteEntityRecognizerResponse * ComprehendClient::deleteEntityRecognizer(const DeleteEntityRecognizerRequest &request)
 {
     return qobject_cast<DeleteEntityRecognizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DeleteResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a resource-based policy that is attached to a custom
+ */
+DeleteResourcePolicyResponse * ComprehendClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
+{
+    return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
 }
 
 /*!
@@ -471,7 +532,9 @@ DescribeDominantLanguageDetectionJobResponse * ComprehendClient::describeDominan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the properties associated with a specific endpoint. Use this operation to get the status of an
+ * Gets the properties associated with a specific endpoint. Use this operation to get the status of an endpoint. For
+ * information about endpoints, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing
  */
 DescribeEndpointResponse * ComprehendClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
@@ -546,6 +609,19 @@ DescribePiiEntitiesDetectionJobResponse * ComprehendClient::describePiiEntitiesD
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the details of a resource-based policy that is attached to a custom model, including the JSON body of the
+ */
+DescribeResourcePolicyResponse * ComprehendClient::describeResourcePolicy(const DescribeResourcePolicyRequest &request)
+{
+    return qobject_cast<DescribeResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * DescribeSentimentDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -555,6 +631,19 @@ DescribePiiEntitiesDetectionJobResponse * ComprehendClient::describePiiEntitiesD
 DescribeSentimentDetectionJobResponse * ComprehendClient::describeSentimentDetectionJob(const DescribeSentimentDetectionJobRequest &request)
 {
     return qobject_cast<DescribeSentimentDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeTargetedSentimentDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with a targeted sentiment detection job. Use this operation to get the status of the
+ */
+DescribeTargetedSentimentDetectionJobResponse * ComprehendClient::describeTargetedSentimentDetectionJob(const DescribeTargetedSentimentDetectionJobRequest &request)
+{
+    return qobject_cast<DescribeTargetedSentimentDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -590,8 +679,8 @@ DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Inspects text for named entities, and returns information about them. For more information, about named entities, see
- * <a>how-entities</a>.
+ * Inspects text for named entities, and returns information about them. For more information, about named entities, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-entities.html">Entities</a> in the Comprehend Developer
  */
 DetectEntitiesResponse * ComprehendClient::detectEntities(const DetectEntitiesRequest &request)
 {
@@ -645,11 +734,53 @@ DetectSentimentResponse * ComprehendClient::detectSentiment(const DetectSentimen
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Inspects text for syntax and the part of speech of words in the document. For more information,
+ * Inspects text for syntax and the part of speech of words in the document. For more information, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-syntax.html">Syntax</a> in the Comprehend Developer Guide.
  */
 DetectSyntaxResponse * ComprehendClient::detectSyntax(const DetectSyntaxRequest &request)
 {
     return qobject_cast<DetectSyntaxResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectTargetedSentimentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Inspects the input text and returns a sentiment analysis for each entity identified in the
+ *
+ * text>
+ *
+ * For more information about targeted sentiment, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted
+ */
+DetectTargetedSentimentResponse * ComprehendClient::detectTargetedSentiment(const DetectTargetedSentimentRequest &request)
+{
+    return qobject_cast<DetectTargetedSentimentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ImportModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new custom model that replicates a source custom model that you import. The source model can be in your AWS
+ * account or another
+ *
+ * one>
+ *
+ * If the source model is in another AWS account, then it must have a resource-based policy that authorizes you to import
+ *
+ * it>
+ *
+ * The source model must be in the same AWS region that you're using when you import. You can't import a model that's in a
+ * different
+ */
+ImportModelResponse * ComprehendClient::importModel(const ImportModelRequest &request)
+{
+    return qobject_cast<ImportModelResponse *>(send(request));
 }
 
 /*!
@@ -663,6 +794,19 @@ DetectSyntaxResponse * ComprehendClient::detectSyntax(const DetectSyntaxRequest 
 ListDocumentClassificationJobsResponse * ComprehendClient::listDocumentClassificationJobs(const ListDocumentClassificationJobsRequest &request)
 {
     return qobject_cast<ListDocumentClassificationJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListDocumentClassifierSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of summaries of the document classifiers that you have
+ */
+ListDocumentClassifierSummariesResponse * ComprehendClient::listDocumentClassifierSummaries(const ListDocumentClassifierSummariesRequest &request)
+{
+    return qobject_cast<ListDocumentClassifierSummariesResponse *>(send(request));
 }
 
 /*!
@@ -697,7 +841,8 @@ ListDominantLanguageDetectionJobsResponse * ComprehendClient::listDominantLangua
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of all existing endpoints that you've
+ * Gets a list of all existing endpoints that you've created. For information about endpoints, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing
  */
 ListEndpointsResponse * ComprehendClient::listEndpoints(const ListEndpointsRequest &request)
 {
@@ -715,6 +860,19 @@ ListEndpointsResponse * ComprehendClient::listEndpoints(const ListEndpointsReque
 ListEntitiesDetectionJobsResponse * ComprehendClient::listEntitiesDetectionJobs(const ListEntitiesDetectionJobsRequest &request)
 {
     return qobject_cast<ListEntitiesDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListEntityRecognizerSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of summaries for the entity recognizers that you have
+ */
+ListEntityRecognizerSummariesResponse * ComprehendClient::listEntityRecognizerSummaries(const ListEntityRecognizerSummariesRequest &request)
+{
+    return qobject_cast<ListEntityRecognizerSummariesResponse *>(send(request));
 }
 
 /*!
@@ -803,6 +961,19 @@ ListTagsForResourceResponse * ComprehendClient::listTagsForResource(const ListTa
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListTargetedSentimentDetectionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of targeted sentiment detection jobs that you have
+ */
+ListTargetedSentimentDetectionJobsResponse * ComprehendClient::listTargetedSentimentDetectionJobs(const ListTargetedSentimentDetectionJobsRequest &request)
+{
+    return qobject_cast<ListTargetedSentimentDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * ListTopicsDetectionJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -812,6 +983,20 @@ ListTagsForResourceResponse * ComprehendClient::listTagsForResource(const ListTa
 ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request)
 {
     return qobject_cast<ListTopicsDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * PutResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attaches a resource-based policy to a custom model. You can use this policy to authorize an entity in another AWS
+ * account to import the custom model, which replicates it in Amazon Comprehend in their
+ */
+PutResourcePolicyResponse * ComprehendClient::putResourcePolicy(const PutResourcePolicyRequest &request)
+{
+    return qobject_cast<PutResourcePolicyResponse *>(send(request));
 }
 
 /*!
@@ -906,11 +1091,25 @@ StartPiiEntitiesDetectionJobResponse * ComprehendClient::startPiiEntitiesDetecti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an asynchronous sentiment detection job for a collection of documents. use the operation to track the status of a
+ * Starts an asynchronous sentiment detection job for a collection of documents. Use the operation to track the status of a
  */
 StartSentimentDetectionJobResponse * ComprehendClient::startSentimentDetectionJob(const StartSentimentDetectionJobRequest &request)
 {
     return qobject_cast<StartSentimentDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StartTargetedSentimentDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous targeted sentiment detection job for a collection of documents. Use the operation to track the
+ * status of a
+ */
+StartTargetedSentimentDetectionJobResponse * ComprehendClient::startTargetedSentimentDetectionJob(const StartTargetedSentimentDetectionJobRequest &request)
+{
+    return qobject_cast<StartTargetedSentimentDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -1047,7 +1246,7 @@ StopPiiEntitiesDetectionJobResponse * ComprehendClient::stopPiiEntitiesDetection
  *
  * progress>
  *
- * If the job state is <code>IN_PROGRESS</code> the job is marked for termination and put into the
+ * If the job state is <code>IN_PROGRESS</code>, the job is marked for termination and put into the
  * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
  * <code>COMPLETED</code> state; otherwise the job is be stopped and put into the <code>STOPPED</code>
  *
@@ -1063,6 +1262,34 @@ StopPiiEntitiesDetectionJobResponse * ComprehendClient::stopPiiEntitiesDetection
 StopSentimentDetectionJobResponse * ComprehendClient::stopSentimentDetectionJob(const StopSentimentDetectionJobRequest &request)
 {
     return qobject_cast<StopSentimentDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StopTargetedSentimentDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a targeted sentiment detection job in
+ *
+ * progress>
+ *
+ * If the job state is <code>IN_PROGRESS</code>, the job is marked for termination and put into the
+ * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
+ * <code>COMPLETED</code> state; otherwise the job is be stopped and put into the <code>STOPPED</code>
+ *
+ * state>
+ *
+ * If the job is in the <code>COMPLETED</code> or <code>FAILED</code> state when you call the
+ * <code>StopDominantLanguageDetectionJob</code> operation, the operation returns a 400 Internal Request Exception.
+ *
+ * </p
+ *
+ * When a job is stopped, any documents already processed are written to the output
+ */
+StopTargetedSentimentDetectionJobResponse * ComprehendClient::stopTargetedSentimentDetectionJob(const StopTargetedSentimentDetectionJobRequest &request)
+{
+    return qobject_cast<StopTargetedSentimentDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -1139,7 +1366,8 @@ UntagResourceResponse * ComprehendClient::untagResource(const UntagResourceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates information about the specified
+ * Updates information about the specified endpoint. For information about endpoints, see <a
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/manage-endpoints.html">Managing
  */
 UpdateEndpointResponse * ComprehendClient::updateEndpoint(const UpdateEndpointRequest &request)
 {

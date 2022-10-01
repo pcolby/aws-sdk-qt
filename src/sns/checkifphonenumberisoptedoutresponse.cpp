@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutResponse
- * \brief The CheckIfPhoneNumberIsOptedOutResponse class provides an interace for SNS CheckIfPhoneNumberIsOptedOut responses.
+ * \class QtAws::Sns::CheckIfPhoneNumberIsOptedOutResponse
+ * \brief The CheckIfPhoneNumberIsOptedOutResponse class provides an interace for Sns CheckIfPhoneNumberIsOptedOut responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse
 
 /*!
  * \reimp
- * Parses a successful SNS CheckIfPhoneNumberIsOptedOut \a response.
+ * Parses a successful Sns CheckIfPhoneNumberIsOptedOut \a response.
  */
 void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutResponsePrivate
+ * \class QtAws::Sns::CheckIfPhoneNumberIsOptedOutResponsePrivate
  * \brief The CheckIfPhoneNumberIsOptedOutResponsePrivate class provides private implementation for CheckIfPhoneNumberIsOptedOutResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutRespons
 }
 
 /*!
- * Parses a SNS CheckIfPhoneNumberIsOptedOut response element from \a xml.
+ * Parses a Sns CheckIfPhoneNumberIsOptedOut response element from \a xml.
  */
 void CheckIfPhoneNumberIsOptedOutResponsePrivate::parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void CheckIfPhoneNumberIsOptedOutResponsePrivate::parseCheckIfPhoneNumberIsOpted
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

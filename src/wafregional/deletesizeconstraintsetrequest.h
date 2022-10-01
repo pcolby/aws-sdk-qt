@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteSizeConstraintSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteSizeConstraintSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteSizeConstraintSetRequest : public WafRegionalRequest {
 
 public:
     DeleteSizeConstraintSetRequest(const DeleteSizeConstraintSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

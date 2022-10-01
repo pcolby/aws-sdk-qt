@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetApiKeyResponse
- * \brief The GetApiKeyResponse class provides an interace for APIGateway GetApiKey responses.
+ * \class QtAws::ApiGateway::GetApiKeyResponse
+ * \brief The GetApiKeyResponse class provides an interace for ApiGateway GetApiKey responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getApiKey
+ * \sa ApiGatewayClient::getApiKey
  */
 
 /*!
@@ -49,7 +49,7 @@ GetApiKeyResponse::GetApiKeyResponse(
         const GetApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetApiKeyResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetApiKeyResponsePrivate(this), parent)
 {
     setRequest(new GetApiKeyRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetApiKeyRequest * GetApiKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetApiKey \a response.
+ * Parses a successful ApiGateway GetApiKey \a response.
  */
 void GetApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetApiKeyResponsePrivate
+ * \class QtAws::ApiGateway::GetApiKeyResponsePrivate
  * \brief The GetApiKeyResponsePrivate class provides private implementation for GetApiKeyResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetApiKeyResponsePrivate object with public implementation \a q.
  */
 GetApiKeyResponsePrivate::GetApiKeyResponsePrivate(
-    GetApiKeyResponse * const q) : APIGatewayResponsePrivate(q)
+    GetApiKeyResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetApiKey response element from \a xml.
+ * Parses a ApiGateway GetApiKey response element from \a xml.
  */
 void GetApiKeyResponsePrivate::parseGetApiKeyResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetApiKeyResponsePrivate::parseGetApiKeyResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

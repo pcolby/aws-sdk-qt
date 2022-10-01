@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::PutPermissionPolicyRequest
- * \brief The PutPermissionPolicyRequest class provides an interface for WAF PutPermissionPolicy requests.
+ * \class QtAws::Waf::PutPermissionPolicyRequest
+ * \brief The PutPermissionPolicyRequest class provides an interface for Waf PutPermissionPolicy requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::PutPermissionPolicyRequestPrivate
+ * \class QtAws::Waf::PutPermissionPolicyRequestPrivate
  * \brief The PutPermissionPolicyRequestPrivate class provides private implementation for PutPermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

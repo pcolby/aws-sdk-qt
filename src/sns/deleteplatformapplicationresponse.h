@@ -24,7 +24,7 @@
 #include "deleteplatformapplicationrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class DeletePlatformApplicationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

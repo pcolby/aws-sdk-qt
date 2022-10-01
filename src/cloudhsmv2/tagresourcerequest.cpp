@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for CloudHSMV2 TagResource requests.
+ * \class QtAws::CloudHsmV2::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for CloudHsmV2 TagResource requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::tagResource
+ * \sa CloudHsmV2Client::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : CloudHSMV2Request(new TagResourceRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : CloudHSMV2Request(new TagResourceRequestPrivate(CloudHSMV2Request::TagResourceAction, this))
+    : CloudHsmV2Request(new TagResourceRequestPrivate(CloudHsmV2Request::TagResourceAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::CloudHSMV2::TagResourceRequestPrivate
+ * \class QtAws::CloudHsmV2::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a TagResourceRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const CloudHSMV2Request::Action action, TagResourceRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, TagResourceRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

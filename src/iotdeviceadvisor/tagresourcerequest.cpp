@@ -23,30 +23,30 @@
 #include "iotdeviceadvisorrequest_p.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for IoTDeviceAdvisor TagResource requests.
+ * \class QtAws::IotDeviceAdvisor::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for IotDeviceAdvisor TagResource requests.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::tagResource
+ * \sa IotDeviceAdvisorClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : IoTDeviceAdvisorRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : IotDeviceAdvisorRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : IoTDeviceAdvisorRequest(new TagResourceRequestPrivate(IoTDeviceAdvisorRequest::TagResourceAction, this))
+    : IotDeviceAdvisorRequest(new TagResourceRequestPrivate(IotDeviceAdvisorRequest::TagResourceAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::TagResourceRequestPrivate
+ * \class QtAws::IotDeviceAdvisor::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for IoTDeviceAdvisor \a action,
+ * Constructs a TagResourceRequestPrivate object for IotDeviceAdvisor \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const IoTDeviceAdvisorRequest::Action action, TagResourceRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(action, q)
+    const IotDeviceAdvisorRequest::Action action, TagResourceRequest * const q)
+    : IotDeviceAdvisorRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(other, q)
+    : IotDeviceAdvisorRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

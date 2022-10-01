@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicResponsePrivate;
+class EcrPublicResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT ECRPublicResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSECRPUBLIC_EXPORT EcrPublicResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ECRPublicResponse(QObject * const parent = 0);
+    EcrPublicResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ECRPublicResponse(ECRPublicResponsePrivate * const d, QObject * const parent);
+    EcrPublicResponse(EcrPublicResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ECRPublicResponse)
-    Q_DISABLE_COPY(ECRPublicResponse)
+    Q_DECLARE_PRIVATE(EcrPublicResponse)
+    Q_DISABLE_COPY(EcrPublicResponse)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

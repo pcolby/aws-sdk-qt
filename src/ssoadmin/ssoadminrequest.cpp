@@ -21,59 +21,65 @@
 #include "ssoadminrequest_p.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 /*!
- * \class QtAws::SSOAdmin::SSOAdminRequest
- * \brief The SSOAdminRequest class provides an interface for SSOAdmin requests.
+ * \class QtAws::SsoAdmin::SsoAdminRequest
+ * \brief The SsoAdminRequest class provides an interface for SsoAdmin requests.
  *
- * \inmodule QtAwsSSOAdmin
+ * \inmodule QtAwsSsoAdmin
  */
 
 /*!
- * \enum SSOAdminRequest::Action
+ * \enum SsoAdminRequest::Action
  *
- * This enum describes the actions that can be performed as SSOAdmin
+ * This enum describes the actions that can be performed as SsoAdmin
  * requests.
  *
- * \value AttachManagedPolicyToPermissionSetAction SSOAdmin AttachManagedPolicyToPermissionSet action.
- * \value CreateAccountAssignmentAction SSOAdmin CreateAccountAssignment action.
- * \value CreateInstanceAccessControlAttributeConfigurationAction SSOAdmin CreateInstanceAccessControlAttributeConfiguration action.
- * \value CreatePermissionSetAction SSOAdmin CreatePermissionSet action.
- * \value DeleteAccountAssignmentAction SSOAdmin DeleteAccountAssignment action.
- * \value DeleteInlinePolicyFromPermissionSetAction SSOAdmin DeleteInlinePolicyFromPermissionSet action.
- * \value DeleteInstanceAccessControlAttributeConfigurationAction SSOAdmin DeleteInstanceAccessControlAttributeConfiguration action.
- * \value DeletePermissionSetAction SSOAdmin DeletePermissionSet action.
- * \value DescribeAccountAssignmentCreationStatusAction SSOAdmin DescribeAccountAssignmentCreationStatus action.
- * \value DescribeAccountAssignmentDeletionStatusAction SSOAdmin DescribeAccountAssignmentDeletionStatus action.
- * \value DescribeInstanceAccessControlAttributeConfigurationAction SSOAdmin DescribeInstanceAccessControlAttributeConfiguration action.
- * \value DescribePermissionSetAction SSOAdmin DescribePermissionSet action.
- * \value DescribePermissionSetProvisioningStatusAction SSOAdmin DescribePermissionSetProvisioningStatus action.
- * \value DetachManagedPolicyFromPermissionSetAction SSOAdmin DetachManagedPolicyFromPermissionSet action.
- * \value GetInlinePolicyForPermissionSetAction SSOAdmin GetInlinePolicyForPermissionSet action.
- * \value ListAccountAssignmentCreationStatusAction SSOAdmin ListAccountAssignmentCreationStatus action.
- * \value ListAccountAssignmentDeletionStatusAction SSOAdmin ListAccountAssignmentDeletionStatus action.
- * \value ListAccountAssignmentsAction SSOAdmin ListAccountAssignments action.
- * \value ListAccountsForProvisionedPermissionSetAction SSOAdmin ListAccountsForProvisionedPermissionSet action.
- * \value ListInstancesAction SSOAdmin ListInstances action.
- * \value ListManagedPoliciesInPermissionSetAction SSOAdmin ListManagedPoliciesInPermissionSet action.
- * \value ListPermissionSetProvisioningStatusAction SSOAdmin ListPermissionSetProvisioningStatus action.
- * \value ListPermissionSetsAction SSOAdmin ListPermissionSets action.
- * \value ListPermissionSetsProvisionedToAccountAction SSOAdmin ListPermissionSetsProvisionedToAccount action.
- * \value ListTagsForResourceAction SSOAdmin ListTagsForResource action.
- * \value ProvisionPermissionSetAction SSOAdmin ProvisionPermissionSet action.
- * \value PutInlinePolicyToPermissionSetAction SSOAdmin PutInlinePolicyToPermissionSet action.
- * \value TagResourceAction SSOAdmin TagResource action.
- * \value UntagResourceAction SSOAdmin UntagResource action.
- * \value UpdateInstanceAccessControlAttributeConfigurationAction SSOAdmin UpdateInstanceAccessControlAttributeConfiguration action.
- * \value UpdatePermissionSetAction SSOAdmin UpdatePermissionSet action.
+ * \value AttachCustomerManagedPolicyReferenceToPermissionSetAction SsoAdmin AttachCustomerManagedPolicyReferenceToPermissionSet action.
+ * \value AttachManagedPolicyToPermissionSetAction SsoAdmin AttachManagedPolicyToPermissionSet action.
+ * \value CreateAccountAssignmentAction SsoAdmin CreateAccountAssignment action.
+ * \value CreateInstanceAccessControlAttributeConfigurationAction SsoAdmin CreateInstanceAccessControlAttributeConfiguration action.
+ * \value CreatePermissionSetAction SsoAdmin CreatePermissionSet action.
+ * \value DeleteAccountAssignmentAction SsoAdmin DeleteAccountAssignment action.
+ * \value DeleteInlinePolicyFromPermissionSetAction SsoAdmin DeleteInlinePolicyFromPermissionSet action.
+ * \value DeleteInstanceAccessControlAttributeConfigurationAction SsoAdmin DeleteInstanceAccessControlAttributeConfiguration action.
+ * \value DeletePermissionSetAction SsoAdmin DeletePermissionSet action.
+ * \value DeletePermissionsBoundaryFromPermissionSetAction SsoAdmin DeletePermissionsBoundaryFromPermissionSet action.
+ * \value DescribeAccountAssignmentCreationStatusAction SsoAdmin DescribeAccountAssignmentCreationStatus action.
+ * \value DescribeAccountAssignmentDeletionStatusAction SsoAdmin DescribeAccountAssignmentDeletionStatus action.
+ * \value DescribeInstanceAccessControlAttributeConfigurationAction SsoAdmin DescribeInstanceAccessControlAttributeConfiguration action.
+ * \value DescribePermissionSetAction SsoAdmin DescribePermissionSet action.
+ * \value DescribePermissionSetProvisioningStatusAction SsoAdmin DescribePermissionSetProvisioningStatus action.
+ * \value DetachCustomerManagedPolicyReferenceFromPermissionSetAction SsoAdmin DetachCustomerManagedPolicyReferenceFromPermissionSet action.
+ * \value DetachManagedPolicyFromPermissionSetAction SsoAdmin DetachManagedPolicyFromPermissionSet action.
+ * \value GetInlinePolicyForPermissionSetAction SsoAdmin GetInlinePolicyForPermissionSet action.
+ * \value GetPermissionsBoundaryForPermissionSetAction SsoAdmin GetPermissionsBoundaryForPermissionSet action.
+ * \value ListAccountAssignmentCreationStatusAction SsoAdmin ListAccountAssignmentCreationStatus action.
+ * \value ListAccountAssignmentDeletionStatusAction SsoAdmin ListAccountAssignmentDeletionStatus action.
+ * \value ListAccountAssignmentsAction SsoAdmin ListAccountAssignments action.
+ * \value ListAccountsForProvisionedPermissionSetAction SsoAdmin ListAccountsForProvisionedPermissionSet action.
+ * \value ListCustomerManagedPolicyReferencesInPermissionSetAction SsoAdmin ListCustomerManagedPolicyReferencesInPermissionSet action.
+ * \value ListInstancesAction SsoAdmin ListInstances action.
+ * \value ListManagedPoliciesInPermissionSetAction SsoAdmin ListManagedPoliciesInPermissionSet action.
+ * \value ListPermissionSetProvisioningStatusAction SsoAdmin ListPermissionSetProvisioningStatus action.
+ * \value ListPermissionSetsAction SsoAdmin ListPermissionSets action.
+ * \value ListPermissionSetsProvisionedToAccountAction SsoAdmin ListPermissionSetsProvisionedToAccount action.
+ * \value ListTagsForResourceAction SsoAdmin ListTagsForResource action.
+ * \value ProvisionPermissionSetAction SsoAdmin ProvisionPermissionSet action.
+ * \value PutInlinePolicyToPermissionSetAction SsoAdmin PutInlinePolicyToPermissionSet action.
+ * \value PutPermissionsBoundaryToPermissionSetAction SsoAdmin PutPermissionsBoundaryToPermissionSet action.
+ * \value TagResourceAction SsoAdmin TagResource action.
+ * \value UntagResourceAction SsoAdmin UntagResource action.
+ * \value UpdateInstanceAccessControlAttributeConfigurationAction SsoAdmin UpdateInstanceAccessControlAttributeConfiguration action.
+ * \value UpdatePermissionSetAction SsoAdmin UpdatePermissionSet action.
  */
 
 /*!
- * Constructs a SSOAdminRequest object for SSOAdmin \a action.
+ * Constructs a SsoAdminRequest object for SsoAdmin \a action.
  */
-SSOAdminRequest::SSOAdminRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SSOAdminRequestPrivate(action, this))
+SsoAdminRequest::SsoAdminRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SsoAdminRequestPrivate(action, this))
 {
 
 }
@@ -81,18 +87,18 @@ SSOAdminRequest::SSOAdminRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SSOAdminRequest::SSOAdminRequest(const SSOAdminRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SSOAdminRequestPrivate(*other.d_func(), this))
+SsoAdminRequest::SsoAdminRequest(const SsoAdminRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SsoAdminRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SSOAdminRequest object to be equal to \a other.
+ * Sets the SsoAdminRequest object to be equal to \a other.
  */
-SSOAdminRequest& SSOAdminRequest::operator=(const SSOAdminRequest &other)
+SsoAdminRequest& SsoAdminRequest::operator=(const SsoAdminRequest &other)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -100,57 +106,57 @@ SSOAdminRequest& SSOAdminRequest::operator=(const SSOAdminRequest &other)
 }
 
 /*!
- * Constructs aa SSOAdminRequest object with private implementation \a d.
+ * Constructs aa SsoAdminRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSOAdminRequestPrivate.
+ * implementation that inherits from SsoAdminRequestPrivate.
  */
-SSOAdminRequest::SSOAdminRequest(SSOAdminRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsoAdminRequest::SsoAdminRequest(SsoAdminRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the SSOAdmin action to be performed by this request.
+ * Returns the SsoAdmin action to be performed by this request.
  */
-SSOAdminRequest::Action SSOAdminRequest::action() const
+SsoAdminRequest::Action SsoAdminRequest::action() const
 {
-    Q_D(const SSOAdminRequest);
+    Q_D(const SsoAdminRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the SSOAdmin action to be performed by this request.
+ * Returns the name of the SsoAdmin action to be performed by this request.
  */
-QString SSOAdminRequest::actionString() const
+QString SsoAdminRequest::actionString() const
 {
-    return SSOAdminRequestPrivate::toString(action());
+    return SsoAdminRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the SSOAdmin API version implemented by this request.
+ * Returns the SsoAdmin API version implemented by this request.
  */
-QString SSOAdminRequest::apiVersion() const
+QString SsoAdminRequest::apiVersion() const
 {
-    Q_D(const SSOAdminRequest);
+    Q_D(const SsoAdminRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the SSOAdmin action to be performed by this request to \a action.
+ * Sets the SsoAdmin action to be performed by this request to \a action.
  */
-void SSOAdminRequest::setAction(const Action action)
+void SsoAdminRequest::setAction(const Action action)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->action = action;
 }
 
 /*!
- * Sets the SSOAdmin API version to include in this request to \a version.
+ * Sets the SsoAdmin API version to include in this request to \a version.
  */
-void SSOAdminRequest::setApiVersion(const QString &version)
+void SsoAdminRequest::setApiVersion(const QString &version)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->apiVersion = version;
 }
 
@@ -162,7 +168,7 @@ void SSOAdminRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SSOAdminRequest::operator==(const SSOAdminRequest &other) const
+bool SsoAdminRequest::operator==(const SsoAdminRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -171,19 +177,19 @@ bool SSOAdminRequest::operator==(const SSOAdminRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SSOAdmin queue name.
+ * Returns \c tue if \a queueName is a valid SsoAdmin queue name.
  *
- * @par From SSOAdmin FAQs:
+ * @par From SsoAdmin FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SSOAdmin queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid SsoAdmin queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SSOAdminRequest::isValidQueueName(const QString &queueName)
+/*bool SsoAdminRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -193,45 +199,45 @@ bool SSOAdminRequest::operator==(const SSOAdminRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SSOAdminRequest::clearParameter(const QString &name)
+int SsoAdminRequest::clearParameter(const QString &name)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SSOAdminRequest::clearParameters()
+void SsoAdminRequest::clearParameters()
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SSOAdminRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SsoAdminRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SSOAdminRequest);
+    Q_D(const SsoAdminRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SSOAdminRequest::parameters() const
+const QVariantMap &SsoAdminRequest::parameters() const
 {
-    Q_D(const SSOAdminRequest);
+    Q_D(const SsoAdminRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SSOAdminRequest::setParameter(const QString &name, const QVariant &value)
+void SsoAdminRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->parameters.insert(name, value);
 }
 
@@ -239,42 +245,42 @@ void SSOAdminRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SSOAdminRequest::setParameters(const QVariantMap &parameters)
+void SsoAdminRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SSOAdminRequest);
+    Q_D(SsoAdminRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the SSOAdmin request using the given
+ * Returns a network request for the SsoAdmin request using the given
  * \a endpoint.
  *
- * This SSOAdmin implementation builds request URLs by combining the
+ * This SsoAdmin implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SSOAdminRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SsoAdminRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const SSOAdminRequest);
+    //Q_D(const SsoAdminRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SSOAdmin::SSOAdminRequestPrivate
- * \brief The SSOAdminRequestPrivate class provides private implementation for SSOAdminRequest.
+ * \class QtAws::SsoAdmin::SsoAdminRequestPrivate
+ * \brief The SsoAdminRequestPrivate class provides private implementation for SsoAdminRequest.
  * \internal
  *
- * \inmodule QtAwsSSOAdmin
+ * \inmodule QtAwsSsoAdmin
  */
 
 /*!
- * Constructs a SSOAdminRequestPrivate object for SSOAdmin \a action,
+ * Constructs a SsoAdminRequestPrivate object for SsoAdmin \a action,
  * with public implementation \a q.
  */
-SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequest::Action action, SSOAdminRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+SsoAdminRequestPrivate::SsoAdminRequestPrivate(const SsoAdminRequest::Action action, SsoAdminRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-07-20"))
 {
 
 }
@@ -285,10 +291,10 @@ SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequest::Action act
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SSOAdminRequest class's copy constructor.
+ * This is required to support the SsoAdminRequest class's copy constructor.
  */
-SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequestPrivate &other,
-                                     SSOAdminRequest * const q)
+SsoAdminRequestPrivate::SsoAdminRequestPrivate(const SsoAdminRequestPrivate &other,
+                                     SsoAdminRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -299,15 +305,16 @@ SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequestPrivate &oth
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SSOAdminRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SSOAdmin service's Action
+ * This function converts SsoAdminRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the SsoAdmin service's Action
  * query parameters.
  */
-QString SSOAdminRequestPrivate::toString(const SSOAdminRequest::Action &action)
+QString SsoAdminRequestPrivate::toString(const SsoAdminRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SSOAdminRequest::action##Action: return QStringLiteral(#action)
+        case SsoAdminRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AttachCustomerManagedPolicyReferenceToPermissionSet);
         ActionToString(AttachManagedPolicyToPermissionSet);
         ActionToString(CreateAccountAssignment);
         ActionToString(CreateInstanceAccessControlAttributeConfiguration);
@@ -316,17 +323,21 @@ QString SSOAdminRequestPrivate::toString(const SSOAdminRequest::Action &action)
         ActionToString(DeleteInlinePolicyFromPermissionSet);
         ActionToString(DeleteInstanceAccessControlAttributeConfiguration);
         ActionToString(DeletePermissionSet);
+        ActionToString(DeletePermissionsBoundaryFromPermissionSet);
         ActionToString(DescribeAccountAssignmentCreationStatus);
         ActionToString(DescribeAccountAssignmentDeletionStatus);
         ActionToString(DescribeInstanceAccessControlAttributeConfiguration);
         ActionToString(DescribePermissionSet);
         ActionToString(DescribePermissionSetProvisioningStatus);
+        ActionToString(DetachCustomerManagedPolicyReferenceFromPermissionSet);
         ActionToString(DetachManagedPolicyFromPermissionSet);
         ActionToString(GetInlinePolicyForPermissionSet);
+        ActionToString(GetPermissionsBoundaryForPermissionSet);
         ActionToString(ListAccountAssignmentCreationStatus);
         ActionToString(ListAccountAssignmentDeletionStatus);
         ActionToString(ListAccountAssignments);
         ActionToString(ListAccountsForProvisionedPermissionSet);
+        ActionToString(ListCustomerManagedPolicyReferencesInPermissionSet);
         ActionToString(ListInstances);
         ActionToString(ListManagedPoliciesInPermissionSet);
         ActionToString(ListPermissionSetProvisioningStatus);
@@ -335,6 +346,7 @@ QString SSOAdminRequestPrivate::toString(const SSOAdminRequest::Action &action)
         ActionToString(ListTagsForResource);
         ActionToString(ProvisionPermissionSet);
         ActionToString(PutInlinePolicyToPermissionSet);
+        ActionToString(PutPermissionsBoundaryToPermissionSet);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateInstanceAccessControlAttributeConfiguration);
@@ -346,5 +358,5 @@ QString SSOAdminRequestPrivate::toString(const SSOAdminRequest::Action &action)
     return QString();
 }
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws

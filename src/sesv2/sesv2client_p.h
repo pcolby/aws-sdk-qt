@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2Client;
+class SESv2Client;
 
-class Sesv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SESv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit Sesv2ClientPrivate(Sesv2Client * const q);
+    explicit SESv2ClientPrivate(SESv2Client * const q);
 
 private:
-    Q_DECLARE_PUBLIC(Sesv2Client)
-    Q_DISABLE_COPY(Sesv2ClientPrivate)
+    Q_DECLARE_PUBLIC(SESv2Client)
+    Q_DISABLE_COPY(SESv2ClientPrivate)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

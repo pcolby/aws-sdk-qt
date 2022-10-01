@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListWorkflowTypesRequest
- * \brief The ListWorkflowTypesRequest class provides an interface for SWF ListWorkflowTypes requests.
+ * \class QtAws::Swf::ListWorkflowTypesRequest
+ * \brief The ListWorkflowTypesRequest class provides an interface for Swf ListWorkflowTypes requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SWF::ListWorkflowTypesRequestPrivate
+ * \class QtAws::Swf::ListWorkflowTypesRequestPrivate
  * \brief The ListWorkflowTypesRequestPrivate class provides private implementation for ListWorkflowTypesRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

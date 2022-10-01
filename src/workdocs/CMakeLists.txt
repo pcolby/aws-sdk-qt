@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWORKDOCS_LIBRARY)
 
 add_library(QtAwsWorkDocs
+  qtawsworkdocsglobal.h
+  workdocsclient.h
+  workdocsclient_p.h
+  workdocsrequest.h
+  workdocsrequest_p.h
+  workdocsresponse.h
+  workdocsresponse_p.h
   abortdocumentversionuploadrequest.h
   abortdocumentversionuploadrequest_p.h
   abortdocumentversionuploadresponse.h
@@ -53,14 +60,14 @@ add_library(QtAwsWorkDocs
   deletedocumentrequest_p.h
   deletedocumentresponse.h
   deletedocumentresponse_p.h
-  deletefoldercontentsrequest.h
-  deletefoldercontentsrequest_p.h
-  deletefoldercontentsresponse.h
-  deletefoldercontentsresponse_p.h
   deletefolderrequest.h
   deletefolderrequest_p.h
   deletefolderresponse.h
   deletefolderresponse_p.h
+  deletefoldercontentsrequest.h
+  deletefoldercontentsrequest_p.h
+  deletefoldercontentsresponse.h
+  deletefoldercontentsresponse_p.h
   deletelabelsrequest.h
   deletelabelsrequest_p.h
   deletelabelsresponse.h
@@ -113,26 +120,26 @@ add_library(QtAwsWorkDocs
   getcurrentuserrequest_p.h
   getcurrentuserresponse.h
   getcurrentuserresponse_p.h
-  getdocumentpathrequest.h
-  getdocumentpathrequest_p.h
-  getdocumentpathresponse.h
-  getdocumentpathresponse_p.h
   getdocumentrequest.h
   getdocumentrequest_p.h
   getdocumentresponse.h
   getdocumentresponse_p.h
+  getdocumentpathrequest.h
+  getdocumentpathrequest_p.h
+  getdocumentpathresponse.h
+  getdocumentpathresponse_p.h
   getdocumentversionrequest.h
   getdocumentversionrequest_p.h
   getdocumentversionresponse.h
   getdocumentversionresponse_p.h
-  getfolderpathrequest.h
-  getfolderpathrequest_p.h
-  getfolderpathresponse.h
-  getfolderpathresponse_p.h
   getfolderrequest.h
   getfolderrequest_p.h
   getfolderresponse.h
   getfolderresponse_p.h
+  getfolderpathrequest.h
+  getfolderpathrequest_p.h
+  getfolderpathresponse.h
+  getfolderpathresponse_p.h
   getresourcesrequest.h
   getresourcesrequest_p.h
   getresourcesresponse.h
@@ -141,7 +148,6 @@ add_library(QtAwsWorkDocs
   initiatedocumentversionuploadrequest_p.h
   initiatedocumentversionuploadresponse.h
   initiatedocumentversionuploadresponse_p.h
-  qtawsworkdocsglobal.h
   removeallresourcepermissionsrequest.h
   removeallresourcepermissionsrequest_p.h
   removeallresourcepermissionsresponse.h
@@ -166,12 +172,9 @@ add_library(QtAwsWorkDocs
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
-  workdocsclient.h
-  workdocsclient_p.h
-  workdocsrequest.h
-  workdocsrequest_p.h
-  workdocsresponse.h
-  workdocsresponse_p.h
+  workdocsclient.cpp
+  workdocsrequest.cpp
+  workdocsresponse.cpp
   abortdocumentversionuploadrequest.cpp
   abortdocumentversionuploadresponse.cpp
   activateuserrequest.cpp
@@ -198,10 +201,10 @@ add_library(QtAwsWorkDocs
   deletecustommetadataresponse.cpp
   deletedocumentrequest.cpp
   deletedocumentresponse.cpp
-  deletefoldercontentsrequest.cpp
-  deletefoldercontentsresponse.cpp
   deletefolderrequest.cpp
   deletefolderresponse.cpp
+  deletefoldercontentsrequest.cpp
+  deletefoldercontentsresponse.cpp
   deletelabelsrequest.cpp
   deletelabelsresponse.cpp
   deletenotificationsubscriptionrequest.cpp
@@ -228,16 +231,16 @@ add_library(QtAwsWorkDocs
   describeusersresponse.cpp
   getcurrentuserrequest.cpp
   getcurrentuserresponse.cpp
-  getdocumentpathrequest.cpp
-  getdocumentpathresponse.cpp
   getdocumentrequest.cpp
   getdocumentresponse.cpp
+  getdocumentpathrequest.cpp
+  getdocumentpathresponse.cpp
   getdocumentversionrequest.cpp
   getdocumentversionresponse.cpp
-  getfolderpathrequest.cpp
-  getfolderpathresponse.cpp
   getfolderrequest.cpp
   getfolderresponse.cpp
+  getfolderpathrequest.cpp
+  getfolderpathresponse.cpp
   getresourcesrequest.cpp
   getresourcesresponse.cpp
   initiatedocumentversionuploadrequest.cpp
@@ -253,10 +256,7 @@ add_library(QtAwsWorkDocs
   updatefolderrequest.cpp
   updatefolderresponse.cpp
   updateuserrequest.cpp
-  updateuserresponse.cpp
-  workdocsclient.cpp
-  workdocsrequest.cpp
-  workdocsresponse.cpp)
+  updateuserresponse.cpp)
 
 target_link_libraries(QtAwsWorkDocs
   PRIVATE QtAwsCore

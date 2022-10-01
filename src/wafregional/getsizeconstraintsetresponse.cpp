@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetSizeConstraintSetResponse
- * \brief The GetSizeConstraintSetResponse class provides an interace for WAFRegional GetSizeConstraintSet responses.
+ * \class QtAws::WafRegional::GetSizeConstraintSetResponse
+ * \brief The GetSizeConstraintSetResponse class provides an interace for WafRegional GetSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getSizeConstraintSet
+ * \sa WafRegionalClient::getSizeConstraintSet
  */
 
 /*!
@@ -67,7 +67,7 @@ GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
         const GetSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetSizeConstraintSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new GetSizeConstraintSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetSizeConstraintSet \a response.
+ * Parses a successful WafRegional GetSizeConstraintSet \a response.
  */
 void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetSizeConstraintSetResponsePrivate
+ * \class QtAws::WafRegional::GetSizeConstraintSetResponsePrivate
  * \brief The GetSizeConstraintSetResponsePrivate class provides private implementation for GetSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
-    GetSizeConstraintSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetSizeConstraintSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetSizeConstraintSet response element from \a xml.
+ * Parses a WafRegional GetSizeConstraintSet response element from \a xml.
  */
 void GetSizeConstraintSetResponsePrivate::parseGetSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetSizeConstraintSetResponsePrivate::parseGetSizeConstraintSetResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

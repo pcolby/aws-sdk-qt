@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateRegexMatchSetRequest
- * \brief The CreateRegexMatchSetRequest class provides an interface for WAFRegional CreateRegexMatchSet requests.
+ * \class QtAws::WafRegional::CreateRegexMatchSetRequest
+ * \brief The CreateRegexMatchSetRequest class provides an interface for WafRegional CreateRegexMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createRegexMatchSet
+ * \sa WafRegionalClient::createRegexMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateRegexMatchSetRequest::CreateRegexMatchSetRequest(const CreateRegexMatchSetRequest &other)
-    : WAFRegionalRequest(new CreateRegexMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateRegexMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateRegexMatchSetRequest::CreateRegexMatchSetRequest(const CreateRegexMatchSet
  * Constructs a CreateRegexMatchSetRequest object.
  */
 CreateRegexMatchSetRequest::CreateRegexMatchSetRequest()
-    : WAFRegionalRequest(new CreateRegexMatchSetRequestPrivate(WAFRegionalRequest::CreateRegexMatchSetAction, this))
+    : WafRegionalRequest(new CreateRegexMatchSetRequestPrivate(WafRegionalRequest::CreateRegexMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateRegexMatchSetRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateRegexMatchSetRequestPrivate
+ * \class QtAws::WafRegional::CreateRegexMatchSetRequestPrivate
  * \brief The CreateRegexMatchSetRequestPrivate class provides private implementation for CreateRegexMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateRegexMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateRegexMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateRegexMatchSetRequestPrivate::CreateRegexMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateRegexMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateRegexMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateRegexMatchSetRequestPrivate::CreateRegexMatchSetRequestPrivate(
  */
 CreateRegexMatchSetRequestPrivate::CreateRegexMatchSetRequestPrivate(
     const CreateRegexMatchSetRequestPrivate &other, CreateRegexMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

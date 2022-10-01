@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DescribeRepositoriesRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT DescribeRepositoriesRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT DescribeRepositoriesRequest : public EcrPublicRequest {
 
 public:
     DescribeRepositoriesRequest(const DescribeRepositoriesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

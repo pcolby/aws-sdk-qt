@@ -24,7 +24,7 @@
 #include "addtagstocertificaterequest.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class AddTagsToCertificateRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

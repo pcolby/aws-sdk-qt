@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWORKSPACES_LIBRARY)
 
 add_library(QtAwsWorkSpaces
+  qtawsworkspacesglobal.h
+  workspacesclient.h
+  workspacesclient_p.h
+  workspacesrequest.h
+  workspacesrequest_p.h
+  workspacesresponse.h
+  workspacesresponse_p.h
   associateconnectionaliasrequest.h
   associateconnectionaliasrequest_p.h
   associateconnectionaliasresponse.h
@@ -17,6 +24,10 @@ add_library(QtAwsWorkSpaces
   copyworkspaceimagerequest_p.h
   copyworkspaceimageresponse.h
   copyworkspaceimageresponse_p.h
+  createconnectclientaddinrequest.h
+  createconnectclientaddinrequest_p.h
+  createconnectclientaddinresponse.h
+  createconnectclientaddinresponse_p.h
   createconnectionaliasrequest.h
   createconnectionaliasrequest_p.h
   createconnectionaliasresponse.h
@@ -29,14 +40,30 @@ add_library(QtAwsWorkSpaces
   createtagsrequest_p.h
   createtagsresponse.h
   createtagsresponse_p.h
+  createupdatedworkspaceimagerequest.h
+  createupdatedworkspaceimagerequest_p.h
+  createupdatedworkspaceimageresponse.h
+  createupdatedworkspaceimageresponse_p.h
   createworkspacebundlerequest.h
   createworkspacebundlerequest_p.h
   createworkspacebundleresponse.h
   createworkspacebundleresponse_p.h
+  createworkspaceimagerequest.h
+  createworkspaceimagerequest_p.h
+  createworkspaceimageresponse.h
+  createworkspaceimageresponse_p.h
   createworkspacesrequest.h
   createworkspacesrequest_p.h
   createworkspacesresponse.h
   createworkspacesresponse_p.h
+  deleteclientbrandingrequest.h
+  deleteclientbrandingrequest_p.h
+  deleteclientbrandingresponse.h
+  deleteclientbrandingresponse_p.h
+  deleteconnectclientaddinrequest.h
+  deleteconnectclientaddinrequest_p.h
+  deleteconnectclientaddinresponse.h
+  deleteconnectclientaddinresponse_p.h
   deleteconnectionaliasrequest.h
   deleteconnectionaliasrequest_p.h
   deleteconnectionaliasresponse.h
@@ -61,26 +88,34 @@ add_library(QtAwsWorkSpaces
   deregisterworkspacedirectoryrequest_p.h
   deregisterworkspacedirectoryresponse.h
   deregisterworkspacedirectoryresponse_p.h
-  describeaccountmodificationsrequest.h
-  describeaccountmodificationsrequest_p.h
-  describeaccountmodificationsresponse.h
-  describeaccountmodificationsresponse_p.h
   describeaccountrequest.h
   describeaccountrequest_p.h
   describeaccountresponse.h
   describeaccountresponse_p.h
+  describeaccountmodificationsrequest.h
+  describeaccountmodificationsrequest_p.h
+  describeaccountmodificationsresponse.h
+  describeaccountmodificationsresponse_p.h
+  describeclientbrandingrequest.h
+  describeclientbrandingrequest_p.h
+  describeclientbrandingresponse.h
+  describeclientbrandingresponse_p.h
   describeclientpropertiesrequest.h
   describeclientpropertiesrequest_p.h
   describeclientpropertiesresponse.h
   describeclientpropertiesresponse_p.h
-  describeconnectionaliasesrequest.h
-  describeconnectionaliasesrequest_p.h
-  describeconnectionaliasesresponse.h
-  describeconnectionaliasesresponse_p.h
+  describeconnectclientaddinsrequest.h
+  describeconnectclientaddinsrequest_p.h
+  describeconnectclientaddinsresponse.h
+  describeconnectclientaddinsresponse_p.h
   describeconnectionaliaspermissionsrequest.h
   describeconnectionaliaspermissionsrequest_p.h
   describeconnectionaliaspermissionsresponse.h
   describeconnectionaliaspermissionsresponse_p.h
+  describeconnectionaliasesrequest.h
+  describeconnectionaliasesrequest_p.h
+  describeconnectionaliasesresponse.h
+  describeconnectionaliasesresponse_p.h
   describeipgroupsrequest.h
   describeipgroupsrequest_p.h
   describeipgroupsresponse.h
@@ -105,10 +140,6 @@ add_library(QtAwsWorkSpaces
   describeworkspaceimagesrequest_p.h
   describeworkspaceimagesresponse.h
   describeworkspaceimagesresponse_p.h
-  describeworkspacesconnectionstatusrequest.h
-  describeworkspacesconnectionstatusrequest_p.h
-  describeworkspacesconnectionstatusresponse.h
-  describeworkspacesconnectionstatusresponse_p.h
   describeworkspacesnapshotsrequest.h
   describeworkspacesnapshotsrequest_p.h
   describeworkspacesnapshotsresponse.h
@@ -117,6 +148,10 @@ add_library(QtAwsWorkSpaces
   describeworkspacesrequest_p.h
   describeworkspacesresponse.h
   describeworkspacesresponse_p.h
+  describeworkspacesconnectionstatusrequest.h
+  describeworkspacesconnectionstatusrequest_p.h
+  describeworkspacesconnectionstatusresponse.h
+  describeworkspacesconnectionstatusresponse_p.h
   disassociateconnectionaliasrequest.h
   disassociateconnectionaliasrequest_p.h
   disassociateconnectionaliasresponse.h
@@ -125,6 +160,10 @@ add_library(QtAwsWorkSpaces
   disassociateipgroupsrequest_p.h
   disassociateipgroupsresponse.h
   disassociateipgroupsresponse_p.h
+  importclientbrandingrequest.h
+  importclientbrandingrequest_p.h
+  importclientbrandingresponse.h
+  importclientbrandingresponse_p.h
   importworkspaceimagerequest.h
   importworkspaceimagerequest_p.h
   importworkspaceimageresponse.h
@@ -145,6 +184,10 @@ add_library(QtAwsWorkSpaces
   modifyclientpropertiesrequest_p.h
   modifyclientpropertiesresponse.h
   modifyclientpropertiesresponse_p.h
+  modifysamlpropertiesrequest.h
+  modifysamlpropertiesrequest_p.h
+  modifysamlpropertiesresponse.h
+  modifysamlpropertiesresponse_p.h
   modifyselfservicepermissionsrequest.h
   modifyselfservicepermissionsrequest_p.h
   modifyselfservicepermissionsresponse.h
@@ -165,7 +208,6 @@ add_library(QtAwsWorkSpaces
   modifyworkspacestaterequest_p.h
   modifyworkspacestateresponse.h
   modifyworkspacestateresponse_p.h
-  qtawsworkspacesglobal.h
   rebootworkspacesrequest.h
   rebootworkspacesrequest_p.h
   rebootworkspacesresponse.h
@@ -198,6 +240,10 @@ add_library(QtAwsWorkSpaces
   terminateworkspacesrequest_p.h
   terminateworkspacesresponse.h
   terminateworkspacesresponse_p.h
+  updateconnectclientaddinrequest.h
+  updateconnectclientaddinrequest_p.h
+  updateconnectclientaddinresponse.h
+  updateconnectclientaddinresponse_p.h
   updateconnectionaliaspermissionrequest.h
   updateconnectionaliaspermissionrequest_p.h
   updateconnectionaliaspermissionresponse.h
@@ -214,12 +260,9 @@ add_library(QtAwsWorkSpaces
   updateworkspaceimagepermissionrequest_p.h
   updateworkspaceimagepermissionresponse.h
   updateworkspaceimagepermissionresponse_p.h
-  workspacesclient.h
-  workspacesclient_p.h
-  workspacesrequest.h
-  workspacesrequest_p.h
-  workspacesresponse.h
-  workspacesresponse_p.h
+  workspacesclient.cpp
+  workspacesrequest.cpp
+  workspacesresponse.cpp
   associateconnectionaliasrequest.cpp
   associateconnectionaliasresponse.cpp
   associateipgroupsrequest.cpp
@@ -228,16 +271,26 @@ add_library(QtAwsWorkSpaces
   authorizeiprulesresponse.cpp
   copyworkspaceimagerequest.cpp
   copyworkspaceimageresponse.cpp
+  createconnectclientaddinrequest.cpp
+  createconnectclientaddinresponse.cpp
   createconnectionaliasrequest.cpp
   createconnectionaliasresponse.cpp
   createipgrouprequest.cpp
   createipgroupresponse.cpp
   createtagsrequest.cpp
   createtagsresponse.cpp
+  createupdatedworkspaceimagerequest.cpp
+  createupdatedworkspaceimageresponse.cpp
   createworkspacebundlerequest.cpp
   createworkspacebundleresponse.cpp
+  createworkspaceimagerequest.cpp
+  createworkspaceimageresponse.cpp
   createworkspacesrequest.cpp
   createworkspacesresponse.cpp
+  deleteclientbrandingrequest.cpp
+  deleteclientbrandingresponse.cpp
+  deleteconnectclientaddinrequest.cpp
+  deleteconnectclientaddinresponse.cpp
   deleteconnectionaliasrequest.cpp
   deleteconnectionaliasresponse.cpp
   deleteipgrouprequest.cpp
@@ -250,16 +303,20 @@ add_library(QtAwsWorkSpaces
   deleteworkspaceimageresponse.cpp
   deregisterworkspacedirectoryrequest.cpp
   deregisterworkspacedirectoryresponse.cpp
-  describeaccountmodificationsrequest.cpp
-  describeaccountmodificationsresponse.cpp
   describeaccountrequest.cpp
   describeaccountresponse.cpp
+  describeaccountmodificationsrequest.cpp
+  describeaccountmodificationsresponse.cpp
+  describeclientbrandingrequest.cpp
+  describeclientbrandingresponse.cpp
   describeclientpropertiesrequest.cpp
   describeclientpropertiesresponse.cpp
-  describeconnectionaliasesrequest.cpp
-  describeconnectionaliasesresponse.cpp
+  describeconnectclientaddinsrequest.cpp
+  describeconnectclientaddinsresponse.cpp
   describeconnectionaliaspermissionsrequest.cpp
   describeconnectionaliaspermissionsresponse.cpp
+  describeconnectionaliasesrequest.cpp
+  describeconnectionaliasesresponse.cpp
   describeipgroupsrequest.cpp
   describeipgroupsresponse.cpp
   describetagsrequest.cpp
@@ -272,16 +329,18 @@ add_library(QtAwsWorkSpaces
   describeworkspaceimagepermissionsresponse.cpp
   describeworkspaceimagesrequest.cpp
   describeworkspaceimagesresponse.cpp
-  describeworkspacesconnectionstatusrequest.cpp
-  describeworkspacesconnectionstatusresponse.cpp
   describeworkspacesnapshotsrequest.cpp
   describeworkspacesnapshotsresponse.cpp
   describeworkspacesrequest.cpp
   describeworkspacesresponse.cpp
+  describeworkspacesconnectionstatusrequest.cpp
+  describeworkspacesconnectionstatusresponse.cpp
   disassociateconnectionaliasrequest.cpp
   disassociateconnectionaliasresponse.cpp
   disassociateipgroupsrequest.cpp
   disassociateipgroupsresponse.cpp
+  importclientbrandingrequest.cpp
+  importclientbrandingresponse.cpp
   importworkspaceimagerequest.cpp
   importworkspaceimageresponse.cpp
   listavailablemanagementcidrrangesrequest.cpp
@@ -292,6 +351,8 @@ add_library(QtAwsWorkSpaces
   modifyaccountresponse.cpp
   modifyclientpropertiesrequest.cpp
   modifyclientpropertiesresponse.cpp
+  modifysamlpropertiesrequest.cpp
+  modifysamlpropertiesresponse.cpp
   modifyselfservicepermissionsrequest.cpp
   modifyselfservicepermissionsresponse.cpp
   modifyworkspaceaccesspropertiesrequest.cpp
@@ -318,6 +379,8 @@ add_library(QtAwsWorkSpaces
   stopworkspacesresponse.cpp
   terminateworkspacesrequest.cpp
   terminateworkspacesresponse.cpp
+  updateconnectclientaddinrequest.cpp
+  updateconnectclientaddinresponse.cpp
   updateconnectionaliaspermissionrequest.cpp
   updateconnectionaliaspermissionresponse.cpp
   updaterulesofipgrouprequest.cpp
@@ -325,10 +388,7 @@ add_library(QtAwsWorkSpaces
   updateworkspacebundlerequest.cpp
   updateworkspacebundleresponse.cpp
   updateworkspaceimagepermissionrequest.cpp
-  updateworkspaceimagepermissionresponse.cpp
-  workspacesclient.cpp
-  workspacesrequest.cpp
-  workspacesresponse.cpp)
+  updateworkspaceimagepermissionresponse.cpp)
 
 target_link_libraries(QtAwsWorkSpaces
   PRIVATE QtAwsCore

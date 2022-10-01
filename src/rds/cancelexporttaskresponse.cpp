@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CancelExportTaskResponse
- * \brief The CancelExportTaskResponse class provides an interace for RDS CancelExportTask responses.
+ * \class QtAws::Rds::CancelExportTaskResponse
+ * \brief The CancelExportTaskResponse class provides an interace for Rds CancelExportTask responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS CancelExportTask \a response.
+ * Parses a successful Rds CancelExportTask \a response.
  */
 void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CancelExportTaskResponsePrivate
+ * \class QtAws::Rds::CancelExportTaskResponsePrivate
  * \brief The CancelExportTaskResponsePrivate class provides private implementation for CancelExportTaskResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
 }
 
 /*!
- * Parses a RDS CancelExportTask response element from \a xml.
+ * Parses a Rds CancelExportTask response element from \a xml.
  */
 void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

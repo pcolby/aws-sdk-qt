@@ -24,16 +24,16 @@
 #include "sesrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SesRequest;
 
 class SesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SesRequest::Action action; ///< SES action to be performed.
-    QString apiVersion;        ///< SES API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SES request (query string) parameters. @todo?
+    SesRequest::Action action; ///< Ses action to be performed.
+    QString apiVersion;        ///< Ses API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ses request (query string) parameters. @todo?
 
     SesRequestPrivate(const SesRequest::Action action, SesRequest * const q);
     SesRequestPrivate(const SesRequestPrivate &other, SesRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

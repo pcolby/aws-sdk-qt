@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDATAPIPELINE_LIBRARY)
 
 add_library(QtAwsDataPipeline
+  qtawsdatapipelineglobal.h
+  datapipelineclient.h
+  datapipelineclient_p.h
+  datapipelinerequest.h
+  datapipelinerequest_p.h
+  datapipelineresponse.h
+  datapipelineresponse_p.h
   activatepipelinerequest.h
   activatepipelinerequest_p.h
   activatepipelineresponse.h
@@ -13,12 +20,6 @@ add_library(QtAwsDataPipeline
   createpipelinerequest_p.h
   createpipelineresponse.h
   createpipelineresponse_p.h
-  datapipelineclient.h
-  datapipelineclient_p.h
-  datapipelinerequest.h
-  datapipelinerequest_p.h
-  datapipelineresponse.h
-  datapipelineresponse_p.h
   deactivatepipelinerequest.h
   deactivatepipelinerequest_p.h
   deactivatepipelineresponse.h
@@ -55,7 +56,6 @@ add_library(QtAwsDataPipeline
   putpipelinedefinitionrequest_p.h
   putpipelinedefinitionresponse.h
   putpipelinedefinitionresponse_p.h
-  qtawsdatapipelineglobal.h
   queryobjectsrequest.h
   queryobjectsrequest_p.h
   queryobjectsresponse.h
@@ -84,15 +84,15 @@ add_library(QtAwsDataPipeline
   validatepipelinedefinitionrequest_p.h
   validatepipelinedefinitionresponse.h
   validatepipelinedefinitionresponse_p.h
+  datapipelineclient.cpp
+  datapipelinerequest.cpp
+  datapipelineresponse.cpp
   activatepipelinerequest.cpp
   activatepipelineresponse.cpp
   addtagsrequest.cpp
   addtagsresponse.cpp
   createpipelinerequest.cpp
   createpipelineresponse.cpp
-  datapipelineclient.cpp
-  datapipelinerequest.cpp
-  datapipelineresponse.cpp
   deactivatepipelinerequest.cpp
   deactivatepipelineresponse.cpp
   deletepipelinerequest.cpp

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListReceiptFiltersRequest
- * \brief The ListReceiptFiltersRequest class provides an interface for SES ListReceiptFilters requests.
+ * \class QtAws::Ses::ListReceiptFiltersRequest
+ * \brief The ListReceiptFiltersRequest class provides an interface for Ses ListReceiptFilters requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * ListReceiptFiltersRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SES::ListReceiptFiltersRequestPrivate
+ * \class QtAws::Ses::ListReceiptFiltersRequestPrivate
  * \brief The ListReceiptFiltersRequestPrivate class provides private implementation for ListReceiptFiltersRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

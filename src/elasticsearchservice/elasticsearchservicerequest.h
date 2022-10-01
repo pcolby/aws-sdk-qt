@@ -52,6 +52,7 @@ public:
         DeleteOutboundCrossClusterSearchConnectionAction,
         DeletePackageAction,
         DescribeDomainAutoTunesAction,
+        DescribeDomainChangeProgressAction,
         DescribeElasticsearchDomainAction,
         DescribeElasticsearchDomainConfigAction,
         DescribeElasticsearchDomainsAction,

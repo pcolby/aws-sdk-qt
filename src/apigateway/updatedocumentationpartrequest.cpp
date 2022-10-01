@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationPartRequest
- * \brief The UpdateDocumentationPartRequest class provides an interface for APIGateway UpdateDocumentationPart requests.
+ * \class QtAws::ApiGateway::UpdateDocumentationPartRequest
+ * \brief The UpdateDocumentationPartRequest class provides an interface for ApiGateway UpdateDocumentationPart requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDocumentationPart
+ * \sa ApiGatewayClient::updateDocumentationPart
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocumentationPartRequest &other)
-    : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateDocumentationPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocum
  * Constructs a UpdateDocumentationPartRequest object.
  */
 UpdateDocumentationPartRequest::UpdateDocumentationPartRequest()
-    : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(APIGatewayRequest::UpdateDocumentationPartAction, this))
+    : ApiGatewayRequest(new UpdateDocumentationPartRequestPrivate(ApiGatewayRequest::UpdateDocumentationPartAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationPartRequestPrivate
+ * \class QtAws::ApiGateway::UpdateDocumentationPartRequestPrivate
  * \brief The UpdateDocumentationPartRequestPrivate class provides private implementation for UpdateDocumentationPartRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateDocumentationPartRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateDocumentationPartRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const UpdateDocumentationPartRequestPrivate &other, UpdateDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

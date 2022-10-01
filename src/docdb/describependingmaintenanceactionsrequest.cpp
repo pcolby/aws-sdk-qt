@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribePendingMaintenanceActionsRequest
- * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for DocDB DescribePendingMaintenanceActions requests.
+ * \class QtAws::DocDb::DescribePendingMaintenanceActionsRequest
+ * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for DocDb DescribePendingMaintenanceActions requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describePendingMaintenanceActions
+ * \sa DocDbClient::describePendingMaintenanceActions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other)
-    : DocDBRequest(new DescribePendingMaintenanceActionsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribePendingMaintenanceActionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsReque
  * Constructs a DescribePendingMaintenanceActionsRequest object.
  */
 DescribePendingMaintenanceActionsRequest::DescribePendingMaintenanceActionsRequest()
-    : DocDBRequest(new DescribePendingMaintenanceActionsRequestPrivate(DocDBRequest::DescribePendingMaintenanceActionsAction, this))
+    : DocDbRequest(new DescribePendingMaintenanceActionsRequestPrivate(DocDbRequest::DescribePendingMaintenanceActionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
 }
 
 /*!
- * \class QtAws::DocDB::DescribePendingMaintenanceActionsRequestPrivate
+ * \class QtAws::DocDb::DescribePendingMaintenanceActionsRequestPrivate
  * \brief The DescribePendingMaintenanceActionsRequestPrivate class provides private implementation for DescribePendingMaintenanceActionsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
-    const DocDBRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActio
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const DescribePendingMaintenanceActionsRequestPrivate &other, DescribePendingMaintenanceActionsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

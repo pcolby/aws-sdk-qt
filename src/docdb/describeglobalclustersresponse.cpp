@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeGlobalClustersResponse
- * \brief The DescribeGlobalClustersResponse class provides an interace for DocDB DescribeGlobalClusters responses.
+ * \class QtAws::DocDb::DescribeGlobalClustersResponse
+ * \brief The DescribeGlobalClustersResponse class provides an interace for DocDb DescribeGlobalClusters responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeGlobalClusters
+ * \sa DocDbClient::describeGlobalClusters
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeGlobalClustersResponse::DescribeGlobalClustersResponse(
         const DescribeGlobalClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeGlobalClustersResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeGlobalClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeGlobalClustersRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeGlobalClustersRequest * DescribeGlobalClustersResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeGlobalClusters \a response.
+ * Parses a successful DocDb DescribeGlobalClusters \a response.
  */
 void DescribeGlobalClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeGlobalClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeGlobalClustersResponsePrivate
+ * \class QtAws::DocDb::DescribeGlobalClustersResponsePrivate
  * \brief The DescribeGlobalClustersResponsePrivate class provides private implementation for DescribeGlobalClustersResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeGlobalClustersResponsePrivate object with public implementation \a q.
  */
 DescribeGlobalClustersResponsePrivate::DescribeGlobalClustersResponsePrivate(
-    DescribeGlobalClustersResponse * const q) : DocDBResponsePrivate(q)
+    DescribeGlobalClustersResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeGlobalClusters response element from \a xml.
+ * Parses a DocDb DescribeGlobalClusters response element from \a xml.
  */
 void DescribeGlobalClustersResponsePrivate::parseDescribeGlobalClustersResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeGlobalClustersResponsePrivate::parseDescribeGlobalClustersResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

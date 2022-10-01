@@ -35,6 +35,8 @@
 #include "getterminologyresponse.h"
 #include "importterminologyrequest.h"
 #include "importterminologyresponse.h"
+#include "listlanguagesrequest.h"
+#include "listlanguagesresponse.h"
 #include "listparalleldatarequest.h"
 #include "listparalleldataresponse.h"
 #include "listterminologiesrequest.h"
@@ -135,8 +137,8 @@ TranslateClient::TranslateClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3. Parallel data files
- * contain examples of source phrases and their translations from your translation memory. By adding parallel data, you can
- * influence the style, tone, and word choice in your translation
+ * contain examples that show how you want segments of text to be translated. By adding parallel data, you can influence
+ * the style, tone, and word choice in your translation
  */
 CreateParallelDataResponse * TranslateClient::createParallelData(const CreateParallelDataRequest &request)
 {
@@ -175,7 +177,7 @@ DeleteTerminologyResponse * TranslateClient::deleteTerminology(const DeleteTermi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the properties associated with an asycnhronous batch translation job including name, ID, status, source and target
+ * Gets the properties associated with an asynchronous batch translation job including name, ID, status, source and target
  * languages, input/output S3 buckets, and so
  */
 DescribeTextTranslationJobResponse * TranslateClient::describeTextTranslationJob(const DescribeTextTranslationJobRequest &request)
@@ -215,19 +217,32 @@ GetTerminologyResponse * TranslateClient::getTerminology(const GetTerminologyReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a custom terminology, depending on whether or not one already exists for the given terminology name.
+ * Creates or updates a custom terminology, depending on whether one already exists for the given terminology name.
  * Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen merge
- * strategy. Currently, the only supported merge strategy is OVERWRITE, and so the imported terminology will overwrite an
- * existing terminology of the same
+ * strategy. The only supported merge strategy is OVERWRITE, where the imported terminology overwrites the existing
+ * terminology of the same
  *
  * name>
  *
- * If you import a terminology that overwrites an existing one, the new terminology take up to 10 minutes to fully
- * propagate and be available for use in a translation due to cache policies with the DataPlane service that performs the
+ * If you import a terminology that overwrites an existing one, the new terminology takes up to 10 minutes to fully
+ * propagate. After that, translations have access to the new
  */
 ImportTerminologyResponse * TranslateClient::importTerminology(const ImportTerminologyRequest &request)
 {
     return qobject_cast<ImportTerminologyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * ListLanguagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of languages (RFC-5646 codes and names) that Amazon Translate
+ */
+ListLanguagesResponse * TranslateClient::listLanguages(const ListLanguagesRequest &request)
+{
+    return qobject_cast<ListLanguagesResponse *>(send(request));
 }
 
 /*!

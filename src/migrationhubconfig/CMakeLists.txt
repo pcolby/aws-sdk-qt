@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMIGRATIONHUBCONFIG_LIBRARY)
 
 add_library(QtAwsMigrationHubConfig
+  qtawsmigrationhubconfigglobal.h
+  migrationhubconfigclient.h
+  migrationhubconfigclient_p.h
+  migrationhubconfigrequest.h
+  migrationhubconfigrequest_p.h
+  migrationhubconfigresponse.h
+  migrationhubconfigresponse_p.h
   createhomeregioncontrolrequest.h
   createhomeregioncontrolrequest_p.h
   createhomeregioncontrolresponse.h
@@ -13,22 +20,15 @@ add_library(QtAwsMigrationHubConfig
   gethomeregionrequest_p.h
   gethomeregionresponse.h
   gethomeregionresponse_p.h
-  migrationhubconfigclient.h
-  migrationhubconfigclient_p.h
-  migrationhubconfigrequest.h
-  migrationhubconfigrequest_p.h
-  migrationhubconfigresponse.h
-  migrationhubconfigresponse_p.h
-  qtawsmigrationhubconfigglobal.h
+  migrationhubconfigclient.cpp
+  migrationhubconfigrequest.cpp
+  migrationhubconfigresponse.cpp
   createhomeregioncontrolrequest.cpp
   createhomeregioncontrolresponse.cpp
   describehomeregioncontrolsrequest.cpp
   describehomeregioncontrolsresponse.cpp
   gethomeregionrequest.cpp
-  gethomeregionresponse.cpp
-  migrationhubconfigclient.cpp
-  migrationhubconfigrequest.cpp
-  migrationhubconfigresponse.cpp)
+  gethomeregionresponse.cpp)
 
 target_link_libraries(QtAwsMigrationHubConfig
   PRIVATE QtAwsCore

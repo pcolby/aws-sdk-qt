@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SendTaskHeartbeatResponse
- * \brief The SendTaskHeartbeatResponse class provides an interace for SFN SendTaskHeartbeat responses.
+ * \class QtAws::Sfn::SendTaskHeartbeatResponse
+ * \brief The SendTaskHeartbeatResponse class provides an interace for Sfn SendTaskHeartbeat responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const SendTaskHeartbeatRequest * SendTaskHeartbeatResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN SendTaskHeartbeat \a response.
+ * Parses a successful Sfn SendTaskHeartbeat \a response.
  */
 void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::SendTaskHeartbeatResponsePrivate
+ * \class QtAws::Sfn::SendTaskHeartbeatResponsePrivate
  * \brief The SendTaskHeartbeatResponsePrivate class provides private implementation for SendTaskHeartbeatResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
 }
 
 /*!
- * Parses a SFN SendTaskHeartbeat response element from \a xml.
+ * Parses a Sfn SendTaskHeartbeat response element from \a xml.
  */
 void SendTaskHeartbeatResponsePrivate::parseSendTaskHeartbeatResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void SendTaskHeartbeatResponsePrivate::parseSendTaskHeartbeatResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "deletemethodresponserequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteMethodResponseRequest;
 
-class DeleteMethodResponseRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteMethodResponseRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteMethodResponseRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteMethodResponseRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteMethodResponseRequest * const q);
     DeleteMethodResponseRequestPrivate(const DeleteMethodResponseRequestPrivate &other,
                                    DeleteMethodResponseRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

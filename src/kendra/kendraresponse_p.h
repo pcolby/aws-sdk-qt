@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
-class kendraResponse;
+class KendraResponse;
 
-class kendraResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class KendraResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit kendraResponsePrivate(kendraResponse * const q);
+    explicit KendraResponsePrivate(KendraResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(kendraResponse)
-    Q_DISABLE_COPY(kendraResponsePrivate)
+    Q_DECLARE_PUBLIC(KendraResponse)
+    Q_DISABLE_COPY(KendraResponsePrivate)
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

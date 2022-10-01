@@ -24,7 +24,7 @@
 #include "updateconfigurationrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class UpdateConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressRequest
- * \brief The AuthorizeDBSecurityGroupIngressRequest class provides an interface for RDS AuthorizeDBSecurityGroupIngress requests.
+ * \class QtAws::Rds::AuthorizeDBSecurityGroupIngressRequest
+ * \brief The AuthorizeDBSecurityGroupIngressRequest class provides an interface for Rds AuthorizeDBSecurityGroupIngress requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::respo
 }
 
 /*!
- * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressRequestPrivate
+ * \class QtAws::Rds::AuthorizeDBSecurityGroupIngressRequestPrivate
  * \brief The AuthorizeDBSecurityGroupIngressRequestPrivate class provides private implementation for AuthorizeDBSecurityGroupIngressRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRe
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

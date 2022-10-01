@@ -21,55 +21,55 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::SSMContactsRequest
- * \brief The SSMContactsRequest class provides an interface for SSMContacts requests.
+ * \class QtAws::SsmContacts::SsmContactsRequest
+ * \brief The SsmContactsRequest class provides an interface for SsmContacts requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * \enum SSMContactsRequest::Action
+ * \enum SsmContactsRequest::Action
  *
- * This enum describes the actions that can be performed as SSMContacts
+ * This enum describes the actions that can be performed as SsmContacts
  * requests.
  *
- * \value AcceptPageAction SSMContacts AcceptPage action.
- * \value ActivateContactChannelAction SSMContacts ActivateContactChannel action.
- * \value CreateContactAction SSMContacts CreateContact action.
- * \value CreateContactChannelAction SSMContacts CreateContactChannel action.
- * \value DeactivateContactChannelAction SSMContacts DeactivateContactChannel action.
- * \value DeleteContactAction SSMContacts DeleteContact action.
- * \value DeleteContactChannelAction SSMContacts DeleteContactChannel action.
- * \value DescribeEngagementAction SSMContacts DescribeEngagement action.
- * \value DescribePageAction SSMContacts DescribePage action.
- * \value GetContactAction SSMContacts GetContact action.
- * \value GetContactChannelAction SSMContacts GetContactChannel action.
- * \value GetContactPolicyAction SSMContacts GetContactPolicy action.
- * \value ListContactChannelsAction SSMContacts ListContactChannels action.
- * \value ListContactsAction SSMContacts ListContacts action.
- * \value ListEngagementsAction SSMContacts ListEngagements action.
- * \value ListPageReceiptsAction SSMContacts ListPageReceipts action.
- * \value ListPagesByContactAction SSMContacts ListPagesByContact action.
- * \value ListPagesByEngagementAction SSMContacts ListPagesByEngagement action.
- * \value ListTagsForResourceAction SSMContacts ListTagsForResource action.
- * \value PutContactPolicyAction SSMContacts PutContactPolicy action.
- * \value SendActivationCodeAction SSMContacts SendActivationCode action.
- * \value StartEngagementAction SSMContacts StartEngagement action.
- * \value StopEngagementAction SSMContacts StopEngagement action.
- * \value TagResourceAction SSMContacts TagResource action.
- * \value UntagResourceAction SSMContacts UntagResource action.
- * \value UpdateContactAction SSMContacts UpdateContact action.
- * \value UpdateContactChannelAction SSMContacts UpdateContactChannel action.
+ * \value AcceptPageAction SsmContacts AcceptPage action.
+ * \value ActivateContactChannelAction SsmContacts ActivateContactChannel action.
+ * \value CreateContactAction SsmContacts CreateContact action.
+ * \value CreateContactChannelAction SsmContacts CreateContactChannel action.
+ * \value DeactivateContactChannelAction SsmContacts DeactivateContactChannel action.
+ * \value DeleteContactAction SsmContacts DeleteContact action.
+ * \value DeleteContactChannelAction SsmContacts DeleteContactChannel action.
+ * \value DescribeEngagementAction SsmContacts DescribeEngagement action.
+ * \value DescribePageAction SsmContacts DescribePage action.
+ * \value GetContactAction SsmContacts GetContact action.
+ * \value GetContactChannelAction SsmContacts GetContactChannel action.
+ * \value GetContactPolicyAction SsmContacts GetContactPolicy action.
+ * \value ListContactChannelsAction SsmContacts ListContactChannels action.
+ * \value ListContactsAction SsmContacts ListContacts action.
+ * \value ListEngagementsAction SsmContacts ListEngagements action.
+ * \value ListPageReceiptsAction SsmContacts ListPageReceipts action.
+ * \value ListPagesByContactAction SsmContacts ListPagesByContact action.
+ * \value ListPagesByEngagementAction SsmContacts ListPagesByEngagement action.
+ * \value ListTagsForResourceAction SsmContacts ListTagsForResource action.
+ * \value PutContactPolicyAction SsmContacts PutContactPolicy action.
+ * \value SendActivationCodeAction SsmContacts SendActivationCode action.
+ * \value StartEngagementAction SsmContacts StartEngagement action.
+ * \value StopEngagementAction SsmContacts StopEngagement action.
+ * \value TagResourceAction SsmContacts TagResource action.
+ * \value UntagResourceAction SsmContacts UntagResource action.
+ * \value UpdateContactAction SsmContacts UpdateContact action.
+ * \value UpdateContactChannelAction SsmContacts UpdateContactChannel action.
  */
 
 /*!
- * Constructs a SSMContactsRequest object for SSMContacts \a action.
+ * Constructs a SsmContactsRequest object for SsmContacts \a action.
  */
-SSMContactsRequest::SSMContactsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SSMContactsRequestPrivate(action, this))
+SsmContactsRequest::SsmContactsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SsmContactsRequestPrivate(action, this))
 {
 
 }
@@ -77,18 +77,18 @@ SSMContactsRequest::SSMContactsRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SSMContactsRequest::SSMContactsRequest(const SSMContactsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SSMContactsRequestPrivate(*other.d_func(), this))
+SsmContactsRequest::SsmContactsRequest(const SsmContactsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SsmContactsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SSMContactsRequest object to be equal to \a other.
+ * Sets the SsmContactsRequest object to be equal to \a other.
  */
-SSMContactsRequest& SSMContactsRequest::operator=(const SSMContactsRequest &other)
+SsmContactsRequest& SsmContactsRequest::operator=(const SsmContactsRequest &other)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -96,57 +96,57 @@ SSMContactsRequest& SSMContactsRequest::operator=(const SSMContactsRequest &othe
 }
 
 /*!
- * Constructs aa SSMContactsRequest object with private implementation \a d.
+ * Constructs aa SsmContactsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMContactsRequestPrivate.
+ * implementation that inherits from SsmContactsRequestPrivate.
  */
-SSMContactsRequest::SSMContactsRequest(SSMContactsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsmContactsRequest::SsmContactsRequest(SsmContactsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the SSMContacts action to be performed by this request.
+ * Returns the SsmContacts action to be performed by this request.
  */
-SSMContactsRequest::Action SSMContactsRequest::action() const
+SsmContactsRequest::Action SsmContactsRequest::action() const
 {
-    Q_D(const SSMContactsRequest);
+    Q_D(const SsmContactsRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the SSMContacts action to be performed by this request.
+ * Returns the name of the SsmContacts action to be performed by this request.
  */
-QString SSMContactsRequest::actionString() const
+QString SsmContactsRequest::actionString() const
 {
-    return SSMContactsRequestPrivate::toString(action());
+    return SsmContactsRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the SSMContacts API version implemented by this request.
+ * Returns the SsmContacts API version implemented by this request.
  */
-QString SSMContactsRequest::apiVersion() const
+QString SsmContactsRequest::apiVersion() const
 {
-    Q_D(const SSMContactsRequest);
+    Q_D(const SsmContactsRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the SSMContacts action to be performed by this request to \a action.
+ * Sets the SsmContacts action to be performed by this request to \a action.
  */
-void SSMContactsRequest::setAction(const Action action)
+void SsmContactsRequest::setAction(const Action action)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->action = action;
 }
 
 /*!
- * Sets the SSMContacts API version to include in this request to \a version.
+ * Sets the SsmContacts API version to include in this request to \a version.
  */
-void SSMContactsRequest::setApiVersion(const QString &version)
+void SsmContactsRequest::setApiVersion(const QString &version)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->apiVersion = version;
 }
 
@@ -158,7 +158,7 @@ void SSMContactsRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SSMContactsRequest::operator==(const SSMContactsRequest &other) const
+bool SsmContactsRequest::operator==(const SsmContactsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -167,19 +167,19 @@ bool SSMContactsRequest::operator==(const SSMContactsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SSMContacts queue name.
+ * Returns \c tue if \a queueName is a valid SsmContacts queue name.
  *
- * @par From SSMContacts FAQs:
+ * @par From SsmContacts FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SSMContacts queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid SsmContacts queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SSMContactsRequest::isValidQueueName(const QString &queueName)
+/*bool SsmContactsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -189,45 +189,45 @@ bool SSMContactsRequest::operator==(const SSMContactsRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SSMContactsRequest::clearParameter(const QString &name)
+int SsmContactsRequest::clearParameter(const QString &name)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SSMContactsRequest::clearParameters()
+void SsmContactsRequest::clearParameters()
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SSMContactsRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SsmContactsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SSMContactsRequest);
+    Q_D(const SsmContactsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SSMContactsRequest::parameters() const
+const QVariantMap &SsmContactsRequest::parameters() const
 {
-    Q_D(const SSMContactsRequest);
+    Q_D(const SsmContactsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SSMContactsRequest::setParameter(const QString &name, const QVariant &value)
+void SsmContactsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -235,42 +235,42 @@ void SSMContactsRequest::setParameter(const QString &name, const QVariant &value
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SSMContactsRequest::setParameters(const QVariantMap &parameters)
+void SsmContactsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SSMContactsRequest);
+    Q_D(SsmContactsRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the SSMContacts request using the given
+ * Returns a network request for the SsmContacts request using the given
  * \a endpoint.
  *
- * This SSMContacts implementation builds request URLs by combining the
+ * This SsmContacts implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SSMContactsRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SsmContactsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const SSMContactsRequest);
+    //Q_D(const SsmContactsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SSMContacts::SSMContactsRequestPrivate
- * \brief The SSMContactsRequestPrivate class provides private implementation for SSMContactsRequest.
+ * \class QtAws::SsmContacts::SsmContactsRequestPrivate
+ * \brief The SsmContactsRequestPrivate class provides private implementation for SsmContactsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a SSMContactsRequestPrivate object for SSMContacts \a action,
+ * Constructs a SsmContactsRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
-SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequest::Action action, SSMContactsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+SsmContactsRequestPrivate::SsmContactsRequestPrivate(const SsmContactsRequest::Action action, SsmContactsRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2021-05-03"))
 {
 
 }
@@ -281,10 +281,10 @@ SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequest::A
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SSMContactsRequest class's copy constructor.
+ * This is required to support the SsmContactsRequest class's copy constructor.
  */
-SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequestPrivate &other,
-                                     SSMContactsRequest * const q)
+SsmContactsRequestPrivate::SsmContactsRequestPrivate(const SsmContactsRequestPrivate &other,
+                                     SsmContactsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -295,14 +295,14 @@ SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequestPri
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SSMContactsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SSMContacts service's Action
+ * This function converts SsmContactsRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the SsmContacts service's Action
  * query parameters.
  */
-QString SSMContactsRequestPrivate::toString(const SSMContactsRequest::Action &action)
+QString SsmContactsRequestPrivate::toString(const SsmContactsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SSMContactsRequest::action##Action: return QStringLiteral(#action)
+        case SsmContactsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AcceptPage);
         ActionToString(ActivateContactChannel);
@@ -338,5 +338,5 @@ QString SSMContactsRequestPrivate::toString(const SSMContactsRequest::Action &ac
     return QString();
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

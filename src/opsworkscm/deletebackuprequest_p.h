@@ -24,14 +24,14 @@
 #include "deletebackuprequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DeleteBackupRequest;
 
-class DeleteBackupRequestPrivate : public OpsWorksCMRequestPrivate {
+class DeleteBackupRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DeleteBackupRequestPrivate(const OpsWorksCMRequest::Action action,
+    DeleteBackupRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DeleteBackupRequest * const q);
     DeleteBackupRequestPrivate(const DeleteBackupRequestPrivate &other,
                                    DeleteBackupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

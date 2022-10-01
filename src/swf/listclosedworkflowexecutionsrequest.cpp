@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListClosedWorkflowExecutionsRequest
- * \brief The ListClosedWorkflowExecutionsRequest class provides an interface for SWF ListClosedWorkflowExecutions requests.
+ * \class QtAws::Swf::ListClosedWorkflowExecutionsRequest
+ * \brief The ListClosedWorkflowExecutionsRequest class provides an interface for Swf ListClosedWorkflowExecutions requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response
 }
 
 /*!
- * \class QtAws::SWF::ListClosedWorkflowExecutionsRequestPrivate
+ * \class QtAws::Swf::ListClosedWorkflowExecutionsRequestPrivate
  * \brief The ListClosedWorkflowExecutionsRequestPrivate class provides private implementation for ListClosedWorkflowExecutionsRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestP
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

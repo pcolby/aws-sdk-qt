@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIAPACKAGEVOD_LIBRARY)
 
 add_library(QtAwsMediaPackageVod
+  qtawsmediapackagevodglobal.h
+  mediapackagevodclient.h
+  mediapackagevodclient_p.h
+  mediapackagevodrequest.h
+  mediapackagevodrequest_p.h
+  mediapackagevodresponse.h
+  mediapackagevodresponse_p.h
   configurelogsrequest.h
   configurelogsrequest_p.h
   configurelogsresponse.h
@@ -57,13 +64,6 @@ add_library(QtAwsMediaPackageVod
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mediapackagevodclient.h
-  mediapackagevodclient_p.h
-  mediapackagevodrequest.h
-  mediapackagevodrequest_p.h
-  mediapackagevodresponse.h
-  mediapackagevodresponse_p.h
-  qtawsmediapackagevodglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -76,6 +76,9 @@ add_library(QtAwsMediaPackageVod
   updatepackaginggrouprequest_p.h
   updatepackaginggroupresponse.h
   updatepackaginggroupresponse_p.h
+  mediapackagevodclient.cpp
+  mediapackagevodrequest.cpp
+  mediapackagevodresponse.cpp
   configurelogsrequest.cpp
   configurelogsresponse.cpp
   createassetrequest.cpp
@@ -104,9 +107,6 @@ add_library(QtAwsMediaPackageVod
   listpackaginggroupsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mediapackagevodclient.cpp
-  mediapackagevodrequest.cpp
-  mediapackagevodresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

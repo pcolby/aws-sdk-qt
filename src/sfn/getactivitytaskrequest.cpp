@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::GetActivityTaskRequest
- * \brief The GetActivityTaskRequest class provides an interface for SFN GetActivityTask requests.
+ * \class QtAws::Sfn::GetActivityTaskRequest
+ * \brief The GetActivityTaskRequest class provides an interface for Sfn GetActivityTask requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::SFN::GetActivityTaskRequestPrivate
+ * \class QtAws::Sfn::GetActivityTaskRequestPrivate
  * \brief The GetActivityTaskRequestPrivate class provides private implementation for GetActivityTaskRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

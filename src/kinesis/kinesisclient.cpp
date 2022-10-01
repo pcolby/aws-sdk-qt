@@ -77,6 +77,8 @@
 #include "subscribetoshardresponse.h"
 #include "updateshardcountrequest.h"
 #include "updateshardcountresponse.h"
+#include "updatestreammoderequest.h"
+#include "updatestreammoderesponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -164,11 +166,9 @@ KinesisClient::KinesisClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or updates tags for the specified Kinesis data stream. Each time you invoke this operation, you can specify up to
- * 10 tags. If you want to add more than 10 tags to your stream, you can invoke this operation multiple times. In total,
- * each stream can have up to 50
+ * Adds or updates tags for the specified Kinesis data stream. You can assign up to 50 tags to a data
  *
- * tags>
+ * stream>
  *
  * If tags have already been assigned to the stream, <code>AddTagsToStream</code> overwrites any existing tags that
  * correspond to the specified tag
@@ -201,9 +201,9 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  *
  * shards>
  *
- * The stream name identifies the stream. The name is scoped to the AWS account used by the application. It is also scoped
- * by AWS Region. That is, two streams in two different accounts can have the same name, and two streams in the same
- * account, but in two different Regions, can have the same
+ * The stream name identifies the stream. The name is scoped to the Amazon Web Services account used by the application. It
+ * is also scoped by Amazon Web Services Region. That is, two streams in two different accounts can have the same name, and
+ * two streams in the same account, but in two different Regions, can have the same
  *
  * name>
  *
@@ -227,14 +227,14 @@ AddTagsToStreamResponse * KinesisClient::addTagsToStream(const AddTagsToStreamRe
  *
  * account> </li> </ul>
  *
- * For the default shard limit for an AWS account, see <a
+ * For the default shard limit for an Amazon Web Services account, see <a
  * href="https://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html">Amazon Kinesis Data Streams
  * Limits</a> in the <i>Amazon Kinesis Data Streams Developer Guide</i>. To increase this limit, <a
- * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">contact AWS
+ * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">contact Amazon Web Services
  *
  * Support</a>>
  *
- * You can use <code>DescribeStream</code> to check the stream status, which is returned in
+ * You can use <a>DescribeStreamSummary</a> to check the stream status, which is returned in
  *
  * <code>StreamStatus</code>>
  *
@@ -290,7 +290,7 @@ DecreaseStreamRetentionPeriodResponse * KinesisClient::decreaseStreamRetentionPe
  *
  * stream>
  *
- * You can use the <a>DescribeStream</a> operation to check the state of the stream, which is returned in
+ * You can use the <a>DescribeStreamSummary</a> operation to check the state of the stream, which is returned in
  *
  * <code>StreamStatus</code>>
  *
@@ -351,7 +351,13 @@ DescribeLimitsResponse * KinesisClient::describeLimits(const DescribeLimitsReque
  *
  * Describes the specified Kinesis data
  *
- * stream>
+ * stream> <note>
+ *
+ * This API has been revised. It's highly recommended that you use the <a>DescribeStreamSummary</a> API to get a summarized
+ * description of the specified Kinesis data stream and the <a>ListShards</a> API to list the shards in a specified data
+ * stream and obtain information about each shard.
+ *
+ * </p </note>
  *
  * The information returned includes the stream name, Amazon Resource Name (ARN), creation time, enhanced metric
  * configuration, and shard map. The shard map is an array of shard objects. For each shard object, there is the hash key
@@ -485,9 +491,11 @@ EnableEnhancedMonitoringResponse * KinesisClient::enableEnhancedMonitoring(const
  *
  * 10,000>
  *
- * The size of the data returned by <a>GetRecords</a> varies depending on the utilization of the shard. The maximum size of
- * data that <a>GetRecords</a> can return is 10 MiB. If a call returns this amount of data, subsequent calls made within
- * the next 5 seconds throw <code>ProvisionedThroughputExceededException</code>. If there is insufficient provisioned
+ * The size of the data returned by <a>GetRecords</a> varies depending on the utilization of the shard. It is recommended
+ * that consumer applications retrieve records via the <code>GetRecords</code> command using the 5 TPS limit to remain
+ * caught up. Retrieving records less frequently can lead to consumer applications falling behind. The maximum size of data
+ * that <a>GetRecords</a> can return is 10 MiB. If a call returns this amount of data, subsequent calls made within the
+ * next 5 seconds throw <code>ProvisionedThroughputExceededException</code>. If there is insufficient provisioned
  * throughput on the stream, subsequent calls made within the next 1 second throw
  * <code>ProvisionedThroughputExceededException</code>. <a>GetRecords</a> doesn't return any data when it throws an
  * exception. For this reason, we recommend that you wait 1 second between calls to <a>GetRecords</a>. However, it's
@@ -579,7 +587,7 @@ GetShardIteratorResponse * KinesisClient::getShardIterator(const GetShardIterato
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Increases the Kinesis data stream's retention period, which is the length of time data records are accessible after they
- * are added to the stream. The maximum value of a stream's retention period is 168 hours (7
+ * are added to the stream. The maximum value of a stream's retention period is 8760 hours (365
  *
  * days)>
  *
@@ -599,10 +607,16 @@ IncreaseStreamRetentionPeriodResponse * KinesisClient::increaseStreamRetentionPe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the shards in a stream and provides information about each shard. This operation has a limit of 100 transactions
+ * Lists the shards in a stream and provides information about each shard. This operation has a limit of 1000 transactions
  * per second per data
  *
- * stream> <b>
+ * stream>
+ *
+ * This action does not list expired shards. For information about expired shards, see <a
+ * href="https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-after-resharding.html#kinesis-using-sdk-java-resharding-data-routing">Data
+ * Routing, Data Persistence, and Shard State after a Reshard</a>.
+ *
+ * </p <b>
  *
  * This API is a new operation that is used by the Amazon Kinesis Client Library (KCL). If you have a fine-grained IAM
  * policy that only allows specific operations, you must update your policy to allow calls to this API. For more
@@ -645,7 +659,7 @@ ListStreamConsumersResponse * KinesisClient::listStreamConsumers(const ListStrea
  * number of returned streams using the <code>Limit</code> parameter. If you do not specify a value for the
  * <code>Limit</code> parameter, Kinesis Data Streams uses the default limit, which is currently
  *
- * 10>
+ * 100>
  *
  * You can detect if there are more streams available to list by using the <code>HasMoreStreams</code> flag from the
  * returned output. If there are more streams available, you can request more streams by using the name of the last stream
@@ -705,7 +719,7 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  *
  * </p
  *
- * You can use <a>DescribeStream</a> to check the state of the stream, which is returned in
+ * You can use <a>DescribeStreamSummary</a> to check the state of the stream, which is returned in
  *
  * <code>StreamStatus</code>>
  *
@@ -716,7 +730,8 @@ ListTagsForStreamResponse * KinesisClient::listTagsForStream(const ListTagsForSt
  *
  * </p
  *
- * You use <a>DescribeStream</a> to determine the shard IDs that are specified in the <code>MergeShards</code> request.
+ * You use <a>DescribeStreamSummary</a> and the <a>ListShards</a> APIs to determine the shard IDs that are specified in the
+ * <code>MergeShards</code> request.
  *
  * </p
  *
@@ -966,8 +981,9 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  *
  * Guide</i>>
  *
- * You can use <a>DescribeStream</a> to determine the shard ID and hash key values for the <code>ShardToSplit</code> and
- * <code>NewStartingHashKey</code> parameters that are specified in the <code>SplitShard</code>
+ * You can use <a>DescribeStreamSummary</a> and the <a>ListShards</a> APIs to determine the shard ID and hash key values
+ * for the <code>ShardToSplit</code> and <code>NewStartingHashKey</code> parameters that are specified in the
+ * <code>SplitShard</code>
  *
  * request>
  *
@@ -978,22 +994,21 @@ RemoveTagsFromStreamResponse * KinesisClient::removeTagsFromStream(const RemoveT
  *
  * </p
  *
- * You can use <code>DescribeStream</code> to check the status of the stream, which is returned in
- * <code>StreamStatus</code>. If the stream is in the <code>ACTIVE</code> state, you can call <code>SplitShard</code>. If a
- * stream is in <code>CREATING</code> or <code>UPDATING</code> or <code>DELETING</code> states, <code>DescribeStream</code>
- * returns a
- *
- * <code>ResourceInUseException</code>>
- *
- * If the specified stream does not exist, <code>DescribeStream</code> returns a <code>ResourceNotFoundException</code>. If
- * you try to create more shards than are authorized for your account, you receive a <code>LimitExceededException</code>.
+ * You can use <a>DescribeStreamSummary</a> to check the status of the stream, which is returned in
+ * <code>StreamStatus</code>. If the stream is in the <code>ACTIVE</code> state, you can call <code>SplitShard</code>.
  *
  * </p
  *
- * For the default shard limit for an AWS account, see <a
+ * If the specified stream does not exist, <a>DescribeStreamSummary</a> returns a <code>ResourceNotFoundException</code>.
+ * If you try to create more shards than are authorized for your account, you receive a
+ * <code>LimitExceededException</code>.
+ *
+ * </p
+ *
+ * For the default shard limit for an Amazon Web Services account, see <a
  * href="https://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html">Kinesis Data Streams Limits</a> in
  * the <i>Amazon Kinesis Data Streams Developer Guide</i>. To increase this limit, <a
- * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">contact AWS
+ * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">contact Amazon Web Services
  *
  * Support</a>>
  *
@@ -1015,7 +1030,7 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables or updates server-side encryption using an AWS KMS key for a specified stream.
+ * Enables or updates server-side encryption using an Amazon Web Services KMS key for a specified stream.
  *
  * </p
  *
@@ -1028,7 +1043,8 @@ SplitShardResponse * KinesisClient::splitShard(const SplitShardRequest &request)
  *
  * </p
  *
- * API Limits: You can successfully apply a new AWS KMS key for server-side encryption 25 times in a rolling 24-hour
+ * API Limits: You can successfully apply a new Amazon Web Services KMS key for server-side encryption 25 times in a
+ * rolling 24-hour
  *
  * period>
  *
@@ -1101,10 +1117,10 @@ StopStreamEncryptionResponse * KinesisClient::stopStreamEncryption(const StopStr
  *
  * If you call <code>SubscribeToShard</code> again with the same <code>ConsumerARN</code> and <code>ShardId</code> within 5
  * seconds of a successful call, you'll get a <code>ResourceInUseException</code>. If you call
- * <code>SubscribeToShard</code> 5 seconds or more after a successful call, the first connection will expire and the second
- * call will take over the
+ * <code>SubscribeToShard</code> 5 seconds or more after a successful call, the second call takes over the subscription and
+ * the previous connection expires or fails with a
  *
- * subscription>
+ * <code>ResourceInUseException</code>>
  *
  * For an example of how to use this operations, see <a
  * href="/streams/latest/dev/building-enhanced-consumers-api.html">Enhanced Fan-Out Using the Kinesis Data Streams
@@ -1159,11 +1175,11 @@ SubscribeToShardResponse * KinesisClient::subscribeToShard(const SubscribeToShar
  *
  * strea> </li> <li>
  *
- * Scale up to more than 500 shards in a
+ * Scale up to more than 10000 shards in a
  *
  * strea> </li> <li>
  *
- * Scale a stream with more than 500 shards down unless the result is less than 500
+ * Scale a stream with more than 10000 shards down unless the result is less than 10000
  *
  * shard> </li> <li>
  *
@@ -1171,15 +1187,29 @@ SubscribeToShardResponse * KinesisClient::subscribeToShard(const SubscribeToShar
  *
  * accoun> </li> </ul>
  *
- * For the default limits for an AWS account, see <a
+ * For the default limits for an Amazon Web Services account, see <a
  * href="https://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html">Streams Limits</a> in the <i>Amazon
  * Kinesis Data Streams Developer Guide</i>. To request an increase in the call rate limit, the shard limit for this API,
  * or your overall shard limit, use the <a
- * href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;limitType=service-code-kinesis">limits
+ * href="https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&limitType=service-code-kinesis">limits
  */
 UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCountRequest &request)
 {
     return qobject_cast<UpdateShardCountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisClient service, and returns a pointer to an
+ * UpdateStreamModeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the capacity mode of the data stream. Currently, in Kinesis Data Streams, you can choose between an
+ * <b>on-demand</b> capacity mode and a <b>provisioned</b> capacity mode for your data stream.
+ */
+UpdateStreamModeResponse * KinesisClient::updateStreamMode(const UpdateStreamModeRequest &request)
+{
+    return qobject_cast<UpdateStreamModeResponse *>(send(request));
 }
 
 /*!

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetTemplateResponse
- * \brief The GetTemplateResponse class provides an interace for SES GetTemplate responses.
+ * \class QtAws::Ses::GetTemplateResponse
+ * \brief The GetTemplateResponse class provides an interace for Ses GetTemplate responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetTemplateRequest * GetTemplateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES GetTemplate \a response.
+ * Parses a successful Ses GetTemplate \a response.
  */
 void GetTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::GetTemplateResponsePrivate
+ * \class QtAws::Ses::GetTemplateResponsePrivate
  * \brief The GetTemplateResponsePrivate class provides private implementation for GetTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetTemplateResponsePrivate::GetTemplateResponsePrivate(
 }
 
 /*!
- * Parses a SES GetTemplate response element from \a xml.
+ * Parses a Ses GetTemplate response element from \a xml.
  */
 void GetTemplateResponsePrivate::parseGetTemplateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetTemplateResponsePrivate::parseGetTemplateResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

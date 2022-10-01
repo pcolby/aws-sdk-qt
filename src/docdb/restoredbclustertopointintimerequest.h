@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RestoreDBClusterToPointInTimeRequestPrivate;
 
-class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeRequest : public DocDbRequest {
 
 public:
     RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

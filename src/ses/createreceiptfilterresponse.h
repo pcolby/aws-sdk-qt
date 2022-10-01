@@ -24,7 +24,7 @@
 #include "createreceiptfilterrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class CreateReceiptFilterResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

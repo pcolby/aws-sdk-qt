@@ -24,14 +24,14 @@
 #include "revokesignaturerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class RevokeSignatureRequest;
 
-class RevokeSignatureRequestPrivate : public signerRequestPrivate {
+class RevokeSignatureRequestPrivate : public SignerRequestPrivate {
 
 public:
-    RevokeSignatureRequestPrivate(const signerRequest::Action action,
+    RevokeSignatureRequestPrivate(const SignerRequest::Action action,
                                    RevokeSignatureRequest * const q);
     RevokeSignatureRequestPrivate(const RevokeSignatureRequestPrivate &other,
                                    RevokeSignatureRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

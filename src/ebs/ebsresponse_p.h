@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class EbsResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

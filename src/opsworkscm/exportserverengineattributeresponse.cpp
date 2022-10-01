@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::ExportServerEngineAttributeResponse
- * \brief The ExportServerEngineAttributeResponse class provides an interace for OpsWorksCM ExportServerEngineAttribute responses.
+ * \class QtAws::OpsWorksCm::ExportServerEngineAttributeResponse
+ * \brief The ExportServerEngineAttributeResponse class provides an interace for OpsWorksCm ExportServerEngineAttribute responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::exportServerEngineAttribute
+ * \sa OpsWorksCmClient::exportServerEngineAttribute
  */
 
 /*!
@@ -123,7 +123,7 @@ ExportServerEngineAttributeResponse::ExportServerEngineAttributeResponse(
         const ExportServerEngineAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new ExportServerEngineAttributeResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new ExportServerEngineAttributeResponsePrivate(this), parent)
 {
     setRequest(new ExportServerEngineAttributeRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const ExportServerEngineAttributeRequest * ExportServerEngineAttributeResponse::
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM ExportServerEngineAttribute \a response.
+ * Parses a successful OpsWorksCm ExportServerEngineAttribute \a response.
  */
 void ExportServerEngineAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void ExportServerEngineAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::ExportServerEngineAttributeResponsePrivate
+ * \class QtAws::OpsWorksCm::ExportServerEngineAttributeResponsePrivate
  * \brief The ExportServerEngineAttributeResponsePrivate class provides private implementation for ExportServerEngineAttributeResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a ExportServerEngineAttributeResponsePrivate object with public implementation \a q.
  */
 ExportServerEngineAttributeResponsePrivate::ExportServerEngineAttributeResponsePrivate(
-    ExportServerEngineAttributeResponse * const q) : OpsWorksCMResponsePrivate(q)
+    ExportServerEngineAttributeResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM ExportServerEngineAttribute response element from \a xml.
+ * Parses a OpsWorksCm ExportServerEngineAttribute response element from \a xml.
  */
 void ExportServerEngineAttributeResponsePrivate::parseExportServerEngineAttributeResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void ExportServerEngineAttributeResponsePrivate::parseExportServerEngineAttribut
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "listcertificatesrequest.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class ListCertificatesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

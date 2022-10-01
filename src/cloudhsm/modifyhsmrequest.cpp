@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ModifyHsmRequest
- * \brief The ModifyHsmRequest class provides an interface for CloudHSM ModifyHsm requests.
+ * \class QtAws::CloudHsm::ModifyHsmRequest
+ * \brief The ModifyHsmRequest class provides an interface for CloudHsm ModifyHsm requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::modifyHsm
+ * \sa CloudHsmClient::modifyHsm
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyHsmRequest::ModifyHsmRequest(const ModifyHsmRequest &other)
-    : CloudHSMRequest(new ModifyHsmRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new ModifyHsmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ ModifyHsmRequest::ModifyHsmRequest(const ModifyHsmRequest &other)
  * Constructs a ModifyHsmRequest object.
  */
 ModifyHsmRequest::ModifyHsmRequest()
-    : CloudHSMRequest(new ModifyHsmRequestPrivate(CloudHSMRequest::ModifyHsmAction, this))
+    : CloudHsmRequest(new ModifyHsmRequestPrivate(CloudHsmRequest::ModifyHsmAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * ModifyHsmRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CloudHSM::ModifyHsmRequestPrivate
+ * \class QtAws::CloudHsm::ModifyHsmRequestPrivate
  * \brief The ModifyHsmRequestPrivate class provides private implementation for ModifyHsmRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a ModifyHsmRequestPrivate object for CloudHSM \a action,
+ * Constructs a ModifyHsmRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
-    const CloudHSMRequest::Action action, ModifyHsmRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, ModifyHsmRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
  */
 ModifyHsmRequestPrivate::ModifyHsmRequestPrivate(
     const ModifyHsmRequestPrivate &other, ModifyHsmRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::UpdateStudioRequest
- * \brief The UpdateStudioRequest class provides an interface for EMR UpdateStudio requests.
+ * \class QtAws::Emr::UpdateStudioRequest
+ * \brief The UpdateStudioRequest class provides an interface for Emr UpdateStudio requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::updateStudio
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * UpdateStudioRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::EMR::UpdateStudioRequestPrivate
+ * \class QtAws::Emr::UpdateStudioRequestPrivate
  * \brief The UpdateStudioRequestPrivate class provides private implementation for UpdateStudioRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ UpdateStudioRequestPrivate::UpdateStudioRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

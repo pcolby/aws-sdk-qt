@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetComponentPolicyResponse
- * \brief The GetComponentPolicyResponse class provides an interace for imagebuilder GetComponentPolicy responses.
+ * \class QtAws::ImageBuilder::GetComponentPolicyResponse
+ * \brief The GetComponentPolicyResponse class provides an interace for ImageBuilder GetComponentPolicy responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getComponentPolicy
+ * \sa ImageBuilderClient::getComponentPolicy
  */
 
 /*!
@@ -47,7 +47,7 @@ GetComponentPolicyResponse::GetComponentPolicyResponse(
         const GetComponentPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetComponentPolicyResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetComponentPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetComponentPolicyRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetComponentPolicyRequest * GetComponentPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetComponentPolicy \a response.
+ * Parses a successful ImageBuilder GetComponentPolicy \a response.
  */
 void GetComponentPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetComponentPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetComponentPolicyResponsePrivate
+ * \class QtAws::ImageBuilder::GetComponentPolicyResponsePrivate
  * \brief The GetComponentPolicyResponsePrivate class provides private implementation for GetComponentPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetComponentPolicyResponsePrivate object with public implementation \a q.
  */
 GetComponentPolicyResponsePrivate::GetComponentPolicyResponsePrivate(
-    GetComponentPolicyResponse * const q) : imagebuilderResponsePrivate(q)
+    GetComponentPolicyResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetComponentPolicy response element from \a xml.
+ * Parses a ImageBuilder GetComponentPolicy response element from \a xml.
  */
 void GetComponentPolicyResponsePrivate::parseGetComponentPolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetComponentPolicyResponsePrivate::parseGetComponentPolicyResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "getsampledrequestsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetSampledRequestsRequest;
 
-class GetSampledRequestsRequestPrivate : public WAFRegionalRequestPrivate {
+class GetSampledRequestsRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    GetSampledRequestsRequestPrivate(const WAFRegionalRequest::Action action,
+    GetSampledRequestsRequestPrivate(const WafRegionalRequest::Action action,
                                    GetSampledRequestsRequest * const q);
     GetSampledRequestsRequestPrivate(const GetSampledRequestsRequestPrivate &other,
                                    GetSampledRequestsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

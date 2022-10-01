@@ -24,7 +24,7 @@
 #include "getappreplicationconfigurationrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class GetAppReplicationConfigurationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

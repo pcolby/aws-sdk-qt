@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromS3Response
- * \brief The RestoreDBInstanceFromS3Response class provides an interace for RDS RestoreDBInstanceFromS3 responses.
+ * \class QtAws::Rds::RestoreDBInstanceFromS3Response
+ * \brief The RestoreDBInstanceFromS3Response class provides an interace for Rds RestoreDBInstanceFromS3 responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request(
 
 /*!
  * \reimp
- * Parses a successful RDS RestoreDBInstanceFromS3 \a response.
+ * Parses a successful Rds RestoreDBInstanceFromS3 \a response.
  */
 void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromS3ResponsePrivate
+ * \class QtAws::Rds::RestoreDBInstanceFromS3ResponsePrivate
  * \brief The RestoreDBInstanceFromS3ResponsePrivate class provides private implementation for RestoreDBInstanceFromS3Response.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
 }
 
 /*!
- * Parses a RDS RestoreDBInstanceFromS3 response element from \a xml.
+ * Parses a Rds RestoreDBInstanceFromS3 response element from \a xml.
  */
 void RestoreDBInstanceFromS3ResponsePrivate::parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RestoreDBInstanceFromS3ResponsePrivate::parseRestoreDBInstanceFromS3Respons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

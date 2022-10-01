@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::TestRenderTemplateRequest
- * \brief The TestRenderTemplateRequest class provides an interface for SES TestRenderTemplate requests.
+ * \class QtAws::Ses::TestRenderTemplateRequest
+ * \brief The TestRenderTemplateRequest class provides an interface for Ses TestRenderTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SES::TestRenderTemplateRequestPrivate
+ * \class QtAws::Ses::TestRenderTemplateRequestPrivate
  * \brief The TestRenderTemplateRequestPrivate class provides private implementation for TestRenderTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

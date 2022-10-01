@@ -52,6 +52,7 @@ namespace LexModelsV2 {
  * \value DeleteBotAliasAction LexModelsV2 DeleteBotAlias action.
  * \value DeleteBotLocaleAction LexModelsV2 DeleteBotLocale action.
  * \value DeleteBotVersionAction LexModelsV2 DeleteBotVersion action.
+ * \value DeleteCustomVocabularyAction LexModelsV2 DeleteCustomVocabulary action.
  * \value DeleteExportAction LexModelsV2 DeleteExport action.
  * \value DeleteImportAction LexModelsV2 DeleteImport action.
  * \value DeleteIntentAction LexModelsV2 DeleteIntent action.
@@ -59,18 +60,23 @@ namespace LexModelsV2 {
  * \value DeleteResourcePolicyStatementAction LexModelsV2 DeleteResourcePolicyStatement action.
  * \value DeleteSlotAction LexModelsV2 DeleteSlot action.
  * \value DeleteSlotTypeAction LexModelsV2 DeleteSlotType action.
+ * \value DeleteUtterancesAction LexModelsV2 DeleteUtterances action.
  * \value DescribeBotAction LexModelsV2 DescribeBot action.
  * \value DescribeBotAliasAction LexModelsV2 DescribeBotAlias action.
  * \value DescribeBotLocaleAction LexModelsV2 DescribeBotLocale action.
+ * \value DescribeBotRecommendationAction LexModelsV2 DescribeBotRecommendation action.
  * \value DescribeBotVersionAction LexModelsV2 DescribeBotVersion action.
+ * \value DescribeCustomVocabularyMetadataAction LexModelsV2 DescribeCustomVocabularyMetadata action.
  * \value DescribeExportAction LexModelsV2 DescribeExport action.
  * \value DescribeImportAction LexModelsV2 DescribeImport action.
  * \value DescribeIntentAction LexModelsV2 DescribeIntent action.
  * \value DescribeResourcePolicyAction LexModelsV2 DescribeResourcePolicy action.
  * \value DescribeSlotAction LexModelsV2 DescribeSlot action.
  * \value DescribeSlotTypeAction LexModelsV2 DescribeSlotType action.
+ * \value ListAggregatedUtterancesAction LexModelsV2 ListAggregatedUtterances action.
  * \value ListBotAliasesAction LexModelsV2 ListBotAliases action.
  * \value ListBotLocalesAction LexModelsV2 ListBotLocales action.
+ * \value ListBotRecommendationsAction LexModelsV2 ListBotRecommendations action.
  * \value ListBotVersionsAction LexModelsV2 ListBotVersions action.
  * \value ListBotsAction LexModelsV2 ListBots action.
  * \value ListBuiltInIntentsAction LexModelsV2 ListBuiltInIntents action.
@@ -78,15 +84,20 @@ namespace LexModelsV2 {
  * \value ListExportsAction LexModelsV2 ListExports action.
  * \value ListImportsAction LexModelsV2 ListImports action.
  * \value ListIntentsAction LexModelsV2 ListIntents action.
+ * \value ListRecommendedIntentsAction LexModelsV2 ListRecommendedIntents action.
  * \value ListSlotTypesAction LexModelsV2 ListSlotTypes action.
  * \value ListSlotsAction LexModelsV2 ListSlots action.
  * \value ListTagsForResourceAction LexModelsV2 ListTagsForResource action.
+ * \value SearchAssociatedTranscriptsAction LexModelsV2 SearchAssociatedTranscripts action.
+ * \value StartBotRecommendationAction LexModelsV2 StartBotRecommendation action.
  * \value StartImportAction LexModelsV2 StartImport action.
+ * \value StopBotRecommendationAction LexModelsV2 StopBotRecommendation action.
  * \value TagResourceAction LexModelsV2 TagResource action.
  * \value UntagResourceAction LexModelsV2 UntagResource action.
  * \value UpdateBotAction LexModelsV2 UpdateBot action.
  * \value UpdateBotAliasAction LexModelsV2 UpdateBotAlias action.
  * \value UpdateBotLocaleAction LexModelsV2 UpdateBotLocale action.
+ * \value UpdateBotRecommendationAction LexModelsV2 UpdateBotRecommendation action.
  * \value UpdateExportAction LexModelsV2 UpdateExport action.
  * \value UpdateIntentAction LexModelsV2 UpdateIntent action.
  * \value UpdateResourcePolicyAction LexModelsV2 UpdateResourcePolicy action.
@@ -299,7 +310,7 @@ QNetworkRequest LexModelsV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LexModelsV2RequestPrivate::LexModelsV2RequestPrivate(const LexModelsV2Request::Action action, LexModelsV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-08-07"))
 {
 
 }
@@ -349,6 +360,7 @@ QString LexModelsV2RequestPrivate::toString(const LexModelsV2Request::Action &ac
         ActionToString(DeleteBotAlias);
         ActionToString(DeleteBotLocale);
         ActionToString(DeleteBotVersion);
+        ActionToString(DeleteCustomVocabulary);
         ActionToString(DeleteExport);
         ActionToString(DeleteImport);
         ActionToString(DeleteIntent);
@@ -356,18 +368,23 @@ QString LexModelsV2RequestPrivate::toString(const LexModelsV2Request::Action &ac
         ActionToString(DeleteResourcePolicyStatement);
         ActionToString(DeleteSlot);
         ActionToString(DeleteSlotType);
+        ActionToString(DeleteUtterances);
         ActionToString(DescribeBot);
         ActionToString(DescribeBotAlias);
         ActionToString(DescribeBotLocale);
+        ActionToString(DescribeBotRecommendation);
         ActionToString(DescribeBotVersion);
+        ActionToString(DescribeCustomVocabularyMetadata);
         ActionToString(DescribeExport);
         ActionToString(DescribeImport);
         ActionToString(DescribeIntent);
         ActionToString(DescribeResourcePolicy);
         ActionToString(DescribeSlot);
         ActionToString(DescribeSlotType);
+        ActionToString(ListAggregatedUtterances);
         ActionToString(ListBotAliases);
         ActionToString(ListBotLocales);
+        ActionToString(ListBotRecommendations);
         ActionToString(ListBotVersions);
         ActionToString(ListBots);
         ActionToString(ListBuiltInIntents);
@@ -375,15 +392,20 @@ QString LexModelsV2RequestPrivate::toString(const LexModelsV2Request::Action &ac
         ActionToString(ListExports);
         ActionToString(ListImports);
         ActionToString(ListIntents);
+        ActionToString(ListRecommendedIntents);
         ActionToString(ListSlotTypes);
         ActionToString(ListSlots);
         ActionToString(ListTagsForResource);
+        ActionToString(SearchAssociatedTranscripts);
+        ActionToString(StartBotRecommendation);
         ActionToString(StartImport);
+        ActionToString(StopBotRecommendation);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateBot);
         ActionToString(UpdateBotAlias);
         ActionToString(UpdateBotLocale);
+        ActionToString(UpdateBotRecommendation);
         ActionToString(UpdateExport);
         ActionToString(UpdateIntent);
         ActionToString(UpdateResourcePolicy);

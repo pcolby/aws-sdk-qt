@@ -30,23 +30,25 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class EfsRequestPrivate;
 
 class QTAWSEFS_EXPORT EfsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EFS.
+    /// Actions supported by Efs.
     enum Action {
         CreateAccessPointAction,
         CreateFileSystemAction,
         CreateMountTargetAction,
+        CreateReplicationConfigurationAction,
         CreateTagsAction,
         DeleteAccessPointAction,
         DeleteFileSystemAction,
         DeleteFileSystemPolicyAction,
         DeleteMountTargetAction,
+        DeleteReplicationConfigurationAction,
         DeleteTagsAction,
         DescribeAccessPointsAction,
         DescribeAccountPreferencesAction,
@@ -56,6 +58,7 @@ public:
         DescribeLifecycleConfigurationAction,
         DescribeMountTargetSecurityGroupsAction,
         DescribeMountTargetsAction,
+        DescribeReplicationConfigurationsAction,
         DescribeTagsAction,
         ListTagsForResourceAction,
         ModifyMountTargetSecurityGroupsAction,
@@ -102,7 +105,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

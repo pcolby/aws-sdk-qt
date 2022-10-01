@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateXssMatchSetResponse
- * \brief The CreateXssMatchSetResponse class provides an interace for WAF CreateXssMatchSet responses.
+ * \class QtAws::Waf::CreateXssMatchSetResponse
+ * \brief The CreateXssMatchSetResponse class provides an interace for Waf CreateXssMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateXssMatchSetRequest * CreateXssMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateXssMatchSet \a response.
+ * Parses a successful Waf CreateXssMatchSet \a response.
  */
 void CreateXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateXssMatchSetResponsePrivate
+ * \class QtAws::Waf::CreateXssMatchSetResponsePrivate
  * \brief The CreateXssMatchSetResponsePrivate class provides private implementation for CreateXssMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateXssMatchSetResponsePrivate::CreateXssMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateXssMatchSet response element from \a xml.
+ * Parses a Waf CreateXssMatchSet response element from \a xml.
  */
 void CreateXssMatchSetResponsePrivate::parseCreateXssMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateXssMatchSetResponsePrivate::parseCreateXssMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

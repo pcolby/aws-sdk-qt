@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::UnsubscribeRequest
- * \brief The UnsubscribeRequest class provides an interface for SNS Unsubscribe requests.
+ * \class QtAws::Sns::UnsubscribeRequest
+ * \brief The UnsubscribeRequest class provides an interface for Sns Unsubscribe requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SNS::UnsubscribeRequestPrivate
+ * \class QtAws::Sns::UnsubscribeRequestPrivate
  * \brief The UnsubscribeRequestPrivate class provides private implementation for UnsubscribeRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

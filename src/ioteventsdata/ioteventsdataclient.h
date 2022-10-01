@@ -32,6 +32,8 @@ namespace IoTEventsData {
 class IoTEventsDataClientPrivate;
 class BatchAcknowledgeAlarmRequest;
 class BatchAcknowledgeAlarmResponse;
+class BatchDeleteDetectorRequest;
+class BatchDeleteDetectorResponse;
 class BatchDisableAlarmRequest;
 class BatchDisableAlarmResponse;
 class BatchEnableAlarmRequest;
@@ -70,6 +72,7 @@ public:
 
 public slots:
     BatchAcknowledgeAlarmResponse * batchAcknowledgeAlarm(const BatchAcknowledgeAlarmRequest &request);
+    BatchDeleteDetectorResponse * batchDeleteDetector(const BatchDeleteDetectorRequest &request);
     BatchDisableAlarmResponse * batchDisableAlarm(const BatchDisableAlarmRequest &request);
     BatchEnableAlarmResponse * batchEnableAlarm(const BatchEnableAlarmRequest &request);
     BatchPutMessageResponse * batchPutMessage(const BatchPutMessageRequest &request);

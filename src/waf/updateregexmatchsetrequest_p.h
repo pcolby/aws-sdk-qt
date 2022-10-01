@@ -24,7 +24,7 @@
 #include "updateregexmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class UpdateRegexMatchSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

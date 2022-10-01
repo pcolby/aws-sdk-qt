@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DeleteManagedEndpointResponse
- * \brief The DeleteManagedEndpointResponse class provides an interace for EMRContainers DeleteManagedEndpoint responses.
+ * \class QtAws::Emrcontainers::DeleteManagedEndpointResponse
+ * \brief The DeleteManagedEndpointResponse class provides an interace for Emrcontainers DeleteManagedEndpoint responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::deleteManagedEndpoint
+ * \sa EmrcontainersClient::deleteManagedEndpoint
  */
 
 /*!
@@ -72,7 +72,7 @@ DeleteManagedEndpointResponse::DeleteManagedEndpointResponse(
         const DeleteManagedEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new DeleteManagedEndpointResponsePrivate(this), parent)
+    : EmrcontainersResponse(new DeleteManagedEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteManagedEndpointRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const DeleteManagedEndpointRequest * DeleteManagedEndpointResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful EMRContainers DeleteManagedEndpoint \a response.
+ * Parses a successful Emrcontainers DeleteManagedEndpoint \a response.
  */
 void DeleteManagedEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void DeleteManagedEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::DeleteManagedEndpointResponsePrivate
+ * \class QtAws::Emrcontainers::DeleteManagedEndpointResponsePrivate
  * \brief The DeleteManagedEndpointResponsePrivate class provides private implementation for DeleteManagedEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a DeleteManagedEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteManagedEndpointResponsePrivate::DeleteManagedEndpointResponsePrivate(
-    DeleteManagedEndpointResponse * const q) : EMRContainersResponsePrivate(q)
+    DeleteManagedEndpointResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers DeleteManagedEndpoint response element from \a xml.
+ * Parses a Emrcontainers DeleteManagedEndpoint response element from \a xml.
  */
 void DeleteManagedEndpointResponsePrivate::parseDeleteManagedEndpointResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void DeleteManagedEndpointResponsePrivate::parseDeleteManagedEndpointResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

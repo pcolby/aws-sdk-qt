@@ -24,11 +24,11 @@
 #include "updatedeletionprotectionrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class UpdateDeletionProtectionResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT UpdateDeletionProtectionResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT UpdateDeletionProtectionResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

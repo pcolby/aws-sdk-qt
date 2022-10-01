@@ -24,11 +24,11 @@
 #include "describevirtualclusterrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class DescribeVirtualClusterResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT DescribeVirtualClusterResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT DescribeVirtualClusterResponse : public EmrcontainersResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

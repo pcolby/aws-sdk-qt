@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListStudioSessionMappingsResponse
- * \brief The ListStudioSessionMappingsResponse class provides an interace for EMR ListStudioSessionMappings responses.
+ * \class QtAws::Emr::ListStudioSessionMappingsResponse
+ * \brief The ListStudioSessionMappingsResponse class provides an interace for Emr ListStudioSessionMappings responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listStudioSessionMappings
  */
@@ -64,7 +64,7 @@ const ListStudioSessionMappingsRequest * ListStudioSessionMappingsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful EMR ListStudioSessionMappings \a response.
+ * Parses a successful Emr ListStudioSessionMappings \a response.
  */
 void ListStudioSessionMappingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListStudioSessionMappingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ListStudioSessionMappingsResponsePrivate
+ * \class QtAws::Emr::ListStudioSessionMappingsResponsePrivate
  * \brief The ListStudioSessionMappingsResponsePrivate class provides private implementation for ListStudioSessionMappingsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ListStudioSessionMappingsResponsePrivate::ListStudioSessionMappingsResponsePriva
 }
 
 /*!
- * Parses a EMR ListStudioSessionMappings response element from \a xml.
+ * Parses a Emr ListStudioSessionMappings response element from \a xml.
  */
 void ListStudioSessionMappingsResponsePrivate::parseListStudioSessionMappingsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListStudioSessionMappingsResponsePrivate::parseListStudioSessionMappingsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

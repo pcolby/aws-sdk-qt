@@ -24,7 +24,7 @@
 #include "startautomationexecutionrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class StartAutomationExecutionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

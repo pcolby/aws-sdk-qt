@@ -24,14 +24,14 @@
 #include "importdocumentationpartsrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class ImportDocumentationPartsRequest;
 
-class ImportDocumentationPartsRequestPrivate : public APIGatewayRequestPrivate {
+class ImportDocumentationPartsRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    ImportDocumentationPartsRequestPrivate(const APIGatewayRequest::Action action,
+    ImportDocumentationPartsRequestPrivate(const ApiGatewayRequest::Action action,
                                    ImportDocumentationPartsRequest * const q);
     ImportDocumentationPartsRequestPrivate(const ImportDocumentationPartsRequestPrivate &other,
                                    ImportDocumentationPartsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

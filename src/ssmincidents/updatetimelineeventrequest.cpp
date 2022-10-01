@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateTimelineEventRequest
- * \brief The UpdateTimelineEventRequest class provides an interface for SSMIncidents UpdateTimelineEvent requests.
+ * \class QtAws::SsmIncidents::UpdateTimelineEventRequest
+ * \brief The UpdateTimelineEventRequest class provides an interface for SsmIncidents UpdateTimelineEvent requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateTimelineEvent
+ * \sa SsmIncidentsClient::updateTimelineEvent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateTimelineEventRequest::UpdateTimelineEventRequest(const UpdateTimelineEventRequest &other)
-    : SSMIncidentsRequest(new UpdateTimelineEventRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new UpdateTimelineEventRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ UpdateTimelineEventRequest::UpdateTimelineEventRequest(const UpdateTimelineEvent
  * Constructs a UpdateTimelineEventRequest object.
  */
 UpdateTimelineEventRequest::UpdateTimelineEventRequest()
-    : SSMIncidentsRequest(new UpdateTimelineEventRequestPrivate(SSMIncidentsRequest::UpdateTimelineEventAction, this))
+    : SsmIncidentsRequest(new UpdateTimelineEventRequestPrivate(SsmIncidentsRequest::UpdateTimelineEventAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * UpdateTimelineEventRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateTimelineEventRequestPrivate
+ * \class QtAws::SsmIncidents::UpdateTimelineEventRequestPrivate
  * \brief The UpdateTimelineEventRequestPrivate class provides private implementation for UpdateTimelineEventRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a UpdateTimelineEventRequestPrivate object for SSMIncidents \a action,
+ * Constructs a UpdateTimelineEventRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 UpdateTimelineEventRequestPrivate::UpdateTimelineEventRequestPrivate(
-    const SSMIncidentsRequest::Action action, UpdateTimelineEventRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, UpdateTimelineEventRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ UpdateTimelineEventRequestPrivate::UpdateTimelineEventRequestPrivate(
  */
 UpdateTimelineEventRequestPrivate::UpdateTimelineEventRequestPrivate(
     const UpdateTimelineEventRequestPrivate &other, UpdateTimelineEventRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

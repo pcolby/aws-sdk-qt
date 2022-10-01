@@ -24,11 +24,11 @@
 #include "uploadlayerpartrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class UploadLayerPartResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT UploadLayerPartResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT UploadLayerPartResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

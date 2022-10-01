@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CopyDBParameterGroupResponse
- * \brief The CopyDBParameterGroupResponse class provides an interace for RDS CopyDBParameterGroup responses.
+ * \class QtAws::Rds::CopyDBParameterGroupResponse
+ * \brief The CopyDBParameterGroupResponse class provides an interace for Rds CopyDBParameterGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful RDS CopyDBParameterGroup \a response.
+ * Parses a successful Rds CopyDBParameterGroup \a response.
  */
 void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CopyDBParameterGroupResponsePrivate
+ * \class QtAws::Rds::CopyDBParameterGroupResponsePrivate
  * \brief The CopyDBParameterGroupResponsePrivate class provides private implementation for CopyDBParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CopyDBParameterGroup response element from \a xml.
+ * Parses a Rds CopyDBParameterGroup response element from \a xml.
  */
 void CopyDBParameterGroupResponsePrivate::parseCopyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CopyDBParameterGroupResponsePrivate::parseCopyDBParameterGroupResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

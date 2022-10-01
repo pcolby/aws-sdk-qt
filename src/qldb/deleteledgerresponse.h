@@ -24,7 +24,7 @@
 #include "deleteledgerrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class DeleteLedgerResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

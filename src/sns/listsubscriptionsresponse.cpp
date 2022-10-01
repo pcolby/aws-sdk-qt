@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListSubscriptionsResponse
- * \brief The ListSubscriptionsResponse class provides an interace for SNS ListSubscriptions responses.
+ * \class QtAws::Sns::ListSubscriptionsResponse
+ * \brief The ListSubscriptionsResponse class provides an interace for Sns ListSubscriptions responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ListSubscriptionsRequest * ListSubscriptionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS ListSubscriptions \a response.
+ * Parses a successful Sns ListSubscriptions \a response.
  */
 void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::ListSubscriptionsResponsePrivate
+ * \class QtAws::Sns::ListSubscriptionsResponsePrivate
  * \brief The ListSubscriptionsResponsePrivate class provides private implementation for ListSubscriptionsResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ListSubscriptionsResponsePrivate::ListSubscriptionsResponsePrivate(
 }
 
 /*!
- * Parses a SNS ListSubscriptions response element from \a xml.
+ * Parses a Sns ListSubscriptions response element from \a xml.
  */
 void ListSubscriptionsResponsePrivate::parseListSubscriptionsResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ListSubscriptionsResponsePrivate::parseListSubscriptionsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

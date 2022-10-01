@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::Ec2Response
- * \brief The Ec2Response class provides an interface for EC2 responses.
+ * \class QtAws::Ec2::Ec2Response
+ * \brief The Ec2Response class provides an interface for Ec2 responses.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -76,11 +76,11 @@ void Ec2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::Ec2ResponsePrivate
+ * \class QtAws::Ec2::Ec2ResponsePrivate
  * \brief The Ec2ResponsePrivate class provides private implementation for Ec2Response.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -92,5 +92,5 @@ Ec2ResponsePrivate::Ec2ResponsePrivate(
 
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

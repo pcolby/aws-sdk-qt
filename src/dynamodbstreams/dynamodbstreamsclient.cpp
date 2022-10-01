@@ -34,23 +34,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::DynamoDBStreams
+ * \namespace QtAws::DynamoDbStreams
  * \brief Contains classess for accessing Amazon DynamoDB Streams.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsClient
- * \brief The DynamoDBStreamsClient class provides access to the Amazon DynamoDB Streams service.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsClient
+ * \brief The DynamoDbStreamsClient class provides access to the Amazon DynamoDB Streams service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -61,21 +61,21 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * \brief Constructs a DynamoDBStreamsClient object.
+ * \brief Constructs a DynamoDbStreamsClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-DynamoDBStreamsClient::DynamoDBStreamsClient(
+DynamoDbStreamsClient::DynamoDbStreamsClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDbStreamsClientPrivate(this), parent)
 {
-    Q_D(DynamoDBStreamsClient);
+    Q_D(DynamoDbStreamsClient);
     d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("streams.dynamodb");
@@ -86,7 +86,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
 }
 
 /*!
- * \overload DynamoDBStreamsClient()
+ * \overload DynamoDbStreamsClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -96,14 +96,14 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-DynamoDBStreamsClient::DynamoDBStreamsClient(
+DynamoDbStreamsClient::DynamoDbStreamsClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new DynamoDbStreamsClientPrivate(this), parent)
 {
-    Q_D(DynamoDBStreamsClient);
+    Q_D(DynamoDbStreamsClient);
     d->apiVersion = QStringLiteral("2012-08-10");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -114,7 +114,7 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
 }
 
 /*!
- * Sends \a request to the DynamoDBStreamsClient service, and returns a pointer to an
+ * Sends \a request to the DynamoDbStreamsClient service, and returns a pointer to an
  * DescribeStreamResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -133,13 +133,13 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  * then the shard is still open (able to receive more stream records). If both <code>StartingSequenceNumber</code> and
  * <code>EndingSequenceNumber</code> are present, then that shard is closed and can no longer receive more
  */
-DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStreamRequest &request)
+DescribeStreamResponse * DynamoDbStreamsClient::describeStream(const DescribeStreamRequest &request)
 {
     return qobject_cast<DescribeStreamResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DynamoDBStreamsClient service, and returns a pointer to an
+ * Sends \a request to the DynamoDbStreamsClient service, and returns a pointer to an
  * GetRecordsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -157,13 +157,13 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
  *
  * <code>GetRecords</code> can retrieve a maximum of 1 MB of data or 1000 stream records, whichever comes
  */
-GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &request)
+GetRecordsResponse * DynamoDbStreamsClient::getRecords(const GetRecordsRequest &request)
 {
     return qobject_cast<GetRecordsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DynamoDBStreamsClient service, and returns a pointer to an
+ * Sends \a request to the DynamoDbStreamsClient service, and returns a pointer to an
  * GetShardIteratorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -175,13 +175,13 @@ GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &
  *
  * A shard iterator expires 15 minutes after it is returned to the
  */
-GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
+GetShardIteratorResponse * DynamoDbStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
 {
     return qobject_cast<GetShardIteratorResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the DynamoDBStreamsClient service, and returns a pointer to an
+ * Sends \a request to the DynamoDbStreamsClient service, and returns a pointer to an
  * ListStreamsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -193,28 +193,28 @@ GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShar
  *
  * You can call <code>ListStreams</code> at a maximum rate of 5 times per
  */
-ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsRequest &request)
+ListStreamsResponse * DynamoDbStreamsClient::listStreams(const ListStreamsRequest &request)
 {
     return qobject_cast<ListStreamsResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsClientPrivate
- * \brief The DynamoDBStreamsClientPrivate class provides private implementation for DynamoDBStreamsClient.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsClientPrivate
+ * \brief The DynamoDbStreamsClientPrivate class provides private implementation for DynamoDbStreamsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a DynamoDBStreamsClientPrivate object with public implementation \a q.
+ * Constructs a DynamoDbStreamsClientPrivate object with public implementation \a q.
  */
-DynamoDBStreamsClientPrivate::DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q)
+DynamoDbStreamsClientPrivate::DynamoDbStreamsClientPrivate(DynamoDbStreamsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBProxyEndpointRequest
- * \brief The CreateDBProxyEndpointRequest class provides an interface for RDS CreateDBProxyEndpoint requests.
+ * \class QtAws::Rds::CreateDBProxyEndpointRequest
+ * \brief The CreateDBProxyEndpointRequest class provides an interface for Rds CreateDBProxyEndpoint requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CreateDBProxyEndpointRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::RDS::CreateDBProxyEndpointRequestPrivate
+ * \class QtAws::Rds::CreateDBProxyEndpointRequestPrivate
  * \brief The CreateDBProxyEndpointRequestPrivate class provides private implementation for CreateDBProxyEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CreateDBProxyEndpointRequestPrivate::CreateDBProxyEndpointRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

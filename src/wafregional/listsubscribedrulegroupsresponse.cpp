@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListSubscribedRuleGroupsResponse
- * \brief The ListSubscribedRuleGroupsResponse class provides an interace for WAFRegional ListSubscribedRuleGroups responses.
+ * \class QtAws::WafRegional::ListSubscribedRuleGroupsResponse
+ * \brief The ListSubscribedRuleGroupsResponse class provides an interace for WafRegional ListSubscribedRuleGroups responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listSubscribedRuleGroups
+ * \sa WafRegionalClient::listSubscribedRuleGroups
  */
 
 /*!
@@ -67,7 +67,7 @@ ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
         const ListSubscribedRuleGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListSubscribedRuleGroupsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListSubscribedRuleGroups \a response.
+ * Parses a successful WafRegional ListSubscribedRuleGroups \a response.
  */
 void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListSubscribedRuleGroupsResponsePrivate
+ * \class QtAws::WafRegional::ListSubscribedRuleGroupsResponsePrivate
  * \brief The ListSubscribedRuleGroupsResponsePrivate class provides private implementation for ListSubscribedRuleGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListSubscribedRuleGroupsResponsePrivate object with public implementation \a q.
  */
 ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate(
-    ListSubscribedRuleGroupsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListSubscribedRuleGroupsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListSubscribedRuleGroups response element from \a xml.
+ * Parses a WafRegional ListSubscribedRuleGroups response element from \a xml.
  */
 void ListSubscribedRuleGroupsResponsePrivate::parseListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListSubscribedRuleGroupsResponsePrivate::parseListSubscribedRuleGroupsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

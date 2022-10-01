@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::SSMContactsResponse
- * \brief The SSMContactsResponse class provides an interface for SSMContacts responses.
+ * \class QtAws::SsmContacts::SsmContactsResponse
+ * \brief The SsmContactsResponse class provides an interface for SsmContacts responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a SSMContactsResponse object with parent \a parent.
+ * Constructs a SsmContactsResponse object with parent \a parent.
  */
-SSMContactsResponse::SSMContactsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SSMContactsResponsePrivate(this), parent)
+SsmContactsResponse::SsmContactsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SsmContactsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SSMContactsResponse object with private implementation \a d,
+ * Constructs a SsmContactsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMContactsResponsePrivate.
+ * implementation that inherits from SsmContactsResponsePrivate.
  */
-SSMContactsResponse::SSMContactsResponse(SSMContactsResponsePrivate * const d, QObject * const parent)
+SsmContactsResponse::SsmContactsResponse(SsmContactsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SSMContactsResponse::SSMContactsResponse(SSMContactsResponsePrivate * const d, Q
 /*!
  * \reimp
  */
-void SSMContactsResponse::parseFailure(QIODevice &response)
+void SsmContactsResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(SSMContactsResponse);
+    //Q_D(SsmContactsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void SSMContactsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::SSMContactsResponsePrivate
- * \brief The SSMContactsResponsePrivate class provides private implementation for SSMContactsResponse.
+ * \class QtAws::SsmContacts::SsmContactsResponsePrivate
+ * \brief The SsmContactsResponsePrivate class provides private implementation for SsmContactsResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a SSMContactsResponsePrivate object with public implementation \a q.
+ * Constructs a SsmContactsResponsePrivate object with public implementation \a q.
  */
-SSMContactsResponsePrivate::SSMContactsResponsePrivate(
-    SSMContactsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SsmContactsResponsePrivate::SsmContactsResponsePrivate(
+    SsmContactsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

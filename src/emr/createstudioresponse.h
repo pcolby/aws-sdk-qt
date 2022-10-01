@@ -24,7 +24,7 @@
 #include "createstudiorequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class CreateStudioResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

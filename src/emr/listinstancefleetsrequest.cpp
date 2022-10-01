@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListInstanceFleetsRequest
- * \brief The ListInstanceFleetsRequest class provides an interface for EMR ListInstanceFleets requests.
+ * \class QtAws::Emr::ListInstanceFleetsRequest
+ * \brief The ListInstanceFleetsRequest class provides an interface for Emr ListInstanceFleets requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listInstanceFleets
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::EMR::ListInstanceFleetsRequestPrivate
+ * \class QtAws::Emr::ListInstanceFleetsRequestPrivate
  * \brief The ListInstanceFleetsRequestPrivate class provides private implementation for ListInstanceFleetsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

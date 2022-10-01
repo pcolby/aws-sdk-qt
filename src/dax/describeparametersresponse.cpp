@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeParametersResponse
- * \brief The DescribeParametersResponse class provides an interace for DAX DescribeParameters responses.
+ * \class QtAws::Dax::DescribeParametersResponse
+ * \brief The DescribeParametersResponse class provides an interace for Dax DescribeParameters responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DescribeParametersRequest * DescribeParametersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX DescribeParameters \a response.
+ * Parses a successful Dax DescribeParameters \a response.
  */
 void DescribeParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DescribeParametersResponsePrivate
+ * \class QtAws::Dax::DescribeParametersResponsePrivate
  * \brief The DescribeParametersResponsePrivate class provides private implementation for DescribeParametersResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
 }
 
 /*!
- * Parses a DAX DescribeParameters response element from \a xml.
+ * Parses a Dax DescribeParameters response element from \a xml.
  */
 void DescribeParametersResponsePrivate::parseDescribeParametersResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DescribeParametersResponsePrivate::parseDescribeParametersResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

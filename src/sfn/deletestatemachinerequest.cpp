@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DeleteStateMachineRequest
- * \brief The DeleteStateMachineRequest class provides an interface for SFN DeleteStateMachine requests.
+ * \class QtAws::Sfn::DeleteStateMachineRequest
+ * \brief The DeleteStateMachineRequest class provides an interface for Sfn DeleteStateMachine requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SFN::DeleteStateMachineRequestPrivate
+ * \class QtAws::Sfn::DeleteStateMachineRequestPrivate
  * \brief The DeleteStateMachineRequestPrivate class provides private implementation for DeleteStateMachineRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "startsigningjobrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class StartSigningJobRequest;
 
-class StartSigningJobRequestPrivate : public signerRequestPrivate {
+class StartSigningJobRequestPrivate : public SignerRequestPrivate {
 
 public:
-    StartSigningJobRequestPrivate(const signerRequest::Action action,
+    StartSigningJobRequestPrivate(const SignerRequest::Action action,
                                    StartSigningJobRequest * const q);
     StartSigningJobRequestPrivate(const StartSigningJobRequestPrivate &other,
                                    StartSigningJobRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

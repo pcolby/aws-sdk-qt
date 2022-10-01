@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeLimitsResponse
- * \brief The DescribeLimitsResponse class provides an interace for DynamoDB DescribeLimits responses.
+ * \class QtAws::DynamoDb::DescribeLimitsResponse
+ * \brief The DescribeLimitsResponse class provides an interace for DynamoDb DescribeLimits responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeLimits
+ * \sa DynamoDbClient::describeLimits
  */
 
 /*!
@@ -63,7 +63,7 @@ DescribeLimitsResponse::DescribeLimitsResponse(
         const DescribeLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeLimitsResponsePrivate(this), parent)
+    : DynamoDbResponse(new DescribeLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLimitsRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DescribeLimitsRequest * DescribeLimitsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DescribeLimits \a response.
+ * Parses a successful DynamoDb DescribeLimits \a response.
  */
 void DescribeLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DescribeLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeLimitsResponsePrivate
+ * \class QtAws::DynamoDb::DescribeLimitsResponsePrivate
  * \brief The DescribeLimitsResponsePrivate class provides private implementation for DescribeLimitsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DescribeLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
-    DescribeLimitsResponse * const q) : DynamoDBResponsePrivate(q)
+    DescribeLimitsResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DescribeLimits response element from \a xml.
+ * Parses a DynamoDb DescribeLimits response element from \a xml.
  */
 void DescribeLimitsResponsePrivate::parseDescribeLimitsResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeLimitsResponsePrivate::parseDescribeLimitsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

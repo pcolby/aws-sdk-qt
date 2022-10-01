@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeBackupsRequest
- * \brief The DescribeBackupsRequest class provides an interface for OpsWorksCM DescribeBackups requests.
+ * \class QtAws::OpsWorksCm::DescribeBackupsRequest
+ * \brief The DescribeBackupsRequest class provides an interface for OpsWorksCm DescribeBackups requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeBackups
+ * \sa OpsWorksCmClient::describeBackups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &other)
-    : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DescribeBackupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &oth
  * Constructs a DescribeBackupsRequest object.
  */
 DescribeBackupsRequest::DescribeBackupsRequest()
-    : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(OpsWorksCMRequest::DescribeBackupsAction, this))
+    : OpsWorksCmRequest(new DescribeBackupsRequestPrivate(OpsWorksCmRequest::DescribeBackupsAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeBackupsRequestPrivate
+ * \class QtAws::OpsWorksCm::DescribeBackupsRequestPrivate
  * \brief The DescribeBackupsRequestPrivate class provides private implementation for DescribeBackupsRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DescribeBackupsRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DescribeBackupsRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
-    const OpsWorksCMRequest::Action action, DescribeBackupsRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DescribeBackupsRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const DescribeBackupsRequestPrivate &other, DescribeBackupsRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

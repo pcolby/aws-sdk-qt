@@ -24,14 +24,14 @@
 #include "updateglobaltablesettingsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateGlobalTableSettingsRequest;
 
-class UpdateGlobalTableSettingsRequestPrivate : public DynamoDBRequestPrivate {
+class UpdateGlobalTableSettingsRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    UpdateGlobalTableSettingsRequestPrivate(const DynamoDBRequest::Action action,
+    UpdateGlobalTableSettingsRequestPrivate(const DynamoDbRequest::Action action,
                                    UpdateGlobalTableSettingsRequest * const q);
     UpdateGlobalTableSettingsRequestPrivate(const UpdateGlobalTableSettingsRequestPrivate &other,
                                    UpdateGlobalTableSettingsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

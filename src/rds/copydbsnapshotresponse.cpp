@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CopyDBSnapshotResponse
- * \brief The CopyDBSnapshotResponse class provides an interace for RDS CopyDBSnapshot responses.
+ * \class QtAws::Rds::CopyDBSnapshotResponse
+ * \brief The CopyDBSnapshotResponse class provides an interace for Rds CopyDBSnapshot responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CopyDBSnapshotRequest * CopyDBSnapshotResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS CopyDBSnapshot \a response.
+ * Parses a successful Rds CopyDBSnapshot \a response.
  */
 void CopyDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CopyDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CopyDBSnapshotResponsePrivate
+ * \class QtAws::Rds::CopyDBSnapshotResponsePrivate
  * \brief The CopyDBSnapshotResponsePrivate class provides private implementation for CopyDBSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
 }
 
 /*!
- * Parses a RDS CopyDBSnapshot response element from \a xml.
+ * Parses a Rds CopyDBSnapshot response element from \a xml.
  */
 void CopyDBSnapshotResponsePrivate::parseCopyDBSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CopyDBSnapshotResponsePrivate::parseCopyDBSnapshotResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

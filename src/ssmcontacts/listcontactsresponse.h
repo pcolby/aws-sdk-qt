@@ -24,11 +24,11 @@
 #include "listcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ListContactsResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT ListContactsResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT ListContactsResponse : public SsmContactsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

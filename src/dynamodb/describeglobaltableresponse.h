@@ -24,11 +24,11 @@
 #include "describeglobaltablerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeGlobalTableResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeGlobalTableResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT DescribeGlobalTableResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -37,45 +37,70 @@ namespace Proton {
  * requests.
  *
  * \value AcceptEnvironmentAccountConnectionAction Proton AcceptEnvironmentAccountConnection action.
+ * \value CancelComponentDeploymentAction Proton CancelComponentDeployment action.
  * \value CancelEnvironmentDeploymentAction Proton CancelEnvironmentDeployment action.
  * \value CancelServiceInstanceDeploymentAction Proton CancelServiceInstanceDeployment action.
  * \value CancelServicePipelineDeploymentAction Proton CancelServicePipelineDeployment action.
+ * \value CreateComponentAction Proton CreateComponent action.
  * \value CreateEnvironmentAction Proton CreateEnvironment action.
  * \value CreateEnvironmentAccountConnectionAction Proton CreateEnvironmentAccountConnection action.
  * \value CreateEnvironmentTemplateAction Proton CreateEnvironmentTemplate action.
  * \value CreateEnvironmentTemplateVersionAction Proton CreateEnvironmentTemplateVersion action.
+ * \value CreateRepositoryAction Proton CreateRepository action.
  * \value CreateServiceAction Proton CreateService action.
  * \value CreateServiceTemplateAction Proton CreateServiceTemplate action.
  * \value CreateServiceTemplateVersionAction Proton CreateServiceTemplateVersion action.
+ * \value CreateTemplateSyncConfigAction Proton CreateTemplateSyncConfig action.
+ * \value DeleteComponentAction Proton DeleteComponent action.
  * \value DeleteEnvironmentAction Proton DeleteEnvironment action.
  * \value DeleteEnvironmentAccountConnectionAction Proton DeleteEnvironmentAccountConnection action.
  * \value DeleteEnvironmentTemplateAction Proton DeleteEnvironmentTemplate action.
  * \value DeleteEnvironmentTemplateVersionAction Proton DeleteEnvironmentTemplateVersion action.
+ * \value DeleteRepositoryAction Proton DeleteRepository action.
  * \value DeleteServiceAction Proton DeleteService action.
  * \value DeleteServiceTemplateAction Proton DeleteServiceTemplate action.
  * \value DeleteServiceTemplateVersionAction Proton DeleteServiceTemplateVersion action.
+ * \value DeleteTemplateSyncConfigAction Proton DeleteTemplateSyncConfig action.
  * \value GetAccountSettingsAction Proton GetAccountSettings action.
+ * \value GetComponentAction Proton GetComponent action.
  * \value GetEnvironmentAction Proton GetEnvironment action.
  * \value GetEnvironmentAccountConnectionAction Proton GetEnvironmentAccountConnection action.
  * \value GetEnvironmentTemplateAction Proton GetEnvironmentTemplate action.
  * \value GetEnvironmentTemplateVersionAction Proton GetEnvironmentTemplateVersion action.
+ * \value GetRepositoryAction Proton GetRepository action.
+ * \value GetRepositorySyncStatusAction Proton GetRepositorySyncStatus action.
  * \value GetServiceAction Proton GetService action.
  * \value GetServiceInstanceAction Proton GetServiceInstance action.
  * \value GetServiceTemplateAction Proton GetServiceTemplate action.
  * \value GetServiceTemplateVersionAction Proton GetServiceTemplateVersion action.
+ * \value GetTemplateSyncConfigAction Proton GetTemplateSyncConfig action.
+ * \value GetTemplateSyncStatusAction Proton GetTemplateSyncStatus action.
+ * \value ListComponentOutputsAction Proton ListComponentOutputs action.
+ * \value ListComponentProvisionedResourcesAction Proton ListComponentProvisionedResources action.
+ * \value ListComponentsAction Proton ListComponents action.
  * \value ListEnvironmentAccountConnectionsAction Proton ListEnvironmentAccountConnections action.
+ * \value ListEnvironmentOutputsAction Proton ListEnvironmentOutputs action.
+ * \value ListEnvironmentProvisionedResourcesAction Proton ListEnvironmentProvisionedResources action.
  * \value ListEnvironmentTemplateVersionsAction Proton ListEnvironmentTemplateVersions action.
  * \value ListEnvironmentTemplatesAction Proton ListEnvironmentTemplates action.
  * \value ListEnvironmentsAction Proton ListEnvironments action.
+ * \value ListRepositoriesAction Proton ListRepositories action.
+ * \value ListRepositorySyncDefinitionsAction Proton ListRepositorySyncDefinitions action.
+ * \value ListServiceInstanceOutputsAction Proton ListServiceInstanceOutputs action.
+ * \value ListServiceInstanceProvisionedResourcesAction Proton ListServiceInstanceProvisionedResources action.
  * \value ListServiceInstancesAction Proton ListServiceInstances action.
+ * \value ListServicePipelineOutputsAction Proton ListServicePipelineOutputs action.
+ * \value ListServicePipelineProvisionedResourcesAction Proton ListServicePipelineProvisionedResources action.
  * \value ListServiceTemplateVersionsAction Proton ListServiceTemplateVersions action.
  * \value ListServiceTemplatesAction Proton ListServiceTemplates action.
  * \value ListServicesAction Proton ListServices action.
  * \value ListTagsForResourceAction Proton ListTagsForResource action.
+ * \value NotifyResourceDeploymentStatusChangeAction Proton NotifyResourceDeploymentStatusChange action.
  * \value RejectEnvironmentAccountConnectionAction Proton RejectEnvironmentAccountConnection action.
  * \value TagResourceAction Proton TagResource action.
  * \value UntagResourceAction Proton UntagResource action.
  * \value UpdateAccountSettingsAction Proton UpdateAccountSettings action.
+ * \value UpdateComponentAction Proton UpdateComponent action.
  * \value UpdateEnvironmentAction Proton UpdateEnvironment action.
  * \value UpdateEnvironmentAccountConnectionAction Proton UpdateEnvironmentAccountConnection action.
  * \value UpdateEnvironmentTemplateAction Proton UpdateEnvironmentTemplate action.
@@ -85,6 +110,7 @@ namespace Proton {
  * \value UpdateServicePipelineAction Proton UpdateServicePipeline action.
  * \value UpdateServiceTemplateAction Proton UpdateServiceTemplate action.
  * \value UpdateServiceTemplateVersionAction Proton UpdateServiceTemplateVersion action.
+ * \value UpdateTemplateSyncConfigAction Proton UpdateTemplateSyncConfig action.
  */
 
 /*!
@@ -292,7 +318,7 @@ QNetworkRequest ProtonRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ProtonRequestPrivate::ProtonRequestPrivate(const ProtonRequest::Action action, ProtonRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-07-20"))
 {
 
 }
@@ -327,45 +353,70 @@ QString ProtonRequestPrivate::toString(const ProtonRequest::Action &action)
         case ProtonRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AcceptEnvironmentAccountConnection);
+        ActionToString(CancelComponentDeployment);
         ActionToString(CancelEnvironmentDeployment);
         ActionToString(CancelServiceInstanceDeployment);
         ActionToString(CancelServicePipelineDeployment);
+        ActionToString(CreateComponent);
         ActionToString(CreateEnvironment);
         ActionToString(CreateEnvironmentAccountConnection);
         ActionToString(CreateEnvironmentTemplate);
         ActionToString(CreateEnvironmentTemplateVersion);
+        ActionToString(CreateRepository);
         ActionToString(CreateService);
         ActionToString(CreateServiceTemplate);
         ActionToString(CreateServiceTemplateVersion);
+        ActionToString(CreateTemplateSyncConfig);
+        ActionToString(DeleteComponent);
         ActionToString(DeleteEnvironment);
         ActionToString(DeleteEnvironmentAccountConnection);
         ActionToString(DeleteEnvironmentTemplate);
         ActionToString(DeleteEnvironmentTemplateVersion);
+        ActionToString(DeleteRepository);
         ActionToString(DeleteService);
         ActionToString(DeleteServiceTemplate);
         ActionToString(DeleteServiceTemplateVersion);
+        ActionToString(DeleteTemplateSyncConfig);
         ActionToString(GetAccountSettings);
+        ActionToString(GetComponent);
         ActionToString(GetEnvironment);
         ActionToString(GetEnvironmentAccountConnection);
         ActionToString(GetEnvironmentTemplate);
         ActionToString(GetEnvironmentTemplateVersion);
+        ActionToString(GetRepository);
+        ActionToString(GetRepositorySyncStatus);
         ActionToString(GetService);
         ActionToString(GetServiceInstance);
         ActionToString(GetServiceTemplate);
         ActionToString(GetServiceTemplateVersion);
+        ActionToString(GetTemplateSyncConfig);
+        ActionToString(GetTemplateSyncStatus);
+        ActionToString(ListComponentOutputs);
+        ActionToString(ListComponentProvisionedResources);
+        ActionToString(ListComponents);
         ActionToString(ListEnvironmentAccountConnections);
+        ActionToString(ListEnvironmentOutputs);
+        ActionToString(ListEnvironmentProvisionedResources);
         ActionToString(ListEnvironmentTemplateVersions);
         ActionToString(ListEnvironmentTemplates);
         ActionToString(ListEnvironments);
+        ActionToString(ListRepositories);
+        ActionToString(ListRepositorySyncDefinitions);
+        ActionToString(ListServiceInstanceOutputs);
+        ActionToString(ListServiceInstanceProvisionedResources);
         ActionToString(ListServiceInstances);
+        ActionToString(ListServicePipelineOutputs);
+        ActionToString(ListServicePipelineProvisionedResources);
         ActionToString(ListServiceTemplateVersions);
         ActionToString(ListServiceTemplates);
         ActionToString(ListServices);
         ActionToString(ListTagsForResource);
+        ActionToString(NotifyResourceDeploymentStatusChange);
         ActionToString(RejectEnvironmentAccountConnection);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAccountSettings);
+        ActionToString(UpdateComponent);
         ActionToString(UpdateEnvironment);
         ActionToString(UpdateEnvironmentAccountConnection);
         ActionToString(UpdateEnvironmentTemplate);
@@ -375,6 +426,7 @@ QString ProtonRequestPrivate::toString(const ProtonRequest::Action &action)
         ActionToString(UpdateServicePipeline);
         ActionToString(UpdateServiceTemplate);
         ActionToString(UpdateServiceTemplateVersion);
+        ActionToString(UpdateTemplateSyncConfig);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListInfrastructureConfigurationsRequest
- * \brief The ListInfrastructureConfigurationsRequest class provides an interface for imagebuilder ListInfrastructureConfigurations requests.
+ * \class QtAws::ImageBuilder::ListInfrastructureConfigurationsRequest
+ * \brief The ListInfrastructureConfigurationsRequest class provides an interface for ImageBuilder ListInfrastructureConfigurations requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listInfrastructureConfigurations
+ * \sa ImageBuilderClient::listInfrastructureConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListInfrastructureConfigurationsRequest::ListInfrastructureConfigurationsRequest(const ListInfrastructureConfigurationsRequest &other)
-    : imagebuilderRequest(new ListInfrastructureConfigurationsRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListInfrastructureConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListInfrastructureConfigurationsRequest::ListInfrastructureConfigurationsRequest
  * Constructs a ListInfrastructureConfigurationsRequest object.
  */
 ListInfrastructureConfigurationsRequest::ListInfrastructureConfigurationsRequest()
-    : imagebuilderRequest(new ListInfrastructureConfigurationsRequestPrivate(imagebuilderRequest::ListInfrastructureConfigurationsAction, this))
+    : ImageBuilderRequest(new ListInfrastructureConfigurationsRequestPrivate(ImageBuilderRequest::ListInfrastructureConfigurationsAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListInfrastructureConfigurationsRequest::resp
 }
 
 /*!
- * \class QtAws::imagebuilder::ListInfrastructureConfigurationsRequestPrivate
+ * \class QtAws::ImageBuilder::ListInfrastructureConfigurationsRequestPrivate
  * \brief The ListInfrastructureConfigurationsRequestPrivate class provides private implementation for ListInfrastructureConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListInfrastructureConfigurationsRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListInfrastructureConfigurationsRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListInfrastructureConfigurationsRequestPrivate::ListInfrastructureConfigurationsRequestPrivate(
-    const imagebuilderRequest::Action action, ListInfrastructureConfigurationsRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListInfrastructureConfigurationsRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListInfrastructureConfigurationsRequestPrivate::ListInfrastructureConfigurations
  */
 ListInfrastructureConfigurationsRequestPrivate::ListInfrastructureConfigurationsRequestPrivate(
     const ListInfrastructureConfigurationsRequestPrivate &other, ListInfrastructureConfigurationsRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

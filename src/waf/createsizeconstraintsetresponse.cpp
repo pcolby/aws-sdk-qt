@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateSizeConstraintSetResponse
- * \brief The CreateSizeConstraintSetResponse class provides an interace for WAF CreateSizeConstraintSet responses.
+ * \class QtAws::Waf::CreateSizeConstraintSetResponse
+ * \brief The CreateSizeConstraintSetResponse class provides an interace for Waf CreateSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAF CreateSizeConstraintSet \a response.
+ * Parses a successful Waf CreateSizeConstraintSet \a response.
  */
 void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateSizeConstraintSetResponsePrivate
+ * \class QtAws::Waf::CreateSizeConstraintSetResponsePrivate
  * \brief The CreateSizeConstraintSetResponsePrivate class provides private implementation for CreateSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateSizeConstraintSet response element from \a xml.
+ * Parses a Waf CreateSizeConstraintSet response element from \a xml.
  */
 void CreateSizeConstraintSetResponsePrivate::parseCreateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateSizeConstraintSetResponsePrivate::parseCreateSizeConstraintSetRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

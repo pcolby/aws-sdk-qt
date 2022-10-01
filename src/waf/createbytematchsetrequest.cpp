@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateByteMatchSetRequest
- * \brief The CreateByteMatchSetRequest class provides an interface for WAF CreateByteMatchSet requests.
+ * \class QtAws::Waf::CreateByteMatchSetRequest
+ * \brief The CreateByteMatchSetRequest class provides an interface for Waf CreateByteMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * CreateByteMatchSetRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAF::CreateByteMatchSetRequestPrivate
+ * \class QtAws::Waf::CreateByteMatchSetRequestPrivate
  * \brief The CreateByteMatchSetRequestPrivate class provides private implementation for CreateByteMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

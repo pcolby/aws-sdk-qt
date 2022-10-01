@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteFaqRequest
- * \brief The DeleteFaqRequest class provides an interface for kendra DeleteFaq requests.
+ * \class QtAws::Kendra::DeleteFaqRequest
+ * \brief The DeleteFaqRequest class provides an interface for Kendra DeleteFaq requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteFaq
+ * \sa KendraClient::deleteFaq
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteFaqRequest::DeleteFaqRequest(const DeleteFaqRequest &other)
-    : kendraRequest(new DeleteFaqRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DeleteFaqRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteFaqRequest::DeleteFaqRequest(const DeleteFaqRequest &other)
  * Constructs a DeleteFaqRequest object.
  */
 DeleteFaqRequest::DeleteFaqRequest()
-    : kendraRequest(new DeleteFaqRequestPrivate(kendraRequest::DeleteFaqAction, this))
+    : KendraRequest(new DeleteFaqRequestPrivate(KendraRequest::DeleteFaqAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteFaqRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::kendra::DeleteFaqRequestPrivate
+ * \class QtAws::Kendra::DeleteFaqRequestPrivate
  * \brief The DeleteFaqRequestPrivate class provides private implementation for DeleteFaqRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DeleteFaqRequestPrivate object for kendra \a action,
+ * Constructs a DeleteFaqRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DeleteFaqRequestPrivate::DeleteFaqRequestPrivate(
-    const kendraRequest::Action action, DeleteFaqRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DeleteFaqRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteFaqRequestPrivate::DeleteFaqRequestPrivate(
  */
 DeleteFaqRequestPrivate::DeleteFaqRequestPrivate(
     const DeleteFaqRequestPrivate &other, DeleteFaqRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

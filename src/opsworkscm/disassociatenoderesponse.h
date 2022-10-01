@@ -24,11 +24,11 @@
 #include "disassociatenoderequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DisassociateNodeResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DisassociateNodeResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DisassociateNodeResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

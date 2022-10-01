@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterParameterGroupResponse
- * \brief The DeleteDBClusterParameterGroupResponse class provides an interace for DocDB DeleteDBClusterParameterGroup responses.
+ * \class QtAws::DocDb::DeleteDBClusterParameterGroupResponse
+ * \brief The DeleteDBClusterParameterGroupResponse class provides an interace for DocDb DeleteDBClusterParameterGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBClusterParameterGroup
+ * \sa DocDbClient::deleteDBClusterParameterGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteDBClusterParameterGroupResponse::DeleteDBClusterParameterGroupResponse(
         const DeleteDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupRespon
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteDBClusterParameterGroup \a response.
+ * Parses a successful DocDb DeleteDBClusterParameterGroup \a response.
  */
 void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterParameterGroupResponsePrivate
+ * \class QtAws::DocDb::DeleteDBClusterParameterGroupResponsePrivate
  * \brief The DeleteDBClusterParameterGroupResponsePrivate class provides private implementation for DeleteDBClusterParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponsePrivate(
-    DeleteDBClusterParameterGroupResponse * const q) : DocDBResponsePrivate(q)
+    DeleteDBClusterParameterGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteDBClusterParameterGroup response element from \a xml.
+ * Parses a DocDb DeleteDBClusterParameterGroup response element from \a xml.
  */
 void DeleteDBClusterParameterGroupResponsePrivate::parseDeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteDBClusterParameterGroupResponsePrivate::parseDeleteDBClusterParameter
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

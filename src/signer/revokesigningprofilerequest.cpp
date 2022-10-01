@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::RevokeSigningProfileRequest
- * \brief The RevokeSigningProfileRequest class provides an interface for signer RevokeSigningProfile requests.
+ * \class QtAws::Signer::RevokeSigningProfileRequest
+ * \brief The RevokeSigningProfileRequest class provides an interface for Signer RevokeSigningProfile requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::revokeSigningProfile
+ * \sa SignerClient::revokeSigningProfile
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RevokeSigningProfileRequest::RevokeSigningProfileRequest(const RevokeSigningProfileRequest &other)
-    : signerRequest(new RevokeSigningProfileRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new RevokeSigningProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ RevokeSigningProfileRequest::RevokeSigningProfileRequest(const RevokeSigningProf
  * Constructs a RevokeSigningProfileRequest object.
  */
 RevokeSigningProfileRequest::RevokeSigningProfileRequest()
-    : signerRequest(new RevokeSigningProfileRequestPrivate(signerRequest::RevokeSigningProfileAction, this))
+    : SignerRequest(new RevokeSigningProfileRequestPrivate(SignerRequest::RevokeSigningProfileAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * RevokeSigningProfileRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::signer::RevokeSigningProfileRequestPrivate
+ * \class QtAws::Signer::RevokeSigningProfileRequestPrivate
  * \brief The RevokeSigningProfileRequestPrivate class provides private implementation for RevokeSigningProfileRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a RevokeSigningProfileRequestPrivate object for signer \a action,
+ * Constructs a RevokeSigningProfileRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 RevokeSigningProfileRequestPrivate::RevokeSigningProfileRequestPrivate(
-    const signerRequest::Action action, RevokeSigningProfileRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, RevokeSigningProfileRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ RevokeSigningProfileRequestPrivate::RevokeSigningProfileRequestPrivate(
  */
 RevokeSigningProfileRequestPrivate::RevokeSigningProfileRequestPrivate(
     const RevokeSigningProfileRequestPrivate &other, RevokeSigningProfileRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaResponsePrivate;
+class AcmPcaResponsePrivate;
 
-class QTAWSACMPCA_EXPORT AcmpcaResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSACMPCA_EXPORT AcmPcaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    AcmpcaResponse(QObject * const parent = 0);
+    AcmPcaResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    AcmpcaResponse(AcmpcaResponsePrivate * const d, QObject * const parent);
+    AcmPcaResponse(AcmPcaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(AcmpcaResponse)
-    Q_DISABLE_COPY(AcmpcaResponse)
+    Q_DECLARE_PRIVATE(AcmPcaResponse)
+    Q_DISABLE_COPY(AcmPcaResponse)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

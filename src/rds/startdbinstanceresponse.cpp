@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StartDBInstanceResponse
- * \brief The StartDBInstanceResponse class provides an interace for RDS StartDBInstance responses.
+ * \class QtAws::Rds::StartDBInstanceResponse
+ * \brief The StartDBInstanceResponse class provides an interace for Rds StartDBInstance responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StartDBInstanceRequest * StartDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS StartDBInstance \a response.
+ * Parses a successful Rds StartDBInstance \a response.
  */
 void StartDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StartDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::StartDBInstanceResponsePrivate
+ * \class QtAws::Rds::StartDBInstanceResponsePrivate
  * \brief The StartDBInstanceResponsePrivate class provides private implementation for StartDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
 }
 
 /*!
- * Parses a RDS StartDBInstance response element from \a xml.
+ * Parses a Rds StartDBInstance response element from \a xml.
  */
 void StartDBInstanceResponsePrivate::parseStartDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StartDBInstanceResponsePrivate::parseStartDBInstanceResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

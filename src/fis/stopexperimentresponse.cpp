@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::StopExperimentResponse
- * \brief The StopExperimentResponse class provides an interace for FIS StopExperiment responses.
+ * \class QtAws::Fis::StopExperimentResponse
+ * \brief The StopExperimentResponse class provides an interace for Fis StopExperiment responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::stopExperiment
  */
@@ -64,7 +64,7 @@ const StopExperimentRequest * StopExperimentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS StopExperiment \a response.
+ * Parses a successful Fis StopExperiment \a response.
  */
 void StopExperimentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void StopExperimentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::StopExperimentResponsePrivate
+ * \class QtAws::Fis::StopExperimentResponsePrivate
  * \brief The StopExperimentResponsePrivate class provides private implementation for StopExperimentResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ StopExperimentResponsePrivate::StopExperimentResponsePrivate(
 }
 
 /*!
- * Parses a FIS StopExperiment response element from \a xml.
+ * Parses a Fis StopExperiment response element from \a xml.
  */
 void StopExperimentResponsePrivate::parseStopExperimentResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void StopExperimentResponsePrivate::parseStopExperimentResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

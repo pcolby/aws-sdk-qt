@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT ListTagsForResourceResponse : public IoTDeviceAdvisorResponse {
+class QTAWSIOTDEVICEADVISOR_EXPORT ListTagsForResourceResponse : public IotDeviceAdvisorResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listsuiterunsrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class ListSuiteRunsRequest;
 
-class ListSuiteRunsRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class ListSuiteRunsRequestPrivate : public IotDeviceAdvisorRequestPrivate {
 
 public:
-    ListSuiteRunsRequestPrivate(const IoTDeviceAdvisorRequest::Action action,
+    ListSuiteRunsRequestPrivate(const IotDeviceAdvisorRequest::Action action,
                                    ListSuiteRunsRequest * const q);
     ListSuiteRunsRequestPrivate(const ListSuiteRunsRequestPrivate &other,
                                    ListSuiteRunsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

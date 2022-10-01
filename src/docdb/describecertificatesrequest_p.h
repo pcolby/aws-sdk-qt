@@ -24,14 +24,14 @@
 #include "describecertificatesrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeCertificatesRequest;
 
-class DescribeCertificatesRequestPrivate : public DocDBRequestPrivate {
+class DescribeCertificatesRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeCertificatesRequestPrivate(const DocDBRequest::Action action,
+    DescribeCertificatesRequestPrivate(const DocDbRequest::Action action,
                                    DescribeCertificatesRequest * const q);
     DescribeCertificatesRequestPrivate(const DescribeCertificatesRequestPrivate &other,
                                    DescribeCertificatesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

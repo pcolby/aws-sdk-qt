@@ -1,22 +1,22 @@
 add_compile_definitions(QTAWSMARKETPLACEENTITLEMENTSERVICE_LIBRARY)
 
 add_library(QtAwsMarketplaceEntitlementService
-  getentitlementsrequest.h
-  getentitlementsrequest_p.h
-  getentitlementsresponse.h
-  getentitlementsresponse_p.h
+  qtawsmarketplaceentitlementserviceglobal.h
   marketplaceentitlementserviceclient.h
   marketplaceentitlementserviceclient_p.h
   marketplaceentitlementservicerequest.h
   marketplaceentitlementservicerequest_p.h
   marketplaceentitlementserviceresponse.h
   marketplaceentitlementserviceresponse_p.h
-  qtawsmarketplaceentitlementserviceglobal.h
-  getentitlementsrequest.cpp
-  getentitlementsresponse.cpp
+  getentitlementsrequest.h
+  getentitlementsrequest_p.h
+  getentitlementsresponse.h
+  getentitlementsresponse_p.h
   marketplaceentitlementserviceclient.cpp
   marketplaceentitlementservicerequest.cpp
-  marketplaceentitlementserviceresponse.cpp)
+  marketplaceentitlementserviceresponse.cpp
+  getentitlementsrequest.cpp
+  getentitlementsresponse.cpp)
 
 target_link_libraries(QtAwsMarketplaceEntitlementService
   PRIVATE QtAwsCore

@@ -188,23 +188,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::WAFRegional
+ * \namespace QtAws::WafRegional
  * \brief Contains classess for accessing AWS WAF Regional.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::WAFRegionalClient
- * \brief The WAFRegionalClient class provides access to the AWS WAF Regional service.
+ * \class QtAws::WafRegional::WafRegionalClient
+ * \brief The WafRegionalClient class provides access to the AWS WAF Regional service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -232,21 +232,21 @@ namespace WAFRegional {
  */
 
 /*!
- * \brief Constructs a WAFRegionalClient object.
+ * \brief Constructs a WafRegionalClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-WAFRegionalClient::WAFRegionalClient(
+WafRegionalClient::WafRegionalClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WafRegionalClientPrivate(this), parent)
 {
-    Q_D(WAFRegionalClient);
+    Q_D(WafRegionalClient);
     d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("waf-regional");
@@ -257,7 +257,7 @@ WAFRegionalClient::WAFRegionalClient(
 }
 
 /*!
- * \overload WAFRegionalClient()
+ * \overload WafRegionalClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -267,14 +267,14 @@ WAFRegionalClient::WAFRegionalClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-WAFRegionalClient::WAFRegionalClient(
+WafRegionalClient::WafRegionalClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new WafRegionalClientPrivate(this), parent)
 {
-    Q_D(WAFRegionalClient);
+    Q_D(WafRegionalClient);
     d->apiVersion = QStringLiteral("2016-11-28");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -285,7 +285,7 @@ WAFRegionalClient::WAFRegionalClient(
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * AssociateWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -306,13 +306,13 @@ WAFRegionalClient::WAFRegionalClient(
  *
  * Associates a web ACL with a resource, either an application load balancer or Amazon API Gateway
  */
-AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebACLRequest &request)
+AssociateWebACLResponse * WafRegionalClient::associateWebACL(const AssociateWebACLRequest &request)
 {
     return qobject_cast<AssociateWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -364,13 +364,13 @@ AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebA
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateByteMatchSetResponse * WAFRegionalClient::createByteMatchSet(const CreateByteMatchSetRequest &request)
+CreateByteMatchSetResponse * WafRegionalClient::createByteMatchSet(const CreateByteMatchSetRequest &request)
 {
     return qobject_cast<CreateByteMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateGeoMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -421,13 +421,13 @@ CreateByteMatchSetResponse * WAFRegionalClient::createByteMatchSet(const CreateB
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateGeoMatchSetResponse * WAFRegionalClient::createGeoMatchSet(const CreateGeoMatchSetRequest &request)
+CreateGeoMatchSetResponse * WafRegionalClient::createGeoMatchSet(const CreateGeoMatchSetRequest &request)
 {
     return qobject_cast<CreateGeoMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -478,13 +478,13 @@ CreateGeoMatchSetResponse * WAFRegionalClient::createGeoMatchSet(const CreateGeo
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &request)
+CreateIPSetResponse * WafRegionalClient::createIPSet(const CreateIPSetRequest &request)
 {
     return qobject_cast<CreateIPSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateRateBasedRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -597,13 +597,13 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateRateBasedRuleResponse * WAFRegionalClient::createRateBasedRule(const CreateRateBasedRuleRequest &request)
+CreateRateBasedRuleResponse * WafRegionalClient::createRateBasedRule(const CreateRateBasedRuleRequest &request)
 {
     return qobject_cast<CreateRateBasedRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateRegexMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -656,13 +656,13 @@ CreateRateBasedRuleResponse * WAFRegionalClient::createRateBasedRule(const Creat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateRegexMatchSetResponse * WAFRegionalClient::createRegexMatchSet(const CreateRegexMatchSetRequest &request)
+CreateRegexMatchSetResponse * WafRegionalClient::createRegexMatchSet(const CreateRegexMatchSetRequest &request)
 {
     return qobject_cast<CreateRegexMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateRegexPatternSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -712,13 +712,13 @@ CreateRegexMatchSetResponse * WAFRegionalClient::createRegexMatchSet(const Creat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateRegexPatternSetResponse * WAFRegionalClient::createRegexPatternSet(const CreateRegexPatternSetRequest &request)
+CreateRegexPatternSetResponse * WafRegionalClient::createRegexPatternSet(const CreateRegexPatternSetRequest &request)
 {
     return qobject_cast<CreateRegexPatternSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -792,13 +792,13 @@ CreateRegexPatternSetResponse * WAFRegionalClient::createRegexPatternSet(const C
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateRuleResponse * WAFRegionalClient::createRule(const CreateRuleRequest &request)
+CreateRuleResponse * WafRegionalClient::createRule(const CreateRuleRequest &request)
 {
     return qobject_cast<CreateRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -841,13 +841,13 @@ CreateRuleResponse * WAFRegionalClient::createRule(const CreateRuleRequest &requ
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateRuleGroupResponse * WAFRegionalClient::createRuleGroup(const CreateRuleGroupRequest &request)
+CreateRuleGroupResponse * WafRegionalClient::createRuleGroup(const CreateRuleGroupRequest &request)
 {
     return qobject_cast<CreateRuleGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -899,13 +899,13 @@ CreateRuleGroupResponse * WAFRegionalClient::createRuleGroup(const CreateRuleGro
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateSizeConstraintSetResponse * WAFRegionalClient::createSizeConstraintSet(const CreateSizeConstraintSetRequest &request)
+CreateSizeConstraintSetResponse * WafRegionalClient::createSizeConstraintSet(const CreateSizeConstraintSetRequest &request)
 {
     return qobject_cast<CreateSizeConstraintSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateSqlInjectionMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -955,13 +955,13 @@ CreateSizeConstraintSetResponse * WAFRegionalClient::createSizeConstraintSet(con
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateSqlInjectionMatchSetResponse * WAFRegionalClient::createSqlInjectionMatchSet(const CreateSqlInjectionMatchSetRequest &request)
+CreateSqlInjectionMatchSetResponse * WafRegionalClient::createSqlInjectionMatchSet(const CreateSqlInjectionMatchSetRequest &request)
 {
     return qobject_cast<CreateSqlInjectionMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1028,13 +1028,13 @@ CreateSqlInjectionMatchSetResponse * WAFRegionalClient::createSqlInjectionMatchS
  * For more information about how to use the AWS WAF API, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateWebACLResponse * WAFRegionalClient::createWebACL(const CreateWebACLRequest &request)
+CreateWebACLResponse * WafRegionalClient::createWebACL(const CreateWebACLRequest &request)
 {
     return qobject_cast<CreateWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateWebACLMigrationStackResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1051,13 +1051,13 @@ CreateWebACLResponse * WAFRegionalClient::createWebACL(const CreateWebACLRequest
  * Classic resources to AWS WAF</a> in the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>.
  */
-CreateWebACLMigrationStackResponse * WAFRegionalClient::createWebACLMigrationStack(const CreateWebACLMigrationStackRequest &request)
+CreateWebACLMigrationStackResponse * WafRegionalClient::createWebACLMigrationStack(const CreateWebACLMigrationStackRequest &request)
 {
     return qobject_cast<CreateWebACLMigrationStackResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * CreateXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1107,13 +1107,13 @@ CreateWebACLMigrationStackResponse * WAFRegionalClient::createWebACLMigrationSta
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-CreateXssMatchSetResponse * WAFRegionalClient::createXssMatchSet(const CreateXssMatchSetRequest &request)
+CreateXssMatchSetResponse * WafRegionalClient::createXssMatchSet(const CreateXssMatchSetRequest &request)
 {
     return qobject_cast<CreateXssMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1156,13 +1156,13 @@ CreateXssMatchSetResponse * WAFRegionalClient::createXssMatchSet(const CreateXss
  *
  * Submit a <code>DeleteByteMatchSet</code>
  */
-DeleteByteMatchSetResponse * WAFRegionalClient::deleteByteMatchSet(const DeleteByteMatchSetRequest &request)
+DeleteByteMatchSetResponse * WafRegionalClient::deleteByteMatchSet(const DeleteByteMatchSetRequest &request)
 {
     return qobject_cast<DeleteByteMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteGeoMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1205,13 +1205,13 @@ DeleteByteMatchSetResponse * WAFRegionalClient::deleteByteMatchSet(const DeleteB
  *
  * Submit a <code>DeleteGeoMatchSet</code>
  */
-DeleteGeoMatchSetResponse * WAFRegionalClient::deleteGeoMatchSet(const DeleteGeoMatchSetRequest &request)
+DeleteGeoMatchSetResponse * WafRegionalClient::deleteGeoMatchSet(const DeleteGeoMatchSetRequest &request)
 {
     return qobject_cast<DeleteGeoMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1254,13 +1254,13 @@ DeleteGeoMatchSetResponse * WAFRegionalClient::deleteGeoMatchSet(const DeleteGeo
  *
  * Submit a <code>DeleteIPSet</code>
  */
-DeleteIPSetResponse * WAFRegionalClient::deleteIPSet(const DeleteIPSetRequest &request)
+DeleteIPSetResponse * WafRegionalClient::deleteIPSet(const DeleteIPSetRequest &request)
 {
     return qobject_cast<DeleteIPSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteLoggingConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1281,13 +1281,13 @@ DeleteIPSetResponse * WAFRegionalClient::deleteIPSet(const DeleteIPSetRequest &r
  *
  * Permanently deletes the <a>LoggingConfiguration</a> from the specified web
  */
-DeleteLoggingConfigurationResponse * WAFRegionalClient::deleteLoggingConfiguration(const DeleteLoggingConfigurationRequest &request)
+DeleteLoggingConfigurationResponse * WafRegionalClient::deleteLoggingConfiguration(const DeleteLoggingConfigurationRequest &request)
 {
     return qobject_cast<DeleteLoggingConfigurationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeletePermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1312,13 +1312,13 @@ DeleteLoggingConfigurationResponse * WAFRegionalClient::deleteLoggingConfigurati
  *
  * The user making the request must be the owner of the
  */
-DeletePermissionPolicyResponse * WAFRegionalClient::deletePermissionPolicy(const DeletePermissionPolicyRequest &request)
+DeletePermissionPolicyResponse * WafRegionalClient::deletePermissionPolicy(const DeletePermissionPolicyRequest &request)
 {
     return qobject_cast<DeletePermissionPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteRateBasedRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1361,13 +1361,13 @@ DeletePermissionPolicyResponse * WAFRegionalClient::deletePermissionPolicy(const
  *
  * Submit a <code>DeleteRateBasedRule</code>
  */
-DeleteRateBasedRuleResponse * WAFRegionalClient::deleteRateBasedRule(const DeleteRateBasedRuleRequest &request)
+DeleteRateBasedRuleResponse * WafRegionalClient::deleteRateBasedRule(const DeleteRateBasedRuleRequest &request)
 {
     return qobject_cast<DeleteRateBasedRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteRegexMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1410,13 +1410,13 @@ DeleteRateBasedRuleResponse * WAFRegionalClient::deleteRateBasedRule(const Delet
  *
  * Submit a <code>DeleteRegexMatchSet</code>
  */
-DeleteRegexMatchSetResponse * WAFRegionalClient::deleteRegexMatchSet(const DeleteRegexMatchSetRequest &request)
+DeleteRegexMatchSetResponse * WafRegionalClient::deleteRegexMatchSet(const DeleteRegexMatchSetRequest &request)
 {
     return qobject_cast<DeleteRegexMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteRegexPatternSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1438,13 +1438,13 @@ DeleteRegexMatchSetResponse * WAFRegionalClient::deleteRegexMatchSet(const Delet
  * Permanently deletes a <a>RegexPatternSet</a>. You can't delete a <code>RegexPatternSet</code> if it's still used in any
  * <code>RegexMatchSet</code> or if the <code>RegexPatternSet</code> is not empty.
  */
-DeleteRegexPatternSetResponse * WAFRegionalClient::deleteRegexPatternSet(const DeleteRegexPatternSetRequest &request)
+DeleteRegexPatternSetResponse * WafRegionalClient::deleteRegexPatternSet(const DeleteRegexPatternSetRequest &request)
 {
     return qobject_cast<DeleteRegexPatternSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1487,13 +1487,13 @@ DeleteRegexPatternSetResponse * WAFRegionalClient::deleteRegexPatternSet(const D
  *
  * Submit a <code>DeleteRule</code>
  */
-DeleteRuleResponse * WAFRegionalClient::deleteRule(const DeleteRuleRequest &request)
+DeleteRuleResponse * WafRegionalClient::deleteRule(const DeleteRuleRequest &request)
 {
     return qobject_cast<DeleteRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1536,13 +1536,13 @@ DeleteRuleResponse * WAFRegionalClient::deleteRule(const DeleteRuleRequest &requ
  *
  * Submit a <code>DeleteRuleGroup</code>
  */
-DeleteRuleGroupResponse * WAFRegionalClient::deleteRuleGroup(const DeleteRuleGroupRequest &request)
+DeleteRuleGroupResponse * WafRegionalClient::deleteRuleGroup(const DeleteRuleGroupRequest &request)
 {
     return qobject_cast<DeleteRuleGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1585,13 +1585,13 @@ DeleteRuleGroupResponse * WAFRegionalClient::deleteRuleGroup(const DeleteRuleGro
  *
  * Submit a <code>DeleteSizeConstraintSet</code>
  */
-DeleteSizeConstraintSetResponse * WAFRegionalClient::deleteSizeConstraintSet(const DeleteSizeConstraintSetRequest &request)
+DeleteSizeConstraintSetResponse * WafRegionalClient::deleteSizeConstraintSet(const DeleteSizeConstraintSetRequest &request)
 {
     return qobject_cast<DeleteSizeConstraintSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteSqlInjectionMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1634,13 +1634,13 @@ DeleteSizeConstraintSetResponse * WAFRegionalClient::deleteSizeConstraintSet(con
  *
  * Submit a <code>DeleteSqlInjectionMatchSet</code>
  */
-DeleteSqlInjectionMatchSetResponse * WAFRegionalClient::deleteSqlInjectionMatchSet(const DeleteSqlInjectionMatchSetRequest &request)
+DeleteSqlInjectionMatchSetResponse * WafRegionalClient::deleteSqlInjectionMatchSet(const DeleteSqlInjectionMatchSetRequest &request)
 {
     return qobject_cast<DeleteSqlInjectionMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1678,13 +1678,13 @@ DeleteSqlInjectionMatchSetResponse * WAFRegionalClient::deleteSqlInjectionMatchS
  *
  * Submit a <code>DeleteWebACL</code>
  */
-DeleteWebACLResponse * WAFRegionalClient::deleteWebACL(const DeleteWebACLRequest &request)
+DeleteWebACLResponse * WafRegionalClient::deleteWebACL(const DeleteWebACLRequest &request)
 {
     return qobject_cast<DeleteWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DeleteXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1727,13 +1727,13 @@ DeleteWebACLResponse * WAFRegionalClient::deleteWebACL(const DeleteWebACLRequest
  *
  * Submit a <code>DeleteXssMatchSet</code>
  */
-DeleteXssMatchSetResponse * WAFRegionalClient::deleteXssMatchSet(const DeleteXssMatchSetRequest &request)
+DeleteXssMatchSetResponse * WafRegionalClient::deleteXssMatchSet(const DeleteXssMatchSetRequest &request)
 {
     return qobject_cast<DeleteXssMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * DisassociateWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1754,13 +1754,13 @@ DeleteXssMatchSetResponse * WAFRegionalClient::deleteXssMatchSet(const DeleteXss
  *
  * Removes a web ACL from the specified resource, either an application load balancer or Amazon API Gateway
  */
-DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const DisassociateWebACLRequest &request)
+DisassociateWebACLResponse * WafRegionalClient::disassociateWebACL(const DisassociateWebACLRequest &request)
 {
     return qobject_cast<DisassociateWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1781,13 +1781,13 @@ DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const Disasso
  *
  * Returns the <a>ByteMatchSet</a> specified by
  */
-GetByteMatchSetResponse * WAFRegionalClient::getByteMatchSet(const GetByteMatchSetRequest &request)
+GetByteMatchSetResponse * WafRegionalClient::getByteMatchSet(const GetByteMatchSetRequest &request)
 {
     return qobject_cast<GetByteMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetChangeTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1822,13 +1822,13 @@ GetByteMatchSetResponse * WAFRegionalClient::getByteMatchSet(const GetByteMatchS
  * <code>PENDING</code>, which indicates that AWS WAF is propagating the change to all AWS WAF servers. Use
  * <code>GetChangeTokenStatus</code> to determine the status of your change
  */
-GetChangeTokenResponse * WAFRegionalClient::getChangeToken(const GetChangeTokenRequest &request)
+GetChangeTokenResponse * WafRegionalClient::getChangeToken(const GetChangeTokenRequest &request)
 {
     return qobject_cast<GetChangeTokenResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetChangeTokenStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1863,13 +1863,13 @@ GetChangeTokenResponse * WAFRegionalClient::getChangeToken(const GetChangeTokenR
  *
  * <code>INSYNC</code>: Propagation is
  */
-GetChangeTokenStatusResponse * WAFRegionalClient::getChangeTokenStatus(const GetChangeTokenStatusRequest &request)
+GetChangeTokenStatusResponse * WafRegionalClient::getChangeTokenStatus(const GetChangeTokenStatusRequest &request)
 {
     return qobject_cast<GetChangeTokenStatusResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetGeoMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1890,13 +1890,13 @@ GetChangeTokenStatusResponse * WAFRegionalClient::getChangeTokenStatus(const Get
  *
  * Returns the <a>GeoMatchSet</a> that is specified by
  */
-GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetRequest &request)
+GetGeoMatchSetResponse * WafRegionalClient::getGeoMatchSet(const GetGeoMatchSetRequest &request)
 {
     return qobject_cast<GetGeoMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1917,13 +1917,13 @@ GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetR
  *
  * Returns the <a>IPSet</a> that is specified by
  */
-GetIPSetResponse * WAFRegionalClient::getIPSet(const GetIPSetRequest &request)
+GetIPSetResponse * WafRegionalClient::getIPSet(const GetIPSetRequest &request)
 {
     return qobject_cast<GetIPSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetLoggingConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1944,13 +1944,13 @@ GetIPSetResponse * WAFRegionalClient::getIPSet(const GetIPSetRequest &request)
  *
  * Returns the <a>LoggingConfiguration</a> for the specified web
  */
-GetLoggingConfigurationResponse * WAFRegionalClient::getLoggingConfiguration(const GetLoggingConfigurationRequest &request)
+GetLoggingConfigurationResponse * WafRegionalClient::getLoggingConfiguration(const GetLoggingConfigurationRequest &request)
 {
     return qobject_cast<GetLoggingConfigurationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetPermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1971,13 +1971,13 @@ GetLoggingConfigurationResponse * WAFRegionalClient::getLoggingConfiguration(con
  *
  * Returns the IAM policy attached to the
  */
-GetPermissionPolicyResponse * WAFRegionalClient::getPermissionPolicy(const GetPermissionPolicyRequest &request)
+GetPermissionPolicyResponse * WafRegionalClient::getPermissionPolicy(const GetPermissionPolicyRequest &request)
 {
     return qobject_cast<GetPermissionPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRateBasedRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1999,13 +1999,13 @@ GetPermissionPolicyResponse * WAFRegionalClient::getPermissionPolicy(const GetPe
  * Returns the <a>RateBasedRule</a> that is specified by the <code>RuleId</code> that you included in the
  * <code>GetRateBasedRule</code>
  */
-GetRateBasedRuleResponse * WAFRegionalClient::getRateBasedRule(const GetRateBasedRuleRequest &request)
+GetRateBasedRuleResponse * WafRegionalClient::getRateBasedRule(const GetRateBasedRuleRequest &request)
 {
     return qobject_cast<GetRateBasedRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRateBasedRuleManagedKeysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2028,13 +2028,13 @@ GetRateBasedRuleResponse * WAFRegionalClient::getRateBasedRule(const GetRateBase
  * <code>RuleId</code>. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses
  * exceed the rate limit, the 10,000 addresses with the highest rates will be
  */
-GetRateBasedRuleManagedKeysResponse * WAFRegionalClient::getRateBasedRuleManagedKeys(const GetRateBasedRuleManagedKeysRequest &request)
+GetRateBasedRuleManagedKeysResponse * WafRegionalClient::getRateBasedRuleManagedKeys(const GetRateBasedRuleManagedKeysRequest &request)
 {
     return qobject_cast<GetRateBasedRuleManagedKeysResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRegexMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2055,13 +2055,13 @@ GetRateBasedRuleManagedKeysResponse * WAFRegionalClient::getRateBasedRuleManaged
  *
  * Returns the <a>RegexMatchSet</a> specified by
  */
-GetRegexMatchSetResponse * WAFRegionalClient::getRegexMatchSet(const GetRegexMatchSetRequest &request)
+GetRegexMatchSetResponse * WafRegionalClient::getRegexMatchSet(const GetRegexMatchSetRequest &request)
 {
     return qobject_cast<GetRegexMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRegexPatternSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2082,13 +2082,13 @@ GetRegexMatchSetResponse * WAFRegionalClient::getRegexMatchSet(const GetRegexMat
  *
  * Returns the <a>RegexPatternSet</a> specified by
  */
-GetRegexPatternSetResponse * WAFRegionalClient::getRegexPatternSet(const GetRegexPatternSetRequest &request)
+GetRegexPatternSetResponse * WafRegionalClient::getRegexPatternSet(const GetRegexPatternSetRequest &request)
 {
     return qobject_cast<GetRegexPatternSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2109,13 +2109,13 @@ GetRegexPatternSetResponse * WAFRegionalClient::getRegexPatternSet(const GetRege
  *
  * Returns the <a>Rule</a> that is specified by the <code>RuleId</code> that you included in the <code>GetRule</code>
  */
-GetRuleResponse * WAFRegionalClient::getRule(const GetRuleRequest &request)
+GetRuleResponse * WafRegionalClient::getRule(const GetRuleRequest &request)
 {
     return qobject_cast<GetRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2141,13 +2141,13 @@ GetRuleResponse * WAFRegionalClient::getRule(const GetRuleRequest &request)
  *
  * To view the rules in a rule group, use
  */
-GetRuleGroupResponse * WAFRegionalClient::getRuleGroup(const GetRuleGroupRequest &request)
+GetRuleGroupResponse * WafRegionalClient::getRuleGroup(const GetRuleGroupRequest &request)
 {
     return qobject_cast<GetRuleGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetSampledRequestsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2177,13 +2177,13 @@ GetRuleGroupResponse * WAFRegionalClient::getRuleGroup(const GetRuleGroupRequest
  * <code>GetSampledRequests</code> returns an updated time range. This new time range indicates the actual period during
  * which AWS WAF selected the requests in the
  */
-GetSampledRequestsResponse * WAFRegionalClient::getSampledRequests(const GetSampledRequestsRequest &request)
+GetSampledRequestsResponse * WafRegionalClient::getSampledRequests(const GetSampledRequestsRequest &request)
 {
     return qobject_cast<GetSampledRequestsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2204,13 +2204,13 @@ GetSampledRequestsResponse * WAFRegionalClient::getSampledRequests(const GetSamp
  *
  * Returns the <a>SizeConstraintSet</a> specified by
  */
-GetSizeConstraintSetResponse * WAFRegionalClient::getSizeConstraintSet(const GetSizeConstraintSetRequest &request)
+GetSizeConstraintSetResponse * WafRegionalClient::getSizeConstraintSet(const GetSizeConstraintSetRequest &request)
 {
     return qobject_cast<GetSizeConstraintSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetSqlInjectionMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2231,13 +2231,13 @@ GetSizeConstraintSetResponse * WAFRegionalClient::getSizeConstraintSet(const Get
  *
  * Returns the <a>SqlInjectionMatchSet</a> that is specified by
  */
-GetSqlInjectionMatchSetResponse * WAFRegionalClient::getSqlInjectionMatchSet(const GetSqlInjectionMatchSetRequest &request)
+GetSqlInjectionMatchSetResponse * WafRegionalClient::getSqlInjectionMatchSet(const GetSqlInjectionMatchSetRequest &request)
 {
     return qobject_cast<GetSqlInjectionMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2258,13 +2258,13 @@ GetSqlInjectionMatchSetResponse * WAFRegionalClient::getSqlInjectionMatchSet(con
  *
  * Returns the <a>WebACL</a> that is specified by
  */
-GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request)
+GetWebACLResponse * WafRegionalClient::getWebACL(const GetWebACLRequest &request)
 {
     return qobject_cast<GetWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetWebACLForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2285,13 +2285,13 @@ GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request
  *
  * Returns the web ACL for the specified resource, either an application load balancer or Amazon API Gateway
  */
-GetWebACLForResourceResponse * WAFRegionalClient::getWebACLForResource(const GetWebACLForResourceRequest &request)
+GetWebACLForResourceResponse * WafRegionalClient::getWebACLForResource(const GetWebACLForResourceRequest &request)
 {
     return qobject_cast<GetWebACLForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * GetXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2312,13 +2312,13 @@ GetWebACLForResourceResponse * WAFRegionalClient::getWebACLForResource(const Get
  *
  * Returns the <a>XssMatchSet</a> that is specified by
  */
-GetXssMatchSetResponse * WAFRegionalClient::getXssMatchSet(const GetXssMatchSetRequest &request)
+GetXssMatchSetResponse * WafRegionalClient::getXssMatchSet(const GetXssMatchSetRequest &request)
 {
     return qobject_cast<GetXssMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListActivatedRulesInRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2339,13 +2339,13 @@ GetXssMatchSetResponse * WAFRegionalClient::getXssMatchSet(const GetXssMatchSetR
  *
  * Returns an array of <a>ActivatedRule</a>
  */
-ListActivatedRulesInRuleGroupResponse * WAFRegionalClient::listActivatedRulesInRuleGroup(const ListActivatedRulesInRuleGroupRequest &request)
+ListActivatedRulesInRuleGroupResponse * WafRegionalClient::listActivatedRulesInRuleGroup(const ListActivatedRulesInRuleGroupRequest &request)
 {
     return qobject_cast<ListActivatedRulesInRuleGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListByteMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2366,13 +2366,13 @@ ListActivatedRulesInRuleGroupResponse * WAFRegionalClient::listActivatedRulesInR
  *
  * Returns an array of <a>ByteMatchSetSummary</a>
  */
-ListByteMatchSetsResponse * WAFRegionalClient::listByteMatchSets(const ListByteMatchSetsRequest &request)
+ListByteMatchSetsResponse * WafRegionalClient::listByteMatchSets(const ListByteMatchSetsRequest &request)
 {
     return qobject_cast<ListByteMatchSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListGeoMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2393,13 +2393,13 @@ ListByteMatchSetsResponse * WAFRegionalClient::listByteMatchSets(const ListByteM
  *
  * Returns an array of <a>GeoMatchSetSummary</a> objects in the
  */
-ListGeoMatchSetsResponse * WAFRegionalClient::listGeoMatchSets(const ListGeoMatchSetsRequest &request)
+ListGeoMatchSetsResponse * WafRegionalClient::listGeoMatchSets(const ListGeoMatchSetsRequest &request)
 {
     return qobject_cast<ListGeoMatchSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListIPSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2420,13 +2420,13 @@ ListGeoMatchSetsResponse * WAFRegionalClient::listGeoMatchSets(const ListGeoMatc
  *
  * Returns an array of <a>IPSetSummary</a> objects in the
  */
-ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &request)
+ListIPSetsResponse * WafRegionalClient::listIPSets(const ListIPSetsRequest &request)
 {
     return qobject_cast<ListIPSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListLoggingConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2447,13 +2447,13 @@ ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &requ
  *
  * Returns an array of <a>LoggingConfiguration</a>
  */
-ListLoggingConfigurationsResponse * WAFRegionalClient::listLoggingConfigurations(const ListLoggingConfigurationsRequest &request)
+ListLoggingConfigurationsResponse * WafRegionalClient::listLoggingConfigurations(const ListLoggingConfigurationsRequest &request)
 {
     return qobject_cast<ListLoggingConfigurationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListRateBasedRulesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2474,13 +2474,13 @@ ListLoggingConfigurationsResponse * WAFRegionalClient::listLoggingConfigurations
  *
  * Returns an array of <a>RuleSummary</a>
  */
-ListRateBasedRulesResponse * WAFRegionalClient::listRateBasedRules(const ListRateBasedRulesRequest &request)
+ListRateBasedRulesResponse * WafRegionalClient::listRateBasedRules(const ListRateBasedRulesRequest &request)
 {
     return qobject_cast<ListRateBasedRulesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListRegexMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2501,13 +2501,13 @@ ListRateBasedRulesResponse * WAFRegionalClient::listRateBasedRules(const ListRat
  *
  * Returns an array of <a>RegexMatchSetSummary</a>
  */
-ListRegexMatchSetsResponse * WAFRegionalClient::listRegexMatchSets(const ListRegexMatchSetsRequest &request)
+ListRegexMatchSetsResponse * WafRegionalClient::listRegexMatchSets(const ListRegexMatchSetsRequest &request)
 {
     return qobject_cast<ListRegexMatchSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListRegexPatternSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2528,13 +2528,13 @@ ListRegexMatchSetsResponse * WAFRegionalClient::listRegexMatchSets(const ListReg
  *
  * Returns an array of <a>RegexPatternSetSummary</a>
  */
-ListRegexPatternSetsResponse * WAFRegionalClient::listRegexPatternSets(const ListRegexPatternSetsRequest &request)
+ListRegexPatternSetsResponse * WafRegionalClient::listRegexPatternSets(const ListRegexPatternSetsRequest &request)
 {
     return qobject_cast<ListRegexPatternSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListResourcesForWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2555,13 +2555,13 @@ ListRegexPatternSetsResponse * WAFRegionalClient::listRegexPatternSets(const Lis
  *
  * Returns an array of resources associated with the specified web
  */
-ListResourcesForWebACLResponse * WAFRegionalClient::listResourcesForWebACL(const ListResourcesForWebACLRequest &request)
+ListResourcesForWebACLResponse * WafRegionalClient::listResourcesForWebACL(const ListResourcesForWebACLRequest &request)
 {
     return qobject_cast<ListResourcesForWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListRuleGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2582,13 +2582,13 @@ ListResourcesForWebACLResponse * WAFRegionalClient::listResourcesForWebACL(const
  *
  * Returns an array of <a>RuleGroup</a>
  */
-ListRuleGroupsResponse * WAFRegionalClient::listRuleGroups(const ListRuleGroupsRequest &request)
+ListRuleGroupsResponse * WafRegionalClient::listRuleGroups(const ListRuleGroupsRequest &request)
 {
     return qobject_cast<ListRuleGroupsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListRulesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2609,13 +2609,13 @@ ListRuleGroupsResponse * WAFRegionalClient::listRuleGroups(const ListRuleGroupsR
  *
  * Returns an array of <a>RuleSummary</a>
  */
-ListRulesResponse * WAFRegionalClient::listRules(const ListRulesRequest &request)
+ListRulesResponse * WafRegionalClient::listRules(const ListRulesRequest &request)
 {
     return qobject_cast<ListRulesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListSizeConstraintSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2636,13 +2636,13 @@ ListRulesResponse * WAFRegionalClient::listRules(const ListRulesRequest &request
  *
  * Returns an array of <a>SizeConstraintSetSummary</a>
  */
-ListSizeConstraintSetsResponse * WAFRegionalClient::listSizeConstraintSets(const ListSizeConstraintSetsRequest &request)
+ListSizeConstraintSetsResponse * WafRegionalClient::listSizeConstraintSets(const ListSizeConstraintSetsRequest &request)
 {
     return qobject_cast<ListSizeConstraintSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListSqlInjectionMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2663,13 +2663,13 @@ ListSizeConstraintSetsResponse * WAFRegionalClient::listSizeConstraintSets(const
  *
  * Returns an array of <a>SqlInjectionMatchSet</a>
  */
-ListSqlInjectionMatchSetsResponse * WAFRegionalClient::listSqlInjectionMatchSets(const ListSqlInjectionMatchSetsRequest &request)
+ListSqlInjectionMatchSetsResponse * WafRegionalClient::listSqlInjectionMatchSets(const ListSqlInjectionMatchSetsRequest &request)
 {
     return qobject_cast<ListSqlInjectionMatchSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListSubscribedRuleGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2690,13 +2690,13 @@ ListSqlInjectionMatchSetsResponse * WAFRegionalClient::listSqlInjectionMatchSets
  *
  * Returns an array of <a>RuleGroup</a> objects that you are subscribed
  */
-ListSubscribedRuleGroupsResponse * WAFRegionalClient::listSubscribedRuleGroups(const ListSubscribedRuleGroupsRequest &request)
+ListSubscribedRuleGroupsResponse * WafRegionalClient::listSubscribedRuleGroups(const ListSubscribedRuleGroupsRequest &request)
 {
     return qobject_cast<ListSubscribedRuleGroupsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2724,13 +2724,13 @@ ListSubscribedRuleGroupsResponse * WAFRegionalClient::listSubscribedRuleGroups(c
  * Tagging is only available through the API, SDKs, and CLI. You can't manage or view tags through the AWS WAF Classic
  * console. You can tag the AWS resources that you manage through AWS WAF Classic: web ACLs, rule groups, and rules.
  */
-ListTagsForResourceResponse * WAFRegionalClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * WafRegionalClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListWebACLsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2751,13 +2751,13 @@ ListTagsForResourceResponse * WAFRegionalClient::listTagsForResource(const ListT
  *
  * Returns an array of <a>WebACLSummary</a> objects in the
  */
-ListWebACLsResponse * WAFRegionalClient::listWebACLs(const ListWebACLsRequest &request)
+ListWebACLsResponse * WafRegionalClient::listWebACLs(const ListWebACLsRequest &request)
 {
     return qobject_cast<ListWebACLsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * ListXssMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2778,13 +2778,13 @@ ListWebACLsResponse * WAFRegionalClient::listWebACLs(const ListWebACLsRequest &r
  *
  * Returns an array of <a>XssMatchSet</a>
  */
-ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatchSetsRequest &request)
+ListXssMatchSetsResponse * WafRegionalClient::listXssMatchSets(const ListXssMatchSetsRequest &request)
 {
     return qobject_cast<ListXssMatchSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * PutLoggingConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2833,13 +2833,13 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
  * <a href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL Traffic Information</a> in
  * the <i>AWS WAF Developer
  */
-PutLoggingConfigurationResponse * WAFRegionalClient::putLoggingConfiguration(const PutLoggingConfigurationRequest &request)
+PutLoggingConfigurationResponse * WafRegionalClient::putLoggingConfiguration(const PutLoggingConfigurationRequest &request)
 {
     return qobject_cast<PutLoggingConfigurationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * PutPermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2907,13 +2907,13 @@ PutLoggingConfigurationResponse * WAFRegionalClient::putLoggingConfiguration(con
  *
  * An example of a valid policy parameter is shown in the Examples section
  */
-PutPermissionPolicyResponse * WAFRegionalClient::putPermissionPolicy(const PutPermissionPolicyRequest &request)
+PutPermissionPolicyResponse * WafRegionalClient::putPermissionPolicy(const PutPermissionPolicyRequest &request)
 {
     return qobject_cast<PutPermissionPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2942,13 +2942,13 @@ PutPermissionPolicyResponse * WAFRegionalClient::putPermissionPolicy(const PutPe
  * console. You can use this action to tag the AWS resources that you manage through AWS WAF Classic: web ACLs, rule
  * groups, and rules.
  */
-TagResourceResponse * WAFRegionalClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * WafRegionalClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2964,14 +2964,16 @@ TagResourceResponse * WAFRegionalClient::tagResource(const TagResourceRequest &r
  * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
  * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  */
-UntagResourceResponse * WAFRegionalClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * WafRegionalClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3046,13 +3048,13 @@ UntagResourceResponse * WAFRegionalClient::untagResource(const UntagResourceRequ
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateByteMatchSetResponse * WAFRegionalClient::updateByteMatchSet(const UpdateByteMatchSetRequest &request)
+UpdateByteMatchSetResponse * WafRegionalClient::updateByteMatchSet(const UpdateByteMatchSetRequest &request)
 {
     return qobject_cast<UpdateByteMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateGeoMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3115,13 +3117,13 @@ UpdateByteMatchSetResponse * WAFRegionalClient::updateByteMatchSet(const UpdateB
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeoMatchSetRequest &request)
+UpdateGeoMatchSetResponse * WafRegionalClient::updateGeoMatchSet(const UpdateGeoMatchSetRequest &request)
 {
     return qobject_cast<UpdateGeoMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3214,13 +3216,13 @@ UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeo
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &request)
+UpdateIPSetResponse * WafRegionalClient::updateIPSet(const UpdateIPSetRequest &request)
 {
     return qobject_cast<UpdateIPSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateRateBasedRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3298,13 +3300,13 @@ UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &r
  * By adding this <code>RateBasedRule</code> to a <code>WebACL</code>, you could limit requests to your login page without
  * affecting the rest of your
  */
-UpdateRateBasedRuleResponse * WAFRegionalClient::updateRateBasedRule(const UpdateRateBasedRuleRequest &request)
+UpdateRateBasedRuleResponse * WafRegionalClient::updateRateBasedRule(const UpdateRateBasedRuleRequest &request)
 {
     return qobject_cast<UpdateRateBasedRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateRegexMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3375,13 +3377,13 @@ UpdateRateBasedRuleResponse * WAFRegionalClient::updateRateBasedRule(const Updat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateRegexMatchSetResponse * WAFRegionalClient::updateRegexMatchSet(const UpdateRegexMatchSetRequest &request)
+UpdateRegexMatchSetResponse * WafRegionalClient::updateRegexMatchSet(const UpdateRegexMatchSetRequest &request)
 {
     return qobject_cast<UpdateRegexMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateRegexPatternSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3447,13 +3449,13 @@ UpdateRegexMatchSetResponse * WAFRegionalClient::updateRegexMatchSet(const Updat
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateRegexPatternSetResponse * WAFRegionalClient::updateRegexPatternSet(const UpdateRegexPatternSetRequest &request)
+UpdateRegexPatternSetResponse * WafRegionalClient::updateRegexPatternSet(const UpdateRegexPatternSetRequest &request)
 {
     return qobject_cast<UpdateRegexPatternSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3527,13 +3529,13 @@ UpdateRegexPatternSetResponse * WAFRegionalClient::updateRegexPatternSet(const U
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateRuleResponse * WAFRegionalClient::updateRule(const UpdateRuleRequest &request)
+UpdateRuleResponse * WafRegionalClient::updateRule(const UpdateRuleRequest &request)
 {
     return qobject_cast<UpdateRuleResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3592,13 +3594,13 @@ UpdateRuleResponse * WAFRegionalClient::updateRule(const UpdateRuleRequest &requ
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateRuleGroupResponse * WAFRegionalClient::updateRuleGroup(const UpdateRuleGroupRequest &request)
+UpdateRuleGroupResponse * WafRegionalClient::updateRuleGroup(const UpdateRuleGroupRequest &request)
 {
     return qobject_cast<UpdateRuleGroupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3678,13 +3680,13 @@ UpdateRuleGroupResponse * WAFRegionalClient::updateRuleGroup(const UpdateRuleGro
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateSizeConstraintSetResponse * WAFRegionalClient::updateSizeConstraintSet(const UpdateSizeConstraintSetRequest &request)
+UpdateSizeConstraintSetResponse * WafRegionalClient::updateSizeConstraintSet(const UpdateSizeConstraintSetRequest &request)
 {
     return qobject_cast<UpdateSizeConstraintSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateSqlInjectionMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3755,13 +3757,13 @@ UpdateSizeConstraintSetResponse * WAFRegionalClient::updateSizeConstraintSet(con
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchSet(const UpdateSqlInjectionMatchSetRequest &request)
+UpdateSqlInjectionMatchSetResponse * WafRegionalClient::updateSqlInjectionMatchSet(const UpdateSqlInjectionMatchSetRequest &request)
 {
     return qobject_cast<UpdateSqlInjectionMatchSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3859,13 +3861,13 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateWebACLResponse * WAFRegionalClient::updateWebACL(const UpdateWebACLRequest &request)
+UpdateWebACLResponse * WafRegionalClient::updateWebACL(const UpdateWebACLRequest &request)
 {
     return qobject_cast<UpdateWebACLResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * Sends \a request to the WafRegionalClient service, and returns a pointer to an
  * UpdateXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3936,28 +3938,28 @@ UpdateWebACLResponse * WAFRegionalClient::updateWebACL(const UpdateWebACLRequest
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
-UpdateXssMatchSetResponse * WAFRegionalClient::updateXssMatchSet(const UpdateXssMatchSetRequest &request)
+UpdateXssMatchSetResponse * WafRegionalClient::updateXssMatchSet(const UpdateXssMatchSetRequest &request)
 {
     return qobject_cast<UpdateXssMatchSetResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::WAFRegional::WAFRegionalClientPrivate
- * \brief The WAFRegionalClientPrivate class provides private implementation for WAFRegionalClient.
+ * \class QtAws::WafRegional::WafRegionalClientPrivate
+ * \brief The WafRegionalClientPrivate class provides private implementation for WafRegionalClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a WAFRegionalClientPrivate object with public implementation \a q.
+ * Constructs a WafRegionalClientPrivate object with public implementation \a q.
  */
-WAFRegionalClientPrivate::WAFRegionalClientPrivate(WAFRegionalClient * const q)
+WafRegionalClientPrivate::WafRegionalClientPrivate(WafRegionalClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

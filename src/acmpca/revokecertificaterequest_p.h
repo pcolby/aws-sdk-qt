@@ -24,14 +24,14 @@
 #include "revokecertificaterequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class RevokeCertificateRequest;
 
-class RevokeCertificateRequestPrivate : public AcmpcaRequestPrivate {
+class RevokeCertificateRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    RevokeCertificateRequestPrivate(const AcmpcaRequest::Action action,
+    RevokeCertificateRequestPrivate(const AcmPcaRequest::Action action,
                                    RevokeCertificateRequest * const q);
     RevokeCertificateRequestPrivate(const RevokeCertificateRequestPrivate &other,
                                    RevokeCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

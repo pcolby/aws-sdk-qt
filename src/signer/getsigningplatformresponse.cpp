@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::GetSigningPlatformResponse
- * \brief The GetSigningPlatformResponse class provides an interace for signer GetSigningPlatform responses.
+ * \class QtAws::Signer::GetSigningPlatformResponse
+ * \brief The GetSigningPlatformResponse class provides an interace for Signer GetSigningPlatform responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::getSigningPlatform
+ * \sa SignerClient::getSigningPlatform
  */
 
 /*!
@@ -69,7 +71,7 @@ GetSigningPlatformResponse::GetSigningPlatformResponse(
         const GetSigningPlatformRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new GetSigningPlatformResponsePrivate(this), parent)
+    : SignerResponse(new GetSigningPlatformResponsePrivate(this), parent)
 {
     setRequest(new GetSigningPlatformRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const GetSigningPlatformRequest * GetSigningPlatformResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer GetSigningPlatform \a response.
+ * Parses a successful Signer GetSigningPlatform \a response.
  */
 void GetSigningPlatformResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void GetSigningPlatformResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::GetSigningPlatformResponsePrivate
+ * \class QtAws::Signer::GetSigningPlatformResponsePrivate
  * \brief The GetSigningPlatformResponsePrivate class provides private implementation for GetSigningPlatformResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a GetSigningPlatformResponsePrivate object with public implementation \a q.
  */
 GetSigningPlatformResponsePrivate::GetSigningPlatformResponsePrivate(
-    GetSigningPlatformResponse * const q) : signerResponsePrivate(q)
+    GetSigningPlatformResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer GetSigningPlatform response element from \a xml.
+ * Parses a Signer GetSigningPlatform response element from \a xml.
  */
 void GetSigningPlatformResponsePrivate::parseGetSigningPlatformResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void GetSigningPlatformResponsePrivate::parseGetSigningPlatformResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "sesv2response_p.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountSuppressionAttributesResponse;
 
-class PutAccountSuppressionAttributesResponsePrivate : public Sesv2ResponsePrivate {
+class PutAccountSuppressionAttributesResponsePrivate : public SESv2ResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listimagebuildversionsrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ListImageBuildVersionsRequest;
 
-class ListImageBuildVersionsRequestPrivate : public imagebuilderRequestPrivate {
+class ListImageBuildVersionsRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    ListImageBuildVersionsRequestPrivate(const imagebuilderRequest::Action action,
+    ListImageBuildVersionsRequestPrivate(const ImageBuilderRequest::Action action,
                                    ListImageBuildVersionsRequest * const q);
     ListImageBuildVersionsRequestPrivate(const ListImageBuildVersionsRequestPrivate &other,
                                    ListImageBuildVersionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

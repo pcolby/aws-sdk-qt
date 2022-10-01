@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBClusterResponse
- * \brief The RemoveRoleFromDBClusterResponse class provides an interace for RDS RemoveRoleFromDBCluster responses.
+ * \class QtAws::Rds::RemoveRoleFromDBClusterResponse
+ * \brief The RemoveRoleFromDBClusterResponse class provides an interace for Rds RemoveRoleFromDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS RemoveRoleFromDBCluster \a response.
+ * Parses a successful Rds RemoveRoleFromDBCluster \a response.
  */
 void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBClusterResponsePrivate
+ * \class QtAws::Rds::RemoveRoleFromDBClusterResponsePrivate
  * \brief The RemoveRoleFromDBClusterResponsePrivate class provides private implementation for RemoveRoleFromDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS RemoveRoleFromDBCluster response element from \a xml.
+ * Parses a Rds RemoveRoleFromDBCluster response element from \a xml.
  */
 void RemoveRoleFromDBClusterResponsePrivate::parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RemoveRoleFromDBClusterResponsePrivate::parseRemoveRoleFromDBClusterRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

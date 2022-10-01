@@ -24,7 +24,7 @@
 #include "deleteclusterrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DeleteClusterRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListVerifiedEmailAddressesResponse
- * \brief The ListVerifiedEmailAddressesResponse class provides an interace for SES ListVerifiedEmailAddresses responses.
+ * \class QtAws::Ses::ListVerifiedEmailAddressesResponse
+ * \brief The ListVerifiedEmailAddressesResponse class provides an interace for Ses ListVerifiedEmailAddresses responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const ListVerifiedEmailAddressesRequest * ListVerifiedEmailAddressesResponse::re
 
 /*!
  * \reimp
- * Parses a successful SES ListVerifiedEmailAddresses \a response.
+ * Parses a successful Ses ListVerifiedEmailAddresses \a response.
  */
 void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::ListVerifiedEmailAddressesResponsePrivate
+ * \class QtAws::Ses::ListVerifiedEmailAddressesResponsePrivate
  * \brief The ListVerifiedEmailAddressesResponsePrivate class provides private implementation for ListVerifiedEmailAddressesResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePri
 }
 
 /*!
- * Parses a SES ListVerifiedEmailAddresses response element from \a xml.
+ * Parses a Ses ListVerifiedEmailAddresses response element from \a xml.
  */
 void ListVerifiedEmailAddressesResponsePrivate::parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ListVerifiedEmailAddressesResponsePrivate::parseListVerifiedEmailAddressesR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class IamResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

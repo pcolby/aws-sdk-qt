@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::GetAuthorizationTokenResponse
- * \brief The GetAuthorizationTokenResponse class provides an interace for ECR GetAuthorizationToken responses.
+ * \class QtAws::Ecr::GetAuthorizationTokenResponse
+ * \brief The GetAuthorizationTokenResponse class provides an interace for Ecr GetAuthorizationToken responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::getAuthorizationToken
  */
@@ -68,7 +74,7 @@ const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ECR GetAuthorizationToken \a response.
+ * Parses a successful Ecr GetAuthorizationToken \a response.
  */
 void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::GetAuthorizationTokenResponsePrivate
+ * \class QtAws::Ecr::GetAuthorizationTokenResponsePrivate
  * \brief The GetAuthorizationTokenResponsePrivate class provides private implementation for GetAuthorizationTokenResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
 }
 
 /*!
- * Parses a ECR GetAuthorizationToken response element from \a xml.
+ * Parses a Ecr GetAuthorizationToken response element from \a xml.
  */
 void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

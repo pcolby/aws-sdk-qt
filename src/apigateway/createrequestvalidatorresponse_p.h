@@ -23,11 +23,11 @@
 #include "apigatewayresponse_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateRequestValidatorResponse;
 
-class CreateRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
+class CreateRequestValidatorResponsePrivate : public ApiGatewayResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

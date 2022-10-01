@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for signer TagResource requests.
+ * \class QtAws::Signer::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Signer TagResource requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::tagResource
+ * \sa SignerClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : signerRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : signerRequest(new TagResourceRequestPrivate(signerRequest::TagResourceAction, this))
+    : SignerRequest(new TagResourceRequestPrivate(SignerRequest::TagResourceAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::signer::TagResourceRequestPrivate
+ * \class QtAws::Signer::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for signer \a action,
+ * Constructs a TagResourceRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const signerRequest::Action action, TagResourceRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, TagResourceRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

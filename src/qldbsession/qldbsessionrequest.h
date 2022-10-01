@@ -30,22 +30,22 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionRequestPrivate;
+class QldbSessionRequestPrivate;
 
-class QTAWSQLDBSESSION_EXPORT QLDBSessionRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSQLDBSESSION_EXPORT QldbSessionRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by QLDBSession.
+    /// Actions supported by QldbSession.
     enum Action {
         SendCommandAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    QLDBSessionRequest(const Action action);
-    QLDBSessionRequest(const QLDBSessionRequest &other);
-    QLDBSessionRequest &operator=(const QLDBSessionRequest &other);
+    QldbSessionRequest(const Action action);
+    QldbSessionRequest(const QldbSessionRequest &other);
+    QldbSessionRequest &operator=(const QldbSessionRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -54,12 +54,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const QLDBSessionRequest &other) const;
+    virtual bool operator==(const QldbSessionRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit QLDBSessionRequest(QLDBSessionRequestPrivate * const d);
+    explicit QldbSessionRequest(QldbSessionRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -72,11 +72,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(QLDBSessionRequest)
+    Q_DECLARE_PRIVATE(QldbSessionRequest)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

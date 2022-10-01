@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::StartJobRunRequest
- * \brief The StartJobRunRequest class provides an interface for EMRContainers StartJobRun requests.
+ * \class QtAws::Emrcontainers::StartJobRunRequest
+ * \brief The StartJobRunRequest class provides an interface for Emrcontainers StartJobRun requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::startJobRun
+ * \sa EmrcontainersClient::startJobRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
-    : EMRContainersRequest(new StartJobRunRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new StartJobRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
  * Constructs a StartJobRunRequest object.
  */
 StartJobRunRequest::StartJobRunRequest()
-    : EMRContainersRequest(new StartJobRunRequestPrivate(EMRContainersRequest::StartJobRunAction, this))
+    : EmrcontainersRequest(new StartJobRunRequestPrivate(EmrcontainersRequest::StartJobRunAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::EMRContainers::StartJobRunRequestPrivate
+ * \class QtAws::Emrcontainers::StartJobRunRequestPrivate
  * \brief The StartJobRunRequestPrivate class provides private implementation for StartJobRunRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a StartJobRunRequestPrivate object for EMRContainers \a action,
+ * Constructs a StartJobRunRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
-    const EMRContainersRequest::Action action, StartJobRunRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, StartJobRunRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ StartJobRunRequestPrivate::StartJobRunRequestPrivate(
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const StartJobRunRequestPrivate &other, StartJobRunRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

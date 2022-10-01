@@ -24,14 +24,14 @@
 #include "exportserverengineattributerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class ExportServerEngineAttributeRequest;
 
-class ExportServerEngineAttributeRequestPrivate : public OpsWorksCMRequestPrivate {
+class ExportServerEngineAttributeRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    ExportServerEngineAttributeRequestPrivate(const OpsWorksCMRequest::Action action,
+    ExportServerEngineAttributeRequestPrivate(const OpsWorksCmRequest::Action action,
                                    ExportServerEngineAttributeRequest * const q);
     ExportServerEngineAttributeRequestPrivate(const ExportServerEngineAttributeRequestPrivate &other,
                                    ExportServerEngineAttributeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

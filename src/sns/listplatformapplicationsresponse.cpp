@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListPlatformApplicationsResponse
- * \brief The ListPlatformApplicationsResponse class provides an interace for SNS ListPlatformApplications responses.
+ * \class QtAws::Sns::ListPlatformApplicationsResponse
+ * \brief The ListPlatformApplicationsResponse class provides an interace for Sns ListPlatformApplications responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ListPlatformApplicationsRequest * ListPlatformApplicationsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SNS ListPlatformApplications \a response.
+ * Parses a successful Sns ListPlatformApplications \a response.
  */
 void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::ListPlatformApplicationsResponsePrivate
+ * \class QtAws::Sns::ListPlatformApplicationsResponsePrivate
  * \brief The ListPlatformApplicationsResponsePrivate class provides private implementation for ListPlatformApplicationsResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate
 }
 
 /*!
- * Parses a SNS ListPlatformApplications response element from \a xml.
+ * Parses a Sns ListPlatformApplications response element from \a xml.
  */
 void ListPlatformApplicationsResponsePrivate::parseListPlatformApplicationsResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ListPlatformApplicationsResponsePrivate::parseListPlatformApplicationsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

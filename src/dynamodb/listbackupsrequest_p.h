@@ -24,14 +24,14 @@
 #include "listbackupsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListBackupsRequest;
 
-class ListBackupsRequestPrivate : public DynamoDBRequestPrivate {
+class ListBackupsRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ListBackupsRequestPrivate(const DynamoDBRequest::Action action,
+    ListBackupsRequestPrivate(const DynamoDbRequest::Action action,
                                    ListBackupsRequest * const q);
     ListBackupsRequestPrivate(const ListBackupsRequestPrivate &other,
                                    ListBackupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

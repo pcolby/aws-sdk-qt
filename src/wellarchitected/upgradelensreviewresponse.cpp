@@ -33,13 +33,13 @@ namespace WellArchitected {
  *
  * \inmodule QtAwsWellArchitected
  *
- *  <fullname>AWS Well-Architected Tool</fullname>
+ *  <fullname>Well-Architected Tool</fullname>
  * 
- *  This is the <i>AWS Well-Architected Tool API Reference</i>. The AWS Well-Architected Tool API provides programmatic
- *  access to the <a href="http://aws.amazon.com/well-architected-tool">AWS Well-Architected Tool</a> in the <a
- *  href="https://console.aws.amazon.com/wellarchitected">AWS Management Console</a>. For information about the AWS
- *  Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">AWS
- *  Well-Architected Tool User
+ *  This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a
+ *  href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a
+ *  href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information about
+ *  the Well-Architected Tool, see the <a
+ *  href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User
  *
  * \sa WellArchitectedClient::upgradeLensReview
  */

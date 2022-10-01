@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendCustomVerificationEmailResponse
- * \brief The SendCustomVerificationEmailResponse class provides an interace for SES SendCustomVerificationEmail responses.
+ * \class QtAws::Ses::SendCustomVerificationEmailResponse
+ * \brief The SendCustomVerificationEmailResponse class provides an interace for Ses SendCustomVerificationEmail responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SendCustomVerificationEmailRequest * SendCustomVerificationEmailResponse::
 
 /*!
  * \reimp
- * Parses a successful SES SendCustomVerificationEmail \a response.
+ * Parses a successful Ses SendCustomVerificationEmail \a response.
  */
 void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SendCustomVerificationEmailResponsePrivate
+ * \class QtAws::Ses::SendCustomVerificationEmailResponsePrivate
  * \brief The SendCustomVerificationEmailResponsePrivate class provides private implementation for SendCustomVerificationEmailResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponseP
 }
 
 /*!
- * Parses a SES SendCustomVerificationEmail response element from \a xml.
+ * Parses a Ses SendCustomVerificationEmail response element from \a xml.
  */
 void SendCustomVerificationEmailResponsePrivate::parseSendCustomVerificationEmailResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SendCustomVerificationEmailResponsePrivate::parseSendCustomVerificationEmai
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "updateledgerrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class UpdateLedgerResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

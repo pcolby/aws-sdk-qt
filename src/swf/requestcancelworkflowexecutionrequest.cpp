@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RequestCancelWorkflowExecutionRequest
- * \brief The RequestCancelWorkflowExecutionRequest class provides an interface for SWF RequestCancelWorkflowExecution requests.
+ * \class QtAws::Swf::RequestCancelWorkflowExecutionRequest
+ * \brief The RequestCancelWorkflowExecutionRequest class provides an interface for Swf RequestCancelWorkflowExecution requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::respon
 }
 
 /*!
- * \class QtAws::SWF::RequestCancelWorkflowExecutionRequestPrivate
+ * \class QtAws::Swf::RequestCancelWorkflowExecutionRequestPrivate
  * \brief The RequestCancelWorkflowExecutionRequestPrivate class provides private implementation for RequestCancelWorkflowExecutionRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequ
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

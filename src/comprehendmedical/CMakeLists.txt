@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCOMPREHENDMEDICAL_LIBRARY)
 
 add_library(QtAwsComprehendMedical
+  qtawscomprehendmedicalglobal.h
   comprehendmedicalclient.h
   comprehendmedicalclient_p.h
   comprehendmedicalrequest.h
@@ -23,6 +24,10 @@ add_library(QtAwsComprehendMedical
   describerxnorminferencejobrequest_p.h
   describerxnorminferencejobresponse.h
   describerxnorminferencejobresponse_p.h
+  describesnomedctinferencejobrequest.h
+  describesnomedctinferencejobrequest_p.h
+  describesnomedctinferencejobresponse.h
+  describesnomedctinferencejobresponse_p.h
   detectentitiesrequest.h
   detectentitiesrequest_p.h
   detectentitiesresponse.h
@@ -43,6 +48,10 @@ add_library(QtAwsComprehendMedical
   inferrxnormrequest_p.h
   inferrxnormresponse.h
   inferrxnormresponse_p.h
+  infersnomedctrequest.h
+  infersnomedctrequest_p.h
+  infersnomedctresponse.h
+  infersnomedctresponse_p.h
   listentitiesdetectionv2jobsrequest.h
   listentitiesdetectionv2jobsrequest_p.h
   listentitiesdetectionv2jobsresponse.h
@@ -59,7 +68,10 @@ add_library(QtAwsComprehendMedical
   listrxnorminferencejobsrequest_p.h
   listrxnorminferencejobsresponse.h
   listrxnorminferencejobsresponse_p.h
-  qtawscomprehendmedicalglobal.h
+  listsnomedctinferencejobsrequest.h
+  listsnomedctinferencejobsrequest_p.h
+  listsnomedctinferencejobsresponse.h
+  listsnomedctinferencejobsresponse_p.h
   startentitiesdetectionv2jobrequest.h
   startentitiesdetectionv2jobrequest_p.h
   startentitiesdetectionv2jobresponse.h
@@ -76,6 +88,10 @@ add_library(QtAwsComprehendMedical
   startrxnorminferencejobrequest_p.h
   startrxnorminferencejobresponse.h
   startrxnorminferencejobresponse_p.h
+  startsnomedctinferencejobrequest.h
+  startsnomedctinferencejobrequest_p.h
+  startsnomedctinferencejobresponse.h
+  startsnomedctinferencejobresponse_p.h
   stopentitiesdetectionv2jobrequest.h
   stopentitiesdetectionv2jobrequest_p.h
   stopentitiesdetectionv2jobresponse.h
@@ -92,6 +108,10 @@ add_library(QtAwsComprehendMedical
   stoprxnorminferencejobrequest_p.h
   stoprxnorminferencejobresponse.h
   stoprxnorminferencejobresponse_p.h
+  stopsnomedctinferencejobrequest.h
+  stopsnomedctinferencejobrequest_p.h
+  stopsnomedctinferencejobresponse.h
+  stopsnomedctinferencejobresponse_p.h
   comprehendmedicalclient.cpp
   comprehendmedicalrequest.cpp
   comprehendmedicalresponse.cpp
@@ -103,6 +123,8 @@ add_library(QtAwsComprehendMedical
   describephidetectionjobresponse.cpp
   describerxnorminferencejobrequest.cpp
   describerxnorminferencejobresponse.cpp
+  describesnomedctinferencejobrequest.cpp
+  describesnomedctinferencejobresponse.cpp
   detectentitiesrequest.cpp
   detectentitiesresponse.cpp
   detectentitiesv2request.cpp
@@ -113,6 +135,8 @@ add_library(QtAwsComprehendMedical
   infericd10cmresponse.cpp
   inferrxnormrequest.cpp
   inferrxnormresponse.cpp
+  infersnomedctrequest.cpp
+  infersnomedctresponse.cpp
   listentitiesdetectionv2jobsrequest.cpp
   listentitiesdetectionv2jobsresponse.cpp
   listicd10cminferencejobsrequest.cpp
@@ -121,6 +145,8 @@ add_library(QtAwsComprehendMedical
   listphidetectionjobsresponse.cpp
   listrxnorminferencejobsrequest.cpp
   listrxnorminferencejobsresponse.cpp
+  listsnomedctinferencejobsrequest.cpp
+  listsnomedctinferencejobsresponse.cpp
   startentitiesdetectionv2jobrequest.cpp
   startentitiesdetectionv2jobresponse.cpp
   starticd10cminferencejobrequest.cpp
@@ -129,6 +155,8 @@ add_library(QtAwsComprehendMedical
   startphidetectionjobresponse.cpp
   startrxnorminferencejobrequest.cpp
   startrxnorminferencejobresponse.cpp
+  startsnomedctinferencejobrequest.cpp
+  startsnomedctinferencejobresponse.cpp
   stopentitiesdetectionv2jobrequest.cpp
   stopentitiesdetectionv2jobresponse.cpp
   stopicd10cminferencejobrequest.cpp
@@ -136,7 +164,9 @@ add_library(QtAwsComprehendMedical
   stopphidetectionjobrequest.cpp
   stopphidetectionjobresponse.cpp
   stoprxnorminferencejobrequest.cpp
-  stoprxnorminferencejobresponse.cpp)
+  stoprxnorminferencejobresponse.cpp
+  stopsnomedctinferencejobrequest.cpp
+  stopsnomedctinferencejobresponse.cpp)
 
 target_link_libraries(QtAwsComprehendMedical
   PRIVATE QtAwsCore

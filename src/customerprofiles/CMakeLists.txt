@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCUSTOMERPROFILES_LIBRARY)
 
 add_library(QtAwsCustomerProfiles
+  qtawscustomerprofilesglobal.h
+  customerprofilesclient.h
+  customerprofilesclient_p.h
+  customerprofilesrequest.h
+  customerprofilesrequest_p.h
+  customerprofilesresponse.h
+  customerprofilesresponse_p.h
   addprofilekeyrequest.h
   addprofilekeyrequest_p.h
   addprofilekeyresponse.h
@@ -9,16 +16,14 @@ add_library(QtAwsCustomerProfiles
   createdomainrequest_p.h
   createdomainresponse.h
   createdomainresponse_p.h
+  createintegrationworkflowrequest.h
+  createintegrationworkflowrequest_p.h
+  createintegrationworkflowresponse.h
+  createintegrationworkflowresponse_p.h
   createprofilerequest.h
   createprofilerequest_p.h
   createprofileresponse.h
   createprofileresponse_p.h
-  customerprofilesclient.h
-  customerprofilesclient_p.h
-  customerprofilesrequest.h
-  customerprofilesrequest_p.h
-  customerprofilesresponse.h
-  customerprofilesresponse_p.h
   deletedomainrequest.h
   deletedomainrequest_p.h
   deletedomainresponse.h
@@ -27,6 +32,10 @@ add_library(QtAwsCustomerProfiles
   deleteintegrationrequest_p.h
   deleteintegrationresponse.h
   deleteintegrationresponse_p.h
+  deleteprofilerequest.h
+  deleteprofilerequest_p.h
+  deleteprofileresponse.h
+  deleteprofileresponse_p.h
   deleteprofilekeyrequest.h
   deleteprofilekeyrequest_p.h
   deleteprofilekeyresponse.h
@@ -39,14 +48,22 @@ add_library(QtAwsCustomerProfiles
   deleteprofileobjecttyperequest_p.h
   deleteprofileobjecttyperesponse.h
   deleteprofileobjecttyperesponse_p.h
-  deleteprofilerequest.h
-  deleteprofilerequest_p.h
-  deleteprofileresponse.h
-  deleteprofileresponse_p.h
+  deleteworkflowrequest.h
+  deleteworkflowrequest_p.h
+  deleteworkflowresponse.h
+  deleteworkflowresponse_p.h
+  getautomergingpreviewrequest.h
+  getautomergingpreviewrequest_p.h
+  getautomergingpreviewresponse.h
+  getautomergingpreviewresponse_p.h
   getdomainrequest.h
   getdomainrequest_p.h
   getdomainresponse.h
   getdomainresponse_p.h
+  getidentityresolutionjobrequest.h
+  getidentityresolutionjobrequest_p.h
+  getidentityresolutionjobresponse.h
+  getidentityresolutionjobresponse_p.h
   getintegrationrequest.h
   getintegrationrequest_p.h
   getintegrationresponse.h
@@ -63,6 +80,14 @@ add_library(QtAwsCustomerProfiles
   getprofileobjecttypetemplaterequest_p.h
   getprofileobjecttypetemplateresponse.h
   getprofileobjecttypetemplateresponse_p.h
+  getworkflowrequest.h
+  getworkflowrequest_p.h
+  getworkflowresponse.h
+  getworkflowresponse_p.h
+  getworkflowstepsrequest.h
+  getworkflowstepsrequest_p.h
+  getworkflowstepsresponse.h
+  getworkflowstepsresponse_p.h
   listaccountintegrationsrequest.h
   listaccountintegrationsrequest_p.h
   listaccountintegrationsresponse.h
@@ -71,26 +96,34 @@ add_library(QtAwsCustomerProfiles
   listdomainsrequest_p.h
   listdomainsresponse.h
   listdomainsresponse_p.h
+  listidentityresolutionjobsrequest.h
+  listidentityresolutionjobsrequest_p.h
+  listidentityresolutionjobsresponse.h
+  listidentityresolutionjobsresponse_p.h
   listintegrationsrequest.h
   listintegrationsrequest_p.h
   listintegrationsresponse.h
   listintegrationsresponse_p.h
-  listprofileobjectsrequest.h
-  listprofileobjectsrequest_p.h
-  listprofileobjectsresponse.h
-  listprofileobjectsresponse_p.h
-  listprofileobjecttypesrequest.h
-  listprofileobjecttypesrequest_p.h
-  listprofileobjecttypesresponse.h
-  listprofileobjecttypesresponse_p.h
   listprofileobjecttypetemplatesrequest.h
   listprofileobjecttypetemplatesrequest_p.h
   listprofileobjecttypetemplatesresponse.h
   listprofileobjecttypetemplatesresponse_p.h
+  listprofileobjecttypesrequest.h
+  listprofileobjecttypesrequest_p.h
+  listprofileobjecttypesresponse.h
+  listprofileobjecttypesresponse_p.h
+  listprofileobjectsrequest.h
+  listprofileobjectsrequest_p.h
+  listprofileobjectsresponse.h
+  listprofileobjectsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listworkflowsrequest.h
+  listworkflowsrequest_p.h
+  listworkflowsresponse.h
+  listworkflowsresponse_p.h
   mergeprofilesrequest.h
   mergeprofilesrequest_p.h
   mergeprofilesresponse.h
@@ -107,7 +140,6 @@ add_library(QtAwsCustomerProfiles
   putprofileobjecttyperequest_p.h
   putprofileobjecttyperesponse.h
   putprofileobjecttyperesponse_p.h
-  qtawscustomerprofilesglobal.h
   searchprofilesrequest.h
   searchprofilesrequest_p.h
   searchprofilesresponse.h
@@ -128,29 +160,37 @@ add_library(QtAwsCustomerProfiles
   updateprofilerequest_p.h
   updateprofileresponse.h
   updateprofileresponse_p.h
+  customerprofilesclient.cpp
+  customerprofilesrequest.cpp
+  customerprofilesresponse.cpp
   addprofilekeyrequest.cpp
   addprofilekeyresponse.cpp
   createdomainrequest.cpp
   createdomainresponse.cpp
+  createintegrationworkflowrequest.cpp
+  createintegrationworkflowresponse.cpp
   createprofilerequest.cpp
   createprofileresponse.cpp
-  customerprofilesclient.cpp
-  customerprofilesrequest.cpp
-  customerprofilesresponse.cpp
   deletedomainrequest.cpp
   deletedomainresponse.cpp
   deleteintegrationrequest.cpp
   deleteintegrationresponse.cpp
+  deleteprofilerequest.cpp
+  deleteprofileresponse.cpp
   deleteprofilekeyrequest.cpp
   deleteprofilekeyresponse.cpp
   deleteprofileobjectrequest.cpp
   deleteprofileobjectresponse.cpp
   deleteprofileobjecttyperequest.cpp
   deleteprofileobjecttyperesponse.cpp
-  deleteprofilerequest.cpp
-  deleteprofileresponse.cpp
+  deleteworkflowrequest.cpp
+  deleteworkflowresponse.cpp
+  getautomergingpreviewrequest.cpp
+  getautomergingpreviewresponse.cpp
   getdomainrequest.cpp
   getdomainresponse.cpp
+  getidentityresolutionjobrequest.cpp
+  getidentityresolutionjobresponse.cpp
   getintegrationrequest.cpp
   getintegrationresponse.cpp
   getmatchesrequest.cpp
@@ -159,20 +199,28 @@ add_library(QtAwsCustomerProfiles
   getprofileobjecttyperesponse.cpp
   getprofileobjecttypetemplaterequest.cpp
   getprofileobjecttypetemplateresponse.cpp
+  getworkflowrequest.cpp
+  getworkflowresponse.cpp
+  getworkflowstepsrequest.cpp
+  getworkflowstepsresponse.cpp
   listaccountintegrationsrequest.cpp
   listaccountintegrationsresponse.cpp
   listdomainsrequest.cpp
   listdomainsresponse.cpp
+  listidentityresolutionjobsrequest.cpp
+  listidentityresolutionjobsresponse.cpp
   listintegrationsrequest.cpp
   listintegrationsresponse.cpp
-  listprofileobjectsrequest.cpp
-  listprofileobjectsresponse.cpp
-  listprofileobjecttypesrequest.cpp
-  listprofileobjecttypesresponse.cpp
   listprofileobjecttypetemplatesrequest.cpp
   listprofileobjecttypetemplatesresponse.cpp
+  listprofileobjecttypesrequest.cpp
+  listprofileobjecttypesresponse.cpp
+  listprofileobjectsrequest.cpp
+  listprofileobjectsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listworkflowsrequest.cpp
+  listworkflowsresponse.cpp
   mergeprofilesrequest.cpp
   mergeprofilesresponse.cpp
   putintegrationrequest.cpp

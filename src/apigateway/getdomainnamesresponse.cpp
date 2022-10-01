@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDomainNamesResponse
- * \brief The GetDomainNamesResponse class provides an interace for APIGateway GetDomainNames responses.
+ * \class QtAws::ApiGateway::GetDomainNamesResponse
+ * \brief The GetDomainNamesResponse class provides an interace for ApiGateway GetDomainNames responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDomainNames
+ * \sa ApiGatewayClient::getDomainNames
  */
 
 /*!
@@ -49,7 +49,7 @@ GetDomainNamesResponse::GetDomainNamesResponse(
         const GetDomainNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetDomainNamesResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetDomainNamesResponsePrivate(this), parent)
 {
     setRequest(new GetDomainNamesRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetDomainNamesRequest * GetDomainNamesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetDomainNames \a response.
+ * Parses a successful ApiGateway GetDomainNames \a response.
  */
 void GetDomainNamesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetDomainNamesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetDomainNamesResponsePrivate
+ * \class QtAws::ApiGateway::GetDomainNamesResponsePrivate
  * \brief The GetDomainNamesResponsePrivate class provides private implementation for GetDomainNamesResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetDomainNamesResponsePrivate object with public implementation \a q.
  */
 GetDomainNamesResponsePrivate::GetDomainNamesResponsePrivate(
-    GetDomainNamesResponse * const q) : APIGatewayResponsePrivate(q)
+    GetDomainNamesResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetDomainNames response element from \a xml.
+ * Parses a ApiGateway GetDomainNames response element from \a xml.
  */
 void GetDomainNamesResponsePrivate::parseGetDomainNamesResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetDomainNamesResponsePrivate::parseGetDomainNamesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

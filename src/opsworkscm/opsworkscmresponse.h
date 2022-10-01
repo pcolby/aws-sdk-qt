@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMResponsePrivate;
+class OpsWorksCmResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT OpsWorksCMResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    OpsWorksCMResponse(QObject * const parent = 0);
+    OpsWorksCmResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent);
+    OpsWorksCmResponse(OpsWorksCmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(OpsWorksCMResponse)
-    Q_DISABLE_COPY(OpsWorksCMResponse)
+    Q_DECLARE_PRIVATE(OpsWorksCmResponse)
+    Q_DISABLE_COPY(OpsWorksCmResponse)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

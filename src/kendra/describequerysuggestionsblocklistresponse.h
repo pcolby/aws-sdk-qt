@@ -24,11 +24,11 @@
 #include "describequerysuggestionsblocklistrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DescribeQuerySuggestionsBlockListResponsePrivate;
 
-class QTAWSKENDRA_EXPORT DescribeQuerySuggestionsBlockListResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DescribeQuerySuggestionsBlockListResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

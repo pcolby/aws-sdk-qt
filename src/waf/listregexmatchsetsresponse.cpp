@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListRegexMatchSetsResponse
- * \brief The ListRegexMatchSetsResponse class provides an interace for WAF ListRegexMatchSets responses.
+ * \class QtAws::Waf::ListRegexMatchSetsResponse
+ * \brief The ListRegexMatchSetsResponse class provides an interace for Waf ListRegexMatchSets responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListRegexMatchSetsRequest * ListRegexMatchSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListRegexMatchSets \a response.
+ * Parses a successful Waf ListRegexMatchSets \a response.
  */
 void ListRegexMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListRegexMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListRegexMatchSetsResponsePrivate
+ * \class QtAws::Waf::ListRegexMatchSetsResponsePrivate
  * \brief The ListRegexMatchSetsResponsePrivate class provides private implementation for ListRegexMatchSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListRegexMatchSetsResponsePrivate::ListRegexMatchSetsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListRegexMatchSets response element from \a xml.
+ * Parses a Waf ListRegexMatchSets response element from \a xml.
  */
 void ListRegexMatchSetsResponsePrivate::parseListRegexMatchSetsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListRegexMatchSetsResponsePrivate::parseListRegexMatchSetsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

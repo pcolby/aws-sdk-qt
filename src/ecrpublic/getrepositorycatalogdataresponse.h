@@ -24,11 +24,11 @@
 #include "getrepositorycatalogdatarequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class GetRepositoryCatalogDataResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT GetRepositoryCatalogDataResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT GetRepositoryCatalogDataResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

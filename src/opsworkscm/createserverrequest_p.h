@@ -24,14 +24,14 @@
 #include "createserverrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class CreateServerRequest;
 
-class CreateServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class CreateServerRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    CreateServerRequestPrivate(const OpsWorksCMRequest::Action action,
+    CreateServerRequestPrivate(const OpsWorksCmRequest::Action action,
                                    CreateServerRequest * const q);
     CreateServerRequestPrivate(const CreateServerRequestPrivate &other,
                                    CreateServerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

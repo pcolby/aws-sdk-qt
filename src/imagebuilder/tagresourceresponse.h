@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class TagResourceResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT TagResourceResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT TagResourceResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

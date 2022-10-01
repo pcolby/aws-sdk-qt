@@ -23,11 +23,11 @@
 #include "ssmincidentsrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT UntagResourceRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT UntagResourceRequest : public SsmIncidentsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

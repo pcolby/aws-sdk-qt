@@ -24,11 +24,11 @@
 #include "listrulegroupsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListRuleGroupsResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListRuleGroupsResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListRuleGroupsResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

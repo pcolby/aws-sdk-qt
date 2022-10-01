@@ -23,7 +23,7 @@
 #include "ecsresponse_p.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class DeleteTaskSetResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

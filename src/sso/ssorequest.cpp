@@ -21,29 +21,29 @@
 #include "ssorequest_p.h"
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 /*!
- * \class QtAws::SSO::SsoRequest
- * \brief The SsoRequest class provides an interface for SSO requests.
+ * \class QtAws::Sso::SsoRequest
+ * \brief The SsoRequest class provides an interface for Sso requests.
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
  * \enum SsoRequest::Action
  *
- * This enum describes the actions that can be performed as SSO
+ * This enum describes the actions that can be performed as Sso
  * requests.
  *
- * \value GetRoleCredentialsAction SSO GetRoleCredentials action.
- * \value ListAccountRolesAction SSO ListAccountRoles action.
- * \value ListAccountsAction SSO ListAccounts action.
- * \value LogoutAction SSO Logout action.
+ * \value GetRoleCredentialsAction Sso GetRoleCredentials action.
+ * \value ListAccountRolesAction Sso ListAccountRoles action.
+ * \value ListAccountsAction Sso ListAccounts action.
+ * \value LogoutAction Sso Logout action.
  */
 
 /*!
- * Constructs a SsoRequest object for SSO \a action.
+ * Constructs a SsoRequest object for Sso \a action.
  */
 SsoRequest::SsoRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SsoRequestPrivate(action, this))
@@ -84,7 +84,7 @@ SsoRequest::SsoRequest(SsoRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SSO action to be performed by this request.
+ * Returns the Sso action to be performed by this request.
  */
 SsoRequest::Action SsoRequest::action() const
 {
@@ -93,7 +93,7 @@ SsoRequest::Action SsoRequest::action() const
 }
 
 /*!
- * Returns the name of the SSO action to be performed by this request.
+ * Returns the name of the Sso action to be performed by this request.
  */
 QString SsoRequest::actionString() const
 {
@@ -101,7 +101,7 @@ QString SsoRequest::actionString() const
 }
 
 /*!
- * Returns the SSO API version implemented by this request.
+ * Returns the Sso API version implemented by this request.
  */
 QString SsoRequest::apiVersion() const
 {
@@ -110,7 +110,7 @@ QString SsoRequest::apiVersion() const
 }
 
 /*!
- * Sets the SSO action to be performed by this request to \a action.
+ * Sets the Sso action to be performed by this request to \a action.
  */
 void SsoRequest::setAction(const Action action)
 {
@@ -119,7 +119,7 @@ void SsoRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SSO API version to include in this request to \a version.
+ * Sets the Sso API version to include in this request to \a version.
  */
 void SsoRequest::setApiVersion(const QString &version)
 {
@@ -144,15 +144,15 @@ bool SsoRequest::operator==(const SsoRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SSO queue name.
+ * Returns \c tue if \a queueName is a valid Sso queue name.
  *
- * @par From SSO FAQs:
+ * @par From Sso FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SSO queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Sso queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -219,10 +219,10 @@ void SsoRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SSO request using the given
+ * Returns a network request for the Sso request using the given
  * \a endpoint.
  *
- * This SSO implementation builds request URLs by combining the
+ * This Sso implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -235,19 +235,19 @@ QNetworkRequest SsoRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SSO::SsoRequestPrivate
+ * \class QtAws::Sso::SsoRequestPrivate
  * \brief The SsoRequestPrivate class provides private implementation for SsoRequest.
  * \internal
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
- * Constructs a SsoRequestPrivate object for SSO \a action,
+ * Constructs a SsoRequestPrivate object for Sso \a action,
  * with public implementation \a q.
  */
 SsoRequestPrivate::SsoRequestPrivate(const SsoRequest::Action action, SsoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-06-10"))
 {
 
 }
@@ -273,7 +273,7 @@ SsoRequestPrivate::SsoRequestPrivate(const SsoRequestPrivate &other,
  * invalid.
  *
  * This function converts SsoRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SSO service's Action
+ * string representations, appropriate for use with the Sso service's Action
  * query parameters.
  */
 QString SsoRequestPrivate::toString(const SsoRequest::Action &action)
@@ -292,5 +292,5 @@ QString SsoRequestPrivate::toString(const SsoRequest::Action &action)
     return QString();
 }
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws

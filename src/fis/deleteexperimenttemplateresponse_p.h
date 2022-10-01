@@ -23,7 +23,7 @@
 #include "fisresponse_p.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 class DeleteExperimentTemplateResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws
 
 #endif

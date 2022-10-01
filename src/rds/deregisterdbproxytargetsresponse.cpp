@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeregisterDBProxyTargetsResponse
- * \brief The DeregisterDBProxyTargetsResponse class provides an interace for RDS DeregisterDBProxyTargets responses.
+ * \class QtAws::Rds::DeregisterDBProxyTargetsResponse
+ * \brief The DeregisterDBProxyTargetsResponse class provides an interace for Rds DeregisterDBProxyTargets responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeregisterDBProxyTargetsRequest * DeregisterDBProxyTargetsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS DeregisterDBProxyTargets \a response.
+ * Parses a successful Rds DeregisterDBProxyTargets \a response.
  */
 void DeregisterDBProxyTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeregisterDBProxyTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeregisterDBProxyTargetsResponsePrivate
+ * \class QtAws::Rds::DeregisterDBProxyTargetsResponsePrivate
  * \brief The DeregisterDBProxyTargetsResponsePrivate class provides private implementation for DeregisterDBProxyTargetsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeregisterDBProxyTargetsResponsePrivate::DeregisterDBProxyTargetsResponsePrivate
 }
 
 /*!
- * Parses a RDS DeregisterDBProxyTargets response element from \a xml.
+ * Parses a Rds DeregisterDBProxyTargets response element from \a xml.
  */
 void DeregisterDBProxyTargetsResponsePrivate::parseDeregisterDBProxyTargetsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeregisterDBProxyTargetsResponsePrivate::parseDeregisterDBProxyTargetsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "getpolicyrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class GetPolicyRequest;
 
-class GetPolicyRequestPrivate : public AcmpcaRequestPrivate {
+class GetPolicyRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    GetPolicyRequestPrivate(const AcmpcaRequest::Action action,
+    GetPolicyRequestPrivate(const AcmPcaRequest::Action action,
                                    GetPolicyRequest * const q);
     GetPolicyRequestPrivate(const GetPolicyRequestPrivate &other,
                                    GetPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

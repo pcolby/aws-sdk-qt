@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddRoleToDBInstanceRequest
- * \brief The AddRoleToDBInstanceRequest class provides an interface for RDS AddRoleToDBInstance requests.
+ * \class QtAws::Rds::AddRoleToDBInstanceRequest
+ * \brief The AddRoleToDBInstanceRequest class provides an interface for Rds AddRoleToDBInstance requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * AddRoleToDBInstanceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::RDS::AddRoleToDBInstanceRequestPrivate
+ * \class QtAws::Rds::AddRoleToDBInstanceRequestPrivate
  * \brief The AddRoleToDBInstanceRequestPrivate class provides private implementation for AddRoleToDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ AddRoleToDBInstanceRequestPrivate::AddRoleToDBInstanceRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

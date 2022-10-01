@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchGetDocumentStatusRequest
- * \brief The BatchGetDocumentStatusRequest class provides an interface for kendra BatchGetDocumentStatus requests.
+ * \class QtAws::Kendra::BatchGetDocumentStatusRequest
+ * \brief The BatchGetDocumentStatusRequest class provides an interface for Kendra BatchGetDocumentStatus requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchGetDocumentStatus
+ * \sa KendraClient::batchGetDocumentStatus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchGetDocumentStatusRequest::BatchGetDocumentStatusRequest(const BatchGetDocumentStatusRequest &other)
-    : kendraRequest(new BatchGetDocumentStatusRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new BatchGetDocumentStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ BatchGetDocumentStatusRequest::BatchGetDocumentStatusRequest(const BatchGetDocum
  * Constructs a BatchGetDocumentStatusRequest object.
  */
 BatchGetDocumentStatusRequest::BatchGetDocumentStatusRequest()
-    : kendraRequest(new BatchGetDocumentStatusRequestPrivate(kendraRequest::BatchGetDocumentStatusAction, this))
+    : KendraRequest(new BatchGetDocumentStatusRequestPrivate(KendraRequest::BatchGetDocumentStatusAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * BatchGetDocumentStatusRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::kendra::BatchGetDocumentStatusRequestPrivate
+ * \class QtAws::Kendra::BatchGetDocumentStatusRequestPrivate
  * \brief The BatchGetDocumentStatusRequestPrivate class provides private implementation for BatchGetDocumentStatusRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a BatchGetDocumentStatusRequestPrivate object for kendra \a action,
+ * Constructs a BatchGetDocumentStatusRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 BatchGetDocumentStatusRequestPrivate::BatchGetDocumentStatusRequestPrivate(
-    const kendraRequest::Action action, BatchGetDocumentStatusRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, BatchGetDocumentStatusRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ BatchGetDocumentStatusRequestPrivate::BatchGetDocumentStatusRequestPrivate(
  */
 BatchGetDocumentStatusRequestPrivate::BatchGetDocumentStatusRequestPrivate(
     const BatchGetDocumentStatusRequestPrivate &other, BatchGetDocumentStatusRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetRateBasedRuleResponse
- * \brief The GetRateBasedRuleResponse class provides an interace for WAF GetRateBasedRule responses.
+ * \class QtAws::Waf::GetRateBasedRuleResponse
+ * \brief The GetRateBasedRuleResponse class provides an interace for Waf GetRateBasedRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetRateBasedRule \a response.
+ * Parses a successful Waf GetRateBasedRule \a response.
  */
 void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetRateBasedRuleResponsePrivate
+ * \class QtAws::Waf::GetRateBasedRuleResponsePrivate
  * \brief The GetRateBasedRuleResponsePrivate class provides private implementation for GetRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetRateBasedRule response element from \a xml.
+ * Parses a Waf GetRateBasedRule response element from \a xml.
  */
 void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

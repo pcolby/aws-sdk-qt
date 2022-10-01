@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetServiceLastAccessedDetailsWithEntitiesResponse
- * \brief The GetServiceLastAccessedDetailsWithEntitiesResponse class provides an interace for IAM GetServiceLastAccessedDetailsWithEntities responses.
+ * \class QtAws::Iam::GetServiceLastAccessedDetailsWithEntitiesResponse
+ * \brief The GetServiceLastAccessedDetailsWithEntitiesResponse class provides an interace for Iam GetServiceLastAccessedDetailsWithEntities responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getServiceLastAccessedDetailsWithEntities
  */
@@ -68,7 +68,7 @@ const GetServiceLastAccessedDetailsWithEntitiesRequest * GetServiceLastAccessedD
 
 /*!
  * \reimp
- * Parses a successful IAM GetServiceLastAccessedDetailsWithEntities \a response.
+ * Parses a successful Iam GetServiceLastAccessedDetailsWithEntities \a response.
  */
 void GetServiceLastAccessedDetailsWithEntitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetServiceLastAccessedDetailsWithEntitiesResponse::parseSuccess(QIODevice &
 }
 
 /*!
- * \class QtAws::IAM::GetServiceLastAccessedDetailsWithEntitiesResponsePrivate
+ * \class QtAws::Iam::GetServiceLastAccessedDetailsWithEntitiesResponsePrivate
  * \brief The GetServiceLastAccessedDetailsWithEntitiesResponsePrivate class provides private implementation for GetServiceLastAccessedDetailsWithEntitiesResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetServiceLastAccessedDetailsWithEntitiesResponsePrivate::GetServiceLastAccessed
 }
 
 /*!
- * Parses a IAM GetServiceLastAccessedDetailsWithEntities response element from \a xml.
+ * Parses a Iam GetServiceLastAccessedDetailsWithEntities response element from \a xml.
  */
 void GetServiceLastAccessedDetailsWithEntitiesResponsePrivate::parseGetServiceLastAccessedDetailsWithEntitiesResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetServiceLastAccessedDetailsWithEntitiesResponsePrivate::parseGetServiceLa
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

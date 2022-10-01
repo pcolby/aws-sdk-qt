@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteEventSubscriptionResponse
- * \brief The DeleteEventSubscriptionResponse class provides an interace for DocDB DeleteEventSubscription responses.
+ * \class QtAws::DocDb::DeleteEventSubscriptionResponse
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for DocDb DeleteEventSubscription responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteEventSubscription
+ * \sa DocDbClient::deleteEventSubscription
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
         const DeleteEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventSubscriptionRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteEventSubscription \a response.
+ * Parses a successful DocDb DeleteEventSubscription \a response.
  */
 void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteEventSubscriptionResponsePrivate
+ * \class QtAws::DocDb::DeleteEventSubscriptionResponsePrivate
  * \brief The DeleteEventSubscriptionResponsePrivate class provides private implementation for DeleteEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
-    DeleteEventSubscriptionResponse * const q) : DocDBResponsePrivate(q)
+    DeleteEventSubscriptionResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteEventSubscription response element from \a xml.
+ * Parses a DocDb DeleteEventSubscription response element from \a xml.
  */
 void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

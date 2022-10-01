@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for EMRContainers TagResource responses.
+ * \class QtAws::Emrcontainers::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for Emrcontainers TagResource responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::tagResource
+ * \sa EmrcontainersClient::tagResource
  */
 
 /*!
@@ -72,7 +72,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new TagResourceResponsePrivate(this), parent)
+    : EmrcontainersResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers TagResource \a response.
+ * Parses a successful Emrcontainers TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::TagResourceResponsePrivate
+ * \class QtAws::Emrcontainers::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : EMRContainersResponsePrivate(q)
+    TagResourceResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers TagResource response element from \a xml.
+ * Parses a Emrcontainers TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

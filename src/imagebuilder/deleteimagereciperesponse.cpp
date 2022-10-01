@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteImageRecipeResponse
- * \brief The DeleteImageRecipeResponse class provides an interace for imagebuilder DeleteImageRecipe responses.
+ * \class QtAws::ImageBuilder::DeleteImageRecipeResponse
+ * \brief The DeleteImageRecipeResponse class provides an interace for ImageBuilder DeleteImageRecipe responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteImageRecipe
+ * \sa ImageBuilderClient::deleteImageRecipe
  */
 
 /*!
@@ -47,7 +47,7 @@ DeleteImageRecipeResponse::DeleteImageRecipeResponse(
         const DeleteImageRecipeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new DeleteImageRecipeResponsePrivate(this), parent)
+    : ImageBuilderResponse(new DeleteImageRecipeResponsePrivate(this), parent)
 {
     setRequest(new DeleteImageRecipeRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const DeleteImageRecipeRequest * DeleteImageRecipeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder DeleteImageRecipe \a response.
+ * Parses a successful ImageBuilder DeleteImageRecipe \a response.
  */
 void DeleteImageRecipeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void DeleteImageRecipeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteImageRecipeResponsePrivate
+ * \class QtAws::ImageBuilder::DeleteImageRecipeResponsePrivate
  * \brief The DeleteImageRecipeResponsePrivate class provides private implementation for DeleteImageRecipeResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a DeleteImageRecipeResponsePrivate object with public implementation \a q.
  */
 DeleteImageRecipeResponsePrivate::DeleteImageRecipeResponsePrivate(
-    DeleteImageRecipeResponse * const q) : imagebuilderResponsePrivate(q)
+    DeleteImageRecipeResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder DeleteImageRecipe response element from \a xml.
+ * Parses a ImageBuilder DeleteImageRecipe response element from \a xml.
  */
 void DeleteImageRecipeResponsePrivate::parseDeleteImageRecipeResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteImageRecipeResponsePrivate::parseDeleteImageRecipeResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

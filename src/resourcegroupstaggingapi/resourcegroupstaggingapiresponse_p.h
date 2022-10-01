@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIResponse;
+class ResourceGroupsTaggingApiResponse;
 
-class ResourceGroupsTaggingAPIResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ResourceGroupsTaggingApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ResourceGroupsTaggingAPIResponsePrivate(ResourceGroupsTaggingAPIResponse * const q);
+    explicit ResourceGroupsTaggingApiResponsePrivate(ResourceGroupsTaggingApiResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIResponse)
-    Q_DISABLE_COPY(ResourceGroupsTaggingAPIResponsePrivate)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiResponse)
+    Q_DISABLE_COPY(ResourceGroupsTaggingApiResponsePrivate)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

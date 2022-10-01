@@ -24,14 +24,14 @@
 #include "activatecontactchannelrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ActivateContactChannelRequest;
 
-class ActivateContactChannelRequestPrivate : public SSMContactsRequestPrivate {
+class ActivateContactChannelRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    ActivateContactChannelRequestPrivate(const SSMContactsRequest::Action action,
+    ActivateContactChannelRequestPrivate(const SsmContactsRequest::Action action,
                                    ActivateContactChannelRequest * const q);
     ActivateContactChannelRequestPrivate(const ActivateContactChannelRequestPrivate &other,
                                    ActivateContactChannelRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

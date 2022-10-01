@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::InitiateLayerUploadRequest
- * \brief The InitiateLayerUploadRequest class provides an interface for ECR InitiateLayerUpload requests.
+ * \class QtAws::Ecr::InitiateLayerUploadRequest
+ * \brief The InitiateLayerUploadRequest class provides an interface for Ecr InitiateLayerUpload requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::initiateLayerUpload
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ECR::InitiateLayerUploadRequestPrivate
+ * \class QtAws::Ecr::InitiateLayerUploadRequestPrivate
  * \brief The InitiateLayerUploadRequestPrivate class provides private implementation for InitiateLayerUploadRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

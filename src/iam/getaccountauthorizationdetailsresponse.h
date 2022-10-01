@@ -24,7 +24,7 @@
 #include "getaccountauthorizationdetailsrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class GetAccountAuthorizationDetailsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

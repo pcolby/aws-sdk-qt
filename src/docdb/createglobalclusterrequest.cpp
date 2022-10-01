@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateGlobalClusterRequest
- * \brief The CreateGlobalClusterRequest class provides an interface for DocDB CreateGlobalCluster requests.
+ * \class QtAws::DocDb::CreateGlobalClusterRequest
+ * \brief The CreateGlobalClusterRequest class provides an interface for DocDb CreateGlobalCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createGlobalCluster
+ * \sa DocDbClient::createGlobalCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateGlobalClusterRequest::CreateGlobalClusterRequest(const CreateGlobalClusterRequest &other)
-    : DocDBRequest(new CreateGlobalClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new CreateGlobalClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateGlobalClusterRequest::CreateGlobalClusterRequest(const CreateGlobalCluster
  * Constructs a CreateGlobalClusterRequest object.
  */
 CreateGlobalClusterRequest::CreateGlobalClusterRequest()
-    : DocDBRequest(new CreateGlobalClusterRequestPrivate(DocDBRequest::CreateGlobalClusterAction, this))
+    : DocDbRequest(new CreateGlobalClusterRequestPrivate(DocDbRequest::CreateGlobalClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateGlobalClusterRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::CreateGlobalClusterRequestPrivate
+ * \class QtAws::DocDb::CreateGlobalClusterRequestPrivate
  * \brief The CreateGlobalClusterRequestPrivate class provides private implementation for CreateGlobalClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a CreateGlobalClusterRequestPrivate object for DocDB \a action,
+ * Constructs a CreateGlobalClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 CreateGlobalClusterRequestPrivate::CreateGlobalClusterRequestPrivate(
-    const DocDBRequest::Action action, CreateGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, CreateGlobalClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateGlobalClusterRequestPrivate::CreateGlobalClusterRequestPrivate(
  */
 CreateGlobalClusterRequestPrivate::CreateGlobalClusterRequestPrivate(
     const CreateGlobalClusterRequestPrivate &other, CreateGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

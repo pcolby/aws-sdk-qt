@@ -1,20 +1,73 @@
 add_compile_definitions(QTAWSIDENTITYSTORE_LIBRARY)
 
 add_library(QtAwsIdentityStore
-  describegrouprequest.h
-  describegrouprequest_p.h
-  describegroupresponse.h
-  describegroupresponse_p.h
-  describeuserrequest.h
-  describeuserrequest_p.h
-  describeuserresponse.h
-  describeuserresponse_p.h
+  qtawsidentitystoreglobal.h
   identitystoreclient.h
   identitystoreclient_p.h
   identitystorerequest.h
   identitystorerequest_p.h
   identitystoreresponse.h
   identitystoreresponse_p.h
+  creategrouprequest.h
+  creategrouprequest_p.h
+  creategroupresponse.h
+  creategroupresponse_p.h
+  creategroupmembershiprequest.h
+  creategroupmembershiprequest_p.h
+  creategroupmembershipresponse.h
+  creategroupmembershipresponse_p.h
+  createuserrequest.h
+  createuserrequest_p.h
+  createuserresponse.h
+  createuserresponse_p.h
+  deletegrouprequest.h
+  deletegrouprequest_p.h
+  deletegroupresponse.h
+  deletegroupresponse_p.h
+  deletegroupmembershiprequest.h
+  deletegroupmembershiprequest_p.h
+  deletegroupmembershipresponse.h
+  deletegroupmembershipresponse_p.h
+  deleteuserrequest.h
+  deleteuserrequest_p.h
+  deleteuserresponse.h
+  deleteuserresponse_p.h
+  describegrouprequest.h
+  describegrouprequest_p.h
+  describegroupresponse.h
+  describegroupresponse_p.h
+  describegroupmembershiprequest.h
+  describegroupmembershiprequest_p.h
+  describegroupmembershipresponse.h
+  describegroupmembershipresponse_p.h
+  describeuserrequest.h
+  describeuserrequest_p.h
+  describeuserresponse.h
+  describeuserresponse_p.h
+  getgroupidrequest.h
+  getgroupidrequest_p.h
+  getgroupidresponse.h
+  getgroupidresponse_p.h
+  getgroupmembershipidrequest.h
+  getgroupmembershipidrequest_p.h
+  getgroupmembershipidresponse.h
+  getgroupmembershipidresponse_p.h
+  getuseridrequest.h
+  getuseridrequest_p.h
+  getuseridresponse.h
+  getuseridresponse_p.h
+  ismemberingroupsrequest.h
+  ismemberingroupsrequest_p.h
+  ismemberingroupsresponse.h
+  ismemberingroupsresponse_p.h
+  listgroupmembershipsrequest.h
+  listgroupmembershipsrequest_p.h
+  listgroupmembershipsresponse.h
+  listgroupmembershipsresponse_p.h
+  listgroupmembershipsformemberrequest.h
+  listgroupmembershipsformemberrequest_p.h
+  listgroupmembershipsformemberresponse.h
+  listgroupmembershipsformemberresponse_p.h
   listgroupsrequest.h
   listgroupsrequest_p.h
   listgroupsresponse.h
@@ -23,18 +76,55 @@ add_library(QtAwsIdentityStore
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  qtawsidentitystoreglobal.h
-  describegrouprequest.cpp
-  describegroupresponse.cpp
-  describeuserrequest.cpp
-  describeuserresponse.cpp
+  updategrouprequest.h
+  updategrouprequest_p.h
+  updategroupresponse.h
+  updategroupresponse_p.h
+  updateuserrequest.h
+  updateuserrequest_p.h
+  updateuserresponse.h
+  updateuserresponse_p.h
   identitystoreclient.cpp
   identitystorerequest.cpp
   identitystoreresponse.cpp
+  creategrouprequest.cpp
+  creategroupresponse.cpp
+  creategroupmembershiprequest.cpp
+  creategroupmembershipresponse.cpp
+  createuserrequest.cpp
+  createuserresponse.cpp
+  deletegrouprequest.cpp
+  deletegroupresponse.cpp
+  deletegroupmembershiprequest.cpp
+  deletegroupmembershipresponse.cpp
+  deleteuserrequest.cpp
+  deleteuserresponse.cpp
+  describegrouprequest.cpp
+  describegroupresponse.cpp
+  describegroupmembershiprequest.cpp
+  describegroupmembershipresponse.cpp
+  describeuserrequest.cpp
+  describeuserresponse.cpp
+  getgroupidrequest.cpp
+  getgroupidresponse.cpp
+  getgroupmembershipidrequest.cpp
+  getgroupmembershipidresponse.cpp
+  getuseridrequest.cpp
+  getuseridresponse.cpp
+  ismemberingroupsrequest.cpp
+  ismemberingroupsresponse.cpp
+  listgroupmembershipsrequest.cpp
+  listgroupmembershipsresponse.cpp
+  listgroupmembershipsformemberrequest.cpp
+  listgroupmembershipsformemberresponse.cpp
   listgroupsrequest.cpp
   listgroupsresponse.cpp
   listusersrequest.cpp
-  listusersresponse.cpp)
+  listusersresponse.cpp
+  updategrouprequest.cpp
+  updategroupresponse.cpp
+  updateuserrequest.cpp
+  updateuserresponse.cpp)
 
 target_link_libraries(QtAwsIdentityStore
   PRIVATE QtAwsCore

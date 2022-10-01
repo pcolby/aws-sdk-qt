@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 /*!
- * \class QtAws::RAM::RamResponse
- * \brief The RamResponse class provides an interface for RAM responses.
+ * \class QtAws::Ram::RamResponse
+ * \brief The RamResponse class provides an interface for Ram responses.
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
@@ -76,11 +76,11 @@ void RamResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RAM::RamResponsePrivate
+ * \class QtAws::Ram::RamResponsePrivate
  * \brief The RamResponsePrivate class provides private implementation for RamResponse.
  * \internal
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
@@ -92,5 +92,5 @@ RamResponsePrivate::RamResponsePrivate(
 
 }
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws

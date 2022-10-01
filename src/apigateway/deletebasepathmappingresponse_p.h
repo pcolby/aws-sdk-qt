@@ -23,11 +23,11 @@
 #include "apigatewayresponse_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteBasePathMappingResponse;
 
-class DeleteBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
+class DeleteBasePathMappingResponsePrivate : public ApiGatewayResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

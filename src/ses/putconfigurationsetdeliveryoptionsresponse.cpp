@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::PutConfigurationSetDeliveryOptionsResponse
- * \brief The PutConfigurationSetDeliveryOptionsResponse class provides an interace for SES PutConfigurationSetDeliveryOptions responses.
+ * \class QtAws::Ses::PutConfigurationSetDeliveryOptionsResponse
+ * \brief The PutConfigurationSetDeliveryOptionsResponse class provides an interace for Ses PutConfigurationSetDeliveryOptions responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const PutConfigurationSetDeliveryOptionsRequest * PutConfigurationSetDeliveryOpt
 
 /*!
  * \reimp
- * Parses a successful SES PutConfigurationSetDeliveryOptions \a response.
+ * Parses a successful Ses PutConfigurationSetDeliveryOptions \a response.
  */
 void PutConfigurationSetDeliveryOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void PutConfigurationSetDeliveryOptionsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::SES::PutConfigurationSetDeliveryOptionsResponsePrivate
+ * \class QtAws::Ses::PutConfigurationSetDeliveryOptionsResponsePrivate
  * \brief The PutConfigurationSetDeliveryOptionsResponsePrivate class provides private implementation for PutConfigurationSetDeliveryOptionsResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ PutConfigurationSetDeliveryOptionsResponsePrivate::PutConfigurationSetDeliveryOp
 }
 
 /*!
- * Parses a SES PutConfigurationSetDeliveryOptions response element from \a xml.
+ * Parses a Ses PutConfigurationSetDeliveryOptions response element from \a xml.
  */
 void PutConfigurationSetDeliveryOptionsResponsePrivate::parsePutConfigurationSetDeliveryOptionsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void PutConfigurationSetDeliveryOptionsResponsePrivate::parsePutConfigurationSet
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

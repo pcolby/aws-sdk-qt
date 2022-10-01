@@ -24,7 +24,7 @@
 #include "listretirablegrantsrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class ListRetirableGrantsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

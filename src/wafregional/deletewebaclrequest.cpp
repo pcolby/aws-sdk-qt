@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteWebACLRequest
- * \brief The DeleteWebACLRequest class provides an interface for WAFRegional DeleteWebACL requests.
+ * \class QtAws::WafRegional::DeleteWebACLRequest
+ * \brief The DeleteWebACLRequest class provides an interface for WafRegional DeleteWebACL requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteWebACL
+ * \sa WafRegionalClient::deleteWebACL
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
-    : WAFRegionalRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
  * Constructs a DeleteWebACLRequest object.
  */
 DeleteWebACLRequest::DeleteWebACLRequest()
-    : WAFRegionalRequest(new DeleteWebACLRequestPrivate(WAFRegionalRequest::DeleteWebACLAction, this))
+    : WafRegionalRequest(new DeleteWebACLRequestPrivate(WafRegionalRequest::DeleteWebACLAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteWebACLRequestPrivate
+ * \class QtAws::WafRegional::DeleteWebACLRequestPrivate
  * \brief The DeleteWebACLRequestPrivate class provides private implementation for DeleteWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteWebACLRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteWebACLRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteWebACLRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const DeleteWebACLRequestPrivate &other, DeleteWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

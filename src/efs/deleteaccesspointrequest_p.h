@@ -24,7 +24,7 @@
 #include "deleteaccesspointrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class DeleteAccessPointRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

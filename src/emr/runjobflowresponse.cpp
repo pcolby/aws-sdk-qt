@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::RunJobFlowResponse
- * \brief The RunJobFlowResponse class provides an interace for EMR RunJobFlow responses.
+ * \class QtAws::Emr::RunJobFlowResponse
+ * \brief The RunJobFlowResponse class provides an interace for Emr RunJobFlow responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::runJobFlow
  */
@@ -64,7 +64,7 @@ const RunJobFlowRequest * RunJobFlowResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR RunJobFlow \a response.
+ * Parses a successful Emr RunJobFlow \a response.
  */
 void RunJobFlowResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void RunJobFlowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::RunJobFlowResponsePrivate
+ * \class QtAws::Emr::RunJobFlowResponsePrivate
  * \brief The RunJobFlowResponsePrivate class provides private implementation for RunJobFlowResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
 }
 
 /*!
- * Parses a EMR RunJobFlow response element from \a xml.
+ * Parses a Emr RunJobFlow response element from \a xml.
  */
 void RunJobFlowResponsePrivate::parseRunJobFlowResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void RunJobFlowResponsePrivate::parseRunJobFlowResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

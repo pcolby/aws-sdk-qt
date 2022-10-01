@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateApiKeyResponse
- * \brief The CreateApiKeyResponse class provides an interace for APIGateway CreateApiKey responses.
+ * \class QtAws::ApiGateway::CreateApiKeyResponse
+ * \brief The CreateApiKeyResponse class provides an interace for ApiGateway CreateApiKey responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createApiKey
+ * \sa ApiGatewayClient::createApiKey
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateApiKeyResponse::CreateApiKeyResponse(
         const CreateApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateApiKeyResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateApiKeyResponsePrivate(this), parent)
 {
     setRequest(new CreateApiKeyRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateApiKeyRequest * CreateApiKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateApiKey \a response.
+ * Parses a successful ApiGateway CreateApiKey \a response.
  */
 void CreateApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateApiKeyResponsePrivate
+ * \class QtAws::ApiGateway::CreateApiKeyResponsePrivate
  * \brief The CreateApiKeyResponsePrivate class provides private implementation for CreateApiKeyResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateApiKeyResponsePrivate object with public implementation \a q.
  */
 CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
-    CreateApiKeyResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateApiKeyResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateApiKey response element from \a xml.
+ * Parses a ApiGateway CreateApiKey response element from \a xml.
  */
 void CreateApiKeyResponsePrivate::parseCreateApiKeyResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateApiKeyResponsePrivate::parseCreateApiKeyResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "simulatecustompolicyrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class SimulateCustomPolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

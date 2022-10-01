@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteThesaurusResponse
- * \brief The DeleteThesaurusResponse class provides an interace for kendra DeleteThesaurus responses.
+ * \class QtAws::Kendra::DeleteThesaurusResponse
+ * \brief The DeleteThesaurusResponse class provides an interace for Kendra DeleteThesaurus responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteThesaurus
+ * \sa KendraClient::deleteThesaurus
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteThesaurusResponse::DeleteThesaurusResponse(
         const DeleteThesaurusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DeleteThesaurusResponsePrivate(this), parent)
+    : KendraResponse(new DeleteThesaurusResponsePrivate(this), parent)
 {
     setRequest(new DeleteThesaurusRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteThesaurusRequest * DeleteThesaurusResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DeleteThesaurus \a response.
+ * Parses a successful Kendra DeleteThesaurus \a response.
  */
 void DeleteThesaurusResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteThesaurusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DeleteThesaurusResponsePrivate
+ * \class QtAws::Kendra::DeleteThesaurusResponsePrivate
  * \brief The DeleteThesaurusResponsePrivate class provides private implementation for DeleteThesaurusResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DeleteThesaurusResponsePrivate object with public implementation \a q.
  */
 DeleteThesaurusResponsePrivate::DeleteThesaurusResponsePrivate(
-    DeleteThesaurusResponse * const q) : kendraResponsePrivate(q)
+    DeleteThesaurusResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DeleteThesaurus response element from \a xml.
+ * Parses a Kendra DeleteThesaurus response element from \a xml.
  */
 void DeleteThesaurusResponsePrivate::parseDeleteThesaurusResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteThesaurusResponsePrivate::parseDeleteThesaurusResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

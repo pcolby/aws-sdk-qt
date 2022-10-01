@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListImagesRequest
- * \brief The ListImagesRequest class provides an interface for imagebuilder ListImages requests.
+ * \class QtAws::ImageBuilder::ListImagesRequest
+ * \brief The ListImagesRequest class provides an interface for ImageBuilder ListImages requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listImages
+ * \sa ImageBuilderClient::listImages
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
-    : imagebuilderRequest(new ListImagesRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListImagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
  * Constructs a ListImagesRequest object.
  */
 ListImagesRequest::ListImagesRequest()
-    : imagebuilderRequest(new ListImagesRequestPrivate(imagebuilderRequest::ListImagesAction, this))
+    : ImageBuilderRequest(new ListImagesRequestPrivate(ImageBuilderRequest::ListImagesAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::imagebuilder::ListImagesRequestPrivate
+ * \class QtAws::ImageBuilder::ListImagesRequestPrivate
  * \brief The ListImagesRequestPrivate class provides private implementation for ListImagesRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListImagesRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListImagesRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
-    const imagebuilderRequest::Action action, ListImagesRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListImagesRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ListImagesRequestPrivate &other, ListImagesRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

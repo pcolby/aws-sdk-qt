@@ -24,14 +24,14 @@
 #include "updatemethodrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateMethodRequest;
 
-class UpdateMethodRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateMethodRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UpdateMethodRequestPrivate(const APIGatewayRequest::Action action,
+    UpdateMethodRequestPrivate(const ApiGatewayRequest::Action action,
                                    UpdateMethodRequest * const q);
     UpdateMethodRequestPrivate(const UpdateMethodRequestPrivate &other,
                                    UpdateMethodRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

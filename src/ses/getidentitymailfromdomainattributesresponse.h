@@ -24,7 +24,7 @@
 #include "getidentitymailfromdomainattributesrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class GetIdentityMailFromDomainAttributesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

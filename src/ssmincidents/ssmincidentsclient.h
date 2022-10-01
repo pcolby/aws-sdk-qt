@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
-class SSMIncidentsClientPrivate;
+class SsmIncidentsClientPrivate;
 class CreateReplicationSetRequest;
 class CreateReplicationSetResponse;
 class CreateResponsePlanRequest;
@@ -89,17 +89,17 @@ class UpdateResponsePlanResponse;
 class UpdateTimelineEventRequest;
 class UpdateTimelineEventResponse;
 
-class QTAWSSSMINCIDENTS_EXPORT SSMIncidentsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSMINCIDENTS_EXPORT SsmIncidentsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SSMIncidentsClient(
+    SsmIncidentsClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit SSMIncidentsClient(
+    explicit SsmIncidentsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -136,12 +136,12 @@ public slots:
     UpdateTimelineEventResponse * updateTimelineEvent(const UpdateTimelineEventRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SSMIncidentsClient)
-    Q_DISABLE_COPY(SSMIncidentsClient)
+    Q_DECLARE_PRIVATE(SsmIncidentsClient)
+    Q_DISABLE_COPY(SsmIncidentsClient)
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

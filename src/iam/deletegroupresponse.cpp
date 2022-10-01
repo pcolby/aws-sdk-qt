@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteGroupResponse
- * \brief The DeleteGroupResponse class provides an interace for IAM DeleteGroup responses.
+ * \class QtAws::Iam::DeleteGroupResponse
+ * \brief The DeleteGroupResponse class provides an interace for Iam DeleteGroup responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteGroup
  */
@@ -68,7 +68,7 @@ const DeleteGroupRequest * DeleteGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteGroup \a response.
+ * Parses a successful Iam DeleteGroup \a response.
  */
 void DeleteGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteGroupResponsePrivate
+ * \class QtAws::Iam::DeleteGroupResponsePrivate
  * \brief The DeleteGroupResponsePrivate class provides private implementation for DeleteGroupResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeleteGroup response element from \a xml.
+ * Parses a Iam DeleteGroup response element from \a xml.
  */
 void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

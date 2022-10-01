@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSROUTE53DOMAINS_LIBRARY)
 
 add_library(QtAwsRoute53Domains
+  qtawsroute53domainsglobal.h
+  route53domainsclient.h
+  route53domainsclient_p.h
+  route53domainsrequest.h
+  route53domainsrequest_p.h
+  route53domainsresponse.h
+  route53domainsresponse_p.h
   acceptdomaintransferfromanotherawsaccountrequest.h
   acceptdomaintransferfromanotherawsaccountrequest_p.h
   acceptdomaintransferfromanotherawsaccountresponse.h
@@ -17,6 +24,10 @@ add_library(QtAwsRoute53Domains
   checkdomaintransferabilityrequest_p.h
   checkdomaintransferabilityresponse.h
   checkdomaintransferabilityresponse_p.h
+  deletedomainrequest.h
+  deletedomainrequest_p.h
+  deletedomainresponse.h
+  deletedomainresponse_p.h
   deletetagsfordomainrequest.h
   deletetagsfordomainrequest_p.h
   deletetagsfordomainresponse.h
@@ -61,11 +72,14 @@ add_library(QtAwsRoute53Domains
   listoperationsrequest_p.h
   listoperationsresponse.h
   listoperationsresponse_p.h
+  listpricesrequest.h
+  listpricesrequest_p.h
+  listpricesresponse.h
+  listpricesresponse_p.h
   listtagsfordomainrequest.h
   listtagsfordomainrequest_p.h
   listtagsfordomainresponse.h
   listtagsfordomainresponse_p.h
-  qtawsroute53domainsglobal.h
   registerdomainrequest.h
   registerdomainrequest_p.h
   registerdomainresponse.h
@@ -86,12 +100,6 @@ add_library(QtAwsRoute53Domains
   retrievedomainauthcoderequest_p.h
   retrievedomainauthcoderesponse.h
   retrievedomainauthcoderesponse_p.h
-  route53domainsclient.h
-  route53domainsclient_p.h
-  route53domainsrequest.h
-  route53domainsrequest_p.h
-  route53domainsresponse.h
-  route53domainsresponse_p.h
   transferdomainrequest.h
   transferdomainrequest_p.h
   transferdomainresponse.h
@@ -100,14 +108,14 @@ add_library(QtAwsRoute53Domains
   transferdomaintoanotherawsaccountrequest_p.h
   transferdomaintoanotherawsaccountresponse.h
   transferdomaintoanotherawsaccountresponse_p.h
-  updatedomaincontactprivacyrequest.h
-  updatedomaincontactprivacyrequest_p.h
-  updatedomaincontactprivacyresponse.h
-  updatedomaincontactprivacyresponse_p.h
   updatedomaincontactrequest.h
   updatedomaincontactrequest_p.h
   updatedomaincontactresponse.h
   updatedomaincontactresponse_p.h
+  updatedomaincontactprivacyrequest.h
+  updatedomaincontactprivacyrequest_p.h
+  updatedomaincontactprivacyresponse.h
+  updatedomaincontactprivacyresponse_p.h
   updatedomainnameserversrequest.h
   updatedomainnameserversrequest_p.h
   updatedomainnameserversresponse.h
@@ -120,6 +128,9 @@ add_library(QtAwsRoute53Domains
   viewbillingrequest_p.h
   viewbillingresponse.h
   viewbillingresponse_p.h
+  route53domainsclient.cpp
+  route53domainsrequest.cpp
+  route53domainsresponse.cpp
   acceptdomaintransferfromanotherawsaccountrequest.cpp
   acceptdomaintransferfromanotherawsaccountresponse.cpp
   canceldomaintransfertoanotherawsaccountrequest.cpp
@@ -128,6 +139,8 @@ add_library(QtAwsRoute53Domains
   checkdomainavailabilityresponse.cpp
   checkdomaintransferabilityrequest.cpp
   checkdomaintransferabilityresponse.cpp
+  deletedomainrequest.cpp
+  deletedomainresponse.cpp
   deletetagsfordomainrequest.cpp
   deletetagsfordomainresponse.cpp
   disabledomainautorenewrequest.cpp
@@ -150,6 +163,8 @@ add_library(QtAwsRoute53Domains
   listdomainsresponse.cpp
   listoperationsrequest.cpp
   listoperationsresponse.cpp
+  listpricesrequest.cpp
+  listpricesresponse.cpp
   listtagsfordomainrequest.cpp
   listtagsfordomainresponse.cpp
   registerdomainrequest.cpp
@@ -162,17 +177,14 @@ add_library(QtAwsRoute53Domains
   resendcontactreachabilityemailresponse.cpp
   retrievedomainauthcoderequest.cpp
   retrievedomainauthcoderesponse.cpp
-  route53domainsclient.cpp
-  route53domainsrequest.cpp
-  route53domainsresponse.cpp
   transferdomainrequest.cpp
   transferdomainresponse.cpp
   transferdomaintoanotherawsaccountrequest.cpp
   transferdomaintoanotherawsaccountresponse.cpp
-  updatedomaincontactprivacyrequest.cpp
-  updatedomaincontactprivacyresponse.cpp
   updatedomaincontactrequest.cpp
   updatedomaincontactresponse.cpp
+  updatedomaincontactprivacyrequest.cpp
+  updatedomaincontactprivacyresponse.cpp
   updatedomainnameserversrequest.cpp
   updatedomainnameserversresponse.cpp
   updatetagsfordomainrequest.cpp

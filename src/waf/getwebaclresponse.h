@@ -24,7 +24,7 @@
 #include "getwebaclrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class GetWebACLResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

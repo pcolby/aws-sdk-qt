@@ -23,11 +23,11 @@
 #include "dynamodbresponse_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListTagsOfResourceResponse;
 
-class ListTagsOfResourceResponsePrivate : public DynamoDBResponsePrivate {
+class ListTagsOfResourceResponsePrivate : public DynamoDbResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

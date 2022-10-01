@@ -24,14 +24,14 @@
 #include "createconfigurationsetrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateConfigurationSetRequest;
 
-class CreateConfigurationSetRequestPrivate : public Sesv2RequestPrivate {
+class CreateConfigurationSetRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    CreateConfigurationSetRequestPrivate(const Sesv2Request::Action action,
+    CreateConfigurationSetRequestPrivate(const SESv2Request::Action action,
                                    CreateConfigurationSetRequest * const q);
     CreateConfigurationSetRequestPrivate(const CreateConfigurationSetRequestPrivate &other,
                                    CreateConfigurationSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

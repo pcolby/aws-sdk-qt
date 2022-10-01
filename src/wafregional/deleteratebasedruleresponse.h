@@ -24,11 +24,11 @@
 #include "deleteratebasedrulerequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteRateBasedRuleResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteRateBasedRuleResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT DeleteRateBasedRuleResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

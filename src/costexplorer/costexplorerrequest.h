@@ -64,10 +64,15 @@ public:
         GetSavingsPlansUtilizationDetailsAction,
         GetTagsAction,
         GetUsageForecastAction,
+        ListCostAllocationTagsAction,
         ListCostCategoryDefinitionsAction,
+        ListTagsForResourceAction,
         ProvideAnomalyFeedbackAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateAnomalyMonitorAction,
         UpdateAnomalySubscriptionAction,
+        UpdateCostAllocationTagsStatusAction,
         UpdateCostCategoryDefinitionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

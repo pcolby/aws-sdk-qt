@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ListJournalKinesisStreamsForLedgerResponse
- * \brief The ListJournalKinesisStreamsForLedgerResponse class provides an interace for QLDB ListJournalKinesisStreamsForLedger responses.
+ * \class QtAws::Qldb::ListJournalKinesisStreamsForLedgerResponse
+ * \brief The ListJournalKinesisStreamsForLedgerResponse class provides an interace for Qldb ListJournalKinesisStreamsForLedger responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const ListJournalKinesisStreamsForLedgerRequest * ListJournalKinesisStreamsForLe
 
 /*!
  * \reimp
- * Parses a successful QLDB ListJournalKinesisStreamsForLedger \a response.
+ * Parses a successful Qldb ListJournalKinesisStreamsForLedger \a response.
  */
 void ListJournalKinesisStreamsForLedgerResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void ListJournalKinesisStreamsForLedgerResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::QLDB::ListJournalKinesisStreamsForLedgerResponsePrivate
+ * \class QtAws::Qldb::ListJournalKinesisStreamsForLedgerResponsePrivate
  * \brief The ListJournalKinesisStreamsForLedgerResponsePrivate class provides private implementation for ListJournalKinesisStreamsForLedgerResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ ListJournalKinesisStreamsForLedgerResponsePrivate::ListJournalKinesisStreamsForL
 }
 
 /*!
- * Parses a QLDB ListJournalKinesisStreamsForLedger response element from \a xml.
+ * Parses a Qldb ListJournalKinesisStreamsForLedger response element from \a xml.
  */
 void ListJournalKinesisStreamsForLedgerResponsePrivate::parseListJournalKinesisStreamsForLedgerResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListJournalKinesisStreamsForLedgerResponsePrivate::parseListJournalKinesisS
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

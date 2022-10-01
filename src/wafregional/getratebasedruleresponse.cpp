@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleResponse
- * \brief The GetRateBasedRuleResponse class provides an interace for WAFRegional GetRateBasedRule responses.
+ * \class QtAws::WafRegional::GetRateBasedRuleResponse
+ * \brief The GetRateBasedRuleResponse class provides an interace for WafRegional GetRateBasedRule responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRateBasedRule
+ * \sa WafRegionalClient::getRateBasedRule
  */
 
 /*!
@@ -67,7 +67,7 @@ GetRateBasedRuleResponse::GetRateBasedRuleResponse(
         const GetRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetRateBasedRuleResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new GetRateBasedRuleRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetRateBasedRule \a response.
+ * Parses a successful WafRegional GetRateBasedRule \a response.
  */
 void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleResponsePrivate
+ * \class QtAws::WafRegional::GetRateBasedRuleResponsePrivate
  * \brief The GetRateBasedRuleResponsePrivate class provides private implementation for GetRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
-    GetRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetRateBasedRuleResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetRateBasedRule response element from \a xml.
+ * Parses a WafRegional GetRateBasedRule response element from \a xml.
  */
 void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

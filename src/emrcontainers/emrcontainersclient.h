@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
-class EMRContainersClientPrivate;
+class EmrcontainersClientPrivate;
 class CancelJobRunRequest;
 class CancelJobRunResponse;
 class CreateManagedEndpointRequest;
@@ -61,17 +61,17 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWSEMRCONTAINERS_EXPORT EMRContainersClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEMRCONTAINERS_EXPORT EmrcontainersClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    EMRContainersClient(
+    EmrcontainersClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit EMRContainersClient(
+    explicit EmrcontainersClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -94,12 +94,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(EMRContainersClient)
-    Q_DISABLE_COPY(EMRContainersClient)
+    Q_DECLARE_PRIVATE(EmrcontainersClient)
+    Q_DISABLE_COPY(EmrcontainersClient)
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

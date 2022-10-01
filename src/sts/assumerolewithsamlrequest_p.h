@@ -24,7 +24,7 @@
 #include "assumerolewithsamlrequest.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class AssumeRoleWithSAMLRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

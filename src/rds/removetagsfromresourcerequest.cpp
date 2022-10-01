@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveTagsFromResourceRequest
- * \brief The RemoveTagsFromResourceRequest class provides an interface for RDS RemoveTagsFromResource requests.
+ * \class QtAws::Rds::RemoveTagsFromResourceRequest
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for Rds RemoveTagsFromResource requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::RDS::RemoveTagsFromResourceRequestPrivate
+ * \class QtAws::Rds::RemoveTagsFromResourceRequestPrivate
  * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

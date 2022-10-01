@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DownloadDBLogFilePortionRequest
- * \brief The DownloadDBLogFilePortionRequest class provides an interface for RDS DownloadDBLogFilePortion requests.
+ * \class QtAws::Rds::DownloadDBLogFilePortionRequest
+ * \brief The DownloadDBLogFilePortionRequest class provides an interface for Rds DownloadDBLogFilePortion requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNe
 }
 
 /*!
- * \class QtAws::RDS::DownloadDBLogFilePortionRequestPrivate
+ * \class QtAws::Rds::DownloadDBLogFilePortionRequestPrivate
  * \brief The DownloadDBLogFilePortionRequestPrivate class provides private implementation for DownloadDBLogFilePortionRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

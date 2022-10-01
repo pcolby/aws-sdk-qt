@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RemoveFromGlobalClusterRequest
- * \brief The RemoveFromGlobalClusterRequest class provides an interface for DocDB RemoveFromGlobalCluster requests.
+ * \class QtAws::DocDb::RemoveFromGlobalClusterRequest
+ * \brief The RemoveFromGlobalClusterRequest class provides an interface for DocDb RemoveFromGlobalCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::removeFromGlobalCluster
+ * \sa DocDbClient::removeFromGlobalCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveFromGlobalClusterRequest::RemoveFromGlobalClusterRequest(const RemoveFromGlobalClusterRequest &other)
-    : DocDBRequest(new RemoveFromGlobalClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RemoveFromGlobalClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RemoveFromGlobalClusterRequest::RemoveFromGlobalClusterRequest(const RemoveFromG
  * Constructs a RemoveFromGlobalClusterRequest object.
  */
 RemoveFromGlobalClusterRequest::RemoveFromGlobalClusterRequest()
-    : DocDBRequest(new RemoveFromGlobalClusterRequestPrivate(DocDBRequest::RemoveFromGlobalClusterAction, this))
+    : DocDbRequest(new RemoveFromGlobalClusterRequestPrivate(DocDbRequest::RemoveFromGlobalClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RemoveFromGlobalClusterRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DocDB::RemoveFromGlobalClusterRequestPrivate
+ * \class QtAws::DocDb::RemoveFromGlobalClusterRequestPrivate
  * \brief The RemoveFromGlobalClusterRequestPrivate class provides private implementation for RemoveFromGlobalClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RemoveFromGlobalClusterRequestPrivate object for DocDB \a action,
+ * Constructs a RemoveFromGlobalClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RemoveFromGlobalClusterRequestPrivate::RemoveFromGlobalClusterRequestPrivate(
-    const DocDBRequest::Action action, RemoveFromGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RemoveFromGlobalClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RemoveFromGlobalClusterRequestPrivate::RemoveFromGlobalClusterRequestPrivate(
  */
 RemoveFromGlobalClusterRequestPrivate::RemoveFromGlobalClusterRequestPrivate(
     const RemoveFromGlobalClusterRequestPrivate &other, RemoveFromGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

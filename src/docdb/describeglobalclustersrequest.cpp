@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeGlobalClustersRequest
- * \brief The DescribeGlobalClustersRequest class provides an interface for DocDB DescribeGlobalClusters requests.
+ * \class QtAws::DocDb::DescribeGlobalClustersRequest
+ * \brief The DescribeGlobalClustersRequest class provides an interface for DocDb DescribeGlobalClusters requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeGlobalClusters
+ * \sa DocDbClient::describeGlobalClusters
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeGlobalClustersRequest::DescribeGlobalClustersRequest(const DescribeGlobalClustersRequest &other)
-    : DocDBRequest(new DescribeGlobalClustersRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeGlobalClustersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeGlobalClustersRequest::DescribeGlobalClustersRequest(const DescribeGloba
  * Constructs a DescribeGlobalClustersRequest object.
  */
 DescribeGlobalClustersRequest::DescribeGlobalClustersRequest()
-    : DocDBRequest(new DescribeGlobalClustersRequestPrivate(DocDBRequest::DescribeGlobalClustersAction, this))
+    : DocDbRequest(new DescribeGlobalClustersRequestPrivate(DocDbRequest::DescribeGlobalClustersAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeGlobalClustersRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::DocDB::DescribeGlobalClustersRequestPrivate
+ * \class QtAws::DocDb::DescribeGlobalClustersRequestPrivate
  * \brief The DescribeGlobalClustersRequestPrivate class provides private implementation for DescribeGlobalClustersRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeGlobalClustersRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeGlobalClustersRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeGlobalClustersRequestPrivate::DescribeGlobalClustersRequestPrivate(
-    const DocDBRequest::Action action, DescribeGlobalClustersRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeGlobalClustersRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeGlobalClustersRequestPrivate::DescribeGlobalClustersRequestPrivate(
  */
 DescribeGlobalClustersRequestPrivate::DescribeGlobalClustersRequestPrivate(
     const DescribeGlobalClustersRequestPrivate &other, DescribeGlobalClustersRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

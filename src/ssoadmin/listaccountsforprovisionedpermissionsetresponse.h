@@ -24,11 +24,11 @@
 #include "listaccountsforprovisionedpermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListAccountsForProvisionedPermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT ListAccountsForProvisionedPermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT ListAccountsForProvisionedPermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

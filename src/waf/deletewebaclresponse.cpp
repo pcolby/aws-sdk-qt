@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteWebACLResponse
- * \brief The DeleteWebACLResponse class provides an interace for WAF DeleteWebACL responses.
+ * \class QtAws::Waf::DeleteWebACLResponse
+ * \brief The DeleteWebACLResponse class provides an interace for Waf DeleteWebACL responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteWebACLRequest * DeleteWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteWebACL \a response.
+ * Parses a successful Waf DeleteWebACL \a response.
  */
 void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteWebACLResponsePrivate
+ * \class QtAws::Waf::DeleteWebACLResponsePrivate
  * \brief The DeleteWebACLResponsePrivate class provides private implementation for DeleteWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteWebACL response element from \a xml.
+ * Parses a Waf DeleteWebACL response element from \a xml.
  */
 void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

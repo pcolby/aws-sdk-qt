@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::EcrResponse
- * \brief The EcrResponse class provides an interface for ECR responses.
+ * \class QtAws::Ecr::EcrResponse
+ * \brief The EcrResponse class provides an interface for Ecr responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -76,11 +76,11 @@ void EcrResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::EcrResponsePrivate
+ * \class QtAws::Ecr::EcrResponsePrivate
  * \brief The EcrResponsePrivate class provides private implementation for EcrResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -92,5 +92,5 @@ EcrResponsePrivate::EcrResponsePrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

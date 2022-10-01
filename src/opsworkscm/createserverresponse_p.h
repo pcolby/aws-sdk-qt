@@ -23,11 +23,11 @@
 #include "opsworkscmresponse_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class CreateServerResponse;
 
-class CreateServerResponsePrivate : public OpsWorksCMResponsePrivate {
+class CreateServerResponsePrivate : public OpsWorksCmResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

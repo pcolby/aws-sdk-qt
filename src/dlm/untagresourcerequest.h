@@ -23,7 +23,7 @@
 #include "dlmrequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class UntagResourceRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

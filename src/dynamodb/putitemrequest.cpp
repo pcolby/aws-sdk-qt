@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::PutItemRequest
- * \brief The PutItemRequest class provides an interface for DynamoDB PutItem requests.
+ * \class QtAws::DynamoDb::PutItemRequest
+ * \brief The PutItemRequest class provides an interface for DynamoDb PutItem requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::putItem
+ * \sa DynamoDbClient::putItem
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutItemRequest::PutItemRequest(const PutItemRequest &other)
-    : DynamoDBRequest(new PutItemRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new PutItemRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ PutItemRequest::PutItemRequest(const PutItemRequest &other)
  * Constructs a PutItemRequest object.
  */
 PutItemRequest::PutItemRequest()
-    : DynamoDBRequest(new PutItemRequestPrivate(DynamoDBRequest::PutItemAction, this))
+    : DynamoDbRequest(new PutItemRequestPrivate(DynamoDbRequest::PutItemAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::DynamoDB::PutItemRequestPrivate
+ * \class QtAws::DynamoDb::PutItemRequestPrivate
  * \brief The PutItemRequestPrivate class provides private implementation for PutItemRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a PutItemRequestPrivate object for DynamoDB \a action,
+ * Constructs a PutItemRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
-    const DynamoDBRequest::Action action, PutItemRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, PutItemRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ PutItemRequestPrivate::PutItemRequestPrivate(
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const PutItemRequestPrivate &other, PutItemRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

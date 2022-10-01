@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::StopEngagementResponse
- * \brief The StopEngagementResponse class provides an interace for SSMContacts StopEngagement responses.
+ * \class QtAws::SsmContacts::StopEngagementResponse
+ * \brief The StopEngagementResponse class provides an interace for SsmContacts StopEngagement responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::stopEngagement
+ * \sa SsmContactsClient::stopEngagement
  */
 
 /*!
@@ -44,7 +54,7 @@ StopEngagementResponse::StopEngagementResponse(
         const StopEngagementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new StopEngagementResponsePrivate(this), parent)
+    : SsmContactsResponse(new StopEngagementResponsePrivate(this), parent)
 {
     setRequest(new StopEngagementRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const StopEngagementRequest * StopEngagementResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts StopEngagement \a response.
+ * Parses a successful SsmContacts StopEngagement \a response.
  */
 void StopEngagementResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void StopEngagementResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::StopEngagementResponsePrivate
+ * \class QtAws::SsmContacts::StopEngagementResponsePrivate
  * \brief The StopEngagementResponsePrivate class provides private implementation for StopEngagementResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a StopEngagementResponsePrivate object with public implementation \a q.
  */
 StopEngagementResponsePrivate::StopEngagementResponsePrivate(
-    StopEngagementResponse * const q) : SSMContactsResponsePrivate(q)
+    StopEngagementResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts StopEngagement response element from \a xml.
+ * Parses a SsmContacts StopEngagement response element from \a xml.
  */
 void StopEngagementResponsePrivate::parseStopEngagementResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void StopEngagementResponsePrivate::parseStopEngagementResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

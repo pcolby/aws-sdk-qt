@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for OpsWorksCM TagResource responses.
+ * \class QtAws::OpsWorksCm::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for OpsWorksCm TagResource responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::tagResource
+ * \sa OpsWorksCmClient::tagResource
  */
 
 /*!
@@ -123,7 +123,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new TagResourceResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM TagResource \a response.
+ * Parses a successful OpsWorksCm TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::TagResourceResponsePrivate
+ * \class QtAws::OpsWorksCm::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : OpsWorksCMResponsePrivate(q)
+    TagResourceResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM TagResource response element from \a xml.
+ * Parses a OpsWorksCm TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeCertificatesRequest
- * \brief The DescribeCertificatesRequest class provides an interface for RDS DescribeCertificates requests.
+ * \class QtAws::Rds::DescribeCertificatesRequest
+ * \brief The DescribeCertificatesRequest class provides an interface for Rds DescribeCertificates requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::RDS::DescribeCertificatesRequestPrivate
+ * \class QtAws::Rds::DescribeCertificatesRequestPrivate
  * \brief The DescribeCertificatesRequestPrivate class provides private implementation for DescribeCertificatesRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -40,6 +40,8 @@ class CreateArchiveRequest;
 class CreateArchiveResponse;
 class CreateConnectionRequest;
 class CreateConnectionResponse;
+class CreateEndpointRequest;
+class CreateEndpointResponse;
 class CreateEventBusRequest;
 class CreateEventBusResponse;
 class CreatePartnerEventSourceRequest;
@@ -54,6 +56,8 @@ class DeleteArchiveRequest;
 class DeleteArchiveResponse;
 class DeleteConnectionRequest;
 class DeleteConnectionResponse;
+class DeleteEndpointRequest;
+class DeleteEndpointResponse;
 class DeleteEventBusRequest;
 class DeleteEventBusResponse;
 class DeletePartnerEventSourceRequest;
@@ -66,6 +70,8 @@ class DescribeArchiveRequest;
 class DescribeArchiveResponse;
 class DescribeConnectionRequest;
 class DescribeConnectionResponse;
+class DescribeEndpointRequest;
+class DescribeEndpointResponse;
 class DescribeEventBusRequest;
 class DescribeEventBusResponse;
 class DescribeEventSourceRequest;
@@ -86,6 +92,8 @@ class ListArchivesRequest;
 class ListArchivesResponse;
 class ListConnectionsRequest;
 class ListConnectionsResponse;
+class ListEndpointsRequest;
+class ListEndpointsResponse;
 class ListEventBusesRequest;
 class ListEventBusesResponse;
 class ListEventSourcesRequest;
@@ -132,6 +140,8 @@ class UpdateArchiveRequest;
 class UpdateArchiveResponse;
 class UpdateConnectionRequest;
 class UpdateConnectionResponse;
+class UpdateEndpointRequest;
+class UpdateEndpointResponse;
 
 class QTAWSEVENTBRIDGE_EXPORT EventBridgeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -154,6 +164,7 @@ public slots:
     CreateApiDestinationResponse * createApiDestination(const CreateApiDestinationRequest &request);
     CreateArchiveResponse * createArchive(const CreateArchiveRequest &request);
     CreateConnectionResponse * createConnection(const CreateConnectionRequest &request);
+    CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
     CreateEventBusResponse * createEventBus(const CreateEventBusRequest &request);
     CreatePartnerEventSourceResponse * createPartnerEventSource(const CreatePartnerEventSourceRequest &request);
     DeactivateEventSourceResponse * deactivateEventSource(const DeactivateEventSourceRequest &request);
@@ -161,12 +172,14 @@ public slots:
     DeleteApiDestinationResponse * deleteApiDestination(const DeleteApiDestinationRequest &request);
     DeleteArchiveResponse * deleteArchive(const DeleteArchiveRequest &request);
     DeleteConnectionResponse * deleteConnection(const DeleteConnectionRequest &request);
+    DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
     DeleteEventBusResponse * deleteEventBus(const DeleteEventBusRequest &request);
     DeletePartnerEventSourceResponse * deletePartnerEventSource(const DeletePartnerEventSourceRequest &request);
     DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
     DescribeApiDestinationResponse * describeApiDestination(const DescribeApiDestinationRequest &request);
     DescribeArchiveResponse * describeArchive(const DescribeArchiveRequest &request);
     DescribeConnectionResponse * describeConnection(const DescribeConnectionRequest &request);
+    DescribeEndpointResponse * describeEndpoint(const DescribeEndpointRequest &request);
     DescribeEventBusResponse * describeEventBus(const DescribeEventBusRequest &request);
     DescribeEventSourceResponse * describeEventSource(const DescribeEventSourceRequest &request);
     DescribePartnerEventSourceResponse * describePartnerEventSource(const DescribePartnerEventSourceRequest &request);
@@ -177,6 +190,7 @@ public slots:
     ListApiDestinationsResponse * listApiDestinations(const ListApiDestinationsRequest &request);
     ListArchivesResponse * listArchives(const ListArchivesRequest &request);
     ListConnectionsResponse * listConnections(const ListConnectionsRequest &request);
+    ListEndpointsResponse * listEndpoints(const ListEndpointsRequest &request);
     ListEventBusesResponse * listEventBuses(const ListEventBusesRequest &request);
     ListEventSourcesResponse * listEventSources(const ListEventSourcesRequest &request);
     ListPartnerEventSourceAccountsResponse * listPartnerEventSourceAccounts(const ListPartnerEventSourceAccountsRequest &request);
@@ -200,6 +214,7 @@ public slots:
     UpdateApiDestinationResponse * updateApiDestination(const UpdateApiDestinationRequest &request);
     UpdateArchiveResponse * updateArchive(const UpdateArchiveRequest &request);
     UpdateConnectionResponse * updateConnection(const UpdateConnectionRequest &request);
+    UpdateEndpointResponse * updateEndpoint(const UpdateEndpointRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EventBridgeClient)

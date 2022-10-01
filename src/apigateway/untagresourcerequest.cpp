@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for APIGateway UntagResource requests.
+ * \class QtAws::ApiGateway::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for ApiGateway UntagResource requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::untagResource
+ * \sa ApiGatewayClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : APIGatewayRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : APIGatewayRequest(new UntagResourceRequestPrivate(APIGatewayRequest::UntagResourceAction, this))
+    : ApiGatewayRequest(new UntagResourceRequestPrivate(ApiGatewayRequest::UntagResourceAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::UntagResourceRequestPrivate
+ * \class QtAws::ApiGateway::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for APIGateway \a action,
+ * Constructs a UntagResourceRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const APIGatewayRequest::Action action, UntagResourceRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UntagResourceRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

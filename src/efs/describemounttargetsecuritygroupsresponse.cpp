@@ -25,21 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponse
- * \brief The DescribeMountTargetSecurityGroupsResponse class provides an interace for EFS DescribeMountTargetSecurityGroups responses.
+ * \class QtAws::Efs::DescribeMountTargetSecurityGroupsResponse
+ * \brief The DescribeMountTargetSecurityGroupsResponse class provides an interace for Efs DescribeMountTargetSecurityGroups responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  *
  * \sa EfsClient::describeMountTargetSecurityGroups
  */
@@ -68,7 +69,7 @@ const DescribeMountTargetSecurityGroupsRequest * DescribeMountTargetSecurityGrou
 
 /*!
  * \reimp
- * Parses a successful EFS DescribeMountTargetSecurityGroups \a response.
+ * Parses a successful Efs DescribeMountTargetSecurityGroups \a response.
  */
 void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +79,11 @@ void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponsePrivate
+ * \class QtAws::Efs::DescribeMountTargetSecurityGroupsResponsePrivate
  * \brief The DescribeMountTargetSecurityGroupsResponsePrivate class provides private implementation for DescribeMountTargetSecurityGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -95,7 +96,7 @@ DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGro
 }
 
 /*!
- * Parses a EFS DescribeMountTargetSecurityGroups response element from \a xml.
+ * Parses a Efs DescribeMountTargetSecurityGroups response element from \a xml.
  */
 void DescribeMountTargetSecurityGroupsResponsePrivate::parseDescribeMountTargetSecurityGroupsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +104,5 @@ void DescribeMountTargetSecurityGroupsResponsePrivate::parseDescribeMountTargetS
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

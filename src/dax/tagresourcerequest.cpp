@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for DAX TagResource requests.
+ * \class QtAws::Dax::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Dax TagResource requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::DAX::TagResourceRequestPrivate
+ * \class QtAws::Dax::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

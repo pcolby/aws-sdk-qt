@@ -24,11 +24,11 @@
 #include "createindexrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class CreateIndexResponsePrivate;
 
-class QTAWSKENDRA_EXPORT CreateIndexResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT CreateIndexResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

@@ -36,25 +36,35 @@ namespace MediaTailor {
  * This enum describes the actions that can be performed as MediaTailor
  * requests.
  *
+ * \value ConfigureLogsForPlaybackConfigurationAction MediaTailor ConfigureLogsForPlaybackConfiguration action.
  * \value CreateChannelAction MediaTailor CreateChannel action.
+ * \value CreateLiveSourceAction MediaTailor CreateLiveSource action.
+ * \value CreatePrefetchScheduleAction MediaTailor CreatePrefetchSchedule action.
  * \value CreateProgramAction MediaTailor CreateProgram action.
  * \value CreateSourceLocationAction MediaTailor CreateSourceLocation action.
  * \value CreateVodSourceAction MediaTailor CreateVodSource action.
  * \value DeleteChannelAction MediaTailor DeleteChannel action.
  * \value DeleteChannelPolicyAction MediaTailor DeleteChannelPolicy action.
+ * \value DeleteLiveSourceAction MediaTailor DeleteLiveSource action.
  * \value DeletePlaybackConfigurationAction MediaTailor DeletePlaybackConfiguration action.
+ * \value DeletePrefetchScheduleAction MediaTailor DeletePrefetchSchedule action.
  * \value DeleteProgramAction MediaTailor DeleteProgram action.
  * \value DeleteSourceLocationAction MediaTailor DeleteSourceLocation action.
  * \value DeleteVodSourceAction MediaTailor DeleteVodSource action.
  * \value DescribeChannelAction MediaTailor DescribeChannel action.
+ * \value DescribeLiveSourceAction MediaTailor DescribeLiveSource action.
  * \value DescribeProgramAction MediaTailor DescribeProgram action.
  * \value DescribeSourceLocationAction MediaTailor DescribeSourceLocation action.
  * \value DescribeVodSourceAction MediaTailor DescribeVodSource action.
  * \value GetChannelPolicyAction MediaTailor GetChannelPolicy action.
  * \value GetChannelScheduleAction MediaTailor GetChannelSchedule action.
  * \value GetPlaybackConfigurationAction MediaTailor GetPlaybackConfiguration action.
+ * \value GetPrefetchScheduleAction MediaTailor GetPrefetchSchedule action.
+ * \value ListAlertsAction MediaTailor ListAlerts action.
  * \value ListChannelsAction MediaTailor ListChannels action.
+ * \value ListLiveSourcesAction MediaTailor ListLiveSources action.
  * \value ListPlaybackConfigurationsAction MediaTailor ListPlaybackConfigurations action.
+ * \value ListPrefetchSchedulesAction MediaTailor ListPrefetchSchedules action.
  * \value ListSourceLocationsAction MediaTailor ListSourceLocations action.
  * \value ListTagsForResourceAction MediaTailor ListTagsForResource action.
  * \value ListVodSourcesAction MediaTailor ListVodSources action.
@@ -65,6 +75,7 @@ namespace MediaTailor {
  * \value TagResourceAction MediaTailor TagResource action.
  * \value UntagResourceAction MediaTailor UntagResource action.
  * \value UpdateChannelAction MediaTailor UpdateChannel action.
+ * \value UpdateLiveSourceAction MediaTailor UpdateLiveSource action.
  * \value UpdateSourceLocationAction MediaTailor UpdateSourceLocation action.
  * \value UpdateVodSourceAction MediaTailor UpdateVodSource action.
  */
@@ -274,7 +285,7 @@ QNetworkRequest MediaTailorRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaTailorRequestPrivate::MediaTailorRequestPrivate(const MediaTailorRequest::Action action, MediaTailorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-04-23"))
 {
 
 }
@@ -308,25 +319,35 @@ QString MediaTailorRequestPrivate::toString(const MediaTailorRequest::Action &ac
     #define ActionToString(action) \
         case MediaTailorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(ConfigureLogsForPlaybackConfiguration);
         ActionToString(CreateChannel);
+        ActionToString(CreateLiveSource);
+        ActionToString(CreatePrefetchSchedule);
         ActionToString(CreateProgram);
         ActionToString(CreateSourceLocation);
         ActionToString(CreateVodSource);
         ActionToString(DeleteChannel);
         ActionToString(DeleteChannelPolicy);
+        ActionToString(DeleteLiveSource);
         ActionToString(DeletePlaybackConfiguration);
+        ActionToString(DeletePrefetchSchedule);
         ActionToString(DeleteProgram);
         ActionToString(DeleteSourceLocation);
         ActionToString(DeleteVodSource);
         ActionToString(DescribeChannel);
+        ActionToString(DescribeLiveSource);
         ActionToString(DescribeProgram);
         ActionToString(DescribeSourceLocation);
         ActionToString(DescribeVodSource);
         ActionToString(GetChannelPolicy);
         ActionToString(GetChannelSchedule);
         ActionToString(GetPlaybackConfiguration);
+        ActionToString(GetPrefetchSchedule);
+        ActionToString(ListAlerts);
         ActionToString(ListChannels);
+        ActionToString(ListLiveSources);
         ActionToString(ListPlaybackConfigurations);
+        ActionToString(ListPrefetchSchedules);
         ActionToString(ListSourceLocations);
         ActionToString(ListTagsForResource);
         ActionToString(ListVodSources);
@@ -337,6 +358,7 @@ QString MediaTailorRequestPrivate::toString(const MediaTailorRequest::Action &ac
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateChannel);
+        ActionToString(UpdateLiveSource);
         ActionToString(UpdateSourceLocation);
         ActionToString(UpdateVodSource);
         default:

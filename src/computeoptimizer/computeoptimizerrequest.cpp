@@ -36,6 +36,7 @@ namespace ComputeOptimizer {
  * This enum describes the actions that can be performed as ComputeOptimizer
  * requests.
  *
+ * \value DeleteRecommendationPreferencesAction ComputeOptimizer DeleteRecommendationPreferences action.
  * \value DescribeRecommendationExportJobsAction ComputeOptimizer DescribeRecommendationExportJobs action.
  * \value ExportAutoScalingGroupRecommendationsAction ComputeOptimizer ExportAutoScalingGroupRecommendations action.
  * \value ExportEBSVolumeRecommendationsAction ComputeOptimizer ExportEBSVolumeRecommendations action.
@@ -45,9 +46,13 @@ namespace ComputeOptimizer {
  * \value GetEBSVolumeRecommendationsAction ComputeOptimizer GetEBSVolumeRecommendations action.
  * \value GetEC2InstanceRecommendationsAction ComputeOptimizer GetEC2InstanceRecommendations action.
  * \value GetEC2RecommendationProjectedMetricsAction ComputeOptimizer GetEC2RecommendationProjectedMetrics action.
+ * \value GetEffectiveRecommendationPreferencesAction ComputeOptimizer GetEffectiveRecommendationPreferences action.
  * \value GetEnrollmentStatusAction ComputeOptimizer GetEnrollmentStatus action.
+ * \value GetEnrollmentStatusesForOrganizationAction ComputeOptimizer GetEnrollmentStatusesForOrganization action.
  * \value GetLambdaFunctionRecommendationsAction ComputeOptimizer GetLambdaFunctionRecommendations action.
+ * \value GetRecommendationPreferencesAction ComputeOptimizer GetRecommendationPreferences action.
  * \value GetRecommendationSummariesAction ComputeOptimizer GetRecommendationSummaries action.
+ * \value PutRecommendationPreferencesAction ComputeOptimizer PutRecommendationPreferences action.
  * \value UpdateEnrollmentStatusAction ComputeOptimizer UpdateEnrollmentStatus action.
  */
 
@@ -256,7 +261,7 @@ QNetworkRequest ComputeOptimizerRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ComputeOptimizerRequestPrivate::ComputeOptimizerRequestPrivate(const ComputeOptimizerRequest::Action action, ComputeOptimizerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-11-01"))
 {
 
 }
@@ -290,6 +295,7 @@ QString ComputeOptimizerRequestPrivate::toString(const ComputeOptimizerRequest::
     #define ActionToString(action) \
         case ComputeOptimizerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(DeleteRecommendationPreferences);
         ActionToString(DescribeRecommendationExportJobs);
         ActionToString(ExportAutoScalingGroupRecommendations);
         ActionToString(ExportEBSVolumeRecommendations);
@@ -299,9 +305,13 @@ QString ComputeOptimizerRequestPrivate::toString(const ComputeOptimizerRequest::
         ActionToString(GetEBSVolumeRecommendations);
         ActionToString(GetEC2InstanceRecommendations);
         ActionToString(GetEC2RecommendationProjectedMetrics);
+        ActionToString(GetEffectiveRecommendationPreferences);
         ActionToString(GetEnrollmentStatus);
+        ActionToString(GetEnrollmentStatusesForOrganization);
         ActionToString(GetLambdaFunctionRecommendations);
+        ActionToString(GetRecommendationPreferences);
         ActionToString(GetRecommendationSummaries);
+        ActionToString(PutRecommendationPreferences);
         ActionToString(UpdateEnrollmentStatus);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

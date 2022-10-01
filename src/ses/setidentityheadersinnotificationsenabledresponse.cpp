@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponse
- * \brief The SetIdentityHeadersInNotificationsEnabledResponse class provides an interace for SES SetIdentityHeadersInNotificationsEnabled responses.
+ * \class QtAws::Ses::SetIdentityHeadersInNotificationsEnabledResponse
+ * \brief The SetIdentityHeadersInNotificationsEnabledResponse class provides an interace for Ses SetIdentityHeadersInNotificationsEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNoti
 
 /*!
  * \reimp
- * Parses a successful SES SetIdentityHeadersInNotificationsEnabled \a response.
+ * Parses a successful Ses SetIdentityHeadersInNotificationsEnabled \a response.
  */
 void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &r
 }
 
 /*!
- * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponsePrivate
+ * \class QtAws::Ses::SetIdentityHeadersInNotificationsEnabledResponsePrivate
  * \brief The SetIdentityHeadersInNotificationsEnabledResponsePrivate class provides private implementation for SetIdentityHeadersInNotificationsEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNot
 }
 
 /*!
- * Parses a SES SetIdentityHeadersInNotificationsEnabled response element from \a xml.
+ * Parses a Ses SetIdentityHeadersInNotificationsEnabled response element from \a xml.
  */
 void SetIdentityHeadersInNotificationsEnabledResponsePrivate::parseSetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetIdentityHeadersInNotificationsEnabledResponsePrivate::parseSetIdentityHe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

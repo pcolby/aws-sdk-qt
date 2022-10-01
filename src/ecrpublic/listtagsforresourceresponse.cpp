@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for ECRPublic ListTagsForResource responses.
+ * \class QtAws::EcrPublic::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for EcrPublic ListTagsForResource responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::listTagsForResource
+ * \sa EcrPublicClient::listTagsForResource
  */
 
 /*!
@@ -52,7 +52,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : EcrPublicResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic ListTagsForResource \a response.
+ * Parses a successful EcrPublic ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::ListTagsForResourceResponsePrivate
+ * \class QtAws::EcrPublic::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : ECRPublicResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic ListTagsForResource response element from \a xml.
+ * Parses a EcrPublic ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

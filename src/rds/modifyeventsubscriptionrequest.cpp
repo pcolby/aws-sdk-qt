@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyEventSubscriptionRequest
- * \brief The ModifyEventSubscriptionRequest class provides an interface for RDS ModifyEventSubscription requests.
+ * \class QtAws::Rds::ModifyEventSubscriptionRequest
+ * \brief The ModifyEventSubscriptionRequest class provides an interface for Rds ModifyEventSubscription requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
 }
 
 /*!
- * \class QtAws::RDS::ModifyEventSubscriptionRequestPrivate
+ * \class QtAws::Rds::ModifyEventSubscriptionRequestPrivate
  * \brief The ModifyEventSubscriptionRequestPrivate class provides private implementation for ModifyEventSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

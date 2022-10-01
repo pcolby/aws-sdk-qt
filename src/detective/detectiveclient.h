@@ -32,6 +32,10 @@ namespace Detective {
 class DetectiveClientPrivate;
 class AcceptInvitationRequest;
 class AcceptInvitationResponse;
+class BatchGetGraphMemberDatasourcesRequest;
+class BatchGetGraphMemberDatasourcesResponse;
+class BatchGetMembershipDatasourcesRequest;
+class BatchGetMembershipDatasourcesResponse;
 class CreateGraphRequest;
 class CreateGraphResponse;
 class CreateMembersRequest;
@@ -40,16 +44,26 @@ class DeleteGraphRequest;
 class DeleteGraphResponse;
 class DeleteMembersRequest;
 class DeleteMembersResponse;
+class DescribeOrganizationConfigurationRequest;
+class DescribeOrganizationConfigurationResponse;
+class DisableOrganizationAdminAccountRequest;
+class DisableOrganizationAdminAccountResponse;
 class DisassociateMembershipRequest;
 class DisassociateMembershipResponse;
+class EnableOrganizationAdminAccountRequest;
+class EnableOrganizationAdminAccountResponse;
 class GetMembersRequest;
 class GetMembersResponse;
+class ListDatasourcePackagesRequest;
+class ListDatasourcePackagesResponse;
 class ListGraphsRequest;
 class ListGraphsResponse;
 class ListInvitationsRequest;
 class ListInvitationsResponse;
 class ListMembersRequest;
 class ListMembersResponse;
+class ListOrganizationAdminAccountsRequest;
+class ListOrganizationAdminAccountsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class RejectInvitationRequest;
@@ -60,6 +74,10 @@ class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateDatasourcePackagesRequest;
+class UpdateDatasourcePackagesResponse;
+class UpdateOrganizationConfigurationRequest;
+class UpdateOrganizationConfigurationResponse;
 
 class QTAWSDETECTIVE_EXPORT DetectiveClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -78,20 +96,29 @@ public:
 
 public slots:
     AcceptInvitationResponse * acceptInvitation(const AcceptInvitationRequest &request);
+    BatchGetGraphMemberDatasourcesResponse * batchGetGraphMemberDatasources(const BatchGetGraphMemberDatasourcesRequest &request);
+    BatchGetMembershipDatasourcesResponse * batchGetMembershipDatasources(const BatchGetMembershipDatasourcesRequest &request);
     CreateGraphResponse * createGraph(const CreateGraphRequest &request);
     CreateMembersResponse * createMembers(const CreateMembersRequest &request);
     DeleteGraphResponse * deleteGraph(const DeleteGraphRequest &request);
     DeleteMembersResponse * deleteMembers(const DeleteMembersRequest &request);
+    DescribeOrganizationConfigurationResponse * describeOrganizationConfiguration(const DescribeOrganizationConfigurationRequest &request);
+    DisableOrganizationAdminAccountResponse * disableOrganizationAdminAccount(const DisableOrganizationAdminAccountRequest &request);
     DisassociateMembershipResponse * disassociateMembership(const DisassociateMembershipRequest &request);
+    EnableOrganizationAdminAccountResponse * enableOrganizationAdminAccount(const EnableOrganizationAdminAccountRequest &request);
     GetMembersResponse * getMembers(const GetMembersRequest &request);
+    ListDatasourcePackagesResponse * listDatasourcePackages(const ListDatasourcePackagesRequest &request);
     ListGraphsResponse * listGraphs(const ListGraphsRequest &request);
     ListInvitationsResponse * listInvitations(const ListInvitationsRequest &request);
     ListMembersResponse * listMembers(const ListMembersRequest &request);
+    ListOrganizationAdminAccountsResponse * listOrganizationAdminAccounts(const ListOrganizationAdminAccountsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RejectInvitationResponse * rejectInvitation(const RejectInvitationRequest &request);
     StartMonitoringMemberResponse * startMonitoringMember(const StartMonitoringMemberRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateDatasourcePackagesResponse * updateDatasourcePackages(const UpdateDatasourcePackagesRequest &request);
+    UpdateOrganizationConfigurationResponse * updateOrganizationConfiguration(const UpdateOrganizationConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DetectiveClient)

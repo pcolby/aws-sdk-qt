@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DescribeImageScanFindingsResponse
- * \brief The DescribeImageScanFindingsResponse class provides an interace for ECR DescribeImageScanFindings responses.
+ * \class QtAws::Ecr::DescribeImageScanFindingsResponse
+ * \brief The DescribeImageScanFindingsResponse class provides an interace for Ecr DescribeImageScanFindings responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::describeImageScanFindings
  */
@@ -68,7 +74,7 @@ const DescribeImageScanFindingsRequest * DescribeImageScanFindingsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful ECR DescribeImageScanFindings \a response.
+ * Parses a successful Ecr DescribeImageScanFindings \a response.
  */
 void DescribeImageScanFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DescribeImageScanFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DescribeImageScanFindingsResponsePrivate
+ * \class QtAws::Ecr::DescribeImageScanFindingsResponsePrivate
  * \brief The DescribeImageScanFindingsResponsePrivate class provides private implementation for DescribeImageScanFindingsResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DescribeImageScanFindingsResponsePrivate::DescribeImageScanFindingsResponsePriva
 }
 
 /*!
- * Parses a ECR DescribeImageScanFindings response element from \a xml.
+ * Parses a Ecr DescribeImageScanFindings response element from \a xml.
  */
 void DescribeImageScanFindingsResponsePrivate::parseDescribeImageScanFindingsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DescribeImageScanFindingsResponsePrivate::parseDescribeImageScanFindingsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

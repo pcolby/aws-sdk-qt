@@ -24,11 +24,11 @@
 #include "deleteincidentrecordrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class DeleteIncidentRecordResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT DeleteIncidentRecordResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT DeleteIncidentRecordResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

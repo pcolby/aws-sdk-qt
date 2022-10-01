@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DeleteFargateProfileResponse
- * \brief The DeleteFargateProfileResponse class provides an interace for EKS DeleteFargateProfile responses.
+ * \class QtAws::Eks::DeleteFargateProfileResponse
+ * \brief The DeleteFargateProfileResponse class provides an interace for Eks DeleteFargateProfile responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DeleteFargateProfileRequest * DeleteFargateProfileResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EKS DeleteFargateProfile \a response.
+ * Parses a successful Eks DeleteFargateProfile \a response.
  */
 void DeleteFargateProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DeleteFargateProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DeleteFargateProfileResponsePrivate
+ * \class QtAws::Eks::DeleteFargateProfileResponsePrivate
  * \brief The DeleteFargateProfileResponsePrivate class provides private implementation for DeleteFargateProfileResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DeleteFargateProfileResponsePrivate::DeleteFargateProfileResponsePrivate(
 }
 
 /*!
- * Parses a EKS DeleteFargateProfile response element from \a xml.
+ * Parses a Eks DeleteFargateProfile response element from \a xml.
  */
 void DeleteFargateProfileResponsePrivate::parseDeleteFargateProfileResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteFargateProfileResponsePrivate::parseDeleteFargateProfileResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

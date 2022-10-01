@@ -24,7 +24,7 @@
 #include "deletepatchbaselinerequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DeletePatchBaselineRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

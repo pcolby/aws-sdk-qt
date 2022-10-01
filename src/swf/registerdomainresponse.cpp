@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RegisterDomainResponse
- * \brief The RegisterDomainResponse class provides an interace for SWF RegisterDomain responses.
+ * \class QtAws::Swf::RegisterDomainResponse
+ * \brief The RegisterDomainResponse class provides an interace for Swf RegisterDomain responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF RegisterDomain \a response.
+ * Parses a successful Swf RegisterDomain \a response.
  */
 void RegisterDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RegisterDomainResponsePrivate
+ * \class QtAws::Swf::RegisterDomainResponsePrivate
  * \brief The RegisterDomainResponsePrivate class provides private implementation for RegisterDomainResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 }
 
 /*!
- * Parses a SWF RegisterDomain response element from \a xml.
+ * Parses a Swf RegisterDomain response element from \a xml.
  */
 void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

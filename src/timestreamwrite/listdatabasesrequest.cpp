@@ -31,6 +31,8 @@ namespace TimestreamWrite {
  *
  * \inmodule QtAwsTimestreamWrite
  *
+ *  <fullname>Amazon Timestream Write</fullname>
+ * 
  *  Amazon Timestream is a fast, scalable, fully managed time series database service that makes it easy to store and
  *  analyze trillions of time series data points per day. With Timestream, you can easily store and analyze IoT sensor data
  *  to derive insights from your IoT applications. You can analyze industrial telemetry to streamline equipment management

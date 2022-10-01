@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableFromBackupResponse
- * \brief The RestoreTableFromBackupResponse class provides an interace for DynamoDB RestoreTableFromBackup responses.
+ * \class QtAws::DynamoDb::RestoreTableFromBackupResponse
+ * \brief The RestoreTableFromBackupResponse class provides an interace for DynamoDb RestoreTableFromBackup responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::restoreTableFromBackup
+ * \sa DynamoDbClient::restoreTableFromBackup
  */
 
 /*!
@@ -63,7 +63,7 @@ RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
         const RestoreTableFromBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new RestoreTableFromBackupResponsePrivate(this), parent)
+    : DynamoDbResponse(new RestoreTableFromBackupResponsePrivate(this), parent)
 {
     setRequest(new RestoreTableFromBackupRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const RestoreTableFromBackupRequest * RestoreTableFromBackupResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful DynamoDB RestoreTableFromBackup \a response.
+ * Parses a successful DynamoDb RestoreTableFromBackup \a response.
  */
 void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableFromBackupResponsePrivate
+ * \class QtAws::DynamoDb::RestoreTableFromBackupResponsePrivate
  * \brief The RestoreTableFromBackupResponsePrivate class provides private implementation for RestoreTableFromBackupResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a RestoreTableFromBackupResponsePrivate object with public implementation \a q.
  */
 RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
-    RestoreTableFromBackupResponse * const q) : DynamoDBResponsePrivate(q)
+    RestoreTableFromBackupResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB RestoreTableFromBackup response element from \a xml.
+ * Parses a DynamoDb RestoreTableFromBackup response element from \a xml.
  */
 void RestoreTableFromBackupResponsePrivate::parseRestoreTableFromBackupResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void RestoreTableFromBackupResponsePrivate::parseRestoreTableFromBackupResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

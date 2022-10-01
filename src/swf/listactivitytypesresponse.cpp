@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListActivityTypesResponse
- * \brief The ListActivityTypesResponse class provides an interace for SWF ListActivityTypes responses.
+ * \class QtAws::Swf::ListActivityTypesResponse
+ * \brief The ListActivityTypesResponse class provides an interace for Swf ListActivityTypes responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const ListActivityTypesRequest * ListActivityTypesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF ListActivityTypes \a response.
+ * Parses a successful Swf ListActivityTypes \a response.
  */
 void ListActivityTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void ListActivityTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::ListActivityTypesResponsePrivate
+ * \class QtAws::Swf::ListActivityTypesResponsePrivate
  * \brief The ListActivityTypesResponsePrivate class provides private implementation for ListActivityTypesResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
 }
 
 /*!
- * Parses a SWF ListActivityTypes response element from \a xml.
+ * Parses a Swf ListActivityTypes response element from \a xml.
  */
 void ListActivityTypesResponsePrivate::parseListActivityTypesResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void ListActivityTypesResponsePrivate::parseListActivityTypesResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

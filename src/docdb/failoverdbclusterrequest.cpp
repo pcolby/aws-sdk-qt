@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::FailoverDBClusterRequest
- * \brief The FailoverDBClusterRequest class provides an interface for DocDB FailoverDBCluster requests.
+ * \class QtAws::DocDb::FailoverDBClusterRequest
+ * \brief The FailoverDBClusterRequest class provides an interface for DocDb FailoverDBCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::failoverDBCluster
+ * \sa DocDbClient::failoverDBCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterRequest &other)
-    : DocDBRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterReques
  * Constructs a FailoverDBClusterRequest object.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest()
-    : DocDBRequest(new FailoverDBClusterRequestPrivate(DocDBRequest::FailoverDBClusterAction, this))
+    : DocDbRequest(new FailoverDBClusterRequestPrivate(DocDbRequest::FailoverDBClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DocDB::FailoverDBClusterRequestPrivate
+ * \class QtAws::DocDb::FailoverDBClusterRequestPrivate
  * \brief The FailoverDBClusterRequestPrivate class provides private implementation for FailoverDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a FailoverDBClusterRequestPrivate object for DocDB \a action,
+ * Constructs a FailoverDBClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
-    const DocDBRequest::Action action, FailoverDBClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, FailoverDBClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const FailoverDBClusterRequestPrivate &other, FailoverDBClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

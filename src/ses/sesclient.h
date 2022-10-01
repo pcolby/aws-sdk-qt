@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SesClientPrivate;
 class CloneReceiptRuleSetRequest;
@@ -271,7 +271,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

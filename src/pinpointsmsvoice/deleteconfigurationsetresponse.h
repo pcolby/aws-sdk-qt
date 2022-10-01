@@ -24,11 +24,11 @@
 #include "deleteconfigurationsetrequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class DeleteConfigurationSetResponsePrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT DeleteConfigurationSetResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT DeleteConfigurationSetResponse : public PinpointSmsVoiceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

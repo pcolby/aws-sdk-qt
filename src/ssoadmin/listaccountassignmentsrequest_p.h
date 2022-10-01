@@ -24,14 +24,14 @@
 #include "listaccountassignmentsrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListAccountAssignmentsRequest;
 
-class ListAccountAssignmentsRequestPrivate : public SSOAdminRequestPrivate {
+class ListAccountAssignmentsRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    ListAccountAssignmentsRequestPrivate(const SSOAdminRequest::Action action,
+    ListAccountAssignmentsRequestPrivate(const SsoAdminRequest::Action action,
                                    ListAccountAssignmentsRequest * const q);
     ListAccountAssignmentsRequestPrivate(const ListAccountAssignmentsRequestPrivate &other,
                                    ListAccountAssignmentsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

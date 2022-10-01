@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CopyBackupToRegionResponse
- * \brief The CopyBackupToRegionResponse class provides an interace for CloudHSMV2 CopyBackupToRegion responses.
+ * \class QtAws::CloudHsmV2::CopyBackupToRegionResponse
+ * \brief The CopyBackupToRegionResponse class provides an interace for CloudHsmV2 CopyBackupToRegion responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::copyBackupToRegion
+ * \sa CloudHsmV2Client::copyBackupToRegion
  */
 
 /*!
@@ -46,7 +46,7 @@ CopyBackupToRegionResponse::CopyBackupToRegionResponse(
         const CopyBackupToRegionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new CopyBackupToRegionResponsePrivate(this), parent)
+    : CloudHsmV2Response(new CopyBackupToRegionResponsePrivate(this), parent)
 {
     setRequest(new CopyBackupToRegionRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const CopyBackupToRegionRequest * CopyBackupToRegionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 CopyBackupToRegion \a response.
+ * Parses a successful CloudHsmV2 CopyBackupToRegion \a response.
  */
 void CopyBackupToRegionResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void CopyBackupToRegionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CopyBackupToRegionResponsePrivate
+ * \class QtAws::CloudHsmV2::CopyBackupToRegionResponsePrivate
  * \brief The CopyBackupToRegionResponsePrivate class provides private implementation for CopyBackupToRegionResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a CopyBackupToRegionResponsePrivate object with public implementation \a q.
  */
 CopyBackupToRegionResponsePrivate::CopyBackupToRegionResponsePrivate(
-    CopyBackupToRegionResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    CopyBackupToRegionResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 CopyBackupToRegion response element from \a xml.
+ * Parses a CloudHsmV2 CopyBackupToRegion response element from \a xml.
  */
 void CopyBackupToRegionResponsePrivate::parseCopyBackupToRegionResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void CopyBackupToRegionResponsePrivate::parseCopyBackupToRegionResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

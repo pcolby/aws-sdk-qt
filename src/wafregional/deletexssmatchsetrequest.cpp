@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteXssMatchSetRequest
- * \brief The DeleteXssMatchSetRequest class provides an interface for WAFRegional DeleteXssMatchSet requests.
+ * \class QtAws::WafRegional::DeleteXssMatchSetRequest
+ * \brief The DeleteXssMatchSetRequest class provides an interface for WafRegional DeleteXssMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteXssMatchSet
+ * \sa WafRegionalClient::deleteXssMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteXssMatchSetRequest::DeleteXssMatchSetRequest(const DeleteXssMatchSetRequest &other)
-    : WAFRegionalRequest(new DeleteXssMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteXssMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteXssMatchSetRequest::DeleteXssMatchSetRequest(const DeleteXssMatchSetReques
  * Constructs a DeleteXssMatchSetRequest object.
  */
 DeleteXssMatchSetRequest::DeleteXssMatchSetRequest()
-    : WAFRegionalRequest(new DeleteXssMatchSetRequestPrivate(WAFRegionalRequest::DeleteXssMatchSetAction, this))
+    : WafRegionalRequest(new DeleteXssMatchSetRequestPrivate(WafRegionalRequest::DeleteXssMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteXssMatchSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteXssMatchSetRequestPrivate
  * \brief The DeleteXssMatchSetRequestPrivate class provides private implementation for DeleteXssMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteXssMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteXssMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteXssMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
     const DeleteXssMatchSetRequestPrivate &other, DeleteXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

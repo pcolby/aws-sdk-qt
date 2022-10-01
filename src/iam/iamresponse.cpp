@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::IamResponse
- * \brief The IamResponse class provides an interface for IAM responses.
+ * \class QtAws::Iam::IamResponse
+ * \brief The IamResponse class provides an interface for Iam responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -76,11 +76,11 @@ void IamResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::IamResponsePrivate
+ * \class QtAws::Iam::IamResponsePrivate
  * \brief The IamResponsePrivate class provides private implementation for IamResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -92,5 +92,5 @@ IamResponsePrivate::IamResponsePrivate(
 
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

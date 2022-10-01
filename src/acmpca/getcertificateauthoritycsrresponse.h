@@ -24,11 +24,11 @@
 #include "getcertificateauthoritycsrrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class GetCertificateAuthorityCsrResponsePrivate;
 
-class QTAWSACMPCA_EXPORT GetCertificateAuthorityCsrResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT GetCertificateAuthorityCsrResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

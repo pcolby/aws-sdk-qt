@@ -24,7 +24,7 @@
 #include "getexperimentrequest.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 class GetExperimentResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws
 
 #endif

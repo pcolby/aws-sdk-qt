@@ -41,6 +41,7 @@ namespace Comprehend {
  * \value BatchDetectKeyPhrasesAction Comprehend BatchDetectKeyPhrases action.
  * \value BatchDetectSentimentAction Comprehend BatchDetectSentiment action.
  * \value BatchDetectSyntaxAction Comprehend BatchDetectSyntax action.
+ * \value BatchDetectTargetedSentimentAction Comprehend BatchDetectTargetedSentiment action.
  * \value ClassifyDocumentAction Comprehend ClassifyDocument action.
  * \value ContainsPiiEntitiesAction Comprehend ContainsPiiEntities action.
  * \value CreateDocumentClassifierAction Comprehend CreateDocumentClassifier action.
@@ -49,6 +50,7 @@ namespace Comprehend {
  * \value DeleteDocumentClassifierAction Comprehend DeleteDocumentClassifier action.
  * \value DeleteEndpointAction Comprehend DeleteEndpoint action.
  * \value DeleteEntityRecognizerAction Comprehend DeleteEntityRecognizer action.
+ * \value DeleteResourcePolicyAction Comprehend DeleteResourcePolicy action.
  * \value DescribeDocumentClassificationJobAction Comprehend DescribeDocumentClassificationJob action.
  * \value DescribeDocumentClassifierAction Comprehend DescribeDocumentClassifier action.
  * \value DescribeDominantLanguageDetectionJobAction Comprehend DescribeDominantLanguageDetectionJob action.
@@ -58,7 +60,9 @@ namespace Comprehend {
  * \value DescribeEventsDetectionJobAction Comprehend DescribeEventsDetectionJob action.
  * \value DescribeKeyPhrasesDetectionJobAction Comprehend DescribeKeyPhrasesDetectionJob action.
  * \value DescribePiiEntitiesDetectionJobAction Comprehend DescribePiiEntitiesDetectionJob action.
+ * \value DescribeResourcePolicyAction Comprehend DescribeResourcePolicy action.
  * \value DescribeSentimentDetectionJobAction Comprehend DescribeSentimentDetectionJob action.
+ * \value DescribeTargetedSentimentDetectionJobAction Comprehend DescribeTargetedSentimentDetectionJob action.
  * \value DescribeTopicsDetectionJobAction Comprehend DescribeTopicsDetectionJob action.
  * \value DetectDominantLanguageAction Comprehend DetectDominantLanguage action.
  * \value DetectEntitiesAction Comprehend DetectEntities action.
@@ -66,18 +70,24 @@ namespace Comprehend {
  * \value DetectPiiEntitiesAction Comprehend DetectPiiEntities action.
  * \value DetectSentimentAction Comprehend DetectSentiment action.
  * \value DetectSyntaxAction Comprehend DetectSyntax action.
+ * \value DetectTargetedSentimentAction Comprehend DetectTargetedSentiment action.
+ * \value ImportModelAction Comprehend ImportModel action.
  * \value ListDocumentClassificationJobsAction Comprehend ListDocumentClassificationJobs action.
+ * \value ListDocumentClassifierSummariesAction Comprehend ListDocumentClassifierSummaries action.
  * \value ListDocumentClassifiersAction Comprehend ListDocumentClassifiers action.
  * \value ListDominantLanguageDetectionJobsAction Comprehend ListDominantLanguageDetectionJobs action.
  * \value ListEndpointsAction Comprehend ListEndpoints action.
  * \value ListEntitiesDetectionJobsAction Comprehend ListEntitiesDetectionJobs action.
+ * \value ListEntityRecognizerSummariesAction Comprehend ListEntityRecognizerSummaries action.
  * \value ListEntityRecognizersAction Comprehend ListEntityRecognizers action.
  * \value ListEventsDetectionJobsAction Comprehend ListEventsDetectionJobs action.
  * \value ListKeyPhrasesDetectionJobsAction Comprehend ListKeyPhrasesDetectionJobs action.
  * \value ListPiiEntitiesDetectionJobsAction Comprehend ListPiiEntitiesDetectionJobs action.
  * \value ListSentimentDetectionJobsAction Comprehend ListSentimentDetectionJobs action.
  * \value ListTagsForResourceAction Comprehend ListTagsForResource action.
+ * \value ListTargetedSentimentDetectionJobsAction Comprehend ListTargetedSentimentDetectionJobs action.
  * \value ListTopicsDetectionJobsAction Comprehend ListTopicsDetectionJobs action.
+ * \value PutResourcePolicyAction Comprehend PutResourcePolicy action.
  * \value StartDocumentClassificationJobAction Comprehend StartDocumentClassificationJob action.
  * \value StartDominantLanguageDetectionJobAction Comprehend StartDominantLanguageDetectionJob action.
  * \value StartEntitiesDetectionJobAction Comprehend StartEntitiesDetectionJob action.
@@ -85,6 +95,7 @@ namespace Comprehend {
  * \value StartKeyPhrasesDetectionJobAction Comprehend StartKeyPhrasesDetectionJob action.
  * \value StartPiiEntitiesDetectionJobAction Comprehend StartPiiEntitiesDetectionJob action.
  * \value StartSentimentDetectionJobAction Comprehend StartSentimentDetectionJob action.
+ * \value StartTargetedSentimentDetectionJobAction Comprehend StartTargetedSentimentDetectionJob action.
  * \value StartTopicsDetectionJobAction Comprehend StartTopicsDetectionJob action.
  * \value StopDominantLanguageDetectionJobAction Comprehend StopDominantLanguageDetectionJob action.
  * \value StopEntitiesDetectionJobAction Comprehend StopEntitiesDetectionJob action.
@@ -92,6 +103,7 @@ namespace Comprehend {
  * \value StopKeyPhrasesDetectionJobAction Comprehend StopKeyPhrasesDetectionJob action.
  * \value StopPiiEntitiesDetectionJobAction Comprehend StopPiiEntitiesDetectionJob action.
  * \value StopSentimentDetectionJobAction Comprehend StopSentimentDetectionJob action.
+ * \value StopTargetedSentimentDetectionJobAction Comprehend StopTargetedSentimentDetectionJob action.
  * \value StopTrainingDocumentClassifierAction Comprehend StopTrainingDocumentClassifier action.
  * \value StopTrainingEntityRecognizerAction Comprehend StopTrainingEntityRecognizer action.
  * \value TagResourceAction Comprehend TagResource action.
@@ -304,7 +316,7 @@ QNetworkRequest ComprehendRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ComprehendRequestPrivate::ComprehendRequestPrivate(const ComprehendRequest::Action action, ComprehendRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-27"))
 {
 
 }
@@ -343,6 +355,7 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(BatchDetectKeyPhrases);
         ActionToString(BatchDetectSentiment);
         ActionToString(BatchDetectSyntax);
+        ActionToString(BatchDetectTargetedSentiment);
         ActionToString(ClassifyDocument);
         ActionToString(ContainsPiiEntities);
         ActionToString(CreateDocumentClassifier);
@@ -351,6 +364,7 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(DeleteDocumentClassifier);
         ActionToString(DeleteEndpoint);
         ActionToString(DeleteEntityRecognizer);
+        ActionToString(DeleteResourcePolicy);
         ActionToString(DescribeDocumentClassificationJob);
         ActionToString(DescribeDocumentClassifier);
         ActionToString(DescribeDominantLanguageDetectionJob);
@@ -360,7 +374,9 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(DescribeEventsDetectionJob);
         ActionToString(DescribeKeyPhrasesDetectionJob);
         ActionToString(DescribePiiEntitiesDetectionJob);
+        ActionToString(DescribeResourcePolicy);
         ActionToString(DescribeSentimentDetectionJob);
+        ActionToString(DescribeTargetedSentimentDetectionJob);
         ActionToString(DescribeTopicsDetectionJob);
         ActionToString(DetectDominantLanguage);
         ActionToString(DetectEntities);
@@ -368,18 +384,24 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(DetectPiiEntities);
         ActionToString(DetectSentiment);
         ActionToString(DetectSyntax);
+        ActionToString(DetectTargetedSentiment);
+        ActionToString(ImportModel);
         ActionToString(ListDocumentClassificationJobs);
+        ActionToString(ListDocumentClassifierSummaries);
         ActionToString(ListDocumentClassifiers);
         ActionToString(ListDominantLanguageDetectionJobs);
         ActionToString(ListEndpoints);
         ActionToString(ListEntitiesDetectionJobs);
+        ActionToString(ListEntityRecognizerSummaries);
         ActionToString(ListEntityRecognizers);
         ActionToString(ListEventsDetectionJobs);
         ActionToString(ListKeyPhrasesDetectionJobs);
         ActionToString(ListPiiEntitiesDetectionJobs);
         ActionToString(ListSentimentDetectionJobs);
         ActionToString(ListTagsForResource);
+        ActionToString(ListTargetedSentimentDetectionJobs);
         ActionToString(ListTopicsDetectionJobs);
+        ActionToString(PutResourcePolicy);
         ActionToString(StartDocumentClassificationJob);
         ActionToString(StartDominantLanguageDetectionJob);
         ActionToString(StartEntitiesDetectionJob);
@@ -387,6 +409,7 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(StartKeyPhrasesDetectionJob);
         ActionToString(StartPiiEntitiesDetectionJob);
         ActionToString(StartSentimentDetectionJob);
+        ActionToString(StartTargetedSentimentDetectionJob);
         ActionToString(StartTopicsDetectionJob);
         ActionToString(StopDominantLanguageDetectionJob);
         ActionToString(StopEntitiesDetectionJob);
@@ -394,6 +417,7 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
         ActionToString(StopKeyPhrasesDetectionJob);
         ActionToString(StopPiiEntitiesDetectionJob);
         ActionToString(StopSentimentDetectionJob);
+        ActionToString(StopTargetedSentimentDetectionJob);
         ActionToString(StopTrainingDocumentClassifier);
         ActionToString(StopTrainingEntityRecognizer);
         ActionToString(TagResource);

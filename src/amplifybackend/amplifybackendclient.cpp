@@ -31,6 +31,8 @@
 #include "createbackendauthresponse.h"
 #include "createbackendconfigrequest.h"
 #include "createbackendconfigresponse.h"
+#include "createbackendstoragerequest.h"
+#include "createbackendstorageresponse.h"
 #include "createtokenrequest.h"
 #include "createtokenresponse.h"
 #include "deletebackendrequest.h"
@@ -39,6 +41,8 @@
 #include "deletebackendapiresponse.h"
 #include "deletebackendauthrequest.h"
 #include "deletebackendauthresponse.h"
+#include "deletebackendstoragerequest.h"
+#include "deletebackendstorageresponse.h"
 #include "deletetokenrequest.h"
 #include "deletetokenresponse.h"
 #include "generatebackendapimodelsrequest.h"
@@ -53,10 +57,18 @@
 #include "getbackendauthresponse.h"
 #include "getbackendjobrequest.h"
 #include "getbackendjobresponse.h"
+#include "getbackendstoragerequest.h"
+#include "getbackendstorageresponse.h"
 #include "gettokenrequest.h"
 #include "gettokenresponse.h"
+#include "importbackendauthrequest.h"
+#include "importbackendauthresponse.h"
+#include "importbackendstoragerequest.h"
+#include "importbackendstorageresponse.h"
 #include "listbackendjobsrequest.h"
 #include "listbackendjobsresponse.h"
+#include "lists3bucketsrequest.h"
+#include "lists3bucketsresponse.h"
 #include "removeallbackendsrequest.h"
 #include "removeallbackendsresponse.h"
 #include "removebackendconfigrequest.h"
@@ -69,6 +81,8 @@
 #include "updatebackendconfigresponse.h"
 #include "updatebackendjobrequest.h"
 #include "updatebackendjobresponse.h"
+#include "updatebackendstoragerequest.h"
+#include "updatebackendstorageresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -215,6 +229,19 @@ CreateBackendConfigResponse * AmplifyBackendClient::createBackendConfig(const Cr
 
 /*!
  * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * CreateBackendStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a backend storage
+ */
+CreateBackendStorageResponse * AmplifyBackendClient::createBackendStorage(const CreateBackendStorageRequest &request)
+{
+    return qobject_cast<CreateBackendStorageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
  * CreateTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -263,6 +290,19 @@ DeleteBackendAPIResponse * AmplifyBackendClient::deleteBackendAPI(const DeleteBa
 DeleteBackendAuthResponse * AmplifyBackendClient::deleteBackendAuth(const DeleteBackendAuthRequest &request)
 {
     return qobject_cast<DeleteBackendAuthResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * DeleteBackendStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified backend storage
+ */
+DeleteBackendStorageResponse * AmplifyBackendClient::deleteBackendStorage(const DeleteBackendStorageRequest &request)
+{
+    return qobject_cast<DeleteBackendStorageResponse *>(send(request));
 }
 
 /*!
@@ -336,7 +376,7 @@ GetBackendAPIModelsResponse * AmplifyBackendClient::getBackendAPIModels(const Ge
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets backend auth
+ * Gets a backend auth
  */
 GetBackendAuthResponse * AmplifyBackendClient::getBackendAuth(const GetBackendAuthRequest &request)
 {
@@ -358,6 +398,19 @@ GetBackendJobResponse * AmplifyBackendClient::getBackendJob(const GetBackendJobR
 
 /*!
  * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * GetBackendStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details for a backend storage
+ */
+GetBackendStorageResponse * AmplifyBackendClient::getBackendStorage(const GetBackendStorageRequest &request)
+{
+    return qobject_cast<GetBackendStorageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
  * GetTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -371,6 +424,32 @@ GetTokenResponse * AmplifyBackendClient::getToken(const GetTokenRequest &request
 
 /*!
  * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * ImportBackendAuthResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports an existing backend authentication
+ */
+ImportBackendAuthResponse * AmplifyBackendClient::importBackendAuth(const ImportBackendAuthRequest &request)
+{
+    return qobject_cast<ImportBackendAuthResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * ImportBackendStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports an existing backend storage
+ */
+ImportBackendStorageResponse * AmplifyBackendClient::importBackendStorage(const ImportBackendStorageRequest &request)
+{
+    return qobject_cast<ImportBackendStorageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
  * ListBackendJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -380,6 +459,19 @@ GetTokenResponse * AmplifyBackendClient::getToken(const GetTokenRequest &request
 ListBackendJobsResponse * AmplifyBackendClient::listBackendJobs(const ListBackendJobsRequest &request)
 {
     return qobject_cast<ListBackendJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * ListS3BucketsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The list of S3 buckets in your
+ */
+ListS3BucketsResponse * AmplifyBackendClient::listS3Buckets(const ListS3BucketsRequest &request)
+{
+    return qobject_cast<ListS3BucketsResponse *>(send(request));
 }
 
 /*!
@@ -401,7 +493,7 @@ RemoveAllBackendsResponse * AmplifyBackendClient::removeAllBackends(const Remove
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the AWS resources that are required to access the Amplify Admin
+ * Removes the AWS resources required to access the Amplify Admin
  */
 RemoveBackendConfigResponse * AmplifyBackendClient::removeBackendConfig(const RemoveBackendConfigRequest &request)
 {
@@ -440,7 +532,7 @@ UpdateBackendAuthResponse * AmplifyBackendClient::updateBackendAuth(const Update
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the AWS resources that are required to access the Amplify Admin
+ * Updates the AWS resources required to access the Amplify Admin
  */
 UpdateBackendConfigResponse * AmplifyBackendClient::updateBackendConfig(const UpdateBackendConfigRequest &request)
 {
@@ -458,6 +550,19 @@ UpdateBackendConfigResponse * AmplifyBackendClient::updateBackendConfig(const Up
 UpdateBackendJobResponse * AmplifyBackendClient::updateBackendJob(const UpdateBackendJobRequest &request)
 {
     return qobject_cast<UpdateBackendJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyBackendClient service, and returns a pointer to an
+ * UpdateBackendStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing backend storage
+ */
+UpdateBackendStorageResponse * AmplifyBackendClient::updateBackendStorage(const UpdateBackendStorageRequest &request)
+{
+    return qobject_cast<UpdateBackendStorageResponse *>(send(request));
 }
 
 /*!

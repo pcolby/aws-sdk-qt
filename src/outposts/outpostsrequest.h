@@ -39,16 +39,32 @@ class QTAWSOUTPOSTS_EXPORT OutpostsRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by Outposts.
     enum Action {
+        CancelOrderAction,
+        CreateOrderAction,
         CreateOutpostAction,
+        CreateSiteAction,
         DeleteOutpostAction,
         DeleteSiteAction,
+        GetCatalogItemAction,
+        GetConnectionAction,
+        GetOrderAction,
         GetOutpostAction,
         GetOutpostInstanceTypesAction,
+        GetSiteAction,
+        GetSiteAddressAction,
+        ListAssetsAction,
+        ListCatalogItemsAction,
+        ListOrdersAction,
         ListOutpostsAction,
         ListSitesAction,
         ListTagsForResourceAction,
+        StartConnectionAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateOutpostAction,
+        UpdateSiteAction,
+        UpdateSiteAddressAction,
+        UpdateSiteRackPhysicalPropertiesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

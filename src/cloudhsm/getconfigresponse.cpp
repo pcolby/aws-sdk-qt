@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::GetConfigResponse
- * \brief The GetConfigResponse class provides an interace for CloudHSM GetConfig responses.
+ * \class QtAws::CloudHsm::GetConfigResponse
+ * \brief The GetConfigResponse class provides an interace for CloudHsm GetConfig responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::getConfig
+ * \sa CloudHsmClient::getConfig
  */
 
 /*!
@@ -56,7 +56,7 @@ GetConfigResponse::GetConfigResponse(
         const GetConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new GetConfigResponsePrivate(this), parent)
+    : CloudHsmResponse(new GetConfigResponsePrivate(this), parent)
 {
     setRequest(new GetConfigRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const GetConfigRequest * GetConfigResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM GetConfig \a response.
+ * Parses a successful CloudHsm GetConfig \a response.
  */
 void GetConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void GetConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::GetConfigResponsePrivate
+ * \class QtAws::CloudHsm::GetConfigResponsePrivate
  * \brief The GetConfigResponsePrivate class provides private implementation for GetConfigResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a GetConfigResponsePrivate object with public implementation \a q.
  */
 GetConfigResponsePrivate::GetConfigResponsePrivate(
-    GetConfigResponse * const q) : CloudHSMResponsePrivate(q)
+    GetConfigResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM GetConfig response element from \a xml.
+ * Parses a CloudHsm GetConfig response element from \a xml.
  */
 void GetConfigResponsePrivate::parseGetConfigResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void GetConfigResponsePrivate::parseGetConfigResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DeleteTagsResponse
- * \brief The DeleteTagsResponse class provides an interace for MQ DeleteTags responses.
+ * \class QtAws::Mq::DeleteTagsResponse
+ * \brief The DeleteTagsResponse class provides an interace for Mq DeleteTags responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::deleteTags
  */
@@ -63,7 +64,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ DeleteTags \a response.
+ * Parses a successful Mq DeleteTags \a response.
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DeleteTagsResponsePrivate
+ * \class QtAws::Mq::DeleteTagsResponsePrivate
  * \brief The DeleteTagsResponsePrivate class provides private implementation for DeleteTagsResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 }
 
 /*!
- * Parses a MQ DeleteTags response element from \a xml.
+ * Parses a Mq DeleteTags response element from \a xml.
  */
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

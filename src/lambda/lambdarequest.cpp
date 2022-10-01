@@ -42,6 +42,7 @@ namespace Lambda {
  * \value CreateCodeSigningConfigAction Lambda CreateCodeSigningConfig action.
  * \value CreateEventSourceMappingAction Lambda CreateEventSourceMapping action.
  * \value CreateFunctionAction Lambda CreateFunction action.
+ * \value CreateFunctionUrlConfigAction Lambda CreateFunctionUrlConfig action.
  * \value DeleteAliasAction Lambda DeleteAlias action.
  * \value DeleteCodeSigningConfigAction Lambda DeleteCodeSigningConfig action.
  * \value DeleteEventSourceMappingAction Lambda DeleteEventSourceMapping action.
@@ -49,6 +50,7 @@ namespace Lambda {
  * \value DeleteFunctionCodeSigningConfigAction Lambda DeleteFunctionCodeSigningConfig action.
  * \value DeleteFunctionConcurrencyAction Lambda DeleteFunctionConcurrency action.
  * \value DeleteFunctionEventInvokeConfigAction Lambda DeleteFunctionEventInvokeConfig action.
+ * \value DeleteFunctionUrlConfigAction Lambda DeleteFunctionUrlConfig action.
  * \value DeleteLayerVersionAction Lambda DeleteLayerVersion action.
  * \value DeleteProvisionedConcurrencyConfigAction Lambda DeleteProvisionedConcurrencyConfig action.
  * \value GetAccountSettingsAction Lambda GetAccountSettings action.
@@ -60,6 +62,7 @@ namespace Lambda {
  * \value GetFunctionConcurrencyAction Lambda GetFunctionConcurrency action.
  * \value GetFunctionConfigurationAction Lambda GetFunctionConfiguration action.
  * \value GetFunctionEventInvokeConfigAction Lambda GetFunctionEventInvokeConfig action.
+ * \value GetFunctionUrlConfigAction Lambda GetFunctionUrlConfig action.
  * \value GetLayerVersionAction Lambda GetLayerVersion action.
  * \value GetLayerVersionByArnAction Lambda GetLayerVersionByArn action.
  * \value GetLayerVersionPolicyAction Lambda GetLayerVersionPolicy action.
@@ -71,6 +74,7 @@ namespace Lambda {
  * \value ListCodeSigningConfigsAction Lambda ListCodeSigningConfigs action.
  * \value ListEventSourceMappingsAction Lambda ListEventSourceMappings action.
  * \value ListFunctionEventInvokeConfigsAction Lambda ListFunctionEventInvokeConfigs action.
+ * \value ListFunctionUrlConfigsAction Lambda ListFunctionUrlConfigs action.
  * \value ListFunctionsAction Lambda ListFunctions action.
  * \value ListFunctionsByCodeSigningConfigAction Lambda ListFunctionsByCodeSigningConfig action.
  * \value ListLayerVersionsAction Lambda ListLayerVersions action.
@@ -94,6 +98,7 @@ namespace Lambda {
  * \value UpdateFunctionCodeAction Lambda UpdateFunctionCode action.
  * \value UpdateFunctionConfigurationAction Lambda UpdateFunctionConfiguration action.
  * \value UpdateFunctionEventInvokeConfigAction Lambda UpdateFunctionEventInvokeConfig action.
+ * \value UpdateFunctionUrlConfigAction Lambda UpdateFunctionUrlConfig action.
  */
 
 /*!
@@ -301,7 +306,7 @@ QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, LambdaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-03-31"))
 {
 
 }
@@ -341,6 +346,7 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
         ActionToString(CreateCodeSigningConfig);
         ActionToString(CreateEventSourceMapping);
         ActionToString(CreateFunction);
+        ActionToString(CreateFunctionUrlConfig);
         ActionToString(DeleteAlias);
         ActionToString(DeleteCodeSigningConfig);
         ActionToString(DeleteEventSourceMapping);
@@ -348,6 +354,7 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
         ActionToString(DeleteFunctionCodeSigningConfig);
         ActionToString(DeleteFunctionConcurrency);
         ActionToString(DeleteFunctionEventInvokeConfig);
+        ActionToString(DeleteFunctionUrlConfig);
         ActionToString(DeleteLayerVersion);
         ActionToString(DeleteProvisionedConcurrencyConfig);
         ActionToString(GetAccountSettings);
@@ -359,6 +366,7 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
         ActionToString(GetFunctionConcurrency);
         ActionToString(GetFunctionConfiguration);
         ActionToString(GetFunctionEventInvokeConfig);
+        ActionToString(GetFunctionUrlConfig);
         ActionToString(GetLayerVersion);
         ActionToString(GetLayerVersionByArn);
         ActionToString(GetLayerVersionPolicy);
@@ -370,6 +378,7 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
         ActionToString(ListCodeSigningConfigs);
         ActionToString(ListEventSourceMappings);
         ActionToString(ListFunctionEventInvokeConfigs);
+        ActionToString(ListFunctionUrlConfigs);
         ActionToString(ListFunctions);
         ActionToString(ListFunctionsByCodeSigningConfig);
         ActionToString(ListLayerVersions);
@@ -393,6 +402,7 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
         ActionToString(UpdateFunctionCode);
         ActionToString(UpdateFunctionConfiguration);
         ActionToString(UpdateFunctionEventInvokeConfig);
+        ActionToString(UpdateFunctionUrlConfig);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

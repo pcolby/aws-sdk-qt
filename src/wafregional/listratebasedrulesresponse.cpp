@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListRateBasedRulesResponse
- * \brief The ListRateBasedRulesResponse class provides an interace for WAFRegional ListRateBasedRules responses.
+ * \class QtAws::WafRegional::ListRateBasedRulesResponse
+ * \brief The ListRateBasedRulesResponse class provides an interace for WafRegional ListRateBasedRules responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listRateBasedRules
+ * \sa WafRegionalClient::listRateBasedRules
  */
 
 /*!
@@ -67,7 +67,7 @@ ListRateBasedRulesResponse::ListRateBasedRulesResponse(
         const ListRateBasedRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListRateBasedRulesResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListRateBasedRulesResponsePrivate(this), parent)
 {
     setRequest(new ListRateBasedRulesRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListRateBasedRules \a response.
+ * Parses a successful WafRegional ListRateBasedRules \a response.
  */
 void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListRateBasedRulesResponsePrivate
+ * \class QtAws::WafRegional::ListRateBasedRulesResponsePrivate
  * \brief The ListRateBasedRulesResponsePrivate class provides private implementation for ListRateBasedRulesResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListRateBasedRulesResponsePrivate object with public implementation \a q.
  */
 ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
-    ListRateBasedRulesResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListRateBasedRulesResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListRateBasedRules response element from \a xml.
+ * Parses a WafRegional ListRateBasedRules response element from \a xml.
  */
 void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

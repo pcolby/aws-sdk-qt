@@ -24,14 +24,14 @@
 #include "initiatelayeruploadrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class InitiateLayerUploadRequest;
 
-class InitiateLayerUploadRequestPrivate : public ECRPublicRequestPrivate {
+class InitiateLayerUploadRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    InitiateLayerUploadRequestPrivate(const ECRPublicRequest::Action action,
+    InitiateLayerUploadRequestPrivate(const EcrPublicRequest::Action action,
                                    InitiateLayerUploadRequest * const q);
     InitiateLayerUploadRequestPrivate(const InitiateLayerUploadRequestPrivate &other,
                                    InitiateLayerUploadRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

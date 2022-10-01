@@ -30,6 +30,8 @@ namespace QtAws {
 namespace ComputeOptimizer {
 
 class ComputeOptimizerClientPrivate;
+class DeleteRecommendationPreferencesRequest;
+class DeleteRecommendationPreferencesResponse;
 class DescribeRecommendationExportJobsRequest;
 class DescribeRecommendationExportJobsResponse;
 class ExportAutoScalingGroupRecommendationsRequest;
@@ -48,12 +50,20 @@ class GetEC2InstanceRecommendationsRequest;
 class GetEC2InstanceRecommendationsResponse;
 class GetEC2RecommendationProjectedMetricsRequest;
 class GetEC2RecommendationProjectedMetricsResponse;
+class GetEffectiveRecommendationPreferencesRequest;
+class GetEffectiveRecommendationPreferencesResponse;
 class GetEnrollmentStatusRequest;
 class GetEnrollmentStatusResponse;
+class GetEnrollmentStatusesForOrganizationRequest;
+class GetEnrollmentStatusesForOrganizationResponse;
 class GetLambdaFunctionRecommendationsRequest;
 class GetLambdaFunctionRecommendationsResponse;
+class GetRecommendationPreferencesRequest;
+class GetRecommendationPreferencesResponse;
 class GetRecommendationSummariesRequest;
 class GetRecommendationSummariesResponse;
+class PutRecommendationPreferencesRequest;
+class PutRecommendationPreferencesResponse;
 class UpdateEnrollmentStatusRequest;
 class UpdateEnrollmentStatusResponse;
 
@@ -73,6 +83,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    DeleteRecommendationPreferencesResponse * deleteRecommendationPreferences(const DeleteRecommendationPreferencesRequest &request);
     DescribeRecommendationExportJobsResponse * describeRecommendationExportJobs(const DescribeRecommendationExportJobsRequest &request);
     ExportAutoScalingGroupRecommendationsResponse * exportAutoScalingGroupRecommendations(const ExportAutoScalingGroupRecommendationsRequest &request);
     ExportEBSVolumeRecommendationsResponse * exportEBSVolumeRecommendations(const ExportEBSVolumeRecommendationsRequest &request);
@@ -82,9 +93,13 @@ public slots:
     GetEBSVolumeRecommendationsResponse * getEBSVolumeRecommendations(const GetEBSVolumeRecommendationsRequest &request);
     GetEC2InstanceRecommendationsResponse * getEC2InstanceRecommendations(const GetEC2InstanceRecommendationsRequest &request);
     GetEC2RecommendationProjectedMetricsResponse * getEC2RecommendationProjectedMetrics(const GetEC2RecommendationProjectedMetricsRequest &request);
+    GetEffectiveRecommendationPreferencesResponse * getEffectiveRecommendationPreferences(const GetEffectiveRecommendationPreferencesRequest &request);
     GetEnrollmentStatusResponse * getEnrollmentStatus(const GetEnrollmentStatusRequest &request);
+    GetEnrollmentStatusesForOrganizationResponse * getEnrollmentStatusesForOrganization(const GetEnrollmentStatusesForOrganizationRequest &request);
     GetLambdaFunctionRecommendationsResponse * getLambdaFunctionRecommendations(const GetLambdaFunctionRecommendationsRequest &request);
+    GetRecommendationPreferencesResponse * getRecommendationPreferences(const GetRecommendationPreferencesRequest &request);
     GetRecommendationSummariesResponse * getRecommendationSummaries(const GetRecommendationSummariesRequest &request);
+    PutRecommendationPreferencesResponse * putRecommendationPreferences(const PutRecommendationPreferencesRequest &request);
     UpdateEnrollmentStatusResponse * updateEnrollmentStatus(const UpdateEnrollmentStatusRequest &request);
 
 private:

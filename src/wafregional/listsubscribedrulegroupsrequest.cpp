@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListSubscribedRuleGroupsRequest
- * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WAFRegional ListSubscribedRuleGroups requests.
+ * \class QtAws::WafRegional::ListSubscribedRuleGroupsRequest
+ * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WafRegional ListSubscribedRuleGroups requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listSubscribedRuleGroups
+ * \sa WafRegionalClient::listSubscribedRuleGroups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubscribedRuleGroupsRequest &other)
-    : WAFRegionalRequest(new ListSubscribedRuleGroupsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListSubscribedRuleGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubsc
  * Constructs a ListSubscribedRuleGroupsRequest object.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest()
-    : WAFRegionalRequest(new ListSubscribedRuleGroupsRequestPrivate(WAFRegionalRequest::ListSubscribedRuleGroupsAction, this))
+    : WafRegionalRequest(new ListSubscribedRuleGroupsRequestPrivate(WafRegionalRequest::ListSubscribedRuleGroupsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::WAFRegional::ListSubscribedRuleGroupsRequestPrivate
+ * \class QtAws::WafRegional::ListSubscribedRuleGroupsRequestPrivate
  * \brief The ListSubscribedRuleGroupsRequestPrivate class provides private implementation for ListSubscribedRuleGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListSubscribedRuleGroupsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListSubscribedRuleGroupsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
     const ListSubscribedRuleGroupsRequestPrivate &other, ListSubscribedRuleGroupsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

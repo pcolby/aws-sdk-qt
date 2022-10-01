@@ -24,7 +24,7 @@
 #include "getinventoryrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class GetInventoryResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

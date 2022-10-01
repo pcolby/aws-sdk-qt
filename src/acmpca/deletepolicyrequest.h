@@ -23,11 +23,11 @@
 #include "acmpcarequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class DeletePolicyRequestPrivate;
 
-class QTAWSACMPCA_EXPORT DeletePolicyRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT DeletePolicyRequest : public AcmPcaRequest {
 
 public:
     DeletePolicyRequest(const DeletePolicyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

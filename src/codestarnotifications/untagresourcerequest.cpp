@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for CodeStarNotifications UntagResource requests.
+ * \class QtAws::CodestarNotifications::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for CodestarNotifications UntagResource requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::untagResource
+ * \sa CodestarNotificationsClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : CodeStarNotificationsRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : CodeStarNotificationsRequest(new UntagResourceRequestPrivate(CodeStarNotificationsRequest::UntagResourceAction, this))
+    : CodestarNotificationsRequest(new UntagResourceRequestPrivate(CodestarNotificationsRequest::UntagResourceAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::UntagResourceRequestPrivate
+ * \class QtAws::CodestarNotifications::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a UntagResourceRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, UntagResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, UntagResourceRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "updatebytematchsetrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class UpdateByteMatchSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

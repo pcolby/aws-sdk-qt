@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::DlmResponse
- * \brief The DlmResponse class provides an interface for DLM responses.
+ * \class QtAws::Dlm::DlmResponse
+ * \brief The DlmResponse class provides an interface for Dlm responses.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -76,11 +76,11 @@ void DlmResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DLM::DlmResponsePrivate
+ * \class QtAws::Dlm::DlmResponsePrivate
  * \brief The DlmResponsePrivate class provides private implementation for DlmResponse.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -92,5 +92,5 @@ DlmResponsePrivate::DlmResponsePrivate(
 
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

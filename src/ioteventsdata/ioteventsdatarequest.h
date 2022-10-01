@@ -40,6 +40,7 @@ public:
     /// Actions supported by IoTEventsData.
     enum Action {
         BatchAcknowledgeAlarmAction,
+        BatchDeleteDetectorAction,
         BatchDisableAlarmAction,
         BatchEnableAlarmAction,
         BatchPutMessageAction,

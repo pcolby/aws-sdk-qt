@@ -23,7 +23,7 @@
 #include "ssorequest.h"
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class ListAccountRolesRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

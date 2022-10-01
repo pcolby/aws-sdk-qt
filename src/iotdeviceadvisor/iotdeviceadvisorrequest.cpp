@@ -21,41 +21,42 @@
 #include "iotdeviceadvisorrequest_p.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorRequest
- * \brief The IoTDeviceAdvisorRequest class provides an interface for IoTDeviceAdvisor requests.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorRequest
+ * \brief The IotDeviceAdvisorRequest class provides an interface for IotDeviceAdvisor requests.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * \enum IoTDeviceAdvisorRequest::Action
+ * \enum IotDeviceAdvisorRequest::Action
  *
- * This enum describes the actions that can be performed as IoTDeviceAdvisor
+ * This enum describes the actions that can be performed as IotDeviceAdvisor
  * requests.
  *
- * \value CreateSuiteDefinitionAction IoTDeviceAdvisor CreateSuiteDefinition action.
- * \value DeleteSuiteDefinitionAction IoTDeviceAdvisor DeleteSuiteDefinition action.
- * \value GetSuiteDefinitionAction IoTDeviceAdvisor GetSuiteDefinition action.
- * \value GetSuiteRunAction IoTDeviceAdvisor GetSuiteRun action.
- * \value GetSuiteRunReportAction IoTDeviceAdvisor GetSuiteRunReport action.
- * \value ListSuiteDefinitionsAction IoTDeviceAdvisor ListSuiteDefinitions action.
- * \value ListSuiteRunsAction IoTDeviceAdvisor ListSuiteRuns action.
- * \value ListTagsForResourceAction IoTDeviceAdvisor ListTagsForResource action.
- * \value StartSuiteRunAction IoTDeviceAdvisor StartSuiteRun action.
- * \value StopSuiteRunAction IoTDeviceAdvisor StopSuiteRun action.
- * \value TagResourceAction IoTDeviceAdvisor TagResource action.
- * \value UntagResourceAction IoTDeviceAdvisor UntagResource action.
- * \value UpdateSuiteDefinitionAction IoTDeviceAdvisor UpdateSuiteDefinition action.
+ * \value CreateSuiteDefinitionAction IotDeviceAdvisor CreateSuiteDefinition action.
+ * \value DeleteSuiteDefinitionAction IotDeviceAdvisor DeleteSuiteDefinition action.
+ * \value GetEndpointAction IotDeviceAdvisor GetEndpoint action.
+ * \value GetSuiteDefinitionAction IotDeviceAdvisor GetSuiteDefinition action.
+ * \value GetSuiteRunAction IotDeviceAdvisor GetSuiteRun action.
+ * \value GetSuiteRunReportAction IotDeviceAdvisor GetSuiteRunReport action.
+ * \value ListSuiteDefinitionsAction IotDeviceAdvisor ListSuiteDefinitions action.
+ * \value ListSuiteRunsAction IotDeviceAdvisor ListSuiteRuns action.
+ * \value ListTagsForResourceAction IotDeviceAdvisor ListTagsForResource action.
+ * \value StartSuiteRunAction IotDeviceAdvisor StartSuiteRun action.
+ * \value StopSuiteRunAction IotDeviceAdvisor StopSuiteRun action.
+ * \value TagResourceAction IotDeviceAdvisor TagResource action.
+ * \value UntagResourceAction IotDeviceAdvisor UntagResource action.
+ * \value UpdateSuiteDefinitionAction IotDeviceAdvisor UpdateSuiteDefinition action.
  */
 
 /*!
- * Constructs a IoTDeviceAdvisorRequest object for IoTDeviceAdvisor \a action.
+ * Constructs a IotDeviceAdvisorRequest object for IotDeviceAdvisor \a action.
  */
-IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoTDeviceAdvisorRequestPrivate(action, this))
+IotDeviceAdvisorRequest::IotDeviceAdvisorRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new IotDeviceAdvisorRequestPrivate(action, this))
 {
 
 }
@@ -63,18 +64,18 @@ IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const IoTDeviceAdvisorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoTDeviceAdvisorRequestPrivate(*other.d_func(), this))
+IotDeviceAdvisorRequest::IotDeviceAdvisorRequest(const IotDeviceAdvisorRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new IotDeviceAdvisorRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the IoTDeviceAdvisorRequest object to be equal to \a other.
+ * Sets the IotDeviceAdvisorRequest object to be equal to \a other.
  */
-IoTDeviceAdvisorRequest& IoTDeviceAdvisorRequest::operator=(const IoTDeviceAdvisorRequest &other)
+IotDeviceAdvisorRequest& IotDeviceAdvisorRequest::operator=(const IotDeviceAdvisorRequest &other)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -82,57 +83,57 @@ IoTDeviceAdvisorRequest& IoTDeviceAdvisorRequest::operator=(const IoTDeviceAdvis
 }
 
 /*!
- * Constructs aa IoTDeviceAdvisorRequest object with private implementation \a d.
+ * Constructs aa IotDeviceAdvisorRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from IoTDeviceAdvisorRequestPrivate.
+ * implementation that inherits from IotDeviceAdvisorRequestPrivate.
  */
-IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IotDeviceAdvisorRequest::IotDeviceAdvisorRequest(IotDeviceAdvisorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the IoTDeviceAdvisor action to be performed by this request.
+ * Returns the IotDeviceAdvisor action to be performed by this request.
  */
-IoTDeviceAdvisorRequest::Action IoTDeviceAdvisorRequest::action() const
+IotDeviceAdvisorRequest::Action IotDeviceAdvisorRequest::action() const
 {
-    Q_D(const IoTDeviceAdvisorRequest);
+    Q_D(const IotDeviceAdvisorRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the IoTDeviceAdvisor action to be performed by this request.
+ * Returns the name of the IotDeviceAdvisor action to be performed by this request.
  */
-QString IoTDeviceAdvisorRequest::actionString() const
+QString IotDeviceAdvisorRequest::actionString() const
 {
-    return IoTDeviceAdvisorRequestPrivate::toString(action());
+    return IotDeviceAdvisorRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the IoTDeviceAdvisor API version implemented by this request.
+ * Returns the IotDeviceAdvisor API version implemented by this request.
  */
-QString IoTDeviceAdvisorRequest::apiVersion() const
+QString IotDeviceAdvisorRequest::apiVersion() const
 {
-    Q_D(const IoTDeviceAdvisorRequest);
+    Q_D(const IotDeviceAdvisorRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the IoTDeviceAdvisor action to be performed by this request to \a action.
+ * Sets the IotDeviceAdvisor action to be performed by this request to \a action.
  */
-void IoTDeviceAdvisorRequest::setAction(const Action action)
+void IotDeviceAdvisorRequest::setAction(const Action action)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->action = action;
 }
 
 /*!
- * Sets the IoTDeviceAdvisor API version to include in this request to \a version.
+ * Sets the IotDeviceAdvisor API version to include in this request to \a version.
  */
-void IoTDeviceAdvisorRequest::setApiVersion(const QString &version)
+void IotDeviceAdvisorRequest::setApiVersion(const QString &version)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->apiVersion = version;
 }
 
@@ -144,7 +145,7 @@ void IoTDeviceAdvisorRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool IoTDeviceAdvisorRequest::operator==(const IoTDeviceAdvisorRequest &other) const
+bool IotDeviceAdvisorRequest::operator==(const IotDeviceAdvisorRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -153,19 +154,19 @@ bool IoTDeviceAdvisorRequest::operator==(const IoTDeviceAdvisorRequest &other) c
 }
 
 /*
- * Returns \c tue if \a queueName is a valid IoTDeviceAdvisor queue name.
+ * Returns \c tue if \a queueName is a valid IotDeviceAdvisor queue name.
  *
- * @par From IoTDeviceAdvisor FAQs:
+ * @par From IotDeviceAdvisor FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid IoTDeviceAdvisor queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid IotDeviceAdvisor queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool IoTDeviceAdvisorRequest::isValidQueueName(const QString &queueName)
+/*bool IotDeviceAdvisorRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -175,45 +176,45 @@ bool IoTDeviceAdvisorRequest::operator==(const IoTDeviceAdvisorRequest &other) c
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int IoTDeviceAdvisorRequest::clearParameter(const QString &name)
+int IotDeviceAdvisorRequest::clearParameter(const QString &name)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void IoTDeviceAdvisorRequest::clearParameters()
+void IotDeviceAdvisorRequest::clearParameters()
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant IoTDeviceAdvisorRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant IotDeviceAdvisorRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const IoTDeviceAdvisorRequest);
+    Q_D(const IotDeviceAdvisorRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &IoTDeviceAdvisorRequest::parameters() const
+const QVariantMap &IotDeviceAdvisorRequest::parameters() const
 {
-    Q_D(const IoTDeviceAdvisorRequest);
+    Q_D(const IotDeviceAdvisorRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void IoTDeviceAdvisorRequest::setParameter(const QString &name, const QVariant &value)
+void IotDeviceAdvisorRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->parameters.insert(name, value);
 }
 
@@ -221,42 +222,42 @@ void IoTDeviceAdvisorRequest::setParameter(const QString &name, const QVariant &
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void IoTDeviceAdvisorRequest::setParameters(const QVariantMap &parameters)
+void IotDeviceAdvisorRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(IoTDeviceAdvisorRequest);
+    Q_D(IotDeviceAdvisorRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the IoTDeviceAdvisor request using the given
+ * Returns a network request for the IotDeviceAdvisor request using the given
  * \a endpoint.
  *
- * This IoTDeviceAdvisor implementation builds request URLs by combining the
+ * This IotDeviceAdvisor implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest IoTDeviceAdvisorRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest IotDeviceAdvisorRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const IoTDeviceAdvisorRequest);
+    //Q_D(const IotDeviceAdvisorRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorRequestPrivate
- * \brief The IoTDeviceAdvisorRequestPrivate class provides private implementation for IoTDeviceAdvisorRequest.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorRequestPrivate
+ * \brief The IotDeviceAdvisorRequestPrivate class provides private implementation for IotDeviceAdvisorRequest.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a IoTDeviceAdvisorRequestPrivate object for IoTDeviceAdvisor \a action,
+ * Constructs a IotDeviceAdvisorRequestPrivate object for IotDeviceAdvisor \a action,
  * with public implementation \a q.
  */
-IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequest::Action action, IoTDeviceAdvisorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+IotDeviceAdvisorRequestPrivate::IotDeviceAdvisorRequestPrivate(const IotDeviceAdvisorRequest::Action action, IotDeviceAdvisorRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-09-18"))
 {
 
 }
@@ -267,10 +268,10 @@ IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAd
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the IoTDeviceAdvisorRequest class's copy constructor.
+ * This is required to support the IotDeviceAdvisorRequest class's copy constructor.
  */
-IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequestPrivate &other,
-                                     IoTDeviceAdvisorRequest * const q)
+IotDeviceAdvisorRequestPrivate::IotDeviceAdvisorRequestPrivate(const IotDeviceAdvisorRequestPrivate &other,
+                                     IotDeviceAdvisorRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -281,17 +282,18 @@ IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAd
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts IoTDeviceAdvisorRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the IoTDeviceAdvisor service's Action
+ * This function converts IotDeviceAdvisorRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the IotDeviceAdvisor service's Action
  * query parameters.
  */
-QString IoTDeviceAdvisorRequestPrivate::toString(const IoTDeviceAdvisorRequest::Action &action)
+QString IotDeviceAdvisorRequestPrivate::toString(const IotDeviceAdvisorRequest::Action &action)
 {
     #define ActionToString(action) \
-        case IoTDeviceAdvisorRequest::action##Action: return QStringLiteral(#action)
+        case IotDeviceAdvisorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateSuiteDefinition);
         ActionToString(DeleteSuiteDefinition);
+        ActionToString(GetEndpoint);
         ActionToString(GetSuiteDefinition);
         ActionToString(GetSuiteRun);
         ActionToString(GetSuiteRunReport);
@@ -310,5 +312,5 @@ QString IoTDeviceAdvisorRequestPrivate::toString(const IoTDeviceAdvisorRequest::
     return QString();
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

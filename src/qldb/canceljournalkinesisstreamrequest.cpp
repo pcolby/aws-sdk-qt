@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::CancelJournalKinesisStreamRequest
- * \brief The CancelJournalKinesisStreamRequest class provides an interface for QLDB CancelJournalKinesisStream requests.
+ * \class QtAws::Qldb::CancelJournalKinesisStreamRequest
+ * \brief The CancelJournalKinesisStreamRequest class provides an interface for Qldb CancelJournalKinesisStream requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * CancelJournalKinesisStreamRequest::response(Q
 }
 
 /*!
- * \class QtAws::QLDB::CancelJournalKinesisStreamRequestPrivate
+ * \class QtAws::Qldb::CancelJournalKinesisStreamRequestPrivate
  * \brief The CancelJournalKinesisStreamRequestPrivate class provides private implementation for CancelJournalKinesisStreamRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ CancelJournalKinesisStreamRequestPrivate::CancelJournalKinesisStreamRequestPriva
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

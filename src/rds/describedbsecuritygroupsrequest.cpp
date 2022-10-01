@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBSecurityGroupsRequest
- * \brief The DescribeDBSecurityGroupsRequest class provides an interface for RDS DescribeDBSecurityGroups requests.
+ * \class QtAws::Rds::DescribeDBSecurityGroupsRequest
+ * \brief The DescribeDBSecurityGroupsRequest class provides an interface for Rds DescribeDBSecurityGroups requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBSecurityGroupsRequestPrivate
+ * \class QtAws::Rds::DescribeDBSecurityGroupsRequestPrivate
  * \brief The DescribeDBSecurityGroupsRequestPrivate class provides private implementation for DescribeDBSecurityGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

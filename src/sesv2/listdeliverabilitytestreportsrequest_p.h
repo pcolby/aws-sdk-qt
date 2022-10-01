@@ -24,14 +24,14 @@
 #include "listdeliverabilitytestreportsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListDeliverabilityTestReportsRequest;
 
-class ListDeliverabilityTestReportsRequestPrivate : public Sesv2RequestPrivate {
+class ListDeliverabilityTestReportsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListDeliverabilityTestReportsRequestPrivate(const Sesv2Request::Action action,
+    ListDeliverabilityTestReportsRequestPrivate(const SESv2Request::Action action,
                                    ListDeliverabilityTestReportsRequest * const q);
     ListDeliverabilityTestReportsRequestPrivate(const ListDeliverabilityTestReportsRequestPrivate &other,
                                    ListDeliverabilityTestReportsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

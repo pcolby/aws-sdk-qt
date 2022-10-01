@@ -39,6 +39,8 @@
 #include "allocateaddressresponse.h"
 #include "allocatehostsrequest.h"
 #include "allocatehostsresponse.h"
+#include "allocateipampoolcidrrequest.h"
+#include "allocateipampoolcidrresponse.h"
 #include "applysecuritygroupstoclientvpntargetnetworkrequest.h"
 #include "applysecuritygroupstoclientvpntargetnetworkresponse.h"
 #include "assignipv6addressesrequest.h"
@@ -55,14 +57,20 @@
 #include "associateenclavecertificateiamroleresponse.h"
 #include "associateiaminstanceprofilerequest.h"
 #include "associateiaminstanceprofileresponse.h"
+#include "associateinstanceeventwindowrequest.h"
+#include "associateinstanceeventwindowresponse.h"
 #include "associateroutetablerequest.h"
 #include "associateroutetableresponse.h"
 #include "associatesubnetcidrblockrequest.h"
 #include "associatesubnetcidrblockresponse.h"
 #include "associatetransitgatewaymulticastdomainrequest.h"
 #include "associatetransitgatewaymulticastdomainresponse.h"
+#include "associatetransitgatewaypolicytablerequest.h"
+#include "associatetransitgatewaypolicytableresponse.h"
 #include "associatetransitgatewayroutetablerequest.h"
 #include "associatetransitgatewayroutetableresponse.h"
+#include "associatetrunkinterfacerequest.h"
+#include "associatetrunkinterfaceresponse.h"
 #include "associatevpccidrblockrequest.h"
 #include "associatevpccidrblockresponse.h"
 #include "attachclassiclinkvpcrequest.h"
@@ -87,6 +95,8 @@
 #include "cancelbundletaskresponse.h"
 #include "cancelcapacityreservationrequest.h"
 #include "cancelcapacityreservationresponse.h"
+#include "cancelcapacityreservationfleetsrequest.h"
+#include "cancelcapacityreservationfleetsresponse.h"
 #include "cancelconversiontaskrequest.h"
 #include "cancelconversiontaskresponse.h"
 #include "cancelexporttaskrequest.h"
@@ -109,12 +119,18 @@
 #include "copysnapshotresponse.h"
 #include "createcapacityreservationrequest.h"
 #include "createcapacityreservationresponse.h"
+#include "createcapacityreservationfleetrequest.h"
+#include "createcapacityreservationfleetresponse.h"
 #include "createcarriergatewayrequest.h"
 #include "createcarriergatewayresponse.h"
 #include "createclientvpnendpointrequest.h"
 #include "createclientvpnendpointresponse.h"
 #include "createclientvpnrouterequest.h"
 #include "createclientvpnrouteresponse.h"
+#include "createcoipcidrrequest.h"
+#include "createcoipcidrresponse.h"
+#include "createcoippoolrequest.h"
+#include "createcoippoolresponse.h"
 #include "createcustomergatewayrequest.h"
 #include "createcustomergatewayresponse.h"
 #include "createdefaultsubnetrequest.h"
@@ -133,10 +149,18 @@
 #include "createfpgaimageresponse.h"
 #include "createimagerequest.h"
 #include "createimageresponse.h"
+#include "createinstanceeventwindowrequest.h"
+#include "createinstanceeventwindowresponse.h"
 #include "createinstanceexporttaskrequest.h"
 #include "createinstanceexporttaskresponse.h"
 #include "createinternetgatewayrequest.h"
 #include "createinternetgatewayresponse.h"
+#include "createipamrequest.h"
+#include "createipamresponse.h"
+#include "createipampoolrequest.h"
+#include "createipampoolresponse.h"
+#include "createipamscoperequest.h"
+#include "createipamscoperesponse.h"
 #include "createkeypairrequest.h"
 #include "createkeypairresponse.h"
 #include "createlaunchtemplaterequest.h"
@@ -145,6 +169,10 @@
 #include "createlaunchtemplateversionresponse.h"
 #include "createlocalgatewayrouterequest.h"
 #include "createlocalgatewayrouteresponse.h"
+#include "createlocalgatewayroutetablerequest.h"
+#include "createlocalgatewayroutetableresponse.h"
+#include "createlocalgatewayroutetablevirtualinterfacegroupassociationrequest.h"
+#include "createlocalgatewayroutetablevirtualinterfacegroupassociationresponse.h"
 #include "createlocalgatewayroutetablevpcassociationrequest.h"
 #include "createlocalgatewayroutetablevpcassociationresponse.h"
 #include "createmanagedprefixlistrequest.h"
@@ -155,6 +183,8 @@
 #include "createnetworkaclresponse.h"
 #include "createnetworkaclentryrequest.h"
 #include "createnetworkaclentryresponse.h"
+#include "createnetworkinsightsaccessscoperequest.h"
+#include "createnetworkinsightsaccessscoperesponse.h"
 #include "createnetworkinsightspathrequest.h"
 #include "createnetworkinsightspathresponse.h"
 #include "createnetworkinterfacerequest.h"
@@ -163,6 +193,8 @@
 #include "createnetworkinterfacepermissionresponse.h"
 #include "createplacementgrouprequest.h"
 #include "createplacementgroupresponse.h"
+#include "createpublicipv4poolrequest.h"
+#include "createpublicipv4poolresponse.h"
 #include "createreplacerootvolumetaskrequest.h"
 #include "createreplacerootvolumetaskresponse.h"
 #include "createreservedinstanceslistingrequest.h"
@@ -185,6 +217,8 @@
 #include "createstoreimagetaskresponse.h"
 #include "createsubnetrequest.h"
 #include "createsubnetresponse.h"
+#include "createsubnetcidrreservationrequest.h"
+#include "createsubnetcidrreservationresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
 #include "createtrafficmirrorfilterrequest.h"
@@ -205,12 +239,16 @@
 #include "createtransitgatewaymulticastdomainresponse.h"
 #include "createtransitgatewaypeeringattachmentrequest.h"
 #include "createtransitgatewaypeeringattachmentresponse.h"
+#include "createtransitgatewaypolicytablerequest.h"
+#include "createtransitgatewaypolicytableresponse.h"
 #include "createtransitgatewayprefixlistreferencerequest.h"
 #include "createtransitgatewayprefixlistreferenceresponse.h"
 #include "createtransitgatewayrouterequest.h"
 #include "createtransitgatewayrouteresponse.h"
 #include "createtransitgatewayroutetablerequest.h"
 #include "createtransitgatewayroutetableresponse.h"
+#include "createtransitgatewayroutetableannouncementrequest.h"
+#include "createtransitgatewayroutetableannouncementresponse.h"
 #include "createtransitgatewayvpcattachmentrequest.h"
 #include "createtransitgatewayvpcattachmentresponse.h"
 #include "createvolumerequest.h"
@@ -237,6 +275,10 @@
 #include "deleteclientvpnendpointresponse.h"
 #include "deleteclientvpnrouterequest.h"
 #include "deleteclientvpnrouteresponse.h"
+#include "deletecoipcidrrequest.h"
+#include "deletecoipcidrresponse.h"
+#include "deletecoippoolrequest.h"
+#include "deletecoippoolresponse.h"
 #include "deletecustomergatewayrequest.h"
 #include "deletecustomergatewayresponse.h"
 #include "deletedhcpoptionsrequest.h"
@@ -249,8 +291,16 @@
 #include "deleteflowlogsresponse.h"
 #include "deletefpgaimagerequest.h"
 #include "deletefpgaimageresponse.h"
+#include "deleteinstanceeventwindowrequest.h"
+#include "deleteinstanceeventwindowresponse.h"
 #include "deleteinternetgatewayrequest.h"
 #include "deleteinternetgatewayresponse.h"
+#include "deleteipamrequest.h"
+#include "deleteipamresponse.h"
+#include "deleteipampoolrequest.h"
+#include "deleteipampoolresponse.h"
+#include "deleteipamscoperequest.h"
+#include "deleteipamscoperesponse.h"
 #include "deletekeypairrequest.h"
 #include "deletekeypairresponse.h"
 #include "deletelaunchtemplaterequest.h"
@@ -259,6 +309,10 @@
 #include "deletelaunchtemplateversionsresponse.h"
 #include "deletelocalgatewayrouterequest.h"
 #include "deletelocalgatewayrouteresponse.h"
+#include "deletelocalgatewayroutetablerequest.h"
+#include "deletelocalgatewayroutetableresponse.h"
+#include "deletelocalgatewayroutetablevirtualinterfacegroupassociationrequest.h"
+#include "deletelocalgatewayroutetablevirtualinterfacegroupassociationresponse.h"
 #include "deletelocalgatewayroutetablevpcassociationrequest.h"
 #include "deletelocalgatewayroutetablevpcassociationresponse.h"
 #include "deletemanagedprefixlistrequest.h"
@@ -269,6 +323,10 @@
 #include "deletenetworkaclresponse.h"
 #include "deletenetworkaclentryrequest.h"
 #include "deletenetworkaclentryresponse.h"
+#include "deletenetworkinsightsaccessscoperequest.h"
+#include "deletenetworkinsightsaccessscoperesponse.h"
+#include "deletenetworkinsightsaccessscopeanalysisrequest.h"
+#include "deletenetworkinsightsaccessscopeanalysisresponse.h"
 #include "deletenetworkinsightsanalysisrequest.h"
 #include "deletenetworkinsightsanalysisresponse.h"
 #include "deletenetworkinsightspathrequest.h"
@@ -279,6 +337,8 @@
 #include "deletenetworkinterfacepermissionresponse.h"
 #include "deleteplacementgrouprequest.h"
 #include "deleteplacementgroupresponse.h"
+#include "deletepublicipv4poolrequest.h"
+#include "deletepublicipv4poolresponse.h"
 #include "deletequeuedreservedinstancesrequest.h"
 #include "deletequeuedreservedinstancesresponse.h"
 #include "deleterouterequest.h"
@@ -293,6 +353,8 @@
 #include "deletespotdatafeedsubscriptionresponse.h"
 #include "deletesubnetrequest.h"
 #include "deletesubnetresponse.h"
+#include "deletesubnetcidrreservationrequest.h"
+#include "deletesubnetcidrreservationresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
 #include "deletetrafficmirrorfilterrequest.h"
@@ -313,12 +375,16 @@
 #include "deletetransitgatewaymulticastdomainresponse.h"
 #include "deletetransitgatewaypeeringattachmentrequest.h"
 #include "deletetransitgatewaypeeringattachmentresponse.h"
+#include "deletetransitgatewaypolicytablerequest.h"
+#include "deletetransitgatewaypolicytableresponse.h"
 #include "deletetransitgatewayprefixlistreferencerequest.h"
 #include "deletetransitgatewayprefixlistreferenceresponse.h"
 #include "deletetransitgatewayrouterequest.h"
 #include "deletetransitgatewayrouteresponse.h"
 #include "deletetransitgatewayroutetablerequest.h"
 #include "deletetransitgatewayroutetableresponse.h"
+#include "deletetransitgatewayroutetableannouncementrequest.h"
+#include "deletetransitgatewayroutetableannouncementresponse.h"
 #include "deletetransitgatewayvpcattachmentrequest.h"
 #include "deletetransitgatewayvpcattachmentresponse.h"
 #include "deletevolumerequest.h"
@@ -341,6 +407,10 @@
 #include "deletevpngatewayresponse.h"
 #include "deprovisionbyoipcidrrequest.h"
 #include "deprovisionbyoipcidrresponse.h"
+#include "deprovisionipampoolcidrrequest.h"
+#include "deprovisionipampoolcidrresponse.h"
+#include "deprovisionpublicipv4poolcidrrequest.h"
+#include "deprovisionpublicipv4poolcidrresponse.h"
 #include "deregisterimagerequest.h"
 #include "deregisterimageresponse.h"
 #include "deregisterinstanceeventnotificationattributesrequest.h"
@@ -363,6 +433,8 @@
 #include "describebundletasksresponse.h"
 #include "describebyoipcidrsrequest.h"
 #include "describebyoipcidrsresponse.h"
+#include "describecapacityreservationfleetsrequest.h"
+#include "describecapacityreservationfleetsresponse.h"
 #include "describecapacityreservationsrequest.h"
 #include "describecapacityreservationsresponse.h"
 #include "describecarriergatewaysrequest.h"
@@ -395,6 +467,8 @@
 #include "describeexportimagetasksresponse.h"
 #include "describeexporttasksrequest.h"
 #include "describeexporttasksresponse.h"
+#include "describefastlaunchimagesrequest.h"
+#include "describefastlaunchimagesresponse.h"
 #include "describefastsnapshotrestoresrequest.h"
 #include "describefastsnapshotrestoresresponse.h"
 #include "describefleethistoryrequest.h"
@@ -435,6 +509,8 @@
 #include "describeinstancecreditspecificationsresponse.h"
 #include "describeinstanceeventnotificationattributesrequest.h"
 #include "describeinstanceeventnotificationattributesresponse.h"
+#include "describeinstanceeventwindowsrequest.h"
+#include "describeinstanceeventwindowsresponse.h"
 #include "describeinstancestatusrequest.h"
 #include "describeinstancestatusresponse.h"
 #include "describeinstancetypeofferingsrequest.h"
@@ -445,6 +521,12 @@
 #include "describeinstancesresponse.h"
 #include "describeinternetgatewaysrequest.h"
 #include "describeinternetgatewaysresponse.h"
+#include "describeipampoolsrequest.h"
+#include "describeipampoolsresponse.h"
+#include "describeipamscopesrequest.h"
+#include "describeipamscopesresponse.h"
+#include "describeipamsrequest.h"
+#include "describeipamsresponse.h"
 #include "describeipv6poolsrequest.h"
 #include "describeipv6poolsresponse.h"
 #include "describekeypairsrequest.h"
@@ -473,6 +555,10 @@
 #include "describenatgatewaysresponse.h"
 #include "describenetworkaclsrequest.h"
 #include "describenetworkaclsresponse.h"
+#include "describenetworkinsightsaccessscopeanalysesrequest.h"
+#include "describenetworkinsightsaccessscopeanalysesresponse.h"
+#include "describenetworkinsightsaccessscopesrequest.h"
+#include "describenetworkinsightsaccessscopesresponse.h"
 #include "describenetworkinsightsanalysesrequest.h"
 #include "describenetworkinsightsanalysesresponse.h"
 #include "describenetworkinsightspathsrequest.h"
@@ -511,10 +597,14 @@
 #include "describescheduledinstancesresponse.h"
 #include "describesecuritygroupreferencesrequest.h"
 #include "describesecuritygroupreferencesresponse.h"
+#include "describesecuritygrouprulesrequest.h"
+#include "describesecuritygrouprulesresponse.h"
 #include "describesecuritygroupsrequest.h"
 #include "describesecuritygroupsresponse.h"
 #include "describesnapshotattributerequest.h"
 #include "describesnapshotattributeresponse.h"
+#include "describesnapshottierstatusrequest.h"
+#include "describesnapshottierstatusresponse.h"
 #include "describesnapshotsrequest.h"
 #include "describesnapshotsresponse.h"
 #include "describespotdatafeedsubscriptionrequest.h"
@@ -553,12 +643,18 @@
 #include "describetransitgatewaymulticastdomainsresponse.h"
 #include "describetransitgatewaypeeringattachmentsrequest.h"
 #include "describetransitgatewaypeeringattachmentsresponse.h"
+#include "describetransitgatewaypolicytablesrequest.h"
+#include "describetransitgatewaypolicytablesresponse.h"
+#include "describetransitgatewayroutetableannouncementsrequest.h"
+#include "describetransitgatewayroutetableannouncementsresponse.h"
 #include "describetransitgatewayroutetablesrequest.h"
 #include "describetransitgatewayroutetablesresponse.h"
 #include "describetransitgatewayvpcattachmentsrequest.h"
 #include "describetransitgatewayvpcattachmentsresponse.h"
 #include "describetransitgatewaysrequest.h"
 #include "describetransitgatewaysresponse.h"
+#include "describetrunkinterfaceassociationsrequest.h"
+#include "describetrunkinterfaceassociationsresponse.h"
 #include "describevolumeattributerequest.h"
 #include "describevolumeattributeresponse.h"
 #include "describevolumestatusrequest.h"
@@ -605,10 +701,14 @@
 #include "detachvpngatewayresponse.h"
 #include "disableebsencryptionbydefaultrequest.h"
 #include "disableebsencryptionbydefaultresponse.h"
+#include "disablefastlaunchrequest.h"
+#include "disablefastlaunchresponse.h"
 #include "disablefastsnapshotrestoresrequest.h"
 #include "disablefastsnapshotrestoresresponse.h"
 #include "disableimagedeprecationrequest.h"
 #include "disableimagedeprecationresponse.h"
+#include "disableipamorganizationadminaccountrequest.h"
+#include "disableipamorganizationadminaccountresponse.h"
 #include "disableserialconsoleaccessrequest.h"
 #include "disableserialconsoleaccessresponse.h"
 #include "disabletransitgatewayroutetablepropagationrequest.h"
@@ -627,22 +727,32 @@
 #include "disassociateenclavecertificateiamroleresponse.h"
 #include "disassociateiaminstanceprofilerequest.h"
 #include "disassociateiaminstanceprofileresponse.h"
+#include "disassociateinstanceeventwindowrequest.h"
+#include "disassociateinstanceeventwindowresponse.h"
 #include "disassociateroutetablerequest.h"
 #include "disassociateroutetableresponse.h"
 #include "disassociatesubnetcidrblockrequest.h"
 #include "disassociatesubnetcidrblockresponse.h"
 #include "disassociatetransitgatewaymulticastdomainrequest.h"
 #include "disassociatetransitgatewaymulticastdomainresponse.h"
+#include "disassociatetransitgatewaypolicytablerequest.h"
+#include "disassociatetransitgatewaypolicytableresponse.h"
 #include "disassociatetransitgatewayroutetablerequest.h"
 #include "disassociatetransitgatewayroutetableresponse.h"
+#include "disassociatetrunkinterfacerequest.h"
+#include "disassociatetrunkinterfaceresponse.h"
 #include "disassociatevpccidrblockrequest.h"
 #include "disassociatevpccidrblockresponse.h"
 #include "enableebsencryptionbydefaultrequest.h"
 #include "enableebsencryptionbydefaultresponse.h"
+#include "enablefastlaunchrequest.h"
+#include "enablefastlaunchresponse.h"
 #include "enablefastsnapshotrestoresrequest.h"
 #include "enablefastsnapshotrestoresresponse.h"
 #include "enableimagedeprecationrequest.h"
 #include "enableimagedeprecationresponse.h"
+#include "enableipamorganizationadminaccountrequest.h"
+#include "enableipamorganizationadminaccountresponse.h"
 #include "enableserialconsoleaccessrequest.h"
 #include "enableserialconsoleaccessresponse.h"
 #include "enabletransitgatewayroutetablepropagationrequest.h"
@@ -687,28 +797,56 @@
 #include "getgroupsforcapacityreservationresponse.h"
 #include "gethostreservationpurchasepreviewrequest.h"
 #include "gethostreservationpurchasepreviewresponse.h"
+#include "getinstancetypesfrominstancerequirementsrequest.h"
+#include "getinstancetypesfrominstancerequirementsresponse.h"
+#include "getinstanceuefidatarequest.h"
+#include "getinstanceuefidataresponse.h"
+#include "getipamaddresshistoryrequest.h"
+#include "getipamaddresshistoryresponse.h"
+#include "getipampoolallocationsrequest.h"
+#include "getipampoolallocationsresponse.h"
+#include "getipampoolcidrsrequest.h"
+#include "getipampoolcidrsresponse.h"
+#include "getipamresourcecidrsrequest.h"
+#include "getipamresourcecidrsresponse.h"
 #include "getlaunchtemplatedatarequest.h"
 #include "getlaunchtemplatedataresponse.h"
 #include "getmanagedprefixlistassociationsrequest.h"
 #include "getmanagedprefixlistassociationsresponse.h"
 #include "getmanagedprefixlistentriesrequest.h"
 #include "getmanagedprefixlistentriesresponse.h"
+#include "getnetworkinsightsaccessscopeanalysisfindingsrequest.h"
+#include "getnetworkinsightsaccessscopeanalysisfindingsresponse.h"
+#include "getnetworkinsightsaccessscopecontentrequest.h"
+#include "getnetworkinsightsaccessscopecontentresponse.h"
 #include "getpassworddatarequest.h"
 #include "getpassworddataresponse.h"
 #include "getreservedinstancesexchangequoterequest.h"
 #include "getreservedinstancesexchangequoteresponse.h"
 #include "getserialconsoleaccessstatusrequest.h"
 #include "getserialconsoleaccessstatusresponse.h"
+#include "getspotplacementscoresrequest.h"
+#include "getspotplacementscoresresponse.h"
+#include "getsubnetcidrreservationsrequest.h"
+#include "getsubnetcidrreservationsresponse.h"
 #include "gettransitgatewayattachmentpropagationsrequest.h"
 #include "gettransitgatewayattachmentpropagationsresponse.h"
 #include "gettransitgatewaymulticastdomainassociationsrequest.h"
 #include "gettransitgatewaymulticastdomainassociationsresponse.h"
+#include "gettransitgatewaypolicytableassociationsrequest.h"
+#include "gettransitgatewaypolicytableassociationsresponse.h"
+#include "gettransitgatewaypolicytableentriesrequest.h"
+#include "gettransitgatewaypolicytableentriesresponse.h"
 #include "gettransitgatewayprefixlistreferencesrequest.h"
 #include "gettransitgatewayprefixlistreferencesresponse.h"
 #include "gettransitgatewayroutetableassociationsrequest.h"
 #include "gettransitgatewayroutetableassociationsresponse.h"
 #include "gettransitgatewayroutetablepropagationsrequest.h"
 #include "gettransitgatewayroutetablepropagationsresponse.h"
+#include "getvpnconnectiondevicesampleconfigurationrequest.h"
+#include "getvpnconnectiondevicesampleconfigurationresponse.h"
+#include "getvpnconnectiondevicetypesrequest.h"
+#include "getvpnconnectiondevicetypesresponse.h"
 #include "importclientvpnclientcertificaterevocationlistrequest.h"
 #include "importclientvpnclientcertificaterevocationlistresponse.h"
 #include "importimagerequest.h"
@@ -721,12 +859,18 @@
 #include "importsnapshotresponse.h"
 #include "importvolumerequest.h"
 #include "importvolumeresponse.h"
+#include "listimagesinrecyclebinrequest.h"
+#include "listimagesinrecyclebinresponse.h"
+#include "listsnapshotsinrecyclebinrequest.h"
+#include "listsnapshotsinrecyclebinresponse.h"
 #include "modifyaddressattributerequest.h"
 #include "modifyaddressattributeresponse.h"
 #include "modifyavailabilityzonegrouprequest.h"
 #include "modifyavailabilityzonegroupresponse.h"
 #include "modifycapacityreservationrequest.h"
 #include "modifycapacityreservationresponse.h"
+#include "modifycapacityreservationfleetrequest.h"
+#include "modifycapacityreservationfleetresponse.h"
 #include "modifyclientvpnendpointrequest.h"
 #include "modifyclientvpnendpointresponse.h"
 #include "modifydefaultcreditspecificationrequest.h"
@@ -753,20 +897,40 @@
 #include "modifyinstancecreditspecificationresponse.h"
 #include "modifyinstanceeventstarttimerequest.h"
 #include "modifyinstanceeventstarttimeresponse.h"
+#include "modifyinstanceeventwindowrequest.h"
+#include "modifyinstanceeventwindowresponse.h"
+#include "modifyinstancemaintenanceoptionsrequest.h"
+#include "modifyinstancemaintenanceoptionsresponse.h"
 #include "modifyinstancemetadataoptionsrequest.h"
 #include "modifyinstancemetadataoptionsresponse.h"
 #include "modifyinstanceplacementrequest.h"
 #include "modifyinstanceplacementresponse.h"
+#include "modifyipamrequest.h"
+#include "modifyipamresponse.h"
+#include "modifyipampoolrequest.h"
+#include "modifyipampoolresponse.h"
+#include "modifyipamresourcecidrrequest.h"
+#include "modifyipamresourcecidrresponse.h"
+#include "modifyipamscoperequest.h"
+#include "modifyipamscoperesponse.h"
 #include "modifylaunchtemplaterequest.h"
 #include "modifylaunchtemplateresponse.h"
+#include "modifylocalgatewayrouterequest.h"
+#include "modifylocalgatewayrouteresponse.h"
 #include "modifymanagedprefixlistrequest.h"
 #include "modifymanagedprefixlistresponse.h"
 #include "modifynetworkinterfaceattributerequest.h"
 #include "modifynetworkinterfaceattributeresponse.h"
+#include "modifyprivatednsnameoptionsrequest.h"
+#include "modifyprivatednsnameoptionsresponse.h"
 #include "modifyreservedinstancesrequest.h"
 #include "modifyreservedinstancesresponse.h"
+#include "modifysecuritygrouprulesrequest.h"
+#include "modifysecuritygrouprulesresponse.h"
 #include "modifysnapshotattributerequest.h"
 #include "modifysnapshotattributeresponse.h"
+#include "modifysnapshottierrequest.h"
+#include "modifysnapshottierresponse.h"
 #include "modifyspotfleetrequestrequest.h"
 #include "modifyspotfleetrequestresponse.h"
 #include "modifysubnetattributerequest.h"
@@ -795,6 +959,8 @@
 #include "modifyvpcendpointconnectionnotificationresponse.h"
 #include "modifyvpcendpointserviceconfigurationrequest.h"
 #include "modifyvpcendpointserviceconfigurationresponse.h"
+#include "modifyvpcendpointservicepayerresponsibilityrequest.h"
+#include "modifyvpcendpointservicepayerresponsibilityresponse.h"
 #include "modifyvpcendpointservicepermissionsrequest.h"
 #include "modifyvpcendpointservicepermissionsresponse.h"
 #include "modifyvpcpeeringconnectionoptionsrequest.h"
@@ -813,8 +979,14 @@
 #include "monitorinstancesresponse.h"
 #include "moveaddresstovpcrequest.h"
 #include "moveaddresstovpcresponse.h"
+#include "movebyoipcidrtoipamrequest.h"
+#include "movebyoipcidrtoipamresponse.h"
 #include "provisionbyoipcidrrequest.h"
 #include "provisionbyoipcidrresponse.h"
+#include "provisionipampoolcidrrequest.h"
+#include "provisionipampoolcidrresponse.h"
+#include "provisionpublicipv4poolcidrrequest.h"
+#include "provisionpublicipv4poolcidrresponse.h"
 #include "purchasehostreservationrequest.h"
 #include "purchasehostreservationresponse.h"
 #include "purchasereservedinstancesofferingrequest.h"
@@ -845,6 +1017,8 @@
 #include "releaseaddressresponse.h"
 #include "releasehostsrequest.h"
 #include "releasehostsresponse.h"
+#include "releaseipampoolallocationrequest.h"
+#include "releaseipampoolallocationresponse.h"
 #include "replaceiaminstanceprofileassociationrequest.h"
 #include "replaceiaminstanceprofileassociationresponse.h"
 #include "replacenetworkaclassociationrequest.h"
@@ -879,8 +1053,14 @@
 #include "resetsnapshotattributeresponse.h"
 #include "restoreaddresstoclassicrequest.h"
 #include "restoreaddresstoclassicresponse.h"
+#include "restoreimagefromrecyclebinrequest.h"
+#include "restoreimagefromrecyclebinresponse.h"
 #include "restoremanagedprefixlistversionrequest.h"
 #include "restoremanagedprefixlistversionresponse.h"
+#include "restoresnapshotfromrecyclebinrequest.h"
+#include "restoresnapshotfromrecyclebinresponse.h"
+#include "restoresnapshottierrequest.h"
+#include "restoresnapshottierresponse.h"
 #include "revokeclientvpningressrequest.h"
 #include "revokeclientvpningressresponse.h"
 #include "revokesecuritygroupegressrequest.h"
@@ -901,6 +1081,8 @@
 #include "senddiagnosticinterruptresponse.h"
 #include "startinstancesrequest.h"
 #include "startinstancesresponse.h"
+#include "startnetworkinsightsaccessscopeanalysisrequest.h"
+#include "startnetworkinsightsaccessscopeanalysisresponse.h"
 #include "startnetworkinsightsanalysisrequest.h"
 #include "startnetworkinsightsanalysisresponse.h"
 #include "startvpcendpointserviceprivatednsverificationrequest.h"
@@ -928,8 +1110,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EC2
- * \brief Contains classess for accessing Amazon Elastic Compute Cloud ( EC2).
+ * \namespace QtAws::Ec2
+ * \brief Contains classess for accessing Amazon Elastic Compute Cloud.
  *
  * \inmodule QtAwsEc2
  *
@@ -937,23 +1119,23 @@
  */
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::Ec2Client
- * \brief The Ec2Client class provides access to the Amazon Elastic Compute Cloud ( EC2) service.
+ * \class QtAws::Ec2::Ec2Client
+ * \brief The Ec2Client class provides access to the Amazon Elastic Compute Cloud service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -976,8 +1158,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  */
 
 /*!
@@ -1130,8 +1312,8 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Advertises an IPv4 or IPv6 address range that is provisioned for use with your AWS resources through bring your own IP
- * addresses
+ * Advertises an IPv4 or IPv6 address range that is provisioned for use with your Amazon Web Services resources through
+ * bring your own IP addresses
  *
  * (BYOIP)>
  *
@@ -1139,13 +1321,15 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
  *
  * time>
  *
- * We recommend that you stop advertising the BYOIP CIDR from other locations when you advertise it from AWS. To minimize
- * down time, you can configure your AWS resources to use an address from a BYOIP CIDR before it is advertised, and then
- * simultaneously stop advertising it from the current location and start advertising it through
+ * We recommend that you stop advertising the BYOIP CIDR from other locations when you advertise it from Amazon Web
+ * Services. To minimize down time, you can configure your Amazon Web Services resources to use an address from a BYOIP
+ * CIDR before it is advertised, and then simultaneously stop advertising it from the current location and start
+ * advertising it through Amazon Web
  *
- * AWS>
+ * Services>
  *
- * It can take a few minutes before traffic to the specified addresses starts routing to AWS because of BGP propagation
+ * It can take a few minutes before traffic to the specified addresses starts routing to Amazon Web Services because of BGP
+ * propagation
  *
  * delays>
  *
@@ -1162,22 +1346,23 @@ AdvertiseByoipCidrResponse * Ec2Client::advertiseByoipCidr(const AdvertiseByoipC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with
- * an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can
- * be allocated to a different AWS
+ * Allocates an Elastic IP address to your Amazon Web Services account. After you allocate the Elastic IP address you can
+ * associate it with an instance or network interface. After you release an Elastic IP address, it is released to the IP
+ * address pool and can be allocated to a different Amazon Web Services
  *
  * account>
  *
- * You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public
- * IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses
- * (BYOIP). For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring
- * Your Own IP Addresses (BYOIP)</a> in the <i>Amazon Elastic Compute Cloud User
+ * You can allocate an Elastic IP address from an address pool owned by Amazon Web Services or from an address pool created
+ * from a public IPv4 address range that you have brought to Amazon Web Services for use with your Amazon Web Services
+ * resources using bring your own IP addresses (BYOIP). For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring Your Own IP Addresses (BYOIP)</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
  * [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP
- * address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for
- * EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this
+ * address that you released after it is allocated to another Amazon Web Services account. You cannot recover an Elastic IP
+ * address for EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this
  *
  * operation>
  *
@@ -1194,6 +1379,12 @@ AdvertiseByoipCidrResponse * Ec2Client::advertiseByoipCidr(const AdvertiseByoipC
  *
  * You can allocate a carrier IP address which is a public IP address from a telecommunication carrier, to a network
  * interface which resides in a subnet in a Wavelength Zone (for example an EC2 instance).
+ *
+ * </p <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressRequest &request)
 {
@@ -1212,6 +1403,22 @@ AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressReques
 AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &request)
 {
     return qobject_cast<AllocateHostsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AllocateIpamPoolCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another resource or
+ * IPAM pool. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon VPC IPAM
+ * User Guide</i>.
+ */
+AllocateIpamPoolCidrResponse * Ec2Client::allocateIpamPoolCidr(const AllocateIpamPoolCidrRequest &request)
+{
+    return qobject_cast<AllocateIpamPoolCidrResponse *>(send(request));
 }
 
 /*!
@@ -1243,7 +1450,14 @@ ApplySecurityGroupsToClientVpnTargetNetworkResponse * Ec2Client::applySecurityGr
  *
  * Guide</i>>
  *
- * You must specify either the IPv6 addresses or the IPv6 address count in the
+ * You must specify either the IPv6 addresses or the IPv6 address count in the request.
+ *
+ * </p
+ *
+ * You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix Delegation
+ * prefixes, or the IPv6 Prefix Delegation count. For information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2 network
+ * interfaces</a> in the <i>Amazon Elastic Compute Cloud User
  */
 AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6AddressesRequest &request)
 {
@@ -1281,6 +1495,13 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
  * complete>
  *
  * You must specify either the IP addresses or the IP address count in the
+ *
+ * request>
+ *
+ * You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix Delegation
+ * prefixes, or the IPv4 Prefix Delegation count. For information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2 network
+ * interfaces</a> in the <i>Amazon Elastic Compute Cloud User
  */
 AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const AssignPrivateIpAddressesRequest &request)
 {
@@ -1330,6 +1551,12 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
  * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and
  * you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the
  * <i>Elastic IP Addresses</i> section of <a href="http://aws.amazon.com/ec2/pricing/">Amazon EC2
+ *
+ * Pricing</a>> </b> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressRequest &request)
 {
@@ -1375,8 +1602,8 @@ AssociateClientVpnTargetNetworkResponse * Ec2Client::associateClientVpnTargetNet
  *
  * instance>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP Options
- * Sets</a> in the <i>Amazon Virtual Private Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options
+ * sets</a> in the <i>Amazon Virtual Private Cloud User
  */
 AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDhcpOptionsRequest &request)
 {
@@ -1389,24 +1616,24 @@ AssociateDhcpOptionsResponse * Ec2Client::associateDhcpOptions(const AssociateDh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This
- * enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave. For more information,
- * see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html">AWS Certificate Manager for
- * Nitro Enclaves</a> in the <i>AWS Nitro Enclaves User
+ * Associates an Identity and Access Management (IAM) role with an Certificate Manager (ACM) certificate. This enables the
+ * certificate to be used by the ACM for Nitro Enclaves application inside an enclave. For more information, see <a
+ * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html">Certificate Manager for Nitro
+ * Enclaves</a> in the <i>Amazon Web Services Nitro Enclaves User
  *
  * Guide</i>>
  *
  * When the IAM role is associated with the ACM certificate, the certificate, certificate chain, and encrypted private key
- * are placed in an Amazon S3 bucket that only the associated IAM role can access. The private key of the certificate is
- * encrypted with an AWS-managed KMS customer master (CMK) that has an attached attestation-based CMK
+ * are placed in an Amazon S3 location that only the associated IAM role can access. The private key of the certificate is
+ * encrypted with an Amazon Web Services managed key that has an attached attestation-based key
  *
  * policy>
  *
  * To enable the IAM role to access the Amazon S3 object, you must grant it permission to call <code>s3:GetObject</code> on
- * the Amazon S3 bucket returned by the command. To enable the IAM role to access the AWS KMS CMK, you must grant it
- * permission to call <code>kms:Decrypt</code> on the AWS KMS CMK returned by the command. For more information, see <a
+ * the Amazon S3 bucket returned by the command. To enable the IAM role to access the KMS key, you must grant it permission
+ * to call <code>kms:Decrypt</code> on the KMS key returned by the command. For more information, see <a
  * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html#add-policy"> Grant the role permission
- * to access the certificate and encryption key</a> in the <i>AWS Nitro Enclaves User
+ * to access the certificate and encryption key</a> in the <i>Amazon Web Services Nitro Enclaves User
  */
 AssociateEnclaveCertificateIamRoleResponse * Ec2Client::associateEnclaveCertificateIamRole(const AssociateEnclaveCertificateIamRoleRequest &request)
 {
@@ -1429,6 +1656,25 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateInstanceEventWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates one or more targets with an event window. Only one type of target (instance IDs, Dedicated Host IDs, or tags)
+ * can be specified with an event
+ *
+ * window>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+AssociateInstanceEventWindowResponse * Ec2Client::associateInstanceEventWindow(const AssociateInstanceEventWindowRequest &request)
+{
+    return qobject_cast<AssociateInstanceEventWindowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * AssociateRouteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1441,7 +1687,7 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
  * subnets>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route
- * Tables</a> in the <i>Amazon Virtual Private Cloud User
+ * tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRouteTableRequest &request)
 {
@@ -1483,6 +1729,19 @@ AssociateTransitGatewayMulticastDomainResponse * Ec2Client::associateTransitGate
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateTransitGatewayPolicyTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified transit gateway attachment with a transit gateway policy
+ */
+AssociateTransitGatewayPolicyTableResponse * Ec2Client::associateTransitGatewayPolicyTable(const AssociateTransitGatewayPolicyTableRequest &request)
+{
+    return qobject_cast<AssociateTransitGatewayPolicyTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * AssociateTransitGatewayRouteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1493,6 +1752,33 @@ AssociateTransitGatewayMulticastDomainResponse * Ec2Client::associateTransitGate
 AssociateTransitGatewayRouteTableResponse * Ec2Client::associateTransitGatewayRouteTable(const AssociateTransitGatewayRouteTableRequest &request)
 {
     return qobject_cast<AssociateTransitGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateTrunkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact your
+ * account
+ *
+ * manager> </note>
+ *
+ * Associates a branch network interface with a trunk network
+ *
+ * interface>
+ *
+ * Before you create the association, run the <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">create-network-interface</a>
+ * command and set <code>--interface-type</code> to <code>trunk</code>. You must also create a network interface for each
+ * branch network interface that you want to associate with the trunk network
+ */
+AssociateTrunkInterfaceResponse * Ec2Client::associateTrunkInterface(const AssociateTrunkInterfaceRequest &request)
+{
+    return qobject_cast<AssociateTrunkInterfaceResponse *>(send(request));
 }
 
 /*!
@@ -1513,7 +1799,7 @@ AssociateTransitGatewayRouteTableResponse * Ec2Client::associateTransitGatewayRo
  * block>
  *
  * For more information about associating CIDR blocks with your VPC and applicable restrictions, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing">VPC and Subnet Sizing</a> in the
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing">VPC and subnet sizing</a> in the
  * <i>Amazon Virtual Private Cloud User
  */
 AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const AssociateVpcCidrBlockRequest &request)
@@ -1526,6 +1812,14 @@ AssociateVpcCidrBlockResponse * Ec2Client::associateVpcCidrBlock(const Associate
  * AttachClassicLinkVpcResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * Links an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups. You cannot
  * link an EC2-Classic instance to more than one VPC at a time. You can only link an instance that's in the
@@ -1591,11 +1885,11 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  * Guide</i>>
  *
  * After you attach an EBS volume, you must make it available. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html">Making an EBS volume available for
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html">Make an EBS volume available for
  *
  * use</a>>
  *
- * If a volume has an AWS Marketplace product
+ * If a volume has an Amazon Web Services Marketplace product
  *
  * code> <ul> <li>
  *
@@ -1603,7 +1897,7 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  *
  * instance> </li> <li>
  *
- * AWS Marketplace product codes are copied from the volume to the
+ * Amazon Web Services Marketplace product codes are copied from the volume to the
  *
  * instance> </li> <li>
  *
@@ -1616,9 +1910,8 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  *
  * instance> </li> </ul>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attaching Amazon EBS volumes</a> in
- * the <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attach
+ * an Amazon EBS volume to an instance</a> in the <i>Amazon Elastic Compute Cloud User
  */
 AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &request)
 {
@@ -1635,8 +1928,8 @@ AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &reques
  *
  * time>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayRequest &request)
 {
@@ -1650,8 +1943,8 @@ AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds an ingress authorization rule to a Client VPN endpoint. Ingress authorization rules act as firewall rules that
- * grant access to networks. You must configure ingress authorization rules to enable clients to access resources in AWS or
- * on-premises
+ * grant access to networks. You must configure ingress authorization rules to enable clients to access resources in Amazon
+ * Web Services or on-premises
  */
 AuthorizeClientVpnIngressResponse * Ec2Client::authorizeClientVpnIngress(const AuthorizeClientVpnIngressRequest &request)
 {
@@ -1664,14 +1957,15 @@ AuthorizeClientVpnIngressResponse * Ec2Client::authorizeClientVpnIngress(const A
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * [VPC only] Adds the specified egress rules to a security group for use with a
+ * [VPC only] Adds the specified outbound (egress) rules to a security group for use with a
  *
  * VPC>
  *
  * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the
- * instances associated with the specified destination security
+ * instances that are associated with the specified source security groups. When specifying an outbound rule for your
+ * security group in a VPC, the <code>IpPermissions</code> must include a destination for the
  *
- * groups>
+ * traffic>
  *
  * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must also specify the
  * destination port or port range. For the ICMP protocol, you must also specify the ICMP type and code. You can use -1 for
@@ -1683,7 +1977,7 @@ AuthorizeClientVpnIngressResponse * Ec2Client::authorizeClientVpnIngress(const A
  *
  * occur>
  *
- * For more information about VPC security group limits, see <a
+ * For information about VPC security group quotas, see <a
  * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC
  */
 AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(const AuthorizeSecurityGroupEgressRequest &request)
@@ -1697,14 +1991,15 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds the specified ingress rules to a security
+ * Adds the specified inbound (ingress) rules to a security
  *
  * group>
  *
- * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address ranges, or from the
- * instances associated with the specified destination security
+ * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from the
+ * instances that are associated with the specified destination security groups. When specifying an inbound rule for your
+ * security group in a VPC, the <code>IpPermissions</code> must include a source for the
  *
- * groups>
+ * traffic>
  *
  * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also specify the destination port or
  * port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code. You can use -1 to mean all types or
@@ -1716,8 +2011,14 @@ AuthorizeSecurityGroupEgressResponse * Ec2Client::authorizeSecurityGroupEgress(c
  *
  * occur>
  *
- * For more information about VPC security group limits, see <a
+ * For more information about VPC security group quotas, see <a
  * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC
+ *
+ * quotas</a>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress(const AuthorizeSecurityGroupIngressRequest &request)
 {
@@ -1776,6 +2077,32 @@ CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskReq
 CancelCapacityReservationResponse * Ec2Client::cancelCapacityReservation(const CancelCapacityReservationRequest &request)
 {
     return qobject_cast<CancelCapacityReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelCapacityReservationFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels one or more Capacity Reservation Fleets. When you cancel a Capacity Reservation Fleet, the following
+ *
+ * happens> <ul> <li>
+ *
+ * The Capacity Reservation Fleet's status changes to
+ *
+ * <code>cancelled</code>> </li> <li>
+ *
+ * The individual Capacity Reservations in the Fleet are cancelled. Instances running in the Capacity Reservations at the
+ * time of cancelling the Fleet continue to run in shared
+ *
+ * capacity> </li> <li>
+ *
+ * The Fleet stops creating new Capacity
+ */
+CancelCapacityReservationFleetsResponse * Ec2Client::cancelCapacityReservationFleets(const CancelCapacityReservationFleetsRequest &request)
+{
+    return qobject_cast<CancelCapacityReservationFleetsResponse *>(send(request));
 }
 
 /*!
@@ -1915,9 +2242,9 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an AWS Outpost. You
- * can't copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To copy an AMI
- * to another partition, see <a
+ * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an Outpost. You can't
+ * copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To copy an AMI to
+ * another partition, see <a
  *
  * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html">CreateStoreImageTask</a>>
  *
@@ -1964,9 +2291,8 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  *
  * When copying snapshots to a Region, copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots
  * remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted snapshot copies
- * use the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a different
- * CMK. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used
- * to encrypt the
+ * use the default Key Management Service (KMS) KMS key; however, you can specify a different KMS key. To copy an encrypted
+ * snapshot that has been shared from another account, you must have permissions for the KMS key used to encrypt the
  *
  * snapshot>
  *
@@ -1981,8 +2307,8 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  *
  * purpose>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copying
- * an Amazon EBS snapshot</a> in the <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copy an
+ * Amazon EBS snapshot</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &request)
 {
@@ -2028,13 +2354,28 @@ CreateCapacityReservationResponse * Ec2Client::createCapacityReservation(const C
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateCapacityReservationFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Capacity Reservation Fleet. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-cr-fleets.html#create-crfleet">Create a Capacity
+ * Reservation Fleet</a> in the Amazon EC2 User
+ */
+CreateCapacityReservationFleetResponse * Ec2Client::createCapacityReservationFleet(const CreateCapacityReservationFleetRequest &request)
+{
+    return qobject_cast<CreateCapacityReservationFleetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateCarrierGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a carrier gateway. For more information about carrier gateways, see <a
  * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway">Carrier
- * gateways</a> in the <i>AWS Wavelength Developer
+ * gateways</a> in the <i>Amazon Web Services Wavelength Developer
  */
 CreateCarrierGatewayResponse * Ec2Client::createCarrierGateway(const CreateCarrierGatewayRequest &request)
 {
@@ -2071,51 +2412,52 @@ CreateClientVpnRouteResponse * Ec2Client::createClientVpnRoute(const CreateClien
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateCoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a range of customer-owned IP addresses.
+ */
+CreateCoipCidrResponse * Ec2Client::createCoipCidr(const CreateCoipCidrRequest &request)
+{
+    return qobject_cast<CreateCoipCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateCoipPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a pool of customer-owned IP (CoIP) addresses.
+ */
+CreateCoipPoolResponse * Ec2Client::createCoipPool(const CreateCoipPoolRequest &request)
+{
+    return qobject_cast<CreateCoipPoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateCustomerGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of
- * the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide
- * the internet-routable IP address of the customer gateway's external interface. The IP address must be static and can be
- * behind a device performing network address translation
+ * Provides information to Amazon Web Services about your customer gateway device. The customer gateway device is the
+ * appliance at your end of the VPN connection. You must provide the IP address of the customer gateway device’s external
+ * interface. The IP address must be static and can be behind a device performing network address translation
  *
  * (NAT)>
  *
  * For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System Number
- * (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private ASN
- * (in the 64512 - 65534
+ * (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private
+ * ASN. For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/cgw-options.html">Customer gateway
+ * options for your Site-to-Site VPN connection</a> in the <i>Amazon Web Services Site-to-Site VPN User
  *
- * range)> <note>
- *
- * Amazon EC2 supports all 4-byte ASN numbers in the range of 1 - 2147483647, with the exception of the
- *
- * following> <ul> <li>
- *
- * 7224 - reserved in the <code>us-east-1</code>
- *
- * Regio> </li> <li>
- *
- * 9059 - reserved in the <code>eu-west-1</code>
- *
- * Regio> </li> <li>
- *
- * 17943 - reserved in the <code>ap-southeast-1</code>
- *
- * Regio> </li> <li>
- *
- * 10124 - reserved in the <code>ap-northeast-1</code>
- *
- * Regio> </li> </ul> </note>
- *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
- *
- * Guide</i>> <b>
+ * Guide</i>>
  *
  * To create more than one customer gateway with the same VPN type, IP address, and BGP ASN, specify a unique device name
- * for each customer gateway. Identical requests return information about the existing customer gateway and do not create
- * new customer
+ * for each customer gateway. An identical request returns information about the existing customer gateway; it doesn't
+ * create a new customer
  */
 CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCustomerGatewayRequest &request)
 {
@@ -2130,8 +2472,8 @@ CreateCustomerGatewayResponse * Ec2Client::createCustomerGateway(const CreateCus
  *
  * Creates a default subnet with a size <code>/20</code> IPv4 CIDR block in the specified Availability Zone in your default
  * VPC. You can have only one default subnet per Availability Zone. For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-subnet">Creating a Default
- * Subnet</a> in the <i>Amazon Virtual Private Cloud User
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html#create-default-subnet">Creating a default
+ * subnet</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefaultSubnetRequest &request)
 {
@@ -2146,7 +2488,7 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
  *
  * Creates a default VPC with a size <code>/16</code> IPv4 CIDR block and a default subnet in each Availability Zone. For
  * more information about the components of a default VPC, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html">Default VPC and Default Subnets</a> in the
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html">Default VPC and default subnets</a> in the
  * <i>Amazon Virtual Private Cloud User Guide</i>. You cannot specify the components of the default VPC
  *
  * yourself>
@@ -2158,6 +2500,12 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
  * If your account supports EC2-Classic, you cannot use this action to create a default VPC in a Region that supports
  * EC2-Classic. If you want a default VPC in a Region that supports EC2-Classic, see "I really want a default VPC for my
  * existing EC2 account. Is that possible?" in the <a href="http://aws.amazon.com/vpc/faqs/#Default_VPCs">Default VPCs
+ *
+ * FAQ</a>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcRequest &request)
 {
@@ -2212,7 +2560,7 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
  * (AmazonProvidedDNS). If you create a set of options, and if your VPC has an internet gateway, make sure to set the
  * <code>domain-name-servers</code> option either to <code>AmazonProvidedDNS</code> or to a domain name server of your
  * choice. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP
- * Options Sets</a> in the <i>Amazon Virtual Private Cloud User
+ * options sets</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptionsRequest &request)
 {
@@ -2249,8 +2597,8 @@ CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGat
  *
  * subnet>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">Launching an EC2
- * Fleet</a> in the <i>Amazon EC2 User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">EC2 Fleet</a> in
+ * the <i>Amazon EC2 User
  */
 CreateFleetResponse * Ec2Client::createFleet(const CreateFleetRequest &request)
 {
@@ -2269,7 +2617,7 @@ CreateFleetResponse * Ec2Client::createFleet(const CreateFleetRequest &request)
  *
  * Flow log data for a monitored network interface is recorded as flow log records, which are log events consisting of
  * fields that describe the traffic flow. For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html#flow-log-records">Flow Log Records</a> in the
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html#flow-log-records">Flow log records</a> in the
  * <i>Amazon Virtual Private Cloud User
  *
  * Guide</i>>
@@ -2303,8 +2651,8 @@ CreateFlowLogsResponse * Ec2Client::createFlowLogs(const CreateFlowLogsRequest &
  * logs>
  *
  * An AFI contains the FPGA bitstream that is ready to download to an FPGA. You can securely deploy an AFI on multiple
- * FPGA-accelerated instances. For more information, see the <a href="https://github.com/aws/aws-fpga/">AWS FPGA Hardware
- * Development
+ * FPGA-accelerated instances. For more information, see the <a href="https://github.com/aws/aws-fpga/">Amazon Web Services
+ * FPGA Hardware Development
  */
 CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageRequest &request)
 {
@@ -2321,9 +2669,22 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
  *
  * stopped>
  *
- * If you customized your instance with instance store volumes or EBS volumes in addition to the root device volume, the
- * new AMI contains block device mapping information for those volumes. When you launch an instance from this new AMI, the
- * instance automatically launches with those additional
+ * By default, when Amazon EC2 creates the new AMI, it reboots the instance so that it can take snapshots of the attached
+ * volumes while data is at rest, in order to ensure a consistent state. You can set the <code>NoReboot</code> parameter to
+ * <code>true</code> in the API request, or use the <code>--no-reboot</code> option in the CLI to prevent Amazon EC2 from
+ * shutting down and rebooting the
+ *
+ * instance> <b>
+ *
+ * If you choose to bypass the shutdown and reboot process by setting the <code>NoReboot</code> parameter to
+ * <code>true</code> in the API request, or by using the <code>--no-reboot</code> option in the CLI, we can't guarantee the
+ * file system integrity of the created
+ *
+ * image> </b>
+ *
+ * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device volume,
+ * the new AMI contains block device mapping information for those volumes. When you launch an instance from this new AMI,
+ * the instance automatically launches with those additional
  *
  * volumes>
  *
@@ -2334,6 +2695,55 @@ CreateFpgaImageResponse * Ec2Client::createFpgaImage(const CreateFpgaImageReques
 CreateImageResponse * Ec2Client::createImage(const CreateImageRequest &request)
 {
     return qobject_cast<CreateImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateInstanceEventWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an event window in which scheduled events for the associated Amazon EC2 instances can
+ *
+ * run>
+ *
+ * You can define either a set of time ranges or a cron expression when creating the event window, but not both. All event
+ * window times are in
+ *
+ * UTC>
+ *
+ * You can create up to 200 event windows per Amazon Web Services
+ *
+ * Region>
+ *
+ * When you create the event window, targets (instance IDs, Dedicated Host IDs, or tags) are not yet associated with it. To
+ * ensure that the event window can be used, you must associate one or more targets with it by using the
+ * <a>AssociateInstanceEventWindow</a>
+ *
+ * API> <b>
+ *
+ * Event windows are applicable only for scheduled events that stop, reboot, or terminate
+ *
+ * instances>
+ *
+ * Event windows are <i>not</i> applicable
+ *
+ * for> <ul> <li>
+ *
+ * Expedited scheduled events and network maintenance events.
+ *
+ * </p </li> <li>
+ *
+ * Unscheduled maintenance such as AutoRecovery and unplanned
+ *
+ * reboots> </li> </ul> </b>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+CreateInstanceEventWindowResponse * Ec2Client::createInstanceEventWindow(const CreateInstanceEventWindowRequest &request)
+{
+    return qobject_cast<CreateInstanceEventWindowResponse *>(send(request));
 }
 
 /*!
@@ -2375,27 +2785,90 @@ CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInt
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateIpamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create an IPAM. Amazon VPC IP Address Manager (IPAM) is a VPC feature that you can use to automate your IP address
+ * management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across Amazon Web
+ * Services Regions and accounts throughout your Amazon Web Services
+ *
+ * Organization>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in
+ * the <i>Amazon VPC IPAM User Guide</i>.
+ */
+CreateIpamResponse * Ec2Client::createIpam(const CreateIpamRequest &request)
+{
+    return qobject_cast<CreateIpamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateIpamPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create an IP address pool for Amazon VPC IP Address Manager (IPAM). In IPAM, a pool is a collection of contiguous IP
+ * addresses CIDRs. Pools enable you to organize your IP addresses according to your routing and security needs. For
+ * example, if you have separate routing and security needs for development and production applications, you can create a
+ * pool for
+ *
+ * each>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/create-top-ipam.html">Create a top-level
+ * pool</a> in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+CreateIpamPoolResponse * Ec2Client::createIpamPool(const CreateIpamPoolRequest &request)
+{
+    return qobject_cast<CreateIpamPoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateIpamScopeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create an IPAM scope. In IPAM, a scope is the highest-level container within IPAM. An IPAM contains two default scopes.
+ * Each scope represents the IP space for a single network. The private scope is intended for all private IP address space.
+ * The public scope is intended for all public IP address space. Scopes enable you to reuse IP addresses across multiple
+ * unconnected networks without causing IP address overlap or
+ *
+ * conflict>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in
+ * the <i>Amazon VPC IPAM User
+ */
+CreateIpamScopeResponse * Ec2Client::createIpamScope(const CreateIpamScopeRequest &request)
+{
+    return qobject_cast<CreateIpamScopeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateKeyPairResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and displays the private key
- * for you to save to a file. The private key is returned as an unencrypted PEM encoded PKCS#1 private key. If a key with
+ * Creates an ED25519 or 2048-bit RSA key pair with the specified name and in the specified PEM or PPK format. Amazon EC2
+ * stores the public key and displays the private key for you to save to a file. The private key is returned as an
+ * unencrypted PEM encoded PKCS#1 private key or an unencrypted PPK formatted private key for use with PuTTY. If a key with
  * the specified name already exists, Amazon EC2 returns an
  *
  * error>
  *
- * You can have up to five thousand key pairs per
- *
- * Region>
- *
- * The key pair returned to you is available only in the Region in which you create it. If you prefer, you can create your
- * own key pair using a third-party tool and upload it to any Region using
+ * The key pair returned to you is available only in the Amazon Web Services Region in which you create it. If you prefer,
+ * you can create your own key pair using a third-party tool and upload it to any Region using
  *
  * <a>ImportKeyPair</a>>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a>
- * in the <i>Amazon Elastic Compute Cloud User
+ * You can have up to 5,000 key pairs per Amazon Web Services
+ *
+ * Region>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2
+ * key pairs</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &request)
 {
@@ -2408,11 +2881,21 @@ CreateKeyPairResponse * Ec2Client::createKeyPair(const CreateKeyPairRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance
- * using <a>RunInstances</a>, you can specify a launch template instead of providing the launch parameters in the request.
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launching an instance from a launch
- * template</a>in the <i>Amazon Elastic Compute Cloud User
+ * Creates a launch
+ *
+ * template>
+ *
+ * A launch template contains the parameters to launch an instance. When you launch an instance using <a>RunInstances</a>,
+ * you can specify a launch template instead of providing the launch parameters in the request. For more information, see
+ * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launch an instance from a launch
+ * template</a> in the <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>>
+ *
+ * If you want to clone an existing launch template as the basis for creating a new launch template, you can use the Amazon
+ * EC2 console. The API, SDKs, and CLI do not support cloning a template. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template-from-existing-launch-template">Create
+ * a launch template from an existing launch template</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunchTemplateRequest &request)
 {
@@ -2425,7 +2908,7 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new version for a launch template. You can specify an existing version of launch template from which to base
+ * Creates a new version of a launch template. You can specify an existing version of launch template from which to base
  * the new
  *
  * version>
@@ -2435,9 +2918,14 @@ CreateLaunchTemplateResponse * Ec2Client::createLaunchTemplate(const CreateLaunc
  *
  * versions>
  *
+ * Launch templates are immutable; after you create a launch template, you can't modify it. Instead, you can create a new
+ * version of the launch template that includes any changes you
+ *
+ * require>
+ *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#manage-launch-template-versions">Managing
- * launch template versions</a>in the <i>Amazon Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#manage-launch-template-versions">Modify
+ * a launch template (manage launch template versions)</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(const CreateLaunchTemplateVersionRequest &request)
 {
@@ -2450,11 +2938,45 @@ CreateLaunchTemplateVersionResponse * Ec2Client::createLaunchTemplateVersion(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a static route for the specified local gateway route
+ * Creates a static route for the specified local gateway route table. You must specify one of the following targets:
+ *
+ * </p <ul> <li>
+ *
+ * <code>LocalGatewayVirtualInterfaceGroupId</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>NetworkInterfaceId</code>
  */
 CreateLocalGatewayRouteResponse * Ec2Client::createLocalGatewayRoute(const CreateLocalGatewayRouteRequest &request)
 {
     return qobject_cast<CreateLocalGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateLocalGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a local gateway route table.
+ */
+CreateLocalGatewayRouteTableResponse * Ec2Client::createLocalGatewayRouteTable(const CreateLocalGatewayRouteTableRequest &request)
+{
+    return qobject_cast<CreateLocalGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a local gateway route table virtual interface group association.
+ */
+CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse * Ec2Client::createLocalGatewayRouteTableVirtualInterfaceGroupAssociation(const CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest &request)
+{
+    return qobject_cast<CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse *>(send(request));
 }
 
 /*!
@@ -2478,10 +3000,6 @@ CreateLocalGatewayRouteTableVpcAssociationResponse * Ec2Client::createLocalGatew
  *
  * Creates a managed prefix list. You can specify one or more entries for the prefix list. Each entry consists of a CIDR
  * block and an optional
- *
- * description>
- *
- * You must specify the maximum number of entries for the prefix list. The maximum number of entries cannot be changed
  */
 CreateManagedPrefixListResponse * Ec2Client::createManagedPrefixList(const CreateManagedPrefixListRequest &request)
 {
@@ -2511,7 +3029,7 @@ CreateManagedPrefixListResponse * Ec2Client::createManagedPrefixList(const Creat
  * networks>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">NAT
- * Gateways</a> in the <i>Amazon Virtual Private Cloud User
+ * gateways</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayRequest &request)
 {
@@ -2571,6 +3089,26 @@ CreateNetworkAclEntryResponse * Ec2Client::createNetworkAclEntry(const CreateNet
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateNetworkInsightsAccessScopeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Network Access
+ *
+ * Scope>
+ *
+ * Amazon Web Services Network Access Analyzer enables cloud networking and cloud operations teams to verify that their
+ * networks on Amazon Web Services conform to their network security and governance objectives. For more information, see
+ * the <a href="https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/">Amazon Web Services Network Access
+ * Analyzer
+ */
+CreateNetworkInsightsAccessScopeResponse * Ec2Client::createNetworkInsightsAccessScope(const CreateNetworkInsightsAccessScopeRequest &request)
+{
+    return qobject_cast<CreateNetworkInsightsAccessScopeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateNetworkInsightsPathResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2598,9 +3136,15 @@ CreateNetworkInsightsPathResponse * Ec2Client::createNetworkInsightsPath(const C
  *
  * subnet>
  *
+ * The number of IP addresses you can assign to a network interface varies by instance type. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI">IP Addresses Per ENI Per
+ * Instance Type</a> in the <i>Amazon Virtual Private Cloud User
+ *
+ * Guide</i>>
+ *
  * For more information about network interfaces, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
- * <i>Amazon Virtual Private Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic network interfaces</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateNetworkInterfaceRequest &request)
 {
@@ -2613,11 +3157,12 @@ CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateN
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Grants an AWS-authorized account permission to attach the specified network interface to an instance in their
+ * Grants an Amazon Web Services-authorized account permission to attach the specified network interface to an instance in
+ * their
  *
  * account>
  *
- * You can grant permission to a single AWS account only, and only one account at a
+ * You can grant permission to a single Amazon Web Services account only, and only one account at a
  */
 CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePermission(const CreateNetworkInterfacePermissionRequest &request)
 {
@@ -2652,6 +3197,21 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreatePublicIpv4PoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a public IPv4 address pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that
+ * you own and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services, however,
+ * use IPAM pools only. To monitor the status of pool creation, use <a
+ */
+CreatePublicIpv4PoolResponse * Ec2Client::createPublicIpv4Pool(const CreatePublicIpv4PoolRequest &request)
+{
+    return qobject_cast<CreatePublicIpv4PoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateReplaceRootVolumeTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2661,8 +3221,9 @@ CreatePlacementGroupResponse * Ec2Client::createPlacementGroup(const CreatePlace
  *
  * snapshot>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/">Replace a root volume</a> in the <i>Amazon Elastic
- * Compute Cloud User
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-restoring-volume.html#replace-root">Replace a root
+ * volume</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateReplaceRootVolumeTaskResponse * Ec2Client::createReplaceRootVolumeTask(const CreateReplaceRootVolumeTaskRequest &request)
 {
@@ -2714,18 +3275,18 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a task that restores an AMI from an S3 object that was previously created by using <a
+ * Starts a task that restores an AMI from an Amazon S3 object that was previously created by using <a
  *
  * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html">CreateStoreImageTask</a>>
  *
  * To use this API, you must have the required permissions. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions for
- * storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and
- * restore an AMI using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * restore an AMI using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateRestoreImageTaskResponse * Ec2Client::createRestoreImageTask(const CreateRestoreImageTaskRequest &request)
 {
@@ -2742,10 +3303,10 @@ CreateRestoreImageTaskResponse * Ec2Client::createRestoreImageTask(const CreateR
  *
  * VPC>
  *
- * You must specify one of the following targets: internet gateway or virtual private gateway, NAT instance, NAT gateway,
- * VPC peering connection, network interface, egress-only internet gateway, or transit
+ * You must specify either a destination CIDR block or a prefix list ID. You must also specify exactly one of the resources
+ * from the parameter
  *
- * gateway>
+ * list>
  *
  * When determining how to route traffic, we use the route with the most specific match. For example, traffic is destined
  * for the IPv4 address <code>192.0.2.3</code>, and the route table includes the following two IPv4
@@ -2766,7 +3327,7 @@ CreateRestoreImageTaskResponse * Ec2Client::createRestoreImageTask(const CreateR
  * traffic>
  *
  * For more information about route tables, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon Virtual
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route tables</a> in the <i>Amazon Virtual
  * Private Cloud User
  */
 CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
@@ -2786,7 +3347,7 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
  * subnet>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route
- * Tables</a> in the <i>Amazon Virtual Private Cloud User
+ * tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableRequest &request)
 {
@@ -2805,8 +3366,8 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  *
  * A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. For more
  * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Amazon EC2
- * Security Groups</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> and <a
- * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your VPC</a>
+ * security groups</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> and <a
+ * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security groups for your VPC</a>
  * in the <i>Amazon Virtual Private Cloud User
  *
  * Guide</i>>
@@ -2830,6 +3391,12 @@ CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableReq
  *
  * For more information about VPC security group limits, see <a
  * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC
+ *
+ * Limits</a>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurityGroupRequest &request)
 {
@@ -2853,21 +3420,21 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
  *
  * Outpost>
  *
- * When a snapshot is created, any AWS Marketplace product codes that are associated with the source volume are propagated
- * to the
+ * When a snapshot is created, any Amazon Web Services Marketplace product codes that are associated with the source volume
+ * are propagated to the
  *
  * snapshot>
  *
  * You can take a snapshot of an attached volume that is in use. However, snapshots only capture data that has been written
- * to your EBS volume at the time the snapshot command is issued; this might exclude any data that has been cached by any
- * applications or the operating system. If you can pause any file systems on the volume long enough to take a snapshot,
- * your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should unmount the
- * volume from within the instance, issue the snapshot command, and then remount the volume to ensure a consistent and
- * complete snapshot. You may remount and use your volume while the snapshot status is
+ * to your Amazon EBS volume at the time the snapshot command is issued; this might exclude any data that has been cached
+ * by any applications or the operating system. If you can pause any file systems on the volume long enough to take a
+ * snapshot, your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should
+ * unmount the volume from within the instance, issue the snapshot command, and then remount the volume to ensure a
+ * consistent and complete snapshot. You may remount and use your volume while the snapshot status is
  *
  * <code>pending</code>>
  *
- * To create a snapshot for EBS volumes that serve as root devices, you should stop the instance before taking the
+ * To create a snapshot for Amazon EBS volumes that serve as root devices, you should stop the instance before taking the
  *
  * snapshot>
  *
@@ -2877,7 +3444,7 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
  * protected>
  *
  * You can tag your snapshots during creation. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a> in the
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in the
  * <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
@@ -2898,10 +3465,14 @@ CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates crash-consistent snapshots of multiple EBS volumes and stores the data in S3. Volumes are chosen by specifying
- * an instance. Any attached volumes will produce one snapshot each that is crash-consistent across the instance. Boot
- * volumes can be excluded by changing the parameters.
+ * an instance. Any attached volumes will produce one snapshot each that is crash-consistent across the
  *
- * </p
+ * instance>
+ *
+ * You can include all of the volumes currently attached to the instance, or you can exclude the root volume or specific
+ * data (non-root) volumes from the multi-volume snapshot
+ *
+ * set>
  *
  * You can create multi-volume snapshots of instances in a Region and instances on an Outpost. If you create snapshots from
  * an instance in a Region, the snapshots must be stored in the same Region as the instance. If you create snapshots from
@@ -2919,7 +3490,7 @@ CreateSnapshotsResponse * Ec2Client::createSnapshots(const CreateSnapshotsReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a data feed for Spot Instances, enabling you to view Spot Instance usage logs. You can create one data feed per
- * AWS account. For more information, see <a
+ * Amazon Web Services account. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance data feed</a> in the
  * <i>Amazon EC2 User Guide for Linux
  */
@@ -2934,18 +3505,18 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stores an AMI as a single object in an S3
+ * Stores an AMI as a single object in an Amazon S3
  *
  * bucket>
  *
  * To use this API, you must have the required permissions. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions for
- * storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and
- * restore an AMI using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * restore an AMI using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateStoreImageTaskResponse * Ec2Client::createStoreImageTask(const CreateStoreImageTaskRequest &request)
 {
@@ -2973,7 +3544,8 @@ CreateStoreImageTaskResponse * Ec2Client::createStoreImageTask(const CreateStore
  *
  * </p <b>
  *
- * AWS reserves both the first four and the last IPv4 address in each subnet's CIDR block. They're not available for
+ * Amazon Web Services reserves both the first four and the last IPv4 address in each subnet's CIDR block. They're not
+ * available for
  *
  * use> </b>
  *
@@ -2987,11 +3559,26 @@ CreateStoreImageTaskResponse * Ec2Client::createStoreImageTask(const CreateStore
  * available>
  *
  * For more information about subnets, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">Your
- * VPC and Subnets</a> in the <i>Amazon Virtual Private Cloud User
+ * VPC and subnets</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &request)
 {
     return qobject_cast<CreateSubnetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateSubnetCidrReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a subnet CIDR reservation. For information about subnet CIDR reservations, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/subnet-cidr-reservation.html">Subnet CIDR reservations</a> in the
+ * <i>Amazon Virtual Private Cloud User
+ */
+CreateSubnetCidrReservationResponse * Ec2Client::createSubnetCidrReservation(const CreateSubnetCidrReservationRequest &request)
+{
+    return qobject_cast<CreateSubnetCidrReservationResponse *>(send(request));
 }
 
 /*!
@@ -3006,12 +3593,11 @@ CreateSubnetResponse * Ec2Client::createSubnet(const CreateSubnetRequest &reques
  *
  * resource>
  *
- * For more information about tags, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the <i>Amazon
- * Elastic Compute Cloud User Guide</i>. For more information about creating IAM policies that control users' access to
- * resources based on tags, see <a
+ * For more information about tags, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag
+ * your Amazon EC2 resources</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. For more information about creating
+ * IAM policies that control users' access to resources based on tags, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-iam-actions-resources.html">Supported
- * Resource-Level Permissions for Amazon EC2 API Actions</a> in the <i>Amazon Elastic Compute Cloud User
+ * resource-level permissions for Amazon EC2 API actions</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
 {
@@ -3049,9 +3635,9 @@ CreateTrafficMirrorFilterResponse * Ec2Client::createTrafficMirrorFilter(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Traffic Mirror filter rule.
+ * Creates a Traffic Mirror filter
  *
- * </p
+ * rule>
  *
  * A Traffic Mirror rule defines the Traffic Mirror source traffic to
  *
@@ -3108,9 +3694,9 @@ CreateTrafficMirrorSessionResponse * Ec2Client::createTrafficMirrorSession(const
  *
  * gateway>
  *
- * A Traffic Mirror target can be a network interface, or a Network Load
+ * A Traffic Mirror target can be a network interface, a Network Load Balancer, or a Gateway Load Balancer
  *
- * Balancer>
+ * endpoint>
  *
  * To use the target in a Traffic Mirror session, use <a
  */
@@ -3166,7 +3752,7 @@ CreateTransitGatewayResponse * Ec2Client::createTransitGateway(const CreateTrans
  *
  * appliance>
  *
- * A Connect attachment uses an existing VPC or AWS Direct Connect attachment as the underlying transport mechanism.
+ * A Connect attachment uses an existing VPC or Amazon Web Services Direct Connect attachment as the underlying transport
  */
 CreateTransitGatewayConnectResponse * Ec2Client::createTransitGatewayConnect(const CreateTransitGatewayConnectRequest &request)
 {
@@ -3221,16 +3807,28 @@ CreateTransitGatewayMulticastDomainResponse * Ec2Client::createTransitGatewayMul
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer transit
- * gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in your account
- * or a different AWS account.
+ * gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
  *
- * </p
+ * account>
  *
  * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
  */
 CreateTransitGatewayPeeringAttachmentResponse * Ec2Client::createTransitGatewayPeeringAttachment(const CreateTransitGatewayPeeringAttachmentRequest &request)
 {
     return qobject_cast<CreateTransitGatewayPeeringAttachmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayPolicyTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a transit gateway policy
+ */
+CreateTransitGatewayPolicyTableResponse * Ec2Client::createTransitGatewayPolicyTable(const CreateTransitGatewayPolicyTableRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayPolicyTableResponse *>(send(request));
 }
 
 /*!
@@ -3274,6 +3872,19 @@ CreateTransitGatewayRouteTableResponse * Ec2Client::createTransitGatewayRouteTab
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayRouteTableAnnouncementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Advertises a new transit gateway route
+ */
+CreateTransitGatewayRouteTableAnnouncementResponse * Ec2Client::createTransitGatewayRouteTableAnnouncement(const CreateTransitGatewayRouteTableAnnouncementRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayRouteTableAnnouncementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateTransitGatewayVpcAttachmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3304,8 +3915,8 @@ CreateTransitGatewayVpcAttachmentResponse * Ec2Client::createTransitGatewayVpcAt
  *
  * Zone>
  *
- * You can create a new empty volume or restore a volume from an EBS snapshot. Any AWS Marketplace product codes from the
- * snapshot are propagated to the
+ * You can create a new empty volume or restore a volume from an EBS snapshot. Any Amazon Web Services Marketplace product
+ * codes from the snapshot are propagated to the
  *
  * volume>
  *
@@ -3317,14 +3928,13 @@ CreateTransitGatewayVpcAttachmentResponse * Ec2Client::createTransitGatewayVpcAt
  * Guide</i>>
  *
  * You can tag your volumes during creation. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a> in the
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in the
  * <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Creating an Amazon EBS volume</a> in
- * the <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Create
+ * an Amazon EBS volume</a> in the <i>Amazon Elastic Compute Cloud User
  */
 CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &request)
 {
@@ -3339,7 +3949,7 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  *
  * Creates a VPC with the specified IPv4 CIDR block. The smallest VPC you can create uses a /28 netmask (16 IPv4
  * addresses), and the largest uses a /16 netmask (65,536 IPv4 addresses). For more information about how large to make
- * your VPC, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">Your VPC and Subnets</a> in
+ * your VPC, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">Your VPC and subnets</a> in
  * the <i>Amazon Virtual Private Cloud User
  *
  * Guide</i>>
@@ -3352,7 +3962,7 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  *
  * By default, each instance you launch in the VPC has the default DHCP options, which include only a default DNS server
  * that we provide (AmazonProvidedDNS). For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the <i>Amazon
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the <i>Amazon
  * Virtual Private Cloud User
  *
  * Guide</i>>
@@ -3374,30 +3984,9 @@ CreateVpcResponse * Ec2Client::createVpc(const CreateVpcRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC
- * and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account. For more
- * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html">VPC Endpoints</a> in the
- * <i>Amazon Virtual Private Cloud User
- *
- * Guide</i>>
- *
- * A <code>gateway</code> endpoint serves as a target for a route in your route table for traffic destined for the AWS
- * service. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from
- * your VPC. You can also specify the VPC route tables that use the
- *
- * endpoint>
- *
- * An <code>interface</code> endpoint is a network interface in your subnet that serves as an endpoint for communicating
- * with the specified service. You can specify the subnets in which to create an endpoint, and the security groups to
- * associate with the endpoint network
- *
- * interface>
- *
- * A <code>GatewayLoadBalancer</code> endpoint is a network interface in your subnet that serves an endpoint for
- * communicating with a Gateway Load Balancer that you've configured as a VPC endpoint
- *
- * service>
- *
- * Use <a>DescribeVpcEndpointServices</a> to get a list of supported
+ * and the service. The service may be provided by Amazon Web Services, an Amazon Web Services Marketplace Partner, or
+ * another Amazon Web Services account. For more information, see the <a
+ * href="https://docs.aws.amazon.com/vpc/latest/privatelink/">Amazon Web Services PrivateLink
  */
 CreateVpcEndpointResponse * Ec2Client::createVpcEndpoint(const CreateVpcEndpointRequest &request)
 {
@@ -3430,32 +4019,30 @@ CreateVpcEndpointConnectionNotificationResponse * Ec2Client::createVpcEndpointCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can
+ * Creates a VPC endpoint service to which service consumers (Amazon Web Services accounts, IAM users, and IAM roles) can
  *
  * connect>
  *
- * To create an endpoint service configuration, you must first create one of the following for your
+ * Before you create an endpoint service, you must create one of the following for your
  *
  * service> <ul> <li>
  *
- * A <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html">Network Load Balancer</a>.
- * Service consumers connect to your service using an interface
+ * A <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/">Network Load Balancer</a>. Service
+ * consumers connect to your service using an interface
  *
  * endpoint> </li> <li>
  *
- * A <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html">Gateway Load Balancer</a>.
- * Service consumers connect to your service using a Gateway Load Balancer
+ * A <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/">Gateway Load Balancer</a>. Service
+ * consumers connect to your service using a Gateway Load Balancer
  *
  * endpoint> </li> </ul>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC Endpoint
- * Services</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+ * If you set the private DNS name, you must prove that you own the private DNS domain
  *
- * </p
+ * name>
  *
- * If you set the private DNS name, you must prove that you own the private DNS domain name. For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-dns-validation.html">VPC Endpoint Service
- * Private DNS Name Verification</a> in the <i>Amazon Virtual Private Cloud User
+ * For more information, see the <a href="https://docs.aws.amazon.com/vpc/latest/privatelink/">Amazon Web Services
+ * PrivateLink
  */
 CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServiceConfiguration(const CreateVpcEndpointServiceConfigurationRequest &request)
 {
@@ -3469,8 +4056,8 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter VPC with which to
- * create the connection. The accepter VPC can belong to another AWS account and can be in a different Region to the
- * requester VPC. The requester VPC and accepter VPC cannot have overlapping CIDR
+ * create the connection. The accepter VPC can belong to another Amazon Web Services account and can be in a different
+ * Region to the requester VPC. The requester VPC and accepter VPC cannot have overlapping CIDR
  *
  * blocks> <note>
  *
@@ -3522,8 +4109,8 @@ CreateVpcPeeringConnectionResponse * Ec2Client::createVpcPeeringConnection(const
  *
  * error>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConnectionRequest &request)
 {
@@ -3541,8 +4128,8 @@ CreateVpnConnectionResponse * Ec2Client::createVpnConnection(const CreateVpnConn
  *
  * gateway>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const CreateVpnConnectionRouteRequest &request)
 {
@@ -3560,8 +4147,8 @@ CreateVpnConnectionRouteResponse * Ec2Client::createVpnConnectionRoute(const Cre
  *
  * itself>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayRequest &request)
 {
@@ -3612,6 +4199,32 @@ DeleteClientVpnEndpointResponse * Ec2Client::deleteClientVpnEndpoint(const Delet
 DeleteClientVpnRouteResponse * Ec2Client::deleteClientVpnRoute(const DeleteClientVpnRouteRequest &request)
 {
     return qobject_cast<DeleteClientVpnRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteCoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a range of customer-owned IP addresses.
+ */
+DeleteCoipCidrResponse * Ec2Client::deleteCoipCidr(const DeleteCoipCidrRequest &request)
+{
+    return qobject_cast<DeleteCoipCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteCoipPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a pool of customer-owned IP (CoIP) addresses.
+ */
+DeleteCoipPoolResponse * Ec2Client::deleteCoipPool(const DeleteCoipPoolRequest &request)
+{
+    return qobject_cast<DeleteCoipPoolResponse *>(send(request));
 }
 
 /*!
@@ -3693,8 +4306,8 @@ DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGat
  * fleets> </li> </ul>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Deleting an EC2 Fleet</a>
- * in the <i>Amazon EC2 User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Delete an EC2 Fleet</a> in
+ * the <i>Amazon EC2 User
  */
 DeleteFleetsResponse * Ec2Client::deleteFleets(const DeleteFleetsRequest &request)
 {
@@ -3729,6 +4342,24 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteInstanceEventWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified event
+ *
+ * window>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+DeleteInstanceEventWindowResponse * Ec2Client::deleteInstanceEventWindow(const DeleteInstanceEventWindowRequest &request)
+{
+    return qobject_cast<DeleteInstanceEventWindowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteInternetGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3738,6 +4369,67 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
 DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInternetGatewayRequest &request)
 {
     return qobject_cast<DeleteInternetGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteIpamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete an IPAM. Deleting an IPAM removes all monitored data associated with the IPAM including the historical data for
+ *
+ * CIDRs>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in
+ * the <i>Amazon VPC IPAM User Guide</i>.
+ */
+DeleteIpamResponse * Ec2Client::deleteIpam(const DeleteIpamRequest &request)
+{
+    return qobject_cast<DeleteIpamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteIpamPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete an IPAM
+ *
+ * pool> <note>
+ *
+ * You cannot delete an IPAM pool if there are allocations in it or CIDRs provisioned to it. To release allocations, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html">ReleaseIpamPoolAllocation</a>.
+ * To deprovision pool CIDRs, see <a
+ *
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeprovisionIpamPoolCidr.html">DeprovisionIpamPoolCidr</a>>
+ * </note>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a>
+ * in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+DeleteIpamPoolResponse * Ec2Client::deleteIpamPool(const DeleteIpamPoolRequest &request)
+{
+    return qobject_cast<DeleteIpamPoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteIpamScopeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete the scope for an IPAM. You cannot delete the default
+ *
+ * scopes>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-scope-ipam.html">Delete a
+ * scope</a> in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+DeleteIpamScopeResponse * Ec2Client::deleteIpamScope(const DeleteIpamScopeRequest &request)
+{
+    return qobject_cast<DeleteIpamScopeResponse *>(send(request));
 }
 
 /*!
@@ -3792,6 +4484,32 @@ DeleteLaunchTemplateVersionsResponse * Ec2Client::deleteLaunchTemplateVersions(c
 DeleteLocalGatewayRouteResponse * Ec2Client::deleteLocalGatewayRoute(const DeleteLocalGatewayRouteRequest &request)
 {
     return qobject_cast<DeleteLocalGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteLocalGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a local gateway route table.
+ */
+DeleteLocalGatewayRouteTableResponse * Ec2Client::deleteLocalGatewayRouteTable(const DeleteLocalGatewayRouteTableRequest &request)
+{
+    return qobject_cast<DeleteLocalGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a local gateway route table virtual interface group association.
+ */
+DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse * Ec2Client::deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(const DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest &request)
+{
+    return qobject_cast<DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResponse *>(send(request));
 }
 
 /*!
@@ -3859,6 +4577,32 @@ DeleteNetworkAclResponse * Ec2Client::deleteNetworkAcl(const DeleteNetworkAclReq
 DeleteNetworkAclEntryResponse * Ec2Client::deleteNetworkAclEntry(const DeleteNetworkAclEntryRequest &request)
 {
     return qobject_cast<DeleteNetworkAclEntryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkInsightsAccessScopeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified Network Access
+ */
+DeleteNetworkInsightsAccessScopeResponse * Ec2Client::deleteNetworkInsightsAccessScope(const DeleteNetworkInsightsAccessScopeRequest &request)
+{
+    return qobject_cast<DeleteNetworkInsightsAccessScopeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteNetworkInsightsAccessScopeAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified Network Access Scope
+ */
+DeleteNetworkInsightsAccessScopeAnalysisResponse * Ec2Client::deleteNetworkInsightsAccessScopeAnalysis(const DeleteNetworkInsightsAccessScopeAnalysisRequest &request)
+{
+    return qobject_cast<DeleteNetworkInsightsAccessScopeAnalysisResponse *>(send(request));
 }
 
 /*!
@@ -3933,6 +4677,21 @@ DeletePlacementGroupResponse * Ec2Client::deletePlacementGroup(const DeletePlace
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeletePublicIpv4PoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete a public IPv4 pool. A public IPv4 pool is an EC2 IP address pool required for the public IPv4 CIDRs that you own
+ * and bring to Amazon Web Services to manage with IPAM. IPv6 addresses you bring to Amazon Web Services, however, use IPAM
+ * pools
+ */
+DeletePublicIpv4PoolResponse * Ec2Client::deletePublicIpv4Pool(const DeletePublicIpv4PoolRequest &request)
+{
+    return qobject_cast<DeletePublicIpv4PoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteQueuedReservedInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3983,6 +4742,12 @@ DeleteRouteTableResponse * Ec2Client::deleteRouteTable(const DeleteRouteTableReq
  *
  * If you attempt to delete a security group that is associated with an instance, or is referenced by another security
  * group, the operation fails with <code>InvalidGroup.InUse</code> in EC2-Classic or <code>DependencyViolation</code> in
+ *
+ * EC2-VPC> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurityGroupRequest &request)
 {
@@ -4012,8 +4777,8 @@ DeleteSecurityGroupResponse * Ec2Client::deleteSecurityGroup(const DeleteSecurit
  * snapshot>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html">Deleting an Amazon EBS
- * snapshot</a> in the <i>Amazon Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html">Delete an Amazon EBS snapshot</a>
+ * in the <i>Amazon Elastic Compute Cloud User
  */
 DeleteSnapshotResponse * Ec2Client::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
@@ -4048,6 +4813,19 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteSubnetCidrReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a subnet CIDR
+ */
+DeleteSubnetCidrReservationResponse * Ec2Client::deleteSubnetCidrReservation(const DeleteSubnetCidrReservationRequest &request)
+{
+    return qobject_cast<DeleteSubnetCidrReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4057,8 +4835,8 @@ DeleteSubnetResponse * Ec2Client::deleteSubnet(const DeleteSubnetRequest &reques
  * resources>
  *
  * To list the current tags, use <a>DescribeTags</a>. For more information about tags, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the <i>Amazon
- * Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
 {
@@ -4192,6 +4970,19 @@ DeleteTransitGatewayPeeringAttachmentResponse * Ec2Client::deleteTransitGatewayP
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayPolicyTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified transit gateway policy
+ */
+DeleteTransitGatewayPolicyTableResponse * Ec2Client::deleteTransitGatewayPolicyTable(const DeleteTransitGatewayPolicyTableRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayPolicyTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteTransitGatewayPrefixListReferenceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4232,6 +5023,19 @@ DeleteTransitGatewayRouteTableResponse * Ec2Client::deleteTransitGatewayRouteTab
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayRouteTableAnnouncementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Advertises to the transit gateway that a transit gateway route table is
+ */
+DeleteTransitGatewayRouteTableAnnouncementResponse * Ec2Client::deleteTransitGatewayRouteTableAnnouncement(const DeleteTransitGatewayRouteTableAnnouncementRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayRouteTableAnnouncementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteTransitGatewayVpcAttachmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4257,9 +5061,8 @@ DeleteTransitGatewayVpcAttachmentResponse * Ec2Client::deleteTransitGatewayVpcAt
  *
  * minutes>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Deleting an Amazon EBS volume</a> in
- * the <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Delete
+ * an Amazon EBS volume</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DeleteVolumeResponse * Ec2Client::deleteVolume(const DeleteVolumeRequest &request)
 {
@@ -4389,8 +5192,8 @@ DeleteVpcPeeringConnectionResponse * Ec2Client::deleteVpcPeeringConnection(const
  *
  * ID>
  *
- * For certificate-based authentication, delete all AWS Certificate Manager (ACM) private certificates used for the
- * AWS-side tunnel endpoints for the VPN connection before deleting the VPN
+ * For certificate-based authentication, delete all Certificate Manager (ACM) private certificates used for the Amazon Web
+ * Services-side tunnel endpoints for the VPN connection before deleting the VPN
  */
 DeleteVpnConnectionResponse * Ec2Client::deleteVpnConnection(const DeleteVpnConnectionRequest &request)
 {
@@ -4432,8 +5235,8 @@ DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Releases the specified address range that you provisioned for use with your AWS resources through bring your own IP
- * addresses (BYOIP) and deletes the corresponding address
+ * Releases the specified address range that you provisioned for use with your Amazon Web Services resources through bring
+ * your own IP addresses (BYOIP) and deletes the corresponding address
  *
  * pool>
  *
@@ -4447,13 +5250,52 @@ DeprovisionByoipCidrResponse * Ec2Client::deprovisionByoipCidr(const Deprovision
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeprovisionIpamPoolCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool, the CIDR
+ * is recycled back into the source pool. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon
+ * VPC IPAM User
+ */
+DeprovisionIpamPoolCidrResponse * Ec2Client::deprovisionIpamPoolCidr(const DeprovisionIpamPoolCidrRequest &request)
+{
+    return qobject_cast<DeprovisionIpamPoolCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeprovisionPublicIpv4PoolCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deprovision a CIDR from a public IPv4
+ */
+DeprovisionPublicIpv4PoolCidrResponse * Ec2Client::deprovisionPublicIpv4PoolCidr(const DeprovisionPublicIpv4PoolCidrRequest &request)
+{
+    return qobject_cast<DeprovisionPublicIpv4PoolCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeregisterImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
- * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for those
- * instances until you terminate
+ * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new
+ *
+ * instances>
+ *
+ * If you deregister an AMI that matches a Recycle Bin retention rule, the AMI is retained in the Recycle Bin for the
+ * specified retention period. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+ * Compute Cloud User
+ *
+ * Guide>
+ *
+ * When you deregister an AMI, it doesn't affect any instances that you've already launched from the AMI. You'll continue
+ * to incur usage costs for those instances until you terminate
  *
  * them>
  *
@@ -4512,7 +5354,7 @@ DeregisterTransitGatewayMulticastGroupSourcesResponse * Ec2Client::deregisterTra
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes attributes of your AWS account. The following are the supported account
+ * Describes attributes of your Amazon Web Services account. The following are the supported account
  *
  * attributes> <ul> <li>
  *
@@ -4542,6 +5384,12 @@ DeregisterTransitGatewayMulticastGroupSourcesResponse * Ec2Client::deregisterTra
  * </p </li> <li>
  *
  * <code>vpc-max-elastic-ips</code>: The maximum number of Elastic IP addresses that you can allocate for use with
+ *
+ * EC2-VPC> </li> </ul> <note>
+ *
+ * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+ * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic
+ * to a VPC</a> in the <i>Amazon EC2 User
  */
 DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
@@ -4560,6 +5408,12 @@ DescribeAccountAttributesResponse * Ec2Client::describeAccountAttributes(const D
  *
  * An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
  * <i>Amazon Elastic Compute Cloud User
  */
 DescribeAddressesResponse * Ec2Client::describeAddresses(const DescribeAddressesRequest &request)
@@ -4624,8 +5478,8 @@ DescribeAggregateIdFormatResponse * Ec2Client::describeAggregateIdFormat(const D
  * zone>
  *
  * For more information about Availability Zones, Local Zones, and Wavelength Zones, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions, Zones and
- * Outposts</a> in the <i>Amazon Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and zones</a>
+ * in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeAvailabilityZonesResponse * Ec2Client::describeAvailabilityZones(const DescribeAvailabilityZonesRequest &request)
 {
@@ -4671,12 +5525,25 @@ DescribeByoipCidrsResponse * Ec2Client::describeByoipCidrs(const DescribeByoipCi
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeCapacityReservationFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more Capacity Reservation
+ */
+DescribeCapacityReservationFleetsResponse * Ec2Client::describeCapacityReservationFleets(const DescribeCapacityReservationFleetsRequest &request)
+{
+    return qobject_cast<DescribeCapacityReservationFleetsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeCapacityReservationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more of your Capacity Reservations. The results describe only the Capacity Reservations in the AWS
- * Region that you're currently
+ * Describes one or more of your Capacity Reservations. The results describe only the Capacity Reservations in the Amazon
+ * Web Services Region that you're currently
  */
 DescribeCapacityReservationsResponse * Ec2Client::describeCapacityReservations(const DescribeCapacityReservationsRequest &request)
 {
@@ -4704,6 +5571,12 @@ DescribeCarrierGatewaysResponse * Ec2Client::describeCarrierGateways(const Descr
  *
  * Describes one or more of your linked EC2-Classic instances. This request only returns information about EC2-Classic
  * instances linked to a VPC through ClassicLink. You cannot use this request to return information about other
+ *
+ * instances> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(const DescribeClassicLinkInstancesRequest &request)
 {
@@ -4818,8 +5691,8 @@ DescribeConversionTasksResponse * Ec2Client::describeConversionTasks(const Descr
  *
  * gateways>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const DescribeCustomerGatewaysRequest &request)
 {
@@ -4836,8 +5709,8 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
  *
  * sets>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP Options
- * Sets</a> in the <i>Amazon Virtual Private Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options
+ * sets</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpOptionsRequest &request)
 {
@@ -4899,6 +5772,19 @@ DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExpor
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFastLaunchImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describe details for Windows AMIs that are configured for faster
+ */
+DescribeFastLaunchImagesResponse * Ec2Client::describeFastLaunchImages(const DescribeFastLaunchImagesRequest &request)
+{
+    return qobject_cast<DescribeFastLaunchImagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeFastSnapshotRestoresResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4925,9 +5811,8 @@ DescribeFastSnapshotRestoresResponse * Ec2Client::describeFastSnapshotRestores(c
  *
  * hours>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
- * Fleet</a> in the <i>Amazon EC2 User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-monitor.html">Monitor fleet
+ * events using Amazon EventBridge</a> in the <i>Amazon EC2 User
  */
 DescribeFleetHistoryResponse * Ec2Client::describeFleetHistory(const DescribeFleetHistoryRequest &request)
 {
@@ -4945,7 +5830,7 @@ DescribeFleetHistoryResponse * Ec2Client::describeFleetHistory(const DescribeFle
  * Fleet>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your EC2
  * Fleet</a> in the <i>Amazon EC2 User
  */
 DescribeFleetInstancesResponse * Ec2Client::describeFleetInstances(const DescribeFleetInstancesRequest &request)
@@ -4964,7 +5849,7 @@ DescribeFleetInstancesResponse * Ec2Client::describeFleetInstances(const Describ
  * Fleets>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your EC2
  * Fleet</a> in the <i>Amazon EC2 User
  */
 DescribeFleetsResponse * Ec2Client::describeFleets(const DescribeFleetsRequest &request)
@@ -4978,8 +5863,12 @@ DescribeFleetsResponse * Ec2Client::describeFleets(const DescribeFleetsRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more flow logs. To view the information in your flow logs (the log streams for the network interfaces),
- * you must use the CloudWatch Logs console or the CloudWatch Logs
+ * Describes one or more flow
+ *
+ * logs>
+ *
+ * To view the published flow log records, you must view the log destination. For example, the CloudWatch Logs log group,
+ * the Amazon S3 bucket, or the Kinesis Data Firehose delivery
  */
 DescribeFlowLogsResponse * Ec2Client::describeFlowLogs(const DescribeFlowLogsRequest &request)
 {
@@ -5006,7 +5895,7 @@ DescribeFpgaImageAttributeResponse * Ec2Client::describeFpgaImageAttribute(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes the Amazon FPGA Images (AFIs) available to you. These include public AFIs, private AFIs that you own, and AFIs
- * owned by other AWS accounts for which you have load
+ * owned by other Amazon Web Services accounts for which you have load
  */
 DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaImagesRequest &request)
 {
@@ -5103,10 +5992,10 @@ DescribeIamInstanceProfileAssociationsResponse * Ec2Client::describeIamInstanceP
  *
  * </p
  *
- * These settings apply to the IAM user who makes the request; they do not apply to the entire AWS account. By default, an
- * IAM user defaults to the same settings as the root user, unless they explicitly override the settings by running the
- * <a>ModifyIdFormat</a> command. Resources created with longer IDs are visible to all IAM users, regardless of these
- * settings and provided that they have permission to use the relevant <code>Describe</code> command for the resource
+ * These settings apply to the IAM user who makes the request; they do not apply to the entire Amazon Web Services account.
+ * By default, an IAM user defaults to the same settings as the root user, unless they explicitly override the settings by
+ * running the <a>ModifyIdFormat</a> command. Resources created with longer IDs are visible to all IAM users, regardless of
+ * these settings and provided that they have permission to use the relevant <code>Describe</code> command for the resource
  */
 DescribeIdFormatResponse * Ec2Client::describeIdFormat(const DescribeIdFormatRequest &request)
 {
@@ -5169,8 +6058,8 @@ DescribeImageAttributeResponse * Ec2Client::describeImageAttribute(const Describ
  *
  * you>
  *
- * The images available to you include public images, private images that you own, and private images owned by other AWS
- * accounts for which you have explicit launch
+ * The images available to you include public images, private images that you own, and private images owned by other Amazon
+ * Web Services accounts for which you have explicit launch
  *
  * permissions>
  *
@@ -5284,6 +6173,31 @@ DescribeInstanceEventNotificationAttributesResponse * Ec2Client::describeInstanc
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeInstanceEventWindowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified event windows or all event
+ *
+ * windows>
+ *
+ * If you specify event window IDs, the output includes information for only the specified event windows. If you specify
+ * filters, the output includes information for only those event windows that meet the filter criteria. If you do not
+ * specify event windows IDs or filters, the output includes information for all event windows, which can affect
+ * performance. We recommend that you use pagination to ensure that the operation returns quickly and successfully.
+ *
+ * </p
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+DescribeInstanceEventWindowsResponse * Ec2Client::describeInstanceEventWindows(const DescribeInstanceEventWindowsRequest &request)
+{
+    return qobject_cast<DescribeInstanceEventWindowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeInstanceStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -5301,7 +6215,7 @@ DescribeInstanceEventNotificationAttributesResponse * Ec2Client::describeInstanc
  * issues. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html">Status checks
  * for your instances</a> and <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshooting instances with
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshoot instances with
  * failed status checks</a> in the <i>Amazon EC2 User
  *
  * Guide</i>> </li> <li>
@@ -5400,6 +6314,50 @@ DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const Des
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIpamPoolsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about your IPAM
+ */
+DescribeIpamPoolsResponse * Ec2Client::describeIpamPools(const DescribeIpamPoolsRequest &request)
+{
+    return qobject_cast<DescribeIpamPoolsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIpamScopesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about your IPAM
+ */
+DescribeIpamScopesResponse * Ec2Client::describeIpamScopes(const DescribeIpamScopesRequest &request)
+{
+    return qobject_cast<DescribeIpamScopesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeIpamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about your IPAM
+ *
+ * pools>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a>
+ * in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+DescribeIpamsResponse * Ec2Client::describeIpams(const DescribeIpamsRequest &request)
+{
+    return qobject_cast<DescribeIpamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeIpv6PoolsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -5422,8 +6380,8 @@ DescribeIpv6PoolsResponse * Ec2Client::describeIpv6Pools(const DescribeIpv6Pools
  * pairs>
  *
  * For more information about key pairs, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a> in the <i>Amazon Elastic
- * Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs</a> in the <i>Amazon
+ * Elastic Compute Cloud User
  */
 DescribeKeyPairsResponse * Ec2Client::describeKeyPairs(const DescribeKeyPairsRequest &request)
 {
@@ -5543,7 +6501,7 @@ DescribeLocalGatewaysResponse * Ec2Client::describeLocalGateways(const DescribeL
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes your managed prefix lists and any AWS-managed prefix
+ * Describes your managed prefix lists and any Amazon Web Services-managed prefix
  *
  * lists>
  *
@@ -5597,6 +6555,32 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
 DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetworkAclsRequest &request)
 {
     return qobject_cast<DescribeNetworkAclsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkInsightsAccessScopeAnalysesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified Network Access Scope
+ */
+DescribeNetworkInsightsAccessScopeAnalysesResponse * Ec2Client::describeNetworkInsightsAccessScopeAnalyses(const DescribeNetworkInsightsAccessScopeAnalysesRequest &request)
+{
+    return qobject_cast<DescribeNetworkInsightsAccessScopeAnalysesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeNetworkInsightsAccessScopesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified Network Access
+ */
+DescribeNetworkInsightsAccessScopesResponse * Ec2Client::describeNetworkInsightsAccessScopes(const DescribeNetworkInsightsAccessScopesRequest &request)
+{
+    return qobject_cast<DescribeNetworkInsightsAccessScopesResponse *>(send(request));
 }
 
 /*!
@@ -5685,8 +6669,8 @@ DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const Descr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes available AWS services in a prefix list format, which includes the prefix list name and prefix list ID of the
- * service and the IP address range for the
+ * Describes available Amazon Web Services services in a prefix list format, which includes the prefix list name and prefix
+ * list ID of the service and the IP address range for the
  *
  * service>
  *
@@ -5753,12 +6737,13 @@ DescribePublicIpv4PoolsResponse * Ec2Client::describePublicIpv4Pools(const Descr
  * Regions>
  *
  * For a list of the Regions supported by Amazon EC2, see <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region"> Regions and
+ * href="https://docs.aws.amazon.com/general/latest/gr/ec2-service.html"> Amazon Elastic Compute Cloud endpoints and
  *
- * Endpoints</a>>
+ * quotas</a>>
  *
  * For information about enabling and disabling Regions for your account, see <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing AWS Regions</a> in the <i>AWS General
+ * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Amazon Web Services Regions</a> in the
+ * <i>Amazon Web Services General
  */
 DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsRequest &request)
 {
@@ -5771,8 +6756,9 @@ DescribeRegionsResponse * Ec2Client::describeRegions(const DescribeRegionsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes a root volume replacement task. For more information, see <a href="https://docs.aws.amazon.com/">Replace a
- * root volume</a> in the <i>Amazon Elastic Compute Cloud User
+ * Describes a root volume replacement task. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-restoring-volume.html#replace-root">Replace a root
+ * volume</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeReplaceRootVolumeTasksResponse * Ec2Client::describeReplaceRootVolumeTasks(const DescribeReplaceRootVolumeTasksRequest &request)
 {
@@ -5895,7 +6881,7 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
  * associations>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route
- * Tables</a> in the <i>Amazon Virtual Private Cloud User
+ * tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRouteTablesRequest &request)
 {
@@ -5955,6 +6941,19 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSecurityGroupRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more of your security group
+ */
+DescribeSecurityGroupRulesResponse * Ec2Client::describeSecurityGroupRules(const DescribeSecurityGroupRulesRequest &request)
+{
+    return qobject_cast<DescribeSecurityGroupRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeSecurityGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -5965,9 +6964,15 @@ DescribeSecurityGroupReferencesResponse * Ec2Client::describeSecurityGroupRefere
  *
  * A security group is for use with instances either in the EC2-Classic platform or in a specific VPC. For more
  * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Amazon EC2
- * Security Groups</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> and <a
- * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security Groups for Your VPC</a>
+ * security groups</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> and <a
+ * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security groups for your VPC</a>
  * in the <i>Amazon Virtual Private Cloud User
+ *
+ * Guide</i>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DescribeSecurityGroupsResponse * Ec2Client::describeSecurityGroups(const DescribeSecurityGroupsRequest &request)
 {
@@ -5995,6 +7000,19 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeSnapshotTierStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the storage tier status of one or more Amazon EBS
+ */
+DescribeSnapshotTierStatusResponse * Ec2Client::describeSnapshotTierStatus(const DescribeSnapshotTierStatusRequest &request)
+{
+    return qobject_cast<DescribeSnapshotTierStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeSnapshotsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -6004,7 +7022,7 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
  * you>
  *
  * The snapshots available to you include public snapshots, private snapshots that you own, and private snapshots owned by
- * other AWS accounts for which you have explicit create volume
+ * other Amazon Web Services accounts for which you have explicit create volume
  *
  * permissions>
  *
@@ -6013,20 +7031,21 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
  * categories> <ul> <li>
  *
  * <i>public</i>: The owner of the snapshot granted create volume permissions for the snapshot to the <code>all</code>
- * group. All AWS accounts have create volume permissions for these
+ * group. All Amazon Web Services accounts have create volume permissions for these
  *
  * snapshots> </li> <li>
  *
- * <i>explicit</i>: The owner of the snapshot granted create volume permissions to a specific AWS
+ * <i>explicit</i>: The owner of the snapshot granted create volume permissions to a specific Amazon Web Services
  *
  * account> </li> <li>
  *
- * <i>implicit</i>: An AWS account has implicit create volume permissions for all snapshots it
+ * <i>implicit</i>: An Amazon Web Services account has implicit create volume permissions for all snapshots it
  *
  * owns> </li> </ul>
  *
- * The list of snapshots returned can be filtered by specifying snapshot IDs, snapshot owners, or AWS accounts with create
- * volume permissions. If no options are specified, Amazon EC2 returns all snapshots for which you have create volume
+ * The list of snapshots returned can be filtered by specifying snapshot IDs, snapshot owners, or Amazon Web Services
+ * accounts with create volume permissions. If no options are specified, Amazon EC2 returns all snapshots for which you
+ * have create volume
  *
  * permissions>
  *
@@ -6037,14 +7056,14 @@ DescribeSnapshotAttributeResponse * Ec2Client::describeSnapshotAttribute(const D
  * results>
  *
  * If you specify one or more snapshot owners using the <code>OwnerIds</code> option, only snapshots from the specified
- * owners and for which you have access are returned. The results can include the AWS account IDs of the specified owners,
- * <code>amazon</code> for snapshots owned by Amazon, or <code>self</code> for snapshots that you
+ * owners and for which you have access are returned. The results can include the Amazon Web Services account IDs of the
+ * specified owners, <code>amazon</code> for snapshots owned by Amazon, or <code>self</code> for snapshots that you
  *
  * own>
  *
  * If you specify a list of restorable users, only snapshots with create snapshot permissions for those users are returned.
- * You can specify AWS account IDs (if you own the snapshots), <code>self</code> for snapshots for which you own or have
- * explicit permissions, or <code>all</code> for public
+ * You can specify Amazon Web Services account IDs (if you own the snapshots), <code>self</code> for snapshots for which
+ * you own or have explicit permissions, or <code>all</code> for public
  *
  * snapshots>
  *
@@ -6109,6 +7128,11 @@ DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const
  *
  * Spot Fleet events are delayed by up to 30 seconds before they can be described. This ensures that you can query by the
  * last evaluated time and not miss a recorded event. Spot Fleet events are available for 48
+ *
+ * hours>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-monitor.html">Monitor fleet
+ * events using Amazon EventBridge</a> in the <i>Amazon EC2 User Guide for Linux
  */
 DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHistory(const DescribeSpotFleetRequestHistoryRequest &request)
 {
@@ -6191,8 +7215,8 @@ DescribeSpotPriceHistoryResponse * Ec2Client::describeSpotPriceHistory(const Des
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * [VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when they
- * reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC peering connection
- * has been
+ * reference a deleted security group in the same VPC or in a peer VPC, or if they reference a security group in a peer VPC
+ * for which the VPC peering connection has been
  */
 DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(const DescribeStaleSecurityGroupsRequest &request)
 {
@@ -6221,12 +7245,12 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
  *
  * To use this API, you must have the required permissions. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions for
- * storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and
- * restore an AMI using S3</a> in the <i>Amazon Elastic Compute Cloud User
+ * restore an AMI using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeStoreImageTasksResponse * Ec2Client::describeStoreImageTasks(const DescribeStoreImageTasksRequest &request)
 {
@@ -6244,7 +7268,7 @@ DescribeStoreImageTasksResponse * Ec2Client::describeStoreImageTasks(const Descr
  * subnets>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">Your VPC and
- * Subnets</a> in the <i>Amazon Virtual Private Cloud User
+ * subnets</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsRequest &request)
 {
@@ -6261,9 +7285,8 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
  *
  * resources>
  *
- * For more information about tags, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the <i>Amazon
- * Elastic Compute Cloud User
+ * For more information about tags, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag
+ * your Amazon EC2 resources</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &request)
 {
@@ -6378,6 +7401,32 @@ DescribeTransitGatewayPeeringAttachmentsResponse * Ec2Client::describeTransitGat
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewayPolicyTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more transit gateway route policy tables.
+ */
+DescribeTransitGatewayPolicyTablesResponse * Ec2Client::describeTransitGatewayPolicyTables(const DescribeTransitGatewayPolicyTablesRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewayPolicyTablesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewayRouteTableAnnouncementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more transit gateway route table
+ */
+DescribeTransitGatewayRouteTableAnnouncementsResponse * Ec2Client::describeTransitGatewayRouteTableAnnouncements(const DescribeTransitGatewayRouteTableAnnouncementsRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewayRouteTableAnnouncementsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeTransitGatewayRouteTablesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -6415,6 +7464,26 @@ DescribeTransitGatewayVpcAttachmentsResponse * Ec2Client::describeTransitGateway
 DescribeTransitGatewaysResponse * Ec2Client::describeTransitGateways(const DescribeTransitGatewaysRequest &request)
 {
     return qobject_cast<DescribeTransitGatewaysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTrunkInterfaceAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact your
+ * account
+ *
+ * manager> </note>
+ *
+ * Describes one or more network interface trunk
+ */
+DescribeTrunkInterfaceAssociationsResponse * Ec2Client::describeTrunkInterfaceAssociations(const DescribeTrunkInterfaceAssociationsRequest &request)
+{
+    return qobject_cast<DescribeTrunkInterfaceAssociationsResponse *>(send(request));
 }
 
 /*!
@@ -6459,7 +7528,7 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
  * <code>ok</code>. If the check fails, the overall status is <code>impaired</code>. If the status is
  * <code>insufficient-data</code>, then the checks might still be taking place on your volume at the time. We recommend
  * that you retry the request. For more information about volume status, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html">Monitoring the status of your
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html">Monitor the status of your
  * volumes</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
@@ -6531,8 +7600,8 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
  * You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about
  * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon CloudWatch
  * Events User Guide</a>. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods">Monitoring volume
- * modifications</a> in the <i>Amazon Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the progress of
+ * volume modifications</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(const DescribeVolumesModificationsRequest &request)
 {
@@ -6559,6 +7628,12 @@ DescribeVpcAttributeResponse * Ec2Client::describeVpcAttribute(const DescribeVpc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes the ClassicLink status of one or more
+ *
+ * VPCs> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const DescribeVpcClassicLinkRequest &request)
 {
@@ -6570,6 +7645,14 @@ DescribeVpcClassicLinkResponse * Ec2Client::describeVpcClassicLink(const Describ
  * DescribeVpcClassicLinkDnsSupportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * Describes the ClassicLink DNS support status of one or more VPCs. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
@@ -6705,8 +7788,8 @@ DescribeVpcsResponse * Ec2Client::describeVpcs(const DescribeVpcsRequest &reques
  *
  * connections>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const DescribeVpnConnectionsRequest &request)
 {
@@ -6723,8 +7806,8 @@ DescribeVpnConnectionsResponse * Ec2Client::describeVpnConnections(const Describ
  *
  * gateways>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a>
- * in the <i>AWS Site-to-Site VPN User
+ * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web Services
+ * Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGatewaysRequest &request)
 {
@@ -6736,6 +7819,14 @@ DescribeVpnGatewaysResponse * Ec2Client::describeVpnGateways(const DescribeVpnGa
  * DetachClassicLinkVpcResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * Unlinks (detaches) a linked EC2-Classic instance from a VPC. After the instance has been unlinked, the VPC security
  * groups are no longer associated with it. An instance is automatically unlinked from a VPC when it's
@@ -6786,14 +7877,13 @@ DetachNetworkInterfaceResponse * Ec2Client::detachNetworkInterface(const DetachN
  *
  * first>
  *
- * When a volume with an AWS Marketplace product code is detached from an instance, the product code is no longer
- * associated with the
+ * When a volume with an Amazon Web Services Marketplace product code is detached from an instance, the product code is no
+ * longer associated with the
  *
  * instance>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detaching an Amazon EBS volume</a>
- * in the <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html">Detach
+ * an Amazon EBS volume</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DetachVolumeResponse * Ec2Client::detachVolume(const DetachVolumeRequest &request)
 {
@@ -6849,6 +7939,25 @@ DisableEbsEncryptionByDefaultResponse * Ec2Client::disableEbsEncryptionByDefault
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableFastLaunchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable faster
+ * launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must be removed
+ * before you can enable faster launching
+ *
+ * again> <note>
+ *
+ * To change these settings, you must own the
+ */
+DisableFastLaunchResponse * Ec2Client::disableFastLaunch(const DisableFastLaunchRequest &request)
+{
+    return qobject_cast<DisableFastLaunchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DisableFastSnapshotRestoresResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -6876,6 +7985,21 @@ DisableFastSnapshotRestoresResponse * Ec2Client::disableFastSnapshotRestores(con
 DisableImageDeprecationResponse * Ec2Client::disableImageDeprecation(const DisableImageDeprecationRequest &request)
 {
     return qobject_cast<DisableImageDeprecationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableIpamOrganizationAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disable the IPAM account. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in
+ * the <i>Amazon VPC IPAM User Guide</i>.
+ */
+DisableIpamOrganizationAdminAccountResponse * Ec2Client::disableIpamOrganizationAdminAccount(const DisableIpamOrganizationAdminAccountRequest &request)
+{
+    return qobject_cast<DisableIpamOrganizationAdminAccountResponse *>(send(request));
 }
 
 /*!
@@ -6927,6 +8051,12 @@ DisableVgwRoutePropagationResponse * Ec2Client::disableVgwRoutePropagation(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disables ClassicLink for a VPC. You cannot disable ClassicLink for a VPC that has EC2-Classic instances linked to
+ *
+ * it> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVpcClassicLinkRequest &request)
 {
@@ -6947,6 +8077,12 @@ DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVp
  * Guide</i>>
  *
  * You must specify a VPC ID in the
+ *
+ * request> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSupport(const DisableVpcClassicLinkDnsSupportRequest &request)
 {
@@ -6967,7 +8103,13 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
  * <i>Amazon Elastic Compute Cloud User
  *
- * Guide</i>>
+ * Guide</i>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an
  */
@@ -7012,11 +8154,10 @@ DisassociateClientVpnTargetNetworkResponse * Ec2Client::disassociateClientVpnTar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates an IAM role from an AWS Certificate Manager (ACM) certificate. Disassociating an IAM role from an ACM
+ * Disassociates an IAM role from an Certificate Manager (ACM) certificate. Disassociating an IAM role from an ACM
  * certificate removes the Amazon S3 object that contains the certificate, certificate chain, and encrypted private key
- * from the Amazon S3 bucket. It also revokes the IAM role's permission to use the AWS Key Management Service (KMS)
- * customer master key (CMK) used to encrypt the private key. This effectively revokes the role's permission to use the
- * certificate.
+ * from the Amazon S3 bucket. It also revokes the IAM role's permission to use the KMS key used to encrypt the private key.
+ * This effectively revokes the role's permission to use the
  */
 DisassociateEnclaveCertificateIamRoleResponse * Ec2Client::disassociateEnclaveCertificateIamRole(const DisassociateEnclaveCertificateIamRoleRequest &request)
 {
@@ -7042,6 +8183,24 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateInstanceEventWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates one or more targets from an event
+ *
+ * window>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+DisassociateInstanceEventWindowResponse * Ec2Client::disassociateInstanceEventWindow(const DisassociateInstanceEventWindowRequest &request)
+{
+    return qobject_cast<DisassociateInstanceEventWindowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DisassociateRouteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7052,7 +8211,7 @@ DisassociateIamInstanceProfileResponse * Ec2Client::disassociateIamInstanceProfi
  *
  * After you perform this action, the subnet no longer uses the routes in the route table. Instead, it uses the routes in
  * the VPC's main route table. For more information about route tables, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon Virtual
+ * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route tables</a> in the <i>Amazon Virtual
  * Private Cloud User
  */
 DisassociateRouteTableResponse * Ec2Client::disassociateRouteTable(const DisassociateRouteTableRequest &request)
@@ -7089,6 +8248,19 @@ DisassociateTransitGatewayMulticastDomainResponse * Ec2Client::disassociateTrans
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateTransitGatewayPolicyTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the association between an an attachment and a policy
+ */
+DisassociateTransitGatewayPolicyTableResponse * Ec2Client::disassociateTransitGatewayPolicyTable(const DisassociateTransitGatewayPolicyTableRequest &request)
+{
+    return qobject_cast<DisassociateTransitGatewayPolicyTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DisassociateTransitGatewayRouteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7098,6 +8270,26 @@ DisassociateTransitGatewayMulticastDomainResponse * Ec2Client::disassociateTrans
 DisassociateTransitGatewayRouteTableResponse * Ec2Client::disassociateTransitGatewayRouteTable(const DisassociateTransitGatewayRouteTableRequest &request)
 {
     return qobject_cast<DisassociateTransitGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateTrunkInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact your
+ * account
+ *
+ * manager> </note>
+ *
+ * Removes an association between a branch network interface with a trunk network
+ */
+DisassociateTrunkInterfaceResponse * Ec2Client::disassociateTrunkInterface(const DisassociateTrunkInterfaceRequest &request)
+{
+    return qobject_cast<DisassociateTrunkInterfaceResponse *>(send(request));
 }
 
 /*!
@@ -7130,13 +8322,13 @@ DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const Dis
  * Region>
  *
  * After you enable encryption by default, the EBS volumes that you create are always encrypted, either using the default
- * CMK or the CMK that you specified when you created each volume. For more information, see <a
+ * KMS key or the KMS key that you specified when you created each volume. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the <i>Amazon
  * Elastic Compute Cloud User
  *
  * Guide</i>>
  *
- * You can specify the default CMK for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
+ * You can specify the default KMS key for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
  *
  * <a>ResetEbsDefaultKmsKeyId</a>>
  *
@@ -7152,6 +8344,26 @@ DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const Dis
 EnableEbsEncryptionByDefaultResponse * Ec2Client::enableEbsEncryptionByDefault(const EnableEbsEncryptionByDefaultRequest &request)
 {
     return qobject_cast<EnableEbsEncryptionByDefaultResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableFastLaunchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch instances up
+ * to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs through Sysprep steps,
+ * rebooting as required. Then it creates a set of reserved snapshots that are used for subsequent launches. The reserved
+ * snapshots are automatically replenished as they are used, depending on your settings for launch
+ *
+ * frequency> <note>
+ *
+ * To change these settings, you must own the
+ */
+EnableFastLaunchResponse * Ec2Client::enableFastLaunch(const EnableFastLaunchRequest &request)
+{
+    return qobject_cast<EnableFastLaunchResponse *>(send(request));
 }
 
 /*!
@@ -7194,6 +8406,22 @@ EnableFastSnapshotRestoresResponse * Ec2Client::enableFastSnapshotRestores(const
 EnableImageDeprecationResponse * Ec2Client::enableImageDeprecation(const EnableImageDeprecationRequest &request)
 {
     return qobject_cast<EnableImageDeprecationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableIpamOrganizationAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management account
+ * as the IPAM admin account. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in
+ * the <i>Amazon VPC IPAM User Guide</i>.
+ */
+EnableIpamOrganizationAdminAccountResponse * Ec2Client::enableIpamOrganizationAdminAccount(const EnableIpamOrganizationAdminAccountRequest &request)
+{
+    return qobject_cast<EnableIpamOrganizationAdminAccountResponse *>(send(request));
 }
 
 /*!
@@ -7257,6 +8485,14 @@ EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
+ *
  * Enables a VPC for ClassicLink. You can then link EC2-Classic instances to your ClassicLink-enabled VPC to allow
  * communication over private IP addresses. You cannot enable your VPC for ClassicLink if any of your VPC route tables have
  * existing routes for address ranges within the <code>10.0.0.0/8</code> IP address range, excluding local routes for VPCs
@@ -7274,6 +8510,14 @@ EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcCl
  * EnableVpcClassicLinkDnsSupportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
@@ -7360,10 +8604,9 @@ ExportTransitGatewayRoutesResponse * Ec2Client::exportTransitGatewayRoutes(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the IAM roles that are associated with the specified AWS Certificate Manager (ACM) certificate. It also returns
- * the name of the Amazon S3 bucket and the Amazon S3 object key where the certificate, certificate chain, and encrypted
- * private key bundle are stored, and the ARN of the AWS Key Management Service (KMS) customer master key (CMK) that's used
- * to encrypt the private
+ * Returns the IAM roles that are associated with the specified ACM (ACM) certificate. It also returns the name of the
+ * Amazon S3 bucket and the Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle
+ * are stored, and the ARN of the KMS key that's used to encrypt the private
  */
 GetAssociatedEnclaveCertificateIamRolesResponse * Ec2Client::getAssociatedEnclaveCertificateIamRoles(const GetAssociatedEnclaveCertificateIamRolesRequest &request)
 {
@@ -7390,8 +8633,8 @@ GetAssociatedIpv6PoolCidrsResponse * Ec2Client::getAssociatedIpv6PoolCidrs(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets usage information about a Capacity Reservation. If the Capacity Reservation is shared, it shows usage information
- * for the Capacity Reservation owner and each AWS account that is currently using the shared capacity. If the Capacity
- * Reservation is not shared, it shows only the Capacity Reservation owner's
+ * for the Capacity Reservation owner and each Amazon Web Services account that is currently using the shared capacity. If
+ * the Capacity Reservation is not shared, it shows only the Capacity Reservation owner's
  */
 GetCapacityReservationUsageResponse * Ec2Client::getCapacityReservationUsage(const GetCapacityReservationUsageRequest &request)
 {
@@ -7485,8 +8728,8 @@ GetDefaultCreditSpecificationResponse * Ec2Client::getDefaultCreditSpecification
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the default customer master key (CMK) for EBS encryption by default for your account in this Region. You can
- * change the default CMK for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
+ * Describes the default KMS key for EBS encryption by default for your account in this Region. You can change the default
+ * KMS key for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or
  *
  * <a>ResetEbsDefaultKmsKeyId</a>>
  *
@@ -7580,6 +8823,121 @@ GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchas
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetInstanceTypesFromInstanceRequirementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
+ * instance types without launching instances. Note that the response does not consider
+ *
+ * capacity>
+ *
+ * When you specify multiple parameters, you get instance types that satisfy all of the specified parameters. If you
+ * specify multiple values for a parameter, you get instance types that satisfy any of the specified
+ *
+ * values>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html#spotfleet-get-instance-types-from-instance-requirements">Preview
+ * instance types with specified attributes</a>, <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html">Attribute-based
+ * instance type selection for EC2 Fleet</a>, <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html">Attribute-based
+ * instance type selection for Spot Fleet</a>, and <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in the
+ * <i>Amazon EC2 User Guide</i>, and <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating an Auto
+ * Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+ */
+GetInstanceTypesFromInstanceRequirementsResponse * Ec2Client::getInstanceTypesFromInstanceRequirements(const GetInstanceTypesFromInstanceRequirementsRequest &request)
+{
+    return qobject_cast<GetInstanceTypesFromInstanceRequirementsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetInstanceUefiDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A binary representation of the UEFI variable store. Only non-volatile variables are stored. This is a base64 encoded and
+ * zlib compressed binary value that must be properly
+ *
+ * encoded>
+ *
+ * When you use <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/register-image.html">register-image</a> to
+ * create an AMI, you can create an exact copy of your variable store by passing the UEFI data in the <code>UefiData</code>
+ * parameter. You can modify the UEFI data by using the <a
+ * href="https://github.com/awslabs/python-uefivars">python-uefivars tool</a> on GitHub. You can use the tool to convert
+ * the UEFI data into a human-readable format (JSON), which you can inspect and modify, and then convert back into the
+ * binary format to use with
+ *
+ * register-image>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/uefi-secure-boot.html">UEFI
+ * Secure Boot</a> in the <i>Amazon EC2 User
+ */
+GetInstanceUefiDataResponse * Ec2Client::getInstanceUefiData(const GetInstanceUefiDataRequest &request)
+{
+    return qobject_cast<GetInstanceUefiDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetIpamAddressHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in
+ * the <i>Amazon VPC IPAM User
+ */
+GetIpamAddressHistoryResponse * Ec2Client::getIpamAddressHistory(const GetIpamAddressHistoryRequest &request)
+{
+    return qobject_cast<GetIpamAddressHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetIpamPoolAllocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get a list of all the CIDR allocations in an IPAM
+ */
+GetIpamPoolAllocationsResponse * Ec2Client::getIpamPoolAllocations(const GetIpamPoolAllocationsRequest &request)
+{
+    return qobject_cast<GetIpamPoolAllocationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetIpamPoolCidrsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the CIDRs provisioned to an IPAM
+ */
+GetIpamPoolCidrsResponse * Ec2Client::getIpamPoolCidrs(const GetIpamPoolCidrsRequest &request)
+{
+    return qobject_cast<GetIpamPoolCidrsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetIpamResourceCidrsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about the resources in a
+ */
+GetIpamResourceCidrsResponse * Ec2Client::getIpamResourceCidrs(const GetIpamResourceCidrsRequest &request)
+{
+    return qobject_cast<GetIpamResourceCidrsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * GetLaunchTemplateDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7589,9 +8947,9 @@ GetHostReservationPurchasePreviewResponse * Ec2Client::getHostReservationPurchas
  * </p
  *
  * This action calls on other describe actions to get instance information. Depending on your instance configuration, you
- * may need to allow the following actions in your IAM policy: DescribeSpotInstanceRequests,
- * DescribeInstanceCreditSpecifications, DescribeVolumes, DescribeInstanceAttribute, and DescribeElasticGpus. Or, you can
- * allow <code>describe*</code> depending on your instance
+ * may need to allow the following actions in your IAM policy: <code>DescribeSpotInstanceRequests</code>,
+ * <code>DescribeInstanceCreditSpecifications</code>, <code>DescribeVolumes</code>, <code>DescribeInstanceAttribute</code>,
+ * and <code>DescribeElasticGpus</code>. Or, you can allow <code>describe*</code> depending on your instance
  */
 GetLaunchTemplateDataResponse * Ec2Client::getLaunchTemplateData(const GetLaunchTemplateDataRequest &request)
 {
@@ -7622,6 +8980,32 @@ GetManagedPrefixListAssociationsResponse * Ec2Client::getManagedPrefixListAssoci
 GetManagedPrefixListEntriesResponse * Ec2Client::getManagedPrefixListEntries(const GetManagedPrefixListEntriesRequest &request)
 {
     return qobject_cast<GetManagedPrefixListEntriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetNetworkInsightsAccessScopeAnalysisFindingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the findings for the specified Network Access Scope
+ */
+GetNetworkInsightsAccessScopeAnalysisFindingsResponse * Ec2Client::getNetworkInsightsAccessScopeAnalysisFindings(const GetNetworkInsightsAccessScopeAnalysisFindingsRequest &request)
+{
+    return qobject_cast<GetNetworkInsightsAccessScopeAnalysisFindingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetNetworkInsightsAccessScopeContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the content for the specified Network Access
+ */
+GetNetworkInsightsAccessScopeContentResponse * Ec2Client::getNetworkInsightsAccessScopeContent(const GetNetworkInsightsAccessScopeContentRequest &request)
+{
+    return qobject_cast<GetNetworkInsightsAccessScopeContentResponse *>(send(request));
 }
 
 /*!
@@ -7693,6 +9077,43 @@ GetSerialConsoleAccessStatusResponse * Ec2Client::getSerialConsoleAccessStatus(c
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetSpotPlacementScoresResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Calculates the Spot placement score for a Region or Availability Zone based on the specified target capacity and compute
+ *
+ * requirements>
+ *
+ * You can specify your compute requirements either by using <code>InstanceRequirementsWithMetadata</code> and letting
+ * Amazon EC2 choose the optimal instance types to fulfill your Spot request, or you can specify the instance types by
+ * using
+ *
+ * <code>InstanceTypes</code>>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot
+ * placement score</a> in the Amazon EC2 User
+ */
+GetSpotPlacementScoresResponse * Ec2Client::getSpotPlacementScores(const GetSpotPlacementScoresRequest &request)
+{
+    return qobject_cast<GetSpotPlacementScoresResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetSubnetCidrReservationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the subnet CIDR
+ */
+GetSubnetCidrReservationsResponse * Ec2Client::getSubnetCidrReservations(const GetSubnetCidrReservationsRequest &request)
+{
+    return qobject_cast<GetSubnetCidrReservationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * GetTransitGatewayAttachmentPropagationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7715,6 +9136,32 @@ GetTransitGatewayAttachmentPropagationsResponse * Ec2Client::getTransitGatewayAt
 GetTransitGatewayMulticastDomainAssociationsResponse * Ec2Client::getTransitGatewayMulticastDomainAssociations(const GetTransitGatewayMulticastDomainAssociationsRequest &request)
 {
     return qobject_cast<GetTransitGatewayMulticastDomainAssociationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetTransitGatewayPolicyTableAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the transit gateway policy table
+ */
+GetTransitGatewayPolicyTableAssociationsResponse * Ec2Client::getTransitGatewayPolicyTableAssociations(const GetTransitGatewayPolicyTableAssociationsRequest &request)
+{
+    return qobject_cast<GetTransitGatewayPolicyTableAssociationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetTransitGatewayPolicyTableEntriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of transit gateway policy table
+ */
+GetTransitGatewayPolicyTableEntriesResponse * Ec2Client::getTransitGatewayPolicyTableEntries(const GetTransitGatewayPolicyTableEntriesRequest &request)
+{
+    return qobject_cast<GetTransitGatewayPolicyTableEntriesResponse *>(send(request));
 }
 
 /*!
@@ -7758,6 +9205,36 @@ GetTransitGatewayRouteTablePropagationsResponse * Ec2Client::getTransitGatewayRo
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetVpnConnectionDeviceSampleConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Download an Amazon Web Services-provided sample configuration file to be used with the customer gateway device specified
+ * for your Site-to-Site VPN
+ */
+GetVpnConnectionDeviceSampleConfigurationResponse * Ec2Client::getVpnConnectionDeviceSampleConfiguration(const GetVpnConnectionDeviceSampleConfigurationRequest &request)
+{
+    return qobject_cast<GetVpnConnectionDeviceSampleConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetVpnConnectionDeviceTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Obtain a list of customer gateway devices for which sample configuration files can be provided. The request has no
+ * additional parameters. You can also see the list of device types with sample configuration files available under <a
+ * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/your-cgw.html">Your customer gateway device</a> in the <i>Amazon Web
+ * Services Site-to-Site VPN User
+ */
+GetVpnConnectionDeviceTypesResponse * Ec2Client::getVpnConnectionDeviceTypes(const GetVpnConnectionDeviceTypesRequest &request)
+{
+    return qobject_cast<GetVpnConnectionDeviceTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ImportClientVpnClientCertificateRevocationListResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7782,7 +9259,13 @@ ImportClientVpnClientCertificateRevocationListResponse * Ec2Client::importClient
  *
  * Import single or multi-volume disk images or EBS snapshots into an Amazon Machine Image
  *
- * (AMI)>
+ * (AMI)> <b>
+ *
+ * Amazon Web Services VM Import/Export strongly recommends specifying a value for either the <code>--license-type</code>
+ * or <code>--usage-operation</code> parameter when you create a new VM Import task. This ensures your operating system is
+ * licensed appropriately and your billing is
+ *
+ * optimized> </b>
  *
  * For more information, see <a
  * href="https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html">Importing a VM as an image
@@ -7807,8 +9290,8 @@ ImportImageResponse * Ec2Client::importImage(const ImportImageRequest &request)
  *
  * instead>
  *
- * This API action is not supported by the AWS Command Line Interface (AWS CLI). For information about using the Amazon EC2
- * CLI, which is deprecated, see <a
+ * This API action is not supported by the Command Line Interface (CLI). For information about using the Amazon EC2 CLI,
+ * which is deprecated, see <a
  * href="https://awsdocs.s3.amazonaws.com/EC2/ec2-clt.pdf#UsingVirtualMachinesinAmazonEC2">Importing a VM to Amazon EC2</a>
  * in the <i>Amazon EC2 CLI Reference</i> PDF
  *
@@ -7828,16 +9311,16 @@ ImportInstanceResponse * Ec2Client::importInstance(const ImportInstanceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports the public key from an RSA key pair that you created with a third-party tool. Compare this with
- * <a>CreateKeyPair</a>, in which AWS creates the key pair and gives the keys to you (AWS keeps a copy of the public key).
- * With ImportKeyPair, you create the key pair and give AWS just the public key. The private key is never transferred
- * between you and
+ * Imports the public key from an RSA or ED25519 key pair that you created with a third-party tool. Compare this with
+ * <a>CreateKeyPair</a>, in which Amazon Web Services creates the key pair and gives the keys to you (Amazon Web Services
+ * keeps a copy of the public key). With ImportKeyPair, you create the key pair and give Amazon Web Services just the
+ * public key. The private key is never transferred between you and Amazon Web
  *
- * AWS>
+ * Services>
  *
  * For more information about key pairs, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pairs</a> in the <i>Amazon Elastic
- * Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pairs</a> in the <i>Amazon
+ * Elastic Compute Cloud User
  */
 ImportKeyPairResponse * Ec2Client::importKeyPair(const ImportKeyPairRequest &request)
 {
@@ -7878,8 +9361,8 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
  *
  * instead>
  *
- * This API action is not supported by the AWS Command Line Interface (AWS CLI). For information about using the Amazon EC2
- * CLI, which is deprecated, see <a
+ * This API action is not supported by the Command Line Interface (CLI). For information about using the Amazon EC2 CLI,
+ * which is deprecated, see <a
  * href="https://awsdocs.s3.amazonaws.com/EC2/ec2-clt.pdf#importing-your-volumes-into-amazon-ebs">Importing Disks to Amazon
  * EBS</a> in the <i>Amazon EC2 CLI Reference</i> PDF
  *
@@ -7891,6 +9374,34 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
 ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &request)
 {
     return qobject_cast<ImportVolumeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ListImagesInRecycleBinResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists one or more AMIs that are currently in the Recycle Bin. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+ * Compute Cloud User
+ */
+ListImagesInRecycleBinResponse * Ec2Client::listImagesInRecycleBin(const ListImagesInRecycleBinRequest &request)
+{
+    return qobject_cast<ListImagesInRecycleBinResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ListSnapshotsInRecycleBinResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists one or more snapshots that are currently in the Recycle
+ */
+ListSnapshotsInRecycleBinResponse * Ec2Client::listSnapshotsInRecycleBin(const ListSnapshotsInRecycleBinRequest &request)
+{
+    return qobject_cast<ListSnapshotsInRecycleBinResponse *>(send(request));
 }
 
 /*!
@@ -7944,6 +9455,26 @@ ModifyCapacityReservationResponse * Ec2Client::modifyCapacityReservation(const M
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyCapacityReservationFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a Capacity Reservation
+ *
+ * Fleet>
+ *
+ * When you modify the total target capacity of a Capacity Reservation Fleet, the Fleet automatically creates new Capacity
+ * Reservations, or modifies or cancels existing Capacity Reservations in the Fleet to meet the new total target capacity.
+ * When you modify the end date for the Fleet, the end dates for all of the individual Capacity Reservations in the Fleet
+ * are updated
+ */
+ModifyCapacityReservationFleetResponse * Ec2Client::modifyCapacityReservationFleet(const ModifyCapacityReservationFleetRequest &request)
+{
+    return qobject_cast<ModifyCapacityReservationFleetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyClientVpnEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -7962,15 +9493,15 @@ ModifyClientVpnEndpointResponse * Ec2Client::modifyClientVpnEndpoint(const Modif
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the default credit option for CPU usage of burstable performance instances. The default credit option is set at
- * the account level per AWS Region, and is specified per instance family. All new burstable performance instances in the
- * account launch using the default credit
+ * the account level per Amazon Web Services Region, and is specified per instance family. All new burstable performance
+ * instances in the account launch using the default credit
  *
  * option>
  *
- * <code>ModifyDefaultCreditSpecification</code> is an asynchronous operation, which works at an AWS Region level and
- * modifies the credit option for each Availability Zone. All zones in a Region are updated within five minutes. But if
- * instances are launched during this operation, they might not get the new credit option until the zone is updated. To
- * verify whether the update has occurred, you can call <code>GetDefaultCreditSpecification</code> and check
+ * <code>ModifyDefaultCreditSpecification</code> is an asynchronous operation, which works at an Amazon Web Services Region
+ * level and modifies the credit option for each Availability Zone. All zones in a Region are updated within five minutes.
+ * But if instances are launched during this operation, they might not get the new credit option until the zone is updated.
+ * To verify whether the update has occurred, you can call <code>GetDefaultCreditSpecification</code> and check
  * <code>DefaultCreditSpecification</code> for
  *
  * updates>
@@ -7990,18 +9521,19 @@ ModifyDefaultCreditSpecificationResponse * Ec2Client::modifyDefaultCreditSpecifi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the default customer master key (CMK) for EBS encryption by default for your account in this
+ * Changes the default KMS key for EBS encryption by default for your account in this
  *
  * Region>
  *
- * AWS creates a unique AWS managed CMK in each Region for use with encryption by default. If you change the default CMK to
- * a symmetric customer managed CMK, it is used instead of the AWS managed CMK. To reset the default CMK to the AWS managed
- * CMK for EBS, use <a>ResetEbsDefaultKmsKeyId</a>. Amazon EBS does not support asymmetric
+ * Amazon Web Services creates a unique Amazon Web Services managed KMS key in each Region for use with encryption by
+ * default. If you change the default KMS key to a symmetric customer managed KMS key, it is used instead of the Amazon Web
+ * Services managed KMS key. To reset the default KMS key to the Amazon Web Services managed KMS key for EBS, use
+ * <a>ResetEbsDefaultKmsKeyId</a>. Amazon EBS does not support asymmetric KMS
  *
- * CMKs>
+ * keys>
  *
- * If you delete or disable the customer managed CMK that you specified for use with encryption by default, your instances
- * will fail to
+ * If you delete or disable the customer managed KMS key that you specified for use with encryption by default, your
+ * instances will fail to
  *
  * launch>
  *
@@ -8117,11 +9649,11 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
  *
  * <code>vpn-gateway</code>>
  *
- * This setting applies to the IAM user who makes the request; it does not apply to the entire AWS account. By default, an
- * IAM user defaults to the same settings as the root user. If you're using this action as the root user, then these
- * settings apply to the entire account, unless an IAM user explicitly overrides these settings for themselves. For more
- * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html">Resource IDs</a> in the
- * <i>Amazon Elastic Compute Cloud User
+ * This setting applies to the IAM user who makes the request; it does not apply to the entire Amazon Web Services account.
+ * By default, an IAM user defaults to the same settings as the root user. If you're using this action as the root user,
+ * then these settings apply to the entire account, unless an IAM user explicitly overrides these settings for themselves.
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html">Resource
+ * IDs</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
@@ -8183,12 +9715,12 @@ ModifyIdentityIdFormatResponse * Ec2Client::modifyIdentityIdFormat(const ModifyI
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the specified attribute of the specified AMI. You can specify only one attribute at a time. You can use the
- * <code>Attribute</code> parameter to specify the attribute or one of the following parameters: <code>Description</code>,
- * <code>LaunchPermission</code>, or
+ * <code>Attribute</code> parameter to specify the attribute or one of the following parameters: <code>Description</code>
+ * or
  *
- * <code>ProductCode</code>>
+ * <code>LaunchPermission</code>>
  *
- * AWS Marketplace product codes cannot be modified. Images with an AWS Marketplace product code cannot be made
+ * Images with an Amazon Web Services Marketplace product code cannot be made
  *
  * public>
  *
@@ -8218,8 +9750,8 @@ ModifyImageAttributeResponse * Ec2Client::modifyImageAttribute(const ModifyImage
  * action>
  *
  * To modify some attributes, the instance must be stopped. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html">Modifying
- * attributes of a stopped instance</a> in the <i>Amazon EC2 User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html">Modify a
+ * stopped instance</a> in the <i>Amazon EC2 User
  */
 ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const ModifyInstanceAttributeRequest &request)
 {
@@ -8276,6 +9808,54 @@ ModifyInstanceEventStartTimeResponse * Ec2Client::modifyInstanceEventStartTime(c
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstanceEventWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the specified event
+ *
+ * window>
+ *
+ * You can define either a set of time ranges or a cron expression when modifying the event window, but not
+ *
+ * both>
+ *
+ * To modify the targets associated with the event window, use the <a>AssociateInstanceEventWindow</a> and
+ * <a>DisassociateInstanceEventWindow</a>
+ *
+ * API>
+ *
+ * If Amazon Web Services has already scheduled an event, modifying an event window won't change the time of the scheduled
+ *
+ * event>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/event-windows.html">Define event
+ * windows for scheduled events</a> in the <i>Amazon EC2 User
+ */
+ModifyInstanceEventWindowResponse * Ec2Client::modifyInstanceEventWindow(const ModifyInstanceEventWindowRequest &request)
+{
+    return qobject_cast<ModifyInstanceEventWindowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstanceMaintenanceOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the recovery behavior of your instance to disable simplified automatic recovery or set the recovery behavior to
+ * default. The default configuration will not enable simplified automatic recovery for an unsupported instance type. For
+ * more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html#instance-configuration-recovery">Simplified
+ * automatic
+ */
+ModifyInstanceMaintenanceOptionsResponse * Ec2Client::modifyInstanceMaintenanceOptions(const ModifyInstanceMaintenanceOptionsRequest &request)
+{
+    return qobject_cast<ModifyInstanceMaintenanceOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyInstanceMetadataOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -8314,10 +9894,9 @@ ModifyInstanceMetadataOptionsResponse * Ec2Client::modifyInstanceMetadataOptions
  *
  * associated> </li> <li>
  *
- * Change the instance tenancy of an instance from <code>host</code> to <code>dedicated</code>, or from
- * <code>dedicated</code> to
+ * Change the instance tenancy of an
  *
- * <code>host</code>> </li> <li>
+ * instance> </li> <li>
  *
  * Move an instance to or from a <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">placement
@@ -8339,6 +9918,72 @@ ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const Modif
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIpamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify the configurations of an IPAM.
+ */
+ModifyIpamResponse * Ec2Client::modifyIpam(const ModifyIpamRequest &request)
+{
+    return qobject_cast<ModifyIpamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIpamPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify the configurations of an IPAM
+ *
+ * pool>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in
+ * the <i>Amazon VPC IPAM User Guide</i>.
+ */
+ModifyIpamPoolResponse * Ec2Client::modifyIpamPool(const ModifyIpamPoolRequest &request)
+{
+    return qobject_cast<ModifyIpamPoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIpamResourceCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify a resource CIDR. You can use this action to transfer resource CIDRs between scopes and ignore resource CIDRs that
+ * you do not want to manage. If set to false, the resource will not be tracked for overlap, it cannot be auto-imported
+ * into a pool, and it will be removed from any pool it has an allocation
+ *
+ * in>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/move-resource-ipam.html">Move resource
+ * CIDRs between scopes</a> and <a
+ * href="https://docs.aws.amazon.com/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
+ * resource CIDRs</a> in the <i>Amazon VPC IPAM User
+ */
+ModifyIpamResourceCidrResponse * Ec2Client::modifyIpamResourceCidr(const ModifyIpamResourceCidrRequest &request)
+{
+    return qobject_cast<ModifyIpamResourceCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyIpamScopeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify an IPAM
+ */
+ModifyIpamScopeResponse * Ec2Client::modifyIpamScope(const ModifyIpamScopeRequest &request)
+{
+    return qobject_cast<ModifyIpamScopeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyLaunchTemplateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -8349,6 +9994,19 @@ ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const Modif
 ModifyLaunchTemplateResponse * Ec2Client::modifyLaunchTemplate(const ModifyLaunchTemplateRequest &request)
 {
     return qobject_cast<ModifyLaunchTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyLocalGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the specified local gateway
+ */
+ModifyLocalGatewayRouteResponse * Ec2Client::modifyLocalGatewayRoute(const ModifyLocalGatewayRouteRequest &request)
+{
+    return qobject_cast<ModifyLocalGatewayRouteResponse *>(send(request));
 }
 
 /*!
@@ -8389,18 +10047,36 @@ ModifyNetworkInterfaceAttributeResponse * Ec2Client::modifyNetworkInterfaceAttri
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyPrivateDnsNameOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the options for instance hostnames for the specified
+ */
+ModifyPrivateDnsNameOptionsResponse * Ec2Client::modifyPrivateDnsNameOptions(const ModifyPrivateDnsNameOptionsRequest &request)
+{
+    return qobject_cast<ModifyPrivateDnsNameOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyReservedInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the Availability Zone, instance count, instance type, or network platform (EC2-Classic or EC2-VPC) of your
- * Reserved Instances. The Reserved Instances to be modified must be identical, except for Availability Zone, network
- * platform, and instance
+ * Modifies the configuration of your Reserved Instances, such as the Availability Zone, instance count, or instance type.
+ * The Reserved Instances to be modified must be identical, except for Availability Zone, network platform, and instance
  *
  * type>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying
  * Reserved Instances</a> in the <i>Amazon EC2 User
+ *
+ * Guide</i>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const ModifyReservedInstancesRequest &request)
 {
@@ -8409,29 +10085,59 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifySecurityGroupRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the rules of a security
+ */
+ModifySecurityGroupRulesResponse * Ec2Client::modifySecurityGroupRules(const ModifySecurityGroupRulesRequest &request)
+{
+    return qobject_cast<ModifySecurityGroupRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifySnapshotAttributeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a
- * snapshot's list of create volume permissions, but you cannot do both in a single operation. If you need to both add and
- * remove account IDs for a snapshot, you must use multiple operations. You can make up to 500 modifications to a snapshot
- * in a single
+ * Adds or removes permission settings for the specified snapshot. You may add or remove specified Amazon Web Services
+ * account IDs from a snapshot's list of create volume permissions, but you cannot do both in a single operation. If you
+ * need to both add and remove account IDs for a snapshot, you must use multiple operations. You can make up to 500
+ * modifications to a snapshot in a single
  *
  * operation>
  *
- * Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with
- * your default CMK cannot be shared with other
+ * Encrypted snapshots and snapshots with Amazon Web Services Marketplace product codes cannot be made public. Snapshots
+ * encrypted with your default KMS key cannot be shared with other
  *
  * accounts>
  *
  * For more information about modifying snapshot permissions, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing snapshots</a>
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a snapshot</a>
  * in the <i>Amazon Elastic Compute Cloud User
  */
 ModifySnapshotAttributeResponse * Ec2Client::modifySnapshotAttribute(const ModifySnapshotAttributeRequest &request)
 {
     return qobject_cast<ModifySnapshotAttributeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifySnapshotTierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Archives an Amazon EBS snapshot. When you archive a snapshot, it is converted to a full snapshot that includes all of
+ * the blocks of data that were written to the volume at the time the snapshot was created, and moved from the standard
+ * tier to the archive tier. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-archive.html">Archive Amazon EBS snapshots</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ */
+ModifySnapshotTierResponse * Ec2Client::modifySnapshotTier(const ModifySnapshotTierRequest &request)
+{
+    return qobject_cast<ModifySnapshotTierResponse *>(send(request));
 }
 
 /*!
@@ -8486,6 +10192,31 @@ ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifyS
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies a subnet attribute. You can only modify one attribute at a
+ *
+ * time>
+ *
+ * Use this action to modify subnets on Amazon Web Services
+ *
+ * Outposts> <ul> <li>
+ *
+ * To modify a subnet on an Outpost rack, set both <code>MapCustomerOwnedIpOnLaunch</code> and
+ * <code>CustomerOwnedIpv4Pool</code>. These two parameters act as a single
+ *
+ * attribute> </li> <li>
+ *
+ * To modify a subnet on an Outpost server, set either <code>EnableLniAtDeviceIndex</code> or
+ *
+ * <code>DisableLniAtDeviceIndex</code>> </li> </ul>
+ *
+ * For more information about Amazon Web Services Outposts, see the
+ *
+ * following> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/outposts/latest/userguide/how-servers-work.html">Outpost servers</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/outposts/latest/userguide/how-racks-work.html">Outpost racks</a>
  */
 ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySubnetAttributeRequest &request)
 {
@@ -8506,12 +10237,6 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
  * network services to a Traffic Mirror filter. When a network service is added to the Traffic Mirror filter, all traffic
  * related to that network service will be mirrored. When you no longer want to mirror network services, use
  * <code>RemoveNetworkServices</code> to remove the network services from the Traffic Mirror filter.
- *
- * </p
- *
- * For information about filter rule properties, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">Network Services</a> in
- * the <i>Traffic Mirroring User Guide
  */
 ModifyTrafficMirrorFilterNetworkServicesResponse * Ec2Client::modifyTrafficMirrorFilterNetworkServices(const ModifyTrafficMirrorFilterNetworkServicesRequest &request)
 {
@@ -8596,42 +10321,38 @@ ModifyTransitGatewayVpcAttachmentResponse * Ec2Client::modifyTransitGatewayVpcAt
  *
  * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If
  * your EBS volume is attached to a current-generation EC2 instance type, you might be able to apply these changes without
- * stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux,
- * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html">Modifying the size, IOPS, or
- * type of an EBS volume on Linux</a>. For more information about modifying an EBS volume running Windows, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html">Modifying the size, IOPS, or type
- * of an EBS volume on
+ * stopping the instance or detaching the volume from it. For more information about modifying EBS volumes, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modify-volume.html">Amazon EBS Elastic Volumes</a> (Linux
+ * instances) or <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-modify-volume.html">Amazon EBS Elastic
+ * Volumes</a> (Windows
  *
- * Windows</a>>
+ * instances)>
  *
  * When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage
- * of the new storage capacity. For information about extending a Linux file system, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux">Extending
- * a Linux file system</a>. For information about extending a Windows file system, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html#recognize-expanded-volume-windows">Extending
- * a Windows file system</a>.
+ * of the new storage capacity. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux">Extend
+ * a Linux file system</a> or <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html#recognize-expanded-volume-windows">Extend
+ * a Windows file
  *
- * </p
+ * system</a>>
  *
  * You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch
  * Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon CloudWatch Events User
  * Guide</a>. You can also track the status of a modification using <a>DescribeVolumesModifications</a>. For information
  * about tracking status changes using either method, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods">Monitoring volume
- * modifications</a>.
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the progress of
+ * volume
  *
- * </p
+ * modifications</a>>
  *
  * With previous-generation instance types, resizing an EBS volume might require detaching and reattaching the volume or
- * stopping and restarting the instance. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modify-volume.html">Amazon EBS Elastic Volumes</a> (Linux)
- * or <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-modify-volume.html">Amazon EBS Elastic
- * Volumes</a>
+ * stopping and restarting the
  *
- * (Windows)>
+ * instance>
  *
- * If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before
- * applying further modifications to the affected EBS
+ * After modifying a volume, you must wait at least six hours and ensure that the volume is in the <code>in-use</code> or
+ * <code>available</code> state before you can modify the same volume. This is sometimes referred to as a cooldown
  */
 ModifyVolumeResponse * Ec2Client::modifyVolume(const ModifyVolumeRequest &request)
 {
@@ -8682,9 +10403,8 @@ ModifyVpcAttributeResponse * Ec2Client::modifyVpcAttribute(const ModifyVpcAttrib
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint
- * (interface, gateway, or Gateway Load Balancer). For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html">VPC Endpoints</a> in the <i>Amazon Virtual
- * Private Cloud User
+ * (interface, gateway, or Gateway Load Balancer). For more information, see the <a
+ * href="https://docs.aws.amazon.com/vpc/latest/privatelink/">Amazon Web Services PrivateLink
  */
 ModifyVpcEndpointResponse * Ec2Client::modifyVpcEndpoint(const ModifyVpcEndpointRequest &request)
 {
@@ -8717,9 +10437,7 @@ ModifyVpcEndpointConnectionNotificationResponse * Ec2Client::modifyVpcEndpointCo
  *
  * endpoint>
  *
- * If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more
- * information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-dns-validation.html">VPC
- * Endpoint Service Private DNS Name Verification</a> in the <i>Amazon Virtual Private Cloud User
+ * If you set or modify the private DNS name, you must prove that you own the private DNS domain
  */
 ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServiceConfiguration(const ModifyVpcEndpointServiceConfigurationRequest &request)
 {
@@ -8728,13 +10446,25 @@ ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServ
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyVpcEndpointServicePayerResponsibilityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the payer responsibility for your VPC endpoint
+ */
+ModifyVpcEndpointServicePayerResponsibilityResponse * Ec2Client::modifyVpcEndpointServicePayerResponsibility(const ModifyVpcEndpointServicePayerResponsibilityRequest &request)
+{
+    return qobject_cast<ModifyVpcEndpointServicePayerResponsibilityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyVpcEndpointServicePermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the permissions for your <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC
- * endpoint service</a>. You can add or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts)
- * to connect to your endpoint
+ * Modifies the permissions for your VPC endpoint service. You can add or remove permissions for service consumers (IAM
+ * users, IAM roles, and Amazon Web Services accounts) to connect to your endpoint
  *
  * service>
  *
@@ -8751,6 +10481,14 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
  * ModifyVpcPeeringConnectionOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * Modifies the VPC peering connection options on one side of a VPC peering connection. You can do the
  *
@@ -8771,13 +10509,14 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
  *
  * VPC> </li> </ul>
  *
- * If the peered VPCs are in the same AWS account, you can enable DNS resolution for queries from the local VPC. This
- * ensures that queries from the local VPC resolve to private IP addresses in the peer VPC. This option is not available if
- * the peered VPCs are in different AWS accounts or different Regions. For peered VPCs in different AWS accounts, each AWS
- * account owner must initiate a separate request to modify the peering connection options. For inter-region peering
- * connections, you must use the Region for the requester VPC to modify the requester VPC peering options and the Region
- * for the accepter VPC to modify the accepter VPC peering options. To verify which VPCs are the accepter and the requester
- * for a VPC peering connection, use the <a>DescribeVpcPeeringConnections</a>
+ * If the peered VPCs are in the same Amazon Web Services account, you can enable DNS resolution for queries from the local
+ * VPC. This ensures that queries from the local VPC resolve to private IP addresses in the peer VPC. This option is not
+ * available if the peered VPCs are in different different Amazon Web Services accounts or different Regions. For peered
+ * VPCs in different Amazon Web Services accounts, each Amazon Web Services account owner must initiate a separate request
+ * to modify the peering connection options. For inter-region peering connections, you must use the Region for the
+ * requester VPC to modify the requester VPC peering options and the Region for the accepter VPC to modify the accepter VPC
+ * peering options. To verify which VPCs are the accepter and the requester for a VPC peering connection, use the
+ * <a>DescribeVpcPeeringConnections</a>
  */
 ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectionOptions(const ModifyVpcPeeringConnectionOptionsRequest &request)
 {
@@ -8816,8 +10555,8 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the customer gateway or the target gateway of an AWS Site-to-Site VPN connection. To modify the target gateway,
- * the following migration options are
+ * Modifies the customer gateway or the target gateway of an Amazon Web Services Site-to-Site VPN connection. To modify the
+ * target gateway, the following migration options are
  *
  * available> <ul> <li>
  *
@@ -8857,13 +10596,13 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
  *
  * After you migrate to the new gateway, you might need to modify your VPC route table. Use <a>CreateRoute</a> and
  * <a>DeleteRoute</a> to make the changes described in <a
- * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/modify-vpn-target.html#step-update-routing">VPN Gateway Target
- * Modification Required VPC Route Table Updates</a> in the <i>AWS Site-to-Site VPN User
+ * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/modify-vpn-target.html#step-update-routing">Update VPC route
+ * tables</a> in the <i>Amazon Web Services Site-to-Site VPN User
  *
  * Guide</i>>
  *
  * When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the VPC and
- * the AWS Site-to-Site VPN connection. Use <a>CreateTransitGatewayRoute</a> to add the
+ * the Amazon Web Services Site-to-Site VPN connection. Use <a>CreateTransitGatewayRoute</a> to add the
  *
  * routes>
  *
@@ -8871,9 +10610,9 @@ ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyReq
  *
  * table>
  *
- * After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options remain
- * intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we provision the
- * new
+ * After you perform this operation, the VPN endpoint's IP addresses on the Amazon Web Services side and the tunnel options
+ * remain intact. Your Amazon Web Services Site-to-Site VPN connection will be temporarily unavailable for a brief period
+ * while we provision the new
  */
 ModifyVpnConnectionResponse * Ec2Client::modifyVpnConnection(const ModifyVpnConnectionRequest &request)
 {
@@ -8890,9 +10629,9 @@ ModifyVpnConnectionResponse * Ec2Client::modifyVpnConnection(const ModifyVpnConn
  *
  * connection>
  *
- * When you modify the VPN connection options, the VPN endpoint IP addresses on the AWS side do not change, and the tunnel
- * options do not change. Your VPN connection will be temporarily unavailable for a brief period while the VPN connection
- * is
+ * When you modify the VPN connection options, the VPN endpoint IP addresses on the Amazon Web Services side do not change,
+ * and the tunnel options do not change. Your VPN connection will be temporarily unavailable for a brief period while the
+ * VPN connection is
  */
 ModifyVpnConnectionOptionsResponse * Ec2Client::modifyVpnConnectionOptions(const ModifyVpnConnectionOptionsRequest &request)
 {
@@ -8918,10 +10657,10 @@ ModifyVpnTunnelCertificateResponse * Ec2Client::modifyVpnTunnelCertificate(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the options for a VPN tunnel in an AWS Site-to-Site VPN connection. You can modify multiple options for a
- * tunnel in a single request, but you can only modify one tunnel at a time. For more information, see <a
- * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNTunnels.html">Site-to-Site VPN Tunnel Options for Your
- * Site-to-Site VPN Connection</a> in the <i>AWS Site-to-Site VPN User
+ * Modifies the options for a VPN tunnel in an Amazon Web Services Site-to-Site VPN connection. You can modify multiple
+ * options for a tunnel in a single request, but you can only modify one tunnel at a time. For more information, see <a
+ * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNTunnels.html">Site-to-Site VPN tunnel options for your
+ * Site-to-Site VPN connection</a> in the <i>Amazon Web Services Site-to-Site VPN User
  */
 ModifyVpnTunnelOptionsResponse * Ec2Client::modifyVpnTunnelOptions(const ModifyVpnTunnelOptionsRequest &request)
 {
@@ -8935,12 +10674,12 @@ ModifyVpnTunnelOptionsResponse * Ec2Client::modifyVpnTunnelOptions(const ModifyV
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring your instances and
- * volumes</a> in the <i>Amazon EC2 User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitor your instances using
+ * CloudWatch</a> in the <i>Amazon EC2 User
  *
  * Guide</i>>
  *
- * To disable detailed monitoring, see
+ * To disable detailed monitoring, see <a
  */
 MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesRequest &request)
 {
@@ -8957,7 +10696,13 @@ MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesReq
  * allocated to your account for more than 24 hours, and it must not be associated with an instance. After the Elastic IP
  * address is moved, it is no longer available for use in the EC2-Classic platform, unless you move it back using the
  * <a>RestoreAddressToClassic</a> request. You cannot move an Elastic IP address that was originally allocated for use in
- * the EC2-VPC platform to the EC2-Classic platform.
+ * the EC2-VPC platform to the EC2-Classic
+ *
+ * platform> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcRequest &request)
 {
@@ -8966,19 +10711,41 @@ MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcReq
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * MoveByoipCidrToIpamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4
+ *
+ * pool>
+ *
+ * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4 pool.
+ * You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the first time,
+ * complete the steps in <a href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP
+ * address CIDRs to
+ */
+MoveByoipCidrToIpamResponse * Ec2Client::moveByoipCidrToIpam(const MoveByoipCidrToIpamRequest &request)
+{
+    return qobject_cast<MoveByoipCidrToIpamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ProvisionByoipCidrResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provisions an IPv4 or IPv6 address range for use with your AWS resources through bring your own IP addresses (BYOIP) and
- * creates a corresponding address pool. After the address range is provisioned, it is ready to be advertised using
+ * Provisions an IPv4 or IPv6 address range for use with your Amazon Web Services resources through bring your own IP
+ * addresses (BYOIP) and creates a corresponding address pool. After the address range is provisioned, it is ready to be
+ * advertised using
  *
  * <a>AdvertiseByoipCidr</a>>
  *
- * AWS verifies that you own the address range and are authorized to advertise it. You must ensure that the address range
- * is registered to you and that you created an RPKI ROA to authorize Amazon ASNs 16509 and 14618 to advertise the address
- * range. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring Your
- * Own IP Addresses (BYOIP)</a> in the <i>Amazon Elastic Compute Cloud User
+ * Amazon Web Services verifies that you own the address range and are authorized to advertise it. You must ensure that the
+ * address range is registered to you and that you created an RPKI ROA to authorize Amazon ASNs 16509 and 14618 to
+ * advertise the address range. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring your own IP addresses (BYOIP)</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
@@ -8990,6 +10757,43 @@ MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcReq
 ProvisionByoipCidrResponse * Ec2Client::provisionByoipCidr(const ProvisionByoipCidrRequest &request)
 {
     return qobject_cast<ProvisionByoipCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ProvisionIpamPoolCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provision a CIDR to an IPAM pool. You can use this action to provision new CIDRs to a top-level pool or to transfer a
+ * CIDR from a top-level pool to a pool within
+ *
+ * it>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to
+ * pools</a> in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+ProvisionIpamPoolCidrResponse * Ec2Client::provisionIpamPoolCidr(const ProvisionIpamPoolCidrRequest &request)
+{
+    return qobject_cast<ProvisionIpamPoolCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ProvisionPublicIpv4PoolCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provision a CIDR to a public IPv4
+ *
+ * pool>
+ *
+ * For more information about IPAM, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html">What is
+ * IPAM?</a> in the <i>Amazon VPC IPAM User
+ */
+ProvisionPublicIpv4PoolCidrResponse * Ec2Client::provisionPublicIpv4PoolCidr(const ProvisionPublicIpv4PoolCidrRequest &request)
+{
+    return qobject_cast<ProvisionPublicIpv4PoolCidrResponse *>(send(request));
 }
 
 /*!
@@ -9032,6 +10836,12 @@ PurchaseHostReservationResponse * Ec2Client::purchaseHostReservation(const Purch
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts-on-demand-reserved-instances.html">Reserved
  * Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
  * Marketplace</a> in the <i>Amazon EC2 User
+ *
+ * Guide</i>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstancesOffering(const PurchaseReservedInstancesOfferingRequest &request)
 {
@@ -9043,6 +10853,12 @@ PurchaseReservedInstancesOfferingResponse * Ec2Client::purchaseReservedInstances
  * PurchaseScheduledInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * You can no longer purchase Scheduled
+ *
+ * Instances> </note>
  *
  * Purchases the Scheduled Instances with the specified
  *
@@ -9079,8 +10895,8 @@ PurchaseScheduledInstancesResponse * Ec2Client::purchaseScheduledInstances(const
  * reboot>
  *
  * For more information about troubleshooting, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Getting console output and rebooting
- * instances</a> in the <i>Amazon EC2 User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Troubleshoot an unreachable
+ * instance</a> in the <i>Amazon EC2 User
  */
 RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesRequest &request)
 {
@@ -9101,9 +10917,10 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  * Guide</i>> <note>
  *
  * For Amazon EBS-backed instances, <a>CreateImage</a> creates and registers the AMI in a single request, so you don't have
- * to register the AMI
+ * to register the AMI yourself. We recommend that you always use <a>CreateImage</a> unless you have a specific reason to
+ * use
  *
- * yourself> </note>
+ * RegisterImage> </note>
  *
  * If needed, you can deregister an AMI at any time. Any modifications you make to an AMI backed by an instance store
  * volume invalidates its registration. If you make changes to an image, deregister the previous image and register the new
@@ -9124,22 +10941,22 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  * For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot">Create
  * a Linux AMI from a snapshot</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use
- * encryption with EBS-backed AMIs</a> in the <i>Amazon Elastic Compute Cloud User
+ * encryption with Amazon EBS-backed AMIs</a> in the <i>Amazon Elastic Compute Cloud User
  *
  * Guide</i>>
  *
- * <b>AWS Marketplace product codes</b>
+ * <b>Amazon Web Services Marketplace product codes</b>
  *
  * </p
  *
- * If any snapshots have AWS Marketplace product codes, they are copied to the new
+ * If any snapshots have Amazon Web Services Marketplace product codes, they are copied to the new
  *
  * AMI>
  *
  * Windows and some Linux distributions, such as Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES),
- * use the EC2 billing product code associated with an AMI to verify the subscription status for package updates. To create
- * a new AMI for operating systems that require a billing product code, instead of registering the AMI, do the following to
- * preserve the billing product code
+ * use the Amazon EC2 billing product code associated with an AMI to verify the subscription status for package updates. To
+ * create a new AMI for operating systems that require a billing product code, instead of registering the AMI, do the
+ * following to preserve the billing product code
  *
  * association> <ol> <li>
  *
@@ -9159,8 +10976,8 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  * product code, make sure that the Reserved Instance has the matching billing product code. If you purchase a Reserved
  * Instance without the matching billing product code, the Reserved Instance will not be applied to the On-Demand Instance.
  * For information about how to obtain the platform details and billing information of an AMI, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining billing information</a> in
- * the <i>Amazon Elastic Compute Cloud User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI billing</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &request)
 {
@@ -9177,7 +10994,7 @@ RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &req
  *
  * </p
  *
- * To remove tags, use
+ * To remove tags, use <a
  */
 RegisterInstanceEventNotificationAttributesResponse * Ec2Client::registerInstanceEventNotificationAttributes(const RegisterInstanceEventNotificationAttributesRequest &request)
 {
@@ -9317,7 +11134,13 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
  * [EC2-Classic, default VPC] Releasing an Elastic IP address automatically disassociates it from any instance that it's
  * associated with. To disassociate an Elastic IP address without releasing it, use
  *
- * <a>DisassociateAddress</a>>
+ * <a>DisassociateAddress</a>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>> </note>
  *
  * [Nondefault VPC] You must use <a>DisassociateAddress</a> to disassociate the Elastic IP address before you can release
  * it. Otherwise, Amazon EC2 returns an error
@@ -9326,12 +11149,19 @@ RejectVpcPeeringConnectionResponse * Ec2Client::rejectVpcPeeringConnection(const
  *
  * After releasing an Elastic IP address, it is released to the IP address pool. Be sure to update your DNS records and any
  * servers or devices that communicate with the address. If you attempt to release an Elastic IP address that you already
- * released, you'll get an <code>AuthFailure</code> error if the address is already allocated to another AWS
+ * released, you'll get an <code>AuthFailure</code> error if the address is already allocated to another Amazon Web
+ * Services
  *
  * account>
  *
  * [EC2-VPC] After you release an Elastic IP address for use in a VPC, you might be able to recover it. For more
  * information, see
+ *
+ * <a>AllocateAddress</a>>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &request)
 {
@@ -9360,6 +11190,23 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
 ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &request)
 {
     return qobject_cast<ReleaseHostsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReleaseIpamPoolAllocationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Release an allocation within an IPAM pool. You can only use this action to release manual allocations. To remove an
+ * allocation for a resource without deleting the resource, set its monitored state to false using <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html">ModifyIpamResourceCidr</a>.
+ * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an
+ * allocation</a> in the <i>Amazon VPC IPAM User Guide</i>.
+ */
+ReleaseIpamPoolAllocationResponse * Ec2Client::releaseIpamPoolAllocation(const ReleaseIpamPoolAllocationRequest &request)
+{
+    return qobject_cast<ReleaseIpamPoolAllocationResponse *>(send(request));
 }
 
 /*!
@@ -9421,14 +11268,17 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces an existing route within a route table in a VPC. You must provide only one of the following: internet gateway,
- * virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, egress-only internet
- * gateway, or transit
+ * Replaces an existing route within a route table in a
  *
- * gateway>
+ * VPC>
+ *
+ * You must specify either a destination CIDR block or a prefix list ID. You must also specify exactly one of the resources
+ * from the parameter list, or reset the local route to its default
+ *
+ * target>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route
- * Tables</a> in the <i>Amazon Virtual Private Cloud User
+ * tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &request)
 {
@@ -9443,7 +11293,7 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
  *
  * Changes the route table associated with a given subnet, internet gateway, or virtual private gateway in a VPC. After the
  * operation completes, the subnet or gateway uses the routes in the new route table. For more information about route
- * tables, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route Tables</a> in the
+ * tables, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route tables</a> in the
  * <i>Amazon Virtual Private Cloud User
  *
  * Guide</i>>
@@ -9528,6 +11378,13 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html">Spot
  * Fleet requests</a> in the <i>Amazon EC2 User Guide for Linux
+ *
+ * Instances</i>> <b>
+ *
+ * We strongly discourage using the RequestSpotFleet API because it is a legacy API with no planned investment. For options
+ * for requesting Spot Instances, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use">Which
+ * is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide for Linux
  */
 RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetRequest &request)
 {
@@ -9546,6 +11403,19 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
  *
  * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance
  * requests</a> in the <i>Amazon EC2 User Guide for Linux
+ *
+ * Instances</i>> <b>
+ *
+ * We strongly discourage using the RequestSpotInstances API because it is a legacy API with no planned investment. For
+ * options for requesting Spot Instances, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use">Which
+ * is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide for Linux
+ *
+ * Instances</i>> </b> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon EC2 User Guide for Linux
  */
 RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpotInstancesRequest &request)
 {
@@ -9573,13 +11443,13 @@ ResetAddressAttributeResponse * Ec2Client::resetAddressAttribute(const ResetAddr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resets the default customer master key (CMK) for EBS encryption for your account in this Region to the AWS managed CMK
+ * Resets the default KMS key for EBS encryption for your account in this Region to the Amazon Web Services managed KMS key
  * for
  *
  * EBS>
  *
- * After resetting the default CMK to the AWS managed CMK, you can continue to encrypt by a customer managed CMK by
- * specifying it when you create the volume. For more information, see <a
+ * After resetting the default KMS key to the Amazon Web Services managed KMS key, you can continue to encrypt by a
+ * customer managed KMS key by specifying it when you create the volume. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the <i>Amazon
  * Elastic Compute Cloud User
  */
@@ -9609,10 +11479,6 @@ ResetFpgaImageAttributeResponse * Ec2Client::resetFpgaImageAttribute(const Reset
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Resets an attribute of an AMI to its default
- *
- * value> <note>
- *
- * The productCodes attribute can't be
  */
 ResetImageAttributeResponse * Ec2Client::resetImageAttribute(const ResetImageAttributeRequest &request)
 {
@@ -9665,7 +11531,7 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
  * snapshot>
  *
  * For more information about modifying snapshot permissions, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing snapshots</a>
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Share a snapshot</a>
  * in the <i>Amazon Elastic Compute Cloud User
  */
 ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSnapshotAttributeRequest &request)
@@ -9682,10 +11548,31 @@ ResetSnapshotAttributeResponse * Ec2Client::resetSnapshotAttribute(const ResetSn
  * Restores an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform. You
  * cannot move an Elastic IP address that was originally allocated for use in EC2-VPC. The Elastic IP address must not be
  * associated with an instance or network
+ *
+ * interface> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const RestoreAddressToClassicRequest &request)
 {
     return qobject_cast<RestoreAddressToClassicResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RestoreImageFromRecycleBinResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restores an AMI from the Recycle Bin. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+ * Compute Cloud User
+ */
+RestoreImageFromRecycleBinResponse * Ec2Client::restoreImageFromRecycleBin(const RestoreImageFromRecycleBinRequest &request)
+{
+    return qobject_cast<RestoreImageFromRecycleBinResponse *>(send(request));
 }
 
 /*!
@@ -9699,6 +11586,44 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
 RestoreManagedPrefixListVersionResponse * Ec2Client::restoreManagedPrefixListVersion(const RestoreManagedPrefixListVersionRequest &request)
 {
     return qobject_cast<RestoreManagedPrefixListVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RestoreSnapshotFromRecycleBinResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restores a snapshot from the Recycle Bin. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-snaps.html#recycle-bin-restore-snaps">Restore
+ * snapshots from the Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User
+ */
+RestoreSnapshotFromRecycleBinResponse * Ec2Client::restoreSnapshotFromRecycleBin(const RestoreSnapshotFromRecycleBinRequest &request)
+{
+    return qobject_cast<RestoreSnapshotFromRecycleBinResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RestoreSnapshotTierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restores an archived Amazon EBS snapshot for use temporarily or permanently, or modifies the restore period or restore
+ * type for a snapshot that was previously temporarily
+ *
+ * restored>
+ *
+ * For more information see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#restore-archived-snapshot">
+ * Restore an archived snapshot</a> and <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-snapshot-archiving.html#modify-temp-restore-period">
+ * modify the restore period or restore type for a temporarily restored snapshot</a> in the <i>Amazon Elastic Compute Cloud
+ * User
+ */
+RestoreSnapshotTierResponse * Ec2Client::restoreSnapshotTier(const RestoreSnapshotTierRequest &request)
+{
+    return qobject_cast<RestoreSnapshotTierResponse *>(send(request));
 }
 
 /*!
@@ -9720,27 +11645,27 @@ RevokeClientVpnIngressResponse * Ec2Client::revokeClientVpnIngress(const RevokeC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * [VPC only] Removes the specified egress rules from a security group for EC2-VPC. This action does not apply to security
- * groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the
- * existing rule's values
+ * [VPC only] Removes the specified outbound (egress) rules from a security group for EC2-VPC. This action does not apply
+ * to security groups for use in
  *
- * exactly> <note>
+ * EC2-Classic>
  *
- * [Default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output
- * describes the security group rules that were not revoked.
- *
- * </p
- *
- * AWS recommends that you use <a>DescribeSecurityGroups</a> to verify that the rule has been
- *
- * removed> </note>
- *
- * Each rule consists of the protocol and the IPv4 or IPv6 CIDR range or source security group. For the TCP and UDP
- * protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify
- * the ICMP type and code. If the security group rule has a description, you do not have to specify the description to
- * revoke the
+ * You can specify rules using either rule IDs or security group rule properties. If you use rule properties, the values
+ * that you specify (for example, ports) must match the existing rule's values exactly. Each rule has a protocol, from and
+ * to ports, and destination (CIDR range, security group, or prefix list). For the TCP and UDP protocols, you must also
+ * specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If
+ * the security group rule has a description, you do not need to specify the description to revoke the
  *
  * rule>
+ *
+ * [Default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output
+ * describes the security group rules that were not
+ *
+ * revoked>
+ *
+ * Amazon Web Services recommends that you describe the security group to verify that the rules were
+ *
+ * removed>
  *
  * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might
  */
@@ -9755,27 +11680,34 @@ RevokeSecurityGroupEgressResponse * Ec2Client::revokeSecurityGroupEgress(const R
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified ingress rules from a security group. To remove a rule, the values that you specify (for example,
- * ports) must match the existing rule's values
+ * Removes the specified inbound (ingress) rules from a security
  *
- * exactly> <note>
+ * group>
  *
- * [EC2-Classic , default VPC] If the values you specify do not match the existing rule's values, no error is returned, and
- * the output describes the security group rules that were not revoked.
- *
- * </p
- *
- * AWS recommends that you use <a>DescribeSecurityGroups</a> to verify that the rule has been
- *
- * removed> </note>
- *
- * Each rule consists of the protocol and the CIDR range or source security group. For the TCP and UDP protocols, you must
- * also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and
- * code. If the security group rule has a description, you do not have to specify the description to revoke the
+ * You can specify rules using either rule IDs or security group rule properties. If you use rule properties, the values
+ * that you specify (for example, ports) must match the existing rule's values exactly. Each rule has a protocol, from and
+ * to ports, and source (CIDR range, security group, or prefix list). For the TCP and UDP protocols, you must also specify
+ * the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the
+ * security group rule has a description, you do not need to specify the description to revoke the
  *
  * rule>
  *
+ * [EC2-Classic, default VPC] If the values you specify do not match the existing rule's values, no error is returned, and
+ * the output describes the security group rules that were not
+ *
+ * revoked>
+ *
+ * Amazon Web Services recommends that you describe the security group to verify that the rules were
+ *
+ * removed>
+ *
  * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might
+ *
+ * occur> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  */
 RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const RevokeSecurityGroupIngressRequest &request)
 {
@@ -9860,6 +11792,12 @@ RevokeSecurityGroupIngressResponse * Ec2Client::revokeSecurityGroupIngress(const
  * instance immediately terminates</a>, and <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html">Troubleshooting
  * connecting to your
+ *
+ * instance</a>> <note>
+ *
+ * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a> in the
+ * <i>Amazon EC2 User
  */
 RunInstancesResponse * Ec2Client::runInstances(const RunInstancesRequest &request)
 {
@@ -9955,9 +11893,9 @@ SearchTransitGatewayRoutesResponse * Ec2Client::searchTransitGatewayRoutes(const
  *
  * For more information about configuring your operating system to generate a crash dump when a kernel panic or stop error
  * occurs, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html">Send a diagnostic
- * interrupt</a> (Linux instances) or <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a Diagnostic Interrupt</a>
- * (Windows
+ * interrupt (for advanced users)</a> (Linux instances) or <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a diagnostic interrupt (for
+ * advanced users)</a> (Windows
  */
 SendDiagnosticInterruptResponse * Ec2Client::sendDiagnosticInterrupt(const SendDiagnosticInterruptRequest &request)
 {
@@ -9977,11 +11915,8 @@ SendDiagnosticInterruptResponse * Ec2Client::sendDiagnosticInterrupt(const SendD
  * Instances that use Amazon EBS volumes as their root devices can be quickly stopped and started. When an instance is
  * stopped, the compute resources are released and you are not billed for instance usage. However, your root partition
  * Amazon EBS volume remains and continues to persist your data, and you are charged for Amazon EBS volume usage. You can
- * restart your instance at any time. Every time you start your Windows instance, Amazon EC2 charges you for a full
- * instance hour. If you stop and restart your Windows instance, a new instance hour begins and Amazon EC2 charges you for
- * another full instance hour even if you are still within the same 60-minute period when it was stopped. Every time you
- * start your Linux instance, Amazon EC2 charges a one-minute minimum for instance usage, and thereafter charges per second
- * for instance
+ * restart your instance at any time. Every time you start your instance, Amazon EC2 charges a one-minute minimum for
+ * instance usage, and thereafter charges per second for instance
  *
  * usage>
  *
@@ -9994,12 +11929,32 @@ SendDiagnosticInterruptResponse * Ec2Client::sendDiagnosticInterrupt(const SendD
  *
  * error>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping
- * instances</a> in the <i>Amazon EC2 User
+ * If you attempt to start a T3 instance with <code>host</code> tenancy and the <code>unlimted</code> CPU credit option,
+ * the request fails. The <code>unlimited</code> CPU credit option is not supported on Dedicated Hosts. Before you start
+ * the instance, either change its CPU credit option to <code>standard</code>, or change its tenancy to
+ * <code>default</code> or
+ *
+ * <code>dedicated</code>>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and start
+ * your instance</a> in the <i>Amazon EC2 User
  */
 StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &request)
 {
     return qobject_cast<StartInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * StartNetworkInsightsAccessScopeAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts analyzing the specified Network Access
+ */
+StartNetworkInsightsAccessScopeAnalysisResponse * Ec2Client::startNetworkInsightsAccessScopeAnalysis(const StartNetworkInsightsAccessScopeAnalysisRequest &request)
+{
+    return qobject_cast<StartNetworkInsightsAccessScopeAnalysisResponse *>(send(request));
 }
 
 /*!
@@ -10029,9 +11984,7 @@ StartNetworkInsightsAnalysisResponse * Ec2Client::startNetworkInsightsAnalysis(c
  *
  * service>
  *
- * Before the service provider runs this command, they must add a record to the DNS server. For more information, see <a
- * href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-dns-validation.html#add-dns-txt-record">Adding
- * a TXT Record to Your Domain's DNS Server </a> in the <i>Amazon VPC User
+ * Before the service provider runs this command, they must add a record to the DNS
  */
 StartVpcEndpointServicePrivateDnsVerificationResponse * Ec2Client::startVpcEndpointServicePrivateDnsVerification(const StartVpcEndpointServicePrivateDnsVerificationRequest &request)
 {
@@ -10044,9 +11997,11 @@ StartVpcEndpointServicePrivateDnsVerificationResponse * Ec2Client::startVpcEndpo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops an Amazon EBS-backed
+ * Stops an Amazon EBS-backed instance. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and start your instance</a> in the
+ * <i>Amazon EC2 User
  *
- * instance>
+ * Guide</i>>
  *
  * You can use the Stop action to hibernate an instance if the instance is <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#enabling-hibernation">enabled for
@@ -10060,10 +12015,7 @@ StartVpcEndpointServicePrivateDnsVerificationResponse * Ec2Client::startVpcEndpo
  *
  * We don't charge usage for a stopped instance, or data transfer fees; however, your root partition Amazon EBS volume
  * remains and continues to persist your data, and you are charged for Amazon EBS volume usage. Every time you start your
- * Windows instance, Amazon EC2 charges you for a full instance hour. If you stop and restart your Windows instance, a new
- * instance hour begins and Amazon EC2 charges you for another full instance hour even if you are still within the same
- * 60-minute period when it was stopped. Every time you start your Linux instance, Amazon EC2 charges a one-minute minimum
- * for instance usage, and thereafter charges per second for instance
+ * instance, Amazon EC2 charges a one-minute minimum for instance usage, and thereafter charges per second for instance
  *
  * usage>
  *
@@ -10094,8 +12046,8 @@ StartVpcEndpointServicePrivateDnsVerificationResponse * Ec2Client::startVpcEndpo
  * When you stop an instance, we attempt to shut it down forcibly after a short while. If your instance appears stuck in
  * the stopping state after a period of time, there may be an issue with the underlying host computer. For more
  * information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshooting
- * stopping your instance</a> in the <i>Amazon EC2 User
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshoot stopping
+ * your instance</a> in the <i>Amazon EC2 User
  */
 StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &request)
 {
@@ -10132,6 +12084,54 @@ TerminateClientVpnConnectionsResponse * Ec2Client::terminateClientVpnConnections
  *
  * terminated>
  *
+ * If you terminate multiple instances across multiple Availability Zones, and one or more of the specified instances are
+ * enabled for termination protection, the request fails with the following
+ *
+ * results> <ul> <li>
+ *
+ * The specified instances that are in the same Availability Zone as the protected instance are not
+ *
+ * terminated> </li> <li>
+ *
+ * The specified instances that are in different Availability Zones, where no other specified instances are protected, are
+ * successfully
+ *
+ * terminated> </li> </ul>
+ *
+ * For example, say you have the following
+ *
+ * instances> <ul> <li>
+ *
+ * Instance A: <code>us-east-1a</code>; Not
+ *
+ * protecte> </li> <li>
+ *
+ * Instance B: <code>us-east-1a</code>; Not
+ *
+ * protecte> </li> <li>
+ *
+ * Instance C: <code>us-east-1b</code>;
+ *
+ * Protecte> </li> <li>
+ *
+ * Instance D: <code>us-east-1b</code>; not
+ *
+ * protecte> </li> </ul>
+ *
+ * If you attempt to terminate all of these instances in the same request, the request reports failure with the following
+ *
+ * results> <ul> <li>
+ *
+ * Instance A and Instance B are successfully terminated because none of the specified instances in <code>us-east-1a</code>
+ * are enabled for termination
+ *
+ * protection> </li> <li>
+ *
+ * Instance C and Instance D fail to terminate because at least one of the specified instances in <code>us-east-1b</code>
+ * (Instance C) is enabled for termination
+ *
+ * protection> </li> </ul>
+ *
  * Terminated instances remain visible after termination (for approximately one
  *
  * hour)>
@@ -10166,7 +12166,7 @@ TerminateInstancesResponse * Ec2Client::terminateInstances(const TerminateInstan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Unassigns one or more IPv6 addresses from a network
+ * Unassigns one or more IPv6 addresses IPv4 Prefix Delegation prefixes from a network
  */
 UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignIpv6AddressesRequest &request)
 {
@@ -10179,7 +12179,7 @@ UnassignIpv6AddressesResponse * Ec2Client::unassignIpv6Addresses(const UnassignI
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Unassigns one or more secondary private IP addresses from a network
+ * Unassigns one or more secondary private IP addresses, or IPv4 Prefix Delegation prefixes from a network
  */
 UnassignPrivateIpAddressesResponse * Ec2Client::unassignPrivateIpAddresses(const UnassignPrivateIpAddressesRequest &request)
 {
@@ -10208,12 +12208,8 @@ UnmonitorInstancesResponse * Ec2Client::unmonitorInstances(const UnmonitorInstan
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * [VPC only] Updates the description of an egress (outbound) security group rule. You can replace an existing description,
- * or add a description to a rule that did not have one
- *
- * previously>
- *
- * You specify the description as part of the IP permissions structure. You can remove a description for a security group
- * rule by omitting the description parameter in the
+ * or add a description to a rule that did not have one previously. You can remove a description for a security group rule
+ * by omitting the description parameter in the
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsEgress(const UpdateSecurityGroupRuleDescriptionsEgressRequest &request)
 {
@@ -10227,12 +12223,8 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the description of an ingress (inbound) security group rule. You can replace an existing description, or add a
- * description to a rule that did not have one
- *
- * previously>
- *
- * You specify the description as part of the IP permissions structure. You can remove a description for a security group
- * rule by omitting the description parameter in the
+ * description to a rule that did not have one previously. You can remove a description for a security group rule by
+ * omitting the description parameter in the
  */
 UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsIngress(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request)
 {
@@ -10253,7 +12245,8 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGr
  *
  * time>
  *
- * It can take a few minutes before traffic to the specified addresses stops routing to AWS because of BGP propagation
+ * It can take a few minutes before traffic to the specified addresses stops routing to Amazon Web Services because of BGP
+ * propagation
  */
 WithdrawByoipCidrResponse * Ec2Client::withdrawByoipCidr(const WithdrawByoipCidrRequest &request)
 {
@@ -10261,12 +12254,12 @@ WithdrawByoipCidrResponse * Ec2Client::withdrawByoipCidr(const WithdrawByoipCidr
 }
 
 /*!
- * \class QtAws::EC2::Ec2ClientPrivate
+ * \class QtAws::Ec2::Ec2ClientPrivate
  * \brief The Ec2ClientPrivate class provides private implementation for Ec2Client.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -10278,5 +12271,5 @@ Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

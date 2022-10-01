@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeClusterResponse
- * \brief The DescribeClusterResponse class provides an interace for EKS DescribeCluster responses.
+ * \class QtAws::Eks::DescribeClusterResponse
+ * \brief The DescribeClusterResponse class provides an interace for Eks DescribeCluster responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeCluster \a response.
+ * Parses a successful Eks DescribeCluster \a response.
  */
 void DescribeClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeClusterResponsePrivate
+ * \class QtAws::Eks::DescribeClusterResponsePrivate
  * \brief The DescribeClusterResponsePrivate class provides private implementation for DescribeClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeCluster response element from \a xml.
+ * Parses a Eks DescribeCluster response element from \a xml.
  */
 void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

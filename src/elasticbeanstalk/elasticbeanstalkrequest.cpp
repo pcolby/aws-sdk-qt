@@ -290,7 +290,7 @@ QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequest::Action action, ElasticBeanstalkRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-12-01"))
 {
 
 }

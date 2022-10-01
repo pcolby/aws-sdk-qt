@@ -23,19 +23,19 @@
 #include "stsrequest_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::DecodeAuthorizationMessageRequest
- * \brief The DecodeAuthorizationMessageRequest class provides an interface for STS DecodeAuthorizationMessage requests.
+ * \class QtAws::Sts::DecodeAuthorizationMessageRequest
+ * \brief The DecodeAuthorizationMessageRequest class provides an interface for Sts DecodeAuthorizationMessage requests.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::decodeAuthorizationMessage
@@ -79,11 +79,11 @@ QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(Q
 }
 
 /*!
- * \class QtAws::STS::DecodeAuthorizationMessageRequestPrivate
+ * \class QtAws::Sts::DecodeAuthorizationMessageRequestPrivate
  * \brief The DecodeAuthorizationMessageRequestPrivate class provides private implementation for DecodeAuthorizationMessageRequest.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -110,5 +110,5 @@ DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPriva
 
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

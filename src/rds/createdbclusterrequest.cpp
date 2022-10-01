@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBClusterRequest
- * \brief The CreateDBClusterRequest class provides an interface for RDS CreateDBCluster requests.
+ * \class QtAws::Rds::CreateDBClusterRequest
+ * \brief The CreateDBClusterRequest class provides an interface for Rds CreateDBCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::RDS::CreateDBClusterRequestPrivate
+ * \class QtAws::Rds::CreateDBClusterRequestPrivate
  * \brief The CreateDBClusterRequestPrivate class provides private implementation for CreateDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

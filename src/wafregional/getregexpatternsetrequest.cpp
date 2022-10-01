@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRegexPatternSetRequest
- * \brief The GetRegexPatternSetRequest class provides an interface for WAFRegional GetRegexPatternSet requests.
+ * \class QtAws::WafRegional::GetRegexPatternSetRequest
+ * \brief The GetRegexPatternSetRequest class provides an interface for WafRegional GetRegexPatternSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRegexPatternSet
+ * \sa WafRegionalClient::getRegexPatternSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRegexPatternSetRequest::GetRegexPatternSetRequest(const GetRegexPatternSetRequest &other)
-    : WAFRegionalRequest(new GetRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetRegexPatternSetRequest::GetRegexPatternSetRequest(const GetRegexPatternSetReq
  * Constructs a GetRegexPatternSetRequest object.
  */
 GetRegexPatternSetRequest::GetRegexPatternSetRequest()
-    : WAFRegionalRequest(new GetRegexPatternSetRequestPrivate(WAFRegionalRequest::GetRegexPatternSetAction, this))
+    : WafRegionalRequest(new GetRegexPatternSetRequestPrivate(WafRegionalRequest::GetRegexPatternSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRegexPatternSetRequestPrivate
+ * \class QtAws::WafRegional::GetRegexPatternSetRequestPrivate
  * \brief The GetRegexPatternSetRequestPrivate class provides private implementation for GetRegexPatternSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetRegexPatternSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetRegexPatternSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetRegexPatternSetRequestPrivate::GetRegexPatternSetRequestPrivate(
-    const WAFRegionalRequest::Action action, GetRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetRegexPatternSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetRegexPatternSetRequestPrivate::GetRegexPatternSetRequestPrivate(
  */
 GetRegexPatternSetRequestPrivate::GetRegexPatternSetRequestPrivate(
     const GetRegexPatternSetRequestPrivate &other, GetRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

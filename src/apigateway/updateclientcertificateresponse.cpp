@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateClientCertificateResponse
- * \brief The UpdateClientCertificateResponse class provides an interace for APIGateway UpdateClientCertificate responses.
+ * \class QtAws::ApiGateway::UpdateClientCertificateResponse
+ * \brief The UpdateClientCertificateResponse class provides an interace for ApiGateway UpdateClientCertificate responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateClientCertificate
+ * \sa ApiGatewayClient::updateClientCertificate
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateClientCertificateResponse::UpdateClientCertificateResponse(
         const UpdateClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateClientCertificateResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateClientCertificateRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request(
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateClientCertificate \a response.
+ * Parses a successful ApiGateway UpdateClientCertificate \a response.
  */
 void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateClientCertificateResponsePrivate
+ * \class QtAws::ApiGateway::UpdateClientCertificateResponsePrivate
  * \brief The UpdateClientCertificateResponsePrivate class provides private implementation for UpdateClientCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateClientCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponsePrivate(
-    UpdateClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateClientCertificateResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateClientCertificate response element from \a xml.
+ * Parses a ApiGateway UpdateClientCertificate response element from \a xml.
  */
 void UpdateClientCertificateResponsePrivate::parseUpdateClientCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateClientCertificateResponsePrivate::parseUpdateClientCertificateRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

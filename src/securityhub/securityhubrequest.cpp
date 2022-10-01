@@ -43,10 +43,12 @@ namespace SecurityHub {
  * \value BatchImportFindingsAction SecurityHub BatchImportFindings action.
  * \value BatchUpdateFindingsAction SecurityHub BatchUpdateFindings action.
  * \value CreateActionTargetAction SecurityHub CreateActionTarget action.
+ * \value CreateFindingAggregatorAction SecurityHub CreateFindingAggregator action.
  * \value CreateInsightAction SecurityHub CreateInsight action.
  * \value CreateMembersAction SecurityHub CreateMembers action.
  * \value DeclineInvitationsAction SecurityHub DeclineInvitations action.
  * \value DeleteActionTargetAction SecurityHub DeleteActionTarget action.
+ * \value DeleteFindingAggregatorAction SecurityHub DeleteFindingAggregator action.
  * \value DeleteInsightAction SecurityHub DeleteInsight action.
  * \value DeleteInvitationsAction SecurityHub DeleteInvitations action.
  * \value DeleteMembersAction SecurityHub DeleteMembers action.
@@ -67,6 +69,7 @@ namespace SecurityHub {
  * \value EnableSecurityHubAction SecurityHub EnableSecurityHub action.
  * \value GetAdministratorAccountAction SecurityHub GetAdministratorAccount action.
  * \value GetEnabledStandardsAction SecurityHub GetEnabledStandards action.
+ * \value GetFindingAggregatorAction SecurityHub GetFindingAggregator action.
  * \value GetFindingsAction SecurityHub GetFindings action.
  * \value GetInsightResultsAction SecurityHub GetInsightResults action.
  * \value GetInsightsAction SecurityHub GetInsights action.
@@ -75,6 +78,7 @@ namespace SecurityHub {
  * \value GetMembersAction SecurityHub GetMembers action.
  * \value InviteMembersAction SecurityHub InviteMembers action.
  * \value ListEnabledProductsForImportAction SecurityHub ListEnabledProductsForImport action.
+ * \value ListFindingAggregatorsAction SecurityHub ListFindingAggregators action.
  * \value ListInvitationsAction SecurityHub ListInvitations action.
  * \value ListMembersAction SecurityHub ListMembers action.
  * \value ListOrganizationAdminAccountsAction SecurityHub ListOrganizationAdminAccounts action.
@@ -82,6 +86,7 @@ namespace SecurityHub {
  * \value TagResourceAction SecurityHub TagResource action.
  * \value UntagResourceAction SecurityHub UntagResource action.
  * \value UpdateActionTargetAction SecurityHub UpdateActionTarget action.
+ * \value UpdateFindingAggregatorAction SecurityHub UpdateFindingAggregator action.
  * \value UpdateFindingsAction SecurityHub UpdateFindings action.
  * \value UpdateInsightAction SecurityHub UpdateInsight action.
  * \value UpdateOrganizationConfigurationAction SecurityHub UpdateOrganizationConfiguration action.
@@ -294,7 +299,7 @@ QNetworkRequest SecurityHubRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SecurityHubRequestPrivate::SecurityHubRequestPrivate(const SecurityHubRequest::Action action, SecurityHubRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-10-26"))
 {
 
 }
@@ -335,10 +340,12 @@ QString SecurityHubRequestPrivate::toString(const SecurityHubRequest::Action &ac
         ActionToString(BatchImportFindings);
         ActionToString(BatchUpdateFindings);
         ActionToString(CreateActionTarget);
+        ActionToString(CreateFindingAggregator);
         ActionToString(CreateInsight);
         ActionToString(CreateMembers);
         ActionToString(DeclineInvitations);
         ActionToString(DeleteActionTarget);
+        ActionToString(DeleteFindingAggregator);
         ActionToString(DeleteInsight);
         ActionToString(DeleteInvitations);
         ActionToString(DeleteMembers);
@@ -359,6 +366,7 @@ QString SecurityHubRequestPrivate::toString(const SecurityHubRequest::Action &ac
         ActionToString(EnableSecurityHub);
         ActionToString(GetAdministratorAccount);
         ActionToString(GetEnabledStandards);
+        ActionToString(GetFindingAggregator);
         ActionToString(GetFindings);
         ActionToString(GetInsightResults);
         ActionToString(GetInsights);
@@ -367,6 +375,7 @@ QString SecurityHubRequestPrivate::toString(const SecurityHubRequest::Action &ac
         ActionToString(GetMembers);
         ActionToString(InviteMembers);
         ActionToString(ListEnabledProductsForImport);
+        ActionToString(ListFindingAggregators);
         ActionToString(ListInvitations);
         ActionToString(ListMembers);
         ActionToString(ListOrganizationAdminAccounts);
@@ -374,6 +383,7 @@ QString SecurityHubRequestPrivate::toString(const SecurityHubRequest::Action &ac
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateActionTarget);
+        ActionToString(UpdateFindingAggregator);
         ActionToString(UpdateFindings);
         ActionToString(UpdateInsight);
         ActionToString(UpdateOrganizationConfiguration);

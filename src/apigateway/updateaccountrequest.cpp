@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateAccountRequest
- * \brief The UpdateAccountRequest class provides an interface for APIGateway UpdateAccount requests.
+ * \class QtAws::ApiGateway::UpdateAccountRequest
+ * \brief The UpdateAccountRequest class provides an interface for ApiGateway UpdateAccount requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateAccount
+ * \sa ApiGatewayClient::updateAccount
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateAccountRequest::UpdateAccountRequest(const UpdateAccountRequest &other)
-    : APIGatewayRequest(new UpdateAccountRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateAccountRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateAccountRequest::UpdateAccountRequest(const UpdateAccountRequest &other)
  * Constructs a UpdateAccountRequest object.
  */
 UpdateAccountRequest::UpdateAccountRequest()
-    : APIGatewayRequest(new UpdateAccountRequestPrivate(APIGatewayRequest::UpdateAccountAction, this))
+    : ApiGatewayRequest(new UpdateAccountRequestPrivate(ApiGatewayRequest::UpdateAccountAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateAccountRequestPrivate
+ * \class QtAws::ApiGateway::UpdateAccountRequestPrivate
  * \brief The UpdateAccountRequestPrivate class provides private implementation for UpdateAccountRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateAccountRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateAccountRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateAccountRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateAccountRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
  */
 UpdateAccountRequestPrivate::UpdateAccountRequestPrivate(
     const UpdateAccountRequestPrivate &other, UpdateAccountRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

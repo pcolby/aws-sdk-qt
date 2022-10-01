@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaResponse;
+class AcmPcaResponse;
 
-class AcmpcaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AcmPcaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit AcmpcaResponsePrivate(AcmpcaResponse * const q);
+    explicit AcmPcaResponsePrivate(AcmPcaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(AcmpcaResponse)
-    Q_DISABLE_COPY(AcmpcaResponsePrivate)
+    Q_DECLARE_PUBLIC(AcmPcaResponse)
+    Q_DISABLE_COPY(AcmPcaResponsePrivate)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

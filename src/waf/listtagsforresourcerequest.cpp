@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for WAF ListTagsForResource requests.
+ * \class QtAws::Waf::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Waf ListTagsForResource requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::ListTagsForResourceRequestPrivate
+ * \class QtAws::Waf::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

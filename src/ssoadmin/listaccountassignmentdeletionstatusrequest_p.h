@@ -24,14 +24,14 @@
 #include "listaccountassignmentdeletionstatusrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListAccountAssignmentDeletionStatusRequest;
 
-class ListAccountAssignmentDeletionStatusRequestPrivate : public SSOAdminRequestPrivate {
+class ListAccountAssignmentDeletionStatusRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    ListAccountAssignmentDeletionStatusRequestPrivate(const SSOAdminRequest::Action action,
+    ListAccountAssignmentDeletionStatusRequestPrivate(const SsoAdminRequest::Action action,
                                    ListAccountAssignmentDeletionStatusRequest * const q);
     ListAccountAssignmentDeletionStatusRequestPrivate(const ListAccountAssignmentDeletionStatusRequestPrivate &other,
                                    ListAccountAssignmentDeletionStatusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

@@ -180,7 +180,7 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::WAF
+ * \namespace QtAws::Waf
  * \brief Contains classess for accessing AWS WAF.
  *
  * \inmodule QtAwsWaf
@@ -189,14 +189,14 @@
  */
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::WafClient
+ * \class QtAws::Waf::WafClient
  * \brief The WafClient class provides access to the AWS WAF service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -2846,6 +2846,8 @@ TagResourceResponse * WafClient::tagResource(const TagResourceRequest &request)
  * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
  * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  */
 UntagResourceResponse * WafClient::untagResource(const UntagResourceRequest &request)
 {
@@ -3824,12 +3826,12 @@ UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSet
 }
 
 /*!
- * \class QtAws::WAF::WafClientPrivate
+ * \class QtAws::Waf::WafClientPrivate
  * \brief The WafClientPrivate class provides private implementation for WafClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -3841,5 +3843,5 @@ WafClientPrivate::WafClientPrivate(WafClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
-class DynamoDBClient;
+class DynamoDbClient;
 
-class DynamoDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DynamoDbClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit DynamoDBClientPrivate(DynamoDBClient * const q);
+    explicit DynamoDbClientPrivate(DynamoDbClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(DynamoDBClient)
-    Q_DISABLE_COPY(DynamoDBClientPrivate)
+    Q_DECLARE_PUBLIC(DynamoDbClient)
+    Q_DISABLE_COPY(DynamoDbClientPrivate)
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

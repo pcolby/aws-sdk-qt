@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::TerminateJobFlowsRequest
- * \brief The TerminateJobFlowsRequest class provides an interface for EMR TerminateJobFlows requests.
+ * \class QtAws::Emr::TerminateJobFlowsRequest
+ * \brief The TerminateJobFlowsRequest class provides an interface for Emr TerminateJobFlows requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::terminateJobFlows
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::EMR::TerminateJobFlowsRequestPrivate
+ * \class QtAws::Emr::TerminateJobFlowsRequestPrivate
  * \brief The TerminateJobFlowsRequestPrivate class provides private implementation for TerminateJobFlowsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

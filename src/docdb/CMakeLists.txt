@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDOCDB_LIBRARY)
 
-add_library(QtAwsDocDB
+add_library(QtAwsDocDb
+  qtawsdocdbglobal.h
+  docdbclient.h
+  docdbclient_p.h
+  docdbrequest.h
+  docdbrequest_p.h
+  docdbresponse.h
+  docdbresponse_p.h
   addsourceidentifiertosubscriptionrequest.h
   addsourceidentifiertosubscriptionrequest_p.h
   addsourceidentifiertosubscriptionresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsDocDB
   copydbclustersnapshotrequest_p.h
   copydbclustersnapshotresponse.h
   copydbclustersnapshotresponse_p.h
-  createdbclusterparametergrouprequest.h
-  createdbclusterparametergrouprequest_p.h
-  createdbclusterparametergroupresponse.h
-  createdbclusterparametergroupresponse_p.h
   createdbclusterrequest.h
   createdbclusterrequest_p.h
   createdbclusterresponse.h
   createdbclusterresponse_p.h
+  createdbclusterparametergrouprequest.h
+  createdbclusterparametergrouprequest_p.h
+  createdbclusterparametergroupresponse.h
+  createdbclusterparametergroupresponse_p.h
   createdbclustersnapshotrequest.h
   createdbclustersnapshotrequest_p.h
   createdbclustersnapshotresponse.h
@@ -49,14 +56,14 @@ add_library(QtAwsDocDB
   createglobalclusterrequest_p.h
   createglobalclusterresponse.h
   createglobalclusterresponse_p.h
-  deletedbclusterparametergrouprequest.h
-  deletedbclusterparametergrouprequest_p.h
-  deletedbclusterparametergroupresponse.h
-  deletedbclusterparametergroupresponse_p.h
   deletedbclusterrequest.h
   deletedbclusterrequest_p.h
   deletedbclusterresponse.h
   deletedbclusterresponse_p.h
+  deletedbclusterparametergrouprequest.h
+  deletedbclusterparametergrouprequest_p.h
+  deletedbclusterparametergroupresponse.h
+  deletedbclusterparametergroupresponse_p.h
   deletedbclustersnapshotrequest.h
   deletedbclustersnapshotrequest_p.h
   deletedbclustersnapshotresponse.h
@@ -121,14 +128,14 @@ add_library(QtAwsDocDB
   describeeventcategoriesrequest_p.h
   describeeventcategoriesresponse.h
   describeeventcategoriesresponse_p.h
-  describeeventsrequest.h
-  describeeventsrequest_p.h
-  describeeventsresponse.h
-  describeeventsresponse_p.h
   describeeventsubscriptionsrequest.h
   describeeventsubscriptionsrequest_p.h
   describeeventsubscriptionsresponse.h
   describeeventsubscriptionsresponse_p.h
+  describeeventsrequest.h
+  describeeventsrequest_p.h
+  describeeventsresponse.h
+  describeeventsresponse_p.h
   describeglobalclustersrequest.h
   describeglobalclustersrequest_p.h
   describeglobalclustersresponse.h
@@ -141,12 +148,6 @@ add_library(QtAwsDocDB
   describependingmaintenanceactionsrequest_p.h
   describependingmaintenanceactionsresponse.h
   describependingmaintenanceactionsresponse_p.h
-  docdbclient.h
-  docdbclient_p.h
-  docdbrequest.h
-  docdbrequest_p.h
-  docdbresponse.h
-  docdbresponse_p.h
   failoverdbclusterrequest.h
   failoverdbclusterrequest_p.h
   failoverdbclusterresponse.h
@@ -155,14 +156,14 @@ add_library(QtAwsDocDB
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  modifydbclusterparametergrouprequest.h
-  modifydbclusterparametergrouprequest_p.h
-  modifydbclusterparametergroupresponse.h
-  modifydbclusterparametergroupresponse_p.h
   modifydbclusterrequest.h
   modifydbclusterrequest_p.h
   modifydbclusterresponse.h
   modifydbclusterresponse_p.h
+  modifydbclusterparametergrouprequest.h
+  modifydbclusterparametergrouprequest_p.h
+  modifydbclusterparametergroupresponse.h
+  modifydbclusterparametergroupresponse_p.h
   modifydbclustersnapshotattributerequest.h
   modifydbclustersnapshotattributerequest_p.h
   modifydbclustersnapshotattributeresponse.h
@@ -183,7 +184,6 @@ add_library(QtAwsDocDB
   modifyglobalclusterrequest_p.h
   modifyglobalclusterresponse.h
   modifyglobalclusterresponse_p.h
-  qtawsdocdbglobal.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h
@@ -220,6 +220,9 @@ add_library(QtAwsDocDB
   stopdbclusterrequest_p.h
   stopdbclusterresponse.h
   stopdbclusterresponse_p.h
+  docdbclient.cpp
+  docdbrequest.cpp
+  docdbresponse.cpp
   addsourceidentifiertosubscriptionrequest.cpp
   addsourceidentifiertosubscriptionresponse.cpp
   addtagstoresourcerequest.cpp
@@ -230,10 +233,10 @@ add_library(QtAwsDocDB
   copydbclusterparametergroupresponse.cpp
   copydbclustersnapshotrequest.cpp
   copydbclustersnapshotresponse.cpp
-  createdbclusterparametergrouprequest.cpp
-  createdbclusterparametergroupresponse.cpp
   createdbclusterrequest.cpp
   createdbclusterresponse.cpp
+  createdbclusterparametergrouprequest.cpp
+  createdbclusterparametergroupresponse.cpp
   createdbclustersnapshotrequest.cpp
   createdbclustersnapshotresponse.cpp
   createdbinstancerequest.cpp
@@ -244,10 +247,10 @@ add_library(QtAwsDocDB
   createeventsubscriptionresponse.cpp
   createglobalclusterrequest.cpp
   createglobalclusterresponse.cpp
-  deletedbclusterparametergrouprequest.cpp
-  deletedbclusterparametergroupresponse.cpp
   deletedbclusterrequest.cpp
   deletedbclusterresponse.cpp
+  deletedbclusterparametergrouprequest.cpp
+  deletedbclusterparametergroupresponse.cpp
   deletedbclustersnapshotrequest.cpp
   deletedbclustersnapshotresponse.cpp
   deletedbinstancerequest.cpp
@@ -280,27 +283,24 @@ add_library(QtAwsDocDB
   describeenginedefaultclusterparametersresponse.cpp
   describeeventcategoriesrequest.cpp
   describeeventcategoriesresponse.cpp
-  describeeventsrequest.cpp
-  describeeventsresponse.cpp
   describeeventsubscriptionsrequest.cpp
   describeeventsubscriptionsresponse.cpp
+  describeeventsrequest.cpp
+  describeeventsresponse.cpp
   describeglobalclustersrequest.cpp
   describeglobalclustersresponse.cpp
   describeorderabledbinstanceoptionsrequest.cpp
   describeorderabledbinstanceoptionsresponse.cpp
   describependingmaintenanceactionsrequest.cpp
   describependingmaintenanceactionsresponse.cpp
-  docdbclient.cpp
-  docdbrequest.cpp
-  docdbresponse.cpp
   failoverdbclusterrequest.cpp
   failoverdbclusterresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  modifydbclusterparametergrouprequest.cpp
-  modifydbclusterparametergroupresponse.cpp
   modifydbclusterrequest.cpp
   modifydbclusterresponse.cpp
+  modifydbclusterparametergrouprequest.cpp
+  modifydbclusterparametergroupresponse.cpp
   modifydbclustersnapshotattributerequest.cpp
   modifydbclustersnapshotattributeresponse.cpp
   modifydbinstancerequest.cpp
@@ -330,7 +330,7 @@ add_library(QtAwsDocDB
   stopdbclusterrequest.cpp
   stopdbclusterresponse.cpp)
 
-target_link_libraries(QtAwsDocDB
+target_link_libraries(QtAwsDocDb
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

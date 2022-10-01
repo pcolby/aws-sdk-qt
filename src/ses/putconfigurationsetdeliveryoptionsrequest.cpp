@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::PutConfigurationSetDeliveryOptionsRequest
- * \brief The PutConfigurationSetDeliveryOptionsRequest class provides an interface for SES PutConfigurationSetDeliveryOptions requests.
+ * \class QtAws::Ses::PutConfigurationSetDeliveryOptionsRequest
+ * \brief The PutConfigurationSetDeliveryOptionsRequest class provides an interface for Ses PutConfigurationSetDeliveryOptions requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * PutConfigurationSetDeliveryOptionsRequest::re
 }
 
 /*!
- * \class QtAws::SES::PutConfigurationSetDeliveryOptionsRequestPrivate
+ * \class QtAws::Ses::PutConfigurationSetDeliveryOptionsRequestPrivate
  * \brief The PutConfigurationSetDeliveryOptionsRequestPrivate class provides private implementation for PutConfigurationSetDeliveryOptionsRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ PutConfigurationSetDeliveryOptionsRequestPrivate::PutConfigurationSetDeliveryOpt
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

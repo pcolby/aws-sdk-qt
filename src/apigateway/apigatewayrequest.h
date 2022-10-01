@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayRequestPrivate;
+class ApiGatewayRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT APIGatewayRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPIGATEWAY_EXPORT ApiGatewayRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by APIGateway.
+    /// Actions supported by ApiGateway.
     enum Action {
         CreateApiKeyAction,
         CreateAuthorizerAction,
@@ -162,9 +162,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    APIGatewayRequest(const Action action);
-    APIGatewayRequest(const APIGatewayRequest &other);
-    APIGatewayRequest &operator=(const APIGatewayRequest &other);
+    ApiGatewayRequest(const Action action);
+    ApiGatewayRequest(const ApiGatewayRequest &other);
+    ApiGatewayRequest &operator=(const ApiGatewayRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -173,12 +173,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const APIGatewayRequest &other) const;
+    virtual bool operator==(const ApiGatewayRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit APIGatewayRequest(APIGatewayRequestPrivate * const d);
+    explicit ApiGatewayRequest(ApiGatewayRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -191,11 +191,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(APIGatewayRequest)
+    Q_DECLARE_PRIVATE(ApiGatewayRequest)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

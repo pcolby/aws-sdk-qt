@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::FailoverGlobalClusterResponse
- * \brief The FailoverGlobalClusterResponse class provides an interace for RDS FailoverGlobalCluster responses.
+ * \class QtAws::Rds::FailoverGlobalClusterResponse
+ * \brief The FailoverGlobalClusterResponse class provides an interace for Rds FailoverGlobalCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const FailoverGlobalClusterRequest * FailoverGlobalClusterResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS FailoverGlobalCluster \a response.
+ * Parses a successful Rds FailoverGlobalCluster \a response.
  */
 void FailoverGlobalClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void FailoverGlobalClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::FailoverGlobalClusterResponsePrivate
+ * \class QtAws::Rds::FailoverGlobalClusterResponsePrivate
  * \brief The FailoverGlobalClusterResponsePrivate class provides private implementation for FailoverGlobalClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ FailoverGlobalClusterResponsePrivate::FailoverGlobalClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS FailoverGlobalCluster response element from \a xml.
+ * Parses a Rds FailoverGlobalCluster response element from \a xml.
  */
 void FailoverGlobalClusterResponsePrivate::parseFailoverGlobalClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void FailoverGlobalClusterResponsePrivate::parseFailoverGlobalClusterResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

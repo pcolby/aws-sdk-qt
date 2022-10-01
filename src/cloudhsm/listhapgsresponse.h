@@ -24,11 +24,11 @@
 #include "listhapgsrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ListHapgsResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT ListHapgsResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT ListHapgsResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

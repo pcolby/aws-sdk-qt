@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateTimeToLiveRequest
- * \brief The UpdateTimeToLiveRequest class provides an interface for DynamoDB UpdateTimeToLive requests.
+ * \class QtAws::DynamoDb::UpdateTimeToLiveRequest
+ * \brief The UpdateTimeToLiveRequest class provides an interface for DynamoDb UpdateTimeToLive requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateTimeToLive
+ * \sa DynamoDbClient::updateTimeToLive
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateTimeToLiveRequest::UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &other)
-    : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new UpdateTimeToLiveRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ UpdateTimeToLiveRequest::UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &
  * Constructs a UpdateTimeToLiveRequest object.
  */
 UpdateTimeToLiveRequest::UpdateTimeToLiveRequest()
-    : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(DynamoDBRequest::UpdateTimeToLiveAction, this))
+    : DynamoDbRequest(new UpdateTimeToLiveRequestPrivate(DynamoDbRequest::UpdateTimeToLiveAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateTimeToLiveRequestPrivate
+ * \class QtAws::DynamoDb::UpdateTimeToLiveRequestPrivate
  * \brief The UpdateTimeToLiveRequestPrivate class provides private implementation for UpdateTimeToLiveRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a UpdateTimeToLiveRequestPrivate object for DynamoDB \a action,
+ * Constructs a UpdateTimeToLiveRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
-    const DynamoDBRequest::Action action, UpdateTimeToLiveRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, UpdateTimeToLiveRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const UpdateTimeToLiveRequestPrivate &other, UpdateTimeToLiveRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

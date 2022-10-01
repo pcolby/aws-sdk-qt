@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBSnapshotAttributesResponse
- * \brief The DescribeDBSnapshotAttributesResponse class provides an interace for RDS DescribeDBSnapshotAttributes responses.
+ * \class QtAws::Rds::DescribeDBSnapshotAttributesResponse
+ * \brief The DescribeDBSnapshotAttributesResponse class provides an interace for Rds DescribeDBSnapshotAttributes responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBSnapshotAttributesRequest * DescribeDBSnapshotAttributesResponse
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBSnapshotAttributes \a response.
+ * Parses a successful Rds DescribeDBSnapshotAttributes \a response.
  */
 void DescribeDBSnapshotAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBSnapshotAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBSnapshotAttributesResponsePrivate
+ * \class QtAws::Rds::DescribeDBSnapshotAttributesResponsePrivate
  * \brief The DescribeDBSnapshotAttributesResponsePrivate class provides private implementation for DescribeDBSnapshotAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBSnapshotAttributesResponsePrivate::DescribeDBSnapshotAttributesRespons
 }
 
 /*!
- * Parses a RDS DescribeDBSnapshotAttributes response element from \a xml.
+ * Parses a Rds DescribeDBSnapshotAttributes response element from \a xml.
  */
 void DescribeDBSnapshotAttributesResponsePrivate::parseDescribeDBSnapshotAttributesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBSnapshotAttributesResponsePrivate::parseDescribeDBSnapshotAttribu
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

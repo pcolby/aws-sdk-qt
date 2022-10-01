@@ -24,11 +24,11 @@
 #include "deletedbsubnetgrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBSubnetGroupResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DeleteDBSubnetGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DeleteDBSubnetGroupResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

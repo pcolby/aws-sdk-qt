@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetIPSetRequest
- * \brief The GetIPSetRequest class provides an interface for WAFRegional GetIPSet requests.
+ * \class QtAws::WafRegional::GetIPSetRequest
+ * \brief The GetIPSetRequest class provides an interface for WafRegional GetIPSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getIPSet
+ * \sa WafRegionalClient::getIPSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
-    : WAFRegionalRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
  * Constructs a GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
-    : WAFRegionalRequest(new GetIPSetRequestPrivate(WAFRegionalRequest::GetIPSetAction, this))
+    : WafRegionalRequest(new GetIPSetRequestPrivate(WafRegionalRequest::GetIPSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::WAFRegional::GetIPSetRequestPrivate
+ * \class QtAws::WafRegional::GetIPSetRequestPrivate
  * \brief The GetIPSetRequestPrivate class provides private implementation for GetIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetIPSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetIPSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
-    const WAFRegionalRequest::Action action, GetIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetIPSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

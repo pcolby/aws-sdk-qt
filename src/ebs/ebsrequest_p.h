@@ -24,16 +24,16 @@
 #include "ebsrequest.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class EbsRequest;
 
 class EbsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EbsRequest::Action action; ///< EBS action to be performed.
-    QString apiVersion;        ///< EBS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EBS request (query string) parameters. @todo?
+    EbsRequest::Action action; ///< Ebs action to be performed.
+    QString apiVersion;        ///< Ebs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ebs request (query string) parameters. @todo?
 
     EbsRequestPrivate(const EbsRequest::Action action, EbsRequest * const q);
     EbsRequestPrivate(const EbsRequestPrivate &other, EbsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

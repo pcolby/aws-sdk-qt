@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListDomainDeliverabilityCampaignsRequestPrivate;
 
-class QTAWSSESV2_EXPORT ListDomainDeliverabilityCampaignsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT ListDomainDeliverabilityCampaignsRequest : public SESv2Request {
 
 public:
     ListDomainDeliverabilityCampaignsRequest(const ListDomainDeliverabilityCampaignsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

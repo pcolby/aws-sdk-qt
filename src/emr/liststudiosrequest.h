@@ -23,7 +23,7 @@
 #include "emrrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class ListStudiosRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

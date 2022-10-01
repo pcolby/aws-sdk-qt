@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::UpdateClusterRequest
- * \brief The UpdateClusterRequest class provides an interface for DAX UpdateCluster requests.
+ * \class QtAws::Dax::UpdateClusterRequest
+ * \brief The UpdateClusterRequest class provides an interface for Dax UpdateCluster requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::DAX::UpdateClusterRequestPrivate
+ * \class QtAws::Dax::UpdateClusterRequestPrivate
  * \brief The UpdateClusterRequestPrivate class provides private implementation for UpdateClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

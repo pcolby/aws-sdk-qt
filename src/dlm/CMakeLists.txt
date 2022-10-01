@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDLM_LIBRARY)
 
 add_library(QtAwsDlm
+  qtawsdlmglobal.h
+  dlmclient.h
+  dlmclient_p.h
+  dlmrequest.h
+  dlmrequest_p.h
+  dlmresponse.h
+  dlmresponse_p.h
   createlifecyclepolicyrequest.h
   createlifecyclepolicyrequest_p.h
   createlifecyclepolicyresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsDlm
   deletelifecyclepolicyrequest_p.h
   deletelifecyclepolicyresponse.h
   deletelifecyclepolicyresponse_p.h
-  dlmclient.h
-  dlmclient_p.h
-  dlmrequest.h
-  dlmrequest_p.h
-  dlmresponse.h
-  dlmresponse_p.h
   getlifecyclepoliciesrequest.h
   getlifecyclepoliciesrequest_p.h
   getlifecyclepoliciesresponse.h
@@ -27,7 +28,6 @@ add_library(QtAwsDlm
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsdlmglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -40,13 +40,13 @@ add_library(QtAwsDlm
   updatelifecyclepolicyrequest_p.h
   updatelifecyclepolicyresponse.h
   updatelifecyclepolicyresponse_p.h
+  dlmclient.cpp
+  dlmrequest.cpp
+  dlmresponse.cpp
   createlifecyclepolicyrequest.cpp
   createlifecyclepolicyresponse.cpp
   deletelifecyclepolicyrequest.cpp
   deletelifecyclepolicyresponse.cpp
-  dlmclient.cpp
-  dlmrequest.cpp
-  dlmresponse.cpp
   getlifecyclepoliciesrequest.cpp
   getlifecyclepoliciesresponse.cpp
   getlifecyclepolicyrequest.cpp

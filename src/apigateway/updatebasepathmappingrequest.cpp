@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateBasePathMappingRequest
- * \brief The UpdateBasePathMappingRequest class provides an interface for APIGateway UpdateBasePathMapping requests.
+ * \class QtAws::ApiGateway::UpdateBasePathMappingRequest
+ * \brief The UpdateBasePathMappingRequest class provides an interface for ApiGateway UpdateBasePathMapping requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateBasePathMapping
+ * \sa ApiGatewayClient::updateBasePathMapping
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathMappingRequest &other)
-    : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateBasePathMappingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathM
  * Constructs a UpdateBasePathMappingRequest object.
  */
 UpdateBasePathMappingRequest::UpdateBasePathMappingRequest()
-    : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(APIGatewayRequest::UpdateBasePathMappingAction, this))
+    : ApiGatewayRequest(new UpdateBasePathMappingRequestPrivate(ApiGatewayRequest::UpdateBasePathMappingAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateBasePathMappingRequestPrivate
+ * \class QtAws::ApiGateway::UpdateBasePathMappingRequestPrivate
  * \brief The UpdateBasePathMappingRequestPrivate class provides private implementation for UpdateBasePathMappingRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateBasePathMappingRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateBasePathMappingRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateBasePathMappingRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateBasePathMappingRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
  */
 UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
     const UpdateBasePathMappingRequestPrivate &other, UpdateBasePathMappingRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

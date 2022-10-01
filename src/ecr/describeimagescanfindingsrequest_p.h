@@ -24,7 +24,7 @@
 #include "describeimagescanfindingsrequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class DescribeImageScanFindingsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

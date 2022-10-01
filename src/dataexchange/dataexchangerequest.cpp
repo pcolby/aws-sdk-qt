@@ -38,25 +38,32 @@ namespace DataExchange {
  *
  * \value CancelJobAction DataExchange CancelJob action.
  * \value CreateDataSetAction DataExchange CreateDataSet action.
+ * \value CreateEventActionAction DataExchange CreateEventAction action.
  * \value CreateJobAction DataExchange CreateJob action.
  * \value CreateRevisionAction DataExchange CreateRevision action.
  * \value DeleteAssetAction DataExchange DeleteAsset action.
  * \value DeleteDataSetAction DataExchange DeleteDataSet action.
+ * \value DeleteEventActionAction DataExchange DeleteEventAction action.
  * \value DeleteRevisionAction DataExchange DeleteRevision action.
  * \value GetAssetAction DataExchange GetAsset action.
  * \value GetDataSetAction DataExchange GetDataSet action.
+ * \value GetEventActionAction DataExchange GetEventAction action.
  * \value GetJobAction DataExchange GetJob action.
  * \value GetRevisionAction DataExchange GetRevision action.
  * \value ListDataSetRevisionsAction DataExchange ListDataSetRevisions action.
  * \value ListDataSetsAction DataExchange ListDataSets action.
+ * \value ListEventActionsAction DataExchange ListEventActions action.
  * \value ListJobsAction DataExchange ListJobs action.
  * \value ListRevisionAssetsAction DataExchange ListRevisionAssets action.
  * \value ListTagsForResourceAction DataExchange ListTagsForResource action.
+ * \value RevokeRevisionAction DataExchange RevokeRevision action.
+ * \value SendApiAssetAction DataExchange SendApiAsset action.
  * \value StartJobAction DataExchange StartJob action.
  * \value TagResourceAction DataExchange TagResource action.
  * \value UntagResourceAction DataExchange UntagResource action.
  * \value UpdateAssetAction DataExchange UpdateAsset action.
  * \value UpdateDataSetAction DataExchange UpdateDataSet action.
+ * \value UpdateEventActionAction DataExchange UpdateEventAction action.
  * \value UpdateRevisionAction DataExchange UpdateRevision action.
  */
 
@@ -265,7 +272,7 @@ QNetworkRequest DataExchangeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DataExchangeRequestPrivate::DataExchangeRequestPrivate(const DataExchangeRequest::Action action, DataExchangeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }
@@ -301,25 +308,32 @@ QString DataExchangeRequestPrivate::toString(const DataExchangeRequest::Action &
     switch (action) {
         ActionToString(CancelJob);
         ActionToString(CreateDataSet);
+        ActionToString(CreateEventAction);
         ActionToString(CreateJob);
         ActionToString(CreateRevision);
         ActionToString(DeleteAsset);
         ActionToString(DeleteDataSet);
+        ActionToString(DeleteEventAction);
         ActionToString(DeleteRevision);
         ActionToString(GetAsset);
         ActionToString(GetDataSet);
+        ActionToString(GetEventAction);
         ActionToString(GetJob);
         ActionToString(GetRevision);
         ActionToString(ListDataSetRevisions);
         ActionToString(ListDataSets);
+        ActionToString(ListEventActions);
         ActionToString(ListJobs);
         ActionToString(ListRevisionAssets);
         ActionToString(ListTagsForResource);
+        ActionToString(RevokeRevision);
+        ActionToString(SendApiAsset);
         ActionToString(StartJob);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAsset);
         ActionToString(UpdateDataSet);
+        ActionToString(UpdateEventAction);
         ActionToString(UpdateRevision);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

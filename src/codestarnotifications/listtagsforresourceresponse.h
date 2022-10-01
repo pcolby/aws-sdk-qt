@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT ListTagsForResourceResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT ListTagsForResourceResponse : public CodestarNotificationsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

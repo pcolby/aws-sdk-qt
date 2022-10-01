@@ -24,7 +24,7 @@
 #include "deleteipsetrequest.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class DeleteIPSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

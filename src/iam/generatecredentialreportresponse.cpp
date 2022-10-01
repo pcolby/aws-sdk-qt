@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GenerateCredentialReportResponse
- * \brief The GenerateCredentialReportResponse class provides an interace for IAM GenerateCredentialReport responses.
+ * \class QtAws::Iam::GenerateCredentialReportResponse
+ * \brief The GenerateCredentialReportResponse class provides an interace for Iam GenerateCredentialReport responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::generateCredentialReport
  */
@@ -68,7 +68,7 @@ const GenerateCredentialReportRequest * GenerateCredentialReportResponse::reques
 
 /*!
  * \reimp
- * Parses a successful IAM GenerateCredentialReport \a response.
+ * Parses a successful Iam GenerateCredentialReport \a response.
  */
 void GenerateCredentialReportResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GenerateCredentialReportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GenerateCredentialReportResponsePrivate
+ * \class QtAws::Iam::GenerateCredentialReportResponsePrivate
  * \brief The GenerateCredentialReportResponsePrivate class provides private implementation for GenerateCredentialReportResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GenerateCredentialReportResponsePrivate::GenerateCredentialReportResponsePrivate
 }
 
 /*!
- * Parses a IAM GenerateCredentialReport response element from \a xml.
+ * Parses a Iam GenerateCredentialReport response element from \a xml.
  */
 void GenerateCredentialReportResponsePrivate::parseGenerateCredentialReportResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GenerateCredentialReportResponsePrivate::parseGenerateCredentialReportRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

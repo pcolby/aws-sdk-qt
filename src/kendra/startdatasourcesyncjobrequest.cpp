@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::StartDataSourceSyncJobRequest
- * \brief The StartDataSourceSyncJobRequest class provides an interface for kendra StartDataSourceSyncJob requests.
+ * \class QtAws::Kendra::StartDataSourceSyncJobRequest
+ * \brief The StartDataSourceSyncJobRequest class provides an interface for Kendra StartDataSourceSyncJob requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::startDataSourceSyncJob
+ * \sa KendraClient::startDataSourceSyncJob
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartDataSourceSyncJobRequest::StartDataSourceSyncJobRequest(const StartDataSourceSyncJobRequest &other)
-    : kendraRequest(new StartDataSourceSyncJobRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new StartDataSourceSyncJobRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ StartDataSourceSyncJobRequest::StartDataSourceSyncJobRequest(const StartDataSour
  * Constructs a StartDataSourceSyncJobRequest object.
  */
 StartDataSourceSyncJobRequest::StartDataSourceSyncJobRequest()
-    : kendraRequest(new StartDataSourceSyncJobRequestPrivate(kendraRequest::StartDataSourceSyncJobAction, this))
+    : KendraRequest(new StartDataSourceSyncJobRequestPrivate(KendraRequest::StartDataSourceSyncJobAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * StartDataSourceSyncJobRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::kendra::StartDataSourceSyncJobRequestPrivate
+ * \class QtAws::Kendra::StartDataSourceSyncJobRequestPrivate
  * \brief The StartDataSourceSyncJobRequestPrivate class provides private implementation for StartDataSourceSyncJobRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a StartDataSourceSyncJobRequestPrivate object for kendra \a action,
+ * Constructs a StartDataSourceSyncJobRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 StartDataSourceSyncJobRequestPrivate::StartDataSourceSyncJobRequestPrivate(
-    const kendraRequest::Action action, StartDataSourceSyncJobRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, StartDataSourceSyncJobRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ StartDataSourceSyncJobRequestPrivate::StartDataSourceSyncJobRequestPrivate(
  */
 StartDataSourceSyncJobRequestPrivate::StartDataSourceSyncJobRequestPrivate(
     const StartDataSourceSyncJobRequestPrivate &other, StartDataSourceSyncJobRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

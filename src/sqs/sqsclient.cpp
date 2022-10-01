@@ -66,8 +66,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SQS
- * \brief Contains classess for accessing Amazon Simple Queue Service ( SQS).
+ * \namespace QtAws::Sqs
+ * \brief Contains classess for accessing Amazon Simple Queue Service.
  *
  * \inmodule QtAwsSqs
  *
@@ -75,33 +75,32 @@
  */
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 /*!
- * \class QtAws::SQS::SqsClient
- * \brief The SqsClient class provides access to the Amazon Simple Queue Service ( SQS) service.
+ * \class QtAws::Sqs::SqsClient
+ * \brief The SqsClient class provides access to the Amazon Simple Queue Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  *
- *  Welcome to the <i>Amazon Simple Queue Service API
+ *  Welcome to the <i>Amazon SQS API
  * 
  *  Reference</i>>
  * 
- *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
- *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
- *  decouple these
+ *  Amazon SQS is a reliable, highly-scalable hosted queue for storing messages as they travel between applications or
+ *  microservices. Amazon SQS moves data between distributed application components and helps you decouple these
  * 
  *  components>
  * 
  *  For information on the permissions you need to use this API, see <a
  *  href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-authentication-and-access-control.html">Identity
- *  and access management</a> in the <i>Amazon Simple Queue Service Developer Guide.</i>
+ *  and access management</a> in the <i>Amazon SQS Developer Guide.</i>
  * 
  *  </p
  * 
- *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
- *  language. The SDKs perform tasks such as the following
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">Amazon Web Services SDKs</a> to access Amazon SQS using your
+ *  favorite programming language. The SDKs perform tasks such as the following
  * 
  *  automatically> <ul> <li>
  * 
@@ -125,7 +124,7 @@ namespace SQS {
  * 
  *  </p </li> <li>
  * 
- *  <i>Amazon Simple Queue Service Developer Guide</i>
+ *  <i>Amazon SQS Developer Guide</i>
  * 
  *  </p <ul> <li>
  * 
@@ -145,8 +144,8 @@ namespace SQS {
  * 
  *  </p </li> </ul> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>AWS CLI Command
- *  Reference</i> </a>
+ *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>Command Line Interface</i>
+ *  </a>
  * 
  *  </p </li> <li>
  * 
@@ -224,14 +223,14 @@ SqsClient::SqsClient(
  * When you create a queue, you have full control access rights for the queue. Only you, the owner of the queue, can grant
  * or deny permissions to the queue. For more information about these permissions, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-writing-an-sqs-policy.html#write-messages-to-shared-queue">Allow
- * Developers to Write Messages to a Shared Queue</a> in the <i>Amazon Simple Queue Service Developer
+ * Developers to Write Messages to a Shared Queue</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> <note> <ul> <li>
  *
  * <code>AddPermission</code> generates a policy for you. You can use <code> <a>SetQueueAttributes</a> </code> to upload
  * your policy. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-creating-custom-policies.html">Using
- * Custom Policies with the Amazon SQS Access Policy Language</a> in the <i>Amazon Simple Queue Service Developer
+ * Custom Policies with the Amazon SQS Access Policy Language</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> </li> <li>
  *
@@ -249,17 +248,17 @@ SqsClient::SqsClient(
  *
  * this>
  *
- * <code>&amp;AttributeName.1=first</code>
+ * <code>&AttributeName.1=first</code>
  *
  * </p
  *
- * <code>&amp;AttributeName.2=second</code>
+ * <code>&AttributeName.2=second</code>
  *
  * </p <note>
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &request)
 {
@@ -275,7 +274,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * Changes the visibility timeout of a specified message in a queue to a new value. The default visibility timeout for a
  * message is 30 seconds. The minimum is 0 seconds. The maximum is 12 hours. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html">Visibility
- * Timeout</a> in the <i>Amazon Simple Queue Service Developer
+ * Timeout</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>>
  *
@@ -318,7 +317,7 @@ AddPermissionResponse * SqsClient::addPermission(const AddPermissionRequest &req
  * limit, Amazon SQS returns the <code>OverLimit</code> error message. To avoid reaching the limit, you should delete
  * messages from the queue after they're processed. You can also increase the number of queues you use to process your
  * messages. To request a limit increase, <a
- * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-sqs">file
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-sqs">file
  * a support
  *
  * request</a>>
@@ -366,11 +365,11 @@ ChangeMessageVisibilityResponse * SqsClient::changeMessageVisibility(const Chang
  *
  * this>
  *
- * <code>&amp;AttributeName.1=first</code>
+ * <code>&AttributeName.1=first</code>
  *
  * </p
  *
- * <code>&amp;AttributeName.2=second</code>
+ * <code>&AttributeName.2=second</code>
  */
 ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(const ChangeMessageVisibilityBatchRequest &request)
 {
@@ -395,7 +394,7 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  * You must either create a new FIFO queue for your application or delete your existing standard queue and recreate it as a
  * FIFO queue. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-moving">Moving
- * From a Standard Queue to a FIFO Queue</a> in the <i>Amazon Simple Queue Service Developer Guide</i>.
+ * From a Standard Queue to a FIFO Queue</a> in the <i>Amazon SQS Developer Guide</i>.
  *
  * </p </note> </li> <li>
  *
@@ -437,17 +436,17 @@ ChangeMessageVisibilityBatchResponse * SqsClient::changeMessageVisibilityBatch(c
  *
  * this>
  *
- * <code>&amp;AttributeName.1=first</code>
+ * <code>&AttributeName.1=first</code>
  *
  * </p
  *
- * <code>&amp;AttributeName.2=second</code>
+ * <code>&AttributeName.2=second</code>
  *
  * </p <note>
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 CreateQueueResponse * SqsClient::createQueue(const CreateQueueRequest &request)
 {
@@ -506,11 +505,11 @@ DeleteMessageResponse * SqsClient::deleteMessage(const DeleteMessageRequest &req
  *
  * this>
  *
- * <code>&amp;AttributeName.1=first</code>
+ * <code>&AttributeName.1=first</code>
  *
  * </p
  *
- * <code>&amp;AttributeName.2=second</code>
+ * <code>&AttributeName.2=second</code>
  */
 DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBatchRequest &request)
 {
@@ -544,7 +543,7 @@ DeleteMessageBatchResponse * SqsClient::deleteMessageBatch(const DeleteMessageBa
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 DeleteQueueResponse * SqsClient::deleteQueue(const DeleteQueueRequest &request)
 {
@@ -584,7 +583,7 @@ GetQueueAttributesResponse * SqsClient::getQueueAttributes(const GetQueueAttribu
  * the account ID of the queue's owner. The queue's owner must grant you permission to access the queue. For more
  * information about shared queue access, see <code> <a>AddPermission</a> </code> or see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-writing-an-sqs-policy.html#write-messages-to-shared-queue">Allow
- * Developers to Write Messages to a Shared Queue</a> in the <i>Amazon Simple Queue Service Developer Guide</i>.
+ * Developers to Write Messages to a Shared Queue</a> in the <i>Amazon SQS Developer Guide</i>.
  */
 GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
 {
@@ -611,7 +610,7 @@ GetQueueUrlResponse * SqsClient::getQueueUrl(const GetQueueUrlRequest &request)
  *
  * For more information about using dead-letter queues, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
- * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon Simple Queue Service Developer
+ * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer
  */
 ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const ListDeadLetterSourceQueuesRequest &request)
 {
@@ -626,13 +625,13 @@ ListDeadLetterSourceQueuesResponse * SqsClient::listDeadLetterSourceQueues(const
  *
  * List all cost allocation tags added to the specified Amazon SQS queue. For an overview, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-tags.html">Tagging Your
- * Amazon SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
+ * Amazon SQS Queues</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> <note>
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &request)
 {
@@ -661,7 +660,7 @@ ListQueueTagsResponse * SqsClient::listQueueTags(const ListQueueTagsRequest &req
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 ListQueuesResponse * SqsClient::listQueues(const ListQueuesRequest &request)
 {
@@ -708,7 +707,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  * Retrieves one or more messages (up to 10), from the specified queue. Using the <code>WaitTimeSeconds</code> parameter
  * enables long-poll support. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html">Amazon SQS Long
- * Polling</a> in the <i>Amazon Simple Queue Service Developer Guide</i>.
+ * Polling</a> in the <i>Amazon SQS Developer Guide</i>.
  *
  * </p
  *
@@ -750,7 +749,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  *
  * The receipt handle is the identifier you must provide when deleting the message. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-message-identifiers.html">Queue
- * and Message Identifiers</a> in the <i>Amazon Simple Queue Service Developer
+ * and Message Identifiers</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>>
  *
@@ -758,7 +757,7 @@ PurgeQueueResponse * SqsClient::purgeQueue(const PurgeQueueRequest &request)
  * that Amazon SQS returns in the response. If you don't include the parameter, the overall visibility timeout for the
  * queue is used for the returned messages. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html">Visibility
- * Timeout</a> in the <i>Amazon Simple Queue Service Developer
+ * Timeout</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>>
  *
@@ -791,7 +790,7 @@ ReceiveMessageResponse * SqsClient::receiveMessage(const ReceiveMessageRequest &
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> </li> <li>
  *
@@ -875,11 +874,11 @@ SendMessageResponse * SqsClient::sendMessage(const SendMessageRequest &request)
  *
  * this>
  *
- * <code>&amp;AttributeName.1=first</code>
+ * <code>&AttributeName.1=first</code>
  *
  * </p
  *
- * <code>&amp;AttributeName.2=second</code>
+ * <code>&AttributeName.2=second</code>
  */
 SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchRequest &request)
 {
@@ -905,7 +904,7 @@ SendMessageBatchResponse * SqsClient::sendMessageBatch(const SendMessageBatchReq
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> </li> <li>
  *
@@ -925,7 +924,7 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  *
  * Add cost allocation tags to the specified Amazon SQS queue. For an overview, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-tags.html">Tagging Your
- * Amazon SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
+ * Amazon SQS Queues</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>>
  *
@@ -950,14 +949,14 @@ SetQueueAttributesResponse * SqsClient::setQueueAttributes(const SetQueueAttribu
  * tag> </li> </ul>
  *
  * For a full list of tag restrictions, see <a
- * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html#limits-queues">Limits
- * Related to Queues</a> in the <i>Amazon Simple Queue Service Developer
+ * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-limits.html#limits-queues">Quotas
+ * related to queues</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> <note>
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
 {
@@ -972,13 +971,13 @@ TagQueueResponse * SqsClient::tagQueue(const TagQueueRequest &request)
  *
  * Remove cost allocation tags from the specified Amazon SQS queue. For an overview, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-tags.html">Tagging Your
- * Amazon SQS Queues</a> in the <i>Amazon Simple Queue Service Developer
+ * Amazon SQS Queues</a> in the <i>Amazon SQS Developer
  *
  * Guide</i>> <note>
  *
  * Cross-account permissions don't apply to this action. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
- * cross-account permissions to a role and a user name</a> in the <i>Amazon Simple Queue Service Developer
+ * cross-account permissions to a role and a user name</a> in the <i>Amazon SQS Developer
  */
 UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 {
@@ -986,12 +985,12 @@ UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 }
 
 /*!
- * \class QtAws::SQS::SqsClientPrivate
+ * \class QtAws::Sqs::SqsClientPrivate
  * \brief The SqsClientPrivate class provides private implementation for SqsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  */
 
 /*!
@@ -1003,5 +1002,5 @@ SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws

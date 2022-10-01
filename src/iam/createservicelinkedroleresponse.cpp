@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::CreateServiceLinkedRoleResponse
- * \brief The CreateServiceLinkedRoleResponse class provides an interace for IAM CreateServiceLinkedRole responses.
+ * \class QtAws::Iam::CreateServiceLinkedRoleResponse
+ * \brief The CreateServiceLinkedRoleResponse class provides an interace for Iam CreateServiceLinkedRole responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::createServiceLinkedRole
  */
@@ -68,7 +68,7 @@ const CreateServiceLinkedRoleRequest * CreateServiceLinkedRoleResponse::request(
 
 /*!
  * \reimp
- * Parses a successful IAM CreateServiceLinkedRole \a response.
+ * Parses a successful Iam CreateServiceLinkedRole \a response.
  */
 void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::CreateServiceLinkedRoleResponsePrivate
+ * \class QtAws::Iam::CreateServiceLinkedRoleResponsePrivate
  * \brief The CreateServiceLinkedRoleResponsePrivate class provides private implementation for CreateServiceLinkedRoleResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
 }
 
 /*!
- * Parses a IAM CreateServiceLinkedRole response element from \a xml.
+ * Parses a Iam CreateServiceLinkedRole response element from \a xml.
  */
 void CreateServiceLinkedRoleResponsePrivate::parseCreateServiceLinkedRoleResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void CreateServiceLinkedRoleResponsePrivate::parseCreateServiceLinkedRoleRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

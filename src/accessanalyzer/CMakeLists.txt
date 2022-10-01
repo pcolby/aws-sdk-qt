@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSACCESSANALYZER_LIBRARY)
 
 add_library(QtAwsAccessAnalyzer
+  qtawsaccessanalyzerglobal.h
   accessanalyzerclient.h
   accessanalyzerclient_p.h
   accessanalyzerrequest.h
@@ -91,7 +92,6 @@ add_library(QtAwsAccessAnalyzer
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsaccessanalyzerglobal.h
   startpolicygenerationrequest.h
   startpolicygenerationrequest_p.h
   startpolicygenerationresponse.h

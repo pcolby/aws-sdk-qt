@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSERVERLESSAPPLICATIONREPOSITORY_LIBRARY)
 
 add_library(QtAwsServerlessApplicationRepository
+  qtawsserverlessapplicationrepositoryglobal.h
+  serverlessapplicationrepositoryclient.h
+  serverlessapplicationrepositoryclient_p.h
+  serverlessapplicationrepositoryrequest.h
+  serverlessapplicationrepositoryrequest_p.h
+  serverlessapplicationrepositoryresponse.h
+  serverlessapplicationrepositoryresponse_p.h
   createapplicationrequest.h
   createapplicationrequest_p.h
   createapplicationresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsServerlessApplicationRepository
   deleteapplicationrequest_p.h
   deleteapplicationresponse.h
   deleteapplicationresponse_p.h
-  getapplicationpolicyrequest.h
-  getapplicationpolicyrequest_p.h
-  getapplicationpolicyresponse.h
-  getapplicationpolicyresponse_p.h
   getapplicationrequest.h
   getapplicationrequest_p.h
   getapplicationresponse.h
   getapplicationresponse_p.h
+  getapplicationpolicyrequest.h
+  getapplicationpolicyrequest_p.h
+  getapplicationpolicyresponse.h
+  getapplicationpolicyresponse_p.h
   getcloudformationtemplaterequest.h
   getcloudformationtemplaterequest_p.h
   getcloudformationtemplateresponse.h
@@ -37,25 +44,18 @@ add_library(QtAwsServerlessApplicationRepository
   listapplicationdependenciesrequest_p.h
   listapplicationdependenciesresponse.h
   listapplicationdependenciesresponse_p.h
-  listapplicationsrequest.h
-  listapplicationsrequest_p.h
-  listapplicationsresponse.h
-  listapplicationsresponse_p.h
   listapplicationversionsrequest.h
   listapplicationversionsrequest_p.h
   listapplicationversionsresponse.h
   listapplicationversionsresponse_p.h
+  listapplicationsrequest.h
+  listapplicationsrequest_p.h
+  listapplicationsresponse.h
+  listapplicationsresponse_p.h
   putapplicationpolicyrequest.h
   putapplicationpolicyrequest_p.h
   putapplicationpolicyresponse.h
   putapplicationpolicyresponse_p.h
-  qtawsserverlessapplicationrepositoryglobal.h
-  serverlessapplicationrepositoryclient.h
-  serverlessapplicationrepositoryclient_p.h
-  serverlessapplicationrepositoryrequest.h
-  serverlessapplicationrepositoryrequest_p.h
-  serverlessapplicationrepositoryresponse.h
-  serverlessapplicationrepositoryresponse_p.h
   unshareapplicationrequest.h
   unshareapplicationrequest_p.h
   unshareapplicationresponse.h
@@ -64,6 +64,9 @@ add_library(QtAwsServerlessApplicationRepository
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
+  serverlessapplicationrepositoryclient.cpp
+  serverlessapplicationrepositoryrequest.cpp
+  serverlessapplicationrepositoryresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
   createapplicationversionrequest.cpp
@@ -74,23 +77,20 @@ add_library(QtAwsServerlessApplicationRepository
   createcloudformationtemplateresponse.cpp
   deleteapplicationrequest.cpp
   deleteapplicationresponse.cpp
-  getapplicationpolicyrequest.cpp
-  getapplicationpolicyresponse.cpp
   getapplicationrequest.cpp
   getapplicationresponse.cpp
+  getapplicationpolicyrequest.cpp
+  getapplicationpolicyresponse.cpp
   getcloudformationtemplaterequest.cpp
   getcloudformationtemplateresponse.cpp
   listapplicationdependenciesrequest.cpp
   listapplicationdependenciesresponse.cpp
-  listapplicationsrequest.cpp
-  listapplicationsresponse.cpp
   listapplicationversionsrequest.cpp
   listapplicationversionsresponse.cpp
+  listapplicationsrequest.cpp
+  listapplicationsresponse.cpp
   putapplicationpolicyrequest.cpp
   putapplicationpolicyresponse.cpp
-  serverlessapplicationrepositoryclient.cpp
-  serverlessapplicationrepositoryrequest.cpp
-  serverlessapplicationrepositoryresponse.cpp
   unshareapplicationrequest.cpp
   unshareapplicationresponse.cpp
   updateapplicationrequest.cpp

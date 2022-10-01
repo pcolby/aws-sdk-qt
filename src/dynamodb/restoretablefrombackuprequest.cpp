@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableFromBackupRequest
- * \brief The RestoreTableFromBackupRequest class provides an interface for DynamoDB RestoreTableFromBackup requests.
+ * \class QtAws::DynamoDb::RestoreTableFromBackupRequest
+ * \brief The RestoreTableFromBackupRequest class provides an interface for DynamoDb RestoreTableFromBackup requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::restoreTableFromBackup
+ * \sa DynamoDbClient::restoreTableFromBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RestoreTableFromBackupRequest::RestoreTableFromBackupRequest(const RestoreTableFromBackupRequest &other)
-    : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new RestoreTableFromBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ RestoreTableFromBackupRequest::RestoreTableFromBackupRequest(const RestoreTableF
  * Constructs a RestoreTableFromBackupRequest object.
  */
 RestoreTableFromBackupRequest::RestoreTableFromBackupRequest()
-    : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(DynamoDBRequest::RestoreTableFromBackupAction, this))
+    : DynamoDbRequest(new RestoreTableFromBackupRequestPrivate(DynamoDbRequest::RestoreTableFromBackupAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableFromBackupRequestPrivate
+ * \class QtAws::DynamoDb::RestoreTableFromBackupRequestPrivate
  * \brief The RestoreTableFromBackupRequestPrivate class provides private implementation for RestoreTableFromBackupRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a RestoreTableFromBackupRequestPrivate object for DynamoDB \a action,
+ * Constructs a RestoreTableFromBackupRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
-    const DynamoDBRequest::Action action, RestoreTableFromBackupRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, RestoreTableFromBackupRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const RestoreTableFromBackupRequestPrivate &other, RestoreTableFromBackupRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

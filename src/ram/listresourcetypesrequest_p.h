@@ -24,7 +24,7 @@
 #include "listresourcetypesrequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class ListResourceTypesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

@@ -31,6 +31,8 @@
 #include "createexportjobresponse.h"
 #include "createimportjobrequest.h"
 #include "createimportjobresponse.h"
+#include "createinapptemplaterequest.h"
+#include "createinapptemplateresponse.h"
 #include "createjourneyrequest.h"
 #include "createjourneyresponse.h"
 #include "createpushtemplaterequest.h"
@@ -69,6 +71,8 @@
 #include "deleteeventstreamresponse.h"
 #include "deletegcmchannelrequest.h"
 #include "deletegcmchannelresponse.h"
+#include "deleteinapptemplaterequest.h"
+#include "deleteinapptemplateresponse.h"
 #include "deletejourneyrequest.h"
 #include "deletejourneyresponse.h"
 #include "deletepushtemplaterequest.h"
@@ -139,6 +143,10 @@
 #include "getimportjobresponse.h"
 #include "getimportjobsrequest.h"
 #include "getimportjobsresponse.h"
+#include "getinappmessagesrequest.h"
+#include "getinappmessagesresponse.h"
+#include "getinapptemplaterequest.h"
+#include "getinapptemplateresponse.h"
 #include "getjourneyrequest.h"
 #include "getjourneyresponse.h"
 #include "getjourneydaterangekpirequest.h"
@@ -193,6 +201,8 @@
 #include "removeattributesresponse.h"
 #include "sendmessagesrequest.h"
 #include "sendmessagesresponse.h"
+#include "sendotpmessagerequest.h"
+#include "sendotpmessageresponse.h"
 #include "sendusersmessagesrequest.h"
 #include "sendusersmessagesresponse.h"
 #include "tagresourcerequest.h"
@@ -225,6 +235,8 @@
 #include "updateendpointsbatchresponse.h"
 #include "updategcmchannelrequest.h"
 #include "updategcmchannelresponse.h"
+#include "updateinapptemplaterequest.h"
+#include "updateinapptemplateresponse.h"
 #include "updatejourneyrequest.h"
 #include "updatejourneyresponse.h"
 #include "updatejourneystaterequest.h"
@@ -245,6 +257,8 @@
 #include "updatevoicechannelresponse.h"
 #include "updatevoicetemplaterequest.h"
 #include "updatevoicetemplateresponse.h"
+#include "verifyotpmessagerequest.h"
+#include "verifyotpmessageresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -387,6 +401,19 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
     return qobject_cast<CreateImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateInAppTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new message template for messages using the in-app message
+ */
+CreateInAppTemplateResponse * PinpointClient::createInAppTemplate(const CreateInAppTemplateRequest &request)
+{
+    return qobject_cast<CreateInAppTemplateResponse *>(send(request));
 }
 
 /*!
@@ -635,6 +662,19 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
 DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
 {
     return qobject_cast<DeleteGcmChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteInAppTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a message template for messages sent using the in-app message
+ */
+DeleteInAppTemplateResponse * PinpointClient::deleteInAppTemplate(const DeleteInAppTemplateRequest &request)
+{
+    return qobject_cast<DeleteInAppTemplateResponse *>(send(request));
 }
 
 /*!
@@ -1095,6 +1135,32 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetInAppMessagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the in-app messages targeted for the provided endpoint
+ */
+GetInAppMessagesResponse * PinpointClient::getInAppMessages(const GetInAppMessagesRequest &request)
+{
+    return qobject_cast<GetInAppMessagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetInAppTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the content and settings of a message template for messages sent through the in-app
+ */
+GetInAppTemplateResponse * PinpointClient::getInAppTemplate(const GetInAppTemplateRequest &request)
+{
+    return qobject_cast<GetInAppTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * GetJourneyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1451,6 +1517,19 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * SendOTPMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Send an OTP
+ */
+SendOTPMessageResponse * PinpointClient::sendOTPMessage(const SendOTPMessageRequest &request)
+{
+    return qobject_cast<SendOTPMessageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * SendUsersMessagesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1666,6 +1745,19 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateInAppTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing message template for messages sent through the in-app message
+ */
+UpdateInAppTemplateResponse * PinpointClient::updateInAppTemplate(const UpdateInAppTemplateRequest &request)
+{
+    return qobject_cast<UpdateInAppTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * UpdateJourneyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1793,6 +1885,19 @@ UpdateVoiceChannelResponse * PinpointClient::updateVoiceChannel(const UpdateVoic
 UpdateVoiceTemplateResponse * PinpointClient::updateVoiceTemplate(const UpdateVoiceTemplateRequest &request)
 {
     return qobject_cast<UpdateVoiceTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * VerifyOTPMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Verify an
+ */
+VerifyOTPMessageResponse * PinpointClient::verifyOTPMessage(const VerifyOTPMessageRequest &request)
+{
+    return qobject_cast<VerifyOTPMessageResponse *>(send(request));
 }
 
 /*!

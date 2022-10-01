@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationVersionsRequest
- * \brief The GetDocumentationVersionsRequest class provides an interface for APIGateway GetDocumentationVersions requests.
+ * \class QtAws::ApiGateway::GetDocumentationVersionsRequest
+ * \brief The GetDocumentationVersionsRequest class provides an interface for ApiGateway GetDocumentationVersions requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDocumentationVersions
+ * \sa ApiGatewayClient::getDocumentationVersions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDocumentationVersionsRequest::GetDocumentationVersionsRequest(const GetDocumentationVersionsRequest &other)
-    : APIGatewayRequest(new GetDocumentationVersionsRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetDocumentationVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetDocumentationVersionsRequest::GetDocumentationVersionsRequest(const GetDocume
  * Constructs a GetDocumentationVersionsRequest object.
  */
 GetDocumentationVersionsRequest::GetDocumentationVersionsRequest()
-    : APIGatewayRequest(new GetDocumentationVersionsRequestPrivate(APIGatewayRequest::GetDocumentationVersionsAction, this))
+    : ApiGatewayRequest(new GetDocumentationVersionsRequestPrivate(ApiGatewayRequest::GetDocumentationVersionsAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationVersionsRequestPrivate
+ * \class QtAws::ApiGateway::GetDocumentationVersionsRequestPrivate
  * \brief The GetDocumentationVersionsRequestPrivate class provides private implementation for GetDocumentationVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetDocumentationVersionsRequestPrivate object for APIGateway \a action,
+ * Constructs a GetDocumentationVersionsRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
-    const APIGatewayRequest::Action action, GetDocumentationVersionsRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetDocumentationVersionsRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
  */
 GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
     const GetDocumentationVersionsRequestPrivate &other, GetDocumentationVersionsRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

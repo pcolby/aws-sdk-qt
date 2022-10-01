@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "associateadminaccountrequest.h"
 #include "associateadminaccountresponse.h"
+#include "associatethirdpartyfirewallrequest.h"
+#include "associatethirdpartyfirewallresponse.h"
 #include "deleteappslistrequest.h"
 #include "deleteappslistresponse.h"
 #include "deletenotificationchannelrequest.h"
@@ -33,6 +35,8 @@
 #include "deleteprotocolslistresponse.h"
 #include "disassociateadminaccountrequest.h"
 #include "disassociateadminaccountresponse.h"
+#include "disassociatethirdpartyfirewallrequest.h"
+#include "disassociatethirdpartyfirewallresponse.h"
 #include "getadminaccountrequest.h"
 #include "getadminaccountresponse.h"
 #include "getappslistrequest.h"
@@ -47,6 +51,8 @@
 #include "getprotectionstatusresponse.h"
 #include "getprotocolslistrequest.h"
 #include "getprotocolslistresponse.h"
+#include "getthirdpartyfirewallassociationstatusrequest.h"
+#include "getthirdpartyfirewallassociationstatusresponse.h"
 #include "getviolationdetailsrequest.h"
 #include "getviolationdetailsresponse.h"
 #include "listappslistsrequest.h"
@@ -61,6 +67,8 @@
 #include "listprotocolslistsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listthirdpartyfirewallfirewallpoliciesrequest.h"
+#include "listthirdpartyfirewallfirewallpoliciesresponse.h"
 #include "putappslistrequest.h"
 #include "putappslistresponse.h"
 #include "putnotificationchannelrequest.h"
@@ -78,8 +86,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::FMS
- * \brief Contains classess for accessing Firewall Management Service (FMS).
+ * \namespace QtAws::Fms
+ * \brief Contains classess for accessing Firewall Management Service.
  *
  * \inmodule QtAwsFms
  *
@@ -87,21 +95,18 @@
  */
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::FmsClient
- * \brief The FmsClient class provides access to the Firewall Management Service (FMS) service.
+ * \class QtAws::Fms::FmsClient
+ * \brief The FmsClient class provides access to the Firewall Management Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -169,14 +174,13 @@ FmsClient::FmsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with the master account of
- * your AWS organization or associated with a member account that has the appropriate permissions. If the account ID that
- * you submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
- * given member
+ * Sets the Firewall Manager administrator account. The account must be a member of the organization in Organizations whose
+ * resources you want to protect. Firewall Manager sets the permissions that allow the account to administer your Firewall
+ * Manager
  *
- * account>
+ * policies>
  *
- * The account that you associate with AWS Firewall Manager is called the AWS Firewall Manager administrator account.
+ * The account that you associate with Firewall Manager is called the Firewall Manager administrator account.
  */
 AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const AssociateAdminAccountRequest &request)
 {
@@ -185,11 +189,25 @@ AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const Associate
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * AssociateThirdPartyFirewallResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service. A tenant is
+ * an instance of the third-party firewall service that's associated with your Amazon Web Services customer
+ */
+AssociateThirdPartyFirewallResponse * FmsClient::associateThirdPartyFirewall(const AssociateThirdPartyFirewallRequest &request)
+{
+    return qobject_cast<AssociateThirdPartyFirewallResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * DeleteAppsListResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Permanently deletes an AWS Firewall Manager applications
+ * Permanently deletes an Firewall Manager applications
  */
 DeleteAppsListResponse * FmsClient::deleteAppsList(const DeleteAppsListRequest &request)
 {
@@ -202,8 +220,8 @@ DeleteAppsListResponse * FmsClient::deleteAppsList(const DeleteAppsListRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic
- * that is used to record AWS Firewall Manager SNS
+ * Deletes an Firewall Manager association with the IAM role and the Amazon Simple Notification Service (SNS) topic that is
+ * used to record Firewall Manager SNS
  */
 DeleteNotificationChannelResponse * FmsClient::deleteNotificationChannel(const DeleteNotificationChannelRequest &request)
 {
@@ -216,7 +234,7 @@ DeleteNotificationChannelResponse * FmsClient::deleteNotificationChannel(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Permanently deletes an AWS Firewall Manager policy.
+ * Permanently deletes an Firewall Manager policy.
  */
 DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -229,7 +247,7 @@ DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Permanently deletes an AWS Firewall Manager protocols
+ * Permanently deletes an Firewall Manager protocols
  */
 DeleteProtocolsListResponse * FmsClient::deleteProtocolsList(const DeleteProtocolsListRequest &request)
 {
@@ -242,8 +260,8 @@ DeleteProtocolsListResponse * FmsClient::deleteProtocolsList(const DeleteProtoco
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the account that has been set as the AWS Firewall Manager administrator account. To set a different
- * account as the administrator account, you must submit an <code>AssociateAdminAccount</code>
+ * Disassociates the account that has been set as the Firewall Manager administrator account. To set a different account as
+ * the administrator account, you must submit an <code>AssociateAdminAccount</code>
  */
 DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const DisassociateAdminAccountRequest &request)
 {
@@ -252,11 +270,26 @@ DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const Dis
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DisassociateThirdPartyFirewallResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a Firewall Manager policy administrator from a third-party firewall tenant. When you call
+ * <code>DisassociateThirdPartyFirewall</code>, the third-party firewall vendor deletes all of the firewalls that are
+ * associated with the
+ */
+DisassociateThirdPartyFirewallResponse * FmsClient::disassociateThirdPartyFirewall(const DisassociateThirdPartyFirewallRequest &request)
+{
+    return qobject_cast<DisassociateThirdPartyFirewallResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * GetAdminAccountResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the AWS Organizations master account that is associated with AWS Firewall Manager as the AWS Firewall Manager
+ * Returns the Organizations account that is associated with Firewall Manager as the Firewall Manager
  */
 GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountRequest &request)
 {
@@ -269,7 +302,7 @@ GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the specified AWS Firewall Manager applications
+ * Returns information about the specified Firewall Manager applications
  */
 GetAppsListResponse * FmsClient::getAppsList(const GetAppsListRequest &request)
 {
@@ -283,13 +316,28 @@ GetAppsListResponse * FmsClient::getAppsList(const GetAppsListRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns detailed compliance information about the specified member account. Details include resources that are in and
- * out of compliance with the specified policy. Resources are considered noncompliant for AWS WAF and Shield Advanced
- * policies if the specified policy has not been applied to them. Resources are considered noncompliant for security group
- * policies if they are in scope of the policy, they violate one or more of the policy rules, and remediation is disabled
- * or not possible. Resources are considered noncompliant for Network Firewall policies if a firewall is missing in the
- * VPC, if the firewall endpoint isn't set up in an expected Availability Zone and subnet, if a subnet created by the
- * Firewall Manager doesn't have the expected route table, and for modifications to a firewall policy that violate the
- * Firewall Manager policy's rules.
+ * out of compliance with the specified policy.
+ *
+ * </p <ul> <li>
+ *
+ * Resources are considered noncompliant for WAF and Shield Advanced policies if the specified policy has not been applied
+ * to
+ *
+ * them> </li> <li>
+ *
+ * Resources are considered noncompliant for security group policies if they are in scope of the policy, they violate one
+ * or more of the policy rules, and remediation is disabled or not
+ *
+ * possible> </li> <li>
+ *
+ * Resources are considered noncompliant for Network Firewall policies if a firewall is missing in the VPC, if the firewall
+ * endpoint isn't set up in an expected Availability Zone and subnet, if a subnet created by the Firewall Manager doesn't
+ * have the expected route table, and for modifications to a firewall policy that violate the Firewall Manager policy's
+ *
+ * rules> </li> <li>
+ *
+ * Resources are considered noncompliant for DNS Firewall policies if a DNS Firewall rule group is missing from the rule
+ * group associations for the VPC.
  */
 GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetComplianceDetailRequest &request)
 {
@@ -302,7 +350,7 @@ GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetCompliance
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Information about the Amazon Simple Notification Service (SNS) topic that is used to record AWS Firewall Manager SNS
+ * Information about the Amazon Simple Notification Service (SNS) topic that is used to record Firewall Manager SNS
  */
 GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNotificationChannelRequest &request)
 {
@@ -315,7 +363,7 @@ GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNoti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the specified AWS Firewall Manager
+ * Returns information about the specified Firewall Manager
  */
 GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -342,7 +390,7 @@ GetProtectionStatusResponse * FmsClient::getProtectionStatus(const GetProtection
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the specified AWS Firewall Manager protocols
+ * Returns information about the specified Firewall Manager protocols
  */
 GetProtocolsListResponse * FmsClient::getProtocolsList(const GetProtocolsListRequest &request)
 {
@@ -351,11 +399,24 @@ GetProtocolsListResponse * FmsClient::getProtocolsList(const GetProtocolsListReq
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetThirdPartyFirewallAssociationStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The onboarding status of a Firewall Manager admin account to third-party firewall vendor
+ */
+GetThirdPartyFirewallAssociationStatusResponse * FmsClient::getThirdPartyFirewallAssociationStatus(const GetThirdPartyFirewallAssociationStatusRequest &request)
+{
+    return qobject_cast<GetThirdPartyFirewallAssociationStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * GetViolationDetailsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves violations for a resource based on the specified AWS Firewall Manager policy and AWS
+ * Retrieves violations for a resource based on the specified Firewall Manager policy and Amazon Web Services
  */
 GetViolationDetailsResponse * FmsClient::getViolationDetails(const GetViolationDetailsRequest &request)
 {
@@ -395,11 +456,11 @@ ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplia
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a <code>MemberAccounts</code> object that lists the member accounts in the administrator's AWS
+ * Returns a <code>MemberAccounts</code> object that lists the member accounts in the administrator's Amazon Web Services
  *
  * organization>
  *
- * The <code>ListMemberAccounts</code> must be submitted by the account that is set as the AWS Firewall Manager
+ * The <code>ListMemberAccounts</code> must be submitted by the account that is set as the Firewall Manager
  */
 ListMemberAccountsResponse * FmsClient::listMemberAccounts(const ListMemberAccountsRequest &request)
 {
@@ -438,7 +499,7 @@ ListProtocolsListsResponse * FmsClient::listProtocolsLists(const ListProtocolsLi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the list of tags for the specified AWS resource.
+ * Retrieves the list of tags for the specified Amazon Web Services resource.
  */
 ListTagsForResourceResponse * FmsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -447,11 +508,25 @@ ListTagsForResourceResponse * FmsClient::listTagsForResource(const ListTagsForRe
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListThirdPartyFirewallFirewallPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall
+ * administrator's
+ */
+ListThirdPartyFirewallFirewallPoliciesResponse * FmsClient::listThirdPartyFirewallFirewallPolicies(const ListThirdPartyFirewallFirewallPoliciesRequest &request)
+{
+    return qobject_cast<ListThirdPartyFirewallFirewallPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * PutAppsListResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Firewall Manager applications
+ * Creates an Firewall Manager applications
  */
 PutAppsListResponse * FmsClient::putAppsList(const PutAppsListRequest &request)
 {
@@ -464,14 +539,14 @@ PutAppsListResponse * FmsClient::putAppsList(const PutAppsListRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS
+ * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that Firewall Manager uses to record SNS
  *
  * logs>
  *
  * To perform this action outside of the console, you must configure the SNS topic to allow the Firewall Manager role
  * <code>AWSServiceRoleForFMS</code> to publish SNS logs. For more information, see <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
- * permissions for API actions</a> in the <i>AWS Firewall Manager Developer
+ * permissions for API actions</a> in the <i>Firewall Manager Developer
  */
 PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNotificationChannelRequest &request)
 {
@@ -484,7 +559,7 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Firewall Manager
+ * Creates an Firewall Manager
  *
  * policy>
  *
@@ -492,12 +567,12 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
  *
  * </p <ul> <li>
  *
- * An AWS WAF policy (type WAFV2), which defines rule groups to run first in the corresponding AWS WAF web ACL and rule
- * groups to run last in the web
+ * An WAF policy (type WAFV2), which defines rule groups to run first in the corresponding WAF web ACL and rule groups to
+ * run last in the web
  *
  * ACL> </li> <li>
  *
- * An AWS WAF Classic policy (type WAF), which defines a rule group.
+ * An WAF Classic policy (type WAF), which defines a rule group.
  *
  * </p </li> <li>
  *
@@ -505,11 +580,15 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
  *
  * resources> </li> <li>
  *
- * A security group policy, which manages VPC security groups across your AWS organization.
+ * A security group policy, which manages VPC security groups across your Amazon Web Services organization.
  *
  * </p </li> <li>
  *
- * An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon
+ * An Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon
+ *
+ * VPCs> </li> <li>
+ *
+ * A DNS Firewall policy, which provides Route 53 Resolver DNS Firewall rules to filter DNS queries for specified
  *
  * VPCs> </li> </ul>
  *
@@ -532,7 +611,7 @@ PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Firewall Manager protocols
+ * Creates an Firewall Manager protocols
  */
 PutProtocolsListResponse * FmsClient::putProtocolsList(const PutProtocolsListRequest &request)
 {
@@ -545,7 +624,7 @@ PutProtocolsListResponse * FmsClient::putProtocolsList(const PutProtocolsListReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to an AWS
+ * Adds one or more tags to an Amazon Web Services
  */
 TagResourceResponse * FmsClient::tagResource(const TagResourceRequest &request)
 {
@@ -558,7 +637,7 @@ TagResourceResponse * FmsClient::tagResource(const TagResourceRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags from an AWS
+ * Removes one or more tags from an Amazon Web Services
  */
 UntagResourceResponse * FmsClient::untagResource(const UntagResourceRequest &request)
 {
@@ -566,12 +645,12 @@ UntagResourceResponse * FmsClient::untagResource(const UntagResourceRequest &req
 }
 
 /*!
- * \class QtAws::FMS::FmsClientPrivate
+ * \class QtAws::Fms::FmsClientPrivate
  * \brief The FmsClientPrivate class provides private implementation for FmsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -583,5 +662,5 @@ FmsClientPrivate::FmsClientPrivate(FmsClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

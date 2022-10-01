@@ -24,11 +24,11 @@
 #include "removesourceidentifierfromsubscriptionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveSourceIdentifierFromSubscriptionResponsePrivate;
 
-class QTAWSDOCDB_EXPORT RemoveSourceIdentifierFromSubscriptionResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RemoveSourceIdentifierFromSubscriptionResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

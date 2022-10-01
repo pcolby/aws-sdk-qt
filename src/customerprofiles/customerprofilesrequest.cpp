@@ -38,6 +38,7 @@ namespace CustomerProfiles {
  *
  * \value AddProfileKeyAction CustomerProfiles AddProfileKey action.
  * \value CreateDomainAction CustomerProfiles CreateDomain action.
+ * \value CreateIntegrationWorkflowAction CustomerProfiles CreateIntegrationWorkflow action.
  * \value CreateProfileAction CustomerProfiles CreateProfile action.
  * \value DeleteDomainAction CustomerProfiles DeleteDomain action.
  * \value DeleteIntegrationAction CustomerProfiles DeleteIntegration action.
@@ -45,18 +46,25 @@ namespace CustomerProfiles {
  * \value DeleteProfileKeyAction CustomerProfiles DeleteProfileKey action.
  * \value DeleteProfileObjectAction CustomerProfiles DeleteProfileObject action.
  * \value DeleteProfileObjectTypeAction CustomerProfiles DeleteProfileObjectType action.
+ * \value DeleteWorkflowAction CustomerProfiles DeleteWorkflow action.
+ * \value GetAutoMergingPreviewAction CustomerProfiles GetAutoMergingPreview action.
  * \value GetDomainAction CustomerProfiles GetDomain action.
+ * \value GetIdentityResolutionJobAction CustomerProfiles GetIdentityResolutionJob action.
  * \value GetIntegrationAction CustomerProfiles GetIntegration action.
  * \value GetMatchesAction CustomerProfiles GetMatches action.
  * \value GetProfileObjectTypeAction CustomerProfiles GetProfileObjectType action.
  * \value GetProfileObjectTypeTemplateAction CustomerProfiles GetProfileObjectTypeTemplate action.
+ * \value GetWorkflowAction CustomerProfiles GetWorkflow action.
+ * \value GetWorkflowStepsAction CustomerProfiles GetWorkflowSteps action.
  * \value ListAccountIntegrationsAction CustomerProfiles ListAccountIntegrations action.
  * \value ListDomainsAction CustomerProfiles ListDomains action.
+ * \value ListIdentityResolutionJobsAction CustomerProfiles ListIdentityResolutionJobs action.
  * \value ListIntegrationsAction CustomerProfiles ListIntegrations action.
  * \value ListProfileObjectTypeTemplatesAction CustomerProfiles ListProfileObjectTypeTemplates action.
  * \value ListProfileObjectTypesAction CustomerProfiles ListProfileObjectTypes action.
  * \value ListProfileObjectsAction CustomerProfiles ListProfileObjects action.
  * \value ListTagsForResourceAction CustomerProfiles ListTagsForResource action.
+ * \value ListWorkflowsAction CustomerProfiles ListWorkflows action.
  * \value MergeProfilesAction CustomerProfiles MergeProfiles action.
  * \value PutIntegrationAction CustomerProfiles PutIntegration action.
  * \value PutProfileObjectAction CustomerProfiles PutProfileObject action.
@@ -273,7 +281,7 @@ QNetworkRequest CustomerProfilesRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 CustomerProfilesRequestPrivate::CustomerProfilesRequestPrivate(const CustomerProfilesRequest::Action action, CustomerProfilesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-08-15"))
 {
 
 }
@@ -309,6 +317,7 @@ QString CustomerProfilesRequestPrivate::toString(const CustomerProfilesRequest::
     switch (action) {
         ActionToString(AddProfileKey);
         ActionToString(CreateDomain);
+        ActionToString(CreateIntegrationWorkflow);
         ActionToString(CreateProfile);
         ActionToString(DeleteDomain);
         ActionToString(DeleteIntegration);
@@ -316,18 +325,25 @@ QString CustomerProfilesRequestPrivate::toString(const CustomerProfilesRequest::
         ActionToString(DeleteProfileKey);
         ActionToString(DeleteProfileObject);
         ActionToString(DeleteProfileObjectType);
+        ActionToString(DeleteWorkflow);
+        ActionToString(GetAutoMergingPreview);
         ActionToString(GetDomain);
+        ActionToString(GetIdentityResolutionJob);
         ActionToString(GetIntegration);
         ActionToString(GetMatches);
         ActionToString(GetProfileObjectType);
         ActionToString(GetProfileObjectTypeTemplate);
+        ActionToString(GetWorkflow);
+        ActionToString(GetWorkflowSteps);
         ActionToString(ListAccountIntegrations);
         ActionToString(ListDomains);
+        ActionToString(ListIdentityResolutionJobs);
         ActionToString(ListIntegrations);
         ActionToString(ListProfileObjectTypeTemplates);
         ActionToString(ListProfileObjectTypes);
         ActionToString(ListProfileObjects);
         ActionToString(ListTagsForResource);
+        ActionToString(ListWorkflows);
         ActionToString(MergeProfiles);
         ActionToString(PutIntegration);
         ActionToString(PutProfileObject);

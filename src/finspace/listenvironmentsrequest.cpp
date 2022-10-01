@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::ListEnvironmentsRequest
- * \brief The ListEnvironmentsRequest class provides an interface for finspace ListEnvironments requests.
+ * \class QtAws::Finspace::ListEnvironmentsRequest
+ * \brief The ListEnvironmentsRequest class provides an interface for Finspace ListEnvironments requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::listEnvironments
+ * \sa FinspaceClient::listEnvironments
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &other)
-    : finspaceRequest(new ListEnvironmentsRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new ListEnvironmentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &
  * Constructs a ListEnvironmentsRequest object.
  */
 ListEnvironmentsRequest::ListEnvironmentsRequest()
-    : finspaceRequest(new ListEnvironmentsRequestPrivate(finspaceRequest::ListEnvironmentsAction, this))
+    : FinspaceRequest(new ListEnvironmentsRequestPrivate(FinspaceRequest::ListEnvironmentsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::finspace::ListEnvironmentsRequestPrivate
+ * \class QtAws::Finspace::ListEnvironmentsRequestPrivate
  * \brief The ListEnvironmentsRequestPrivate class provides private implementation for ListEnvironmentsRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a ListEnvironmentsRequestPrivate object for finspace \a action,
+ * Constructs a ListEnvironmentsRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
-    const finspaceRequest::Action action, ListEnvironmentsRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, ListEnvironmentsRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
  */
 ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
     const ListEnvironmentsRequestPrivate &other, ListEnvironmentsRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

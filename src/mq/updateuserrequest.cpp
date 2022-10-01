@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::UpdateUserRequest
- * \brief The UpdateUserRequest class provides an interface for MQ UpdateUser requests.
+ * \class QtAws::Mq::UpdateUserRequest
+ * \brief The UpdateUserRequest class provides an interface for Mq UpdateUser requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::updateUser
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::MQ::UpdateUserRequestPrivate
+ * \class QtAws::Mq::UpdateUserRequestPrivate
  * \brief The UpdateUserRequestPrivate class provides private implementation for UpdateUserRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

@@ -96,8 +96,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SMS
- * \brief Contains classess for accessing AWS Server Migration Service (SMS).
+ * \namespace QtAws::Sms
+ * \brief Contains classess for accessing AWS Server Migration Service.
  *
  * \inmodule QtAwsSms
  *
@@ -105,28 +105,38 @@
  */
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::SmsClient
- * \brief The SmsClient class provides access to the AWS Server Migration Service (SMS) service.
+ * \class QtAws::Sms::SmsClient
+ * \brief The SmsClient class provides access to the AWS Server Migration Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  *
- *  <fullname>AWS Server Migration Service</fullname>
+ *  <b>
  * 
- *  AWS Server Migration Service (AWS SMS) makes it easier and faster for you to migrate your on-premises workloads to AWS.
- *  To learn more about AWS SMS, see the following
+ *  <b>Product update</b>
+ * 
+ *  </p
+ * 
+ *  We recommend <a href="http://aws.amazon.com/application-migration-service">Amazon Web Services Application Migration
+ *  Service</a> (Amazon Web Services MGN) as the primary migration service for lift-and-shift migrations. If Amazon Web
+ *  Services MGN is unavailable in a specific Amazon Web Services Region, you can use the Server Migration Service APIs
+ *  through March
+ * 
+ *  2023> </b>
+ * 
+ *  Server Migration Service (Server Migration Service) makes it easier and faster for you to migrate your on-premises
+ *  workloads to Amazon Web Services. To learn more about Server Migration Service, see the following
  * 
  *  resources> <ul> <li>
  * 
- *  <a href="http://aws.amazon.com/server-migration-service/">AWS Server Migration Service product page</a>
+ *  <a href="http://aws.amazon.com/server-migration-service/">Server Migration Service product page</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">AWS Server Migration Service User
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">Server Migration Service User Guide</a>
  */
 
 /*!
@@ -201,8 +211,8 @@ CreateAppResponse * SmsClient::createApp(const CreateAppRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a replication job. The replication job schedules periodic replication runs to replicate your server to AWS. Each
- * replication run creates an Amazon Machine Image
+ * Creates a replication job. The replication job schedules periodic replication runs to replicate your server to Amazon
+ * Web Services. Each replication run creates an Amazon Machine Image
  */
 CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateReplicationJobRequest &request)
 {
@@ -215,8 +225,8 @@ CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateRepli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified application. Optionally deletes the launched stack associated with the application and all AWS SMS
- * replication jobs for servers in the
+ * Deletes the specified application. Optionally deletes the launched stack associated with the application and all Server
+ * Migration Service replication jobs for servers in the
  */
 DeleteAppResponse * SmsClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -272,8 +282,8 @@ DeleteAppValidationConfigurationResponse * SmsClient::deleteAppValidationConfigu
  *
  * job>
  *
- * After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3
- * bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not
+ * After you delete a replication job, there are no further replication runs. Amazon Web Services deletes the contents of
+ * the Amazon S3 bucket used to store Server Migration Service artifacts. The AMIs created by the replication runs are not
  */
 DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteReplicationJobRequest &request)
 {
@@ -299,9 +309,9 @@ DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the specified connector from AWS
+ * Disassociates the specified connector from Server Migration
  *
- * SMS>
+ * Service>
  *
  * After you disassociate a connector, it is no longer available to support replication
  */
@@ -330,8 +340,8 @@ GenerateChangeSetResponse * SmsClient::generateChangeSet(const GenerateChangeSet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Generates an AWS CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object
- * in the customer’s Amazon S3
+ * Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in
+ * the customer’s Amazon S3
  */
 GenerateTemplateResponse * SmsClient::generateTemplate(const GenerateTemplateRequest &request)
 {
@@ -409,7 +419,7 @@ GetAppValidationOutputResponse * SmsClient::getAppValidationOutput(const GetAppV
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the connectors registered with the AWS
+ * Describes the connectors registered with the Server Migration
  */
 GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &request)
 {
@@ -465,7 +475,7 @@ GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allows application import from AWS Migration
+ * Allows application import from Migration
  */
 ImportAppCatalogResponse * SmsClient::importAppCatalog(const ImportAppCatalogRequest &request)
 {
@@ -495,7 +505,7 @@ ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Launches the specified application as a stack in AWS
+ * Launches the specified application as a stack in
  */
 LaunchAppResponse * SmsClient::launchApp(const LaunchAppRequest &request)
 {
@@ -521,7 +531,7 @@ ListAppsResponse * SmsClient::listApps(const ListAppsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information to AWS SMS about whether application validation is
+ * Provides information to Server Migration Service about whether application validation is
  */
 NotifyAppValidationOutputResponse * SmsClient::notifyAppValidationOutput(const NotifyAppValidationOutputRequest &request)
 {
@@ -664,12 +674,12 @@ UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateRepli
 }
 
 /*!
- * \class QtAws::SMS::SmsClientPrivate
+ * \class QtAws::Sms::SmsClientPrivate
  * \brief The SmsClientPrivate class provides private implementation for SmsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -681,5 +691,5 @@ SmsClientPrivate::SmsClientPrivate(SmsClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

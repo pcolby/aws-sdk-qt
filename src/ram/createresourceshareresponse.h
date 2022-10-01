@@ -24,7 +24,7 @@
 #include "createresourcesharerequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class CreateResourceShareResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

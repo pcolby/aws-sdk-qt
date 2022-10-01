@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParameterGroupsRequest
- * \brief The DescribeDBClusterParameterGroupsRequest class provides an interface for DocDB DescribeDBClusterParameterGroups requests.
+ * \class QtAws::DocDb::DescribeDBClusterParameterGroupsRequest
+ * \brief The DescribeDBClusterParameterGroupsRequest class provides an interface for DocDb DescribeDBClusterParameterGroups requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBClusterParameterGroups
+ * \sa DocDbClient::describeDBClusterParameterGroups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest(const DescribeDBClusterParameterGroupsRequest &other)
-    : DocDBRequest(new DescribeDBClusterParameterGroupsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeDBClusterParameterGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest
  * Constructs a DescribeDBClusterParameterGroupsRequest object.
  */
 DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest()
-    : DocDBRequest(new DescribeDBClusterParameterGroupsRequestPrivate(DocDBRequest::DescribeDBClusterParameterGroupsAction, this))
+    : DocDbRequest(new DescribeDBClusterParameterGroupsRequestPrivate(DocDbRequest::DescribeDBClusterParameterGroupsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterParameterGroupsRequest::resp
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParameterGroupsRequestPrivate
+ * \class QtAws::DocDb::DescribeDBClusterParameterGroupsRequestPrivate
  * \brief The DescribeDBClusterParameterGroupsRequestPrivate class provides private implementation for DescribeDBClusterParameterGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroupsRequestPrivate(
-    const DocDBRequest::Action action, DescribeDBClusterParameterGroupsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeDBClusterParameterGroupsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroups
  */
 DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroupsRequestPrivate(
     const DescribeDBClusterParameterGroupsRequestPrivate &other, DescribeDBClusterParameterGroupsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

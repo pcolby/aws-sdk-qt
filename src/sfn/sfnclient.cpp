@@ -72,8 +72,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SFN
- * \brief Contains classess for accessing AWS Step Functions ( SFN).
+ * \namespace QtAws::Sfn
+ * \brief Contains classess for accessing AWS Step Functions.
  *
  * \inmodule QtAwsSfn
  *
@@ -81,14 +81,14 @@
  */
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SfnClient
- * \brief The SfnClient class provides access to the AWS Step Functions ( SFN) service.
+ * \class QtAws::Sfn::SfnClient
+ * \brief The SfnClient class provides access to the AWS Step Functions service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -644,12 +644,12 @@ UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMach
 }
 
 /*!
- * \class QtAws::SFN::SfnClientPrivate
+ * \class QtAws::Sfn::SfnClientPrivate
  * \brief The SfnClientPrivate class provides private implementation for SfnClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -661,5 +661,5 @@ SfnClientPrivate::SfnClientPrivate(SfnClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

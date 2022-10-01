@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class Wafv2RequestPrivate;
 
 class QTAWSWAFV2_EXPORT Wafv2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by WAFV2.
+    /// Actions supported by Wafv2.
     enum Action {
         AssociateWebACLAction,
         CheckCapacityAction,
@@ -54,8 +54,11 @@ public:
         DeleteWebACLAction,
         DescribeManagedRuleGroupAction,
         DisassociateWebACLAction,
+        GenerateMobileSdkReleaseUrlAction,
         GetIPSetAction,
         GetLoggingConfigurationAction,
+        GetManagedRuleSetAction,
+        GetMobileSdkReleaseAction,
         GetPermissionPolicyAction,
         GetRateBasedStatementManagedKeysAction,
         GetRegexPatternSetAction,
@@ -63,19 +66,24 @@ public:
         GetSampledRequestsAction,
         GetWebACLAction,
         GetWebACLForResourceAction,
+        ListAvailableManagedRuleGroupVersionsAction,
         ListAvailableManagedRuleGroupsAction,
         ListIPSetsAction,
         ListLoggingConfigurationsAction,
+        ListManagedRuleSetsAction,
+        ListMobileSdkReleasesAction,
         ListRegexPatternSetsAction,
         ListResourcesForWebACLAction,
         ListRuleGroupsAction,
         ListTagsForResourceAction,
         ListWebACLsAction,
         PutLoggingConfigurationAction,
+        PutManagedRuleSetVersionsAction,
         PutPermissionPolicyAction,
         TagResourceAction,
         UntagResourceAction,
         UpdateIPSetAction,
+        UpdateManagedRuleSetVersionExpiryDateAction,
         UpdateRegexPatternSetAction,
         UpdateRuleGroupAction,
         UpdateWebACLAction,
@@ -115,7 +123,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

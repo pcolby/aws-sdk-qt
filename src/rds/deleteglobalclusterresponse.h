@@ -24,7 +24,7 @@
 #include "deleteglobalclusterrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class DeleteGlobalClusterResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

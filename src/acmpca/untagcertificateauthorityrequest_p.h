@@ -24,14 +24,14 @@
 #include "untagcertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class UntagCertificateAuthorityRequest;
 
-class UntagCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
+class UntagCertificateAuthorityRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    UntagCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,
+    UntagCertificateAuthorityRequestPrivate(const AcmPcaRequest::Action action,
                                    UntagCertificateAuthorityRequest * const q);
     UntagCertificateAuthorityRequestPrivate(const UntagCertificateAuthorityRequestPrivate &other,
                                    UntagCertificateAuthorityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

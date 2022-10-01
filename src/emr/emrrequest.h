@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class EmrRequestPrivate;
 
 class QTAWSEMR_EXPORT EmrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EMR.
+    /// Actions supported by Emr.
     enum Action {
         AddInstanceFleetAction,
         AddInstanceGroupsAction,
@@ -53,9 +53,11 @@ public:
         DescribeClusterAction,
         DescribeJobFlowsAction,
         DescribeNotebookExecutionAction,
+        DescribeReleaseLabelAction,
         DescribeSecurityConfigurationAction,
         DescribeStepAction,
         DescribeStudioAction,
+        GetAutoTerminationPolicyAction,
         GetBlockPublicAccessConfigurationAction,
         GetManagedScalingPolicyAction,
         GetStudioSessionMappingAction,
@@ -65,6 +67,7 @@ public:
         ListInstanceGroupsAction,
         ListInstancesAction,
         ListNotebookExecutionsAction,
+        ListReleaseLabelsAction,
         ListSecurityConfigurationsAction,
         ListStepsAction,
         ListStudioSessionMappingsAction,
@@ -73,9 +76,11 @@ public:
         ModifyInstanceFleetAction,
         ModifyInstanceGroupsAction,
         PutAutoScalingPolicyAction,
+        PutAutoTerminationPolicyAction,
         PutBlockPublicAccessConfigurationAction,
         PutManagedScalingPolicyAction,
         RemoveAutoScalingPolicyAction,
+        RemoveAutoTerminationPolicyAction,
         RemoveManagedScalingPolicyAction,
         RemoveTagsAction,
         RunJobFlowAction,
@@ -122,7 +127,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

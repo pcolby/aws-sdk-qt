@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDATASYNC_LIBRARY)
 
 add_library(QtAwsDataSync
+  qtawsdatasyncglobal.h
+  datasyncclient.h
+  datasyncclient_p.h
+  datasyncrequest.h
+  datasyncrequest_p.h
+  datasyncresponse.h
+  datasyncresponse_p.h
   canceltaskexecutionrequest.h
   canceltaskexecutionrequest_p.h
   canceltaskexecutionresponse.h
@@ -13,10 +20,26 @@ add_library(QtAwsDataSync
   createlocationefsrequest_p.h
   createlocationefsresponse.h
   createlocationefsresponse_p.h
+  createlocationfsxlustrerequest.h
+  createlocationfsxlustrerequest_p.h
+  createlocationfsxlustreresponse.h
+  createlocationfsxlustreresponse_p.h
+  createlocationfsxontaprequest.h
+  createlocationfsxontaprequest_p.h
+  createlocationfsxontapresponse.h
+  createlocationfsxontapresponse_p.h
+  createlocationfsxopenzfsrequest.h
+  createlocationfsxopenzfsrequest_p.h
+  createlocationfsxopenzfsresponse.h
+  createlocationfsxopenzfsresponse_p.h
   createlocationfsxwindowsrequest.h
   createlocationfsxwindowsrequest_p.h
   createlocationfsxwindowsresponse.h
   createlocationfsxwindowsresponse_p.h
+  createlocationhdfsrequest.h
+  createlocationhdfsrequest_p.h
+  createlocationhdfsresponse.h
+  createlocationhdfsresponse_p.h
   createlocationnfsrequest.h
   createlocationnfsrequest_p.h
   createlocationnfsresponse.h
@@ -37,12 +60,6 @@ add_library(QtAwsDataSync
   createtaskrequest_p.h
   createtaskresponse.h
   createtaskresponse_p.h
-  datasyncclient.h
-  datasyncclient_p.h
-  datasyncrequest.h
-  datasyncrequest_p.h
-  datasyncresponse.h
-  datasyncresponse_p.h
   deleteagentrequest.h
   deleteagentrequest_p.h
   deleteagentresponse.h
@@ -63,10 +80,26 @@ add_library(QtAwsDataSync
   describelocationefsrequest_p.h
   describelocationefsresponse.h
   describelocationefsresponse_p.h
+  describelocationfsxlustrerequest.h
+  describelocationfsxlustrerequest_p.h
+  describelocationfsxlustreresponse.h
+  describelocationfsxlustreresponse_p.h
+  describelocationfsxontaprequest.h
+  describelocationfsxontaprequest_p.h
+  describelocationfsxontapresponse.h
+  describelocationfsxontapresponse_p.h
+  describelocationfsxopenzfsrequest.h
+  describelocationfsxopenzfsrequest_p.h
+  describelocationfsxopenzfsresponse.h
+  describelocationfsxopenzfsresponse_p.h
   describelocationfsxwindowsrequest.h
   describelocationfsxwindowsrequest_p.h
   describelocationfsxwindowsresponse.h
   describelocationfsxwindowsresponse_p.h
+  describelocationhdfsrequest.h
+  describelocationhdfsrequest_p.h
+  describelocationhdfsresponse.h
+  describelocationhdfsresponse_p.h
   describelocationnfsrequest.h
   describelocationnfsrequest_p.h
   describelocationnfsresponse.h
@@ -83,14 +116,14 @@ add_library(QtAwsDataSync
   describelocationsmbrequest_p.h
   describelocationsmbresponse.h
   describelocationsmbresponse_p.h
-  describetaskexecutionrequest.h
-  describetaskexecutionrequest_p.h
-  describetaskexecutionresponse.h
-  describetaskexecutionresponse_p.h
   describetaskrequest.h
   describetaskrequest_p.h
   describetaskresponse.h
   describetaskresponse_p.h
+  describetaskexecutionrequest.h
+  describetaskexecutionrequest_p.h
+  describetaskexecutionresponse.h
+  describetaskexecutionresponse_p.h
   listagentsrequest.h
   listagentsrequest_p.h
   listagentsresponse.h
@@ -111,7 +144,6 @@ add_library(QtAwsDataSync
   listtasksrequest_p.h
   listtasksresponse.h
   listtasksresponse_p.h
-  qtawsdatasyncglobal.h
   starttaskexecutionrequest.h
   starttaskexecutionrequest_p.h
   starttaskexecutionresponse.h
@@ -128,6 +160,10 @@ add_library(QtAwsDataSync
   updateagentrequest_p.h
   updateagentresponse.h
   updateagentresponse_p.h
+  updatelocationhdfsrequest.h
+  updatelocationhdfsrequest_p.h
+  updatelocationhdfsresponse.h
+  updatelocationhdfsresponse_p.h
   updatelocationnfsrequest.h
   updatelocationnfsrequest_p.h
   updatelocationnfsresponse.h
@@ -140,22 +176,33 @@ add_library(QtAwsDataSync
   updatelocationsmbrequest_p.h
   updatelocationsmbresponse.h
   updatelocationsmbresponse_p.h
-  updatetaskexecutionrequest.h
-  updatetaskexecutionrequest_p.h
-  updatetaskexecutionresponse.h
-  updatetaskexecutionresponse_p.h
   updatetaskrequest.h
   updatetaskrequest_p.h
   updatetaskresponse.h
   updatetaskresponse_p.h
+  updatetaskexecutionrequest.h
+  updatetaskexecutionrequest_p.h
+  updatetaskexecutionresponse.h
+  updatetaskexecutionresponse_p.h
+  datasyncclient.cpp
+  datasyncrequest.cpp
+  datasyncresponse.cpp
   canceltaskexecutionrequest.cpp
   canceltaskexecutionresponse.cpp
   createagentrequest.cpp
   createagentresponse.cpp
   createlocationefsrequest.cpp
   createlocationefsresponse.cpp
+  createlocationfsxlustrerequest.cpp
+  createlocationfsxlustreresponse.cpp
+  createlocationfsxontaprequest.cpp
+  createlocationfsxontapresponse.cpp
+  createlocationfsxopenzfsrequest.cpp
+  createlocationfsxopenzfsresponse.cpp
   createlocationfsxwindowsrequest.cpp
   createlocationfsxwindowsresponse.cpp
+  createlocationhdfsrequest.cpp
+  createlocationhdfsresponse.cpp
   createlocationnfsrequest.cpp
   createlocationnfsresponse.cpp
   createlocationobjectstoragerequest.cpp
@@ -166,9 +213,6 @@ add_library(QtAwsDataSync
   createlocationsmbresponse.cpp
   createtaskrequest.cpp
   createtaskresponse.cpp
-  datasyncclient.cpp
-  datasyncrequest.cpp
-  datasyncresponse.cpp
   deleteagentrequest.cpp
   deleteagentresponse.cpp
   deletelocationrequest.cpp
@@ -179,8 +223,16 @@ add_library(QtAwsDataSync
   describeagentresponse.cpp
   describelocationefsrequest.cpp
   describelocationefsresponse.cpp
+  describelocationfsxlustrerequest.cpp
+  describelocationfsxlustreresponse.cpp
+  describelocationfsxontaprequest.cpp
+  describelocationfsxontapresponse.cpp
+  describelocationfsxopenzfsrequest.cpp
+  describelocationfsxopenzfsresponse.cpp
   describelocationfsxwindowsrequest.cpp
   describelocationfsxwindowsresponse.cpp
+  describelocationhdfsrequest.cpp
+  describelocationhdfsresponse.cpp
   describelocationnfsrequest.cpp
   describelocationnfsresponse.cpp
   describelocationobjectstoragerequest.cpp
@@ -189,10 +241,10 @@ add_library(QtAwsDataSync
   describelocations3response.cpp
   describelocationsmbrequest.cpp
   describelocationsmbresponse.cpp
-  describetaskexecutionrequest.cpp
-  describetaskexecutionresponse.cpp
   describetaskrequest.cpp
   describetaskresponse.cpp
+  describetaskexecutionrequest.cpp
+  describetaskexecutionresponse.cpp
   listagentsrequest.cpp
   listagentsresponse.cpp
   listlocationsrequest.cpp
@@ -211,16 +263,18 @@ add_library(QtAwsDataSync
   untagresourceresponse.cpp
   updateagentrequest.cpp
   updateagentresponse.cpp
+  updatelocationhdfsrequest.cpp
+  updatelocationhdfsresponse.cpp
   updatelocationnfsrequest.cpp
   updatelocationnfsresponse.cpp
   updatelocationobjectstoragerequest.cpp
   updatelocationobjectstorageresponse.cpp
   updatelocationsmbrequest.cpp
   updatelocationsmbresponse.cpp
-  updatetaskexecutionrequest.cpp
-  updatetaskexecutionresponse.cpp
   updatetaskrequest.cpp
-  updatetaskresponse.cpp)
+  updatetaskresponse.cpp
+  updatetaskexecutionrequest.cpp
+  updatetaskexecutionresponse.cpp)
 
 target_link_libraries(QtAwsDataSync
   PRIVATE QtAwsCore

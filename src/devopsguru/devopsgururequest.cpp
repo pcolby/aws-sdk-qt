@@ -37,24 +37,34 @@ namespace DevOpsGuru {
  * requests.
  *
  * \value AddNotificationChannelAction DevOpsGuru AddNotificationChannel action.
+ * \value DeleteInsightAction DevOpsGuru DeleteInsight action.
  * \value DescribeAccountHealthAction DevOpsGuru DescribeAccountHealth action.
  * \value DescribeAccountOverviewAction DevOpsGuru DescribeAccountOverview action.
  * \value DescribeAnomalyAction DevOpsGuru DescribeAnomaly action.
+ * \value DescribeEventSourcesConfigAction DevOpsGuru DescribeEventSourcesConfig action.
  * \value DescribeFeedbackAction DevOpsGuru DescribeFeedback action.
  * \value DescribeInsightAction DevOpsGuru DescribeInsight action.
+ * \value DescribeOrganizationHealthAction DevOpsGuru DescribeOrganizationHealth action.
+ * \value DescribeOrganizationOverviewAction DevOpsGuru DescribeOrganizationOverview action.
+ * \value DescribeOrganizationResourceCollectionHealthAction DevOpsGuru DescribeOrganizationResourceCollectionHealth action.
  * \value DescribeResourceCollectionHealthAction DevOpsGuru DescribeResourceCollectionHealth action.
  * \value DescribeServiceIntegrationAction DevOpsGuru DescribeServiceIntegration action.
  * \value GetCostEstimationAction DevOpsGuru GetCostEstimation action.
  * \value GetResourceCollectionAction DevOpsGuru GetResourceCollection action.
  * \value ListAnomaliesForInsightAction DevOpsGuru ListAnomaliesForInsight action.
+ * \value ListAnomalousLogGroupsAction DevOpsGuru ListAnomalousLogGroups action.
  * \value ListEventsAction DevOpsGuru ListEvents action.
  * \value ListInsightsAction DevOpsGuru ListInsights action.
+ * \value ListMonitoredResourcesAction DevOpsGuru ListMonitoredResources action.
  * \value ListNotificationChannelsAction DevOpsGuru ListNotificationChannels action.
+ * \value ListOrganizationInsightsAction DevOpsGuru ListOrganizationInsights action.
  * \value ListRecommendationsAction DevOpsGuru ListRecommendations action.
  * \value PutFeedbackAction DevOpsGuru PutFeedback action.
  * \value RemoveNotificationChannelAction DevOpsGuru RemoveNotificationChannel action.
  * \value SearchInsightsAction DevOpsGuru SearchInsights action.
+ * \value SearchOrganizationInsightsAction DevOpsGuru SearchOrganizationInsights action.
  * \value StartCostEstimationAction DevOpsGuru StartCostEstimation action.
+ * \value UpdateEventSourcesConfigAction DevOpsGuru UpdateEventSourcesConfig action.
  * \value UpdateResourceCollectionAction DevOpsGuru UpdateResourceCollection action.
  * \value UpdateServiceIntegrationAction DevOpsGuru UpdateServiceIntegration action.
  */
@@ -264,7 +274,7 @@ QNetworkRequest DevOpsGuruRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DevOpsGuruRequestPrivate::DevOpsGuruRequestPrivate(const DevOpsGuruRequest::Action action, DevOpsGuruRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-12-01"))
 {
 
 }
@@ -299,24 +309,34 @@ QString DevOpsGuruRequestPrivate::toString(const DevOpsGuruRequest::Action &acti
         case DevOpsGuruRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddNotificationChannel);
+        ActionToString(DeleteInsight);
         ActionToString(DescribeAccountHealth);
         ActionToString(DescribeAccountOverview);
         ActionToString(DescribeAnomaly);
+        ActionToString(DescribeEventSourcesConfig);
         ActionToString(DescribeFeedback);
         ActionToString(DescribeInsight);
+        ActionToString(DescribeOrganizationHealth);
+        ActionToString(DescribeOrganizationOverview);
+        ActionToString(DescribeOrganizationResourceCollectionHealth);
         ActionToString(DescribeResourceCollectionHealth);
         ActionToString(DescribeServiceIntegration);
         ActionToString(GetCostEstimation);
         ActionToString(GetResourceCollection);
         ActionToString(ListAnomaliesForInsight);
+        ActionToString(ListAnomalousLogGroups);
         ActionToString(ListEvents);
         ActionToString(ListInsights);
+        ActionToString(ListMonitoredResources);
         ActionToString(ListNotificationChannels);
+        ActionToString(ListOrganizationInsights);
         ActionToString(ListRecommendations);
         ActionToString(PutFeedback);
         ActionToString(RemoveNotificationChannel);
         ActionToString(SearchInsights);
+        ActionToString(SearchOrganizationInsights);
         ActionToString(StartCostEstimation);
+        ActionToString(UpdateEventSourcesConfig);
         ActionToString(UpdateResourceCollection);
         ActionToString(UpdateServiceIntegration);
         default:

@@ -24,14 +24,14 @@
 #include "registerclientrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class RegisterClientRequest;
 
-class RegisterClientRequestPrivate : public SsooidcRequestPrivate {
+class RegisterClientRequestPrivate : public SsoOidcRequestPrivate {
 
 public:
-    RegisterClientRequestPrivate(const SsooidcRequest::Action action,
+    RegisterClientRequestPrivate(const SsoOidcRequest::Action action,
                                    RegisterClientRequest * const q);
     RegisterClientRequestPrivate(const RegisterClientRequestPrivate &other,
                                    RegisterClientRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

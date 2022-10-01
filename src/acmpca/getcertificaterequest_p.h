@@ -24,14 +24,14 @@
 #include "getcertificaterequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class GetCertificateRequest;
 
-class GetCertificateRequestPrivate : public AcmpcaRequestPrivate {
+class GetCertificateRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    GetCertificateRequestPrivate(const AcmpcaRequest::Action action,
+    GetCertificateRequestPrivate(const AcmPcaRequest::Action action,
                                    GetCertificateRequest * const q);
     GetCertificateRequestPrivate(const GetCertificateRequestPrivate &other,
                                    GetCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

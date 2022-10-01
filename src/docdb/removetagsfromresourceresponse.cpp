@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RemoveTagsFromResourceResponse
- * \brief The RemoveTagsFromResourceResponse class provides an interace for DocDB RemoveTagsFromResource responses.
+ * \class QtAws::DocDb::RemoveTagsFromResourceResponse
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for DocDb RemoveTagsFromResource responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::removeTagsFromResource
+ * \sa DocDbClient::removeTagsFromResource
  */
 
 /*!
@@ -45,7 +45,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+    : DocDbResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful DocDB RemoveTagsFromResource \a response.
+ * Parses a successful DocDb RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::RemoveTagsFromResourceResponsePrivate
+ * \class QtAws::DocDb::RemoveTagsFromResourceResponsePrivate
  * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
-    RemoveTagsFromResourceResponse * const q) : DocDBResponsePrivate(q)
+    RemoveTagsFromResourceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB RemoveTagsFromResource response element from \a xml.
+ * Parses a DocDb RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

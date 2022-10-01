@@ -23,17 +23,17 @@
 #include "eksrequest_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupVersionRequest
- * \brief The UpdateNodegroupVersionRequest class provides an interface for EKS UpdateNodegroupVersion requests.
+ * \class QtAws::Eks::UpdateNodegroupVersionRequest
+ * \brief The UpdateNodegroupVersionRequest class provides an interface for Eks UpdateNodegroupVersion requests.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * UpdateNodegroupVersionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupVersionRequestPrivate
+ * \class QtAws::Eks::UpdateNodegroupVersionRequestPrivate
  * \brief The UpdateNodegroupVersionRequestPrivate class provides private implementation for UpdateNodegroupVersionRequest.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -114,5 +114,5 @@ UpdateNodegroupVersionRequestPrivate::UpdateNodegroupVersionRequestPrivate(
 
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

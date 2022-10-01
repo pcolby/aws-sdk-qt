@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryPolicyRequest
- * \brief The GetRepositoryPolicyRequest class provides an interface for ECRPublic GetRepositoryPolicy requests.
+ * \class QtAws::EcrPublic::GetRepositoryPolicyRequest
+ * \brief The GetRepositoryPolicyRequest class provides an interface for EcrPublic GetRepositoryPolicy requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getRepositoryPolicy
+ * \sa EcrPublicClient::getRepositoryPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicyRequest &other)
-    : ECRPublicRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicy
  * Constructs a GetRepositoryPolicyRequest object.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
-    : ECRPublicRequest(new GetRepositoryPolicyRequestPrivate(ECRPublicRequest::GetRepositoryPolicyAction, this))
+    : EcrPublicRequest(new GetRepositoryPolicyRequestPrivate(EcrPublicRequest::GetRepositoryPolicyAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryPolicyRequestPrivate
+ * \class QtAws::EcrPublic::GetRepositoryPolicyRequestPrivate
  * \brief The GetRepositoryPolicyRequestPrivate class provides private implementation for GetRepositoryPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a GetRepositoryPolicyRequestPrivate object for ECRPublic \a action,
+ * Constructs a GetRepositoryPolicyRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
-    const ECRPublicRequest::Action action, GetRepositoryPolicyRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, GetRepositoryPolicyRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const GetRepositoryPolicyRequestPrivate &other, GetRepositoryPolicyRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

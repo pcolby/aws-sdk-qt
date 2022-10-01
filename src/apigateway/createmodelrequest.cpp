@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateModelRequest
- * \brief The CreateModelRequest class provides an interface for APIGateway CreateModel requests.
+ * \class QtAws::ApiGateway::CreateModelRequest
+ * \brief The CreateModelRequest class provides an interface for ApiGateway CreateModel requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createModel
+ * \sa ApiGatewayClient::createModel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
-    : APIGatewayRequest(new CreateModelRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateModelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
  * Constructs a CreateModelRequest object.
  */
 CreateModelRequest::CreateModelRequest()
-    : APIGatewayRequest(new CreateModelRequestPrivate(APIGatewayRequest::CreateModelAction, this))
+    : ApiGatewayRequest(new CreateModelRequestPrivate(ApiGatewayRequest::CreateModelAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::CreateModelRequestPrivate
+ * \class QtAws::ApiGateway::CreateModelRequestPrivate
  * \brief The CreateModelRequestPrivate class provides private implementation for CreateModelRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateModelRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateModelRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateModelRequestPrivate::CreateModelRequestPrivate(
-    const APIGatewayRequest::Action action, CreateModelRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateModelRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateModelRequestPrivate::CreateModelRequestPrivate(
  */
 CreateModelRequestPrivate::CreateModelRequestPrivate(
     const CreateModelRequestPrivate &other, CreateModelRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

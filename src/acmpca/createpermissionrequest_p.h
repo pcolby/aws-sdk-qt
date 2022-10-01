@@ -24,14 +24,14 @@
 #include "createpermissionrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class CreatePermissionRequest;
 
-class CreatePermissionRequestPrivate : public AcmpcaRequestPrivate {
+class CreatePermissionRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    CreatePermissionRequestPrivate(const AcmpcaRequest::Action action,
+    CreatePermissionRequestPrivate(const AcmPcaRequest::Action action,
                                    CreatePermissionRequest * const q);
     CreatePermissionRequestPrivate(const CreatePermissionRequestPrivate &other,
                                    CreatePermissionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

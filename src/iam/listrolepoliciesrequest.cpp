@@ -23,21 +23,21 @@
 #include "iamrequest_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ListRolePoliciesRequest
- * \brief The ListRolePoliciesRequest class provides an interface for IAM ListRolePolicies requests.
+ * \class QtAws::Iam::ListRolePoliciesRequest
+ * \brief The ListRolePoliciesRequest class provides an interface for Iam ListRolePolicies requests.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::listRolePolicies
  */
@@ -80,11 +80,11 @@ QtAws::Core::AwsAbstractResponse * ListRolePoliciesRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::IAM::ListRolePoliciesRequestPrivate
+ * \class QtAws::Iam::ListRolePoliciesRequestPrivate
  * \brief The ListRolePoliciesRequestPrivate class provides private implementation for ListRolePoliciesRequest.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -111,5 +111,5 @@ ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
 
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

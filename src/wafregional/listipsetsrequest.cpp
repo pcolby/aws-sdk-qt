@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListIPSetsRequest
- * \brief The ListIPSetsRequest class provides an interface for WAFRegional ListIPSets requests.
+ * \class QtAws::WafRegional::ListIPSetsRequest
+ * \brief The ListIPSetsRequest class provides an interface for WafRegional ListIPSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listIPSets
+ * \sa WafRegionalClient::listIPSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
-    : WAFRegionalRequest(new ListIPSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListIPSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
  * Constructs a ListIPSetsRequest object.
  */
 ListIPSetsRequest::ListIPSetsRequest()
-    : WAFRegionalRequest(new ListIPSetsRequestPrivate(WAFRegionalRequest::ListIPSetsAction, this))
+    : WafRegionalRequest(new ListIPSetsRequestPrivate(WafRegionalRequest::ListIPSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::WAFRegional::ListIPSetsRequestPrivate
+ * \class QtAws::WafRegional::ListIPSetsRequestPrivate
  * \brief The ListIPSetsRequestPrivate class provides private implementation for ListIPSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListIPSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListIPSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListIPSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListIPSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const ListIPSetsRequestPrivate &other, ListIPSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

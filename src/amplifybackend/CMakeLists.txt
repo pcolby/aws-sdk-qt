@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAMPLIFYBACKEND_LIBRARY)
 
 add_library(QtAwsAmplifyBackend
+  qtawsamplifybackendglobal.h
   amplifybackendclient.h
   amplifybackendclient_p.h
   amplifybackendrequest.h
@@ -11,6 +12,10 @@ add_library(QtAwsAmplifyBackend
   clonebackendrequest_p.h
   clonebackendresponse.h
   clonebackendresponse_p.h
+  createbackendrequest.h
+  createbackendrequest_p.h
+  createbackendresponse.h
+  createbackendresponse_p.h
   createbackendapirequest.h
   createbackendapirequest_p.h
   createbackendapiresponse.h
@@ -23,14 +28,18 @@ add_library(QtAwsAmplifyBackend
   createbackendconfigrequest_p.h
   createbackendconfigresponse.h
   createbackendconfigresponse_p.h
-  createbackendrequest.h
-  createbackendrequest_p.h
-  createbackendresponse.h
-  createbackendresponse_p.h
+  createbackendstoragerequest.h
+  createbackendstoragerequest_p.h
+  createbackendstorageresponse.h
+  createbackendstorageresponse_p.h
   createtokenrequest.h
   createtokenrequest_p.h
   createtokenresponse.h
   createtokenresponse_p.h
+  deletebackendrequest.h
+  deletebackendrequest_p.h
+  deletebackendresponse.h
+  deletebackendresponse_p.h
   deletebackendapirequest.h
   deletebackendapirequest_p.h
   deletebackendapiresponse.h
@@ -39,10 +48,10 @@ add_library(QtAwsAmplifyBackend
   deletebackendauthrequest_p.h
   deletebackendauthresponse.h
   deletebackendauthresponse_p.h
-  deletebackendrequest.h
-  deletebackendrequest_p.h
-  deletebackendresponse.h
-  deletebackendresponse_p.h
+  deletebackendstoragerequest.h
+  deletebackendstoragerequest_p.h
+  deletebackendstorageresponse.h
+  deletebackendstorageresponse_p.h
   deletetokenrequest.h
   deletetokenrequest_p.h
   deletetokenresponse.h
@@ -51,14 +60,18 @@ add_library(QtAwsAmplifyBackend
   generatebackendapimodelsrequest_p.h
   generatebackendapimodelsresponse.h
   generatebackendapimodelsresponse_p.h
-  getbackendapimodelsrequest.h
-  getbackendapimodelsrequest_p.h
-  getbackendapimodelsresponse.h
-  getbackendapimodelsresponse_p.h
+  getbackendrequest.h
+  getbackendrequest_p.h
+  getbackendresponse.h
+  getbackendresponse_p.h
   getbackendapirequest.h
   getbackendapirequest_p.h
   getbackendapiresponse.h
   getbackendapiresponse_p.h
+  getbackendapimodelsrequest.h
+  getbackendapimodelsrequest_p.h
+  getbackendapimodelsresponse.h
+  getbackendapimodelsresponse_p.h
   getbackendauthrequest.h
   getbackendauthrequest_p.h
   getbackendauthresponse.h
@@ -67,19 +80,30 @@ add_library(QtAwsAmplifyBackend
   getbackendjobrequest_p.h
   getbackendjobresponse.h
   getbackendjobresponse_p.h
-  getbackendrequest.h
-  getbackendrequest_p.h
-  getbackendresponse.h
-  getbackendresponse_p.h
+  getbackendstoragerequest.h
+  getbackendstoragerequest_p.h
+  getbackendstorageresponse.h
+  getbackendstorageresponse_p.h
   gettokenrequest.h
   gettokenrequest_p.h
   gettokenresponse.h
   gettokenresponse_p.h
+  importbackendauthrequest.h
+  importbackendauthrequest_p.h
+  importbackendauthresponse.h
+  importbackendauthresponse_p.h
+  importbackendstoragerequest.h
+  importbackendstoragerequest_p.h
+  importbackendstorageresponse.h
+  importbackendstorageresponse_p.h
   listbackendjobsrequest.h
   listbackendjobsrequest_p.h
   listbackendjobsresponse.h
   listbackendjobsresponse_p.h
-  qtawsamplifybackendglobal.h
+  lists3bucketsrequest.h
+  lists3bucketsrequest_p.h
+  lists3bucketsresponse.h
+  lists3bucketsresponse_p.h
   removeallbackendsrequest.h
   removeallbackendsrequest_p.h
   removeallbackendsresponse.h
@@ -104,45 +128,61 @@ add_library(QtAwsAmplifyBackend
   updatebackendjobrequest_p.h
   updatebackendjobresponse.h
   updatebackendjobresponse_p.h
+  updatebackendstoragerequest.h
+  updatebackendstoragerequest_p.h
+  updatebackendstorageresponse.h
+  updatebackendstorageresponse_p.h
   amplifybackendclient.cpp
   amplifybackendrequest.cpp
   amplifybackendresponse.cpp
   clonebackendrequest.cpp
   clonebackendresponse.cpp
+  createbackendrequest.cpp
+  createbackendresponse.cpp
   createbackendapirequest.cpp
   createbackendapiresponse.cpp
   createbackendauthrequest.cpp
   createbackendauthresponse.cpp
   createbackendconfigrequest.cpp
   createbackendconfigresponse.cpp
-  createbackendrequest.cpp
-  createbackendresponse.cpp
+  createbackendstoragerequest.cpp
+  createbackendstorageresponse.cpp
   createtokenrequest.cpp
   createtokenresponse.cpp
+  deletebackendrequest.cpp
+  deletebackendresponse.cpp
   deletebackendapirequest.cpp
   deletebackendapiresponse.cpp
   deletebackendauthrequest.cpp
   deletebackendauthresponse.cpp
-  deletebackendrequest.cpp
-  deletebackendresponse.cpp
+  deletebackendstoragerequest.cpp
+  deletebackendstorageresponse.cpp
   deletetokenrequest.cpp
   deletetokenresponse.cpp
   generatebackendapimodelsrequest.cpp
   generatebackendapimodelsresponse.cpp
-  getbackendapimodelsrequest.cpp
-  getbackendapimodelsresponse.cpp
+  getbackendrequest.cpp
+  getbackendresponse.cpp
   getbackendapirequest.cpp
   getbackendapiresponse.cpp
+  getbackendapimodelsrequest.cpp
+  getbackendapimodelsresponse.cpp
   getbackendauthrequest.cpp
   getbackendauthresponse.cpp
   getbackendjobrequest.cpp
   getbackendjobresponse.cpp
-  getbackendrequest.cpp
-  getbackendresponse.cpp
+  getbackendstoragerequest.cpp
+  getbackendstorageresponse.cpp
   gettokenrequest.cpp
   gettokenresponse.cpp
+  importbackendauthrequest.cpp
+  importbackendauthresponse.cpp
+  importbackendstoragerequest.cpp
+  importbackendstorageresponse.cpp
   listbackendjobsrequest.cpp
   listbackendjobsresponse.cpp
+  lists3bucketsrequest.cpp
+  lists3bucketsresponse.cpp
   removeallbackendsrequest.cpp
   removeallbackendsresponse.cpp
   removebackendconfigrequest.cpp
@@ -154,7 +194,9 @@ add_library(QtAwsAmplifyBackend
   updatebackendconfigrequest.cpp
   updatebackendconfigresponse.cpp
   updatebackendjobrequest.cpp
-  updatebackendjobresponse.cpp)
+  updatebackendjobresponse.cpp
+  updatebackendstoragerequest.cpp
+  updatebackendstorageresponse.cpp)
 
 target_link_libraries(QtAwsAmplifyBackend
   PRIVATE QtAwsCore

@@ -21,6 +21,8 @@
 #include "cloudfrontclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associatealiasrequest.h"
+#include "associatealiasresponse.h"
 #include "createcachepolicyrequest.h"
 #include "createcachepolicyresponse.h"
 #include "createcloudfrontoriginaccessidentityrequest.h"
@@ -41,12 +43,16 @@
 #include "createkeygroupresponse.h"
 #include "createmonitoringsubscriptionrequest.h"
 #include "createmonitoringsubscriptionresponse.h"
+#include "createoriginaccesscontrolrequest.h"
+#include "createoriginaccesscontrolresponse.h"
 #include "createoriginrequestpolicyrequest.h"
 #include "createoriginrequestpolicyresponse.h"
 #include "createpublickeyrequest.h"
 #include "createpublickeyresponse.h"
 #include "createrealtimelogconfigrequest.h"
 #include "createrealtimelogconfigresponse.h"
+#include "createresponseheaderspolicyrequest.h"
+#include "createresponseheaderspolicyresponse.h"
 #include "createstreamingdistributionrequest.h"
 #include "createstreamingdistributionresponse.h"
 #include "createstreamingdistributionwithtagsrequest.h"
@@ -67,12 +73,16 @@
 #include "deletekeygroupresponse.h"
 #include "deletemonitoringsubscriptionrequest.h"
 #include "deletemonitoringsubscriptionresponse.h"
+#include "deleteoriginaccesscontrolrequest.h"
+#include "deleteoriginaccesscontrolresponse.h"
 #include "deleteoriginrequestpolicyrequest.h"
 #include "deleteoriginrequestpolicyresponse.h"
 #include "deletepublickeyrequest.h"
 #include "deletepublickeyresponse.h"
 #include "deleterealtimelogconfigrequest.h"
 #include "deleterealtimelogconfigresponse.h"
+#include "deleteresponseheaderspolicyrequest.h"
+#include "deleteresponseheaderspolicyresponse.h"
 #include "deletestreamingdistributionrequest.h"
 #include "deletestreamingdistributionresponse.h"
 #include "describefunctionrequest.h"
@@ -107,6 +117,10 @@
 #include "getkeygroupconfigresponse.h"
 #include "getmonitoringsubscriptionrequest.h"
 #include "getmonitoringsubscriptionresponse.h"
+#include "getoriginaccesscontrolrequest.h"
+#include "getoriginaccesscontrolresponse.h"
+#include "getoriginaccesscontrolconfigrequest.h"
+#include "getoriginaccesscontrolconfigresponse.h"
 #include "getoriginrequestpolicyrequest.h"
 #include "getoriginrequestpolicyresponse.h"
 #include "getoriginrequestpolicyconfigrequest.h"
@@ -117,6 +131,10 @@
 #include "getpublickeyconfigresponse.h"
 #include "getrealtimelogconfigrequest.h"
 #include "getrealtimelogconfigresponse.h"
+#include "getresponseheaderspolicyrequest.h"
+#include "getresponseheaderspolicyresponse.h"
+#include "getresponseheaderspolicyconfigrequest.h"
+#include "getresponseheaderspolicyconfigresponse.h"
 #include "getstreamingdistributionrequest.h"
 #include "getstreamingdistributionresponse.h"
 #include "getstreamingdistributionconfigrequest.h"
@@ -125,6 +143,8 @@
 #include "listcachepoliciesresponse.h"
 #include "listcloudfrontoriginaccessidentitiesrequest.h"
 #include "listcloudfrontoriginaccessidentitiesresponse.h"
+#include "listconflictingaliasesrequest.h"
+#include "listconflictingaliasesresponse.h"
 #include "listdistributionsrequest.h"
 #include "listdistributionsresponse.h"
 #include "listdistributionsbycachepolicyidrequest.h"
@@ -135,6 +155,8 @@
 #include "listdistributionsbyoriginrequestpolicyidresponse.h"
 #include "listdistributionsbyrealtimelogconfigrequest.h"
 #include "listdistributionsbyrealtimelogconfigresponse.h"
+#include "listdistributionsbyresponseheaderspolicyidrequest.h"
+#include "listdistributionsbyresponseheaderspolicyidresponse.h"
 #include "listdistributionsbywebaclidrequest.h"
 #include "listdistributionsbywebaclidresponse.h"
 #include "listfieldlevelencryptionconfigsrequest.h"
@@ -147,12 +169,16 @@
 #include "listinvalidationsresponse.h"
 #include "listkeygroupsrequest.h"
 #include "listkeygroupsresponse.h"
+#include "listoriginaccesscontrolsrequest.h"
+#include "listoriginaccesscontrolsresponse.h"
 #include "listoriginrequestpoliciesrequest.h"
 #include "listoriginrequestpoliciesresponse.h"
 #include "listpublickeysrequest.h"
 #include "listpublickeysresponse.h"
 #include "listrealtimelogconfigsrequest.h"
 #include "listrealtimelogconfigsresponse.h"
+#include "listresponseheaderspoliciesrequest.h"
+#include "listresponseheaderspoliciesresponse.h"
 #include "liststreamingdistributionsrequest.h"
 #include "liststreamingdistributionsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -179,12 +205,16 @@
 #include "updatefunctionresponse.h"
 #include "updatekeygrouprequest.h"
 #include "updatekeygroupresponse.h"
+#include "updateoriginaccesscontrolrequest.h"
+#include "updateoriginaccesscontrolresponse.h"
 #include "updateoriginrequestpolicyrequest.h"
 #include "updateoriginrequestpolicyresponse.h"
 #include "updatepublickeyrequest.h"
 #include "updatepublickeyresponse.h"
 #include "updaterealtimelogconfigrequest.h"
 #include "updaterealtimelogconfigresponse.h"
+#include "updateresponseheaderspolicyrequest.h"
+#include "updateresponseheaderspolicyresponse.h"
 #include "updatestreamingdistributionrequest.h"
 #include "updatestreamingdistributionresponse.h"
 
@@ -268,6 +298,33 @@ CloudFrontClient::CloudFrontClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Amazon CloudFront");
     d->serviceName = QStringLiteral("cloudfront");
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * AssociateAliasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates an alias (also known as a CNAME or an alternate domain name) with a CloudFront
+ *
+ * distribution>
+ *
+ * With this operation you can move an alias that’s already in use on a CloudFront distribution to a different distribution
+ * in one step. This prevents the downtime that could occur if you first remove the alias from one distribution and then
+ * separately add the alias to another
+ *
+ * distribution>
+ *
+ * To use this operation to associate an alias with a distribution, you provide the alias and the ID of the target
+ * distribution for the alias. For more information, including how to set up the target distribution, prerequisites that
+ * you must complete, and other restrictions, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html#alternate-domain-names-move">Moving
+ * an alternate domain name to a different distribution</a> in the <i>Amazon CloudFront Developer
+ */
+AssociateAliasResponse * CloudFrontClient::associateAlias(const AssociateAliasRequest &request)
+{
+    return qobject_cast<AssociateAliasResponse *>(send(request));
 }
 
 /*!
@@ -479,6 +536,31 @@ CreateMonitoringSubscriptionResponse * CloudFrontClient::createMonitoringSubscri
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateOriginAccessControlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new origin access control in CloudFront. After you create an origin access control, you can add it to an
+ * origin in a CloudFront distribution so that CloudFront sends authenticated (signed) requests to the
+ *
+ * origin>
+ *
+ * For an Amazon S3 origin, this makes it possible to block public access to the Amazon S3 bucket so that viewers (users)
+ * can access the content in the bucket only through
+ *
+ * CloudFront>
+ *
+ * For more information about using a CloudFront origin access control, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html">Restricting
+ * access to an Amazon S3 origin</a> in the <i>Amazon CloudFront Developer
+ */
+CreateOriginAccessControlResponse * CloudFrontClient::createOriginAccessControl(const CreateOriginAccessControlRequest &request)
+{
+    return qobject_cast<CreateOriginAccessControlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * CreateOriginRequestPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -559,6 +641,31 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
 CreateRealtimeLogConfigResponse * CloudFrontClient::createRealtimeLogConfig(const CreateRealtimeLogConfigRequest &request)
 {
     return qobject_cast<CreateRealtimeLogConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateResponseHeadersPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a response headers
+ *
+ * policy>
+ *
+ * A response headers policy contains information about a set of HTTP response headers and their values. To create a
+ * response headers policy, you provide some metadata about the policy, and a set of configurations that specify the
+ * response
+ *
+ * headers>
+ *
+ * After you create a response headers policy, you can use its ID to attach it to one or more cache behaviors in a
+ * CloudFront distribution. When it’s attached to a cache behavior, CloudFront adds the headers in the policy to HTTP
+ * responses that it sends for requests that match the cache
+ */
+CreateResponseHeadersPolicyResponse * CloudFrontClient::createResponseHeadersPolicy(const CreateResponseHeadersPolicyRequest &request)
+{
+    return qobject_cast<CreateResponseHeadersPolicyResponse *>(send(request));
 }
 
 /*!
@@ -727,6 +834,24 @@ DeleteMonitoringSubscriptionResponse * CloudFrontClient::deleteMonitoringSubscri
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteOriginAccessControlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a CloudFront origin access
+ *
+ * control>
+ *
+ * You cannot delete an origin access control if it's in use. First, update all distributions to remove the origin access
+ * control from all origins, then delete the origin access
+ */
+DeleteOriginAccessControlResponse * CloudFrontClient::deleteOriginAccessControl(const DeleteOriginAccessControlRequest &request)
+{
+    return qobject_cast<DeleteOriginAccessControlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * DeleteOriginRequestPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -782,6 +907,29 @@ DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKe
 DeleteRealtimeLogConfigResponse * CloudFrontClient::deleteRealtimeLogConfig(const DeleteRealtimeLogConfigRequest &request)
 {
     return qobject_cast<DeleteRealtimeLogConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteResponseHeadersPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a response headers
+ *
+ * policy>
+ *
+ * You cannot delete a response headers policy if it’s attached to a cache behavior. First update your distributions to
+ * remove the response headers policy from all cache behaviors, then delete the response headers
+ *
+ * policy>
+ *
+ * To delete a response headers policy, you must provide the policy’s identifier and version. To get these values, you can
+ * use <code>ListResponseHeadersPolicies</code> or <code>GetResponseHeadersPolicy</code>.
+ */
+DeleteResponseHeadersPolicyResponse * CloudFrontClient::deleteResponseHeadersPolicy(const DeleteResponseHeadersPolicyRequest &request)
+{
+    return qobject_cast<DeleteResponseHeadersPolicyResponse *>(send(request));
 }
 
 /*!
@@ -1101,6 +1249,32 @@ GetMonitoringSubscriptionResponse * CloudFrontClient::getMonitoringSubscription(
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetOriginAccessControlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a CloudFront origin access control, including its unique
+ */
+GetOriginAccessControlResponse * CloudFrontClient::getOriginAccessControl(const GetOriginAccessControlRequest &request)
+{
+    return qobject_cast<GetOriginAccessControlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetOriginAccessControlConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a CloudFront origin access control
+ */
+GetOriginAccessControlConfigResponse * CloudFrontClient::getOriginAccessControlConfig(const GetOriginAccessControlConfigRequest &request)
+{
+    return qobject_cast<GetOriginAccessControlConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * GetOriginRequestPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1193,6 +1367,47 @@ GetRealtimeLogConfigResponse * CloudFrontClient::getRealtimeLogConfig(const GetR
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetResponseHeadersPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a response headers policy, including metadata (the policy’s identifier and the date and time when the policy was
+ * last
+ *
+ * modified)>
+ *
+ * To get a response headers policy, you must provide the policy’s identifier. If the response headers policy is attached
+ * to a distribution’s cache behavior, you can get the policy’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the response headers policy is not attached to a cache behavior, you can get the
+ * identifier using
+ */
+GetResponseHeadersPolicyResponse * CloudFrontClient::getResponseHeadersPolicy(const GetResponseHeadersPolicyRequest &request)
+{
+    return qobject_cast<GetResponseHeadersPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetResponseHeadersPolicyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a response headers policy
+ *
+ * configuration>
+ *
+ * To get a response headers policy configuration, you must provide the policy’s identifier. If the response headers policy
+ * is attached to a distribution’s cache behavior, you can get the policy’s identifier using <code>ListDistributions</code>
+ * or <code>GetDistribution</code>. If the response headers policy is not attached to a cache behavior, you can get the
+ * identifier using
+ */
+GetResponseHeadersPolicyConfigResponse * CloudFrontClient::getResponseHeadersPolicyConfig(const GetResponseHeadersPolicyConfigRequest &request)
+{
+    return qobject_cast<GetResponseHeadersPolicyConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * GetStreamingDistributionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1227,8 +1442,8 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
  *
  * policies>
  *
- * You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies
- * created in your AWS
+ * You can optionally apply a filter to return only the managed policies created by Amazon Web Services, or only the custom
+ * policies created in your Amazon Web Services
  *
  * account>
  *
@@ -1253,6 +1468,46 @@ ListCachePoliciesResponse * CloudFrontClient::listCachePolicies(const ListCacheP
 ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontOriginAccessIdentities(const ListCloudFrontOriginAccessIdentitiesRequest &request)
 {
     return qobject_cast<ListCloudFrontOriginAccessIdentitiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListConflictingAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of aliases (also called CNAMEs or alternate domain names) that conflict or overlap with the provided alias,
+ * and the associated CloudFront distributions and Amazon Web Services accounts for each conflicting alias. In the returned
+ * list, the distribution and account IDs are partially hidden, which allows you to identify the distributions and accounts
+ * that you own, but helps to protect the information of ones that you don’t
+ *
+ * own>
+ *
+ * Use this operation to find aliases that are in use in CloudFront that conflict or overlap with the provided alias. For
+ * example, if you provide <code>www.example.com</code> as input, the returned list can include
+ * <code>www.example.com</code> and the overlapping wildcard alternate domain name (<code>*.example.com</code>), if they
+ * exist. If you provide <code>*.example.com</code> as input, the returned list can include <code>*.example.com</code> and
+ * any alternate domain names covered by that wildcard (for example, <code>www.example.com</code>,
+ * <code>test.example.com</code>, <code>dev.example.com</code>, and so on), if they
+ *
+ * exist>
+ *
+ * To list conflicting aliases, you provide the alias to search and the ID of a distribution in your account that has an
+ * attached SSL/TLS certificate that includes the provided alias. For more information, including how to set up the
+ * distribution and certificate, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html#alternate-domain-names-move">Moving
+ * an alternate domain name to a different distribution</a> in the <i>Amazon CloudFront Developer
+ *
+ * Guide</i>>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListConflictingAliasesResponse * CloudFrontClient::listConflictingAliases(const ListConflictingAliasesRequest &request)
+{
+    return qobject_cast<ListConflictingAliasesResponse *>(send(request));
 }
 
 /*!
@@ -1356,11 +1611,32 @@ ListDistributionsByRealtimeLogConfigResponse * CloudFrontClient::listDistributio
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByResponseHeadersPolicyIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified
+ * response headers
+ *
+ * policy>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListDistributionsByResponseHeadersPolicyIdResponse * CloudFrontClient::listDistributionsByResponseHeadersPolicyId(const ListDistributionsByResponseHeadersPolicyIdRequest &request)
+{
+    return qobject_cast<ListDistributionsByResponseHeadersPolicyIdResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * ListDistributionsByWebACLIdResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List the distributions that are associated with a specified AWS WAF web ACL.
+ * List the distributions that are associated with a specified WAF web
  */
 ListDistributionsByWebACLIdResponse * CloudFrontClient::listDistributionsByWebACLId(const ListDistributionsByWebACLIdRequest &request)
 {
@@ -1399,7 +1675,7 @@ ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncry
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of all CloudFront functions in your AWS
+ * Gets a list of all CloudFront functions in your Amazon Web Services
  *
  * account>
  *
@@ -1453,6 +1729,26 @@ ListKeyGroupsResponse * CloudFrontClient::listKeyGroups(const ListKeyGroupsReque
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListOriginAccessControlsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the list of CloudFront origin access controls in this Amazon Web Services
+ *
+ * account>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send another request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the next
+ */
+ListOriginAccessControlsResponse * CloudFrontClient::listOriginAccessControls(const ListOriginAccessControlsRequest &request)
+{
+    return qobject_cast<ListOriginAccessControlsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * ListOriginRequestPoliciesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1461,8 +1757,8 @@ ListKeyGroupsResponse * CloudFrontClient::listKeyGroups(const ListKeyGroupsReque
  *
  * policies>
  *
- * You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies
- * created in your AWS
+ * You can optionally apply a filter to return only the managed policies created by Amazon Web Services, or only the custom
+ * policies created in your Amazon Web Services
  *
  * account>
  *
@@ -1507,6 +1803,31 @@ ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRe
 ListRealtimeLogConfigsResponse * CloudFrontClient::listRealtimeLogConfigs(const ListRealtimeLogConfigsRequest &request)
 {
     return qobject_cast<ListRealtimeLogConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListResponseHeadersPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of response headers
+ *
+ * policies>
+ *
+ * You can optionally apply a filter to get only the managed policies created by Amazon Web Services, or only the custom
+ * policies created in your Amazon Web Services
+ *
+ * account>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListResponseHeadersPoliciesResponse * CloudFrontClient::listResponseHeadersPolicies(const ListResponseHeadersPoliciesRequest &request)
+{
+    return qobject_cast<ListResponseHeadersPoliciesResponse *>(send(request));
 }
 
 /*!
@@ -1839,6 +2160,19 @@ UpdateKeyGroupResponse * CloudFrontClient::updateKeyGroup(const UpdateKeyGroupRe
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateOriginAccessControlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a CloudFront origin access
+ */
+UpdateOriginAccessControlResponse * CloudFrontClient::updateOriginAccessControl(const UpdateOriginAccessControlRequest &request)
+{
+    return qobject_cast<UpdateOriginAccessControlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * UpdateOriginRequestPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1914,6 +2248,37 @@ UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKe
 UpdateRealtimeLogConfigResponse * CloudFrontClient::updateRealtimeLogConfig(const UpdateRealtimeLogConfigRequest &request)
 {
     return qobject_cast<UpdateRealtimeLogConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateResponseHeadersPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a response headers
+ *
+ * policy>
+ *
+ * When you update a response headers policy, the entire policy is replaced. You cannot update some policy fields
+ * independent of others. To update a response headers policy
+ *
+ * configuration> <ol> <li>
+ *
+ * Use <code>GetResponseHeadersPolicyConfig</code> to get the current policy’s
+ *
+ * configuration> </li> <li>
+ *
+ * Modify the fields in the response headers policy configuration that you want to
+ *
+ * update> </li> <li>
+ *
+ * Call <code>UpdateResponseHeadersPolicy</code>, providing the entire response headers policy configuration, including the
+ * fields that you modified and those that you
+ */
+UpdateResponseHeadersPolicyResponse * CloudFrontClient::updateResponseHeadersPolicy(const UpdateResponseHeadersPolicyRequest &request)
+{
+    return qobject_cast<UpdateResponseHeadersPolicyResponse *>(send(request));
 }
 
 /*!

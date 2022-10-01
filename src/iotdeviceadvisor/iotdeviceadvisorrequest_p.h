@@ -24,28 +24,28 @@
 #include "iotdeviceadvisorrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorRequest;
+class IotDeviceAdvisorRequest;
 
-class IoTDeviceAdvisorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IotDeviceAdvisorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    IoTDeviceAdvisorRequest::Action action; ///< IoTDeviceAdvisor action to be performed.
-    QString apiVersion;        ///< IoTDeviceAdvisor API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< IoTDeviceAdvisor request (query string) parameters. @todo?
+    IotDeviceAdvisorRequest::Action action; ///< IotDeviceAdvisor action to be performed.
+    QString apiVersion;        ///< IotDeviceAdvisor API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< IotDeviceAdvisor request (query string) parameters. @todo?
 
-    IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequest::Action action, IoTDeviceAdvisorRequest * const q);
-    IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequestPrivate &other, IoTDeviceAdvisorRequest * const q);
+    IotDeviceAdvisorRequestPrivate(const IotDeviceAdvisorRequest::Action action, IotDeviceAdvisorRequest * const q);
+    IotDeviceAdvisorRequestPrivate(const IotDeviceAdvisorRequestPrivate &other, IotDeviceAdvisorRequest * const q);
 
-    static QString toString(const IoTDeviceAdvisorRequest::Action &action);
+    static QString toString(const IotDeviceAdvisorRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(IoTDeviceAdvisorRequest)
+    Q_DECLARE_PUBLIC(IotDeviceAdvisorRequest)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

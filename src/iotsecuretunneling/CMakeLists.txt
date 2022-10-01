@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTSECURETUNNELING_LIBRARY)
 
 add_library(QtAwsIoTSecureTunneling
+  qtawsiotsecuretunnelingglobal.h
+  iotsecuretunnelingclient.h
+  iotsecuretunnelingclient_p.h
+  iotsecuretunnelingrequest.h
+  iotsecuretunnelingrequest_p.h
+  iotsecuretunnelingresponse.h
+  iotsecuretunnelingresponse_p.h
   closetunnelrequest.h
   closetunnelrequest_p.h
   closetunnelresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsIoTSecureTunneling
   describetunnelrequest_p.h
   describetunnelresponse.h
   describetunnelresponse_p.h
-  iotsecuretunnelingclient.h
-  iotsecuretunnelingclient_p.h
-  iotsecuretunnelingrequest.h
-  iotsecuretunnelingrequest_p.h
-  iotsecuretunnelingresponse.h
-  iotsecuretunnelingresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -27,7 +28,10 @@ add_library(QtAwsIoTSecureTunneling
   opentunnelrequest_p.h
   opentunnelresponse.h
   opentunnelresponse_p.h
-  qtawsiotsecuretunnelingglobal.h
+  rotatetunnelaccesstokenrequest.h
+  rotatetunnelaccesstokenrequest_p.h
+  rotatetunnelaccesstokenresponse.h
+  rotatetunnelaccesstokenresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -36,19 +40,21 @@ add_library(QtAwsIoTSecureTunneling
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  iotsecuretunnelingclient.cpp
+  iotsecuretunnelingrequest.cpp
+  iotsecuretunnelingresponse.cpp
   closetunnelrequest.cpp
   closetunnelresponse.cpp
   describetunnelrequest.cpp
   describetunnelresponse.cpp
-  iotsecuretunnelingclient.cpp
-  iotsecuretunnelingrequest.cpp
-  iotsecuretunnelingresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listtunnelsrequest.cpp
   listtunnelsresponse.cpp
   opentunnelrequest.cpp
   opentunnelresponse.cpp
+  rotatetunnelaccesstokenrequest.cpp
+  rotatetunnelaccesstokenresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

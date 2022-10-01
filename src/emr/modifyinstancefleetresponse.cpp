@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ModifyInstanceFleetResponse
- * \brief The ModifyInstanceFleetResponse class provides an interace for EMR ModifyInstanceFleet responses.
+ * \class QtAws::Emr::ModifyInstanceFleetResponse
+ * \brief The ModifyInstanceFleetResponse class provides an interace for Emr ModifyInstanceFleet responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::modifyInstanceFleet
  */
@@ -64,7 +64,7 @@ const ModifyInstanceFleetRequest * ModifyInstanceFleetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR ModifyInstanceFleet \a response.
+ * Parses a successful Emr ModifyInstanceFleet \a response.
  */
 void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ModifyInstanceFleetResponsePrivate
+ * \class QtAws::Emr::ModifyInstanceFleetResponsePrivate
  * \brief The ModifyInstanceFleetResponsePrivate class provides private implementation for ModifyInstanceFleetResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
 }
 
 /*!
- * Parses a EMR ModifyInstanceFleet response element from \a xml.
+ * Parses a Emr ModifyInstanceFleet response element from \a xml.
  */
 void ModifyInstanceFleetResponsePrivate::parseModifyInstanceFleetResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ModifyInstanceFleetResponsePrivate::parseModifyInstanceFleetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

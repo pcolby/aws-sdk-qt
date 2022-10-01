@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetEventDestinationResponse
- * \brief The DeleteConfigurationSetEventDestinationResponse class provides an interace for SES DeleteConfigurationSetEventDestination responses.
+ * \class QtAws::Ses::DeleteConfigurationSetEventDestinationResponse
+ * \brief The DeleteConfigurationSetEventDestinationResponse class provides an interace for Ses DeleteConfigurationSetEventDestination responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEven
 
 /*!
  * \reimp
- * Parses a successful SES DeleteConfigurationSetEventDestination \a response.
+ * Parses a successful Ses DeleteConfigurationSetEventDestination \a response.
  */
 void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetEventDestinationResponsePrivate
+ * \class QtAws::Ses::DeleteConfigurationSetEventDestinationResponsePrivate
  * \brief The DeleteConfigurationSetEventDestinationResponsePrivate class provides private implementation for DeleteConfigurationSetEventDestinationResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEve
 }
 
 /*!
- * Parses a SES DeleteConfigurationSetEventDestination response element from \a xml.
+ * Parses a Ses DeleteConfigurationSetEventDestination response element from \a xml.
  */
 void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigura
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

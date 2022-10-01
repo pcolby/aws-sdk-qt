@@ -24,11 +24,11 @@
 #include "createpermissionrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class CreatePermissionResponsePrivate;
 
-class QTAWSACMPCA_EXPORT CreatePermissionResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT CreatePermissionResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

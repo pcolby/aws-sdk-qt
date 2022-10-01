@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for FIS TagResource responses.
+ * \class QtAws::Fis::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for Fis TagResource responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::tagResource
  */
@@ -64,7 +64,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS TagResource \a response.
+ * Parses a successful Fis TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::TagResourceResponsePrivate
+ * \class QtAws::Fis::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * Parses a FIS TagResource response element from \a xml.
+ * Parses a Fis TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetResourcePoliciesRequest
- * \brief The GetResourcePoliciesRequest class provides an interface for SSMIncidents GetResourcePolicies requests.
+ * \class QtAws::SsmIncidents::GetResourcePoliciesRequest
+ * \brief The GetResourcePoliciesRequest class provides an interface for SsmIncidents GetResourcePolicies requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getResourcePolicies
+ * \sa SsmIncidentsClient::getResourcePolicies
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetResourcePoliciesRequest::GetResourcePoliciesRequest(const GetResourcePoliciesRequest &other)
-    : SSMIncidentsRequest(new GetResourcePoliciesRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new GetResourcePoliciesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ GetResourcePoliciesRequest::GetResourcePoliciesRequest(const GetResourcePolicies
  * Constructs a GetResourcePoliciesRequest object.
  */
 GetResourcePoliciesRequest::GetResourcePoliciesRequest()
-    : SSMIncidentsRequest(new GetResourcePoliciesRequestPrivate(SSMIncidentsRequest::GetResourcePoliciesAction, this))
+    : SsmIncidentsRequest(new GetResourcePoliciesRequestPrivate(SsmIncidentsRequest::GetResourcePoliciesAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetResourcePoliciesRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetResourcePoliciesRequestPrivate
+ * \class QtAws::SsmIncidents::GetResourcePoliciesRequestPrivate
  * \brief The GetResourcePoliciesRequestPrivate class provides private implementation for GetResourcePoliciesRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a GetResourcePoliciesRequestPrivate object for SSMIncidents \a action,
+ * Constructs a GetResourcePoliciesRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 GetResourcePoliciesRequestPrivate::GetResourcePoliciesRequestPrivate(
-    const SSMIncidentsRequest::Action action, GetResourcePoliciesRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, GetResourcePoliciesRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ GetResourcePoliciesRequestPrivate::GetResourcePoliciesRequestPrivate(
  */
 GetResourcePoliciesRequestPrivate::GetResourcePoliciesRequestPrivate(
     const GetResourcePoliciesRequestPrivate &other, GetResourcePoliciesRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

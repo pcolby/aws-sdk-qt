@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenStatusRequest
- * \brief The GetChangeTokenStatusRequest class provides an interface for WAFRegional GetChangeTokenStatus requests.
+ * \class QtAws::WafRegional::GetChangeTokenStatusRequest
+ * \brief The GetChangeTokenStatusRequest class provides an interface for WafRegional GetChangeTokenStatus requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getChangeTokenStatus
+ * \sa WafRegionalClient::getChangeTokenStatus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetChangeTokenStatusRequest::GetChangeTokenStatusRequest(const GetChangeTokenStatusRequest &other)
-    : WAFRegionalRequest(new GetChangeTokenStatusRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetChangeTokenStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetChangeTokenStatusRequest::GetChangeTokenStatusRequest(const GetChangeTokenSta
  * Constructs a GetChangeTokenStatusRequest object.
  */
 GetChangeTokenStatusRequest::GetChangeTokenStatusRequest()
-    : WAFRegionalRequest(new GetChangeTokenStatusRequestPrivate(WAFRegionalRequest::GetChangeTokenStatusAction, this))
+    : WafRegionalRequest(new GetChangeTokenStatusRequestPrivate(WafRegionalRequest::GetChangeTokenStatusAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenStatusRequestPrivate
+ * \class QtAws::WafRegional::GetChangeTokenStatusRequestPrivate
  * \brief The GetChangeTokenStatusRequestPrivate class provides private implementation for GetChangeTokenStatusRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetChangeTokenStatusRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetChangeTokenStatusRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
-    const WAFRegionalRequest::Action action, GetChangeTokenStatusRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetChangeTokenStatusRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
  */
 GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
     const GetChangeTokenStatusRequestPrivate &other, GetChangeTokenStatusRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

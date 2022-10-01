@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateByteMatchSetRequest
- * \brief The UpdateByteMatchSetRequest class provides an interface for WAF UpdateByteMatchSet requests.
+ * \class QtAws::Waf::UpdateByteMatchSetRequest
+ * \brief The UpdateByteMatchSetRequest class provides an interface for Waf UpdateByteMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAF::UpdateByteMatchSetRequestPrivate
+ * \class QtAws::Waf::UpdateByteMatchSetRequestPrivate
  * \brief The UpdateByteMatchSetRequestPrivate class provides private implementation for UpdateByteMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

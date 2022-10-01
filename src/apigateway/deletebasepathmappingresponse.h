@@ -24,11 +24,11 @@
 #include "deletebasepathmappingrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteBasePathMappingResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

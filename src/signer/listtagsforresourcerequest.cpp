@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for signer ListTagsForResource requests.
+ * \class QtAws::Signer::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Signer ListTagsForResource requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listTagsForResource
+ * \sa SignerClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : signerRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : signerRequest(new ListTagsForResourceRequestPrivate(signerRequest::ListTagsForResourceAction, this))
+    : SignerRequest(new ListTagsForResourceRequestPrivate(SignerRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::signer::ListTagsForResourceRequestPrivate
+ * \class QtAws::Signer::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for signer \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const signerRequest::Action action, ListTagsForResourceRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, ListTagsForResourceRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

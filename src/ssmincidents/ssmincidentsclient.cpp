@@ -84,27 +84,27 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SSMIncidents
- * \brief Contains classess for accessing AWS Systems Manager Incident Manager (SSM Incidents).
+ * \namespace QtAws::SsmIncidents
+ * \brief Contains classess for accessing AWS Systems Manager Incident Manager.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsClient
- * \brief The SSMIncidentsClient class provides access to the AWS Systems Manager Incident Manager (SSM Incidents) service.
+ * \class QtAws::SsmIncidents::SsmIncidentsClient
+ * \brief The SsmIncidentsClient class provides access to the AWS Systems Manager Incident Manager service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -115,24 +115,24 @@ namespace SSMIncidents {
  */
 
 /*!
- * \brief Constructs a SSMIncidentsClient object.
+ * \brief Constructs a SsmIncidentsClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-SSMIncidentsClient::SSMIncidentsClient(
+SsmIncidentsClient::SsmIncidentsClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSMIncidentsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsmIncidentsClientPrivate(this), parent)
 {
-    Q_D(SSMIncidentsClient);
+    Q_D(SsmIncidentsClient);
     d->apiVersion = QStringLiteral("2018-05-10");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ssm-incidents");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager");
@@ -140,7 +140,7 @@ SSMIncidentsClient::SSMIncidentsClient(
 }
 
 /*!
- * \overload SSMIncidentsClient()
+ * \overload SsmIncidentsClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -150,38 +150,38 @@ SSMIncidentsClient::SSMIncidentsClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-SSMIncidentsClient::SSMIncidentsClient(
+SsmIncidentsClient::SsmIncidentsClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSMIncidentsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SsmIncidentsClientPrivate(this), parent)
 {
-    Q_D(SSMIncidentsClient);
+    Q_D(SsmIncidentsClient);
     d->apiVersion = QStringLiteral("2018-05-10");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ssm-incidents");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager");
     d->serviceName = QStringLiteral("ssm-incidents");
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * CreateReplicationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * A replication set replicates and encrypts your data to the provided Regions with the provided KMS key.
  */
-CreateReplicationSetResponse * SSMIncidentsClient::createReplicationSet(const CreateReplicationSetRequest &request)
+CreateReplicationSetResponse * SsmIncidentsClient::createReplicationSet(const CreateReplicationSetRequest &request)
 {
     return qobject_cast<CreateReplicationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * CreateResponsePlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -189,13 +189,13 @@ CreateReplicationSetResponse * SSMIncidentsClient::createReplicationSet(const Cr
  * Creates a response plan that automates the initial response to incidents. A response plan engages contacts, starts chat
  * channel collaboration, and initiates runbooks at the beginning of an
  */
-CreateResponsePlanResponse * SSMIncidentsClient::createResponsePlan(const CreateResponsePlanRequest &request)
+CreateResponsePlanResponse * SsmIncidentsClient::createResponsePlan(const CreateResponsePlanRequest &request)
 {
     return qobject_cast<CreateResponsePlanResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * CreateTimelineEventResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -204,52 +204,52 @@ CreateResponsePlanResponse * SSMIncidentsClient::createResponsePlan(const Create
  * created by Incident Manager, marking key moment during an incident. You can create custom timeline events to mark
  * important events that are automatically detected by Incident
  */
-CreateTimelineEventResponse * SSMIncidentsClient::createTimelineEvent(const CreateTimelineEventRequest &request)
+CreateTimelineEventResponse * SsmIncidentsClient::createTimelineEvent(const CreateTimelineEventRequest &request)
 {
     return qobject_cast<CreateTimelineEventResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * DeleteIncidentRecordResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Delete an incident record from Incident Manager.
  */
-DeleteIncidentRecordResponse * SSMIncidentsClient::deleteIncidentRecord(const DeleteIncidentRecordRequest &request)
+DeleteIncidentRecordResponse * SsmIncidentsClient::deleteIncidentRecord(const DeleteIncidentRecordRequest &request)
 {
     return qobject_cast<DeleteIncidentRecordResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * DeleteReplicationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes all Regions in your replication set. Deleting the replication set deletes all Incident Manager
  */
-DeleteReplicationSetResponse * SSMIncidentsClient::deleteReplicationSet(const DeleteReplicationSetRequest &request)
+DeleteReplicationSetResponse * SsmIncidentsClient::deleteReplicationSet(const DeleteReplicationSetRequest &request)
 {
     return qobject_cast<DeleteReplicationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * DeleteResourcePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the resource policy that AWS Resource Access Manager uses to share your Incident Manager
+ * Deletes the resource policy that Resource Access Manager uses to share your Incident Manager
  */
-DeleteResourcePolicyResponse * SSMIncidentsClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
+DeleteResourcePolicyResponse * SsmIncidentsClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
 {
     return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * DeleteResponsePlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -257,91 +257,91 @@ DeleteResourcePolicyResponse * SSMIncidentsClient::deleteResourcePolicy(const De
  * Deletes the specified response plan. Deleting a response plan stops all linked CloudWatch alarms and EventBridge events
  * from creating an incident with this response
  */
-DeleteResponsePlanResponse * SSMIncidentsClient::deleteResponsePlan(const DeleteResponsePlanRequest &request)
+DeleteResponsePlanResponse * SsmIncidentsClient::deleteResponsePlan(const DeleteResponsePlanRequest &request)
 {
     return qobject_cast<DeleteResponsePlanResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * DeleteTimelineEventResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a timeline event from an
  */
-DeleteTimelineEventResponse * SSMIncidentsClient::deleteTimelineEvent(const DeleteTimelineEventRequest &request)
+DeleteTimelineEventResponse * SsmIncidentsClient::deleteTimelineEvent(const DeleteTimelineEventRequest &request)
 {
     return qobject_cast<DeleteTimelineEventResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * GetIncidentRecordResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the details of the specified incident
+ * Returns the details for the specified incident
  */
-GetIncidentRecordResponse * SSMIncidentsClient::getIncidentRecord(const GetIncidentRecordRequest &request)
+GetIncidentRecordResponse * SsmIncidentsClient::getIncidentRecord(const GetIncidentRecordRequest &request)
 {
     return qobject_cast<GetIncidentRecordResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * GetReplicationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieve your Incident Manager replication
  */
-GetReplicationSetResponse * SSMIncidentsClient::getReplicationSet(const GetReplicationSetRequest &request)
+GetReplicationSetResponse * SsmIncidentsClient::getReplicationSet(const GetReplicationSetRequest &request)
 {
     return qobject_cast<GetReplicationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * GetResourcePoliciesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the resource policies attached to the specified response
  */
-GetResourcePoliciesResponse * SSMIncidentsClient::getResourcePolicies(const GetResourcePoliciesRequest &request)
+GetResourcePoliciesResponse * SsmIncidentsClient::getResourcePolicies(const GetResourcePoliciesRequest &request)
 {
     return qobject_cast<GetResourcePoliciesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * GetResponsePlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the details of the specified response
  */
-GetResponsePlanResponse * SSMIncidentsClient::getResponsePlan(const GetResponsePlanRequest &request)
+GetResponsePlanResponse * SsmIncidentsClient::getResponsePlan(const GetResponsePlanRequest &request)
 {
     return qobject_cast<GetResponsePlanResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * GetTimelineEventResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a timeline event based on its ID and incident
  */
-GetTimelineEventResponse * SSMIncidentsClient::getTimelineEvent(const GetTimelineEventRequest &request)
+GetTimelineEventResponse * SsmIncidentsClient::getTimelineEvent(const GetTimelineEventRequest &request)
 {
     return qobject_cast<GetTimelineEventResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListIncidentRecordsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -349,225 +349,227 @@ GetTimelineEventResponse * SSMIncidentsClient::getTimelineEvent(const GetTimelin
  * Lists all incident records in your account. Use this command to retrieve the Amazon Resource Name (ARN) of the incident
  * record you want to update.
  */
-ListIncidentRecordsResponse * SSMIncidentsClient::listIncidentRecords(const ListIncidentRecordsRequest &request)
+ListIncidentRecordsResponse * SsmIncidentsClient::listIncidentRecords(const ListIncidentRecordsRequest &request)
 {
     return qobject_cast<ListIncidentRecordsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListRelatedItemsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List all related items for an incident
  */
-ListRelatedItemsResponse * SSMIncidentsClient::listRelatedItems(const ListRelatedItemsRequest &request)
+ListRelatedItemsResponse * SsmIncidentsClient::listRelatedItems(const ListRelatedItemsRequest &request)
 {
     return qobject_cast<ListRelatedItemsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListReplicationSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists details about the replication set configured in your account.
  */
-ListReplicationSetsResponse * SSMIncidentsClient::listReplicationSets(const ListReplicationSetsRequest &request)
+ListReplicationSetsResponse * SsmIncidentsClient::listReplicationSets(const ListReplicationSetsRequest &request)
 {
     return qobject_cast<ListReplicationSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListResponsePlansResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all response plans in your
  */
-ListResponsePlansResponse * SSMIncidentsClient::listResponsePlans(const ListResponsePlansRequest &request)
+ListResponsePlansResponse * SsmIncidentsClient::listResponsePlans(const ListResponsePlansRequest &request)
 {
     return qobject_cast<ListResponsePlansResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the tags that are attached to the specified response
  */
-ListTagsForResourceResponse * SSMIncidentsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * SsmIncidentsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * ListTimelineEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists timeline events of the specified incident
+ * Lists timeline events for the specified incident
  */
-ListTimelineEventsResponse * SSMIncidentsClient::listTimelineEvents(const ListTimelineEventsRequest &request)
+ListTimelineEventsResponse * SsmIncidentsClient::listTimelineEvents(const ListTimelineEventsRequest &request)
 {
     return qobject_cast<ListTimelineEventsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * PutResourcePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a resource policy to the specified response
+ * Adds a resource policy to the specified response plan. The resource policy is used to share the response plan using
+ * Resource Access Manager (RAM). For more information about cross-account sharing, see <a
+ * href="https://docs.aws.amazon.com/incident-manager/latest/userguide/xa.html">Setting up cross-account
  */
-PutResourcePolicyResponse * SSMIncidentsClient::putResourcePolicy(const PutResourcePolicyRequest &request)
+PutResourcePolicyResponse * SsmIncidentsClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
     return qobject_cast<PutResourcePolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * StartIncidentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Used to start an incident from CloudWatch alarms, EventBridge events, or manually.
  */
-StartIncidentResponse * SSMIncidentsClient::startIncident(const StartIncidentRequest &request)
+StartIncidentResponse * SsmIncidentsClient::startIncident(const StartIncidentRequest &request)
 {
     return qobject_cast<StartIncidentResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds a tag to a response
  */
-TagResourceResponse * SSMIncidentsClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * SsmIncidentsClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes a tag from a
  */
-UntagResourceResponse * SSMIncidentsClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * SsmIncidentsClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateDeletionProtectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Update deletion protection to either allow or deny deletion of the final Region in a replication
  */
-UpdateDeletionProtectionResponse * SSMIncidentsClient::updateDeletionProtection(const UpdateDeletionProtectionRequest &request)
+UpdateDeletionProtectionResponse * SsmIncidentsClient::updateDeletionProtection(const UpdateDeletionProtectionRequest &request)
 {
     return qobject_cast<UpdateDeletionProtectionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateIncidentRecordResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Update the details of an incident record. You can use this action to update an incident record from the defined chat
+ * Update the details of an incident record. You can use this operation to update an incident record from the defined chat
  * channel. For more information about using actions in chat channels, see <a
  * href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through
  */
-UpdateIncidentRecordResponse * SSMIncidentsClient::updateIncidentRecord(const UpdateIncidentRecordRequest &request)
+UpdateIncidentRecordResponse * SsmIncidentsClient::updateIncidentRecord(const UpdateIncidentRecordRequest &request)
 {
     return qobject_cast<UpdateIncidentRecordResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateRelatedItemsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Add or remove related items from the related items tab of an incident
  */
-UpdateRelatedItemsResponse * SSMIncidentsClient::updateRelatedItems(const UpdateRelatedItemsRequest &request)
+UpdateRelatedItemsResponse * SsmIncidentsClient::updateRelatedItems(const UpdateRelatedItemsRequest &request)
 {
     return qobject_cast<UpdateRelatedItemsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateReplicationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Add or delete Regions from your replication
  */
-UpdateReplicationSetResponse * SSMIncidentsClient::updateReplicationSet(const UpdateReplicationSetRequest &request)
+UpdateReplicationSetResponse * SsmIncidentsClient::updateReplicationSet(const UpdateReplicationSetRequest &request)
 {
     return qobject_cast<UpdateReplicationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateResponsePlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the specified response
  */
-UpdateResponsePlanResponse * SSMIncidentsClient::updateResponsePlan(const UpdateResponsePlanRequest &request)
+UpdateResponsePlanResponse * SsmIncidentsClient::updateResponsePlan(const UpdateResponsePlanRequest &request)
 {
     return qobject_cast<UpdateResponsePlanResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the SSMIncidentsClient service, and returns a pointer to an
+ * Sends \a request to the SsmIncidentsClient service, and returns a pointer to an
  * UpdateTimelineEventResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a timeline event. You can update events of type <code>Custom
  */
-UpdateTimelineEventResponse * SSMIncidentsClient::updateTimelineEvent(const UpdateTimelineEventRequest &request)
+UpdateTimelineEventResponse * SsmIncidentsClient::updateTimelineEvent(const UpdateTimelineEventRequest &request)
 {
     return qobject_cast<UpdateTimelineEventResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsClientPrivate
- * \brief The SSMIncidentsClientPrivate class provides private implementation for SSMIncidentsClient.
+ * \class QtAws::SsmIncidents::SsmIncidentsClientPrivate
+ * \brief The SsmIncidentsClientPrivate class provides private implementation for SsmIncidentsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a SSMIncidentsClientPrivate object with public implementation \a q.
+ * Constructs a SsmIncidentsClientPrivate object with public implementation \a q.
  */
-SSMIncidentsClientPrivate::SSMIncidentsClientPrivate(SSMIncidentsClient * const q)
+SsmIncidentsClientPrivate::SsmIncidentsClientPrivate(SsmIncidentsClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

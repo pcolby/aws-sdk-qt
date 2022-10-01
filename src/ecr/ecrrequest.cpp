@@ -21,59 +21,66 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::EcrRequest
- * \brief The EcrRequest class provides an interface for ECR requests.
+ * \class QtAws::Ecr::EcrRequest
+ * \brief The EcrRequest class provides an interface for Ecr requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
  * \enum EcrRequest::Action
  *
- * This enum describes the actions that can be performed as ECR
+ * This enum describes the actions that can be performed as Ecr
  * requests.
  *
- * \value BatchCheckLayerAvailabilityAction ECR BatchCheckLayerAvailability action.
- * \value BatchDeleteImageAction ECR BatchDeleteImage action.
- * \value BatchGetImageAction ECR BatchGetImage action.
- * \value CompleteLayerUploadAction ECR CompleteLayerUpload action.
- * \value CreateRepositoryAction ECR CreateRepository action.
- * \value DeleteLifecyclePolicyAction ECR DeleteLifecyclePolicy action.
- * \value DeleteRegistryPolicyAction ECR DeleteRegistryPolicy action.
- * \value DeleteRepositoryAction ECR DeleteRepository action.
- * \value DeleteRepositoryPolicyAction ECR DeleteRepositoryPolicy action.
- * \value DescribeImageScanFindingsAction ECR DescribeImageScanFindings action.
- * \value DescribeImagesAction ECR DescribeImages action.
- * \value DescribeRegistryAction ECR DescribeRegistry action.
- * \value DescribeRepositoriesAction ECR DescribeRepositories action.
- * \value GetAuthorizationTokenAction ECR GetAuthorizationToken action.
- * \value GetDownloadUrlForLayerAction ECR GetDownloadUrlForLayer action.
- * \value GetLifecyclePolicyAction ECR GetLifecyclePolicy action.
- * \value GetLifecyclePolicyPreviewAction ECR GetLifecyclePolicyPreview action.
- * \value GetRegistryPolicyAction ECR GetRegistryPolicy action.
- * \value GetRepositoryPolicyAction ECR GetRepositoryPolicy action.
- * \value InitiateLayerUploadAction ECR InitiateLayerUpload action.
- * \value ListImagesAction ECR ListImages action.
- * \value ListTagsForResourceAction ECR ListTagsForResource action.
- * \value PutImageAction ECR PutImage action.
- * \value PutImageScanningConfigurationAction ECR PutImageScanningConfiguration action.
- * \value PutImageTagMutabilityAction ECR PutImageTagMutability action.
- * \value PutLifecyclePolicyAction ECR PutLifecyclePolicy action.
- * \value PutRegistryPolicyAction ECR PutRegistryPolicy action.
- * \value PutReplicationConfigurationAction ECR PutReplicationConfiguration action.
- * \value SetRepositoryPolicyAction ECR SetRepositoryPolicy action.
- * \value StartImageScanAction ECR StartImageScan action.
- * \value StartLifecyclePolicyPreviewAction ECR StartLifecyclePolicyPreview action.
- * \value TagResourceAction ECR TagResource action.
- * \value UntagResourceAction ECR UntagResource action.
- * \value UploadLayerPartAction ECR UploadLayerPart action.
+ * \value BatchCheckLayerAvailabilityAction Ecr BatchCheckLayerAvailability action.
+ * \value BatchDeleteImageAction Ecr BatchDeleteImage action.
+ * \value BatchGetImageAction Ecr BatchGetImage action.
+ * \value BatchGetRepositoryScanningConfigurationAction Ecr BatchGetRepositoryScanningConfiguration action.
+ * \value CompleteLayerUploadAction Ecr CompleteLayerUpload action.
+ * \value CreatePullThroughCacheRuleAction Ecr CreatePullThroughCacheRule action.
+ * \value CreateRepositoryAction Ecr CreateRepository action.
+ * \value DeleteLifecyclePolicyAction Ecr DeleteLifecyclePolicy action.
+ * \value DeletePullThroughCacheRuleAction Ecr DeletePullThroughCacheRule action.
+ * \value DeleteRegistryPolicyAction Ecr DeleteRegistryPolicy action.
+ * \value DeleteRepositoryAction Ecr DeleteRepository action.
+ * \value DeleteRepositoryPolicyAction Ecr DeleteRepositoryPolicy action.
+ * \value DescribeImageReplicationStatusAction Ecr DescribeImageReplicationStatus action.
+ * \value DescribeImageScanFindingsAction Ecr DescribeImageScanFindings action.
+ * \value DescribeImagesAction Ecr DescribeImages action.
+ * \value DescribePullThroughCacheRulesAction Ecr DescribePullThroughCacheRules action.
+ * \value DescribeRegistryAction Ecr DescribeRegistry action.
+ * \value DescribeRepositoriesAction Ecr DescribeRepositories action.
+ * \value GetAuthorizationTokenAction Ecr GetAuthorizationToken action.
+ * \value GetDownloadUrlForLayerAction Ecr GetDownloadUrlForLayer action.
+ * \value GetLifecyclePolicyAction Ecr GetLifecyclePolicy action.
+ * \value GetLifecyclePolicyPreviewAction Ecr GetLifecyclePolicyPreview action.
+ * \value GetRegistryPolicyAction Ecr GetRegistryPolicy action.
+ * \value GetRegistryScanningConfigurationAction Ecr GetRegistryScanningConfiguration action.
+ * \value GetRepositoryPolicyAction Ecr GetRepositoryPolicy action.
+ * \value InitiateLayerUploadAction Ecr InitiateLayerUpload action.
+ * \value ListImagesAction Ecr ListImages action.
+ * \value ListTagsForResourceAction Ecr ListTagsForResource action.
+ * \value PutImageAction Ecr PutImage action.
+ * \value PutImageScanningConfigurationAction Ecr PutImageScanningConfiguration action.
+ * \value PutImageTagMutabilityAction Ecr PutImageTagMutability action.
+ * \value PutLifecyclePolicyAction Ecr PutLifecyclePolicy action.
+ * \value PutRegistryPolicyAction Ecr PutRegistryPolicy action.
+ * \value PutRegistryScanningConfigurationAction Ecr PutRegistryScanningConfiguration action.
+ * \value PutReplicationConfigurationAction Ecr PutReplicationConfiguration action.
+ * \value SetRepositoryPolicyAction Ecr SetRepositoryPolicy action.
+ * \value StartImageScanAction Ecr StartImageScan action.
+ * \value StartLifecyclePolicyPreviewAction Ecr StartLifecyclePolicyPreview action.
+ * \value TagResourceAction Ecr TagResource action.
+ * \value UntagResourceAction Ecr UntagResource action.
+ * \value UploadLayerPartAction Ecr UploadLayerPart action.
  */
 
 /*!
- * Constructs a EcrRequest object for ECR \a action.
+ * Constructs a EcrRequest object for Ecr \a action.
  */
 EcrRequest::EcrRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EcrRequestPrivate(action, this))
@@ -114,7 +121,7 @@ EcrRequest::EcrRequest(EcrRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the ECR action to be performed by this request.
+ * Returns the Ecr action to be performed by this request.
  */
 EcrRequest::Action EcrRequest::action() const
 {
@@ -123,7 +130,7 @@ EcrRequest::Action EcrRequest::action() const
 }
 
 /*!
- * Returns the name of the ECR action to be performed by this request.
+ * Returns the name of the Ecr action to be performed by this request.
  */
 QString EcrRequest::actionString() const
 {
@@ -131,7 +138,7 @@ QString EcrRequest::actionString() const
 }
 
 /*!
- * Returns the ECR API version implemented by this request.
+ * Returns the Ecr API version implemented by this request.
  */
 QString EcrRequest::apiVersion() const
 {
@@ -140,7 +147,7 @@ QString EcrRequest::apiVersion() const
 }
 
 /*!
- * Sets the ECR action to be performed by this request to \a action.
+ * Sets the Ecr action to be performed by this request to \a action.
  */
 void EcrRequest::setAction(const Action action)
 {
@@ -149,7 +156,7 @@ void EcrRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the ECR API version to include in this request to \a version.
+ * Sets the Ecr API version to include in this request to \a version.
  */
 void EcrRequest::setApiVersion(const QString &version)
 {
@@ -174,15 +181,15 @@ bool EcrRequest::operator==(const EcrRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ECR queue name.
+ * Returns \c tue if \a queueName is a valid Ecr queue name.
  *
- * @par From ECR FAQs:
+ * @par From Ecr FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ECR queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ecr queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -249,10 +256,10 @@ void EcrRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the ECR request using the given
+ * Returns a network request for the Ecr request using the given
  * \a endpoint.
  *
- * This ECR implementation builds request URLs by combining the
+ * This Ecr implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -265,19 +272,19 @@ QNetworkRequest EcrRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::ECR::EcrRequestPrivate
+ * \class QtAws::Ecr::EcrRequestPrivate
  * \brief The EcrRequestPrivate class provides private implementation for EcrRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
- * Constructs a EcrRequestPrivate object for ECR \a action,
+ * Constructs a EcrRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 EcrRequestPrivate::EcrRequestPrivate(const EcrRequest::Action action, EcrRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-09-21"))
 {
 
 }
@@ -303,7 +310,7 @@ EcrRequestPrivate::EcrRequestPrivate(const EcrRequestPrivate &other,
  * invalid.
  *
  * This function converts EcrRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ECR service's Action
+ * string representations, appropriate for use with the Ecr service's Action
  * query parameters.
  */
 QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
@@ -314,14 +321,19 @@ QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
         ActionToString(BatchCheckLayerAvailability);
         ActionToString(BatchDeleteImage);
         ActionToString(BatchGetImage);
+        ActionToString(BatchGetRepositoryScanningConfiguration);
         ActionToString(CompleteLayerUpload);
+        ActionToString(CreatePullThroughCacheRule);
         ActionToString(CreateRepository);
         ActionToString(DeleteLifecyclePolicy);
+        ActionToString(DeletePullThroughCacheRule);
         ActionToString(DeleteRegistryPolicy);
         ActionToString(DeleteRepository);
         ActionToString(DeleteRepositoryPolicy);
+        ActionToString(DescribeImageReplicationStatus);
         ActionToString(DescribeImageScanFindings);
         ActionToString(DescribeImages);
+        ActionToString(DescribePullThroughCacheRules);
         ActionToString(DescribeRegistry);
         ActionToString(DescribeRepositories);
         ActionToString(GetAuthorizationToken);
@@ -329,6 +341,7 @@ QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
         ActionToString(GetLifecyclePolicy);
         ActionToString(GetLifecyclePolicyPreview);
         ActionToString(GetRegistryPolicy);
+        ActionToString(GetRegistryScanningConfiguration);
         ActionToString(GetRepositoryPolicy);
         ActionToString(InitiateLayerUpload);
         ActionToString(ListImages);
@@ -338,6 +351,7 @@ QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
         ActionToString(PutImageTagMutability);
         ActionToString(PutLifecyclePolicy);
         ActionToString(PutRegistryPolicy);
+        ActionToString(PutRegistryScanningConfiguration);
         ActionToString(PutReplicationConfiguration);
         ActionToString(SetRepositoryPolicy);
         ActionToString(StartImageScan);
@@ -352,5 +366,5 @@ QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
     return QString();
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

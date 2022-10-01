@@ -61,10 +61,15 @@ namespace CostExplorer {
  * \value GetSavingsPlansUtilizationDetailsAction CostExplorer GetSavingsPlansUtilizationDetails action.
  * \value GetTagsAction CostExplorer GetTags action.
  * \value GetUsageForecastAction CostExplorer GetUsageForecast action.
+ * \value ListCostAllocationTagsAction CostExplorer ListCostAllocationTags action.
  * \value ListCostCategoryDefinitionsAction CostExplorer ListCostCategoryDefinitions action.
+ * \value ListTagsForResourceAction CostExplorer ListTagsForResource action.
  * \value ProvideAnomalyFeedbackAction CostExplorer ProvideAnomalyFeedback action.
+ * \value TagResourceAction CostExplorer TagResource action.
+ * \value UntagResourceAction CostExplorer UntagResource action.
  * \value UpdateAnomalyMonitorAction CostExplorer UpdateAnomalyMonitor action.
  * \value UpdateAnomalySubscriptionAction CostExplorer UpdateAnomalySubscription action.
+ * \value UpdateCostAllocationTagsStatusAction CostExplorer UpdateCostAllocationTagsStatus action.
  * \value UpdateCostCategoryDefinitionAction CostExplorer UpdateCostCategoryDefinition action.
  */
 
@@ -273,7 +278,7 @@ QNetworkRequest CostExplorerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CostExplorerRequestPrivate::CostExplorerRequestPrivate(const CostExplorerRequest::Action action, CostExplorerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-25"))
 {
 
 }
@@ -332,10 +337,15 @@ QString CostExplorerRequestPrivate::toString(const CostExplorerRequest::Action &
         ActionToString(GetSavingsPlansUtilizationDetails);
         ActionToString(GetTags);
         ActionToString(GetUsageForecast);
+        ActionToString(ListCostAllocationTags);
         ActionToString(ListCostCategoryDefinitions);
+        ActionToString(ListTagsForResource);
         ActionToString(ProvideAnomalyFeedback);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         ActionToString(UpdateAnomalyMonitor);
         ActionToString(UpdateAnomalySubscription);
+        ActionToString(UpdateCostAllocationTagsStatus);
         ActionToString(UpdateCostCategoryDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

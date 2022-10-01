@@ -36,13 +36,21 @@ namespace Synthetics {
  * This enum describes the actions that can be performed as Synthetics
  * requests.
  *
+ * \value AssociateResourceAction Synthetics AssociateResource action.
  * \value CreateCanaryAction Synthetics CreateCanary action.
+ * \value CreateGroupAction Synthetics CreateGroup action.
  * \value DeleteCanaryAction Synthetics DeleteCanary action.
+ * \value DeleteGroupAction Synthetics DeleteGroup action.
  * \value DescribeCanariesAction Synthetics DescribeCanaries action.
  * \value DescribeCanariesLastRunAction Synthetics DescribeCanariesLastRun action.
  * \value DescribeRuntimeVersionsAction Synthetics DescribeRuntimeVersions action.
+ * \value DisassociateResourceAction Synthetics DisassociateResource action.
  * \value GetCanaryAction Synthetics GetCanary action.
  * \value GetCanaryRunsAction Synthetics GetCanaryRuns action.
+ * \value GetGroupAction Synthetics GetGroup action.
+ * \value ListAssociatedGroupsAction Synthetics ListAssociatedGroups action.
+ * \value ListGroupResourcesAction Synthetics ListGroupResources action.
+ * \value ListGroupsAction Synthetics ListGroups action.
  * \value ListTagsForResourceAction Synthetics ListTagsForResource action.
  * \value StartCanaryAction Synthetics StartCanary action.
  * \value StopCanaryAction Synthetics StopCanary action.
@@ -256,7 +264,7 @@ QNetworkRequest SyntheticsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SyntheticsRequestPrivate::SyntheticsRequestPrivate(const SyntheticsRequest::Action action, SyntheticsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-11"))
 {
 
 }
@@ -290,13 +298,21 @@ QString SyntheticsRequestPrivate::toString(const SyntheticsRequest::Action &acti
     #define ActionToString(action) \
         case SyntheticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AssociateResource);
         ActionToString(CreateCanary);
+        ActionToString(CreateGroup);
         ActionToString(DeleteCanary);
+        ActionToString(DeleteGroup);
         ActionToString(DescribeCanaries);
         ActionToString(DescribeCanariesLastRun);
         ActionToString(DescribeRuntimeVersions);
+        ActionToString(DisassociateResource);
         ActionToString(GetCanary);
         ActionToString(GetCanaryRuns);
+        ActionToString(GetGroup);
+        ActionToString(ListAssociatedGroups);
+        ActionToString(ListGroupResources);
+        ActionToString(ListGroups);
         ActionToString(ListTagsForResource);
         ActionToString(StartCanary);
         ActionToString(StopCanary);

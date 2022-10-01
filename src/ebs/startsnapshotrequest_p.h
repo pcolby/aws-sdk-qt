@@ -24,7 +24,7 @@
 #include "startsnapshotrequest.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class StartSnapshotRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

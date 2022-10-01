@@ -27,6 +27,8 @@
 #include "getdashstreamingsessionurlresponse.h"
 #include "gethlsstreamingsessionurlrequest.h"
 #include "gethlsstreamingsessionurlresponse.h"
+#include "getimagesrequest.h"
+#include "getimagesresponse.h"
 #include "getmediaforfragmentlistrequest.h"
 #include "getmediaforfragmentlistresponse.h"
 #include "listfragmentsrequest.h"
@@ -37,7 +39,7 @@
 
 /*!
  * \namespace QtAws::KinesisVideoArchivedMedia
- * \brief Contains classess for accessing Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media).
+ * \brief Contains classess for accessing Amazon Kinesis Video Streams Archived Media.
  *
  * \inmodule QtAwsKinesisVideoArchivedMedia
  *
@@ -49,7 +51,7 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClient
- * \brief The KinesisVideoArchivedMediaClient class provides access to the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service.
+ * \brief The KinesisVideoArchivedMediaClient class provides access to the Amazon Kinesis Video Streams Archived Media service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsKinesisVideoArchivedMedia
@@ -126,7 +128,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  * </p
  *
  * As a prerequisite to using GetCLip API, you must obtain an endpoint using <code>GetDataEndpoint</code>, specifying
- * GET_CLIP for<code/> the <code>APIName</code> parameter.
+ * GET_CLIP for<code></code> the <code>APIName</code> parameter.
  *
  * </p
  *
@@ -528,6 +530,19 @@ GetDASHStreamingSessionURLResponse * KinesisVideoArchivedMediaClient::getDASHStr
 GetHLSStreamingSessionURLResponse * KinesisVideoArchivedMediaClient::getHLSStreamingSessionURL(const GetHLSStreamingSessionURLRequest &request)
 {
     return qobject_cast<GetHLSStreamingSessionURLResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoArchivedMediaClient service, and returns a pointer to an
+ * GetImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image format
+ */
+GetImagesResponse * KinesisVideoArchivedMediaClient::getImages(const GetImagesRequest &request)
+{
+    return qobject_cast<GetImagesResponse *>(send(request));
 }
 
 /*!

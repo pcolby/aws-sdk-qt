@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutReplicationConfigurationResponse
- * \brief The PutReplicationConfigurationResponse class provides an interace for ECR PutReplicationConfiguration responses.
+ * \class QtAws::Ecr::PutReplicationConfigurationResponse
+ * \brief The PutReplicationConfigurationResponse class provides an interace for Ecr PutReplicationConfiguration responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putReplicationConfiguration
  */
@@ -68,7 +74,7 @@ const PutReplicationConfigurationRequest * PutReplicationConfigurationResponse::
 
 /*!
  * \reimp
- * Parses a successful ECR PutReplicationConfiguration \a response.
+ * Parses a successful Ecr PutReplicationConfiguration \a response.
  */
 void PutReplicationConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void PutReplicationConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::PutReplicationConfigurationResponsePrivate
+ * \class QtAws::Ecr::PutReplicationConfigurationResponsePrivate
  * \brief The PutReplicationConfigurationResponsePrivate class provides private implementation for PutReplicationConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ PutReplicationConfigurationResponsePrivate::PutReplicationConfigurationResponseP
 }
 
 /*!
- * Parses a ECR PutReplicationConfiguration response element from \a xml.
+ * Parses a Ecr PutReplicationConfiguration response element from \a xml.
  */
 void PutReplicationConfigurationResponsePrivate::parsePutReplicationConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void PutReplicationConfigurationResponsePrivate::parsePutReplicationConfiguratio
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

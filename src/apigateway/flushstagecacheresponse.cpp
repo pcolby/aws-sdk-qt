@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::FlushStageCacheResponse
- * \brief The FlushStageCacheResponse class provides an interace for APIGateway FlushStageCache responses.
+ * \class QtAws::ApiGateway::FlushStageCacheResponse
+ * \brief The FlushStageCacheResponse class provides an interace for ApiGateway FlushStageCache responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::flushStageCache
+ * \sa ApiGatewayClient::flushStageCache
  */
 
 /*!
@@ -49,7 +49,7 @@ FlushStageCacheResponse::FlushStageCacheResponse(
         const FlushStageCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new FlushStageCacheResponsePrivate(this), parent)
+    : ApiGatewayResponse(new FlushStageCacheResponsePrivate(this), parent)
 {
     setRequest(new FlushStageCacheRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const FlushStageCacheRequest * FlushStageCacheResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway FlushStageCache \a response.
+ * Parses a successful ApiGateway FlushStageCache \a response.
  */
 void FlushStageCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void FlushStageCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::FlushStageCacheResponsePrivate
+ * \class QtAws::ApiGateway::FlushStageCacheResponsePrivate
  * \brief The FlushStageCacheResponsePrivate class provides private implementation for FlushStageCacheResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a FlushStageCacheResponsePrivate object with public implementation \a q.
  */
 FlushStageCacheResponsePrivate::FlushStageCacheResponsePrivate(
-    FlushStageCacheResponse * const q) : APIGatewayResponsePrivate(q)
+    FlushStageCacheResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway FlushStageCache response element from \a xml.
+ * Parses a ApiGateway FlushStageCache response element from \a xml.
  */
 void FlushStageCacheResponsePrivate::parseFlushStageCacheResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void FlushStageCacheResponsePrivate::parseFlushStageCacheResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

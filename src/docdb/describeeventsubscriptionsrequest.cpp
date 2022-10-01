@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEventSubscriptionsRequest
- * \brief The DescribeEventSubscriptionsRequest class provides an interface for DocDB DescribeEventSubscriptions requests.
+ * \class QtAws::DocDb::DescribeEventSubscriptionsRequest
+ * \brief The DescribeEventSubscriptionsRequest class provides an interface for DocDb DescribeEventSubscriptions requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEventSubscriptions
+ * \sa DocDbClient::describeEventSubscriptions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const DescribeEventSubscriptionsRequest &other)
-    : DocDBRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const Descr
  * Constructs a DescribeEventSubscriptionsRequest object.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
-    : DocDBRequest(new DescribeEventSubscriptionsRequestPrivate(DocDBRequest::DescribeEventSubscriptionsAction, this))
+    : DocDbRequest(new DescribeEventSubscriptionsRequestPrivate(DocDbRequest::DescribeEventSubscriptionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEventSubscriptionsRequestPrivate
+ * \class QtAws::DocDb::DescribeEventSubscriptionsRequestPrivate
  * \brief The DescribeEventSubscriptionsRequestPrivate class provides private implementation for DescribeEventSubscriptionsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeEventSubscriptionsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
-    const DocDBRequest::Action action, DescribeEventSubscriptionsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeEventSubscriptionsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const DescribeEventSubscriptionsRequestPrivate &other, DescribeEventSubscriptionsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

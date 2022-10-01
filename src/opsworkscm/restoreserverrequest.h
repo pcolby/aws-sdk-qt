@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class RestoreServerRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT RestoreServerRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT RestoreServerRequest : public OpsWorksCmRequest {
 
 public:
     RestoreServerRequest(const RestoreServerRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

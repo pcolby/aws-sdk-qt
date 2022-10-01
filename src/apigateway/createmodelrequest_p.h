@@ -24,14 +24,14 @@
 #include "createmodelrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateModelRequest;
 
-class CreateModelRequestPrivate : public APIGatewayRequestPrivate {
+class CreateModelRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateModelRequestPrivate(const APIGatewayRequest::Action action,
+    CreateModelRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateModelRequest * const q);
     CreateModelRequestPrivate(const CreateModelRequestPrivate &other,
                                    CreateModelRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

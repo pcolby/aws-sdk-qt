@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::CompleteLayerUploadRequest
- * \brief The CompleteLayerUploadRequest class provides an interface for ECRPublic CompleteLayerUpload requests.
+ * \class QtAws::EcrPublic::CompleteLayerUploadRequest
+ * \brief The CompleteLayerUploadRequest class provides an interface for EcrPublic CompleteLayerUpload requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::completeLayerUpload
+ * \sa EcrPublicClient::completeLayerUpload
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUploadRequest &other)
-    : ECRPublicRequest(new CompleteLayerUploadRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new CompleteLayerUploadRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUpload
  * Constructs a CompleteLayerUploadRequest object.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest()
-    : ECRPublicRequest(new CompleteLayerUploadRequestPrivate(ECRPublicRequest::CompleteLayerUploadAction, this))
+    : EcrPublicRequest(new CompleteLayerUploadRequestPrivate(EcrPublicRequest::CompleteLayerUploadAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ECRPublic::CompleteLayerUploadRequestPrivate
+ * \class QtAws::EcrPublic::CompleteLayerUploadRequestPrivate
  * \brief The CompleteLayerUploadRequestPrivate class provides private implementation for CompleteLayerUploadRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a CompleteLayerUploadRequestPrivate object for ECRPublic \a action,
+ * Constructs a CompleteLayerUploadRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
-    const ECRPublicRequest::Action action, CompleteLayerUploadRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, CompleteLayerUploadRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const CompleteLayerUploadRequestPrivate &other, CompleteLayerUploadRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

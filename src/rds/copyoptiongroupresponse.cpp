@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CopyOptionGroupResponse
- * \brief The CopyOptionGroupResponse class provides an interace for RDS CopyOptionGroup responses.
+ * \class QtAws::Rds::CopyOptionGroupResponse
+ * \brief The CopyOptionGroupResponse class provides an interace for Rds CopyOptionGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CopyOptionGroupRequest * CopyOptionGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS CopyOptionGroup \a response.
+ * Parses a successful Rds CopyOptionGroup \a response.
  */
 void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CopyOptionGroupResponsePrivate
+ * \class QtAws::Rds::CopyOptionGroupResponsePrivate
  * \brief The CopyOptionGroupResponsePrivate class provides private implementation for CopyOptionGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CopyOptionGroup response element from \a xml.
+ * Parses a Rds CopyOptionGroup response element from \a xml.
  */
 void CopyOptionGroupResponsePrivate::parseCopyOptionGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CopyOptionGroupResponsePrivate::parseCopyOptionGroupResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "ssmcontactsresponse_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ListPagesByContactResponse;
 
-class ListPagesByContactResponsePrivate : public SSMContactsResponsePrivate {
+class ListPagesByContactResponsePrivate : public SsmContactsResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

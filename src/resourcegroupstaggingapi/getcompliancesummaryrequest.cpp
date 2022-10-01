@@ -23,23 +23,23 @@
 #include "resourcegroupstaggingapirequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetComplianceSummaryRequest
- * \brief The GetComplianceSummaryRequest class provides an interface for ResourceGroupsTaggingAPI GetComplianceSummary requests.
+ * \class QtAws::ResourceGroupsTaggingApi::GetComplianceSummaryRequest
+ * \brief The GetComplianceSummaryRequest class provides an interface for ResourceGroupsTaggingApi GetComplianceSummary requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  *
- * \sa ResourceGroupsTaggingAPIClient::getComplianceSummary
+ * \sa ResourceGroupsTaggingApiClient::getComplianceSummary
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetComplianceSummaryRequest::GetComplianceSummaryRequest(const GetComplianceSummaryRequest &other)
-    : ResourceGroupsTaggingAPIRequest(new GetComplianceSummaryRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingApiRequest(new GetComplianceSummaryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetComplianceSummaryRequest::GetComplianceSummaryRequest(const GetComplianceSumm
  * Constructs a GetComplianceSummaryRequest object.
  */
 GetComplianceSummaryRequest::GetComplianceSummaryRequest()
-    : ResourceGroupsTaggingAPIRequest(new GetComplianceSummaryRequestPrivate(ResourceGroupsTaggingAPIRequest::GetComplianceSummaryAction, this))
+    : ResourceGroupsTaggingApiRequest(new GetComplianceSummaryRequestPrivate(ResourceGroupsTaggingApiRequest::GetComplianceSummaryAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * GetComplianceSummaryRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetComplianceSummaryRequestPrivate
+ * \class QtAws::ResourceGroupsTaggingApi::GetComplianceSummaryRequestPrivate
  * \brief The GetComplianceSummaryRequestPrivate class provides private implementation for GetComplianceSummaryRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
- * Constructs a GetComplianceSummaryRequestPrivate object for ResourceGroupsTaggingAPI \a action,
+ * Constructs a GetComplianceSummaryRequestPrivate object for ResourceGroupsTaggingApi \a action,
  * with public implementation \a q.
  */
 GetComplianceSummaryRequestPrivate::GetComplianceSummaryRequestPrivate(
-    const ResourceGroupsTaggingAPIRequest::Action action, GetComplianceSummaryRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(action, q)
+    const ResourceGroupsTaggingApiRequest::Action action, GetComplianceSummaryRequest * const q)
+    : ResourceGroupsTaggingApiRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ GetComplianceSummaryRequestPrivate::GetComplianceSummaryRequestPrivate(
  */
 GetComplianceSummaryRequestPrivate::GetComplianceSummaryRequestPrivate(
     const GetComplianceSummaryRequestPrivate &other, GetComplianceSummaryRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(other, q)
+    : ResourceGroupsTaggingApiRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

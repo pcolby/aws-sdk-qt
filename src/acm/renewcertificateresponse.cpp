@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::RenewCertificateResponse
- * \brief The RenewCertificateResponse class provides an interace for ACM RenewCertificate responses.
+ * \class QtAws::Acm::RenewCertificateResponse
+ * \brief The RenewCertificateResponse class provides an interace for Acm RenewCertificate responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::renewCertificate
  */
@@ -66,7 +66,7 @@ const RenewCertificateRequest * RenewCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ACM RenewCertificate \a response.
+ * Parses a successful Acm RenewCertificate \a response.
  */
 void RenewCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void RenewCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::RenewCertificateResponsePrivate
+ * \class QtAws::Acm::RenewCertificateResponsePrivate
  * \brief The RenewCertificateResponsePrivate class provides private implementation for RenewCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ RenewCertificateResponsePrivate::RenewCertificateResponsePrivate(
 }
 
 /*!
- * Parses a ACM RenewCertificate response element from \a xml.
+ * Parses a Acm RenewCertificate response element from \a xml.
  */
 void RenewCertificateResponsePrivate::parseRenewCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void RenewCertificateResponsePrivate::parseRenewCertificateResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

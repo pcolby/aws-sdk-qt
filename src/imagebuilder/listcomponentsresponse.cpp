@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListComponentsResponse
- * \brief The ListComponentsResponse class provides an interace for imagebuilder ListComponents responses.
+ * \class QtAws::ImageBuilder::ListComponentsResponse
+ * \brief The ListComponentsResponse class provides an interace for ImageBuilder ListComponents responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listComponents
+ * \sa ImageBuilderClient::listComponents
  */
 
 /*!
@@ -47,7 +47,7 @@ ListComponentsResponse::ListComponentsResponse(
         const ListComponentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ListComponentsResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ListComponentsResponsePrivate(this), parent)
 {
     setRequest(new ListComponentsRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ListComponentsRequest * ListComponentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ListComponents \a response.
+ * Parses a successful ImageBuilder ListComponents \a response.
  */
 void ListComponentsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ListComponentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ListComponentsResponsePrivate
+ * \class QtAws::ImageBuilder::ListComponentsResponsePrivate
  * \brief The ListComponentsResponsePrivate class provides private implementation for ListComponentsResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ListComponentsResponsePrivate object with public implementation \a q.
  */
 ListComponentsResponsePrivate::ListComponentsResponsePrivate(
-    ListComponentsResponse * const q) : imagebuilderResponsePrivate(q)
+    ListComponentsResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ListComponents response element from \a xml.
+ * Parses a ImageBuilder ListComponents response element from \a xml.
  */
 void ListComponentsResponsePrivate::parseListComponentsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListComponentsResponsePrivate::parseListComponentsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

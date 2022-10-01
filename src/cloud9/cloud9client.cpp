@@ -70,23 +70,22 @@ namespace Cloud9 {
  * \ingroup aws-clients
  * \inmodule QtAwsCloud9
  *
- *  <fullname>AWS Cloud9</fullname>
+ *  <fullname>Cloud9</fullname>
  * 
- *  AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
+ *  Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
  * 
  *  cloud>
  * 
- *  For more information about AWS Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">AWS Cloud9
- *  User
+ *  For more information about Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">Cloud9 User
  * 
  *  Guide</a>>
  * 
- *  AWS Cloud9 supports these
+ *  Cloud9 supports these
  * 
  *  operations> <ul> <li>
  * 
- *  <code>CreateEnvironmentEC2</code>: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and
- *  then connects from the instance to the
+ *  <code>CreateEnvironmentEC2</code>: Creates an Cloud9 development environment, launches an Amazon EC2 instance, and then
+ *  connects from the instance to the
  * 
  *  environment> </li> <li>
  * 
@@ -197,7 +196,7 @@ Cloud9Client::Cloud9Client(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
+ * Creates an Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then
  * connects from the instance to the
  */
 CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEnvironmentEC2Request &request)
@@ -211,7 +210,7 @@ CreateEnvironmentEC2Response * Cloud9Client::createEnvironmentEC2(const CreateEn
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an environment member to an AWS Cloud9 development
+ * Adds an environment member to an Cloud9 development
  */
 CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(const CreateEnvironmentMembershipRequest &request)
 {
@@ -224,8 +223,8 @@ CreateEnvironmentMembershipResponse * Cloud9Client::createEnvironmentMembership(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also
- * terminates the
+ * Deletes an Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also terminates
+ * the
  */
 DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironmentRequest &request)
 {
@@ -238,7 +237,7 @@ DeleteEnvironmentResponse * Cloud9Client::deleteEnvironment(const DeleteEnvironm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an environment member from an AWS Cloud9 development
+ * Deletes an environment member from an Cloud9 development
  */
 DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(const DeleteEnvironmentMembershipRequest &request)
 {
@@ -251,7 +250,7 @@ DeleteEnvironmentMembershipResponse * Cloud9Client::deleteEnvironmentMembership(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about environment members for an AWS Cloud9 development
+ * Gets information about environment members for an Cloud9 development
  */
 DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMemberships(const DescribeEnvironmentMembershipsRequest &request)
 {
@@ -264,7 +263,7 @@ DescribeEnvironmentMembershipsResponse * Cloud9Client::describeEnvironmentMember
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets status information for an AWS Cloud9 development
+ * Gets status information for an Cloud9 development
  */
 DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request)
 {
@@ -277,7 +276,7 @@ DescribeEnvironmentStatusResponse * Cloud9Client::describeEnvironmentStatus(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about AWS Cloud9 development
+ * Gets information about Cloud9 development
  */
 DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const DescribeEnvironmentsRequest &request)
 {
@@ -290,7 +289,7 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of AWS Cloud9 development environment
+ * Gets a list of Cloud9 development environment
  */
 ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
 {
@@ -303,7 +302,7 @@ ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironments
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of the tags associated with an AWS Cloud9 development
+ * Gets a list of the tags associated with an Cloud9 development
  */
 ListTagsForResourceResponse * Cloud9Client::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -316,11 +315,11 @@ ListTagsForResourceResponse * Cloud9Client::listTagsForResource(const ListTagsFo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds tags to an AWS Cloud9 development
+ * Adds tags to an Cloud9 development
  *
  * environment> <b>
  *
- * Tags that you add to an AWS Cloud9 environment by using this method will NOT be automatically propagated to underlying
+ * Tags that you add to an Cloud9 environment by using this method will NOT be automatically propagated to underlying
  */
 TagResourceResponse * Cloud9Client::tagResource(const TagResourceRequest &request)
 {
@@ -333,7 +332,7 @@ TagResourceResponse * Cloud9Client::tagResource(const TagResourceRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes tags from an AWS Cloud9 development
+ * Removes tags from an Cloud9 development
  */
 UntagResourceResponse * Cloud9Client::untagResource(const UntagResourceRequest &request)
 {
@@ -346,7 +345,7 @@ UntagResourceResponse * Cloud9Client::untagResource(const UntagResourceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the settings of an existing AWS Cloud9 development
+ * Changes the settings of an existing Cloud9 development
  */
 UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironmentRequest &request)
 {
@@ -359,7 +358,7 @@ UpdateEnvironmentResponse * Cloud9Client::updateEnvironment(const UpdateEnvironm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the settings of an existing environment member for an AWS Cloud9 development
+ * Changes the settings of an existing environment member for an Cloud9 development
  */
 UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request)
 {

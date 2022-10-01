@@ -1,26 +1,26 @@
 add_compile_definitions(QTAWSMARKETPLACECOMMERCEANALYTICS_LIBRARY)
 
 add_library(QtAwsMarketplaceCommerceAnalytics
-  generatedatasetrequest.h
-  generatedatasetrequest_p.h
-  generatedatasetresponse.h
-  generatedatasetresponse_p.h
+  qtawsmarketplacecommerceanalyticsglobal.h
   marketplacecommerceanalyticsclient.h
   marketplacecommerceanalyticsclient_p.h
   marketplacecommerceanalyticsrequest.h
   marketplacecommerceanalyticsrequest_p.h
   marketplacecommerceanalyticsresponse.h
   marketplacecommerceanalyticsresponse_p.h
-  qtawsmarketplacecommerceanalyticsglobal.h
+  generatedatasetrequest.h
+  generatedatasetrequest_p.h
+  generatedatasetresponse.h
+  generatedatasetresponse_p.h
   startsupportdataexportrequest.h
   startsupportdataexportrequest_p.h
   startsupportdataexportresponse.h
   startsupportdataexportresponse_p.h
-  generatedatasetrequest.cpp
-  generatedatasetresponse.cpp
   marketplacecommerceanalyticsclient.cpp
   marketplacecommerceanalyticsrequest.cpp
   marketplacecommerceanalyticsresponse.cpp
+  generatedatasetrequest.cpp
+  generatedatasetresponse.cpp
   startsupportdataexportrequest.cpp
   startsupportdataexportresponse.cpp)
 

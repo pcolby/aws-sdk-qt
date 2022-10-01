@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBClusterBacktracksResponse
- * \brief The DescribeDBClusterBacktracksResponse class provides an interace for RDS DescribeDBClusterBacktracks responses.
+ * \class QtAws::Rds::DescribeDBClusterBacktracksResponse
+ * \brief The DescribeDBClusterBacktracksResponse class provides an interace for Rds DescribeDBClusterBacktracks responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBClusterBacktracksRequest * DescribeDBClusterBacktracksResponse::
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBClusterBacktracks \a response.
+ * Parses a successful Rds DescribeDBClusterBacktracks \a response.
  */
 void DescribeDBClusterBacktracksResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBClusterBacktracksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBClusterBacktracksResponsePrivate
+ * \class QtAws::Rds::DescribeDBClusterBacktracksResponsePrivate
  * \brief The DescribeDBClusterBacktracksResponsePrivate class provides private implementation for DescribeDBClusterBacktracksResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBClusterBacktracksResponsePrivate::DescribeDBClusterBacktracksResponseP
 }
 
 /*!
- * Parses a RDS DescribeDBClusterBacktracks response element from \a xml.
+ * Parses a Rds DescribeDBClusterBacktracks response element from \a xml.
  */
 void DescribeDBClusterBacktracksResponsePrivate::parseDescribeDBClusterBacktracksResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBClusterBacktracksResponsePrivate::parseDescribeDBClusterBacktrack
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

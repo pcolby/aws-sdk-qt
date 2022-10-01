@@ -24,7 +24,7 @@
 #include "listfargateprofilesrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class ListFargateProfilesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetServerCertificateResponse
- * \brief The GetServerCertificateResponse class provides an interace for IAM GetServerCertificate responses.
+ * \class QtAws::Iam::GetServerCertificateResponse
+ * \brief The GetServerCertificateResponse class provides an interace for Iam GetServerCertificate responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getServerCertificate
  */
@@ -68,7 +68,7 @@ const GetServerCertificateRequest * GetServerCertificateResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful IAM GetServerCertificate \a response.
+ * Parses a successful Iam GetServerCertificate \a response.
  */
 void GetServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetServerCertificateResponsePrivate
+ * \class QtAws::Iam::GetServerCertificateResponsePrivate
  * \brief The GetServerCertificateResponsePrivate class provides private implementation for GetServerCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetServerCertificateResponsePrivate::GetServerCertificateResponsePrivate(
 }
 
 /*!
- * Parses a IAM GetServerCertificate response element from \a xml.
+ * Parses a Iam GetServerCertificate response element from \a xml.
  */
 void GetServerCertificateResponsePrivate::parseGetServerCertificateResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetServerCertificateResponsePrivate::parseGetServerCertificateResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

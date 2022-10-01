@@ -24,11 +24,11 @@
 #include "updatedomainnamerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateDomainNameResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT UpdateDomainNameResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT UpdateDomainNameResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

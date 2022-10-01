@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterSnapshotResponse
- * \brief The CopyDBClusterSnapshotResponse class provides an interace for DocDB CopyDBClusterSnapshot responses.
+ * \class QtAws::DocDb::CopyDBClusterSnapshotResponse
+ * \brief The CopyDBClusterSnapshotResponse class provides an interace for DocDb CopyDBClusterSnapshot responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::copyDBClusterSnapshot
+ * \sa DocDbClient::copyDBClusterSnapshot
  */
 
 /*!
@@ -45,7 +45,7 @@ CopyDBClusterSnapshotResponse::CopyDBClusterSnapshotResponse(
         const CopyDBClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CopyDBClusterSnapshotResponsePrivate(this), parent)
+    : DocDbResponse(new CopyDBClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopyDBClusterSnapshotRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CopyDBClusterSnapshotRequest * CopyDBClusterSnapshotResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful DocDB CopyDBClusterSnapshot \a response.
+ * Parses a successful DocDb CopyDBClusterSnapshot \a response.
  */
 void CopyDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CopyDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterSnapshotResponsePrivate
+ * \class QtAws::DocDb::CopyDBClusterSnapshotResponsePrivate
  * \brief The CopyDBClusterSnapshotResponsePrivate class provides private implementation for CopyDBClusterSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CopyDBClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponsePrivate(
-    CopyDBClusterSnapshotResponse * const q) : DocDBResponsePrivate(q)
+    CopyDBClusterSnapshotResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CopyDBClusterSnapshot response element from \a xml.
+ * Parses a DocDb CopyDBClusterSnapshot response element from \a xml.
  */
 void CopyDBClusterSnapshotResponsePrivate::parseCopyDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CopyDBClusterSnapshotResponsePrivate::parseCopyDBClusterSnapshotResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

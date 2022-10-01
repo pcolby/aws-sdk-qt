@@ -36,41 +36,91 @@ namespace NetworkManager {
  * This enum describes the actions that can be performed as NetworkManager
  * requests.
  *
+ * \value AcceptAttachmentAction NetworkManager AcceptAttachment action.
+ * \value AssociateConnectPeerAction NetworkManager AssociateConnectPeer action.
  * \value AssociateCustomerGatewayAction NetworkManager AssociateCustomerGateway action.
  * \value AssociateLinkAction NetworkManager AssociateLink action.
  * \value AssociateTransitGatewayConnectPeerAction NetworkManager AssociateTransitGatewayConnectPeer action.
+ * \value CreateConnectAttachmentAction NetworkManager CreateConnectAttachment action.
+ * \value CreateConnectPeerAction NetworkManager CreateConnectPeer action.
  * \value CreateConnectionAction NetworkManager CreateConnection action.
+ * \value CreateCoreNetworkAction NetworkManager CreateCoreNetwork action.
  * \value CreateDeviceAction NetworkManager CreateDevice action.
  * \value CreateGlobalNetworkAction NetworkManager CreateGlobalNetwork action.
  * \value CreateLinkAction NetworkManager CreateLink action.
  * \value CreateSiteAction NetworkManager CreateSite action.
+ * \value CreateSiteToSiteVpnAttachmentAction NetworkManager CreateSiteToSiteVpnAttachment action.
+ * \value CreateTransitGatewayPeeringAction NetworkManager CreateTransitGatewayPeering action.
+ * \value CreateTransitGatewayRouteTableAttachmentAction NetworkManager CreateTransitGatewayRouteTableAttachment action.
+ * \value CreateVpcAttachmentAction NetworkManager CreateVpcAttachment action.
+ * \value DeleteAttachmentAction NetworkManager DeleteAttachment action.
+ * \value DeleteConnectPeerAction NetworkManager DeleteConnectPeer action.
  * \value DeleteConnectionAction NetworkManager DeleteConnection action.
+ * \value DeleteCoreNetworkAction NetworkManager DeleteCoreNetwork action.
+ * \value DeleteCoreNetworkPolicyVersionAction NetworkManager DeleteCoreNetworkPolicyVersion action.
  * \value DeleteDeviceAction NetworkManager DeleteDevice action.
  * \value DeleteGlobalNetworkAction NetworkManager DeleteGlobalNetwork action.
  * \value DeleteLinkAction NetworkManager DeleteLink action.
+ * \value DeletePeeringAction NetworkManager DeletePeering action.
+ * \value DeleteResourcePolicyAction NetworkManager DeleteResourcePolicy action.
  * \value DeleteSiteAction NetworkManager DeleteSite action.
  * \value DeregisterTransitGatewayAction NetworkManager DeregisterTransitGateway action.
  * \value DescribeGlobalNetworksAction NetworkManager DescribeGlobalNetworks action.
+ * \value DisassociateConnectPeerAction NetworkManager DisassociateConnectPeer action.
  * \value DisassociateCustomerGatewayAction NetworkManager DisassociateCustomerGateway action.
  * \value DisassociateLinkAction NetworkManager DisassociateLink action.
  * \value DisassociateTransitGatewayConnectPeerAction NetworkManager DisassociateTransitGatewayConnectPeer action.
+ * \value ExecuteCoreNetworkChangeSetAction NetworkManager ExecuteCoreNetworkChangeSet action.
+ * \value GetConnectAttachmentAction NetworkManager GetConnectAttachment action.
+ * \value GetConnectPeerAction NetworkManager GetConnectPeer action.
+ * \value GetConnectPeerAssociationsAction NetworkManager GetConnectPeerAssociations action.
  * \value GetConnectionsAction NetworkManager GetConnections action.
+ * \value GetCoreNetworkAction NetworkManager GetCoreNetwork action.
+ * \value GetCoreNetworkChangeEventsAction NetworkManager GetCoreNetworkChangeEvents action.
+ * \value GetCoreNetworkChangeSetAction NetworkManager GetCoreNetworkChangeSet action.
+ * \value GetCoreNetworkPolicyAction NetworkManager GetCoreNetworkPolicy action.
  * \value GetCustomerGatewayAssociationsAction NetworkManager GetCustomerGatewayAssociations action.
  * \value GetDevicesAction NetworkManager GetDevices action.
  * \value GetLinkAssociationsAction NetworkManager GetLinkAssociations action.
  * \value GetLinksAction NetworkManager GetLinks action.
+ * \value GetNetworkResourceCountsAction NetworkManager GetNetworkResourceCounts action.
+ * \value GetNetworkResourceRelationshipsAction NetworkManager GetNetworkResourceRelationships action.
+ * \value GetNetworkResourcesAction NetworkManager GetNetworkResources action.
+ * \value GetNetworkRoutesAction NetworkManager GetNetworkRoutes action.
+ * \value GetNetworkTelemetryAction NetworkManager GetNetworkTelemetry action.
+ * \value GetResourcePolicyAction NetworkManager GetResourcePolicy action.
+ * \value GetRouteAnalysisAction NetworkManager GetRouteAnalysis action.
+ * \value GetSiteToSiteVpnAttachmentAction NetworkManager GetSiteToSiteVpnAttachment action.
  * \value GetSitesAction NetworkManager GetSites action.
  * \value GetTransitGatewayConnectPeerAssociationsAction NetworkManager GetTransitGatewayConnectPeerAssociations action.
+ * \value GetTransitGatewayPeeringAction NetworkManager GetTransitGatewayPeering action.
  * \value GetTransitGatewayRegistrationsAction NetworkManager GetTransitGatewayRegistrations action.
+ * \value GetTransitGatewayRouteTableAttachmentAction NetworkManager GetTransitGatewayRouteTableAttachment action.
+ * \value GetVpcAttachmentAction NetworkManager GetVpcAttachment action.
+ * \value ListAttachmentsAction NetworkManager ListAttachments action.
+ * \value ListConnectPeersAction NetworkManager ListConnectPeers action.
+ * \value ListCoreNetworkPolicyVersionsAction NetworkManager ListCoreNetworkPolicyVersions action.
+ * \value ListCoreNetworksAction NetworkManager ListCoreNetworks action.
+ * \value ListOrganizationServiceAccessStatusAction NetworkManager ListOrganizationServiceAccessStatus action.
+ * \value ListPeeringsAction NetworkManager ListPeerings action.
  * \value ListTagsForResourceAction NetworkManager ListTagsForResource action.
+ * \value PutCoreNetworkPolicyAction NetworkManager PutCoreNetworkPolicy action.
+ * \value PutResourcePolicyAction NetworkManager PutResourcePolicy action.
  * \value RegisterTransitGatewayAction NetworkManager RegisterTransitGateway action.
+ * \value RejectAttachmentAction NetworkManager RejectAttachment action.
+ * \value RestoreCoreNetworkPolicyVersionAction NetworkManager RestoreCoreNetworkPolicyVersion action.
+ * \value StartOrganizationServiceAccessUpdateAction NetworkManager StartOrganizationServiceAccessUpdate action.
+ * \value StartRouteAnalysisAction NetworkManager StartRouteAnalysis action.
  * \value TagResourceAction NetworkManager TagResource action.
  * \value UntagResourceAction NetworkManager UntagResource action.
  * \value UpdateConnectionAction NetworkManager UpdateConnection action.
+ * \value UpdateCoreNetworkAction NetworkManager UpdateCoreNetwork action.
  * \value UpdateDeviceAction NetworkManager UpdateDevice action.
  * \value UpdateGlobalNetworkAction NetworkManager UpdateGlobalNetwork action.
  * \value UpdateLinkAction NetworkManager UpdateLink action.
+ * \value UpdateNetworkResourceMetadataAction NetworkManager UpdateNetworkResourceMetadata action.
  * \value UpdateSiteAction NetworkManager UpdateSite action.
+ * \value UpdateVpcAttachmentAction NetworkManager UpdateVpcAttachment action.
  */
 
 /*!
@@ -278,7 +328,7 @@ QNetworkRequest NetworkManagerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 NetworkManagerRequestPrivate::NetworkManagerRequestPrivate(const NetworkManagerRequest::Action action, NetworkManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-07-05"))
 {
 
 }
@@ -312,41 +362,91 @@ QString NetworkManagerRequestPrivate::toString(const NetworkManagerRequest::Acti
     #define ActionToString(action) \
         case NetworkManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AcceptAttachment);
+        ActionToString(AssociateConnectPeer);
         ActionToString(AssociateCustomerGateway);
         ActionToString(AssociateLink);
         ActionToString(AssociateTransitGatewayConnectPeer);
+        ActionToString(CreateConnectAttachment);
+        ActionToString(CreateConnectPeer);
         ActionToString(CreateConnection);
+        ActionToString(CreateCoreNetwork);
         ActionToString(CreateDevice);
         ActionToString(CreateGlobalNetwork);
         ActionToString(CreateLink);
         ActionToString(CreateSite);
+        ActionToString(CreateSiteToSiteVpnAttachment);
+        ActionToString(CreateTransitGatewayPeering);
+        ActionToString(CreateTransitGatewayRouteTableAttachment);
+        ActionToString(CreateVpcAttachment);
+        ActionToString(DeleteAttachment);
+        ActionToString(DeleteConnectPeer);
         ActionToString(DeleteConnection);
+        ActionToString(DeleteCoreNetwork);
+        ActionToString(DeleteCoreNetworkPolicyVersion);
         ActionToString(DeleteDevice);
         ActionToString(DeleteGlobalNetwork);
         ActionToString(DeleteLink);
+        ActionToString(DeletePeering);
+        ActionToString(DeleteResourcePolicy);
         ActionToString(DeleteSite);
         ActionToString(DeregisterTransitGateway);
         ActionToString(DescribeGlobalNetworks);
+        ActionToString(DisassociateConnectPeer);
         ActionToString(DisassociateCustomerGateway);
         ActionToString(DisassociateLink);
         ActionToString(DisassociateTransitGatewayConnectPeer);
+        ActionToString(ExecuteCoreNetworkChangeSet);
+        ActionToString(GetConnectAttachment);
+        ActionToString(GetConnectPeer);
+        ActionToString(GetConnectPeerAssociations);
         ActionToString(GetConnections);
+        ActionToString(GetCoreNetwork);
+        ActionToString(GetCoreNetworkChangeEvents);
+        ActionToString(GetCoreNetworkChangeSet);
+        ActionToString(GetCoreNetworkPolicy);
         ActionToString(GetCustomerGatewayAssociations);
         ActionToString(GetDevices);
         ActionToString(GetLinkAssociations);
         ActionToString(GetLinks);
+        ActionToString(GetNetworkResourceCounts);
+        ActionToString(GetNetworkResourceRelationships);
+        ActionToString(GetNetworkResources);
+        ActionToString(GetNetworkRoutes);
+        ActionToString(GetNetworkTelemetry);
+        ActionToString(GetResourcePolicy);
+        ActionToString(GetRouteAnalysis);
+        ActionToString(GetSiteToSiteVpnAttachment);
         ActionToString(GetSites);
         ActionToString(GetTransitGatewayConnectPeerAssociations);
+        ActionToString(GetTransitGatewayPeering);
         ActionToString(GetTransitGatewayRegistrations);
+        ActionToString(GetTransitGatewayRouteTableAttachment);
+        ActionToString(GetVpcAttachment);
+        ActionToString(ListAttachments);
+        ActionToString(ListConnectPeers);
+        ActionToString(ListCoreNetworkPolicyVersions);
+        ActionToString(ListCoreNetworks);
+        ActionToString(ListOrganizationServiceAccessStatus);
+        ActionToString(ListPeerings);
         ActionToString(ListTagsForResource);
+        ActionToString(PutCoreNetworkPolicy);
+        ActionToString(PutResourcePolicy);
         ActionToString(RegisterTransitGateway);
+        ActionToString(RejectAttachment);
+        ActionToString(RestoreCoreNetworkPolicyVersion);
+        ActionToString(StartOrganizationServiceAccessUpdate);
+        ActionToString(StartRouteAnalysis);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateConnection);
+        ActionToString(UpdateCoreNetwork);
         ActionToString(UpdateDevice);
         ActionToString(UpdateGlobalNetwork);
         ActionToString(UpdateLink);
+        ActionToString(UpdateNetworkResourceMetadata);
         ActionToString(UpdateSite);
+        ActionToString(UpdateVpcAttachment);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

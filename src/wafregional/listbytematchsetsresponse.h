@@ -24,11 +24,11 @@
 #include "listbytematchsetsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListByteMatchSetsResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListByteMatchSetsResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListByteMatchSetsResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

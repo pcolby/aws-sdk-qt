@@ -24,14 +24,14 @@
 #include "deleteinstanceaccesscontrolattributeconfigurationrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DeleteInstanceAccessControlAttributeConfigurationRequest;
 
-class DeleteInstanceAccessControlAttributeConfigurationRequestPrivate : public SSOAdminRequestPrivate {
+class DeleteInstanceAccessControlAttributeConfigurationRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DeleteInstanceAccessControlAttributeConfigurationRequestPrivate(const SSOAdminRequest::Action action,
+    DeleteInstanceAccessControlAttributeConfigurationRequestPrivate(const SsoAdminRequest::Action action,
                                    DeleteInstanceAccessControlAttributeConfigurationRequest * const q);
     DeleteInstanceAccessControlAttributeConfigurationRequestPrivate(const DeleteInstanceAccessControlAttributeConfigurationRequestPrivate &other,
                                    DeleteInstanceAccessControlAttributeConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

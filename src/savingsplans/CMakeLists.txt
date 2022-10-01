@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSAVINGSPLANS_LIBRARY)
 
 add_library(QtAwsSavingsPlans
+  qtawssavingsplansglobal.h
+  savingsplansclient.h
+  savingsplansclient_p.h
+  savingsplansrequest.h
+  savingsplansrequest_p.h
+  savingsplansresponse.h
+  savingsplansresponse_p.h
   createsavingsplanrequest.h
   createsavingsplanrequest_p.h
   createsavingsplanresponse.h
@@ -13,6 +20,10 @@ add_library(QtAwsSavingsPlans
   describesavingsplanratesrequest_p.h
   describesavingsplanratesresponse.h
   describesavingsplanratesresponse_p.h
+  describesavingsplansrequest.h
+  describesavingsplansrequest_p.h
+  describesavingsplansresponse.h
+  describesavingsplansresponse_p.h
   describesavingsplansofferingratesrequest.h
   describesavingsplansofferingratesrequest_p.h
   describesavingsplansofferingratesresponse.h
@@ -21,21 +32,10 @@ add_library(QtAwsSavingsPlans
   describesavingsplansofferingsrequest_p.h
   describesavingsplansofferingsresponse.h
   describesavingsplansofferingsresponse_p.h
-  describesavingsplansrequest.h
-  describesavingsplansrequest_p.h
-  describesavingsplansresponse.h
-  describesavingsplansresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawssavingsplansglobal.h
-  savingsplansclient.h
-  savingsplansclient_p.h
-  savingsplansrequest.h
-  savingsplansrequest_p.h
-  savingsplansresponse.h
-  savingsplansresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -44,23 +44,23 @@ add_library(QtAwsSavingsPlans
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  savingsplansclient.cpp
+  savingsplansrequest.cpp
+  savingsplansresponse.cpp
   createsavingsplanrequest.cpp
   createsavingsplanresponse.cpp
   deletequeuedsavingsplanrequest.cpp
   deletequeuedsavingsplanresponse.cpp
   describesavingsplanratesrequest.cpp
   describesavingsplanratesresponse.cpp
+  describesavingsplansrequest.cpp
+  describesavingsplansresponse.cpp
   describesavingsplansofferingratesrequest.cpp
   describesavingsplansofferingratesresponse.cpp
   describesavingsplansofferingsrequest.cpp
   describesavingsplansofferingsresponse.cpp
-  describesavingsplansrequest.cpp
-  describesavingsplansresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  savingsplansclient.cpp
-  savingsplansrequest.cpp
-  savingsplansresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

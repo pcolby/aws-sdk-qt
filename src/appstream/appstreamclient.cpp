@@ -21,6 +21,10 @@
 #include "appstreamclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associateapplicationfleetrequest.h"
+#include "associateapplicationfleetresponse.h"
+#include "associateapplicationtoentitlementrequest.h"
+#include "associateapplicationtoentitlementresponse.h"
 #include "associatefleetrequest.h"
 #include "associatefleetresponse.h"
 #include "batchassociateuserstackrequest.h"
@@ -29,8 +33,14 @@
 #include "batchdisassociateuserstackresponse.h"
 #include "copyimagerequest.h"
 #include "copyimageresponse.h"
+#include "createappblockrequest.h"
+#include "createappblockresponse.h"
+#include "createapplicationrequest.h"
+#include "createapplicationresponse.h"
 #include "createdirectoryconfigrequest.h"
 #include "createdirectoryconfigresponse.h"
+#include "createentitlementrequest.h"
+#include "createentitlementresponse.h"
 #include "createfleetrequest.h"
 #include "createfleetresponse.h"
 #include "createimagebuilderrequest.h"
@@ -47,8 +57,14 @@
 #include "createusagereportsubscriptionresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
+#include "deleteappblockrequest.h"
+#include "deleteappblockresponse.h"
+#include "deleteapplicationrequest.h"
+#include "deleteapplicationresponse.h"
 #include "deletedirectoryconfigrequest.h"
 #include "deletedirectoryconfigresponse.h"
+#include "deleteentitlementrequest.h"
+#include "deleteentitlementresponse.h"
 #include "deletefleetrequest.h"
 #include "deletefleetresponse.h"
 #include "deleteimagerequest.h"
@@ -63,8 +79,16 @@
 #include "deleteusagereportsubscriptionresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
+#include "describeappblocksrequest.h"
+#include "describeappblocksresponse.h"
+#include "describeapplicationfleetassociationsrequest.h"
+#include "describeapplicationfleetassociationsresponse.h"
+#include "describeapplicationsrequest.h"
+#include "describeapplicationsresponse.h"
 #include "describedirectoryconfigsrequest.h"
 #include "describedirectoryconfigsresponse.h"
+#include "describeentitlementsrequest.h"
+#include "describeentitlementsresponse.h"
 #include "describefleetsrequest.h"
 #include "describefleetsresponse.h"
 #include "describeimagebuildersrequest.h"
@@ -85,6 +109,10 @@
 #include "describeusersresponse.h"
 #include "disableuserrequest.h"
 #include "disableuserresponse.h"
+#include "disassociateapplicationfleetrequest.h"
+#include "disassociateapplicationfleetresponse.h"
+#include "disassociateapplicationfromentitlementrequest.h"
+#include "disassociateapplicationfromentitlementresponse.h"
 #include "disassociatefleetrequest.h"
 #include "disassociatefleetresponse.h"
 #include "enableuserrequest.h"
@@ -95,6 +123,8 @@
 #include "listassociatedfleetsresponse.h"
 #include "listassociatedstacksrequest.h"
 #include "listassociatedstacksresponse.h"
+#include "listentitledapplicationsrequest.h"
+#include "listentitledapplicationsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "startfleetrequest.h"
@@ -109,8 +139,12 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateapplicationrequest.h"
+#include "updateapplicationresponse.h"
 #include "updatedirectoryconfigrequest.h"
 #include "updatedirectoryconfigresponse.h"
+#include "updateentitlementrequest.h"
+#include "updateentitlementresponse.h"
 #include "updatefleetrequest.h"
 #include "updatefleetresponse.h"
 #include "updateimagepermissionsrequest.h"
@@ -223,6 +257,32 @@ AppStreamClient::AppStreamClient(
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * AssociateApplicationFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified application with the specified fleet. This is only supported for Elastic
+ */
+AssociateApplicationFleetResponse * AppStreamClient::associateApplicationFleet(const AssociateApplicationFleetRequest &request)
+{
+    return qobject_cast<AssociateApplicationFleetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * AssociateApplicationToEntitlementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates an application to
+ */
+AssociateApplicationToEntitlementResponse * AppStreamClient::associateApplicationToEntitlement(const AssociateApplicationToEntitlementRequest &request)
+{
+    return qobject_cast<AssociateApplicationToEntitlementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * AssociateFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -277,6 +337,54 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateAppBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an app
+ *
+ * block>
+ *
+ * App blocks are an Amazon AppStream 2.0 resource that stores the details about the virtual hard disk in an S3 bucket. It
+ * also stores the setup script with details about how to mount the virtual hard disk. The virtual hard disk includes the
+ * application binaries and other files necessary to launch your applications. Multiple applications can be assigned to a
+ * single app
+ *
+ * block>
+ *
+ * This is only supported for Elastic
+ */
+CreateAppBlockResponse * AppStreamClient::createAppBlock(const CreateAppBlockRequest &request)
+{
+    return qobject_cast<CreateAppBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an
+ *
+ * application>
+ *
+ * Applications are an Amazon AppStream 2.0 resource that stores the details about how to launch applications on Elastic
+ * fleet streaming instances. An application consists of the launch details, icon, and display name. Applications are
+ * associated with an app block that contains the application binaries and other files. The applications assigned to an
+ * Elastic fleet are the applications users can launch.
+ *
+ * </p
+ *
+ * This is only supported for Elastic
+ */
+CreateApplicationResponse * AppStreamClient::createApplication(const CreateApplicationRequest &request)
+{
+    return qobject_cast<CreateApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * CreateDirectoryConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -291,11 +399,27 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateEntitlementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new entitlement. Entitlements control access to specific applications within a stack, based on user
+ * attributes. Entitlements apply to SAML 2.0 federated user identities. Amazon AppStream 2.0 user pool and streaming URL
+ * users are entitled to all applications in a stack. Entitlements don't apply to the desktop stream view application, or
+ * to applications managed by a dynamic app provider using the Dynamic Application
+ */
+CreateEntitlementResponse * AppStreamClient::createEntitlement(const CreateEntitlementRequest &request)
+{
+    return qobject_cast<CreateEntitlementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * CreateFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a fleet. A fleet consists of streaming instances that run a specified
+ * Creates a fleet. A fleet consists of streaming instances that run a specified image when using Always-On or
  */
 CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &request)
 {
@@ -407,6 +531,32 @@ CreateUserResponse * AppStreamClient::createUser(const CreateUserRequest &reques
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteAppBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an app
+ */
+DeleteAppBlockResponse * AppStreamClient::deleteAppBlock(const DeleteAppBlockRequest &request)
+{
+    return qobject_cast<DeleteAppBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an
+ */
+DeleteApplicationResponse * AppStreamClient::deleteApplication(const DeleteApplicationRequest &request)
+{
+    return qobject_cast<DeleteApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DeleteDirectoryConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -417,6 +567,19 @@ CreateUserResponse * AppStreamClient::createUser(const CreateUserRequest &reques
 DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request)
 {
     return qobject_cast<DeleteDirectoryConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteEntitlementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified
+ */
+DeleteEntitlementResponse * AppStreamClient::deleteEntitlement(const DeleteEntitlementRequest &request)
+{
+    return qobject_cast<DeleteEntitlementResponse *>(send(request));
 }
 
 /*!
@@ -515,6 +678,45 @@ DeleteUserResponse * AppStreamClient::deleteUser(const DeleteUserRequest &reques
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeAppBlocksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more app
+ */
+DescribeAppBlocksResponse * AppStreamClient::describeAppBlocks(const DescribeAppBlocksRequest &request)
+{
+    return qobject_cast<DescribeAppBlocksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeApplicationFleetAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more application fleet associations. Either ApplicationArn or FleetName must be
+ */
+DescribeApplicationFleetAssociationsResponse * AppStreamClient::describeApplicationFleetAssociations(const DescribeApplicationFleetAssociationsRequest &request)
+{
+    return qobject_cast<DescribeApplicationFleetAssociationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more
+ */
+DescribeApplicationsResponse * AppStreamClient::describeApplications(const DescribeApplicationsRequest &request)
+{
+    return qobject_cast<DescribeApplicationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DescribeDirectoryConfigsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -530,6 +732,19 @@ DeleteUserResponse * AppStreamClient::deleteUser(const DeleteUserRequest &reques
 DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request)
 {
     return qobject_cast<DescribeDirectoryConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeEntitlementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one of more
+ */
+DescribeEntitlementsResponse * AppStreamClient::describeEntitlements(const DescribeEntitlementsRequest &request)
+{
+    return qobject_cast<DescribeEntitlementsResponse *>(send(request));
 }
 
 /*!
@@ -679,6 +894,32 @@ DisableUserResponse * AppStreamClient::disableUser(const DisableUserRequest &req
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DisassociateApplicationFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates the specified application from the
+ */
+DisassociateApplicationFleetResponse * AppStreamClient::disassociateApplicationFleet(const DisassociateApplicationFleetRequest &request)
+{
+    return qobject_cast<DisassociateApplicationFleetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DisassociateApplicationFromEntitlementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified application from the specified
+ */
+DisassociateApplicationFromEntitlementResponse * AppStreamClient::disassociateApplicationFromEntitlement(const DisassociateApplicationFromEntitlementRequest &request)
+{
+    return qobject_cast<DisassociateApplicationFromEntitlementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DisassociateFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -741,6 +982,19 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
 ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListAssociatedStacksRequest &request)
 {
     return qobject_cast<ListAssociatedStacksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * ListEntitledApplicationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of entitled
+ */
+ListEntitledApplicationsResponse * AppStreamClient::listEntitledApplications(const ListEntitledApplicationsRequest &request)
+{
+    return qobject_cast<ListEntitledApplicationsResponse *>(send(request));
 }
 
 /*!
@@ -870,6 +1124,19 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified
+ */
+UpdateApplicationResponse * AppStreamClient::updateApplication(const UpdateApplicationRequest &request)
+{
+    return qobject_cast<UpdateApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * UpdateDirectoryConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -884,6 +1151,19 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateEntitlementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified
+ */
+UpdateEntitlementResponse * AppStreamClient::updateEntitlement(const UpdateEntitlementRequest &request)
+{
+    return qobject_cast<UpdateEntitlementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * UpdateFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -892,11 +1172,34 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  *
  * fleet>
  *
- * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet name. If the fleet is
- * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code>, <code>ComputeCapacity</code>,
- * <code>ImageARN</code>, <code>ImageName</code>, <code>IdleDisconnectTimeoutInSeconds</code>, and
- * <code>DisconnectTimeoutInSeconds</code> attributes. If the fleet is in the <code>STARTING</code> or
- * <code>STOPPING</code> state, you can't update
+ * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet
+ *
+ * name>
+ *
+ * If the fleet is in the <code>RUNNING</code> state, you can update the following based on the fleet
+ *
+ * type> <ul> <li>
+ *
+ * Always-On and On-Demand fleet
+ *
+ * type>
+ *
+ * You can update the <code>DisplayName</code>, <code>ComputeCapacity</code>, <code>ImageARN</code>,
+ * <code>ImageName</code>, <code>IdleDisconnectTimeoutInSeconds</code>, and <code>DisconnectTimeoutInSeconds</code>
+ *
+ * attributes> </li> <li>
+ *
+ * Elastic fleet
+ *
+ * typ>
+ *
+ * You can update the <code>DisplayName</code>, <code>IdleDisconnectTimeoutInSeconds</code>,
+ * <code>DisconnectTimeoutInSeconds</code>, <code>MaxConcurrentSessions</code>, <code>SessionScriptS3Location</code> and
+ * <code>UsbDeviceFilterStrings</code>
+ *
+ * attributes> </li> </ul>
+ *
+ * If the fleet is in the <code>STARTING</code> or <code>STOPPED</code> state, you can't update
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {

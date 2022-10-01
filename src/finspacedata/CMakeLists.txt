@@ -1,36 +1,204 @@
 add_compile_definitions(QTAWSFINSPACEDATA_LIBRARY)
 
-add_library(QtAwsFinSpaceData
-  createchangesetrequest.h
-  createchangesetrequest_p.h
-  createchangesetresponse.h
-  createchangesetresponse_p.h
+add_library(QtAwsFinspaceData
+  qtawsfinspacedataglobal.h
   finspacedataclient.h
   finspacedataclient_p.h
   finspacedatarequest.h
   finspacedatarequest_p.h
   finspacedataresponse.h
   finspacedataresponse_p.h
+  associateusertopermissiongrouprequest.h
+  associateusertopermissiongrouprequest_p.h
+  associateusertopermissiongroupresponse.h
+  associateusertopermissiongroupresponse_p.h
+  createchangesetrequest.h
+  createchangesetrequest_p.h
+  createchangesetresponse.h
+  createchangesetresponse_p.h
+  createdataviewrequest.h
+  createdataviewrequest_p.h
+  createdataviewresponse.h
+  createdataviewresponse_p.h
+  createdatasetrequest.h
+  createdatasetrequest_p.h
+  createdatasetresponse.h
+  createdatasetresponse_p.h
+  createpermissiongrouprequest.h
+  createpermissiongrouprequest_p.h
+  createpermissiongroupresponse.h
+  createpermissiongroupresponse_p.h
+  createuserrequest.h
+  createuserrequest_p.h
+  createuserresponse.h
+  createuserresponse_p.h
+  deletedatasetrequest.h
+  deletedatasetrequest_p.h
+  deletedatasetresponse.h
+  deletedatasetresponse_p.h
+  deletepermissiongrouprequest.h
+  deletepermissiongrouprequest_p.h
+  deletepermissiongroupresponse.h
+  deletepermissiongroupresponse_p.h
+  disableuserrequest.h
+  disableuserrequest_p.h
+  disableuserresponse.h
+  disableuserresponse_p.h
+  disassociateuserfrompermissiongrouprequest.h
+  disassociateuserfrompermissiongrouprequest_p.h
+  disassociateuserfrompermissiongroupresponse.h
+  disassociateuserfrompermissiongroupresponse_p.h
+  enableuserrequest.h
+  enableuserrequest_p.h
+  enableuserresponse.h
+  enableuserresponse_p.h
+  getchangesetrequest.h
+  getchangesetrequest_p.h
+  getchangesetresponse.h
+  getchangesetresponse_p.h
+  getdataviewrequest.h
+  getdataviewrequest_p.h
+  getdataviewresponse.h
+  getdataviewresponse_p.h
+  getdatasetrequest.h
+  getdatasetrequest_p.h
+  getdatasetresponse.h
+  getdatasetresponse_p.h
+  getexternaldataviewaccessdetailsrequest.h
+  getexternaldataviewaccessdetailsrequest_p.h
+  getexternaldataviewaccessdetailsresponse.h
+  getexternaldataviewaccessdetailsresponse_p.h
+  getpermissiongrouprequest.h
+  getpermissiongrouprequest_p.h
+  getpermissiongroupresponse.h
+  getpermissiongroupresponse_p.h
   getprogrammaticaccesscredentialsrequest.h
   getprogrammaticaccesscredentialsrequest_p.h
   getprogrammaticaccesscredentialsresponse.h
   getprogrammaticaccesscredentialsresponse_p.h
+  getuserrequest.h
+  getuserrequest_p.h
+  getuserresponse.h
+  getuserresponse_p.h
   getworkinglocationrequest.h
   getworkinglocationrequest_p.h
   getworkinglocationresponse.h
   getworkinglocationresponse_p.h
-  qtawsfinspacedataglobal.h
-  createchangesetrequest.cpp
-  createchangesetresponse.cpp
+  listchangesetsrequest.h
+  listchangesetsrequest_p.h
+  listchangesetsresponse.h
+  listchangesetsresponse_p.h
+  listdataviewsrequest.h
+  listdataviewsrequest_p.h
+  listdataviewsresponse.h
+  listdataviewsresponse_p.h
+  listdatasetsrequest.h
+  listdatasetsrequest_p.h
+  listdatasetsresponse.h
+  listdatasetsresponse_p.h
+  listpermissiongroupsrequest.h
+  listpermissiongroupsrequest_p.h
+  listpermissiongroupsresponse.h
+  listpermissiongroupsresponse_p.h
+  listpermissiongroupsbyuserrequest.h
+  listpermissiongroupsbyuserrequest_p.h
+  listpermissiongroupsbyuserresponse.h
+  listpermissiongroupsbyuserresponse_p.h
+  listusersrequest.h
+  listusersrequest_p.h
+  listusersresponse.h
+  listusersresponse_p.h
+  listusersbypermissiongrouprequest.h
+  listusersbypermissiongrouprequest_p.h
+  listusersbypermissiongroupresponse.h
+  listusersbypermissiongroupresponse_p.h
+  resetuserpasswordrequest.h
+  resetuserpasswordrequest_p.h
+  resetuserpasswordresponse.h
+  resetuserpasswordresponse_p.h
+  updatechangesetrequest.h
+  updatechangesetrequest_p.h
+  updatechangesetresponse.h
+  updatechangesetresponse_p.h
+  updatedatasetrequest.h
+  updatedatasetrequest_p.h
+  updatedatasetresponse.h
+  updatedatasetresponse_p.h
+  updatepermissiongrouprequest.h
+  updatepermissiongrouprequest_p.h
+  updatepermissiongroupresponse.h
+  updatepermissiongroupresponse_p.h
+  updateuserrequest.h
+  updateuserrequest_p.h
+  updateuserresponse.h
+  updateuserresponse_p.h
   finspacedataclient.cpp
   finspacedatarequest.cpp
   finspacedataresponse.cpp
+  associateusertopermissiongrouprequest.cpp
+  associateusertopermissiongroupresponse.cpp
+  createchangesetrequest.cpp
+  createchangesetresponse.cpp
+  createdataviewrequest.cpp
+  createdataviewresponse.cpp
+  createdatasetrequest.cpp
+  createdatasetresponse.cpp
+  createpermissiongrouprequest.cpp
+  createpermissiongroupresponse.cpp
+  createuserrequest.cpp
+  createuserresponse.cpp
+  deletedatasetrequest.cpp
+  deletedatasetresponse.cpp
+  deletepermissiongrouprequest.cpp
+  deletepermissiongroupresponse.cpp
+  disableuserrequest.cpp
+  disableuserresponse.cpp
+  disassociateuserfrompermissiongrouprequest.cpp
+  disassociateuserfrompermissiongroupresponse.cpp
+  enableuserrequest.cpp
+  enableuserresponse.cpp
+  getchangesetrequest.cpp
+  getchangesetresponse.cpp
+  getdataviewrequest.cpp
+  getdataviewresponse.cpp
+  getdatasetrequest.cpp
+  getdatasetresponse.cpp
+  getexternaldataviewaccessdetailsrequest.cpp
+  getexternaldataviewaccessdetailsresponse.cpp
+  getpermissiongrouprequest.cpp
+  getpermissiongroupresponse.cpp
   getprogrammaticaccesscredentialsrequest.cpp
   getprogrammaticaccesscredentialsresponse.cpp
+  getuserrequest.cpp
+  getuserresponse.cpp
   getworkinglocationrequest.cpp
-  getworkinglocationresponse.cpp)
+  getworkinglocationresponse.cpp
+  listchangesetsrequest.cpp
+  listchangesetsresponse.cpp
+  listdataviewsrequest.cpp
+  listdataviewsresponse.cpp
+  listdatasetsrequest.cpp
+  listdatasetsresponse.cpp
+  listpermissiongroupsrequest.cpp
+  listpermissiongroupsresponse.cpp
+  listpermissiongroupsbyuserrequest.cpp
+  listpermissiongroupsbyuserresponse.cpp
+  listusersrequest.cpp
+  listusersresponse.cpp
+  listusersbypermissiongrouprequest.cpp
+  listusersbypermissiongroupresponse.cpp
+  resetuserpasswordrequest.cpp
+  resetuserpasswordresponse.cpp
+  updatechangesetrequest.cpp
+  updatechangesetresponse.cpp
+  updatedatasetrequest.cpp
+  updatedatasetresponse.cpp
+  updatepermissiongrouprequest.cpp
+  updatepermissiongroupresponse.cpp
+  updateuserrequest.cpp
+  updateuserresponse.cpp)
 
-target_link_libraries(QtAwsFinSpaceData
+target_link_libraries(QtAwsFinspaceData
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

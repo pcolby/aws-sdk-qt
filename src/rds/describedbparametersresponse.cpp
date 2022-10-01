@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBParametersResponse
- * \brief The DescribeDBParametersResponse class provides an interace for RDS DescribeDBParameters responses.
+ * \class QtAws::Rds::DescribeDBParametersResponse
+ * \brief The DescribeDBParametersResponse class provides an interace for Rds DescribeDBParameters responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBParametersRequest * DescribeDBParametersResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBParameters \a response.
+ * Parses a successful Rds DescribeDBParameters \a response.
  */
 void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBParametersResponsePrivate
+ * \class QtAws::Rds::DescribeDBParametersResponsePrivate
  * \brief The DescribeDBParametersResponsePrivate class provides private implementation for DescribeDBParametersResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeDBParameters response element from \a xml.
+ * Parses a Rds DescribeDBParameters response element from \a xml.
  */
 void DescribeDBParametersResponsePrivate::parseDescribeDBParametersResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBParametersResponsePrivate::parseDescribeDBParametersResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

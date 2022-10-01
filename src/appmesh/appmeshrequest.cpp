@@ -281,7 +281,7 @@ QNetworkRequest AppMeshRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppMeshRequestPrivate::AppMeshRequestPrivate(const AppMeshRequest::Action action, AppMeshRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-01-25"))
 {
 
 }

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::RemoveProfilePermissionResponse
- * \brief The RemoveProfilePermissionResponse class provides an interace for signer RemoveProfilePermission responses.
+ * \class QtAws::Signer::RemoveProfilePermissionResponse
+ * \brief The RemoveProfilePermissionResponse class provides an interace for Signer RemoveProfilePermission responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::removeProfilePermission
+ * \sa SignerClient::removeProfilePermission
  */
 
 /*!
@@ -69,7 +71,7 @@ RemoveProfilePermissionResponse::RemoveProfilePermissionResponse(
         const RemoveProfilePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new RemoveProfilePermissionResponsePrivate(this), parent)
+    : SignerResponse(new RemoveProfilePermissionResponsePrivate(this), parent)
 {
     setRequest(new RemoveProfilePermissionRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const RemoveProfilePermissionRequest * RemoveProfilePermissionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful signer RemoveProfilePermission \a response.
+ * Parses a successful Signer RemoveProfilePermission \a response.
  */
 void RemoveProfilePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void RemoveProfilePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::RemoveProfilePermissionResponsePrivate
+ * \class QtAws::Signer::RemoveProfilePermissionResponsePrivate
  * \brief The RemoveProfilePermissionResponsePrivate class provides private implementation for RemoveProfilePermissionResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a RemoveProfilePermissionResponsePrivate object with public implementation \a q.
  */
 RemoveProfilePermissionResponsePrivate::RemoveProfilePermissionResponsePrivate(
-    RemoveProfilePermissionResponse * const q) : signerResponsePrivate(q)
+    RemoveProfilePermissionResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer RemoveProfilePermission response element from \a xml.
+ * Parses a Signer RemoveProfilePermission response element from \a xml.
  */
 void RemoveProfilePermissionResponsePrivate::parseRemoveProfilePermissionResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void RemoveProfilePermissionResponsePrivate::parseRemoveProfilePermissionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddSourceIdentifierToSubscriptionRequest
- * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for RDS AddSourceIdentifierToSubscription requests.
+ * \class QtAws::Rds::AddSourceIdentifierToSubscriptionRequest
+ * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for Rds AddSourceIdentifierToSubscription requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
 }
 
 /*!
- * \class QtAws::RDS::AddSourceIdentifierToSubscriptionRequestPrivate
+ * \class QtAws::Rds::AddSourceIdentifierToSubscriptionRequestPrivate
  * \brief The AddSourceIdentifierToSubscriptionRequestPrivate class provides private implementation for AddSourceIdentifierToSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

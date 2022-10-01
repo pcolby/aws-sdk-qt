@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterSnapshotAttributeResponse
- * \brief The ModifyDBClusterSnapshotAttributeResponse class provides an interace for DocDB ModifyDBClusterSnapshotAttribute responses.
+ * \class QtAws::DocDb::ModifyDBClusterSnapshotAttributeResponse
+ * \brief The ModifyDBClusterSnapshotAttributeResponse class provides an interace for DocDb ModifyDBClusterSnapshotAttribute responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBClusterSnapshotAttribute
+ * \sa DocDbClient::modifyDBClusterSnapshotAttribute
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyDBClusterSnapshotAttributeResponse::ModifyDBClusterSnapshotAttributeRespon
         const ModifyDBClusterSnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyDBClusterSnapshotAttributeResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyDBClusterSnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBClusterSnapshotAttributeRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttribute
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyDBClusterSnapshotAttribute \a response.
+ * Parses a successful DocDb ModifyDBClusterSnapshotAttribute \a response.
  */
 void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterSnapshotAttributeResponsePrivate
+ * \class QtAws::DocDb::ModifyDBClusterSnapshotAttributeResponsePrivate
  * \brief The ModifyDBClusterSnapshotAttributeResponsePrivate class provides private implementation for ModifyDBClusterSnapshotAttributeResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyDBClusterSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttributeResponsePrivate(
-    ModifyDBClusterSnapshotAttributeResponse * const q) : DocDBResponsePrivate(q)
+    ModifyDBClusterSnapshotAttributeResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyDBClusterSnapshotAttribute response element from \a xml.
+ * Parses a DocDb ModifyDBClusterSnapshotAttribute response element from \a xml.
  */
 void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapsh
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

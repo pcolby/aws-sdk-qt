@@ -24,7 +24,7 @@
 #include "createclusterrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class CreateClusterResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

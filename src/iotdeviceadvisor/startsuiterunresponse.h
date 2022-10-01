@@ -24,11 +24,11 @@
 #include "startsuiterunrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class StartSuiteRunResponsePrivate;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT StartSuiteRunResponse : public IoTDeviceAdvisorResponse {
+class QTAWSIOTDEVICEADVISOR_EXPORT StartSuiteRunResponse : public IotDeviceAdvisorResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "listclustersrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class ListClustersRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

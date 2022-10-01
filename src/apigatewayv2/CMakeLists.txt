@@ -1,20 +1,21 @@
 add_compile_definitions(QTAWSAPIGATEWAYV2_LIBRARY)
 
 add_library(QtAwsApiGatewayV2
+  qtawsapigatewayv2global.h
   apigatewayv2client.h
   apigatewayv2client_p.h
   apigatewayv2request.h
   apigatewayv2request_p.h
   apigatewayv2response.h
   apigatewayv2response_p.h
-  createapimappingrequest.h
-  createapimappingrequest_p.h
-  createapimappingresponse.h
-  createapimappingresponse_p.h
   createapirequest.h
   createapirequest_p.h
   createapiresponse.h
   createapiresponse_p.h
+  createapimappingrequest.h
+  createapimappingrequest_p.h
+  createapimappingresponse.h
+  createapimappingresponse_p.h
   createauthorizerrequest.h
   createauthorizerrequest_p.h
   createauthorizerresponse.h
@@ -59,14 +60,14 @@ add_library(QtAwsApiGatewayV2
   deleteaccesslogsettingsrequest_p.h
   deleteaccesslogsettingsresponse.h
   deleteaccesslogsettingsresponse_p.h
-  deleteapimappingrequest.h
-  deleteapimappingrequest_p.h
-  deleteapimappingresponse.h
-  deleteapimappingresponse_p.h
   deleteapirequest.h
   deleteapirequest_p.h
   deleteapiresponse.h
   deleteapiresponse_p.h
+  deleteapimappingrequest.h
+  deleteapimappingrequest_p.h
+  deleteapimappingresponse.h
+  deleteapimappingresponse_p.h
   deleteauthorizerrequest.h
   deleteauthorizerrequest_p.h
   deleteauthorizerresponse.h
@@ -97,12 +98,12 @@ add_library(QtAwsApiGatewayV2
   deletemodelresponse_p.h
   deleterouterequest.h
   deleterouterequest_p.h
+  deleterouteresponse.h
+  deleterouteresponse_p.h
   deleterouterequestparameterrequest.h
   deleterouterequestparameterrequest_p.h
   deleterouterequestparameterresponse.h
   deleterouterequestparameterresponse_p.h
-  deleterouteresponse.h
-  deleterouteresponse_p.h
   deleterouteresponserequest.h
   deleterouteresponserequest_p.h
   deleterouteresponseresponse.h
@@ -123,6 +124,10 @@ add_library(QtAwsApiGatewayV2
   exportapirequest_p.h
   exportapiresponse.h
   exportapiresponse_p.h
+  getapirequest.h
+  getapirequest_p.h
+  getapiresponse.h
+  getapiresponse_p.h
   getapimappingrequest.h
   getapimappingrequest_p.h
   getapimappingresponse.h
@@ -131,10 +136,6 @@ add_library(QtAwsApiGatewayV2
   getapimappingsrequest_p.h
   getapimappingsresponse.h
   getapimappingsresponse_p.h
-  getapirequest.h
-  getapirequest_p.h
-  getapiresponse.h
-  getapiresponse_p.h
   getapisrequest.h
   getapisrequest_p.h
   getapisresponse.h
@@ -183,14 +184,14 @@ add_library(QtAwsApiGatewayV2
   getmodelrequest_p.h
   getmodelresponse.h
   getmodelresponse_p.h
-  getmodelsrequest.h
-  getmodelsrequest_p.h
-  getmodelsresponse.h
-  getmodelsresponse_p.h
   getmodeltemplaterequest.h
   getmodeltemplaterequest_p.h
   getmodeltemplateresponse.h
   getmodeltemplateresponse_p.h
+  getmodelsrequest.h
+  getmodelsrequest_p.h
+  getmodelsresponse.h
+  getmodelsresponse_p.h
   getrouterequest.h
   getrouterequest_p.h
   getrouteresponse.h
@@ -231,7 +232,6 @@ add_library(QtAwsApiGatewayV2
   importapirequest_p.h
   importapiresponse.h
   importapiresponse_p.h
-  qtawsapigatewayv2global.h
   reimportapirequest.h
   reimportapirequest_p.h
   reimportapiresponse.h
@@ -248,14 +248,14 @@ add_library(QtAwsApiGatewayV2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updateapimappingrequest.h
-  updateapimappingrequest_p.h
-  updateapimappingresponse.h
-  updateapimappingresponse_p.h
   updateapirequest.h
   updateapirequest_p.h
   updateapiresponse.h
   updateapiresponse_p.h
+  updateapimappingrequest.h
+  updateapimappingrequest_p.h
+  updateapimappingresponse.h
+  updateapimappingresponse_p.h
   updateauthorizerrequest.h
   updateauthorizerrequest_p.h
   updateauthorizerresponse.h
@@ -299,10 +299,10 @@ add_library(QtAwsApiGatewayV2
   apigatewayv2client.cpp
   apigatewayv2request.cpp
   apigatewayv2response.cpp
-  createapimappingrequest.cpp
-  createapimappingresponse.cpp
   createapirequest.cpp
   createapiresponse.cpp
+  createapimappingrequest.cpp
+  createapimappingresponse.cpp
   createauthorizerrequest.cpp
   createauthorizerresponse.cpp
   createdeploymentrequest.cpp
@@ -325,10 +325,10 @@ add_library(QtAwsApiGatewayV2
   createvpclinkresponse.cpp
   deleteaccesslogsettingsrequest.cpp
   deleteaccesslogsettingsresponse.cpp
-  deleteapimappingrequest.cpp
-  deleteapimappingresponse.cpp
   deleteapirequest.cpp
   deleteapiresponse.cpp
+  deleteapimappingrequest.cpp
+  deleteapimappingresponse.cpp
   deleteauthorizerrequest.cpp
   deleteauthorizerresponse.cpp
   deletecorsconfigurationrequest.cpp
@@ -344,9 +344,9 @@ add_library(QtAwsApiGatewayV2
   deletemodelrequest.cpp
   deletemodelresponse.cpp
   deleterouterequest.cpp
+  deleterouteresponse.cpp
   deleterouterequestparameterrequest.cpp
   deleterouterequestparameterresponse.cpp
-  deleterouteresponse.cpp
   deleterouteresponserequest.cpp
   deleterouteresponseresponse.cpp
   deleteroutesettingsrequest.cpp
@@ -357,12 +357,12 @@ add_library(QtAwsApiGatewayV2
   deletevpclinkresponse.cpp
   exportapirequest.cpp
   exportapiresponse.cpp
+  getapirequest.cpp
+  getapiresponse.cpp
   getapimappingrequest.cpp
   getapimappingresponse.cpp
   getapimappingsrequest.cpp
   getapimappingsresponse.cpp
-  getapirequest.cpp
-  getapiresponse.cpp
   getapisrequest.cpp
   getapisresponse.cpp
   getauthorizerrequest.cpp
@@ -387,10 +387,10 @@ add_library(QtAwsApiGatewayV2
   getintegrationsresponse.cpp
   getmodelrequest.cpp
   getmodelresponse.cpp
-  getmodelsrequest.cpp
-  getmodelsresponse.cpp
   getmodeltemplaterequest.cpp
   getmodeltemplateresponse.cpp
+  getmodelsrequest.cpp
+  getmodelsresponse.cpp
   getrouterequest.cpp
   getrouteresponse.cpp
   getrouteresponserequest.cpp
@@ -419,10 +419,10 @@ add_library(QtAwsApiGatewayV2
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updateapimappingrequest.cpp
-  updateapimappingresponse.cpp
   updateapirequest.cpp
   updateapiresponse.cpp
+  updateapimappingrequest.cpp
+  updateapimappingresponse.cpp
   updateauthorizerrequest.cpp
   updateauthorizerresponse.cpp
   updatedeploymentrequest.cpp

@@ -24,14 +24,14 @@
 #include "getitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class GetItemRequest;
 
-class GetItemRequestPrivate : public DynamoDBRequestPrivate {
+class GetItemRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    GetItemRequestPrivate(const DynamoDBRequest::Action action,
+    GetItemRequestPrivate(const DynamoDbRequest::Action action,
                                    GetItemRequest * const q);
     GetItemRequestPrivate(const GetItemRequestPrivate &other,
                                    GetItemRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

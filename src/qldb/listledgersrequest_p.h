@@ -24,7 +24,7 @@
 #include "listledgersrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class ListLedgersRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

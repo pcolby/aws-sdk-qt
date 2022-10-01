@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::GetQuerySuggestionsResponse
- * \brief The GetQuerySuggestionsResponse class provides an interace for kendra GetQuerySuggestions responses.
+ * \class QtAws::Kendra::GetQuerySuggestionsResponse
+ * \brief The GetQuerySuggestionsResponse class provides an interace for Kendra GetQuerySuggestions responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::getQuerySuggestions
+ * \sa KendraClient::getQuerySuggestions
  */
 
 /*!
@@ -45,7 +45,7 @@ GetQuerySuggestionsResponse::GetQuerySuggestionsResponse(
         const GetQuerySuggestionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new GetQuerySuggestionsResponsePrivate(this), parent)
+    : KendraResponse(new GetQuerySuggestionsResponsePrivate(this), parent)
 {
     setRequest(new GetQuerySuggestionsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const GetQuerySuggestionsRequest * GetQuerySuggestionsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra GetQuerySuggestions \a response.
+ * Parses a successful Kendra GetQuerySuggestions \a response.
  */
 void GetQuerySuggestionsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void GetQuerySuggestionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::GetQuerySuggestionsResponsePrivate
+ * \class QtAws::Kendra::GetQuerySuggestionsResponsePrivate
  * \brief The GetQuerySuggestionsResponsePrivate class provides private implementation for GetQuerySuggestionsResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a GetQuerySuggestionsResponsePrivate object with public implementation \a q.
  */
 GetQuerySuggestionsResponsePrivate::GetQuerySuggestionsResponsePrivate(
-    GetQuerySuggestionsResponse * const q) : kendraResponsePrivate(q)
+    GetQuerySuggestionsResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra GetQuerySuggestions response element from \a xml.
+ * Parses a Kendra GetQuerySuggestions response element from \a xml.
  */
 void GetQuerySuggestionsResponsePrivate::parseGetQuerySuggestionsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetQuerySuggestionsResponsePrivate::parseGetQuerySuggestionsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

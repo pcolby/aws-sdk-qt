@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteApiKeyResponse
- * \brief The DeleteApiKeyResponse class provides an interace for APIGateway DeleteApiKey responses.
+ * \class QtAws::ApiGateway::DeleteApiKeyResponse
+ * \brief The DeleteApiKeyResponse class provides an interace for ApiGateway DeleteApiKey responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteApiKey
+ * \sa ApiGatewayClient::deleteApiKey
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteApiKeyResponse::DeleteApiKeyResponse(
         const DeleteApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteApiKeyResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteApiKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteApiKeyRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteApiKey \a response.
+ * Parses a successful ApiGateway DeleteApiKey \a response.
  */
 void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteApiKeyResponsePrivate
+ * \class QtAws::ApiGateway::DeleteApiKeyResponsePrivate
  * \brief The DeleteApiKeyResponsePrivate class provides private implementation for DeleteApiKeyResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteApiKeyResponsePrivate object with public implementation \a q.
  */
 DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
-    DeleteApiKeyResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteApiKeyResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteApiKey response element from \a xml.
+ * Parses a ApiGateway DeleteApiKey response element from \a xml.
  */
 void DeleteApiKeyResponsePrivate::parseDeleteApiKeyResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteApiKeyResponsePrivate::parseDeleteApiKeyResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

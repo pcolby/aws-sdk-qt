@@ -23,27 +23,37 @@
 #include "smsrequest_p.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::StartOnDemandReplicationRunRequest
- * \brief The StartOnDemandReplicationRunRequest class provides an interface for SMS StartOnDemandReplicationRun requests.
+ * \class QtAws::Sms::StartOnDemandReplicationRunRequest
+ * \brief The StartOnDemandReplicationRunRequest class provides an interface for Sms StartOnDemandReplicationRun requests.
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  *
- *  <fullname>AWS Server Migration Service</fullname>
+ *  <b>
  * 
- *  AWS Server Migration Service (AWS SMS) makes it easier and faster for you to migrate your on-premises workloads to AWS.
- *  To learn more about AWS SMS, see the following
+ *  <b>Product update</b>
+ * 
+ *  </p
+ * 
+ *  We recommend <a href="http://aws.amazon.com/application-migration-service">Amazon Web Services Application Migration
+ *  Service</a> (Amazon Web Services MGN) as the primary migration service for lift-and-shift migrations. If Amazon Web
+ *  Services MGN is unavailable in a specific Amazon Web Services Region, you can use the Server Migration Service APIs
+ *  through March
+ * 
+ *  2023> </b>
+ * 
+ *  Server Migration Service (Server Migration Service) makes it easier and faster for you to migrate your on-premises
+ *  workloads to Amazon Web Services. To learn more about Server Migration Service, see the following
  * 
  *  resources> <ul> <li>
  * 
- *  <a href="http://aws.amazon.com/server-migration-service/">AWS Server Migration Service product page</a>
+ *  <a href="http://aws.amazon.com/server-migration-service/">Server Migration Service product page</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">AWS Server Migration Service User
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">Server Migration Service User Guide</a>
  *
  * \sa SmsClient::startOnDemandReplicationRun
  */
@@ -86,11 +96,11 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
 }
 
 /*!
- * \class QtAws::SMS::StartOnDemandReplicationRunRequestPrivate
+ * \class QtAws::Sms::StartOnDemandReplicationRunRequestPrivate
  * \brief The StartOnDemandReplicationRunRequestPrivate class provides private implementation for StartOnDemandReplicationRunRequest.
  * \internal
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -117,5 +127,5 @@ StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPri
 
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

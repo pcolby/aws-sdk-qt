@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StartActivityStreamRequest
- * \brief The StartActivityStreamRequest class provides an interface for RDS StartActivityStream requests.
+ * \class QtAws::Rds::StartActivityStreamRequest
+ * \brief The StartActivityStreamRequest class provides an interface for Rds StartActivityStream requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * StartActivityStreamRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::RDS::StartActivityStreamRequestPrivate
+ * \class QtAws::Rds::StartActivityStreamRequestPrivate
  * \brief The StartActivityStreamRequestPrivate class provides private implementation for StartActivityStreamRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ StartActivityStreamRequestPrivate::StartActivityStreamRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

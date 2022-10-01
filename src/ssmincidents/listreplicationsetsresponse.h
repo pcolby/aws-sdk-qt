@@ -24,11 +24,11 @@
 #include "listreplicationsetsrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class ListReplicationSetsResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT ListReplicationSetsResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT ListReplicationSetsResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

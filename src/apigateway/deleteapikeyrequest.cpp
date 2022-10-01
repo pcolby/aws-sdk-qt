@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteApiKeyRequest
- * \brief The DeleteApiKeyRequest class provides an interface for APIGateway DeleteApiKey requests.
+ * \class QtAws::ApiGateway::DeleteApiKeyRequest
+ * \brief The DeleteApiKeyRequest class provides an interface for ApiGateway DeleteApiKey requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteApiKey
+ * \sa ApiGatewayClient::deleteApiKey
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
-    : APIGatewayRequest(new DeleteApiKeyRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteApiKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
  * Constructs a DeleteApiKeyRequest object.
  */
 DeleteApiKeyRequest::DeleteApiKeyRequest()
-    : APIGatewayRequest(new DeleteApiKeyRequestPrivate(APIGatewayRequest::DeleteApiKeyAction, this))
+    : ApiGatewayRequest(new DeleteApiKeyRequestPrivate(ApiGatewayRequest::DeleteApiKeyAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteApiKeyRequestPrivate
+ * \class QtAws::ApiGateway::DeleteApiKeyRequestPrivate
  * \brief The DeleteApiKeyRequestPrivate class provides private implementation for DeleteApiKeyRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteApiKeyRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteApiKeyRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteApiKeyRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const DeleteApiKeyRequestPrivate &other, DeleteApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

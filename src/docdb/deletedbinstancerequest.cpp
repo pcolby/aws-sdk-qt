@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBInstanceRequest
- * \brief The DeleteDBInstanceRequest class provides an interface for DocDB DeleteDBInstance requests.
+ * \class QtAws::DocDb::DeleteDBInstanceRequest
+ * \brief The DeleteDBInstanceRequest class provides an interface for DocDb DeleteDBInstance requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBInstance
+ * \sa DocDbClient::deleteDBInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other)
-    : DocDBRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &
  * Constructs a DeleteDBInstanceRequest object.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest()
-    : DocDBRequest(new DeleteDBInstanceRequestPrivate(DocDBRequest::DeleteDBInstanceAction, this))
+    : DocDbRequest(new DeleteDBInstanceRequestPrivate(DocDbRequest::DeleteDBInstanceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBInstanceRequestPrivate
+ * \class QtAws::DocDb::DeleteDBInstanceRequestPrivate
  * \brief The DeleteDBInstanceRequestPrivate class provides private implementation for DeleteDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DeleteDBInstanceRequestPrivate object for DocDB \a action,
+ * Constructs a DeleteDBInstanceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
-    const DocDBRequest::Action action, DeleteDBInstanceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DeleteDBInstanceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const DeleteDBInstanceRequestPrivate &other, DeleteDBInstanceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

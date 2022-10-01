@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::StartJobRunResponse
- * \brief The StartJobRunResponse class provides an interace for EMRContainers StartJobRun responses.
+ * \class QtAws::Emrcontainers::StartJobRunResponse
+ * \brief The StartJobRunResponse class provides an interace for Emrcontainers StartJobRun responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::startJobRun
+ * \sa EmrcontainersClient::startJobRun
  */
 
 /*!
@@ -72,7 +72,7 @@ StartJobRunResponse::StartJobRunResponse(
         const StartJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new StartJobRunResponsePrivate(this), parent)
+    : EmrcontainersResponse(new StartJobRunResponsePrivate(this), parent)
 {
     setRequest(new StartJobRunRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const StartJobRunRequest * StartJobRunResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers StartJobRun \a response.
+ * Parses a successful Emrcontainers StartJobRun \a response.
  */
 void StartJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void StartJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::StartJobRunResponsePrivate
+ * \class QtAws::Emrcontainers::StartJobRunResponsePrivate
  * \brief The StartJobRunResponsePrivate class provides private implementation for StartJobRunResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a StartJobRunResponsePrivate object with public implementation \a q.
  */
 StartJobRunResponsePrivate::StartJobRunResponsePrivate(
-    StartJobRunResponse * const q) : EMRContainersResponsePrivate(q)
+    StartJobRunResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers StartJobRun response element from \a xml.
+ * Parses a Emrcontainers StartJobRun response element from \a xml.
  */
 void StartJobRunResponsePrivate::parseStartJobRunResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void StartJobRunResponsePrivate::parseStartJobRunResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

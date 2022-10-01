@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
-class kendraClient;
+class KendraClient;
 
-class kendraClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class KendraClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit kendraClientPrivate(kendraClient * const q);
+    explicit KendraClientPrivate(KendraClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(kendraClient)
-    Q_DISABLE_COPY(kendraClientPrivate)
+    Q_DECLARE_PUBLIC(KendraClient)
+    Q_DISABLE_COPY(KendraClientPrivate)
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

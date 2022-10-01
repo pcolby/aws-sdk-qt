@@ -24,7 +24,7 @@
 #include "updateclusterrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class UpdateClusterResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

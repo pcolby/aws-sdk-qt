@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DescribeHsmRequest
- * \brief The DescribeHsmRequest class provides an interface for CloudHSM DescribeHsm requests.
+ * \class QtAws::CloudHsm::DescribeHsmRequest
+ * \brief The DescribeHsmRequest class provides an interface for CloudHsm DescribeHsm requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::describeHsm
+ * \sa CloudHsmClient::describeHsm
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeHsmRequest::DescribeHsmRequest(const DescribeHsmRequest &other)
-    : CloudHSMRequest(new DescribeHsmRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new DescribeHsmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ DescribeHsmRequest::DescribeHsmRequest(const DescribeHsmRequest &other)
  * Constructs a DescribeHsmRequest object.
  */
 DescribeHsmRequest::DescribeHsmRequest()
-    : CloudHSMRequest(new DescribeHsmRequestPrivate(CloudHSMRequest::DescribeHsmAction, this))
+    : CloudHsmRequest(new DescribeHsmRequestPrivate(CloudHsmRequest::DescribeHsmAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::CloudHSM::DescribeHsmRequestPrivate
+ * \class QtAws::CloudHsm::DescribeHsmRequestPrivate
  * \brief The DescribeHsmRequestPrivate class provides private implementation for DescribeHsmRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a DescribeHsmRequestPrivate object for CloudHSM \a action,
+ * Constructs a DescribeHsmRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
-    const CloudHSMRequest::Action action, DescribeHsmRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, DescribeHsmRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
  */
 DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
     const DescribeHsmRequestPrivate &other, DescribeHsmRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

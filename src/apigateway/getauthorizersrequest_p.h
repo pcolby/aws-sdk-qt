@@ -24,14 +24,14 @@
 #include "getauthorizersrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetAuthorizersRequest;
 
-class GetAuthorizersRequestPrivate : public APIGatewayRequestPrivate {
+class GetAuthorizersRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetAuthorizersRequestPrivate(const APIGatewayRequest::Action action,
+    GetAuthorizersRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetAuthorizersRequest * const q);
     GetAuthorizersRequestPrivate(const GetAuthorizersRequestPrivate &other,
                                    GetAuthorizersRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

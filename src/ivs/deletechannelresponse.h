@@ -24,7 +24,7 @@
 #include "deletechannelrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class DeleteChannelResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

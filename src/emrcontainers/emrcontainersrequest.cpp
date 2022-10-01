@@ -21,43 +21,43 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersRequest
- * \brief The EMRContainersRequest class provides an interface for EMRContainers requests.
+ * \class QtAws::Emrcontainers::EmrcontainersRequest
+ * \brief The EmrcontainersRequest class provides an interface for Emrcontainers requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * \enum EMRContainersRequest::Action
+ * \enum EmrcontainersRequest::Action
  *
- * This enum describes the actions that can be performed as EMRContainers
+ * This enum describes the actions that can be performed as Emrcontainers
  * requests.
  *
- * \value CancelJobRunAction EMRContainers CancelJobRun action.
- * \value CreateManagedEndpointAction EMRContainers CreateManagedEndpoint action.
- * \value CreateVirtualClusterAction EMRContainers CreateVirtualCluster action.
- * \value DeleteManagedEndpointAction EMRContainers DeleteManagedEndpoint action.
- * \value DeleteVirtualClusterAction EMRContainers DeleteVirtualCluster action.
- * \value DescribeJobRunAction EMRContainers DescribeJobRun action.
- * \value DescribeManagedEndpointAction EMRContainers DescribeManagedEndpoint action.
- * \value DescribeVirtualClusterAction EMRContainers DescribeVirtualCluster action.
- * \value ListJobRunsAction EMRContainers ListJobRuns action.
- * \value ListManagedEndpointsAction EMRContainers ListManagedEndpoints action.
- * \value ListTagsForResourceAction EMRContainers ListTagsForResource action.
- * \value ListVirtualClustersAction EMRContainers ListVirtualClusters action.
- * \value StartJobRunAction EMRContainers StartJobRun action.
- * \value TagResourceAction EMRContainers TagResource action.
- * \value UntagResourceAction EMRContainers UntagResource action.
+ * \value CancelJobRunAction Emrcontainers CancelJobRun action.
+ * \value CreateManagedEndpointAction Emrcontainers CreateManagedEndpoint action.
+ * \value CreateVirtualClusterAction Emrcontainers CreateVirtualCluster action.
+ * \value DeleteManagedEndpointAction Emrcontainers DeleteManagedEndpoint action.
+ * \value DeleteVirtualClusterAction Emrcontainers DeleteVirtualCluster action.
+ * \value DescribeJobRunAction Emrcontainers DescribeJobRun action.
+ * \value DescribeManagedEndpointAction Emrcontainers DescribeManagedEndpoint action.
+ * \value DescribeVirtualClusterAction Emrcontainers DescribeVirtualCluster action.
+ * \value ListJobRunsAction Emrcontainers ListJobRuns action.
+ * \value ListManagedEndpointsAction Emrcontainers ListManagedEndpoints action.
+ * \value ListTagsForResourceAction Emrcontainers ListTagsForResource action.
+ * \value ListVirtualClustersAction Emrcontainers ListVirtualClusters action.
+ * \value StartJobRunAction Emrcontainers StartJobRun action.
+ * \value TagResourceAction Emrcontainers TagResource action.
+ * \value UntagResourceAction Emrcontainers UntagResource action.
  */
 
 /*!
- * Constructs a EMRContainersRequest object for EMRContainers \a action.
+ * Constructs a EmrcontainersRequest object for Emrcontainers \a action.
  */
-EMRContainersRequest::EMRContainersRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EMRContainersRequestPrivate(action, this))
+EmrcontainersRequest::EmrcontainersRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EmrcontainersRequestPrivate(action, this))
 {
 
 }
@@ -65,18 +65,18 @@ EMRContainersRequest::EMRContainersRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-EMRContainersRequest::EMRContainersRequest(const EMRContainersRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new EMRContainersRequestPrivate(*other.d_func(), this))
+EmrcontainersRequest::EmrcontainersRequest(const EmrcontainersRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EmrcontainersRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the EMRContainersRequest object to be equal to \a other.
+ * Sets the EmrcontainersRequest object to be equal to \a other.
  */
-EMRContainersRequest& EMRContainersRequest::operator=(const EMRContainersRequest &other)
+EmrcontainersRequest& EmrcontainersRequest::operator=(const EmrcontainersRequest &other)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -84,57 +84,57 @@ EMRContainersRequest& EMRContainersRequest::operator=(const EMRContainersRequest
 }
 
 /*!
- * Constructs aa EMRContainersRequest object with private implementation \a d.
+ * Constructs aa EmrcontainersRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EMRContainersRequestPrivate.
+ * implementation that inherits from EmrcontainersRequestPrivate.
  */
-EMRContainersRequest::EMRContainersRequest(EMRContainersRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EmrcontainersRequest::EmrcontainersRequest(EmrcontainersRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the EMRContainers action to be performed by this request.
+ * Returns the Emrcontainers action to be performed by this request.
  */
-EMRContainersRequest::Action EMRContainersRequest::action() const
+EmrcontainersRequest::Action EmrcontainersRequest::action() const
 {
-    Q_D(const EMRContainersRequest);
+    Q_D(const EmrcontainersRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the EMRContainers action to be performed by this request.
+ * Returns the name of the Emrcontainers action to be performed by this request.
  */
-QString EMRContainersRequest::actionString() const
+QString EmrcontainersRequest::actionString() const
 {
-    return EMRContainersRequestPrivate::toString(action());
+    return EmrcontainersRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the EMRContainers API version implemented by this request.
+ * Returns the Emrcontainers API version implemented by this request.
  */
-QString EMRContainersRequest::apiVersion() const
+QString EmrcontainersRequest::apiVersion() const
 {
-    Q_D(const EMRContainersRequest);
+    Q_D(const EmrcontainersRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the EMRContainers action to be performed by this request to \a action.
+ * Sets the Emrcontainers action to be performed by this request to \a action.
  */
-void EMRContainersRequest::setAction(const Action action)
+void EmrcontainersRequest::setAction(const Action action)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->action = action;
 }
 
 /*!
- * Sets the EMRContainers API version to include in this request to \a version.
+ * Sets the Emrcontainers API version to include in this request to \a version.
  */
-void EMRContainersRequest::setApiVersion(const QString &version)
+void EmrcontainersRequest::setApiVersion(const QString &version)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->apiVersion = version;
 }
 
@@ -146,7 +146,7 @@ void EMRContainersRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool EMRContainersRequest::operator==(const EMRContainersRequest &other) const
+bool EmrcontainersRequest::operator==(const EmrcontainersRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -155,19 +155,19 @@ bool EMRContainersRequest::operator==(const EMRContainersRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid EMRContainers queue name.
+ * Returns \c tue if \a queueName is a valid Emrcontainers queue name.
  *
- * @par From EMRContainers FAQs:
+ * @par From Emrcontainers FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid EMRContainers queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Emrcontainers queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool EMRContainersRequest::isValidQueueName(const QString &queueName)
+/*bool EmrcontainersRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -177,45 +177,45 @@ bool EMRContainersRequest::operator==(const EMRContainersRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int EMRContainersRequest::clearParameter(const QString &name)
+int EmrcontainersRequest::clearParameter(const QString &name)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void EMRContainersRequest::clearParameters()
+void EmrcontainersRequest::clearParameters()
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant EMRContainersRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EmrcontainersRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const EMRContainersRequest);
+    Q_D(const EmrcontainersRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &EMRContainersRequest::parameters() const
+const QVariantMap &EmrcontainersRequest::parameters() const
 {
-    Q_D(const EMRContainersRequest);
+    Q_D(const EmrcontainersRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void EMRContainersRequest::setParameter(const QString &name, const QVariant &value)
+void EmrcontainersRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->parameters.insert(name, value);
 }
 
@@ -223,42 +223,42 @@ void EMRContainersRequest::setParameter(const QString &name, const QVariant &val
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void EMRContainersRequest::setParameters(const QVariantMap &parameters)
+void EmrcontainersRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(EMRContainersRequest);
+    Q_D(EmrcontainersRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the EMRContainers request using the given
+ * Returns a network request for the Emrcontainers request using the given
  * \a endpoint.
  *
- * This EMRContainers implementation builds request URLs by combining the
+ * This Emrcontainers implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest EMRContainersRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EmrcontainersRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const EMRContainersRequest);
+    //Q_D(const EmrcontainersRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersRequestPrivate
- * \brief The EMRContainersRequestPrivate class provides private implementation for EMRContainersRequest.
+ * \class QtAws::Emrcontainers::EmrcontainersRequestPrivate
+ * \brief The EmrcontainersRequestPrivate class provides private implementation for EmrcontainersRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a EMRContainersRequestPrivate object for EMRContainers \a action,
+ * Constructs a EmrcontainersRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
-EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequest::Action action, EMRContainersRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+EmrcontainersRequestPrivate::EmrcontainersRequestPrivate(const EmrcontainersRequest::Action action, EmrcontainersRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-10-01"))
 {
 
 }
@@ -269,10 +269,10 @@ EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequ
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the EMRContainersRequest class's copy constructor.
+ * This is required to support the EmrcontainersRequest class's copy constructor.
  */
-EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequestPrivate &other,
-                                     EMRContainersRequest * const q)
+EmrcontainersRequestPrivate::EmrcontainersRequestPrivate(const EmrcontainersRequestPrivate &other,
+                                     EmrcontainersRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -283,14 +283,14 @@ EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequ
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts EMRContainersRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the EMRContainers service's Action
+ * This function converts EmrcontainersRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the Emrcontainers service's Action
  * query parameters.
  */
-QString EMRContainersRequestPrivate::toString(const EMRContainersRequest::Action &action)
+QString EmrcontainersRequestPrivate::toString(const EmrcontainersRequest::Action &action)
 {
     #define ActionToString(action) \
-        case EMRContainersRequest::action##Action: return QStringLiteral(#action)
+        case EmrcontainersRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CancelJobRun);
         ActionToString(CreateManagedEndpoint);
@@ -314,5 +314,5 @@ QString EMRContainersRequestPrivate::toString(const EMRContainersRequest::Action
     return QString();
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

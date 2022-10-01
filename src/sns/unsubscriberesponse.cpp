@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::UnsubscribeResponse
- * \brief The UnsubscribeResponse class provides an interace for SNS Unsubscribe responses.
+ * \class QtAws::Sns::UnsubscribeResponse
+ * \brief The UnsubscribeResponse class provides an interace for Sns Unsubscribe responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const UnsubscribeRequest * UnsubscribeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS Unsubscribe \a response.
+ * Parses a successful Sns Unsubscribe \a response.
  */
 void UnsubscribeResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void UnsubscribeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::UnsubscribeResponsePrivate
+ * \class QtAws::Sns::UnsubscribeResponsePrivate
  * \brief The UnsubscribeResponsePrivate class provides private implementation for UnsubscribeResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
 }
 
 /*!
- * Parses a SNS Unsubscribe response element from \a xml.
+ * Parses a Sns Unsubscribe response element from \a xml.
  */
 void UnsubscribeResponsePrivate::parseUnsubscribeResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void UnsubscribeResponsePrivate::parseUnsubscribeResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

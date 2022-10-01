@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class IamClientPrivate;
 class AddClientIDToOpenIDConnectProviderRequest;
@@ -388,7 +388,6 @@ public slots:
     DeleteAccessKeyResponse * deleteAccessKey(const DeleteAccessKeyRequest &request);
     DeleteAccountAliasResponse * deleteAccountAlias(const DeleteAccountAliasRequest &request);
     DeleteAccountPasswordPolicyResponse * deleteAccountPasswordPolicy(const DeleteAccountPasswordPolicyRequest &request);
-    DeleteAccountPasswordPolicyResponse * deleteAccountPasswordPolicy();
     DeleteGroupResponse * deleteGroup(const DeleteGroupRequest &request);
     DeleteGroupPolicyResponse * deleteGroupPolicy(const DeleteGroupPolicyRequest &request);
     DeleteInstanceProfileResponse * deleteInstanceProfile(const DeleteInstanceProfileRequest &request);
@@ -414,19 +413,15 @@ public slots:
     DetachUserPolicyResponse * detachUserPolicy(const DetachUserPolicyRequest &request);
     EnableMFADeviceResponse * enableMFADevice(const EnableMFADeviceRequest &request);
     GenerateCredentialReportResponse * generateCredentialReport(const GenerateCredentialReportRequest &request);
-    GenerateCredentialReportResponse * generateCredentialReport();
     GenerateOrganizationsAccessReportResponse * generateOrganizationsAccessReport(const GenerateOrganizationsAccessReportRequest &request);
     GenerateServiceLastAccessedDetailsResponse * generateServiceLastAccessedDetails(const GenerateServiceLastAccessedDetailsRequest &request);
     GetAccessKeyLastUsedResponse * getAccessKeyLastUsed(const GetAccessKeyLastUsedRequest &request);
     GetAccountAuthorizationDetailsResponse * getAccountAuthorizationDetails(const GetAccountAuthorizationDetailsRequest &request);
     GetAccountPasswordPolicyResponse * getAccountPasswordPolicy(const GetAccountPasswordPolicyRequest &request);
-    GetAccountPasswordPolicyResponse * getAccountPasswordPolicy();
     GetAccountSummaryResponse * getAccountSummary(const GetAccountSummaryRequest &request);
-    GetAccountSummaryResponse * getAccountSummary();
     GetContextKeysForCustomPolicyResponse * getContextKeysForCustomPolicy(const GetContextKeysForCustomPolicyRequest &request);
     GetContextKeysForPrincipalPolicyResponse * getContextKeysForPrincipalPolicy(const GetContextKeysForPrincipalPolicyRequest &request);
     GetCredentialReportResponse * getCredentialReport(const GetCredentialReportRequest &request);
-    GetCredentialReportResponse * getCredentialReport();
     GetGroupResponse * getGroup(const GetGroupRequest &request);
     GetGroupPolicyResponse * getGroupPolicy(const GetGroupPolicyRequest &request);
     GetInstanceProfileResponse * getInstanceProfile(const GetInstanceProfileRequest &request);
@@ -533,7 +528,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

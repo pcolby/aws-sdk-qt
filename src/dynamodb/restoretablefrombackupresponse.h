@@ -24,11 +24,11 @@
 #include "restoretablefrombackuprequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class RestoreTableFromBackupResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT RestoreTableFromBackupResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT RestoreTableFromBackupResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

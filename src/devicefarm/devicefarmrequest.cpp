@@ -320,7 +320,7 @@ QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Action action, DeviceFarmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-06-23"))
 {
 
 }

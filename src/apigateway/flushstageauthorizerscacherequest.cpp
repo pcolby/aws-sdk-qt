@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::FlushStageAuthorizersCacheRequest
- * \brief The FlushStageAuthorizersCacheRequest class provides an interface for APIGateway FlushStageAuthorizersCache requests.
+ * \class QtAws::ApiGateway::FlushStageAuthorizersCacheRequest
+ * \brief The FlushStageAuthorizersCacheRequest class provides an interface for ApiGateway FlushStageAuthorizersCache requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::flushStageAuthorizersCache
+ * \sa ApiGatewayClient::flushStageAuthorizersCache
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest(const FlushStageAuthorizersCacheRequest &other)
-    : APIGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest(const Flush
  * Constructs a FlushStageAuthorizersCacheRequest object.
  */
 FlushStageAuthorizersCacheRequest::FlushStageAuthorizersCacheRequest()
-    : APIGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(APIGatewayRequest::FlushStageAuthorizersCacheAction, this))
+    : ApiGatewayRequest(new FlushStageAuthorizersCacheRequestPrivate(ApiGatewayRequest::FlushStageAuthorizersCacheAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
 }
 
 /*!
- * \class QtAws::APIGateway::FlushStageAuthorizersCacheRequestPrivate
+ * \class QtAws::ApiGateway::FlushStageAuthorizersCacheRequestPrivate
  * \brief The FlushStageAuthorizersCacheRequestPrivate class provides private implementation for FlushStageAuthorizersCacheRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a FlushStageAuthorizersCacheRequestPrivate object for APIGateway \a action,
+ * Constructs a FlushStageAuthorizersCacheRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
-    const APIGatewayRequest::Action action, FlushStageAuthorizersCacheRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, FlushStageAuthorizersCacheRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPriva
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const FlushStageAuthorizersCacheRequestPrivate &other, FlushStageAuthorizersCacheRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

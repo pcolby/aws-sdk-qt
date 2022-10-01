@@ -24,7 +24,7 @@
 #include "createloginprofilerequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class CreateLoginProfileRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

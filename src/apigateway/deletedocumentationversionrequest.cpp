@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationVersionRequest
- * \brief The DeleteDocumentationVersionRequest class provides an interface for APIGateway DeleteDocumentationVersion requests.
+ * \class QtAws::ApiGateway::DeleteDocumentationVersionRequest
+ * \brief The DeleteDocumentationVersionRequest class provides an interface for ApiGateway DeleteDocumentationVersion requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDocumentationVersion
+ * \sa ApiGatewayClient::deleteDocumentationVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest(const DeleteDocumentationVersionRequest &other)
-    : APIGatewayRequest(new DeleteDocumentationVersionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteDocumentationVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest(const Delet
  * Constructs a DeleteDocumentationVersionRequest object.
  */
 DeleteDocumentationVersionRequest::DeleteDocumentationVersionRequest()
-    : APIGatewayRequest(new DeleteDocumentationVersionRequestPrivate(APIGatewayRequest::DeleteDocumentationVersionAction, this))
+    : ApiGatewayRequest(new DeleteDocumentationVersionRequestPrivate(ApiGatewayRequest::DeleteDocumentationVersionAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationVersionRequestPrivate
+ * \class QtAws::ApiGateway::DeleteDocumentationVersionRequestPrivate
  * \brief The DeleteDocumentationVersionRequestPrivate class provides private implementation for DeleteDocumentationVersionRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteDocumentationVersionRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteDocumentationVersionRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteDocumentationVersionRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPriva
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const DeleteDocumentationVersionRequestPrivate &other, DeleteDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

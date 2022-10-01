@@ -24,16 +24,16 @@
 #include "efsrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class EfsRequest;
 
 class EfsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EfsRequest::Action action; ///< EFS action to be performed.
-    QString apiVersion;        ///< EFS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EFS request (query string) parameters. @todo?
+    EfsRequest::Action action; ///< Efs action to be performed.
+    QString apiVersion;        ///< Efs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Efs request (query string) parameters. @todo?
 
     EfsRequestPrivate(const EfsRequest::Action action, EfsRequest * const q);
     EfsRequestPrivate(const EfsRequestPrivate &other, EfsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

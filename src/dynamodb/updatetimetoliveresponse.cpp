@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateTimeToLiveResponse
- * \brief The UpdateTimeToLiveResponse class provides an interace for DynamoDB UpdateTimeToLive responses.
+ * \class QtAws::DynamoDb::UpdateTimeToLiveResponse
+ * \brief The UpdateTimeToLiveResponse class provides an interace for DynamoDb UpdateTimeToLive responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateTimeToLive
+ * \sa DynamoDbClient::updateTimeToLive
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
         const UpdateTimeToLiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateTimeToLiveResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateTimeToLiveResponsePrivate(this), parent)
 {
     setRequest(new UpdateTimeToLiveRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateTimeToLiveRequest * UpdateTimeToLiveResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateTimeToLive \a response.
+ * Parses a successful DynamoDb UpdateTimeToLive \a response.
  */
 void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateTimeToLiveResponsePrivate
+ * \class QtAws::DynamoDb::UpdateTimeToLiveResponsePrivate
  * \brief The UpdateTimeToLiveResponsePrivate class provides private implementation for UpdateTimeToLiveResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateTimeToLiveResponsePrivate object with public implementation \a q.
  */
 UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
-    UpdateTimeToLiveResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateTimeToLiveResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateTimeToLive response element from \a xml.
+ * Parses a DynamoDb UpdateTimeToLive response element from \a xml.
  */
 void UpdateTimeToLiveResponsePrivate::parseUpdateTimeToLiveResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateTimeToLiveResponsePrivate::parseUpdateTimeToLiveResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

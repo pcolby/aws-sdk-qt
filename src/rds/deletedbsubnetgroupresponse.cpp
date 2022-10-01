@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBSubnetGroupResponse
- * \brief The DeleteDBSubnetGroupResponse class provides an interace for RDS DeleteDBSubnetGroup responses.
+ * \class QtAws::Rds::DeleteDBSubnetGroupResponse
+ * \brief The DeleteDBSubnetGroupResponse class provides an interace for Rds DeleteDBSubnetGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteDBSubnetGroup \a response.
+ * Parses a successful Rds DeleteDBSubnetGroup \a response.
  */
 void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBSubnetGroupResponsePrivate
+ * \class QtAws::Rds::DeleteDBSubnetGroupResponsePrivate
  * \brief The DeleteDBSubnetGroupResponsePrivate class provides private implementation for DeleteDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteDBSubnetGroup response element from \a xml.
+ * Parses a Rds DeleteDBSubnetGroup response element from \a xml.
  */
 void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

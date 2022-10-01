@@ -24,11 +24,11 @@
 #include "updateenvironmentrequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class UpdateEnvironmentResponsePrivate;
 
-class QTAWSFINSPACE_EXPORT UpdateEnvironmentResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT UpdateEnvironmentResponse : public FinspaceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

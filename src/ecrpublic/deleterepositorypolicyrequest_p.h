@@ -24,14 +24,14 @@
 #include "deleterepositorypolicyrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DeleteRepositoryPolicyRequest;
 
-class DeleteRepositoryPolicyRequestPrivate : public ECRPublicRequestPrivate {
+class DeleteRepositoryPolicyRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    DeleteRepositoryPolicyRequestPrivate(const ECRPublicRequest::Action action,
+    DeleteRepositoryPolicyRequestPrivate(const EcrPublicRequest::Action action,
                                    DeleteRepositoryPolicyRequest * const q);
     DeleteRepositoryPolicyRequestPrivate(const DeleteRepositoryPolicyRequestPrivate &other,
                                    DeleteRepositoryPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

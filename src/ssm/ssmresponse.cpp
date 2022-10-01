@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 /*!
- * \class QtAws::SSM::SsmResponse
- * \brief The SsmResponse class provides an interface for SSM responses.
+ * \class QtAws::Ssm::SsmResponse
+ * \brief The SsmResponse class provides an interface for Ssm responses.
  *
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  */
 
 /*!
@@ -76,11 +76,11 @@ void SsmResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSM::SsmResponsePrivate
+ * \class QtAws::Ssm::SsmResponsePrivate
  * \brief The SsmResponsePrivate class provides private implementation for SsmResponse.
  * \internal
  *
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  */
 
 /*!
@@ -92,5 +92,5 @@ SsmResponsePrivate::SsmResponsePrivate(
 
 }
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws

@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::UpdateConfigurationResponse
- * \brief The UpdateConfigurationResponse class provides an interace for MQ UpdateConfiguration responses.
+ * \class QtAws::Mq::UpdateConfigurationResponse
+ * \brief The UpdateConfigurationResponse class provides an interace for Mq UpdateConfiguration responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::updateConfiguration
  */
@@ -63,7 +64,7 @@ const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ UpdateConfiguration \a response.
+ * Parses a successful Mq UpdateConfiguration \a response.
  */
 void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::UpdateConfigurationResponsePrivate
+ * \class QtAws::Mq::UpdateConfigurationResponsePrivate
  * \brief The UpdateConfigurationResponsePrivate class provides private implementation for UpdateConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ UpdateConfigurationResponsePrivate::UpdateConfigurationResponsePrivate(
 }
 
 /*!
- * Parses a MQ UpdateConfiguration response element from \a xml.
+ * Parses a Mq UpdateConfiguration response element from \a xml.
  */
 void UpdateConfigurationResponsePrivate::parseUpdateConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void UpdateConfigurationResponsePrivate::parseUpdateConfigurationResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

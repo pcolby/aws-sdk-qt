@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DeactivateContactChannelRequest
- * \brief The DeactivateContactChannelRequest class provides an interface for SSMContacts DeactivateContactChannel requests.
+ * \class QtAws::SsmContacts::DeactivateContactChannelRequest
+ * \brief The DeactivateContactChannelRequest class provides an interface for SsmContacts DeactivateContactChannel requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::deactivateContactChannel
+ * \sa SsmContactsClient::deactivateContactChannel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeactivateContactChannelRequest::DeactivateContactChannelRequest(const DeactivateContactChannelRequest &other)
-    : SSMContactsRequest(new DeactivateContactChannelRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new DeactivateContactChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ DeactivateContactChannelRequest::DeactivateContactChannelRequest(const Deactivat
  * Constructs a DeactivateContactChannelRequest object.
  */
 DeactivateContactChannelRequest::DeactivateContactChannelRequest()
-    : SSMContactsRequest(new DeactivateContactChannelRequestPrivate(SSMContactsRequest::DeactivateContactChannelAction, this))
+    : SsmContactsRequest(new DeactivateContactChannelRequestPrivate(SsmContactsRequest::DeactivateContactChannelAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DeactivateContactChannelRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SSMContacts::DeactivateContactChannelRequestPrivate
+ * \class QtAws::SsmContacts::DeactivateContactChannelRequestPrivate
  * \brief The DeactivateContactChannelRequestPrivate class provides private implementation for DeactivateContactChannelRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a DeactivateContactChannelRequestPrivate object for SSMContacts \a action,
+ * Constructs a DeactivateContactChannelRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 DeactivateContactChannelRequestPrivate::DeactivateContactChannelRequestPrivate(
-    const SSMContactsRequest::Action action, DeactivateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, DeactivateContactChannelRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ DeactivateContactChannelRequestPrivate::DeactivateContactChannelRequestPrivate(
  */
 DeactivateContactChannelRequestPrivate::DeactivateContactChannelRequestPrivate(
     const DeactivateContactChannelRequestPrivate &other, DeactivateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

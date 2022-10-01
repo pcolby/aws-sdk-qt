@@ -24,14 +24,14 @@
 #include "copybackuptoregionrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class CopyBackupToRegionRequest;
 
-class CopyBackupToRegionRequestPrivate : public CloudHSMV2RequestPrivate {
+class CopyBackupToRegionRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    CopyBackupToRegionRequestPrivate(const CloudHSMV2Request::Action action,
+    CopyBackupToRegionRequestPrivate(const CloudHsmV2Request::Action action,
                                    CopyBackupToRegionRequest * const q);
     CopyBackupToRegionRequestPrivate(const CopyBackupToRegionRequestPrivate &other,
                                    CopyBackupToRegionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

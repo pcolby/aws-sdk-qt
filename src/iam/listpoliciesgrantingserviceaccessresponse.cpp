@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ListPoliciesGrantingServiceAccessResponse
- * \brief The ListPoliciesGrantingServiceAccessResponse class provides an interace for IAM ListPoliciesGrantingServiceAccess responses.
+ * \class QtAws::Iam::ListPoliciesGrantingServiceAccessResponse
+ * \brief The ListPoliciesGrantingServiceAccessResponse class provides an interace for Iam ListPoliciesGrantingServiceAccess responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::listPoliciesGrantingServiceAccess
  */
@@ -68,7 +68,7 @@ const ListPoliciesGrantingServiceAccessRequest * ListPoliciesGrantingServiceAcce
 
 /*!
  * \reimp
- * Parses a successful IAM ListPoliciesGrantingServiceAccess \a response.
+ * Parses a successful Iam ListPoliciesGrantingServiceAccess \a response.
  */
 void ListPoliciesGrantingServiceAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void ListPoliciesGrantingServiceAccessResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::IAM::ListPoliciesGrantingServiceAccessResponsePrivate
+ * \class QtAws::Iam::ListPoliciesGrantingServiceAccessResponsePrivate
  * \brief The ListPoliciesGrantingServiceAccessResponsePrivate class provides private implementation for ListPoliciesGrantingServiceAccessResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ ListPoliciesGrantingServiceAccessResponsePrivate::ListPoliciesGrantingServiceAcc
 }
 
 /*!
- * Parses a IAM ListPoliciesGrantingServiceAccess response element from \a xml.
+ * Parses a Iam ListPoliciesGrantingServiceAccess response element from \a xml.
  */
 void ListPoliciesGrantingServiceAccessResponsePrivate::parseListPoliciesGrantingServiceAccessResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ListPoliciesGrantingServiceAccessResponsePrivate::parseListPoliciesGranting
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

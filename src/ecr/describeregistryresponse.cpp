@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DescribeRegistryResponse
- * \brief The DescribeRegistryResponse class provides an interace for ECR DescribeRegistry responses.
+ * \class QtAws::Ecr::DescribeRegistryResponse
+ * \brief The DescribeRegistryResponse class provides an interace for Ecr DescribeRegistry responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::describeRegistry
  */
@@ -68,7 +74,7 @@ const DescribeRegistryRequest * DescribeRegistryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR DescribeRegistry \a response.
+ * Parses a successful Ecr DescribeRegistry \a response.
  */
 void DescribeRegistryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DescribeRegistryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DescribeRegistryResponsePrivate
+ * \class QtAws::Ecr::DescribeRegistryResponsePrivate
  * \brief The DescribeRegistryResponsePrivate class provides private implementation for DescribeRegistryResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DescribeRegistryResponsePrivate::DescribeRegistryResponsePrivate(
 }
 
 /*!
- * Parses a ECR DescribeRegistry response element from \a xml.
+ * Parses a Ecr DescribeRegistry response element from \a xml.
  */
 void DescribeRegistryResponsePrivate::parseDescribeRegistryResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DescribeRegistryResponsePrivate::parseDescribeRegistryResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

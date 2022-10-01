@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::CloudHSMResponse
- * \brief The CloudHSMResponse class provides an interface for CloudHSM responses.
+ * \class QtAws::CloudHsm::CloudHsmResponse
+ * \brief The CloudHsmResponse class provides an interface for CloudHsm responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a CloudHSMResponse object with parent \a parent.
+ * Constructs a CloudHsmResponse object with parent \a parent.
  */
-CloudHSMResponse::CloudHSMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudHSMResponsePrivate(this), parent)
+CloudHsmResponse::CloudHsmResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudHsmResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a CloudHSMResponse object with private implementation \a d,
+ * Constructs a CloudHsmResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CloudHSMResponsePrivate.
+ * implementation that inherits from CloudHsmResponsePrivate.
  */
-CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * const parent)
+CloudHsmResponse::CloudHsmResponse(CloudHsmResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * 
 /*!
  * \reimp
  */
-void CloudHSMResponse::parseFailure(QIODevice &response)
+void CloudHsmResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(CloudHSMResponse);
+    //Q_D(CloudHsmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::CloudHSMResponsePrivate
- * \brief The CloudHSMResponsePrivate class provides private implementation for CloudHSMResponse.
+ * \class QtAws::CloudHsm::CloudHsmResponsePrivate
+ * \brief The CloudHsmResponsePrivate class provides private implementation for CloudHsmResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a CloudHSMResponsePrivate object with public implementation \a q.
+ * Constructs a CloudHsmResponsePrivate object with public implementation \a q.
  */
-CloudHSMResponsePrivate::CloudHSMResponsePrivate(
-    CloudHSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+CloudHsmResponsePrivate::CloudHsmResponsePrivate(
+    CloudHsmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

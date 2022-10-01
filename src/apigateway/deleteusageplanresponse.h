@@ -24,11 +24,11 @@
 #include "deleteusageplanrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteUsagePlanResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteUsagePlanResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteUsagePlanResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

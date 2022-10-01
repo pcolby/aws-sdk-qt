@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateSizeConstraintSetRequest
- * \brief The UpdateSizeConstraintSetRequest class provides an interface for WAF UpdateSizeConstraintSet requests.
+ * \class QtAws::Waf::UpdateSizeConstraintSetRequest
+ * \brief The UpdateSizeConstraintSetRequest class provides an interface for Waf UpdateSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAF::UpdateSizeConstraintSetRequestPrivate
+ * \class QtAws::Waf::UpdateSizeConstraintSetRequestPrivate
  * \brief The UpdateSizeConstraintSetRequestPrivate class provides private implementation for UpdateSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

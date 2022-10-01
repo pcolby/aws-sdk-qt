@@ -24,7 +24,7 @@
 #include "getrevisionrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class GetRevisionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

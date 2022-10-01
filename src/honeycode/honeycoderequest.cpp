@@ -46,8 +46,11 @@ namespace Honeycode {
  * \value ListTableColumnsAction Honeycode ListTableColumns action.
  * \value ListTableRowsAction Honeycode ListTableRows action.
  * \value ListTablesAction Honeycode ListTables action.
+ * \value ListTagsForResourceAction Honeycode ListTagsForResource action.
  * \value QueryTableRowsAction Honeycode QueryTableRows action.
  * \value StartTableDataImportJobAction Honeycode StartTableDataImportJob action.
+ * \value TagResourceAction Honeycode TagResource action.
+ * \value UntagResourceAction Honeycode UntagResource action.
  */
 
 /*!
@@ -255,7 +258,7 @@ QNetworkRequest HoneycodeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 HoneycodeRequestPrivate::HoneycodeRequestPrivate(const HoneycodeRequest::Action action, HoneycodeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-03-01"))
 {
 
 }
@@ -299,8 +302,11 @@ QString HoneycodeRequestPrivate::toString(const HoneycodeRequest::Action &action
         ActionToString(ListTableColumns);
         ActionToString(ListTableRows);
         ActionToString(ListTables);
+        ActionToString(ListTagsForResource);
         ActionToString(QueryTableRows);
         ActionToString(StartTableDataImportJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

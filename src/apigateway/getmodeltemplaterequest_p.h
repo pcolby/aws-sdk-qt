@@ -24,14 +24,14 @@
 #include "getmodeltemplaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetModelTemplateRequest;
 
-class GetModelTemplateRequestPrivate : public APIGatewayRequestPrivate {
+class GetModelTemplateRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetModelTemplateRequestPrivate(const APIGatewayRequest::Action action,
+    GetModelTemplateRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetModelTemplateRequest * const q);
     GetModelTemplateRequestPrivate(const GetModelTemplateRequestPrivate &other,
                                    GetModelTemplateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

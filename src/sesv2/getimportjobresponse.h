@@ -24,11 +24,11 @@
 #include "getimportjobrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetImportJobResponsePrivate;
 
-class QTAWSSESV2_EXPORT GetImportJobResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetImportJobResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

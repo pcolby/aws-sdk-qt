@@ -66,6 +66,8 @@ public:
         GetIntentAction,
         GetIntentVersionsAction,
         GetIntentsAction,
+        GetMigrationAction,
+        GetMigrationsAction,
         GetSlotTypeAction,
         GetSlotTypeVersionsAction,
         GetSlotTypesAction,
@@ -76,6 +78,7 @@ public:
         PutIntentAction,
         PutSlotTypeAction,
         StartImportAction,
+        StartMigrationAction,
         TagResourceAction,
         UntagResourceAction,
     };

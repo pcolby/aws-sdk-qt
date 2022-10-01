@@ -24,14 +24,14 @@
 #include "putconfigurationsetsendingoptionsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetSendingOptionsRequest;
 
-class PutConfigurationSetSendingOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetSendingOptionsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutConfigurationSetSendingOptionsRequestPrivate(const Sesv2Request::Action action,
+    PutConfigurationSetSendingOptionsRequestPrivate(const SESv2Request::Action action,
                                    PutConfigurationSetSendingOptionsRequest * const q);
     PutConfigurationSetSendingOptionsRequestPrivate(const PutConfigurationSetSendingOptionsRequestPrivate &other,
                                    PutConfigurationSetSendingOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

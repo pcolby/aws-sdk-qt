@@ -1,12 +1,17 @@
 add_compile_definitions(QTAWSAPPSYNC_LIBRARY)
 
 add_library(QtAwsAppSync
+  qtawsappsyncglobal.h
   appsyncclient.h
   appsyncclient_p.h
   appsyncrequest.h
   appsyncrequest_p.h
   appsyncresponse.h
   appsyncresponse_p.h
+  associateapirequest.h
+  associateapirequest_p.h
+  associateapiresponse.h
+  associateapiresponse_p.h
   createapicacherequest.h
   createapicacherequest_p.h
   createapicacheresponse.h
@@ -19,6 +24,10 @@ add_library(QtAwsAppSync
   createdatasourcerequest_p.h
   createdatasourceresponse.h
   createdatasourceresponse_p.h
+  createdomainnamerequest.h
+  createdomainnamerequest_p.h
+  createdomainnameresponse.h
+  createdomainnameresponse_p.h
   createfunctionrequest.h
   createfunctionrequest_p.h
   createfunctionresponse.h
@@ -47,6 +56,10 @@ add_library(QtAwsAppSync
   deletedatasourcerequest_p.h
   deletedatasourceresponse.h
   deletedatasourceresponse_p.h
+  deletedomainnamerequest.h
+  deletedomainnamerequest_p.h
+  deletedomainnameresponse.h
+  deletedomainnameresponse_p.h
   deletefunctionrequest.h
   deletefunctionrequest_p.h
   deletefunctionresponse.h
@@ -63,10 +76,22 @@ add_library(QtAwsAppSync
   deletetyperequest_p.h
   deletetyperesponse.h
   deletetyperesponse_p.h
+  disassociateapirequest.h
+  disassociateapirequest_p.h
+  disassociateapiresponse.h
+  disassociateapiresponse_p.h
+  evaluatemappingtemplaterequest.h
+  evaluatemappingtemplaterequest_p.h
+  evaluatemappingtemplateresponse.h
+  evaluatemappingtemplateresponse_p.h
   flushapicacherequest.h
   flushapicacherequest_p.h
   flushapicacheresponse.h
   flushapicacheresponse_p.h
+  getapiassociationrequest.h
+  getapiassociationrequest_p.h
+  getapiassociationresponse.h
+  getapiassociationresponse_p.h
   getapicacherequest.h
   getapicacherequest_p.h
   getapicacheresponse.h
@@ -75,6 +100,10 @@ add_library(QtAwsAppSync
   getdatasourcerequest_p.h
   getdatasourceresponse.h
   getdatasourceresponse_p.h
+  getdomainnamerequest.h
+  getdomainnamerequest_p.h
+  getdomainnameresponse.h
+  getdomainnameresponse_p.h
   getfunctionrequest.h
   getfunctionrequest_p.h
   getfunctionresponse.h
@@ -107,6 +136,10 @@ add_library(QtAwsAppSync
   listdatasourcesrequest_p.h
   listdatasourcesresponse.h
   listdatasourcesresponse_p.h
+  listdomainnamesrequest.h
+  listdomainnamesrequest_p.h
+  listdomainnamesresponse.h
+  listdomainnamesresponse_p.h
   listfunctionsrequest.h
   listfunctionsrequest_p.h
   listfunctionsresponse.h
@@ -115,14 +148,14 @@ add_library(QtAwsAppSync
   listgraphqlapisrequest_p.h
   listgraphqlapisresponse.h
   listgraphqlapisresponse_p.h
-  listresolversbyfunctionrequest.h
-  listresolversbyfunctionrequest_p.h
-  listresolversbyfunctionresponse.h
-  listresolversbyfunctionresponse_p.h
   listresolversrequest.h
   listresolversrequest_p.h
   listresolversresponse.h
   listresolversresponse_p.h
+  listresolversbyfunctionrequest.h
+  listresolversbyfunctionrequest_p.h
+  listresolversbyfunctionresponse.h
+  listresolversbyfunctionresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -131,7 +164,6 @@ add_library(QtAwsAppSync
   listtypesrequest_p.h
   listtypesresponse.h
   listtypesresponse_p.h
-  qtawsappsyncglobal.h
   startschemacreationrequest.h
   startschemacreationrequest_p.h
   startschemacreationresponse.h
@@ -156,6 +188,10 @@ add_library(QtAwsAppSync
   updatedatasourcerequest_p.h
   updatedatasourceresponse.h
   updatedatasourceresponse_p.h
+  updatedomainnamerequest.h
+  updatedomainnamerequest_p.h
+  updatedomainnameresponse.h
+  updatedomainnameresponse_p.h
   updatefunctionrequest.h
   updatefunctionrequest_p.h
   updatefunctionresponse.h
@@ -175,12 +211,16 @@ add_library(QtAwsAppSync
   appsyncclient.cpp
   appsyncrequest.cpp
   appsyncresponse.cpp
+  associateapirequest.cpp
+  associateapiresponse.cpp
   createapicacherequest.cpp
   createapicacheresponse.cpp
   createapikeyrequest.cpp
   createapikeyresponse.cpp
   createdatasourcerequest.cpp
   createdatasourceresponse.cpp
+  createdomainnamerequest.cpp
+  createdomainnameresponse.cpp
   createfunctionrequest.cpp
   createfunctionresponse.cpp
   creategraphqlapirequest.cpp
@@ -195,6 +235,8 @@ add_library(QtAwsAppSync
   deleteapikeyresponse.cpp
   deletedatasourcerequest.cpp
   deletedatasourceresponse.cpp
+  deletedomainnamerequest.cpp
+  deletedomainnameresponse.cpp
   deletefunctionrequest.cpp
   deletefunctionresponse.cpp
   deletegraphqlapirequest.cpp
@@ -203,12 +245,20 @@ add_library(QtAwsAppSync
   deleteresolverresponse.cpp
   deletetyperequest.cpp
   deletetyperesponse.cpp
+  disassociateapirequest.cpp
+  disassociateapiresponse.cpp
+  evaluatemappingtemplaterequest.cpp
+  evaluatemappingtemplateresponse.cpp
   flushapicacherequest.cpp
   flushapicacheresponse.cpp
+  getapiassociationrequest.cpp
+  getapiassociationresponse.cpp
   getapicacherequest.cpp
   getapicacheresponse.cpp
   getdatasourcerequest.cpp
   getdatasourceresponse.cpp
+  getdomainnamerequest.cpp
+  getdomainnameresponse.cpp
   getfunctionrequest.cpp
   getfunctionresponse.cpp
   getgraphqlapirequest.cpp
@@ -225,14 +275,16 @@ add_library(QtAwsAppSync
   listapikeysresponse.cpp
   listdatasourcesrequest.cpp
   listdatasourcesresponse.cpp
+  listdomainnamesrequest.cpp
+  listdomainnamesresponse.cpp
   listfunctionsrequest.cpp
   listfunctionsresponse.cpp
   listgraphqlapisrequest.cpp
   listgraphqlapisresponse.cpp
-  listresolversbyfunctionrequest.cpp
-  listresolversbyfunctionresponse.cpp
   listresolversrequest.cpp
   listresolversresponse.cpp
+  listresolversbyfunctionrequest.cpp
+  listresolversbyfunctionresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listtypesrequest.cpp
@@ -249,6 +301,8 @@ add_library(QtAwsAppSync
   updateapikeyresponse.cpp
   updatedatasourcerequest.cpp
   updatedatasourceresponse.cpp
+  updatedomainnamerequest.cpp
+  updatedomainnameresponse.cpp
   updatefunctionrequest.cpp
   updatefunctionresponse.cpp
   updategraphqlapirequest.cpp

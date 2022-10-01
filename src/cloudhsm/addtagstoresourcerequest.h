@@ -23,11 +23,11 @@
 #include "cloudhsmrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class AddTagsToResourceRequestPrivate;
 
-class QTAWSCLOUDHSM_EXPORT AddTagsToResourceRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT AddTagsToResourceRequest : public CloudHsmRequest {
 
 public:
     AddTagsToResourceRequest(const AddTagsToResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

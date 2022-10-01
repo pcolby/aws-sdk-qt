@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DeleteRepositoryPolicyRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT DeleteRepositoryPolicyRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT DeleteRepositoryPolicyRequest : public EcrPublicRequest {
 
 public:
     DeleteRepositoryPolicyRequest(const DeleteRepositoryPolicyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLEXRUNTIMEV2_LIBRARY)
 
 add_library(QtAwsLexRuntimeV2
+  qtawslexruntimev2global.h
+  lexruntimev2client.h
+  lexruntimev2client_p.h
+  lexruntimev2request.h
+  lexruntimev2request_p.h
+  lexruntimev2response.h
+  lexruntimev2response_p.h
   deletesessionrequest.h
   deletesessionrequest_p.h
   deletesessionresponse.h
@@ -9,17 +16,10 @@ add_library(QtAwsLexRuntimeV2
   getsessionrequest_p.h
   getsessionresponse.h
   getsessionresponse_p.h
-  lexruntimev2client.h
-  lexruntimev2client_p.h
-  lexruntimev2request.h
-  lexruntimev2request_p.h
-  lexruntimev2response.h
-  lexruntimev2response_p.h
   putsessionrequest.h
   putsessionrequest_p.h
   putsessionresponse.h
   putsessionresponse_p.h
-  qtawslexruntimev2global.h
   recognizetextrequest.h
   recognizetextrequest_p.h
   recognizetextresponse.h
@@ -32,13 +32,13 @@ add_library(QtAwsLexRuntimeV2
   startconversationrequest_p.h
   startconversationresponse.h
   startconversationresponse_p.h
+  lexruntimev2client.cpp
+  lexruntimev2request.cpp
+  lexruntimev2response.cpp
   deletesessionrequest.cpp
   deletesessionresponse.cpp
   getsessionrequest.cpp
   getsessionresponse.cpp
-  lexruntimev2client.cpp
-  lexruntimev2request.cpp
-  lexruntimev2response.cpp
   putsessionrequest.cpp
   putsessionresponse.cpp
   recognizetextrequest.cpp

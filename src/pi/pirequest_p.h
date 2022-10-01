@@ -24,16 +24,16 @@
 #include "pirequest.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class PiRequest;
 
 class PiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    PiRequest::Action action; ///< PI action to be performed.
-    QString apiVersion;        ///< PI API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< PI request (query string) parameters. @todo?
+    PiRequest::Action action; ///< Pi action to be performed.
+    QString apiVersion;        ///< Pi API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Pi request (query string) parameters. @todo?
 
     PiRequestPrivate(const PiRequest::Action action, PiRequest * const q);
     PiRequestPrivate(const PiRequestPrivate &other, PiRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

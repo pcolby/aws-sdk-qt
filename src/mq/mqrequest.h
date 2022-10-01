@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class MqRequestPrivate;
 
 class QTAWSMQ_EXPORT MqRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by MQ.
+    /// Actions supported by Mq.
     enum Action {
         CreateBrokerAction,
         CreateConfigurationAction,
@@ -97,7 +97,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

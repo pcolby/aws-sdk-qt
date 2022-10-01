@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public mgnRequestPrivate {
+class UntagResourceRequestPrivate : public MgnRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const mgnRequest::Action action,
+    UntagResourceRequestPrivate(const MgnRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

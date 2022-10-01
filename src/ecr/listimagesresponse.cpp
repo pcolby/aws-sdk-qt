@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::ListImagesResponse
- * \brief The ListImagesResponse class provides an interace for ECR ListImages responses.
+ * \class QtAws::Ecr::ListImagesResponse
+ * \brief The ListImagesResponse class provides an interace for Ecr ListImages responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::listImages
  */
@@ -68,7 +74,7 @@ const ListImagesRequest * ListImagesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR ListImages \a response.
+ * Parses a successful Ecr ListImages \a response.
  */
 void ListImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void ListImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::ListImagesResponsePrivate
+ * \class QtAws::Ecr::ListImagesResponsePrivate
  * \brief The ListImagesResponsePrivate class provides private implementation for ListImagesResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ ListImagesResponsePrivate::ListImagesResponsePrivate(
 }
 
 /*!
- * Parses a ECR ListImages response element from \a xml.
+ * Parses a Ecr ListImages response element from \a xml.
  */
 void ListImagesResponsePrivate::parseListImagesResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void ListImagesResponsePrivate::parseListImagesResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

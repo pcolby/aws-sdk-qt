@@ -24,7 +24,7 @@
 #include "createuserrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class CreateUserRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

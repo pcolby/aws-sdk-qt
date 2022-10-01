@@ -24,7 +24,7 @@
 #include "promoteresourcesharecreatedfrompolicyrequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class PromoteResourceShareCreatedFromPolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

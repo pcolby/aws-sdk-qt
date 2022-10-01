@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT UntagResourceRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT UntagResourceRequest : public EcrPublicRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

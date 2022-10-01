@@ -24,11 +24,11 @@
 #include "creategeomatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateGeoMatchSetResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT CreateGeoMatchSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT CreateGeoMatchSetResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

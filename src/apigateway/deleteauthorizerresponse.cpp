@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteAuthorizerResponse
- * \brief The DeleteAuthorizerResponse class provides an interace for APIGateway DeleteAuthorizer responses.
+ * \class QtAws::ApiGateway::DeleteAuthorizerResponse
+ * \brief The DeleteAuthorizerResponse class provides an interace for ApiGateway DeleteAuthorizer responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteAuthorizer
+ * \sa ApiGatewayClient::deleteAuthorizer
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
         const DeleteAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteAuthorizerResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new DeleteAuthorizerRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteAuthorizer \a response.
+ * Parses a successful ApiGateway DeleteAuthorizer \a response.
  */
 void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteAuthorizerResponsePrivate
+ * \class QtAws::ApiGateway::DeleteAuthorizerResponsePrivate
  * \brief The DeleteAuthorizerResponsePrivate class provides private implementation for DeleteAuthorizerResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteAuthorizerResponsePrivate object with public implementation \a q.
  */
 DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
-    DeleteAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteAuthorizerResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteAuthorizer response element from \a xml.
+ * Parses a ApiGateway DeleteAuthorizer response element from \a xml.
  */
 void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

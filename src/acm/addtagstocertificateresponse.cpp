@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::AddTagsToCertificateResponse
- * \brief The AddTagsToCertificateResponse class provides an interace for ACM AddTagsToCertificate responses.
+ * \class QtAws::Acm::AddTagsToCertificateResponse
+ * \brief The AddTagsToCertificateResponse class provides an interace for Acm AddTagsToCertificate responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::addTagsToCertificate
  */
@@ -66,7 +66,7 @@ const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful ACM AddTagsToCertificate \a response.
+ * Parses a successful Acm AddTagsToCertificate \a response.
  */
 void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::AddTagsToCertificateResponsePrivate
+ * \class QtAws::Acm::AddTagsToCertificateResponsePrivate
  * \brief The AddTagsToCertificateResponsePrivate class provides private implementation for AddTagsToCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
 }
 
 /*!
- * Parses a ACM AddTagsToCertificate response element from \a xml.
+ * Parses a Acm AddTagsToCertificate response element from \a xml.
  */
 void AddTagsToCertificateResponsePrivate::parseAddTagsToCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void AddTagsToCertificateResponsePrivate::parseAddTagsToCertificateResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

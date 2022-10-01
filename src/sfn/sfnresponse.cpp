@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SfnResponse
- * \brief The SfnResponse class provides an interface for SFN responses.
+ * \class QtAws::Sfn::SfnResponse
+ * \brief The SfnResponse class provides an interface for Sfn responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -76,11 +76,11 @@ void SfnResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::SfnResponsePrivate
+ * \class QtAws::Sfn::SfnResponsePrivate
  * \brief The SfnResponsePrivate class provides private implementation for SfnResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -92,5 +92,5 @@ SfnResponsePrivate::SfnResponsePrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

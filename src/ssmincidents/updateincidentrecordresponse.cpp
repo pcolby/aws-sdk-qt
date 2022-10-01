@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateIncidentRecordResponse
- * \brief The UpdateIncidentRecordResponse class provides an interace for SSMIncidents UpdateIncidentRecord responses.
+ * \class QtAws::SsmIncidents::UpdateIncidentRecordResponse
+ * \brief The UpdateIncidentRecordResponse class provides an interace for SsmIncidents UpdateIncidentRecord responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateIncidentRecord
+ * \sa SsmIncidentsClient::updateIncidentRecord
  */
 
 /*!
@@ -54,7 +54,7 @@ UpdateIncidentRecordResponse::UpdateIncidentRecordResponse(
         const UpdateIncidentRecordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new UpdateIncidentRecordResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new UpdateIncidentRecordResponsePrivate(this), parent)
 {
     setRequest(new UpdateIncidentRecordRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const UpdateIncidentRecordRequest * UpdateIncidentRecordResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents UpdateIncidentRecord \a response.
+ * Parses a successful SsmIncidents UpdateIncidentRecord \a response.
  */
 void UpdateIncidentRecordResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void UpdateIncidentRecordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateIncidentRecordResponsePrivate
+ * \class QtAws::SsmIncidents::UpdateIncidentRecordResponsePrivate
  * \brief The UpdateIncidentRecordResponsePrivate class provides private implementation for UpdateIncidentRecordResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a UpdateIncidentRecordResponsePrivate object with public implementation \a q.
  */
 UpdateIncidentRecordResponsePrivate::UpdateIncidentRecordResponsePrivate(
-    UpdateIncidentRecordResponse * const q) : SSMIncidentsResponsePrivate(q)
+    UpdateIncidentRecordResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents UpdateIncidentRecord response element from \a xml.
+ * Parses a SsmIncidents UpdateIncidentRecord response element from \a xml.
  */
 void UpdateIncidentRecordResponsePrivate::parseUpdateIncidentRecordResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateIncidentRecordResponsePrivate::parseUpdateIncidentRecordResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

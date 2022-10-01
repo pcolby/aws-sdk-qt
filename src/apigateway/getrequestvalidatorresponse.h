@@ -24,11 +24,11 @@
 #include "getrequestvalidatorrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetRequestValidatorResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetRequestValidatorResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetRequestValidatorResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

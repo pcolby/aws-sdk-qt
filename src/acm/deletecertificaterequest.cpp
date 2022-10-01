@@ -23,19 +23,19 @@
 #include "acmrequest_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::DeleteCertificateRequest
- * \brief The DeleteCertificateRequest class provides an interface for ACM DeleteCertificate requests.
+ * \class QtAws::Acm::DeleteCertificateRequest
+ * \brief The DeleteCertificateRequest class provides an interface for Acm DeleteCertificate requests.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::deleteCertificate
  */
@@ -78,11 +78,11 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ACM::DeleteCertificateRequestPrivate
+ * \class QtAws::Acm::DeleteCertificateRequestPrivate
  * \brief The DeleteCertificateRequestPrivate class provides private implementation for DeleteCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -109,5 +109,5 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

@@ -24,16 +24,16 @@
 #include "fmsrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class FmsRequest;
 
 class FmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    FmsRequest::Action action; ///< FMS action to be performed.
-    QString apiVersion;        ///< FMS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< FMS request (query string) parameters. @todo?
+    FmsRequest::Action action; ///< Fms action to be performed.
+    QString apiVersion;        ///< Fms API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Fms request (query string) parameters. @todo?
 
     FmsRequestPrivate(const FmsRequest::Action action, FmsRequest * const q);
     FmsRequestPrivate(const FmsRequestPrivate &other, FmsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

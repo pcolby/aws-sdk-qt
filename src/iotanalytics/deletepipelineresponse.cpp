@@ -33,9 +33,9 @@ namespace IoTAnalytics {
  *
  * \inmodule QtAwsIoTAnalytics
  *
- *  AWS IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then
- *  query the data and run sophisticated analytics on it. AWS IoT Analytics enables advanced data exploration through
- *  integration with Jupyter Notebooks and data visualization through integration with Amazon
+ *  IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then query
+ *  the data and run sophisticated analytics on it. IoT Analytics enables advanced data exploration through integration with
+ *  Jupyter Notebooks and data visualization through integration with Amazon
  * 
  *  QuickSight>
  * 
@@ -46,11 +46,11 @@ namespace IoTAnalytics {
  * 
  *  </p
  * 
- *  AWS IoT Analytics automates the steps required to analyze data from IoT devices. AWS IoT Analytics filters, transforms,
- *  and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect
- *  only the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with
+ *  IoT Analytics automates the steps required to analyze data from IoT devices. IoT Analytics filters, transforms, and
+ *  enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect only
+ *  the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with
  *  device-specific metadata such as device type and location before storing it. Then, you can analyze your data by running
- *  queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. AWS IoT
+ *  queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. IoT
  *  Analytics includes pre-built models for common IoT use cases so you can answer questions like which devices are about to
  *  fail or which customers are at risk of abandoning their wearable
  *

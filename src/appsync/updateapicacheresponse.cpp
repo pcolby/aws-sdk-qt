@@ -33,7 +33,7 @@ namespace AppSync {
  *
  * \inmodule QtAwsAppSync
  *
- *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *  AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
  * \sa AppSyncClient::updateApiCache
  */

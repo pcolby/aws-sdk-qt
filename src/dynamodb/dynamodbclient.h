@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
-class DynamoDBClientPrivate;
+class DynamoDbClientPrivate;
 class BatchExecuteStatementRequest;
 class BatchExecuteStatementResponse;
 class BatchGetItemRequest;
@@ -62,6 +62,8 @@ class DescribeGlobalTableRequest;
 class DescribeGlobalTableResponse;
 class DescribeGlobalTableSettingsRequest;
 class DescribeGlobalTableSettingsResponse;
+class DescribeImportRequest;
+class DescribeImportResponse;
 class DescribeKinesisStreamingDestinationRequest;
 class DescribeKinesisStreamingDestinationResponse;
 class DescribeLimitsRequest;
@@ -84,6 +86,8 @@ class ExportTableToPointInTimeRequest;
 class ExportTableToPointInTimeResponse;
 class GetItemRequest;
 class GetItemResponse;
+class ImportTableRequest;
+class ImportTableResponse;
 class ListBackupsRequest;
 class ListBackupsResponse;
 class ListContributorInsightsRequest;
@@ -92,6 +96,8 @@ class ListExportsRequest;
 class ListExportsResponse;
 class ListGlobalTablesRequest;
 class ListGlobalTablesResponse;
+class ListImportsRequest;
+class ListImportsResponse;
 class ListTablesRequest;
 class ListTablesResponse;
 class ListTagsOfResourceRequest;
@@ -131,17 +137,17 @@ class UpdateTableReplicaAutoScalingResponse;
 class UpdateTimeToLiveRequest;
 class UpdateTimeToLiveResponse;
 
-class QTAWSDYNAMODB_EXPORT DynamoDBClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDYNAMODB_EXPORT DynamoDbClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    DynamoDBClient(
+    DynamoDbClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit DynamoDBClient(
+    explicit DynamoDbClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -163,6 +169,7 @@ public slots:
     DescribeExportResponse * describeExport(const DescribeExportRequest &request);
     DescribeGlobalTableResponse * describeGlobalTable(const DescribeGlobalTableRequest &request);
     DescribeGlobalTableSettingsResponse * describeGlobalTableSettings(const DescribeGlobalTableSettingsRequest &request);
+    DescribeImportResponse * describeImport(const DescribeImportRequest &request);
     DescribeKinesisStreamingDestinationResponse * describeKinesisStreamingDestination(const DescribeKinesisStreamingDestinationRequest &request);
     DescribeLimitsResponse * describeLimits(const DescribeLimitsRequest &request);
     DescribeTableResponse * describeTable(const DescribeTableRequest &request);
@@ -174,10 +181,12 @@ public slots:
     ExecuteTransactionResponse * executeTransaction(const ExecuteTransactionRequest &request);
     ExportTableToPointInTimeResponse * exportTableToPointInTime(const ExportTableToPointInTimeRequest &request);
     GetItemResponse * getItem(const GetItemRequest &request);
+    ImportTableResponse * importTable(const ImportTableRequest &request);
     ListBackupsResponse * listBackups(const ListBackupsRequest &request);
     ListContributorInsightsResponse * listContributorInsights(const ListContributorInsightsRequest &request);
     ListExportsResponse * listExports(const ListExportsRequest &request);
     ListGlobalTablesResponse * listGlobalTables(const ListGlobalTablesRequest &request);
+    ListImportsResponse * listImports(const ListImportsRequest &request);
     ListTablesResponse * listTables(const ListTablesRequest &request);
     ListTagsOfResourceResponse * listTagsOfResource(const ListTagsOfResourceRequest &request);
     PutItemResponse * putItem(const PutItemRequest &request);
@@ -199,12 +208,12 @@ public slots:
     UpdateTimeToLiveResponse * updateTimeToLive(const UpdateTimeToLiveRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(DynamoDBClient)
-    Q_DISABLE_COPY(DynamoDBClient)
+    Q_DECLARE_PRIVATE(DynamoDbClient)
+    Q_DISABLE_COPY(DynamoDbClient)
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

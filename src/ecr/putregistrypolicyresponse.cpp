@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutRegistryPolicyResponse
- * \brief The PutRegistryPolicyResponse class provides an interace for ECR PutRegistryPolicy responses.
+ * \class QtAws::Ecr::PutRegistryPolicyResponse
+ * \brief The PutRegistryPolicyResponse class provides an interace for Ecr PutRegistryPolicy responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putRegistryPolicy
  */
@@ -68,7 +74,7 @@ const PutRegistryPolicyRequest * PutRegistryPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR PutRegistryPolicy \a response.
+ * Parses a successful Ecr PutRegistryPolicy \a response.
  */
 void PutRegistryPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void PutRegistryPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::PutRegistryPolicyResponsePrivate
+ * \class QtAws::Ecr::PutRegistryPolicyResponsePrivate
  * \brief The PutRegistryPolicyResponsePrivate class provides private implementation for PutRegistryPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ PutRegistryPolicyResponsePrivate::PutRegistryPolicyResponsePrivate(
 }
 
 /*!
- * Parses a ECR PutRegistryPolicy response element from \a xml.
+ * Parses a Ecr PutRegistryPolicy response element from \a xml.
  */
 void PutRegistryPolicyResponsePrivate::parsePutRegistryPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void PutRegistryPolicyResponsePrivate::parsePutRegistryPolicyResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "deletelunaclientrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class DeleteLunaClientResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT DeleteLunaClientResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT DeleteLunaClientResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

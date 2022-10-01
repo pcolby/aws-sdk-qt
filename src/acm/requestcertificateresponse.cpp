@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::RequestCertificateResponse
- * \brief The RequestCertificateResponse class provides an interace for ACM RequestCertificate responses.
+ * \class QtAws::Acm::RequestCertificateResponse
+ * \brief The RequestCertificateResponse class provides an interace for Acm RequestCertificate responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::requestCertificate
  */
@@ -66,7 +66,7 @@ const RequestCertificateRequest * RequestCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ACM RequestCertificate \a response.
+ * Parses a successful Acm RequestCertificate \a response.
  */
 void RequestCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void RequestCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::RequestCertificateResponsePrivate
+ * \class QtAws::Acm::RequestCertificateResponsePrivate
  * \brief The RequestCertificateResponsePrivate class provides private implementation for RequestCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
 }
 
 /*!
- * Parses a ACM RequestCertificate response element from \a xml.
+ * Parses a Acm RequestCertificate response element from \a xml.
  */
 void RequestCertificateResponsePrivate::parseRequestCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void RequestCertificateResponsePrivate::parseRequestCertificateResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

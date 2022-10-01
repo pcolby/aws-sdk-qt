@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for finspace ListTagsForResource requests.
+ * \class QtAws::Finspace::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Finspace ListTagsForResource requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::listTagsForResource
+ * \sa FinspaceClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : finspaceRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : finspaceRequest(new ListTagsForResourceRequestPrivate(finspaceRequest::ListTagsForResourceAction, this))
+    : FinspaceRequest(new ListTagsForResourceRequestPrivate(FinspaceRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::finspace::ListTagsForResourceRequestPrivate
+ * \class QtAws::Finspace::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for finspace \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const finspaceRequest::Action action, ListTagsForResourceRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, ListTagsForResourceRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

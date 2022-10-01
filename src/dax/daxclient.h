@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DaxClientPrivate;
 class CreateClusterRequest;
@@ -117,7 +117,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

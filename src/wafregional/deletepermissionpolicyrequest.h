@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeletePermissionPolicyRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeletePermissionPolicyRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeletePermissionPolicyRequest : public WafRegionalRequest {
 
 public:
     DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

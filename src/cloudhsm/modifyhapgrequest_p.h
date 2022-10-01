@@ -24,14 +24,14 @@
 #include "modifyhapgrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ModifyHapgRequest;
 
-class ModifyHapgRequestPrivate : public CloudHSMRequestPrivate {
+class ModifyHapgRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    ModifyHapgRequestPrivate(const CloudHSMRequest::Action action,
+    ModifyHapgRequestPrivate(const CloudHsmRequest::Action action,
                                    ModifyHapgRequest * const q);
     ModifyHapgRequestPrivate(const ModifyHapgRequestPrivate &other,
                                    ModifyHapgRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

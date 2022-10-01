@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeCertificatesResponse
- * \brief The DescribeCertificatesResponse class provides an interace for DocDB DescribeCertificates responses.
+ * \class QtAws::DocDb::DescribeCertificatesResponse
+ * \brief The DescribeCertificatesResponse class provides an interace for DocDb DescribeCertificates responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeCertificates
+ * \sa DocDbClient::describeCertificates
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeCertificatesResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificatesRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeCertificates \a response.
+ * Parses a successful DocDb DescribeCertificates \a response.
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeCertificatesResponsePrivate
+ * \class QtAws::DocDb::DescribeCertificatesResponsePrivate
  * \brief The DescribeCertificatesResponsePrivate class provides private implementation for DescribeCertificatesResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
-    DescribeCertificatesResponse * const q) : DocDBResponsePrivate(q)
+    DescribeCertificatesResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeCertificates response element from \a xml.
+ * Parses a DocDb DescribeCertificates response element from \a xml.
  */
 void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

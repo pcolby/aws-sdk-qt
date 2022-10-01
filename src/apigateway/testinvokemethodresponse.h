@@ -24,11 +24,11 @@
 #include "testinvokemethodrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class TestInvokeMethodResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT TestInvokeMethodResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT TestInvokeMethodResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorResponse
- * \brief The IoTDeviceAdvisorResponse class provides an interface for IoTDeviceAdvisor responses.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorResponse
+ * \brief The IotDeviceAdvisorResponse class provides an interface for IotDeviceAdvisor responses.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a IoTDeviceAdvisorResponse object with parent \a parent.
+ * Constructs a IotDeviceAdvisorResponse object with parent \a parent.
  */
-IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTDeviceAdvisorResponsePrivate(this), parent)
+IotDeviceAdvisorResponse::IotDeviceAdvisorResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new IotDeviceAdvisorResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a IoTDeviceAdvisorResponse object with private implementation \a d,
+ * Constructs a IotDeviceAdvisorResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from IoTDeviceAdvisorResponsePrivate.
+ * implementation that inherits from IotDeviceAdvisorResponsePrivate.
  */
-IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(IoTDeviceAdvisorResponsePrivate * const d, QObject * const parent)
+IotDeviceAdvisorResponse::IotDeviceAdvisorResponse(IotDeviceAdvisorResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(IoTDeviceAdvisorResponsePriva
 /*!
  * \reimp
  */
-void IoTDeviceAdvisorResponse::parseFailure(QIODevice &response)
+void IotDeviceAdvisorResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(IoTDeviceAdvisorResponse);
+    //Q_D(IotDeviceAdvisorResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void IoTDeviceAdvisorResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorResponsePrivate
- * \brief The IoTDeviceAdvisorResponsePrivate class provides private implementation for IoTDeviceAdvisorResponse.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorResponsePrivate
+ * \brief The IotDeviceAdvisorResponsePrivate class provides private implementation for IotDeviceAdvisorResponse.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a IoTDeviceAdvisorResponsePrivate object with public implementation \a q.
+ * Constructs a IotDeviceAdvisorResponsePrivate object with public implementation \a q.
  */
-IoTDeviceAdvisorResponsePrivate::IoTDeviceAdvisorResponsePrivate(
-    IoTDeviceAdvisorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+IotDeviceAdvisorResponsePrivate::IotDeviceAdvisorResponsePrivate(
+    IotDeviceAdvisorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

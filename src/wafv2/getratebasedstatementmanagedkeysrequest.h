@@ -23,7 +23,7 @@
 #include "wafv2request.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class GetRateBasedStatementManagedKeysRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

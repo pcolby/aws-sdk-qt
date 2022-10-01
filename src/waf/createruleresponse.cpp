@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateRuleResponse
- * \brief The CreateRuleResponse class provides an interace for WAF CreateRule responses.
+ * \class QtAws::Waf::CreateRuleResponse
+ * \brief The CreateRuleResponse class provides an interace for Waf CreateRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateRuleRequest * CreateRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateRule \a response.
+ * Parses a successful Waf CreateRule \a response.
  */
 void CreateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateRuleResponsePrivate
+ * \class QtAws::Waf::CreateRuleResponsePrivate
  * \brief The CreateRuleResponsePrivate class provides private implementation for CreateRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateRuleResponsePrivate::CreateRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateRule response element from \a xml.
+ * Parses a Waf CreateRule response element from \a xml.
  */
 void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

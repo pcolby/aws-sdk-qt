@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class GetRegistryCatalogDataRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT GetRegistryCatalogDataRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT GetRegistryCatalogDataRequest : public EcrPublicRequest {
 
 public:
     GetRegistryCatalogDataRequest(const GetRegistryCatalogDataRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

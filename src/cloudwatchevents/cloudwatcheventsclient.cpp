@@ -146,20 +146,20 @@ namespace CloudWatchEvents {
  * \ingroup aws-clients
  * \inmodule QtAwsCloudWatchEvents
  *
- *  Amazon EventBridge helps you to respond to state changes in your AWS resources. When your resources change state, they
- *  automatically send events into an event stream. You can create rules that match selected events in the stream and route
- *  them to targets to take action. You can also use rules to take action on a predetermined schedule. For example, you can
- *  configure rules
+ *  Amazon EventBridge helps you to respond to state changes in your Amazon Web Services resources. When your resources
+ *  change state, they automatically send events to an event stream. You can create rules that match selected events in the
+ *  stream and route them to targets to take action. You can also use rules to take action on a predetermined schedule. For
+ *  example, you can configure rules
  * 
  *  to> <ul> <li>
  * 
- *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
- *  enters the running
+ *  Automatically invoke an Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance enters
+ *  the running
  * 
  *  state> </li> <li>
  * 
- *  Direct specific API records from AWS CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential
- *  security or availability
+ *  Direct specific API records from CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential security
+ *  or availability
  * 
  *  risks> </li> <li>
  * 
@@ -314,12 +314,13 @@ CreateEventBusResponse * CloudWatchEventsClient::createEventBus(const CreateEven
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Called by an SaaS partner to create a partner event source. This operation is not used by AWS
+ * Called by an SaaS partner to create a partner event source. This operation is not used by Amazon Web Services
  *
  * customers>
  *
- * Each partner event source can be used by one AWS account to create a matching partner event bus in that AWS account. A
- * SaaS partner must create one partner event source for each AWS account that wants to receive those event types.
+ * Each partner event source can be used by one Amazon Web Services account to create a matching partner event bus in that
+ * Amazon Web Services account. A SaaS partner must create one partner event source for each Amazon Web Services account
+ * that wants to receive those event types.
  *
  * </p
  *
@@ -327,8 +328,8 @@ CreateEventBusResponse * CloudWatchEventsClient::createEventBus(const CreateEven
  *
  * application>
  *
- * An AWS account that creates a partner event bus that matches the partner event source can use that event bus to receive
- * events from the partner, and then process them using AWS Events rules and
+ * An Amazon Web Services account that creates a partner event bus that matches the partner event source can use that event
+ * bus to receive events from the partner, and then process them using Amazon Web Services Events rules and
  *
  * targets>
  *
@@ -340,11 +341,11 @@ CreateEventBusResponse * CloudWatchEventsClient::createEventBus(const CreateEven
  *
  * </p
  *
- * <i>partner_name</i> is determined during partner registration and identifies the partner to AWS customers.
- * <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their events.
+ * <i>partner_name</i> is determined during partner registration and identifies the partner to Amazon Web Services
+ * customers. <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their events.
  * <i>event_name</i> is determined by the partner, and should uniquely identify an event-generating resource within the
- * partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help AWS customers decide whether
- * to create an event bus to receive these
+ * partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help Amazon Web Services
+ * customers decide whether to create an event bus to receive these
  */
 CreatePartnerEventSourceResponse * CloudWatchEventsClient::createPartnerEventSource(const CreatePartnerEventSourceRequest &request)
 {
@@ -367,7 +368,7 @@ CreatePartnerEventSourceResponse * CloudWatchEventsClient::createPartnerEventSou
  *
  * deleted>
  *
- * To activate a deactivated partner event source, use
+ * To activate a deactivated partner event source, use <a
  */
 DeactivateEventSourceResponse * CloudWatchEventsClient::deactivateEventSource(const DeactivateEventSourceRequest &request)
 {
@@ -447,11 +448,15 @@ DeleteEventBusResponse * CloudWatchEventsClient::deleteEventBus(const DeleteEven
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation is used by SaaS partners to delete a partner event source. This operation is not used by AWS
+ * This operation is used by SaaS partners to delete a partner event source. This operation is not used by Amazon Web
+ * Services
  *
  * customers>
  *
- * When you delete an event source, the status of the corresponding partner event bus in the AWS customer account becomes
+ * When you delete an event source, the status of the corresponding partner event bus in the Amazon Web Services customer
+ * account becomes
+ *
+ * DELETED>
  */
 DeletePartnerEventSourceResponse * CloudWatchEventsClient::deletePartnerEventSource(const DeletePartnerEventSourceRequest &request)
 {
@@ -468,18 +473,24 @@ DeletePartnerEventSourceResponse * CloudWatchEventsClient::deletePartnerEventSou
  *
  * rule>
  *
- * Before you can delete the rule, you must remove all targets, using
+ * Before you can delete the rule, you must remove all targets, using <a
  *
- * <a>RemoveTargets</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemoveTargets.html">RemoveTargets</a>>
  *
  * When you delete a rule, incoming events might continue to match to the deleted rule. Allow a short period of time for
  * changes to take
  *
  * effect>
  *
- * Managed rules are rules created and managed by another AWS service on your behalf. These rules are created by those
- * other AWS services to support functionality in those services. You can delete these rules using the <code>Force</code>
- * option, but you should do so only if you are sure the other service is not still using that
+ * If you call delete rule multiple times for the same rule, all calls will succeed. When you call delete rule for a
+ * non-existent custom eventbus, <code>ResourceNotFoundException</code> is
+ *
+ * returned>
+ *
+ * Managed rules are rules created and managed by another Amazon Web Services service on your behalf. These rules are
+ * created by those other Amazon Web Services services to support functionality in those services. You can delete these
+ * rules using the <code>Force</code> option, but you should do so only if you are sure the other service is not still
+ * using that
  */
 DeleteRuleResponse * CloudWatchEventsClient::deleteRule(const DeleteRuleRequest &request)
 {
@@ -531,17 +542,17 @@ DescribeConnectionResponse * CloudWatchEventsClient::describeConnection(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Displays details about an event bus in your account. This can include the external AWS accounts that are permitted to
- * write events to your default event bus, and the associated policy. For custom event buses and partner event buses, it
- * displays the name, ARN, policy, state, and creation
+ * Displays details about an event bus in your account. This can include the external Amazon Web Services accounts that are
+ * permitted to write events to your default event bus, and the associated policy. For custom event buses and partner event
+ * buses, it displays the name, ARN, policy, state, and creation
  *
  * time>
  *
- * To enable your account to receive events from other accounts on its default event bus, use
+ * To enable your account to receive events from other accounts on its default event bus, use <a
  *
- * <a>PutPermission</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>>
  *
- * For more information about partner event buses, see
+ * For more information about partner event buses, see <a
  */
 DescribeEventBusResponse * CloudWatchEventsClient::describeEventBus(const DescribeEventBusRequest &request)
 {
@@ -567,9 +578,10 @@ DescribeEventSourceResponse * CloudWatchEventsClient::describeEventSource(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * An SaaS partner can use this operation to list details about a partner event source that they have created. AWS
- * customers do not use this operation. Instead, AWS customers can use <a>DescribeEventSource</a> to see details about a
- * partner event source that is shared with
+ * An SaaS partner can use this operation to list details about a partner event source that they have created. Amazon Web
+ * Services customers do not use this operation. Instead, Amazon Web Services customers can use <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventSource.html">DescribeEventSource</a>
+ * to see details about a partner event source that is shared with
  */
 DescribePartnerEventSourceResponse * CloudWatchEventsClient::describePartnerEventSource(const DescribePartnerEventSourceRequest &request)
 {
@@ -605,7 +617,7 @@ DescribeReplayResponse * CloudWatchEventsClient::describeReplay(const DescribeRe
  *
  * rule>
  *
- * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use
+ * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use <a
  */
 DescribeRuleResponse * CloudWatchEventsClient::describeRule(const DescribeRuleRequest &request)
 {
@@ -707,8 +719,8 @@ ListEventBusesResponse * CloudWatchEventsClient::listEventBuses(const ListEventB
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can use this to see all the partner event sources that have been shared with your AWS account. For more information
- * about partner event sources, see
+ * You can use this to see all the partner event sources that have been shared with your Amazon Web Services account. For
+ * more information about partner event sources, see <a
  */
 ListEventSourcesResponse * CloudWatchEventsClient::listEventSources(const ListEventSourcesRequest &request)
 {
@@ -721,8 +733,8 @@ ListEventSourcesResponse * CloudWatchEventsClient::listEventSources(const ListEv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * An SaaS partner can use this operation to display the AWS account ID that a particular partner event source name is
- * associated with. This operation is not used by AWS
+ * An SaaS partner can use this operation to display the Amazon Web Services account ID that a particular partner event
+ * source name is associated with. This operation is not used by Amazon Web Services
  */
 ListPartnerEventSourceAccountsResponse * CloudWatchEventsClient::listPartnerEventSourceAccounts(const ListPartnerEventSourceAccountsRequest &request)
 {
@@ -736,7 +748,7 @@ ListPartnerEventSourceAccountsResponse * CloudWatchEventsClient::listPartnerEven
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * An SaaS partner can use this operation to list all the partner event source names that they have created. This operation
- * is not used by AWS
+ * is not used by Amazon Web Services
  */
 ListPartnerEventSourcesResponse * CloudWatchEventsClient::listPartnerEventSources(const ListPartnerEventSourcesRequest &request)
 {
@@ -781,7 +793,7 @@ ListRuleNamesByTargetResponse * CloudWatchEventsClient::listRuleNamesByTarget(co
  *
  * names>
  *
- * ListRules does not list the targets of a rule. To see the targets associated with a rule, use
+ * ListRules does not list the targets of a rule. To see the targets associated with a rule, use <a
  */
 ListRulesResponse * CloudWatchEventsClient::listRules(const ListRulesRequest &request)
 {
@@ -833,7 +845,8 @@ PutEventsResponse * CloudWatchEventsClient::putEvents(const PutEventsRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This is used by SaaS partners to write events to a customer's partner event bus. AWS customers do not use this
+ * This is used by SaaS partners to write events to a customer's partner event bus. Amazon Web Services customers do not
+ * use this
  */
 PutPartnerEventsResponse * CloudWatchEventsClient::putPartnerEvents(const PutPartnerEventsRequest &request)
 {
@@ -846,9 +859,9 @@ PutPartnerEventsResponse * CloudWatchEventsClient::putPartnerEvents(const PutPar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Running <code>PutPermission</code> permits the specified AWS account or AWS organization to put events to the specified
- * <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in your account are triggered by these events arriving to
- * an event bus in your account.
+ * Running <code>PutPermission</code> permits the specified Amazon Web Services account or Amazon Web Services organization
+ * to put events to the specified <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in your account are
+ * triggered by these events arriving to an event bus in your account.
  *
  * </p
  *
@@ -857,10 +870,10 @@ PutPartnerEventsResponse * CloudWatchEventsClient::putPartnerEvents(const PutPar
  *
  * target>
  *
- * To enable multiple AWS accounts to put events to your event bus, run <code>PutPermission</code> once for each of these
- * accounts. Or, if all the accounts are members of the same AWS organization, you can run <code>PutPermission</code> once
- * specifying <code>Principal</code> as "*" and specifying the AWS organization ID in <code>Condition</code>, to grant
- * permissions to all accounts in that
+ * To enable multiple Amazon Web Services accounts to put events to your event bus, run <code>PutPermission</code> once for
+ * each of these accounts. Or, if all the accounts are members of the same Amazon Web Services organization, you can run
+ * <code>PutPermission</code> once specifying <code>Principal</code> as "*" and specifying the Amazon Web Services
+ * organization ID in <code>Condition</code>, to grant permissions to all accounts in that
  *
  * organization>
  *
@@ -868,11 +881,11 @@ PutPartnerEventsResponse * CloudWatchEventsClient::putPartnerEvents(const PutPar
  * with proper permissions when they use <code>PutTarget</code> to add your account's event bus as a target. For more
  * information, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html">Sending
- * and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User
+ * and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
  *
  * Guide</i>>
  *
- * The permission policy on the default event bus cannot exceed 10 KB in
+ * The permission policy on the event bus cannot exceed 10 KB in
  */
 PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissionRequest &request)
 {
@@ -886,16 +899,16 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates or updates the specified rule. Rules are enabled by default, or based on value of the state. You can disable a
- * rule using
+ * rule using <a
  *
- * <a>DisableRule</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DisableRule.html">DisableRule</a>>
  *
- * A single rule watches for events from a single event bus. Events generated by AWS services go to your account's default
- * event bus. Events generated by SaaS partner services or applications go to the matching partner event bus. If you have
- * custom applications or services, you can specify whether their events go to your default event bus or a custom event bus
- * that you have created. For more information, see
+ * A single rule watches for events from a single event bus. Events generated by Amazon Web Services services go to your
+ * account's default event bus. Events generated by SaaS partner services or applications go to the matching partner event
+ * bus. If you have custom applications or services, you can specify whether their events go to your default event bus or a
+ * custom event bus that you have created. For more information, see <a
  *
- * <a>CreateEventBus</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>>
  *
  * If you are updating an existing rule, the rule is replaced with what you specify in this <code>PutRule</code> command.
  * If you omit arguments in <code>PutRule</code>, the old values for those arguments are not kept. Instead, they are
@@ -922,13 +935,14 @@ PutPermissionResponse * CloudWatchEventsClient::putPermission(const PutPermissio
  * permissions>
  *
  * If you are updating an existing rule, any tags you specify in the <code>PutRule</code> operation are ignored. To update
- * the tags of an existing rule, use <a>TagResource</a> and
+ * the tags of an existing rule, use <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TagResource.html">TagResource</a> and <a
  *
- * <a>UntagResource</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UntagResource.html">UntagResource</a>>
  *
- * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge uses an
- * exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so that
- * they match the ARN syntax in the event you want to
+ * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+ * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating
+ * event patterns so that they match the ARN syntax in the event you want to
  *
  * match>
  *
@@ -971,83 +985,106 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  *
  * Events> <ul> <li>
  *
- * EC2
+ * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-api-destinations.html">API destination</a>
  *
- * instance> </li> <li>
+ * </p </li> <li>
  *
- * SSM Run
+ * Amazon API Gateway REST API
  *
- * Comman> </li> <li>
+ * endpoint> </li> <li>
  *
- * SSM
+ * API
  *
- * Automatio> </li> <li>
+ * Gatewa> </li> <li>
  *
- * AWS Lambda
+ * Batch job
  *
- * function> </li> <li>
+ * queu> </li> <li>
  *
- * Data streams in Amazon Kinesis Data
+ * CloudWatch Logs
  *
- * Stream> </li> <li>
+ * grou> </li> <li>
  *
- * Data delivery streams in Amazon Kinesis Data
+ * CodeBuild
  *
- * Firehos> </li> <li>
+ * projec> </li> <li>
+ *
+ * CodePipelin> </li> <li>
+ *
+ * Amazon EC2 <code>CreateSnapshot</code> API
+ *
+ * cal> </li> <li>
+ *
+ * Amazon EC2 <code>RebootInstances</code> API
+ *
+ * cal> </li> <li>
+ *
+ * Amazon EC2 <code>StopInstances</code> API
+ *
+ * cal> </li> <li>
+ *
+ * Amazon EC2 <code>TerminateInstances</code> API
+ *
+ * cal> </li> <li>
  *
  * Amazon ECS
  *
  * task> </li> <li>
  *
- * AWS Step Functions state
+ * Event bus in a different Amazon Web Services account or
  *
- * machine> </li> <li>
+ * Region>
  *
- * AWS Batch
+ * You can use an event bus in the US East (N. Virginia) us-east-1, US West (Oregon) us-west-2, or Europe (Ireland)
+ * eu-west-1 Regions as a target for a
  *
- * job> </li> <li>
+ * rule> </li> <li>
  *
- * AWS CodeBuild
+ * Firehose delivery stream (Kinesis Data
  *
- * project> </li> <li>
+ * Firehose> </li> <li>
  *
- * Pipelines in AWS
+ * Inspector assessment template (Amazon
  *
- * CodePipelin> </li> <li>
+ * Inspector> </li> <li>
  *
- * Amazon Inspector assessment
+ * Kinesis stream (Kinesis Data
  *
- * template> </li> <li>
+ * Stream> </li> <li>
+ *
+ * Lambda
+ *
+ * functio> </li> <li>
+ *
+ * Redshift clusters (Data API statement
+ *
+ * execution> </li> <li>
  *
  * Amazon SNS
  *
- * topic> </li> <li>
+ * topi> </li> <li>
  *
- * Amazon SQS queues, including FIFO
+ * Amazon SQS queues (includes FIFO
  *
  * queue> </li> <li>
  *
- * The default event bus of another AWS
+ * SSM
  *
- * accoun> </li> <li>
+ * Automatio> </li> <li>
  *
- * Amazon API Gateway REST
+ * SSM
  *
- * API> </li> <li>
+ * OpsIte> </li> <li>
  *
- * Redshift Clusters to invoke Data API ExecuteStatement
+ * SSM Run
  *
- * o> </li> <li>
+ * Comman> </li> <li>
  *
- * Custom/SaaS HTTPS APIs via EventBridge API
+ * Step Functions state
  *
- * Destination> </li> <li>
+ * machine> </li> </ul>
  *
- * Amazon SageMaker Model Building
- *
- * Pipeline> </li> </ul>
- *
- * Creating rules with built-in targets is supported only in the AWS Management Console. The built-in targets are <code>EC2
+ * Creating rules with built-in targets is supported only in the Management Console. The built-in targets are <code>EC2
  * CreateSnapshot API call</code>, <code>EC2 RebootInstances API call</code>, <code>EC2 StopInstances API call</code>, and
  * <code>EC2 TerminateInstances API call</code>.
  *
@@ -1059,26 +1096,27 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  *
  * field>
  *
- * To be able to make API calls against the resources that you own, Amazon EventBridge (CloudWatch Events) needs the
- * appropriate permissions. For AWS Lambda and Amazon SNS resources, EventBridge relies on resource-based policies. For EC2
- * instances, Kinesis data streams, AWS Step Functions state machines and API Gateway REST APIs, EventBridge relies on IAM
- * roles that you specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more information, see <a
+ * To be able to make API calls against the resources that you own, Amazon EventBridge needs the appropriate permissions.
+ * For Lambda and Amazon SNS resources, EventBridge relies on resource-based policies. For EC2 instances, Kinesis Data
+ * Streams, Step Functions state machines and API Gateway REST APIs, EventBridge relies on IAM roles that you specify in
+ * the <code>RoleARN</code> argument in <code>PutTargets</code>. For more information, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html">Authentication
  * and Access Control</a> in the <i>Amazon EventBridge User
  *
  * Guide</i>>
  *
- * If another AWS account is in the same region and has granted you permission (using <code>PutPermission</code>), you can
- * send events to that account. Set that account's event bus as a target of the rules in your account. To send the matched
- * events to the other account, specify that account's event bus as the <code>Arn</code> value when you run
- * <code>PutTargets</code>. If your account sends events to another account, your account is charged for each sent event.
- * Each event sent to another account is charged as a custom event. The account receiving the event is not charged. For
- * more information, see <a href="https://aws.amazon.com/eventbridge/pricing/">Amazon EventBridge (CloudWatch Events)
+ * If another Amazon Web Services account is in the same region and has granted you permission (using
+ * <code>PutPermission</code>), you can send events to that account. Set that account's event bus as a target of the rules
+ * in your account. To send the matched events to the other account, specify that account's event bus as the
+ * <code>Arn</code> value when you run <code>PutTargets</code>. If your account sends events to another account, your
+ * account is charged for each sent event. Each event sent to another account is charged as a custom event. The account
+ * receiving the event is not charged. For more information, see <a
+ * href="http://aws.amazon.com/eventbridge/pricing/">Amazon EventBridge
  *
  * Pricing</a>> <note>
  *
  * <code>Input</code>, <code>InputPath</code>, and <code>InputTransformer</code> are not available with
- * <code>PutTarget</code> if the target is an event bus of a different AWS
+ * <code>PutTarget</code> if the target is an event bus of a different Amazon Web Services
  *
  * account> </note>
  *
@@ -1086,13 +1124,13 @@ PutRuleResponse * CloudWatchEventsClient::putRule(const PutRuleRequest &request)
  * through an organization instead of directly by the account ID, then you must specify a <code>RoleArn</code> with proper
  * permissions in the <code>Target</code> structure. For more information, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html">Sending
- * and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User
+ * and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
  *
  * Guide</i>>
  *
- * For more information about enabling cross-account events, see
+ * For more information about enabling cross-account events, see <a
  *
- * <a>PutPermission</a>>
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>>
  *
  * <b>Input</b>, <b>InputPath</b>, and <b>InputTransformer</b> are mutually exclusive and optional parameters of a target.
  * When a rule is triggered due to a matched
@@ -1143,9 +1181,9 @@ PutTargetsResponse * CloudWatchEventsClient::putTargets(const PutTargetsRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Revokes the permission of another AWS account to be able to put events to the specified event bus. Specify the account
- * to revoke by the <code>StatementId</code> value that you associated with the account when you granted it permission with
- * <code>PutPermission</code>. You can find the <code>StatementId</code> by using
+ * Revokes the permission of another Amazon Web Services account to be able to put events to the specified event bus.
+ * Specify the account to revoke by the <code>StatementId</code> value that you associated with the account when you
+ * granted it permission with <code>PutPermission</code>. You can find the <code>StatementId</code> by using <a
  */
 RemovePermissionResponse * CloudWatchEventsClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -1206,7 +1244,7 @@ StartReplayResponse * CloudWatchEventsClient::startReplay(const StartReplayReque
  *
  * tagged>
  *
- * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+ * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
  *
  * characters>
  *
@@ -1233,9 +1271,9 @@ TagResourceResponse * CloudWatchEventsClient::tagResource(const TagResourceReque
  *
  * event>
  *
- * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge uses an
- * exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event patterns so that
- * they match the ARN syntax in the event you want to
+ * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+ * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating
+ * event patterns so that they match the ARN syntax in the event you want to
  */
 TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEventPatternRequest &request)
 {
@@ -1248,7 +1286,7 @@ TestEventPatternResponse * CloudWatchEventsClient::testEventPattern(const TestEv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags from the specified EventBridge resource. In Amazon EventBridge (CloudWatch Events, rules and
+ * Removes one or more tags from the specified EventBridge resource. In Amazon EventBridge (CloudWatch Events), rules and
  * event buses can be
  */
 UntagResourceResponse * CloudWatchEventsClient::untagResource(const UntagResourceRequest &request)

@@ -24,7 +24,7 @@
 #include "createopenidconnectproviderrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class CreateOpenIDConnectProviderRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "startimagepipelineexecutionrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class StartImagePipelineExecutionResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT StartImagePipelineExecutionResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT StartImagePipelineExecutionResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

@@ -24,28 +24,28 @@
 #include "mgnrequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnRequest;
+class MgnRequest;
 
-class mgnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MgnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    mgnRequest::Action action; ///< mgn action to be performed.
-    QString apiVersion;        ///< mgn API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< mgn request (query string) parameters. @todo?
+    MgnRequest::Action action; ///< Mgn action to be performed.
+    QString apiVersion;        ///< Mgn API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Mgn request (query string) parameters. @todo?
 
-    mgnRequestPrivate(const mgnRequest::Action action, mgnRequest * const q);
-    mgnRequestPrivate(const mgnRequestPrivate &other, mgnRequest * const q);
+    MgnRequestPrivate(const MgnRequest::Action action, MgnRequest * const q);
+    MgnRequestPrivate(const MgnRequestPrivate &other, MgnRequest * const q);
 
-    static QString toString(const mgnRequest::Action &action);
+    static QString toString(const MgnRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(mgnRequest)
+    Q_DECLARE_PUBLIC(MgnRequest)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

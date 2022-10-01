@@ -32,8 +32,12 @@ namespace Rekognition {
 class RekognitionClientPrivate;
 class CompareFacesRequest;
 class CompareFacesResponse;
+class CopyProjectVersionRequest;
+class CopyProjectVersionResponse;
 class CreateCollectionRequest;
 class CreateCollectionResponse;
+class CreateDatasetRequest;
+class CreateDatasetResponse;
 class CreateProjectRequest;
 class CreateProjectResponse;
 class CreateProjectVersionRequest;
@@ -42,16 +46,22 @@ class CreateStreamProcessorRequest;
 class CreateStreamProcessorResponse;
 class DeleteCollectionRequest;
 class DeleteCollectionResponse;
+class DeleteDatasetRequest;
+class DeleteDatasetResponse;
 class DeleteFacesRequest;
 class DeleteFacesResponse;
 class DeleteProjectRequest;
 class DeleteProjectResponse;
+class DeleteProjectPolicyRequest;
+class DeleteProjectPolicyResponse;
 class DeleteProjectVersionRequest;
 class DeleteProjectVersionResponse;
 class DeleteStreamProcessorRequest;
 class DeleteStreamProcessorResponse;
 class DescribeCollectionRequest;
 class DescribeCollectionResponse;
+class DescribeDatasetRequest;
+class DescribeDatasetResponse;
 class DescribeProjectVersionsRequest;
 class DescribeProjectVersionsResponse;
 class DescribeProjectsRequest;
@@ -70,6 +80,8 @@ class DetectProtectiveEquipmentRequest;
 class DetectProtectiveEquipmentResponse;
 class DetectTextRequest;
 class DetectTextResponse;
+class DistributeDatasetEntriesRequest;
+class DistributeDatasetEntriesResponse;
 class GetCelebrityInfoRequest;
 class GetCelebrityInfoResponse;
 class GetCelebrityRecognitionRequest;
@@ -92,12 +104,20 @@ class IndexFacesRequest;
 class IndexFacesResponse;
 class ListCollectionsRequest;
 class ListCollectionsResponse;
+class ListDatasetEntriesRequest;
+class ListDatasetEntriesResponse;
+class ListDatasetLabelsRequest;
+class ListDatasetLabelsResponse;
 class ListFacesRequest;
 class ListFacesResponse;
+class ListProjectPoliciesRequest;
+class ListProjectPoliciesResponse;
 class ListStreamProcessorsRequest;
 class ListStreamProcessorsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class PutProjectPolicyRequest;
+class PutProjectPolicyResponse;
 class RecognizeCelebritiesRequest;
 class RecognizeCelebritiesResponse;
 class SearchFacesRequest;
@@ -132,6 +152,10 @@ class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateDatasetEntriesRequest;
+class UpdateDatasetEntriesResponse;
+class UpdateStreamProcessorRequest;
+class UpdateStreamProcessorResponse;
 
 class QTAWSREKOGNITION_EXPORT RekognitionClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -150,16 +174,21 @@ public:
 
 public slots:
     CompareFacesResponse * compareFaces(const CompareFacesRequest &request);
+    CopyProjectVersionResponse * copyProjectVersion(const CopyProjectVersionRequest &request);
     CreateCollectionResponse * createCollection(const CreateCollectionRequest &request);
+    CreateDatasetResponse * createDataset(const CreateDatasetRequest &request);
     CreateProjectResponse * createProject(const CreateProjectRequest &request);
     CreateProjectVersionResponse * createProjectVersion(const CreateProjectVersionRequest &request);
     CreateStreamProcessorResponse * createStreamProcessor(const CreateStreamProcessorRequest &request);
     DeleteCollectionResponse * deleteCollection(const DeleteCollectionRequest &request);
+    DeleteDatasetResponse * deleteDataset(const DeleteDatasetRequest &request);
     DeleteFacesResponse * deleteFaces(const DeleteFacesRequest &request);
     DeleteProjectResponse * deleteProject(const DeleteProjectRequest &request);
+    DeleteProjectPolicyResponse * deleteProjectPolicy(const DeleteProjectPolicyRequest &request);
     DeleteProjectVersionResponse * deleteProjectVersion(const DeleteProjectVersionRequest &request);
     DeleteStreamProcessorResponse * deleteStreamProcessor(const DeleteStreamProcessorRequest &request);
     DescribeCollectionResponse * describeCollection(const DescribeCollectionRequest &request);
+    DescribeDatasetResponse * describeDataset(const DescribeDatasetRequest &request);
     DescribeProjectVersionsResponse * describeProjectVersions(const DescribeProjectVersionsRequest &request);
     DescribeProjectsResponse * describeProjects(const DescribeProjectsRequest &request);
     DescribeStreamProcessorResponse * describeStreamProcessor(const DescribeStreamProcessorRequest &request);
@@ -169,6 +198,7 @@ public slots:
     DetectModerationLabelsResponse * detectModerationLabels(const DetectModerationLabelsRequest &request);
     DetectProtectiveEquipmentResponse * detectProtectiveEquipment(const DetectProtectiveEquipmentRequest &request);
     DetectTextResponse * detectText(const DetectTextRequest &request);
+    DistributeDatasetEntriesResponse * distributeDatasetEntries(const DistributeDatasetEntriesRequest &request);
     GetCelebrityInfoResponse * getCelebrityInfo(const GetCelebrityInfoRequest &request);
     GetCelebrityRecognitionResponse * getCelebrityRecognition(const GetCelebrityRecognitionRequest &request);
     GetContentModerationResponse * getContentModeration(const GetContentModerationRequest &request);
@@ -180,9 +210,13 @@ public slots:
     GetTextDetectionResponse * getTextDetection(const GetTextDetectionRequest &request);
     IndexFacesResponse * indexFaces(const IndexFacesRequest &request);
     ListCollectionsResponse * listCollections(const ListCollectionsRequest &request);
+    ListDatasetEntriesResponse * listDatasetEntries(const ListDatasetEntriesRequest &request);
+    ListDatasetLabelsResponse * listDatasetLabels(const ListDatasetLabelsRequest &request);
     ListFacesResponse * listFaces(const ListFacesRequest &request);
+    ListProjectPoliciesResponse * listProjectPolicies(const ListProjectPoliciesRequest &request);
     ListStreamProcessorsResponse * listStreamProcessors(const ListStreamProcessorsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    PutProjectPolicyResponse * putProjectPolicy(const PutProjectPolicyRequest &request);
     RecognizeCelebritiesResponse * recognizeCelebrities(const RecognizeCelebritiesRequest &request);
     SearchFacesResponse * searchFaces(const SearchFacesRequest &request);
     SearchFacesByImageResponse * searchFacesByImage(const SearchFacesByImageRequest &request);
@@ -200,6 +234,8 @@ public slots:
     StopStreamProcessorResponse * stopStreamProcessor(const StopStreamProcessorRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateDatasetEntriesResponse * updateDatasetEntries(const UpdateDatasetEntriesRequest &request);
+    UpdateStreamProcessorResponse * updateStreamProcessor(const UpdateStreamProcessorRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RekognitionClient)

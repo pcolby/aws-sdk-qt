@@ -48,6 +48,7 @@ namespace AuditManager {
  * \value CreateControlAction AuditManager CreateControl action.
  * \value DeleteAssessmentAction AuditManager DeleteAssessment action.
  * \value DeleteAssessmentFrameworkAction AuditManager DeleteAssessmentFramework action.
+ * \value DeleteAssessmentFrameworkShareAction AuditManager DeleteAssessmentFrameworkShare action.
  * \value DeleteAssessmentReportAction AuditManager DeleteAssessmentReport action.
  * \value DeleteControlAction AuditManager DeleteControl action.
  * \value DeregisterAccountAction AuditManager DeregisterAccount action.
@@ -65,24 +66,33 @@ namespace AuditManager {
  * \value GetEvidenceFolderAction AuditManager GetEvidenceFolder action.
  * \value GetEvidenceFoldersByAssessmentAction AuditManager GetEvidenceFoldersByAssessment action.
  * \value GetEvidenceFoldersByAssessmentControlAction AuditManager GetEvidenceFoldersByAssessmentControl action.
+ * \value GetInsightsAction AuditManager GetInsights action.
+ * \value GetInsightsByAssessmentAction AuditManager GetInsightsByAssessment action.
  * \value GetOrganizationAdminAccountAction AuditManager GetOrganizationAdminAccount action.
  * \value GetServicesInScopeAction AuditManager GetServicesInScope action.
  * \value GetSettingsAction AuditManager GetSettings action.
+ * \value ListAssessmentControlInsightsByControlDomainAction AuditManager ListAssessmentControlInsightsByControlDomain action.
+ * \value ListAssessmentFrameworkShareRequestsAction AuditManager ListAssessmentFrameworkShareRequests action.
  * \value ListAssessmentFrameworksAction AuditManager ListAssessmentFrameworks action.
  * \value ListAssessmentReportsAction AuditManager ListAssessmentReports action.
  * \value ListAssessmentsAction AuditManager ListAssessments action.
+ * \value ListControlDomainInsightsAction AuditManager ListControlDomainInsights action.
+ * \value ListControlDomainInsightsByAssessmentAction AuditManager ListControlDomainInsightsByAssessment action.
+ * \value ListControlInsightsByControlDomainAction AuditManager ListControlInsightsByControlDomain action.
  * \value ListControlsAction AuditManager ListControls action.
  * \value ListKeywordsForDataSourceAction AuditManager ListKeywordsForDataSource action.
  * \value ListNotificationsAction AuditManager ListNotifications action.
  * \value ListTagsForResourceAction AuditManager ListTagsForResource action.
  * \value RegisterAccountAction AuditManager RegisterAccount action.
  * \value RegisterOrganizationAdminAccountAction AuditManager RegisterOrganizationAdminAccount action.
+ * \value StartAssessmentFrameworkShareAction AuditManager StartAssessmentFrameworkShare action.
  * \value TagResourceAction AuditManager TagResource action.
  * \value UntagResourceAction AuditManager UntagResource action.
  * \value UpdateAssessmentAction AuditManager UpdateAssessment action.
  * \value UpdateAssessmentControlAction AuditManager UpdateAssessmentControl action.
  * \value UpdateAssessmentControlSetStatusAction AuditManager UpdateAssessmentControlSetStatus action.
  * \value UpdateAssessmentFrameworkAction AuditManager UpdateAssessmentFramework action.
+ * \value UpdateAssessmentFrameworkShareAction AuditManager UpdateAssessmentFrameworkShare action.
  * \value UpdateAssessmentStatusAction AuditManager UpdateAssessmentStatus action.
  * \value UpdateControlAction AuditManager UpdateControl action.
  * \value UpdateSettingsAction AuditManager UpdateSettings action.
@@ -294,7 +304,7 @@ QNetworkRequest AuditManagerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AuditManagerRequestPrivate::AuditManagerRequestPrivate(const AuditManagerRequest::Action action, AuditManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }
@@ -340,6 +350,7 @@ QString AuditManagerRequestPrivate::toString(const AuditManagerRequest::Action &
         ActionToString(CreateControl);
         ActionToString(DeleteAssessment);
         ActionToString(DeleteAssessmentFramework);
+        ActionToString(DeleteAssessmentFrameworkShare);
         ActionToString(DeleteAssessmentReport);
         ActionToString(DeleteControl);
         ActionToString(DeregisterAccount);
@@ -357,24 +368,33 @@ QString AuditManagerRequestPrivate::toString(const AuditManagerRequest::Action &
         ActionToString(GetEvidenceFolder);
         ActionToString(GetEvidenceFoldersByAssessment);
         ActionToString(GetEvidenceFoldersByAssessmentControl);
+        ActionToString(GetInsights);
+        ActionToString(GetInsightsByAssessment);
         ActionToString(GetOrganizationAdminAccount);
         ActionToString(GetServicesInScope);
         ActionToString(GetSettings);
+        ActionToString(ListAssessmentControlInsightsByControlDomain);
+        ActionToString(ListAssessmentFrameworkShareRequests);
         ActionToString(ListAssessmentFrameworks);
         ActionToString(ListAssessmentReports);
         ActionToString(ListAssessments);
+        ActionToString(ListControlDomainInsights);
+        ActionToString(ListControlDomainInsightsByAssessment);
+        ActionToString(ListControlInsightsByControlDomain);
         ActionToString(ListControls);
         ActionToString(ListKeywordsForDataSource);
         ActionToString(ListNotifications);
         ActionToString(ListTagsForResource);
         ActionToString(RegisterAccount);
         ActionToString(RegisterOrganizationAdminAccount);
+        ActionToString(StartAssessmentFrameworkShare);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAssessment);
         ActionToString(UpdateAssessmentControl);
         ActionToString(UpdateAssessmentControlSetStatus);
         ActionToString(UpdateAssessmentFramework);
+        ActionToString(UpdateAssessmentFrameworkShare);
         ActionToString(UpdateAssessmentStatus);
         ActionToString(UpdateControl);
         ActionToString(UpdateSettings);

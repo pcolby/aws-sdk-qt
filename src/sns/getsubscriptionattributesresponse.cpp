@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::GetSubscriptionAttributesResponse
- * \brief The GetSubscriptionAttributesResponse class provides an interace for SNS GetSubscriptionAttributes responses.
+ * \class QtAws::Sns::GetSubscriptionAttributesResponse
+ * \brief The GetSubscriptionAttributesResponse class provides an interace for Sns GetSubscriptionAttributes responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const GetSubscriptionAttributesRequest * GetSubscriptionAttributesResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SNS GetSubscriptionAttributes \a response.
+ * Parses a successful Sns GetSubscriptionAttributes \a response.
  */
 void GetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void GetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::GetSubscriptionAttributesResponsePrivate
+ * \class QtAws::Sns::GetSubscriptionAttributesResponsePrivate
  * \brief The GetSubscriptionAttributesResponsePrivate class provides private implementation for GetSubscriptionAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ GetSubscriptionAttributesResponsePrivate::GetSubscriptionAttributesResponsePriva
 }
 
 /*!
- * Parses a SNS GetSubscriptionAttributes response element from \a xml.
+ * Parses a Sns GetSubscriptionAttributes response element from \a xml.
  */
 void GetSubscriptionAttributesResponsePrivate::parseGetSubscriptionAttributesResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void GetSubscriptionAttributesResponsePrivate::parseGetSubscriptionAttributesRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -25,34 +25,35 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 /*!
- * \class QtAws::SSO::GetRoleCredentialsResponse
- * \brief The GetRoleCredentialsResponse class provides an interace for SSO GetRoleCredentials responses.
+ * \class QtAws::Sso::GetRoleCredentialsResponse
+ * \brief The GetRoleCredentialsResponse class provides an interace for Sso GetRoleCredentials responses.
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  *
- *  AWS Single Sign-On Portal is a web service that makes it easy for you to assign user access to AWS SSO resources such as
- *  the user portal. Users can get AWS account applications and roles assigned to them and get federated into the
+ *  AWS IAM Identity Center (successor to AWS Single Sign-On) Portal is a web service that makes it easy for you to assign
+ *  user access to IAM Identity Center resources such as the AWS access portal. Users can get AWS account applications and
+ *  roles assigned to them and get federated into the
  * 
- *  application>
+ *  application> <note>
  * 
- *  For general information about AWS SSO, see <a
- *  href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">What is AWS Single Sign-On?</a> in the
- *  <i>AWS SSO User
+ *  Although AWS Single Sign-On was renamed, the <code>sso</code> and <code>identitystore</code> API namespaces will
+ *  continue to retain their original name for backward compatibility purposes. For more information, see <a
+ *  href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">IAM Identity Center
  * 
- *  Guide</i>>
+ *  rename</a>> </note>
  * 
- *  This API reference guide describes the AWS SSO Portal operations that you can call programatically and includes detailed
- *  information on data types and
+ *  This reference guide describes the IAM Identity Center Portal operations that you can call programatically and includes
+ *  detailed information on data types and
  * 
  *  errors> <note>
  * 
  *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms, such as
- *  Java, Ruby, .Net, iOS, or Android. The SDKs provide a convenient way to create programmatic access to AWS SSO and other
- *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
- *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  Java, Ruby, .Net, iOS, or Android. The SDKs provide a convenient way to create programmatic access to IAM Identity
+ *  Center and other AWS services. For more information about the AWS SDKs, including how to download and install them, see
+ *  <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
  * \sa SsoClient::getRoleCredentials
  */
@@ -81,7 +82,7 @@ const GetRoleCredentialsRequest * GetRoleCredentialsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSO GetRoleCredentials \a response.
+ * Parses a successful Sso GetRoleCredentials \a response.
  */
 void GetRoleCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +92,11 @@ void GetRoleCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSO::GetRoleCredentialsResponsePrivate
+ * \class QtAws::Sso::GetRoleCredentialsResponsePrivate
  * \brief The GetRoleCredentialsResponsePrivate class provides private implementation for GetRoleCredentialsResponse.
  * \internal
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
@@ -108,7 +109,7 @@ GetRoleCredentialsResponsePrivate::GetRoleCredentialsResponsePrivate(
 }
 
 /*!
- * Parses a SSO GetRoleCredentials response element from \a xml.
+ * Parses a Sso GetRoleCredentials response element from \a xml.
  */
 void GetRoleCredentialsResponsePrivate::parseGetRoleCredentialsResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +117,5 @@ void GetRoleCredentialsResponsePrivate::parseGetRoleCredentialsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws

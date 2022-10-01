@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeregisterDBProxyTargetsRequest
- * \brief The DeregisterDBProxyTargetsRequest class provides an interface for RDS DeregisterDBProxyTargets requests.
+ * \class QtAws::Rds::DeregisterDBProxyTargetsRequest
+ * \brief The DeregisterDBProxyTargetsRequest class provides an interface for Rds DeregisterDBProxyTargets requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeregisterDBProxyTargetsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::RDS::DeregisterDBProxyTargetsRequestPrivate
+ * \class QtAws::Rds::DeregisterDBProxyTargetsRequestPrivate
  * \brief The DeregisterDBProxyTargetsRequestPrivate class provides private implementation for DeregisterDBProxyTargetsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeregisterDBProxyTargetsRequestPrivate::DeregisterDBProxyTargetsRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

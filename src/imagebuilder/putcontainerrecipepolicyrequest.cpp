@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::PutContainerRecipePolicyRequest
- * \brief The PutContainerRecipePolicyRequest class provides an interface for imagebuilder PutContainerRecipePolicy requests.
+ * \class QtAws::ImageBuilder::PutContainerRecipePolicyRequest
+ * \brief The PutContainerRecipePolicyRequest class provides an interface for ImageBuilder PutContainerRecipePolicy requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::putContainerRecipePolicy
+ * \sa ImageBuilderClient::putContainerRecipePolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutContainerRecipePolicyRequest::PutContainerRecipePolicyRequest(const PutContainerRecipePolicyRequest &other)
-    : imagebuilderRequest(new PutContainerRecipePolicyRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new PutContainerRecipePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ PutContainerRecipePolicyRequest::PutContainerRecipePolicyRequest(const PutContai
  * Constructs a PutContainerRecipePolicyRequest object.
  */
 PutContainerRecipePolicyRequest::PutContainerRecipePolicyRequest()
-    : imagebuilderRequest(new PutContainerRecipePolicyRequestPrivate(imagebuilderRequest::PutContainerRecipePolicyAction, this))
+    : ImageBuilderRequest(new PutContainerRecipePolicyRequestPrivate(ImageBuilderRequest::PutContainerRecipePolicyAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * PutContainerRecipePolicyRequest::response(QNe
 }
 
 /*!
- * \class QtAws::imagebuilder::PutContainerRecipePolicyRequestPrivate
+ * \class QtAws::ImageBuilder::PutContainerRecipePolicyRequestPrivate
  * \brief The PutContainerRecipePolicyRequestPrivate class provides private implementation for PutContainerRecipePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a PutContainerRecipePolicyRequestPrivate object for imagebuilder \a action,
+ * Constructs a PutContainerRecipePolicyRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 PutContainerRecipePolicyRequestPrivate::PutContainerRecipePolicyRequestPrivate(
-    const imagebuilderRequest::Action action, PutContainerRecipePolicyRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, PutContainerRecipePolicyRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ PutContainerRecipePolicyRequestPrivate::PutContainerRecipePolicyRequestPrivate(
  */
 PutContainerRecipePolicyRequestPrivate::PutContainerRecipePolicyRequestPrivate(
     const PutContainerRecipePolicyRequestPrivate &other, PutContainerRecipePolicyRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

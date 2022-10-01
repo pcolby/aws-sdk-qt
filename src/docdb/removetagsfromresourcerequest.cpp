@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RemoveTagsFromResourceRequest
- * \brief The RemoveTagsFromResourceRequest class provides an interface for DocDB RemoveTagsFromResource requests.
+ * \class QtAws::DocDb::RemoveTagsFromResourceRequest
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for DocDb RemoveTagsFromResource requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::removeTagsFromResource
+ * \sa DocDbClient::removeTagsFromResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
-    : DocDBRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
  * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
-    : DocDBRequest(new RemoveTagsFromResourceRequestPrivate(DocDBRequest::RemoveTagsFromResourceAction, this))
+    : DocDbRequest(new RemoveTagsFromResourceRequestPrivate(DocDbRequest::RemoveTagsFromResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::DocDB::RemoveTagsFromResourceRequestPrivate
+ * \class QtAws::DocDb::RemoveTagsFromResourceRequestPrivate
  * \brief The RemoveTagsFromResourceRequestPrivate class provides private implementation for RemoveTagsFromResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RemoveTagsFromResourceRequestPrivate object for DocDB \a action,
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
-    const DocDBRequest::Action action, RemoveTagsFromResourceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RemoveTagsFromResourceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

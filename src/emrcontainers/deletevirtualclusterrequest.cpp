@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DeleteVirtualClusterRequest
- * \brief The DeleteVirtualClusterRequest class provides an interface for EMRContainers DeleteVirtualCluster requests.
+ * \class QtAws::Emrcontainers::DeleteVirtualClusterRequest
+ * \brief The DeleteVirtualClusterRequest class provides an interface for Emrcontainers DeleteVirtualCluster requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::deleteVirtualCluster
+ * \sa EmrcontainersClient::deleteVirtualCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteVirtualClusterRequest::DeleteVirtualClusterRequest(const DeleteVirtualClusterRequest &other)
-    : EMRContainersRequest(new DeleteVirtualClusterRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new DeleteVirtualClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ DeleteVirtualClusterRequest::DeleteVirtualClusterRequest(const DeleteVirtualClus
  * Constructs a DeleteVirtualClusterRequest object.
  */
 DeleteVirtualClusterRequest::DeleteVirtualClusterRequest()
-    : EMRContainersRequest(new DeleteVirtualClusterRequestPrivate(EMRContainersRequest::DeleteVirtualClusterAction, this))
+    : EmrcontainersRequest(new DeleteVirtualClusterRequestPrivate(EmrcontainersRequest::DeleteVirtualClusterAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualClusterRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EMRContainers::DeleteVirtualClusterRequestPrivate
+ * \class QtAws::Emrcontainers::DeleteVirtualClusterRequestPrivate
  * \brief The DeleteVirtualClusterRequestPrivate class provides private implementation for DeleteVirtualClusterRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a DeleteVirtualClusterRequestPrivate object for EMRContainers \a action,
+ * Constructs a DeleteVirtualClusterRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 DeleteVirtualClusterRequestPrivate::DeleteVirtualClusterRequestPrivate(
-    const EMRContainersRequest::Action action, DeleteVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, DeleteVirtualClusterRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ DeleteVirtualClusterRequestPrivate::DeleteVirtualClusterRequestPrivate(
  */
 DeleteVirtualClusterRequestPrivate::DeleteVirtualClusterRequestPrivate(
     const DeleteVirtualClusterRequestPrivate &other, DeleteVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

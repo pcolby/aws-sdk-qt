@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteClusterRequest
- * \brief The DeleteClusterRequest class provides an interface for CloudHSMV2 DeleteCluster requests.
+ * \class QtAws::CloudHsmV2::DeleteClusterRequest
+ * \brief The DeleteClusterRequest class provides an interface for CloudHsmV2 DeleteCluster requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::deleteCluster
+ * \sa CloudHsmV2Client::deleteCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
-    : CloudHSMV2Request(new DeleteClusterRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new DeleteClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
  * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
-    : CloudHSMV2Request(new DeleteClusterRequestPrivate(CloudHSMV2Request::DeleteClusterAction, this))
+    : CloudHsmV2Request(new DeleteClusterRequestPrivate(CloudHsmV2Request::DeleteClusterAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteClusterRequestPrivate
+ * \class QtAws::CloudHsmV2::DeleteClusterRequestPrivate
  * \brief The DeleteClusterRequestPrivate class provides private implementation for DeleteClusterRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a DeleteClusterRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a DeleteClusterRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
-    const CloudHSMV2Request::Action action, DeleteClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, DeleteClusterRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

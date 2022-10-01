@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SetPlatformApplicationAttributesResponse
- * \brief The SetPlatformApplicationAttributesResponse class provides an interace for SNS SetPlatformApplicationAttributes responses.
+ * \class QtAws::Sns::SetPlatformApplicationAttributesResponse
+ * \brief The SetPlatformApplicationAttributesResponse class provides an interace for Sns SetPlatformApplicationAttributes responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const SetPlatformApplicationAttributesRequest * SetPlatformApplicationAttributes
 
 /*!
  * \reimp
- * Parses a successful SNS SetPlatformApplicationAttributes \a response.
+ * Parses a successful Sns SetPlatformApplicationAttributes \a response.
  */
 void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::SetPlatformApplicationAttributesResponsePrivate
+ * \class QtAws::Sns::SetPlatformApplicationAttributesResponsePrivate
  * \brief The SetPlatformApplicationAttributesResponsePrivate class provides private implementation for SetPlatformApplicationAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttribute
 }
 
 /*!
- * Parses a SNS SetPlatformApplicationAttributes response element from \a xml.
+ * Parses a Sns SetPlatformApplicationAttributes response element from \a xml.
  */
 void SetPlatformApplicationAttributesResponsePrivate::parseSetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void SetPlatformApplicationAttributesResponsePrivate::parseSetPlatformApplicatio
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

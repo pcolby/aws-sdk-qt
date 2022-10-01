@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSRESOURCEGROUPS_LIBRARY)
 
 add_library(QtAwsResourceGroups
+  qtawsresourcegroupsglobal.h
+  resourcegroupsclient.h
+  resourcegroupsclient_p.h
+  resourcegroupsrequest.h
+  resourcegroupsrequest_p.h
+  resourcegroupsresponse.h
+  resourcegroupsresponse_p.h
   creategrouprequest.h
   creategrouprequest_p.h
   creategroupresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsResourceGroups
   deletegrouprequest_p.h
   deletegroupresponse.h
   deletegroupresponse_p.h
+  getgrouprequest.h
+  getgrouprequest_p.h
+  getgroupresponse.h
+  getgroupresponse_p.h
   getgroupconfigurationrequest.h
   getgroupconfigurationrequest_p.h
   getgroupconfigurationresponse.h
@@ -17,10 +28,6 @@ add_library(QtAwsResourceGroups
   getgroupqueryrequest_p.h
   getgroupqueryresponse.h
   getgroupqueryresponse_p.h
-  getgrouprequest.h
-  getgrouprequest_p.h
-  getgroupresponse.h
-  getgroupresponse_p.h
   gettagsrequest.h
   gettagsrequest_p.h
   gettagsresponse.h
@@ -41,13 +48,6 @@ add_library(QtAwsResourceGroups
   putgroupconfigurationrequest_p.h
   putgroupconfigurationresponse.h
   putgroupconfigurationresponse_p.h
-  qtawsresourcegroupsglobal.h
-  resourcegroupsclient.h
-  resourcegroupsclient_p.h
-  resourcegroupsrequest.h
-  resourcegroupsrequest_p.h
-  resourcegroupsresponse.h
-  resourcegroupsresponse_p.h
   searchresourcesrequest.h
   searchresourcesrequest_p.h
   searchresourcesresponse.h
@@ -64,24 +64,27 @@ add_library(QtAwsResourceGroups
   untagrequest_p.h
   untagresponse.h
   untagresponse_p.h
-  updategroupqueryrequest.h
-  updategroupqueryrequest_p.h
-  updategroupqueryresponse.h
-  updategroupqueryresponse_p.h
   updategrouprequest.h
   updategrouprequest_p.h
   updategroupresponse.h
   updategroupresponse_p.h
+  updategroupqueryrequest.h
+  updategroupqueryrequest_p.h
+  updategroupqueryresponse.h
+  updategroupqueryresponse_p.h
+  resourcegroupsclient.cpp
+  resourcegroupsrequest.cpp
+  resourcegroupsresponse.cpp
   creategrouprequest.cpp
   creategroupresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
+  getgrouprequest.cpp
+  getgroupresponse.cpp
   getgroupconfigurationrequest.cpp
   getgroupconfigurationresponse.cpp
   getgroupqueryrequest.cpp
   getgroupqueryresponse.cpp
-  getgrouprequest.cpp
-  getgroupresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
   groupresourcesrequest.cpp
@@ -92,9 +95,6 @@ add_library(QtAwsResourceGroups
   listgroupsresponse.cpp
   putgroupconfigurationrequest.cpp
   putgroupconfigurationresponse.cpp
-  resourcegroupsclient.cpp
-  resourcegroupsrequest.cpp
-  resourcegroupsresponse.cpp
   searchresourcesrequest.cpp
   searchresourcesresponse.cpp
   tagrequest.cpp
@@ -103,10 +103,10 @@ add_library(QtAwsResourceGroups
   ungroupresourcesresponse.cpp
   untagrequest.cpp
   untagresponse.cpp
-  updategroupqueryrequest.cpp
-  updategroupqueryresponse.cpp
   updategrouprequest.cpp
-  updategroupresponse.cpp)
+  updategroupresponse.cpp
+  updategroupqueryrequest.cpp
+  updategroupqueryresponse.cpp)
 
 target_link_libraries(QtAwsResourceGroups
   PRIVATE QtAwsCore

@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DescribeBrokerInstanceOptionsResponse
- * \brief The DescribeBrokerInstanceOptionsResponse class provides an interace for MQ DescribeBrokerInstanceOptions responses.
+ * \class QtAws::Mq::DescribeBrokerInstanceOptionsResponse
+ * \brief The DescribeBrokerInstanceOptionsResponse class provides an interace for Mq DescribeBrokerInstanceOptions responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::describeBrokerInstanceOptions
  */
@@ -63,7 +64,7 @@ const DescribeBrokerInstanceOptionsRequest * DescribeBrokerInstanceOptionsRespon
 
 /*!
  * \reimp
- * Parses a successful MQ DescribeBrokerInstanceOptions \a response.
+ * Parses a successful Mq DescribeBrokerInstanceOptions \a response.
  */
 void DescribeBrokerInstanceOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DescribeBrokerInstanceOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DescribeBrokerInstanceOptionsResponsePrivate
+ * \class QtAws::Mq::DescribeBrokerInstanceOptionsResponsePrivate
  * \brief The DescribeBrokerInstanceOptionsResponsePrivate class provides private implementation for DescribeBrokerInstanceOptionsResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DescribeBrokerInstanceOptionsResponsePrivate::DescribeBrokerInstanceOptionsRespo
 }
 
 /*!
- * Parses a MQ DescribeBrokerInstanceOptions response element from \a xml.
+ * Parses a Mq DescribeBrokerInstanceOptions response element from \a xml.
  */
 void DescribeBrokerInstanceOptionsResponsePrivate::parseDescribeBrokerInstanceOptionsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DescribeBrokerInstanceOptionsResponsePrivate::parseDescribeBrokerInstanceOp
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

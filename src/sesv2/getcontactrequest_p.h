@@ -24,14 +24,14 @@
 #include "getcontactrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetContactRequest;
 
-class GetContactRequestPrivate : public Sesv2RequestPrivate {
+class GetContactRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetContactRequestPrivate(const Sesv2Request::Action action,
+    GetContactRequestPrivate(const SESv2Request::Action action,
                                    GetContactRequest * const q);
     GetContactRequestPrivate(const GetContactRequestPrivate &other,
                                    GetContactRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

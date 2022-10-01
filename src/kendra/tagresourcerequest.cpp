@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for kendra TagResource requests.
+ * \class QtAws::Kendra::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Kendra TagResource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::tagResource
+ * \sa KendraClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : kendraRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : kendraRequest(new TagResourceRequestPrivate(kendraRequest::TagResourceAction, this))
+    : KendraRequest(new TagResourceRequestPrivate(KendraRequest::TagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::kendra::TagResourceRequestPrivate
+ * \class QtAws::Kendra::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for kendra \a action,
+ * Constructs a TagResourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const kendraRequest::Action action, TagResourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, TagResourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

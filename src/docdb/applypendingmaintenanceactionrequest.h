@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ApplyPendingMaintenanceActionRequestPrivate;
 
-class QTAWSDOCDB_EXPORT ApplyPendingMaintenanceActionRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ApplyPendingMaintenanceActionRequest : public DocDbRequest {
 
 public:
     ApplyPendingMaintenanceActionRequest(const ApplyPendingMaintenanceActionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

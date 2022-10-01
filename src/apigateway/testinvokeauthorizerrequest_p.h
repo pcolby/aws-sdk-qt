@@ -24,14 +24,14 @@
 #include "testinvokeauthorizerrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class TestInvokeAuthorizerRequest;
 
-class TestInvokeAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
+class TestInvokeAuthorizerRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    TestInvokeAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
+    TestInvokeAuthorizerRequestPrivate(const ApiGatewayRequest::Action action,
                                    TestInvokeAuthorizerRequest * const q);
     TestInvokeAuthorizerRequestPrivate(const TestInvokeAuthorizerRequestPrivate &other,
                                    TestInvokeAuthorizerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

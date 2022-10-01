@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterResponse
- * \brief The ModifyDBClusterResponse class provides an interace for DocDB ModifyDBCluster responses.
+ * \class QtAws::DocDb::ModifyDBClusterResponse
+ * \brief The ModifyDBClusterResponse class provides an interace for DocDb ModifyDBCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBCluster
+ * \sa DocDbClient::modifyDBCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyDBClusterResponse::ModifyDBClusterResponse(
         const ModifyDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyDBClusterResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyDBClusterResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyDBCluster \a response.
+ * Parses a successful DocDb ModifyDBCluster \a response.
  */
 void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterResponsePrivate
+ * \class QtAws::DocDb::ModifyDBClusterResponsePrivate
  * \brief The ModifyDBClusterResponsePrivate class provides private implementation for ModifyDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyDBClusterResponsePrivate object with public implementation \a q.
  */
 ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
-    ModifyDBClusterResponse * const q) : DocDBResponsePrivate(q)
+    ModifyDBClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyDBCluster response element from \a xml.
+ * Parses a DocDb ModifyDBCluster response element from \a xml.
  */
 void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

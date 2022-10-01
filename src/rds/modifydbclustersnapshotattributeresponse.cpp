@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBClusterSnapshotAttributeResponse
- * \brief The ModifyDBClusterSnapshotAttributeResponse class provides an interace for RDS ModifyDBClusterSnapshotAttribute responses.
+ * \class QtAws::Rds::ModifyDBClusterSnapshotAttributeResponse
+ * \brief The ModifyDBClusterSnapshotAttributeResponse class provides an interace for Rds ModifyDBClusterSnapshotAttribute responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttribute
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBClusterSnapshotAttribute \a response.
+ * Parses a successful Rds ModifyDBClusterSnapshotAttribute \a response.
  */
 void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBClusterSnapshotAttributeResponsePrivate
+ * \class QtAws::Rds::ModifyDBClusterSnapshotAttributeResponsePrivate
  * \brief The ModifyDBClusterSnapshotAttributeResponsePrivate class provides private implementation for ModifyDBClusterSnapshotAttributeResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttribut
 }
 
 /*!
- * Parses a RDS ModifyDBClusterSnapshotAttribute response element from \a xml.
+ * Parses a Rds ModifyDBClusterSnapshotAttribute response element from \a xml.
  */
 void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapsh
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

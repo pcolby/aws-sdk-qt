@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetExportResponse
- * \brief The GetExportResponse class provides an interace for APIGateway GetExport responses.
+ * \class QtAws::ApiGateway::GetExportResponse
+ * \brief The GetExportResponse class provides an interace for ApiGateway GetExport responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getExport
+ * \sa ApiGatewayClient::getExport
  */
 
 /*!
@@ -49,7 +49,7 @@ GetExportResponse::GetExportResponse(
         const GetExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetExportResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetExportResponsePrivate(this), parent)
 {
     setRequest(new GetExportRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetExportRequest * GetExportResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetExport \a response.
+ * Parses a successful ApiGateway GetExport \a response.
  */
 void GetExportResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetExportResponsePrivate
+ * \class QtAws::ApiGateway::GetExportResponsePrivate
  * \brief The GetExportResponsePrivate class provides private implementation for GetExportResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetExportResponsePrivate object with public implementation \a q.
  */
 GetExportResponsePrivate::GetExportResponsePrivate(
-    GetExportResponse * const q) : APIGatewayResponsePrivate(q)
+    GetExportResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetExport response element from \a xml.
+ * Parses a ApiGateway GetExport response element from \a xml.
  */
 void GetExportResponsePrivate::parseGetExportResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetExportResponsePrivate::parseGetExportResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

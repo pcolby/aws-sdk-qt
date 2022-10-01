@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskFailedResponse
- * \brief The RespondActivityTaskFailedResponse class provides an interace for SWF RespondActivityTaskFailed responses.
+ * \class QtAws::Swf::RespondActivityTaskFailedResponse
+ * \brief The RespondActivityTaskFailedResponse class provides an interace for Swf RespondActivityTaskFailed responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SWF RespondActivityTaskFailed \a response.
+ * Parses a successful Swf RespondActivityTaskFailed \a response.
  */
 void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskFailedResponsePrivate
+ * \class QtAws::Swf::RespondActivityTaskFailedResponsePrivate
  * \brief The RespondActivityTaskFailedResponsePrivate class provides private implementation for RespondActivityTaskFailedResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePriva
 }
 
 /*!
- * Parses a SWF RespondActivityTaskFailed response element from \a xml.
+ * Parses a Swf RespondActivityTaskFailed response element from \a xml.
  */
 void RespondActivityTaskFailedResponsePrivate::parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RespondActivityTaskFailedResponsePrivate::parseRespondActivityTaskFailedRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::ListResponsePlansResponse
- * \brief The ListResponsePlansResponse class provides an interace for SSMIncidents ListResponsePlans responses.
+ * \class QtAws::SsmIncidents::ListResponsePlansResponse
+ * \brief The ListResponsePlansResponse class provides an interace for SsmIncidents ListResponsePlans responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::listResponsePlans
+ * \sa SsmIncidentsClient::listResponsePlans
  */
 
 /*!
@@ -54,7 +54,7 @@ ListResponsePlansResponse::ListResponsePlansResponse(
         const ListResponsePlansRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new ListResponsePlansResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new ListResponsePlansResponsePrivate(this), parent)
 {
     setRequest(new ListResponsePlansRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const ListResponsePlansRequest * ListResponsePlansResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents ListResponsePlans \a response.
+ * Parses a successful SsmIncidents ListResponsePlans \a response.
  */
 void ListResponsePlansResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void ListResponsePlansResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::ListResponsePlansResponsePrivate
+ * \class QtAws::SsmIncidents::ListResponsePlansResponsePrivate
  * \brief The ListResponsePlansResponsePrivate class provides private implementation for ListResponsePlansResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a ListResponsePlansResponsePrivate object with public implementation \a q.
  */
 ListResponsePlansResponsePrivate::ListResponsePlansResponsePrivate(
-    ListResponsePlansResponse * const q) : SSMIncidentsResponsePrivate(q)
+    ListResponsePlansResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents ListResponsePlans response element from \a xml.
+ * Parses a SsmIncidents ListResponsePlans response element from \a xml.
  */
 void ListResponsePlansResponsePrivate::parseListResponsePlansResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void ListResponsePlansResponsePrivate::parseListResponsePlansResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for mgn TagResource responses.
+ * \class QtAws::Mgn::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for Mgn TagResource responses.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::tagResource
+ * \sa MgnClient::tagResource
  */
 
 /*!
@@ -45,7 +45,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : mgnResponse(new TagResourceResponsePrivate(this), parent)
+    : MgnResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful mgn TagResource \a response.
+ * Parses a successful Mgn TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::mgn::TagResourceResponsePrivate
+ * \class QtAws::Mgn::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : mgnResponsePrivate(q)
+    TagResourceResponse * const q) : MgnResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a mgn TagResource response element from \a xml.
+ * Parses a Mgn TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

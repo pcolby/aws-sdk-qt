@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetSampledRequestsRequest
- * \brief The GetSampledRequestsRequest class provides an interface for WAFRegional GetSampledRequests requests.
+ * \class QtAws::WafRegional::GetSampledRequestsRequest
+ * \brief The GetSampledRequestsRequest class provides an interface for WafRegional GetSampledRequests requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getSampledRequests
+ * \sa WafRegionalClient::getSampledRequests
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsRequest &other)
-    : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsReq
  * Constructs a GetSampledRequestsRequest object.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest()
-    : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(WAFRegionalRequest::GetSampledRequestsAction, this))
+    : WafRegionalRequest(new GetSampledRequestsRequestPrivate(WafRegionalRequest::GetSampledRequestsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAFRegional::GetSampledRequestsRequestPrivate
+ * \class QtAws::WafRegional::GetSampledRequestsRequestPrivate
  * \brief The GetSampledRequestsRequestPrivate class provides private implementation for GetSampledRequestsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetSampledRequestsRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetSampledRequestsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
-    const WAFRegionalRequest::Action action, GetSampledRequestsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetSampledRequestsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

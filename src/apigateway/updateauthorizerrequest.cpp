@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateAuthorizerRequest
- * \brief The UpdateAuthorizerRequest class provides an interface for APIGateway UpdateAuthorizer requests.
+ * \class QtAws::ApiGateway::UpdateAuthorizerRequest
+ * \brief The UpdateAuthorizerRequest class provides an interface for ApiGateway UpdateAuthorizer requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateAuthorizer
+ * \sa ApiGatewayClient::updateAuthorizer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateAuthorizerRequest::UpdateAuthorizerRequest(const UpdateAuthorizerRequest &other)
-    : APIGatewayRequest(new UpdateAuthorizerRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateAuthorizerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateAuthorizerRequest::UpdateAuthorizerRequest(const UpdateAuthorizerRequest &
  * Constructs a UpdateAuthorizerRequest object.
  */
 UpdateAuthorizerRequest::UpdateAuthorizerRequest()
-    : APIGatewayRequest(new UpdateAuthorizerRequestPrivate(APIGatewayRequest::UpdateAuthorizerAction, this))
+    : ApiGatewayRequest(new UpdateAuthorizerRequestPrivate(ApiGatewayRequest::UpdateAuthorizerAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthorizerRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateAuthorizerRequestPrivate
+ * \class QtAws::ApiGateway::UpdateAuthorizerRequestPrivate
  * \brief The UpdateAuthorizerRequestPrivate class provides private implementation for UpdateAuthorizerRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateAuthorizerRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateAuthorizerRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateAuthorizerRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
  */
 UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
     const UpdateAuthorizerRequestPrivate &other, UpdateAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

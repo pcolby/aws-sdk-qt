@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::AcceptPageRequest
- * \brief The AcceptPageRequest class provides an interface for SSMContacts AcceptPage requests.
+ * \class QtAws::SsmContacts::AcceptPageRequest
+ * \brief The AcceptPageRequest class provides an interface for SsmContacts AcceptPage requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::acceptPage
+ * \sa SsmContactsClient::acceptPage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AcceptPageRequest::AcceptPageRequest(const AcceptPageRequest &other)
-    : SSMContactsRequest(new AcceptPageRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new AcceptPageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ AcceptPageRequest::AcceptPageRequest(const AcceptPageRequest &other)
  * Constructs a AcceptPageRequest object.
  */
 AcceptPageRequest::AcceptPageRequest()
-    : SSMContactsRequest(new AcceptPageRequestPrivate(SSMContactsRequest::AcceptPageAction, this))
+    : SsmContactsRequest(new AcceptPageRequestPrivate(SsmContactsRequest::AcceptPageAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * AcceptPageRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::SSMContacts::AcceptPageRequestPrivate
+ * \class QtAws::SsmContacts::AcceptPageRequestPrivate
  * \brief The AcceptPageRequestPrivate class provides private implementation for AcceptPageRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a AcceptPageRequestPrivate object for SSMContacts \a action,
+ * Constructs a AcceptPageRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 AcceptPageRequestPrivate::AcceptPageRequestPrivate(
-    const SSMContactsRequest::Action action, AcceptPageRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, AcceptPageRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ AcceptPageRequestPrivate::AcceptPageRequestPrivate(
  */
 AcceptPageRequestPrivate::AcceptPageRequestPrivate(
     const AcceptPageRequestPrivate &other, AcceptPageRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

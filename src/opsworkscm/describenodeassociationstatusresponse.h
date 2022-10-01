@@ -24,11 +24,11 @@
 #include "describenodeassociationstatusrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeNodeAssociationStatusResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DescribeNodeAssociationStatusResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DescribeNodeAssociationStatusResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

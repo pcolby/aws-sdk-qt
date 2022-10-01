@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImagePipelineRequest
- * \brief The GetImagePipelineRequest class provides an interface for imagebuilder GetImagePipeline requests.
+ * \class QtAws::ImageBuilder::GetImagePipelineRequest
+ * \brief The GetImagePipelineRequest class provides an interface for ImageBuilder GetImagePipeline requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImagePipeline
+ * \sa ImageBuilderClient::getImagePipeline
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetImagePipelineRequest::GetImagePipelineRequest(const GetImagePipelineRequest &other)
-    : imagebuilderRequest(new GetImagePipelineRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetImagePipelineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetImagePipelineRequest::GetImagePipelineRequest(const GetImagePipelineRequest &
  * Constructs a GetImagePipelineRequest object.
  */
 GetImagePipelineRequest::GetImagePipelineRequest()
-    : imagebuilderRequest(new GetImagePipelineRequestPrivate(imagebuilderRequest::GetImagePipelineAction, this))
+    : ImageBuilderRequest(new GetImagePipelineRequestPrivate(ImageBuilderRequest::GetImagePipelineAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetImagePipelineRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImagePipelineRequestPrivate
+ * \class QtAws::ImageBuilder::GetImagePipelineRequestPrivate
  * \brief The GetImagePipelineRequestPrivate class provides private implementation for GetImagePipelineRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetImagePipelineRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetImagePipelineRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetImagePipelineRequestPrivate::GetImagePipelineRequestPrivate(
-    const imagebuilderRequest::Action action, GetImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetImagePipelineRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetImagePipelineRequestPrivate::GetImagePipelineRequestPrivate(
  */
 GetImagePipelineRequestPrivate::GetImagePipelineRequestPrivate(
     const GetImagePipelineRequestPrivate &other, GetImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

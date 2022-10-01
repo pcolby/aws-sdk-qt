@@ -24,14 +24,14 @@
 #include "describedbsubnetgroupsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeDBSubnetGroupsRequest;
 
-class DescribeDBSubnetGroupsRequestPrivate : public DocDBRequestPrivate {
+class DescribeDBSubnetGroupsRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeDBSubnetGroupsRequestPrivate(const DocDBRequest::Action action,
+    DescribeDBSubnetGroupsRequestPrivate(const DocDbRequest::Action action,
                                    DescribeDBSubnetGroupsRequest * const q);
     DescribeDBSubnetGroupsRequestPrivate(const DescribeDBSubnetGroupsRequestPrivate &other,
                                    DescribeDBSubnetGroupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

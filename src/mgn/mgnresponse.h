@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnResponsePrivate;
+class MgnResponsePrivate;
 
-class QTAWSMGN_EXPORT mgnResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMGN_EXPORT MgnResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    mgnResponse(QObject * const parent = 0);
+    MgnResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    mgnResponse(mgnResponsePrivate * const d, QObject * const parent);
+    MgnResponse(MgnResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(mgnResponse)
-    Q_DISABLE_COPY(mgnResponse)
+    Q_DECLARE_PRIVATE(MgnResponse)
+    Q_DISABLE_COPY(MgnResponse)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

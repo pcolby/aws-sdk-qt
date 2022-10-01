@@ -24,7 +24,7 @@
 #include "putreplicationconfigurationrequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class PutReplicationConfigurationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

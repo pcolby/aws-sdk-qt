@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityNotificationTopicResponse
- * \brief The SetIdentityNotificationTopicResponse class provides an interace for SES SetIdentityNotificationTopic responses.
+ * \class QtAws::Ses::SetIdentityNotificationTopicResponse
+ * \brief The SetIdentityNotificationTopicResponse class provides an interace for Ses SetIdentityNotificationTopic responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse
 
 /*!
  * \reimp
- * Parses a successful SES SetIdentityNotificationTopic \a response.
+ * Parses a successful Ses SetIdentityNotificationTopic \a response.
  */
 void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SetIdentityNotificationTopicResponsePrivate
+ * \class QtAws::Ses::SetIdentityNotificationTopicResponsePrivate
  * \brief The SetIdentityNotificationTopicResponsePrivate class provides private implementation for SetIdentityNotificationTopicResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRespons
 }
 
 /*!
- * Parses a SES SetIdentityNotificationTopic response element from \a xml.
+ * Parses a Ses SetIdentityNotificationTopic response element from \a xml.
  */
 void SetIdentityNotificationTopicResponsePrivate::parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetIdentityNotificationTopicResponsePrivate::parseSetIdentityNotificationTo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

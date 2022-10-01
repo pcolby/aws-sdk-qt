@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotResponse
- * \brief The RestoreDBInstanceFromDBSnapshotResponse class provides an interace for RDS RestoreDBInstanceFromDBSnapshot responses.
+ * \class QtAws::Rds::RestoreDBInstanceFromDBSnapshotResponse
+ * \brief The RestoreDBInstanceFromDBSnapshotResponse class provides an interace for Rds RestoreDBInstanceFromDBSnapshot responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RestoreDBInstanceFromDBSnapshotRequest * RestoreDBInstanceFromDBSnapshotRe
 
 /*!
  * \reimp
- * Parses a successful RDS RestoreDBInstanceFromDBSnapshot \a response.
+ * Parses a successful Rds RestoreDBInstanceFromDBSnapshot \a response.
  */
 void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotResponsePrivate
+ * \class QtAws::Rds::RestoreDBInstanceFromDBSnapshotResponsePrivate
  * \brief The RestoreDBInstanceFromDBSnapshotResponsePrivate class provides private implementation for RestoreDBInstanceFromDBSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotR
 }
 
 /*!
- * Parses a RDS RestoreDBInstanceFromDBSnapshot response element from \a xml.
+ * Parses a Rds RestoreDBInstanceFromDBSnapshot response element from \a xml.
  */
 void RestoreDBInstanceFromDBSnapshotResponsePrivate::parseRestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RestoreDBInstanceFromDBSnapshotResponsePrivate::parseRestoreDBInstanceFromD
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

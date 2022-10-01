@@ -24,11 +24,11 @@
 #include "describeeventsrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeEventsResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DescribeEventsResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DescribeEventsResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

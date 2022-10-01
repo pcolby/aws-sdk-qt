@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableResponse
- * \brief The DescribeTableResponse class provides an interace for DynamoDB DescribeTable responses.
+ * \class QtAws::DynamoDb::DescribeTableResponse
+ * \brief The DescribeTableResponse class provides an interace for DynamoDb DescribeTable responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeTable
+ * \sa DynamoDbClient::describeTable
  */
 
 /*!
@@ -63,7 +63,7 @@ DescribeTableResponse::DescribeTableResponse(
         const DescribeTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeTableResponsePrivate(this), parent)
+    : DynamoDbResponse(new DescribeTableResponsePrivate(this), parent)
 {
     setRequest(new DescribeTableRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DescribeTableRequest * DescribeTableResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DescribeTable \a response.
+ * Parses a successful DynamoDb DescribeTable \a response.
  */
 void DescribeTableResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DescribeTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableResponsePrivate
+ * \class QtAws::DynamoDb::DescribeTableResponsePrivate
  * \brief The DescribeTableResponsePrivate class provides private implementation for DescribeTableResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DescribeTableResponsePrivate object with public implementation \a q.
  */
 DescribeTableResponsePrivate::DescribeTableResponsePrivate(
-    DescribeTableResponse * const q) : DynamoDBResponsePrivate(q)
+    DescribeTableResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DescribeTable response element from \a xml.
+ * Parses a DynamoDb DescribeTable response element from \a xml.
  */
 void DescribeTableResponsePrivate::parseDescribeTableResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeTableResponsePrivate::parseDescribeTableResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

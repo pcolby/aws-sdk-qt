@@ -33,49 +33,50 @@ namespace StorageGateway {
  *
  * \inmodule QtAwsStorageGateway
  *
- *  <fullname>AWS Storage Gateway Service</fullname>
+ *  <fullname>Storage Gateway Service</fullname>
  * 
- *  AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
- *  seamless and secure integration between an organization's on-premises IT environment and the AWS storage infrastructure.
- *  The service enables you to securely upload data to the AWS Cloud for cost effective backup and rapid disaster
+ *  Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
+ *  seamless and secure integration between an organization's on-premises IT environment and the Amazon Web Services storage
+ *  infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost effective
+ *  backup and rapid disaster
  * 
  *  recovery>
  * 
- *  Use the following links to get started using the <i>AWS Storage Gateway Service API
+ *  Use the following links to get started using the <i>Storage Gateway Service API
  * 
  *  Reference</i>> <ul> <li>
  * 
  *  <a
- *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
- *  Storage Gateway required request headers</a>: Describes the required headers that you must send with every POST request
- *  to AWS Storage
+ *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">Storage
+ *  Gateway required request headers</a>: Describes the required headers that you must send with every POST request to
+ *  Storage
  * 
  *  Gateway> </li> <li>
  * 
  *  <a
  *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
- *  requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
- *  such a
+ *  requests</a>: Storage Gateway requires that you authenticate every request you send; this topic describes how sign such
+ *  a
  * 
  *  request> </li> <li>
  * 
  *  <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
- *  responses</a>: Provides reference information about AWS Storage Gateway
+ *  responses</a>: Provides reference information about Storage Gateway
  * 
  *  errors> </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
- *  Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
+ *  <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in Storage
+ *  Gateway</a>: Contains detailed descriptions of all Storage Gateway operations, their request parameters, response
  *  elements, possible errors, and examples of requests and
  * 
  *  responses> </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">AWS Storage Gateway endpoints and quotas</a>: Provides a
- *  list of each AWS Region and the endpoints available for use with AWS Storage
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a
+ *  list of each Amazon Web Services Region and the endpoints available for use with Storage
  * 
  *  Gateway> </li> </ul> <note>
  * 
- *  AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
+ *  Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
  *  resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
  *  Storage Gateway the ID for a volume might be <code>vol-AA22BB012345DAF670</code>. When you use this ID with the EC2 API,
  *  you must change it to <code>vol-aa22bb012345daf670</code>. Otherwise, the EC2 API might not behave as
@@ -100,7 +101,7 @@ namespace StorageGateway {
  * 
  *  <code>snap-78e226633445566ee</code>>
  * 
- *  For more information, see <a href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer AWS
+ *  For more information, see <a href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer
  *  Storage Gateway volume and snapshot IDs coming in
  *
  * \sa StorageGatewayClient::describeSnapshotSchedule

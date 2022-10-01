@@ -23,11 +23,11 @@
 #include "cloudhsmv2request.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class ModifyClusterRequestPrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT ModifyClusterRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT ModifyClusterRequest : public CloudHsmV2Request {
 
 public:
     ModifyClusterRequest(const ModifyClusterRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetVpcLinkResponse
- * \brief The GetVpcLinkResponse class provides an interace for APIGateway GetVpcLink responses.
+ * \class QtAws::ApiGateway::GetVpcLinkResponse
+ * \brief The GetVpcLinkResponse class provides an interace for ApiGateway GetVpcLink responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getVpcLink
+ * \sa ApiGatewayClient::getVpcLink
  */
 
 /*!
@@ -49,7 +49,7 @@ GetVpcLinkResponse::GetVpcLinkResponse(
         const GetVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetVpcLinkResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetVpcLinkResponsePrivate(this), parent)
 {
     setRequest(new GetVpcLinkRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetVpcLinkRequest * GetVpcLinkResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetVpcLink \a response.
+ * Parses a successful ApiGateway GetVpcLink \a response.
  */
 void GetVpcLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetVpcLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetVpcLinkResponsePrivate
+ * \class QtAws::ApiGateway::GetVpcLinkResponsePrivate
  * \brief The GetVpcLinkResponsePrivate class provides private implementation for GetVpcLinkResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetVpcLinkResponsePrivate object with public implementation \a q.
  */
 GetVpcLinkResponsePrivate::GetVpcLinkResponsePrivate(
-    GetVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
+    GetVpcLinkResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetVpcLink response element from \a xml.
+ * Parses a ApiGateway GetVpcLink response element from \a xml.
  */
 void GetVpcLinkResponsePrivate::parseGetVpcLinkResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetVpcLinkResponsePrivate::parseGetVpcLinkResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

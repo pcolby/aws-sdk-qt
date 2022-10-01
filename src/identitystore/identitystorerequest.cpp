@@ -36,10 +36,25 @@ namespace IdentityStore {
  * This enum describes the actions that can be performed as IdentityStore
  * requests.
  *
+ * \value CreateGroupAction IdentityStore CreateGroup action.
+ * \value CreateGroupMembershipAction IdentityStore CreateGroupMembership action.
+ * \value CreateUserAction IdentityStore CreateUser action.
+ * \value DeleteGroupAction IdentityStore DeleteGroup action.
+ * \value DeleteGroupMembershipAction IdentityStore DeleteGroupMembership action.
+ * \value DeleteUserAction IdentityStore DeleteUser action.
  * \value DescribeGroupAction IdentityStore DescribeGroup action.
+ * \value DescribeGroupMembershipAction IdentityStore DescribeGroupMembership action.
  * \value DescribeUserAction IdentityStore DescribeUser action.
+ * \value GetGroupIdAction IdentityStore GetGroupId action.
+ * \value GetGroupMembershipIdAction IdentityStore GetGroupMembershipId action.
+ * \value GetUserIdAction IdentityStore GetUserId action.
+ * \value IsMemberInGroupsAction IdentityStore IsMemberInGroups action.
+ * \value ListGroupMembershipsAction IdentityStore ListGroupMemberships action.
+ * \value ListGroupMembershipsForMemberAction IdentityStore ListGroupMembershipsForMember action.
  * \value ListGroupsAction IdentityStore ListGroups action.
  * \value ListUsersAction IdentityStore ListUsers action.
+ * \value UpdateGroupAction IdentityStore UpdateGroup action.
+ * \value UpdateUserAction IdentityStore UpdateUser action.
  */
 
 /*!
@@ -247,7 +262,7 @@ QNetworkRequest IdentityStoreRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 IdentityStoreRequestPrivate::IdentityStoreRequestPrivate(const IdentityStoreRequest::Action action, IdentityStoreRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-06-15"))
 {
 
 }
@@ -281,10 +296,25 @@ QString IdentityStoreRequestPrivate::toString(const IdentityStoreRequest::Action
     #define ActionToString(action) \
         case IdentityStoreRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(CreateGroup);
+        ActionToString(CreateGroupMembership);
+        ActionToString(CreateUser);
+        ActionToString(DeleteGroup);
+        ActionToString(DeleteGroupMembership);
+        ActionToString(DeleteUser);
         ActionToString(DescribeGroup);
+        ActionToString(DescribeGroupMembership);
         ActionToString(DescribeUser);
+        ActionToString(GetGroupId);
+        ActionToString(GetGroupMembershipId);
+        ActionToString(GetUserId);
+        ActionToString(IsMemberInGroups);
+        ActionToString(ListGroupMemberships);
+        ActionToString(ListGroupMembershipsForMember);
         ActionToString(ListGroups);
         ActionToString(ListUsers);
+        ActionToString(UpdateGroup);
+        ActionToString(UpdateUser);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

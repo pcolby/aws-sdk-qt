@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::finspaceResponse
- * \brief The finspaceResponse class provides an interface for finspace responses.
+ * \class QtAws::Finspace::FinspaceResponse
+ * \brief The FinspaceResponse class provides an interface for Finspace responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a finspaceResponse object with parent \a parent.
+ * Constructs a FinspaceResponse object with parent \a parent.
  */
-finspaceResponse::finspaceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new finspaceResponsePrivate(this), parent)
+FinspaceResponse::FinspaceResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new FinspaceResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a finspaceResponse object with private implementation \a d,
+ * Constructs a FinspaceResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from finspaceResponsePrivate.
+ * implementation that inherits from FinspaceResponsePrivate.
  */
-finspaceResponse::finspaceResponse(finspaceResponsePrivate * const d, QObject * const parent)
+FinspaceResponse::FinspaceResponse(FinspaceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ finspaceResponse::finspaceResponse(finspaceResponsePrivate * const d, QObject * 
 /*!
  * \reimp
  */
-void finspaceResponse::parseFailure(QIODevice &response)
+void FinspaceResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(finspaceResponse);
+    //Q_D(FinspaceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void finspaceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::finspaceResponsePrivate
- * \brief The finspaceResponsePrivate class provides private implementation for finspaceResponse.
+ * \class QtAws::Finspace::FinspaceResponsePrivate
+ * \brief The FinspaceResponsePrivate class provides private implementation for FinspaceResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a finspaceResponsePrivate object with public implementation \a q.
+ * Constructs a FinspaceResponsePrivate object with public implementation \a q.
  */
-finspaceResponsePrivate::finspaceResponsePrivate(
-    finspaceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+FinspaceResponsePrivate::FinspaceResponsePrivate(
+    FinspaceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

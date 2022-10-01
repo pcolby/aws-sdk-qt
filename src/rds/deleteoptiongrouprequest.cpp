@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteOptionGroupRequest
- * \brief The DeleteOptionGroupRequest class provides an interface for RDS DeleteOptionGroup requests.
+ * \class QtAws::Rds::DeleteOptionGroupRequest
+ * \brief The DeleteOptionGroupRequest class provides an interface for Rds DeleteOptionGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::RDS::DeleteOptionGroupRequestPrivate
+ * \class QtAws::Rds::DeleteOptionGroupRequestPrivate
  * \brief The DeleteOptionGroupRequestPrivate class provides private implementation for DeleteOptionGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

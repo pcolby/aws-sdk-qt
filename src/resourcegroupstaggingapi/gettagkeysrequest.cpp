@@ -23,23 +23,23 @@
 #include "resourcegroupstaggingapirequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysRequest
- * \brief The GetTagKeysRequest class provides an interface for ResourceGroupsTaggingAPI GetTagKeys requests.
+ * \class QtAws::ResourceGroupsTaggingApi::GetTagKeysRequest
+ * \brief The GetTagKeysRequest class provides an interface for ResourceGroupsTaggingApi GetTagKeys requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  *
- * \sa ResourceGroupsTaggingAPIClient::getTagKeys
+ * \sa ResourceGroupsTaggingApiClient::getTagKeys
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetTagKeysRequest::GetTagKeysRequest(const GetTagKeysRequest &other)
-    : ResourceGroupsTaggingAPIRequest(new GetTagKeysRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingApiRequest(new GetTagKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetTagKeysRequest::GetTagKeysRequest(const GetTagKeysRequest &other)
  * Constructs a GetTagKeysRequest object.
  */
 GetTagKeysRequest::GetTagKeysRequest()
-    : ResourceGroupsTaggingAPIRequest(new GetTagKeysRequestPrivate(ResourceGroupsTaggingAPIRequest::GetTagKeysAction, this))
+    : ResourceGroupsTaggingApiRequest(new GetTagKeysRequestPrivate(ResourceGroupsTaggingApiRequest::GetTagKeysAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * GetTagKeysRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysRequestPrivate
+ * \class QtAws::ResourceGroupsTaggingApi::GetTagKeysRequestPrivate
  * \brief The GetTagKeysRequestPrivate class provides private implementation for GetTagKeysRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
- * Constructs a GetTagKeysRequestPrivate object for ResourceGroupsTaggingAPI \a action,
+ * Constructs a GetTagKeysRequestPrivate object for ResourceGroupsTaggingApi \a action,
  * with public implementation \a q.
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
-    const ResourceGroupsTaggingAPIRequest::Action action, GetTagKeysRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(action, q)
+    const ResourceGroupsTaggingApiRequest::Action action, GetTagKeysRequest * const q)
+    : ResourceGroupsTaggingApiRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
  */
 GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
     const GetTagKeysRequestPrivate &other, GetTagKeysRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(other, q)
+    : ResourceGroupsTaggingApiRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

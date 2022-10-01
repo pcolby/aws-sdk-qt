@@ -24,7 +24,7 @@
 #include "generateorganizationsaccessreportrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class GenerateOrganizationsAccessReportResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

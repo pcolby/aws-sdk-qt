@@ -24,14 +24,14 @@
 #include "listemailtemplatesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListEmailTemplatesRequest;
 
-class ListEmailTemplatesRequestPrivate : public Sesv2RequestPrivate {
+class ListEmailTemplatesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListEmailTemplatesRequestPrivate(const Sesv2Request::Action action,
+    ListEmailTemplatesRequestPrivate(const SESv2Request::Action action,
                                    ListEmailTemplatesRequest * const q);
     ListEmailTemplatesRequestPrivate(const ListEmailTemplatesRequestPrivate &other,
                                    ListEmailTemplatesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

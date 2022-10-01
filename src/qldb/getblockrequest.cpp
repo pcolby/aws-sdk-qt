@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetBlockRequest
- * \brief The GetBlockRequest class provides an interface for QLDB GetBlock requests.
+ * \class QtAws::Qldb::GetBlockRequest
+ * \brief The GetBlockRequest class provides an interface for Qldb GetBlock requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * GetBlockRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::QLDB::GetBlockRequestPrivate
+ * \class QtAws::Qldb::GetBlockRequestPrivate
  * \brief The GetBlockRequestPrivate class provides private implementation for GetBlockRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ GetBlockRequestPrivate::GetBlockRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

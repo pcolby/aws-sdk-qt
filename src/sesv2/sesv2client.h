@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2ClientPrivate;
+class SESv2ClientPrivate;
 class CreateConfigurationSetRequest;
 class CreateConfigurationSetResponse;
 class CreateConfigurationSetEventDestinationRequest;
@@ -193,17 +193,17 @@ class UpdateEmailIdentityPolicyResponse;
 class UpdateEmailTemplateRequest;
 class UpdateEmailTemplateResponse;
 
-class QTAWSSESV2_EXPORT Sesv2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSSESV2_EXPORT SESv2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    Sesv2Client(
+    SESv2Client(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit Sesv2Client(
+    explicit SESv2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -292,12 +292,12 @@ public slots:
     UpdateEmailTemplateResponse * updateEmailTemplate(const UpdateEmailTemplateRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(Sesv2Client)
-    Q_DISABLE_COPY(Sesv2Client)
+    Q_DECLARE_PRIVATE(SESv2Client)
+    Q_DISABLE_COPY(SESv2Client)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

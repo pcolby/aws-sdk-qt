@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::SubmitFeedbackRequest
- * \brief The SubmitFeedbackRequest class provides an interface for kendra SubmitFeedback requests.
+ * \class QtAws::Kendra::SubmitFeedbackRequest
+ * \brief The SubmitFeedbackRequest class provides an interface for Kendra SubmitFeedback requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::submitFeedback
+ * \sa KendraClient::submitFeedback
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SubmitFeedbackRequest::SubmitFeedbackRequest(const SubmitFeedbackRequest &other)
-    : kendraRequest(new SubmitFeedbackRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new SubmitFeedbackRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ SubmitFeedbackRequest::SubmitFeedbackRequest(const SubmitFeedbackRequest &other)
  * Constructs a SubmitFeedbackRequest object.
  */
 SubmitFeedbackRequest::SubmitFeedbackRequest()
-    : kendraRequest(new SubmitFeedbackRequestPrivate(kendraRequest::SubmitFeedbackAction, this))
+    : KendraRequest(new SubmitFeedbackRequestPrivate(KendraRequest::SubmitFeedbackAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * SubmitFeedbackRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::kendra::SubmitFeedbackRequestPrivate
+ * \class QtAws::Kendra::SubmitFeedbackRequestPrivate
  * \brief The SubmitFeedbackRequestPrivate class provides private implementation for SubmitFeedbackRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a SubmitFeedbackRequestPrivate object for kendra \a action,
+ * Constructs a SubmitFeedbackRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 SubmitFeedbackRequestPrivate::SubmitFeedbackRequestPrivate(
-    const kendraRequest::Action action, SubmitFeedbackRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, SubmitFeedbackRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ SubmitFeedbackRequestPrivate::SubmitFeedbackRequestPrivate(
  */
 SubmitFeedbackRequestPrivate::SubmitFeedbackRequestPrivate(
     const SubmitFeedbackRequestPrivate &other, SubmitFeedbackRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "getimagerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class GetImageRequest;
 
-class GetImageRequestPrivate : public imagebuilderRequestPrivate {
+class GetImageRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    GetImageRequestPrivate(const imagebuilderRequest::Action action,
+    GetImageRequestPrivate(const ImageBuilderRequest::Action action,
                                    GetImageRequest * const q);
     GetImageRequestPrivate(const GetImageRequestPrivate &other,
                                    GetImageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

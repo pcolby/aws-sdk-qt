@@ -24,14 +24,14 @@
 #include "listinstancesrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListInstancesRequest;
 
-class ListInstancesRequestPrivate : public SSOAdminRequestPrivate {
+class ListInstancesRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    ListInstancesRequestPrivate(const SSOAdminRequest::Action action,
+    ListInstancesRequestPrivate(const SsoAdminRequest::Action action,
                                    ListInstancesRequest * const q);
     ListInstancesRequestPrivate(const ListInstancesRequestPrivate &other,
                                    ListInstancesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

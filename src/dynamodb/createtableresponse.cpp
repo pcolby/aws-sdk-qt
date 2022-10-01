@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::CreateTableResponse
- * \brief The CreateTableResponse class provides an interace for DynamoDB CreateTable responses.
+ * \class QtAws::DynamoDb::CreateTableResponse
+ * \brief The CreateTableResponse class provides an interace for DynamoDb CreateTable responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::createTable
+ * \sa DynamoDbClient::createTable
  */
 
 /*!
@@ -63,7 +63,7 @@ CreateTableResponse::CreateTableResponse(
         const CreateTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new CreateTableResponsePrivate(this), parent)
+    : DynamoDbResponse(new CreateTableResponsePrivate(this), parent)
 {
     setRequest(new CreateTableRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const CreateTableRequest * CreateTableResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB CreateTable \a response.
+ * Parses a successful DynamoDb CreateTable \a response.
  */
 void CreateTableResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void CreateTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::CreateTableResponsePrivate
+ * \class QtAws::DynamoDb::CreateTableResponsePrivate
  * \brief The CreateTableResponsePrivate class provides private implementation for CreateTableResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a CreateTableResponsePrivate object with public implementation \a q.
  */
 CreateTableResponsePrivate::CreateTableResponsePrivate(
-    CreateTableResponse * const q) : DynamoDBResponsePrivate(q)
+    CreateTableResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB CreateTable response element from \a xml.
+ * Parses a DynamoDb CreateTable response element from \a xml.
  */
 void CreateTableResponsePrivate::parseCreateTableResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void CreateTableResponsePrivate::parseCreateTableResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

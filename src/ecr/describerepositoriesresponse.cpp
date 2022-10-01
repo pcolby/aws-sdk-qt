@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DescribeRepositoriesResponse
- * \brief The DescribeRepositoriesResponse class provides an interace for ECR DescribeRepositories responses.
+ * \class QtAws::Ecr::DescribeRepositoriesResponse
+ * \brief The DescribeRepositoriesResponse class provides an interace for Ecr DescribeRepositories responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::describeRepositories
  */
@@ -68,7 +74,7 @@ const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful ECR DescribeRepositories \a response.
+ * Parses a successful Ecr DescribeRepositories \a response.
  */
 void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DescribeRepositoriesResponsePrivate
+ * \class QtAws::Ecr::DescribeRepositoriesResponsePrivate
  * \brief The DescribeRepositoriesResponsePrivate class provides private implementation for DescribeRepositoriesResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
 }
 
 /*!
- * Parses a ECR DescribeRepositories response element from \a xml.
+ * Parses a Ecr DescribeRepositories response element from \a xml.
  */
 void DescribeRepositoriesResponsePrivate::parseDescribeRepositoriesResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DescribeRepositoriesResponsePrivate::parseDescribeRepositoriesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

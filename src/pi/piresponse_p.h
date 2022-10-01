@@ -23,7 +23,7 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class PiResponse;
 
@@ -42,7 +42,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

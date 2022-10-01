@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeSecurityConfigurationResponse
- * \brief The DescribeSecurityConfigurationResponse class provides an interace for EMR DescribeSecurityConfiguration responses.
+ * \class QtAws::Emr::DescribeSecurityConfigurationResponse
+ * \brief The DescribeSecurityConfigurationResponse class provides an interace for Emr DescribeSecurityConfiguration responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeSecurityConfiguration
  */
@@ -64,7 +64,7 @@ const DescribeSecurityConfigurationRequest * DescribeSecurityConfigurationRespon
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeSecurityConfiguration \a response.
+ * Parses a successful Emr DescribeSecurityConfiguration \a response.
  */
 void DescribeSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeSecurityConfigurationResponsePrivate
+ * \class QtAws::Emr::DescribeSecurityConfigurationResponsePrivate
  * \brief The DescribeSecurityConfigurationResponsePrivate class provides private implementation for DescribeSecurityConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeSecurityConfigurationResponsePrivate::DescribeSecurityConfigurationRespo
 }
 
 /*!
- * Parses a EMR DescribeSecurityConfiguration response element from \a xml.
+ * Parses a Emr DescribeSecurityConfiguration response element from \a xml.
  */
 void DescribeSecurityConfigurationResponsePrivate::parseDescribeSecurityConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeSecurityConfigurationResponsePrivate::parseDescribeSecurityConfigur
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

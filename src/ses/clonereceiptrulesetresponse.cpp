@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CloneReceiptRuleSetResponse
- * \brief The CloneReceiptRuleSetResponse class provides an interace for SES CloneReceiptRuleSet responses.
+ * \class QtAws::Ses::CloneReceiptRuleSetResponse
+ * \brief The CloneReceiptRuleSetResponse class provides an interace for Ses CloneReceiptRuleSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const CloneReceiptRuleSetRequest * CloneReceiptRuleSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES CloneReceiptRuleSet \a response.
+ * Parses a successful Ses CloneReceiptRuleSet \a response.
  */
 void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::CloneReceiptRuleSetResponsePrivate
+ * \class QtAws::Ses::CloneReceiptRuleSetResponsePrivate
  * \brief The CloneReceiptRuleSetResponsePrivate class provides private implementation for CloneReceiptRuleSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
 }
 
 /*!
- * Parses a SES CloneReceiptRuleSet response element from \a xml.
+ * Parses a Ses CloneReceiptRuleSet response element from \a xml.
  */
 void CloneReceiptRuleSetResponsePrivate::parseCloneReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CloneReceiptRuleSetResponsePrivate::parseCloneReceiptRuleSetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "describekinesisstreamingdestinationrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeKinesisStreamingDestinationRequest;
 
-class DescribeKinesisStreamingDestinationRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeKinesisStreamingDestinationRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    DescribeKinesisStreamingDestinationRequestPrivate(const DynamoDBRequest::Action action,
+    DescribeKinesisStreamingDestinationRequestPrivate(const DynamoDbRequest::Action action,
                                    DescribeKinesisStreamingDestinationRequest * const q);
     DescribeKinesisStreamingDestinationRequestPrivate(const DescribeKinesisStreamingDestinationRequestPrivate &other,
                                    DescribeKinesisStreamingDestinationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

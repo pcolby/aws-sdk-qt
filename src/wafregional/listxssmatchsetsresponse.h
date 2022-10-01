@@ -24,11 +24,11 @@
 #include "listxssmatchsetsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListXssMatchSetsResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListXssMatchSetsResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListXssMatchSetsResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

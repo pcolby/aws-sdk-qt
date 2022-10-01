@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class TagResourceResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT TagResourceResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT TagResourceResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

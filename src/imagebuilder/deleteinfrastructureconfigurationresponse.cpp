@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteInfrastructureConfigurationResponse
- * \brief The DeleteInfrastructureConfigurationResponse class provides an interace for imagebuilder DeleteInfrastructureConfiguration responses.
+ * \class QtAws::ImageBuilder::DeleteInfrastructureConfigurationResponse
+ * \brief The DeleteInfrastructureConfigurationResponse class provides an interace for ImageBuilder DeleteInfrastructureConfiguration responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteInfrastructureConfiguration
+ * \sa ImageBuilderClient::deleteInfrastructureConfiguration
  */
 
 /*!
@@ -47,7 +47,7 @@ DeleteInfrastructureConfigurationResponse::DeleteInfrastructureConfigurationResp
         const DeleteInfrastructureConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new DeleteInfrastructureConfigurationResponsePrivate(this), parent)
+    : ImageBuilderResponse(new DeleteInfrastructureConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteInfrastructureConfigurationRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const DeleteInfrastructureConfigurationRequest * DeleteInfrastructureConfigurati
 
 /*!
  * \reimp
- * Parses a successful imagebuilder DeleteInfrastructureConfiguration \a response.
+ * Parses a successful ImageBuilder DeleteInfrastructureConfiguration \a response.
  */
 void DeleteInfrastructureConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void DeleteInfrastructureConfigurationResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteInfrastructureConfigurationResponsePrivate
+ * \class QtAws::ImageBuilder::DeleteInfrastructureConfigurationResponsePrivate
  * \brief The DeleteInfrastructureConfigurationResponsePrivate class provides private implementation for DeleteInfrastructureConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a DeleteInfrastructureConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteInfrastructureConfigurationResponsePrivate::DeleteInfrastructureConfigurationResponsePrivate(
-    DeleteInfrastructureConfigurationResponse * const q) : imagebuilderResponsePrivate(q)
+    DeleteInfrastructureConfigurationResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder DeleteInfrastructureConfiguration response element from \a xml.
+ * Parses a ImageBuilder DeleteInfrastructureConfiguration response element from \a xml.
  */
 void DeleteInfrastructureConfigurationResponsePrivate::parseDeleteInfrastructureConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteInfrastructureConfigurationResponsePrivate::parseDeleteInfrastructure
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

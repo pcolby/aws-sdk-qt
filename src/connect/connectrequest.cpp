@@ -38,53 +38,81 @@ namespace Connect {
  *
  * \value AssociateApprovedOriginAction Connect AssociateApprovedOrigin action.
  * \value AssociateBotAction Connect AssociateBot action.
+ * \value AssociateDefaultVocabularyAction Connect AssociateDefaultVocabulary action.
  * \value AssociateInstanceStorageConfigAction Connect AssociateInstanceStorageConfig action.
  * \value AssociateLambdaFunctionAction Connect AssociateLambdaFunction action.
  * \value AssociateLexBotAction Connect AssociateLexBot action.
+ * \value AssociatePhoneNumberContactFlowAction Connect AssociatePhoneNumberContactFlow action.
  * \value AssociateQueueQuickConnectsAction Connect AssociateQueueQuickConnects action.
  * \value AssociateRoutingProfileQueuesAction Connect AssociateRoutingProfileQueues action.
  * \value AssociateSecurityKeyAction Connect AssociateSecurityKey action.
+ * \value ClaimPhoneNumberAction Connect ClaimPhoneNumber action.
+ * \value CreateAgentStatusAction Connect CreateAgentStatus action.
  * \value CreateContactFlowAction Connect CreateContactFlow action.
+ * \value CreateContactFlowModuleAction Connect CreateContactFlowModule action.
+ * \value CreateHoursOfOperationAction Connect CreateHoursOfOperation action.
  * \value CreateInstanceAction Connect CreateInstance action.
  * \value CreateIntegrationAssociationAction Connect CreateIntegrationAssociation action.
  * \value CreateQueueAction Connect CreateQueue action.
  * \value CreateQuickConnectAction Connect CreateQuickConnect action.
  * \value CreateRoutingProfileAction Connect CreateRoutingProfile action.
+ * \value CreateSecurityProfileAction Connect CreateSecurityProfile action.
+ * \value CreateTaskTemplateAction Connect CreateTaskTemplate action.
  * \value CreateUseCaseAction Connect CreateUseCase action.
  * \value CreateUserAction Connect CreateUser action.
  * \value CreateUserHierarchyGroupAction Connect CreateUserHierarchyGroup action.
+ * \value CreateVocabularyAction Connect CreateVocabulary action.
+ * \value DeleteContactFlowAction Connect DeleteContactFlow action.
+ * \value DeleteContactFlowModuleAction Connect DeleteContactFlowModule action.
+ * \value DeleteHoursOfOperationAction Connect DeleteHoursOfOperation action.
  * \value DeleteInstanceAction Connect DeleteInstance action.
  * \value DeleteIntegrationAssociationAction Connect DeleteIntegrationAssociation action.
  * \value DeleteQuickConnectAction Connect DeleteQuickConnect action.
+ * \value DeleteSecurityProfileAction Connect DeleteSecurityProfile action.
+ * \value DeleteTaskTemplateAction Connect DeleteTaskTemplate action.
  * \value DeleteUseCaseAction Connect DeleteUseCase action.
  * \value DeleteUserAction Connect DeleteUser action.
  * \value DeleteUserHierarchyGroupAction Connect DeleteUserHierarchyGroup action.
+ * \value DeleteVocabularyAction Connect DeleteVocabulary action.
+ * \value DescribeAgentStatusAction Connect DescribeAgentStatus action.
+ * \value DescribeContactAction Connect DescribeContact action.
  * \value DescribeContactFlowAction Connect DescribeContactFlow action.
+ * \value DescribeContactFlowModuleAction Connect DescribeContactFlowModule action.
  * \value DescribeHoursOfOperationAction Connect DescribeHoursOfOperation action.
  * \value DescribeInstanceAction Connect DescribeInstance action.
  * \value DescribeInstanceAttributeAction Connect DescribeInstanceAttribute action.
  * \value DescribeInstanceStorageConfigAction Connect DescribeInstanceStorageConfig action.
+ * \value DescribePhoneNumberAction Connect DescribePhoneNumber action.
  * \value DescribeQueueAction Connect DescribeQueue action.
  * \value DescribeQuickConnectAction Connect DescribeQuickConnect action.
  * \value DescribeRoutingProfileAction Connect DescribeRoutingProfile action.
+ * \value DescribeSecurityProfileAction Connect DescribeSecurityProfile action.
  * \value DescribeUserAction Connect DescribeUser action.
  * \value DescribeUserHierarchyGroupAction Connect DescribeUserHierarchyGroup action.
  * \value DescribeUserHierarchyStructureAction Connect DescribeUserHierarchyStructure action.
+ * \value DescribeVocabularyAction Connect DescribeVocabulary action.
  * \value DisassociateApprovedOriginAction Connect DisassociateApprovedOrigin action.
  * \value DisassociateBotAction Connect DisassociateBot action.
  * \value DisassociateInstanceStorageConfigAction Connect DisassociateInstanceStorageConfig action.
  * \value DisassociateLambdaFunctionAction Connect DisassociateLambdaFunction action.
  * \value DisassociateLexBotAction Connect DisassociateLexBot action.
+ * \value DisassociatePhoneNumberContactFlowAction Connect DisassociatePhoneNumberContactFlow action.
  * \value DisassociateQueueQuickConnectsAction Connect DisassociateQueueQuickConnects action.
  * \value DisassociateRoutingProfileQueuesAction Connect DisassociateRoutingProfileQueues action.
  * \value DisassociateSecurityKeyAction Connect DisassociateSecurityKey action.
  * \value GetContactAttributesAction Connect GetContactAttributes action.
  * \value GetCurrentMetricDataAction Connect GetCurrentMetricData action.
+ * \value GetCurrentUserDataAction Connect GetCurrentUserData action.
  * \value GetFederationTokenAction Connect GetFederationToken action.
  * \value GetMetricDataAction Connect GetMetricData action.
+ * \value GetTaskTemplateAction Connect GetTaskTemplate action.
+ * \value ListAgentStatusesAction Connect ListAgentStatuses action.
  * \value ListApprovedOriginsAction Connect ListApprovedOrigins action.
  * \value ListBotsAction Connect ListBots action.
+ * \value ListContactFlowModulesAction Connect ListContactFlowModules action.
  * \value ListContactFlowsAction Connect ListContactFlows action.
+ * \value ListContactReferencesAction Connect ListContactReferences action.
+ * \value ListDefaultVocabulariesAction Connect ListDefaultVocabularies action.
  * \value ListHoursOfOperationsAction Connect ListHoursOfOperations action.
  * \value ListInstanceAttributesAction Connect ListInstanceAttributes action.
  * \value ListInstanceStorageConfigsAction Connect ListInstanceStorageConfigs action.
@@ -93,6 +121,7 @@ namespace Connect {
  * \value ListLambdaFunctionsAction Connect ListLambdaFunctions action.
  * \value ListLexBotsAction Connect ListLexBots action.
  * \value ListPhoneNumbersAction Connect ListPhoneNumbers action.
+ * \value ListPhoneNumbersV2Action Connect ListPhoneNumbersV2 action.
  * \value ListPromptsAction Connect ListPrompts action.
  * \value ListQueueQuickConnectsAction Connect ListQueueQuickConnects action.
  * \value ListQueuesAction Connect ListQueues action.
@@ -100,26 +129,47 @@ namespace Connect {
  * \value ListRoutingProfileQueuesAction Connect ListRoutingProfileQueues action.
  * \value ListRoutingProfilesAction Connect ListRoutingProfiles action.
  * \value ListSecurityKeysAction Connect ListSecurityKeys action.
+ * \value ListSecurityProfilePermissionsAction Connect ListSecurityProfilePermissions action.
  * \value ListSecurityProfilesAction Connect ListSecurityProfiles action.
  * \value ListTagsForResourceAction Connect ListTagsForResource action.
+ * \value ListTaskTemplatesAction Connect ListTaskTemplates action.
  * \value ListUseCasesAction Connect ListUseCases action.
  * \value ListUserHierarchyGroupsAction Connect ListUserHierarchyGroups action.
  * \value ListUsersAction Connect ListUsers action.
+ * \value PutUserStatusAction Connect PutUserStatus action.
+ * \value ReleasePhoneNumberAction Connect ReleasePhoneNumber action.
  * \value ResumeContactRecordingAction Connect ResumeContactRecording action.
+ * \value SearchAvailablePhoneNumbersAction Connect SearchAvailablePhoneNumbers action.
+ * \value SearchQueuesAction Connect SearchQueues action.
+ * \value SearchRoutingProfilesAction Connect SearchRoutingProfiles action.
+ * \value SearchSecurityProfilesAction Connect SearchSecurityProfiles action.
+ * \value SearchUsersAction Connect SearchUsers action.
+ * \value SearchVocabulariesAction Connect SearchVocabularies action.
  * \value StartChatContactAction Connect StartChatContact action.
  * \value StartContactRecordingAction Connect StartContactRecording action.
+ * \value StartContactStreamingAction Connect StartContactStreaming action.
  * \value StartOutboundVoiceContactAction Connect StartOutboundVoiceContact action.
  * \value StartTaskContactAction Connect StartTaskContact action.
  * \value StopContactAction Connect StopContact action.
  * \value StopContactRecordingAction Connect StopContactRecording action.
+ * \value StopContactStreamingAction Connect StopContactStreaming action.
  * \value SuspendContactRecordingAction Connect SuspendContactRecording action.
  * \value TagResourceAction Connect TagResource action.
+ * \value TransferContactAction Connect TransferContact action.
  * \value UntagResourceAction Connect UntagResource action.
+ * \value UpdateAgentStatusAction Connect UpdateAgentStatus action.
+ * \value UpdateContactAction Connect UpdateContact action.
  * \value UpdateContactAttributesAction Connect UpdateContactAttributes action.
  * \value UpdateContactFlowContentAction Connect UpdateContactFlowContent action.
+ * \value UpdateContactFlowMetadataAction Connect UpdateContactFlowMetadata action.
+ * \value UpdateContactFlowModuleContentAction Connect UpdateContactFlowModuleContent action.
+ * \value UpdateContactFlowModuleMetadataAction Connect UpdateContactFlowModuleMetadata action.
  * \value UpdateContactFlowNameAction Connect UpdateContactFlowName action.
+ * \value UpdateContactScheduleAction Connect UpdateContactSchedule action.
+ * \value UpdateHoursOfOperationAction Connect UpdateHoursOfOperation action.
  * \value UpdateInstanceAttributeAction Connect UpdateInstanceAttribute action.
  * \value UpdateInstanceStorageConfigAction Connect UpdateInstanceStorageConfig action.
+ * \value UpdatePhoneNumberAction Connect UpdatePhoneNumber action.
  * \value UpdateQueueHoursOfOperationAction Connect UpdateQueueHoursOfOperation action.
  * \value UpdateQueueMaxContactsAction Connect UpdateQueueMaxContacts action.
  * \value UpdateQueueNameAction Connect UpdateQueueName action.
@@ -131,6 +181,8 @@ namespace Connect {
  * \value UpdateRoutingProfileDefaultOutboundQueueAction Connect UpdateRoutingProfileDefaultOutboundQueue action.
  * \value UpdateRoutingProfileNameAction Connect UpdateRoutingProfileName action.
  * \value UpdateRoutingProfileQueuesAction Connect UpdateRoutingProfileQueues action.
+ * \value UpdateSecurityProfileAction Connect UpdateSecurityProfile action.
+ * \value UpdateTaskTemplateAction Connect UpdateTaskTemplate action.
  * \value UpdateUserHierarchyAction Connect UpdateUserHierarchy action.
  * \value UpdateUserHierarchyGroupNameAction Connect UpdateUserHierarchyGroupName action.
  * \value UpdateUserHierarchyStructureAction Connect UpdateUserHierarchyStructure action.
@@ -345,7 +397,7 @@ QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action, ConnectRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-08-08"))
 {
 
 }
@@ -381,53 +433,81 @@ QString ConnectRequestPrivate::toString(const ConnectRequest::Action &action)
     switch (action) {
         ActionToString(AssociateApprovedOrigin);
         ActionToString(AssociateBot);
+        ActionToString(AssociateDefaultVocabulary);
         ActionToString(AssociateInstanceStorageConfig);
         ActionToString(AssociateLambdaFunction);
         ActionToString(AssociateLexBot);
+        ActionToString(AssociatePhoneNumberContactFlow);
         ActionToString(AssociateQueueQuickConnects);
         ActionToString(AssociateRoutingProfileQueues);
         ActionToString(AssociateSecurityKey);
+        ActionToString(ClaimPhoneNumber);
+        ActionToString(CreateAgentStatus);
         ActionToString(CreateContactFlow);
+        ActionToString(CreateContactFlowModule);
+        ActionToString(CreateHoursOfOperation);
         ActionToString(CreateInstance);
         ActionToString(CreateIntegrationAssociation);
         ActionToString(CreateQueue);
         ActionToString(CreateQuickConnect);
         ActionToString(CreateRoutingProfile);
+        ActionToString(CreateSecurityProfile);
+        ActionToString(CreateTaskTemplate);
         ActionToString(CreateUseCase);
         ActionToString(CreateUser);
         ActionToString(CreateUserHierarchyGroup);
+        ActionToString(CreateVocabulary);
+        ActionToString(DeleteContactFlow);
+        ActionToString(DeleteContactFlowModule);
+        ActionToString(DeleteHoursOfOperation);
         ActionToString(DeleteInstance);
         ActionToString(DeleteIntegrationAssociation);
         ActionToString(DeleteQuickConnect);
+        ActionToString(DeleteSecurityProfile);
+        ActionToString(DeleteTaskTemplate);
         ActionToString(DeleteUseCase);
         ActionToString(DeleteUser);
         ActionToString(DeleteUserHierarchyGroup);
+        ActionToString(DeleteVocabulary);
+        ActionToString(DescribeAgentStatus);
+        ActionToString(DescribeContact);
         ActionToString(DescribeContactFlow);
+        ActionToString(DescribeContactFlowModule);
         ActionToString(DescribeHoursOfOperation);
         ActionToString(DescribeInstance);
         ActionToString(DescribeInstanceAttribute);
         ActionToString(DescribeInstanceStorageConfig);
+        ActionToString(DescribePhoneNumber);
         ActionToString(DescribeQueue);
         ActionToString(DescribeQuickConnect);
         ActionToString(DescribeRoutingProfile);
+        ActionToString(DescribeSecurityProfile);
         ActionToString(DescribeUser);
         ActionToString(DescribeUserHierarchyGroup);
         ActionToString(DescribeUserHierarchyStructure);
+        ActionToString(DescribeVocabulary);
         ActionToString(DisassociateApprovedOrigin);
         ActionToString(DisassociateBot);
         ActionToString(DisassociateInstanceStorageConfig);
         ActionToString(DisassociateLambdaFunction);
         ActionToString(DisassociateLexBot);
+        ActionToString(DisassociatePhoneNumberContactFlow);
         ActionToString(DisassociateQueueQuickConnects);
         ActionToString(DisassociateRoutingProfileQueues);
         ActionToString(DisassociateSecurityKey);
         ActionToString(GetContactAttributes);
         ActionToString(GetCurrentMetricData);
+        ActionToString(GetCurrentUserData);
         ActionToString(GetFederationToken);
         ActionToString(GetMetricData);
+        ActionToString(GetTaskTemplate);
+        ActionToString(ListAgentStatuses);
         ActionToString(ListApprovedOrigins);
         ActionToString(ListBots);
+        ActionToString(ListContactFlowModules);
         ActionToString(ListContactFlows);
+        ActionToString(ListContactReferences);
+        ActionToString(ListDefaultVocabularies);
         ActionToString(ListHoursOfOperations);
         ActionToString(ListInstanceAttributes);
         ActionToString(ListInstanceStorageConfigs);
@@ -436,6 +516,7 @@ QString ConnectRequestPrivate::toString(const ConnectRequest::Action &action)
         ActionToString(ListLambdaFunctions);
         ActionToString(ListLexBots);
         ActionToString(ListPhoneNumbers);
+        ActionToString(ListPhoneNumbersV2);
         ActionToString(ListPrompts);
         ActionToString(ListQueueQuickConnects);
         ActionToString(ListQueues);
@@ -443,26 +524,47 @@ QString ConnectRequestPrivate::toString(const ConnectRequest::Action &action)
         ActionToString(ListRoutingProfileQueues);
         ActionToString(ListRoutingProfiles);
         ActionToString(ListSecurityKeys);
+        ActionToString(ListSecurityProfilePermissions);
         ActionToString(ListSecurityProfiles);
         ActionToString(ListTagsForResource);
+        ActionToString(ListTaskTemplates);
         ActionToString(ListUseCases);
         ActionToString(ListUserHierarchyGroups);
         ActionToString(ListUsers);
+        ActionToString(PutUserStatus);
+        ActionToString(ReleasePhoneNumber);
         ActionToString(ResumeContactRecording);
+        ActionToString(SearchAvailablePhoneNumbers);
+        ActionToString(SearchQueues);
+        ActionToString(SearchRoutingProfiles);
+        ActionToString(SearchSecurityProfiles);
+        ActionToString(SearchUsers);
+        ActionToString(SearchVocabularies);
         ActionToString(StartChatContact);
         ActionToString(StartContactRecording);
+        ActionToString(StartContactStreaming);
         ActionToString(StartOutboundVoiceContact);
         ActionToString(StartTaskContact);
         ActionToString(StopContact);
         ActionToString(StopContactRecording);
+        ActionToString(StopContactStreaming);
         ActionToString(SuspendContactRecording);
         ActionToString(TagResource);
+        ActionToString(TransferContact);
         ActionToString(UntagResource);
+        ActionToString(UpdateAgentStatus);
+        ActionToString(UpdateContact);
         ActionToString(UpdateContactAttributes);
         ActionToString(UpdateContactFlowContent);
+        ActionToString(UpdateContactFlowMetadata);
+        ActionToString(UpdateContactFlowModuleContent);
+        ActionToString(UpdateContactFlowModuleMetadata);
         ActionToString(UpdateContactFlowName);
+        ActionToString(UpdateContactSchedule);
+        ActionToString(UpdateHoursOfOperation);
         ActionToString(UpdateInstanceAttribute);
         ActionToString(UpdateInstanceStorageConfig);
+        ActionToString(UpdatePhoneNumber);
         ActionToString(UpdateQueueHoursOfOperation);
         ActionToString(UpdateQueueMaxContacts);
         ActionToString(UpdateQueueName);
@@ -474,6 +576,8 @@ QString ConnectRequestPrivate::toString(const ConnectRequest::Action &action)
         ActionToString(UpdateRoutingProfileDefaultOutboundQueue);
         ActionToString(UpdateRoutingProfileName);
         ActionToString(UpdateRoutingProfileQueues);
+        ActionToString(UpdateSecurityProfile);
+        ActionToString(UpdateTaskTemplate);
         ActionToString(UpdateUserHierarchy);
         ActionToString(UpdateUserHierarchyGroupName);
         ActionToString(UpdateUserHierarchyStructure);

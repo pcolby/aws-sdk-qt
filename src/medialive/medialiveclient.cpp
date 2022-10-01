@@ -33,6 +33,8 @@
 #include "batchupdatescheduleresponse.h"
 #include "cancelinputdevicetransferrequest.h"
 #include "cancelinputdevicetransferresponse.h"
+#include "claimdevicerequest.h"
+#include "claimdeviceresponse.h"
 #include "createchannelrequest.h"
 #include "createchannelresponse.h"
 #include "createinputrequest.h"
@@ -105,10 +107,14 @@
 #include "listtagsforresourceresponse.h"
 #include "purchaseofferingrequest.h"
 #include "purchaseofferingresponse.h"
+#include "rebootinputdevicerequest.h"
+#include "rebootinputdeviceresponse.h"
 #include "rejectinputdevicetransferrequest.h"
 #include "rejectinputdevicetransferresponse.h"
 #include "startchannelrequest.h"
 #include "startchannelresponse.h"
+#include "startinputdevicemaintenancewindowrequest.h"
+#include "startinputdevicemaintenancewindowresponse.h"
 #include "startmultiplexrequest.h"
 #include "startmultiplexresponse.h"
 #include "stopchannelrequest.h"
@@ -281,6 +287,19 @@ BatchUpdateScheduleResponse * MediaLiveClient::batchUpdateSchedule(const BatchUp
 CancelInputDeviceTransferResponse * MediaLiveClient::cancelInputDeviceTransfer(const CancelInputDeviceTransferRequest &request)
 {
     return qobject_cast<CancelInputDeviceTransferResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ClaimDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Send a request to claim an AWS Elemental device that you have purchased from a third-party vendor. After the request
+ */
+ClaimDeviceResponse * MediaLiveClient::claimDevice(const ClaimDeviceRequest &request)
+{
+    return qobject_cast<ClaimDeviceResponse *>(send(request));
 }
 
 /*!
@@ -718,6 +737,19 @@ PurchaseOfferingResponse * MediaLiveClient::purchaseOffering(const PurchaseOffer
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * RebootInputDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Send a reboot command to the specified input device. The device will begin rebooting within a few seconds of sending the
+ */
+RebootInputDeviceResponse * MediaLiveClient::rebootInputDevice(const RebootInputDeviceRequest &request)
+{
+    return qobject_cast<RebootInputDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * RejectInputDeviceTransferResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -738,6 +770,22 @@ RejectInputDeviceTransferResponse * MediaLiveClient::rejectInputDeviceTransfer(c
 StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &request)
 {
     return qobject_cast<StartChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * StartInputDeviceMaintenanceWindowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Start a maintenance window for the specified input device. Starting a maintenance window will give the device up to two
+ * hours to install software. If the device was streaming prior to the maintenance, it will resume streaming when the
+ * software is fully installed. Devices automatically install updates while they are powered on and their MediaLive
+ * channels are stopped. A maintenance window allows you to update a device without having to stop MediaLive channels that
+ */
+StartInputDeviceMaintenanceWindowResponse * MediaLiveClient::startInputDeviceMaintenanceWindow(const StartInputDeviceMaintenanceWindowRequest &request)
+{
+    return qobject_cast<StartInputDeviceMaintenanceWindowResponse *>(send(request));
 }
 
 /*!

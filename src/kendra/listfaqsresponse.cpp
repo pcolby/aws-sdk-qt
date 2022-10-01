@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListFaqsResponse
- * \brief The ListFaqsResponse class provides an interace for kendra ListFaqs responses.
+ * \class QtAws::Kendra::ListFaqsResponse
+ * \brief The ListFaqsResponse class provides an interace for Kendra ListFaqs responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listFaqs
+ * \sa KendraClient::listFaqs
  */
 
 /*!
@@ -45,7 +45,7 @@ ListFaqsResponse::ListFaqsResponse(
         const ListFaqsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ListFaqsResponsePrivate(this), parent)
+    : KendraResponse(new ListFaqsResponsePrivate(this), parent)
 {
     setRequest(new ListFaqsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListFaqsRequest * ListFaqsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra ListFaqs \a response.
+ * Parses a successful Kendra ListFaqs \a response.
  */
 void ListFaqsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListFaqsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ListFaqsResponsePrivate
+ * \class QtAws::Kendra::ListFaqsResponsePrivate
  * \brief The ListFaqsResponsePrivate class provides private implementation for ListFaqsResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ListFaqsResponsePrivate object with public implementation \a q.
  */
 ListFaqsResponsePrivate::ListFaqsResponsePrivate(
-    ListFaqsResponse * const q) : kendraResponsePrivate(q)
+    ListFaqsResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ListFaqs response element from \a xml.
+ * Parses a Kendra ListFaqs response element from \a xml.
  */
 void ListFaqsResponsePrivate::parseListFaqsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListFaqsResponsePrivate::parseListFaqsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "updatethesaurusrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class UpdateThesaurusRequest;
 
-class UpdateThesaurusRequestPrivate : public kendraRequestPrivate {
+class UpdateThesaurusRequestPrivate : public KendraRequestPrivate {
 
 public:
-    UpdateThesaurusRequestPrivate(const kendraRequest::Action action,
+    UpdateThesaurusRequestPrivate(const KendraRequest::Action action,
                                    UpdateThesaurusRequest * const q);
     UpdateThesaurusRequestPrivate(const UpdateThesaurusRequestPrivate &other,
                                    UpdateThesaurusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

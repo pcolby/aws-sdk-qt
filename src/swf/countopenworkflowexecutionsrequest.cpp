@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::CountOpenWorkflowExecutionsRequest
- * \brief The CountOpenWorkflowExecutionsRequest class provides an interface for SWF CountOpenWorkflowExecutions requests.
+ * \class QtAws::Swf::CountOpenWorkflowExecutionsRequest
+ * \brief The CountOpenWorkflowExecutionsRequest class provides an interface for Swf CountOpenWorkflowExecutions requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * CountOpenWorkflowExecutionsRequest::response(
 }
 
 /*!
- * \class QtAws::SWF::CountOpenWorkflowExecutionsRequestPrivate
+ * \class QtAws::Swf::CountOpenWorkflowExecutionsRequestPrivate
  * \brief The CountOpenWorkflowExecutionsRequestPrivate class provides private implementation for CountOpenWorkflowExecutionsRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateAuthorizerRequest
- * \brief The CreateAuthorizerRequest class provides an interface for APIGateway CreateAuthorizer requests.
+ * \class QtAws::ApiGateway::CreateAuthorizerRequest
+ * \brief The CreateAuthorizerRequest class provides an interface for ApiGateway CreateAuthorizer requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createAuthorizer
+ * \sa ApiGatewayClient::createAuthorizer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &other)
-    : APIGatewayRequest(new CreateAuthorizerRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateAuthorizerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateAuthorizerRequest::CreateAuthorizerRequest(const CreateAuthorizerRequest &
  * Constructs a CreateAuthorizerRequest object.
  */
 CreateAuthorizerRequest::CreateAuthorizerRequest()
-    : APIGatewayRequest(new CreateAuthorizerRequestPrivate(APIGatewayRequest::CreateAuthorizerAction, this))
+    : ApiGatewayRequest(new CreateAuthorizerRequestPrivate(ApiGatewayRequest::CreateAuthorizerAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateAuthorizerRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::CreateAuthorizerRequestPrivate
+ * \class QtAws::ApiGateway::CreateAuthorizerRequestPrivate
  * \brief The CreateAuthorizerRequestPrivate class provides private implementation for CreateAuthorizerRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateAuthorizerRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateAuthorizerRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
-    const APIGatewayRequest::Action action, CreateAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateAuthorizerRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
  */
 CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
     const CreateAuthorizerRequestPrivate &other, CreateAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

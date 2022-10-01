@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class SwfRequestPrivate;
 
 class QTAWSSWF_EXPORT SwfRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SWF.
+    /// Actions supported by Swf.
     enum Action {
         CountClosedWorkflowExecutionsAction,
         CountOpenWorkflowExecutionsAction,
@@ -112,7 +112,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

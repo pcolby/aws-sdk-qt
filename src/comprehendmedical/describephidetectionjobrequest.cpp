@@ -31,8 +31,8 @@ namespace ComprehendMedical {
  *
  * \inmodule QtAwsComprehendMedical
  *
- *  Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
- *  insight in your documents.
+ *  Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain insight
+ *  in your documents.
  *
  * \sa ComprehendMedicalClient::describePHIDetectionJob
  */

@@ -24,16 +24,16 @@
 #include "ramrequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class RamRequest;
 
 class RamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    RamRequest::Action action; ///< RAM action to be performed.
-    QString apiVersion;        ///< RAM API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< RAM request (query string) parameters. @todo?
+    RamRequest::Action action; ///< Ram action to be performed.
+    QString apiVersion;        ///< Ram API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ram request (query string) parameters. @todo?
 
     RamRequestPrivate(const RamRequest::Action action, RamRequest * const q);
     RamRequestPrivate(const RamRequestPrivate &other, RamRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

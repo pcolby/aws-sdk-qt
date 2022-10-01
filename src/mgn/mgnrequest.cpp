@@ -21,53 +21,61 @@
 #include "mgnrequest_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::mgnRequest
- * \brief The mgnRequest class provides an interface for mgn requests.
+ * \class QtAws::Mgn::MgnRequest
+ * \brief The MgnRequest class provides an interface for Mgn requests.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * \enum mgnRequest::Action
+ * \enum MgnRequest::Action
  *
- * This enum describes the actions that can be performed as mgn
+ * This enum describes the actions that can be performed as Mgn
  * requests.
  *
- * \value ChangeServerLifeCycleStateAction mgn ChangeServerLifeCycleState action.
- * \value CreateReplicationConfigurationTemplateAction mgn CreateReplicationConfigurationTemplate action.
- * \value DeleteJobAction mgn DeleteJob action.
- * \value DeleteReplicationConfigurationTemplateAction mgn DeleteReplicationConfigurationTemplate action.
- * \value DeleteSourceServerAction mgn DeleteSourceServer action.
- * \value DescribeJobLogItemsAction mgn DescribeJobLogItems action.
- * \value DescribeJobsAction mgn DescribeJobs action.
- * \value DescribeReplicationConfigurationTemplatesAction mgn DescribeReplicationConfigurationTemplates action.
- * \value DescribeSourceServersAction mgn DescribeSourceServers action.
- * \value DisconnectFromServiceAction mgn DisconnectFromService action.
- * \value FinalizeCutoverAction mgn FinalizeCutover action.
- * \value GetLaunchConfigurationAction mgn GetLaunchConfiguration action.
- * \value GetReplicationConfigurationAction mgn GetReplicationConfiguration action.
- * \value InitializeServiceAction mgn InitializeService action.
- * \value ListTagsForResourceAction mgn ListTagsForResource action.
- * \value MarkAsArchivedAction mgn MarkAsArchived action.
- * \value RetryDataReplicationAction mgn RetryDataReplication action.
- * \value StartCutoverAction mgn StartCutover action.
- * \value StartTestAction mgn StartTest action.
- * \value TagResourceAction mgn TagResource action.
- * \value TerminateTargetInstancesAction mgn TerminateTargetInstances action.
- * \value UntagResourceAction mgn UntagResource action.
- * \value UpdateLaunchConfigurationAction mgn UpdateLaunchConfiguration action.
- * \value UpdateReplicationConfigurationAction mgn UpdateReplicationConfiguration action.
- * \value UpdateReplicationConfigurationTemplateAction mgn UpdateReplicationConfigurationTemplate action.
+ * \value ChangeServerLifeCycleStateAction Mgn ChangeServerLifeCycleState action.
+ * \value CreateLaunchConfigurationTemplateAction Mgn CreateLaunchConfigurationTemplate action.
+ * \value CreateReplicationConfigurationTemplateAction Mgn CreateReplicationConfigurationTemplate action.
+ * \value DeleteJobAction Mgn DeleteJob action.
+ * \value DeleteLaunchConfigurationTemplateAction Mgn DeleteLaunchConfigurationTemplate action.
+ * \value DeleteReplicationConfigurationTemplateAction Mgn DeleteReplicationConfigurationTemplate action.
+ * \value DeleteSourceServerAction Mgn DeleteSourceServer action.
+ * \value DeleteVcenterClientAction Mgn DeleteVcenterClient action.
+ * \value DescribeJobLogItemsAction Mgn DescribeJobLogItems action.
+ * \value DescribeJobsAction Mgn DescribeJobs action.
+ * \value DescribeLaunchConfigurationTemplatesAction Mgn DescribeLaunchConfigurationTemplates action.
+ * \value DescribeReplicationConfigurationTemplatesAction Mgn DescribeReplicationConfigurationTemplates action.
+ * \value DescribeSourceServersAction Mgn DescribeSourceServers action.
+ * \value DescribeVcenterClientsAction Mgn DescribeVcenterClients action.
+ * \value DisconnectFromServiceAction Mgn DisconnectFromService action.
+ * \value FinalizeCutoverAction Mgn FinalizeCutover action.
+ * \value GetLaunchConfigurationAction Mgn GetLaunchConfiguration action.
+ * \value GetReplicationConfigurationAction Mgn GetReplicationConfiguration action.
+ * \value InitializeServiceAction Mgn InitializeService action.
+ * \value ListTagsForResourceAction Mgn ListTagsForResource action.
+ * \value MarkAsArchivedAction Mgn MarkAsArchived action.
+ * \value RetryDataReplicationAction Mgn RetryDataReplication action.
+ * \value StartCutoverAction Mgn StartCutover action.
+ * \value StartReplicationAction Mgn StartReplication action.
+ * \value StartTestAction Mgn StartTest action.
+ * \value TagResourceAction Mgn TagResource action.
+ * \value TerminateTargetInstancesAction Mgn TerminateTargetInstances action.
+ * \value UntagResourceAction Mgn UntagResource action.
+ * \value UpdateLaunchConfigurationAction Mgn UpdateLaunchConfiguration action.
+ * \value UpdateLaunchConfigurationTemplateAction Mgn UpdateLaunchConfigurationTemplate action.
+ * \value UpdateReplicationConfigurationAction Mgn UpdateReplicationConfiguration action.
+ * \value UpdateReplicationConfigurationTemplateAction Mgn UpdateReplicationConfigurationTemplate action.
+ * \value UpdateSourceServerReplicationTypeAction Mgn UpdateSourceServerReplicationType action.
  */
 
 /*!
- * Constructs a mgnRequest object for mgn \a action.
+ * Constructs a MgnRequest object for Mgn \a action.
  */
-mgnRequest::mgnRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new mgnRequestPrivate(action, this))
+MgnRequest::MgnRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new MgnRequestPrivate(action, this))
 {
 
 }
@@ -75,18 +83,18 @@ mgnRequest::mgnRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-mgnRequest::mgnRequest(const mgnRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new mgnRequestPrivate(*other.d_func(), this))
+MgnRequest::MgnRequest(const MgnRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new MgnRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the mgnRequest object to be equal to \a other.
+ * Sets the MgnRequest object to be equal to \a other.
  */
-mgnRequest& mgnRequest::operator=(const mgnRequest &other)
+MgnRequest& MgnRequest::operator=(const MgnRequest &other)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -94,57 +102,57 @@ mgnRequest& mgnRequest::operator=(const mgnRequest &other)
 }
 
 /*!
- * Constructs aa mgnRequest object with private implementation \a d.
+ * Constructs aa MgnRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from mgnRequestPrivate.
+ * implementation that inherits from MgnRequestPrivate.
  */
-mgnRequest::mgnRequest(mgnRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MgnRequest::MgnRequest(MgnRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the mgn action to be performed by this request.
+ * Returns the Mgn action to be performed by this request.
  */
-mgnRequest::Action mgnRequest::action() const
+MgnRequest::Action MgnRequest::action() const
 {
-    Q_D(const mgnRequest);
+    Q_D(const MgnRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the mgn action to be performed by this request.
+ * Returns the name of the Mgn action to be performed by this request.
  */
-QString mgnRequest::actionString() const
+QString MgnRequest::actionString() const
 {
-    return mgnRequestPrivate::toString(action());
+    return MgnRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the mgn API version implemented by this request.
+ * Returns the Mgn API version implemented by this request.
  */
-QString mgnRequest::apiVersion() const
+QString MgnRequest::apiVersion() const
 {
-    Q_D(const mgnRequest);
+    Q_D(const MgnRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the mgn action to be performed by this request to \a action.
+ * Sets the Mgn action to be performed by this request to \a action.
  */
-void mgnRequest::setAction(const Action action)
+void MgnRequest::setAction(const Action action)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->action = action;
 }
 
 /*!
- * Sets the mgn API version to include in this request to \a version.
+ * Sets the Mgn API version to include in this request to \a version.
  */
-void mgnRequest::setApiVersion(const QString &version)
+void MgnRequest::setApiVersion(const QString &version)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->apiVersion = version;
 }
 
@@ -156,7 +164,7 @@ void mgnRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool mgnRequest::operator==(const mgnRequest &other) const
+bool MgnRequest::operator==(const MgnRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -165,19 +173,19 @@ bool mgnRequest::operator==(const mgnRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid mgn queue name.
+ * Returns \c tue if \a queueName is a valid Mgn queue name.
  *
- * @par From mgn FAQs:
+ * @par From Mgn FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid mgn queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Mgn queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool mgnRequest::isValidQueueName(const QString &queueName)
+/*bool MgnRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -187,45 +195,45 @@ bool mgnRequest::operator==(const mgnRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int mgnRequest::clearParameter(const QString &name)
+int MgnRequest::clearParameter(const QString &name)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void mgnRequest::clearParameters()
+void MgnRequest::clearParameters()
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant mgnRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant MgnRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const mgnRequest);
+    Q_D(const MgnRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &mgnRequest::parameters() const
+const QVariantMap &MgnRequest::parameters() const
 {
-    Q_D(const mgnRequest);
+    Q_D(const MgnRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void mgnRequest::setParameter(const QString &name, const QVariant &value)
+void MgnRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->parameters.insert(name, value);
 }
 
@@ -233,42 +241,42 @@ void mgnRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void mgnRequest::setParameters(const QVariantMap &parameters)
+void MgnRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(mgnRequest);
+    Q_D(MgnRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the mgn request using the given
+ * Returns a network request for the Mgn request using the given
  * \a endpoint.
  *
- * This mgn implementation builds request URLs by combining the
+ * This Mgn implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest mgnRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest MgnRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const mgnRequest);
+    //Q_D(const MgnRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::mgn::mgnRequestPrivate
- * \brief The mgnRequestPrivate class provides private implementation for mgnRequest.
+ * \class QtAws::Mgn::MgnRequestPrivate
+ * \brief The MgnRequestPrivate class provides private implementation for MgnRequest.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a mgnRequestPrivate object for mgn \a action,
+ * Constructs a MgnRequestPrivate object for Mgn \a action,
  * with public implementation \a q.
  */
-mgnRequestPrivate::mgnRequestPrivate(const mgnRequest::Action action, mgnRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+MgnRequestPrivate::MgnRequestPrivate(const MgnRequest::Action action, MgnRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-02-26"))
 {
 
 }
@@ -279,10 +287,10 @@ mgnRequestPrivate::mgnRequestPrivate(const mgnRequest::Action action, mgnRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the mgnRequest class's copy constructor.
+ * This is required to support the MgnRequest class's copy constructor.
  */
-mgnRequestPrivate::mgnRequestPrivate(const mgnRequestPrivate &other,
-                                     mgnRequest * const q)
+MgnRequestPrivate::MgnRequestPrivate(const MgnRequestPrivate &other,
+                                     MgnRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -293,24 +301,29 @@ mgnRequestPrivate::mgnRequestPrivate(const mgnRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts mgnRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the mgn service's Action
+ * This function converts MgnRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the Mgn service's Action
  * query parameters.
  */
-QString mgnRequestPrivate::toString(const mgnRequest::Action &action)
+QString MgnRequestPrivate::toString(const MgnRequest::Action &action)
 {
     #define ActionToString(action) \
-        case mgnRequest::action##Action: return QStringLiteral(#action)
+        case MgnRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(ChangeServerLifeCycleState);
+        ActionToString(CreateLaunchConfigurationTemplate);
         ActionToString(CreateReplicationConfigurationTemplate);
         ActionToString(DeleteJob);
+        ActionToString(DeleteLaunchConfigurationTemplate);
         ActionToString(DeleteReplicationConfigurationTemplate);
         ActionToString(DeleteSourceServer);
+        ActionToString(DeleteVcenterClient);
         ActionToString(DescribeJobLogItems);
         ActionToString(DescribeJobs);
+        ActionToString(DescribeLaunchConfigurationTemplates);
         ActionToString(DescribeReplicationConfigurationTemplates);
         ActionToString(DescribeSourceServers);
+        ActionToString(DescribeVcenterClients);
         ActionToString(DisconnectFromService);
         ActionToString(FinalizeCutover);
         ActionToString(GetLaunchConfiguration);
@@ -320,13 +333,16 @@ QString mgnRequestPrivate::toString(const mgnRequest::Action &action)
         ActionToString(MarkAsArchived);
         ActionToString(RetryDataReplication);
         ActionToString(StartCutover);
+        ActionToString(StartReplication);
         ActionToString(StartTest);
         ActionToString(TagResource);
         ActionToString(TerminateTargetInstances);
         ActionToString(UntagResource);
         ActionToString(UpdateLaunchConfiguration);
+        ActionToString(UpdateLaunchConfigurationTemplate);
         ActionToString(UpdateReplicationConfiguration);
         ActionToString(UpdateReplicationConfigurationTemplate);
+        ActionToString(UpdateSourceServerReplicationType);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
@@ -334,5 +350,5 @@ QString mgnRequestPrivate::toString(const mgnRequest::Action &action)
     return QString();
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

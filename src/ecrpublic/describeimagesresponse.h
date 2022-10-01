@@ -24,11 +24,11 @@
 #include "describeimagesrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DescribeImagesResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT DescribeImagesResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT DescribeImagesResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

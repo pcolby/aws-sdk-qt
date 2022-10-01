@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteInfrastructureConfigurationRequest
- * \brief The DeleteInfrastructureConfigurationRequest class provides an interface for imagebuilder DeleteInfrastructureConfiguration requests.
+ * \class QtAws::ImageBuilder::DeleteInfrastructureConfigurationRequest
+ * \brief The DeleteInfrastructureConfigurationRequest class provides an interface for ImageBuilder DeleteInfrastructureConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteInfrastructureConfiguration
+ * \sa ImageBuilderClient::deleteInfrastructureConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteInfrastructureConfigurationRequest::DeleteInfrastructureConfigurationRequest(const DeleteInfrastructureConfigurationRequest &other)
-    : imagebuilderRequest(new DeleteInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new DeleteInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DeleteInfrastructureConfigurationRequest::DeleteInfrastructureConfigurationReque
  * Constructs a DeleteInfrastructureConfigurationRequest object.
  */
 DeleteInfrastructureConfigurationRequest::DeleteInfrastructureConfigurationRequest()
-    : imagebuilderRequest(new DeleteInfrastructureConfigurationRequestPrivate(imagebuilderRequest::DeleteInfrastructureConfigurationAction, this))
+    : ImageBuilderRequest(new DeleteInfrastructureConfigurationRequestPrivate(ImageBuilderRequest::DeleteInfrastructureConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * DeleteInfrastructureConfigurationRequest::res
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteInfrastructureConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::DeleteInfrastructureConfigurationRequestPrivate
  * \brief The DeleteInfrastructureConfigurationRequestPrivate class provides private implementation for DeleteInfrastructureConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a DeleteInfrastructureConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a DeleteInfrastructureConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 DeleteInfrastructureConfigurationRequestPrivate::DeleteInfrastructureConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, DeleteInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, DeleteInfrastructureConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ DeleteInfrastructureConfigurationRequestPrivate::DeleteInfrastructureConfigurati
  */
 DeleteInfrastructureConfigurationRequestPrivate::DeleteInfrastructureConfigurationRequestPrivate(
     const DeleteInfrastructureConfigurationRequestPrivate &other, DeleteInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

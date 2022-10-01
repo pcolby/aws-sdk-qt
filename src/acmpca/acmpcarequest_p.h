@@ -24,28 +24,28 @@
 #include "acmpcarequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaRequest;
+class AcmPcaRequest;
 
-class AcmpcaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AcmPcaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    AcmpcaRequest::Action action; ///< ACMPCA action to be performed.
-    QString apiVersion;        ///< ACMPCA API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ACMPCA request (query string) parameters. @todo?
+    AcmPcaRequest::Action action; ///< AcmPca action to be performed.
+    QString apiVersion;        ///< AcmPca API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< AcmPca request (query string) parameters. @todo?
 
-    AcmpcaRequestPrivate(const AcmpcaRequest::Action action, AcmpcaRequest * const q);
-    AcmpcaRequestPrivate(const AcmpcaRequestPrivate &other, AcmpcaRequest * const q);
+    AcmPcaRequestPrivate(const AcmPcaRequest::Action action, AcmPcaRequest * const q);
+    AcmPcaRequestPrivate(const AcmPcaRequestPrivate &other, AcmPcaRequest * const q);
 
-    static QString toString(const AcmpcaRequest::Action &action);
+    static QString toString(const AcmPcaRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(AcmpcaRequest)
+    Q_DECLARE_PUBLIC(AcmPcaRequest)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

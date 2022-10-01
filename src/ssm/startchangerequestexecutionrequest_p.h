@@ -24,7 +24,7 @@
 #include "startchangerequestexecutionrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class StartChangeRequestExecutionRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

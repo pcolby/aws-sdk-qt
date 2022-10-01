@@ -24,7 +24,7 @@
 #include "listopsitemrelateditemsrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class ListOpsItemRelatedItemsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

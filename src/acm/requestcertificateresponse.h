@@ -24,7 +24,7 @@
 #include "requestcertificaterequest.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class RequestCertificateResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

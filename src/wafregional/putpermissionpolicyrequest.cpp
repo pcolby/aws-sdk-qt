@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::PutPermissionPolicyRequest
- * \brief The PutPermissionPolicyRequest class provides an interface for WAFRegional PutPermissionPolicy requests.
+ * \class QtAws::WafRegional::PutPermissionPolicyRequest
+ * \brief The PutPermissionPolicyRequest class provides an interface for WafRegional PutPermissionPolicy requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::putPermissionPolicy
+ * \sa WafRegionalClient::putPermissionPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other)
-    : WAFRegionalRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicy
  * Constructs a PutPermissionPolicyRequest object.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest()
-    : WAFRegionalRequest(new PutPermissionPolicyRequestPrivate(WAFRegionalRequest::PutPermissionPolicyAction, this))
+    : WafRegionalRequest(new PutPermissionPolicyRequestPrivate(WafRegionalRequest::PutPermissionPolicyAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAFRegional::PutPermissionPolicyRequestPrivate
+ * \class QtAws::WafRegional::PutPermissionPolicyRequestPrivate
  * \brief The PutPermissionPolicyRequestPrivate class provides private implementation for PutPermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a PutPermissionPolicyRequestPrivate object for WAFRegional \a action,
+ * Constructs a PutPermissionPolicyRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
-    const WAFRegionalRequest::Action action, PutPermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, PutPermissionPolicyRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for signer ListTagsForResource responses.
+ * \class QtAws::Signer::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for Signer ListTagsForResource responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listTagsForResource
+ * \sa SignerClient::listTagsForResource
  */
 
 /*!
@@ -69,7 +71,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : SignerResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer ListTagsForResource \a response.
+ * Parses a successful Signer ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::ListTagsForResourceResponsePrivate
+ * \class QtAws::Signer::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : signerResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer ListTagsForResource response element from \a xml.
+ * Parses a Signer ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

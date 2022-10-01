@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetBasePathMappingsRequest
- * \brief The GetBasePathMappingsRequest class provides an interface for APIGateway GetBasePathMappings requests.
+ * \class QtAws::ApiGateway::GetBasePathMappingsRequest
+ * \brief The GetBasePathMappingsRequest class provides an interface for ApiGateway GetBasePathMappings requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getBasePathMappings
+ * \sa ApiGatewayClient::getBasePathMappings
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetBasePathMappingsRequest::GetBasePathMappingsRequest(const GetBasePathMappingsRequest &other)
-    : APIGatewayRequest(new GetBasePathMappingsRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetBasePathMappingsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetBasePathMappingsRequest::GetBasePathMappingsRequest(const GetBasePathMappings
  * Constructs a GetBasePathMappingsRequest object.
  */
 GetBasePathMappingsRequest::GetBasePathMappingsRequest()
-    : APIGatewayRequest(new GetBasePathMappingsRequestPrivate(APIGatewayRequest::GetBasePathMappingsAction, this))
+    : ApiGatewayRequest(new GetBasePathMappingsRequestPrivate(ApiGatewayRequest::GetBasePathMappingsAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetBasePathMappingsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::APIGateway::GetBasePathMappingsRequestPrivate
+ * \class QtAws::ApiGateway::GetBasePathMappingsRequestPrivate
  * \brief The GetBasePathMappingsRequestPrivate class provides private implementation for GetBasePathMappingsRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetBasePathMappingsRequestPrivate object for APIGateway \a action,
+ * Constructs a GetBasePathMappingsRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
-    const APIGatewayRequest::Action action, GetBasePathMappingsRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetBasePathMappingsRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
  */
 GetBasePathMappingsRequestPrivate::GetBasePathMappingsRequestPrivate(
     const GetBasePathMappingsRequestPrivate &other, GetBasePathMappingsRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

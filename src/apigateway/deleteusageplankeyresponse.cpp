@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteUsagePlanKeyResponse
- * \brief The DeleteUsagePlanKeyResponse class provides an interace for APIGateway DeleteUsagePlanKey responses.
+ * \class QtAws::ApiGateway::DeleteUsagePlanKeyResponse
+ * \brief The DeleteUsagePlanKeyResponse class provides an interace for ApiGateway DeleteUsagePlanKey responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteUsagePlanKey
+ * \sa ApiGatewayClient::deleteUsagePlanKey
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteUsagePlanKeyResponse::DeleteUsagePlanKeyResponse(
         const DeleteUsagePlanKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteUsagePlanKeyResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteUsagePlanKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteUsagePlanKeyRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteUsagePlanKey \a response.
+ * Parses a successful ApiGateway DeleteUsagePlanKey \a response.
  */
 void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteUsagePlanKeyResponsePrivate
+ * \class QtAws::ApiGateway::DeleteUsagePlanKeyResponsePrivate
  * \brief The DeleteUsagePlanKeyResponsePrivate class provides private implementation for DeleteUsagePlanKeyResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteUsagePlanKeyResponsePrivate object with public implementation \a q.
  */
 DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
-    DeleteUsagePlanKeyResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteUsagePlanKeyResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteUsagePlanKey response element from \a xml.
+ * Parses a ApiGateway DeleteUsagePlanKey response element from \a xml.
  */
 void DeleteUsagePlanKeyResponsePrivate::parseDeleteUsagePlanKeyResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteUsagePlanKeyResponsePrivate::parseDeleteUsagePlanKeyResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

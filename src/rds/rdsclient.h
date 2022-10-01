@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class RdsClientPrivate;
 class AddRoleToDBClusterRequest;
@@ -56,8 +56,8 @@ class CopyDBSnapshotRequest;
 class CopyDBSnapshotResponse;
 class CopyOptionGroupRequest;
 class CopyOptionGroupResponse;
-class CreateCustomAvailabilityZoneRequest;
-class CreateCustomAvailabilityZoneResponse;
+class CreateCustomDBEngineVersionRequest;
+class CreateCustomDBEngineVersionResponse;
 class CreateDBClusterRequest;
 class CreateDBClusterResponse;
 class CreateDBClusterEndpointRequest;
@@ -88,8 +88,8 @@ class CreateGlobalClusterRequest;
 class CreateGlobalClusterResponse;
 class CreateOptionGroupRequest;
 class CreateOptionGroupResponse;
-class DeleteCustomAvailabilityZoneRequest;
-class DeleteCustomAvailabilityZoneResponse;
+class DeleteCustomDBEngineVersionRequest;
+class DeleteCustomDBEngineVersionResponse;
 class DeleteDBClusterRequest;
 class DeleteDBClusterResponse;
 class DeleteDBClusterEndpointRequest;
@@ -118,8 +118,6 @@ class DeleteEventSubscriptionRequest;
 class DeleteEventSubscriptionResponse;
 class DeleteGlobalClusterRequest;
 class DeleteGlobalClusterResponse;
-class DeleteInstallationMediaRequest;
-class DeleteInstallationMediaResponse;
 class DeleteOptionGroupRequest;
 class DeleteOptionGroupResponse;
 class DeregisterDBProxyTargetsRequest;
@@ -128,8 +126,6 @@ class DescribeAccountAttributesRequest;
 class DescribeAccountAttributesResponse;
 class DescribeCertificatesRequest;
 class DescribeCertificatesResponse;
-class DescribeCustomAvailabilityZonesRequest;
-class DescribeCustomAvailabilityZonesResponse;
 class DescribeDBClusterBacktracksRequest;
 class DescribeDBClusterBacktracksResponse;
 class DescribeDBClusterEndpointsRequest;
@@ -186,8 +182,6 @@ class DescribeExportTasksRequest;
 class DescribeExportTasksResponse;
 class DescribeGlobalClustersRequest;
 class DescribeGlobalClustersResponse;
-class DescribeInstallationMediaRequest;
-class DescribeInstallationMediaResponse;
 class DescribeOptionGroupOptionsRequest;
 class DescribeOptionGroupOptionsResponse;
 class DescribeOptionGroupsRequest;
@@ -210,14 +204,16 @@ class FailoverDBClusterRequest;
 class FailoverDBClusterResponse;
 class FailoverGlobalClusterRequest;
 class FailoverGlobalClusterResponse;
-class ImportInstallationMediaRequest;
-class ImportInstallationMediaResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class ModifyActivityStreamRequest;
+class ModifyActivityStreamResponse;
 class ModifyCertificatesRequest;
 class ModifyCertificatesResponse;
 class ModifyCurrentDBClusterCapacityRequest;
 class ModifyCurrentDBClusterCapacityResponse;
+class ModifyCustomDBEngineVersionRequest;
+class ModifyCustomDBEngineVersionResponse;
 class ModifyDBClusterRequest;
 class ModifyDBClusterResponse;
 class ModifyDBClusterEndpointRequest;
@@ -254,6 +250,8 @@ class PromoteReadReplicaDBClusterRequest;
 class PromoteReadReplicaDBClusterResponse;
 class PurchaseReservedDBInstancesOfferingRequest;
 class PurchaseReservedDBInstancesOfferingResponse;
+class RebootDBClusterRequest;
+class RebootDBClusterResponse;
 class RebootDBInstanceRequest;
 class RebootDBInstanceResponse;
 class RegisterDBProxyTargetsRequest;
@@ -304,6 +302,8 @@ class StopDBInstanceRequest;
 class StopDBInstanceResponse;
 class StopDBInstanceAutomatedBackupsReplicationRequest;
 class StopDBInstanceAutomatedBackupsReplicationResponse;
+class SwitchoverReadReplicaRequest;
+class SwitchoverReadReplicaResponse;
 
 class QTAWSRDS_EXPORT RdsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -334,7 +334,7 @@ public slots:
     CopyDBParameterGroupResponse * copyDBParameterGroup(const CopyDBParameterGroupRequest &request);
     CopyDBSnapshotResponse * copyDBSnapshot(const CopyDBSnapshotRequest &request);
     CopyOptionGroupResponse * copyOptionGroup(const CopyOptionGroupRequest &request);
-    CreateCustomAvailabilityZoneResponse * createCustomAvailabilityZone(const CreateCustomAvailabilityZoneRequest &request);
+    CreateCustomDBEngineVersionResponse * createCustomDBEngineVersion(const CreateCustomDBEngineVersionRequest &request);
     CreateDBClusterResponse * createDBCluster(const CreateDBClusterRequest &request);
     CreateDBClusterEndpointResponse * createDBClusterEndpoint(const CreateDBClusterEndpointRequest &request);
     CreateDBClusterParameterGroupResponse * createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request);
@@ -350,7 +350,7 @@ public slots:
     CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
     CreateGlobalClusterResponse * createGlobalCluster(const CreateGlobalClusterRequest &request);
     CreateOptionGroupResponse * createOptionGroup(const CreateOptionGroupRequest &request);
-    DeleteCustomAvailabilityZoneResponse * deleteCustomAvailabilityZone(const DeleteCustomAvailabilityZoneRequest &request);
+    DeleteCustomDBEngineVersionResponse * deleteCustomDBEngineVersion(const DeleteCustomDBEngineVersionRequest &request);
     DeleteDBClusterResponse * deleteDBCluster(const DeleteDBClusterRequest &request);
     DeleteDBClusterEndpointResponse * deleteDBClusterEndpoint(const DeleteDBClusterEndpointRequest &request);
     DeleteDBClusterParameterGroupResponse * deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request);
@@ -365,12 +365,10 @@ public slots:
     DeleteDBSubnetGroupResponse * deleteDBSubnetGroup(const DeleteDBSubnetGroupRequest &request);
     DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
     DeleteGlobalClusterResponse * deleteGlobalCluster(const DeleteGlobalClusterRequest &request);
-    DeleteInstallationMediaResponse * deleteInstallationMedia(const DeleteInstallationMediaRequest &request);
     DeleteOptionGroupResponse * deleteOptionGroup(const DeleteOptionGroupRequest &request);
     DeregisterDBProxyTargetsResponse * deregisterDBProxyTargets(const DeregisterDBProxyTargetsRequest &request);
     DescribeAccountAttributesResponse * describeAccountAttributes(const DescribeAccountAttributesRequest &request);
     DescribeCertificatesResponse * describeCertificates(const DescribeCertificatesRequest &request);
-    DescribeCustomAvailabilityZonesResponse * describeCustomAvailabilityZones(const DescribeCustomAvailabilityZonesRequest &request);
     DescribeDBClusterBacktracksResponse * describeDBClusterBacktracks(const DescribeDBClusterBacktracksRequest &request);
     DescribeDBClusterEndpointsResponse * describeDBClusterEndpoints(const DescribeDBClusterEndpointsRequest &request);
     DescribeDBClusterParameterGroupsResponse * describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request);
@@ -399,7 +397,6 @@ public slots:
     DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
     DescribeExportTasksResponse * describeExportTasks(const DescribeExportTasksRequest &request);
     DescribeGlobalClustersResponse * describeGlobalClusters(const DescribeGlobalClustersRequest &request);
-    DescribeInstallationMediaResponse * describeInstallationMedia(const DescribeInstallationMediaRequest &request);
     DescribeOptionGroupOptionsResponse * describeOptionGroupOptions(const DescribeOptionGroupOptionsRequest &request);
     DescribeOptionGroupsResponse * describeOptionGroups(const DescribeOptionGroupsRequest &request);
     DescribeOrderableDBInstanceOptionsResponse * describeOrderableDBInstanceOptions(const DescribeOrderableDBInstanceOptionsRequest &request);
@@ -411,10 +408,11 @@ public slots:
     DownloadDBLogFilePortionResponse * downloadDBLogFilePortion(const DownloadDBLogFilePortionRequest &request);
     FailoverDBClusterResponse * failoverDBCluster(const FailoverDBClusterRequest &request);
     FailoverGlobalClusterResponse * failoverGlobalCluster(const FailoverGlobalClusterRequest &request);
-    ImportInstallationMediaResponse * importInstallationMedia(const ImportInstallationMediaRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ModifyActivityStreamResponse * modifyActivityStream(const ModifyActivityStreamRequest &request);
     ModifyCertificatesResponse * modifyCertificates(const ModifyCertificatesRequest &request);
     ModifyCurrentDBClusterCapacityResponse * modifyCurrentDBClusterCapacity(const ModifyCurrentDBClusterCapacityRequest &request);
+    ModifyCustomDBEngineVersionResponse * modifyCustomDBEngineVersion(const ModifyCustomDBEngineVersionRequest &request);
     ModifyDBClusterResponse * modifyDBCluster(const ModifyDBClusterRequest &request);
     ModifyDBClusterEndpointResponse * modifyDBClusterEndpoint(const ModifyDBClusterEndpointRequest &request);
     ModifyDBClusterParameterGroupResponse * modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request);
@@ -433,6 +431,7 @@ public slots:
     PromoteReadReplicaResponse * promoteReadReplica(const PromoteReadReplicaRequest &request);
     PromoteReadReplicaDBClusterResponse * promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request);
     PurchaseReservedDBInstancesOfferingResponse * purchaseReservedDBInstancesOffering(const PurchaseReservedDBInstancesOfferingRequest &request);
+    RebootDBClusterResponse * rebootDBCluster(const RebootDBClusterRequest &request);
     RebootDBInstanceResponse * rebootDBInstance(const RebootDBInstanceRequest &request);
     RegisterDBProxyTargetsResponse * registerDBProxyTargets(const RegisterDBProxyTargetsRequest &request);
     RemoveFromGlobalClusterResponse * removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request);
@@ -458,6 +457,7 @@ public slots:
     StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
     StopDBInstanceResponse * stopDBInstance(const StopDBInstanceRequest &request);
     StopDBInstanceAutomatedBackupsReplicationResponse * stopDBInstanceAutomatedBackupsReplication(const StopDBInstanceAutomatedBackupsReplicationRequest &request);
+    SwitchoverReadReplicaResponse * switchoverReadReplica(const SwitchoverReadReplicaRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RdsClient)
@@ -465,7 +465,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

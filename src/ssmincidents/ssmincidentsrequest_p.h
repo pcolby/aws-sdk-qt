@@ -24,28 +24,28 @@
 #include "ssmincidentsrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
-class SSMIncidentsRequest;
+class SsmIncidentsRequest;
 
-class SSMIncidentsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsmIncidentsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SSMIncidentsRequest::Action action; ///< SSMIncidents action to be performed.
-    QString apiVersion;        ///< SSMIncidents API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSMIncidents request (query string) parameters. @todo?
+    SsmIncidentsRequest::Action action; ///< SsmIncidents action to be performed.
+    QString apiVersion;        ///< SsmIncidents API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SsmIncidents request (query string) parameters. @todo?
 
-    SSMIncidentsRequestPrivate(const SSMIncidentsRequest::Action action, SSMIncidentsRequest * const q);
-    SSMIncidentsRequestPrivate(const SSMIncidentsRequestPrivate &other, SSMIncidentsRequest * const q);
+    SsmIncidentsRequestPrivate(const SsmIncidentsRequest::Action action, SsmIncidentsRequest * const q);
+    SsmIncidentsRequestPrivate(const SsmIncidentsRequestPrivate &other, SsmIncidentsRequest * const q);
 
-    static QString toString(const SSMIncidentsRequest::Action &action);
+    static QString toString(const SsmIncidentsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SSMIncidentsRequest)
+    Q_DECLARE_PUBLIC(SsmIncidentsRequest)
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

@@ -32,10 +32,14 @@ namespace IoTDataPlane {
 class IoTDataPlaneClientPrivate;
 class DeleteThingShadowRequest;
 class DeleteThingShadowResponse;
+class GetRetainedMessageRequest;
+class GetRetainedMessageResponse;
 class GetThingShadowRequest;
 class GetThingShadowResponse;
 class ListNamedShadowsForThingRequest;
 class ListNamedShadowsForThingResponse;
+class ListRetainedMessagesRequest;
+class ListRetainedMessagesResponse;
 class PublishRequest;
 class PublishResponse;
 class UpdateThingShadowRequest;
@@ -58,8 +62,10 @@ public:
 
 public slots:
     DeleteThingShadowResponse * deleteThingShadow(const DeleteThingShadowRequest &request);
+    GetRetainedMessageResponse * getRetainedMessage(const GetRetainedMessageRequest &request);
     GetThingShadowResponse * getThingShadow(const GetThingShadowRequest &request);
     ListNamedShadowsForThingResponse * listNamedShadowsForThing(const ListNamedShadowsForThingRequest &request);
+    ListRetainedMessagesResponse * listRetainedMessages(const ListRetainedMessagesRequest &request);
     PublishResponse * publish(const PublishRequest &request);
     UpdateThingShadowResponse * updateThingShadow(const UpdateThingShadowRequest &request);
 

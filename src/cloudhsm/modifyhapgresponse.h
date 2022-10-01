@@ -24,11 +24,11 @@
 #include "modifyhapgrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ModifyHapgResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT ModifyHapgResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT ModifyHapgResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

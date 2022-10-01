@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DeleteBackupRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DeleteBackupRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DeleteBackupRequest : public OpsWorksCmRequest {
 
 public:
     DeleteBackupRequest(const DeleteBackupRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

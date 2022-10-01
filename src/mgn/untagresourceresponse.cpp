@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::UntagResourceResponse
- * \brief The UntagResourceResponse class provides an interace for mgn UntagResource responses.
+ * \class QtAws::Mgn::UntagResourceResponse
+ * \brief The UntagResourceResponse class provides an interace for Mgn UntagResource responses.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::untagResource
+ * \sa MgnClient::untagResource
  */
 
 /*!
@@ -45,7 +45,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : mgnResponse(new UntagResourceResponsePrivate(this), parent)
+    : MgnResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful mgn UntagResource \a response.
+ * Parses a successful Mgn UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::mgn::UntagResourceResponsePrivate
+ * \class QtAws::Mgn::UntagResourceResponsePrivate
  * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : mgnResponsePrivate(q)
+    UntagResourceResponse * const q) : MgnResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a mgn UntagResource response element from \a xml.
+ * Parses a Mgn UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

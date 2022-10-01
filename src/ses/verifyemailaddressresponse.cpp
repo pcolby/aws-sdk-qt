@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::VerifyEmailAddressResponse
- * \brief The VerifyEmailAddressResponse class provides an interace for SES VerifyEmailAddress responses.
+ * \class QtAws::Ses::VerifyEmailAddressResponse
+ * \brief The VerifyEmailAddressResponse class provides an interace for Ses VerifyEmailAddress responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const VerifyEmailAddressRequest * VerifyEmailAddressResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES VerifyEmailAddress \a response.
+ * Parses a successful Ses VerifyEmailAddress \a response.
  */
 void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::VerifyEmailAddressResponsePrivate
+ * \class QtAws::Ses::VerifyEmailAddressResponsePrivate
  * \brief The VerifyEmailAddressResponsePrivate class provides private implementation for VerifyEmailAddressResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
 }
 
 /*!
- * Parses a SES VerifyEmailAddress response element from \a xml.
+ * Parses a Ses VerifyEmailAddress response element from \a xml.
  */
 void VerifyEmailAddressResponsePrivate::parseVerifyEmailAddressResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void VerifyEmailAddressResponsePrivate::parseVerifyEmailAddressResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

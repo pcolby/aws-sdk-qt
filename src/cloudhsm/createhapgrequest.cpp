@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::CreateHapgRequest
- * \brief The CreateHapgRequest class provides an interface for CloudHSM CreateHapg requests.
+ * \class QtAws::CloudHsm::CreateHapgRequest
+ * \brief The CreateHapgRequest class provides an interface for CloudHsm CreateHapg requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::createHapg
+ * \sa CloudHsmClient::createHapg
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
-    : CloudHSMRequest(new CreateHapgRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new CreateHapgRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
  * Constructs a CreateHapgRequest object.
  */
 CreateHapgRequest::CreateHapgRequest()
-    : CloudHSMRequest(new CreateHapgRequestPrivate(CloudHSMRequest::CreateHapgAction, this))
+    : CloudHsmRequest(new CreateHapgRequestPrivate(CloudHsmRequest::CreateHapgAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::CloudHSM::CreateHapgRequestPrivate
+ * \class QtAws::CloudHsm::CreateHapgRequestPrivate
  * \brief The CreateHapgRequestPrivate class provides private implementation for CreateHapgRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a CreateHapgRequestPrivate object for CloudHSM \a action,
+ * Constructs a CreateHapgRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
-    const CloudHSMRequest::Action action, CreateHapgRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, CreateHapgRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ CreateHapgRequestPrivate::CreateHapgRequestPrivate(
  */
 CreateHapgRequestPrivate::CreateHapgRequestPrivate(
     const CreateHapgRequestPrivate &other, CreateHapgRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

@@ -33,12 +33,13 @@ namespace ApplicationDiscoveryService {
  *
  * \inmodule QtAwsApplicationDiscoveryService
  *
- *  <fullname>AWS Application Discovery Service</fullname>
+ *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
- *  AWS Application Discovery Service helps you plan application migration projects. It automatically identifies servers,
- *  virtual machines (VMs), and network dependencies in your on-premises data centers. For more information, see the <a
- *  href="http://aws.amazon.com/application-discovery/faqs/">AWS Application Discovery Service FAQ</a>. Application
- *  Discovery Service offers three ways of performing discovery and collecting data about your on-premises
+ *  Amazon Web Services Application Discovery Service helps you plan application migration projects. It automatically
+ *  identifies servers, virtual machines (VMs), and network dependencies in your on-premises data centers. For more
+ *  information, see the <a href="http://aws.amazon.com/application-discovery/faqs/">Amazon Web Services Application
+ *  Discovery Service FAQ</a>. Application Discovery Service offers three ways of performing discovery and collecting data
+ *  about your on-premises
  * 
  *  servers> <ul> <li>
  * 
@@ -56,8 +57,8 @@ namespace ApplicationDiscoveryService {
  * 
  *  information> </li> </ul> </li> </ul> <ul> <li>
  * 
- *  <b>Agent-based discovery</b> collects a richer set of data than agentless discovery by using the AWS Application
- *  Discovery Agent, which you install on one or more hosts in your data
+ *  <b>Agent-based discovery</b> collects a richer set of data than agentless discovery by using the Amazon Web Services
+ *  Application Discovery Agent, which you install on one or more hosts in your data
  * 
  *  center> <ul> <li>
  * 
@@ -71,13 +72,14 @@ namespace ApplicationDiscoveryService {
  * 
  *  </p </li> </ul> </li> </ul> <ul> <li>
  * 
- *  <b>AWS Partner Network (APN) solutions</b> integrate with Application Discovery Service, enabling you to import details
- *  of your on-premises environment directly into Migration Hub without using the discovery connector or discovery
+ *  <b>Amazon Web Services Partner Network (APN) solutions</b> integrate with Application Discovery Service, enabling you to
+ *  import details of your on-premises environment directly into Migration Hub without using the discovery connector or
+ *  discovery
  * 
  *  agent> <ul> <li>
  * 
- *  Third-party application discovery tools can query AWS Application Discovery Service, and they can write to the
- *  Application Discovery Service database using the public
+ *  Third-party application discovery tools can query Amazon Web Services Application Discovery Service, and they can write
+ *  to the Application Discovery Service database using the public
  * 
  *  API> </li> <li>
  * 
@@ -103,8 +105,9 @@ namespace ApplicationDiscoveryService {
  * 
  *  This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
  *  Application Discovery Service. The topic for each action shows the API request parameters and the response.
- *  Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
- *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ *  Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming
+ *  language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web
+ *  Services
  * 
  *  SDKs</a>> <note> <ul> <li>
  * 
@@ -130,13 +133,14 @@ namespace ApplicationDiscoveryService {
  * 
  *  region> </li> </ul> </note>
  * 
- *  This guide is intended for use with the <a href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">AWS
- *  Application Discovery Service User
+ *  This guide is intended for use with the <a
+ *  href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">Amazon Web Services Application Discovery
+ *  Service User
  * 
  *  Guide</a>> <b>
  * 
- *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate
- *  Application Discovery Service offline to inspect collected data before it is shared with the
+ *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
+ *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  *
  * \sa ApplicationDiscoveryServiceClient::describeConfigurations
  */

@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSALEXAFORBUSINESS_LIBRARY)
 
 add_library(QtAwsAlexaForBusiness
+  qtawsalexaforbusinessglobal.h
   alexaforbusinessclient.h
   alexaforbusinessclient_p.h
   alexaforbusinessrequest.h
@@ -175,14 +176,14 @@ add_library(QtAwsAlexaForBusiness
   getdevicerequest_p.h
   getdeviceresponse.h
   getdeviceresponse_p.h
-  getgatewaygrouprequest.h
-  getgatewaygrouprequest_p.h
-  getgatewaygroupresponse.h
-  getgatewaygroupresponse_p.h
   getgatewayrequest.h
   getgatewayrequest_p.h
   getgatewayresponse.h
   getgatewayresponse_p.h
+  getgatewaygrouprequest.h
+  getgatewaygrouprequest_p.h
+  getgatewaygroupresponse.h
+  getgatewaygroupresponse_p.h
   getinvitationconfigurationrequest.h
   getinvitationconfigurationrequest_p.h
   getinvitationconfigurationresponse.h
@@ -263,7 +264,6 @@ add_library(QtAwsAlexaForBusiness
   putskillauthorizationrequest_p.h
   putskillauthorizationresponse.h
   putskillauthorizationresponse_p.h
-  qtawsalexaforbusinessglobal.h
   registeravsdevicerequest.h
   registeravsdevicerequest_p.h
   registeravsdeviceresponse.h
@@ -356,14 +356,14 @@ add_library(QtAwsAlexaForBusiness
   updatedevicerequest_p.h
   updatedeviceresponse.h
   updatedeviceresponse_p.h
-  updategatewaygrouprequest.h
-  updategatewaygrouprequest_p.h
-  updategatewaygroupresponse.h
-  updategatewaygroupresponse_p.h
   updategatewayrequest.h
   updategatewayrequest_p.h
   updategatewayresponse.h
   updategatewayresponse_p.h
+  updategatewaygrouprequest.h
+  updategatewaygrouprequest_p.h
+  updategatewaygroupresponse.h
+  updategatewaygroupresponse_p.h
   updatenetworkprofilerequest.h
   updatenetworkprofilerequest_p.h
   updatenetworkprofileresponse.h
@@ -467,10 +467,10 @@ add_library(QtAwsAlexaForBusiness
   getcontactresponse.cpp
   getdevicerequest.cpp
   getdeviceresponse.cpp
-  getgatewaygrouprequest.cpp
-  getgatewaygroupresponse.cpp
   getgatewayrequest.cpp
   getgatewayresponse.cpp
+  getgatewaygrouprequest.cpp
+  getgatewaygroupresponse.cpp
   getinvitationconfigurationrequest.cpp
   getinvitationconfigurationresponse.cpp
   getnetworkprofilerequest.cpp
@@ -557,10 +557,10 @@ add_library(QtAwsAlexaForBusiness
   updatecontactresponse.cpp
   updatedevicerequest.cpp
   updatedeviceresponse.cpp
-  updategatewaygrouprequest.cpp
-  updategatewaygroupresponse.cpp
   updategatewayrequest.cpp
   updategatewayresponse.cpp
+  updategatewaygrouprequest.cpp
+  updategatewaygroupresponse.cpp
   updatenetworkprofilerequest.cpp
   updatenetworkprofileresponse.cpp
   updateprofilerequest.cpp

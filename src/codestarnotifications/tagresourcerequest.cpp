@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for CodeStarNotifications TagResource requests.
+ * \class QtAws::CodestarNotifications::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for CodestarNotifications TagResource requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::tagResource
+ * \sa CodestarNotificationsClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : CodeStarNotificationsRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : CodeStarNotificationsRequest(new TagResourceRequestPrivate(CodeStarNotificationsRequest::TagResourceAction, this))
+    : CodestarNotificationsRequest(new TagResourceRequestPrivate(CodestarNotificationsRequest::TagResourceAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::TagResourceRequestPrivate
+ * \class QtAws::CodestarNotifications::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a TagResourceRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, TagResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, TagResourceRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

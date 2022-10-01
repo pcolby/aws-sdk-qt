@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateEventSubscriptionResponse
- * \brief The CreateEventSubscriptionResponse class provides an interace for DocDB CreateEventSubscription responses.
+ * \class QtAws::DocDb::CreateEventSubscriptionResponse
+ * \brief The CreateEventSubscriptionResponse class provides an interace for DocDb CreateEventSubscription responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createEventSubscription
+ * \sa DocDbClient::createEventSubscription
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
         const CreateEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
+    : DocDbResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateEventSubscriptionRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DocDB CreateEventSubscription \a response.
+ * Parses a successful DocDb CreateEventSubscription \a response.
  */
 void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CreateEventSubscriptionResponsePrivate
+ * \class QtAws::DocDb::CreateEventSubscriptionResponsePrivate
  * \brief The CreateEventSubscriptionResponsePrivate class provides private implementation for CreateEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CreateEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
-    CreateEventSubscriptionResponse * const q) : DocDBResponsePrivate(q)
+    CreateEventSubscriptionResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CreateEventSubscription response element from \a xml.
+ * Parses a DocDb CreateEventSubscription response element from \a xml.
  */
 void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

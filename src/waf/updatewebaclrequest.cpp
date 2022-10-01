@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateWebACLRequest
- * \brief The UpdateWebACLRequest class provides an interface for WAF UpdateWebACL requests.
+ * \class QtAws::Waf::UpdateWebACLRequest
+ * \brief The UpdateWebACLRequest class provides an interface for Waf UpdateWebACL requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAF::UpdateWebACLRequestPrivate
+ * \class QtAws::Waf::UpdateWebACLRequestPrivate
  * \brief The UpdateWebACLRequestPrivate class provides private implementation for UpdateWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

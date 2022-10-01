@@ -24,14 +24,14 @@
 #include "initializeservicerequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class InitializeServiceRequest;
 
-class InitializeServiceRequestPrivate : public mgnRequestPrivate {
+class InitializeServiceRequestPrivate : public MgnRequestPrivate {
 
 public:
-    InitializeServiceRequestPrivate(const mgnRequest::Action action,
+    InitializeServiceRequestPrivate(const MgnRequest::Action action,
                                    InitializeServiceRequest * const q);
     InitializeServiceRequestPrivate(const InitializeServiceRequestPrivate &other,
                                    InitializeServiceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

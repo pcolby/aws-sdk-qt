@@ -24,7 +24,7 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class TagResourceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

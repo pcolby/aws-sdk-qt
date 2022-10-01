@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSQUICKSIGHT_LIBRARY)
 
 add_library(QtAwsQuickSight
+  qtawsquicksightglobal.h
+  quicksightclient.h
+  quicksightclient_p.h
+  quicksightrequest.h
+  quicksightrequest_p.h
+  quicksightresponse.h
+  quicksightresponse_p.h
   cancelingestionrequest.h
   cancelingestionrequest_p.h
   cancelingestionresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsQuickSight
   createaccountcustomizationrequest_p.h
   createaccountcustomizationresponse.h
   createaccountcustomizationresponse_p.h
+  createaccountsubscriptionrequest.h
+  createaccountsubscriptionrequest_p.h
+  createaccountsubscriptionresponse.h
+  createaccountsubscriptionresponse_p.h
   createanalysisrequest.h
   createanalysisrequest_p.h
   createanalysisresponse.h
@@ -25,14 +36,22 @@ add_library(QtAwsQuickSight
   createdatasourcerequest_p.h
   createdatasourceresponse.h
   createdatasourceresponse_p.h
-  creategroupmembershiprequest.h
-  creategroupmembershiprequest_p.h
-  creategroupmembershipresponse.h
-  creategroupmembershipresponse_p.h
+  createfolderrequest.h
+  createfolderrequest_p.h
+  createfolderresponse.h
+  createfolderresponse_p.h
+  createfoldermembershiprequest.h
+  createfoldermembershiprequest_p.h
+  createfoldermembershipresponse.h
+  createfoldermembershipresponse_p.h
   creategrouprequest.h
   creategrouprequest_p.h
   creategroupresponse.h
   creategroupresponse_p.h
+  creategroupmembershiprequest.h
+  creategroupmembershiprequest_p.h
+  creategroupmembershipresponse.h
+  creategroupmembershipresponse_p.h
   createiampolicyassignmentrequest.h
   createiampolicyassignmentrequest_p.h
   createiampolicyassignmentresponse.h
@@ -45,22 +64,22 @@ add_library(QtAwsQuickSight
   createnamespacerequest_p.h
   createnamespaceresponse.h
   createnamespaceresponse_p.h
-  createtemplatealiasrequest.h
-  createtemplatealiasrequest_p.h
-  createtemplatealiasresponse.h
-  createtemplatealiasresponse_p.h
   createtemplaterequest.h
   createtemplaterequest_p.h
   createtemplateresponse.h
   createtemplateresponse_p.h
-  createthemealiasrequest.h
-  createthemealiasrequest_p.h
-  createthemealiasresponse.h
-  createthemealiasresponse_p.h
+  createtemplatealiasrequest.h
+  createtemplatealiasrequest_p.h
+  createtemplatealiasresponse.h
+  createtemplatealiasresponse_p.h
   createthemerequest.h
   createthemerequest_p.h
   createthemeresponse.h
   createthemeresponse_p.h
+  createthemealiasrequest.h
+  createthemealiasrequest_p.h
+  createthemealiasresponse.h
+  createthemealiasresponse_p.h
   deleteaccountcustomizationrequest.h
   deleteaccountcustomizationrequest_p.h
   deleteaccountcustomizationresponse.h
@@ -81,14 +100,22 @@ add_library(QtAwsQuickSight
   deletedatasourcerequest_p.h
   deletedatasourceresponse.h
   deletedatasourceresponse_p.h
-  deletegroupmembershiprequest.h
-  deletegroupmembershiprequest_p.h
-  deletegroupmembershipresponse.h
-  deletegroupmembershipresponse_p.h
+  deletefolderrequest.h
+  deletefolderrequest_p.h
+  deletefolderresponse.h
+  deletefolderresponse_p.h
+  deletefoldermembershiprequest.h
+  deletefoldermembershiprequest_p.h
+  deletefoldermembershipresponse.h
+  deletefoldermembershipresponse_p.h
   deletegrouprequest.h
   deletegrouprequest_p.h
   deletegroupresponse.h
   deletegroupresponse_p.h
+  deletegroupmembershiprequest.h
+  deletegroupmembershiprequest_p.h
+  deletegroupmembershipresponse.h
+  deletegroupmembershipresponse_p.h
   deleteiampolicyassignmentrequest.h
   deleteiampolicyassignmentrequest_p.h
   deleteiampolicyassignmentresponse.h
@@ -97,30 +124,30 @@ add_library(QtAwsQuickSight
   deletenamespacerequest_p.h
   deletenamespaceresponse.h
   deletenamespaceresponse_p.h
-  deletetemplatealiasrequest.h
-  deletetemplatealiasrequest_p.h
-  deletetemplatealiasresponse.h
-  deletetemplatealiasresponse_p.h
   deletetemplaterequest.h
   deletetemplaterequest_p.h
   deletetemplateresponse.h
   deletetemplateresponse_p.h
-  deletethemealiasrequest.h
-  deletethemealiasrequest_p.h
-  deletethemealiasresponse.h
-  deletethemealiasresponse_p.h
+  deletetemplatealiasrequest.h
+  deletetemplatealiasrequest_p.h
+  deletetemplatealiasresponse.h
+  deletetemplatealiasresponse_p.h
   deletethemerequest.h
   deletethemerequest_p.h
   deletethemeresponse.h
   deletethemeresponse_p.h
-  deleteuserbyprincipalidrequest.h
-  deleteuserbyprincipalidrequest_p.h
-  deleteuserbyprincipalidresponse.h
-  deleteuserbyprincipalidresponse_p.h
+  deletethemealiasrequest.h
+  deletethemealiasrequest_p.h
+  deletethemealiasresponse.h
+  deletethemealiasresponse_p.h
   deleteuserrequest.h
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  deleteuserbyprincipalidrequest.h
+  deleteuserbyprincipalidrequest_p.h
+  deleteuserbyprincipalidresponse.h
+  deleteuserbyprincipalidresponse_p.h
   describeaccountcustomizationrequest.h
   describeaccountcustomizationrequest_p.h
   describeaccountcustomizationresponse.h
@@ -129,42 +156,62 @@ add_library(QtAwsQuickSight
   describeaccountsettingsrequest_p.h
   describeaccountsettingsresponse.h
   describeaccountsettingsresponse_p.h
-  describeanalysispermissionsrequest.h
-  describeanalysispermissionsrequest_p.h
-  describeanalysispermissionsresponse.h
-  describeanalysispermissionsresponse_p.h
+  describeaccountsubscriptionrequest.h
+  describeaccountsubscriptionrequest_p.h
+  describeaccountsubscriptionresponse.h
+  describeaccountsubscriptionresponse_p.h
   describeanalysisrequest.h
   describeanalysisrequest_p.h
   describeanalysisresponse.h
   describeanalysisresponse_p.h
-  describedashboardpermissionsrequest.h
-  describedashboardpermissionsrequest_p.h
-  describedashboardpermissionsresponse.h
-  describedashboardpermissionsresponse_p.h
+  describeanalysispermissionsrequest.h
+  describeanalysispermissionsrequest_p.h
+  describeanalysispermissionsresponse.h
+  describeanalysispermissionsresponse_p.h
   describedashboardrequest.h
   describedashboardrequest_p.h
   describedashboardresponse.h
   describedashboardresponse_p.h
-  describedatasetpermissionsrequest.h
-  describedatasetpermissionsrequest_p.h
-  describedatasetpermissionsresponse.h
-  describedatasetpermissionsresponse_p.h
+  describedashboardpermissionsrequest.h
+  describedashboardpermissionsrequest_p.h
+  describedashboardpermissionsresponse.h
+  describedashboardpermissionsresponse_p.h
   describedatasetrequest.h
   describedatasetrequest_p.h
   describedatasetresponse.h
   describedatasetresponse_p.h
-  describedatasourcepermissionsrequest.h
-  describedatasourcepermissionsrequest_p.h
-  describedatasourcepermissionsresponse.h
-  describedatasourcepermissionsresponse_p.h
+  describedatasetpermissionsrequest.h
+  describedatasetpermissionsrequest_p.h
+  describedatasetpermissionsresponse.h
+  describedatasetpermissionsresponse_p.h
   describedatasourcerequest.h
   describedatasourcerequest_p.h
   describedatasourceresponse.h
   describedatasourceresponse_p.h
+  describedatasourcepermissionsrequest.h
+  describedatasourcepermissionsrequest_p.h
+  describedatasourcepermissionsresponse.h
+  describedatasourcepermissionsresponse_p.h
+  describefolderrequest.h
+  describefolderrequest_p.h
+  describefolderresponse.h
+  describefolderresponse_p.h
+  describefolderpermissionsrequest.h
+  describefolderpermissionsrequest_p.h
+  describefolderpermissionsresponse.h
+  describefolderpermissionsresponse_p.h
+  describefolderresolvedpermissionsrequest.h
+  describefolderresolvedpermissionsrequest_p.h
+  describefolderresolvedpermissionsresponse.h
+  describefolderresolvedpermissionsresponse_p.h
   describegrouprequest.h
   describegrouprequest_p.h
   describegroupresponse.h
   describegroupresponse_p.h
+  describegroupmembershiprequest.h
+  describegroupmembershiprequest_p.h
+  describegroupmembershipresponse.h
+  describegroupmembershipresponse_p.h
   describeiampolicyassignmentrequest.h
   describeiampolicyassignmentrequest_p.h
   describeiampolicyassignmentresponse.h
@@ -173,10 +220,18 @@ add_library(QtAwsQuickSight
   describeingestionrequest_p.h
   describeingestionresponse.h
   describeingestionresponse_p.h
+  describeiprestrictionrequest.h
+  describeiprestrictionrequest_p.h
+  describeiprestrictionresponse.h
+  describeiprestrictionresponse_p.h
   describenamespacerequest.h
   describenamespacerequest_p.h
   describenamespaceresponse.h
   describenamespaceresponse_p.h
+  describetemplaterequest.h
+  describetemplaterequest_p.h
+  describetemplateresponse.h
+  describetemplateresponse_p.h
   describetemplatealiasrequest.h
   describetemplatealiasrequest_p.h
   describetemplatealiasresponse.h
@@ -185,10 +240,10 @@ add_library(QtAwsQuickSight
   describetemplatepermissionsrequest_p.h
   describetemplatepermissionsresponse.h
   describetemplatepermissionsresponse_p.h
-  describetemplaterequest.h
-  describetemplaterequest_p.h
-  describetemplateresponse.h
-  describetemplateresponse_p.h
+  describethemerequest.h
+  describethemerequest_p.h
+  describethemeresponse.h
+  describethemeresponse_p.h
   describethemealiasrequest.h
   describethemealiasrequest_p.h
   describethemealiasresponse.h
@@ -197,14 +252,18 @@ add_library(QtAwsQuickSight
   describethemepermissionsrequest_p.h
   describethemepermissionsresponse.h
   describethemepermissionsresponse_p.h
-  describethemerequest.h
-  describethemerequest_p.h
-  describethemeresponse.h
-  describethemeresponse_p.h
   describeuserrequest.h
   describeuserrequest_p.h
   describeuserresponse.h
   describeuserresponse_p.h
+  generateembedurlforanonymoususerrequest.h
+  generateembedurlforanonymoususerrequest_p.h
+  generateembedurlforanonymoususerresponse.h
+  generateembedurlforanonymoususerresponse_p.h
+  generateembedurlforregistereduserrequest.h
+  generateembedurlforregistereduserrequest_p.h
+  generateembedurlforregistereduserresponse.h
+  generateembedurlforregistereduserresponse_p.h
   getdashboardembedurlrequest.h
   getdashboardembedurlrequest_p.h
   getdashboardembedurlresponse.h
@@ -217,14 +276,14 @@ add_library(QtAwsQuickSight
   listanalysesrequest_p.h
   listanalysesresponse.h
   listanalysesresponse_p.h
-  listdashboardsrequest.h
-  listdashboardsrequest_p.h
-  listdashboardsresponse.h
-  listdashboardsresponse_p.h
   listdashboardversionsrequest.h
   listdashboardversionsrequest_p.h
   listdashboardversionsresponse.h
   listdashboardversionsresponse_p.h
+  listdashboardsrequest.h
+  listdashboardsrequest_p.h
+  listdashboardsresponse.h
+  listdashboardsresponse_p.h
   listdatasetsrequest.h
   listdatasetsrequest_p.h
   listdatasetsresponse.h
@@ -233,6 +292,14 @@ add_library(QtAwsQuickSight
   listdatasourcesrequest_p.h
   listdatasourcesresponse.h
   listdatasourcesresponse_p.h
+  listfoldermembersrequest.h
+  listfoldermembersrequest_p.h
+  listfoldermembersresponse.h
+  listfoldermembersresponse_p.h
+  listfoldersrequest.h
+  listfoldersrequest_p.h
+  listfoldersresponse.h
+  listfoldersresponse_p.h
   listgroupmembershipsrequest.h
   listgroupmembershipsrequest_p.h
   listgroupmembershipsresponse.h
@@ -241,14 +308,14 @@ add_library(QtAwsQuickSight
   listgroupsrequest_p.h
   listgroupsresponse.h
   listgroupsresponse_p.h
-  listiampolicyassignmentsforuserrequest.h
-  listiampolicyassignmentsforuserrequest_p.h
-  listiampolicyassignmentsforuserresponse.h
-  listiampolicyassignmentsforuserresponse_p.h
   listiampolicyassignmentsrequest.h
   listiampolicyassignmentsrequest_p.h
   listiampolicyassignmentsresponse.h
   listiampolicyassignmentsresponse_p.h
+  listiampolicyassignmentsforuserrequest.h
+  listiampolicyassignmentsforuserrequest_p.h
+  listiampolicyassignmentsforuserresponse.h
+  listiampolicyassignmentsforuserresponse_p.h
   listingestionsrequest.h
   listingestionsrequest_p.h
   listingestionsresponse.h
@@ -265,26 +332,26 @@ add_library(QtAwsQuickSight
   listtemplatealiasesrequest_p.h
   listtemplatealiasesresponse.h
   listtemplatealiasesresponse_p.h
-  listtemplatesrequest.h
-  listtemplatesrequest_p.h
-  listtemplatesresponse.h
-  listtemplatesresponse_p.h
   listtemplateversionsrequest.h
   listtemplateversionsrequest_p.h
   listtemplateversionsresponse.h
   listtemplateversionsresponse_p.h
+  listtemplatesrequest.h
+  listtemplatesrequest_p.h
+  listtemplatesresponse.h
+  listtemplatesresponse_p.h
   listthemealiasesrequest.h
   listthemealiasesrequest_p.h
   listthemealiasesresponse.h
   listthemealiasesresponse_p.h
-  listthemesrequest.h
-  listthemesrequest_p.h
-  listthemesresponse.h
-  listthemesresponse_p.h
   listthemeversionsrequest.h
   listthemeversionsrequest_p.h
   listthemeversionsresponse.h
   listthemeversionsresponse_p.h
+  listthemesrequest.h
+  listthemesrequest_p.h
+  listthemesresponse.h
+  listthemesresponse_p.h
   listusergroupsrequest.h
   listusergroupsrequest_p.h
   listusergroupsresponse.h
@@ -293,13 +360,6 @@ add_library(QtAwsQuickSight
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  qtawsquicksightglobal.h
-  quicksightclient.h
-  quicksightclient_p.h
-  quicksightrequest.h
-  quicksightrequest_p.h
-  quicksightresponse.h
-  quicksightresponse_p.h
   registeruserrequest.h
   registeruserrequest_p.h
   registeruserresponse.h
@@ -316,6 +376,14 @@ add_library(QtAwsQuickSight
   searchdashboardsrequest_p.h
   searchdashboardsresponse.h
   searchdashboardsresponse_p.h
+  searchfoldersrequest.h
+  searchfoldersrequest_p.h
+  searchfoldersresponse.h
+  searchfoldersresponse_p.h
+  searchgroupsrequest.h
+  searchgroupsrequest_p.h
+  searchgroupsresponse.h
+  searchgroupsresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -332,14 +400,18 @@ add_library(QtAwsQuickSight
   updateaccountsettingsrequest_p.h
   updateaccountsettingsresponse.h
   updateaccountsettingsresponse_p.h
-  updateanalysispermissionsrequest.h
-  updateanalysispermissionsrequest_p.h
-  updateanalysispermissionsresponse.h
-  updateanalysispermissionsresponse_p.h
   updateanalysisrequest.h
   updateanalysisrequest_p.h
   updateanalysisresponse.h
   updateanalysisresponse_p.h
+  updateanalysispermissionsrequest.h
+  updateanalysispermissionsrequest_p.h
+  updateanalysispermissionsresponse.h
+  updateanalysispermissionsresponse_p.h
+  updatedashboardrequest.h
+  updatedashboardrequest_p.h
+  updatedashboardresponse.h
+  updatedashboardresponse_p.h
   updatedashboardpermissionsrequest.h
   updatedashboardpermissionsrequest_p.h
   updatedashboardpermissionsresponse.h
@@ -348,26 +420,30 @@ add_library(QtAwsQuickSight
   updatedashboardpublishedversionrequest_p.h
   updatedashboardpublishedversionresponse.h
   updatedashboardpublishedversionresponse_p.h
-  updatedashboardrequest.h
-  updatedashboardrequest_p.h
-  updatedashboardresponse.h
-  updatedashboardresponse_p.h
-  updatedatasetpermissionsrequest.h
-  updatedatasetpermissionsrequest_p.h
-  updatedatasetpermissionsresponse.h
-  updatedatasetpermissionsresponse_p.h
   updatedatasetrequest.h
   updatedatasetrequest_p.h
   updatedatasetresponse.h
   updatedatasetresponse_p.h
-  updatedatasourcepermissionsrequest.h
-  updatedatasourcepermissionsrequest_p.h
-  updatedatasourcepermissionsresponse.h
-  updatedatasourcepermissionsresponse_p.h
+  updatedatasetpermissionsrequest.h
+  updatedatasetpermissionsrequest_p.h
+  updatedatasetpermissionsresponse.h
+  updatedatasetpermissionsresponse_p.h
   updatedatasourcerequest.h
   updatedatasourcerequest_p.h
   updatedatasourceresponse.h
   updatedatasourceresponse_p.h
+  updatedatasourcepermissionsrequest.h
+  updatedatasourcepermissionsrequest_p.h
+  updatedatasourcepermissionsresponse.h
+  updatedatasourcepermissionsresponse_p.h
+  updatefolderrequest.h
+  updatefolderrequest_p.h
+  updatefolderresponse.h
+  updatefolderresponse_p.h
+  updatefolderpermissionsrequest.h
+  updatefolderpermissionsrequest_p.h
+  updatefolderpermissionsresponse.h
+  updatefolderpermissionsresponse_p.h
   updategrouprequest.h
   updategrouprequest_p.h
   updategroupresponse.h
@@ -376,6 +452,18 @@ add_library(QtAwsQuickSight
   updateiampolicyassignmentrequest_p.h
   updateiampolicyassignmentresponse.h
   updateiampolicyassignmentresponse_p.h
+  updateiprestrictionrequest.h
+  updateiprestrictionrequest_p.h
+  updateiprestrictionresponse.h
+  updateiprestrictionresponse_p.h
+  updatepublicsharingsettingsrequest.h
+  updatepublicsharingsettingsrequest_p.h
+  updatepublicsharingsettingsresponse.h
+  updatepublicsharingsettingsresponse_p.h
+  updatetemplaterequest.h
+  updatetemplaterequest_p.h
+  updatetemplateresponse.h
+  updatetemplateresponse_p.h
   updatetemplatealiasrequest.h
   updatetemplatealiasrequest_p.h
   updatetemplatealiasresponse.h
@@ -384,10 +472,10 @@ add_library(QtAwsQuickSight
   updatetemplatepermissionsrequest_p.h
   updatetemplatepermissionsresponse.h
   updatetemplatepermissionsresponse_p.h
-  updatetemplaterequest.h
-  updatetemplaterequest_p.h
-  updatetemplateresponse.h
-  updatetemplateresponse_p.h
+  updatethemerequest.h
+  updatethemerequest_p.h
+  updatethemeresponse.h
+  updatethemeresponse_p.h
   updatethemealiasrequest.h
   updatethemealiasrequest_p.h
   updatethemealiasresponse.h
@@ -396,18 +484,19 @@ add_library(QtAwsQuickSight
   updatethemepermissionsrequest_p.h
   updatethemepermissionsresponse.h
   updatethemepermissionsresponse_p.h
-  updatethemerequest.h
-  updatethemerequest_p.h
-  updatethemeresponse.h
-  updatethemeresponse_p.h
   updateuserrequest.h
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
+  quicksightclient.cpp
+  quicksightrequest.cpp
+  quicksightresponse.cpp
   cancelingestionrequest.cpp
   cancelingestionresponse.cpp
   createaccountcustomizationrequest.cpp
   createaccountcustomizationresponse.cpp
+  createaccountsubscriptionrequest.cpp
+  createaccountsubscriptionresponse.cpp
   createanalysisrequest.cpp
   createanalysisresponse.cpp
   createdashboardrequest.cpp
@@ -416,24 +505,28 @@ add_library(QtAwsQuickSight
   createdatasetresponse.cpp
   createdatasourcerequest.cpp
   createdatasourceresponse.cpp
-  creategroupmembershiprequest.cpp
-  creategroupmembershipresponse.cpp
+  createfolderrequest.cpp
+  createfolderresponse.cpp
+  createfoldermembershiprequest.cpp
+  createfoldermembershipresponse.cpp
   creategrouprequest.cpp
   creategroupresponse.cpp
+  creategroupmembershiprequest.cpp
+  creategroupmembershipresponse.cpp
   createiampolicyassignmentrequest.cpp
   createiampolicyassignmentresponse.cpp
   createingestionrequest.cpp
   createingestionresponse.cpp
   createnamespacerequest.cpp
   createnamespaceresponse.cpp
-  createtemplatealiasrequest.cpp
-  createtemplatealiasresponse.cpp
   createtemplaterequest.cpp
   createtemplateresponse.cpp
-  createthemealiasrequest.cpp
-  createthemealiasresponse.cpp
+  createtemplatealiasrequest.cpp
+  createtemplatealiasresponse.cpp
   createthemerequest.cpp
   createthemeresponse.cpp
+  createthemealiasrequest.cpp
+  createthemealiasresponse.cpp
   deleteaccountcustomizationrequest.cpp
   deleteaccountcustomizationresponse.cpp
   deleteanalysisrequest.cpp
@@ -444,90 +537,114 @@ add_library(QtAwsQuickSight
   deletedatasetresponse.cpp
   deletedatasourcerequest.cpp
   deletedatasourceresponse.cpp
-  deletegroupmembershiprequest.cpp
-  deletegroupmembershipresponse.cpp
+  deletefolderrequest.cpp
+  deletefolderresponse.cpp
+  deletefoldermembershiprequest.cpp
+  deletefoldermembershipresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
+  deletegroupmembershiprequest.cpp
+  deletegroupmembershipresponse.cpp
   deleteiampolicyassignmentrequest.cpp
   deleteiampolicyassignmentresponse.cpp
   deletenamespacerequest.cpp
   deletenamespaceresponse.cpp
-  deletetemplatealiasrequest.cpp
-  deletetemplatealiasresponse.cpp
   deletetemplaterequest.cpp
   deletetemplateresponse.cpp
-  deletethemealiasrequest.cpp
-  deletethemealiasresponse.cpp
+  deletetemplatealiasrequest.cpp
+  deletetemplatealiasresponse.cpp
   deletethemerequest.cpp
   deletethemeresponse.cpp
-  deleteuserbyprincipalidrequest.cpp
-  deleteuserbyprincipalidresponse.cpp
+  deletethemealiasrequest.cpp
+  deletethemealiasresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  deleteuserbyprincipalidrequest.cpp
+  deleteuserbyprincipalidresponse.cpp
   describeaccountcustomizationrequest.cpp
   describeaccountcustomizationresponse.cpp
   describeaccountsettingsrequest.cpp
   describeaccountsettingsresponse.cpp
-  describeanalysispermissionsrequest.cpp
-  describeanalysispermissionsresponse.cpp
+  describeaccountsubscriptionrequest.cpp
+  describeaccountsubscriptionresponse.cpp
   describeanalysisrequest.cpp
   describeanalysisresponse.cpp
-  describedashboardpermissionsrequest.cpp
-  describedashboardpermissionsresponse.cpp
+  describeanalysispermissionsrequest.cpp
+  describeanalysispermissionsresponse.cpp
   describedashboardrequest.cpp
   describedashboardresponse.cpp
-  describedatasetpermissionsrequest.cpp
-  describedatasetpermissionsresponse.cpp
+  describedashboardpermissionsrequest.cpp
+  describedashboardpermissionsresponse.cpp
   describedatasetrequest.cpp
   describedatasetresponse.cpp
-  describedatasourcepermissionsrequest.cpp
-  describedatasourcepermissionsresponse.cpp
+  describedatasetpermissionsrequest.cpp
+  describedatasetpermissionsresponse.cpp
   describedatasourcerequest.cpp
   describedatasourceresponse.cpp
+  describedatasourcepermissionsrequest.cpp
+  describedatasourcepermissionsresponse.cpp
+  describefolderrequest.cpp
+  describefolderresponse.cpp
+  describefolderpermissionsrequest.cpp
+  describefolderpermissionsresponse.cpp
+  describefolderresolvedpermissionsrequest.cpp
+  describefolderresolvedpermissionsresponse.cpp
   describegrouprequest.cpp
   describegroupresponse.cpp
+  describegroupmembershiprequest.cpp
+  describegroupmembershipresponse.cpp
   describeiampolicyassignmentrequest.cpp
   describeiampolicyassignmentresponse.cpp
   describeingestionrequest.cpp
   describeingestionresponse.cpp
+  describeiprestrictionrequest.cpp
+  describeiprestrictionresponse.cpp
   describenamespacerequest.cpp
   describenamespaceresponse.cpp
+  describetemplaterequest.cpp
+  describetemplateresponse.cpp
   describetemplatealiasrequest.cpp
   describetemplatealiasresponse.cpp
   describetemplatepermissionsrequest.cpp
   describetemplatepermissionsresponse.cpp
-  describetemplaterequest.cpp
-  describetemplateresponse.cpp
+  describethemerequest.cpp
+  describethemeresponse.cpp
   describethemealiasrequest.cpp
   describethemealiasresponse.cpp
   describethemepermissionsrequest.cpp
   describethemepermissionsresponse.cpp
-  describethemerequest.cpp
-  describethemeresponse.cpp
   describeuserrequest.cpp
   describeuserresponse.cpp
+  generateembedurlforanonymoususerrequest.cpp
+  generateembedurlforanonymoususerresponse.cpp
+  generateembedurlforregistereduserrequest.cpp
+  generateembedurlforregistereduserresponse.cpp
   getdashboardembedurlrequest.cpp
   getdashboardembedurlresponse.cpp
   getsessionembedurlrequest.cpp
   getsessionembedurlresponse.cpp
   listanalysesrequest.cpp
   listanalysesresponse.cpp
-  listdashboardsrequest.cpp
-  listdashboardsresponse.cpp
   listdashboardversionsrequest.cpp
   listdashboardversionsresponse.cpp
+  listdashboardsrequest.cpp
+  listdashboardsresponse.cpp
   listdatasetsrequest.cpp
   listdatasetsresponse.cpp
   listdatasourcesrequest.cpp
   listdatasourcesresponse.cpp
+  listfoldermembersrequest.cpp
+  listfoldermembersresponse.cpp
+  listfoldersrequest.cpp
+  listfoldersresponse.cpp
   listgroupmembershipsrequest.cpp
   listgroupmembershipsresponse.cpp
   listgroupsrequest.cpp
   listgroupsresponse.cpp
-  listiampolicyassignmentsforuserrequest.cpp
-  listiampolicyassignmentsforuserresponse.cpp
   listiampolicyassignmentsrequest.cpp
   listiampolicyassignmentsresponse.cpp
+  listiampolicyassignmentsforuserrequest.cpp
+  listiampolicyassignmentsforuserresponse.cpp
   listingestionsrequest.cpp
   listingestionsresponse.cpp
   listnamespacesrequest.cpp
@@ -536,23 +653,20 @@ add_library(QtAwsQuickSight
   listtagsforresourceresponse.cpp
   listtemplatealiasesrequest.cpp
   listtemplatealiasesresponse.cpp
-  listtemplatesrequest.cpp
-  listtemplatesresponse.cpp
   listtemplateversionsrequest.cpp
   listtemplateversionsresponse.cpp
+  listtemplatesrequest.cpp
+  listtemplatesresponse.cpp
   listthemealiasesrequest.cpp
   listthemealiasesresponse.cpp
-  listthemesrequest.cpp
-  listthemesresponse.cpp
   listthemeversionsrequest.cpp
   listthemeversionsresponse.cpp
+  listthemesrequest.cpp
+  listthemesresponse.cpp
   listusergroupsrequest.cpp
   listusergroupsresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
-  quicksightclient.cpp
-  quicksightrequest.cpp
-  quicksightresponse.cpp
   registeruserrequest.cpp
   registeruserresponse.cpp
   restoreanalysisrequest.cpp
@@ -561,6 +675,10 @@ add_library(QtAwsQuickSight
   searchanalysesresponse.cpp
   searchdashboardsrequest.cpp
   searchdashboardsresponse.cpp
+  searchfoldersrequest.cpp
+  searchfoldersresponse.cpp
+  searchgroupsrequest.cpp
+  searchgroupsresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
@@ -569,40 +687,48 @@ add_library(QtAwsQuickSight
   updateaccountcustomizationresponse.cpp
   updateaccountsettingsrequest.cpp
   updateaccountsettingsresponse.cpp
-  updateanalysispermissionsrequest.cpp
-  updateanalysispermissionsresponse.cpp
   updateanalysisrequest.cpp
   updateanalysisresponse.cpp
+  updateanalysispermissionsrequest.cpp
+  updateanalysispermissionsresponse.cpp
+  updatedashboardrequest.cpp
+  updatedashboardresponse.cpp
   updatedashboardpermissionsrequest.cpp
   updatedashboardpermissionsresponse.cpp
   updatedashboardpublishedversionrequest.cpp
   updatedashboardpublishedversionresponse.cpp
-  updatedashboardrequest.cpp
-  updatedashboardresponse.cpp
-  updatedatasetpermissionsrequest.cpp
-  updatedatasetpermissionsresponse.cpp
   updatedatasetrequest.cpp
   updatedatasetresponse.cpp
-  updatedatasourcepermissionsrequest.cpp
-  updatedatasourcepermissionsresponse.cpp
+  updatedatasetpermissionsrequest.cpp
+  updatedatasetpermissionsresponse.cpp
   updatedatasourcerequest.cpp
   updatedatasourceresponse.cpp
+  updatedatasourcepermissionsrequest.cpp
+  updatedatasourcepermissionsresponse.cpp
+  updatefolderrequest.cpp
+  updatefolderresponse.cpp
+  updatefolderpermissionsrequest.cpp
+  updatefolderpermissionsresponse.cpp
   updategrouprequest.cpp
   updategroupresponse.cpp
   updateiampolicyassignmentrequest.cpp
   updateiampolicyassignmentresponse.cpp
+  updateiprestrictionrequest.cpp
+  updateiprestrictionresponse.cpp
+  updatepublicsharingsettingsrequest.cpp
+  updatepublicsharingsettingsresponse.cpp
+  updatetemplaterequest.cpp
+  updatetemplateresponse.cpp
   updatetemplatealiasrequest.cpp
   updatetemplatealiasresponse.cpp
   updatetemplatepermissionsrequest.cpp
   updatetemplatepermissionsresponse.cpp
-  updatetemplaterequest.cpp
-  updatetemplateresponse.cpp
+  updatethemerequest.cpp
+  updatethemeresponse.cpp
   updatethemealiasrequest.cpp
   updatethemealiasresponse.cpp
   updatethemepermissionsrequest.cpp
   updatethemepermissionsresponse.cpp
-  updatethemerequest.cpp
-  updatethemeresponse.cpp
   updateuserrequest.cpp
   updateuserresponse.cpp)
 

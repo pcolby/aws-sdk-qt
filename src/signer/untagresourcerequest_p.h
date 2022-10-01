@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public signerRequestPrivate {
+class UntagResourceRequestPrivate : public SignerRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const signerRequest::Action action,
+    UntagResourceRequestPrivate(const SignerRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

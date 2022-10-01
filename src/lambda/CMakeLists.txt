@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLAMBDA_LIBRARY)
 
 add_library(QtAwsLambda
+  qtawslambdaglobal.h
+  lambdaclient.h
+  lambdaclient_p.h
+  lambdarequest.h
+  lambdarequest_p.h
+  lambdaresponse.h
+  lambdaresponse_p.h
   addlayerversionpermissionrequest.h
   addlayerversionpermissionrequest_p.h
   addlayerversionpermissionresponse.h
@@ -25,6 +32,10 @@ add_library(QtAwsLambda
   createfunctionrequest_p.h
   createfunctionresponse.h
   createfunctionresponse_p.h
+  createfunctionurlconfigrequest.h
+  createfunctionurlconfigrequest_p.h
+  createfunctionurlconfigresponse.h
+  createfunctionurlconfigresponse_p.h
   deletealiasrequest.h
   deletealiasrequest_p.h
   deletealiasresponse.h
@@ -37,6 +48,10 @@ add_library(QtAwsLambda
   deleteeventsourcemappingrequest_p.h
   deleteeventsourcemappingresponse.h
   deleteeventsourcemappingresponse_p.h
+  deletefunctionrequest.h
+  deletefunctionrequest_p.h
+  deletefunctionresponse.h
+  deletefunctionresponse_p.h
   deletefunctioncodesigningconfigrequest.h
   deletefunctioncodesigningconfigrequest_p.h
   deletefunctioncodesigningconfigresponse.h
@@ -49,10 +64,10 @@ add_library(QtAwsLambda
   deletefunctioneventinvokeconfigrequest_p.h
   deletefunctioneventinvokeconfigresponse.h
   deletefunctioneventinvokeconfigresponse_p.h
-  deletefunctionrequest.h
-  deletefunctionrequest_p.h
-  deletefunctionresponse.h
-  deletefunctionresponse_p.h
+  deletefunctionurlconfigrequest.h
+  deletefunctionurlconfigrequest_p.h
+  deletefunctionurlconfigresponse.h
+  deletefunctionurlconfigresponse_p.h
   deletelayerversionrequest.h
   deletelayerversionrequest_p.h
   deletelayerversionresponse.h
@@ -77,6 +92,10 @@ add_library(QtAwsLambda
   geteventsourcemappingrequest_p.h
   geteventsourcemappingresponse.h
   geteventsourcemappingresponse_p.h
+  getfunctionrequest.h
+  getfunctionrequest_p.h
+  getfunctionresponse.h
+  getfunctionresponse_p.h
   getfunctioncodesigningconfigrequest.h
   getfunctioncodesigningconfigrequest_p.h
   getfunctioncodesigningconfigresponse.h
@@ -93,10 +112,14 @@ add_library(QtAwsLambda
   getfunctioneventinvokeconfigrequest_p.h
   getfunctioneventinvokeconfigresponse.h
   getfunctioneventinvokeconfigresponse_p.h
-  getfunctionrequest.h
-  getfunctionrequest_p.h
-  getfunctionresponse.h
-  getfunctionresponse_p.h
+  getfunctionurlconfigrequest.h
+  getfunctionurlconfigrequest_p.h
+  getfunctionurlconfigresponse.h
+  getfunctionurlconfigresponse_p.h
+  getlayerversionrequest.h
+  getlayerversionrequest_p.h
+  getlayerversionresponse.h
+  getlayerversionresponse_p.h
   getlayerversionbyarnrequest.h
   getlayerversionbyarnrequest_p.h
   getlayerversionbyarnresponse.h
@@ -105,10 +128,6 @@ add_library(QtAwsLambda
   getlayerversionpolicyrequest_p.h
   getlayerversionpolicyresponse.h
   getlayerversionpolicyresponse_p.h
-  getlayerversionrequest.h
-  getlayerversionrequest_p.h
-  getlayerversionresponse.h
-  getlayerversionresponse_p.h
   getpolicyrequest.h
   getpolicyrequest_p.h
   getpolicyresponse.h
@@ -117,20 +136,14 @@ add_library(QtAwsLambda
   getprovisionedconcurrencyconfigrequest_p.h
   getprovisionedconcurrencyconfigresponse.h
   getprovisionedconcurrencyconfigresponse_p.h
-  invokeasyncrequest.h
-  invokeasyncrequest_p.h
-  invokeasyncresponse.h
-  invokeasyncresponse_p.h
   invokerequest.h
   invokerequest_p.h
   invokeresponse.h
   invokeresponse_p.h
-  lambdaclient.h
-  lambdaclient_p.h
-  lambdarequest.h
-  lambdarequest_p.h
-  lambdaresponse.h
-  lambdaresponse_p.h
+  invokeasyncrequest.h
+  invokeasyncrequest_p.h
+  invokeasyncresponse.h
+  invokeasyncresponse_p.h
   listaliasesrequest.h
   listaliasesrequest_p.h
   listaliasesresponse.h
@@ -147,22 +160,26 @@ add_library(QtAwsLambda
   listfunctioneventinvokeconfigsrequest_p.h
   listfunctioneventinvokeconfigsresponse.h
   listfunctioneventinvokeconfigsresponse_p.h
-  listfunctionsbycodesigningconfigrequest.h
-  listfunctionsbycodesigningconfigrequest_p.h
-  listfunctionsbycodesigningconfigresponse.h
-  listfunctionsbycodesigningconfigresponse_p.h
+  listfunctionurlconfigsrequest.h
+  listfunctionurlconfigsrequest_p.h
+  listfunctionurlconfigsresponse.h
+  listfunctionurlconfigsresponse_p.h
   listfunctionsrequest.h
   listfunctionsrequest_p.h
   listfunctionsresponse.h
   listfunctionsresponse_p.h
-  listlayersrequest.h
-  listlayersrequest_p.h
-  listlayersresponse.h
-  listlayersresponse_p.h
+  listfunctionsbycodesigningconfigrequest.h
+  listfunctionsbycodesigningconfigrequest_p.h
+  listfunctionsbycodesigningconfigresponse.h
+  listfunctionsbycodesigningconfigresponse_p.h
   listlayerversionsrequest.h
   listlayerversionsrequest_p.h
   listlayerversionsresponse.h
   listlayerversionsresponse_p.h
+  listlayersrequest.h
+  listlayersrequest_p.h
+  listlayersresponse.h
+  listlayersresponse_p.h
   listprovisionedconcurrencyconfigsrequest.h
   listprovisionedconcurrencyconfigsrequest_p.h
   listprovisionedconcurrencyconfigsresponse.h
@@ -199,7 +216,6 @@ add_library(QtAwsLambda
   putprovisionedconcurrencyconfigrequest_p.h
   putprovisionedconcurrencyconfigresponse.h
   putprovisionedconcurrencyconfigresponse_p.h
-  qtawslambdaglobal.h
   removelayerversionpermissionrequest.h
   removelayerversionpermissionrequest_p.h
   removelayerversionpermissionresponse.h
@@ -240,6 +256,13 @@ add_library(QtAwsLambda
   updatefunctioneventinvokeconfigrequest_p.h
   updatefunctioneventinvokeconfigresponse.h
   updatefunctioneventinvokeconfigresponse_p.h
+  updatefunctionurlconfigrequest.h
+  updatefunctionurlconfigrequest_p.h
+  updatefunctionurlconfigresponse.h
+  updatefunctionurlconfigresponse_p.h
+  lambdaclient.cpp
+  lambdarequest.cpp
+  lambdaresponse.cpp
   addlayerversionpermissionrequest.cpp
   addlayerversionpermissionresponse.cpp
   addpermissionrequest.cpp
@@ -252,20 +275,24 @@ add_library(QtAwsLambda
   createeventsourcemappingresponse.cpp
   createfunctionrequest.cpp
   createfunctionresponse.cpp
+  createfunctionurlconfigrequest.cpp
+  createfunctionurlconfigresponse.cpp
   deletealiasrequest.cpp
   deletealiasresponse.cpp
   deletecodesigningconfigrequest.cpp
   deletecodesigningconfigresponse.cpp
   deleteeventsourcemappingrequest.cpp
   deleteeventsourcemappingresponse.cpp
+  deletefunctionrequest.cpp
+  deletefunctionresponse.cpp
   deletefunctioncodesigningconfigrequest.cpp
   deletefunctioncodesigningconfigresponse.cpp
   deletefunctionconcurrencyrequest.cpp
   deletefunctionconcurrencyresponse.cpp
   deletefunctioneventinvokeconfigrequest.cpp
   deletefunctioneventinvokeconfigresponse.cpp
-  deletefunctionrequest.cpp
-  deletefunctionresponse.cpp
+  deletefunctionurlconfigrequest.cpp
+  deletefunctionurlconfigresponse.cpp
   deletelayerversionrequest.cpp
   deletelayerversionresponse.cpp
   deleteprovisionedconcurrencyconfigrequest.cpp
@@ -278,6 +305,8 @@ add_library(QtAwsLambda
   getcodesigningconfigresponse.cpp
   geteventsourcemappingrequest.cpp
   geteventsourcemappingresponse.cpp
+  getfunctionrequest.cpp
+  getfunctionresponse.cpp
   getfunctioncodesigningconfigrequest.cpp
   getfunctioncodesigningconfigresponse.cpp
   getfunctionconcurrencyrequest.cpp
@@ -286,25 +315,22 @@ add_library(QtAwsLambda
   getfunctionconfigurationresponse.cpp
   getfunctioneventinvokeconfigrequest.cpp
   getfunctioneventinvokeconfigresponse.cpp
-  getfunctionrequest.cpp
-  getfunctionresponse.cpp
+  getfunctionurlconfigrequest.cpp
+  getfunctionurlconfigresponse.cpp
+  getlayerversionrequest.cpp
+  getlayerversionresponse.cpp
   getlayerversionbyarnrequest.cpp
   getlayerversionbyarnresponse.cpp
   getlayerversionpolicyrequest.cpp
   getlayerversionpolicyresponse.cpp
-  getlayerversionrequest.cpp
-  getlayerversionresponse.cpp
   getpolicyrequest.cpp
   getpolicyresponse.cpp
   getprovisionedconcurrencyconfigrequest.cpp
   getprovisionedconcurrencyconfigresponse.cpp
-  invokeasyncrequest.cpp
-  invokeasyncresponse.cpp
   invokerequest.cpp
   invokeresponse.cpp
-  lambdaclient.cpp
-  lambdarequest.cpp
-  lambdaresponse.cpp
+  invokeasyncrequest.cpp
+  invokeasyncresponse.cpp
   listaliasesrequest.cpp
   listaliasesresponse.cpp
   listcodesigningconfigsrequest.cpp
@@ -313,14 +339,16 @@ add_library(QtAwsLambda
   listeventsourcemappingsresponse.cpp
   listfunctioneventinvokeconfigsrequest.cpp
   listfunctioneventinvokeconfigsresponse.cpp
-  listfunctionsbycodesigningconfigrequest.cpp
-  listfunctionsbycodesigningconfigresponse.cpp
+  listfunctionurlconfigsrequest.cpp
+  listfunctionurlconfigsresponse.cpp
   listfunctionsrequest.cpp
   listfunctionsresponse.cpp
-  listlayersrequest.cpp
-  listlayersresponse.cpp
+  listfunctionsbycodesigningconfigrequest.cpp
+  listfunctionsbycodesigningconfigresponse.cpp
   listlayerversionsrequest.cpp
   listlayerversionsresponse.cpp
+  listlayersrequest.cpp
+  listlayersresponse.cpp
   listprovisionedconcurrencyconfigsrequest.cpp
   listprovisionedconcurrencyconfigsresponse.cpp
   listtagsrequest.cpp
@@ -358,7 +386,9 @@ add_library(QtAwsLambda
   updatefunctionconfigurationrequest.cpp
   updatefunctionconfigurationresponse.cpp
   updatefunctioneventinvokeconfigrequest.cpp
-  updatefunctioneventinvokeconfigresponse.cpp)
+  updatefunctioneventinvokeconfigresponse.cpp
+  updatefunctionurlconfigrequest.cpp
+  updatefunctionurlconfigresponse.cpp)
 
 target_link_libraries(QtAwsLambda
   PRIVATE QtAwsCore

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateReceiptFilterRequest
- * \brief The CreateReceiptFilterRequest class provides an interface for SES CreateReceiptFilter requests.
+ * \class QtAws::Ses::CreateReceiptFilterRequest
+ * \brief The CreateReceiptFilterRequest class provides an interface for Ses CreateReceiptFilter requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SES::CreateReceiptFilterRequestPrivate
+ * \class QtAws::Ses::CreateReceiptFilterRequestPrivate
  * \brief The CreateReceiptFilterRequestPrivate class provides private implementation for CreateReceiptFilterRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationPartResponse
- * \brief The CreateDocumentationPartResponse class provides an interace for APIGateway CreateDocumentationPart responses.
+ * \class QtAws::ApiGateway::CreateDocumentationPartResponse
+ * \brief The CreateDocumentationPartResponse class provides an interace for ApiGateway CreateDocumentationPart responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDocumentationPart
+ * \sa ApiGatewayClient::createDocumentationPart
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateDocumentationPartResponse::CreateDocumentationPartResponse(
         const CreateDocumentationPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDocumentationPartResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateDocumentationPartResponsePrivate(this), parent)
 {
     setRequest(new CreateDocumentationPartRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateDocumentationPartRequest * CreateDocumentationPartResponse::request(
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateDocumentationPart \a response.
+ * Parses a successful ApiGateway CreateDocumentationPart \a response.
  */
 void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationPartResponsePrivate
+ * \class QtAws::ApiGateway::CreateDocumentationPartResponsePrivate
  * \brief The CreateDocumentationPartResponsePrivate class provides private implementation for CreateDocumentationPartResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateDocumentationPartResponsePrivate object with public implementation \a q.
  */
 CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
-    CreateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateDocumentationPartResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateDocumentationPart response element from \a xml.
+ * Parses a ApiGateway CreateDocumentationPart response element from \a xml.
  */
 void CreateDocumentationPartResponsePrivate::parseCreateDocumentationPartResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateDocumentationPartResponsePrivate::parseCreateDocumentationPartRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

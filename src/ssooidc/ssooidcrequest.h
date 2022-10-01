@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
-class SsooidcRequestPrivate;
+class SsoOidcRequestPrivate;
 
-class QTAWSSSOOIDC_EXPORT SsooidcRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSOOIDC_EXPORT SsoOidcRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSOOIDC.
+    /// Actions supported by SsoOidc.
     enum Action {
         CreateTokenAction,
         RegisterClientAction,
@@ -45,9 +45,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SsooidcRequest(const Action action);
-    SsooidcRequest(const SsooidcRequest &other);
-    SsooidcRequest &operator=(const SsooidcRequest &other);
+    SsoOidcRequest(const Action action);
+    SsoOidcRequest(const SsoOidcRequest &other);
+    SsoOidcRequest &operator=(const SsoOidcRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -56,12 +56,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SsooidcRequest &other) const;
+    virtual bool operator==(const SsoOidcRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit SsooidcRequest(SsooidcRequestPrivate * const d);
+    explicit SsoOidcRequest(SsoOidcRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -74,11 +74,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SsooidcRequest)
+    Q_DECLARE_PRIVATE(SsoOidcRequest)
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
-class DynamoDBStreamsClientPrivate;
+class DynamoDbStreamsClientPrivate;
 class DescribeStreamRequest;
 class DescribeStreamResponse;
 class GetRecordsRequest;
@@ -39,17 +39,17 @@ class GetShardIteratorResponse;
 class ListStreamsRequest;
 class ListStreamsResponse;
 
-class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDBStreamsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDbStreamsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    DynamoDBStreamsClient(
+    DynamoDbStreamsClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit DynamoDBStreamsClient(
+    explicit DynamoDbStreamsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -61,12 +61,12 @@ public slots:
     ListStreamsResponse * listStreams(const ListStreamsRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(DynamoDBStreamsClient)
-    Q_DISABLE_COPY(DynamoDBStreamsClient)
+    Q_DECLARE_PRIVATE(DynamoDbStreamsClient)
+    Q_DISABLE_COPY(DynamoDbStreamsClient)
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

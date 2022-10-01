@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSAUDITMANAGER_LIBRARY)
 
 add_library(QtAwsAuditManager
-  associateassessmentreportevidencefolderrequest.h
-  associateassessmentreportevidencefolderrequest_p.h
-  associateassessmentreportevidencefolderresponse.h
-  associateassessmentreportevidencefolderresponse_p.h
+  qtawsauditmanagerglobal.h
   auditmanagerclient.h
   auditmanagerclient_p.h
   auditmanagerrequest.h
   auditmanagerrequest_p.h
   auditmanagerresponse.h
   auditmanagerresponse_p.h
+  associateassessmentreportevidencefolderrequest.h
+  associateassessmentreportevidencefolderrequest_p.h
+  associateassessmentreportevidencefolderresponse.h
+  associateassessmentreportevidencefolderresponse_p.h
   batchassociateassessmentreportevidencerequest.h
   batchassociateassessmentreportevidencerequest_p.h
   batchassociateassessmentreportevidenceresponse.h
@@ -31,6 +32,10 @@ add_library(QtAwsAuditManager
   batchimportevidencetoassessmentcontrolrequest_p.h
   batchimportevidencetoassessmentcontrolresponse.h
   batchimportevidencetoassessmentcontrolresponse_p.h
+  createassessmentrequest.h
+  createassessmentrequest_p.h
+  createassessmentresponse.h
+  createassessmentresponse_p.h
   createassessmentframeworkrequest.h
   createassessmentframeworkrequest_p.h
   createassessmentframeworkresponse.h
@@ -39,26 +44,26 @@ add_library(QtAwsAuditManager
   createassessmentreportrequest_p.h
   createassessmentreportresponse.h
   createassessmentreportresponse_p.h
-  createassessmentrequest.h
-  createassessmentrequest_p.h
-  createassessmentresponse.h
-  createassessmentresponse_p.h
   createcontrolrequest.h
   createcontrolrequest_p.h
   createcontrolresponse.h
   createcontrolresponse_p.h
-  deleteassessmentframeworkrequest.h
-  deleteassessmentframeworkrequest_p.h
-  deleteassessmentframeworkresponse.h
-  deleteassessmentframeworkresponse_p.h
-  deleteassessmentreportrequest.h
-  deleteassessmentreportrequest_p.h
-  deleteassessmentreportresponse.h
-  deleteassessmentreportresponse_p.h
   deleteassessmentrequest.h
   deleteassessmentrequest_p.h
   deleteassessmentresponse.h
   deleteassessmentresponse_p.h
+  deleteassessmentframeworkrequest.h
+  deleteassessmentframeworkrequest_p.h
+  deleteassessmentframeworkresponse.h
+  deleteassessmentframeworkresponse_p.h
+  deleteassessmentframeworksharerequest.h
+  deleteassessmentframeworksharerequest_p.h
+  deleteassessmentframeworkshareresponse.h
+  deleteassessmentframeworkshareresponse_p.h
+  deleteassessmentreportrequest.h
+  deleteassessmentreportrequest_p.h
+  deleteassessmentreportresponse.h
+  deleteassessmentreportresponse_p.h
   deletecontrolrequest.h
   deletecontrolrequest_p.h
   deletecontrolresponse.h
@@ -79,6 +84,10 @@ add_library(QtAwsAuditManager
   getaccountstatusrequest_p.h
   getaccountstatusresponse.h
   getaccountstatusresponse_p.h
+  getassessmentrequest.h
+  getassessmentrequest_p.h
+  getassessmentresponse.h
+  getassessmentresponse_p.h
   getassessmentframeworkrequest.h
   getassessmentframeworkrequest_p.h
   getassessmentframeworkresponse.h
@@ -87,10 +96,6 @@ add_library(QtAwsAuditManager
   getassessmentreporturlrequest_p.h
   getassessmentreporturlresponse.h
   getassessmentreporturlresponse_p.h
-  getassessmentrequest.h
-  getassessmentrequest_p.h
-  getassessmentresponse.h
-  getassessmentresponse_p.h
   getchangelogsrequest.h
   getchangelogsrequest_p.h
   getchangelogsresponse.h
@@ -103,6 +108,10 @@ add_library(QtAwsAuditManager
   getdelegationsrequest_p.h
   getdelegationsresponse.h
   getdelegationsresponse_p.h
+  getevidencerequest.h
+  getevidencerequest_p.h
+  getevidenceresponse.h
+  getevidenceresponse_p.h
   getevidencebyevidencefolderrequest.h
   getevidencebyevidencefolderrequest_p.h
   getevidencebyevidencefolderresponse.h
@@ -111,18 +120,22 @@ add_library(QtAwsAuditManager
   getevidencefolderrequest_p.h
   getevidencefolderresponse.h
   getevidencefolderresponse_p.h
-  getevidencefoldersbyassessmentcontrolrequest.h
-  getevidencefoldersbyassessmentcontrolrequest_p.h
-  getevidencefoldersbyassessmentcontrolresponse.h
-  getevidencefoldersbyassessmentcontrolresponse_p.h
   getevidencefoldersbyassessmentrequest.h
   getevidencefoldersbyassessmentrequest_p.h
   getevidencefoldersbyassessmentresponse.h
   getevidencefoldersbyassessmentresponse_p.h
-  getevidencerequest.h
-  getevidencerequest_p.h
-  getevidenceresponse.h
-  getevidenceresponse_p.h
+  getevidencefoldersbyassessmentcontrolrequest.h
+  getevidencefoldersbyassessmentcontrolrequest_p.h
+  getevidencefoldersbyassessmentcontrolresponse.h
+  getevidencefoldersbyassessmentcontrolresponse_p.h
+  getinsightsrequest.h
+  getinsightsrequest_p.h
+  getinsightsresponse.h
+  getinsightsresponse_p.h
+  getinsightsbyassessmentrequest.h
+  getinsightsbyassessmentrequest_p.h
+  getinsightsbyassessmentresponse.h
+  getinsightsbyassessmentresponse_p.h
   getorganizationadminaccountrequest.h
   getorganizationadminaccountrequest_p.h
   getorganizationadminaccountresponse.h
@@ -135,6 +148,14 @@ add_library(QtAwsAuditManager
   getsettingsrequest_p.h
   getsettingsresponse.h
   getsettingsresponse_p.h
+  listassessmentcontrolinsightsbycontroldomainrequest.h
+  listassessmentcontrolinsightsbycontroldomainrequest_p.h
+  listassessmentcontrolinsightsbycontroldomainresponse.h
+  listassessmentcontrolinsightsbycontroldomainresponse_p.h
+  listassessmentframeworksharerequestsrequest.h
+  listassessmentframeworksharerequestsrequest_p.h
+  listassessmentframeworksharerequestsresponse.h
+  listassessmentframeworksharerequestsresponse_p.h
   listassessmentframeworksrequest.h
   listassessmentframeworksrequest_p.h
   listassessmentframeworksresponse.h
@@ -147,6 +168,18 @@ add_library(QtAwsAuditManager
   listassessmentsrequest_p.h
   listassessmentsresponse.h
   listassessmentsresponse_p.h
+  listcontroldomaininsightsrequest.h
+  listcontroldomaininsightsrequest_p.h
+  listcontroldomaininsightsresponse.h
+  listcontroldomaininsightsresponse_p.h
+  listcontroldomaininsightsbyassessmentrequest.h
+  listcontroldomaininsightsbyassessmentrequest_p.h
+  listcontroldomaininsightsbyassessmentresponse.h
+  listcontroldomaininsightsbyassessmentresponse_p.h
+  listcontrolinsightsbycontroldomainrequest.h
+  listcontrolinsightsbycontroldomainrequest_p.h
+  listcontrolinsightsbycontroldomainresponse.h
+  listcontrolinsightsbycontroldomainresponse_p.h
   listcontrolsrequest.h
   listcontrolsrequest_p.h
   listcontrolsresponse.h
@@ -163,7 +196,6 @@ add_library(QtAwsAuditManager
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsauditmanagerglobal.h
   registeraccountrequest.h
   registeraccountrequest_p.h
   registeraccountresponse.h
@@ -172,6 +204,10 @@ add_library(QtAwsAuditManager
   registerorganizationadminaccountrequest_p.h
   registerorganizationadminaccountresponse.h
   registerorganizationadminaccountresponse_p.h
+  startassessmentframeworksharerequest.h
+  startassessmentframeworksharerequest_p.h
+  startassessmentframeworkshareresponse.h
+  startassessmentframeworkshareresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -180,6 +216,10 @@ add_library(QtAwsAuditManager
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateassessmentrequest.h
+  updateassessmentrequest_p.h
+  updateassessmentresponse.h
+  updateassessmentresponse_p.h
   updateassessmentcontrolrequest.h
   updateassessmentcontrolrequest_p.h
   updateassessmentcontrolresponse.h
@@ -192,10 +232,10 @@ add_library(QtAwsAuditManager
   updateassessmentframeworkrequest_p.h
   updateassessmentframeworkresponse.h
   updateassessmentframeworkresponse_p.h
-  updateassessmentrequest.h
-  updateassessmentrequest_p.h
-  updateassessmentresponse.h
-  updateassessmentresponse_p.h
+  updateassessmentframeworksharerequest.h
+  updateassessmentframeworksharerequest_p.h
+  updateassessmentframeworkshareresponse.h
+  updateassessmentframeworkshareresponse_p.h
   updateassessmentstatusrequest.h
   updateassessmentstatusrequest_p.h
   updateassessmentstatusresponse.h
@@ -212,11 +252,11 @@ add_library(QtAwsAuditManager
   validateassessmentreportintegrityrequest_p.h
   validateassessmentreportintegrityresponse.h
   validateassessmentreportintegrityresponse_p.h
-  associateassessmentreportevidencefolderrequest.cpp
-  associateassessmentreportevidencefolderresponse.cpp
   auditmanagerclient.cpp
   auditmanagerrequest.cpp
   auditmanagerresponse.cpp
+  associateassessmentreportevidencefolderrequest.cpp
+  associateassessmentreportevidencefolderresponse.cpp
   batchassociateassessmentreportevidencerequest.cpp
   batchassociateassessmentreportevidenceresponse.cpp
   batchcreatedelegationbyassessmentrequest.cpp
@@ -227,20 +267,22 @@ add_library(QtAwsAuditManager
   batchdisassociateassessmentreportevidenceresponse.cpp
   batchimportevidencetoassessmentcontrolrequest.cpp
   batchimportevidencetoassessmentcontrolresponse.cpp
+  createassessmentrequest.cpp
+  createassessmentresponse.cpp
   createassessmentframeworkrequest.cpp
   createassessmentframeworkresponse.cpp
   createassessmentreportrequest.cpp
   createassessmentreportresponse.cpp
-  createassessmentrequest.cpp
-  createassessmentresponse.cpp
   createcontrolrequest.cpp
   createcontrolresponse.cpp
-  deleteassessmentframeworkrequest.cpp
-  deleteassessmentframeworkresponse.cpp
-  deleteassessmentreportrequest.cpp
-  deleteassessmentreportresponse.cpp
   deleteassessmentrequest.cpp
   deleteassessmentresponse.cpp
+  deleteassessmentframeworkrequest.cpp
+  deleteassessmentframeworkresponse.cpp
+  deleteassessmentframeworksharerequest.cpp
+  deleteassessmentframeworkshareresponse.cpp
+  deleteassessmentreportrequest.cpp
+  deleteassessmentreportresponse.cpp
   deletecontrolrequest.cpp
   deletecontrolresponse.cpp
   deregisteraccountrequest.cpp
@@ -251,40 +293,54 @@ add_library(QtAwsAuditManager
   disassociateassessmentreportevidencefolderresponse.cpp
   getaccountstatusrequest.cpp
   getaccountstatusresponse.cpp
+  getassessmentrequest.cpp
+  getassessmentresponse.cpp
   getassessmentframeworkrequest.cpp
   getassessmentframeworkresponse.cpp
   getassessmentreporturlrequest.cpp
   getassessmentreporturlresponse.cpp
-  getassessmentrequest.cpp
-  getassessmentresponse.cpp
   getchangelogsrequest.cpp
   getchangelogsresponse.cpp
   getcontrolrequest.cpp
   getcontrolresponse.cpp
   getdelegationsrequest.cpp
   getdelegationsresponse.cpp
+  getevidencerequest.cpp
+  getevidenceresponse.cpp
   getevidencebyevidencefolderrequest.cpp
   getevidencebyevidencefolderresponse.cpp
   getevidencefolderrequest.cpp
   getevidencefolderresponse.cpp
-  getevidencefoldersbyassessmentcontrolrequest.cpp
-  getevidencefoldersbyassessmentcontrolresponse.cpp
   getevidencefoldersbyassessmentrequest.cpp
   getevidencefoldersbyassessmentresponse.cpp
-  getevidencerequest.cpp
-  getevidenceresponse.cpp
+  getevidencefoldersbyassessmentcontrolrequest.cpp
+  getevidencefoldersbyassessmentcontrolresponse.cpp
+  getinsightsrequest.cpp
+  getinsightsresponse.cpp
+  getinsightsbyassessmentrequest.cpp
+  getinsightsbyassessmentresponse.cpp
   getorganizationadminaccountrequest.cpp
   getorganizationadminaccountresponse.cpp
   getservicesinscoperequest.cpp
   getservicesinscoperesponse.cpp
   getsettingsrequest.cpp
   getsettingsresponse.cpp
+  listassessmentcontrolinsightsbycontroldomainrequest.cpp
+  listassessmentcontrolinsightsbycontroldomainresponse.cpp
+  listassessmentframeworksharerequestsrequest.cpp
+  listassessmentframeworksharerequestsresponse.cpp
   listassessmentframeworksrequest.cpp
   listassessmentframeworksresponse.cpp
   listassessmentreportsrequest.cpp
   listassessmentreportsresponse.cpp
   listassessmentsrequest.cpp
   listassessmentsresponse.cpp
+  listcontroldomaininsightsrequest.cpp
+  listcontroldomaininsightsresponse.cpp
+  listcontroldomaininsightsbyassessmentrequest.cpp
+  listcontroldomaininsightsbyassessmentresponse.cpp
+  listcontrolinsightsbycontroldomainrequest.cpp
+  listcontrolinsightsbycontroldomainresponse.cpp
   listcontrolsrequest.cpp
   listcontrolsresponse.cpp
   listkeywordsfordatasourcerequest.cpp
@@ -297,18 +353,22 @@ add_library(QtAwsAuditManager
   registeraccountresponse.cpp
   registerorganizationadminaccountrequest.cpp
   registerorganizationadminaccountresponse.cpp
+  startassessmentframeworksharerequest.cpp
+  startassessmentframeworkshareresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateassessmentrequest.cpp
+  updateassessmentresponse.cpp
   updateassessmentcontrolrequest.cpp
   updateassessmentcontrolresponse.cpp
   updateassessmentcontrolsetstatusrequest.cpp
   updateassessmentcontrolsetstatusresponse.cpp
   updateassessmentframeworkrequest.cpp
   updateassessmentframeworkresponse.cpp
-  updateassessmentrequest.cpp
-  updateassessmentresponse.cpp
+  updateassessmentframeworksharerequest.cpp
+  updateassessmentframeworkshareresponse.cpp
   updateassessmentstatusrequest.cpp
   updateassessmentstatusresponse.cpp
   updatecontrolrequest.cpp

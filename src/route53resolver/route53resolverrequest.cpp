@@ -61,6 +61,7 @@ namespace Route53Resolver {
  * \value GetFirewallRuleGroupAction Route53Resolver GetFirewallRuleGroup action.
  * \value GetFirewallRuleGroupAssociationAction Route53Resolver GetFirewallRuleGroupAssociation action.
  * \value GetFirewallRuleGroupPolicyAction Route53Resolver GetFirewallRuleGroupPolicy action.
+ * \value GetResolverConfigAction Route53Resolver GetResolverConfig action.
  * \value GetResolverDnssecConfigAction Route53Resolver GetResolverDnssecConfig action.
  * \value GetResolverEndpointAction Route53Resolver GetResolverEndpoint action.
  * \value GetResolverQueryLogConfigAction Route53Resolver GetResolverQueryLogConfig action.
@@ -76,6 +77,7 @@ namespace Route53Resolver {
  * \value ListFirewallRuleGroupAssociationsAction Route53Resolver ListFirewallRuleGroupAssociations action.
  * \value ListFirewallRuleGroupsAction Route53Resolver ListFirewallRuleGroups action.
  * \value ListFirewallRulesAction Route53Resolver ListFirewallRules action.
+ * \value ListResolverConfigsAction Route53Resolver ListResolverConfigs action.
  * \value ListResolverDnssecConfigsAction Route53Resolver ListResolverDnssecConfigs action.
  * \value ListResolverEndpointIpAddressesAction Route53Resolver ListResolverEndpointIpAddresses action.
  * \value ListResolverEndpointsAction Route53Resolver ListResolverEndpoints action.
@@ -93,6 +95,7 @@ namespace Route53Resolver {
  * \value UpdateFirewallDomainsAction Route53Resolver UpdateFirewallDomains action.
  * \value UpdateFirewallRuleAction Route53Resolver UpdateFirewallRule action.
  * \value UpdateFirewallRuleGroupAssociationAction Route53Resolver UpdateFirewallRuleGroupAssociation action.
+ * \value UpdateResolverConfigAction Route53Resolver UpdateResolverConfig action.
  * \value UpdateResolverDnssecConfigAction Route53Resolver UpdateResolverDnssecConfig action.
  * \value UpdateResolverEndpointAction Route53Resolver UpdateResolverEndpoint action.
  * \value UpdateResolverRuleAction Route53Resolver UpdateResolverRule action.
@@ -303,7 +306,7 @@ QNetworkRequest Route53ResolverRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 Route53ResolverRequestPrivate::Route53ResolverRequestPrivate(const Route53ResolverRequest::Action action, Route53ResolverRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-04-01"))
 {
 
 }
@@ -362,6 +365,7 @@ QString Route53ResolverRequestPrivate::toString(const Route53ResolverRequest::Ac
         ActionToString(GetFirewallRuleGroup);
         ActionToString(GetFirewallRuleGroupAssociation);
         ActionToString(GetFirewallRuleGroupPolicy);
+        ActionToString(GetResolverConfig);
         ActionToString(GetResolverDnssecConfig);
         ActionToString(GetResolverEndpoint);
         ActionToString(GetResolverQueryLogConfig);
@@ -377,6 +381,7 @@ QString Route53ResolverRequestPrivate::toString(const Route53ResolverRequest::Ac
         ActionToString(ListFirewallRuleGroupAssociations);
         ActionToString(ListFirewallRuleGroups);
         ActionToString(ListFirewallRules);
+        ActionToString(ListResolverConfigs);
         ActionToString(ListResolverDnssecConfigs);
         ActionToString(ListResolverEndpointIpAddresses);
         ActionToString(ListResolverEndpoints);
@@ -394,6 +399,7 @@ QString Route53ResolverRequestPrivate::toString(const Route53ResolverRequest::Ac
         ActionToString(UpdateFirewallDomains);
         ActionToString(UpdateFirewallRule);
         ActionToString(UpdateFirewallRuleGroupAssociation);
+        ActionToString(UpdateResolverConfig);
         ActionToString(UpdateResolverDnssecConfig);
         ActionToString(UpdateResolverEndpoint);
         ActionToString(UpdateResolverRule);

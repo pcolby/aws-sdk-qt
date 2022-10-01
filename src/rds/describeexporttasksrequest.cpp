@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeExportTasksRequest
- * \brief The DescribeExportTasksRequest class provides an interface for RDS DescribeExportTasks requests.
+ * \class QtAws::Rds::DescribeExportTasksRequest
+ * \brief The DescribeExportTasksRequest class provides an interface for Rds DescribeExportTasks requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::RDS::DescribeExportTasksRequestPrivate
+ * \class QtAws::Rds::DescribeExportTasksRequestPrivate
  * \brief The DescribeExportTasksRequestPrivate class provides private implementation for DescribeExportTasksRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CreateImageRecipeRequest
- * \brief The CreateImageRecipeRequest class provides an interface for imagebuilder CreateImageRecipe requests.
+ * \class QtAws::ImageBuilder::CreateImageRecipeRequest
+ * \brief The CreateImageRecipeRequest class provides an interface for ImageBuilder CreateImageRecipe requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::createImageRecipe
+ * \sa ImageBuilderClient::createImageRecipe
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateImageRecipeRequest::CreateImageRecipeRequest(const CreateImageRecipeRequest &other)
-    : imagebuilderRequest(new CreateImageRecipeRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new CreateImageRecipeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ CreateImageRecipeRequest::CreateImageRecipeRequest(const CreateImageRecipeReques
  * Constructs a CreateImageRecipeRequest object.
  */
 CreateImageRecipeRequest::CreateImageRecipeRequest()
-    : imagebuilderRequest(new CreateImageRecipeRequestPrivate(imagebuilderRequest::CreateImageRecipeAction, this))
+    : ImageBuilderRequest(new CreateImageRecipeRequestPrivate(ImageBuilderRequest::CreateImageRecipeAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * CreateImageRecipeRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::imagebuilder::CreateImageRecipeRequestPrivate
+ * \class QtAws::ImageBuilder::CreateImageRecipeRequestPrivate
  * \brief The CreateImageRecipeRequestPrivate class provides private implementation for CreateImageRecipeRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a CreateImageRecipeRequestPrivate object for imagebuilder \a action,
+ * Constructs a CreateImageRecipeRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 CreateImageRecipeRequestPrivate::CreateImageRecipeRequestPrivate(
-    const imagebuilderRequest::Action action, CreateImageRecipeRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, CreateImageRecipeRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ CreateImageRecipeRequestPrivate::CreateImageRecipeRequestPrivate(
  */
 CreateImageRecipeRequestPrivate::CreateImageRecipeRequestPrivate(
     const CreateImageRecipeRequestPrivate &other, CreateImageRecipeRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

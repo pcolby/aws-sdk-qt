@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::TransactGetItemsRequest
- * \brief The TransactGetItemsRequest class provides an interface for DynamoDB TransactGetItems requests.
+ * \class QtAws::DynamoDb::TransactGetItemsRequest
+ * \brief The TransactGetItemsRequest class provides an interface for DynamoDb TransactGetItems requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::transactGetItems
+ * \sa DynamoDbClient::transactGetItems
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TransactGetItemsRequest::TransactGetItemsRequest(const TransactGetItemsRequest &other)
-    : DynamoDBRequest(new TransactGetItemsRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new TransactGetItemsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ TransactGetItemsRequest::TransactGetItemsRequest(const TransactGetItemsRequest &
  * Constructs a TransactGetItemsRequest object.
  */
 TransactGetItemsRequest::TransactGetItemsRequest()
-    : DynamoDBRequest(new TransactGetItemsRequestPrivate(DynamoDBRequest::TransactGetItemsAction, this))
+    : DynamoDbRequest(new TransactGetItemsRequestPrivate(DynamoDbRequest::TransactGetItemsAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * TransactGetItemsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DynamoDB::TransactGetItemsRequestPrivate
+ * \class QtAws::DynamoDb::TransactGetItemsRequestPrivate
  * \brief The TransactGetItemsRequestPrivate class provides private implementation for TransactGetItemsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a TransactGetItemsRequestPrivate object for DynamoDB \a action,
+ * Constructs a TransactGetItemsRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 TransactGetItemsRequestPrivate::TransactGetItemsRequestPrivate(
-    const DynamoDBRequest::Action action, TransactGetItemsRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, TransactGetItemsRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ TransactGetItemsRequestPrivate::TransactGetItemsRequestPrivate(
  */
 TransactGetItemsRequestPrivate::TransactGetItemsRequestPrivate(
     const TransactGetItemsRequestPrivate &other, TransactGetItemsRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

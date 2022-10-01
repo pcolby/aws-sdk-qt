@@ -60,6 +60,7 @@ namespace IoT {
  * \value CreateDimensionAction IoT CreateDimension action.
  * \value CreateDomainConfigurationAction IoT CreateDomainConfiguration action.
  * \value CreateDynamicThingGroupAction IoT CreateDynamicThingGroup action.
+ * \value CreateFleetMetricAction IoT CreateFleetMetric action.
  * \value CreateJobAction IoT CreateJob action.
  * \value CreateJobTemplateAction IoT CreateJobTemplate action.
  * \value CreateKeysAndCertificateAction IoT CreateKeysAndCertificate action.
@@ -89,6 +90,7 @@ namespace IoT {
  * \value DeleteDimensionAction IoT DeleteDimension action.
  * \value DeleteDomainConfigurationAction IoT DeleteDomainConfiguration action.
  * \value DeleteDynamicThingGroupAction IoT DeleteDynamicThingGroup action.
+ * \value DeleteFleetMetricAction IoT DeleteFleetMetric action.
  * \value DeleteJobAction IoT DeleteJob action.
  * \value DeleteJobExecutionAction IoT DeleteJobExecution action.
  * \value DeleteJobTemplateAction IoT DeleteJobTemplate action.
@@ -126,10 +128,12 @@ namespace IoT {
  * \value DescribeDomainConfigurationAction IoT DescribeDomainConfiguration action.
  * \value DescribeEndpointAction IoT DescribeEndpoint action.
  * \value DescribeEventConfigurationsAction IoT DescribeEventConfigurations action.
+ * \value DescribeFleetMetricAction IoT DescribeFleetMetric action.
  * \value DescribeIndexAction IoT DescribeIndex action.
  * \value DescribeJobAction IoT DescribeJob action.
  * \value DescribeJobExecutionAction IoT DescribeJobExecution action.
  * \value DescribeJobTemplateAction IoT DescribeJobTemplate action.
+ * \value DescribeManagedJobTemplateAction IoT DescribeManagedJobTemplate action.
  * \value DescribeMitigationActionAction IoT DescribeMitigationAction action.
  * \value DescribeProvisioningTemplateAction IoT DescribeProvisioningTemplate action.
  * \value DescribeProvisioningTemplateVersionAction IoT DescribeProvisioningTemplateVersion action.
@@ -148,6 +152,7 @@ namespace IoT {
  * \value DisableTopicRuleAction IoT DisableTopicRule action.
  * \value EnableTopicRuleAction IoT EnableTopicRule action.
  * \value GetBehaviorModelTrainingSummariesAction IoT GetBehaviorModelTrainingSummaries action.
+ * \value GetBucketsAggregationAction IoT GetBucketsAggregation action.
  * \value GetCardinalityAction IoT GetCardinality action.
  * \value GetEffectivePoliciesAction IoT GetEffectivePolicies action.
  * \value GetIndexingConfigurationAction IoT GetIndexingConfiguration action.
@@ -179,11 +184,14 @@ namespace IoT {
  * \value ListDetectMitigationActionsTasksAction IoT ListDetectMitigationActionsTasks action.
  * \value ListDimensionsAction IoT ListDimensions action.
  * \value ListDomainConfigurationsAction IoT ListDomainConfigurations action.
+ * \value ListFleetMetricsAction IoT ListFleetMetrics action.
  * \value ListIndicesAction IoT ListIndices action.
  * \value ListJobExecutionsForJobAction IoT ListJobExecutionsForJob action.
  * \value ListJobExecutionsForThingAction IoT ListJobExecutionsForThing action.
  * \value ListJobTemplatesAction IoT ListJobTemplates action.
  * \value ListJobsAction IoT ListJobs action.
+ * \value ListManagedJobTemplatesAction IoT ListManagedJobTemplates action.
+ * \value ListMetricValuesAction IoT ListMetricValues action.
  * \value ListMitigationActionsAction IoT ListMitigationActions action.
  * \value ListOTAUpdatesAction IoT ListOTAUpdates action.
  * \value ListOutgoingCertificatesAction IoT ListOutgoingCertificates action.
@@ -215,6 +223,7 @@ namespace IoT {
  * \value ListTopicRulesAction IoT ListTopicRules action.
  * \value ListV2LoggingLevelsAction IoT ListV2LoggingLevels action.
  * \value ListViolationEventsAction IoT ListViolationEvents action.
+ * \value PutVerificationStateOnViolationAction IoT PutVerificationStateOnViolation action.
  * \value RegisterCACertificateAction IoT RegisterCACertificate action.
  * \value RegisterCertificateAction IoT RegisterCertificate action.
  * \value RegisterCertificateWithoutCAAction IoT RegisterCertificateWithoutCA action.
@@ -250,6 +259,7 @@ namespace IoT {
  * \value UpdateDomainConfigurationAction IoT UpdateDomainConfiguration action.
  * \value UpdateDynamicThingGroupAction IoT UpdateDynamicThingGroup action.
  * \value UpdateEventConfigurationsAction IoT UpdateEventConfigurations action.
+ * \value UpdateFleetMetricAction IoT UpdateFleetMetric action.
  * \value UpdateIndexingConfigurationAction IoT UpdateIndexingConfiguration action.
  * \value UpdateJobAction IoT UpdateJob action.
  * \value UpdateMitigationActionAction IoT UpdateMitigationAction action.
@@ -470,7 +480,7 @@ QNetworkRequest IoTRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTRequestPrivate::IoTRequestPrivate(const IoTRequest::Action action, IoTRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-05-28"))
 {
 
 }
@@ -528,6 +538,7 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(CreateDimension);
         ActionToString(CreateDomainConfiguration);
         ActionToString(CreateDynamicThingGroup);
+        ActionToString(CreateFleetMetric);
         ActionToString(CreateJob);
         ActionToString(CreateJobTemplate);
         ActionToString(CreateKeysAndCertificate);
@@ -557,6 +568,7 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(DeleteDimension);
         ActionToString(DeleteDomainConfiguration);
         ActionToString(DeleteDynamicThingGroup);
+        ActionToString(DeleteFleetMetric);
         ActionToString(DeleteJob);
         ActionToString(DeleteJobExecution);
         ActionToString(DeleteJobTemplate);
@@ -594,10 +606,12 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(DescribeDomainConfiguration);
         ActionToString(DescribeEndpoint);
         ActionToString(DescribeEventConfigurations);
+        ActionToString(DescribeFleetMetric);
         ActionToString(DescribeIndex);
         ActionToString(DescribeJob);
         ActionToString(DescribeJobExecution);
         ActionToString(DescribeJobTemplate);
+        ActionToString(DescribeManagedJobTemplate);
         ActionToString(DescribeMitigationAction);
         ActionToString(DescribeProvisioningTemplate);
         ActionToString(DescribeProvisioningTemplateVersion);
@@ -616,6 +630,7 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(DisableTopicRule);
         ActionToString(EnableTopicRule);
         ActionToString(GetBehaviorModelTrainingSummaries);
+        ActionToString(GetBucketsAggregation);
         ActionToString(GetCardinality);
         ActionToString(GetEffectivePolicies);
         ActionToString(GetIndexingConfiguration);
@@ -647,11 +662,14 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(ListDetectMitigationActionsTasks);
         ActionToString(ListDimensions);
         ActionToString(ListDomainConfigurations);
+        ActionToString(ListFleetMetrics);
         ActionToString(ListIndices);
         ActionToString(ListJobExecutionsForJob);
         ActionToString(ListJobExecutionsForThing);
         ActionToString(ListJobTemplates);
         ActionToString(ListJobs);
+        ActionToString(ListManagedJobTemplates);
+        ActionToString(ListMetricValues);
         ActionToString(ListMitigationActions);
         ActionToString(ListOTAUpdates);
         ActionToString(ListOutgoingCertificates);
@@ -683,6 +701,7 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(ListTopicRules);
         ActionToString(ListV2LoggingLevels);
         ActionToString(ListViolationEvents);
+        ActionToString(PutVerificationStateOnViolation);
         ActionToString(RegisterCACertificate);
         ActionToString(RegisterCertificate);
         ActionToString(RegisterCertificateWithoutCA);
@@ -718,6 +737,7 @@ QString IoTRequestPrivate::toString(const IoTRequest::Action &action)
         ActionToString(UpdateDomainConfiguration);
         ActionToString(UpdateDynamicThingGroup);
         ActionToString(UpdateEventConfigurations);
+        ActionToString(UpdateFleetMetric);
         ActionToString(UpdateIndexingConfiguration);
         ActionToString(UpdateJob);
         ActionToString(UpdateMitigationAction);

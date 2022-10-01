@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
-class finspaceClient;
+class FinspaceClient;
 
-class finspaceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FinspaceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit finspaceClientPrivate(finspaceClient * const q);
+    explicit FinspaceClientPrivate(FinspaceClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(finspaceClient)
-    Q_DISABLE_COPY(finspaceClientPrivate)
+    Q_DECLARE_PUBLIC(FinspaceClient)
+    Q_DISABLE_COPY(FinspaceClientPrivate)
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

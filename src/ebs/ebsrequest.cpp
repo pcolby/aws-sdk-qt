@@ -21,31 +21,31 @@
 #include "ebsrequest_p.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 /*!
- * \class QtAws::EBS::EbsRequest
- * \brief The EbsRequest class provides an interface for EBS requests.
+ * \class QtAws::Ebs::EbsRequest
+ * \brief The EbsRequest class provides an interface for Ebs requests.
  *
- * \inmodule QtAwsEBS
+ * \inmodule QtAwsEbs
  */
 
 /*!
  * \enum EbsRequest::Action
  *
- * This enum describes the actions that can be performed as EBS
+ * This enum describes the actions that can be performed as Ebs
  * requests.
  *
- * \value CompleteSnapshotAction EBS CompleteSnapshot action.
- * \value GetSnapshotBlockAction EBS GetSnapshotBlock action.
- * \value ListChangedBlocksAction EBS ListChangedBlocks action.
- * \value ListSnapshotBlocksAction EBS ListSnapshotBlocks action.
- * \value PutSnapshotBlockAction EBS PutSnapshotBlock action.
- * \value StartSnapshotAction EBS StartSnapshot action.
+ * \value CompleteSnapshotAction Ebs CompleteSnapshot action.
+ * \value GetSnapshotBlockAction Ebs GetSnapshotBlock action.
+ * \value ListChangedBlocksAction Ebs ListChangedBlocks action.
+ * \value ListSnapshotBlocksAction Ebs ListSnapshotBlocks action.
+ * \value PutSnapshotBlockAction Ebs PutSnapshotBlock action.
+ * \value StartSnapshotAction Ebs StartSnapshot action.
  */
 
 /*!
- * Constructs a EbsRequest object for EBS \a action.
+ * Constructs a EbsRequest object for Ebs \a action.
  */
 EbsRequest::EbsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EbsRequestPrivate(action, this))
@@ -86,7 +86,7 @@ EbsRequest::EbsRequest(EbsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the EBS action to be performed by this request.
+ * Returns the Ebs action to be performed by this request.
  */
 EbsRequest::Action EbsRequest::action() const
 {
@@ -95,7 +95,7 @@ EbsRequest::Action EbsRequest::action() const
 }
 
 /*!
- * Returns the name of the EBS action to be performed by this request.
+ * Returns the name of the Ebs action to be performed by this request.
  */
 QString EbsRequest::actionString() const
 {
@@ -103,7 +103,7 @@ QString EbsRequest::actionString() const
 }
 
 /*!
- * Returns the EBS API version implemented by this request.
+ * Returns the Ebs API version implemented by this request.
  */
 QString EbsRequest::apiVersion() const
 {
@@ -112,7 +112,7 @@ QString EbsRequest::apiVersion() const
 }
 
 /*!
- * Sets the EBS action to be performed by this request to \a action.
+ * Sets the Ebs action to be performed by this request to \a action.
  */
 void EbsRequest::setAction(const Action action)
 {
@@ -121,7 +121,7 @@ void EbsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the EBS API version to include in this request to \a version.
+ * Sets the Ebs API version to include in this request to \a version.
  */
 void EbsRequest::setApiVersion(const QString &version)
 {
@@ -146,15 +146,15 @@ bool EbsRequest::operator==(const EbsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid EBS queue name.
+ * Returns \c tue if \a queueName is a valid Ebs queue name.
  *
- * @par From EBS FAQs:
+ * @par From Ebs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid EBS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ebs queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -221,10 +221,10 @@ void EbsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the EBS request using the given
+ * Returns a network request for the Ebs request using the given
  * \a endpoint.
  *
- * This EBS implementation builds request URLs by combining the
+ * This Ebs implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -237,19 +237,19 @@ QNetworkRequest EbsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::EBS::EbsRequestPrivate
+ * \class QtAws::Ebs::EbsRequestPrivate
  * \brief The EbsRequestPrivate class provides private implementation for EbsRequest.
  * \internal
  *
- * \inmodule QtAwsEBS
+ * \inmodule QtAwsEbs
  */
 
 /*!
- * Constructs a EbsRequestPrivate object for EBS \a action,
+ * Constructs a EbsRequestPrivate object for Ebs \a action,
  * with public implementation \a q.
  */
 EbsRequestPrivate::EbsRequestPrivate(const EbsRequest::Action action, EbsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-11-02"))
 {
 
 }
@@ -275,7 +275,7 @@ EbsRequestPrivate::EbsRequestPrivate(const EbsRequestPrivate &other,
  * invalid.
  *
  * This function converts EbsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the EBS service's Action
+ * string representations, appropriate for use with the Ebs service's Action
  * query parameters.
  */
 QString EbsRequestPrivate::toString(const EbsRequest::Action &action)
@@ -296,5 +296,5 @@ QString EbsRequestPrivate::toString(const EbsRequest::Action &action)
     return QString();
 }
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws

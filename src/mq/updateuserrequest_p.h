@@ -24,7 +24,7 @@
 #include "updateuserrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class UpdateUserRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

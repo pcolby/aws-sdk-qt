@@ -24,7 +24,7 @@
 #include "terminatejobflowsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class TerminateJobFlowsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

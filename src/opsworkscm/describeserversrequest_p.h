@@ -24,14 +24,14 @@
 #include "describeserversrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeServersRequest;
 
-class DescribeServersRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeServersRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DescribeServersRequestPrivate(const OpsWorksCMRequest::Action action,
+    DescribeServersRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DescribeServersRequest * const q);
     DescribeServersRequestPrivate(const DescribeServersRequestPrivate &other,
                                    DescribeServersRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

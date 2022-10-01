@@ -24,7 +24,7 @@
 #include "putnotificationchannelrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class PutNotificationChannelRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

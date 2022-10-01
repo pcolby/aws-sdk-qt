@@ -25,8 +25,12 @@
 #include "batchcreatevariableresponse.h"
 #include "batchgetvariablerequest.h"
 #include "batchgetvariableresponse.h"
+#include "cancelbatchimportjobrequest.h"
+#include "cancelbatchimportjobresponse.h"
 #include "cancelbatchpredictionjobrequest.h"
 #include "cancelbatchpredictionjobresponse.h"
+#include "createbatchimportjobrequest.h"
+#include "createbatchimportjobresponse.h"
 #include "createbatchpredictionjobrequest.h"
 #include "createbatchpredictionjobresponse.h"
 #include "createdetectorversionrequest.h"
@@ -39,6 +43,8 @@
 #include "createruleresponse.h"
 #include "createvariablerequest.h"
 #include "createvariableresponse.h"
+#include "deletebatchimportjobrequest.h"
+#include "deletebatchimportjobresponse.h"
 #include "deletebatchpredictionjobrequest.h"
 #include "deletebatchpredictionjobresponse.h"
 #include "deletedetectorrequest.h"
@@ -51,6 +57,8 @@
 #include "deleteeventresponse.h"
 #include "deleteeventtyperequest.h"
 #include "deleteeventtyperesponse.h"
+#include "deleteeventsbyeventtyperequest.h"
+#include "deleteeventsbyeventtyperesponse.h"
 #include "deleteexternalmodelrequest.h"
 #include "deleteexternalmodelresponse.h"
 #include "deletelabelrequest.h"
@@ -69,16 +77,24 @@
 #include "describedetectorresponse.h"
 #include "describemodelversionsrequest.h"
 #include "describemodelversionsresponse.h"
+#include "getbatchimportjobsrequest.h"
+#include "getbatchimportjobsresponse.h"
 #include "getbatchpredictionjobsrequest.h"
 #include "getbatchpredictionjobsresponse.h"
+#include "getdeleteeventsbyeventtypestatusrequest.h"
+#include "getdeleteeventsbyeventtypestatusresponse.h"
 #include "getdetectorversionrequest.h"
 #include "getdetectorversionresponse.h"
 #include "getdetectorsrequest.h"
 #include "getdetectorsresponse.h"
 #include "getentitytypesrequest.h"
 #include "getentitytypesresponse.h"
+#include "geteventrequest.h"
+#include "geteventresponse.h"
 #include "geteventpredictionrequest.h"
 #include "geteventpredictionresponse.h"
+#include "geteventpredictionmetadatarequest.h"
+#include "geteventpredictionmetadataresponse.h"
 #include "geteventtypesrequest.h"
 #include "geteventtypesresponse.h"
 #include "getexternalmodelsrequest.h"
@@ -97,6 +113,8 @@
 #include "getrulesresponse.h"
 #include "getvariablesrequest.h"
 #include "getvariablesresponse.h"
+#include "listeventpredictionsrequest.h"
+#include "listeventpredictionsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "putdetectorrequest.h"
@@ -113,6 +131,8 @@
 #include "putlabelresponse.h"
 #include "putoutcomerequest.h"
 #include "putoutcomeresponse.h"
+#include "sendeventrequest.h"
+#include "sendeventresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -123,6 +143,8 @@
 #include "updatedetectorversionmetadataresponse.h"
 #include "updatedetectorversionstatusrequest.h"
 #include "updatedetectorversionstatusresponse.h"
+#include "updateeventlabelrequest.h"
+#include "updateeventlabelresponse.h"
 #include "updatemodelrequest.h"
 #include "updatemodelresponse.h"
 #include "updatemodelversionrequest.h"
@@ -161,6 +183,20 @@ namespace FraudDetector {
  *  This is the Amazon Fraud Detector API Reference. This guide is for developers who need detailed information about Amazon
  *  Fraud Detector API actions, data types, and errors. For more information about Amazon Fraud Detector features, see the
  *  <a href="https://docs.aws.amazon.com/frauddetector/latest/ug/">Amazon Fraud Detector User
+ * 
+ *  Guide</a>>
+ * 
+ *  We provide the Query API as well as AWS software development kits (SDK) for Amazon Fraud Detector in Java and Python
+ *  programming
+ * 
+ *  languages>
+ * 
+ *  The Amazon Fraud Detector Query API provides HTTPS requests that use the HTTP verb GET or POST and a Query parameter
+ *  <code>Action</code>. AWS SDK provides libraries, sample code, tutorials, and other resources for software developers who
+ *  prefer to build applications using language-specific APIs instead of submitting a request over HTTP or HTTPS. These
+ *  libraries provide basic functions that automatically take care of tasks such as cryptographically signing your requests,
+ *  retrying requests, and handling error responses, so that it is easier for you to get started. For more information about
+ *  the AWS SDKs, see <a href="https://docs.aws.amazon.com/https:/aws.amazon.com/tools/">Tools to build on AWS</a>.
  */
 
 /*!
@@ -244,6 +280,19 @@ BatchGetVariableResponse * FraudDetectorClient::batchGetVariable(const BatchGetV
 
 /*!
  * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * CancelBatchImportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an in-progress batch import
+ */
+CancelBatchImportJobResponse * FraudDetectorClient::cancelBatchImportJob(const CancelBatchImportJobRequest &request)
+{
+    return qobject_cast<CancelBatchImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
  * CancelBatchPredictionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -253,6 +302,19 @@ BatchGetVariableResponse * FraudDetectorClient::batchGetVariable(const BatchGetV
 CancelBatchPredictionJobResponse * FraudDetectorClient::cancelBatchPredictionJob(const CancelBatchPredictionJobRequest &request)
 {
     return qobject_cast<CancelBatchPredictionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * CreateBatchImportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a batch import job.
+ */
+CreateBatchImportJobResponse * FraudDetectorClient::createBatchImportJob(const CreateBatchImportJobRequest &request)
+{
+    return qobject_cast<CreateBatchImportJobResponse *>(send(request));
 }
 
 /*!
@@ -331,6 +393,19 @@ CreateRuleResponse * FraudDetectorClient::createRule(const CreateRuleRequest &re
 CreateVariableResponse * FraudDetectorClient::createVariable(const CreateVariableRequest &request)
 {
     return qobject_cast<CreateVariableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * DeleteBatchImportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified batch import job ID record. This action does not delete the data that was batch imported.
+ */
+DeleteBatchImportJobResponse * FraudDetectorClient::deleteBatchImportJob(const DeleteBatchImportJobRequest &request)
+{
+    return qobject_cast<DeleteBatchImportJobResponse *>(send(request));
 }
 
 /*!
@@ -437,12 +512,25 @@ DeleteEventResponse * FraudDetectorClient::deleteEvent(const DeleteEventRequest 
  *
  * model>
  *
- * When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type and the data is no longer
+ * When you delete an event type, Amazon Fraud Detector permanently deletes that event type and the data is no longer
  * stored in Amazon Fraud
  */
 DeleteEventTypeResponse * FraudDetectorClient::deleteEventType(const DeleteEventTypeRequest &request)
 {
     return qobject_cast<DeleteEventTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * DeleteEventsByEventTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes all events of a particular event
+ */
+DeleteEventsByEventTypeResponse * FraudDetectorClient::deleteEventsByEventType(const DeleteEventsByEventTypeRequest &request)
+{
+    return qobject_cast<DeleteEventsByEventTypeResponse *>(send(request));
 }
 
 /*!
@@ -629,6 +717,23 @@ DescribeModelVersionsResponse * FraudDetectorClient::describeModelVersions(const
 
 /*!
  * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * GetBatchImportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets all batch import jobs or a specific job of the specified ID. This is a paginated API. If you provide a null
+ * <code>maxResults</code>, this action retrieves a maximum of 50 records per page. If you provide a
+ * <code>maxResults</code>, the value must be between 1 and 50. To get the next page results, provide the pagination token
+ * from the <code>GetBatchImportJobsResponse</code> as part of your request. A null pagination token fetches the records
+ * from the
+ */
+GetBatchImportJobsResponse * FraudDetectorClient::getBatchImportJobs(const GetBatchImportJobsRequest &request)
+{
+    return qobject_cast<GetBatchImportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
  * GetBatchPredictionJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -641,6 +746,19 @@ DescribeModelVersionsResponse * FraudDetectorClient::describeModelVersions(const
 GetBatchPredictionJobsResponse * FraudDetectorClient::getBatchPredictionJobs(const GetBatchPredictionJobsRequest &request)
 {
     return qobject_cast<GetBatchPredictionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * GetDeleteEventsByEventTypeStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the status of a <code>DeleteEventsByEventType</code>
+ */
+GetDeleteEventsByEventTypeStatusResponse * FraudDetectorClient::getDeleteEventsByEventTypeStatus(const GetDeleteEventsByEventTypeStatusRequest &request)
+{
+    return qobject_cast<GetDeleteEventsByEventTypeStatusResponse *>(send(request));
 }
 
 /*!
@@ -692,6 +810,19 @@ GetEntityTypesResponse * FraudDetectorClient::getEntityTypes(const GetEntityType
 
 /*!
  * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * GetEventResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves details of events stored with Amazon Fraud Detector. This action does not retrieve prediction
+ */
+GetEventResponse * FraudDetectorClient::getEvent(const GetEventRequest &request)
+{
+    return qobject_cast<GetEventResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
  * GetEventPredictionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -702,6 +833,20 @@ GetEntityTypesResponse * FraudDetectorClient::getEntityTypes(const GetEntityType
 GetEventPredictionResponse * FraudDetectorClient::getEventPrediction(const GetEventPredictionRequest &request)
 {
     return qobject_cast<GetEventPredictionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * GetEventPredictionMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details of the past fraud predictions for the specified event ID, event type, detector ID, and detector version ID
+ * that was generated in the specified time period.
+ */
+GetEventPredictionMetadataResponse * FraudDetectorClient::getEventPredictionMetadata(const GetEventPredictionMetadataRequest &request)
+{
+    return qobject_cast<GetEventPredictionMetadataResponse *>(send(request));
 }
 
 /*!
@@ -744,26 +889,11 @@ GetExternalModelsResponse * FraudDetectorClient::getExternalModels(const GetExte
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the encryption key if a Key Management Service (KMS) customer master key (CMK) has been specified to be used to
- * encrypt content in Amazon Fraud
+ * Gets the encryption key if a KMS key has been specified to be used to encrypt content in Amazon Fraud
  */
 GetKMSEncryptionKeyResponse * FraudDetectorClient::getKMSEncryptionKey(const GetKMSEncryptionKeyRequest &request)
 {
     return qobject_cast<GetKMSEncryptionKeyResponse *>(send(request));
-}
-
-/*!
- * Sends a GetKMSEncryptionKey request to the FraudDetectorClient service, and returns a pointer to an
- * GetKMSEncryptionKeyResponse object to track the result.
- *
- * \note The caller is to take responsbility for the resulting pointer.
- *
- * Gets the encryption key if a Key Management Service (KMS) customer master key (CMK) has been specified to be used to
- * encrypt content in Amazon Fraud
- */
-GetKMSEncryptionKeyResponse * FraudDetectorClient::getKMSEncryptionKey()
-{
-    return getKMSEncryptionKey(GetKMSEncryptionKeyRequest());
 }
 
 /*!
@@ -802,9 +932,9 @@ GetModelVersionResponse * FraudDetectorClient::getModelVersion(const GetModelVer
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets one or more models. Gets all models for the AWS account if no model type and no model id provided. Gets all models
- * for the AWS account and model type, if the model type is specified but model id is not provided. Gets a specific model
- * if (model type, model id) tuple is specified.
+ * Gets one or more models. Gets all models for the Amazon Web Services account if no model type and no model id provided.
+ * Gets all models for the Amazon Web Services account and model type, if the model type is specified but model id is not
+ * provided. Gets a specific model if (model type, model id) tuple is specified.
  *
  * </p
  *
@@ -869,6 +999,32 @@ GetRulesResponse * FraudDetectorClient::getRules(const GetRulesRequest &request)
 GetVariablesResponse * FraudDetectorClient::getVariables(const GetVariablesRequest &request)
 {
     return qobject_cast<GetVariablesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * ListEventPredictionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of past predictions. The list can be filtered by detector ID, detector version ID, event ID, event type, or
+ * by specifying a time period. If filter is not specified, the most recent prediction is
+ *
+ * returned>
+ *
+ * For example, the following filter lists all past predictions for <code>xyz</code> event type - <code>{ "eventType":{
+ * "value": "xyz" }” } </code>
+ *
+ * </p
+ *
+ * This is a paginated API. If you provide a null <code>maxResults</code>, this action will retrieve a maximum of 10
+ * records per page. If you provide a <code>maxResults</code>, the value must be between 50 and 100. To get the next page
+ * results, provide the <code>nextToken</code> from the response as part of your request. A null <code>nextToken</code>
+ * fetches the records from the beginning.
+ */
+ListEventPredictionsResponse * FraudDetectorClient::listEventPredictions(const ListEventPredictionsRequest &request)
+{
+    return qobject_cast<ListEventPredictionsResponse *>(send(request));
 }
 
 /*!
@@ -951,7 +1107,7 @@ PutExternalModelResponse * FraudDetectorClient::putExternalModel(const PutExtern
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Specifies the Key Management Service (KMS) customer master key (CMK) to be used to encrypt content in Amazon Fraud
+ * Specifies the KMS key to be used to encrypt content in Amazon Fraud
  */
 PutKMSEncryptionKeyResponse * FraudDetectorClient::putKMSEncryptionKey(const PutKMSEncryptionKeyRequest &request)
 {
@@ -983,6 +1139,20 @@ PutLabelResponse * FraudDetectorClient::putLabel(const PutLabelRequest &request)
 PutOutcomeResponse * FraudDetectorClient::putOutcome(const PutOutcomeRequest &request)
 {
     return qobject_cast<PutOutcomeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * SendEventResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stores events in Amazon Fraud Detector without generating fraud predictions for those events. For example, you can use
+ * <code>SendEvent</code> to upload a historical dataset, which you can then later use to train a
+ */
+SendEventResponse * FraudDetectorClient::sendEvent(const SendEventRequest &request)
+{
+    return qobject_cast<SendEventResponse *>(send(request));
 }
 
 /*!
@@ -1056,11 +1226,24 @@ UpdateDetectorVersionStatusResponse * FraudDetectorClient::updateDetectorVersion
 
 /*!
  * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
+ * UpdateEventLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified event with a new
+ */
+UpdateEventLabelResponse * FraudDetectorClient::updateEventLabel(const UpdateEventLabelRequest &request)
+{
+    return qobject_cast<UpdateEventLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FraudDetectorClient service, and returns a pointer to an
  * UpdateModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a model. You can update the description attribute using this
+ * Updates model
  */
 UpdateModelResponse * FraudDetectorClient::updateModel(const UpdateModelRequest &request)
 {
@@ -1096,11 +1279,15 @@ UpdateModelVersionResponse * FraudDetectorClient::updateModelVersion(const Updat
  *
  * updates> <ol> <li>
  *
+ * Change the <code>TRAINING_IN_PROGRESS</code> status to
+ *
+ * <code>TRAINING_CANCELLED</code>> </li> <li>
+ *
  * Change the <code>TRAINING_COMPLETE</code> status to
  *
  * <code>ACTIVE</code>> </li> <li>
  *
- * Change <code>ACTIVE</code>to
+ * Change <code>ACTIVE</code> to
  */
 UpdateModelVersionStatusResponse * FraudDetectorClient::updateModelVersionStatus(const UpdateModelVersionStatusRequest &request)
 {

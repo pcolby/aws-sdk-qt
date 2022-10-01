@@ -23,7 +23,7 @@
 #include "iamresponse_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class TagServerCertificateResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

@@ -296,8 +296,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SSM
- * \brief Contains classess for accessing Amazon Simple Systems Manager (SSM) ( SSM).
+ * \namespace QtAws::Ssm
+ * \brief Contains classess for accessing Amazon Simple Systems Manager (SSM).
  *
  * \inmodule QtAwsSsm
  *
@@ -305,36 +305,32 @@
  */
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 /*!
- * \class QtAws::SSM::SsmClient
- * \brief The SsmClient class provides access to the Amazon Simple Systems Manager (SSM) ( SSM) service.
+ * \class QtAws::Ssm::SsmClient
+ * \brief The SsmClient class provides access to the Amazon Simple Systems Manager (SSM) service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  *
- *  <fullname>AWS Systems Manager</fullname>
+ *  Amazon Web Services Systems Manager is a collection of capabilities to help you manage your applications and
+ *  infrastructure running in the Amazon Web Services Cloud;. Systems Manager simplifies application and resource
+ *  management, shortens the time to detect and resolve operational problems, and helps you manage your Amazon Web Services
+ *  resources securely at
  * 
- *  AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system
- *  inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and
- *  configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the
- *  configuration of your managed instances. A <i>managed instance</i> is any Amazon Elastic Compute Cloud instance (EC2
- *  instance), or any on-premises server or virtual machine (VM) in your hybrid environment that has been configured for
- *  Systems
- * 
- *  Manager>
+ *  scale>
  * 
  *  This reference is intended to be used with the <a
- *  href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">AWS Systems Manager User
+ *  href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User
  * 
  *  Guide</a>>
  * 
- *  To get started, verify prerequisites and configure managed instances. For more information, see <a
- *  href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting up AWS
- *  Systems Manager</a> in the <i>AWS Systems Manager User
+ *  To get started, verify prerequisites. For more information, see <a
+ *  href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting up Amazon
+ *  Web Services Systems
  * 
- *  Guide</i>> <p class="title"> <b>Related resources</b>
+ *  Manager</a>> <p class="title"> <b>Related resources</b>
  * 
  *  </p <ul> <li>
  * 
@@ -343,20 +339,20 @@ namespace SSM {
  * 
  *  </p </li> <li>
  * 
- *  For information about other API actions you can perform on EC2 instances, see the <a
+ *  For information about other API operations you can perform on EC2 instances, see the <a
  *  href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API
  * 
  *  Reference</a>> </li> <li>
  * 
- *  For information about AWS AppConfig, a capability of Systems Manager, see the <a
- *  href="https://docs.aws.amazon.com/appconfig/latest/userguide/">AWS AppConfig User Guide</a> and the <a
- *  href="https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/">AWS AppConfig API
+ *  For information about AppConfig, a capability of Systems Manager, see the <a
+ *  href="https://docs.aws.amazon.com/appconfig/latest/userguide/">AppConfig User Guide</a> and the <a
+ *  href="https://docs.aws.amazon.com/appconfig/2019-10-09/APIReference/">AppConfig API
  * 
  *  Reference</a>> </li> <li>
  * 
- *  For information about AWS Incident Manager, a capability of Systems Manager, see the <a
- *  href="https://docs.aws.amazon.com/incident-manager/latest/userguide/">AWS Incident Manager User Guide</a> and the <a
- *  href="https://docs.aws.amazon.com/incident-manager/latest/APIReference/">AWS Incident Manager API
+ *  For information about Incident Manager, a capability of Systems Manager, see the <a
+ *  href="https://docs.aws.amazon.com/incident-manager/latest/userguide/">Incident Manager User Guide</a> and the <a
+ *  href="https://docs.aws.amazon.com/incident-manager/latest/APIReference/">Incident Manager API
  */
 
 /*!
@@ -418,26 +414,49 @@ SsmClient::SsmClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,
- * managed instances, maintenance windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize
- * your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
- * optional value, both of which you define. For example, you could define a set of tags for your account's managed
- * instances that helps you track each instance's owner and stack level. For example: Key=Owner and Value=DbAdmin,
- * SysAdmin, or Dev. Or Key=Stack and Value=Production, Pre-Production, or
+ * Adds or overwrites one or more tags for the specified resource. <i>Tags</i> are metadata that you can assign to your
+ * automations, documents, managed nodes, maintenance windows, Parameter Store parameters, and patch baselines. Tags enable
+ * you to categorize your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of
+ * a key and an optional value, both of which you define. For example, you could define a set of tags for your account's
+ * managed nodes that helps you track each node's owner and stack level. For
  *
- * Test>
+ * example> <ul> <li>
  *
- * Each resource can have a maximum of 50 tags.
+ * <code>Key=Owner,Value=DbAdmin</code>
  *
- * </p
+ * </p </li> <li>
+ *
+ * <code>Key=Owner,Value=SysAdmin</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>Key=Owner,Value=Dev</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>Key=Stack,Value=Production</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>Key=Stack,Value=Pre-Production</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>Key=Stack,Value=Test</code>
+ *
+ * </p </li> </ul>
+ *
+ * Most resources can have a maximum of 50 tags. Automations can have a maximum of 5
+ *
+ * tags>
  *
  * We recommend that you devise a set of tag keys that meets your needs for each resource type. Using a consistent set of
  * tag keys makes it easier for you to manage your resources. You can search and filter the resources based on the tags you
- * add. Tags don't have any semantic meaning to and are interpreted strictly as a string of characters.
+ * add. Tags don't have any semantic meaning to and are interpreted strictly as a string of
  *
- * </p
+ * characters>
  *
- * For more information about using tags with EC2 instances, see <a
+ * For more information about using tags with Amazon Elastic Compute Cloud (Amazon EC2) instances, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a> in the
  * <i>Amazon EC2 User
  */
@@ -452,8 +471,8 @@ AddTagsToResourceResponse * SsmClient::addTagsToResource(const AddTagsToResource
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a related resource to a Systems Manager OpsCenter OpsItem. For example, you can associate an Incident Manager
- * incident or analysis with an OpsItem. Incident Manager is a capability of AWS Systems
+ * Associates a related item to a Systems Manager OpsCenter OpsItem. For example, you can associate an Incident Manager
+ * incident or analysis with an OpsItem. Incident Manager and OpsCenter are capabilities of Amazon Web Services Systems
  */
 AssociateOpsItemRelatedItemResponse * SsmClient::associateOpsItemRelatedItem(const AssociateOpsItemRelatedItemRequest &request)
 {
@@ -480,8 +499,8 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a maintenance window execution that is already in progress and cancels any tasks in the window that have not
- * already starting running. (Tasks already in progress will continue to
+ * Stops a maintenance window execution that is already in progress and cancels any tasks in the window that haven't
+ * already starting running. Tasks already in progress will continue to
  */
 CancelMaintenanceWindowExecutionResponse * SsmClient::cancelMaintenanceWindowExecution(const CancelMaintenanceWindowExecutionRequest &request)
 {
@@ -494,17 +513,19 @@ CancelMaintenanceWindowExecutionResponse * SsmClient::cancelMaintenanceWindowExe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Generates an activation code and activation ID you can use to register your on-premises server or virtual machine (VM)
- * with Systems Manager. Registering these machines with Systems Manager makes it possible to manage them using Systems
- * Manager capabilities. You use the activation code and ID when installing SSM Agent on machines in your hybrid
- * environment. For more information about requirements for managing on-premises instances and VMs using Systems Manager,
- * see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting
- * up AWS Systems Manager for hybrid environments</a> in the <i>AWS Systems Manager User Guide</i>.
+ * Generates an activation code and activation ID you can use to register your on-premises servers, edge devices, or
+ * virtual machine (VM) with Amazon Web Services Systems Manager. Registering these machines with Systems Manager makes it
+ * possible to manage them using Systems Manager capabilities. You use the activation code and ID when installing SSM Agent
+ * on machines in your hybrid environment. For more information about requirements for managing on-premises machines using
+ * Systems Manager, see <a
+ * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting up
+ * Amazon Web Services Systems Manager for hybrid environments</a> in the <i>Amazon Web Services Systems Manager User
+ * Guide</i>.
  *
  * </p <note>
  *
- * On-premises servers or VMs that are registered with Systems Manager and EC2 instances that you manage with Systems
- * Manager are all called <i>managed
+ * Amazon Elastic Compute Cloud (Amazon EC2) instances, edge devices, and on-premises servers and VMs that are configured
+ * for Systems Manager are all called <i>managed
  */
 CreateActivationResponse * SsmClient::createActivation(const CreateActivationRequest &request)
 {
@@ -517,14 +538,15 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * A State Manager association defines the state that you want to maintain on your instances. For example, an association
- * can specify that anti-virus software must be installed and running on your instances, or that certain ports must be
- * closed. For static targets, the association specifies a schedule for when the configuration is reapplied. For dynamic
- * targets, such as an AWS Resource Group or an AWS Autoscaling Group, State Manager applies the configuration when new
- * instances are added to the group. The association also specifies actions to take when applying the configuration. For
- * example, an association for anti-virus software might run once a day. If the software is not installed, then State
- * Manager installs it. If the software is installed, but the service is not running, then the association might instruct
- * State Manager to start the service.
+ * A State Manager association defines the state that you want to maintain on your managed nodes. For example, an
+ * association can specify that anti-virus software must be installed and running on your managed nodes, or that certain
+ * ports must be closed. For static targets, the association specifies a schedule for when the configuration is reapplied.
+ * For dynamic targets, such as an Amazon Web Services resource group or an Amazon Web Services autoscaling group, State
+ * Manager, a capability of Amazon Web Services Systems Manager applies the configuration when new managed nodes are added
+ * to the group. The association also specifies actions to take when applying the configuration. For example, an
+ * association for anti-virus software might run once a day. If the software isn't installed, then State Manager installs
+ * it. If the software is installed, but the service isn't running, then the association might instruct State Manager to
+ * start the service.
  */
 CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociationRequest &request)
 {
@@ -537,16 +559,16 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates the specified Systems Manager document with the specified instances or
+ * Associates the specified Amazon Web Services Systems Manager document (SSM document) with the specified managed nodes or
  *
  * targets>
  *
- * When you associate a document with one or more instances using instance IDs or tags, SSM Agent running on the instance
- * processes the document and configures the instance as
+ * When you associate a document with one or more managed nodes using IDs or tags, Amazon Web Services Systems Manager
+ * Agent (SSM Agent) running on the managed node processes the document and configures the node as
  *
  * specified>
  *
- * If you associate a document with an instance that already has an associated document, the system returns the
+ * If you associate a document with a managed node that already has an associated document, the system returns the
  * AssociationAlreadyExists
  */
 CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateAssociationBatchRequest &request)
@@ -560,10 +582,11 @@ CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Systems Manager (SSM) document. An SSM document defines the actions that Systems Manager performs on your
- * managed instances. For more information about SSM documents, including information about supported schemas, features,
- * and syntax, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html">AWS Systems
- * Manager Documents</a> in the <i>AWS Systems Manager User
+ * Creates a Amazon Web Services Systems Manager (SSM document). An SSM document defines the actions that Systems Manager
+ * performs on your managed nodes. For more information about SSM documents, including information about supported schemas,
+ * features, and syntax, see <a
+ * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html">Amazon Web Services Systems
+ * Manager Documents</a> in the <i>Amazon Web Services Systems Manager User
  */
 CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &request)
 {
@@ -596,17 +619,17 @@ CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new OpsItem. You must have permission in AWS Identity and Access Management (IAM) to create a new OpsItem. For
+ * Creates a new OpsItem. You must have permission in Identity and Access Management (IAM) to create a new OpsItem. For
  * more information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting started with
- * OpsCenter</a> in the <i>AWS Systems Manager User
+ * OpsCenter</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
- * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
- * the performance and health of their AWS resources. For more information, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
- * the <i>AWS Systems Manager User Guide</i>.
+ * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate, and
+ * remediate operational issues impacting the performance and health of their Amazon Web Services resources. For more
+ * information, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">Amazon Web
+ * Services Systems Manager OpsCenter</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  */
 CreateOpsItemResponse * SsmClient::createOpsItem(const CreateOpsItemRequest &request)
 {
@@ -619,8 +642,8 @@ CreateOpsItemResponse * SsmClient::createOpsItem(const CreateOpsItemRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * If you create a new application in Application Manager, Systems Manager calls this API action to specify information
- * about the new application, including the application
+ * If you create a new application in Application Manager, Amazon Web Services Systems Manager calls this API operation to
+ * specify information about the new application, including the application
  */
 CreateOpsMetadataResponse * SsmClient::createOpsMetadata(const CreateOpsMetadataRequest &request)
 {
@@ -637,8 +660,7 @@ CreateOpsMetadataResponse * SsmClient::createOpsMetadata(const CreateOpsMetadata
  *
  * baseline> <note>
  *
- * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
- * see <a
+ * For information about valid key-value pairs in <code>PatchFilters</code> for each supported operating system type, see
  */
 CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBaselineRequest &request)
 {
@@ -651,24 +673,26 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * A resource data sync helps you view data from multiple sources in a single location. Systems Manager offers two types of
- * resource data sync: <code>SyncToDestination</code> and
+ * A resource data sync helps you view data from multiple sources in a single location. Amazon Web Services Systems Manager
+ * offers two types of resource data sync: <code>SyncToDestination</code> and
  *
  * <code>SyncFromSource</code>>
  *
  * You can configure Systems Manager Inventory to use the <code>SyncToDestination</code> type to synchronize Inventory data
- * from multiple AWS Regions to a single S3 bucket. For more information, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring Resource
- * Data Sync for Inventory</a> in the <i>AWS Systems Manager User
+ * from multiple Amazon Web Services Regions to a single Amazon Simple Storage Service (Amazon S3) bucket. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring resource
+ * data sync for Inventory</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
  * You can configure Systems Manager Explorer to use the <code>SyncFromSource</code> type to synchronize operational work
- * items (OpsItems) and operational data (OpsData) from multiple AWS Regions to a single S3 bucket. This type can
- * synchronize OpsItems and OpsData from multiple AWS accounts and Regions or <code>EntireOrganization</code> by using AWS
- * Organizations. For more information, see <a
+ * items (OpsItems) and operational data (OpsData) from multiple Amazon Web Services Regions to a single Amazon S3 bucket.
+ * This type can synchronize OpsItems and OpsData from multiple Amazon Web Services accounts and Amazon Web Services
+ * Regions or <code>EntireOrganization</code> by using Organizations. For more information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html">Setting up Systems
- * Manager Explorer to display data from multiple accounts and Regions</a> in the <i>AWS Systems Manager User
+ * Manager Explorer to display data from multiple accounts and Regions</a> in the <i>Amazon Web Services Systems Manager
+ * User
  *
  * Guide</i>>
  *
@@ -677,7 +701,7 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  *
  * <a>ListResourceDataSync</a>> <note>
  *
- * By default, data is not encrypted in Amazon S3. We strongly recommend that you enable encryption in Amazon S3 to ensure
+ * By default, data isn't encrypted in Amazon S3. We strongly recommend that you enable encryption in Amazon S3 to ensure
  * secure data storage. We also recommend that you secure access to the Amazon S3 bucket by creating a restrictive bucket
  * policy.
  */
@@ -692,9 +716,9 @@ CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an activation. You are not required to delete an activation. If you delete an activation, you can no longer use
- * it to register additional managed instances. Deleting an activation does not de-register managed instances. You must
- * manually de-register managed
+ * Deletes an activation. You aren't required to delete an activation. If you delete an activation, you can no longer use
+ * it to register additional managed nodes. Deleting an activation doesn't de-register managed nodes. You must manually
+ * de-register managed
  */
 DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationRequest &request)
 {
@@ -707,12 +731,14 @@ DeleteActivationResponse * SsmClient::deleteActivation(const DeleteActivationReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the specified Systems Manager document from the specified
+ * Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified managed node.
+ * If you created the association by using the <code>Targets</code> parameter, then you must delete the association by
+ * using the association
  *
- * instance>
+ * ID>
  *
- * When you disassociate a document from an instance, it does not change the configuration of the instance. To change the
- * configuration state of an instance after you disassociate a document, you must create a new document with the desired
+ * When you disassociate a document from a managed node, it doesn't change the configuration of the node. To change the
+ * configuration state of a managed node after you disassociate a document, you must create a new document with the desired
  * configuration and associate it with the
  */
 DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociationRequest &request)
@@ -726,12 +752,12 @@ DeleteAssociationResponse * SsmClient::deleteAssociation(const DeleteAssociation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the Systems Manager document and all instance associations to the
+ * Deletes the Amazon Web Services Systems Manager document (SSM document) and all managed node associations to the
  *
  * document>
  *
- * Before you delete the document, we recommend that you use <a>DeleteAssociation</a> to disassociate all instances that
- * are associated with the
+ * Before you delete the document, we recommend that you use <a>DeleteAssociation</a> to disassociate all managed nodes
+ * that are associated with the
  */
 DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &request)
 {
@@ -784,7 +810,8 @@ DeleteOpsMetadataResponse * SsmClient::deleteOpsMetadata(const DeleteOpsMetadata
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete a parameter from the
+ * Delete a parameter from the system. After deleting a parameter, wait for at least 30 seconds to create a parameter with
+ * the same
  */
 DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterRequest &request)
 {
@@ -797,7 +824,8 @@ DeleteParameterResponse * SsmClient::deleteParameter(const DeleteParameterReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete a list of
+ * Delete a list of parameters. After deleting a parameter, wait for at least 30 seconds to create a parameter with the
+ * same
  */
 DeleteParametersResponse * SsmClient::deleteParameters(const DeleteParametersRequest &request)
 {
@@ -823,8 +851,8 @@ DeletePatchBaselineResponse * SsmClient::deletePatchBaseline(const DeletePatchBa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a Resource Data Sync configuration. After the configuration is deleted, changes to data on managed instances are
- * no longer synced to or from the target. Deleting a sync configuration does not delete
+ * Deletes a resource data sync configuration. After the configuration is deleted, changes to data on managed nodes are no
+ * longer synced to or from the target. Deleting a sync configuration doesn't delete
  */
 DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteResourceDataSyncRequest &request)
 {
@@ -837,7 +865,7 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any
+ * Removes the server or virtual machine from the list of registered servers. You can reregister the node again at any
  * time. If you don't plan to use Run Command on the server, we suggest uninstalling SSM Agent
  */
 DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const DeregisterManagedInstanceRequest &request)
@@ -891,7 +919,8 @@ DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaint
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes details about the activation, such as the date and time the activation was created, its expiration date, the
- * IAM role assigned to the instances in the activation, and the number of instances registered by using this
+ * Identity and Access Management (IAM) role assigned to the managed nodes in the activation, and the number of nodes
+ * registered by using this
  */
 DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActivationsRequest &request)
 {
@@ -904,10 +933,8 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the association for the specified target or instance. If you created the association by using the
- * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you created the
- * association by specifying an instance ID and a Systems Manager document, then you retrieve the association by specifying
- * the document name and the instance ID.
+ * Describes the association for the specified target or managed node. If you created the association by using the
+ * <code>Targets</code> parameter, then you must retrieve the association by using the association
  */
 DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssociationRequest &request)
 {
@@ -920,7 +947,7 @@ DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssoc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this API action to view information about a specific execution of a specific
+ * Views information about a specific execution of a specific
  */
 DescribeAssociationExecutionTargetsResponse * SsmClient::describeAssociationExecutionTargets(const DescribeAssociationExecutionTargetsRequest &request)
 {
@@ -933,7 +960,7 @@ DescribeAssociationExecutionTargetsResponse * SsmClient::describeAssociationExec
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this API action to view all executions for a specific association ID.
+ * Views all executions for a specific association ID.
  */
 DescribeAssociationExecutionsResponse * SsmClient::describeAssociationExecutions(const DescribeAssociationExecutionsRequest &request)
 {
@@ -985,7 +1012,7 @@ DescribeAvailablePatchesResponse * SsmClient::describeAvailablePatches(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified Systems Manager
+ * Describes the specified Amazon Web Services Systems Manager document (SSM
  */
 DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentRequest &request)
 {
@@ -998,8 +1025,9 @@ DescribeDocumentResponse * SsmClient::describeDocument(const DescribeDocumentReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the permissions for a Systems Manager document. If you created the document, you are the owner. If a document
- * is shared, it can either be shared privately (by specifying a user's AWS account ID) or publicly (<i>All</i>).
+ * Describes the permissions for a Amazon Web Services Systems Manager document (SSM document). If you created the
+ * document, you are the owner. If a document is shared, it can either be shared privately (by specifying a user's Amazon
+ * Web Services account ID) or publicly (<i>All</i>).
  */
 DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const DescribeDocumentPermissionRequest &request)
 {
@@ -1012,7 +1040,7 @@ DescribeDocumentPermissionResponse * SsmClient::describeDocumentPermission(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * All associations for the
+ * All associations for the managed
  */
 DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInstanceAssociations(const DescribeEffectiveInstanceAssociationsRequest &request)
 {
@@ -1025,8 +1053,8 @@ DescribeEffectiveInstanceAssociationsResponse * SsmClient::describeEffectiveInst
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Note that
- * this API applies only to Windows patch
+ * Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Applies to
+ * patch baselines for Windows
  */
 DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectivePatchesForPatchBaseline(const DescribeEffectivePatchesForPatchBaselineRequest &request)
 {
@@ -1039,7 +1067,7 @@ DescribeEffectivePatchesForPatchBaselineResponse * SsmClient::describeEffectiveP
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The status of the associations for the
+ * The status of the associations for the managed
  */
 DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociationsStatus(const DescribeInstanceAssociationsStatusRequest &request)
 {
@@ -1052,19 +1080,19 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more of your instances, including information about the operating system platform, the version of SSM
- * Agent installed on the instance, instance status, and so
+ * Describes one or more of your managed nodes, including information about the operating system platform, the version of
+ * SSM Agent installed on the managed node, node status, and so
  *
  * on>
  *
- * If you specify one or more instance IDs, it returns information for those instances. If you do not specify instance IDs,
- * it returns information for all your instances. If you specify an instance ID that is not valid or an instance that you
- * do not own, you receive an
+ * If you specify one or more managed node IDs, it returns information for those managed nodes. If you don't specify node
+ * IDs, it returns information for all your managed nodes. If you specify a node ID that isn't valid or a node that you
+ * don't own, you receive an
  *
  * error> <note>
  *
- * The IamRole field for this API action is the Amazon Identity and Access Management (IAM) role assigned to on-premises
- * instances. This call does not return the IAM role for EC2
+ * The <code>IamRole</code> field for this API operation is the Identity and Access Management (IAM) role assigned to
+ * on-premises managed nodes. This call doesn't return the IAM role for EC2
  */
 DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(const DescribeInstanceInformationRequest &request)
 {
@@ -1077,7 +1105,7 @@ DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the high-level patch state of one or more
+ * Retrieves the high-level patch state of one or more managed
  */
 DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(const DescribeInstancePatchStatesRequest &request)
 {
@@ -1090,7 +1118,7 @@ DescribeInstancePatchStatesResponse * SsmClient::describeInstancePatchStates(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the high-level patch state for the instances in the specified patch
+ * Retrieves the high-level patch state for the managed nodes in the specified patch
  */
 DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePatchStatesForPatchGroup(const DescribeInstancePatchStatesForPatchGroupRequest &request)
 {
@@ -1103,8 +1131,8 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the patches on the specified instance and their state relative to the patch baseline being
- * used for the
+ * Retrieves information about the patches on the specified managed node and their state relative to the patch baseline
+ * being used for the
  */
 DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const DescribeInstancePatchesRequest &request)
 {
@@ -1200,9 +1228,9 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
  *
  * window> <note>
  *
- * For maintenance window tasks without a specified target, you cannot supply values for <code>--max-errors</code> and
+ * For maintenance window tasks without a specified target, you can't supply values for <code>--max-errors</code> and
  * <code>--max-concurrency</code>. Instead, the system inserts a placeholder value of <code>1</code>, which may be reported
- * in the response to this command. These values do not affect the running of your task and can be
+ * in the response to this command. These values don't affect the running of your task and can be
  */
 DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTasks(const DescribeMaintenanceWindowTasksRequest &request)
 {
@@ -1215,7 +1243,7 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the maintenance windows in an AWS
+ * Retrieves the maintenance windows in an Amazon Web Services
  */
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
@@ -1228,7 +1256,7 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the maintenance window targets or tasks that an instance is associated
+ * Retrieves information about the maintenance window targets or tasks that a managed node is associated
  */
 DescribeMaintenanceWindowsForTargetResponse * SsmClient::describeMaintenanceWindowsForTarget(const DescribeMaintenanceWindowsForTargetRequest &request)
 {
@@ -1241,17 +1269,17 @@ DescribeMaintenanceWindowsForTargetResponse * SsmClient::describeMaintenanceWind
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Query a set of OpsItems. You must have permission in AWS Identity and Access Management (IAM) to query a list of
- * OpsItems. For more information, see <a
+ * Query a set of OpsItems. You must have permission in Identity and Access Management (IAM) to query a list of OpsItems.
+ * For more information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting started with
- * OpsCenter</a> in the <i>AWS Systems Manager User
+ * OpsCenter</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
- * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
- * the performance and health of their AWS resources. For more information, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
- * the <i>AWS Systems Manager User Guide</i>.
+ * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate, and
+ * remediate operational issues impacting the performance and health of their Amazon Web Services resources. For more
+ * information, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in
+ * the <i>Amazon Web Services Systems Manager User Guide</i>.
  */
 DescribeOpsItemsResponse * SsmClient::describeOpsItems(const DescribeOpsItemsRequest &request)
 {
@@ -1266,13 +1294,19 @@ DescribeOpsItemsResponse * SsmClient::describeOpsItems(const DescribeOpsItemsReq
  *
  * Get information about a
  *
- * parameter> <note>
+ * parameter>
  *
  * Request results are returned on a best-effort basis. If you specify <code>MaxResults</code> in the request, the response
  * includes information up to the limit specified. The number of items returned, however, can be between zero and the value
  * of <code>MaxResults</code>. If the service reaches an internal limit while processing the results, it stops the
  * operation and returns the matching values up to that point and a <code>NextToken</code>. You can specify the
  * <code>NextToken</code> in a subsequent call to get the next set of
+ *
+ * results> <b>
+ *
+ * If you change the KMS key alias for the KMS key used to encrypt a parameter, then you must also update the key alias the
+ * parameter uses to reference KMS. Otherwise, <code>DescribeParameters</code> retrieves whatever the original key alias
+ * was
  */
 DescribeParametersResponse * SsmClient::describeParameters(const DescribeParametersRequest &request)
 {
@@ -1285,7 +1319,7 @@ DescribeParametersResponse * SsmClient::describeParameters(const DescribeParamet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the patch baselines in your AWS
+ * Lists the patch baselines in your Amazon Web Services
  */
 DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const DescribePatchBaselinesRequest &request)
 {
@@ -1298,7 +1332,7 @@ DescribePatchBaselinesResponse * SsmClient::describePatchBaselines(const Describ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns high-level aggregated patch compliance state for a patch
+ * Returns high-level aggregated patch compliance state information for a patch
  */
 DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const DescribePatchGroupStateRequest &request)
 {
@@ -1325,8 +1359,8 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the properties of available patches organized by product, product family, classification, severity, and other
- * properties of available patches. You can use the reported properties in the filters you specify in requests for actions
- * such as <a>CreatePatchBaseline</a>, <a>UpdatePatchBaseline</a>, <a>DescribeAvailablePatches</a>, and
+ * properties of available patches. You can use the reported properties in the filters you specify in requests for
+ * operations such as <a>CreatePatchBaseline</a>, <a>UpdatePatchBaseline</a>, <a>DescribeAvailablePatches</a>, and
  *
  * <a>DescribePatchBaselines</a>>
  *
@@ -1334,43 +1368,44 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
  *
  * type> <dl> <dt>AMAZON_LINUX</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>AMAZON_LINUX_2</dt> <dd>
+ * </p </dd> <dt>AMAZON_LINUX_2</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>CENTOS</dt> <dd>
+ * </p </dd> <dt>CENTOS</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>DEBIAN</dt> <dd>
+ * </p </dd> <dt>DEBIAN</dt> <dd>
  *
- * Valid properties: PRODUCT,
+ * Valid properties: <code>PRODUCT</code> | <code>PRIORITY</code>
  *
- * PRIORIT> </dd> <dt>MACOS</dt> <dd>
+ * </p </dd> <dt>MACOS</dt> <dd>
  *
- * Valid properties: PRODUCT,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code>
  *
- * CLASSIFICATIO> </dd> <dt>ORACLE_LINUX</dt> <dd>
+ * </p </dd> <dt>ORACLE_LINUX</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>REDHAT_ENTERPRISE_LINUX</dt> <dd>
+ * </p </dd> <dt>REDHAT_ENTERPRISE_LINUX</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>SUSE</dt> <dd>
+ * </p </dd> <dt>SUSE</dt> <dd>
  *
- * Valid properties: PRODUCT, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>CLASSIFICATION</code> | <code>SEVERITY</code>
  *
- * SEVERIT> </dd> <dt>UBUNTU</dt> <dd>
+ * </p </dd> <dt>UBUNTU</dt> <dd>
  *
- * Valid properties: PRODUCT,
+ * Valid properties: <code>PRODUCT</code> | <code>PRIORITY</code>
  *
- * PRIORIT> </dd> <dt>WINDOWS</dt> <dd>
+ * </p </dd> <dt>WINDOWS</dt> <dd>
  *
- * Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION,
+ * Valid properties: <code>PRODUCT</code> | <code>PRODUCT_FAMILY</code> | <code>CLASSIFICATION</code> |
+ * <code>MSRC_SEVERITY</code>
  */
 DescribePatchPropertiesResponse * SsmClient::describePatchProperties(const DescribePatchPropertiesRequest &request)
 {
@@ -1396,8 +1431,8 @@ DescribeSessionsResponse * SsmClient::describeSessions(const DescribeSessionsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the association between an OpsItem and a related resource. For example, this API action can delete an Incident
- * Manager incident from an OpsItem. Incident Manager is a capability of AWS Systems
+ * Deletes the association between an OpsItem and a related item. For example, this API operation can delete an Incident
+ * Manager incident from an OpsItem. Incident Manager is a capability of Amazon Web Services Systems
  */
 DisassociateOpsItemRelatedItemResponse * SsmClient::disassociateOpsItemRelatedItem(const DisassociateOpsItemRelatedItemRequest &request)
 {
@@ -1423,10 +1458,10 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the state of the AWS Systems Manager Change Calendar at an optional, specified time. If you specify a time,
- * <code>GetCalendarState</code> returns the state of the calendar at a specific time, and returns the next time that the
- * Change Calendar state will transition. If you do not specify a time, <code>GetCalendarState</code> assumes the current
- * time. Change Calendar entries have two possible states: <code>OPEN</code> or
+ * Gets the state of a Amazon Web Services Systems Manager change calendar at the current time or a specified time. If you
+ * specify a time, <code>GetCalendarState</code> returns the state of the calendar at that specific time, and returns the
+ * next time that the change calendar state will transition. If you don't specify a time, <code>GetCalendarState</code>
+ * uses the current time. Change Calendar entries have two possible states: <code>OPEN</code> or
  *
  * <code>CLOSED</code>>
  *
@@ -1435,9 +1470,9 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
  *
  * <code>CLOSED</code>>
  *
- * For more information about Systems Manager Change Calendar, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar.html">AWS Systems
- * Manager Change Calendar</a> in the <i>AWS Systems Manager User
+ * For more information about Change Calendar, a capability of Amazon Web Services Systems Manager, see <a
+ * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar.html">Amazon Web
+ * Services Systems Manager Change Calendar</a> in the <i>Amazon Web Services Systems Manager User
  */
 GetCalendarStateResponse * SsmClient::getCalendarState(const GetCalendarStateRequest &request)
 {
@@ -1455,8 +1490,8 @@ GetCalendarStateResponse * SsmClient::getCalendarState(const GetCalendarStateReq
  * plugin>
  *
  * <code>GetCommandInvocation</code> only gives the execution status of a plugin in a document. To get the command
- * execution status on a specific instance, use <a>ListCommandInvocations</a>. To get the command execution status across
- * instances, use
+ * execution status on a specific managed node, use <a>ListCommandInvocations</a>. To get the command execution status
+ * across managed nodes, use
  */
 GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandInvocationRequest &request)
 {
@@ -1469,8 +1504,8 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the Session Manager connection status for an instance to determine whether it is running and ready to receive
- * Session Manager
+ * Retrieves the Session Manager connection status for a managed node to determine whether it is running and ready to
+ * receive Session Manager
  */
 GetConnectionStatusResponse * SsmClient::getConnectionStatus(const GetConnectionStatusRequest &request)
 {
@@ -1483,12 +1518,12 @@ GetConnectionStatusResponse * SsmClient::getConnectionStatus(const GetConnection
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
- * example, you can create a default patch baseline for each operating
+ * Retrieves the default patch baseline. Amazon Web Services Systems Manager supports creating multiple default patch
+ * baselines. For example, you can create a default patch baseline for each operating
  *
  * system>
  *
- * If you do not specify an operating system value, the default patch baseline for Windows is
+ * If you don't specify an operating system value, the default patch baseline for Windows is
  */
 GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDefaultPatchBaselineRequest &request)
 {
@@ -1501,8 +1536,16 @@ GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the current snapshot for the patch baseline the instance uses. This API is primarily used by the
- * AWS-RunPatchBaseline Systems Manager document.
+ * Retrieves the current snapshot for the patch baseline the managed node uses. This API is primarily used by the
+ * <code>AWS-RunPatchBaseline</code> Systems Manager document (SSM
+ *
+ * document)> <note>
+ *
+ * If you run the command locally, such as with the Command Line Interface (CLI), the system attempts to use your local
+ * Amazon Web Services credentials and the operation fails. To avoid this, you can run the command in the Amazon Web
+ * Services Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems Manager, with an SSM
+ * document that enables you to target a managed node with a script or command. For example, run the command using the
+ * <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code>
  */
 GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSnapshotForInstance(const GetDeployablePatchSnapshotForInstanceRequest &request)
 {
@@ -1515,7 +1558,7 @@ GetDeployablePatchSnapshotForInstanceResponse * SsmClient::getDeployablePatchSna
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the contents of the specified Systems Manager
+ * Gets the contents of the specified Amazon Web Services Systems Manager document (SSM
  */
 GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
 {
@@ -1528,7 +1571,7 @@ GetDocumentResponse * SsmClient::getDocument(const GetDocumentRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Query inventory
+ * Query inventory information. This includes managed node status, such as <code>Stopped</code> or
  */
 GetInventoryResponse * SsmClient::getInventory(const GetInventoryRequest &request)
 {
@@ -1606,13 +1649,17 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tasks in a maintenance
+ * Retrieves the details of a maintenance window
  *
- * window> <note>
+ * task> <note>
  *
- * For maintenance window tasks without a specified target, you cannot supply values for <code>--max-errors</code> and
+ * For maintenance window tasks without a specified target, you can't supply values for <code>--max-errors</code> and
  * <code>--max-concurrency</code>. Instead, the system inserts a placeholder value of <code>1</code>, which may be reported
- * in the response to this command. These values do not affect the running of your task and can be
+ * in the response to this command. These values don't affect the running of your task and can be
+ *
+ * ignored> </note>
+ *
+ * To retrieve a list of tasks in a maintenance window, instead use the <a>DescribeMaintenanceWindowTasks</a>
  */
 GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const GetMaintenanceWindowTaskRequest &request)
 {
@@ -1625,17 +1672,17 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get information about an OpsItem by using the ID. You must have permission in AWS Identity and Access Management (IAM)
- * to view information about an OpsItem. For more information, see <a
+ * Get information about an OpsItem by using the ID. You must have permission in Identity and Access Management (IAM) to
+ * view information about an OpsItem. For more information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting started with
- * OpsCenter</a> in the <i>AWS Systems Manager User
+ * OpsCenter</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
- * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
- * the performance and health of their AWS resources. For more information, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
- * the <i>AWS Systems Manager User Guide</i>.
+ * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate, and
+ * remediate operational issues impacting the performance and health of their Amazon Web Services resources. For more
+ * information, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in
+ * the <i>Amazon Web Services Systems Manager User Guide</i>.
  */
 GetOpsItemResponse * SsmClient::getOpsItem(const GetOpsItemRequest &request)
 {
@@ -1661,7 +1708,10 @@ GetOpsMetadataResponse * SsmClient::getOpsMetadata(const GetOpsMetadataRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * View a summary of OpsItems based on specified filters and
+ * View a summary of operations metadata (OpsData) based on specified filters and aggregators. OpsData can include
+ * information about Amazon Web Services Systems Manager OpsCenter operational workitems (OpsItems) as well as information
+ * about any Amazon Web Services resource or service configured to report OpsData to Amazon Web Services Systems Manager
+ * Explorer.
  */
 GetOpsSummaryResponse * SsmClient::getOpsSummary(const GetOpsSummaryRequest &request)
 {
@@ -1674,8 +1724,11 @@ GetOpsSummaryResponse * SsmClient::getOpsSummary(const GetOpsSummaryRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get information about a parameter by using the parameter name. Don't confuse this API action with the
- * <a>GetParameters</a> API
+ * Get information about a single parameter by specifying the parameter
+ *
+ * name> <note>
+ *
+ * To get information about more than one parameter at a time, use the <a>GetParameters</a>
  */
 GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &request)
 {
@@ -1689,6 +1742,12 @@ GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the history of all changes to a
+ *
+ * parameter> <b>
+ *
+ * If you change the KMS key alias for the KMS key used to encrypt a parameter, then you must also update the key alias the
+ * parameter uses to reference KMS. Otherwise, <code>GetParameterHistory</code> retrieves whatever the original key alias
+ * was
  */
 GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterHistoryRequest &request)
 {
@@ -1701,7 +1760,11 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get details of a parameter. Don't confuse this API action with the <a>GetParameter</a> API
+ * Get information about one or more parameters by specifying multiple parameter
+ *
+ * names> <note>
+ *
+ * To get information about a single parameter, you can use the <a>GetParameter</a> operation
  */
 GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &request)
 {
@@ -1716,7 +1779,7 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
  *
  * Retrieve information about one or more parameters in a specific hierarchy.
  *
- * </p <note>
+ * </p
  *
  * Request results are returned on a best-effort basis. If you specify <code>MaxResults</code> in the request, the response
  * includes information up to the limit specified. The number of items returned, however, can be between zero and the value
@@ -1761,22 +1824,23 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
- * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
- * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
- * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ * <code>ServiceSetting</code> is an account-level setting for an Amazon Web Services service. This setting defines how a
+ * user interacts with or uses a service or a feature of a service. For example, if an Amazon Web Services service charges
+ * money to the account based on feature or service usage, then the Amazon Web Services service team might create a default
+ * setting of <code>false</code>. This means the user can't use this feature unless they change the setting to
+ * <code>true</code> and intentionally opt in for a paid
  *
  * feature>
  *
- * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
- * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
- * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>UpdateServiceSetting</a> API
- * action to change the default setting. Or use the <a>ResetServiceSetting</a> to change the value back to the original
- * value defined by the AWS service
+ * Services map a <code>SettingId</code> object to a setting value. Amazon Web Services services teams define the default
+ * value for a <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default
+ * value if you have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the
+ * <a>UpdateServiceSetting</a> API operation to change the default setting. Or use the <a>ResetServiceSetting</a> to change
+ * the value back to the original value defined by the Amazon Web Services service
  *
  * team>
  *
- * Query the current service setting for the account.
+ * Query the current service setting for the Amazon Web Services account.
  */
 GetServiceSettingResponse * SsmClient::getServiceSetting(const GetServiceSettingRequest &request)
 {
@@ -1790,8 +1854,8 @@ GetServiceSettingResponse * SsmClient::getServiceSetting(const GetServiceSetting
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * A parameter label is a user-defined alias to help you manage different versions of a parameter. When you modify a
- * parameter, Systems Manager automatically saves a new version and increments the version number by one. A label can help
- * you remember the purpose of a parameter when there are multiple versions.
+ * parameter, Amazon Web Services Systems Manager automatically saves a new version and increments the version number by
+ * one. A label can help you remember the purpose of a parameter when there are multiple versions.
  *
  * </p
  *
@@ -1828,8 +1892,8 @@ GetServiceSettingResponse * SsmClient::getServiceSetting(const GetServiceSetting
  *
  * (_)> </li> <li>
  *
- * Labels can't begin with a number, "aws," or "ssm" (not case sensitive). If a label fails to meet these requirements,
- * then the label is not associated with a parameter and the system displays it in the list of
+ * Labels can't begin with a number, "<code>aws</code>" or "<code>ssm</code>" (not case sensitive). If a label fails to
+ * meet these requirements, then the label isn't associated with a parameter and the system displays it in the list of
  */
 LabelParameterVersionResponse * SsmClient::labelParameterVersion(const LabelParameterVersionRequest &request)
 {
@@ -1855,8 +1919,9 @@ ListAssociationVersionsResponse * SsmClient::listAssociationVersions(const ListA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all State Manager associations in the current AWS account and Region. You can limit the results to a specific
- * State Manager association document or instance by specifying a
+ * Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region. You
+ * can limit the results to a specific State Manager association document or managed node by specifying a filter. State
+ * Manager is a capability of Amazon Web Services Systems
  */
 ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsRequest &request)
 {
@@ -1869,9 +1934,10 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command
- * invocation applies to one instance. For example, if a user runs SendCommand against three instances, then a command
- * invocation is created for each requested instance ID. ListCommandInvocations provide status about command
+ * An invocation is copy of a command sent to a specific managed node. A command can apply to one or more managed nodes. A
+ * command invocation applies to one managed node. For example, if a user runs <code>SendCommand</code> against three
+ * managed nodes, then a command invocation is created for each requested managed node ID.
+ * <code>ListCommandInvocations</code> provide status about command
  */
 ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCommandInvocationsRequest &request)
 {
@@ -1884,7 +1950,7 @@ ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCom
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the commands requested by users of the AWS
+ * Lists the commands requested by users of the Amazon Web Services
  */
 ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &request)
 {
@@ -1897,7 +1963,7 @@ ListCommandsResponse * SsmClient::listCommands(const ListCommandsRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For a specified resource ID, this API action returns a list of compliance statuses for different resource types.
+ * For a specified resource ID, this API operation returns a list of compliance statuses for different resource types.
  * Currently, you can only specify one resource ID per call. List results depend on the criteria specified in the
  */
 ListComplianceItemsResponse * SsmClient::listComplianceItems(const ListComplianceItemsRequest &request)
@@ -1925,7 +1991,7 @@ ListComplianceSummariesResponse * SsmClient::listComplianceSummaries(const ListC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Information about approval reviews for a version of an SSM
+ * Information about approval reviews for a version of a change template in Change
  */
 ListDocumentMetadataHistoryResponse * SsmClient::listDocumentMetadataHistory(const ListDocumentMetadataHistoryRequest &request)
 {
@@ -1951,8 +2017,8 @@ ListDocumentVersionsResponse * SsmClient::listDocumentVersions(const ListDocumen
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all Systems Manager (SSM) documents in the current AWS account and Region. You can limit the results of this
- * request by using a
+ * Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services Region.
+ * You can limit the results of this request by using a
  */
 ListDocumentsResponse * SsmClient::listDocuments(const ListDocumentsRequest &request)
 {
@@ -1978,8 +2044,8 @@ ListInventoryEntriesResponse * SsmClient::listInventoryEntries(const ListInvento
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of all OpsItem events in the current AWS account and Region. You can limit the results to events
- * associated with specific OpsItems by specifying a
+ * Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account. You can
+ * limit the results to events associated with specific OpsItems by specifying a
  */
 ListOpsItemEventsResponse * SsmClient::listOpsItemEvents(const ListOpsItemEventsRequest &request)
 {
@@ -1992,7 +2058,8 @@ ListOpsItemEventsResponse * SsmClient::listOpsItemEvents(const ListOpsItemEvents
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all related-item resources associated with an
+ * Lists all related-item resources associated with a Systems Manager OpsCenter OpsItem. OpsCenter is a capability of
+ * Amazon Web Services Systems
  */
 ListOpsItemRelatedItemsResponse * SsmClient::listOpsItemRelatedItems(const ListOpsItemRelatedItemsRequest &request)
 {
@@ -2005,7 +2072,8 @@ ListOpsItemRelatedItemsResponse * SsmClient::listOpsItemRelatedItems(const ListO
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Systems Manager calls this API action when displaying all Application Manager OpsMetadata objects or
+ * Amazon Web Services Systems Manager calls this API operation when displaying all Application Manager OpsMetadata objects
+ * or
  */
 ListOpsMetadataResponse * SsmClient::listOpsMetadata(const ListOpsMetadataRequest &request)
 {
@@ -2055,6 +2123,10 @@ ListResourceDataSyncResponse * SsmClient::listResourceDataSync(const ListResourc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of the tags assigned to the specified
+ *
+ * resource>
+ *
+ * For information about the ID format for each supported resource type, see
  */
 ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -2067,9 +2139,9 @@ ListTagsForResourceResponse * SsmClient::listTagsForResource(const ListTagsForRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Shares a Systems Manager document publicly or privately. If you share a document privately, you must specify the AWS
- * user account IDs for those people who can use the document. If you share a document publicly, you must specify
- * <i>All</i> as the account
+ * Shares a Amazon Web Services Systems Manager document (SSM document)publicly or privately. If you share a document
+ * privately, you must specify the Amazon Web Services user account IDs for those people who can use the document. If you
+ * share a document publicly, you must specify <i>All</i> as the account
  */
 ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const ModifyDocumentPermissionRequest &request)
 {
@@ -2082,9 +2154,9 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers a compliance type and other compliance details on a designated resource. This action lets you register custom
- * compliance details with a resource. This call overwrites existing compliance information on the resource, so you must
- * provide a full list of compliance items each time that you send the
+ * Registers a compliance type and other compliance details on a designated resource. This operation lets you register
+ * custom compliance details with a resource. This call overwrites existing compliance information on the resource, so you
+ * must provide a full list of compliance items each time that you send the
  *
  * request>
  *
@@ -2100,9 +2172,9 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  *
  * Custom:<code>string</code>> </li> <li>
  *
- * ExecutionTime. The time the patch, association, or custom compliance item was applied to the
+ * ExecutionTime. The time the patch, association, or custom compliance item was applied to the managed
  *
- * instance> </li> <li>
+ * node> </li> <li>
  *
  * Id: The patch, association, or custom compliance
  *
@@ -2118,11 +2190,11 @@ ModifyDocumentPermissionResponse * SsmClient::modifyDocumentPermission(const Mod
  *
  * Severity: A patch severity. For example,
  *
- * <code>critical</code>> </li> <li>
+ * <code>Critical</code>> </li> <li>
  *
- * DocumentName: A SSM document name. For example,
+ * DocumentName: An SSM document name. For example,
  *
- * AWS-RunPatchBaseline> </li> <li>
+ * <code>AWS-RunPatchBaseline</code>> </li> <li>
  *
  * DocumentVersion: An SSM document version number. For example,
  *
@@ -2162,8 +2234,8 @@ PutComplianceItemsResponse * SsmClient::putComplianceItems(const PutComplianceIt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Bulk update custom inventory items on one more instance. The request adds an inventory item, if it doesn't already
- * exist, or updates an inventory item, if it does
+ * Bulk update custom inventory items on one or more managed nodes. The request adds an inventory item, if it doesn't
+ * already exist, or updates an inventory item, if it does
  */
 PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &request)
 {
@@ -2193,9 +2265,9 @@ PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &reques
  *
  * system>
  *
- * To reset the AWS predefined patch baseline as the default, specify the full patch baseline ARN as the baseline ID value.
- * For example, for CentOS, specify <code>arn:aws:ssm:us-east-2:733109147000:patchbaseline/pb-0574b43a65ea646ed</code>
- * instead of
+ * To reset the Amazon Web Services-predefined patch baseline as the default, specify the full patch baseline Amazon
+ * Resource Name (ARN) as the baseline ID value. For example, for CentOS, specify
+ * <code>arn:aws:ssm:us-east-2:733109147000:patchbaseline/pb-0574b43a65ea646ed</code> instead of
  */
 RegisterDefaultPatchBaselineResponse * SsmClient::registerDefaultPatchBaseline(const RegisterDefaultPatchBaselineRequest &request)
 {
@@ -2260,21 +2332,23 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
- * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
- * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
- * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ * <code>ServiceSetting</code> is an account-level setting for an Amazon Web Services service. This setting defines how a
+ * user interacts with or uses a service or a feature of a service. For example, if an Amazon Web Services service charges
+ * money to the account based on feature or service usage, then the Amazon Web Services service team might create a default
+ * setting of "false". This means the user can't use this feature unless they change the setting to "true" and
+ * intentionally opt in for a paid
  *
  * feature>
  *
- * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
- * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
- * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a> API action
- * to view the current value. Use the <a>UpdateServiceSetting</a> API action to change the default setting.
+ * Services map a <code>SettingId</code> object to a setting value. Amazon Web Services services teams define the default
+ * value for a <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default
+ * value if you have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a>
+ * API operation to view the current value. Use the <a>UpdateServiceSetting</a> API operation to change the default
+ * setting.
  *
  * </p
  *
- * Reset the service setting for the account to the default value as provisioned by the AWS service team.
+ * Reset the service setting for the account to the default value as provisioned by the Amazon Web Services service team.
  */
 ResetServiceSettingResponse * SsmClient::resetServiceSetting(const ResetServiceSettingRequest &request)
 {
@@ -2287,13 +2361,13 @@ ResetServiceSettingResponse * SsmClient::resetServiceSetting(const ResetServiceS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Reconnects a session to an instance after it has been disconnected. Connections can be resumed for disconnected
+ * Reconnects a session to a managed node after it has been disconnected. Connections can be resumed for disconnected
  * sessions, but not terminated
  *
  * sessions> <note>
  *
  * This command is primarily for use by client machines to automatically reconnect during intermittent network issues. It
- * is not intended for any other
+ * isn't intended for any other
  */
 ResumeSessionResponse * SsmClient::resumeSession(const ResumeSessionRequest &request)
 {
@@ -2332,7 +2406,7 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this API action to run an association immediately and only one time. This action can be helpful when troubleshooting
+ * Runs an association immediately and only one time. This operation can be helpful when troubleshooting
  */
 StartAssociationsOnceResponse * SsmClient::startAssociationsOnce(const StartAssociationsOnceRequest &request)
 {
@@ -2358,8 +2432,8 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a change request for Change Manager. The runbooks (Automation documents) specified in the change request run
- * only after all required approvals for the change request have been
+ * Creates a change request for Change Manager. The Automation runbooks specified in the change request run only after all
+ * required approvals for the change request have been
  */
 StartChangeRequestExecutionResponse * SsmClient::startChangeRequestExecution(const StartChangeRequestExecutionRequest &request)
 {
@@ -2372,19 +2446,20 @@ StartChangeRequestExecutionResponse * SsmClient::startChangeRequestExecution(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a connection to a target (for example, an instance) for a Session Manager session. Returns a URL and token
+ * Initiates a connection to a target (for example, a managed node) for a Session Manager session. Returns a URL and token
  * that can be used to open a WebSocket connection for sending input and receiving
  *
  * outputs> <note>
  *
- * AWS CLI usage: <code>start-session</code> is an interactive command that requires the Session Manager plugin to be
- * installed on the client machine making the call. For information, see <a
+ * Amazon Web Services CLI usage: <code>start-session</code> is an interactive command that requires the Session Manager
+ * plugin to be installed on the client machine making the call. For information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html">Install
- * the Session Manager plugin for the AWS CLI</a> in the <i>AWS Systems Manager User
+ * the Session Manager plugin for the Amazon Web Services CLI</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
- * AWS Tools for PowerShell usage: Start-SSMSession is not currently supported by AWS Tools for PowerShell on Windows local
+ * Amazon Web Services Tools for PowerShell usage: Start-SSMSession isn't currently supported by Amazon Web Services Tools
+ * for PowerShell on Windows local
  */
 StartSessionResponse * SsmClient::startSession(const StartSessionRequest &request)
 {
@@ -2411,7 +2486,7 @@ StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Permanently ends a session and closes the data connection between the Session Manager client and SSM Agent on the
- * instance. A terminated session cannot be
+ * managed node. A terminated session can't be
  */
 TerminateSessionResponse * SsmClient::terminateSession(const TerminateSessionRequest &request)
 {
@@ -2438,18 +2513,25 @@ UnlabelParameterVersionResponse * SsmClient::unlabelParameterVersion(const Unlab
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an association. You can update the association name and version, the document version, schedule, parameters, and
- * Amazon S3 output.
+ * Amazon Simple Storage Service (Amazon S3) output. When you call <code>UpdateAssociation</code>, the system removes all
+ * optional parameters from the request and overwrites the association with null values for those parameters. This is by
+ * design. You must specify all optional parameters in the call, even if you are not changing the parameters. This includes
+ * the <code>Name</code> parameter. Before calling this API action, we recommend that you call the
+ * <a>DescribeAssociation</a> API operation and make a note of all optional parameters required for your
+ * <code>UpdateAssociation</code>
  *
- * </p
+ * call>
  *
- * In order to call this API action, your IAM user account, group, or role must be configured with permission to call the
- * <a>DescribeAssociation</a> API action. If you don't have permission to call DescribeAssociation, then you receive the
- * following error: <code>An error occurred (AccessDeniedException) when calling the UpdateAssociation operation: User:
- * &lt;user_arn&gt; is not authorized to perform: ssm:DescribeAssociation on resource: &lt;resource_arn&gt;</code>
+ * In order to call this API operation, your Identity and Access Management (IAM) user account, group, or role must be
+ * configured with permission to call the <a>DescribeAssociation</a> API operation. If you don't have permission to call
+ * <code>DescribeAssociation</code>, then you receive the following error: <code>An error occurred (AccessDeniedException)
+ * when calling the UpdateAssociation operation: User: <user_arn> isn't authorized to perform: ssm:DescribeAssociation on
+ * resource: <resource_arn></code>
  *
  * </p <b>
  *
- * When you update an association, the association immediately runs against the specified
+ * When you update an association, the association immediately runs against the specified targets. You can add the
+ * <code>ApplyOnlyAtCronInterval</code> parameter to run the association during the next schedule
  */
 UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociationRequest &request)
 {
@@ -2462,7 +2544,14 @@ UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the status of the Systems Manager document associated with the specified
+ * Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the specified
+ * managed
+ *
+ * node>
+ *
+ * <code>UpdateAssociationStatus</code> is primarily used by the Amazon Web Services Systems Manager Agent (SSM Agent) to
+ * report status updates about your associations and is only used for associations created with the <code>InstanceId</code>
+ * legacy
  */
 UpdateAssociationStatusResponse * SsmClient::updateAssociationStatus(const UpdateAssociationStatusRequest &request)
 {
@@ -2489,6 +2578,11 @@ UpdateDocumentResponse * SsmClient::updateDocument(const UpdateDocumentRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Set the default version of a document.
+ *
+ * </p <note>
+ *
+ * If you change a document version for a State Manager association, Systems Manager immediately runs the association
+ * unless you previously specifed the <code>apply-only-at-cron-interval</code>
  */
 UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(const UpdateDocumentDefaultVersionRequest &request)
 {
@@ -2501,7 +2595,7 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates information related to approval reviews for a specific version of a
+ * Updates information related to approval reviews for a specific version of a change template in Change
  */
 UpdateDocumentMetadataResponse * SsmClient::updateDocumentMetadata(const UpdateDocumentMetadataRequest &request)
 {
@@ -2557,7 +2651,7 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
  *
  * <a>Target</a>> </li> </ul> <note>
  *
- * If a parameter is null, then the corresponding field is not
+ * If a parameter is null, then the corresponding field isn't
  */
 UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget(const UpdateMaintenanceWindowTargetRequest &request)
 {
@@ -2574,38 +2668,49 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  *
  * values> <ul> <li>
  *
- * TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to
+ * <code>TaskARN</code>. For example, you can change a <code>RUN_COMMAND</code> task from
+ * <code>AWS-RunPowerShellScript</code> to
  *
- * AWS-RunShellScript> </li> <li>
+ * <code>AWS-RunShellScript</code>> </li> <li>
  *
- * ServiceRoleAr> </li> <li>
+ * <code>ServiceRoleArn</code>
  *
- * TaskInvocationParameter> </li> <li>
+ * </p </li> <li>
  *
- * Priorit> </li> <li>
+ * <code>TaskInvocationParameters</code>
  *
- * MaxConcurrenc> </li> <li>
+ * </p </li> <li>
  *
- * MaxError> </li> </ul> <note>
+ * <code>Priority</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>MaxConcurrency</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>MaxErrors</code>
+ *
+ * </p </li> </ul> <note>
  *
  * One or more targets must be specified for maintenance window Run Command-type tasks. Depending on the task, targets are
- * optional for other maintenance window task types (Automation, AWS Lambda, and AWS Step Functions). For more information
- * about running tasks that do not specify targets, see <a
+ * optional for other maintenance window task types (Automation, Lambda, and Step Functions). For more information about
+ * running tasks that don't specify targets, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html">Registering
- * maintenance window tasks without targets</a> in the <i>AWS Systems Manager User
+ * maintenance window tasks without targets</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>> </note>
  *
- * If the value for a parameter in <code>UpdateMaintenanceWindowTask</code> is null, then the corresponding field is not
+ * If the value for a parameter in <code>UpdateMaintenanceWindowTask</code> is null, then the corresponding field isn't
  * modified. If you set <code>Replace</code> to true, then all fields required by the
- * <a>RegisterTaskWithMaintenanceWindow</a> action are required for this request. Optional fields that aren't specified are
- * set to
+ * <a>RegisterTaskWithMaintenanceWindow</a> operation are required for this request. Optional fields that aren't specified
+ * are set to
  *
  * null> <b>
  *
  * When you update a maintenance window task that has options specified in <code>TaskInvocationParameters</code>, you must
- * provide again all the <code>TaskInvocationParameters</code> values that you want to retain. The values you do not
- * specify again are removed. For example, suppose that when you registered a Run Command task, you specified
+ * provide again all the <code>TaskInvocationParameters</code> values that you want to retain. The values you don't specify
+ * again are removed. For example, suppose that when you registered a Run Command task, you specified
  * <code>TaskInvocationParameters</code> values for <code>Comment</code>, <code>NotificationConfig</code>, and
  * <code>OutputS3BucketName</code>. If you update the maintenance window task and specify only a different
  * <code>OutputS3BucketName</code> value, the values for <code>Comment</code> and <code>NotificationConfig</code> are
@@ -2621,8 +2726,8 @@ UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the Amazon Identity and Access Management (IAM) role that is assigned to the on-premises instance or virtual
- * machines (VM). IAM roles are first assigned to these hybrid instances during the activation process. For more
+ * Changes the Identity and Access Management (IAM) role that is assigned to the on-premises server, edge device, or
+ * virtual machines (VM). IAM roles are first assigned to these hybrid nodes during the activation process. For more
  * information, see
  */
 UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const UpdateManagedInstanceRoleRequest &request)
@@ -2636,17 +2741,17 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Edit or change an OpsItem. You must have permission in AWS Identity and Access Management (IAM) to update an OpsItem.
- * For more information, see <a
+ * Edit or change an OpsItem. You must have permission in Identity and Access Management (IAM) to update an OpsItem. For
+ * more information, see <a
  * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting started with
- * OpsCenter</a> in the <i>AWS Systems Manager User
+ * OpsCenter</a> in the <i>Amazon Web Services Systems Manager User
  *
  * Guide</i>>
  *
- * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
- * the performance and health of their AWS resources. For more information, see <a
- * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
- * the <i>AWS Systems Manager User Guide</i>.
+ * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate, and
+ * remediate operational issues impacting the performance and health of their Amazon Web Services resources. For more
+ * information, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a> in
+ * the <i>Amazon Web Services Systems Manager User Guide</i>.
  */
 UpdateOpsItemResponse * SsmClient::updateOpsItem(const UpdateOpsItemRequest &request)
 {
@@ -2659,7 +2764,7 @@ UpdateOpsItemResponse * SsmClient::updateOpsItem(const UpdateOpsItemRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Systems Manager calls this API action when you edit OpsMetadata in Application
+ * Amazon Web Services Systems Manager calls this API operation when you edit OpsMetadata in Application
  */
 UpdateOpsMetadataResponse * SsmClient::updateOpsMetadata(const UpdateOpsMetadataRequest &request)
 {
@@ -2676,8 +2781,7 @@ UpdateOpsMetadataResponse * SsmClient::updateOpsMetadata(const UpdateOpsMetadata
  *
  * unchanged> <note>
  *
- * For information about valid key and value pairs in <code>PatchFilters</code> for each supported operating system type,
- * see <a
+ * For information about valid key-value pairs in <code>PatchFilters</code> for each supported operating system type, see
  */
 UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBaselineRequest &request)
 {
@@ -2691,13 +2795,13 @@ UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBa
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Update a resource data sync. After you create a resource data sync for a Region, you can't change the account options
- * for that sync. For example, if you create a sync in the us-east-2 (Ohio) Region and you choose the Include only the
- * current account option, you can't edit that sync later and choose the Include all accounts from my AWS Organizations
- * configuration option. Instead, you must delete the first resource data sync, and create a new
+ * for that sync. For example, if you create a sync in the us-east-2 (Ohio) Region and you choose the <code>Include only
+ * the current account</code> option, you can't edit that sync later and choose the <code>Include all accounts from my
+ * Organizations configuration</code> option. Instead, you must delete the first resource data sync, and create a new
  *
  * one> <note>
  *
- * This API action only supports a resource data sync that was created with a SyncFromSource
+ * This API operation only supports a resource data sync that was created with a SyncFromSource
  */
 UpdateResourceDataSyncResponse * SsmClient::updateResourceDataSync(const UpdateResourceDataSyncRequest &request)
 {
@@ -2710,18 +2814,19 @@ UpdateResourceDataSyncResponse * SsmClient::updateResourceDataSync(const UpdateR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
- * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
- * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
- * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ * <code>ServiceSetting</code> is an account-level setting for an Amazon Web Services service. This setting defines how a
+ * user interacts with or uses a service or a feature of a service. For example, if an Amazon Web Services service charges
+ * money to the account based on feature or service usage, then the Amazon Web Services service team might create a default
+ * setting of "false". This means the user can't use this feature unless they change the setting to "true" and
+ * intentionally opt in for a paid
  *
  * feature>
  *
- * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
- * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
- * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a> API action
- * to view the current value. Or, use the <a>ResetServiceSetting</a> to change the value back to the original value defined
- * by the AWS service
+ * Services map a <code>SettingId</code> object to a setting value. Amazon Web Services services teams define the default
+ * value for a <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default
+ * value if you have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a>
+ * API operation to view the current value. Or, use the <a>ResetServiceSetting</a> to change the value back to the original
+ * value defined by the Amazon Web Services service
  *
  * team>
  *
@@ -2733,12 +2838,12 @@ UpdateServiceSettingResponse * SsmClient::updateServiceSetting(const UpdateServi
 }
 
 /*!
- * \class QtAws::SSM::SsmClientPrivate
+ * \class QtAws::Ssm::SsmClientPrivate
  * \brief The SsmClientPrivate class provides private implementation for SsmClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  */
 
 /*!
@@ -2750,5 +2855,5 @@ SsmClientPrivate::SsmClientPrivate(SsmClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws

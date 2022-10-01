@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetReplicationSetRequest
- * \brief The GetReplicationSetRequest class provides an interface for SSMIncidents GetReplicationSet requests.
+ * \class QtAws::SsmIncidents::GetReplicationSetRequest
+ * \brief The GetReplicationSetRequest class provides an interface for SsmIncidents GetReplicationSet requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getReplicationSet
+ * \sa SsmIncidentsClient::getReplicationSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetReplicationSetRequest::GetReplicationSetRequest(const GetReplicationSetRequest &other)
-    : SSMIncidentsRequest(new GetReplicationSetRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new GetReplicationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ GetReplicationSetRequest::GetReplicationSetRequest(const GetReplicationSetReques
  * Constructs a GetReplicationSetRequest object.
  */
 GetReplicationSetRequest::GetReplicationSetRequest()
-    : SSMIncidentsRequest(new GetReplicationSetRequestPrivate(SSMIncidentsRequest::GetReplicationSetAction, this))
+    : SsmIncidentsRequest(new GetReplicationSetRequestPrivate(SsmIncidentsRequest::GetReplicationSetAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetReplicationSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetReplicationSetRequestPrivate
+ * \class QtAws::SsmIncidents::GetReplicationSetRequestPrivate
  * \brief The GetReplicationSetRequestPrivate class provides private implementation for GetReplicationSetRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a GetReplicationSetRequestPrivate object for SSMIncidents \a action,
+ * Constructs a GetReplicationSetRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 GetReplicationSetRequestPrivate::GetReplicationSetRequestPrivate(
-    const SSMIncidentsRequest::Action action, GetReplicationSetRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, GetReplicationSetRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ GetReplicationSetRequestPrivate::GetReplicationSetRequestPrivate(
  */
 GetReplicationSetRequestPrivate::GetReplicationSetRequestPrivate(
     const GetReplicationSetRequestPrivate &other, GetReplicationSetRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

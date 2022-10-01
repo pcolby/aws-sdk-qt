@@ -72,56 +72,65 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ACMPCA
- * \brief Contains classess for accessing AWS Certificate Manager Private Certificate Authority (ACM-PCA).
+ * \namespace QtAws::AcmPca
+ * \brief Contains classess for accessing AWS Certificate Manager Private Certificate Authority.
  *
- * \inmodule QtAwsAcmpca
+ * \inmodule QtAwsAcmPca
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::AcmpcaClient
- * \brief The AcmpcaClient class provides access to the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.
+ * \class QtAws::AcmPca::AcmPcaClient
+ * \brief The AcmPcaClient class provides access to the AWS Certificate Manager Private Certificate Authority service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  *
- *  This is the <i>ACM Private CA API Reference</i>. It provides descriptions, syntax, and usage examples for each of the
- *  actions and data types involved in creating and managing private certificate authorities (CA) for your
+ *  This is the <i>Certificate Manager Private Certificate Authority (PCA) API Reference</i>. It provides descriptions,
+ *  syntax, and usage examples for each of the actions and data types involved in creating and managing a private
+ *  certificate authority (CA) for your
  * 
  *  organization>
  * 
- *  The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can
- *  use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For
- *  more information, see <a href="https://aws.amazon.com/tools/#SDKs">AWS
+ *  The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one
+ *  of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you
+ *  prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services
  * 
- *  SDKs</a>> <note>
+ *  SDKs</a>>
  * 
- *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
- *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
- *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API operation has a quota that determines the number of times the operation can be called per
+ *  second. ACM Private CA throttles API requests at different rates depending on the operation. Throttling means that ACM
+ *  Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of
+ *  requests per second. When a request is throttled, ACM Private CA returns a <a
+ *  href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. ACM
+ *  Private CA does not guarantee a minimum request rate for APIs.
+ * 
+ *  </p
+ * 
+ *  To see an up-to-date list of your ACM Private CA quotas, or to request a quota increase, log into your Amazon Web
+ *  Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a>
  */
 
 /*!
- * \brief Constructs a AcmpcaClient object.
+ * \brief Constructs a AcmPcaClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-AcmpcaClient::AcmpcaClient(
+AcmPcaClient::AcmPcaClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AcmpcaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AcmPcaClientPrivate(this), parent)
 {
-    Q_D(AcmpcaClient);
+    Q_D(AcmPcaClient);
     d->apiVersion = QStringLiteral("2017-08-22");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("acm-pca");
@@ -132,7 +141,7 @@ AcmpcaClient::AcmpcaClient(
 }
 
 /*!
- * \overload AcmpcaClient()
+ * \overload AcmPcaClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -142,14 +151,14 @@ AcmpcaClient::AcmpcaClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-AcmpcaClient::AcmpcaClient(
+AcmPcaClient::AcmPcaClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AcmpcaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new AcmPcaClientPrivate(this), parent)
 {
-    Q_D(AcmpcaClient);
+    Q_D(AcmPcaClient);
     d->apiVersion = QStringLiteral("2017-08-22");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -160,18 +169,19 @@ AcmpcaClient::AcmpcaClient(
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * CreateCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a root or subordinate private certificate authority (CA). You must specify the CA configuration, the certificate
- * revocation list (CRL) configuration, the CA type, and an optional idempotency token to avoid accidental creation of
- * multiple CAs. The CA configuration specifies the name of the algorithm and key size to be used to create the CA private
- * key, the type of signing algorithm that the CA uses, and X.500 subject information. The CRL configuration specifies the
- * CRL expiration period in days (the validity period of the CRL), the Amazon S3 bucket that will contain the CRL, and a
- * CNAME alias for the S3 bucket that is included in certificates issued by the CA. If successful, this action returns the
- * Amazon Resource Name (ARN) of the
+ * Creates a root or subordinate private certificate authority (CA). You must specify the CA configuration, an optional
+ * configuration for Online Certificate Status Protocol (OCSP) and/or a certificate revocation list (CRL), the CA type, and
+ * an optional idempotency token to avoid accidental creation of multiple CAs. The CA configuration specifies the name of
+ * the algorithm and key size to be used to create the CA private key, the type of signing algorithm that the CA uses, and
+ * X.500 subject information. The OCSP configuration can optionally specify a custom URL for the OCSP responder. The CRL
+ * configuration specifies the CRL expiration period in days (the validity period of the CRL), the Amazon S3 bucket that
+ * will contain the CRL, and a CNAME alias for the S3 bucket that is included in certificates issued by the CA. If
+ * successful, this action returns the Amazon Resource Name (ARN) of the
  *
  * CA>
  *
@@ -182,15 +192,16 @@ AcmpcaClient::AcmpcaClient(
  *
  * Both PCA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal
  * making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see
- * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuthAccess.html">Configure Access to ACM Private
+ * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html#s3-policies">Access policies for CRLs in
+ * Amazon
  */
-CreateCertificateAuthorityResponse * AcmpcaClient::createCertificateAuthority(const CreateCertificateAuthorityRequest &request)
+CreateCertificateAuthorityResponse * AcmPcaClient::createCertificateAuthority(const CreateCertificateAuthorityRequest &request)
 {
     return qobject_cast<CreateCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * CreateCertificateAuthorityAuditReportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -205,28 +216,33 @@ CreateCertificateAuthorityResponse * AcmpcaClient::createCertificateAuthority(co
  *
  * Both PCA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal
  * making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see
- * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuthAccess.html">Configure Access to ACM Private
+ * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html#s3-policies">Access policies for CRLs in
+ * Amazon
  *
- * CA</a>> </note>
+ * S3</a>> </note>
  *
  * ACM Private CA assets that are stored in Amazon S3 can be protected with encryption. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuditReport.html#audit-report-encryption">Encrypting Your
  * Audit
+ *
+ * Reports</a>> <note>
+ *
+ * You can generate a maximum of one report every 30
  */
-CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateAuthorityAuditReport(const CreateCertificateAuthorityAuditReportRequest &request)
+CreateCertificateAuthorityAuditReportResponse * AcmPcaClient::createCertificateAuthorityAuditReport(const CreateCertificateAuthorityAuditReportRequest &request)
 {
     return qobject_cast<CreateCertificateAuthorityAuditReportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * CreatePermissionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Grants one or more permissions on a private CA to the AWS Certificate Manager (ACM) service principal
+ * Grants one or more permissions on a private CA to the Certificate Manager (ACM) service principal
  * (<code>acm.amazonaws.com</code>). These permissions allow ACM to issue and renew ACM certificates that reside in the
- * same AWS account as the
+ * same Amazon Web Services account as the
  *
  * CA>
  *
@@ -253,13 +269,13 @@ CreateCertificateAuthorityAuditReportResponse * AcmpcaClient::createCertificateA
  * issuance and renewals. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
  */
-CreatePermissionResponse * AcmpcaClient::createPermission(const CreatePermissionRequest &request)
+CreatePermissionResponse * AcmPcaClient::createPermission(const CreatePermissionRequest &request)
 {
     return qobject_cast<CreatePermissionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * DeleteCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -297,23 +313,23 @@ CreatePermissionResponse * AcmpcaClient::createPermission(const CreatePermission
  * restore an eligible CA, call the <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_RestoreCertificateAuthority.html">RestoreCertificateAuthority</a>
  */
-DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(const DeleteCertificateAuthorityRequest &request)
+DeleteCertificateAuthorityResponse * AcmPcaClient::deleteCertificateAuthority(const DeleteCertificateAuthorityRequest &request)
 {
     return qobject_cast<DeleteCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * DeletePermissionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Revokes permissions on a private CA granted to the AWS Certificate Manager (ACM) service principal (acm.amazonaws.com).
+ * Revokes permissions on a private CA granted to the Certificate Manager (ACM) service principal (acm.amazonaws.com).
  *
  * </p
  *
- * These permissions allow ACM to issue and renew ACM certificates that reside in the same AWS account as the CA. If you
- * revoke these permissions, ACM will no longer renew the affected certificates
+ * These permissions allow ACM to issue and renew ACM certificates that reside in the same Amazon Web Services account as
+ * the CA. If you revoke these permissions, ACM will no longer renew the affected certificates
  *
  * automatically>
  *
@@ -340,13 +356,13 @@ DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(co
  * issuance and renewals. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
  */
-DeletePermissionResponse * AcmpcaClient::deletePermission(const DeletePermissionRequest &request)
+DeletePermissionResponse * AcmPcaClient::deletePermission(const DeletePermissionRequest &request)
 {
     return qobject_cast<DeletePermissionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * DeletePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -356,12 +372,12 @@ DeletePermissionResponse * AcmpcaClient::deletePermission(const DeletePermission
  *
  * successful>
  *
- * If you delete a policy that was applied through AWS Resource Access Manager (RAM), the CA will be removed from all
- * shares in which it was included.
+ * If you delete a policy that was applied through Amazon Web Services Resource Access Manager (RAM), the CA will be
+ * removed from all shares in which it was included.
  *
  * </p
  *
- * The AWS Certificate Manager Service Linked Role that the policy supports is not affected when you delete the policy.
+ * The Certificate Manager Service Linked Role that the policy supports is not affected when you delete the policy.
  *
  * </p
  *
@@ -373,13 +389,14 @@ DeletePermissionResponse * AcmpcaClient::deletePermission(const DeletePermission
  *
  * </p <ul> <li>
  *
- * A policy grants access on a private CA to an AWS customer account, to AWS Organizations, or to an AWS Organizations
- * unit. Policies are under the control of a CA administrator. For more information, see <a
- * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
+ * A policy grants access on a private CA to an Amazon Web Services customer account, to Amazon Web Services Organizations,
+ * or to an Amazon Web Services Organizations unit. Policies are under the control of a CA administrator. For more
+ * information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based
+ * Policy with ACM Private
  *
  * CA</a>> </li> <li>
  *
- * A policy permits a user of AWS Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
+ * A policy permits a user of Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
  *
  * account> </li> <li>
  *
@@ -390,16 +407,16 @@ DeletePermissionResponse * AcmpcaClient::deletePermission(const DeletePermission
  *
  * ACM</a>> </li> <li>
  *
- * Updates made in AWS Resource Manager (RAM) are reflected in policies. For more information, see <a
+ * Updates made in Amazon Web Services Resource Manager (RAM) are reflected in policies. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html">Attach a Policy for Cross-Account
  */
-DeletePolicyResponse * AcmpcaClient::deletePolicy(const DeletePolicyRequest &request)
+DeletePolicyResponse * AcmPcaClient::deletePolicy(const DeletePolicyRequest &request)
 {
     return qobject_cast<DeletePolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * DescribeCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -432,20 +449,21 @@ DeletePolicyResponse * AcmpcaClient::deletePolicy(const DeletePolicyRequest &req
  * expired> </li> <li>
  *
  * <code>FAILED</code> - Your private CA has failed. Your CA can fail because of problems such a network outage or back-end
- * AWS failure or other errors. A failed CA can never return to the pending state. You must create a new CA.
+ * Amazon Web Services failure or other errors. A failed CA can never return to the pending state. You must create a new
+ * CA.
  *
  * </p </li> <li>
  *
  * <code>DELETED</code> - Your private CA is within the restoration period, after which it is permanently deleted. The
  * length of time remaining in the CA's restoration period is also included in this action's
  */
-DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthority(const DescribeCertificateAuthorityRequest &request)
+DescribeCertificateAuthorityResponse * AcmPcaClient::describeCertificateAuthority(const DescribeCertificateAuthorityRequest &request)
 {
     return qobject_cast<DescribeCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * DescribeCertificateAuthorityAuditReportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -458,13 +476,13 @@ DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthorit
  * the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_RevokeCertificate.html">RevokeCertificate</a>
  * action.
  */
-DescribeCertificateAuthorityAuditReportResponse * AcmpcaClient::describeCertificateAuthorityAuditReport(const DescribeCertificateAuthorityAuditReportRequest &request)
+DescribeCertificateAuthorityAuditReportResponse * AcmPcaClient::describeCertificateAuthorityAuditReport(const DescribeCertificateAuthorityAuditReportRequest &request)
 {
     return qobject_cast<DescribeCertificateAuthorityAuditReportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * GetCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -477,13 +495,13 @@ DescribeCertificateAuthorityAuditReportResponse * AcmpcaClient::describeCertific
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthorityAuditReport.html">CreateCertificateAuthorityAuditReport</a>
  * action to create a report that contains information about all of the certificates issued and revoked by your private CA.
  */
-GetCertificateResponse * AcmpcaClient::getCertificate(const GetCertificateRequest &request)
+GetCertificateResponse * AcmPcaClient::getCertificate(const GetCertificateRequest &request)
 {
     return qobject_cast<GetCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * GetCertificateAuthorityCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -492,13 +510,13 @@ GetCertificateResponse * AcmpcaClient::getCertificate(const GetCertificateReques
  * with you. Both the certificate and the chain are base64 PEM-encoded. The chain does not include the CA certificate. Each
  * certificate in the chain signs the one before it.
  */
-GetCertificateAuthorityCertificateResponse * AcmpcaClient::getCertificateAuthorityCertificate(const GetCertificateAuthorityCertificateRequest &request)
+GetCertificateAuthorityCertificateResponse * AcmPcaClient::getCertificateAuthorityCertificate(const GetCertificateAuthorityCertificateRequest &request)
 {
     return qobject_cast<GetCertificateAuthorityCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * GetCertificateAuthorityCsrResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -511,13 +529,13 @@ GetCertificateAuthorityCertificateResponse * AcmpcaClient::getCertificateAuthori
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ImportCertificateAuthorityCertificate.html">ImportCertificateAuthorityCertificate</a>
  * action. The CSR is returned as a base64 PEM-encoded string.
  */
-GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(const GetCertificateAuthorityCsrRequest &request)
+GetCertificateAuthorityCsrResponse * AcmPcaClient::getCertificateAuthorityCsr(const GetCertificateAuthorityCsrRequest &request)
 {
     return qobject_cast<GetCertificateAuthorityCsrResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * GetPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -535,13 +553,14 @@ GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(co
  *
  * </p <ul> <li>
  *
- * A policy grants access on a private CA to an AWS customer account, to AWS Organizations, or to an AWS Organizations
- * unit. Policies are under the control of a CA administrator. For more information, see <a
- * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
+ * A policy grants access on a private CA to an Amazon Web Services customer account, to Amazon Web Services Organizations,
+ * or to an Amazon Web Services Organizations unit. Policies are under the control of a CA administrator. For more
+ * information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based
+ * Policy with ACM Private
  *
  * CA</a>> </li> <li>
  *
- * A policy permits a user of AWS Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
+ * A policy permits a user of Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
  *
  * account> </li> <li>
  *
@@ -552,16 +571,16 @@ GetCertificateAuthorityCsrResponse * AcmpcaClient::getCertificateAuthorityCsr(co
  *
  * ACM</a>> </li> <li>
  *
- * Updates made in AWS Resource Manager (RAM) are reflected in policies. For more information, see <a
+ * Updates made in Amazon Web Services Resource Manager (RAM) are reflected in policies. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html">Attach a Policy for Cross-Account
  */
-GetPolicyResponse * AcmpcaClient::getPolicy(const GetPolicyRequest &request)
+GetPolicyResponse * AcmPcaClient::getPolicy(const GetPolicyRequest &request)
 {
     return qobject_cast<GetPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * ImportCertificateAuthorityCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -723,13 +742,13 @@ GetPolicyResponse * AcmpcaClient::getPolicy(const GetPolicyRequest &request)
  *
  * Any other
  */
-ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateAuthorityCertificate(const ImportCertificateAuthorityCertificateRequest &request)
+ImportCertificateAuthorityCertificateResponse * AcmPcaClient::importCertificateAuthorityCertificate(const ImportCertificateAuthorityCertificateRequest &request)
 {
     return qobject_cast<ImportCertificateAuthorityCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * IssueCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -744,13 +763,13 @@ ImportCertificateAuthorityCertificateResponse * AcmpcaClient::importCertificateA
  * You cannot use the ACM <b>ListCertificateAuthorities</b> action to retrieve the ARNs of the certificates that you issue
  * by using ACM Private
  */
-IssueCertificateResponse * AcmpcaClient::issueCertificate(const IssueCertificateRequest &request)
+IssueCertificateResponse * AcmPcaClient::issueCertificate(const IssueCertificateRequest &request)
 {
     return qobject_cast<IssueCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * ListCertificateAuthoritiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -758,23 +777,24 @@ IssueCertificateResponse * AcmpcaClient::issueCertificate(const IssueCertificate
  * Lists the private certificate authorities that you created by using the <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthority.html">CreateCertificateAuthority</a>
  */
-ListCertificateAuthoritiesResponse * AcmpcaClient::listCertificateAuthorities(const ListCertificateAuthoritiesRequest &request)
+ListCertificateAuthoritiesResponse * AcmPcaClient::listCertificateAuthorities(const ListCertificateAuthoritiesRequest &request)
 {
     return qobject_cast<ListCertificateAuthoritiesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * ListPermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List all permissions on a private CA, if any, granted to the AWS Certificate Manager (ACM) service principal
+ * List all permissions on a private CA, if any, granted to the Certificate Manager (ACM) service principal
  * (acm.amazonaws.com).
  *
  * </p
  *
- * These permissions allow ACM to issue and renew ACM certificates that reside in the same AWS account as the CA.
+ * These permissions allow ACM to issue and renew ACM certificates that reside in the same Amazon Web Services account as
+ * the CA.
  *
  * </p
  *
@@ -801,13 +821,13 @@ ListCertificateAuthoritiesResponse * AcmpcaClient::listCertificateAuthorities(co
  * issuance and renewals. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
  */
-ListPermissionsResponse * AcmpcaClient::listPermissions(const ListPermissionsRequest &request)
+ListPermissionsResponse * AcmPcaClient::listPermissions(const ListPermissionsRequest &request)
 {
     return qobject_cast<ListPermissionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * ListTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -819,13 +839,13 @@ ListPermissionsResponse * AcmpcaClient::listPermissions(const ListPermissionsReq
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UntagCertificateAuthority.html">UntagCertificateAuthority</a>
  * action to remove tags.
  */
-ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
+ListTagsResponse * AcmPcaClient::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * PutPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -834,8 +854,9 @@ ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
  *
  * </p
  *
- * A policy can also be applied by sharing a private CA through AWS Resource Access Manager (RAM). For more information,
- * see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html">Attach a Policy for Cross-Account
+ * A policy can also be applied by sharing a private CA through Amazon Web Services Resource Access Manager (RAM). For more
+ * information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html">Attach a Policy for
+ * Cross-Account
  *
  * Access</a>>
  *
@@ -847,13 +868,14 @@ ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
  *
  * </p <ul> <li>
  *
- * A policy grants access on a private CA to an AWS customer account, to AWS Organizations, or to an AWS Organizations
- * unit. Policies are under the control of a CA administrator. For more information, see <a
- * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based Policy with ACM Private
+ * A policy grants access on a private CA to an Amazon Web Services customer account, to Amazon Web Services Organizations,
+ * or to an Amazon Web Services Organizations unit. Policies are under the control of a CA administrator. For more
+ * information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html">Using a Resource Based
+ * Policy with ACM Private
  *
  * CA</a>> </li> <li>
  *
- * A policy permits a user of AWS Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
+ * A policy permits a user of Certificate Manager (ACM) to issue ACM certificates signed by a CA in another
  *
  * account> </li> <li>
  *
@@ -864,16 +886,16 @@ ListTagsResponse * AcmpcaClient::listTags(const ListTagsRequest &request)
  *
  * ACM</a>> </li> <li>
  *
- * Updates made in AWS Resource Manager (RAM) are reflected in policies. For more information, see <a
+ * Updates made in Amazon Web Services Resource Manager (RAM) are reflected in policies. For more information, see <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html">Attach a Policy for Cross-Account
  */
-PutPolicyResponse * AcmpcaClient::putPolicy(const PutPolicyRequest &request)
+PutPolicyResponse * AcmPcaClient::putPolicy(const PutPolicyRequest &request)
 {
     return qobject_cast<PutPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * RestoreCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -895,13 +917,13 @@ PutPolicyResponse * AcmpcaClient::putPolicy(const PutPolicyRequest &request)
  * action to import a certificate authority into the private CA before it can be activated. You cannot restore a CA after
  * the restoration period has
  */
-RestoreCertificateAuthorityResponse * AcmpcaClient::restoreCertificateAuthority(const RestoreCertificateAuthorityRequest &request)
+RestoreCertificateAuthorityResponse * AcmPcaClient::restoreCertificateAuthority(const RestoreCertificateAuthorityRequest &request)
 {
     return qobject_cast<RestoreCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * RevokeCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -918,9 +940,10 @@ RestoreCertificateAuthorityResponse * AcmpcaClient::restoreCertificateAuthority(
  *
  * Both PCA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal
  * making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see
- * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuthAccess.html">Configure Access to ACM Private
+ * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html#s3-policies">Access policies for CRLs in
+ * Amazon
  *
- * CA</a>> </note>
+ * S3</a>> </note>
  *
  * ACM Private CA also writes revocation information to the audit report. For more information, see <a
  *
@@ -929,33 +952,33 @@ RestoreCertificateAuthorityResponse * AcmpcaClient::restoreCertificateAuthority(
  *
  * You cannot revoke a root CA self-signed
  */
-RevokeCertificateResponse * AcmpcaClient::revokeCertificate(const RevokeCertificateRequest &request)
+RevokeCertificateResponse * AcmPcaClient::revokeCertificate(const RevokeCertificateRequest &request)
 {
     return qobject_cast<RevokeCertificateResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * TagCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to your private CA. Tags are labels that you can use to identify and organize your AWS resources.
- * Each tag consists of a key and an optional value. You specify the private CA on input by its Amazon Resource Name (ARN).
- * You specify the tag by using a key-value pair. You can apply a tag to just one private CA if you want to identify a
- * specific characteristic of that CA, or you can apply the same tag to multiple private CAs if you want to filter for a
- * common relationship among those CAs. To remove one or more tags, use the <a
+ * Adds one or more tags to your private CA. Tags are labels that you can use to identify and organize your Amazon Web
+ * Services resources. Each tag consists of a key and an optional value. You specify the private CA on input by its Amazon
+ * Resource Name (ARN). You specify the tag by using a key-value pair. You can apply a tag to just one private CA if you
+ * want to identify a specific characteristic of that CA, or you can apply the same tag to multiple private CAs if you want
+ * to filter for a common relationship among those CAs. To remove one or more tags, use the <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UntagCertificateAuthority.html">UntagCertificateAuthority</a>
  * action. Call the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ListTags.html">ListTags</a> action
  * to see what tags are associated with your CA.
  */
-TagCertificateAuthorityResponse * AcmpcaClient::tagCertificateAuthority(const TagCertificateAuthorityRequest &request)
+TagCertificateAuthorityResponse * AcmPcaClient::tagCertificateAuthority(const TagCertificateAuthorityRequest &request)
 {
     return qobject_cast<TagCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * UntagCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -967,13 +990,13 @@ TagCertificateAuthorityResponse * AcmpcaClient::tagCertificateAuthority(const Ta
  * Call the <a href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ListTags.html">ListTags</a> action to see
  * what tags are associated with your CA.
  */
-UntagCertificateAuthorityResponse * AcmpcaClient::untagCertificateAuthority(const UntagCertificateAuthorityRequest &request)
+UntagCertificateAuthorityResponse * AcmPcaClient::untagCertificateAuthority(const UntagCertificateAuthorityRequest &request)
 {
     return qobject_cast<UntagCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the AcmpcaClient service, and returns a pointer to an
+ * Sends \a request to the AcmPcaClient service, and returns a pointer to an
  * UpdateCertificateAuthorityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -986,30 +1009,31 @@ UntagCertificateAuthorityResponse * AcmpcaClient::untagCertificateAuthority(cons
  *
  * Both PCA and the IAM principal must have permission to write to the S3 bucket that you specify. If the IAM principal
  * making the call does not have permission to write to the bucket, then an exception is thrown. For more information, see
- * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaAuthAccess.html">Configure Access to ACM Private
+ * <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html#s3-policies">Access policies for CRLs in
+ * Amazon
  */
-UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(const UpdateCertificateAuthorityRequest &request)
+UpdateCertificateAuthorityResponse * AcmPcaClient::updateCertificateAuthority(const UpdateCertificateAuthorityRequest &request)
 {
     return qobject_cast<UpdateCertificateAuthorityResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ACMPCA::AcmpcaClientPrivate
- * \brief The AcmpcaClientPrivate class provides private implementation for AcmpcaClient.
+ * \class QtAws::AcmPca::AcmPcaClientPrivate
+ * \brief The AcmPcaClientPrivate class provides private implementation for AcmPcaClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
- * Constructs a AcmpcaClientPrivate object with public implementation \a q.
+ * Constructs a AcmPcaClientPrivate object with public implementation \a q.
  */
-AcmpcaClientPrivate::AcmpcaClientPrivate(AcmpcaClient * const q)
+AcmPcaClientPrivate::AcmPcaClientPrivate(AcmPcaClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

@@ -737,6 +737,8 @@ GetTestGridProjectResponse * DeviceFarmClient::getTestGridProject(const GetTestG
  * (<a>GetTestGridSessionRequest$sessionArn</a>)> </li> <li>
  *
  * The project ARN and a session ID (<a>GetTestGridSessionRequest$projectArn</a> and
+ *
+ * <a>GetTestGridSessionRequest$sessionId</a>)> </li> </ul>
  */
 GetTestGridSessionResponse * DeviceFarmClient::getTestGridSession(const GetTestGridSessionRequest &request)
 {

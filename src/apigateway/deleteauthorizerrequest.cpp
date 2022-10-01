@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteAuthorizerRequest
- * \brief The DeleteAuthorizerRequest class provides an interface for APIGateway DeleteAuthorizer requests.
+ * \class QtAws::ApiGateway::DeleteAuthorizerRequest
+ * \brief The DeleteAuthorizerRequest class provides an interface for ApiGateway DeleteAuthorizer requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteAuthorizer
+ * \sa ApiGatewayClient::deleteAuthorizer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other)
-    : APIGatewayRequest(new DeleteAuthorizerRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteAuthorizerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteAuthorizerRequest::DeleteAuthorizerRequest(const DeleteAuthorizerRequest &
  * Constructs a DeleteAuthorizerRequest object.
  */
 DeleteAuthorizerRequest::DeleteAuthorizerRequest()
-    : APIGatewayRequest(new DeleteAuthorizerRequestPrivate(APIGatewayRequest::DeleteAuthorizerAction, this))
+    : ApiGatewayRequest(new DeleteAuthorizerRequestPrivate(ApiGatewayRequest::DeleteAuthorizerAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteAuthorizerRequestPrivate
+ * \class QtAws::ApiGateway::DeleteAuthorizerRequestPrivate
  * \brief The DeleteAuthorizerRequestPrivate class provides private implementation for DeleteAuthorizerRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteAuthorizerRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteAuthorizerRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteAuthorizerRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const DeleteAuthorizerRequestPrivate &other, DeleteAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

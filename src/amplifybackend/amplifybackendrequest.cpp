@@ -41,10 +41,12 @@ namespace AmplifyBackend {
  * \value CreateBackendAPIAction AmplifyBackend CreateBackendAPI action.
  * \value CreateBackendAuthAction AmplifyBackend CreateBackendAuth action.
  * \value CreateBackendConfigAction AmplifyBackend CreateBackendConfig action.
+ * \value CreateBackendStorageAction AmplifyBackend CreateBackendStorage action.
  * \value CreateTokenAction AmplifyBackend CreateToken action.
  * \value DeleteBackendAction AmplifyBackend DeleteBackend action.
  * \value DeleteBackendAPIAction AmplifyBackend DeleteBackendAPI action.
  * \value DeleteBackendAuthAction AmplifyBackend DeleteBackendAuth action.
+ * \value DeleteBackendStorageAction AmplifyBackend DeleteBackendStorage action.
  * \value DeleteTokenAction AmplifyBackend DeleteToken action.
  * \value GenerateBackendAPIModelsAction AmplifyBackend GenerateBackendAPIModels action.
  * \value GetBackendAction AmplifyBackend GetBackend action.
@@ -52,14 +54,19 @@ namespace AmplifyBackend {
  * \value GetBackendAPIModelsAction AmplifyBackend GetBackendAPIModels action.
  * \value GetBackendAuthAction AmplifyBackend GetBackendAuth action.
  * \value GetBackendJobAction AmplifyBackend GetBackendJob action.
+ * \value GetBackendStorageAction AmplifyBackend GetBackendStorage action.
  * \value GetTokenAction AmplifyBackend GetToken action.
+ * \value ImportBackendAuthAction AmplifyBackend ImportBackendAuth action.
+ * \value ImportBackendStorageAction AmplifyBackend ImportBackendStorage action.
  * \value ListBackendJobsAction AmplifyBackend ListBackendJobs action.
+ * \value ListS3BucketsAction AmplifyBackend ListS3Buckets action.
  * \value RemoveAllBackendsAction AmplifyBackend RemoveAllBackends action.
  * \value RemoveBackendConfigAction AmplifyBackend RemoveBackendConfig action.
  * \value UpdateBackendAPIAction AmplifyBackend UpdateBackendAPI action.
  * \value UpdateBackendAuthAction AmplifyBackend UpdateBackendAuth action.
  * \value UpdateBackendConfigAction AmplifyBackend UpdateBackendConfig action.
  * \value UpdateBackendJobAction AmplifyBackend UpdateBackendJob action.
+ * \value UpdateBackendStorageAction AmplifyBackend UpdateBackendStorage action.
  */
 
 /*!
@@ -267,7 +274,7 @@ QNetworkRequest AmplifyBackendRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 AmplifyBackendRequestPrivate::AmplifyBackendRequestPrivate(const AmplifyBackendRequest::Action action, AmplifyBackendRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-08-11"))
 {
 
 }
@@ -306,10 +313,12 @@ QString AmplifyBackendRequestPrivate::toString(const AmplifyBackendRequest::Acti
         ActionToString(CreateBackendAPI);
         ActionToString(CreateBackendAuth);
         ActionToString(CreateBackendConfig);
+        ActionToString(CreateBackendStorage);
         ActionToString(CreateToken);
         ActionToString(DeleteBackend);
         ActionToString(DeleteBackendAPI);
         ActionToString(DeleteBackendAuth);
+        ActionToString(DeleteBackendStorage);
         ActionToString(DeleteToken);
         ActionToString(GenerateBackendAPIModels);
         ActionToString(GetBackend);
@@ -317,14 +326,19 @@ QString AmplifyBackendRequestPrivate::toString(const AmplifyBackendRequest::Acti
         ActionToString(GetBackendAPIModels);
         ActionToString(GetBackendAuth);
         ActionToString(GetBackendJob);
+        ActionToString(GetBackendStorage);
         ActionToString(GetToken);
+        ActionToString(ImportBackendAuth);
+        ActionToString(ImportBackendStorage);
         ActionToString(ListBackendJobs);
+        ActionToString(ListS3Buckets);
         ActionToString(RemoveAllBackends);
         ActionToString(RemoveBackendConfig);
         ActionToString(UpdateBackendAPI);
         ActionToString(UpdateBackendAuth);
         ActionToString(UpdateBackendConfig);
         ActionToString(UpdateBackendJob);
+        ActionToString(UpdateBackendStorage);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

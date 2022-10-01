@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateCustomVerificationEmailTemplateRequest
- * \brief The UpdateCustomVerificationEmailTemplateRequest class provides an interface for SES UpdateCustomVerificationEmailTemplate requests.
+ * \class QtAws::Ses::UpdateCustomVerificationEmailTemplateRequest
+ * \brief The UpdateCustomVerificationEmailTemplateRequest class provides an interface for Ses UpdateCustomVerificationEmailTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
 }
 
 /*!
- * \class QtAws::SES::UpdateCustomVerificationEmailTemplateRequestPrivate
+ * \class QtAws::Ses::UpdateCustomVerificationEmailTemplateRequestPrivate
  * \brief The UpdateCustomVerificationEmailTemplateRequestPrivate class provides private implementation for UpdateCustomVerificationEmailTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteReplicationSetResponse
- * \brief The DeleteReplicationSetResponse class provides an interace for SSMIncidents DeleteReplicationSet responses.
+ * \class QtAws::SsmIncidents::DeleteReplicationSetResponse
+ * \brief The DeleteReplicationSetResponse class provides an interace for SsmIncidents DeleteReplicationSet responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteReplicationSet
+ * \sa SsmIncidentsClient::deleteReplicationSet
  */
 
 /*!
@@ -54,7 +54,7 @@ DeleteReplicationSetResponse::DeleteReplicationSetResponse(
         const DeleteReplicationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new DeleteReplicationSetResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new DeleteReplicationSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationSetRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const DeleteReplicationSetRequest * DeleteReplicationSetResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents DeleteReplicationSet \a response.
+ * Parses a successful SsmIncidents DeleteReplicationSet \a response.
  */
 void DeleteReplicationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void DeleteReplicationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteReplicationSetResponsePrivate
+ * \class QtAws::SsmIncidents::DeleteReplicationSetResponsePrivate
  * \brief The DeleteReplicationSetResponsePrivate class provides private implementation for DeleteReplicationSetResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a DeleteReplicationSetResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationSetResponsePrivate::DeleteReplicationSetResponsePrivate(
-    DeleteReplicationSetResponse * const q) : SSMIncidentsResponsePrivate(q)
+    DeleteReplicationSetResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents DeleteReplicationSet response element from \a xml.
+ * Parses a SsmIncidents DeleteReplicationSet response element from \a xml.
  */
 void DeleteReplicationSetResponsePrivate::parseDeleteReplicationSetResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteReplicationSetResponsePrivate::parseDeleteReplicationSetResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

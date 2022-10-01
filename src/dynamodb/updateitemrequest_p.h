@@ -24,14 +24,14 @@
 #include "updateitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateItemRequest;
 
-class UpdateItemRequestPrivate : public DynamoDBRequestPrivate {
+class UpdateItemRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    UpdateItemRequestPrivate(const DynamoDBRequest::Action action,
+    UpdateItemRequestPrivate(const DynamoDbRequest::Action action,
                                    UpdateItemRequest * const q);
     UpdateItemRequestPrivate(const UpdateItemRequestPrivate &other,
                                    UpdateItemRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

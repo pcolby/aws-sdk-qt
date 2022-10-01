@@ -24,14 +24,14 @@
 #include "listfaqsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListFaqsRequest;
 
-class ListFaqsRequestPrivate : public kendraRequestPrivate {
+class ListFaqsRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ListFaqsRequestPrivate(const kendraRequest::Action action,
+    ListFaqsRequestPrivate(const KendraRequest::Action action,
                                    ListFaqsRequest * const q);
     ListFaqsRequestPrivate(const ListFaqsRequestPrivate &other,
                                    ListFaqsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

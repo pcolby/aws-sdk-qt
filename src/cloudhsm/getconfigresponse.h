@@ -24,11 +24,11 @@
 #include "getconfigrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class GetConfigResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT GetConfigResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT GetConfigResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

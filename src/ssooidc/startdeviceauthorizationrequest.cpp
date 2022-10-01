@@ -23,13 +23,13 @@
 #include "ssooidcrequest_p.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::StartDeviceAuthorizationRequest
- * \brief The StartDeviceAuthorizationRequest class provides an interface for SSOOIDC StartDeviceAuthorization requests.
+ * \class QtAws::SsoOidc::StartDeviceAuthorizationRequest
+ * \brief The StartDeviceAuthorizationRequest class provides an interface for SsoOidc StartDeviceAuthorization requests.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -54,14 +54,14 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::startDeviceAuthorization
+ * \sa SsoOidcClient::startDeviceAuthorization
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartDeviceAuthorizationRequest::StartDeviceAuthorizationRequest(const StartDeviceAuthorizationRequest &other)
-    : SsooidcRequest(new StartDeviceAuthorizationRequestPrivate(*other.d_func(), this))
+    : SsoOidcRequest(new StartDeviceAuthorizationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -70,7 +70,7 @@ StartDeviceAuthorizationRequest::StartDeviceAuthorizationRequest(const StartDevi
  * Constructs a StartDeviceAuthorizationRequest object.
  */
 StartDeviceAuthorizationRequest::StartDeviceAuthorizationRequest()
-    : SsooidcRequest(new StartDeviceAuthorizationRequestPrivate(SsooidcRequest::StartDeviceAuthorizationAction, this))
+    : SsoOidcRequest(new StartDeviceAuthorizationRequestPrivate(SsoOidcRequest::StartDeviceAuthorizationAction, this))
 {
 
 }
@@ -95,20 +95,20 @@ QtAws::Core::AwsAbstractResponse * StartDeviceAuthorizationRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SSOOIDC::StartDeviceAuthorizationRequestPrivate
+ * \class QtAws::SsoOidc::StartDeviceAuthorizationRequestPrivate
  * \brief The StartDeviceAuthorizationRequestPrivate class provides private implementation for StartDeviceAuthorizationRequest.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a StartDeviceAuthorizationRequestPrivate object for Ssooidc \a action,
+ * Constructs a StartDeviceAuthorizationRequestPrivate object for SsoOidc \a action,
  * with public implementation \a q.
  */
 StartDeviceAuthorizationRequestPrivate::StartDeviceAuthorizationRequestPrivate(
-    const SsooidcRequest::Action action, StartDeviceAuthorizationRequest * const q)
-    : SsooidcRequestPrivate(action, q)
+    const SsoOidcRequest::Action action, StartDeviceAuthorizationRequest * const q)
+    : SsoOidcRequestPrivate(action, q)
 {
 
 }
@@ -121,10 +121,10 @@ StartDeviceAuthorizationRequestPrivate::StartDeviceAuthorizationRequestPrivate(
  */
 StartDeviceAuthorizationRequestPrivate::StartDeviceAuthorizationRequestPrivate(
     const StartDeviceAuthorizationRequestPrivate &other, StartDeviceAuthorizationRequest * const q)
-    : SsooidcRequestPrivate(other, q)
+    : SsoOidcRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

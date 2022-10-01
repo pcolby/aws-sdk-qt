@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class SfnRequestPrivate;
 
 class QTAWSSFN_EXPORT SfnRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SFN.
+    /// Actions supported by Sfn.
     enum Action {
         CreateActivityAction,
         CreateStateMachineAction,
@@ -98,7 +98,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DeleteClusterRequest
- * \brief The DeleteClusterRequest class provides an interface for DAX DeleteCluster requests.
+ * \class QtAws::Dax::DeleteClusterRequest
+ * \brief The DeleteClusterRequest class provides an interface for Dax DeleteCluster requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::DAX::DeleteClusterRequestPrivate
+ * \class QtAws::Dax::DeleteClusterRequestPrivate
  * \brief The DeleteClusterRequestPrivate class provides private implementation for DeleteClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

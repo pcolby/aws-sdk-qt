@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyEventSubscriptionResponse
- * \brief The ModifyEventSubscriptionResponse class provides an interace for DocDB ModifyEventSubscription responses.
+ * \class QtAws::DocDb::ModifyEventSubscriptionResponse
+ * \brief The ModifyEventSubscriptionResponse class provides an interace for DocDb ModifyEventSubscription responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyEventSubscription
+ * \sa DocDbClient::modifyEventSubscription
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
         const ModifyEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ModifyEventSubscriptionRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyEventSubscription \a response.
+ * Parses a successful DocDb ModifyEventSubscription \a response.
  */
 void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyEventSubscriptionResponsePrivate
+ * \class QtAws::DocDb::ModifyEventSubscriptionResponsePrivate
  * \brief The ModifyEventSubscriptionResponsePrivate class provides private implementation for ModifyEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
-    ModifyEventSubscriptionResponse * const q) : DocDBResponsePrivate(q)
+    ModifyEventSubscriptionResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyEventSubscription response element from \a xml.
+ * Parses a DocDb ModifyEventSubscription response element from \a xml.
  */
 void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

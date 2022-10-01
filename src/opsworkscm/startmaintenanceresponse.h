@@ -24,11 +24,11 @@
 #include "startmaintenancerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class StartMaintenanceResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT StartMaintenanceResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT StartMaintenanceResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

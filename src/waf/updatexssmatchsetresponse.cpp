@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateXssMatchSetResponse
- * \brief The UpdateXssMatchSetResponse class provides an interace for WAF UpdateXssMatchSet responses.
+ * \class QtAws::Waf::UpdateXssMatchSetResponse
+ * \brief The UpdateXssMatchSetResponse class provides an interace for Waf UpdateXssMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateXssMatchSetRequest * UpdateXssMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateXssMatchSet \a response.
+ * Parses a successful Waf UpdateXssMatchSet \a response.
  */
 void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateXssMatchSetResponsePrivate
+ * \class QtAws::Waf::UpdateXssMatchSetResponsePrivate
  * \brief The UpdateXssMatchSetResponsePrivate class provides private implementation for UpdateXssMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateXssMatchSet response element from \a xml.
+ * Parses a Waf UpdateXssMatchSet response element from \a xml.
  */
 void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetByteMatchSetResponse
- * \brief The GetByteMatchSetResponse class provides an interace for WAFRegional GetByteMatchSet responses.
+ * \class QtAws::WafRegional::GetByteMatchSetResponse
+ * \brief The GetByteMatchSetResponse class provides an interace for WafRegional GetByteMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getByteMatchSet
+ * \sa WafRegionalClient::getByteMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ GetByteMatchSetResponse::GetByteMatchSetResponse(
         const GetByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetByteMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new GetByteMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetByteMatchSet \a response.
+ * Parses a successful WafRegional GetByteMatchSet \a response.
  */
 void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetByteMatchSetResponsePrivate
+ * \class QtAws::WafRegional::GetByteMatchSetResponsePrivate
  * \brief The GetByteMatchSetResponsePrivate class provides private implementation for GetByteMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetByteMatchSetResponsePrivate object with public implementation \a q.
  */
 GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
-    GetByteMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetByteMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetByteMatchSet response element from \a xml.
+ * Parses a WafRegional GetByteMatchSet response element from \a xml.
  */
 void GetByteMatchSetResponsePrivate::parseGetByteMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetByteMatchSetResponsePrivate::parseGetByteMatchSetResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for signer UntagResource requests.
+ * \class QtAws::Signer::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for Signer UntagResource requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::untagResource
+ * \sa SignerClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : signerRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : signerRequest(new UntagResourceRequestPrivate(signerRequest::UntagResourceAction, this))
+    : SignerRequest(new UntagResourceRequestPrivate(SignerRequest::UntagResourceAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::signer::UntagResourceRequestPrivate
+ * \class QtAws::Signer::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for signer \a action,
+ * Constructs a UntagResourceRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const signerRequest::Action action, UntagResourceRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, UntagResourceRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StopDBInstanceResponse
- * \brief The StopDBInstanceResponse class provides an interace for RDS StopDBInstance responses.
+ * \class QtAws::Rds::StopDBInstanceResponse
+ * \brief The StopDBInstanceResponse class provides an interace for Rds StopDBInstance responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StopDBInstanceRequest * StopDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS StopDBInstance \a response.
+ * Parses a successful Rds StopDBInstance \a response.
  */
 void StopDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StopDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::StopDBInstanceResponsePrivate
+ * \class QtAws::Rds::StopDBInstanceResponsePrivate
  * \brief The StopDBInstanceResponsePrivate class provides private implementation for StopDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
 }
 
 /*!
- * Parses a RDS StopDBInstance response element from \a xml.
+ * Parses a Rds StopDBInstance response element from \a xml.
  */
 void StopDBInstanceResponsePrivate::parseStopDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StopDBInstanceResponsePrivate::parseStopDBInstanceResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

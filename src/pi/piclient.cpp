@@ -25,15 +25,21 @@
 #include "describedimensionkeysresponse.h"
 #include "getdimensionkeydetailsrequest.h"
 #include "getdimensionkeydetailsresponse.h"
+#include "getresourcemetadatarequest.h"
+#include "getresourcemetadataresponse.h"
 #include "getresourcemetricsrequest.h"
 #include "getresourcemetricsresponse.h"
+#include "listavailableresourcedimensionsrequest.h"
+#include "listavailableresourcedimensionsresponse.h"
+#include "listavailableresourcemetricsrequest.h"
+#include "listavailableresourcemetricsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::PI
- * \brief Contains classess for accessing AWS Performance Insights ( PI).
+ * \namespace QtAws::Pi
+ * \brief Contains classess for accessing AWS Performance Insights.
  *
  * \inmodule QtAwsPi
  *
@@ -41,14 +47,14 @@
  */
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 /*!
- * \class QtAws::PI::PiClient
- * \brief The PiClient class provides access to the AWS Performance Insights ( PI) service.
+ * \class QtAws::Pi::PiClient
+ * \brief The PiClient class provides access to the AWS Performance Insights service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  *
  *  <fullname>Amazon RDS Performance Insights</fullname>
  * 
@@ -59,25 +65,32 @@ namespace PI {
  *  errors>
  * 
  *  When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the performance
- *  of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended monitoring metrics.
- *  Performance Insights offers a domain-specific view of DB load.
+ *  of your DB instance. Amazon CloudWatch provides the authoritative source for Amazon Web Services service-vended
+ *  monitoring metrics. Performance Insights offers a domain-specific view of DB
  * 
- *  </p
+ *  load>
  * 
- *  DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ *  DB load is measured as average active sessions. Performance Insights provides the data to API consumers as a
  *  two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
  *  range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
  *  Examples include SQL, Wait event, User, and
  * 
  *  Host> <ul> <li>
  * 
- *  To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
- *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ *  To learn more about Performance Insights and Amazon Aurora DB instances, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User Guide</a>
+ *  </i>.
  * 
- *  Guide</a>> </li> <li>
+ *  </p </li> <li>
  * 
- *  To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User
+ *  To learn more about Performance Insights and Amazon RDS DB instances, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a> </i>.
+ * 
+ *  </p </li> <li>
+ * 
+ *  To learn more about Performance Insights and Amazon DocumentDB clusters, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html"> Amazon DocumentDB
+ *  Developer Guide</a>
  */
 
 /*!
@@ -139,9 +152,9 @@ PiClient::PiClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For a specific time period, retrieve the top <code>N</code> dimension keys for a
+ * For a specific time period, retrieve the top <code>N</code> dimension keys for a metric.
  *
- * metric> <note>
+ * </p <note>
  *
  * Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500
  * bytes are
@@ -169,11 +182,25 @@ GetDimensionKeyDetailsResponse * PiClient::getDimensionKeyDetails(const GetDimen
 
 /*!
  * Sends \a request to the PiClient service, and returns a pointer to an
+ * GetResourceMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve the metadata for different features. For example, the metadata might indicate that a feature is turned on or
+ * off on a specific DB instance.
+ */
+GetResourceMetadataResponse * PiClient::getResourceMetadata(const GetResourceMetadataRequest &request)
+{
+    return qobject_cast<GetResourceMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PiClient service, and returns a pointer to an
  * GetResourceMetricsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieve Performance Insights metrics for a set of data sources, over a time period. You can provide specific dimension
+ * Retrieve Performance Insights metrics for a set of data sources over a time period. You can provide specific dimension
  * groups and dimensions, and provide aggregation and filtering criteria for each
  *
  * group> <note>
@@ -187,12 +214,38 @@ GetResourceMetricsResponse * PiClient::getResourceMetrics(const GetResourceMetri
 }
 
 /*!
- * \class QtAws::PI::PiClientPrivate
+ * Sends \a request to the PiClient service, and returns a pointer to an
+ * ListAvailableResourceDimensionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve the dimensions that can be queried for each specified metric type on a specified DB
+ */
+ListAvailableResourceDimensionsResponse * PiClient::listAvailableResourceDimensions(const ListAvailableResourceDimensionsRequest &request)
+{
+    return qobject_cast<ListAvailableResourceDimensionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PiClient service, and returns a pointer to an
+ * ListAvailableResourceMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve metrics of the specified types that can be queried for a specified DB instance.
+ */
+ListAvailableResourceMetricsResponse * PiClient::listAvailableResourceMetrics(const ListAvailableResourceMetricsRequest &request)
+{
+    return qobject_cast<ListAvailableResourceMetricsResponse *>(send(request));
+}
+
+/*!
+ * \class QtAws::Pi::PiClientPrivate
  * \brief The PiClientPrivate class provides private implementation for PiClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
@@ -204,5 +257,5 @@ PiClientPrivate::PiClientPrivate(PiClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws

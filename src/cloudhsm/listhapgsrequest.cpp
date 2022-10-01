@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListHapgsRequest
- * \brief The ListHapgsRequest class provides an interface for CloudHSM ListHapgs requests.
+ * \class QtAws::CloudHsm::ListHapgsRequest
+ * \brief The ListHapgsRequest class provides an interface for CloudHsm ListHapgs requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listHapgs
+ * \sa CloudHsmClient::listHapgs
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
-    : CloudHSMRequest(new ListHapgsRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new ListHapgsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
  * Constructs a ListHapgsRequest object.
  */
 ListHapgsRequest::ListHapgsRequest()
-    : CloudHSMRequest(new ListHapgsRequestPrivate(CloudHSMRequest::ListHapgsAction, this))
+    : CloudHsmRequest(new ListHapgsRequestPrivate(CloudHsmRequest::ListHapgsAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CloudHSM::ListHapgsRequestPrivate
+ * \class QtAws::CloudHsm::ListHapgsRequestPrivate
  * \brief The ListHapgsRequestPrivate class provides private implementation for ListHapgsRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a ListHapgsRequestPrivate object for CloudHSM \a action,
+ * Constructs a ListHapgsRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
-    const CloudHSMRequest::Action action, ListHapgsRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, ListHapgsRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ ListHapgsRequestPrivate::ListHapgsRequestPrivate(
  */
 ListHapgsRequestPrivate::ListHapgsRequestPrivate(
     const ListHapgsRequestPrivate &other, ListHapgsRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

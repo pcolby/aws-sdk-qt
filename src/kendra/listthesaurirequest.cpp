@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListThesauriRequest
- * \brief The ListThesauriRequest class provides an interface for kendra ListThesauri requests.
+ * \class QtAws::Kendra::ListThesauriRequest
+ * \brief The ListThesauriRequest class provides an interface for Kendra ListThesauri requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listThesauri
+ * \sa KendraClient::listThesauri
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListThesauriRequest::ListThesauriRequest(const ListThesauriRequest &other)
-    : kendraRequest(new ListThesauriRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new ListThesauriRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListThesauriRequest::ListThesauriRequest(const ListThesauriRequest &other)
  * Constructs a ListThesauriRequest object.
  */
 ListThesauriRequest::ListThesauriRequest()
-    : kendraRequest(new ListThesauriRequestPrivate(kendraRequest::ListThesauriAction, this))
+    : KendraRequest(new ListThesauriRequestPrivate(KendraRequest::ListThesauriAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListThesauriRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::kendra::ListThesauriRequestPrivate
+ * \class QtAws::Kendra::ListThesauriRequestPrivate
  * \brief The ListThesauriRequestPrivate class provides private implementation for ListThesauriRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a ListThesauriRequestPrivate object for kendra \a action,
+ * Constructs a ListThesauriRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 ListThesauriRequestPrivate::ListThesauriRequestPrivate(
-    const kendraRequest::Action action, ListThesauriRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, ListThesauriRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListThesauriRequestPrivate::ListThesauriRequestPrivate(
  */
 ListThesauriRequestPrivate::ListThesauriRequestPrivate(
     const ListThesauriRequestPrivate &other, ListThesauriRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

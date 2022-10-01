@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSTRANSLATE_LIBRARY)
 
 add_library(QtAwsTranslate
+  qtawstranslateglobal.h
+  translateclient.h
+  translateclient_p.h
+  translaterequest.h
+  translaterequest_p.h
+  translateresponse.h
+  translateresponse_p.h
   createparalleldatarequest.h
   createparalleldatarequest_p.h
   createparalleldataresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsTranslate
   importterminologyrequest_p.h
   importterminologyresponse.h
   importterminologyresponse_p.h
+  listlanguagesrequest.h
+  listlanguagesrequest_p.h
+  listlanguagesresponse.h
+  listlanguagesresponse_p.h
   listparalleldatarequest.h
   listparalleldatarequest_p.h
   listparalleldataresponse.h
@@ -41,7 +52,6 @@ add_library(QtAwsTranslate
   listtexttranslationjobsrequest_p.h
   listtexttranslationjobsresponse.h
   listtexttranslationjobsresponse_p.h
-  qtawstranslateglobal.h
   starttexttranslationjobrequest.h
   starttexttranslationjobrequest_p.h
   starttexttranslationjobresponse.h
@@ -50,12 +60,6 @@ add_library(QtAwsTranslate
   stoptexttranslationjobrequest_p.h
   stoptexttranslationjobresponse.h
   stoptexttranslationjobresponse_p.h
-  translateclient.h
-  translateclient_p.h
-  translaterequest.h
-  translaterequest_p.h
-  translateresponse.h
-  translateresponse_p.h
   translatetextrequest.h
   translatetextrequest_p.h
   translatetextresponse.h
@@ -64,6 +68,9 @@ add_library(QtAwsTranslate
   updateparalleldatarequest_p.h
   updateparalleldataresponse.h
   updateparalleldataresponse_p.h
+  translateclient.cpp
+  translaterequest.cpp
+  translateresponse.cpp
   createparalleldatarequest.cpp
   createparalleldataresponse.cpp
   deleteparalleldatarequest.cpp
@@ -78,6 +85,8 @@ add_library(QtAwsTranslate
   getterminologyresponse.cpp
   importterminologyrequest.cpp
   importterminologyresponse.cpp
+  listlanguagesrequest.cpp
+  listlanguagesresponse.cpp
   listparalleldatarequest.cpp
   listparalleldataresponse.cpp
   listterminologiesrequest.cpp
@@ -88,9 +97,6 @@ add_library(QtAwsTranslate
   starttexttranslationjobresponse.cpp
   stoptexttranslationjobrequest.cpp
   stoptexttranslationjobresponse.cpp
-  translateclient.cpp
-  translaterequest.cpp
-  translateresponse.cpp
   translatetextrequest.cpp
   translatetextresponse.cpp
   updateparalleldatarequest.cpp

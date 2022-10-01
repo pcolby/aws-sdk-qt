@@ -36,10 +36,14 @@ class CreateComputeEnvironmentRequest;
 class CreateComputeEnvironmentResponse;
 class CreateJobQueueRequest;
 class CreateJobQueueResponse;
+class CreateSchedulingPolicyRequest;
+class CreateSchedulingPolicyResponse;
 class DeleteComputeEnvironmentRequest;
 class DeleteComputeEnvironmentResponse;
 class DeleteJobQueueRequest;
 class DeleteJobQueueResponse;
+class DeleteSchedulingPolicyRequest;
+class DeleteSchedulingPolicyResponse;
 class DeregisterJobDefinitionRequest;
 class DeregisterJobDefinitionResponse;
 class DescribeComputeEnvironmentsRequest;
@@ -50,8 +54,12 @@ class DescribeJobQueuesRequest;
 class DescribeJobQueuesResponse;
 class DescribeJobsRequest;
 class DescribeJobsResponse;
+class DescribeSchedulingPoliciesRequest;
+class DescribeSchedulingPoliciesResponse;
 class ListJobsRequest;
 class ListJobsResponse;
+class ListSchedulingPoliciesRequest;
+class ListSchedulingPoliciesResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class RegisterJobDefinitionRequest;
@@ -68,6 +76,8 @@ class UpdateComputeEnvironmentRequest;
 class UpdateComputeEnvironmentResponse;
 class UpdateJobQueueRequest;
 class UpdateJobQueueResponse;
+class UpdateSchedulingPolicyRequest;
+class UpdateSchedulingPolicyResponse;
 
 class QTAWSBATCH_EXPORT BatchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -88,14 +98,18 @@ public slots:
     CancelJobResponse * cancelJob(const CancelJobRequest &request);
     CreateComputeEnvironmentResponse * createComputeEnvironment(const CreateComputeEnvironmentRequest &request);
     CreateJobQueueResponse * createJobQueue(const CreateJobQueueRequest &request);
+    CreateSchedulingPolicyResponse * createSchedulingPolicy(const CreateSchedulingPolicyRequest &request);
     DeleteComputeEnvironmentResponse * deleteComputeEnvironment(const DeleteComputeEnvironmentRequest &request);
     DeleteJobQueueResponse * deleteJobQueue(const DeleteJobQueueRequest &request);
+    DeleteSchedulingPolicyResponse * deleteSchedulingPolicy(const DeleteSchedulingPolicyRequest &request);
     DeregisterJobDefinitionResponse * deregisterJobDefinition(const DeregisterJobDefinitionRequest &request);
     DescribeComputeEnvironmentsResponse * describeComputeEnvironments(const DescribeComputeEnvironmentsRequest &request);
     DescribeJobDefinitionsResponse * describeJobDefinitions(const DescribeJobDefinitionsRequest &request);
     DescribeJobQueuesResponse * describeJobQueues(const DescribeJobQueuesRequest &request);
     DescribeJobsResponse * describeJobs(const DescribeJobsRequest &request);
+    DescribeSchedulingPoliciesResponse * describeSchedulingPolicies(const DescribeSchedulingPoliciesRequest &request);
     ListJobsResponse * listJobs(const ListJobsRequest &request);
+    ListSchedulingPoliciesResponse * listSchedulingPolicies(const ListSchedulingPoliciesRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RegisterJobDefinitionResponse * registerJobDefinition(const RegisterJobDefinitionRequest &request);
     SubmitJobResponse * submitJob(const SubmitJobRequest &request);
@@ -104,6 +118,7 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateComputeEnvironmentResponse * updateComputeEnvironment(const UpdateComputeEnvironmentRequest &request);
     UpdateJobQueueResponse * updateJobQueue(const UpdateJobQueueRequest &request);
+    UpdateSchedulingPolicyResponse * updateSchedulingPolicy(const UpdateSchedulingPolicyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(BatchClient)

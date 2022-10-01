@@ -24,14 +24,14 @@
 #include "updatetimetoliverequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateTimeToLiveRequest;
 
-class UpdateTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
+class UpdateTimeToLiveRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    UpdateTimeToLiveRequestPrivate(const DynamoDBRequest::Action action,
+    UpdateTimeToLiveRequestPrivate(const DynamoDbRequest::Action action,
                                    UpdateTimeToLiveRequest * const q);
     UpdateTimeToLiveRequestPrivate(const UpdateTimeToLiveRequestPrivate &other,
                                    UpdateTimeToLiveRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

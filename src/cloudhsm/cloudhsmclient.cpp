@@ -66,23 +66,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::CloudHSM
+ * \namespace QtAws::CloudHsm
  * \brief Contains classess for accessing Amazon CloudHSM.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::CloudHSMClient
- * \brief The CloudHSMClient class provides access to the Amazon CloudHSM service.
+ * \class QtAws::CloudHsm::CloudHsmClient
+ * \brief The CloudHsmClient class provides access to the Amazon CloudHSM service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -99,21 +99,21 @@ namespace CloudHSM {
  */
 
 /*!
- * \brief Constructs a CloudHSMClient object.
+ * \brief Constructs a CloudHsmClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-CloudHSMClient::CloudHSMClient(
+CloudHsmClient::CloudHsmClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHsmClientPrivate(this), parent)
 {
-    Q_D(CloudHSMClient);
+    Q_D(CloudHsmClient);
     d->apiVersion = QStringLiteral("2014-05-30");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cloudhsm");
@@ -124,7 +124,7 @@ CloudHSMClient::CloudHSMClient(
 }
 
 /*!
- * \overload CloudHSMClient()
+ * \overload CloudHsmClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -134,14 +134,14 @@ CloudHSMClient::CloudHSMClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-CloudHSMClient::CloudHSMClient(
+CloudHsmClient::CloudHsmClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new CloudHsmClientPrivate(this), parent)
 {
-    Q_D(CloudHSMClient);
+    Q_D(CloudHsmClient);
     d->apiVersion = QStringLiteral("2014-05-30");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -152,7 +152,7 @@ CloudHSMClient::CloudHSMClient(
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * AddTagsToResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -176,13 +176,13 @@ CloudHSMClient::CloudHSMClient(
  *
  * Each tag consists of a key and a value. Tag keys must be unique to each
  */
-AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToResourceRequest &request)
+AddTagsToResourceResponse * CloudHsmClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
     return qobject_cast<AddTagsToResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * CreateHapgResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -203,13 +203,13 @@ AddTagsToResourceResponse * CloudHSMClient::addTagsToResource(const AddTagsToRes
  * Creates a high-availability partition group. A high-availability partition group is a group of partitions that spans
  * multiple physical
  */
-CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request)
+CreateHapgResponse * CloudHsmClient::createHapg(const CreateHapgRequest &request)
 {
     return qobject_cast<CreateHapgResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * CreateHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -241,13 +241,13 @@ CreateHapgResponse * CloudHSMClient::createHapg(const CreateHapgRequest &request
  * It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the
  * <a>DescribeHsm</a> operation. The HSM is ready to be initialized when the status changes to
  */
-CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
+CreateHsmResponse * CloudHsmClient::createHsm(const CreateHsmRequest &request)
 {
     return qobject_cast<CreateHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * CreateLunaClientResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -267,13 +267,13 @@ CreateHsmResponse * CloudHSMClient::createHsm(const CreateHsmRequest &request)
  *
  * Creates an HSM
  */
-CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClientRequest &request)
+CreateLunaClientResponse * CloudHsmClient::createLunaClient(const CreateLunaClientRequest &request)
 {
     return qobject_cast<CreateLunaClientResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DeleteHapgResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -293,13 +293,13 @@ CreateLunaClientResponse * CloudHSMClient::createLunaClient(const CreateLunaClie
  *
  * Deletes a high-availability partition
  */
-DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request)
+DeleteHapgResponse * CloudHsmClient::deleteHapg(const DeleteHapgRequest &request)
 {
     return qobject_cast<DeleteHapgResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DeleteHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -319,13 +319,13 @@ DeleteHapgResponse * CloudHSMClient::deleteHapg(const DeleteHapgRequest &request
  *
  * Deletes an HSM. After completion, this operation cannot be undone and your key material cannot be
  */
-DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
+DeleteHsmResponse * CloudHsmClient::deleteHsm(const DeleteHsmRequest &request)
 {
     return qobject_cast<DeleteHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DeleteLunaClientResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -345,13 +345,13 @@ DeleteHsmResponse * CloudHSMClient::deleteHsm(const DeleteHsmRequest &request)
  *
  * Deletes a
  */
-DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClientRequest &request)
+DeleteLunaClientResponse * CloudHsmClient::deleteLunaClient(const DeleteLunaClientRequest &request)
 {
     return qobject_cast<DeleteLunaClientResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DescribeHapgResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -371,13 +371,13 @@ DeleteLunaClientResponse * CloudHSMClient::deleteLunaClient(const DeleteLunaClie
  *
  * Retrieves information about a high-availability partition
  */
-DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &request)
+DescribeHapgResponse * CloudHsmClient::describeHapg(const DescribeHapgRequest &request)
 {
     return qobject_cast<DescribeHapgResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DescribeHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -397,13 +397,13 @@ DescribeHapgResponse * CloudHSMClient::describeHapg(const DescribeHapgRequest &r
  *
  * Retrieves information about an HSM. You can identify the HSM by its ARN or its serial
  */
-DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &request)
+DescribeHsmResponse * CloudHsmClient::describeHsm(const DescribeHsmRequest &request)
 {
     return qobject_cast<DescribeHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * DescribeLunaClientResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -423,13 +423,13 @@ DescribeHsmResponse * CloudHSMClient::describeHsm(const DescribeHsmRequest &requ
  *
  * Retrieves information about an HSM
  */
-DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLunaClientRequest &request)
+DescribeLunaClientResponse * CloudHsmClient::describeLunaClient(const DescribeLunaClientRequest &request)
 {
     return qobject_cast<DescribeLunaClientResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * GetConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -449,13 +449,13 @@ DescribeLunaClientResponse * CloudHSMClient::describeLunaClient(const DescribeLu
  *
  * Gets the configuration files necessary to connect to all high availability partition groups the client is associated
  */
-GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
+GetConfigResponse * CloudHsmClient::getConfig(const GetConfigRequest &request)
 {
     return qobject_cast<GetConfigResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ListAvailableZonesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -475,13 +475,13 @@ GetConfigResponse * CloudHSMClient::getConfig(const GetConfigRequest &request)
  *
  * Lists the Availability Zones that have available AWS CloudHSM
  */
-ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvailableZonesRequest &request)
+ListAvailableZonesResponse * CloudHsmClient::listAvailableZones(const ListAvailableZonesRequest &request)
 {
     return qobject_cast<ListAvailableZonesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ListHapgsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -507,13 +507,13 @@ ListAvailableZonesResponse * CloudHSMClient::listAvailableZones(const ListAvaila
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHapgs</code>
  * to retrieve the next set of
  */
-ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
+ListHapgsResponse * CloudHsmClient::listHapgs(const ListHapgsRequest &request)
 {
     return qobject_cast<ListHapgsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ListHsmsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -539,13 +539,13 @@ ListHapgsResponse * CloudHSMClient::listHapgs(const ListHapgsRequest &request)
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to <code>ListHsms</code>
  * to retrieve the next set of
  */
-ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
+ListHsmsResponse * CloudHsmClient::listHsms(const ListHsmsRequest &request)
 {
     return qobject_cast<ListHsmsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ListLunaClientsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -571,13 +571,13 @@ ListHsmsResponse * CloudHSMClient::listHsms(const ListHsmsRequest &request)
  * <code>NextToken</code> member of the response contains a token that you pass in the next call to
  * <code>ListLunaClients</code> to retrieve the next set of
  */
-ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsRequest &request)
+ListLunaClientsResponse * CloudHsmClient::listLunaClients(const ListLunaClientsRequest &request)
 {
     return qobject_cast<ListLunaClientsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -597,13 +597,13 @@ ListLunaClientsResponse * CloudHSMClient::listLunaClients(const ListLunaClientsR
  *
  * Returns a list of all tags for the specified AWS CloudHSM
  */
-ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * CloudHsmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ModifyHapgResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -623,13 +623,13 @@ ListTagsForResourceResponse * CloudHSMClient::listTagsForResource(const ListTags
  *
  * Modifies an existing high-availability partition
  */
-ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request)
+ModifyHapgResponse * CloudHsmClient::modifyHapg(const ModifyHapgRequest &request)
 {
     return qobject_cast<ModifyHapgResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ModifyHsmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -655,13 +655,13 @@ ModifyHapgResponse * CloudHSMClient::modifyHapg(const ModifyHapgRequest &request
  * If you are modifying a production HSM, you should ensure that your AWS CloudHSM service is configured for high
  * availability, and consider executing this operation during a maintenance
  */
-ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
+ModifyHsmResponse * CloudHsmClient::modifyHsm(const ModifyHsmRequest &request)
 {
     return qobject_cast<ModifyHsmResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * ModifyLunaClientResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -685,13 +685,13 @@ ModifyHsmResponse * CloudHSMClient::modifyHsm(const ModifyHsmRequest &request)
  *
  * This action can potentially start a workflow to install the new certificate on the client's
  */
-ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClientRequest &request)
+ModifyLunaClientResponse * CloudHsmClient::modifyLunaClient(const ModifyLunaClientRequest &request)
 {
     return qobject_cast<ModifyLunaClientResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the CloudHSMClient service, and returns a pointer to an
+ * Sends \a request to the CloudHsmClient service, and returns a pointer to an
  * RemoveTagsFromResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -715,28 +715,28 @@ ModifyLunaClientResponse * CloudHSMClient::modifyLunaClient(const ModifyLunaClie
  *
  * To remove a tag, specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use
  */
-RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
+RemoveTagsFromResourceResponse * CloudHsmClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::CloudHSM::CloudHSMClientPrivate
- * \brief The CloudHSMClientPrivate class provides private implementation for CloudHSMClient.
+ * \class QtAws::CloudHsm::CloudHsmClientPrivate
+ * \brief The CloudHsmClientPrivate class provides private implementation for CloudHsmClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a CloudHSMClientPrivate object with public implementation \a q.
+ * Constructs a CloudHsmClientPrivate object with public implementation \a q.
  */
-CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
+CloudHsmClientPrivate::CloudHsmClientPrivate(CloudHsmClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

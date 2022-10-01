@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class BatchDeleteDocumentRequestPrivate;
 
-class QTAWSKENDRA_EXPORT BatchDeleteDocumentRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT BatchDeleteDocumentRequest : public KendraRequest {
 
 public:
     BatchDeleteDocumentRequest(const BatchDeleteDocumentRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

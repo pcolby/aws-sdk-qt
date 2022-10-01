@@ -250,7 +250,7 @@ QNetworkRequest MacieRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MacieRequestPrivate::MacieRequestPrivate(const MacieRequest::Action action, MacieRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-12-19"))
 {
 
 }

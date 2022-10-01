@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationVersionResponse
- * \brief The CreateDocumentationVersionResponse class provides an interace for APIGateway CreateDocumentationVersion responses.
+ * \class QtAws::ApiGateway::CreateDocumentationVersionResponse
+ * \brief The CreateDocumentationVersionResponse class provides an interace for ApiGateway CreateDocumentationVersion responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDocumentationVersion
+ * \sa ApiGatewayClient::createDocumentationVersion
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateDocumentationVersionResponse::CreateDocumentationVersionResponse(
         const CreateDocumentationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDocumentationVersionResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateDocumentationVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateDocumentationVersionRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateDocumentationVersionRequest * CreateDocumentationVersionResponse::re
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateDocumentationVersion \a response.
+ * Parses a successful ApiGateway CreateDocumentationVersion \a response.
  */
 void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationVersionResponsePrivate
+ * \class QtAws::ApiGateway::CreateDocumentationVersionResponsePrivate
  * \brief The CreateDocumentationVersionResponsePrivate class provides private implementation for CreateDocumentationVersionResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateDocumentationVersionResponsePrivate object with public implementation \a q.
  */
 CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponsePrivate(
-    CreateDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateDocumentationVersionResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateDocumentationVersion response element from \a xml.
+ * Parses a ApiGateway CreateDocumentationVersion response element from \a xml.
  */
 void CreateDocumentationVersionResponsePrivate::parseCreateDocumentationVersionResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateDocumentationVersionResponsePrivate::parseCreateDocumentationVersionR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

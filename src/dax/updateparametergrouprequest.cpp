@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::UpdateParameterGroupRequest
- * \brief The UpdateParameterGroupRequest class provides an interface for DAX UpdateParameterGroup requests.
+ * \class QtAws::Dax::UpdateParameterGroupRequest
+ * \brief The UpdateParameterGroupRequest class provides an interface for Dax UpdateParameterGroup requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DAX::UpdateParameterGroupRequestPrivate
+ * \class QtAws::Dax::UpdateParameterGroupRequestPrivate
  * \brief The UpdateParameterGroupRequestPrivate class provides private implementation for UpdateParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

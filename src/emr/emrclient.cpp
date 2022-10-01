@@ -49,12 +49,16 @@
 #include "describejobflowsresponse.h"
 #include "describenotebookexecutionrequest.h"
 #include "describenotebookexecutionresponse.h"
+#include "describereleaselabelrequest.h"
+#include "describereleaselabelresponse.h"
 #include "describesecurityconfigurationrequest.h"
 #include "describesecurityconfigurationresponse.h"
 #include "describesteprequest.h"
 #include "describestepresponse.h"
 #include "describestudiorequest.h"
 #include "describestudioresponse.h"
+#include "getautoterminationpolicyrequest.h"
+#include "getautoterminationpolicyresponse.h"
 #include "getblockpublicaccessconfigurationrequest.h"
 #include "getblockpublicaccessconfigurationresponse.h"
 #include "getmanagedscalingpolicyrequest.h"
@@ -73,6 +77,8 @@
 #include "listinstancesresponse.h"
 #include "listnotebookexecutionsrequest.h"
 #include "listnotebookexecutionsresponse.h"
+#include "listreleaselabelsrequest.h"
+#include "listreleaselabelsresponse.h"
 #include "listsecurityconfigurationsrequest.h"
 #include "listsecurityconfigurationsresponse.h"
 #include "liststepsrequest.h"
@@ -89,12 +95,16 @@
 #include "modifyinstancegroupsresponse.h"
 #include "putautoscalingpolicyrequest.h"
 #include "putautoscalingpolicyresponse.h"
+#include "putautoterminationpolicyrequest.h"
+#include "putautoterminationpolicyresponse.h"
 #include "putblockpublicaccessconfigurationrequest.h"
 #include "putblockpublicaccessconfigurationresponse.h"
 #include "putmanagedscalingpolicyrequest.h"
 #include "putmanagedscalingpolicyresponse.h"
 #include "removeautoscalingpolicyrequest.h"
 #include "removeautoscalingpolicyresponse.h"
+#include "removeautoterminationpolicyrequest.h"
+#include "removeautoterminationpolicyresponse.h"
 #include "removemanagedscalingpolicyrequest.h"
 #include "removemanagedscalingpolicyresponse.h"
 #include "removetagsrequest.h"
@@ -120,8 +130,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EMR
- * \brief Contains classess for accessing Amazon Elastic MapReduce ( EMR).
+ * \namespace QtAws::Emr
+ * \brief Contains classess for accessing Amazon EMR.
  *
  * \inmodule QtAwsEmr
  *
@@ -129,18 +139,18 @@
  */
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::EmrClient
- * \brief The EmrClient class provides access to the Amazon Elastic MapReduce ( EMR) service.
+ * \class QtAws::Emr::EmrClient
+ * \brief The EmrClient class provides access to the Amazon EMR service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  */
 
 /*!
@@ -164,7 +174,7 @@ EmrClient::EmrClient(
     d->endpointPrefix = QStringLiteral("elasticmapreduce");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
+    d->serviceFullName = QStringLiteral("Amazon EMR");
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
@@ -192,7 +202,7 @@ EmrClient::EmrClient(
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("elasticmapreduce");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
+    d->serviceFullName = QStringLiteral("Amazon EMR");
     d->serviceName = QStringLiteral("elasticmapreduce");
 }
 
@@ -257,6 +267,10 @@ AddInstanceGroupsResponse * EmrClient::addInstanceGroups(const AddInstanceGroups
  * successfully>
  *
  * You can only add steps to a cluster that is in one of the following states: STARTING, BOOTSTRAPPING, RUNNING, or
+ *
+ * WAITING> <note>
+ *
+ * The string values passed into <code>HadoopJarStep</code> object cannot exceed a total of 10240
  */
 AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsRequest &request)
 {
@@ -269,9 +283,9 @@ AddJobFlowStepsResponse * EmrClient::addJobFlowSteps(const AddJobFlowStepsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds tags to an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping
- * clusters to track your Amazon EMR resource allocation costs. For more information, see <a
- * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
+ * Adds tags to an Amazon EMR resource, such as a cluster or an Amazon EMR Studio. Tags make it easier to associate
+ * resources in various ways, such as grouping clusters to track your Amazon EMR resource allocation costs. For more
+ * information, see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
  */
 AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
 {
@@ -286,8 +300,10 @@ AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
  *
  * Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8.0 and later, excluding
  * version 5.0.0. A maximum of 256 steps are allowed in each CancelSteps request. CancelSteps is idempotent but
- * asynchronous; it does not guarantee that a step will be canceled, even if the request is successfully submitted. You can
- * only cancel steps that are in a <code>PENDING</code>
+ * asynchronous; it does not guarantee that a step will be canceled, even if the request is successfully submitted. When
+ * you use Amazon EMR versions 5.28.0 and later, you can cancel steps that are in a <code>PENDING</code> or
+ * <code>RUNNING</code> state. In earlier versions of Amazon EMR, you can only cancel steps that are in a
+ * <code>PENDING</code> state.
  */
 CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
 {
@@ -327,7 +343,11 @@ CreateStudioResponse * EmrClient::createStudio(const CreateStudioRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Maps a user or group to the Amazon EMR Studio specified by <code>StudioId</code>, and applies a session policy to refine
- * Studio permissions for that user or
+ * Studio permissions for that user or group. Use <code>CreateStudioSessionMapping</code> to assign users to a Studio when
+ * you use Amazon Web Services SSO authentication. For instructions on how to assign users to a Studio when you use IAM
+ * authentication, see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-manage-users.html#emr-studio-assign-users-groups">Assign
+ * a user or group to your EMR
  */
 CreateStudioSessionMappingResponse * EmrClient::createStudioSessionMapping(const CreateStudioSessionMappingRequest &request)
 {
@@ -379,7 +399,7 @@ DeleteStudioSessionMappingResponse * EmrClient::deleteStudioSessionMapping(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on.
+ * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so
  */
 DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterRequest &request)
 {
@@ -441,6 +461,21 @@ DescribeNotebookExecutionResponse * EmrClient::describeNotebookExecution(const D
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * DescribeReleaseLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides EMR release label details, such as releases available the region where the API request is run, and the
+ * available applications for a specific EMR release label. Can also list EMR release versions that support a specified
+ * version of
+ */
+DescribeReleaseLabelResponse * EmrClient::describeReleaseLabel(const DescribeReleaseLabelRequest &request)
+{
+    return qobject_cast<DescribeReleaseLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * DescribeSecurityConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -480,12 +515,25 @@ DescribeStudioResponse * EmrClient::describeStudio(const DescribeStudioRequest &
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * GetAutoTerminationPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the auto-termination policy for an Amazon EMR
+ */
+GetAutoTerminationPolicyResponse * EmrClient::getAutoTerminationPolicy(const GetAutoTerminationPolicyRequest &request)
+{
+    return qobject_cast<GetAutoTerminationPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * GetBlockPublicAccessConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the Amazon EMR block public access configuration for your AWS account in the current Region. For more
- * information see <a
+ * Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current Region. For
+ * more information see <a
  * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block Public
  * Access for Amazon EMR</a> in the <i>Amazon EMR Management
  */
@@ -539,9 +587,10 @@ ListBootstrapActionsResponse * EmrClient::listBootstrapActions(const ListBootstr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides the status of all clusters visible to this AWS account. Allows you to filter the list of clusters based on
- * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a maximum of
- * 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListClusters
+ * Provides the status of all clusters visible to this Amazon Web Services account. Allows you to filter the list of
+ * clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This call
+ * returns a maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the cluster
+ * list across multiple ListClusters
  */
 ListClustersResponse * EmrClient::listClusters(const ListClustersRequest &request)
 {
@@ -610,6 +659,19 @@ ListNotebookExecutionsResponse * EmrClient::listNotebookExecutions(const ListNot
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * ListReleaseLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves release labels of EMR services in the region where the API is
+ */
+ListReleaseLabelsResponse * EmrClient::listReleaseLabels(const ListReleaseLabelsRequest &request)
+{
+    return qobject_cast<ListReleaseLabelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * ListSecurityConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -629,8 +691,10 @@ ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of steps for the cluster in reverse order unless you specify <code>stepIds</code> with the request of
- * filter by <code>StepStates</code>. You can specify a maximum of 10
+ * Provides a list of steps for the cluster in reverse order unless you specify <code>stepIds</code> with the request or
+ * filter by <code>StepStates</code>. You can specify a maximum of 10 <code>stepIDs</code>. The CLI automatically paginates
+ * results to return a list greater than 50 steps. To return more than 50 steps using the CLI, specify a
+ * <code>Marker</code>, which is a pagination token that indicates the next set of steps to
  */
 ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
 {
@@ -656,8 +720,8 @@ ListStudioSessionMappingsResponse * EmrClient::listStudioSessionMappings(const L
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of all Amazon EMR Studios associated with the AWS account. The list includes details such as ID, Studio
- * Access URL, and creation time for each
+ * Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account. The list includes details such
+ * as ID, Studio Access URL, and creation time for each
  */
 ListStudiosResponse * EmrClient::listStudios(const ListStudiosRequest &request)
 {
@@ -726,12 +790,34 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * PutAutoTerminationPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * Auto-termination is supported in Amazon EMR versions 5.30.0 and 6.1.0 and later. For more information, see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using an auto-termination
+ *
+ * policy</a>> </note>
+ *
+ * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the amount
+ * of idle time in seconds after which a cluster automatically terminates. For alternative cluster termination options, see
+ * <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control cluster
+ */
+PutAutoTerminationPolicyResponse * EmrClient::putAutoTerminationPolicy(const PutAutoTerminationPolicyRequest &request)
+{
+    return qobject_cast<PutAutoTerminationPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * PutBlockPublicAccessConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates an Amazon EMR block public access configuration for your AWS account in the current Region. For more
- * information see <a
+ * Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the current
+ * Region. For more information see <a
  * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block Public
  * Access for Amazon EMR</a> in the <i>Amazon EMR Management
  */
@@ -770,6 +856,19 @@ RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const Remov
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * RemoveAutoTerminationPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an auto-termination policy from an Amazon EMR
+ */
+RemoveAutoTerminationPolicyResponse * EmrClient::removeAutoTerminationPolicy(const RemoveAutoTerminationPolicyRequest &request)
+{
+    return qobject_cast<RemoveAutoTerminationPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * RemoveManagedScalingPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -787,9 +886,9 @@ RemoveManagedScalingPolicyResponse * EmrClient::removeManagedScalingPolicy(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes tags from an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping
- * clusters to track your Amazon EMR resource allocation costs. For more information, see <a
- * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
+ * Removes tags from an Amazon EMR resource, such as a cluster or Amazon EMR Studio. Tags make it easier to associate
+ * resources in various ways, such as grouping clusters to track your Amazon EMR resource allocation costs. For more
+ * information, see <a href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html">Tag Clusters</a>.
  *
  * </p
  *
@@ -884,12 +983,29 @@ SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const Set
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the <a>Cluster$VisibleToAllUsers</a> value, which determines whether the cluster is visible to all IAM users of the
- * AWS account associated with the cluster. Only the IAM user who created the cluster or the AWS account root user can call
- * this action. The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
- * actions if they have the proper IAM policy permissions. If set to <code>false</code>, only the IAM user that created the
- * cluster can perform actions. This action works on running clusters. You can override the default <code>true</code>
- * setting when you create a cluster by using the <code>VisibleToAllUsers</code> parameter with
+ * <b>
+ *
+ * The SetVisibleToAllUsers parameter is no longer supported. Your cluster may be visible to all users in your account. To
+ * restrict cluster access using an IAM policy, see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html">Identity and Access Management
+ * for EMR</a>.
+ *
+ * </p </b>
+ *
+ * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the Amazon
+ * Web Services account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the
+ * IAM principal that created the cluster and the Amazon Web Services account root user can perform EMR actions on the
+ * cluster, regardless of IAM permissions policies attached to other IAM
+ *
+ * principals>
+ *
+ * This action works on running clusters. When you create a cluster, use the <a>RunJobFlowInput$VisibleToAllUsers</a>
+ *
+ * parameter>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users">Understanding
+ * the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement
  */
 SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleToAllUsersRequest &request)
 {
@@ -970,12 +1086,12 @@ UpdateStudioSessionMappingResponse * EmrClient::updateStudioSessionMapping(const
 }
 
 /*!
- * \class QtAws::EMR::EmrClientPrivate
+ * \class QtAws::Emr::EmrClientPrivate
  * \brief The EmrClientPrivate class provides private implementation for EmrClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -987,5 +1103,5 @@ EmrClientPrivate::EmrClientPrivate(EmrClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

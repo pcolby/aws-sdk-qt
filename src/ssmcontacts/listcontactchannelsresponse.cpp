@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListContactChannelsResponse
- * \brief The ListContactChannelsResponse class provides an interace for SSMContacts ListContactChannels responses.
+ * \class QtAws::SsmContacts::ListContactChannelsResponse
+ * \brief The ListContactChannelsResponse class provides an interace for SsmContacts ListContactChannels responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listContactChannels
+ * \sa SsmContactsClient::listContactChannels
  */
 
 /*!
@@ -44,7 +54,7 @@ ListContactChannelsResponse::ListContactChannelsResponse(
         const ListContactChannelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new ListContactChannelsResponsePrivate(this), parent)
+    : SsmContactsResponse(new ListContactChannelsResponsePrivate(this), parent)
 {
     setRequest(new ListContactChannelsRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const ListContactChannelsRequest * ListContactChannelsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts ListContactChannels \a response.
+ * Parses a successful SsmContacts ListContactChannels \a response.
  */
 void ListContactChannelsResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void ListContactChannelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::ListContactChannelsResponsePrivate
+ * \class QtAws::SsmContacts::ListContactChannelsResponsePrivate
  * \brief The ListContactChannelsResponsePrivate class provides private implementation for ListContactChannelsResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a ListContactChannelsResponsePrivate object with public implementation \a q.
  */
 ListContactChannelsResponsePrivate::ListContactChannelsResponsePrivate(
-    ListContactChannelsResponse * const q) : SSMContactsResponsePrivate(q)
+    ListContactChannelsResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts ListContactChannels response element from \a xml.
+ * Parses a SsmContacts ListContactChannels response element from \a xml.
  */
 void ListContactChannelsResponsePrivate::parseListContactChannelsResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void ListContactChannelsResponsePrivate::parseListContactChannelsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

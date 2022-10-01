@@ -24,7 +24,7 @@
 #include "getappvalidationoutputrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class GetAppValidationOutputResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateDBClusterParameterGroupRequestPrivate;
 
-class QTAWSDOCDB_EXPORT CreateDBClusterParameterGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT CreateDBClusterParameterGroupRequest : public DocDbRequest {
 
 public:
     CreateDBClusterParameterGroupRequest(const CreateDBClusterParameterGroupRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

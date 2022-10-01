@@ -23,7 +23,7 @@
 #include "ssmresponse_p.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class GetCommandInvocationResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

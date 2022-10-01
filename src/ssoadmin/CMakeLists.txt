@@ -1,6 +1,17 @@
 add_compile_definitions(QTAWSSSOADMIN_LIBRARY)
 
-add_library(QtAwsSSOAdmin
+add_library(QtAwsSsoAdmin
+  qtawsssoadminglobal.h
+  ssoadminclient.h
+  ssoadminclient_p.h
+  ssoadminrequest.h
+  ssoadminrequest_p.h
+  ssoadminresponse.h
+  ssoadminresponse_p.h
+  attachcustomermanagedpolicyreferencetopermissionsetrequest.h
+  attachcustomermanagedpolicyreferencetopermissionsetrequest_p.h
+  attachcustomermanagedpolicyreferencetopermissionsetresponse.h
+  attachcustomermanagedpolicyreferencetopermissionsetresponse_p.h
   attachmanagedpolicytopermissionsetrequest.h
   attachmanagedpolicytopermissionsetrequest_p.h
   attachmanagedpolicytopermissionsetresponse.h
@@ -33,6 +44,10 @@ add_library(QtAwsSSOAdmin
   deletepermissionsetrequest_p.h
   deletepermissionsetresponse.h
   deletepermissionsetresponse_p.h
+  deletepermissionsboundaryfrompermissionsetrequest.h
+  deletepermissionsboundaryfrompermissionsetrequest_p.h
+  deletepermissionsboundaryfrompermissionsetresponse.h
+  deletepermissionsboundaryfrompermissionsetresponse_p.h
   describeaccountassignmentcreationstatusrequest.h
   describeaccountassignmentcreationstatusrequest_p.h
   describeaccountassignmentcreationstatusresponse.h
@@ -45,14 +60,18 @@ add_library(QtAwsSSOAdmin
   describeinstanceaccesscontrolattributeconfigurationrequest_p.h
   describeinstanceaccesscontrolattributeconfigurationresponse.h
   describeinstanceaccesscontrolattributeconfigurationresponse_p.h
-  describepermissionsetprovisioningstatusrequest.h
-  describepermissionsetprovisioningstatusrequest_p.h
-  describepermissionsetprovisioningstatusresponse.h
-  describepermissionsetprovisioningstatusresponse_p.h
   describepermissionsetrequest.h
   describepermissionsetrequest_p.h
   describepermissionsetresponse.h
   describepermissionsetresponse_p.h
+  describepermissionsetprovisioningstatusrequest.h
+  describepermissionsetprovisioningstatusrequest_p.h
+  describepermissionsetprovisioningstatusresponse.h
+  describepermissionsetprovisioningstatusresponse_p.h
+  detachcustomermanagedpolicyreferencefrompermissionsetrequest.h
+  detachcustomermanagedpolicyreferencefrompermissionsetrequest_p.h
+  detachcustomermanagedpolicyreferencefrompermissionsetresponse.h
+  detachcustomermanagedpolicyreferencefrompermissionsetresponse_p.h
   detachmanagedpolicyfrompermissionsetrequest.h
   detachmanagedpolicyfrompermissionsetrequest_p.h
   detachmanagedpolicyfrompermissionsetresponse.h
@@ -61,6 +80,10 @@ add_library(QtAwsSSOAdmin
   getinlinepolicyforpermissionsetrequest_p.h
   getinlinepolicyforpermissionsetresponse.h
   getinlinepolicyforpermissionsetresponse_p.h
+  getpermissionsboundaryforpermissionsetrequest.h
+  getpermissionsboundaryforpermissionsetrequest_p.h
+  getpermissionsboundaryforpermissionsetresponse.h
+  getpermissionsboundaryforpermissionsetresponse_p.h
   listaccountassignmentcreationstatusrequest.h
   listaccountassignmentcreationstatusrequest_p.h
   listaccountassignmentcreationstatusresponse.h
@@ -77,6 +100,10 @@ add_library(QtAwsSSOAdmin
   listaccountsforprovisionedpermissionsetrequest_p.h
   listaccountsforprovisionedpermissionsetresponse.h
   listaccountsforprovisionedpermissionsetresponse_p.h
+  listcustomermanagedpolicyreferencesinpermissionsetrequest.h
+  listcustomermanagedpolicyreferencesinpermissionsetrequest_p.h
+  listcustomermanagedpolicyreferencesinpermissionsetresponse.h
+  listcustomermanagedpolicyreferencesinpermissionsetresponse_p.h
   listinstancesrequest.h
   listinstancesrequest_p.h
   listinstancesresponse.h
@@ -89,14 +116,14 @@ add_library(QtAwsSSOAdmin
   listpermissionsetprovisioningstatusrequest_p.h
   listpermissionsetprovisioningstatusresponse.h
   listpermissionsetprovisioningstatusresponse_p.h
-  listpermissionsetsprovisionedtoaccountrequest.h
-  listpermissionsetsprovisionedtoaccountrequest_p.h
-  listpermissionsetsprovisionedtoaccountresponse.h
-  listpermissionsetsprovisionedtoaccountresponse_p.h
   listpermissionsetsrequest.h
   listpermissionsetsrequest_p.h
   listpermissionsetsresponse.h
   listpermissionsetsresponse_p.h
+  listpermissionsetsprovisionedtoaccountrequest.h
+  listpermissionsetsprovisionedtoaccountrequest_p.h
+  listpermissionsetsprovisionedtoaccountresponse.h
+  listpermissionsetsprovisionedtoaccountresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -109,13 +136,10 @@ add_library(QtAwsSSOAdmin
   putinlinepolicytopermissionsetrequest_p.h
   putinlinepolicytopermissionsetresponse.h
   putinlinepolicytopermissionsetresponse_p.h
-  qtawsssoadminglobal.h
-  ssoadminclient.h
-  ssoadminclient_p.h
-  ssoadminrequest.h
-  ssoadminrequest_p.h
-  ssoadminresponse.h
-  ssoadminresponse_p.h
+  putpermissionsboundarytopermissionsetrequest.h
+  putpermissionsboundarytopermissionsetrequest_p.h
+  putpermissionsboundarytopermissionsetresponse.h
+  putpermissionsboundarytopermissionsetresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -132,6 +156,11 @@ add_library(QtAwsSSOAdmin
   updatepermissionsetrequest_p.h
   updatepermissionsetresponse.h
   updatepermissionsetresponse_p.h
+  ssoadminclient.cpp
+  ssoadminrequest.cpp
+  ssoadminresponse.cpp
+  attachcustomermanagedpolicyreferencetopermissionsetrequest.cpp
+  attachcustomermanagedpolicyreferencetopermissionsetresponse.cpp
   attachmanagedpolicytopermissionsetrequest.cpp
   attachmanagedpolicytopermissionsetresponse.cpp
   createaccountassignmentrequest.cpp
@@ -148,20 +177,26 @@ add_library(QtAwsSSOAdmin
   deleteinstanceaccesscontrolattributeconfigurationresponse.cpp
   deletepermissionsetrequest.cpp
   deletepermissionsetresponse.cpp
+  deletepermissionsboundaryfrompermissionsetrequest.cpp
+  deletepermissionsboundaryfrompermissionsetresponse.cpp
   describeaccountassignmentcreationstatusrequest.cpp
   describeaccountassignmentcreationstatusresponse.cpp
   describeaccountassignmentdeletionstatusrequest.cpp
   describeaccountassignmentdeletionstatusresponse.cpp
   describeinstanceaccesscontrolattributeconfigurationrequest.cpp
   describeinstanceaccesscontrolattributeconfigurationresponse.cpp
-  describepermissionsetprovisioningstatusrequest.cpp
-  describepermissionsetprovisioningstatusresponse.cpp
   describepermissionsetrequest.cpp
   describepermissionsetresponse.cpp
+  describepermissionsetprovisioningstatusrequest.cpp
+  describepermissionsetprovisioningstatusresponse.cpp
+  detachcustomermanagedpolicyreferencefrompermissionsetrequest.cpp
+  detachcustomermanagedpolicyreferencefrompermissionsetresponse.cpp
   detachmanagedpolicyfrompermissionsetrequest.cpp
   detachmanagedpolicyfrompermissionsetresponse.cpp
   getinlinepolicyforpermissionsetrequest.cpp
   getinlinepolicyforpermissionsetresponse.cpp
+  getpermissionsboundaryforpermissionsetrequest.cpp
+  getpermissionsboundaryforpermissionsetresponse.cpp
   listaccountassignmentcreationstatusrequest.cpp
   listaccountassignmentcreationstatusresponse.cpp
   listaccountassignmentdeletionstatusrequest.cpp
@@ -170,25 +205,26 @@ add_library(QtAwsSSOAdmin
   listaccountassignmentsresponse.cpp
   listaccountsforprovisionedpermissionsetrequest.cpp
   listaccountsforprovisionedpermissionsetresponse.cpp
+  listcustomermanagedpolicyreferencesinpermissionsetrequest.cpp
+  listcustomermanagedpolicyreferencesinpermissionsetresponse.cpp
   listinstancesrequest.cpp
   listinstancesresponse.cpp
   listmanagedpoliciesinpermissionsetrequest.cpp
   listmanagedpoliciesinpermissionsetresponse.cpp
   listpermissionsetprovisioningstatusrequest.cpp
   listpermissionsetprovisioningstatusresponse.cpp
-  listpermissionsetsprovisionedtoaccountrequest.cpp
-  listpermissionsetsprovisionedtoaccountresponse.cpp
   listpermissionsetsrequest.cpp
   listpermissionsetsresponse.cpp
+  listpermissionsetsprovisionedtoaccountrequest.cpp
+  listpermissionsetsprovisionedtoaccountresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   provisionpermissionsetrequest.cpp
   provisionpermissionsetresponse.cpp
   putinlinepolicytopermissionsetrequest.cpp
   putinlinepolicytopermissionsetresponse.cpp
-  ssoadminclient.cpp
-  ssoadminrequest.cpp
-  ssoadminresponse.cpp
+  putpermissionsboundarytopermissionsetrequest.cpp
+  putpermissionsboundarytopermissionsetresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
@@ -198,7 +234,7 @@ add_library(QtAwsSSOAdmin
   updatepermissionsetrequest.cpp
   updatepermissionsetresponse.cpp)
 
-target_link_libraries(QtAwsSSOAdmin
+target_link_libraries(QtAwsSsoAdmin
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,12 +1,21 @@
 add_compile_definitions(QTAWSAPPSTREAM_LIBRARY)
 
 add_library(QtAwsAppStream
+  qtawsappstreamglobal.h
   appstreamclient.h
   appstreamclient_p.h
   appstreamrequest.h
   appstreamrequest_p.h
   appstreamresponse.h
   appstreamresponse_p.h
+  associateapplicationfleetrequest.h
+  associateapplicationfleetrequest_p.h
+  associateapplicationfleetresponse.h
+  associateapplicationfleetresponse_p.h
+  associateapplicationtoentitlementrequest.h
+  associateapplicationtoentitlementrequest_p.h
+  associateapplicationtoentitlementresponse.h
+  associateapplicationtoentitlementresponse_p.h
   associatefleetrequest.h
   associatefleetrequest_p.h
   associatefleetresponse.h
@@ -23,10 +32,22 @@ add_library(QtAwsAppStream
   copyimagerequest_p.h
   copyimageresponse.h
   copyimageresponse_p.h
+  createappblockrequest.h
+  createappblockrequest_p.h
+  createappblockresponse.h
+  createappblockresponse_p.h
+  createapplicationrequest.h
+  createapplicationrequest_p.h
+  createapplicationresponse.h
+  createapplicationresponse_p.h
   createdirectoryconfigrequest.h
   createdirectoryconfigrequest_p.h
   createdirectoryconfigresponse.h
   createdirectoryconfigresponse_p.h
+  createentitlementrequest.h
+  createentitlementrequest_p.h
+  createentitlementresponse.h
+  createentitlementresponse_p.h
   createfleetrequest.h
   createfleetrequest_p.h
   createfleetresponse.h
@@ -59,14 +80,30 @@ add_library(QtAwsAppStream
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  deleteappblockrequest.h
+  deleteappblockrequest_p.h
+  deleteappblockresponse.h
+  deleteappblockresponse_p.h
+  deleteapplicationrequest.h
+  deleteapplicationrequest_p.h
+  deleteapplicationresponse.h
+  deleteapplicationresponse_p.h
   deletedirectoryconfigrequest.h
   deletedirectoryconfigrequest_p.h
   deletedirectoryconfigresponse.h
   deletedirectoryconfigresponse_p.h
+  deleteentitlementrequest.h
+  deleteentitlementrequest_p.h
+  deleteentitlementresponse.h
+  deleteentitlementresponse_p.h
   deletefleetrequest.h
   deletefleetrequest_p.h
   deletefleetresponse.h
   deletefleetresponse_p.h
+  deleteimagerequest.h
+  deleteimagerequest_p.h
+  deleteimageresponse.h
+  deleteimageresponse_p.h
   deleteimagebuilderrequest.h
   deleteimagebuilderrequest_p.h
   deleteimagebuilderresponse.h
@@ -75,10 +112,6 @@ add_library(QtAwsAppStream
   deleteimagepermissionsrequest_p.h
   deleteimagepermissionsresponse.h
   deleteimagepermissionsresponse_p.h
-  deleteimagerequest.h
-  deleteimagerequest_p.h
-  deleteimageresponse.h
-  deleteimageresponse_p.h
   deletestackrequest.h
   deletestackrequest_p.h
   deletestackresponse.h
@@ -91,10 +124,26 @@ add_library(QtAwsAppStream
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  describeappblocksrequest.h
+  describeappblocksrequest_p.h
+  describeappblocksresponse.h
+  describeappblocksresponse_p.h
+  describeapplicationfleetassociationsrequest.h
+  describeapplicationfleetassociationsrequest_p.h
+  describeapplicationfleetassociationsresponse.h
+  describeapplicationfleetassociationsresponse_p.h
+  describeapplicationsrequest.h
+  describeapplicationsrequest_p.h
+  describeapplicationsresponse.h
+  describeapplicationsresponse_p.h
   describedirectoryconfigsrequest.h
   describedirectoryconfigsrequest_p.h
   describedirectoryconfigsresponse.h
   describedirectoryconfigsresponse_p.h
+  describeentitlementsrequest.h
+  describeentitlementsrequest_p.h
+  describeentitlementsresponse.h
+  describeentitlementsresponse_p.h
   describefleetsrequest.h
   describefleetsrequest_p.h
   describefleetsresponse.h
@@ -123,18 +172,26 @@ add_library(QtAwsAppStream
   describeusagereportsubscriptionsrequest_p.h
   describeusagereportsubscriptionsresponse.h
   describeusagereportsubscriptionsresponse_p.h
-  describeusersrequest.h
-  describeusersrequest_p.h
-  describeusersresponse.h
-  describeusersresponse_p.h
   describeuserstackassociationsrequest.h
   describeuserstackassociationsrequest_p.h
   describeuserstackassociationsresponse.h
   describeuserstackassociationsresponse_p.h
+  describeusersrequest.h
+  describeusersrequest_p.h
+  describeusersresponse.h
+  describeusersresponse_p.h
   disableuserrequest.h
   disableuserrequest_p.h
   disableuserresponse.h
   disableuserresponse_p.h
+  disassociateapplicationfleetrequest.h
+  disassociateapplicationfleetrequest_p.h
+  disassociateapplicationfleetresponse.h
+  disassociateapplicationfleetresponse_p.h
+  disassociateapplicationfromentitlementrequest.h
+  disassociateapplicationfromentitlementrequest_p.h
+  disassociateapplicationfromentitlementresponse.h
+  disassociateapplicationfromentitlementresponse_p.h
   disassociatefleetrequest.h
   disassociatefleetrequest_p.h
   disassociatefleetresponse.h
@@ -155,11 +212,14 @@ add_library(QtAwsAppStream
   listassociatedstacksrequest_p.h
   listassociatedstacksresponse.h
   listassociatedstacksresponse_p.h
+  listentitledapplicationsrequest.h
+  listentitledapplicationsrequest_p.h
+  listentitledapplicationsresponse.h
+  listentitledapplicationsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsappstreamglobal.h
   startfleetrequest.h
   startfleetrequest_p.h
   startfleetresponse.h
@@ -184,10 +244,18 @@ add_library(QtAwsAppStream
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateapplicationrequest.h
+  updateapplicationrequest_p.h
+  updateapplicationresponse.h
+  updateapplicationresponse_p.h
   updatedirectoryconfigrequest.h
   updatedirectoryconfigrequest_p.h
   updatedirectoryconfigresponse.h
   updatedirectoryconfigresponse_p.h
+  updateentitlementrequest.h
+  updateentitlementrequest_p.h
+  updateentitlementresponse.h
+  updateentitlementresponse_p.h
   updatefleetrequest.h
   updatefleetrequest_p.h
   updatefleetresponse.h
@@ -203,6 +271,10 @@ add_library(QtAwsAppStream
   appstreamclient.cpp
   appstreamrequest.cpp
   appstreamresponse.cpp
+  associateapplicationfleetrequest.cpp
+  associateapplicationfleetresponse.cpp
+  associateapplicationtoentitlementrequest.cpp
+  associateapplicationtoentitlementresponse.cpp
   associatefleetrequest.cpp
   associatefleetresponse.cpp
   batchassociateuserstackrequest.cpp
@@ -211,8 +283,14 @@ add_library(QtAwsAppStream
   batchdisassociateuserstackresponse.cpp
   copyimagerequest.cpp
   copyimageresponse.cpp
+  createappblockrequest.cpp
+  createappblockresponse.cpp
+  createapplicationrequest.cpp
+  createapplicationresponse.cpp
   createdirectoryconfigrequest.cpp
   createdirectoryconfigresponse.cpp
+  createentitlementrequest.cpp
+  createentitlementresponse.cpp
   createfleetrequest.cpp
   createfleetresponse.cpp
   createimagebuilderrequest.cpp
@@ -229,24 +307,38 @@ add_library(QtAwsAppStream
   createusagereportsubscriptionresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  deleteappblockrequest.cpp
+  deleteappblockresponse.cpp
+  deleteapplicationrequest.cpp
+  deleteapplicationresponse.cpp
   deletedirectoryconfigrequest.cpp
   deletedirectoryconfigresponse.cpp
+  deleteentitlementrequest.cpp
+  deleteentitlementresponse.cpp
   deletefleetrequest.cpp
   deletefleetresponse.cpp
+  deleteimagerequest.cpp
+  deleteimageresponse.cpp
   deleteimagebuilderrequest.cpp
   deleteimagebuilderresponse.cpp
   deleteimagepermissionsrequest.cpp
   deleteimagepermissionsresponse.cpp
-  deleteimagerequest.cpp
-  deleteimageresponse.cpp
   deletestackrequest.cpp
   deletestackresponse.cpp
   deleteusagereportsubscriptionrequest.cpp
   deleteusagereportsubscriptionresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  describeappblocksrequest.cpp
+  describeappblocksresponse.cpp
+  describeapplicationfleetassociationsrequest.cpp
+  describeapplicationfleetassociationsresponse.cpp
+  describeapplicationsrequest.cpp
+  describeapplicationsresponse.cpp
   describedirectoryconfigsrequest.cpp
   describedirectoryconfigsresponse.cpp
+  describeentitlementsrequest.cpp
+  describeentitlementsresponse.cpp
   describefleetsrequest.cpp
   describefleetsresponse.cpp
   describeimagebuildersrequest.cpp
@@ -261,12 +353,16 @@ add_library(QtAwsAppStream
   describestacksresponse.cpp
   describeusagereportsubscriptionsrequest.cpp
   describeusagereportsubscriptionsresponse.cpp
-  describeusersrequest.cpp
-  describeusersresponse.cpp
   describeuserstackassociationsrequest.cpp
   describeuserstackassociationsresponse.cpp
+  describeusersrequest.cpp
+  describeusersresponse.cpp
   disableuserrequest.cpp
   disableuserresponse.cpp
+  disassociateapplicationfleetrequest.cpp
+  disassociateapplicationfleetresponse.cpp
+  disassociateapplicationfromentitlementrequest.cpp
+  disassociateapplicationfromentitlementresponse.cpp
   disassociatefleetrequest.cpp
   disassociatefleetresponse.cpp
   enableuserrequest.cpp
@@ -277,6 +373,8 @@ add_library(QtAwsAppStream
   listassociatedfleetsresponse.cpp
   listassociatedstacksrequest.cpp
   listassociatedstacksresponse.cpp
+  listentitledapplicationsrequest.cpp
+  listentitledapplicationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   startfleetrequest.cpp
@@ -291,8 +389,12 @@ add_library(QtAwsAppStream
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateapplicationrequest.cpp
+  updateapplicationresponse.cpp
   updatedirectoryconfigrequest.cpp
   updatedirectoryconfigresponse.cpp
+  updateentitlementrequest.cpp
+  updateentitlementresponse.cpp
   updatefleetrequest.cpp
   updatefleetresponse.cpp
   updateimagepermissionsrequest.cpp

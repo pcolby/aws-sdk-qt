@@ -40,8 +40,10 @@ public:
     /// Actions supported by IoTDataPlane.
     enum Action {
         DeleteThingShadowAction,
+        GetRetainedMessageAction,
         GetThingShadowAction,
         ListNamedShadowsForThingAction,
+        ListRetainedMessagesAction,
         PublishAction,
         UpdateThingShadowAction,
     };

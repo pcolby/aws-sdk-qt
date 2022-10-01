@@ -23,11 +23,11 @@
 #include "acmpcaresponse_p.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class GetPolicyResponse;
 
-class GetPolicyResponsePrivate : public AcmpcaResponsePrivate {
+class GetPolicyResponsePrivate : public AcmPcaResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

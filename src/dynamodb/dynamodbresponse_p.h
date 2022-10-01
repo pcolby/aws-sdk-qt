@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
-class DynamoDBResponse;
+class DynamoDbResponse;
 
-class DynamoDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DynamoDbResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit DynamoDBResponsePrivate(DynamoDBResponse * const q);
+    explicit DynamoDbResponsePrivate(DynamoDbResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(DynamoDBResponse)
-    Q_DISABLE_COPY(DynamoDBResponsePrivate)
+    Q_DECLARE_PUBLIC(DynamoDbResponse)
+    Q_DISABLE_COPY(DynamoDbResponsePrivate)
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

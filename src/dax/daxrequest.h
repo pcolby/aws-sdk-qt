@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DaxRequestPrivate;
 
 class QTAWSDAX_EXPORT DaxRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DAX.
+    /// Actions supported by Dax.
     enum Action {
         CreateClusterAction,
         CreateParameterGroupAction,
@@ -96,7 +96,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

@@ -23,11 +23,11 @@
 #include "ssoadminrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListAccountAssignmentDeletionStatusRequestPrivate;
 
-class QTAWSSSOADMIN_EXPORT ListAccountAssignmentDeletionStatusRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT ListAccountAssignmentDeletionStatusRequest : public SsoAdminRequest {
 
 public:
     ListAccountAssignmentDeletionStatusRequest(const ListAccountAssignmentDeletionStatusRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

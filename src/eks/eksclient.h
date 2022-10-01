@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class EksClientPrivate;
 class AssociateEncryptionConfigRequest;
@@ -50,6 +50,8 @@ class DeleteFargateProfileRequest;
 class DeleteFargateProfileResponse;
 class DeleteNodegroupRequest;
 class DeleteNodegroupResponse;
+class DeregisterClusterRequest;
+class DeregisterClusterResponse;
 class DescribeAddonRequest;
 class DescribeAddonResponse;
 class DescribeAddonVersionsRequest;
@@ -80,6 +82,8 @@ class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class ListUpdatesRequest;
 class ListUpdatesResponse;
+class RegisterClusterRequest;
+class RegisterClusterResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -121,6 +125,7 @@ public slots:
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DeleteFargateProfileResponse * deleteFargateProfile(const DeleteFargateProfileRequest &request);
     DeleteNodegroupResponse * deleteNodegroup(const DeleteNodegroupRequest &request);
+    DeregisterClusterResponse * deregisterCluster(const DeregisterClusterRequest &request);
     DescribeAddonResponse * describeAddon(const DescribeAddonRequest &request);
     DescribeAddonVersionsResponse * describeAddonVersions(const DescribeAddonVersionsRequest &request);
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
@@ -136,6 +141,7 @@ public slots:
     ListNodegroupsResponse * listNodegroups(const ListNodegroupsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListUpdatesResponse * listUpdates(const ListUpdatesRequest &request);
+    RegisterClusterResponse * registerCluster(const RegisterClusterRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAddonResponse * updateAddon(const UpdateAddonRequest &request);
@@ -150,7 +156,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

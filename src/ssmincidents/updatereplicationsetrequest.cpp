@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateReplicationSetRequest
- * \brief The UpdateReplicationSetRequest class provides an interface for SSMIncidents UpdateReplicationSet requests.
+ * \class QtAws::SsmIncidents::UpdateReplicationSetRequest
+ * \brief The UpdateReplicationSetRequest class provides an interface for SsmIncidents UpdateReplicationSet requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateReplicationSet
+ * \sa SsmIncidentsClient::updateReplicationSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateReplicationSetRequest::UpdateReplicationSetRequest(const UpdateReplicationSetRequest &other)
-    : SSMIncidentsRequest(new UpdateReplicationSetRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new UpdateReplicationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ UpdateReplicationSetRequest::UpdateReplicationSetRequest(const UpdateReplication
  * Constructs a UpdateReplicationSetRequest object.
  */
 UpdateReplicationSetRequest::UpdateReplicationSetRequest()
-    : SSMIncidentsRequest(new UpdateReplicationSetRequestPrivate(SSMIncidentsRequest::UpdateReplicationSetAction, this))
+    : SsmIncidentsRequest(new UpdateReplicationSetRequestPrivate(SsmIncidentsRequest::UpdateReplicationSetAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationSetRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateReplicationSetRequestPrivate
+ * \class QtAws::SsmIncidents::UpdateReplicationSetRequestPrivate
  * \brief The UpdateReplicationSetRequestPrivate class provides private implementation for UpdateReplicationSetRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a UpdateReplicationSetRequestPrivate object for SSMIncidents \a action,
+ * Constructs a UpdateReplicationSetRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 UpdateReplicationSetRequestPrivate::UpdateReplicationSetRequestPrivate(
-    const SSMIncidentsRequest::Action action, UpdateReplicationSetRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, UpdateReplicationSetRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ UpdateReplicationSetRequestPrivate::UpdateReplicationSetRequestPrivate(
  */
 UpdateReplicationSetRequestPrivate::UpdateReplicationSetRequestPrivate(
     const UpdateReplicationSetRequestPrivate &other, UpdateReplicationSetRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

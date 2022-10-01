@@ -24,7 +24,7 @@
 #include "getpermissionpolicyrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class GetPermissionPolicyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

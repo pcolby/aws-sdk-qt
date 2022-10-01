@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class UntagResourceRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    UntagResourceRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

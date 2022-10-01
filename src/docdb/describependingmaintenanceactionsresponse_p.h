@@ -23,11 +23,11 @@
 #include "docdbresponse_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribePendingMaintenanceActionsResponse;
 
-class DescribePendingMaintenanceActionsResponsePrivate : public DocDBResponsePrivate {
+class DescribePendingMaintenanceActionsResponsePrivate : public DocDbResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

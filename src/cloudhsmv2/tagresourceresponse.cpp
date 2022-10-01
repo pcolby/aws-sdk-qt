@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for CloudHSMV2 TagResource responses.
+ * \class QtAws::CloudHsmV2::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for CloudHsmV2 TagResource responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::tagResource
+ * \sa CloudHsmV2Client::tagResource
  */
 
 /*!
@@ -46,7 +46,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new TagResourceResponsePrivate(this), parent)
+    : CloudHsmV2Response(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 TagResource \a response.
+ * Parses a successful CloudHsmV2 TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::TagResourceResponsePrivate
+ * \class QtAws::CloudHsmV2::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    TagResourceResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 TagResource response element from \a xml.
+ * Parses a CloudHsmV2 TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

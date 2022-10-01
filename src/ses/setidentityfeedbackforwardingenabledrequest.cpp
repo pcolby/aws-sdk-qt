@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledRequest
- * \brief The SetIdentityFeedbackForwardingEnabledRequest class provides an interface for SES SetIdentityFeedbackForwardingEnabled requests.
+ * \class QtAws::Ses::SetIdentityFeedbackForwardingEnabledRequest
+ * \brief The SetIdentityFeedbackForwardingEnabledRequest class provides an interface for Ses SetIdentityFeedbackForwardingEnabled requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
 }
 
 /*!
- * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledRequestPrivate
+ * \class QtAws::Ses::SetIdentityFeedbackForwardingEnabledRequestPrivate
  * \brief The SetIdentityFeedbackForwardingEnabledRequestPrivate class provides private implementation for SetIdentityFeedbackForwardingEnabledRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardin
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

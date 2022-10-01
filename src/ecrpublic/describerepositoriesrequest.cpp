@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DescribeRepositoriesRequest
- * \brief The DescribeRepositoriesRequest class provides an interface for ECRPublic DescribeRepositories requests.
+ * \class QtAws::EcrPublic::DescribeRepositoriesRequest
+ * \brief The DescribeRepositoriesRequest class provides an interface for EcrPublic DescribeRepositories requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::describeRepositories
+ * \sa EcrPublicClient::describeRepositories
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositoriesRequest &other)
-    : ECRPublicRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositor
  * Constructs a DescribeRepositoriesRequest object.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest()
-    : ECRPublicRequest(new DescribeRepositoriesRequestPrivate(ECRPublicRequest::DescribeRepositoriesAction, this))
+    : EcrPublicRequest(new DescribeRepositoriesRequestPrivate(EcrPublicRequest::DescribeRepositoriesAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::ECRPublic::DescribeRepositoriesRequestPrivate
+ * \class QtAws::EcrPublic::DescribeRepositoriesRequestPrivate
  * \brief The DescribeRepositoriesRequestPrivate class provides private implementation for DescribeRepositoriesRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a DescribeRepositoriesRequestPrivate object for ECRPublic \a action,
+ * Constructs a DescribeRepositoriesRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
-    const ECRPublicRequest::Action action, DescribeRepositoriesRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, DescribeRepositoriesRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const DescribeRepositoriesRequestPrivate &other, DescribeRepositoriesRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

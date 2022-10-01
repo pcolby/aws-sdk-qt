@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DeleteStateMachineResponse
- * \brief The DeleteStateMachineResponse class provides an interace for SFN DeleteStateMachine responses.
+ * \class QtAws::Sfn::DeleteStateMachineResponse
+ * \brief The DeleteStateMachineResponse class provides an interace for Sfn DeleteStateMachine responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN DeleteStateMachine \a response.
+ * Parses a successful Sfn DeleteStateMachine \a response.
  */
 void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::DeleteStateMachineResponsePrivate
+ * \class QtAws::Sfn::DeleteStateMachineResponsePrivate
  * \brief The DeleteStateMachineResponsePrivate class provides private implementation for DeleteStateMachineResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
 }
 
 /*!
- * Parses a SFN DeleteStateMachine response element from \a xml.
+ * Parses a Sfn DeleteStateMachine response element from \a xml.
  */
 void DeleteStateMachineResponsePrivate::parseDeleteStateMachineResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DeleteStateMachineResponsePrivate::parseDeleteStateMachineResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

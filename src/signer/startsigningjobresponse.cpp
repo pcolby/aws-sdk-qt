@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::StartSigningJobResponse
- * \brief The StartSigningJobResponse class provides an interace for signer StartSigningJob responses.
+ * \class QtAws::Signer::StartSigningJobResponse
+ * \brief The StartSigningJobResponse class provides an interace for Signer StartSigningJob responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::startSigningJob
+ * \sa SignerClient::startSigningJob
  */
 
 /*!
@@ -69,7 +71,7 @@ StartSigningJobResponse::StartSigningJobResponse(
         const StartSigningJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new StartSigningJobResponsePrivate(this), parent)
+    : SignerResponse(new StartSigningJobResponsePrivate(this), parent)
 {
     setRequest(new StartSigningJobRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const StartSigningJobRequest * StartSigningJobResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer StartSigningJob \a response.
+ * Parses a successful Signer StartSigningJob \a response.
  */
 void StartSigningJobResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void StartSigningJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::StartSigningJobResponsePrivate
+ * \class QtAws::Signer::StartSigningJobResponsePrivate
  * \brief The StartSigningJobResponsePrivate class provides private implementation for StartSigningJobResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a StartSigningJobResponsePrivate object with public implementation \a q.
  */
 StartSigningJobResponsePrivate::StartSigningJobResponsePrivate(
-    StartSigningJobResponse * const q) : signerResponsePrivate(q)
+    StartSigningJobResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer StartSigningJob response element from \a xml.
+ * Parses a Signer StartSigningJob response element from \a xml.
  */
 void StartSigningJobResponsePrivate::parseStartSigningJobResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void StartSigningJobResponsePrivate::parseStartSigningJobResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

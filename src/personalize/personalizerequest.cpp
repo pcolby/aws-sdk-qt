@@ -37,6 +37,7 @@ namespace Personalize {
  * requests.
  *
  * \value CreateBatchInferenceJobAction Personalize CreateBatchInferenceJob action.
+ * \value CreateBatchSegmentJobAction Personalize CreateBatchSegmentJob action.
  * \value CreateCampaignAction Personalize CreateCampaign action.
  * \value CreateDatasetAction Personalize CreateDataset action.
  * \value CreateDatasetExportJobAction Personalize CreateDatasetExportJob action.
@@ -44,6 +45,7 @@ namespace Personalize {
  * \value CreateDatasetImportJobAction Personalize CreateDatasetImportJob action.
  * \value CreateEventTrackerAction Personalize CreateEventTracker action.
  * \value CreateFilterAction Personalize CreateFilter action.
+ * \value CreateRecommenderAction Personalize CreateRecommender action.
  * \value CreateSchemaAction Personalize CreateSchema action.
  * \value CreateSolutionAction Personalize CreateSolution action.
  * \value CreateSolutionVersionAction Personalize CreateSolutionVersion action.
@@ -52,10 +54,12 @@ namespace Personalize {
  * \value DeleteDatasetGroupAction Personalize DeleteDatasetGroup action.
  * \value DeleteEventTrackerAction Personalize DeleteEventTracker action.
  * \value DeleteFilterAction Personalize DeleteFilter action.
+ * \value DeleteRecommenderAction Personalize DeleteRecommender action.
  * \value DeleteSchemaAction Personalize DeleteSchema action.
  * \value DeleteSolutionAction Personalize DeleteSolution action.
  * \value DescribeAlgorithmAction Personalize DescribeAlgorithm action.
  * \value DescribeBatchInferenceJobAction Personalize DescribeBatchInferenceJob action.
+ * \value DescribeBatchSegmentJobAction Personalize DescribeBatchSegmentJob action.
  * \value DescribeCampaignAction Personalize DescribeCampaign action.
  * \value DescribeDatasetAction Personalize DescribeDataset action.
  * \value DescribeDatasetExportJobAction Personalize DescribeDatasetExportJob action.
@@ -65,11 +69,13 @@ namespace Personalize {
  * \value DescribeFeatureTransformationAction Personalize DescribeFeatureTransformation action.
  * \value DescribeFilterAction Personalize DescribeFilter action.
  * \value DescribeRecipeAction Personalize DescribeRecipe action.
+ * \value DescribeRecommenderAction Personalize DescribeRecommender action.
  * \value DescribeSchemaAction Personalize DescribeSchema action.
  * \value DescribeSolutionAction Personalize DescribeSolution action.
  * \value DescribeSolutionVersionAction Personalize DescribeSolutionVersion action.
  * \value GetSolutionMetricsAction Personalize GetSolutionMetrics action.
  * \value ListBatchInferenceJobsAction Personalize ListBatchInferenceJobs action.
+ * \value ListBatchSegmentJobsAction Personalize ListBatchSegmentJobs action.
  * \value ListCampaignsAction Personalize ListCampaigns action.
  * \value ListDatasetExportJobsAction Personalize ListDatasetExportJobs action.
  * \value ListDatasetGroupsAction Personalize ListDatasetGroups action.
@@ -78,11 +84,18 @@ namespace Personalize {
  * \value ListEventTrackersAction Personalize ListEventTrackers action.
  * \value ListFiltersAction Personalize ListFilters action.
  * \value ListRecipesAction Personalize ListRecipes action.
+ * \value ListRecommendersAction Personalize ListRecommenders action.
  * \value ListSchemasAction Personalize ListSchemas action.
  * \value ListSolutionVersionsAction Personalize ListSolutionVersions action.
  * \value ListSolutionsAction Personalize ListSolutions action.
+ * \value ListTagsForResourceAction Personalize ListTagsForResource action.
+ * \value StartRecommenderAction Personalize StartRecommender action.
+ * \value StopRecommenderAction Personalize StopRecommender action.
  * \value StopSolutionVersionCreationAction Personalize StopSolutionVersionCreation action.
+ * \value TagResourceAction Personalize TagResource action.
+ * \value UntagResourceAction Personalize UntagResource action.
  * \value UpdateCampaignAction Personalize UpdateCampaign action.
+ * \value UpdateRecommenderAction Personalize UpdateRecommender action.
  */
 
 /*!
@@ -290,7 +303,7 @@ QNetworkRequest PersonalizeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 PersonalizeRequestPrivate::PersonalizeRequestPrivate(const PersonalizeRequest::Action action, PersonalizeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-22"))
 {
 
 }
@@ -325,6 +338,7 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
         case PersonalizeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateBatchInferenceJob);
+        ActionToString(CreateBatchSegmentJob);
         ActionToString(CreateCampaign);
         ActionToString(CreateDataset);
         ActionToString(CreateDatasetExportJob);
@@ -332,6 +346,7 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
         ActionToString(CreateDatasetImportJob);
         ActionToString(CreateEventTracker);
         ActionToString(CreateFilter);
+        ActionToString(CreateRecommender);
         ActionToString(CreateSchema);
         ActionToString(CreateSolution);
         ActionToString(CreateSolutionVersion);
@@ -340,10 +355,12 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
         ActionToString(DeleteDatasetGroup);
         ActionToString(DeleteEventTracker);
         ActionToString(DeleteFilter);
+        ActionToString(DeleteRecommender);
         ActionToString(DeleteSchema);
         ActionToString(DeleteSolution);
         ActionToString(DescribeAlgorithm);
         ActionToString(DescribeBatchInferenceJob);
+        ActionToString(DescribeBatchSegmentJob);
         ActionToString(DescribeCampaign);
         ActionToString(DescribeDataset);
         ActionToString(DescribeDatasetExportJob);
@@ -353,11 +370,13 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
         ActionToString(DescribeFeatureTransformation);
         ActionToString(DescribeFilter);
         ActionToString(DescribeRecipe);
+        ActionToString(DescribeRecommender);
         ActionToString(DescribeSchema);
         ActionToString(DescribeSolution);
         ActionToString(DescribeSolutionVersion);
         ActionToString(GetSolutionMetrics);
         ActionToString(ListBatchInferenceJobs);
+        ActionToString(ListBatchSegmentJobs);
         ActionToString(ListCampaigns);
         ActionToString(ListDatasetExportJobs);
         ActionToString(ListDatasetGroups);
@@ -366,11 +385,18 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
         ActionToString(ListEventTrackers);
         ActionToString(ListFilters);
         ActionToString(ListRecipes);
+        ActionToString(ListRecommenders);
         ActionToString(ListSchemas);
         ActionToString(ListSolutionVersions);
         ActionToString(ListSolutions);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartRecommender);
+        ActionToString(StopRecommender);
         ActionToString(StopSolutionVersionCreation);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         ActionToString(UpdateCampaign);
+        ActionToString(UpdateRecommender);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

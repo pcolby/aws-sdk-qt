@@ -23,7 +23,7 @@
 #include "pirequest.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class DescribeDimensionKeysRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "deleteenvironmentrequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class DeleteEnvironmentRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

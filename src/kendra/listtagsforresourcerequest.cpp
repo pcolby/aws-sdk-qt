@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for kendra ListTagsForResource requests.
+ * \class QtAws::Kendra::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Kendra ListTagsForResource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listTagsForResource
+ * \sa KendraClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : kendraRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : kendraRequest(new ListTagsForResourceRequestPrivate(kendraRequest::ListTagsForResourceAction, this))
+    : KendraRequest(new ListTagsForResourceRequestPrivate(KendraRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::kendra::ListTagsForResourceRequestPrivate
+ * \class QtAws::Kendra::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for kendra \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const kendraRequest::Action action, ListTagsForResourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, ListTagsForResourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

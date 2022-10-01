@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSINSPECTOR_LIBRARY)
 
 add_library(QtAwsInspector
+  qtawsinspectorglobal.h
+  inspectorclient.h
+  inspectorclient_p.h
+  inspectorrequest.h
+  inspectorrequest_p.h
+  inspectorresponse.h
+  inspectorresponse_p.h
   addattributestofindingsrequest.h
   addattributestofindingsrequest_p.h
   addattributestofindingsresponse.h
@@ -77,12 +84,6 @@ add_library(QtAwsInspector
   gettelemetrymetadatarequest_p.h
   gettelemetrymetadataresponse.h
   gettelemetrymetadataresponse_p.h
-  inspectorclient.h
-  inspectorclient_p.h
-  inspectorrequest.h
-  inspectorrequest_p.h
-  inspectorresponse.h
-  inspectorresponse_p.h
   listassessmentrunagentsrequest.h
   listassessmentrunagentsrequest_p.h
   listassessmentrunagentsresponse.h
@@ -123,7 +124,6 @@ add_library(QtAwsInspector
   previewagentsrequest_p.h
   previewagentsresponse.h
   previewagentsresponse_p.h
-  qtawsinspectorglobal.h
   registercrossaccountaccessrolerequest.h
   registercrossaccountaccessrolerequest_p.h
   registercrossaccountaccessroleresponse.h
@@ -156,6 +156,9 @@ add_library(QtAwsInspector
   updateassessmenttargetrequest_p.h
   updateassessmenttargetresponse.h
   updateassessmenttargetresponse_p.h
+  inspectorclient.cpp
+  inspectorrequest.cpp
+  inspectorresponse.cpp
   addattributestofindingsrequest.cpp
   addattributestofindingsresponse.cpp
   createassessmenttargetrequest.cpp
@@ -194,9 +197,6 @@ add_library(QtAwsInspector
   getexclusionspreviewresponse.cpp
   gettelemetrymetadatarequest.cpp
   gettelemetrymetadataresponse.cpp
-  inspectorclient.cpp
-  inspectorrequest.cpp
-  inspectorresponse.cpp
   listassessmentrunagentsrequest.cpp
   listassessmentrunagentsresponse.cpp
   listassessmentrunsrequest.cpp

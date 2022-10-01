@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::SetVisibleToAllUsersResponse
- * \brief The SetVisibleToAllUsersResponse class provides an interace for EMR SetVisibleToAllUsers responses.
+ * \class QtAws::Emr::SetVisibleToAllUsersResponse
+ * \brief The SetVisibleToAllUsersResponse class provides an interace for Emr SetVisibleToAllUsers responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::setVisibleToAllUsers
  */
@@ -64,7 +64,7 @@ const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMR SetVisibleToAllUsers \a response.
+ * Parses a successful Emr SetVisibleToAllUsers \a response.
  */
 void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::SetVisibleToAllUsersResponsePrivate
+ * \class QtAws::Emr::SetVisibleToAllUsersResponsePrivate
  * \brief The SetVisibleToAllUsersResponsePrivate class provides private implementation for SetVisibleToAllUsersResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
 }
 
 /*!
- * Parses a EMR SetVisibleToAllUsers response element from \a xml.
+ * Parses a Emr SetVisibleToAllUsers response element from \a xml.
  */
 void SetVisibleToAllUsersResponsePrivate::parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void SetVisibleToAllUsersResponsePrivate::parseSetVisibleToAllUsersResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

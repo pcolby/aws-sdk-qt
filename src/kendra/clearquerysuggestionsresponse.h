@@ -24,11 +24,11 @@
 #include "clearquerysuggestionsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ClearQuerySuggestionsResponsePrivate;
 
-class QTAWSKENDRA_EXPORT ClearQuerySuggestionsResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ClearQuerySuggestionsResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

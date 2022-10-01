@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeleteSMSSandboxPhoneNumberRequest
- * \brief The DeleteSMSSandboxPhoneNumberRequest class provides an interface for SNS DeleteSMSSandboxPhoneNumber requests.
+ * \class QtAws::Sns::DeleteSMSSandboxPhoneNumberRequest
+ * \brief The DeleteSMSSandboxPhoneNumberRequest class provides an interface for Sns DeleteSMSSandboxPhoneNumber requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * DeleteSMSSandboxPhoneNumberRequest::response(
 }
 
 /*!
- * \class QtAws::SNS::DeleteSMSSandboxPhoneNumberRequestPrivate
+ * \class QtAws::Sns::DeleteSMSSandboxPhoneNumberRequestPrivate
  * \brief The DeleteSMSSandboxPhoneNumberRequestPrivate class provides private implementation for DeleteSMSSandboxPhoneNumberRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ DeleteSMSSandboxPhoneNumberRequestPrivate::DeleteSMSSandboxPhoneNumberRequestPri
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

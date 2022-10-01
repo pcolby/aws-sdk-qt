@@ -24,14 +24,14 @@
 #include "failoverdbclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class FailoverDBClusterRequest;
 
-class FailoverDBClusterRequestPrivate : public DocDBRequestPrivate {
+class FailoverDBClusterRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    FailoverDBClusterRequestPrivate(const DocDBRequest::Action action,
+    FailoverDBClusterRequestPrivate(const DocDbRequest::Action action,
                                    FailoverDBClusterRequest * const q);
     FailoverDBClusterRequestPrivate(const FailoverDBClusterRequestPrivate &other,
                                    FailoverDBClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

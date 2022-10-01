@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
-class finspaceClientPrivate;
+class FinspaceClientPrivate;
 class CreateEnvironmentRequest;
 class CreateEnvironmentResponse;
 class DeleteEnvironmentRequest;
@@ -47,17 +47,17 @@ class UntagResourceResponse;
 class UpdateEnvironmentRequest;
 class UpdateEnvironmentResponse;
 
-class QTAWSFINSPACE_EXPORT finspaceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFINSPACE_EXPORT FinspaceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    finspaceClient(
+    FinspaceClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit finspaceClient(
+    explicit FinspaceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -73,12 +73,12 @@ public slots:
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(finspaceClient)
-    Q_DISABLE_COPY(finspaceClient)
+    Q_DECLARE_PRIVATE(FinspaceClient)
+    Q_DISABLE_COPY(FinspaceClient)
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

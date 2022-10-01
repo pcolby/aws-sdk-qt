@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::MqResponse
- * \brief The MqResponse class provides an interface for MQ responses.
+ * \class QtAws::Mq::MqResponse
+ * \brief The MqResponse class provides an interface for Mq responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -76,11 +76,11 @@ void MqResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::MqResponsePrivate
+ * \class QtAws::Mq::MqResponsePrivate
  * \brief The MqResponsePrivate class provides private implementation for MqResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -92,5 +92,5 @@ MqResponsePrivate::MqResponsePrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

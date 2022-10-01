@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::BatchCheckLayerAvailabilityResponse
- * \brief The BatchCheckLayerAvailabilityResponse class provides an interace for ECRPublic BatchCheckLayerAvailability responses.
+ * \class QtAws::EcrPublic::BatchCheckLayerAvailabilityResponse
+ * \brief The BatchCheckLayerAvailabilityResponse class provides an interace for EcrPublic BatchCheckLayerAvailability responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::batchCheckLayerAvailability
+ * \sa EcrPublicClient::batchCheckLayerAvailability
  */
 
 /*!
@@ -52,7 +52,7 @@ BatchCheckLayerAvailabilityResponse::BatchCheckLayerAvailabilityResponse(
         const BatchCheckLayerAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
+    : EcrPublicResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new BatchCheckLayerAvailabilityRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const BatchCheckLayerAvailabilityRequest * BatchCheckLayerAvailabilityResponse::
 
 /*!
  * \reimp
- * Parses a successful ECRPublic BatchCheckLayerAvailability \a response.
+ * Parses a successful EcrPublic BatchCheckLayerAvailability \a response.
  */
 void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::BatchCheckLayerAvailabilityResponsePrivate
+ * \class QtAws::EcrPublic::BatchCheckLayerAvailabilityResponsePrivate
  * \brief The BatchCheckLayerAvailabilityResponsePrivate class provides private implementation for BatchCheckLayerAvailabilityResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a BatchCheckLayerAvailabilityResponsePrivate object with public implementation \a q.
  */
 BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponsePrivate(
-    BatchCheckLayerAvailabilityResponse * const q) : ECRPublicResponsePrivate(q)
+    BatchCheckLayerAvailabilityResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic BatchCheckLayerAvailability response element from \a xml.
+ * Parses a EcrPublic BatchCheckLayerAvailability response element from \a xml.
  */
 void BatchCheckLayerAvailabilityResponsePrivate::parseBatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void BatchCheckLayerAvailabilityResponsePrivate::parseBatchCheckLayerAvailabilit
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

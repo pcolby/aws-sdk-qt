@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSRESOURCEGROUPSTAGGINGAPI_LIBRARY)
 
-add_library(QtAwsResourceGroupsTaggingAPI
+add_library(QtAwsResourceGroupsTaggingApi
+  qtawsresourcegroupstaggingapiglobal.h
+  resourcegroupstaggingapiclient.h
+  resourcegroupstaggingapiclient_p.h
+  resourcegroupstaggingapirequest.h
+  resourcegroupstaggingapirequest_p.h
+  resourcegroupstaggingapiresponse.h
+  resourcegroupstaggingapiresponse_p.h
   describereportcreationrequest.h
   describereportcreationrequest_p.h
   describereportcreationresponse.h
@@ -21,13 +28,6 @@ add_library(QtAwsResourceGroupsTaggingAPI
   gettagvaluesrequest_p.h
   gettagvaluesresponse.h
   gettagvaluesresponse_p.h
-  qtawsresourcegroupstaggingapiglobal.h
-  resourcegroupstaggingapiclient.h
-  resourcegroupstaggingapiclient_p.h
-  resourcegroupstaggingapirequest.h
-  resourcegroupstaggingapirequest_p.h
-  resourcegroupstaggingapiresponse.h
-  resourcegroupstaggingapiresponse_p.h
   startreportcreationrequest.h
   startreportcreationrequest_p.h
   startreportcreationresponse.h
@@ -40,6 +40,9 @@ add_library(QtAwsResourceGroupsTaggingAPI
   untagresourcesrequest_p.h
   untagresourcesresponse.h
   untagresourcesresponse_p.h
+  resourcegroupstaggingapiclient.cpp
+  resourcegroupstaggingapirequest.cpp
+  resourcegroupstaggingapiresponse.cpp
   describereportcreationrequest.cpp
   describereportcreationresponse.cpp
   getcompliancesummaryrequest.cpp
@@ -50,9 +53,6 @@ add_library(QtAwsResourceGroupsTaggingAPI
   gettagkeysresponse.cpp
   gettagvaluesrequest.cpp
   gettagvaluesresponse.cpp
-  resourcegroupstaggingapiclient.cpp
-  resourcegroupstaggingapirequest.cpp
-  resourcegroupstaggingapiresponse.cpp
   startreportcreationrequest.cpp
   startreportcreationresponse.cpp
   tagresourcesrequest.cpp
@@ -60,7 +60,7 @@ add_library(QtAwsResourceGroupsTaggingAPI
   untagresourcesrequest.cpp
   untagresourcesresponse.cpp)
 
-target_link_libraries(QtAwsResourceGroupsTaggingAPI
+target_link_libraries(QtAwsResourceGroupsTaggingApi
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

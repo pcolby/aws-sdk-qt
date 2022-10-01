@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPRUNNER_LIBRARY)
 
 add_library(QtAwsAppRunner
+  qtawsapprunnerglobal.h
   apprunnerclient.h
   apprunnerclient_p.h
   apprunnerrequest.h
@@ -19,10 +20,18 @@ add_library(QtAwsAppRunner
   createconnectionrequest_p.h
   createconnectionresponse.h
   createconnectionresponse_p.h
+  createobservabilityconfigurationrequest.h
+  createobservabilityconfigurationrequest_p.h
+  createobservabilityconfigurationresponse.h
+  createobservabilityconfigurationresponse_p.h
   createservicerequest.h
   createservicerequest_p.h
   createserviceresponse.h
   createserviceresponse_p.h
+  createvpcconnectorrequest.h
+  createvpcconnectorrequest_p.h
+  createvpcconnectorresponse.h
+  createvpcconnectorresponse_p.h
   deleteautoscalingconfigurationrequest.h
   deleteautoscalingconfigurationrequest_p.h
   deleteautoscalingconfigurationresponse.h
@@ -31,10 +40,18 @@ add_library(QtAwsAppRunner
   deleteconnectionrequest_p.h
   deleteconnectionresponse.h
   deleteconnectionresponse_p.h
+  deleteobservabilityconfigurationrequest.h
+  deleteobservabilityconfigurationrequest_p.h
+  deleteobservabilityconfigurationresponse.h
+  deleteobservabilityconfigurationresponse_p.h
   deleteservicerequest.h
   deleteservicerequest_p.h
   deleteserviceresponse.h
   deleteserviceresponse_p.h
+  deletevpcconnectorrequest.h
+  deletevpcconnectorrequest_p.h
+  deletevpcconnectorresponse.h
+  deletevpcconnectorresponse_p.h
   describeautoscalingconfigurationrequest.h
   describeautoscalingconfigurationrequest_p.h
   describeautoscalingconfigurationresponse.h
@@ -43,10 +60,18 @@ add_library(QtAwsAppRunner
   describecustomdomainsrequest_p.h
   describecustomdomainsresponse.h
   describecustomdomainsresponse_p.h
+  describeobservabilityconfigurationrequest.h
+  describeobservabilityconfigurationrequest_p.h
+  describeobservabilityconfigurationresponse.h
+  describeobservabilityconfigurationresponse_p.h
   describeservicerequest.h
   describeservicerequest_p.h
   describeserviceresponse.h
   describeserviceresponse_p.h
+  describevpcconnectorrequest.h
+  describevpcconnectorrequest_p.h
+  describevpcconnectorresponse.h
+  describevpcconnectorresponse_p.h
   disassociatecustomdomainrequest.h
   disassociatecustomdomainrequest_p.h
   disassociatecustomdomainresponse.h
@@ -59,6 +84,10 @@ add_library(QtAwsAppRunner
   listconnectionsrequest_p.h
   listconnectionsresponse.h
   listconnectionsresponse_p.h
+  listobservabilityconfigurationsrequest.h
+  listobservabilityconfigurationsrequest_p.h
+  listobservabilityconfigurationsresponse.h
+  listobservabilityconfigurationsresponse_p.h
   listoperationsrequest.h
   listoperationsrequest_p.h
   listoperationsresponse.h
@@ -71,11 +100,14 @@ add_library(QtAwsAppRunner
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listvpcconnectorsrequest.h
+  listvpcconnectorsrequest_p.h
+  listvpcconnectorsresponse.h
+  listvpcconnectorsresponse_p.h
   pauseservicerequest.h
   pauseservicerequest_p.h
   pauseserviceresponse.h
   pauseserviceresponse_p.h
-  qtawsapprunnerglobal.h
   resumeservicerequest.h
   resumeservicerequest_p.h
   resumeserviceresponse.h
@@ -105,32 +137,48 @@ add_library(QtAwsAppRunner
   createautoscalingconfigurationresponse.cpp
   createconnectionrequest.cpp
   createconnectionresponse.cpp
+  createobservabilityconfigurationrequest.cpp
+  createobservabilityconfigurationresponse.cpp
   createservicerequest.cpp
   createserviceresponse.cpp
+  createvpcconnectorrequest.cpp
+  createvpcconnectorresponse.cpp
   deleteautoscalingconfigurationrequest.cpp
   deleteautoscalingconfigurationresponse.cpp
   deleteconnectionrequest.cpp
   deleteconnectionresponse.cpp
+  deleteobservabilityconfigurationrequest.cpp
+  deleteobservabilityconfigurationresponse.cpp
   deleteservicerequest.cpp
   deleteserviceresponse.cpp
+  deletevpcconnectorrequest.cpp
+  deletevpcconnectorresponse.cpp
   describeautoscalingconfigurationrequest.cpp
   describeautoscalingconfigurationresponse.cpp
   describecustomdomainsrequest.cpp
   describecustomdomainsresponse.cpp
+  describeobservabilityconfigurationrequest.cpp
+  describeobservabilityconfigurationresponse.cpp
   describeservicerequest.cpp
   describeserviceresponse.cpp
+  describevpcconnectorrequest.cpp
+  describevpcconnectorresponse.cpp
   disassociatecustomdomainrequest.cpp
   disassociatecustomdomainresponse.cpp
   listautoscalingconfigurationsrequest.cpp
   listautoscalingconfigurationsresponse.cpp
   listconnectionsrequest.cpp
   listconnectionsresponse.cpp
+  listobservabilityconfigurationsrequest.cpp
+  listobservabilityconfigurationsresponse.cpp
   listoperationsrequest.cpp
   listoperationsresponse.cpp
   listservicesrequest.cpp
   listservicesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listvpcconnectorsrequest.cpp
+  listvpcconnectorsresponse.cpp
   pauseservicerequest.cpp
   pauseserviceresponse.cpp
   resumeservicerequest.cpp

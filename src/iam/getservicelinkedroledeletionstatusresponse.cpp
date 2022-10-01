@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusResponse
- * \brief The GetServiceLinkedRoleDeletionStatusResponse class provides an interace for IAM GetServiceLinkedRoleDeletionStatus responses.
+ * \class QtAws::Iam::GetServiceLinkedRoleDeletionStatusResponse
+ * \brief The GetServiceLinkedRoleDeletionStatusResponse class provides an interace for Iam GetServiceLinkedRoleDeletionStatus responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getServiceLinkedRoleDeletionStatus
  */
@@ -68,7 +68,7 @@ const GetServiceLinkedRoleDeletionStatusRequest * GetServiceLinkedRoleDeletionSt
 
 /*!
  * \reimp
- * Parses a successful IAM GetServiceLinkedRoleDeletionStatus \a response.
+ * Parses a successful Iam GetServiceLinkedRoleDeletionStatus \a response.
  */
 void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusResponsePrivate
+ * \class QtAws::Iam::GetServiceLinkedRoleDeletionStatusResponsePrivate
  * \brief The GetServiceLinkedRoleDeletionStatusResponsePrivate class provides private implementation for GetServiceLinkedRoleDeletionStatusResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionS
 }
 
 /*!
- * Parses a IAM GetServiceLinkedRoleDeletionStatus response element from \a xml.
+ * Parses a Iam GetServiceLinkedRoleDeletionStatus response element from \a xml.
  */
 void GetServiceLinkedRoleDeletionStatusResponsePrivate::parseGetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetServiceLinkedRoleDeletionStatusResponsePrivate::parseGetServiceLinkedRol
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

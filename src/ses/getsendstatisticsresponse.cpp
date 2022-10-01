@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetSendStatisticsResponse
- * \brief The GetSendStatisticsResponse class provides an interace for SES GetSendStatistics responses.
+ * \class QtAws::Ses::GetSendStatisticsResponse
+ * \brief The GetSendStatisticsResponse class provides an interace for Ses GetSendStatistics responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES GetSendStatistics \a response.
+ * Parses a successful Ses GetSendStatistics \a response.
  */
 void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::GetSendStatisticsResponsePrivate
+ * \class QtAws::Ses::GetSendStatisticsResponsePrivate
  * \brief The GetSendStatisticsResponsePrivate class provides private implementation for GetSendStatisticsResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
 }
 
 /*!
- * Parses a SES GetSendStatistics response element from \a xml.
+ * Parses a Ses GetSendStatistics response element from \a xml.
  */
 void GetSendStatisticsResponsePrivate::parseGetSendStatisticsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetSendStatisticsResponsePrivate::parseGetSendStatisticsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

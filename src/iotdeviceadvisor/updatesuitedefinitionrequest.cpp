@@ -23,30 +23,30 @@
 #include "iotdeviceadvisorrequest_p.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::UpdateSuiteDefinitionRequest
- * \brief The UpdateSuiteDefinitionRequest class provides an interface for IoTDeviceAdvisor UpdateSuiteDefinition requests.
+ * \class QtAws::IotDeviceAdvisor::UpdateSuiteDefinitionRequest
+ * \brief The UpdateSuiteDefinitionRequest class provides an interface for IotDeviceAdvisor UpdateSuiteDefinition requests.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::updateSuiteDefinition
+ * \sa IotDeviceAdvisorClient::updateSuiteDefinition
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateSuiteDefinitionRequest::UpdateSuiteDefinitionRequest(const UpdateSuiteDefinitionRequest &other)
-    : IoTDeviceAdvisorRequest(new UpdateSuiteDefinitionRequestPrivate(*other.d_func(), this))
+    : IotDeviceAdvisorRequest(new UpdateSuiteDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ UpdateSuiteDefinitionRequest::UpdateSuiteDefinitionRequest(const UpdateSuiteDefi
  * Constructs a UpdateSuiteDefinitionRequest object.
  */
 UpdateSuiteDefinitionRequest::UpdateSuiteDefinitionRequest()
-    : IoTDeviceAdvisorRequest(new UpdateSuiteDefinitionRequestPrivate(IoTDeviceAdvisorRequest::UpdateSuiteDefinitionAction, this))
+    : IotDeviceAdvisorRequest(new UpdateSuiteDefinitionRequestPrivate(IotDeviceAdvisorRequest::UpdateSuiteDefinitionAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * UpdateSuiteDefinitionRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::UpdateSuiteDefinitionRequestPrivate
+ * \class QtAws::IotDeviceAdvisor::UpdateSuiteDefinitionRequestPrivate
  * \brief The UpdateSuiteDefinitionRequestPrivate class provides private implementation for UpdateSuiteDefinitionRequest.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a UpdateSuiteDefinitionRequestPrivate object for IoTDeviceAdvisor \a action,
+ * Constructs a UpdateSuiteDefinitionRequestPrivate object for IotDeviceAdvisor \a action,
  * with public implementation \a q.
  */
 UpdateSuiteDefinitionRequestPrivate::UpdateSuiteDefinitionRequestPrivate(
-    const IoTDeviceAdvisorRequest::Action action, UpdateSuiteDefinitionRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(action, q)
+    const IotDeviceAdvisorRequest::Action action, UpdateSuiteDefinitionRequest * const q)
+    : IotDeviceAdvisorRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ UpdateSuiteDefinitionRequestPrivate::UpdateSuiteDefinitionRequestPrivate(
  */
 UpdateSuiteDefinitionRequestPrivate::UpdateSuiteDefinitionRequestPrivate(
     const UpdateSuiteDefinitionRequestPrivate &other, UpdateSuiteDefinitionRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(other, q)
+    : IotDeviceAdvisorRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

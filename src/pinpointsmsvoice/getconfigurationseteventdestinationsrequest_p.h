@@ -24,14 +24,14 @@
 #include "getconfigurationseteventdestinationsrequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class GetConfigurationSetEventDestinationsRequest;
 
-class GetConfigurationSetEventDestinationsRequestPrivate : public PinpointSMSVoiceRequestPrivate {
+class GetConfigurationSetEventDestinationsRequestPrivate : public PinpointSmsVoiceRequestPrivate {
 
 public:
-    GetConfigurationSetEventDestinationsRequestPrivate(const PinpointSMSVoiceRequest::Action action,
+    GetConfigurationSetEventDestinationsRequestPrivate(const PinpointSmsVoiceRequest::Action action,
                                    GetConfigurationSetEventDestinationsRequest * const q);
     GetConfigurationSetEventDestinationsRequestPrivate(const GetConfigurationSetEventDestinationsRequestPrivate &other,
                                    GetConfigurationSetEventDestinationsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

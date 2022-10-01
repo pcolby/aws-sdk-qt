@@ -23,19 +23,19 @@
 #include "acmrequest_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::ListTagsForCertificateRequest
- * \brief The ListTagsForCertificateRequest class provides an interface for ACM ListTagsForCertificate requests.
+ * \class QtAws::Acm::ListTagsForCertificateRequest
+ * \brief The ListTagsForCertificateRequest class provides an interface for Acm ListTagsForCertificate requests.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::listTagsForCertificate
  */
@@ -78,11 +78,11 @@ QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::ACM::ListTagsForCertificateRequestPrivate
+ * \class QtAws::Acm::ListTagsForCertificateRequestPrivate
  * \brief The ListTagsForCertificateRequestPrivate class provides private implementation for ListTagsForCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -109,5 +109,5 @@ ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
 
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

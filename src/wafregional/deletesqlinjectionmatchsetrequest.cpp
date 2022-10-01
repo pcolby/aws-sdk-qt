@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetRequest
- * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for WAFRegional DeleteSqlInjectionMatchSet requests.
+ * \class QtAws::WafRegional::DeleteSqlInjectionMatchSetRequest
+ * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for WafRegional DeleteSqlInjectionMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteSqlInjectionMatchSet
+ * \sa WafRegionalClient::deleteSqlInjectionMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const DeleteSqlInjectionMatchSetRequest &other)
-    : WAFRegionalRequest(new DeleteSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const Delet
  * Constructs a DeleteSqlInjectionMatchSetRequest object.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest()
-    : WAFRegionalRequest(new DeleteSqlInjectionMatchSetRequestPrivate(WAFRegionalRequest::DeleteSqlInjectionMatchSetAction, this))
+    : WafRegionalRequest(new DeleteSqlInjectionMatchSetRequestPrivate(WafRegionalRequest::DeleteSqlInjectionMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteSqlInjectionMatchSetRequestPrivate
  * \brief The DeleteSqlInjectionMatchSetRequestPrivate class provides private implementation for DeleteSqlInjectionMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPriva
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const DeleteSqlInjectionMatchSetRequestPrivate &other, DeleteSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

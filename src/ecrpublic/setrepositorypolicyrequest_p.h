@@ -24,14 +24,14 @@
 #include "setrepositorypolicyrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class SetRepositoryPolicyRequest;
 
-class SetRepositoryPolicyRequestPrivate : public ECRPublicRequestPrivate {
+class SetRepositoryPolicyRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    SetRepositoryPolicyRequestPrivate(const ECRPublicRequest::Action action,
+    SetRepositoryPolicyRequestPrivate(const EcrPublicRequest::Action action,
                                    SetRepositoryPolicyRequest * const q);
     SetRepositoryPolicyRequestPrivate(const SetRepositoryPolicyRequestPrivate &other,
                                    SetRepositoryPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
-class DynamoDBStreamsRequestPrivate;
+class DynamoDbStreamsRequestPrivate;
 
-class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDBStreamsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDbStreamsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DynamoDBStreams.
+    /// Actions supported by DynamoDbStreams.
     enum Action {
         DescribeStreamAction,
         GetRecordsAction,
@@ -46,9 +46,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    DynamoDBStreamsRequest(const Action action);
-    DynamoDBStreamsRequest(const DynamoDBStreamsRequest &other);
-    DynamoDBStreamsRequest &operator=(const DynamoDBStreamsRequest &other);
+    DynamoDbStreamsRequest(const Action action);
+    DynamoDbStreamsRequest(const DynamoDbStreamsRequest &other);
+    DynamoDbStreamsRequest &operator=(const DynamoDbStreamsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -57,12 +57,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DynamoDBStreamsRequest &other) const;
+    virtual bool operator==(const DynamoDbStreamsRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d);
+    explicit DynamoDbStreamsRequest(DynamoDbStreamsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -75,11 +75,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DynamoDBStreamsRequest)
+    Q_DECLARE_PRIVATE(DynamoDbStreamsRequest)
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

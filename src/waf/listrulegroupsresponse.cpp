@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListRuleGroupsResponse
- * \brief The ListRuleGroupsResponse class provides an interace for WAF ListRuleGroups responses.
+ * \class QtAws::Waf::ListRuleGroupsResponse
+ * \brief The ListRuleGroupsResponse class provides an interace for Waf ListRuleGroups responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListRuleGroupsRequest * ListRuleGroupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListRuleGroups \a response.
+ * Parses a successful Waf ListRuleGroups \a response.
  */
 void ListRuleGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListRuleGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListRuleGroupsResponsePrivate
+ * \class QtAws::Waf::ListRuleGroupsResponsePrivate
  * \brief The ListRuleGroupsResponsePrivate class provides private implementation for ListRuleGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListRuleGroupsResponsePrivate::ListRuleGroupsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListRuleGroups response element from \a xml.
+ * Parses a Waf ListRuleGroups response element from \a xml.
  */
 void ListRuleGroupsResponsePrivate::parseListRuleGroupsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListRuleGroupsResponsePrivate::parseListRuleGroupsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::PutLoggingConfigurationRequest
- * \brief The PutLoggingConfigurationRequest class provides an interface for WAFRegional PutLoggingConfiguration requests.
+ * \class QtAws::WafRegional::PutLoggingConfigurationRequest
+ * \brief The PutLoggingConfigurationRequest class provides an interface for WafRegional PutLoggingConfiguration requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::putLoggingConfiguration
+ * \sa WafRegionalClient::putLoggingConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutLoggingConfigurationRequest::PutLoggingConfigurationRequest(const PutLoggingConfigurationRequest &other)
-    : WAFRegionalRequest(new PutLoggingConfigurationRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new PutLoggingConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ PutLoggingConfigurationRequest::PutLoggingConfigurationRequest(const PutLoggingC
  * Constructs a PutLoggingConfigurationRequest object.
  */
 PutLoggingConfigurationRequest::PutLoggingConfigurationRequest()
-    : WAFRegionalRequest(new PutLoggingConfigurationRequestPrivate(WAFRegionalRequest::PutLoggingConfigurationAction, this))
+    : WafRegionalRequest(new PutLoggingConfigurationRequestPrivate(WafRegionalRequest::PutLoggingConfigurationAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * PutLoggingConfigurationRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAFRegional::PutLoggingConfigurationRequestPrivate
+ * \class QtAws::WafRegional::PutLoggingConfigurationRequestPrivate
  * \brief The PutLoggingConfigurationRequestPrivate class provides private implementation for PutLoggingConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a PutLoggingConfigurationRequestPrivate object for WAFRegional \a action,
+ * Constructs a PutLoggingConfigurationRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 PutLoggingConfigurationRequestPrivate::PutLoggingConfigurationRequestPrivate(
-    const WAFRegionalRequest::Action action, PutLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, PutLoggingConfigurationRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ PutLoggingConfigurationRequestPrivate::PutLoggingConfigurationRequestPrivate(
  */
 PutLoggingConfigurationRequestPrivate::PutLoggingConfigurationRequestPrivate(
     const PutLoggingConfigurationRequestPrivate &other, PutLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

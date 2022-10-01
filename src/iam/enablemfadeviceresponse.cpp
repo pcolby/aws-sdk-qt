@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::EnableMFADeviceResponse
- * \brief The EnableMFADeviceResponse class provides an interace for IAM EnableMFADevice responses.
+ * \class QtAws::Iam::EnableMFADeviceResponse
+ * \brief The EnableMFADeviceResponse class provides an interace for Iam EnableMFADevice responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::enableMFADevice
  */
@@ -68,7 +68,7 @@ const EnableMFADeviceRequest * EnableMFADeviceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM EnableMFADevice \a response.
+ * Parses a successful Iam EnableMFADevice \a response.
  */
 void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::EnableMFADeviceResponsePrivate
+ * \class QtAws::Iam::EnableMFADeviceResponsePrivate
  * \brief The EnableMFADeviceResponsePrivate class provides private implementation for EnableMFADeviceResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ EnableMFADeviceResponsePrivate::EnableMFADeviceResponsePrivate(
 }
 
 /*!
- * Parses a IAM EnableMFADevice response element from \a xml.
+ * Parses a Iam EnableMFADevice response element from \a xml.
  */
 void EnableMFADeviceResponsePrivate::parseEnableMFADeviceResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void EnableMFADeviceResponsePrivate::parseEnableMFADeviceResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

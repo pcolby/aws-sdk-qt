@@ -262,7 +262,7 @@ QNetworkRequest ServiceQuotasRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 ServiceQuotasRequestPrivate::ServiceQuotasRequestPrivate(const ServiceQuotasRequest::Action action, ServiceQuotasRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-06-24"))
 {
 
 }

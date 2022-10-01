@@ -245,7 +245,7 @@ QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl 
  * with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action, MarketplaceCommerceAnalyticsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-07-01"))
 {
 
 }

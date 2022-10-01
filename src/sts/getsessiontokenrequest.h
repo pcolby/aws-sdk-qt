@@ -23,7 +23,7 @@
 #include "stsrequest.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class GetSessionTokenRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

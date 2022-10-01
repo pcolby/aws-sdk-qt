@@ -24,11 +24,11 @@
 #include "exporttabletopointintimerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ExportTableToPointInTimeResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT ExportTableToPointInTimeResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ExportTableToPointInTimeResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

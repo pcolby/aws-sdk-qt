@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIResponsePrivate;
+class ResourceGroupsTaggingApiResponsePrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingApiResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ResourceGroupsTaggingAPIResponse(QObject * const parent = 0);
+    ResourceGroupsTaggingApiResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ResourceGroupsTaggingAPIResponse(ResourceGroupsTaggingAPIResponsePrivate * const d, QObject * const parent);
+    ResourceGroupsTaggingApiResponse(ResourceGroupsTaggingApiResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ResourceGroupsTaggingAPIResponse)
-    Q_DISABLE_COPY(ResourceGroupsTaggingAPIResponse)
+    Q_DECLARE_PRIVATE(ResourceGroupsTaggingApiResponse)
+    Q_DISABLE_COPY(ResourceGroupsTaggingApiResponse)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

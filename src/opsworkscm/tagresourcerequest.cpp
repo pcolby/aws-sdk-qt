@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for OpsWorksCM TagResource requests.
+ * \class QtAws::OpsWorksCm::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for OpsWorksCm TagResource requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::tagResource
+ * \sa OpsWorksCmClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : OpsWorksCMRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : OpsWorksCMRequest(new TagResourceRequestPrivate(OpsWorksCMRequest::TagResourceAction, this))
+    : OpsWorksCmRequest(new TagResourceRequestPrivate(OpsWorksCmRequest::TagResourceAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::OpsWorksCM::TagResourceRequestPrivate
+ * \class QtAws::OpsWorksCm::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a TagResourceRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const OpsWorksCMRequest::Action action, TagResourceRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, TagResourceRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

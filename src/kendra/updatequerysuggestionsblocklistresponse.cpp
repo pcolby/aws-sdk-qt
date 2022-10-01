@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsBlockListResponse
- * \brief The UpdateQuerySuggestionsBlockListResponse class provides an interace for kendra UpdateQuerySuggestionsBlockList responses.
+ * \class QtAws::Kendra::UpdateQuerySuggestionsBlockListResponse
+ * \brief The UpdateQuerySuggestionsBlockListResponse class provides an interace for Kendra UpdateQuerySuggestionsBlockList responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateQuerySuggestionsBlockList
+ * \sa KendraClient::updateQuerySuggestionsBlockList
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateQuerySuggestionsBlockListResponse::UpdateQuerySuggestionsBlockListResponse
         const UpdateQuerySuggestionsBlockListRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new UpdateQuerySuggestionsBlockListResponsePrivate(this), parent)
+    : KendraResponse(new UpdateQuerySuggestionsBlockListResponsePrivate(this), parent)
 {
     setRequest(new UpdateQuerySuggestionsBlockListRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateQuerySuggestionsBlockListRequest * UpdateQuerySuggestionsBlockListRe
 
 /*!
  * \reimp
- * Parses a successful kendra UpdateQuerySuggestionsBlockList \a response.
+ * Parses a successful Kendra UpdateQuerySuggestionsBlockList \a response.
  */
 void UpdateQuerySuggestionsBlockListResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateQuerySuggestionsBlockListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsBlockListResponsePrivate
+ * \class QtAws::Kendra::UpdateQuerySuggestionsBlockListResponsePrivate
  * \brief The UpdateQuerySuggestionsBlockListResponsePrivate class provides private implementation for UpdateQuerySuggestionsBlockListResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a UpdateQuerySuggestionsBlockListResponsePrivate object with public implementation \a q.
  */
 UpdateQuerySuggestionsBlockListResponsePrivate::UpdateQuerySuggestionsBlockListResponsePrivate(
-    UpdateQuerySuggestionsBlockListResponse * const q) : kendraResponsePrivate(q)
+    UpdateQuerySuggestionsBlockListResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra UpdateQuerySuggestionsBlockList response element from \a xml.
+ * Parses a Kendra UpdateQuerySuggestionsBlockList response element from \a xml.
  */
 void UpdateQuerySuggestionsBlockListResponsePrivate::parseUpdateQuerySuggestionsBlockListResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateQuerySuggestionsBlockListResponsePrivate::parseUpdateQuerySuggestions
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

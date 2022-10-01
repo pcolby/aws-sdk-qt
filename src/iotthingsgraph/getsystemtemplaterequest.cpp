@@ -42,6 +42,10 @@ namespace IoTThingsGraph {
  * 
  *  For more information about how AWS IoT Things Graph works, see the <a
  *  href="https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html">User
+ * 
+ *  Guide</a>>
+ * 
+ *  The AWS IoT Things Graph service is
  *
  * \sa IoTThingsGraphClient::getSystemTemplate
  */

@@ -24,11 +24,11 @@
 #include "createstagerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateStageResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT CreateStageResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT CreateStageResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

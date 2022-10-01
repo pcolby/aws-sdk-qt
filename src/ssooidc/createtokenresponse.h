@@ -24,11 +24,11 @@
 #include "createtokenrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class CreateTokenResponsePrivate;
 
-class QTAWSSSOOIDC_EXPORT CreateTokenResponse : public SsooidcResponse {
+class QTAWSSSOOIDC_EXPORT CreateTokenResponse : public SsoOidcResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

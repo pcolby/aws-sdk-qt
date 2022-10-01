@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImagePolicyRequest
- * \brief The GetImagePolicyRequest class provides an interface for imagebuilder GetImagePolicy requests.
+ * \class QtAws::ImageBuilder::GetImagePolicyRequest
+ * \brief The GetImagePolicyRequest class provides an interface for ImageBuilder GetImagePolicy requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImagePolicy
+ * \sa ImageBuilderClient::getImagePolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetImagePolicyRequest::GetImagePolicyRequest(const GetImagePolicyRequest &other)
-    : imagebuilderRequest(new GetImagePolicyRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetImagePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetImagePolicyRequest::GetImagePolicyRequest(const GetImagePolicyRequest &other)
  * Constructs a GetImagePolicyRequest object.
  */
 GetImagePolicyRequest::GetImagePolicyRequest()
-    : imagebuilderRequest(new GetImagePolicyRequestPrivate(imagebuilderRequest::GetImagePolicyAction, this))
+    : ImageBuilderRequest(new GetImagePolicyRequestPrivate(ImageBuilderRequest::GetImagePolicyAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetImagePolicyRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImagePolicyRequestPrivate
+ * \class QtAws::ImageBuilder::GetImagePolicyRequestPrivate
  * \brief The GetImagePolicyRequestPrivate class provides private implementation for GetImagePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetImagePolicyRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetImagePolicyRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetImagePolicyRequestPrivate::GetImagePolicyRequestPrivate(
-    const imagebuilderRequest::Action action, GetImagePolicyRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetImagePolicyRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetImagePolicyRequestPrivate::GetImagePolicyRequestPrivate(
  */
 GetImagePolicyRequestPrivate::GetImagePolicyRequestPrivate(
     const GetImagePolicyRequestPrivate &other, GetImagePolicyRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

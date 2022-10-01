@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateDataSourceRequest
- * \brief The CreateDataSourceRequest class provides an interface for kendra CreateDataSource requests.
+ * \class QtAws::Kendra::CreateDataSourceRequest
+ * \brief The CreateDataSourceRequest class provides an interface for Kendra CreateDataSource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createDataSource
+ * \sa KendraClient::createDataSource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDataSourceRequest::CreateDataSourceRequest(const CreateDataSourceRequest &other)
-    : kendraRequest(new CreateDataSourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new CreateDataSourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateDataSourceRequest::CreateDataSourceRequest(const CreateDataSourceRequest &
  * Constructs a CreateDataSourceRequest object.
  */
 CreateDataSourceRequest::CreateDataSourceRequest()
-    : kendraRequest(new CreateDataSourceRequestPrivate(kendraRequest::CreateDataSourceAction, this))
+    : KendraRequest(new CreateDataSourceRequestPrivate(KendraRequest::CreateDataSourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::kendra::CreateDataSourceRequestPrivate
+ * \class QtAws::Kendra::CreateDataSourceRequestPrivate
  * \brief The CreateDataSourceRequestPrivate class provides private implementation for CreateDataSourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a CreateDataSourceRequestPrivate object for kendra \a action,
+ * Constructs a CreateDataSourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
-    const kendraRequest::Action action, CreateDataSourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, CreateDataSourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
  */
 CreateDataSourceRequestPrivate::CreateDataSourceRequestPrivate(
     const CreateDataSourceRequestPrivate &other, CreateDataSourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

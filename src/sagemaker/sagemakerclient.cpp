@@ -27,6 +27,8 @@
 #include "addtagsresponse.h"
 #include "associatetrialcomponentrequest.h"
 #include "associatetrialcomponentresponse.h"
+#include "batchdescribemodelpackagerequest.h"
+#include "batchdescribemodelpackageresponse.h"
 #include "createactionrequest.h"
 #include "createactionresponse.h"
 #include "createalgorithmrequest.h"
@@ -51,6 +53,10 @@
 #include "createdevicefleetresponse.h"
 #include "createdomainrequest.h"
 #include "createdomainresponse.h"
+#include "createedgedeploymentplanrequest.h"
+#include "createedgedeploymentplanresponse.h"
+#include "createedgedeploymentstagerequest.h"
+#include "createedgedeploymentstageresponse.h"
 #include "createedgepackagingjobrequest.h"
 #include "createedgepackagingjobresponse.h"
 #include "createendpointrequest.h"
@@ -71,6 +77,8 @@
 #include "createimageresponse.h"
 #include "createimageversionrequest.h"
 #include "createimageversionresponse.h"
+#include "createinferencerecommendationsjobrequest.h"
+#include "createinferencerecommendationsjobresponse.h"
 #include "createlabelingjobrequest.h"
 #include "createlabelingjobresponse.h"
 #include "createmodelrequest.h"
@@ -101,6 +109,8 @@
 #include "createprocessingjobresponse.h"
 #include "createprojectrequest.h"
 #include "createprojectresponse.h"
+#include "createstudiolifecycleconfigrequest.h"
+#include "createstudiolifecycleconfigresponse.h"
 #include "createtrainingjobrequest.h"
 #include "createtrainingjobresponse.h"
 #include "createtransformjobrequest.h"
@@ -137,6 +147,10 @@
 #include "deletedevicefleetresponse.h"
 #include "deletedomainrequest.h"
 #include "deletedomainresponse.h"
+#include "deleteedgedeploymentplanrequest.h"
+#include "deleteedgedeploymentplanresponse.h"
+#include "deleteedgedeploymentstagerequest.h"
+#include "deleteedgedeploymentstageresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteendpointconfigrequest.h"
@@ -177,6 +191,8 @@
 #include "deletepipelineresponse.h"
 #include "deleteprojectrequest.h"
 #include "deleteprojectresponse.h"
+#include "deletestudiolifecycleconfigrequest.h"
+#include "deletestudiolifecycleconfigresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
 #include "deletetrialrequest.h"
@@ -217,6 +233,8 @@
 #include "describedevicefleetresponse.h"
 #include "describedomainrequest.h"
 #include "describedomainresponse.h"
+#include "describeedgedeploymentplanrequest.h"
+#include "describeedgedeploymentplanresponse.h"
 #include "describeedgepackagingjobrequest.h"
 #include "describeedgepackagingjobresponse.h"
 #include "describeendpointrequest.h"
@@ -227,6 +245,8 @@
 #include "describeexperimentresponse.h"
 #include "describefeaturegrouprequest.h"
 #include "describefeaturegroupresponse.h"
+#include "describefeaturemetadatarequest.h"
+#include "describefeaturemetadataresponse.h"
 #include "describeflowdefinitionrequest.h"
 #include "describeflowdefinitionresponse.h"
 #include "describehumantaskuirequest.h"
@@ -237,8 +257,12 @@
 #include "describeimageresponse.h"
 #include "describeimageversionrequest.h"
 #include "describeimageversionresponse.h"
+#include "describeinferencerecommendationsjobrequest.h"
+#include "describeinferencerecommendationsjobresponse.h"
 #include "describelabelingjobrequest.h"
 #include "describelabelingjobresponse.h"
+#include "describelineagegrouprequest.h"
+#include "describelineagegroupresponse.h"
 #include "describemodelrequest.h"
 #include "describemodelresponse.h"
 #include "describemodelbiasjobdefinitionrequest.h"
@@ -267,6 +291,8 @@
 #include "describeprocessingjobresponse.h"
 #include "describeprojectrequest.h"
 #include "describeprojectresponse.h"
+#include "describestudiolifecycleconfigrequest.h"
+#include "describestudiolifecycleconfigresponse.h"
 #include "describesubscribedworkteamrequest.h"
 #include "describesubscribedworkteamresponse.h"
 #include "describetrainingjobrequest.h"
@@ -291,6 +317,8 @@
 #include "enablesagemakerservicecatalogportfolioresponse.h"
 #include "getdevicefleetreportrequest.h"
 #include "getdevicefleetreportresponse.h"
+#include "getlineagegrouppolicyrequest.h"
+#include "getlineagegrouppolicyresponse.h"
 #include "getmodelpackagegrouppolicyrequest.h"
 #include "getmodelpackagegrouppolicyresponse.h"
 #include "getsagemakerservicecatalogportfoliostatusrequest.h"
@@ -327,6 +355,8 @@
 #include "listdevicesresponse.h"
 #include "listdomainsrequest.h"
 #include "listdomainsresponse.h"
+#include "listedgedeploymentplansrequest.h"
+#include "listedgedeploymentplansresponse.h"
 #include "listedgepackagingjobsrequest.h"
 #include "listedgepackagingjobsresponse.h"
 #include "listendpointconfigsrequest.h"
@@ -347,14 +377,20 @@
 #include "listimageversionsresponse.h"
 #include "listimagesrequest.h"
 #include "listimagesresponse.h"
+#include "listinferencerecommendationsjobsrequest.h"
+#include "listinferencerecommendationsjobsresponse.h"
 #include "listlabelingjobsrequest.h"
 #include "listlabelingjobsresponse.h"
 #include "listlabelingjobsforworkteamrequest.h"
 #include "listlabelingjobsforworkteamresponse.h"
+#include "listlineagegroupsrequest.h"
+#include "listlineagegroupsresponse.h"
 #include "listmodelbiasjobdefinitionsrequest.h"
 #include "listmodelbiasjobdefinitionsresponse.h"
 #include "listmodelexplainabilityjobdefinitionsrequest.h"
 #include "listmodelexplainabilityjobdefinitionsresponse.h"
+#include "listmodelmetadatarequest.h"
+#include "listmodelmetadataresponse.h"
 #include "listmodelpackagegroupsrequest.h"
 #include "listmodelpackagegroupsresponse.h"
 #include "listmodelpackagesrequest.h"
@@ -383,6 +419,10 @@
 #include "listprocessingjobsresponse.h"
 #include "listprojectsrequest.h"
 #include "listprojectsresponse.h"
+#include "liststagedevicesrequest.h"
+#include "liststagedevicesresponse.h"
+#include "liststudiolifecycleconfigsrequest.h"
+#include "liststudiolifecycleconfigsresponse.h"
 #include "listsubscribedworkteamsrequest.h"
 #include "listsubscribedworkteamsresponse.h"
 #include "listtagsrequest.h"
@@ -405,16 +445,22 @@
 #include "listworkteamsresponse.h"
 #include "putmodelpackagegrouppolicyrequest.h"
 #include "putmodelpackagegrouppolicyresponse.h"
+#include "querylineagerequest.h"
+#include "querylineageresponse.h"
 #include "registerdevicesrequest.h"
 #include "registerdevicesresponse.h"
 #include "renderuitemplaterequest.h"
 #include "renderuitemplateresponse.h"
+#include "retrypipelineexecutionrequest.h"
+#include "retrypipelineexecutionresponse.h"
 #include "searchrequest.h"
 #include "searchresponse.h"
 #include "sendpipelineexecutionstepfailurerequest.h"
 #include "sendpipelineexecutionstepfailureresponse.h"
 #include "sendpipelineexecutionstepsuccessrequest.h"
 #include "sendpipelineexecutionstepsuccessresponse.h"
+#include "startedgedeploymentstagerequest.h"
+#include "startedgedeploymentstageresponse.h"
 #include "startmonitoringschedulerequest.h"
 #include "startmonitoringscheduleresponse.h"
 #include "startnotebookinstancerequest.h"
@@ -425,10 +471,14 @@
 #include "stopautomljobresponse.h"
 #include "stopcompilationjobrequest.h"
 #include "stopcompilationjobresponse.h"
+#include "stopedgedeploymentstagerequest.h"
+#include "stopedgedeploymentstageresponse.h"
 #include "stopedgepackagingjobrequest.h"
 #include "stopedgepackagingjobresponse.h"
 #include "stophyperparametertuningjobrequest.h"
 #include "stophyperparametertuningjobresponse.h"
+#include "stopinferencerecommendationsjobrequest.h"
+#include "stopinferencerecommendationsjobresponse.h"
 #include "stoplabelingjobrequest.h"
 #include "stoplabelingjobresponse.h"
 #include "stopmonitoringschedulerequest.h"
@@ -465,6 +515,10 @@
 #include "updateendpointweightsandcapacitiesresponse.h"
 #include "updateexperimentrequest.h"
 #include "updateexperimentresponse.h"
+#include "updatefeaturegrouprequest.h"
+#include "updatefeaturegroupresponse.h"
+#include "updatefeaturemetadatarequest.h"
+#include "updatefeaturemetadataresponse.h"
 #include "updateimagerequest.h"
 #include "updateimageresponse.h"
 #include "updatemodelpackagerequest.h"
@@ -479,6 +533,8 @@
 #include "updatepipelineresponse.h"
 #include "updatepipelineexecutionrequest.h"
 #include "updatepipelineexecutionresponse.h"
+#include "updateprojectrequest.h"
+#include "updateprojectresponse.h"
 #include "updatetrainingjobrequest.h"
 #include "updatetrainingjobresponse.h"
 #include "updatetrialrequest.h"
@@ -514,7 +570,7 @@ namespace SageMaker {
  * \ingroup aws-clients
  * \inmodule QtAwsSageMaker
  *
- *  Provides APIs for creating and managing Amazon SageMaker resources.
+ *  Provides APIs for creating and managing SageMaker resources.
  * 
  *  </p
  * 
@@ -522,8 +578,7 @@ namespace SageMaker {
  * 
  *  Resources> <ul> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">Amazon SageMaker Developer
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer Guide</a>
  * 
  *  </p </li> <li>
  * 
@@ -606,15 +661,15 @@ AddAssociationResponse * SageMakerClient::addAssociation(const AddAssociationReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
+ * Adds or overwrites one or more tags for the specified SageMaker resource. You can add tags to notebook instances,
  * training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint
  * configurations, and
  *
  * endpoints>
  *
  * Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags,
- * see For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
- * Tagging
+ * see For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Amazon
+ * Web Services Tagging
  *
  * Strategies</a>> <note>
  *
@@ -653,6 +708,19 @@ AssociateTrialComponentResponse * SageMakerClient::associateTrialComponent(const
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * BatchDescribeModelPackageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This action batch describes a list of versioned model
+ */
+BatchDescribeModelPackageResponse * SageMakerClient::batchDescribeModelPackage(const BatchDescribeModelPackageRequest &request)
+{
+    return qobject_cast<BatchDescribeModelPackageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * CreateActionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -661,12 +729,6 @@ AssociateTrialComponentResponse * SageMakerClient::associateTrialComponent(const
  * model deployment or an HPO job. Generally, an action involves at least one input or output artifact. For more
  * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML
  * Lineage
- *
- * Tracking</a>> <note>
- *
- * <code>CreateAction</code> can only be invoked from within an SageMaker managed environment. This includes SageMaker
- * training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to <code>CreateAction</code> from
- * outside one of these environments results in an
  */
 CreateActionResponse * SageMakerClient::createAction(const CreateActionRequest &request)
 {
@@ -679,7 +741,7 @@ CreateActionResponse * SageMakerClient::createAction(const CreateActionRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a machine learning algorithm that you can use in Amazon SageMaker and list in the AWS
+ * Create a machine learning algorithm that you can use in SageMaker and list in the Amazon Web Services
  */
 CreateAlgorithmResponse * SageMakerClient::createAlgorithm(const CreateAlgorithmRequest &request)
 {
@@ -692,9 +754,9 @@ CreateAlgorithmResponse * SageMakerClient::createAlgorithm(const CreateAlgorithm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a running app for the specified UserProfile. Supported apps are <code>JupyterServer</code> and
- * <code>KernelGateway</code>. This operation is automatically invoked by Amazon SageMaker Studio upon access to the
- * associated Domain, and when new kernel configurations are selected by the user. A user may have multiple Apps active
+ * Creates a running app for the specified UserProfile. This operation is automatically invoked by Amazon SageMaker Studio
+ * upon access to the associated Domain, and when new kernel configurations are selected by the user. A user may have
+ * multiple Apps active
  */
 CreateAppResponse * SageMakerClient::createApp(const CreateAppRequest &request)
 {
@@ -724,12 +786,6 @@ CreateAppImageConfigResponse * SageMakerClient::createAppImageConfig(const Creat
  * Creates an <i>artifact</i>. An artifact is a lineage tracking entity that represents a URI addressable object or data.
  * Some examples are the S3 URI of a dataset and the ECR registry path of an image. For more information, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
- *
- * Tracking</a>> <note>
- *
- * <code>CreateArtifact</code> can only be invoked from within an SageMaker managed environment. This includes SageMaker
- * training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to <code>CreateArtifact</code> from
- * outside one of these environments results in an
  */
 CreateArtifactResponse * SageMakerClient::createArtifact(const CreateArtifactRequest &request)
 {
@@ -746,7 +802,7 @@ CreateArtifactResponse * SageMakerClient::createArtifact(const CreateArtifactReq
  *
  * job>
  *
- * Find the best performing model after you run an Autopilot job by calling
+ * Find the best-performing model after you run an Autopilot job by calling
  *
  * >
  *
@@ -765,15 +821,16 @@ CreateAutoMLJobResponse * SageMakerClient::createAutoMLJob(const CreateAutoMLJob
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Git repository as a resource in your Amazon SageMaker account. You can associate the repository with notebook
+ * Creates a Git repository as a resource in your SageMaker account. You can associate the repository with notebook
  * instances so that you can use Git source control for the notebooks you create. The Git repository is a resource in your
- * Amazon SageMaker account, so it can be associated with more than one notebook instance, and it persists independently
- * from the lifecycle of any notebook instances it is associated
+ * SageMaker account, so it can be associated with more than one notebook instance, and it persists independently from the
+ * lifecycle of any notebook instances it is associated
  *
  * with>
  *
  * The repository can be hosted either in <a
- * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS CodeCommit</a> or in any other Git
+ * href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon Web Services CodeCommit</a> or in any
+ * other Git
  */
 CreateCodeRepositoryResponse * SageMakerClient::createCodeRepository(const CreateCodeRepositoryRequest &request)
 {
@@ -792,7 +849,8 @@ CreateCodeRepositoryResponse * SageMakerClient::createCodeRepository(const Creat
  * </p
  *
  * If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as
- * part of the model. You can also use the artifacts with AWS IoT Greengrass. In that case, deploy them as an ML
+ * part of the model. You can also use the artifacts with Amazon Web Services IoT Greengrass. In that case, deploy them as
+ * an ML
  *
  * resource>
  *
@@ -838,12 +896,6 @@ CreateCompilationJobResponse * SageMakerClient::createCompilationJob(const Creat
  * Creates a <i>context</i>. A context is a lineage tracking entity that represents a logical grouping of other tracking or
  * experiment entities. Some examples are an endpoint and a model package. For more information, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
- *
- * Tracking</a>> <note>
- *
- * <code>CreateContext</code> can only be invoked from within an SageMaker managed environment. This includes SageMaker
- * training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to <code>CreateContext</code> from
- * outside one of these environments results in an
  */
 CreateContextResponse * SageMakerClient::createContext(const CreateContextRequest &request)
 {
@@ -885,8 +937,8 @@ CreateDeviceFleetResponse * SageMakerClient::createDeviceFleet(const CreateDevic
  *
  * Creates a <code>Domain</code> used by Amazon SageMaker Studio. A domain consists of an associated Amazon Elastic File
  * System (EFS) volume, a list of authorized users, and a variety of security, application, policy, and Amazon Virtual
- * Private Cloud (VPC) configurations. An AWS account is limited to one domain per region. Users within a domain can share
- * notebook files and other artifacts with each
+ * Private Cloud (VPC) configurations. An Amazon Web Services account is limited to one domain per region. Users within a
+ * domain can share notebook files and other artifacts with each
  *
  * other>
  *
@@ -899,10 +951,10 @@ CreateDeviceFleetResponse * SageMakerClient::createDeviceFleet(const CreateDevic
  *
  * files>
  *
- * SageMaker uses the AWS Key Management Service (AWS KMS) to encrypt the EFS volume attached to the domain with an AWS
- * managed customer master key (CMK) by default. For more control, you can specify a customer managed CMK. For more
- * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html">Protect Data at Rest
- * Using
+ * SageMaker uses the Amazon Web Services Key Management Service (Amazon Web Services KMS) to encrypt the EFS volume
+ * attached to the domain with an Amazon Web Services managed key by default. For more control, you can specify a customer
+ * managed key. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html">Protect Data at Rest Using
  *
  * Encryption</a>>
  *
@@ -929,7 +981,12 @@ CreateDeviceFleetResponse * SageMakerClient::createDeviceFleet(const CreateDevic
  * When internet access is disabled, you won't be able to run a Studio notebook or to train or host models unless your VPC
  * has an interface endpoint to the SageMaker API and runtime or a NAT gateway and your security groups allow outbound
  *
- * connections> </li> </ul>
+ * connections> </li> </ul> <b>
+ *
+ * NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in order to launch a SageMaker
+ * Studio app
+ *
+ * successfully> </b>
  *
  * For more information, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html">Connect SageMaker
@@ -938,6 +995,33 @@ CreateDeviceFleetResponse * SageMakerClient::createDeviceFleet(const CreateDevic
 CreateDomainResponse * SageMakerClient::createDomain(const CreateDomainRequest &request)
 {
     return qobject_cast<CreateDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateEdgeDeploymentPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an edge deployment plan, consisting of multiple stages. Each stage may have a different deployment configuration
+ * and
+ */
+CreateEdgeDeploymentPlanResponse * SageMakerClient::createEdgeDeploymentPlan(const CreateEdgeDeploymentPlanRequest &request)
+{
+    return qobject_cast<CreateEdgeDeploymentPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateEdgeDeploymentStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new stage in an existing edge deployment
+ */
+CreateEdgeDeploymentStageResponse * SageMakerClient::createEdgeDeploymentStage(const CreateEdgeDeploymentStageRequest &request)
+{
+    return qobject_cast<CreateEdgeDeploymentStageResponse *>(send(request));
 }
 
 /*!
@@ -961,18 +1045,18 @@ CreateEdgePackagingJobResponse * SageMakerClient::createEdgePackagingJob(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an endpoint using the endpoint configuration specified in the request. Amazon SageMaker uses the endpoint to
- * provision resources and deploy models. You create the endpoint configuration with the <a>CreateEndpointConfig</a> API.
+ * Creates an endpoint using the endpoint configuration specified in the request. SageMaker uses the endpoint to provision
+ * resources and deploy models. You create the endpoint configuration with the <a>CreateEndpointConfig</a> API.
  *
  * </p
  *
- * Use this API to deploy models using Amazon SageMaker hosting services.
+ * Use this API to deploy models using SageMaker hosting services.
  *
  * </p
  *
- * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
- * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the Model to
- * Amazon SageMaker Hosting Services (AWS SDK for Python (Boto 3)).</a>
+ * For an example that calls this method when deploying a model to SageMaker hosting services, see the <a
+ * href="https://github.com/aws/amazon-sagemaker-examples/blob/master/sagemaker-fundamentals/create-endpoint/create_endpoint.ipynb">Create
+ * Endpoint example notebook.</a>
  *
  * </p <note>
  *
@@ -982,12 +1066,12 @@ CreateEdgePackagingJobResponse * SageMakerClient::createEdgePackagingJob(const C
  *
  * <code>EndpointConfig</code>> </note>
  *
- * The endpoint name must be unique within an AWS Region in your AWS account.
+ * The endpoint name must be unique within an Amazon Web Services Region in your Amazon Web Services account.
  *
  * </p
  *
- * When it receives the request, Amazon SageMaker creates the endpoint, launches the resources (ML compute instances), and
- * deploys the model(s) on them.
+ * When it receives the request, SageMaker creates the endpoint, launches the resources (ML compute instances), and deploys
+ * the model(s) on them.
  *
  * </p <note>
  *
@@ -1003,18 +1087,19 @@ CreateEdgePackagingJobResponse * SageMakerClient::createEdgePackagingJob(const C
  *
  * read> </note>
  *
- * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Creating</code>. After it creates the
- * endpoint, it sets the status to <code>InService</code>. Amazon SageMaker can then process incoming requests for
- * inferences. To check the status of an endpoint, use the <a>DescribeEndpoint</a>
+ * When SageMaker receives the request, it sets the endpoint status to <code>Creating</code>. After it creates the
+ * endpoint, it sets the status to <code>InService</code>. SageMaker can then process incoming requests for inferences. To
+ * check the status of an endpoint, use the <a>DescribeEndpoint</a>
  *
  * API>
  *
- * If any of the models hosted at this endpoint get model data from an Amazon S3 location, Amazon SageMaker uses AWS
- * Security Token Service to download model artifacts from the S3 path you provided. AWS STS is activated in your IAM user
- * account by default. If you previously deactivated AWS STS for a region, you need to reactivate AWS STS for that region.
- * For more information, see <a
+ * If any of the models hosted at this endpoint get model data from an Amazon S3 location, SageMaker uses Amazon Web
+ * Services Security Token Service to download model artifacts from the S3 path you provided. Amazon Web Services STS is
+ * activated in your IAM user account by default. If you previously deactivated Amazon Web Services STS for a region, you
+ * need to reactivate Amazon Web Services STS for that region. For more information, see <a
  * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
- * Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access Management User
+ * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity and
+ * Access Management User
  *
  * Guide</i>> <note>
  *
@@ -1024,7 +1109,7 @@ CreateEdgePackagingJobResponse * SageMakerClient::createEdgePackagingJob(const C
  *
  * </p <ul> <li>
  *
- * Option 1: For a full Amazon SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
+ * Option 1: For a full SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
  *
  * policy> </li> <li>
  *
@@ -1054,7 +1139,7 @@ CreateEdgePackagingJobResponse * SageMakerClient::createEdgePackagingJob(const C
  * </p
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon SageMaker API Permissions:
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">SageMaker API Permissions:
  * Actions, Permissions, and Resources
  */
 CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointRequest &request)
@@ -1068,32 +1153,25 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models. In the configuration,
- * you identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that you
- * want Amazon SageMaker to provision. Then you call the <a>CreateEndpoint</a>
+ * Creates an endpoint configuration that SageMaker hosting services uses to deploy models. In the configuration, you
+ * identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that you want
+ * SageMaker to provision. Then you call the <a>CreateEndpoint</a>
  *
  * API> <note>
  *
- * Use this API if you want to use Amazon SageMaker hosting services to deploy models into production.
+ * Use this API if you want to use SageMaker hosting services to deploy models into production.
  *
  * </p </note>
  *
  * In the request, you define a <code>ProductionVariant</code>, for each model that you want to deploy. Each
- * <code>ProductionVariant</code> parameter also describes the resources that you want Amazon SageMaker to provision. This
+ * <code>ProductionVariant</code> parameter also describes the resources that you want SageMaker to provision. This
  * includes the number and type of ML compute instances to deploy.
  *
  * </p
  *
  * If you are hosting multiple models, you also assign a <code>VariantWeight</code> to specify how much traffic you want to
  * allocate to each model. For example, suppose that you want to host two models, A and B, and you assign traffic weight 2
- * for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model A, and one-third to model
- * B.
- *
- * </p
- *
- * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
- * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the Model to
- * Amazon SageMaker Hosting Services (AWS SDK for Python (Boto 3)).</a>
+ * for model A and 1 for model B. SageMaker distributes two-thirds of the traffic to Model A, and one-third to model B.
  *
  * </p <note>
  *
@@ -1129,8 +1207,8 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
  * constant>
  *
  * When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are
- * automatically tracked, logged, and indexed. When you use the AWS SDK for Python (Boto), you must use the logging APIs
- * provided by the
+ * automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the
+ * logging APIs provided by the
  *
  * SDK>
  *
@@ -1166,8 +1244,8 @@ CreateExperimentResponse * SageMakerClient::createExperiment(const CreateExperim
  * The <code>FeatureGroup</code> defines the schema and features contained in the FeatureGroup. A <code>FeatureGroup</code>
  * definition is composed of a list of <code>Features</code>, a <code>RecordIdentifierFeatureName</code>, an
  * <code>EventTimeFeatureName</code> and configurations for its <code>OnlineStore</code> and <code>OfflineStore</code>.
- * Check <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS service quotas</a> to see the
- * <code>FeatureGroup</code>s quota for your AWS
+ * Check <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon Web Services service
+ * quotas</a> to see the <code>FeatureGroup</code>s quota for your Amazon Web Services
  *
  * account> <b>
  *
@@ -1228,7 +1306,7 @@ CreateHyperParameterTuningJobResponse * SageMakerClient::createHyperParameterTun
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a custom SageMaker image. A SageMaker image is a set of image versions. Each image version represents a
- * container image stored in Amazon Container Registry (ECR). For more information, see <a
+ * container image stored in Amazon Elastic Container Registry (ECR). For more information, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html">Bring your own SageMaker
  */
 CreateImageResponse * SageMakerClient::createImage(const CreateImageRequest &request)
@@ -1242,12 +1320,25 @@ CreateImageResponse * SageMakerClient::createImage(const CreateImageRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a version of the SageMaker image specified by <code>ImageName</code>. The version represents the Amazon
+ * Creates a version of the SageMaker image specified by <code>ImageName</code>. The version represents the Amazon Elastic
  * Container Registry (ECR) container image specified by
  */
 CreateImageVersionResponse * SageMakerClient::createImageVersion(const CreateImageVersionRequest &request)
 {
     return qobject_cast<CreateImageVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateInferenceRecommendationsJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a recommendation job. You can create either an instance recommendation or load test
+ */
+CreateInferenceRecommendationsJobResponse * SageMakerClient::createInferenceRecommendationsJob(const CreateInferenceRecommendationsJobRequest &request)
+{
+    return qobject_cast<CreateInferenceRecommendationsJobResponse *>(send(request));
 }
 
 /*!
@@ -1270,7 +1361,8 @@ CreateImageVersionResponse * SageMakerClient::createImageVersion(const CreateIma
  *
  * required> </li> <li>
  *
- * One or more vendors that you select from the AWS Marketplace. Vendors provide expertise in specific areas.
+ * One or more vendors that you select from the Amazon Web Services Marketplace. Vendors provide expertise in specific
+ * areas.
  *
  * </p </li> <li>
  *
@@ -1315,41 +1407,37 @@ CreateLabelingJobResponse * SageMakerClient::createLabelingJob(const CreateLabel
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a model in Amazon SageMaker. In the request, you name the model and describe a primary container. For the
- * primary container, you specify the Docker image that contains inference code, artifacts (from prior training), and a
- * custom environment map that the inference code uses when you deploy the model for
+ * Creates a model in SageMaker. In the request, you name the model and describe a primary container. For the primary
+ * container, you specify the Docker image that contains inference code, artifacts (from prior training), and a custom
+ * environment map that the inference code uses when you deploy the model for
  *
  * predictions>
  *
- * Use this API to create a model if you want to use Amazon SageMaker hosting services or run a batch transform
+ * Use this API to create a model if you want to use SageMaker hosting services or run a batch transform
  *
  * job>
  *
  * To host your model, you create an endpoint configuration with the <code>CreateEndpointConfig</code> API, and then create
- * an endpoint with the <code>CreateEndpoint</code> API. Amazon SageMaker then deploys all of the containers that you
- * defined for the model in the hosting environment.
+ * an endpoint with the <code>CreateEndpoint</code> API. SageMaker then deploys all of the containers that you defined for
+ * the model in the hosting environment.
  *
  * </p
  *
- * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
- * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the Model to
- * Amazon SageMaker Hosting Services (AWS SDK for Python (Boto 3)).</a>
+ * For an example that calls this method when deploying a model to SageMaker hosting services, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-deployment.html#realtime-endpoints-deployment-create-model">Create
+ * a Model (Amazon Web Services SDK for Python (Boto 3)).</a>
  *
  * </p
  *
- * To run a batch transform using your model, you start a job with the <code>CreateTransformJob</code> API. Amazon
- * SageMaker uses your model and your dataset to get inferences which are then saved to a specified S3
+ * To run a batch transform using your model, you start a job with the <code>CreateTransformJob</code> API. SageMaker uses
+ * your model and your dataset to get inferences which are then saved to a specified S3
  *
  * location>
  *
- * In the <code>CreateModel</code> request, you must define a container with the <code>PrimaryContainer</code>
- *
- * parameter>
- *
- * In the request, you also provide an IAM role that Amazon SageMaker can assume to access model artifacts and docker image
- * for deployment on ML compute hosting instances or for batch transform jobs. In addition, you also use the IAM role to
- * manage permissions the inference code needs. For example, if the inference code access any other AWS resources, you
- * grant necessary permissions via this
+ * In the request, you also provide an IAM role that SageMaker can assume to access model artifacts and docker image for
+ * deployment on ML compute hosting instances or for batch transform jobs. In addition, you also use the IAM role to manage
+ * permissions the inference code needs. For example, if the inference code access any other Amazon Web Services resources,
+ * you grant necessary permissions via this
  */
 CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &request)
 {
@@ -1388,15 +1476,15 @@ CreateModelExplainabilityJobDefinitionResponse * SageMakerClient::createModelExp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a model package that you can use to create Amazon SageMaker models or list on AWS Marketplace, or a versioned
- * model that is part of a model group. Buyers can subscribe to model packages listed on AWS Marketplace to create models
- * in Amazon
+ * Creates a model package that you can use to create SageMaker models or list on Amazon Web Services Marketplace, or a
+ * versioned model that is part of a model group. Buyers can subscribe to model packages listed on Amazon Web Services
+ * Marketplace to create models in
  *
  * SageMaker>
  *
  * To create a model package by specifying a Docker container that contains your inference code and the Amazon S3 location
  * of your model artifacts, provide values for <code>InferenceSpecification</code>. To create a model from an algorithm
- * resource that you created or subscribed to in AWS Marketplace, provide a value for
+ * resource that you created or subscribed to in Amazon Web Services Marketplace, provide a value for
  *
  * <code>SourceAlgorithmSpecification</code>> <note>
  *
@@ -1462,50 +1550,50 @@ CreateMonitoringScheduleResponse * SageMakerClient::createMonitoringSchedule(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon SageMaker notebook instance. A notebook instance is a machine learning (ML) compute instance running
- * on a Jupyter notebook.
+ * Creates an SageMaker notebook instance. A notebook instance is a machine learning (ML) compute instance running on a
+ * Jupyter notebook.
  *
  * </p
  *
- * In a <code>CreateNotebookInstance</code> request, specify the type of ML compute instance that you want to run. Amazon
+ * In a <code>CreateNotebookInstance</code> request, specify the type of ML compute instance that you want to run.
  * SageMaker launches the instance, installs common libraries that you can use to explore datasets for model training, and
  * attaches an ML storage volume to the notebook instance.
  *
  * </p
  *
- * Amazon SageMaker also provides a set of example notebooks. Each notebook demonstrates how to use Amazon SageMaker with a
- * specific algorithm or with a machine learning framework.
+ * SageMaker also provides a set of example notebooks. Each notebook demonstrates how to use SageMaker with a specific
+ * algorithm or with a machine learning framework.
  *
  * </p
  *
- * After receiving the request, Amazon SageMaker does the
+ * After receiving the request, SageMaker does the
  *
  * following> <ol> <li>
  *
- * Creates a network interface in the Amazon SageMaker
+ * Creates a network interface in the SageMaker
  *
  * VPC> </li> <li>
  *
- * (Option) If you specified <code>SubnetId</code>, Amazon SageMaker creates a network interface in your own VPC, which is
- * inferred from the subnet ID that you provide in the input. When creating this network interface, Amazon SageMaker
- * attaches the security group that you specified in the request to the network interface that it creates in your
+ * (Option) If you specified <code>SubnetId</code>, SageMaker creates a network interface in your own VPC, which is
+ * inferred from the subnet ID that you provide in the input. When creating this network interface, SageMaker attaches the
+ * security group that you specified in the request to the network interface that it creates in your
  *
  * VPC> </li> <li>
  *
- * Launches an EC2 instance of the type specified in the request in the Amazon SageMaker VPC. If you specified
- * <code>SubnetId</code> of your VPC, Amazon SageMaker specifies both network interfaces when launching this instance. This
+ * Launches an EC2 instance of the type specified in the request in the SageMaker VPC. If you specified
+ * <code>SubnetId</code> of your VPC, SageMaker specifies both network interfaces when launching this instance. This
  * enables inbound traffic from your own VPC to the notebook instance, assuming that the security groups allow
  *
  * it> </li> </ol>
  *
- * After creating the notebook instance, Amazon SageMaker returns its Amazon Resource Name (ARN). You can't change the name
- * of a notebook instance after you create
+ * After creating the notebook instance, SageMaker returns its Amazon Resource Name (ARN). You can't change the name of a
+ * notebook instance after you create
  *
  * it>
  *
- * After Amazon SageMaker creates the notebook instance, you can connect to the Jupyter server and work in Jupyter
- * notebooks. For example, you can write code to explore a dataset that you can use for model training, train a model, host
- * models by creating Amazon SageMaker endpoints, and validate hosted models.
+ * After SageMaker creates the notebook instance, you can connect to the Jupyter server and work in Jupyter notebooks. For
+ * example, you can write code to explore a dataset that you can use for model training, train a model, host models by
+ * creating SageMaker endpoints, and validate hosted models.
  *
  * </p
  *
@@ -1577,11 +1665,24 @@ CreatePipelineResponse * SageMakerClient::createPipeline(const CreatePipelineReq
  * signed in to Amazon SageMaker Studio, and granted access to all of the Apps and files associated with the Domain's
  * Amazon Elastic File System (EFS) volume. This operation can only be called when the authentication mode equals IAM.
  *
- * </p <note>
+ * </p
+ *
+ * The IAM role or user passed to this API defines the permissions to access the app. Once the presigned URL is created, no
+ * additional permission is required to access this URL. IAM authorization policies for this API are also enforced for
+ * every HTTP request and WebSocket frame that attempts to connect to the
+ *
+ * app>
+ *
+ * You can restrict access to this API and to the URL that it returns to a list of IP addresses, Amazon VPCs or Amazon VPC
+ * Endpoints that you specify. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-interface-endpoint.html">Connect to SageMaker Studio
+ * Through an Interface VPC Endpoint</a>
+ *
+ * > <note>
  *
  * The URL that you get from a call to <code>CreatePresignedDomainUrl</code> has a default timeout of 5 minutes. You can
  * configure this value using <code>ExpiresInSeconds</code>. If you try to use the URL after the timeout limit expires, you
- * are directed to the AWS console sign-in
+ * are directed to the Amazon Web Services console sign-in
  */
 CreatePresignedDomainUrlResponse * SageMakerClient::createPresignedDomainUrl(const CreatePresignedDomainUrlRequest &request)
 {
@@ -1594,9 +1695,9 @@ CreatePresignedDomainUrlResponse * SageMakerClient::createPresignedDomainUrl(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker
- * console, when you choose <code>Open</code> next to a notebook instance, Amazon SageMaker opens a new tab showing the
- * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the
+ * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the SageMaker console, when
+ * you choose <code>Open</code> next to a notebook instance, SageMaker opens a new tab showing the Jupyter server home page
+ * from the notebook instance. The console uses this API to get the URL and show the
  *
  * page>
  *
@@ -1615,7 +1716,7 @@ CreatePresignedDomainUrlResponse * SageMakerClient::createPresignedDomainUrl(con
  * Address</a>> <note>
  *
  * The URL that you get from a call to <a>CreatePresignedNotebookInstanceUrl</a> is valid only for 5 minutes. If you try to
- * use the URL after the 5-minute limit expires, you are directed to the AWS console sign-in
+ * use the URL after the 5-minute limit expires, you are directed to the Amazon Web Services console sign-in
  */
 CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNotebookInstanceUrl(const CreatePresignedNotebookInstanceUrlRequest &request)
 {
@@ -1651,18 +1752,31 @@ CreateProjectResponse * SageMakerClient::createProject(const CreateProjectReques
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateStudioLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Studio Lifecycle
+ */
+CreateStudioLifecycleConfigResponse * SageMakerClient::createStudioLifecycleConfig(const CreateStudioLifecycleConfigRequest &request)
+{
+    return qobject_cast<CreateStudioLifecycleConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * CreateTrainingJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a model training job. After training completes, Amazon SageMaker saves the resulting model artifacts to an Amazon
- * S3 location that you specify.
+ * Starts a model training job. After training completes, SageMaker saves the resulting model artifacts to an Amazon S3
+ * location that you specify.
  *
  * </p
  *
- * If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as
- * part of the model. You can also use the artifacts in a machine learning service other than Amazon SageMaker, provided
- * that you know how to use them for inference.
+ * If you choose to host your model using SageMaker hosting services, you can use the resulting model artifacts as part of
+ * the model. You can also use the artifacts in a machine learning service other than SageMaker, provided that you know how
+ * to use them for inference.
  *
  * </p
  *
@@ -1676,17 +1790,23 @@ CreateProjectResponse * SageMakerClient::createProject(const CreateProjectReques
  *
  * <code>HyperParameters</code> - Specify these algorithm-specific parameters to enable the estimation of model parameters
  * during training. Hyperparameters can be tuned to optimize this learning process. For a list of hyperparameters for each
- * training algorithm provided by Amazon SageMaker, see <a
+ * training algorithm provided by SageMaker, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
  *
- * </p </li> <li>
+ * </p <b>
+ *
+ * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
+ * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception error
+ * for detected credentials, if such user input is
+ *
+ * found> </b> </li> <li>
  *
  * <code>InputDataConfig</code> - Describes the training dataset and the Amazon S3, EFS, or FSx location where it is
  *
  * stored> </li> <li>
  *
- * <code>OutputDataConfig</code> - Identifies the Amazon S3 bucket where you want Amazon SageMaker to save the results of
- * model training.
+ * <code>OutputDataConfig</code> - Identifies the Amazon S3 bucket where you want SageMaker to save the results of model
+ * training.
  *
  * </p </li> <li>
  *
@@ -1701,9 +1821,9 @@ CreateProjectResponse * SageMakerClient::createProject(const CreateProjectReques
  *
  * </p </li> <li>
  *
- * <code>RoleArn</code> - The Amazon Resource Name (ARN) that Amazon SageMaker assumes to perform tasks on your behalf
- * during model training. You must grant this role the necessary permissions so that Amazon SageMaker can successfully
- * complete model training.
+ * <code>RoleArn</code> - The Amazon Resource Name (ARN) that SageMaker assumes to perform tasks on your behalf during
+ * model training. You must grant this role the necessary permissions so that SageMaker can successfully complete model
+ * training.
  *
  * </p </li> <li>
  *
@@ -1720,7 +1840,7 @@ CreateProjectResponse * SageMakerClient::createProject(const CreateProjectReques
  *
  * <code>InternalServerError</code>> </li> </ul>
  *
- * For more information about Amazon SageMaker, see <a
+ * For more information about SageMaker, see <a
  * href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
  */
 CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrainingJobRequest &request)
@@ -1747,14 +1867,16 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
  *
  * following> <ul> <li>
  *
- * <code>TransformJobName</code> - Identifies the transform job. The name must be unique within an AWS Region in an AWS
+ * <code>TransformJobName</code> - Identifies the transform job. The name must be unique within an Amazon Web Services
+ * Region in an Amazon Web Services
  *
  * account> </li> <li>
  *
  * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code> must be the name of an existing Amazon
- * SageMaker model in the same AWS Region and AWS account. For information on creating a model, see
+ * SageMaker model in the same Amazon Web Services Region and Amazon Web Services account. For information on creating a
+ * model, see <a
  *
- * <a>CreateModel</a>> </li> <li>
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html">CreateModel</a>> </li> <li>
  *
  * <code>TransformInput</code> - Describes the dataset to be transformed and the Amazon S3 location where it is
  *
@@ -1789,8 +1911,8 @@ CreateTransformJobResponse * SageMakerClient::createTransformJob(const CreateTra
  * <i>experiment</i>>
  *
  * When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are
- * automatically tracked, logged, and indexed. When you use the AWS SDK for Python (Boto), you must use the logging APIs
- * provided by the
+ * automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the
+ * logging APIs provided by the
  *
  * SDK>
  *
@@ -1822,18 +1944,12 @@ CreateTrialResponse * SageMakerClient::createTrial(const CreateTrialRequest &req
  * jobs>
  *
  * When you use SageMaker Studio or the SageMaker Python SDK, all experiments, trials, and trial components are
- * automatically tracked, logged, and indexed. When you use the AWS SDK for Python (Boto), you must use the logging APIs
- * provided by the
+ * automatically tracked, logged, and indexed. When you use the Amazon Web Services SDK for Python (Boto), you must use the
+ * logging APIs provided by the
  *
  * SDK>
  *
  * You can add tags to a trial component and then use the <a>Search</a> API to search for the
- *
- * tags> <note>
- *
- * <code>CreateTrialComponent</code> can only be invoked from within an SageMaker managed environment. This includes
- * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
- * <code>CreateTrialComponent</code> from outside one of these environments results in an
  */
 CreateTrialComponentResponse * SageMakerClient::createTrialComponent(const CreateTrialComponentRequest &request)
 {
@@ -1848,9 +1964,9 @@ CreateTrialComponentResponse * SageMakerClient::createTrialComponent(const Creat
  *
  * Creates a user profile. A user profile represents a single user within a domain, and is the main way to reference a
  * "person" for the purposes of sharing, reporting, and other user-oriented features. This entity is created when a user
- * onboards to Amazon SageMaker Studio. If an administrator invites a person by email or imports them from SSO, a user
- * profile is automatically created. A user profile is the primary holder of settings for an individual user and has a
- * reference to the user's private Amazon Elastic File System (EFS) home directory.
+ * onboards to Amazon SageMaker Studio. If an administrator invites a person by email or imports them from IAM Identity
+ * Center, a user profile is automatically created. A user profile is the primary holder of settings for an individual user
+ * and has a reference to the user's private Amazon Elastic File System (EFS) home directory.
  */
 CreateUserProfileResponse * SageMakerClient::createUserProfile(const CreateUserProfileRequest &request)
 {
@@ -1863,13 +1979,14 @@ CreateUserProfileResponse * SageMakerClient::createUserProfile(const CreateUserP
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this operation to create a workforce. This operation will return an error if a workforce already exists in the AWS
- * Region that you specify. You can only create one workforce in each AWS Region per AWS
+ * Use this operation to create a workforce. This operation will return an error if a workforce already exists in the
+ * Amazon Web Services Region that you specify. You can only create one workforce in each Amazon Web Services Region per
+ * Amazon Web Services
  *
  * account>
  *
- * If you want to create a new workforce in an AWS Region where a workforce already exists, use the API operation to delete
- * the existing workforce and then use <code>CreateWorkforce</code> to create a new
+ * If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use the API
+ * operation to delete the existing workforce and then use <code>CreateWorkforce</code> to create a new
  *
  * workforce>
  *
@@ -2045,9 +2162,9 @@ DeleteDeviceFleetResponse * SageMakerClient::deleteDeviceFleet(const DeleteDevic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Used to delete a domain. If you onboarded with IAM mode, you will need to delete your domain to onboard again using SSO.
- * Use with caution. All of the members of the domain will lose access to their EFS volume, including data, notebooks, and
- * other artifacts.
+ * Used to delete a domain. If you onboarded with IAM mode, you will need to delete your domain to onboard again using IAM
+ * Identity Center. Use with caution. All of the members of the domain will lose access to their EFS volume, including
+ * data, notebooks, and other artifacts.
  */
 DeleteDomainResponse * SageMakerClient::deleteDomain(const DeleteDomainRequest &request)
 {
@@ -2056,16 +2173,50 @@ DeleteDomainResponse * SageMakerClient::deleteDomain(const DeleteDomainRequest &
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteEdgeDeploymentPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an edge deployment plan if (and only if) all the stages in the plan are inactive or there are no stages in the
+ */
+DeleteEdgeDeploymentPlanResponse * SageMakerClient::deleteEdgeDeploymentPlan(const DeleteEdgeDeploymentPlanRequest &request)
+{
+    return qobject_cast<DeleteEdgeDeploymentPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteEdgeDeploymentStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete a stage in an edge deployment plan if (and only if) the stage is
+ */
+DeleteEdgeDeploymentStageResponse * SageMakerClient::deleteEdgeDeploymentStage(const DeleteEdgeDeploymentStageRequest &request)
+{
+    return qobject_cast<DeleteEdgeDeploymentStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DeleteEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an endpoint. Amazon SageMaker frees up all of the resources that were deployed when the endpoint was created.
+ * Deletes an endpoint. SageMaker frees up all of the resources that were deployed when the endpoint was created.
  *
  * </p
  *
- * Amazon SageMaker retires any custom KMS key grants associated with the endpoint, meaning you don't need to use the <a
+ * SageMaker retires any custom KMS key grants associated with the endpoint, meaning you don't need to use the <a
  * href="http://docs.aws.amazon.com/kms/latest/APIReference/API_RevokeGrant.html">RevokeGrant</a> API
+ *
+ * call>
+ *
+ * When you delete your endpoint, SageMaker asynchronously deletes associated endpoint resources such as KMS key grants.
+ * You might still see these resources in your account for a few minutes after deleting your endpoint. Do not delete or
+ * revoke the permissions for your <code> <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html#sagemaker-CreateModel-request-ExecutionRoleArn">ExecutionRoleArn</a>
+ * </code>, otherwise SageMaker cannot delete these
  */
 DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -2119,8 +2270,8 @@ DeleteExperimentResponse * SageMakerClient::deleteExperiment(const DeleteExperim
  *
  * </p
  *
- * Data written into the <code>OfflineStore</code> will not be deleted. The AWS Glue database and tables that are
- * automatically created for your <code>OfflineStore</code> are not deleted.
+ * Data written into the <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue database and tables
+ * that are automatically created for your <code>OfflineStore</code> are not deleted.
  */
 DeleteFeatureGroupResponse * SageMakerClient::deleteFeatureGroup(const DeleteFeatureGroupRequest &request)
 {
@@ -2190,8 +2341,8 @@ DeleteImageVersionResponse * SageMakerClient::deleteImageVersion(const DeleteIma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in Amazon SageMaker when
- * you called the <a>CreateModel</a> API. It does not delete model artifacts, inference code, or the IAM role that you
+ * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in SageMaker when you
+ * called the <code>CreateModel</code> API. It does not delete model artifacts, inference code, or the IAM role that you
  * specified when creating the model.
  */
 DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &request)
@@ -2235,8 +2386,8 @@ DeleteModelExplainabilityJobDefinitionResponse * SageMakerClient::deleteModelExp
  *
  * package>
  *
- * A model package is used to create Amazon SageMaker models or list on AWS Marketplace. Buyers can subscribe to model
- * packages listed on AWS Marketplace to create models in Amazon
+ * A model package is used to create SageMaker models or list on Amazon Web Services Marketplace. Buyers can subscribe to
+ * model packages listed on Amazon Web Services Marketplace to create models in
  */
 DeleteModelPackageResponse * SageMakerClient::deleteModelPackage(const DeleteModelPackageRequest &request)
 {
@@ -2302,13 +2453,13 @@ DeleteMonitoringScheduleResponse * SageMakerClient::deleteMonitoringSchedule(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an Amazon SageMaker notebook instance. Before you can delete a notebook instance, you must call the
+ * Deletes an SageMaker notebook instance. Before you can delete a notebook instance, you must call the
  * <code>StopNotebookInstance</code> API.
  *
  * </p <b>
  *
- * When you delete a notebook instance, you lose all of your data. Amazon SageMaker removes the ML compute instance, and
- * deletes the ML storage volume and the network interface associated with the notebook instance.
+ * When you delete a notebook instance, you lose all of your data. SageMaker removes the ML compute instance, and deletes
+ * the ML storage volume and the network interface associated with the notebook instance.
  */
 DeleteNotebookInstanceResponse * SageMakerClient::deleteNotebookInstance(const DeleteNotebookInstanceRequest &request)
 {
@@ -2358,11 +2509,26 @@ DeleteProjectResponse * SageMakerClient::deleteProject(const DeleteProjectReques
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteStudioLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle Configuration, there must be no running
+ * apps using the Lifecycle Configuration. You must also remove the Lifecycle Configuration from UserSettings in all
+ * Domains and
+ */
+DeleteStudioLifecycleConfigResponse * SageMakerClient::deleteStudioLifecycleConfig(const DeleteStudioLifecycleConfigRequest &request)
+{
+    return qobject_cast<DeleteStudioLifecycleConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DeleteTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified tags from an Amazon SageMaker
+ * Deletes the specified tags from an SageMaker
  *
  * resource>
  *
@@ -2435,8 +2601,8 @@ DeleteUserProfileResponse * SageMakerClient::deleteUserProfile(const DeleteUserP
  *
  * workforce>
  *
- * If you want to create a new workforce in an AWS Region where a workforce already exists, use this operation to delete
- * the existing workforce and then use to create a new
+ * If you want to create a new workforce in an Amazon Web Services Region where a workforce already exists, use this
+ * operation to delete the existing workforce and then use to create a new
  *
  * workforce> <b>
  *
@@ -2651,6 +2817,19 @@ DescribeDomainResponse * SageMakerClient::describeDomain(const DescribeDomainReq
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeEdgeDeploymentPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an edge deployment plan with deployment status per
+ */
+DescribeEdgeDeploymentPlanResponse * SageMakerClient::describeEdgeDeploymentPlan(const DescribeEdgeDeploymentPlanRequest &request)
+{
+    return qobject_cast<DescribeEdgeDeploymentPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DescribeEdgePackagingJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2713,6 +2892,19 @@ DescribeExperimentResponse * SageMakerClient::describeExperiment(const DescribeE
 DescribeFeatureGroupResponse * SageMakerClient::describeFeatureGroup(const DescribeFeatureGroupRequest &request)
 {
     return qobject_cast<DescribeFeatureGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeFeatureMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Shows the metadata for a feature within a feature
+ */
+DescribeFeatureMetadataResponse * SageMakerClient::describeFeatureMetadata(const DescribeFeatureMetadataRequest &request)
+{
+    return qobject_cast<DescribeFeatureMetadataResponse *>(send(request));
 }
 
 /*!
@@ -2782,6 +2974,19 @@ DescribeImageVersionResponse * SageMakerClient::describeImageVersion(const Descr
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeInferenceRecommendationsJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides the results of the Inference Recommender job. One or more recommendation jobs are
+ */
+DescribeInferenceRecommendationsJobResponse * SageMakerClient::describeInferenceRecommendationsJob(const DescribeInferenceRecommendationsJobRequest &request)
+{
+    return qobject_cast<DescribeInferenceRecommendationsJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DescribeLabelingJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2791,6 +2996,21 @@ DescribeImageVersionResponse * SageMakerClient::describeImageVersion(const Descr
 DescribeLabelingJobResponse * SageMakerClient::describeLabelingJob(const DescribeLabelingJobRequest &request)
 {
     return qobject_cast<DescribeLabelingJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeLineageGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of properties for the requested lineage group. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage Tracking
+ * </a> in the <i>Amazon SageMaker Developer
+ */
+DescribeLineageGroupResponse * SageMakerClient::describeLineageGroup(const DescribeLineageGroupRequest &request)
+{
+    return qobject_cast<DescribeLineageGroupResponse *>(send(request));
 }
 
 /*!
@@ -2838,12 +3058,12 @@ DescribeModelExplainabilityJobDefinitionResponse * SageMakerClient::describeMode
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a description of the specified model package, which is used to create Amazon SageMaker models or list them on
- * AWS
+ * Returns a description of the specified model package, which is used to create SageMaker models or list them on Amazon
+ * Web Services
  *
  * Marketplace>
  *
- * To create models in Amazon SageMaker, buyers can subscribe to model packages listed on AWS
+ * To create models in SageMaker, buyers can subscribe to model packages listed on Amazon Web Services
  */
 DescribeModelPackageResponse * SageMakerClient::describeModelPackage(const DescribeModelPackageRequest &request)
 {
@@ -2988,12 +3208,25 @@ DescribeProjectResponse * SageMakerClient::describeProject(const DescribeProject
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeStudioLifecycleConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the Studio Lifecycle
+ */
+DescribeStudioLifecycleConfigResponse * SageMakerClient::describeStudioLifecycleConfig(const DescribeStudioLifecycleConfigRequest &request)
+{
+    return qobject_cast<DescribeStudioLifecycleConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DescribeSubscribedWorkteamResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a work team provided by a vendor. It returns details about the subscription with a vendor in the
- * AWS
+ * Amazon Web Services
  */
 DescribeSubscribedWorkteamResponse * SageMakerClient::describeSubscribedWorkteam(const DescribeSubscribedWorkteamRequest &request)
 {
@@ -3166,13 +3399,26 @@ GetDeviceFleetReportResponse * SageMakerClient::getDeviceFleetReport(const GetDe
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * GetLineageGroupPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The resource policy for the lineage
+ */
+GetLineageGroupPolicyResponse * SageMakerClient::getLineageGroupPolicy(const GetLineageGroupPolicyRequest &request)
+{
+    return qobject_cast<GetLineageGroupPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * GetModelPackageGroupPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a resource policy that manages access for a model group. For information about resource policies, see <a
  * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
- * policies and resource-based policies</a> in the <i>AWS Identity and Access Management User
+ * policies and resource-based policies</a> in the <i>Amazon Web Services Identity and Access Management User
  */
 GetModelPackageGroupPolicyResponse * SageMakerClient::getModelPackageGroupPolicy(const GetModelPackageGroupPolicyRequest &request)
 {
@@ -3410,6 +3656,19 @@ ListDomainsResponse * SageMakerClient::listDomains(const ListDomainsRequest &req
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListEdgeDeploymentPlansResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all edge deployment
+ */
+ListEdgeDeploymentPlansResponse * SageMakerClient::listEdgeDeploymentPlans(const ListEdgeDeploymentPlansRequest &request)
+{
+    return qobject_cast<ListEdgeDeploymentPlansResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListEdgePackagingJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3543,6 +3802,19 @@ ListImagesResponse * SageMakerClient::listImages(const ListImagesRequest &reques
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListInferenceRecommendationsJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists recommendation jobs that satisfy various
+ */
+ListInferenceRecommendationsJobsResponse * SageMakerClient::listInferenceRecommendationsJobs(const ListInferenceRecommendationsJobsRequest &request)
+{
+    return qobject_cast<ListInferenceRecommendationsJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListLabelingJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3565,6 +3837,21 @@ ListLabelingJobsResponse * SageMakerClient::listLabelingJobs(const ListLabelingJ
 ListLabelingJobsForWorkteamResponse * SageMakerClient::listLabelingJobsForWorkteam(const ListLabelingJobsForWorkteamRequest &request)
 {
     return qobject_cast<ListLabelingJobsForWorkteamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListLineageGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A list of lineage groups shared with your Amazon Web Services account. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/xaccount-lineage-tracking.html"> Cross-Account Lineage Tracking
+ * </a> in the <i>Amazon SageMaker Developer
+ */
+ListLineageGroupsResponse * SageMakerClient::listLineageGroups(const ListLineageGroupsRequest &request)
+{
+    return qobject_cast<ListLineageGroupsResponse *>(send(request));
 }
 
 /*!
@@ -3595,11 +3882,24 @@ ListModelExplainabilityJobDefinitionsResponse * SageMakerClient::listModelExplai
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListModelMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the domain, framework, task, and model name of standard machine learning models found in common model
+ */
+ListModelMetadataResponse * SageMakerClient::listModelMetadata(const ListModelMetadataRequest &request)
+{
+    return qobject_cast<ListModelMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListModelPackageGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of the model groups in your AWS
+ * Gets a list of the model groups in your Amazon Web Services
  */
 ListModelPackageGroupsResponse * SageMakerClient::listModelPackageGroups(const ListModelPackageGroupsRequest &request)
 {
@@ -3638,7 +3938,7 @@ ListModelQualityJobDefinitionsResponse * SageMakerClient::listModelQualityJobDef
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists models created with the <a>CreateModel</a>
+ * Lists models created with the <code>CreateModel</code>
  */
 ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &request)
 {
@@ -3690,7 +3990,7 @@ ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInst
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the Amazon SageMaker notebook instances in the requester's account in an AWS Region.
+ * Returns a list of the SageMaker notebook instances in the requester's account in an Amazon Web Services Region.
  */
 ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const ListNotebookInstancesRequest &request)
 {
@@ -3768,7 +4068,7 @@ ListProcessingJobsResponse * SageMakerClient::listProcessingJobs(const ListProce
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of the projects in an AWS
+ * Gets a list of the projects in an Amazon Web Services
  */
 ListProjectsResponse * SageMakerClient::listProjects(const ListProjectsRequest &request)
 {
@@ -3777,12 +4077,38 @@ ListProjectsResponse * SageMakerClient::listProjects(const ListProjectsRequest &
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListStageDevicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists devices allocated to the stage, containing detailed device information and deployment
+ */
+ListStageDevicesResponse * SageMakerClient::listStageDevices(const ListStageDevicesRequest &request)
+{
+    return qobject_cast<ListStageDevicesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListStudioLifecycleConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the Studio Lifecycle Configurations in your Amazon Web Services
+ */
+ListStudioLifecycleConfigsResponse * SageMakerClient::listStudioLifecycleConfigs(const ListStudioLifecycleConfigsRequest &request)
+{
+    return qobject_cast<ListStudioLifecycleConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListSubscribedWorkteamsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of the work teams that you are subscribed to in the AWS Marketplace. The list may be empty if no work team
- * satisfies the filter specified in the <code>NameContains</code>
+ * Gets a list of the work teams that you are subscribed to in the Amazon Web Services Marketplace. The list may be empty
+ * if no work team satisfies the filter specified in the <code>NameContains</code>
  */
 ListSubscribedWorkteamsResponse * SageMakerClient::listSubscribedWorkteams(const ListSubscribedWorkteamsRequest &request)
 {
@@ -3795,7 +4121,7 @@ ListSubscribedWorkteamsResponse * SageMakerClient::listSubscribedWorkteams(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the tags for the specified Amazon SageMaker
+ * Returns the tags for the specified SageMaker
  */
 ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
 {
@@ -3832,7 +4158,7 @@ ListTagsResponse * SageMakerClient::listTags(const ListTagsRequest &request)
  *
  * returned>
  *
- * You can quickly test the API using the following AWS CLI
+ * You can quickly test the API using the following Amazon Web Services CLI
  *
  * code>
  *
@@ -3930,8 +4256,8 @@ ListUserProfilesResponse * SageMakerClient::listUserProfiles(const ListUserProfi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this operation to list all private and vendor workforces in an AWS Region. Note that you can only have one private
- * workforce per AWS
+ * Use this operation to list all private and vendor workforces in an Amazon Web Services Region. Note that you can only
+ * have one private workforce per Amazon Web Services
  */
 ListWorkforcesResponse * SageMakerClient::listWorkforces(const ListWorkforcesRequest &request)
 {
@@ -3960,11 +4286,26 @@ ListWorkteamsResponse * SageMakerClient::listWorkteams(const ListWorkteamsReques
  *
  * Adds a resouce policy to control access to a model group. For information about resoure policies, see <a
  * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html">Identity-based
- * policies and resource-based policies</a> in the <i>AWS Identity and Access Management User
+ * policies and resource-based policies</a> in the <i>Amazon Web Services Identity and Access Management User
  */
 PutModelPackageGroupPolicyResponse * SageMakerClient::putModelPackageGroupPolicy(const PutModelPackageGroupPolicyRequest &request)
 {
     return qobject_cast<PutModelPackageGroupPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * QueryLineageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this action to inspect your lineage and discover relationships between entities. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage Entities</a> in
+ * the <i>Amazon SageMaker Developer
+ */
+QueryLineageResponse * SageMakerClient::queryLineage(const QueryLineageRequest &request)
+{
+    return qobject_cast<QueryLineageResponse *>(send(request));
 }
 
 /*!
@@ -3991,6 +4332,19 @@ RegisterDevicesResponse * SageMakerClient::registerDevices(const RegisterDevices
 RenderUiTemplateResponse * SageMakerClient::renderUiTemplate(const RenderUiTemplateRequest &request)
 {
     return qobject_cast<RenderUiTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * RetryPipelineExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retry the execution of the
+ */
+RetryPipelineExecutionResponse * SageMakerClient::retryPipelineExecution(const RetryPipelineExecutionRequest &request)
+{
+    return qobject_cast<RetryPipelineExecutionResponse *>(send(request));
 }
 
 /*!
@@ -4044,6 +4398,19 @@ SendPipelineExecutionStepSuccessResponse * SageMakerClient::sendPipelineExecutio
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StartEdgeDeploymentStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a stage in an edge deployment
+ */
+StartEdgeDeploymentStageResponse * SageMakerClient::startEdgeDeploymentStage(const StartEdgeDeploymentStageRequest &request)
+{
+    return qobject_cast<StartEdgeDeploymentStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * StartMonitoringScheduleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4066,8 +4433,8 @@ StartMonitoringScheduleResponse * SageMakerClient::startMonitoringSchedule(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After
- * configuring the notebook instance, Amazon SageMaker sets the notebook instance status to <code>InService</code>. A
- * notebook instance's status must be <code>InService</code> before you can connect to your Jupyter notebook.
+ * configuring the notebook instance, SageMaker sets the notebook instance status to <code>InService</code>. A notebook
+ * instance's status must be <code>InService</code> before you can connect to your Jupyter notebook.
  */
 StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const StartNotebookInstanceRequest &request)
 {
@@ -4126,6 +4493,19 @@ StopCompilationJobResponse * SageMakerClient::stopCompilationJob(const StopCompi
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopEdgeDeploymentStageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a stage in an edge deployment
+ */
+StopEdgeDeploymentStageResponse * SageMakerClient::stopEdgeDeploymentStage(const StopEdgeDeploymentStageRequest &request)
+{
+    return qobject_cast<StopEdgeDeploymentStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * StopEdgePackagingJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4154,6 +4534,19 @@ StopEdgePackagingJobResponse * SageMakerClient::stopEdgePackagingJob(const StopE
 StopHyperParameterTuningJobResponse * SageMakerClient::stopHyperParameterTuningJob(const StopHyperParameterTuningJobRequest &request)
 {
     return qobject_cast<StopHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopInferenceRecommendationsJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an Inference Recommender
+ */
+StopInferenceRecommendationsJobResponse * SageMakerClient::stopInferenceRecommendationsJob(const StopInferenceRecommendationsJobRequest &request)
+{
+    return qobject_cast<StopInferenceRecommendationsJobResponse *>(send(request));
 }
 
 /*!
@@ -4189,9 +4582,8 @@ StopMonitoringScheduleResponse * SageMakerClient::stopMonitoringSchedule(const S
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Terminates the ML compute instance. Before terminating the instance, Amazon SageMaker disconnects the ML storage volume
- * from it. Amazon SageMaker preserves the ML storage volume. Amazon SageMaker stops charging you for the ML compute
- * instance when you call
+ * Terminates the ML compute instance. Before terminating the instance, SageMaker disconnects the ML storage volume from
+ * it. SageMaker preserves the ML storage volume. SageMaker stops charging you for the ML compute instance when you call
  *
  * <code>StopNotebookInstance</code>>
  *
@@ -4211,6 +4603,37 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops a pipeline
+ *
+ * execution>
+ *
+ * <b>Callback Step</b>
+ *
+ * </p
+ *
+ * A pipeline execution won't stop while a callback step is running. When you call <code>StopPipelineExecution</code> on a
+ * pipeline execution with a running callback step, SageMaker Pipelines sends an additional Amazon SQS message to the
+ * specified SQS queue. The body of the SQS message contains a "Status" field which is set to
+ *
+ * "Stopping">
+ *
+ * You should add logic to your Amazon SQS message consumer to take any needed action (for example, resource cleanup) upon
+ * receipt of the message followed by a call to <code>SendPipelineExecutionStepSuccess</code> or
+ *
+ * <code>SendPipelineExecutionStepFailure</code>>
+ *
+ * Only when SageMaker Pipelines receives one of these calls will it stop the pipeline
+ *
+ * execution>
+ *
+ * <b>Lambda Step</b>
+ *
+ * </p
+ *
+ * A pipeline execution can't be stopped while a lambda step is running because the Lambda function invoked by the lambda
+ * step can't be stopped. If you attempt to stop the execution while the Lambda function is running, the pipeline waits for
+ * the Lambda function to finish or until the timeout is hit, whichever occurs first, and then stops. If the Lambda
+ * function finishes, the pipeline execution status is <code>Stopped</code>. If the timeout is hit the pipeline execution
+ * status is
  */
 StopPipelineExecutionResponse * SageMakerClient::stopPipelineExecution(const StopPipelineExecutionRequest &request)
 {
@@ -4236,14 +4659,14 @@ StopProcessingJobResponse * SageMakerClient::stopProcessingJob(const StopProcess
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a training job. To stop a job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays
- * job termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results
- * of the training is not lost.
+ * Stops a training job. To stop a job, SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays job
+ * termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results of
+ * the training is not lost.
  *
  * </p
  *
- * When it receives a <code>StopTrainingJob</code> request, Amazon SageMaker changes the status of the job to
- * <code>Stopping</code>. After Amazon SageMaker stops the job, it sets the status to
+ * When it receives a <code>StopTrainingJob</code> request, SageMaker changes the status of the job to
+ * <code>Stopping</code>. After SageMaker stops the job, it sets the status to
  */
 StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJobRequest &request)
 {
@@ -4256,13 +4679,13 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a transform
+ * Stops a batch transform
  *
  * job>
  *
  * When Amazon SageMaker receives a <code>StopTransformJob</code> request, the status of the job changes to
  * <code>Stopping</code>. After Amazon SageMaker stops the job, the status is set to <code>Stopped</code>. When you stop a
- * transform job before it is completed, Amazon SageMaker doesn't store the job's output in Amazon
+ * batch transform job before it is completed, Amazon SageMaker doesn't store the job's output in Amazon
  */
 StopTransformJobResponse * SageMakerClient::stopTransformJob(const StopTransformJobRequest &request)
 {
@@ -4385,9 +4808,8 @@ UpdateDomainResponse * SageMakerClient::updateDomain(const UpdateDomainRequest &
  *
  * </p
  *
- * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the
- * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the
- * <a>DescribeEndpoint</a> API.
+ * When SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the endpoint,
+ * it sets the status to <code>InService</code>. To check the status of an endpoint, use the <a>DescribeEndpoint</a> API.
  *
  * </p <note>
  *
@@ -4412,7 +4834,7 @@ UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant
- * associated with an existing endpoint. When it receives the request, Amazon SageMaker sets the endpoint status to
+ * associated with an existing endpoint. When it receives the request, SageMaker sets the endpoint status to
  * <code>Updating</code>. After updating the endpoint, it sets the status to <code>InService</code>. To check the status of
  * an endpoint, use the <a>DescribeEndpoint</a> API.
  */
@@ -4432,6 +4854,32 @@ UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeig
 UpdateExperimentResponse * SageMakerClient::updateExperiment(const UpdateExperimentRequest &request)
 {
     return qobject_cast<UpdateExperimentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateFeatureGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the feature
+ */
+UpdateFeatureGroupResponse * SageMakerClient::updateFeatureGroup(const UpdateFeatureGroupRequest &request)
+{
+    return qobject_cast<UpdateFeatureGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateFeatureMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the description and parameters of the feature
+ */
+UpdateFeatureMetadataResponse * SageMakerClient::updateFeatureMetadata(const UpdateFeatureMetadataRequest &request)
+{
+    return qobject_cast<UpdateFeatureMetadataResponse *>(send(request));
 }
 
 /*!
@@ -4528,6 +4976,25 @@ UpdatePipelineExecutionResponse * SageMakerClient::updatePipelineExecution(const
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a machine learning (ML) project that is created from a template that sets up an ML pipeline from training to
+ * deploying an approved
+ *
+ * model> <note>
+ *
+ * You must not update a project that is in use. If you update the <code>ServiceCatalogProvisioningUpdateDetails</code> of
+ * a project that is active or being created, or updated, you may lose resources already created by the
+ */
+UpdateProjectResponse * SageMakerClient::updateProject(const UpdateProjectRequest &request)
+{
+    return qobject_cast<UpdateProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * UpdateTrainingJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4589,6 +5056,10 @@ UpdateUserProfileResponse * SageMakerClient::updateUserProfile(const UpdateUserP
  *
  * configuration>
  *
+ * The worker portal is now supported in VPC and public
+ *
+ * internet>
+ *
  * Use <code>SourceIpConfig</code> to restrict worker access to tasks to a specific range of IP addresses. You specify
  * allowed IP addresses by creating a list of up to ten <a
  * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>. By default, a workforce isn't
@@ -4596,6 +5067,14 @@ UpdateUserProfileResponse * SageMakerClient::updateUserProfile(const UpdateUserP
  * any IP address outside the specified range are denied and get a <code>Not Found</code> error message on the worker
  *
  * portal>
+ *
+ * To restrict access to all the workers in public internet, add the <code>SourceIpConfig</code> CIDR value as
+ *
+ * "0.0.0.0/0"> <b>
+ *
+ * Amazon SageMaker does not support Source Ip restriction for worker portals in
+ *
+ * VPC> </b>
  *
  * Use <code>OidcConfig</code> to update the configuration of a workforce created using your own OIDC IdP.
  *

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingRequest
- * \brief The PurchaseReservedDBInstancesOfferingRequest class provides an interface for RDS PurchaseReservedDBInstancesOffering requests.
+ * \class QtAws::Rds::PurchaseReservedDBInstancesOfferingRequest
+ * \brief The PurchaseReservedDBInstancesOfferingRequest class provides an interface for Rds PurchaseReservedDBInstancesOffering requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedDBInstancesOfferingRequest::r
 }
 
 /*!
- * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingRequestPrivate
+ * \class QtAws::Rds::PurchaseReservedDBInstancesOfferingRequestPrivate
  * \brief The PurchaseReservedDBInstancesOfferingRequestPrivate class provides private implementation for PurchaseReservedDBInstancesOfferingRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOf
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

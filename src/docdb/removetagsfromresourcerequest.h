@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWSDOCDB_EXPORT RemoveTagsFromResourceRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RemoveTagsFromResourceRequest : public DocDbRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

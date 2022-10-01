@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateDBClusterResponse
- * \brief The CreateDBClusterResponse class provides an interace for DocDB CreateDBCluster responses.
+ * \class QtAws::DocDb::CreateDBClusterResponse
+ * \brief The CreateDBClusterResponse class provides an interace for DocDb CreateDBCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createDBCluster
+ * \sa DocDbClient::createDBCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateDBClusterResponse::CreateDBClusterResponse(
         const CreateDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CreateDBClusterResponsePrivate(this), parent)
+    : DocDbResponse(new CreateDBClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateDBClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateDBClusterRequest * CreateDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB CreateDBCluster \a response.
+ * Parses a successful DocDb CreateDBCluster \a response.
  */
 void CreateDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CreateDBClusterResponsePrivate
+ * \class QtAws::DocDb::CreateDBClusterResponsePrivate
  * \brief The CreateDBClusterResponsePrivate class provides private implementation for CreateDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CreateDBClusterResponsePrivate object with public implementation \a q.
  */
 CreateDBClusterResponsePrivate::CreateDBClusterResponsePrivate(
-    CreateDBClusterResponse * const q) : DocDBResponsePrivate(q)
+    CreateDBClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CreateDBCluster response element from \a xml.
+ * Parses a DocDb CreateDBCluster response element from \a xml.
  */
 void CreateDBClusterResponsePrivate::parseCreateDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateDBClusterResponsePrivate::parseCreateDBClusterResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

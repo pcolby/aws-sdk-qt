@@ -24,14 +24,14 @@
 #include "deleteloggingconfigurationrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteLoggingConfigurationRequest;
 
-class DeleteLoggingConfigurationRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteLoggingConfigurationRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteLoggingConfigurationRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteLoggingConfigurationRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteLoggingConfigurationRequest * const q);
     DeleteLoggingConfigurationRequestPrivate(const DeleteLoggingConfigurationRequestPrivate &other,
                                    DeleteLoggingConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

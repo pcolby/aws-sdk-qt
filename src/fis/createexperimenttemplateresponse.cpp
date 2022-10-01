@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::CreateExperimentTemplateResponse
- * \brief The CreateExperimentTemplateResponse class provides an interace for FIS CreateExperimentTemplate responses.
+ * \class QtAws::Fis::CreateExperimentTemplateResponse
+ * \brief The CreateExperimentTemplateResponse class provides an interace for Fis CreateExperimentTemplate responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::createExperimentTemplate
  */
@@ -64,7 +64,7 @@ const CreateExperimentTemplateRequest * CreateExperimentTemplateResponse::reques
 
 /*!
  * \reimp
- * Parses a successful FIS CreateExperimentTemplate \a response.
+ * Parses a successful Fis CreateExperimentTemplate \a response.
  */
 void CreateExperimentTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void CreateExperimentTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::CreateExperimentTemplateResponsePrivate
+ * \class QtAws::Fis::CreateExperimentTemplateResponsePrivate
  * \brief The CreateExperimentTemplateResponsePrivate class provides private implementation for CreateExperimentTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ CreateExperimentTemplateResponsePrivate::CreateExperimentTemplateResponsePrivate
 }
 
 /*!
- * Parses a FIS CreateExperimentTemplate response element from \a xml.
+ * Parses a Fis CreateExperimentTemplate response element from \a xml.
  */
 void CreateExperimentTemplateResponsePrivate::parseCreateExperimentTemplateResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void CreateExperimentTemplateResponsePrivate::parseCreateExperimentTemplateRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

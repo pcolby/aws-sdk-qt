@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ListGroupsForUserResponse
- * \brief The ListGroupsForUserResponse class provides an interace for IAM ListGroupsForUser responses.
+ * \class QtAws::Iam::ListGroupsForUserResponse
+ * \brief The ListGroupsForUserResponse class provides an interace for Iam ListGroupsForUser responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::listGroupsForUser
  */
@@ -68,7 +68,7 @@ const ListGroupsForUserRequest * ListGroupsForUserResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM ListGroupsForUser \a response.
+ * Parses a successful Iam ListGroupsForUser \a response.
  */
 void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::ListGroupsForUserResponsePrivate
+ * \class QtAws::Iam::ListGroupsForUserResponsePrivate
  * \brief The ListGroupsForUserResponsePrivate class provides private implementation for ListGroupsForUserResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
 }
 
 /*!
- * Parses a IAM ListGroupsForUser response element from \a xml.
+ * Parses a Iam ListGroupsForUser response element from \a xml.
  */
 void ListGroupsForUserResponsePrivate::parseListGroupsForUserResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ListGroupsForUserResponsePrivate::parseListGroupsForUserResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

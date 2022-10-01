@@ -24,14 +24,14 @@
 #include "testrenderemailtemplaterequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class TestRenderEmailTemplateRequest;
 
-class TestRenderEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class TestRenderEmailTemplateRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    TestRenderEmailTemplateRequestPrivate(const Sesv2Request::Action action,
+    TestRenderEmailTemplateRequestPrivate(const SESv2Request::Action action,
                                    TestRenderEmailTemplateRequest * const q);
     TestRenderEmailTemplateRequestPrivate(const TestRenderEmailTemplateRequestPrivate &other,
                                    TestRenderEmailTemplateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

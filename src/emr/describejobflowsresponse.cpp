@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeJobFlowsResponse
- * \brief The DescribeJobFlowsResponse class provides an interace for EMR DescribeJobFlows responses.
+ * \class QtAws::Emr::DescribeJobFlowsResponse
+ * \brief The DescribeJobFlowsResponse class provides an interace for Emr DescribeJobFlows responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeJobFlows
  */
@@ -64,7 +64,7 @@ const DescribeJobFlowsRequest * DescribeJobFlowsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeJobFlows \a response.
+ * Parses a successful Emr DescribeJobFlows \a response.
  */
 void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeJobFlowsResponsePrivate
+ * \class QtAws::Emr::DescribeJobFlowsResponsePrivate
  * \brief The DescribeJobFlowsResponsePrivate class provides private implementation for DescribeJobFlowsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
 }
 
 /*!
- * Parses a EMR DescribeJobFlows response element from \a xml.
+ * Parses a Emr DescribeJobFlows response element from \a xml.
  */
 void DescribeJobFlowsResponsePrivate::parseDescribeJobFlowsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeJobFlowsResponsePrivate::parseDescribeJobFlowsResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

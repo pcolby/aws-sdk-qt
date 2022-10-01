@@ -21,183 +21,183 @@
 #include "iamrequest_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::IamRequest
- * \brief The IamRequest class provides an interface for IAM requests.
+ * \class QtAws::Iam::IamRequest
+ * \brief The IamRequest class provides an interface for Iam requests.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
  * \enum IamRequest::Action
  *
- * This enum describes the actions that can be performed as IAM
+ * This enum describes the actions that can be performed as Iam
  * requests.
  *
- * \value AddClientIDToOpenIDConnectProviderAction IAM AddClientIDToOpenIDConnectProvider action.
- * \value AddRoleToInstanceProfileAction IAM AddRoleToInstanceProfile action.
- * \value AddUserToGroupAction IAM AddUserToGroup action.
- * \value AttachGroupPolicyAction IAM AttachGroupPolicy action.
- * \value AttachRolePolicyAction IAM AttachRolePolicy action.
- * \value AttachUserPolicyAction IAM AttachUserPolicy action.
- * \value ChangePasswordAction IAM ChangePassword action.
- * \value CreateAccessKeyAction IAM CreateAccessKey action.
- * \value CreateAccountAliasAction IAM CreateAccountAlias action.
- * \value CreateGroupAction IAM CreateGroup action.
- * \value CreateInstanceProfileAction IAM CreateInstanceProfile action.
- * \value CreateLoginProfileAction IAM CreateLoginProfile action.
- * \value CreateOpenIDConnectProviderAction IAM CreateOpenIDConnectProvider action.
- * \value CreatePolicyAction IAM CreatePolicy action.
- * \value CreatePolicyVersionAction IAM CreatePolicyVersion action.
- * \value CreateRoleAction IAM CreateRole action.
- * \value CreateSAMLProviderAction IAM CreateSAMLProvider action.
- * \value CreateServiceLinkedRoleAction IAM CreateServiceLinkedRole action.
- * \value CreateServiceSpecificCredentialAction IAM CreateServiceSpecificCredential action.
- * \value CreateUserAction IAM CreateUser action.
- * \value CreateVirtualMFADeviceAction IAM CreateVirtualMFADevice action.
- * \value DeactivateMFADeviceAction IAM DeactivateMFADevice action.
- * \value DeleteAccessKeyAction IAM DeleteAccessKey action.
- * \value DeleteAccountAliasAction IAM DeleteAccountAlias action.
- * \value DeleteAccountPasswordPolicyAction IAM DeleteAccountPasswordPolicy action.
- * \value DeleteGroupAction IAM DeleteGroup action.
- * \value DeleteGroupPolicyAction IAM DeleteGroupPolicy action.
- * \value DeleteInstanceProfileAction IAM DeleteInstanceProfile action.
- * \value DeleteLoginProfileAction IAM DeleteLoginProfile action.
- * \value DeleteOpenIDConnectProviderAction IAM DeleteOpenIDConnectProvider action.
- * \value DeletePolicyAction IAM DeletePolicy action.
- * \value DeletePolicyVersionAction IAM DeletePolicyVersion action.
- * \value DeleteRoleAction IAM DeleteRole action.
- * \value DeleteRolePermissionsBoundaryAction IAM DeleteRolePermissionsBoundary action.
- * \value DeleteRolePolicyAction IAM DeleteRolePolicy action.
- * \value DeleteSAMLProviderAction IAM DeleteSAMLProvider action.
- * \value DeleteSSHPublicKeyAction IAM DeleteSSHPublicKey action.
- * \value DeleteServerCertificateAction IAM DeleteServerCertificate action.
- * \value DeleteServiceLinkedRoleAction IAM DeleteServiceLinkedRole action.
- * \value DeleteServiceSpecificCredentialAction IAM DeleteServiceSpecificCredential action.
- * \value DeleteSigningCertificateAction IAM DeleteSigningCertificate action.
- * \value DeleteUserAction IAM DeleteUser action.
- * \value DeleteUserPermissionsBoundaryAction IAM DeleteUserPermissionsBoundary action.
- * \value DeleteUserPolicyAction IAM DeleteUserPolicy action.
- * \value DeleteVirtualMFADeviceAction IAM DeleteVirtualMFADevice action.
- * \value DetachGroupPolicyAction IAM DetachGroupPolicy action.
- * \value DetachRolePolicyAction IAM DetachRolePolicy action.
- * \value DetachUserPolicyAction IAM DetachUserPolicy action.
- * \value EnableMFADeviceAction IAM EnableMFADevice action.
- * \value GenerateCredentialReportAction IAM GenerateCredentialReport action.
- * \value GenerateOrganizationsAccessReportAction IAM GenerateOrganizationsAccessReport action.
- * \value GenerateServiceLastAccessedDetailsAction IAM GenerateServiceLastAccessedDetails action.
- * \value GetAccessKeyLastUsedAction IAM GetAccessKeyLastUsed action.
- * \value GetAccountAuthorizationDetailsAction IAM GetAccountAuthorizationDetails action.
- * \value GetAccountPasswordPolicyAction IAM GetAccountPasswordPolicy action.
- * \value GetAccountSummaryAction IAM GetAccountSummary action.
- * \value GetContextKeysForCustomPolicyAction IAM GetContextKeysForCustomPolicy action.
- * \value GetContextKeysForPrincipalPolicyAction IAM GetContextKeysForPrincipalPolicy action.
- * \value GetCredentialReportAction IAM GetCredentialReport action.
- * \value GetGroupAction IAM GetGroup action.
- * \value GetGroupPolicyAction IAM GetGroupPolicy action.
- * \value GetInstanceProfileAction IAM GetInstanceProfile action.
- * \value GetLoginProfileAction IAM GetLoginProfile action.
- * \value GetOpenIDConnectProviderAction IAM GetOpenIDConnectProvider action.
- * \value GetOrganizationsAccessReportAction IAM GetOrganizationsAccessReport action.
- * \value GetPolicyAction IAM GetPolicy action.
- * \value GetPolicyVersionAction IAM GetPolicyVersion action.
- * \value GetRoleAction IAM GetRole action.
- * \value GetRolePolicyAction IAM GetRolePolicy action.
- * \value GetSAMLProviderAction IAM GetSAMLProvider action.
- * \value GetSSHPublicKeyAction IAM GetSSHPublicKey action.
- * \value GetServerCertificateAction IAM GetServerCertificate action.
- * \value GetServiceLastAccessedDetailsAction IAM GetServiceLastAccessedDetails action.
- * \value GetServiceLastAccessedDetailsWithEntitiesAction IAM GetServiceLastAccessedDetailsWithEntities action.
- * \value GetServiceLinkedRoleDeletionStatusAction IAM GetServiceLinkedRoleDeletionStatus action.
- * \value GetUserAction IAM GetUser action.
- * \value GetUserPolicyAction IAM GetUserPolicy action.
- * \value ListAccessKeysAction IAM ListAccessKeys action.
- * \value ListAccountAliasesAction IAM ListAccountAliases action.
- * \value ListAttachedGroupPoliciesAction IAM ListAttachedGroupPolicies action.
- * \value ListAttachedRolePoliciesAction IAM ListAttachedRolePolicies action.
- * \value ListAttachedUserPoliciesAction IAM ListAttachedUserPolicies action.
- * \value ListEntitiesForPolicyAction IAM ListEntitiesForPolicy action.
- * \value ListGroupPoliciesAction IAM ListGroupPolicies action.
- * \value ListGroupsAction IAM ListGroups action.
- * \value ListGroupsForUserAction IAM ListGroupsForUser action.
- * \value ListInstanceProfileTagsAction IAM ListInstanceProfileTags action.
- * \value ListInstanceProfilesAction IAM ListInstanceProfiles action.
- * \value ListInstanceProfilesForRoleAction IAM ListInstanceProfilesForRole action.
- * \value ListMFADeviceTagsAction IAM ListMFADeviceTags action.
- * \value ListMFADevicesAction IAM ListMFADevices action.
- * \value ListOpenIDConnectProviderTagsAction IAM ListOpenIDConnectProviderTags action.
- * \value ListOpenIDConnectProvidersAction IAM ListOpenIDConnectProviders action.
- * \value ListPoliciesAction IAM ListPolicies action.
- * \value ListPoliciesGrantingServiceAccessAction IAM ListPoliciesGrantingServiceAccess action.
- * \value ListPolicyTagsAction IAM ListPolicyTags action.
- * \value ListPolicyVersionsAction IAM ListPolicyVersions action.
- * \value ListRolePoliciesAction IAM ListRolePolicies action.
- * \value ListRoleTagsAction IAM ListRoleTags action.
- * \value ListRolesAction IAM ListRoles action.
- * \value ListSAMLProviderTagsAction IAM ListSAMLProviderTags action.
- * \value ListSAMLProvidersAction IAM ListSAMLProviders action.
- * \value ListSSHPublicKeysAction IAM ListSSHPublicKeys action.
- * \value ListServerCertificateTagsAction IAM ListServerCertificateTags action.
- * \value ListServerCertificatesAction IAM ListServerCertificates action.
- * \value ListServiceSpecificCredentialsAction IAM ListServiceSpecificCredentials action.
- * \value ListSigningCertificatesAction IAM ListSigningCertificates action.
- * \value ListUserPoliciesAction IAM ListUserPolicies action.
- * \value ListUserTagsAction IAM ListUserTags action.
- * \value ListUsersAction IAM ListUsers action.
- * \value ListVirtualMFADevicesAction IAM ListVirtualMFADevices action.
- * \value PutGroupPolicyAction IAM PutGroupPolicy action.
- * \value PutRolePermissionsBoundaryAction IAM PutRolePermissionsBoundary action.
- * \value PutRolePolicyAction IAM PutRolePolicy action.
- * \value PutUserPermissionsBoundaryAction IAM PutUserPermissionsBoundary action.
- * \value PutUserPolicyAction IAM PutUserPolicy action.
- * \value RemoveClientIDFromOpenIDConnectProviderAction IAM RemoveClientIDFromOpenIDConnectProvider action.
- * \value RemoveRoleFromInstanceProfileAction IAM RemoveRoleFromInstanceProfile action.
- * \value RemoveUserFromGroupAction IAM RemoveUserFromGroup action.
- * \value ResetServiceSpecificCredentialAction IAM ResetServiceSpecificCredential action.
- * \value ResyncMFADeviceAction IAM ResyncMFADevice action.
- * \value SetDefaultPolicyVersionAction IAM SetDefaultPolicyVersion action.
- * \value SetSecurityTokenServicePreferencesAction IAM SetSecurityTokenServicePreferences action.
- * \value SimulateCustomPolicyAction IAM SimulateCustomPolicy action.
- * \value SimulatePrincipalPolicyAction IAM SimulatePrincipalPolicy action.
- * \value TagInstanceProfileAction IAM TagInstanceProfile action.
- * \value TagMFADeviceAction IAM TagMFADevice action.
- * \value TagOpenIDConnectProviderAction IAM TagOpenIDConnectProvider action.
- * \value TagPolicyAction IAM TagPolicy action.
- * \value TagRoleAction IAM TagRole action.
- * \value TagSAMLProviderAction IAM TagSAMLProvider action.
- * \value TagServerCertificateAction IAM TagServerCertificate action.
- * \value TagUserAction IAM TagUser action.
- * \value UntagInstanceProfileAction IAM UntagInstanceProfile action.
- * \value UntagMFADeviceAction IAM UntagMFADevice action.
- * \value UntagOpenIDConnectProviderAction IAM UntagOpenIDConnectProvider action.
- * \value UntagPolicyAction IAM UntagPolicy action.
- * \value UntagRoleAction IAM UntagRole action.
- * \value UntagSAMLProviderAction IAM UntagSAMLProvider action.
- * \value UntagServerCertificateAction IAM UntagServerCertificate action.
- * \value UntagUserAction IAM UntagUser action.
- * \value UpdateAccessKeyAction IAM UpdateAccessKey action.
- * \value UpdateAccountPasswordPolicyAction IAM UpdateAccountPasswordPolicy action.
- * \value UpdateAssumeRolePolicyAction IAM UpdateAssumeRolePolicy action.
- * \value UpdateGroupAction IAM UpdateGroup action.
- * \value UpdateLoginProfileAction IAM UpdateLoginProfile action.
- * \value UpdateOpenIDConnectProviderThumbprintAction IAM UpdateOpenIDConnectProviderThumbprint action.
- * \value UpdateRoleAction IAM UpdateRole action.
- * \value UpdateRoleDescriptionAction IAM UpdateRoleDescription action.
- * \value UpdateSAMLProviderAction IAM UpdateSAMLProvider action.
- * \value UpdateSSHPublicKeyAction IAM UpdateSSHPublicKey action.
- * \value UpdateServerCertificateAction IAM UpdateServerCertificate action.
- * \value UpdateServiceSpecificCredentialAction IAM UpdateServiceSpecificCredential action.
- * \value UpdateSigningCertificateAction IAM UpdateSigningCertificate action.
- * \value UpdateUserAction IAM UpdateUser action.
- * \value UploadSSHPublicKeyAction IAM UploadSSHPublicKey action.
- * \value UploadServerCertificateAction IAM UploadServerCertificate action.
- * \value UploadSigningCertificateAction IAM UploadSigningCertificate action.
+ * \value AddClientIDToOpenIDConnectProviderAction Iam AddClientIDToOpenIDConnectProvider action.
+ * \value AddRoleToInstanceProfileAction Iam AddRoleToInstanceProfile action.
+ * \value AddUserToGroupAction Iam AddUserToGroup action.
+ * \value AttachGroupPolicyAction Iam AttachGroupPolicy action.
+ * \value AttachRolePolicyAction Iam AttachRolePolicy action.
+ * \value AttachUserPolicyAction Iam AttachUserPolicy action.
+ * \value ChangePasswordAction Iam ChangePassword action.
+ * \value CreateAccessKeyAction Iam CreateAccessKey action.
+ * \value CreateAccountAliasAction Iam CreateAccountAlias action.
+ * \value CreateGroupAction Iam CreateGroup action.
+ * \value CreateInstanceProfileAction Iam CreateInstanceProfile action.
+ * \value CreateLoginProfileAction Iam CreateLoginProfile action.
+ * \value CreateOpenIDConnectProviderAction Iam CreateOpenIDConnectProvider action.
+ * \value CreatePolicyAction Iam CreatePolicy action.
+ * \value CreatePolicyVersionAction Iam CreatePolicyVersion action.
+ * \value CreateRoleAction Iam CreateRole action.
+ * \value CreateSAMLProviderAction Iam CreateSAMLProvider action.
+ * \value CreateServiceLinkedRoleAction Iam CreateServiceLinkedRole action.
+ * \value CreateServiceSpecificCredentialAction Iam CreateServiceSpecificCredential action.
+ * \value CreateUserAction Iam CreateUser action.
+ * \value CreateVirtualMFADeviceAction Iam CreateVirtualMFADevice action.
+ * \value DeactivateMFADeviceAction Iam DeactivateMFADevice action.
+ * \value DeleteAccessKeyAction Iam DeleteAccessKey action.
+ * \value DeleteAccountAliasAction Iam DeleteAccountAlias action.
+ * \value DeleteAccountPasswordPolicyAction Iam DeleteAccountPasswordPolicy action.
+ * \value DeleteGroupAction Iam DeleteGroup action.
+ * \value DeleteGroupPolicyAction Iam DeleteGroupPolicy action.
+ * \value DeleteInstanceProfileAction Iam DeleteInstanceProfile action.
+ * \value DeleteLoginProfileAction Iam DeleteLoginProfile action.
+ * \value DeleteOpenIDConnectProviderAction Iam DeleteOpenIDConnectProvider action.
+ * \value DeletePolicyAction Iam DeletePolicy action.
+ * \value DeletePolicyVersionAction Iam DeletePolicyVersion action.
+ * \value DeleteRoleAction Iam DeleteRole action.
+ * \value DeleteRolePermissionsBoundaryAction Iam DeleteRolePermissionsBoundary action.
+ * \value DeleteRolePolicyAction Iam DeleteRolePolicy action.
+ * \value DeleteSAMLProviderAction Iam DeleteSAMLProvider action.
+ * \value DeleteSSHPublicKeyAction Iam DeleteSSHPublicKey action.
+ * \value DeleteServerCertificateAction Iam DeleteServerCertificate action.
+ * \value DeleteServiceLinkedRoleAction Iam DeleteServiceLinkedRole action.
+ * \value DeleteServiceSpecificCredentialAction Iam DeleteServiceSpecificCredential action.
+ * \value DeleteSigningCertificateAction Iam DeleteSigningCertificate action.
+ * \value DeleteUserAction Iam DeleteUser action.
+ * \value DeleteUserPermissionsBoundaryAction Iam DeleteUserPermissionsBoundary action.
+ * \value DeleteUserPolicyAction Iam DeleteUserPolicy action.
+ * \value DeleteVirtualMFADeviceAction Iam DeleteVirtualMFADevice action.
+ * \value DetachGroupPolicyAction Iam DetachGroupPolicy action.
+ * \value DetachRolePolicyAction Iam DetachRolePolicy action.
+ * \value DetachUserPolicyAction Iam DetachUserPolicy action.
+ * \value EnableMFADeviceAction Iam EnableMFADevice action.
+ * \value GenerateCredentialReportAction Iam GenerateCredentialReport action.
+ * \value GenerateOrganizationsAccessReportAction Iam GenerateOrganizationsAccessReport action.
+ * \value GenerateServiceLastAccessedDetailsAction Iam GenerateServiceLastAccessedDetails action.
+ * \value GetAccessKeyLastUsedAction Iam GetAccessKeyLastUsed action.
+ * \value GetAccountAuthorizationDetailsAction Iam GetAccountAuthorizationDetails action.
+ * \value GetAccountPasswordPolicyAction Iam GetAccountPasswordPolicy action.
+ * \value GetAccountSummaryAction Iam GetAccountSummary action.
+ * \value GetContextKeysForCustomPolicyAction Iam GetContextKeysForCustomPolicy action.
+ * \value GetContextKeysForPrincipalPolicyAction Iam GetContextKeysForPrincipalPolicy action.
+ * \value GetCredentialReportAction Iam GetCredentialReport action.
+ * \value GetGroupAction Iam GetGroup action.
+ * \value GetGroupPolicyAction Iam GetGroupPolicy action.
+ * \value GetInstanceProfileAction Iam GetInstanceProfile action.
+ * \value GetLoginProfileAction Iam GetLoginProfile action.
+ * \value GetOpenIDConnectProviderAction Iam GetOpenIDConnectProvider action.
+ * \value GetOrganizationsAccessReportAction Iam GetOrganizationsAccessReport action.
+ * \value GetPolicyAction Iam GetPolicy action.
+ * \value GetPolicyVersionAction Iam GetPolicyVersion action.
+ * \value GetRoleAction Iam GetRole action.
+ * \value GetRolePolicyAction Iam GetRolePolicy action.
+ * \value GetSAMLProviderAction Iam GetSAMLProvider action.
+ * \value GetSSHPublicKeyAction Iam GetSSHPublicKey action.
+ * \value GetServerCertificateAction Iam GetServerCertificate action.
+ * \value GetServiceLastAccessedDetailsAction Iam GetServiceLastAccessedDetails action.
+ * \value GetServiceLastAccessedDetailsWithEntitiesAction Iam GetServiceLastAccessedDetailsWithEntities action.
+ * \value GetServiceLinkedRoleDeletionStatusAction Iam GetServiceLinkedRoleDeletionStatus action.
+ * \value GetUserAction Iam GetUser action.
+ * \value GetUserPolicyAction Iam GetUserPolicy action.
+ * \value ListAccessKeysAction Iam ListAccessKeys action.
+ * \value ListAccountAliasesAction Iam ListAccountAliases action.
+ * \value ListAttachedGroupPoliciesAction Iam ListAttachedGroupPolicies action.
+ * \value ListAttachedRolePoliciesAction Iam ListAttachedRolePolicies action.
+ * \value ListAttachedUserPoliciesAction Iam ListAttachedUserPolicies action.
+ * \value ListEntitiesForPolicyAction Iam ListEntitiesForPolicy action.
+ * \value ListGroupPoliciesAction Iam ListGroupPolicies action.
+ * \value ListGroupsAction Iam ListGroups action.
+ * \value ListGroupsForUserAction Iam ListGroupsForUser action.
+ * \value ListInstanceProfileTagsAction Iam ListInstanceProfileTags action.
+ * \value ListInstanceProfilesAction Iam ListInstanceProfiles action.
+ * \value ListInstanceProfilesForRoleAction Iam ListInstanceProfilesForRole action.
+ * \value ListMFADeviceTagsAction Iam ListMFADeviceTags action.
+ * \value ListMFADevicesAction Iam ListMFADevices action.
+ * \value ListOpenIDConnectProviderTagsAction Iam ListOpenIDConnectProviderTags action.
+ * \value ListOpenIDConnectProvidersAction Iam ListOpenIDConnectProviders action.
+ * \value ListPoliciesAction Iam ListPolicies action.
+ * \value ListPoliciesGrantingServiceAccessAction Iam ListPoliciesGrantingServiceAccess action.
+ * \value ListPolicyTagsAction Iam ListPolicyTags action.
+ * \value ListPolicyVersionsAction Iam ListPolicyVersions action.
+ * \value ListRolePoliciesAction Iam ListRolePolicies action.
+ * \value ListRoleTagsAction Iam ListRoleTags action.
+ * \value ListRolesAction Iam ListRoles action.
+ * \value ListSAMLProviderTagsAction Iam ListSAMLProviderTags action.
+ * \value ListSAMLProvidersAction Iam ListSAMLProviders action.
+ * \value ListSSHPublicKeysAction Iam ListSSHPublicKeys action.
+ * \value ListServerCertificateTagsAction Iam ListServerCertificateTags action.
+ * \value ListServerCertificatesAction Iam ListServerCertificates action.
+ * \value ListServiceSpecificCredentialsAction Iam ListServiceSpecificCredentials action.
+ * \value ListSigningCertificatesAction Iam ListSigningCertificates action.
+ * \value ListUserPoliciesAction Iam ListUserPolicies action.
+ * \value ListUserTagsAction Iam ListUserTags action.
+ * \value ListUsersAction Iam ListUsers action.
+ * \value ListVirtualMFADevicesAction Iam ListVirtualMFADevices action.
+ * \value PutGroupPolicyAction Iam PutGroupPolicy action.
+ * \value PutRolePermissionsBoundaryAction Iam PutRolePermissionsBoundary action.
+ * \value PutRolePolicyAction Iam PutRolePolicy action.
+ * \value PutUserPermissionsBoundaryAction Iam PutUserPermissionsBoundary action.
+ * \value PutUserPolicyAction Iam PutUserPolicy action.
+ * \value RemoveClientIDFromOpenIDConnectProviderAction Iam RemoveClientIDFromOpenIDConnectProvider action.
+ * \value RemoveRoleFromInstanceProfileAction Iam RemoveRoleFromInstanceProfile action.
+ * \value RemoveUserFromGroupAction Iam RemoveUserFromGroup action.
+ * \value ResetServiceSpecificCredentialAction Iam ResetServiceSpecificCredential action.
+ * \value ResyncMFADeviceAction Iam ResyncMFADevice action.
+ * \value SetDefaultPolicyVersionAction Iam SetDefaultPolicyVersion action.
+ * \value SetSecurityTokenServicePreferencesAction Iam SetSecurityTokenServicePreferences action.
+ * \value SimulateCustomPolicyAction Iam SimulateCustomPolicy action.
+ * \value SimulatePrincipalPolicyAction Iam SimulatePrincipalPolicy action.
+ * \value TagInstanceProfileAction Iam TagInstanceProfile action.
+ * \value TagMFADeviceAction Iam TagMFADevice action.
+ * \value TagOpenIDConnectProviderAction Iam TagOpenIDConnectProvider action.
+ * \value TagPolicyAction Iam TagPolicy action.
+ * \value TagRoleAction Iam TagRole action.
+ * \value TagSAMLProviderAction Iam TagSAMLProvider action.
+ * \value TagServerCertificateAction Iam TagServerCertificate action.
+ * \value TagUserAction Iam TagUser action.
+ * \value UntagInstanceProfileAction Iam UntagInstanceProfile action.
+ * \value UntagMFADeviceAction Iam UntagMFADevice action.
+ * \value UntagOpenIDConnectProviderAction Iam UntagOpenIDConnectProvider action.
+ * \value UntagPolicyAction Iam UntagPolicy action.
+ * \value UntagRoleAction Iam UntagRole action.
+ * \value UntagSAMLProviderAction Iam UntagSAMLProvider action.
+ * \value UntagServerCertificateAction Iam UntagServerCertificate action.
+ * \value UntagUserAction Iam UntagUser action.
+ * \value UpdateAccessKeyAction Iam UpdateAccessKey action.
+ * \value UpdateAccountPasswordPolicyAction Iam UpdateAccountPasswordPolicy action.
+ * \value UpdateAssumeRolePolicyAction Iam UpdateAssumeRolePolicy action.
+ * \value UpdateGroupAction Iam UpdateGroup action.
+ * \value UpdateLoginProfileAction Iam UpdateLoginProfile action.
+ * \value UpdateOpenIDConnectProviderThumbprintAction Iam UpdateOpenIDConnectProviderThumbprint action.
+ * \value UpdateRoleAction Iam UpdateRole action.
+ * \value UpdateRoleDescriptionAction Iam UpdateRoleDescription action.
+ * \value UpdateSAMLProviderAction Iam UpdateSAMLProvider action.
+ * \value UpdateSSHPublicKeyAction Iam UpdateSSHPublicKey action.
+ * \value UpdateServerCertificateAction Iam UpdateServerCertificate action.
+ * \value UpdateServiceSpecificCredentialAction Iam UpdateServiceSpecificCredential action.
+ * \value UpdateSigningCertificateAction Iam UpdateSigningCertificate action.
+ * \value UpdateUserAction Iam UpdateUser action.
+ * \value UploadSSHPublicKeyAction Iam UploadSSHPublicKey action.
+ * \value UploadServerCertificateAction Iam UploadServerCertificate action.
+ * \value UploadSigningCertificateAction Iam UploadSigningCertificate action.
  */
 
 /*!
- * Constructs a IamRequest object for IAM \a action.
+ * Constructs a IamRequest object for Iam \a action.
  */
 IamRequest::IamRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IamRequestPrivate(action, this))
@@ -238,7 +238,7 @@ IamRequest::IamRequest(IamRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the IAM action to be performed by this request.
+ * Returns the Iam action to be performed by this request.
  */
 IamRequest::Action IamRequest::action() const
 {
@@ -247,7 +247,7 @@ IamRequest::Action IamRequest::action() const
 }
 
 /*!
- * Returns the name of the IAM action to be performed by this request.
+ * Returns the name of the Iam action to be performed by this request.
  */
 QString IamRequest::actionString() const
 {
@@ -255,7 +255,7 @@ QString IamRequest::actionString() const
 }
 
 /*!
- * Returns the IAM API version implemented by this request.
+ * Returns the Iam API version implemented by this request.
  */
 QString IamRequest::apiVersion() const
 {
@@ -264,7 +264,7 @@ QString IamRequest::apiVersion() const
 }
 
 /*!
- * Sets the IAM action to be performed by this request to \a action.
+ * Sets the Iam action to be performed by this request to \a action.
  */
 void IamRequest::setAction(const Action action)
 {
@@ -273,7 +273,7 @@ void IamRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the IAM API version to include in this request to \a version.
+ * Sets the Iam API version to include in this request to \a version.
  */
 void IamRequest::setApiVersion(const QString &version)
 {
@@ -298,15 +298,15 @@ bool IamRequest::operator==(const IamRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid IAM queue name.
+ * Returns \c tue if \a queueName is a valid Iam queue name.
  *
- * @par From IAM FAQs:
+ * @par From Iam FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid IAM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Iam queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -373,10 +373,10 @@ void IamRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the IAM request using the given
+ * Returns a network request for the Iam request using the given
  * \a endpoint.
  *
- * This IAM implementation builds request URLs by combining the
+ * This Iam implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -389,19 +389,19 @@ QNetworkRequest IamRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::IAM::IamRequestPrivate
+ * \class QtAws::Iam::IamRequestPrivate
  * \brief The IamRequestPrivate class provides private implementation for IamRequest.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
- * Constructs a IamRequestPrivate object for IAM \a action,
+ * Constructs a IamRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 IamRequestPrivate::IamRequestPrivate(const IamRequest::Action action, IamRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-05-08"))
 {
 
 }
@@ -427,7 +427,7 @@ IamRequestPrivate::IamRequestPrivate(const IamRequestPrivate &other,
  * invalid.
  *
  * This function converts IamRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the IAM service's Action
+ * string representations, appropriate for use with the Iam service's Action
  * query parameters.
  */
 QString IamRequestPrivate::toString(const IamRequest::Action &action)
@@ -600,5 +600,5 @@ QString IamRequestPrivate::toString(const IamRequest::Action &action)
     return QString();
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

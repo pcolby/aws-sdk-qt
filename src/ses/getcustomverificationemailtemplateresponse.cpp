@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetCustomVerificationEmailTemplateResponse
- * \brief The GetCustomVerificationEmailTemplateResponse class provides an interace for SES GetCustomVerificationEmailTemplate responses.
+ * \class QtAws::Ses::GetCustomVerificationEmailTemplateResponse
+ * \brief The GetCustomVerificationEmailTemplateResponse class provides an interace for Ses GetCustomVerificationEmailTemplate responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetCustomVerificationEmailTemplateRequest * GetCustomVerificationEmailTemp
 
 /*!
  * \reimp
- * Parses a successful SES GetCustomVerificationEmailTemplate \a response.
+ * Parses a successful Ses GetCustomVerificationEmailTemplate \a response.
  */
 void GetCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::SES::GetCustomVerificationEmailTemplateResponsePrivate
+ * \class QtAws::Ses::GetCustomVerificationEmailTemplateResponsePrivate
  * \brief The GetCustomVerificationEmailTemplateResponsePrivate class provides private implementation for GetCustomVerificationEmailTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetCustomVerificationEmailTemplateResponsePrivate::GetCustomVerificationEmailTem
 }
 
 /*!
- * Parses a SES GetCustomVerificationEmailTemplate response element from \a xml.
+ * Parses a Ses GetCustomVerificationEmailTemplate response element from \a xml.
  */
 void GetCustomVerificationEmailTemplateResponsePrivate::parseGetCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetCustomVerificationEmailTemplateResponsePrivate::parseGetCustomVerificati
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

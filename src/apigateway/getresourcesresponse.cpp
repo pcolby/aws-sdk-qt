@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetResourcesResponse
- * \brief The GetResourcesResponse class provides an interace for APIGateway GetResources responses.
+ * \class QtAws::ApiGateway::GetResourcesResponse
+ * \brief The GetResourcesResponse class provides an interace for ApiGateway GetResources responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getResources
+ * \sa ApiGatewayClient::getResources
  */
 
 /*!
@@ -49,7 +49,7 @@ GetResourcesResponse::GetResourcesResponse(
         const GetResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetResourcesResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetResourcesResponsePrivate(this), parent)
 {
     setRequest(new GetResourcesRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetResourcesRequest * GetResourcesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetResources \a response.
+ * Parses a successful ApiGateway GetResources \a response.
  */
 void GetResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetResourcesResponsePrivate
+ * \class QtAws::ApiGateway::GetResourcesResponsePrivate
  * \brief The GetResourcesResponsePrivate class provides private implementation for GetResourcesResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetResourcesResponsePrivate object with public implementation \a q.
  */
 GetResourcesResponsePrivate::GetResourcesResponsePrivate(
-    GetResourcesResponse * const q) : APIGatewayResponsePrivate(q)
+    GetResourcesResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetResources response element from \a xml.
+ * Parses a ApiGateway GetResources response element from \a xml.
  */
 void GetResourcesResponsePrivate::parseGetResourcesResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetResourcesResponsePrivate::parseGetResourcesResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

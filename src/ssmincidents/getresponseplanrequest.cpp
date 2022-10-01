@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetResponsePlanRequest
- * \brief The GetResponsePlanRequest class provides an interface for SSMIncidents GetResponsePlan requests.
+ * \class QtAws::SsmIncidents::GetResponsePlanRequest
+ * \brief The GetResponsePlanRequest class provides an interface for SsmIncidents GetResponsePlan requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getResponsePlan
+ * \sa SsmIncidentsClient::getResponsePlan
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetResponsePlanRequest::GetResponsePlanRequest(const GetResponsePlanRequest &other)
-    : SSMIncidentsRequest(new GetResponsePlanRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new GetResponsePlanRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ GetResponsePlanRequest::GetResponsePlanRequest(const GetResponsePlanRequest &oth
  * Constructs a GetResponsePlanRequest object.
  */
 GetResponsePlanRequest::GetResponsePlanRequest()
-    : SSMIncidentsRequest(new GetResponsePlanRequestPrivate(SSMIncidentsRequest::GetResponsePlanAction, this))
+    : SsmIncidentsRequest(new GetResponsePlanRequestPrivate(SsmIncidentsRequest::GetResponsePlanAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetResponsePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetResponsePlanRequestPrivate
+ * \class QtAws::SsmIncidents::GetResponsePlanRequestPrivate
  * \brief The GetResponsePlanRequestPrivate class provides private implementation for GetResponsePlanRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a GetResponsePlanRequestPrivate object for SSMIncidents \a action,
+ * Constructs a GetResponsePlanRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 GetResponsePlanRequestPrivate::GetResponsePlanRequestPrivate(
-    const SSMIncidentsRequest::Action action, GetResponsePlanRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, GetResponsePlanRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ GetResponsePlanRequestPrivate::GetResponsePlanRequestPrivate(
  */
 GetResponsePlanRequestPrivate::GetResponsePlanRequestPrivate(
     const GetResponsePlanRequestPrivate &other, GetResponsePlanRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

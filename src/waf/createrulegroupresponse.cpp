@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateRuleGroupResponse
- * \brief The CreateRuleGroupResponse class provides an interace for WAF CreateRuleGroup responses.
+ * \class QtAws::Waf::CreateRuleGroupResponse
+ * \brief The CreateRuleGroupResponse class provides an interace for Waf CreateRuleGroup responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateRuleGroupRequest * CreateRuleGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateRuleGroup \a response.
+ * Parses a successful Waf CreateRuleGroup \a response.
  */
 void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateRuleGroupResponsePrivate
+ * \class QtAws::Waf::CreateRuleGroupResponsePrivate
  * \brief The CreateRuleGroupResponsePrivate class provides private implementation for CreateRuleGroupResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateRuleGroupResponsePrivate::CreateRuleGroupResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateRuleGroup response element from \a xml.
+ * Parses a Waf CreateRuleGroup response element from \a xml.
  */
 void CreateRuleGroupResponsePrivate::parseCreateRuleGroupResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateRuleGroupResponsePrivate::parseCreateRuleGroupResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

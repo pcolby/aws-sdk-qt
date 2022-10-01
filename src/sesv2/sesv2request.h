@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2RequestPrivate;
+class SESv2RequestPrivate;
 
-class QTAWSSESV2_EXPORT Sesv2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSESV2_EXPORT SESv2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SESV2.
+    /// Actions supported by SESv2.
     enum Action {
         CreateConfigurationSetAction,
         CreateConfigurationSetEventDestinationAction,
@@ -123,9 +123,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    Sesv2Request(const Action action);
-    Sesv2Request(const Sesv2Request &other);
-    Sesv2Request &operator=(const Sesv2Request &other);
+    SESv2Request(const Action action);
+    SESv2Request(const SESv2Request &other);
+    SESv2Request &operator=(const SESv2Request &other);
 
     Action action() const;
     QString actionString() const;
@@ -134,12 +134,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const Sesv2Request &other) const;
+    virtual bool operator==(const SESv2Request &other) const;
 
 
 protected:
     /// @cond internal
-    explicit Sesv2Request(Sesv2RequestPrivate * const d);
+    explicit SESv2Request(SESv2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -152,11 +152,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(Sesv2Request)
+    Q_DECLARE_PRIVATE(SESv2Request)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

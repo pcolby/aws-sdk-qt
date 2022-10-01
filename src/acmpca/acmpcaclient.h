@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaClientPrivate;
+class AcmPcaClientPrivate;
 class CreateCertificateAuthorityRequest;
 class CreateCertificateAuthorityResponse;
 class CreateCertificateAuthorityAuditReportRequest;
@@ -77,17 +77,17 @@ class UntagCertificateAuthorityResponse;
 class UpdateCertificateAuthorityRequest;
 class UpdateCertificateAuthorityResponse;
 
-class QTAWSACMPCA_EXPORT AcmpcaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSACMPCA_EXPORT AcmPcaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    AcmpcaClient(
+    AcmPcaClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit AcmpcaClient(
+    explicit AcmPcaClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -118,12 +118,12 @@ public slots:
     UpdateCertificateAuthorityResponse * updateCertificateAuthority(const UpdateCertificateAuthorityRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(AcmpcaClient)
-    Q_DISABLE_COPY(AcmpcaClient)
+    Q_DECLARE_PRIVATE(AcmPcaClient)
+    Q_DISABLE_COPY(AcmPcaClient)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

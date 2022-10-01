@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UploadSSHPublicKeyResponse
- * \brief The UploadSSHPublicKeyResponse class provides an interace for IAM UploadSSHPublicKey responses.
+ * \class QtAws::Iam::UploadSSHPublicKeyResponse
+ * \brief The UploadSSHPublicKeyResponse class provides an interace for Iam UploadSSHPublicKey responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::uploadSSHPublicKey
  */
@@ -68,7 +68,7 @@ const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UploadSSHPublicKey \a response.
+ * Parses a successful Iam UploadSSHPublicKey \a response.
  */
 void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UploadSSHPublicKeyResponsePrivate
+ * \class QtAws::Iam::UploadSSHPublicKeyResponsePrivate
  * \brief The UploadSSHPublicKeyResponsePrivate class provides private implementation for UploadSSHPublicKeyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
 }
 
 /*!
- * Parses a IAM UploadSSHPublicKey response element from \a xml.
+ * Parses a Iam UploadSSHPublicKey response element from \a xml.
  */
 void UploadSSHPublicKeyResponsePrivate::parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UploadSSHPublicKeyResponsePrivate::parseUploadSSHPublicKeyResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

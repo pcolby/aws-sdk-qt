@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class TagResourceRequestPrivate : public IotDeviceAdvisorRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const IoTDeviceAdvisorRequest::Action action,
+    TagResourceRequestPrivate(const IotDeviceAdvisorRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

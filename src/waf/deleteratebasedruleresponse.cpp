@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteRateBasedRuleResponse
- * \brief The DeleteRateBasedRuleResponse class provides an interace for WAF DeleteRateBasedRule responses.
+ * \class QtAws::Waf::DeleteRateBasedRuleResponse
+ * \brief The DeleteRateBasedRuleResponse class provides an interace for Waf DeleteRateBasedRule responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteRateBasedRule \a response.
+ * Parses a successful Waf DeleteRateBasedRule \a response.
  */
 void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteRateBasedRuleResponsePrivate
+ * \class QtAws::Waf::DeleteRateBasedRuleResponsePrivate
  * \brief The DeleteRateBasedRuleResponsePrivate class provides private implementation for DeleteRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteRateBasedRule response element from \a xml.
+ * Parses a Waf DeleteRateBasedRule response element from \a xml.
  */
 void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

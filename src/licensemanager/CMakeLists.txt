@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLICENSEMANAGER_LIBRARY)
 
 add_library(QtAwsLicenseManager
+  qtawslicensemanagerglobal.h
+  licensemanagerclient.h
+  licensemanagerclient_p.h
+  licensemanagerrequest.h
+  licensemanagerrequest_p.h
+  licensemanagerresponse.h
+  licensemanagerresponse_p.h
   acceptgrantrequest.h
   acceptgrantrequest_p.h
   acceptgrantresponse.h
@@ -25,18 +32,22 @@ add_library(QtAwsLicenseManager
   creategrantversionrequest_p.h
   creategrantversionresponse.h
   creategrantversionresponse_p.h
-  createlicenseconfigurationrequest.h
-  createlicenseconfigurationrequest_p.h
-  createlicenseconfigurationresponse.h
-  createlicenseconfigurationresponse_p.h
-  createlicensemanagerreportgeneratorrequest.h
-  createlicensemanagerreportgeneratorrequest_p.h
-  createlicensemanagerreportgeneratorresponse.h
-  createlicensemanagerreportgeneratorresponse_p.h
   createlicenserequest.h
   createlicenserequest_p.h
   createlicenseresponse.h
   createlicenseresponse_p.h
+  createlicenseconfigurationrequest.h
+  createlicenseconfigurationrequest_p.h
+  createlicenseconfigurationresponse.h
+  createlicenseconfigurationresponse_p.h
+  createlicenseconversiontaskforresourcerequest.h
+  createlicenseconversiontaskforresourcerequest_p.h
+  createlicenseconversiontaskforresourceresponse.h
+  createlicenseconversiontaskforresourceresponse_p.h
+  createlicensemanagerreportgeneratorrequest.h
+  createlicensemanagerreportgeneratorrequest_p.h
+  createlicensemanagerreportgeneratorresponse.h
+  createlicensemanagerreportgeneratorresponse_p.h
   createlicenseversionrequest.h
   createlicenseversionrequest_p.h
   createlicenseversionresponse.h
@@ -49,6 +60,10 @@ add_library(QtAwsLicenseManager
   deletegrantrequest_p.h
   deletegrantresponse.h
   deletegrantresponse_p.h
+  deletelicenserequest.h
+  deletelicenserequest_p.h
+  deletelicenseresponse.h
+  deletelicenseresponse_p.h
   deletelicenseconfigurationrequest.h
   deletelicenseconfigurationrequest_p.h
   deletelicenseconfigurationresponse.h
@@ -57,10 +72,6 @@ add_library(QtAwsLicenseManager
   deletelicensemanagerreportgeneratorrequest_p.h
   deletelicensemanagerreportgeneratorresponse.h
   deletelicensemanagerreportgeneratorresponse_p.h
-  deletelicenserequest.h
-  deletelicenserequest_p.h
-  deletelicenseresponse.h
-  deletelicenseresponse_p.h
   deletetokenrequest.h
   deletetokenrequest_p.h
   deletetokenresponse.h
@@ -77,18 +88,22 @@ add_library(QtAwsLicenseManager
   getgrantrequest_p.h
   getgrantresponse.h
   getgrantresponse_p.h
-  getlicenseconfigurationrequest.h
-  getlicenseconfigurationrequest_p.h
-  getlicenseconfigurationresponse.h
-  getlicenseconfigurationresponse_p.h
-  getlicensemanagerreportgeneratorrequest.h
-  getlicensemanagerreportgeneratorrequest_p.h
-  getlicensemanagerreportgeneratorresponse.h
-  getlicensemanagerreportgeneratorresponse_p.h
   getlicenserequest.h
   getlicenserequest_p.h
   getlicenseresponse.h
   getlicenseresponse_p.h
+  getlicenseconfigurationrequest.h
+  getlicenseconfigurationrequest_p.h
+  getlicenseconfigurationresponse.h
+  getlicenseconfigurationresponse_p.h
+  getlicenseconversiontaskrequest.h
+  getlicenseconversiontaskrequest_p.h
+  getlicenseconversiontaskresponse.h
+  getlicenseconversiontaskresponse_p.h
+  getlicensemanagerreportgeneratorrequest.h
+  getlicensemanagerreportgeneratorrequest_p.h
+  getlicensemanagerreportgeneratorresponse.h
+  getlicensemanagerreportgeneratorresponse_p.h
   getlicenseusagerequest.h
   getlicenseusagerequest_p.h
   getlicenseusageresponse.h
@@ -97,12 +112,6 @@ add_library(QtAwsLicenseManager
   getservicesettingsrequest_p.h
   getservicesettingsresponse.h
   getservicesettingsresponse_p.h
-  licensemanagerclient.h
-  licensemanagerclient_p.h
-  licensemanagerrequest.h
-  licensemanagerrequest_p.h
-  licensemanagerresponse.h
-  licensemanagerresponse_p.h
   listassociationsforlicenseconfigurationrequest.h
   listassociationsforlicenseconfigurationrequest_p.h
   listassociationsforlicenseconfigurationresponse.h
@@ -119,6 +128,10 @@ add_library(QtAwsLicenseManager
   listlicenseconfigurationsrequest_p.h
   listlicenseconfigurationsresponse.h
   listlicenseconfigurationsresponse_p.h
+  listlicenseconversiontasksrequest.h
+  listlicenseconversiontasksrequest_p.h
+  listlicenseconversiontasksresponse.h
+  listlicenseconversiontasksresponse_p.h
   listlicensemanagerreportgeneratorsrequest.h
   listlicensemanagerreportgeneratorsrequest_p.h
   listlicensemanagerreportgeneratorsresponse.h
@@ -127,14 +140,14 @@ add_library(QtAwsLicenseManager
   listlicensespecificationsforresourcerequest_p.h
   listlicensespecificationsforresourceresponse.h
   listlicensespecificationsforresourceresponse_p.h
-  listlicensesrequest.h
-  listlicensesrequest_p.h
-  listlicensesresponse.h
-  listlicensesresponse_p.h
   listlicenseversionsrequest.h
   listlicenseversionsrequest_p.h
   listlicenseversionsresponse.h
   listlicenseversionsresponse_p.h
+  listlicensesrequest.h
+  listlicensesrequest_p.h
+  listlicensesresponse.h
+  listlicensesresponse_p.h
   listreceivedgrantsrequest.h
   listreceivedgrantsrequest_p.h
   listreceivedgrantsresponse.h
@@ -159,7 +172,6 @@ add_library(QtAwsLicenseManager
   listusageforlicenseconfigurationrequest_p.h
   listusageforlicenseconfigurationresponse.h
   listusageforlicenseconfigurationresponse_p.h
-  qtawslicensemanagerglobal.h
   rejectgrantrequest.h
   rejectgrantrequest_p.h
   rejectgrantresponse.h
@@ -188,6 +200,9 @@ add_library(QtAwsLicenseManager
   updateservicesettingsrequest_p.h
   updateservicesettingsresponse.h
   updateservicesettingsresponse_p.h
+  licensemanagerclient.cpp
+  licensemanagerrequest.cpp
+  licensemanagerresponse.cpp
   acceptgrantrequest.cpp
   acceptgrantresponse.cpp
   checkinlicenserequest.cpp
@@ -200,24 +215,26 @@ add_library(QtAwsLicenseManager
   creategrantresponse.cpp
   creategrantversionrequest.cpp
   creategrantversionresponse.cpp
-  createlicenseconfigurationrequest.cpp
-  createlicenseconfigurationresponse.cpp
-  createlicensemanagerreportgeneratorrequest.cpp
-  createlicensemanagerreportgeneratorresponse.cpp
   createlicenserequest.cpp
   createlicenseresponse.cpp
+  createlicenseconfigurationrequest.cpp
+  createlicenseconfigurationresponse.cpp
+  createlicenseconversiontaskforresourcerequest.cpp
+  createlicenseconversiontaskforresourceresponse.cpp
+  createlicensemanagerreportgeneratorrequest.cpp
+  createlicensemanagerreportgeneratorresponse.cpp
   createlicenseversionrequest.cpp
   createlicenseversionresponse.cpp
   createtokenrequest.cpp
   createtokenresponse.cpp
   deletegrantrequest.cpp
   deletegrantresponse.cpp
+  deletelicenserequest.cpp
+  deletelicenseresponse.cpp
   deletelicenseconfigurationrequest.cpp
   deletelicenseconfigurationresponse.cpp
   deletelicensemanagerreportgeneratorrequest.cpp
   deletelicensemanagerreportgeneratorresponse.cpp
-  deletelicenserequest.cpp
-  deletelicenseresponse.cpp
   deletetokenrequest.cpp
   deletetokenresponse.cpp
   extendlicenseconsumptionrequest.cpp
@@ -226,19 +243,18 @@ add_library(QtAwsLicenseManager
   getaccesstokenresponse.cpp
   getgrantrequest.cpp
   getgrantresponse.cpp
-  getlicenseconfigurationrequest.cpp
-  getlicenseconfigurationresponse.cpp
-  getlicensemanagerreportgeneratorrequest.cpp
-  getlicensemanagerreportgeneratorresponse.cpp
   getlicenserequest.cpp
   getlicenseresponse.cpp
+  getlicenseconfigurationrequest.cpp
+  getlicenseconfigurationresponse.cpp
+  getlicenseconversiontaskrequest.cpp
+  getlicenseconversiontaskresponse.cpp
+  getlicensemanagerreportgeneratorrequest.cpp
+  getlicensemanagerreportgeneratorresponse.cpp
   getlicenseusagerequest.cpp
   getlicenseusageresponse.cpp
   getservicesettingsrequest.cpp
   getservicesettingsresponse.cpp
-  licensemanagerclient.cpp
-  licensemanagerrequest.cpp
-  licensemanagerresponse.cpp
   listassociationsforlicenseconfigurationrequest.cpp
   listassociationsforlicenseconfigurationresponse.cpp
   listdistributedgrantsrequest.cpp
@@ -247,14 +263,16 @@ add_library(QtAwsLicenseManager
   listfailuresforlicenseconfigurationoperationsresponse.cpp
   listlicenseconfigurationsrequest.cpp
   listlicenseconfigurationsresponse.cpp
+  listlicenseconversiontasksrequest.cpp
+  listlicenseconversiontasksresponse.cpp
   listlicensemanagerreportgeneratorsrequest.cpp
   listlicensemanagerreportgeneratorsresponse.cpp
   listlicensespecificationsforresourcerequest.cpp
   listlicensespecificationsforresourceresponse.cpp
-  listlicensesrequest.cpp
-  listlicensesresponse.cpp
   listlicenseversionsrequest.cpp
   listlicenseversionsresponse.cpp
+  listlicensesrequest.cpp
+  listlicensesresponse.cpp
   listreceivedgrantsrequest.cpp
   listreceivedgrantsresponse.cpp
   listreceivedlicensesrequest.cpp

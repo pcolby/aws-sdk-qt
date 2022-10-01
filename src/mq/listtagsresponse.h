@@ -24,7 +24,7 @@
 #include "listtagsrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class ListTagsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

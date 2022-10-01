@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DeleteStudioRequest
- * \brief The DeleteStudioRequest class provides an interface for EMR DeleteStudio requests.
+ * \class QtAws::Emr::DeleteStudioRequest
+ * \brief The DeleteStudioRequest class provides an interface for Emr DeleteStudio requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::deleteStudio
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DeleteStudioRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::EMR::DeleteStudioRequestPrivate
+ * \class QtAws::Emr::DeleteStudioRequestPrivate
  * \brief The DeleteStudioRequestPrivate class provides private implementation for DeleteStudioRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ DeleteStudioRequestPrivate::DeleteStudioRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

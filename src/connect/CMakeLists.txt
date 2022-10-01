@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCONNECT_LIBRARY)
 
 add_library(QtAwsConnect
+  qtawsconnectglobal.h
+  connectclient.h
+  connectclient_p.h
+  connectrequest.h
+  connectrequest_p.h
+  connectresponse.h
+  connectresponse_p.h
   associateapprovedoriginrequest.h
   associateapprovedoriginrequest_p.h
   associateapprovedoriginresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsConnect
   associatebotrequest_p.h
   associatebotresponse.h
   associatebotresponse_p.h
+  associatedefaultvocabularyrequest.h
+  associatedefaultvocabularyrequest_p.h
+  associatedefaultvocabularyresponse.h
+  associatedefaultvocabularyresponse_p.h
   associateinstancestorageconfigrequest.h
   associateinstancestorageconfigrequest_p.h
   associateinstancestorageconfigresponse.h
@@ -21,6 +32,10 @@ add_library(QtAwsConnect
   associatelexbotrequest_p.h
   associatelexbotresponse.h
   associatelexbotresponse_p.h
+  associatephonenumbercontactflowrequest.h
+  associatephonenumbercontactflowrequest_p.h
+  associatephonenumbercontactflowresponse.h
+  associatephonenumbercontactflowresponse_p.h
   associatequeuequickconnectsrequest.h
   associatequeuequickconnectsrequest_p.h
   associatequeuequickconnectsresponse.h
@@ -33,16 +48,26 @@ add_library(QtAwsConnect
   associatesecuritykeyrequest_p.h
   associatesecuritykeyresponse.h
   associatesecuritykeyresponse_p.h
-  connectclient.h
-  connectclient_p.h
-  connectrequest.h
-  connectrequest_p.h
-  connectresponse.h
-  connectresponse_p.h
+  claimphonenumberrequest.h
+  claimphonenumberrequest_p.h
+  claimphonenumberresponse.h
+  claimphonenumberresponse_p.h
+  createagentstatusrequest.h
+  createagentstatusrequest_p.h
+  createagentstatusresponse.h
+  createagentstatusresponse_p.h
   createcontactflowrequest.h
   createcontactflowrequest_p.h
   createcontactflowresponse.h
   createcontactflowresponse_p.h
+  createcontactflowmodulerequest.h
+  createcontactflowmodulerequest_p.h
+  createcontactflowmoduleresponse.h
+  createcontactflowmoduleresponse_p.h
+  createhoursofoperationrequest.h
+  createhoursofoperationrequest_p.h
+  createhoursofoperationresponse.h
+  createhoursofoperationresponse_p.h
   createinstancerequest.h
   createinstancerequest_p.h
   createinstanceresponse.h
@@ -63,18 +88,42 @@ add_library(QtAwsConnect
   createroutingprofilerequest_p.h
   createroutingprofileresponse.h
   createroutingprofileresponse_p.h
+  createsecurityprofilerequest.h
+  createsecurityprofilerequest_p.h
+  createsecurityprofileresponse.h
+  createsecurityprofileresponse_p.h
+  createtasktemplaterequest.h
+  createtasktemplaterequest_p.h
+  createtasktemplateresponse.h
+  createtasktemplateresponse_p.h
   createusecaserequest.h
   createusecaserequest_p.h
   createusecaseresponse.h
   createusecaseresponse_p.h
-  createuserhierarchygrouprequest.h
-  createuserhierarchygrouprequest_p.h
-  createuserhierarchygroupresponse.h
-  createuserhierarchygroupresponse_p.h
   createuserrequest.h
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  createuserhierarchygrouprequest.h
+  createuserhierarchygrouprequest_p.h
+  createuserhierarchygroupresponse.h
+  createuserhierarchygroupresponse_p.h
+  createvocabularyrequest.h
+  createvocabularyrequest_p.h
+  createvocabularyresponse.h
+  createvocabularyresponse_p.h
+  deletecontactflowrequest.h
+  deletecontactflowrequest_p.h
+  deletecontactflowresponse.h
+  deletecontactflowresponse_p.h
+  deletecontactflowmodulerequest.h
+  deletecontactflowmodulerequest_p.h
+  deletecontactflowmoduleresponse.h
+  deletecontactflowmoduleresponse_p.h
+  deletehoursofoperationrequest.h
+  deletehoursofoperationrequest_p.h
+  deletehoursofoperationresponse.h
+  deletehoursofoperationresponse_p.h
   deleteinstancerequest.h
   deleteinstancerequest_p.h
   deleteinstanceresponse.h
@@ -87,38 +136,66 @@ add_library(QtAwsConnect
   deletequickconnectrequest_p.h
   deletequickconnectresponse.h
   deletequickconnectresponse_p.h
+  deletesecurityprofilerequest.h
+  deletesecurityprofilerequest_p.h
+  deletesecurityprofileresponse.h
+  deletesecurityprofileresponse_p.h
+  deletetasktemplaterequest.h
+  deletetasktemplaterequest_p.h
+  deletetasktemplateresponse.h
+  deletetasktemplateresponse_p.h
   deleteusecaserequest.h
   deleteusecaserequest_p.h
   deleteusecaseresponse.h
   deleteusecaseresponse_p.h
-  deleteuserhierarchygrouprequest.h
-  deleteuserhierarchygrouprequest_p.h
-  deleteuserhierarchygroupresponse.h
-  deleteuserhierarchygroupresponse_p.h
   deleteuserrequest.h
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  deleteuserhierarchygrouprequest.h
+  deleteuserhierarchygrouprequest_p.h
+  deleteuserhierarchygroupresponse.h
+  deleteuserhierarchygroupresponse_p.h
+  deletevocabularyrequest.h
+  deletevocabularyrequest_p.h
+  deletevocabularyresponse.h
+  deletevocabularyresponse_p.h
+  describeagentstatusrequest.h
+  describeagentstatusrequest_p.h
+  describeagentstatusresponse.h
+  describeagentstatusresponse_p.h
+  describecontactrequest.h
+  describecontactrequest_p.h
+  describecontactresponse.h
+  describecontactresponse_p.h
   describecontactflowrequest.h
   describecontactflowrequest_p.h
   describecontactflowresponse.h
   describecontactflowresponse_p.h
+  describecontactflowmodulerequest.h
+  describecontactflowmodulerequest_p.h
+  describecontactflowmoduleresponse.h
+  describecontactflowmoduleresponse_p.h
   describehoursofoperationrequest.h
   describehoursofoperationrequest_p.h
   describehoursofoperationresponse.h
   describehoursofoperationresponse_p.h
-  describeinstanceattributerequest.h
-  describeinstanceattributerequest_p.h
-  describeinstanceattributeresponse.h
-  describeinstanceattributeresponse_p.h
   describeinstancerequest.h
   describeinstancerequest_p.h
   describeinstanceresponse.h
   describeinstanceresponse_p.h
+  describeinstanceattributerequest.h
+  describeinstanceattributerequest_p.h
+  describeinstanceattributeresponse.h
+  describeinstanceattributeresponse_p.h
   describeinstancestorageconfigrequest.h
   describeinstancestorageconfigrequest_p.h
   describeinstancestorageconfigresponse.h
   describeinstancestorageconfigresponse_p.h
+  describephonenumberrequest.h
+  describephonenumberrequest_p.h
+  describephonenumberresponse.h
+  describephonenumberresponse_p.h
   describequeuerequest.h
   describequeuerequest_p.h
   describequeueresponse.h
@@ -131,6 +208,14 @@ add_library(QtAwsConnect
   describeroutingprofilerequest_p.h
   describeroutingprofileresponse.h
   describeroutingprofileresponse_p.h
+  describesecurityprofilerequest.h
+  describesecurityprofilerequest_p.h
+  describesecurityprofileresponse.h
+  describesecurityprofileresponse_p.h
+  describeuserrequest.h
+  describeuserrequest_p.h
+  describeuserresponse.h
+  describeuserresponse_p.h
   describeuserhierarchygrouprequest.h
   describeuserhierarchygrouprequest_p.h
   describeuserhierarchygroupresponse.h
@@ -139,10 +224,10 @@ add_library(QtAwsConnect
   describeuserhierarchystructurerequest_p.h
   describeuserhierarchystructureresponse.h
   describeuserhierarchystructureresponse_p.h
-  describeuserrequest.h
-  describeuserrequest_p.h
-  describeuserresponse.h
-  describeuserresponse_p.h
+  describevocabularyrequest.h
+  describevocabularyrequest_p.h
+  describevocabularyresponse.h
+  describevocabularyresponse_p.h
   disassociateapprovedoriginrequest.h
   disassociateapprovedoriginrequest_p.h
   disassociateapprovedoriginresponse.h
@@ -163,6 +248,10 @@ add_library(QtAwsConnect
   disassociatelexbotrequest_p.h
   disassociatelexbotresponse.h
   disassociatelexbotresponse_p.h
+  disassociatephonenumbercontactflowrequest.h
+  disassociatephonenumbercontactflowrequest_p.h
+  disassociatephonenumbercontactflowresponse.h
+  disassociatephonenumbercontactflowresponse_p.h
   disassociatequeuequickconnectsrequest.h
   disassociatequeuequickconnectsrequest_p.h
   disassociatequeuequickconnectsresponse.h
@@ -183,6 +272,10 @@ add_library(QtAwsConnect
   getcurrentmetricdatarequest_p.h
   getcurrentmetricdataresponse.h
   getcurrentmetricdataresponse_p.h
+  getcurrentuserdatarequest.h
+  getcurrentuserdatarequest_p.h
+  getcurrentuserdataresponse.h
+  getcurrentuserdataresponse_p.h
   getfederationtokenrequest.h
   getfederationtokenrequest_p.h
   getfederationtokenresponse.h
@@ -191,6 +284,14 @@ add_library(QtAwsConnect
   getmetricdatarequest_p.h
   getmetricdataresponse.h
   getmetricdataresponse_p.h
+  gettasktemplaterequest.h
+  gettasktemplaterequest_p.h
+  gettasktemplateresponse.h
+  gettasktemplateresponse_p.h
+  listagentstatusesrequest.h
+  listagentstatusesrequest_p.h
+  listagentstatusesresponse.h
+  listagentstatusesresponse_p.h
   listapprovedoriginsrequest.h
   listapprovedoriginsrequest_p.h
   listapprovedoriginsresponse.h
@@ -199,10 +300,22 @@ add_library(QtAwsConnect
   listbotsrequest_p.h
   listbotsresponse.h
   listbotsresponse_p.h
+  listcontactflowmodulesrequest.h
+  listcontactflowmodulesrequest_p.h
+  listcontactflowmodulesresponse.h
+  listcontactflowmodulesresponse_p.h
   listcontactflowsrequest.h
   listcontactflowsrequest_p.h
   listcontactflowsresponse.h
   listcontactflowsresponse_p.h
+  listcontactreferencesrequest.h
+  listcontactreferencesrequest_p.h
+  listcontactreferencesresponse.h
+  listcontactreferencesresponse_p.h
+  listdefaultvocabulariesrequest.h
+  listdefaultvocabulariesrequest_p.h
+  listdefaultvocabulariesresponse.h
+  listdefaultvocabulariesresponse_p.h
   listhoursofoperationsrequest.h
   listhoursofoperationsrequest_p.h
   listhoursofoperationsresponse.h
@@ -211,14 +324,14 @@ add_library(QtAwsConnect
   listinstanceattributesrequest_p.h
   listinstanceattributesresponse.h
   listinstanceattributesresponse_p.h
-  listinstancesrequest.h
-  listinstancesrequest_p.h
-  listinstancesresponse.h
-  listinstancesresponse_p.h
   listinstancestorageconfigsrequest.h
   listinstancestorageconfigsrequest_p.h
   listinstancestorageconfigsresponse.h
   listinstancestorageconfigsresponse_p.h
+  listinstancesrequest.h
+  listinstancesrequest_p.h
+  listinstancesresponse.h
+  listinstancesresponse_p.h
   listintegrationassociationsrequest.h
   listintegrationassociationsrequest_p.h
   listintegrationassociationsresponse.h
@@ -235,6 +348,10 @@ add_library(QtAwsConnect
   listphonenumbersrequest_p.h
   listphonenumbersresponse.h
   listphonenumbersresponse_p.h
+  listphonenumbersv2request.h
+  listphonenumbersv2request_p.h
+  listphonenumbersv2response.h
+  listphonenumbersv2response_p.h
   listpromptsrequest.h
   listpromptsrequest_p.h
   listpromptsresponse.h
@@ -263,6 +380,10 @@ add_library(QtAwsConnect
   listsecuritykeysrequest_p.h
   listsecuritykeysresponse.h
   listsecuritykeysresponse_p.h
+  listsecurityprofilepermissionsrequest.h
+  listsecurityprofilepermissionsrequest_p.h
+  listsecurityprofilepermissionsresponse.h
+  listsecurityprofilepermissionsresponse_p.h
   listsecurityprofilesrequest.h
   listsecurityprofilesrequest_p.h
   listsecurityprofilesresponse.h
@@ -271,6 +392,10 @@ add_library(QtAwsConnect
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listtasktemplatesrequest.h
+  listtasktemplatesrequest_p.h
+  listtasktemplatesresponse.h
+  listtasktemplatesresponse_p.h
   listusecasesrequest.h
   listusecasesrequest_p.h
   listusecasesresponse.h
@@ -283,11 +408,42 @@ add_library(QtAwsConnect
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  qtawsconnectglobal.h
+  putuserstatusrequest.h
+  putuserstatusrequest_p.h
+  putuserstatusresponse.h
+  putuserstatusresponse_p.h
+  releasephonenumberrequest.h
+  releasephonenumberrequest_p.h
+  releasephonenumberresponse.h
+  releasephonenumberresponse_p.h
   resumecontactrecordingrequest.h
   resumecontactrecordingrequest_p.h
   resumecontactrecordingresponse.h
   resumecontactrecordingresponse_p.h
+  searchavailablephonenumbersrequest.h
+  searchavailablephonenumbersrequest_p.h
+  searchavailablephonenumbersresponse.h
+  searchavailablephonenumbersresponse_p.h
+  searchqueuesrequest.h
+  searchqueuesrequest_p.h
+  searchqueuesresponse.h
+  searchqueuesresponse_p.h
+  searchroutingprofilesrequest.h
+  searchroutingprofilesrequest_p.h
+  searchroutingprofilesresponse.h
+  searchroutingprofilesresponse_p.h
+  searchsecurityprofilesrequest.h
+  searchsecurityprofilesrequest_p.h
+  searchsecurityprofilesresponse.h
+  searchsecurityprofilesresponse_p.h
+  searchusersrequest.h
+  searchusersrequest_p.h
+  searchusersresponse.h
+  searchusersresponse_p.h
+  searchvocabulariesrequest.h
+  searchvocabulariesrequest_p.h
+  searchvocabulariesresponse.h
+  searchvocabulariesresponse_p.h
   startchatcontactrequest.h
   startchatcontactrequest_p.h
   startchatcontactresponse.h
@@ -296,6 +452,10 @@ add_library(QtAwsConnect
   startcontactrecordingrequest_p.h
   startcontactrecordingresponse.h
   startcontactrecordingresponse_p.h
+  startcontactstreamingrequest.h
+  startcontactstreamingrequest_p.h
+  startcontactstreamingresponse.h
+  startcontactstreamingresponse_p.h
   startoutboundvoicecontactrequest.h
   startoutboundvoicecontactrequest_p.h
   startoutboundvoicecontactresponse.h
@@ -304,14 +464,18 @@ add_library(QtAwsConnect
   starttaskcontactrequest_p.h
   starttaskcontactresponse.h
   starttaskcontactresponse_p.h
-  stopcontactrecordingrequest.h
-  stopcontactrecordingrequest_p.h
-  stopcontactrecordingresponse.h
-  stopcontactrecordingresponse_p.h
   stopcontactrequest.h
   stopcontactrequest_p.h
   stopcontactresponse.h
   stopcontactresponse_p.h
+  stopcontactrecordingrequest.h
+  stopcontactrecordingrequest_p.h
+  stopcontactrecordingresponse.h
+  stopcontactrecordingresponse_p.h
+  stopcontactstreamingrequest.h
+  stopcontactstreamingrequest_p.h
+  stopcontactstreamingresponse.h
+  stopcontactstreamingresponse_p.h
   suspendcontactrecordingrequest.h
   suspendcontactrecordingrequest_p.h
   suspendcontactrecordingresponse.h
@@ -320,10 +484,22 @@ add_library(QtAwsConnect
   tagresourcerequest_p.h
   tagresourceresponse.h
   tagresourceresponse_p.h
+  transfercontactrequest.h
+  transfercontactrequest_p.h
+  transfercontactresponse.h
+  transfercontactresponse_p.h
   untagresourcerequest.h
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateagentstatusrequest.h
+  updateagentstatusrequest_p.h
+  updateagentstatusresponse.h
+  updateagentstatusresponse_p.h
+  updatecontactrequest.h
+  updatecontactrequest_p.h
+  updatecontactresponse.h
+  updatecontactresponse_p.h
   updatecontactattributesrequest.h
   updatecontactattributesrequest_p.h
   updatecontactattributesresponse.h
@@ -332,10 +508,30 @@ add_library(QtAwsConnect
   updatecontactflowcontentrequest_p.h
   updatecontactflowcontentresponse.h
   updatecontactflowcontentresponse_p.h
+  updatecontactflowmetadatarequest.h
+  updatecontactflowmetadatarequest_p.h
+  updatecontactflowmetadataresponse.h
+  updatecontactflowmetadataresponse_p.h
+  updatecontactflowmodulecontentrequest.h
+  updatecontactflowmodulecontentrequest_p.h
+  updatecontactflowmodulecontentresponse.h
+  updatecontactflowmodulecontentresponse_p.h
+  updatecontactflowmodulemetadatarequest.h
+  updatecontactflowmodulemetadatarequest_p.h
+  updatecontactflowmodulemetadataresponse.h
+  updatecontactflowmodulemetadataresponse_p.h
   updatecontactflownamerequest.h
   updatecontactflownamerequest_p.h
   updatecontactflownameresponse.h
   updatecontactflownameresponse_p.h
+  updatecontactschedulerequest.h
+  updatecontactschedulerequest_p.h
+  updatecontactscheduleresponse.h
+  updatecontactscheduleresponse_p.h
+  updatehoursofoperationrequest.h
+  updatehoursofoperationrequest_p.h
+  updatehoursofoperationresponse.h
+  updatehoursofoperationresponse_p.h
   updateinstanceattributerequest.h
   updateinstanceattributerequest_p.h
   updateinstanceattributeresponse.h
@@ -344,6 +540,10 @@ add_library(QtAwsConnect
   updateinstancestorageconfigrequest_p.h
   updateinstancestorageconfigresponse.h
   updateinstancestorageconfigresponse_p.h
+  updatephonenumberrequest.h
+  updatephonenumberrequest_p.h
+  updatephonenumberresponse.h
+  updatephonenumberresponse_p.h
   updatequeuehoursofoperationrequest.h
   updatequeuehoursofoperationrequest_p.h
   updatequeuehoursofoperationresponse.h
@@ -388,14 +588,22 @@ add_library(QtAwsConnect
   updateroutingprofilequeuesrequest_p.h
   updateroutingprofilequeuesresponse.h
   updateroutingprofilequeuesresponse_p.h
-  updateuserhierarchygroupnamerequest.h
-  updateuserhierarchygroupnamerequest_p.h
-  updateuserhierarchygroupnameresponse.h
-  updateuserhierarchygroupnameresponse_p.h
+  updatesecurityprofilerequest.h
+  updatesecurityprofilerequest_p.h
+  updatesecurityprofileresponse.h
+  updatesecurityprofileresponse_p.h
+  updatetasktemplaterequest.h
+  updatetasktemplaterequest_p.h
+  updatetasktemplateresponse.h
+  updatetasktemplateresponse_p.h
   updateuserhierarchyrequest.h
   updateuserhierarchyrequest_p.h
   updateuserhierarchyresponse.h
   updateuserhierarchyresponse_p.h
+  updateuserhierarchygroupnamerequest.h
+  updateuserhierarchygroupnamerequest_p.h
+  updateuserhierarchygroupnameresponse.h
+  updateuserhierarchygroupnameresponse_p.h
   updateuserhierarchystructurerequest.h
   updateuserhierarchystructurerequest_p.h
   updateuserhierarchystructureresponse.h
@@ -416,27 +624,39 @@ add_library(QtAwsConnect
   updateusersecurityprofilesrequest_p.h
   updateusersecurityprofilesresponse.h
   updateusersecurityprofilesresponse_p.h
+  connectclient.cpp
+  connectrequest.cpp
+  connectresponse.cpp
   associateapprovedoriginrequest.cpp
   associateapprovedoriginresponse.cpp
   associatebotrequest.cpp
   associatebotresponse.cpp
+  associatedefaultvocabularyrequest.cpp
+  associatedefaultvocabularyresponse.cpp
   associateinstancestorageconfigrequest.cpp
   associateinstancestorageconfigresponse.cpp
   associatelambdafunctionrequest.cpp
   associatelambdafunctionresponse.cpp
   associatelexbotrequest.cpp
   associatelexbotresponse.cpp
+  associatephonenumbercontactflowrequest.cpp
+  associatephonenumbercontactflowresponse.cpp
   associatequeuequickconnectsrequest.cpp
   associatequeuequickconnectsresponse.cpp
   associateroutingprofilequeuesrequest.cpp
   associateroutingprofilequeuesresponse.cpp
   associatesecuritykeyrequest.cpp
   associatesecuritykeyresponse.cpp
-  connectclient.cpp
-  connectrequest.cpp
-  connectresponse.cpp
+  claimphonenumberrequest.cpp
+  claimphonenumberresponse.cpp
+  createagentstatusrequest.cpp
+  createagentstatusresponse.cpp
   createcontactflowrequest.cpp
   createcontactflowresponse.cpp
+  createcontactflowmodulerequest.cpp
+  createcontactflowmoduleresponse.cpp
+  createhoursofoperationrequest.cpp
+  createhoursofoperationresponse.cpp
   createinstancerequest.cpp
   createinstanceresponse.cpp
   createintegrationassociationrequest.cpp
@@ -447,46 +667,76 @@ add_library(QtAwsConnect
   createquickconnectresponse.cpp
   createroutingprofilerequest.cpp
   createroutingprofileresponse.cpp
+  createsecurityprofilerequest.cpp
+  createsecurityprofileresponse.cpp
+  createtasktemplaterequest.cpp
+  createtasktemplateresponse.cpp
   createusecaserequest.cpp
   createusecaseresponse.cpp
-  createuserhierarchygrouprequest.cpp
-  createuserhierarchygroupresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  createuserhierarchygrouprequest.cpp
+  createuserhierarchygroupresponse.cpp
+  createvocabularyrequest.cpp
+  createvocabularyresponse.cpp
+  deletecontactflowrequest.cpp
+  deletecontactflowresponse.cpp
+  deletecontactflowmodulerequest.cpp
+  deletecontactflowmoduleresponse.cpp
+  deletehoursofoperationrequest.cpp
+  deletehoursofoperationresponse.cpp
   deleteinstancerequest.cpp
   deleteinstanceresponse.cpp
   deleteintegrationassociationrequest.cpp
   deleteintegrationassociationresponse.cpp
   deletequickconnectrequest.cpp
   deletequickconnectresponse.cpp
+  deletesecurityprofilerequest.cpp
+  deletesecurityprofileresponse.cpp
+  deletetasktemplaterequest.cpp
+  deletetasktemplateresponse.cpp
   deleteusecaserequest.cpp
   deleteusecaseresponse.cpp
-  deleteuserhierarchygrouprequest.cpp
-  deleteuserhierarchygroupresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  deleteuserhierarchygrouprequest.cpp
+  deleteuserhierarchygroupresponse.cpp
+  deletevocabularyrequest.cpp
+  deletevocabularyresponse.cpp
+  describeagentstatusrequest.cpp
+  describeagentstatusresponse.cpp
+  describecontactrequest.cpp
+  describecontactresponse.cpp
   describecontactflowrequest.cpp
   describecontactflowresponse.cpp
+  describecontactflowmodulerequest.cpp
+  describecontactflowmoduleresponse.cpp
   describehoursofoperationrequest.cpp
   describehoursofoperationresponse.cpp
-  describeinstanceattributerequest.cpp
-  describeinstanceattributeresponse.cpp
   describeinstancerequest.cpp
   describeinstanceresponse.cpp
+  describeinstanceattributerequest.cpp
+  describeinstanceattributeresponse.cpp
   describeinstancestorageconfigrequest.cpp
   describeinstancestorageconfigresponse.cpp
+  describephonenumberrequest.cpp
+  describephonenumberresponse.cpp
   describequeuerequest.cpp
   describequeueresponse.cpp
   describequickconnectrequest.cpp
   describequickconnectresponse.cpp
   describeroutingprofilerequest.cpp
   describeroutingprofileresponse.cpp
+  describesecurityprofilerequest.cpp
+  describesecurityprofileresponse.cpp
+  describeuserrequest.cpp
+  describeuserresponse.cpp
   describeuserhierarchygrouprequest.cpp
   describeuserhierarchygroupresponse.cpp
   describeuserhierarchystructurerequest.cpp
   describeuserhierarchystructureresponse.cpp
-  describeuserrequest.cpp
-  describeuserresponse.cpp
+  describevocabularyrequest.cpp
+  describevocabularyresponse.cpp
   disassociateapprovedoriginrequest.cpp
   disassociateapprovedoriginresponse.cpp
   disassociatebotrequest.cpp
@@ -497,6 +747,8 @@ add_library(QtAwsConnect
   disassociatelambdafunctionresponse.cpp
   disassociatelexbotrequest.cpp
   disassociatelexbotresponse.cpp
+  disassociatephonenumbercontactflowrequest.cpp
+  disassociatephonenumbercontactflowresponse.cpp
   disassociatequeuequickconnectsrequest.cpp
   disassociatequeuequickconnectsresponse.cpp
   disassociateroutingprofilequeuesrequest.cpp
@@ -507,24 +759,36 @@ add_library(QtAwsConnect
   getcontactattributesresponse.cpp
   getcurrentmetricdatarequest.cpp
   getcurrentmetricdataresponse.cpp
+  getcurrentuserdatarequest.cpp
+  getcurrentuserdataresponse.cpp
   getfederationtokenrequest.cpp
   getfederationtokenresponse.cpp
   getmetricdatarequest.cpp
   getmetricdataresponse.cpp
+  gettasktemplaterequest.cpp
+  gettasktemplateresponse.cpp
+  listagentstatusesrequest.cpp
+  listagentstatusesresponse.cpp
   listapprovedoriginsrequest.cpp
   listapprovedoriginsresponse.cpp
   listbotsrequest.cpp
   listbotsresponse.cpp
+  listcontactflowmodulesrequest.cpp
+  listcontactflowmodulesresponse.cpp
   listcontactflowsrequest.cpp
   listcontactflowsresponse.cpp
+  listcontactreferencesrequest.cpp
+  listcontactreferencesresponse.cpp
+  listdefaultvocabulariesrequest.cpp
+  listdefaultvocabulariesresponse.cpp
   listhoursofoperationsrequest.cpp
   listhoursofoperationsresponse.cpp
   listinstanceattributesrequest.cpp
   listinstanceattributesresponse.cpp
-  listinstancesrequest.cpp
-  listinstancesresponse.cpp
   listinstancestorageconfigsrequest.cpp
   listinstancestorageconfigsresponse.cpp
+  listinstancesrequest.cpp
+  listinstancesresponse.cpp
   listintegrationassociationsrequest.cpp
   listintegrationassociationsresponse.cpp
   listlambdafunctionsrequest.cpp
@@ -533,6 +797,8 @@ add_library(QtAwsConnect
   listlexbotsresponse.cpp
   listphonenumbersrequest.cpp
   listphonenumbersresponse.cpp
+  listphonenumbersv2request.cpp
+  listphonenumbersv2response.cpp
   listpromptsrequest.cpp
   listpromptsresponse.cpp
   listqueuequickconnectsrequest.cpp
@@ -547,46 +813,88 @@ add_library(QtAwsConnect
   listroutingprofilesresponse.cpp
   listsecuritykeysrequest.cpp
   listsecuritykeysresponse.cpp
+  listsecurityprofilepermissionsrequest.cpp
+  listsecurityprofilepermissionsresponse.cpp
   listsecurityprofilesrequest.cpp
   listsecurityprofilesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listtasktemplatesrequest.cpp
+  listtasktemplatesresponse.cpp
   listusecasesrequest.cpp
   listusecasesresponse.cpp
   listuserhierarchygroupsrequest.cpp
   listuserhierarchygroupsresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  putuserstatusrequest.cpp
+  putuserstatusresponse.cpp
+  releasephonenumberrequest.cpp
+  releasephonenumberresponse.cpp
   resumecontactrecordingrequest.cpp
   resumecontactrecordingresponse.cpp
+  searchavailablephonenumbersrequest.cpp
+  searchavailablephonenumbersresponse.cpp
+  searchqueuesrequest.cpp
+  searchqueuesresponse.cpp
+  searchroutingprofilesrequest.cpp
+  searchroutingprofilesresponse.cpp
+  searchsecurityprofilesrequest.cpp
+  searchsecurityprofilesresponse.cpp
+  searchusersrequest.cpp
+  searchusersresponse.cpp
+  searchvocabulariesrequest.cpp
+  searchvocabulariesresponse.cpp
   startchatcontactrequest.cpp
   startchatcontactresponse.cpp
   startcontactrecordingrequest.cpp
   startcontactrecordingresponse.cpp
+  startcontactstreamingrequest.cpp
+  startcontactstreamingresponse.cpp
   startoutboundvoicecontactrequest.cpp
   startoutboundvoicecontactresponse.cpp
   starttaskcontactrequest.cpp
   starttaskcontactresponse.cpp
-  stopcontactrecordingrequest.cpp
-  stopcontactrecordingresponse.cpp
   stopcontactrequest.cpp
   stopcontactresponse.cpp
+  stopcontactrecordingrequest.cpp
+  stopcontactrecordingresponse.cpp
+  stopcontactstreamingrequest.cpp
+  stopcontactstreamingresponse.cpp
   suspendcontactrecordingrequest.cpp
   suspendcontactrecordingresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
+  transfercontactrequest.cpp
+  transfercontactresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateagentstatusrequest.cpp
+  updateagentstatusresponse.cpp
+  updatecontactrequest.cpp
+  updatecontactresponse.cpp
   updatecontactattributesrequest.cpp
   updatecontactattributesresponse.cpp
   updatecontactflowcontentrequest.cpp
   updatecontactflowcontentresponse.cpp
+  updatecontactflowmetadatarequest.cpp
+  updatecontactflowmetadataresponse.cpp
+  updatecontactflowmodulecontentrequest.cpp
+  updatecontactflowmodulecontentresponse.cpp
+  updatecontactflowmodulemetadatarequest.cpp
+  updatecontactflowmodulemetadataresponse.cpp
   updatecontactflownamerequest.cpp
   updatecontactflownameresponse.cpp
+  updatecontactschedulerequest.cpp
+  updatecontactscheduleresponse.cpp
+  updatehoursofoperationrequest.cpp
+  updatehoursofoperationresponse.cpp
   updateinstanceattributerequest.cpp
   updateinstanceattributeresponse.cpp
   updateinstancestorageconfigrequest.cpp
   updateinstancestorageconfigresponse.cpp
+  updatephonenumberrequest.cpp
+  updatephonenumberresponse.cpp
   updatequeuehoursofoperationrequest.cpp
   updatequeuehoursofoperationresponse.cpp
   updatequeuemaxcontactsrequest.cpp
@@ -609,10 +917,14 @@ add_library(QtAwsConnect
   updateroutingprofilenameresponse.cpp
   updateroutingprofilequeuesrequest.cpp
   updateroutingprofilequeuesresponse.cpp
-  updateuserhierarchygroupnamerequest.cpp
-  updateuserhierarchygroupnameresponse.cpp
+  updatesecurityprofilerequest.cpp
+  updatesecurityprofileresponse.cpp
+  updatetasktemplaterequest.cpp
+  updatetasktemplateresponse.cpp
   updateuserhierarchyrequest.cpp
   updateuserhierarchyresponse.cpp
+  updateuserhierarchygroupnamerequest.cpp
+  updateuserhierarchygroupnameresponse.cpp
   updateuserhierarchystructurerequest.cpp
   updateuserhierarchystructureresponse.cpp
   updateuseridentityinforequest.cpp

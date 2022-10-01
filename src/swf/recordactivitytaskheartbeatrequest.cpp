@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RecordActivityTaskHeartbeatRequest
- * \brief The RecordActivityTaskHeartbeatRequest class provides an interface for SWF RecordActivityTaskHeartbeat requests.
+ * \class QtAws::Swf::RecordActivityTaskHeartbeatRequest
+ * \brief The RecordActivityTaskHeartbeatRequest class provides an interface for Swf RecordActivityTaskHeartbeat requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(
 }
 
 /*!
- * \class QtAws::SWF::RecordActivityTaskHeartbeatRequestPrivate
+ * \class QtAws::Swf::RecordActivityTaskHeartbeatRequestPrivate
  * \brief The RecordActivityTaskHeartbeatRequestPrivate class provides private implementation for RecordActivityTaskHeartbeatRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPri
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

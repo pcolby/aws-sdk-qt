@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteIPSetRequest
- * \brief The DeleteIPSetRequest class provides an interface for WAF DeleteIPSet requests.
+ * \class QtAws::Waf::DeleteIPSetRequest
+ * \brief The DeleteIPSetRequest class provides an interface for Waf DeleteIPSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAF::DeleteIPSetRequestPrivate
+ * \class QtAws::Waf::DeleteIPSetRequestPrivate
  * \brief The DeleteIPSetRequestPrivate class provides private implementation for DeleteIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

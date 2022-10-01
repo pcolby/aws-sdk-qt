@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DeleteHapgRequest
- * \brief The DeleteHapgRequest class provides an interface for CloudHSM DeleteHapg requests.
+ * \class QtAws::CloudHsm::DeleteHapgRequest
+ * \brief The DeleteHapgRequest class provides an interface for CloudHsm DeleteHapg requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::deleteHapg
+ * \sa CloudHsmClient::deleteHapg
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
-    : CloudHSMRequest(new DeleteHapgRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new DeleteHapgRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
  * Constructs a DeleteHapgRequest object.
  */
 DeleteHapgRequest::DeleteHapgRequest()
-    : CloudHSMRequest(new DeleteHapgRequestPrivate(CloudHSMRequest::DeleteHapgAction, this))
+    : CloudHsmRequest(new DeleteHapgRequestPrivate(CloudHsmRequest::DeleteHapgAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::CloudHSM::DeleteHapgRequestPrivate
+ * \class QtAws::CloudHsm::DeleteHapgRequestPrivate
  * \brief The DeleteHapgRequestPrivate class provides private implementation for DeleteHapgRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a DeleteHapgRequestPrivate object for CloudHSM \a action,
+ * Constructs a DeleteHapgRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
-    const CloudHSMRequest::Action action, DeleteHapgRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, DeleteHapgRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const DeleteHapgRequestPrivate &other, DeleteHapgRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

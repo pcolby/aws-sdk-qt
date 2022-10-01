@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::PutBlockPublicAccessConfigurationResponse
- * \brief The PutBlockPublicAccessConfigurationResponse class provides an interace for EMR PutBlockPublicAccessConfiguration responses.
+ * \class QtAws::Emr::PutBlockPublicAccessConfigurationResponse
+ * \brief The PutBlockPublicAccessConfigurationResponse class provides an interace for Emr PutBlockPublicAccessConfiguration responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::putBlockPublicAccessConfiguration
  */
@@ -64,7 +64,7 @@ const PutBlockPublicAccessConfigurationRequest * PutBlockPublicAccessConfigurati
 
 /*!
  * \reimp
- * Parses a successful EMR PutBlockPublicAccessConfiguration \a response.
+ * Parses a successful Emr PutBlockPublicAccessConfiguration \a response.
  */
 void PutBlockPublicAccessConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void PutBlockPublicAccessConfigurationResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::EMR::PutBlockPublicAccessConfigurationResponsePrivate
+ * \class QtAws::Emr::PutBlockPublicAccessConfigurationResponsePrivate
  * \brief The PutBlockPublicAccessConfigurationResponsePrivate class provides private implementation for PutBlockPublicAccessConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ PutBlockPublicAccessConfigurationResponsePrivate::PutBlockPublicAccessConfigurat
 }
 
 /*!
- * Parses a EMR PutBlockPublicAccessConfiguration response element from \a xml.
+ * Parses a Emr PutBlockPublicAccessConfiguration response element from \a xml.
  */
 void PutBlockPublicAccessConfigurationResponsePrivate::parsePutBlockPublicAccessConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void PutBlockPublicAccessConfigurationResponsePrivate::parsePutBlockPublicAccess
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

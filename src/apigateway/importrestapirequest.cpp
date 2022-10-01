@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::ImportRestApiRequest
- * \brief The ImportRestApiRequest class provides an interface for APIGateway ImportRestApi requests.
+ * \class QtAws::ApiGateway::ImportRestApiRequest
+ * \brief The ImportRestApiRequest class provides an interface for ApiGateway ImportRestApi requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::importRestApi
+ * \sa ApiGatewayClient::importRestApi
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
-    : APIGatewayRequest(new ImportRestApiRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new ImportRestApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
  * Constructs a ImportRestApiRequest object.
  */
 ImportRestApiRequest::ImportRestApiRequest()
-    : APIGatewayRequest(new ImportRestApiRequestPrivate(APIGatewayRequest::ImportRestApiAction, this))
+    : ApiGatewayRequest(new ImportRestApiRequestPrivate(ApiGatewayRequest::ImportRestApiAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::ImportRestApiRequestPrivate
+ * \class QtAws::ApiGateway::ImportRestApiRequestPrivate
  * \brief The ImportRestApiRequestPrivate class provides private implementation for ImportRestApiRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a ImportRestApiRequestPrivate object for APIGateway \a action,
+ * Constructs a ImportRestApiRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
-    const APIGatewayRequest::Action action, ImportRestApiRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, ImportRestApiRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const ImportRestApiRequestPrivate &other, ImportRestApiRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

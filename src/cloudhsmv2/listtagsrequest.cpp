@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::ListTagsRequest
- * \brief The ListTagsRequest class provides an interface for CloudHSMV2 ListTags requests.
+ * \class QtAws::CloudHsmV2::ListTagsRequest
+ * \brief The ListTagsRequest class provides an interface for CloudHsmV2 ListTags requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::listTags
+ * \sa CloudHsmV2Client::listTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
-    : CloudHSMV2Request(new ListTagsRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new ListTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
  * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
-    : CloudHSMV2Request(new ListTagsRequestPrivate(CloudHSMV2Request::ListTagsAction, this))
+    : CloudHsmV2Request(new ListTagsRequestPrivate(CloudHsmV2Request::ListTagsAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::CloudHSMV2::ListTagsRequestPrivate
+ * \class QtAws::CloudHsmV2::ListTagsRequestPrivate
  * \brief The ListTagsRequestPrivate class provides private implementation for ListTagsRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a ListTagsRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a ListTagsRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
-    const CloudHSMV2Request::Action action, ListTagsRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, ListTagsRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

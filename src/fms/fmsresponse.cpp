@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::FmsResponse
- * \brief The FmsResponse class provides an interface for FMS responses.
+ * \class QtAws::Fms::FmsResponse
+ * \brief The FmsResponse class provides an interface for Fms responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -76,11 +76,11 @@ void FmsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::FmsResponsePrivate
+ * \class QtAws::Fms::FmsResponsePrivate
  * \brief The FmsResponsePrivate class provides private implementation for FmsResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -92,5 +92,5 @@ FmsResponsePrivate::FmsResponsePrivate(
 
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

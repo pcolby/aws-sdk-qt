@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetSdkTypeRequest
- * \brief The GetSdkTypeRequest class provides an interface for APIGateway GetSdkType requests.
+ * \class QtAws::ApiGateway::GetSdkTypeRequest
+ * \brief The GetSdkTypeRequest class provides an interface for ApiGateway GetSdkType requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getSdkType
+ * \sa ApiGatewayClient::getSdkType
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetSdkTypeRequest::GetSdkTypeRequest(const GetSdkTypeRequest &other)
-    : APIGatewayRequest(new GetSdkTypeRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetSdkTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetSdkTypeRequest::GetSdkTypeRequest(const GetSdkTypeRequest &other)
  * Constructs a GetSdkTypeRequest object.
  */
 GetSdkTypeRequest::GetSdkTypeRequest()
-    : APIGatewayRequest(new GetSdkTypeRequestPrivate(APIGatewayRequest::GetSdkTypeAction, this))
+    : ApiGatewayRequest(new GetSdkTypeRequestPrivate(ApiGatewayRequest::GetSdkTypeAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetSdkTypeRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::APIGateway::GetSdkTypeRequestPrivate
+ * \class QtAws::ApiGateway::GetSdkTypeRequestPrivate
  * \brief The GetSdkTypeRequestPrivate class provides private implementation for GetSdkTypeRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetSdkTypeRequestPrivate object for APIGateway \a action,
+ * Constructs a GetSdkTypeRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
-    const APIGatewayRequest::Action action, GetSdkTypeRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetSdkTypeRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
  */
 GetSdkTypeRequestPrivate::GetSdkTypeRequestPrivate(
     const GetSdkTypeRequestPrivate &other, GetSdkTypeRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

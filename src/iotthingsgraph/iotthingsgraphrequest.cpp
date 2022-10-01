@@ -278,7 +278,7 @@ QNetworkRequest IoTThingsGraphRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 IoTThingsGraphRequestPrivate::IoTThingsGraphRequestPrivate(const IoTThingsGraphRequest::Action action, IoTThingsGraphRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-06"))
 {
 
 }

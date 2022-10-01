@@ -49,6 +49,8 @@
 #include "describeresourcepolicyresponse.h"
 #include "describerulegrouprequest.h"
 #include "describerulegroupresponse.h"
+#include "describerulegroupmetadatarequest.h"
+#include "describerulegroupmetadataresponse.h"
 #include "disassociatesubnetsrequest.h"
 #include "disassociatesubnetsresponse.h"
 #include "listfirewallpoliciesrequest.h"
@@ -69,6 +71,8 @@
 #include "updatefirewalldeleteprotectionresponse.h"
 #include "updatefirewalldescriptionrequest.h"
 #include "updatefirewalldescriptionresponse.h"
+#include "updatefirewallencryptionconfigurationrequest.h"
+#include "updatefirewallencryptionconfigurationresponse.h"
 #include "updatefirewallpolicyrequest.h"
 #include "updatefirewallpolicyresponse.h"
 #include "updatefirewallpolicychangeprotectionrequest.h"
@@ -102,24 +106,24 @@ namespace NetworkFirewall {
  * \ingroup aws-clients
  * \inmodule QtAwsNetworkFirewall
  *
- *  This is the API Reference for AWS Network Firewall. This guide is for developers who need detailed information about the
+ *  This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the
  *  Network Firewall API actions, data types, and errors.
  * 
  *  </p <ul> <li>
  * 
  *  The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and
- *  error handling. For general information about using the AWS REST APIs, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">AWS APIs</a>.
+ *  error handling. For general information about using the Amazon Web Services REST APIs, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>.
  * 
  *  </p
  * 
- *  To access Network Firewall using the REST API endpoint: <code>https://network-firewall.&lt;region&gt;.amazonaws.com
- *  </code>
+ *  To access Network Firewall using the REST API endpoint: <code>https://network-firewall.<region>.amazonaws.com </code>
  * 
  *  </p </li> <li>
  * 
- *  Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or platform
- *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ *  Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming
+ *  language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web
+ *  Services
  * 
  *  SDKs</a>> </li> <li>
  * 
@@ -131,9 +135,10 @@ namespace NetworkFirewall {
  * 
  *  Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon
  *  Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This
- *  includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or AWS Direct Connect.
+ *  includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect.
  *  Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection system (IDS)
- *  engine. For information about Suricata, see the <a href="https://suricata-ids.org/">Suricata
+ *  engine. Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
+ *  href="https://suricata-ids.org/">Suricata
  * 
  *  website</a>>
  * 
@@ -142,7 +147,8 @@ namespace NetworkFirewall {
  * 
  *  </p <ul> <li>
  * 
- *  Allow domains or IP addresses for known AWS service endpoints, such as Amazon S3, and block all other forms of
+ *  Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other
+ *  forms of
  * 
  *  traffic> </li> <li>
  * 
@@ -277,9 +283,9 @@ AssociateFirewallPolicyResponse * NetworkFirewallClient::associateFirewallPolicy
  *
  * </p
  *
- * This request creates an AWS Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
- * protections, you must also modify the VPC's route tables for each subnet's Availability Zone, to redirect the traffic
- * that's coming into and going out of the zone through the firewall endpoint.
+ * This request creates an Network Firewall firewall endpoint in each of the subnets. To enable the firewall's protections,
+ * you must also modify the VPC's route tables for each subnet's Availability Zone, to redirect the traffic that's coming
+ * into and going out of the zone through the firewall endpoint.
  */
 AssociateSubnetsResponse * NetworkFirewallClient::associateSubnets(const AssociateSubnetsRequest &request)
 {
@@ -292,13 +298,13 @@ AssociateSubnetsResponse * NetworkFirewallClient::associateSubnets(const Associa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
+ * Creates an Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
  *
  * </p
  *
- * The firewall defines the configuration settings for an AWS Network Firewall firewall. The settings that you can define
- * at creation include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that
- * are attached to the firewall AWS resource.
+ * The firewall defines the configuration settings for an Network Firewall firewall. The settings that you can define at
+ * creation include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are
+ * attached to the firewall Amazon Web Services resource.
  *
  * </p
  *
@@ -311,8 +317,8 @@ AssociateSubnetsResponse * NetworkFirewallClient::associateSubnets(const Associa
  *
  * </p
  *
- * To manage a firewall's tags, use the standard AWS resource tagging operations, <a>ListTagsForResource</a>,
- * <a>TagResource</a>, and
+ * To manage a firewall's tags, use the standard Amazon Web Services resource tagging operations,
+ * <a>ListTagsForResource</a>, <a>TagResource</a>, and
  *
  * <a>UntagResource</a>>
  *
@@ -333,8 +339,8 @@ CreateFirewallResponse * NetworkFirewallClient::createFirewall(const CreateFirew
  *
  * </p
  *
- * An AWS Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and stateful
- * rule groups and other settings. You can use one firewall policy for multiple firewalls.
+ * An Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and stateful rule
+ * groups and other settings. You can use one firewall policy for multiple firewalls.
  */
 CreateFirewallPolicyResponse * NetworkFirewallClient::createFirewallPolicy(const CreateFirewallPolicyRequest &request)
 {
@@ -491,6 +497,21 @@ DescribeRuleGroupResponse * NetworkFirewallClient::describeRuleGroup(const Descr
 
 /*!
  * Sends \a request to the NetworkFirewallClient service, and returns a pointer to an
+ * DescribeRuleGroupMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * High-level information about a rule group, returned by operations like create and describe. You can use the information
+ * provided in the metadata to retrieve and manage a rule group. You can retrieve all objects for a rule group by calling
+ * <a>DescribeRuleGroup</a>.
+ */
+DescribeRuleGroupMetadataResponse * NetworkFirewallClient::describeRuleGroupMetadata(const DescribeRuleGroupMetadataRequest &request)
+{
+    return qobject_cast<DescribeRuleGroupMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NetworkFirewallClient service, and returns a pointer to an
  * DisassociateSubnetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -557,12 +578,13 @@ ListRuleGroupsResponse * NetworkFirewallClient::listRuleGroups(const ListRuleGro
  *
  * Retrieves the tags associated with the specified resource. Tags are key:value pairs that you can use to categorize and
  * manage your resources, for purposes like billing. For example, you might set the tag key to "customer" and the value to
- * the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for a
+ * the customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource, up to 50 tags for
+ * a
  *
  * resource>
  *
- * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and rule
- * groups.
+ * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall policies,
+ * and rule groups.
  */
 ListTagsForResourceResponse * NetworkFirewallClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -575,9 +597,9 @@ ListTagsForResourceResponse * NetworkFirewallClient::listTagsForResource(const L
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates an AWS Identity and Access Management policy for your rule group or firewall policy. Use this to
- * share rule groups and firewall policies between accounts. This operation works in conjunction with the AWS Resource
- * Access Manager (RAM) service to manage resource sharing for Network Firewall.
+ * Creates or updates an IAM policy for your rule group or firewall policy. Use this to share rule groups and firewall
+ * policies between accounts. This operation works in conjunction with the Amazon Web Services Resource Access Manager
+ * (RAM) service to manage resource sharing for Network Firewall.
  *
  * </p
  *
@@ -605,7 +627,7 @@ ListTagsForResourceResponse * NetworkFirewallClient::listTagsForResource(const L
  * </p </li> </ul>
  *
  * For additional information about resource sharing using RAM, see <a
- * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">AWS Resource Access Manager User
+ * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User
  */
 PutResourcePolicyResponse * NetworkFirewallClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
@@ -620,12 +642,12 @@ PutResourcePolicyResponse * NetworkFirewallClient::putResourcePolicy(const PutRe
  *
  * Adds the specified tags to the specified resource. Tags are key:value pairs that you can use to categorize and manage
  * your resources, for purposes like billing. For example, you might set the tag key to "customer" and the value to the
- * customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for a
+ * customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource, up to 50 tags for a
  *
  * resource>
  *
- * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and rule
- * groups.
+ * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall policies,
+ * and rule groups.
  */
 TagResourceResponse * NetworkFirewallClient::tagResource(const TagResourceRequest &request)
 {
@@ -640,13 +662,13 @@ TagResourceResponse * NetworkFirewallClient::tagResource(const TagResourceReques
  *
  * Removes the tags with the specified keys from the specified resource. Tags are key:value pairs that you can use to
  * categorize and manage your resources, for purposes like billing. For example, you might set the tag key to "customer"
- * and the value to the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags
- * for a
+ * and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource,
+ * up to 50 tags for a
  *
  * resource>
  *
- * You can manage tags for the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies,
- * and rule groups.
+ * You can manage tags for the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+ * policies, and rule groups.
  */
 UntagResourceResponse * NetworkFirewallClient::untagResource(const UntagResourceRequest &request)
 {
@@ -684,6 +706,19 @@ UpdateFirewallDescriptionResponse * NetworkFirewallClient::updateFirewallDescrip
 
 /*!
  * Sends \a request to the NetworkFirewallClient service, and returns a pointer to an
+ * UpdateFirewallEncryptionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A complex type that contains settings for encryption of your firewall
+ */
+UpdateFirewallEncryptionConfigurationResponse * NetworkFirewallClient::updateFirewallEncryptionConfiguration(const UpdateFirewallEncryptionConfigurationRequest &request)
+{
+    return qobject_cast<UpdateFirewallEncryptionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NetworkFirewallClient service, and returns a pointer to an
  * UpdateFirewallPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -701,6 +736,9 @@ UpdateFirewallPolicyResponse * NetworkFirewallClient::updateFirewallPolicy(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Modifies the flag, <code>ChangeProtection</code>, which indicates whether it is possible to change the firewall. If the
+ * flag is set to <code>TRUE</code>, the firewall is protected from changes. This setting helps protect against
+ * accidentally changing a firewall that's in
  */
 UpdateFirewallPolicyChangeProtectionResponse * NetworkFirewallClient::updateFirewallPolicyChangeProtection(const UpdateFirewallPolicyChangeProtectionRequest &request)
 {

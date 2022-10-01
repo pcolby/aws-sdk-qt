@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::RevokeSignatureResponse
- * \brief The RevokeSignatureResponse class provides an interace for signer RevokeSignature responses.
+ * \class QtAws::Signer::RevokeSignatureResponse
+ * \brief The RevokeSignatureResponse class provides an interace for Signer RevokeSignature responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::revokeSignature
+ * \sa SignerClient::revokeSignature
  */
 
 /*!
@@ -69,7 +71,7 @@ RevokeSignatureResponse::RevokeSignatureResponse(
         const RevokeSignatureRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new RevokeSignatureResponsePrivate(this), parent)
+    : SignerResponse(new RevokeSignatureResponsePrivate(this), parent)
 {
     setRequest(new RevokeSignatureRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const RevokeSignatureRequest * RevokeSignatureResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer RevokeSignature \a response.
+ * Parses a successful Signer RevokeSignature \a response.
  */
 void RevokeSignatureResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void RevokeSignatureResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::RevokeSignatureResponsePrivate
+ * \class QtAws::Signer::RevokeSignatureResponsePrivate
  * \brief The RevokeSignatureResponsePrivate class provides private implementation for RevokeSignatureResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a RevokeSignatureResponsePrivate object with public implementation \a q.
  */
 RevokeSignatureResponsePrivate::RevokeSignatureResponsePrivate(
-    RevokeSignatureResponse * const q) : signerResponsePrivate(q)
+    RevokeSignatureResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer RevokeSignature response element from \a xml.
+ * Parses a Signer RevokeSignature response element from \a xml.
  */
 void RevokeSignatureResponsePrivate::parseRevokeSignatureResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void RevokeSignatureResponsePrivate::parseRevokeSignatureResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

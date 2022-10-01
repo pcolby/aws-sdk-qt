@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ActivateContactChannelRequest
- * \brief The ActivateContactChannelRequest class provides an interface for SSMContacts ActivateContactChannel requests.
+ * \class QtAws::SsmContacts::ActivateContactChannelRequest
+ * \brief The ActivateContactChannelRequest class provides an interface for SsmContacts ActivateContactChannel requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::activateContactChannel
+ * \sa SsmContactsClient::activateContactChannel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ActivateContactChannelRequest::ActivateContactChannelRequest(const ActivateContactChannelRequest &other)
-    : SSMContactsRequest(new ActivateContactChannelRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new ActivateContactChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ ActivateContactChannelRequest::ActivateContactChannelRequest(const ActivateConta
  * Constructs a ActivateContactChannelRequest object.
  */
 ActivateContactChannelRequest::ActivateContactChannelRequest()
-    : SSMContactsRequest(new ActivateContactChannelRequestPrivate(SSMContactsRequest::ActivateContactChannelAction, this))
+    : SsmContactsRequest(new ActivateContactChannelRequestPrivate(SsmContactsRequest::ActivateContactChannelAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ActivateContactChannelRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SSMContacts::ActivateContactChannelRequestPrivate
+ * \class QtAws::SsmContacts::ActivateContactChannelRequestPrivate
  * \brief The ActivateContactChannelRequestPrivate class provides private implementation for ActivateContactChannelRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a ActivateContactChannelRequestPrivate object for SSMContacts \a action,
+ * Constructs a ActivateContactChannelRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 ActivateContactChannelRequestPrivate::ActivateContactChannelRequestPrivate(
-    const SSMContactsRequest::Action action, ActivateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, ActivateContactChannelRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ ActivateContactChannelRequestPrivate::ActivateContactChannelRequestPrivate(
  */
 ActivateContactChannelRequestPrivate::ActivateContactChannelRequestPrivate(
     const ActivateContactChannelRequestPrivate &other, ActivateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public imagebuilderRequestPrivate {
+class TagResourceRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const imagebuilderRequest::Action action,
+    TagResourceRequestPrivate(const ImageBuilderRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

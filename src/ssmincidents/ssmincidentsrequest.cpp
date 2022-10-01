@@ -21,57 +21,57 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsRequest
- * \brief The SSMIncidentsRequest class provides an interface for SSMIncidents requests.
+ * \class QtAws::SsmIncidents::SsmIncidentsRequest
+ * \brief The SsmIncidentsRequest class provides an interface for SsmIncidents requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * \enum SSMIncidentsRequest::Action
+ * \enum SsmIncidentsRequest::Action
  *
- * This enum describes the actions that can be performed as SSMIncidents
+ * This enum describes the actions that can be performed as SsmIncidents
  * requests.
  *
- * \value CreateReplicationSetAction SSMIncidents CreateReplicationSet action.
- * \value CreateResponsePlanAction SSMIncidents CreateResponsePlan action.
- * \value CreateTimelineEventAction SSMIncidents CreateTimelineEvent action.
- * \value DeleteIncidentRecordAction SSMIncidents DeleteIncidentRecord action.
- * \value DeleteReplicationSetAction SSMIncidents DeleteReplicationSet action.
- * \value DeleteResourcePolicyAction SSMIncidents DeleteResourcePolicy action.
- * \value DeleteResponsePlanAction SSMIncidents DeleteResponsePlan action.
- * \value DeleteTimelineEventAction SSMIncidents DeleteTimelineEvent action.
- * \value GetIncidentRecordAction SSMIncidents GetIncidentRecord action.
- * \value GetReplicationSetAction SSMIncidents GetReplicationSet action.
- * \value GetResourcePoliciesAction SSMIncidents GetResourcePolicies action.
- * \value GetResponsePlanAction SSMIncidents GetResponsePlan action.
- * \value GetTimelineEventAction SSMIncidents GetTimelineEvent action.
- * \value ListIncidentRecordsAction SSMIncidents ListIncidentRecords action.
- * \value ListRelatedItemsAction SSMIncidents ListRelatedItems action.
- * \value ListReplicationSetsAction SSMIncidents ListReplicationSets action.
- * \value ListResponsePlansAction SSMIncidents ListResponsePlans action.
- * \value ListTagsForResourceAction SSMIncidents ListTagsForResource action.
- * \value ListTimelineEventsAction SSMIncidents ListTimelineEvents action.
- * \value PutResourcePolicyAction SSMIncidents PutResourcePolicy action.
- * \value StartIncidentAction SSMIncidents StartIncident action.
- * \value TagResourceAction SSMIncidents TagResource action.
- * \value UntagResourceAction SSMIncidents UntagResource action.
- * \value UpdateDeletionProtectionAction SSMIncidents UpdateDeletionProtection action.
- * \value UpdateIncidentRecordAction SSMIncidents UpdateIncidentRecord action.
- * \value UpdateRelatedItemsAction SSMIncidents UpdateRelatedItems action.
- * \value UpdateReplicationSetAction SSMIncidents UpdateReplicationSet action.
- * \value UpdateResponsePlanAction SSMIncidents UpdateResponsePlan action.
- * \value UpdateTimelineEventAction SSMIncidents UpdateTimelineEvent action.
+ * \value CreateReplicationSetAction SsmIncidents CreateReplicationSet action.
+ * \value CreateResponsePlanAction SsmIncidents CreateResponsePlan action.
+ * \value CreateTimelineEventAction SsmIncidents CreateTimelineEvent action.
+ * \value DeleteIncidentRecordAction SsmIncidents DeleteIncidentRecord action.
+ * \value DeleteReplicationSetAction SsmIncidents DeleteReplicationSet action.
+ * \value DeleteResourcePolicyAction SsmIncidents DeleteResourcePolicy action.
+ * \value DeleteResponsePlanAction SsmIncidents DeleteResponsePlan action.
+ * \value DeleteTimelineEventAction SsmIncidents DeleteTimelineEvent action.
+ * \value GetIncidentRecordAction SsmIncidents GetIncidentRecord action.
+ * \value GetReplicationSetAction SsmIncidents GetReplicationSet action.
+ * \value GetResourcePoliciesAction SsmIncidents GetResourcePolicies action.
+ * \value GetResponsePlanAction SsmIncidents GetResponsePlan action.
+ * \value GetTimelineEventAction SsmIncidents GetTimelineEvent action.
+ * \value ListIncidentRecordsAction SsmIncidents ListIncidentRecords action.
+ * \value ListRelatedItemsAction SsmIncidents ListRelatedItems action.
+ * \value ListReplicationSetsAction SsmIncidents ListReplicationSets action.
+ * \value ListResponsePlansAction SsmIncidents ListResponsePlans action.
+ * \value ListTagsForResourceAction SsmIncidents ListTagsForResource action.
+ * \value ListTimelineEventsAction SsmIncidents ListTimelineEvents action.
+ * \value PutResourcePolicyAction SsmIncidents PutResourcePolicy action.
+ * \value StartIncidentAction SsmIncidents StartIncident action.
+ * \value TagResourceAction SsmIncidents TagResource action.
+ * \value UntagResourceAction SsmIncidents UntagResource action.
+ * \value UpdateDeletionProtectionAction SsmIncidents UpdateDeletionProtection action.
+ * \value UpdateIncidentRecordAction SsmIncidents UpdateIncidentRecord action.
+ * \value UpdateRelatedItemsAction SsmIncidents UpdateRelatedItems action.
+ * \value UpdateReplicationSetAction SsmIncidents UpdateReplicationSet action.
+ * \value UpdateResponsePlanAction SsmIncidents UpdateResponsePlan action.
+ * \value UpdateTimelineEventAction SsmIncidents UpdateTimelineEvent action.
  */
 
 /*!
- * Constructs a SSMIncidentsRequest object for SSMIncidents \a action.
+ * Constructs a SsmIncidentsRequest object for SsmIncidents \a action.
  */
-SSMIncidentsRequest::SSMIncidentsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SSMIncidentsRequestPrivate(action, this))
+SsmIncidentsRequest::SsmIncidentsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SsmIncidentsRequestPrivate(action, this))
 {
 
 }
@@ -79,18 +79,18 @@ SSMIncidentsRequest::SSMIncidentsRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SSMIncidentsRequest::SSMIncidentsRequest(const SSMIncidentsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SSMIncidentsRequestPrivate(*other.d_func(), this))
+SsmIncidentsRequest::SsmIncidentsRequest(const SsmIncidentsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SsmIncidentsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SSMIncidentsRequest object to be equal to \a other.
+ * Sets the SsmIncidentsRequest object to be equal to \a other.
  */
-SSMIncidentsRequest& SSMIncidentsRequest::operator=(const SSMIncidentsRequest &other)
+SsmIncidentsRequest& SsmIncidentsRequest::operator=(const SsmIncidentsRequest &other)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -98,57 +98,57 @@ SSMIncidentsRequest& SSMIncidentsRequest::operator=(const SSMIncidentsRequest &o
 }
 
 /*!
- * Constructs aa SSMIncidentsRequest object with private implementation \a d.
+ * Constructs aa SsmIncidentsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMIncidentsRequestPrivate.
+ * implementation that inherits from SsmIncidentsRequestPrivate.
  */
-SSMIncidentsRequest::SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsmIncidentsRequest::SsmIncidentsRequest(SsmIncidentsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the SSMIncidents action to be performed by this request.
+ * Returns the SsmIncidents action to be performed by this request.
  */
-SSMIncidentsRequest::Action SSMIncidentsRequest::action() const
+SsmIncidentsRequest::Action SsmIncidentsRequest::action() const
 {
-    Q_D(const SSMIncidentsRequest);
+    Q_D(const SsmIncidentsRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the SSMIncidents action to be performed by this request.
+ * Returns the name of the SsmIncidents action to be performed by this request.
  */
-QString SSMIncidentsRequest::actionString() const
+QString SsmIncidentsRequest::actionString() const
 {
-    return SSMIncidentsRequestPrivate::toString(action());
+    return SsmIncidentsRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the SSMIncidents API version implemented by this request.
+ * Returns the SsmIncidents API version implemented by this request.
  */
-QString SSMIncidentsRequest::apiVersion() const
+QString SsmIncidentsRequest::apiVersion() const
 {
-    Q_D(const SSMIncidentsRequest);
+    Q_D(const SsmIncidentsRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the SSMIncidents action to be performed by this request to \a action.
+ * Sets the SsmIncidents action to be performed by this request to \a action.
  */
-void SSMIncidentsRequest::setAction(const Action action)
+void SsmIncidentsRequest::setAction(const Action action)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->action = action;
 }
 
 /*!
- * Sets the SSMIncidents API version to include in this request to \a version.
+ * Sets the SsmIncidents API version to include in this request to \a version.
  */
-void SSMIncidentsRequest::setApiVersion(const QString &version)
+void SsmIncidentsRequest::setApiVersion(const QString &version)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->apiVersion = version;
 }
 
@@ -160,7 +160,7 @@ void SSMIncidentsRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SSMIncidentsRequest::operator==(const SSMIncidentsRequest &other) const
+bool SsmIncidentsRequest::operator==(const SsmIncidentsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -169,19 +169,19 @@ bool SSMIncidentsRequest::operator==(const SSMIncidentsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SSMIncidents queue name.
+ * Returns \c tue if \a queueName is a valid SsmIncidents queue name.
  *
- * @par From SSMIncidents FAQs:
+ * @par From SsmIncidents FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SSMIncidents queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid SsmIncidents queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SSMIncidentsRequest::isValidQueueName(const QString &queueName)
+/*bool SsmIncidentsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -191,45 +191,45 @@ bool SSMIncidentsRequest::operator==(const SSMIncidentsRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SSMIncidentsRequest::clearParameter(const QString &name)
+int SsmIncidentsRequest::clearParameter(const QString &name)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SSMIncidentsRequest::clearParameters()
+void SsmIncidentsRequest::clearParameters()
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SSMIncidentsRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SsmIncidentsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SSMIncidentsRequest);
+    Q_D(const SsmIncidentsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SSMIncidentsRequest::parameters() const
+const QVariantMap &SsmIncidentsRequest::parameters() const
 {
-    Q_D(const SSMIncidentsRequest);
+    Q_D(const SsmIncidentsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SSMIncidentsRequest::setParameter(const QString &name, const QVariant &value)
+void SsmIncidentsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -237,42 +237,42 @@ void SSMIncidentsRequest::setParameter(const QString &name, const QVariant &valu
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SSMIncidentsRequest::setParameters(const QVariantMap &parameters)
+void SsmIncidentsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SSMIncidentsRequest);
+    Q_D(SsmIncidentsRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the SSMIncidents request using the given
+ * Returns a network request for the SsmIncidents request using the given
  * \a endpoint.
  *
- * This SSMIncidents implementation builds request URLs by combining the
+ * This SsmIncidents implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SSMIncidentsRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SsmIncidentsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const SSMIncidentsRequest);
+    //Q_D(const SsmIncidentsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsRequestPrivate
- * \brief The SSMIncidentsRequestPrivate class provides private implementation for SSMIncidentsRequest.
+ * \class QtAws::SsmIncidents::SsmIncidentsRequestPrivate
+ * \brief The SsmIncidentsRequestPrivate class provides private implementation for SsmIncidentsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a SSMIncidentsRequestPrivate object for SSMIncidents \a action,
+ * Constructs a SsmIncidentsRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
-SSMIncidentsRequestPrivate::SSMIncidentsRequestPrivate(const SSMIncidentsRequest::Action action, SSMIncidentsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+SsmIncidentsRequestPrivate::SsmIncidentsRequestPrivate(const SsmIncidentsRequest::Action action, SsmIncidentsRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-10"))
 {
 
 }
@@ -283,10 +283,10 @@ SSMIncidentsRequestPrivate::SSMIncidentsRequestPrivate(const SSMIncidentsRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SSMIncidentsRequest class's copy constructor.
+ * This is required to support the SsmIncidentsRequest class's copy constructor.
  */
-SSMIncidentsRequestPrivate::SSMIncidentsRequestPrivate(const SSMIncidentsRequestPrivate &other,
-                                     SSMIncidentsRequest * const q)
+SsmIncidentsRequestPrivate::SsmIncidentsRequestPrivate(const SsmIncidentsRequestPrivate &other,
+                                     SsmIncidentsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -297,14 +297,14 @@ SSMIncidentsRequestPrivate::SSMIncidentsRequestPrivate(const SSMIncidentsRequest
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SSMIncidentsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SSMIncidents service's Action
+ * This function converts SsmIncidentsRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the SsmIncidents service's Action
  * query parameters.
  */
-QString SSMIncidentsRequestPrivate::toString(const SSMIncidentsRequest::Action &action)
+QString SsmIncidentsRequestPrivate::toString(const SsmIncidentsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SSMIncidentsRequest::action##Action: return QStringLiteral(#action)
+        case SsmIncidentsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateReplicationSet);
         ActionToString(CreateResponsePlan);
@@ -342,5 +342,5 @@ QString SSMIncidentsRequestPrivate::toString(const SSMIncidentsRequest::Action &
     return QString();
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

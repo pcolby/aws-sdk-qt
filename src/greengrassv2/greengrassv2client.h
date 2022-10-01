@@ -30,6 +30,8 @@ namespace QtAws {
 namespace GreengrassV2 {
 
 class GreengrassV2ClientPrivate;
+class AssociateServiceRoleToAccountRequest;
+class AssociateServiceRoleToAccountResponse;
 class BatchAssociateClientDeviceWithCoreDeviceRequest;
 class BatchAssociateClientDeviceWithCoreDeviceResponse;
 class BatchDisassociateClientDeviceFromCoreDeviceRequest;
@@ -44,16 +46,24 @@ class DeleteComponentRequest;
 class DeleteComponentResponse;
 class DeleteCoreDeviceRequest;
 class DeleteCoreDeviceResponse;
+class DeleteDeploymentRequest;
+class DeleteDeploymentResponse;
 class DescribeComponentRequest;
 class DescribeComponentResponse;
+class DisassociateServiceRoleFromAccountRequest;
+class DisassociateServiceRoleFromAccountResponse;
 class GetComponentRequest;
 class GetComponentResponse;
 class GetComponentVersionArtifactRequest;
 class GetComponentVersionArtifactResponse;
+class GetConnectivityInfoRequest;
+class GetConnectivityInfoResponse;
 class GetCoreDeviceRequest;
 class GetCoreDeviceResponse;
 class GetDeploymentRequest;
 class GetDeploymentResponse;
+class GetServiceRoleForAccountRequest;
+class GetServiceRoleForAccountResponse;
 class ListClientDevicesAssociatedWithCoreDeviceRequest;
 class ListClientDevicesAssociatedWithCoreDeviceResponse;
 class ListComponentVersionsRequest;
@@ -76,6 +86,8 @@ class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateConnectivityInfoRequest;
+class UpdateConnectivityInfoResponse;
 
 class QTAWSGREENGRASSV2_EXPORT GreengrassV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -93,6 +105,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateServiceRoleToAccountResponse * associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request);
     BatchAssociateClientDeviceWithCoreDeviceResponse * batchAssociateClientDeviceWithCoreDevice(const BatchAssociateClientDeviceWithCoreDeviceRequest &request);
     BatchDisassociateClientDeviceFromCoreDeviceResponse * batchDisassociateClientDeviceFromCoreDevice(const BatchDisassociateClientDeviceFromCoreDeviceRequest &request);
     CancelDeploymentResponse * cancelDeployment(const CancelDeploymentRequest &request);
@@ -100,11 +113,15 @@ public slots:
     CreateDeploymentResponse * createDeployment(const CreateDeploymentRequest &request);
     DeleteComponentResponse * deleteComponent(const DeleteComponentRequest &request);
     DeleteCoreDeviceResponse * deleteCoreDevice(const DeleteCoreDeviceRequest &request);
+    DeleteDeploymentResponse * deleteDeployment(const DeleteDeploymentRequest &request);
     DescribeComponentResponse * describeComponent(const DescribeComponentRequest &request);
+    DisassociateServiceRoleFromAccountResponse * disassociateServiceRoleFromAccount(const DisassociateServiceRoleFromAccountRequest &request);
     GetComponentResponse * getComponent(const GetComponentRequest &request);
     GetComponentVersionArtifactResponse * getComponentVersionArtifact(const GetComponentVersionArtifactRequest &request);
+    GetConnectivityInfoResponse * getConnectivityInfo(const GetConnectivityInfoRequest &request);
     GetCoreDeviceResponse * getCoreDevice(const GetCoreDeviceRequest &request);
     GetDeploymentResponse * getDeployment(const GetDeploymentRequest &request);
+    GetServiceRoleForAccountResponse * getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request);
     ListClientDevicesAssociatedWithCoreDeviceResponse * listClientDevicesAssociatedWithCoreDevice(const ListClientDevicesAssociatedWithCoreDeviceRequest &request);
     ListComponentVersionsResponse * listComponentVersions(const ListComponentVersionsRequest &request);
     ListComponentsResponse * listComponents(const ListComponentsRequest &request);
@@ -116,6 +133,7 @@ public slots:
     ResolveComponentCandidatesResponse * resolveComponentCandidates(const ResolveComponentCandidatesRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateConnectivityInfoResponse * updateConnectivityInfo(const UpdateConnectivityInfoRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(GreengrassV2Client)

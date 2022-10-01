@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeEventSubscriptionsRequest
- * \brief The DescribeEventSubscriptionsRequest class provides an interface for RDS DescribeEventSubscriptions requests.
+ * \class QtAws::Rds::DescribeEventSubscriptionsRequest
+ * \brief The DescribeEventSubscriptionsRequest class provides an interface for Rds DescribeEventSubscriptions requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
 }
 
 /*!
- * \class QtAws::RDS::DescribeEventSubscriptionsRequestPrivate
+ * \class QtAws::Rds::DescribeEventSubscriptionsRequestPrivate
  * \brief The DescribeEventSubscriptionsRequestPrivate class provides private implementation for DescribeEventSubscriptionsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

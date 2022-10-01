@@ -24,16 +24,16 @@
 #include "ssorequest.h"
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class SsoRequest;
 
 class SsoRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SsoRequest::Action action; ///< SSO action to be performed.
-    QString apiVersion;        ///< SSO API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSO request (query string) parameters. @todo?
+    SsoRequest::Action action; ///< Sso action to be performed.
+    QString apiVersion;        ///< Sso API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sso request (query string) parameters. @todo?
 
     SsoRequestPrivate(const SsoRequest::Action action, SsoRequest * const q);
     SsoRequestPrivate(const SsoRequestPrivate &other, SsoRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

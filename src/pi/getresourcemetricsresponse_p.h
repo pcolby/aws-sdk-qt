@@ -23,7 +23,7 @@
 #include "piresponse_p.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class GetResourceMetricsResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

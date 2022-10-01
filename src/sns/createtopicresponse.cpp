@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CreateTopicResponse
- * \brief The CreateTopicResponse class provides an interace for SNS CreateTopic responses.
+ * \class QtAws::Sns::CreateTopicResponse
+ * \brief The CreateTopicResponse class provides an interace for Sns CreateTopic responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const CreateTopicRequest * CreateTopicResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS CreateTopic \a response.
+ * Parses a successful Sns CreateTopic \a response.
  */
 void CreateTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void CreateTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::CreateTopicResponsePrivate
+ * \class QtAws::Sns::CreateTopicResponsePrivate
  * \brief The CreateTopicResponsePrivate class provides private implementation for CreateTopicResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ CreateTopicResponsePrivate::CreateTopicResponsePrivate(
 }
 
 /*!
- * Parses a SNS CreateTopic response element from \a xml.
+ * Parses a Sns CreateTopic response element from \a xml.
  */
 void CreateTopicResponsePrivate::parseCreateTopicResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void CreateTopicResponsePrivate::parseCreateTopicResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

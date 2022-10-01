@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayResponsePrivate;
+class ApiGatewayResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT APIGatewayResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPIGATEWAY_EXPORT ApiGatewayResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    APIGatewayResponse(QObject * const parent = 0);
+    ApiGatewayResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    APIGatewayResponse(APIGatewayResponsePrivate * const d, QObject * const parent);
+    ApiGatewayResponse(ApiGatewayResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(APIGatewayResponse)
-    Q_DISABLE_COPY(APIGatewayResponse)
+    Q_DECLARE_PRIVATE(ApiGatewayResponse)
+    Q_DISABLE_COPY(ApiGatewayResponse)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

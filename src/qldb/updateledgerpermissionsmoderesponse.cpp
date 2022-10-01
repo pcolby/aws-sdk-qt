@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::UpdateLedgerPermissionsModeResponse
- * \brief The UpdateLedgerPermissionsModeResponse class provides an interace for QLDB UpdateLedgerPermissionsMode responses.
+ * \class QtAws::Qldb::UpdateLedgerPermissionsModeResponse
+ * \brief The UpdateLedgerPermissionsModeResponse class provides an interace for Qldb UpdateLedgerPermissionsMode responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const UpdateLedgerPermissionsModeRequest * UpdateLedgerPermissionsModeResponse::
 
 /*!
  * \reimp
- * Parses a successful QLDB UpdateLedgerPermissionsMode \a response.
+ * Parses a successful Qldb UpdateLedgerPermissionsMode \a response.
  */
 void UpdateLedgerPermissionsModeResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void UpdateLedgerPermissionsModeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::UpdateLedgerPermissionsModeResponsePrivate
+ * \class QtAws::Qldb::UpdateLedgerPermissionsModeResponsePrivate
  * \brief The UpdateLedgerPermissionsModeResponsePrivate class provides private implementation for UpdateLedgerPermissionsModeResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ UpdateLedgerPermissionsModeResponsePrivate::UpdateLedgerPermissionsModeResponseP
 }
 
 /*!
- * Parses a QLDB UpdateLedgerPermissionsMode response element from \a xml.
+ * Parses a Qldb UpdateLedgerPermissionsMode response element from \a xml.
  */
 void UpdateLedgerPermissionsModeResponsePrivate::parseUpdateLedgerPermissionsModeResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateLedgerPermissionsModeResponsePrivate::parseUpdateLedgerPermissionsMod
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

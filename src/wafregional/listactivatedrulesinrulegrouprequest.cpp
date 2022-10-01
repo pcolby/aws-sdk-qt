@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequest
- * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for WAFRegional ListActivatedRulesInRuleGroup requests.
+ * \class QtAws::WafRegional::ListActivatedRulesInRuleGroupRequest
+ * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for WafRegional ListActivatedRulesInRuleGroup requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listActivatedRulesInRuleGroup
+ * \sa WafRegionalClient::listActivatedRulesInRuleGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const ListActivatedRulesInRuleGroupRequest &other)
-    : WAFRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const
  * Constructs a ListActivatedRulesInRuleGroupRequest object.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest()
-    : WAFRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(WAFRegionalRequest::ListActivatedRulesInRuleGroupAction, this))
+    : WafRegionalRequest(new ListActivatedRulesInRuleGroupRequestPrivate(WafRegionalRequest::ListActivatedRulesInRuleGroupAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
 }
 
 /*!
- * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequestPrivate
+ * \class QtAws::WafRegional::ListActivatedRulesInRuleGroupRequestPrivate
  * \brief The ListActivatedRulesInRuleGroupRequestPrivate class provides private implementation for ListActivatedRulesInRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
-    const WAFRegionalRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const ListActivatedRulesInRuleGroupRequestPrivate &other, ListActivatedRulesInRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

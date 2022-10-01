@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSKINESISANALYTICS_LIBRARY)
 
 add_library(QtAwsKinesisAnalytics
+  qtawskinesisanalyticsglobal.h
+  kinesisanalyticsclient.h
+  kinesisanalyticsclient_p.h
+  kinesisanalyticsrequest.h
+  kinesisanalyticsrequest_p.h
+  kinesisanalyticsresponse.h
+  kinesisanalyticsresponse_p.h
   addapplicationcloudwatchloggingoptionrequest.h
   addapplicationcloudwatchloggingoptionrequest_p.h
   addapplicationcloudwatchloggingoptionresponse.h
   addapplicationcloudwatchloggingoptionresponse_p.h
-  addapplicationinputprocessingconfigurationrequest.h
-  addapplicationinputprocessingconfigurationrequest_p.h
-  addapplicationinputprocessingconfigurationresponse.h
-  addapplicationinputprocessingconfigurationresponse_p.h
   addapplicationinputrequest.h
   addapplicationinputrequest_p.h
   addapplicationinputresponse.h
   addapplicationinputresponse_p.h
+  addapplicationinputprocessingconfigurationrequest.h
+  addapplicationinputprocessingconfigurationrequest_p.h
+  addapplicationinputprocessingconfigurationresponse.h
+  addapplicationinputprocessingconfigurationresponse_p.h
   addapplicationoutputrequest.h
   addapplicationoutputrequest_p.h
   addapplicationoutputresponse.h
@@ -25,6 +32,10 @@ add_library(QtAwsKinesisAnalytics
   createapplicationrequest_p.h
   createapplicationresponse.h
   createapplicationresponse_p.h
+  deleteapplicationrequest.h
+  deleteapplicationrequest_p.h
+  deleteapplicationresponse.h
+  deleteapplicationresponse_p.h
   deleteapplicationcloudwatchloggingoptionrequest.h
   deleteapplicationcloudwatchloggingoptionrequest_p.h
   deleteapplicationcloudwatchloggingoptionresponse.h
@@ -41,10 +52,6 @@ add_library(QtAwsKinesisAnalytics
   deleteapplicationreferencedatasourcerequest_p.h
   deleteapplicationreferencedatasourceresponse.h
   deleteapplicationreferencedatasourceresponse_p.h
-  deleteapplicationrequest.h
-  deleteapplicationrequest_p.h
-  deleteapplicationresponse.h
-  deleteapplicationresponse_p.h
   describeapplicationrequest.h
   describeapplicationrequest_p.h
   describeapplicationresponse.h
@@ -53,12 +60,6 @@ add_library(QtAwsKinesisAnalytics
   discoverinputschemarequest_p.h
   discoverinputschemaresponse.h
   discoverinputschemaresponse_p.h
-  kinesisanalyticsclient.h
-  kinesisanalyticsclient_p.h
-  kinesisanalyticsrequest.h
-  kinesisanalyticsrequest_p.h
-  kinesisanalyticsresponse.h
-  kinesisanalyticsresponse_p.h
   listapplicationsrequest.h
   listapplicationsrequest_p.h
   listapplicationsresponse.h
@@ -67,7 +68,6 @@ add_library(QtAwsKinesisAnalytics
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawskinesisanalyticsglobal.h
   startapplicationrequest.h
   startapplicationrequest_p.h
   startapplicationresponse.h
@@ -88,18 +88,23 @@ add_library(QtAwsKinesisAnalytics
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
+  kinesisanalyticsclient.cpp
+  kinesisanalyticsrequest.cpp
+  kinesisanalyticsresponse.cpp
   addapplicationcloudwatchloggingoptionrequest.cpp
   addapplicationcloudwatchloggingoptionresponse.cpp
-  addapplicationinputprocessingconfigurationrequest.cpp
-  addapplicationinputprocessingconfigurationresponse.cpp
   addapplicationinputrequest.cpp
   addapplicationinputresponse.cpp
+  addapplicationinputprocessingconfigurationrequest.cpp
+  addapplicationinputprocessingconfigurationresponse.cpp
   addapplicationoutputrequest.cpp
   addapplicationoutputresponse.cpp
   addapplicationreferencedatasourcerequest.cpp
   addapplicationreferencedatasourceresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
+  deleteapplicationrequest.cpp
+  deleteapplicationresponse.cpp
   deleteapplicationcloudwatchloggingoptionrequest.cpp
   deleteapplicationcloudwatchloggingoptionresponse.cpp
   deleteapplicationinputprocessingconfigurationrequest.cpp
@@ -108,15 +113,10 @@ add_library(QtAwsKinesisAnalytics
   deleteapplicationoutputresponse.cpp
   deleteapplicationreferencedatasourcerequest.cpp
   deleteapplicationreferencedatasourceresponse.cpp
-  deleteapplicationrequest.cpp
-  deleteapplicationresponse.cpp
   describeapplicationrequest.cpp
   describeapplicationresponse.cpp
   discoverinputschemarequest.cpp
   discoverinputschemaresponse.cpp
-  kinesisanalyticsclient.cpp
-  kinesisanalyticsrequest.cpp
-  kinesisanalyticsresponse.cpp
   listapplicationsrequest.cpp
   listapplicationsresponse.cpp
   listtagsforresourcerequest.cpp

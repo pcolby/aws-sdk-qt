@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSWF_LIBRARY)
 
 add_library(QtAwsSwf
+  qtawsswfglobal.h
+  swfclient.h
+  swfclient_p.h
+  swfrequest.h
+  swfrequest_p.h
+  swfresponse.h
+  swfresponse_p.h
   countclosedworkflowexecutionsrequest.h
   countclosedworkflowexecutionsrequest_p.h
   countclosedworkflowexecutionsresponse.h
@@ -81,7 +88,6 @@ add_library(QtAwsSwf
   pollfordecisiontaskrequest_p.h
   pollfordecisiontaskresponse.h
   pollfordecisiontaskresponse_p.h
-  qtawsswfglobal.h
   recordactivitytaskheartbeatrequest.h
   recordactivitytaskheartbeatrequest_p.h
   recordactivitytaskheartbeatresponse.h
@@ -126,12 +132,6 @@ add_library(QtAwsSwf
   startworkflowexecutionrequest_p.h
   startworkflowexecutionresponse.h
   startworkflowexecutionresponse_p.h
-  swfclient.h
-  swfclient_p.h
-  swfrequest.h
-  swfrequest_p.h
-  swfresponse.h
-  swfresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -156,6 +156,9 @@ add_library(QtAwsSwf
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  swfclient.cpp
+  swfrequest.cpp
+  swfresponse.cpp
   countclosedworkflowexecutionsrequest.cpp
   countclosedworkflowexecutionsresponse.cpp
   countopenworkflowexecutionsrequest.cpp
@@ -218,9 +221,6 @@ add_library(QtAwsSwf
   signalworkflowexecutionresponse.cpp
   startworkflowexecutionrequest.cpp
   startworkflowexecutionresponse.cpp
-  swfclient.cpp
-  swfrequest.cpp
-  swfresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   terminateworkflowexecutionrequest.cpp

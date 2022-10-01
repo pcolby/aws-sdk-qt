@@ -24,7 +24,7 @@
 #include "deletereplicationjobrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class DeleteReplicationJobRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

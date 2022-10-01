@@ -24,14 +24,14 @@
 #include "deleteconfigurationsetrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class DeleteConfigurationSetRequest;
 
-class DeleteConfigurationSetRequestPrivate : public Sesv2RequestPrivate {
+class DeleteConfigurationSetRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    DeleteConfigurationSetRequestPrivate(const Sesv2Request::Action action,
+    DeleteConfigurationSetRequestPrivate(const SESv2Request::Action action,
                                    DeleteConfigurationSetRequest * const q);
     DeleteConfigurationSetRequestPrivate(const DeleteConfigurationSetRequestPrivate &other,
                                    DeleteConfigurationSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

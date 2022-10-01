@@ -30,17 +30,18 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorRequestPrivate;
+class IotDeviceAdvisorRequestPrivate;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT IotDeviceAdvisorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by IoTDeviceAdvisor.
+    /// Actions supported by IotDeviceAdvisor.
     enum Action {
         CreateSuiteDefinitionAction,
         DeleteSuiteDefinitionAction,
+        GetEndpointAction,
         GetSuiteDefinitionAction,
         GetSuiteRunAction,
         GetSuiteRunReportAction,
@@ -55,9 +56,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    IoTDeviceAdvisorRequest(const Action action);
-    IoTDeviceAdvisorRequest(const IoTDeviceAdvisorRequest &other);
-    IoTDeviceAdvisorRequest &operator=(const IoTDeviceAdvisorRequest &other);
+    IotDeviceAdvisorRequest(const Action action);
+    IotDeviceAdvisorRequest(const IotDeviceAdvisorRequest &other);
+    IotDeviceAdvisorRequest &operator=(const IotDeviceAdvisorRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -66,12 +67,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const IoTDeviceAdvisorRequest &other) const;
+    virtual bool operator==(const IotDeviceAdvisorRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
+    explicit IotDeviceAdvisorRequest(IotDeviceAdvisorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -84,11 +85,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(IoTDeviceAdvisorRequest)
+    Q_DECLARE_PRIVATE(IotDeviceAdvisorRequest)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

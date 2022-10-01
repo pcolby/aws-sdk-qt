@@ -24,16 +24,16 @@
 #include "eksrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class EksRequest;
 
 class EksRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EksRequest::Action action; ///< EKS action to be performed.
-    QString apiVersion;        ///< EKS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EKS request (query string) parameters. @todo?
+    EksRequest::Action action; ///< Eks action to be performed.
+    QString apiVersion;        ///< Eks API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Eks request (query string) parameters. @todo?
 
     EksRequestPrivate(const EksRequest::Action action, EksRequest * const q);
     EksRequestPrivate(const EksRequestPrivate &other, EksRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

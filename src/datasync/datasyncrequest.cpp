@@ -39,7 +39,11 @@ namespace DataSync {
  * \value CancelTaskExecutionAction DataSync CancelTaskExecution action.
  * \value CreateAgentAction DataSync CreateAgent action.
  * \value CreateLocationEfsAction DataSync CreateLocationEfs action.
+ * \value CreateLocationFsxLustreAction DataSync CreateLocationFsxLustre action.
+ * \value CreateLocationFsxOntapAction DataSync CreateLocationFsxOntap action.
+ * \value CreateLocationFsxOpenZfsAction DataSync CreateLocationFsxOpenZfs action.
  * \value CreateLocationFsxWindowsAction DataSync CreateLocationFsxWindows action.
+ * \value CreateLocationHdfsAction DataSync CreateLocationHdfs action.
  * \value CreateLocationNfsAction DataSync CreateLocationNfs action.
  * \value CreateLocationObjectStorageAction DataSync CreateLocationObjectStorage action.
  * \value CreateLocationS3Action DataSync CreateLocationS3 action.
@@ -50,7 +54,11 @@ namespace DataSync {
  * \value DeleteTaskAction DataSync DeleteTask action.
  * \value DescribeAgentAction DataSync DescribeAgent action.
  * \value DescribeLocationEfsAction DataSync DescribeLocationEfs action.
+ * \value DescribeLocationFsxLustreAction DataSync DescribeLocationFsxLustre action.
+ * \value DescribeLocationFsxOntapAction DataSync DescribeLocationFsxOntap action.
+ * \value DescribeLocationFsxOpenZfsAction DataSync DescribeLocationFsxOpenZfs action.
  * \value DescribeLocationFsxWindowsAction DataSync DescribeLocationFsxWindows action.
+ * \value DescribeLocationHdfsAction DataSync DescribeLocationHdfs action.
  * \value DescribeLocationNfsAction DataSync DescribeLocationNfs action.
  * \value DescribeLocationObjectStorageAction DataSync DescribeLocationObjectStorage action.
  * \value DescribeLocationS3Action DataSync DescribeLocationS3 action.
@@ -66,6 +74,7 @@ namespace DataSync {
  * \value TagResourceAction DataSync TagResource action.
  * \value UntagResourceAction DataSync UntagResource action.
  * \value UpdateAgentAction DataSync UpdateAgent action.
+ * \value UpdateLocationHdfsAction DataSync UpdateLocationHdfs action.
  * \value UpdateLocationNfsAction DataSync UpdateLocationNfs action.
  * \value UpdateLocationObjectStorageAction DataSync UpdateLocationObjectStorage action.
  * \value UpdateLocationSmbAction DataSync UpdateLocationSmb action.
@@ -278,7 +287,7 @@ QNetworkRequest DataSyncRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DataSyncRequestPrivate::DataSyncRequestPrivate(const DataSyncRequest::Action action, DataSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-09"))
 {
 
 }
@@ -315,7 +324,11 @@ QString DataSyncRequestPrivate::toString(const DataSyncRequest::Action &action)
         ActionToString(CancelTaskExecution);
         ActionToString(CreateAgent);
         ActionToString(CreateLocationEfs);
+        ActionToString(CreateLocationFsxLustre);
+        ActionToString(CreateLocationFsxOntap);
+        ActionToString(CreateLocationFsxOpenZfs);
         ActionToString(CreateLocationFsxWindows);
+        ActionToString(CreateLocationHdfs);
         ActionToString(CreateLocationNfs);
         ActionToString(CreateLocationObjectStorage);
         ActionToString(CreateLocationS3);
@@ -326,7 +339,11 @@ QString DataSyncRequestPrivate::toString(const DataSyncRequest::Action &action)
         ActionToString(DeleteTask);
         ActionToString(DescribeAgent);
         ActionToString(DescribeLocationEfs);
+        ActionToString(DescribeLocationFsxLustre);
+        ActionToString(DescribeLocationFsxOntap);
+        ActionToString(DescribeLocationFsxOpenZfs);
         ActionToString(DescribeLocationFsxWindows);
+        ActionToString(DescribeLocationHdfs);
         ActionToString(DescribeLocationNfs);
         ActionToString(DescribeLocationObjectStorage);
         ActionToString(DescribeLocationS3);
@@ -342,6 +359,7 @@ QString DataSyncRequestPrivate::toString(const DataSyncRequest::Action &action)
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAgent);
+        ActionToString(UpdateLocationHdfs);
         ActionToString(UpdateLocationNfs);
         ActionToString(UpdateLocationObjectStorage);
         ActionToString(UpdateLocationSmb);

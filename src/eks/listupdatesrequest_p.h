@@ -24,7 +24,7 @@
 #include "listupdatesrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class ListUpdatesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

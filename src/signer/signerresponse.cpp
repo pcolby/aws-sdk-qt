@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::signerResponse
- * \brief The signerResponse class provides an interface for signer responses.
+ * \class QtAws::Signer::SignerResponse
+ * \brief The SignerResponse class provides an interface for Signer responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a signerResponse object with parent \a parent.
+ * Constructs a SignerResponse object with parent \a parent.
  */
-signerResponse::signerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new signerResponsePrivate(this), parent)
+SignerResponse::SignerResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SignerResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a signerResponse object with private implementation \a d,
+ * Constructs a SignerResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from signerResponsePrivate.
+ * implementation that inherits from SignerResponsePrivate.
  */
-signerResponse::signerResponse(signerResponsePrivate * const d, QObject * const parent)
+SignerResponse::SignerResponse(SignerResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ signerResponse::signerResponse(signerResponsePrivate * const d, QObject * const 
 /*!
  * \reimp
  */
-void signerResponse::parseFailure(QIODevice &response)
+void SignerResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(signerResponse);
+    //Q_D(SignerResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void signerResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::signerResponsePrivate
- * \brief The signerResponsePrivate class provides private implementation for signerResponse.
+ * \class QtAws::Signer::SignerResponsePrivate
+ * \brief The SignerResponsePrivate class provides private implementation for SignerResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a signerResponsePrivate object with public implementation \a q.
+ * Constructs a SignerResponsePrivate object with public implementation \a q.
  */
-signerResponsePrivate::signerResponsePrivate(
-    signerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SignerResponsePrivate::SignerResponsePrivate(
+    SignerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

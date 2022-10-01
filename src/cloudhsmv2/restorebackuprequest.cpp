@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::RestoreBackupRequest
- * \brief The RestoreBackupRequest class provides an interface for CloudHSMV2 RestoreBackup requests.
+ * \class QtAws::CloudHsmV2::RestoreBackupRequest
+ * \brief The RestoreBackupRequest class provides an interface for CloudHsmV2 RestoreBackup requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::restoreBackup
+ * \sa CloudHsmV2Client::restoreBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RestoreBackupRequest::RestoreBackupRequest(const RestoreBackupRequest &other)
-    : CloudHSMV2Request(new RestoreBackupRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new RestoreBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ RestoreBackupRequest::RestoreBackupRequest(const RestoreBackupRequest &other)
  * Constructs a RestoreBackupRequest object.
  */
 RestoreBackupRequest::RestoreBackupRequest()
-    : CloudHSMV2Request(new RestoreBackupRequestPrivate(CloudHSMV2Request::RestoreBackupAction, this))
+    : CloudHsmV2Request(new RestoreBackupRequestPrivate(CloudHsmV2Request::RestoreBackupAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * RestoreBackupRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::CloudHSMV2::RestoreBackupRequestPrivate
+ * \class QtAws::CloudHsmV2::RestoreBackupRequestPrivate
  * \brief The RestoreBackupRequestPrivate class provides private implementation for RestoreBackupRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a RestoreBackupRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a RestoreBackupRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 RestoreBackupRequestPrivate::RestoreBackupRequestPrivate(
-    const CloudHSMV2Request::Action action, RestoreBackupRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, RestoreBackupRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ RestoreBackupRequestPrivate::RestoreBackupRequestPrivate(
  */
 RestoreBackupRequestPrivate::RestoreBackupRequestPrivate(
     const RestoreBackupRequestPrivate &other, RestoreBackupRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

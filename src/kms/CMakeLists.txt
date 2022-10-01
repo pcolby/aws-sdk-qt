@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSKMS_LIBRARY)
 
 add_library(QtAwsKms
+  qtawskmsglobal.h
+  kmsclient.h
+  kmsclient_p.h
+  kmsrequest.h
+  kmsrequest_p.h
+  kmsresponse.h
+  kmsresponse_p.h
   cancelkeydeletionrequest.h
   cancelkeydeletionrequest_p.h
   cancelkeydeletionresponse.h
@@ -73,6 +80,10 @@ add_library(QtAwsKms
   encryptrequest_p.h
   encryptresponse.h
   encryptresponse_p.h
+  generatedatakeyrequest.h
+  generatedatakeyrequest_p.h
+  generatedatakeyresponse.h
+  generatedatakeyresponse_p.h
   generatedatakeypairrequest.h
   generatedatakeypairrequest_p.h
   generatedatakeypairresponse.h
@@ -81,14 +92,14 @@ add_library(QtAwsKms
   generatedatakeypairwithoutplaintextrequest_p.h
   generatedatakeypairwithoutplaintextresponse.h
   generatedatakeypairwithoutplaintextresponse_p.h
-  generatedatakeyrequest.h
-  generatedatakeyrequest_p.h
-  generatedatakeyresponse.h
-  generatedatakeyresponse_p.h
   generatedatakeywithoutplaintextrequest.h
   generatedatakeywithoutplaintextrequest_p.h
   generatedatakeywithoutplaintextresponse.h
   generatedatakeywithoutplaintextresponse_p.h
+  generatemacrequest.h
+  generatemacrequest_p.h
+  generatemacresponse.h
+  generatemacresponse_p.h
   generaterandomrequest.h
   generaterandomrequest_p.h
   generaterandomresponse.h
@@ -113,12 +124,6 @@ add_library(QtAwsKms
   importkeymaterialrequest_p.h
   importkeymaterialresponse.h
   importkeymaterialresponse_p.h
-  kmsclient.h
-  kmsclient_p.h
-  kmsrequest.h
-  kmsrequest_p.h
-  kmsresponse.h
-  kmsresponse_p.h
   listaliasesrequest.h
   listaliasesrequest_p.h
   listaliasesresponse.h
@@ -147,11 +152,14 @@ add_library(QtAwsKms
   putkeypolicyrequest_p.h
   putkeypolicyresponse.h
   putkeypolicyresponse_p.h
-  qtawskmsglobal.h
   reencryptrequest.h
   reencryptrequest_p.h
   reencryptresponse.h
   reencryptresponse_p.h
+  replicatekeyrequest.h
+  replicatekeyrequest_p.h
+  replicatekeyresponse.h
+  replicatekeyresponse_p.h
   retiregrantrequest.h
   retiregrantrequest_p.h
   retiregrantresponse.h
@@ -188,10 +196,21 @@ add_library(QtAwsKms
   updatekeydescriptionrequest_p.h
   updatekeydescriptionresponse.h
   updatekeydescriptionresponse_p.h
+  updateprimaryregionrequest.h
+  updateprimaryregionrequest_p.h
+  updateprimaryregionresponse.h
+  updateprimaryregionresponse_p.h
   verifyrequest.h
   verifyrequest_p.h
   verifyresponse.h
   verifyresponse_p.h
+  verifymacrequest.h
+  verifymacrequest_p.h
+  verifymacresponse.h
+  verifymacresponse_p.h
+  kmsclient.cpp
+  kmsrequest.cpp
+  kmsresponse.cpp
   cancelkeydeletionrequest.cpp
   cancelkeydeletionresponse.cpp
   connectcustomkeystorerequest.cpp
@@ -228,14 +247,16 @@ add_library(QtAwsKms
   enablekeyrotationresponse.cpp
   encryptrequest.cpp
   encryptresponse.cpp
+  generatedatakeyrequest.cpp
+  generatedatakeyresponse.cpp
   generatedatakeypairrequest.cpp
   generatedatakeypairresponse.cpp
   generatedatakeypairwithoutplaintextrequest.cpp
   generatedatakeypairwithoutplaintextresponse.cpp
-  generatedatakeyrequest.cpp
-  generatedatakeyresponse.cpp
   generatedatakeywithoutplaintextrequest.cpp
   generatedatakeywithoutplaintextresponse.cpp
+  generatemacrequest.cpp
+  generatemacresponse.cpp
   generaterandomrequest.cpp
   generaterandomresponse.cpp
   getkeypolicyrequest.cpp
@@ -248,9 +269,6 @@ add_library(QtAwsKms
   getpublickeyresponse.cpp
   importkeymaterialrequest.cpp
   importkeymaterialresponse.cpp
-  kmsclient.cpp
-  kmsrequest.cpp
-  kmsresponse.cpp
   listaliasesrequest.cpp
   listaliasesresponse.cpp
   listgrantsrequest.cpp
@@ -267,6 +285,8 @@ add_library(QtAwsKms
   putkeypolicyresponse.cpp
   reencryptrequest.cpp
   reencryptresponse.cpp
+  replicatekeyrequest.cpp
+  replicatekeyresponse.cpp
   retiregrantrequest.cpp
   retiregrantresponse.cpp
   revokegrantrequest.cpp
@@ -285,8 +305,12 @@ add_library(QtAwsKms
   updatecustomkeystoreresponse.cpp
   updatekeydescriptionrequest.cpp
   updatekeydescriptionresponse.cpp
+  updateprimaryregionrequest.cpp
+  updateprimaryregionresponse.cpp
   verifyrequest.cpp
-  verifyresponse.cpp)
+  verifyresponse.cpp
+  verifymacrequest.cpp
+  verifymacresponse.cpp)
 
 target_link_libraries(QtAwsKms
   PRIVATE QtAwsCore

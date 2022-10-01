@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::PutRestApiRequest
- * \brief The PutRestApiRequest class provides an interface for APIGateway PutRestApi requests.
+ * \class QtAws::ApiGateway::PutRestApiRequest
+ * \brief The PutRestApiRequest class provides an interface for ApiGateway PutRestApi requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::putRestApi
+ * \sa ApiGatewayClient::putRestApi
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutRestApiRequest::PutRestApiRequest(const PutRestApiRequest &other)
-    : APIGatewayRequest(new PutRestApiRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new PutRestApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ PutRestApiRequest::PutRestApiRequest(const PutRestApiRequest &other)
  * Constructs a PutRestApiRequest object.
  */
 PutRestApiRequest::PutRestApiRequest()
-    : APIGatewayRequest(new PutRestApiRequestPrivate(APIGatewayRequest::PutRestApiAction, this))
+    : ApiGatewayRequest(new PutRestApiRequestPrivate(ApiGatewayRequest::PutRestApiAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * PutRestApiRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::APIGateway::PutRestApiRequestPrivate
+ * \class QtAws::ApiGateway::PutRestApiRequestPrivate
  * \brief The PutRestApiRequestPrivate class provides private implementation for PutRestApiRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a PutRestApiRequestPrivate object for APIGateway \a action,
+ * Constructs a PutRestApiRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 PutRestApiRequestPrivate::PutRestApiRequestPrivate(
-    const APIGatewayRequest::Action action, PutRestApiRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, PutRestApiRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ PutRestApiRequestPrivate::PutRestApiRequestPrivate(
  */
 PutRestApiRequestPrivate::PutRestApiRequestPrivate(
     const PutRestApiRequestPrivate &other, PutRestApiRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

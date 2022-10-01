@@ -24,14 +24,14 @@
 #include "describepagerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class DescribePageRequest;
 
-class DescribePageRequestPrivate : public SSMContactsRequestPrivate {
+class DescribePageRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    DescribePageRequestPrivate(const SSMContactsRequest::Action action,
+    DescribePageRequestPrivate(const SsmContactsRequest::Action action,
                                    DescribePageRequest * const q);
     DescribePageRequestPrivate(const DescribePageRequestPrivate &other,
                                    DescribePageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

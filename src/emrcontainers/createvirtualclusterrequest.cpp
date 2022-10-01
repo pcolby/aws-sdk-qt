@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CreateVirtualClusterRequest
- * \brief The CreateVirtualClusterRequest class provides an interface for EMRContainers CreateVirtualCluster requests.
+ * \class QtAws::Emrcontainers::CreateVirtualClusterRequest
+ * \brief The CreateVirtualClusterRequest class provides an interface for Emrcontainers CreateVirtualCluster requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::createVirtualCluster
+ * \sa EmrcontainersClient::createVirtualCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateVirtualClusterRequest::CreateVirtualClusterRequest(const CreateVirtualClusterRequest &other)
-    : EMRContainersRequest(new CreateVirtualClusterRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new CreateVirtualClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ CreateVirtualClusterRequest::CreateVirtualClusterRequest(const CreateVirtualClus
  * Constructs a CreateVirtualClusterRequest object.
  */
 CreateVirtualClusterRequest::CreateVirtualClusterRequest()
-    : EMRContainersRequest(new CreateVirtualClusterRequestPrivate(EMRContainersRequest::CreateVirtualClusterAction, this))
+    : EmrcontainersRequest(new CreateVirtualClusterRequestPrivate(EmrcontainersRequest::CreateVirtualClusterAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * CreateVirtualClusterRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EMRContainers::CreateVirtualClusterRequestPrivate
+ * \class QtAws::Emrcontainers::CreateVirtualClusterRequestPrivate
  * \brief The CreateVirtualClusterRequestPrivate class provides private implementation for CreateVirtualClusterRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a CreateVirtualClusterRequestPrivate object for EMRContainers \a action,
+ * Constructs a CreateVirtualClusterRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 CreateVirtualClusterRequestPrivate::CreateVirtualClusterRequestPrivate(
-    const EMRContainersRequest::Action action, CreateVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, CreateVirtualClusterRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ CreateVirtualClusterRequestPrivate::CreateVirtualClusterRequestPrivate(
  */
 CreateVirtualClusterRequestPrivate::CreateVirtualClusterRequestPrivate(
     const CreateVirtualClusterRequestPrivate &other, CreateVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

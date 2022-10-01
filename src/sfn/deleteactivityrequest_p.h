@@ -24,7 +24,7 @@
 #include "deleteactivityrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class DeleteActivityRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

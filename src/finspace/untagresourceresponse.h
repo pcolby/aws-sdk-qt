@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSFINSPACE_EXPORT UntagResourceResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT UntagResourceResponse : public FinspaceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

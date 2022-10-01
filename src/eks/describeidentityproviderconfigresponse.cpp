@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeIdentityProviderConfigResponse
- * \brief The DescribeIdentityProviderConfigResponse class provides an interace for EKS DescribeIdentityProviderConfig responses.
+ * \class QtAws::Eks::DescribeIdentityProviderConfigResponse
+ * \brief The DescribeIdentityProviderConfigResponse class provides an interace for Eks DescribeIdentityProviderConfig responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeIdentityProviderConfigRequest * DescribeIdentityProviderConfigResp
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeIdentityProviderConfig \a response.
+ * Parses a successful Eks DescribeIdentityProviderConfig \a response.
  */
 void DescribeIdentityProviderConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeIdentityProviderConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeIdentityProviderConfigResponsePrivate
+ * \class QtAws::Eks::DescribeIdentityProviderConfigResponsePrivate
  * \brief The DescribeIdentityProviderConfigResponsePrivate class provides private implementation for DescribeIdentityProviderConfigResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeIdentityProviderConfigResponsePrivate::DescribeIdentityProviderConfigRes
 }
 
 /*!
- * Parses a EKS DescribeIdentityProviderConfig response element from \a xml.
+ * Parses a Eks DescribeIdentityProviderConfig response element from \a xml.
  */
 void DescribeIdentityProviderConfigResponsePrivate::parseDescribeIdentityProviderConfigResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeIdentityProviderConfigResponsePrivate::parseDescribeIdentityProvide
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

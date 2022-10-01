@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCOGNITOIDENTITYPROVIDER_LIBRARY)
 
 add_library(QtAwsCognitoIdentityProvider
+  qtawscognitoidentityproviderglobal.h
+  cognitoidentityproviderclient.h
+  cognitoidentityproviderclient_p.h
+  cognitoidentityproviderrequest.h
+  cognitoidentityproviderrequest_p.h
+  cognitoidentityproviderresponse.h
+  cognitoidentityproviderresponse_p.h
   addcustomattributesrequest.h
   addcustomattributesrequest_p.h
   addcustomattributesresponse.h
@@ -17,14 +24,14 @@ add_library(QtAwsCognitoIdentityProvider
   admincreateuserrequest_p.h
   admincreateuserresponse.h
   admincreateuserresponse_p.h
-  admindeleteuserattributesrequest.h
-  admindeleteuserattributesrequest_p.h
-  admindeleteuserattributesresponse.h
-  admindeleteuserattributesresponse_p.h
   admindeleteuserrequest.h
   admindeleteuserrequest_p.h
   admindeleteuserresponse.h
   admindeleteuserresponse_p.h
+  admindeleteuserattributesrequest.h
+  admindeleteuserattributesrequest_p.h
+  admindeleteuserattributesresponse.h
+  admindeleteuserattributesresponse_p.h
   admindisableproviderforuserrequest.h
   admindisableproviderforuserrequest_p.h
   admindisableproviderforuserresponse.h
@@ -117,12 +124,6 @@ add_library(QtAwsCognitoIdentityProvider
   changepasswordrequest_p.h
   changepasswordresponse.h
   changepasswordresponse_p.h
-  cognitoidentityproviderclient.h
-  cognitoidentityproviderclient_p.h
-  cognitoidentityproviderrequest.h
-  cognitoidentityproviderrequest_p.h
-  cognitoidentityproviderresponse.h
-  cognitoidentityproviderresponse_p.h
   confirmdevicerequest.h
   confirmdevicerequest_p.h
   confirmdeviceresponse.h
@@ -151,6 +152,10 @@ add_library(QtAwsCognitoIdentityProvider
   createuserimportjobrequest_p.h
   createuserimportjobresponse.h
   createuserimportjobresponse_p.h
+  createuserpoolrequest.h
+  createuserpoolrequest_p.h
+  createuserpoolresponse.h
+  createuserpoolresponse_p.h
   createuserpoolclientrequest.h
   createuserpoolclientrequest_p.h
   createuserpoolclientresponse.h
@@ -159,10 +164,6 @@ add_library(QtAwsCognitoIdentityProvider
   createuserpooldomainrequest_p.h
   createuserpooldomainresponse.h
   createuserpooldomainresponse_p.h
-  createuserpoolrequest.h
-  createuserpoolrequest_p.h
-  createuserpoolresponse.h
-  createuserpoolresponse_p.h
   deletegrouprequest.h
   deletegrouprequest_p.h
   deletegroupresponse.h
@@ -175,10 +176,18 @@ add_library(QtAwsCognitoIdentityProvider
   deleteresourceserverrequest_p.h
   deleteresourceserverresponse.h
   deleteresourceserverresponse_p.h
+  deleteuserrequest.h
+  deleteuserrequest_p.h
+  deleteuserresponse.h
+  deleteuserresponse_p.h
   deleteuserattributesrequest.h
   deleteuserattributesrequest_p.h
   deleteuserattributesresponse.h
   deleteuserattributesresponse_p.h
+  deleteuserpoolrequest.h
+  deleteuserpoolrequest_p.h
+  deleteuserpoolresponse.h
+  deleteuserpoolresponse_p.h
   deleteuserpoolclientrequest.h
   deleteuserpoolclientrequest_p.h
   deleteuserpoolclientresponse.h
@@ -187,14 +196,6 @@ add_library(QtAwsCognitoIdentityProvider
   deleteuserpooldomainrequest_p.h
   deleteuserpooldomainresponse.h
   deleteuserpooldomainresponse_p.h
-  deleteuserpoolrequest.h
-  deleteuserpoolrequest_p.h
-  deleteuserpoolresponse.h
-  deleteuserpoolresponse_p.h
-  deleteuserrequest.h
-  deleteuserrequest_p.h
-  deleteuserresponse.h
-  deleteuserresponse_p.h
   describeidentityproviderrequest.h
   describeidentityproviderrequest_p.h
   describeidentityproviderresponse.h
@@ -211,6 +212,10 @@ add_library(QtAwsCognitoIdentityProvider
   describeuserimportjobrequest_p.h
   describeuserimportjobresponse.h
   describeuserimportjobresponse_p.h
+  describeuserpoolrequest.h
+  describeuserpoolrequest_p.h
+  describeuserpoolresponse.h
+  describeuserpoolresponse_p.h
   describeuserpoolclientrequest.h
   describeuserpoolclientrequest_p.h
   describeuserpoolclientresponse.h
@@ -219,10 +224,6 @@ add_library(QtAwsCognitoIdentityProvider
   describeuserpooldomainrequest_p.h
   describeuserpooldomainresponse.h
   describeuserpooldomainresponse_p.h
-  describeuserpoolrequest.h
-  describeuserpoolrequest_p.h
-  describeuserpoolresponse.h
-  describeuserpoolresponse_p.h
   forgetdevicerequest.h
   forgetdevicerequest_p.h
   forgetdeviceresponse.h
@@ -255,6 +256,10 @@ add_library(QtAwsCognitoIdentityProvider
   getuicustomizationrequest_p.h
   getuicustomizationresponse.h
   getuicustomizationresponse_p.h
+  getuserrequest.h
+  getuserrequest_p.h
+  getuserresponse.h
+  getuserresponse_p.h
   getuserattributeverificationcoderequest.h
   getuserattributeverificationcoderequest_p.h
   getuserattributeverificationcoderesponse.h
@@ -263,10 +268,6 @@ add_library(QtAwsCognitoIdentityProvider
   getuserpoolmfaconfigrequest_p.h
   getuserpoolmfaconfigresponse.h
   getuserpoolmfaconfigresponse_p.h
-  getuserrequest.h
-  getuserrequest_p.h
-  getuserresponse.h
-  getuserresponse_p.h
   globalsignoutrequest.h
   globalsignoutrequest_p.h
   globalsignoutresponse.h
@@ -307,15 +308,14 @@ add_library(QtAwsCognitoIdentityProvider
   listuserpoolsrequest_p.h
   listuserpoolsresponse.h
   listuserpoolsresponse_p.h
-  listusersingrouprequest.h
-  listusersingrouprequest_p.h
-  listusersingroupresponse.h
-  listusersingroupresponse_p.h
   listusersrequest.h
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  qtawscognitoidentityproviderglobal.h
+  listusersingrouprequest.h
+  listusersingrouprequest_p.h
+  listusersingroupresponse.h
+  listusersingroupresponse_p.h
   resendconfirmationcoderequest.h
   resendconfirmationcoderequest_p.h
   resendconfirmationcoderesponse.h
@@ -392,6 +392,10 @@ add_library(QtAwsCognitoIdentityProvider
   updateuserattributesrequest_p.h
   updateuserattributesresponse.h
   updateuserattributesresponse_p.h
+  updateuserpoolrequest.h
+  updateuserpoolrequest_p.h
+  updateuserpoolresponse.h
+  updateuserpoolresponse_p.h
   updateuserpoolclientrequest.h
   updateuserpoolclientrequest_p.h
   updateuserpoolclientresponse.h
@@ -400,10 +404,6 @@ add_library(QtAwsCognitoIdentityProvider
   updateuserpooldomainrequest_p.h
   updateuserpooldomainresponse.h
   updateuserpooldomainresponse_p.h
-  updateuserpoolrequest.h
-  updateuserpoolrequest_p.h
-  updateuserpoolresponse.h
-  updateuserpoolresponse_p.h
   verifysoftwaretokenrequest.h
   verifysoftwaretokenrequest_p.h
   verifysoftwaretokenresponse.h
@@ -412,6 +412,9 @@ add_library(QtAwsCognitoIdentityProvider
   verifyuserattributerequest_p.h
   verifyuserattributeresponse.h
   verifyuserattributeresponse_p.h
+  cognitoidentityproviderclient.cpp
+  cognitoidentityproviderrequest.cpp
+  cognitoidentityproviderresponse.cpp
   addcustomattributesrequest.cpp
   addcustomattributesresponse.cpp
   adminaddusertogrouprequest.cpp
@@ -420,10 +423,10 @@ add_library(QtAwsCognitoIdentityProvider
   adminconfirmsignupresponse.cpp
   admincreateuserrequest.cpp
   admincreateuserresponse.cpp
-  admindeleteuserattributesrequest.cpp
-  admindeleteuserattributesresponse.cpp
   admindeleteuserrequest.cpp
   admindeleteuserresponse.cpp
+  admindeleteuserattributesrequest.cpp
+  admindeleteuserattributesresponse.cpp
   admindisableproviderforuserrequest.cpp
   admindisableproviderforuserresponse.cpp
   admindisableuserrequest.cpp
@@ -470,9 +473,6 @@ add_library(QtAwsCognitoIdentityProvider
   associatesoftwaretokenresponse.cpp
   changepasswordrequest.cpp
   changepasswordresponse.cpp
-  cognitoidentityproviderclient.cpp
-  cognitoidentityproviderrequest.cpp
-  cognitoidentityproviderresponse.cpp
   confirmdevicerequest.cpp
   confirmdeviceresponse.cpp
   confirmforgotpasswordrequest.cpp
@@ -487,28 +487,28 @@ add_library(QtAwsCognitoIdentityProvider
   createresourceserverresponse.cpp
   createuserimportjobrequest.cpp
   createuserimportjobresponse.cpp
+  createuserpoolrequest.cpp
+  createuserpoolresponse.cpp
   createuserpoolclientrequest.cpp
   createuserpoolclientresponse.cpp
   createuserpooldomainrequest.cpp
   createuserpooldomainresponse.cpp
-  createuserpoolrequest.cpp
-  createuserpoolresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
   deleteidentityproviderrequest.cpp
   deleteidentityproviderresponse.cpp
   deleteresourceserverrequest.cpp
   deleteresourceserverresponse.cpp
+  deleteuserrequest.cpp
+  deleteuserresponse.cpp
   deleteuserattributesrequest.cpp
   deleteuserattributesresponse.cpp
+  deleteuserpoolrequest.cpp
+  deleteuserpoolresponse.cpp
   deleteuserpoolclientrequest.cpp
   deleteuserpoolclientresponse.cpp
   deleteuserpooldomainrequest.cpp
   deleteuserpooldomainresponse.cpp
-  deleteuserpoolrequest.cpp
-  deleteuserpoolresponse.cpp
-  deleteuserrequest.cpp
-  deleteuserresponse.cpp
   describeidentityproviderrequest.cpp
   describeidentityproviderresponse.cpp
   describeresourceserverrequest.cpp
@@ -517,12 +517,12 @@ add_library(QtAwsCognitoIdentityProvider
   describeriskconfigurationresponse.cpp
   describeuserimportjobrequest.cpp
   describeuserimportjobresponse.cpp
+  describeuserpoolrequest.cpp
+  describeuserpoolresponse.cpp
   describeuserpoolclientrequest.cpp
   describeuserpoolclientresponse.cpp
   describeuserpooldomainrequest.cpp
   describeuserpooldomainresponse.cpp
-  describeuserpoolrequest.cpp
-  describeuserpoolresponse.cpp
   forgetdevicerequest.cpp
   forgetdeviceresponse.cpp
   forgotpasswordrequest.cpp
@@ -539,12 +539,12 @@ add_library(QtAwsCognitoIdentityProvider
   getsigningcertificateresponse.cpp
   getuicustomizationrequest.cpp
   getuicustomizationresponse.cpp
+  getuserrequest.cpp
+  getuserresponse.cpp
   getuserattributeverificationcoderequest.cpp
   getuserattributeverificationcoderesponse.cpp
   getuserpoolmfaconfigrequest.cpp
   getuserpoolmfaconfigresponse.cpp
-  getuserrequest.cpp
-  getuserresponse.cpp
   globalsignoutrequest.cpp
   globalsignoutresponse.cpp
   initiateauthrequest.cpp
@@ -565,10 +565,10 @@ add_library(QtAwsCognitoIdentityProvider
   listuserpoolclientsresponse.cpp
   listuserpoolsrequest.cpp
   listuserpoolsresponse.cpp
-  listusersingrouprequest.cpp
-  listusersingroupresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  listusersingrouprequest.cpp
+  listusersingroupresponse.cpp
   resendconfirmationcoderequest.cpp
   resendconfirmationcoderesponse.cpp
   respondtoauthchallengerequest.cpp
@@ -607,12 +607,12 @@ add_library(QtAwsCognitoIdentityProvider
   updateresourceserverresponse.cpp
   updateuserattributesrequest.cpp
   updateuserattributesresponse.cpp
+  updateuserpoolrequest.cpp
+  updateuserpoolresponse.cpp
   updateuserpoolclientrequest.cpp
   updateuserpoolclientresponse.cpp
   updateuserpooldomainrequest.cpp
   updateuserpooldomainresponse.cpp
-  updateuserpoolrequest.cpp
-  updateuserpoolresponse.cpp
   verifysoftwaretokenrequest.cpp
   verifysoftwaretokenresponse.cpp
   verifyuserattributerequest.cpp

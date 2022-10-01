@@ -24,7 +24,7 @@
 #include "getviolationdetailsrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class GetViolationDetailsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeEventsResponse
- * \brief The DescribeEventsResponse class provides an interace for DAX DescribeEvents responses.
+ * \class QtAws::Dax::DescribeEventsResponse
+ * \brief The DescribeEventsResponse class provides an interace for Dax DescribeEvents responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX DescribeEvents \a response.
+ * Parses a successful Dax DescribeEvents \a response.
  */
 void DescribeEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DescribeEventsResponsePrivate
+ * \class QtAws::Dax::DescribeEventsResponsePrivate
  * \brief The DescribeEventsResponsePrivate class provides private implementation for DescribeEventsResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 }
 
 /*!
- * Parses a DAX DescribeEvents response element from \a xml.
+ * Parses a Dax DescribeEvents response element from \a xml.
  */
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

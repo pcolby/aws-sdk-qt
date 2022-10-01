@@ -23,11 +23,11 @@
 #include "emrcontainersresponse_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class StartJobRunResponse;
 
-class StartJobRunResponsePrivate : public EMRContainersResponsePrivate {
+class StartJobRunResponsePrivate : public EmrcontainersResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

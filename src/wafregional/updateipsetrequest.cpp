@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateIPSetRequest
- * \brief The UpdateIPSetRequest class provides an interface for WAFRegional UpdateIPSet requests.
+ * \class QtAws::WafRegional::UpdateIPSetRequest
+ * \brief The UpdateIPSetRequest class provides an interface for WafRegional UpdateIPSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateIPSet
+ * \sa WafRegionalClient::updateIPSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
-    : WAFRegionalRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
  * Constructs a UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
-    : WAFRegionalRequest(new UpdateIPSetRequestPrivate(WAFRegionalRequest::UpdateIPSetAction, this))
+    : WafRegionalRequest(new UpdateIPSetRequestPrivate(WafRegionalRequest::UpdateIPSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateIPSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateIPSetRequestPrivate
  * \brief The UpdateIPSetRequestPrivate class provides private implementation for UpdateIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateIPSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateIPSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateIPSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

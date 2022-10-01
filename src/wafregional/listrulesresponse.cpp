@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListRulesResponse
- * \brief The ListRulesResponse class provides an interace for WAFRegional ListRules responses.
+ * \class QtAws::WafRegional::ListRulesResponse
+ * \brief The ListRulesResponse class provides an interace for WafRegional ListRules responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listRules
+ * \sa WafRegionalClient::listRules
  */
 
 /*!
@@ -67,7 +67,7 @@ ListRulesResponse::ListRulesResponse(
         const ListRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListRulesResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListRulesResponsePrivate(this), parent)
 {
     setRequest(new ListRulesRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListRulesRequest * ListRulesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListRules \a response.
+ * Parses a successful WafRegional ListRules \a response.
  */
 void ListRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListRulesResponsePrivate
+ * \class QtAws::WafRegional::ListRulesResponsePrivate
  * \brief The ListRulesResponsePrivate class provides private implementation for ListRulesResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListRulesResponsePrivate object with public implementation \a q.
  */
 ListRulesResponsePrivate::ListRulesResponsePrivate(
-    ListRulesResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListRulesResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListRules response element from \a xml.
+ * Parses a WafRegional ListRules response element from \a xml.
  */
 void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

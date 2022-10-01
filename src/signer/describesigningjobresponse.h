@@ -24,11 +24,11 @@
 #include "describesigningjobrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class DescribeSigningJobResponsePrivate;
 
-class QTAWSSIGNER_EXPORT DescribeSigningJobResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT DescribeSigningJobResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

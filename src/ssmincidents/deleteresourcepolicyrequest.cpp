@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResourcePolicyRequest
- * \brief The DeleteResourcePolicyRequest class provides an interface for SSMIncidents DeleteResourcePolicy requests.
+ * \class QtAws::SsmIncidents::DeleteResourcePolicyRequest
+ * \brief The DeleteResourcePolicyRequest class provides an interface for SsmIncidents DeleteResourcePolicy requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteResourcePolicy
+ * \sa SsmIncidentsClient::deleteResourcePolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteResourcePolicyRequest::DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other)
-    : SSMIncidentsRequest(new DeleteResourcePolicyRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new DeleteResourcePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ DeleteResourcePolicyRequest::DeleteResourcePolicyRequest(const DeleteResourcePol
  * Constructs a DeleteResourcePolicyRequest object.
  */
 DeleteResourcePolicyRequest::DeleteResourcePolicyRequest()
-    : SSMIncidentsRequest(new DeleteResourcePolicyRequestPrivate(SSMIncidentsRequest::DeleteResourcePolicyAction, this))
+    : SsmIncidentsRequest(new DeleteResourcePolicyRequestPrivate(SsmIncidentsRequest::DeleteResourcePolicyAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResourcePolicyRequestPrivate
+ * \class QtAws::SsmIncidents::DeleteResourcePolicyRequestPrivate
  * \brief The DeleteResourcePolicyRequestPrivate class provides private implementation for DeleteResourcePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a DeleteResourcePolicyRequestPrivate object for SSMIncidents \a action,
+ * Constructs a DeleteResourcePolicyRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
-    const SSMIncidentsRequest::Action action, DeleteResourcePolicyRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, DeleteResourcePolicyRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const DeleteResourcePolicyRequestPrivate &other, DeleteResourcePolicyRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

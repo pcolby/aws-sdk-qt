@@ -23,16 +23,24 @@
 #include "core/awssignaturev4.h"
 #include "analyzedocumentrequest.h"
 #include "analyzedocumentresponse.h"
+#include "analyzeexpenserequest.h"
+#include "analyzeexpenseresponse.h"
+#include "analyzeidrequest.h"
+#include "analyzeidresponse.h"
 #include "detectdocumenttextrequest.h"
 #include "detectdocumenttextresponse.h"
 #include "getdocumentanalysisrequest.h"
 #include "getdocumentanalysisresponse.h"
 #include "getdocumenttextdetectionrequest.h"
 #include "getdocumenttextdetectionresponse.h"
+#include "getexpenseanalysisrequest.h"
+#include "getexpenseanalysisresponse.h"
 #include "startdocumentanalysisrequest.h"
 #include "startdocumentanalysisresponse.h"
 #include "startdocumenttextdetectionrequest.h"
 #include "startdocumenttextdetectionresponse.h"
+#include "startexpenseanalysisrequest.h"
+#include "startexpenseanalysisresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -142,7 +150,12 @@ TextractClient::TextractClient(
  * lines and words that are detected in the document are returned (including text that doesn't have a relationship with the
  * value of <code>FeatureTypes</code>).
  *
- * </p </li> </ul>
+ * </p </li> <li>
+ *
+ * Queries.A QUERIES_RESULT Block object contains the answer to the query, the alias associated and an ID that connect it
+ * to the query asked. This Block also contains a location and attached confidence
+ *
+ * score> </li> </ul>
  *
  * Selection elements such as check boxes and option buttons (radio buttons) can be detected in form data and in tables. A
  * SELECTION_ELEMENT <code>Block</code> object contains information about a selection element, including the selection
@@ -171,13 +184,54 @@ AnalyzeDocumentResponse * TextractClient::analyzeDocument(const AnalyzeDocumentR
 
 /*!
  * Sends \a request to the TextractClient service, and returns a pointer to an
+ * AnalyzeExpenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>AnalyzeExpense</code> synchronously analyzes an input document for financially related relationships between
+ *
+ * text>
+ *
+ * Information is returned as <code>ExpenseDocuments</code> and seperated as
+ *
+ * follows> <ul> <li>
+ *
+ * <code>LineItemGroups</code>- A data set containing <code>LineItems</code> which store information about the lines of
+ * text, such as an item purchased and its price on a
+ *
+ * receipt> </li> <li>
+ *
+ * <code>SummaryFields</code>- Contains all other information a receipt, such as header information or the vendors
+ */
+AnalyzeExpenseResponse * TextractClient::analyzeExpense(const AnalyzeExpenseRequest &request)
+{
+    return qobject_cast<AnalyzeExpenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TextractClient service, and returns a pointer to an
+ * AnalyzeIDResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Analyzes identity documents for relevant information. This information is extracted and returned as
+ * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.Unlike
+ * other Amazon Textract operations, <code>AnalyzeID</code> doesn't return any Geometry
+ */
+AnalyzeIDResponse * TextractClient::analyzeID(const AnalyzeIDRequest &request)
+{
+    return qobject_cast<AnalyzeIDResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TextractClient service, and returns a pointer to an
  * DetectDocumentTextResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Detects text in the input document. Amazon Textract can detect lines of text and the words that make up a line of text.
- * The input document must be an image in JPEG or PNG format. <code>DetectDocumentText</code> returns the detected text in
- * an array of <a>Block</a> objects.
+ * The input document must be an image in JPEG, PNG, PDF, or TIFF format. <code>DetectDocumentText</code> returns the
+ * detected text in an array of <a>Block</a> objects.
  *
  * </p
  *
@@ -238,7 +292,12 @@ DetectDocumentTextResponse * TextractClient::detectDocumentText(const DetectDocu
  * lines and words that are detected in the document are returned (including text that doesn't have a relationship with the
  * value of the <code>StartDocumentAnalysis</code> <code>FeatureTypes</code> input parameter).
  *
- * </p </li> </ul>
+ * </p </li> <li>
+ *
+ * Queries. A QUERIES_RESULT Block object contains the answer to the query, the alias associated and an ID that connect it
+ * to the query asked. This Block also contains a location and attached confidence
+ *
+ * scor> </li> </ul>
  *
  * Selection elements such as check boxes and option buttons (radio buttons) can be detected in form data and in tables. A
  * SELECTION_ELEMENT <code>Block</code> object contains information about a selection element, including the selection
@@ -308,6 +367,41 @@ GetDocumentTextDetectionResponse * TextractClient::getDocumentTextDetection(cons
 
 /*!
  * Sends \a request to the TextractClient service, and returns a pointer to an
+ * GetExpenseAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the results for an Amazon Textract asynchronous operation that analyzes invoices and receipts. Amazon Textract
+ * finds contact information, items purchased, and vendor name, from input invoices and
+ *
+ * receipts>
+ *
+ * You start asynchronous invoice/receipt analysis by calling <a>StartExpenseAnalysis</a>, which returns a job identifier
+ * (<code>JobId</code>). Upon completion of the invoice/receipt analysis, Amazon Textract publishes the completion status
+ * to the Amazon Simple Notification Service (Amazon SNS) topic. This topic must be registered in the initial call to
+ * <code>StartExpenseAnalysis</code>. To get the results of the invoice/receipt analysis operation, first ensure that the
+ * status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call <code>GetExpenseAnalysis</code>,
+ * and pass the job identifier (<code>JobId</code>) from the initial call to
+ *
+ * <code>StartExpenseAnalysis</code>>
+ *
+ * Use the MaxResults parameter to limit the number of blocks that are returned. If there are more results than specified
+ * in <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token
+ * for getting the next set of results. To get the next page of results, call <code>GetExpenseAnalysis</code>, and populate
+ * the <code>NextToken</code> request parameter with the token value that's returned from the previous call to
+ *
+ * <code>GetExpenseAnalysis</code>>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/invoices-receipts.html">Analyzing
+ * Invoices and
+ */
+GetExpenseAnalysisResponse * TextractClient::getExpenseAnalysis(const GetExpenseAnalysisRequest &request)
+{
+    return qobject_cast<GetExpenseAnalysisResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TextractClient service, and returns a pointer to an
  * StartDocumentAnalysisResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -317,8 +411,9 @@ GetDocumentTextDetectionResponse * TextractClient::getDocumentTextDetection(cons
  *
  * elements>
  *
- * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The documents
- * are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the document.
+ * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPEG, PNG, TIFF, and PDF format. The
+ * documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the
+ * document.
  *
  * </p
  *
@@ -349,7 +444,7 @@ StartDocumentAnalysisResponse * TextractClient::startDocumentAnalysis(const Star
  *
  * text>
  *
- * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The
+ * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPEG, PNG, TIFF, and PDF format. The
  * documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the
  * document.
  *
@@ -369,6 +464,39 @@ StartDocumentAnalysisResponse * TextractClient::startDocumentAnalysis(const Star
 StartDocumentTextDetectionResponse * TextractClient::startDocumentTextDetection(const StartDocumentTextDetectionRequest &request)
 {
     return qobject_cast<StartDocumentTextDetectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TextractClient service, and returns a pointer to an
+ * StartExpenseAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts the asynchronous analysis of invoices or receipts for data like contact information, items purchased, and vendor
+ *
+ * names>
+ *
+ * <code>StartExpenseAnalysis</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The documents
+ * must be stored in an Amazon S3 bucket. Use the <a>DocumentLocation</a> parameter to specify the name of your S3 bucket
+ * and the name of the document in that bucket.
+ *
+ * </p
+ *
+ * <code>StartExpenseAnalysis</code> returns a job identifier (<code>JobId</code>) that you will provide to
+ * <code>GetExpenseAnalysis</code> to retrieve the results of the operation. When the analysis of the input
+ * invoices/receipts is finished, Amazon Textract publishes a completion status to the Amazon Simple Notification Service
+ * (Amazon SNS) topic that you provide to the <code>NotificationChannel</code>. To obtain the results of the invoice and
+ * receipt analysis operation, ensure that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If
+ * so, call <a>GetExpenseAnalysis</a>, and pass the job identifier (<code>JobId</code>) that was returned by your call to
+ *
+ * <code>StartExpenseAnalysis</code>>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/textract/latest/dg/invoice-receipts.html">Analyzing
+ * Invoices and
+ */
+StartExpenseAnalysisResponse * TextractClient::startExpenseAnalysis(const StartExpenseAnalysisRequest &request)
+{
+    return qobject_cast<StartExpenseAnalysisResponse *>(send(request));
 }
 
 /*!

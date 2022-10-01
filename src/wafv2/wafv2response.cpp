@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 /*!
- * \class QtAws::WAFV2::Wafv2Response
- * \brief The Wafv2Response class provides an interface for WAFV2 responses.
+ * \class QtAws::Wafv2::Wafv2Response
+ * \brief The Wafv2Response class provides an interface for Wafv2 responses.
  *
- * \inmodule QtAwsWAFV2
+ * \inmodule QtAwsWafv2
  */
 
 /*!
@@ -76,11 +76,11 @@ void Wafv2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFV2::Wafv2ResponsePrivate
+ * \class QtAws::Wafv2::Wafv2ResponsePrivate
  * \brief The Wafv2ResponsePrivate class provides private implementation for Wafv2Response.
  * \internal
  *
- * \inmodule QtAwsWAFV2
+ * \inmodule QtAwsWafv2
  */
 
 /*!
@@ -92,5 +92,5 @@ Wafv2ResponsePrivate::Wafv2ResponsePrivate(
 
 }
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws

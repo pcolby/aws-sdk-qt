@@ -36,6 +36,7 @@ namespace GuardDuty {
  * This enum describes the actions that can be performed as GuardDuty
  * requests.
  *
+ * \value AcceptAdministratorInvitationAction GuardDuty AcceptAdministratorInvitation action.
  * \value AcceptInvitationAction GuardDuty AcceptInvitation action.
  * \value ArchiveFindingsAction GuardDuty ArchiveFindings action.
  * \value CreateDetectorAction GuardDuty CreateDetector action.
@@ -53,21 +54,26 @@ namespace GuardDuty {
  * \value DeleteMembersAction GuardDuty DeleteMembers action.
  * \value DeletePublishingDestinationAction GuardDuty DeletePublishingDestination action.
  * \value DeleteThreatIntelSetAction GuardDuty DeleteThreatIntelSet action.
+ * \value DescribeMalwareScansAction GuardDuty DescribeMalwareScans action.
  * \value DescribeOrganizationConfigurationAction GuardDuty DescribeOrganizationConfiguration action.
  * \value DescribePublishingDestinationAction GuardDuty DescribePublishingDestination action.
  * \value DisableOrganizationAdminAccountAction GuardDuty DisableOrganizationAdminAccount action.
+ * \value DisassociateFromAdministratorAccountAction GuardDuty DisassociateFromAdministratorAccount action.
  * \value DisassociateFromMasterAccountAction GuardDuty DisassociateFromMasterAccount action.
  * \value DisassociateMembersAction GuardDuty DisassociateMembers action.
  * \value EnableOrganizationAdminAccountAction GuardDuty EnableOrganizationAdminAccount action.
+ * \value GetAdministratorAccountAction GuardDuty GetAdministratorAccount action.
  * \value GetDetectorAction GuardDuty GetDetector action.
  * \value GetFilterAction GuardDuty GetFilter action.
  * \value GetFindingsAction GuardDuty GetFindings action.
  * \value GetFindingsStatisticsAction GuardDuty GetFindingsStatistics action.
  * \value GetIPSetAction GuardDuty GetIPSet action.
  * \value GetInvitationsCountAction GuardDuty GetInvitationsCount action.
+ * \value GetMalwareScanSettingsAction GuardDuty GetMalwareScanSettings action.
  * \value GetMasterAccountAction GuardDuty GetMasterAccount action.
  * \value GetMemberDetectorsAction GuardDuty GetMemberDetectors action.
  * \value GetMembersAction GuardDuty GetMembers action.
+ * \value GetRemainingFreeTrialDaysAction GuardDuty GetRemainingFreeTrialDays action.
  * \value GetThreatIntelSetAction GuardDuty GetThreatIntelSet action.
  * \value GetUsageStatisticsAction GuardDuty GetUsageStatistics action.
  * \value InviteMembersAction GuardDuty InviteMembers action.
@@ -90,6 +96,7 @@ namespace GuardDuty {
  * \value UpdateFilterAction GuardDuty UpdateFilter action.
  * \value UpdateFindingsFeedbackAction GuardDuty UpdateFindingsFeedback action.
  * \value UpdateIPSetAction GuardDuty UpdateIPSet action.
+ * \value UpdateMalwareScanSettingsAction GuardDuty UpdateMalwareScanSettings action.
  * \value UpdateMemberDetectorsAction GuardDuty UpdateMemberDetectors action.
  * \value UpdateOrganizationConfigurationAction GuardDuty UpdateOrganizationConfiguration action.
  * \value UpdatePublishingDestinationAction GuardDuty UpdatePublishingDestination action.
@@ -301,7 +308,7 @@ QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action action, GuardDutyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-28"))
 {
 
 }
@@ -335,6 +342,7 @@ QString GuardDutyRequestPrivate::toString(const GuardDutyRequest::Action &action
     #define ActionToString(action) \
         case GuardDutyRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AcceptAdministratorInvitation);
         ActionToString(AcceptInvitation);
         ActionToString(ArchiveFindings);
         ActionToString(CreateDetector);
@@ -352,21 +360,26 @@ QString GuardDutyRequestPrivate::toString(const GuardDutyRequest::Action &action
         ActionToString(DeleteMembers);
         ActionToString(DeletePublishingDestination);
         ActionToString(DeleteThreatIntelSet);
+        ActionToString(DescribeMalwareScans);
         ActionToString(DescribeOrganizationConfiguration);
         ActionToString(DescribePublishingDestination);
         ActionToString(DisableOrganizationAdminAccount);
+        ActionToString(DisassociateFromAdministratorAccount);
         ActionToString(DisassociateFromMasterAccount);
         ActionToString(DisassociateMembers);
         ActionToString(EnableOrganizationAdminAccount);
+        ActionToString(GetAdministratorAccount);
         ActionToString(GetDetector);
         ActionToString(GetFilter);
         ActionToString(GetFindings);
         ActionToString(GetFindingsStatistics);
         ActionToString(GetIPSet);
         ActionToString(GetInvitationsCount);
+        ActionToString(GetMalwareScanSettings);
         ActionToString(GetMasterAccount);
         ActionToString(GetMemberDetectors);
         ActionToString(GetMembers);
+        ActionToString(GetRemainingFreeTrialDays);
         ActionToString(GetThreatIntelSet);
         ActionToString(GetUsageStatistics);
         ActionToString(InviteMembers);
@@ -389,6 +402,7 @@ QString GuardDutyRequestPrivate::toString(const GuardDutyRequest::Action &action
         ActionToString(UpdateFilter);
         ActionToString(UpdateFindingsFeedback);
         ActionToString(UpdateIPSet);
+        ActionToString(UpdateMalwareScanSettings);
         ActionToString(UpdateMemberDetectors);
         ActionToString(UpdateOrganizationConfiguration);
         ActionToString(UpdatePublishingDestination);

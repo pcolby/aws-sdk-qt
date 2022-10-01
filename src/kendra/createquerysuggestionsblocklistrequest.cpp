@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateQuerySuggestionsBlockListRequest
- * \brief The CreateQuerySuggestionsBlockListRequest class provides an interface for kendra CreateQuerySuggestionsBlockList requests.
+ * \class QtAws::Kendra::CreateQuerySuggestionsBlockListRequest
+ * \brief The CreateQuerySuggestionsBlockListRequest class provides an interface for Kendra CreateQuerySuggestionsBlockList requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createQuerySuggestionsBlockList
+ * \sa KendraClient::createQuerySuggestionsBlockList
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateQuerySuggestionsBlockListRequest::CreateQuerySuggestionsBlockListRequest(const CreateQuerySuggestionsBlockListRequest &other)
-    : kendraRequest(new CreateQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new CreateQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateQuerySuggestionsBlockListRequest::CreateQuerySuggestionsBlockListRequest(c
  * Constructs a CreateQuerySuggestionsBlockListRequest object.
  */
 CreateQuerySuggestionsBlockListRequest::CreateQuerySuggestionsBlockListRequest()
-    : kendraRequest(new CreateQuerySuggestionsBlockListRequestPrivate(kendraRequest::CreateQuerySuggestionsBlockListAction, this))
+    : KendraRequest(new CreateQuerySuggestionsBlockListRequestPrivate(KendraRequest::CreateQuerySuggestionsBlockListAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateQuerySuggestionsBlockListRequest::respo
 }
 
 /*!
- * \class QtAws::kendra::CreateQuerySuggestionsBlockListRequestPrivate
+ * \class QtAws::Kendra::CreateQuerySuggestionsBlockListRequestPrivate
  * \brief The CreateQuerySuggestionsBlockListRequestPrivate class provides private implementation for CreateQuerySuggestionsBlockListRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a CreateQuerySuggestionsBlockListRequestPrivate object for kendra \a action,
+ * Constructs a CreateQuerySuggestionsBlockListRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 CreateQuerySuggestionsBlockListRequestPrivate::CreateQuerySuggestionsBlockListRequestPrivate(
-    const kendraRequest::Action action, CreateQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, CreateQuerySuggestionsBlockListRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateQuerySuggestionsBlockListRequestPrivate::CreateQuerySuggestionsBlockListRe
  */
 CreateQuerySuggestionsBlockListRequestPrivate::CreateQuerySuggestionsBlockListRequestPrivate(
     const CreateQuerySuggestionsBlockListRequestPrivate &other, CreateQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

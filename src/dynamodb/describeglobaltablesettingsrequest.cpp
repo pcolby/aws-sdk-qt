@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeGlobalTableSettingsRequest
- * \brief The DescribeGlobalTableSettingsRequest class provides an interface for DynamoDB DescribeGlobalTableSettings requests.
+ * \class QtAws::DynamoDb::DescribeGlobalTableSettingsRequest
+ * \brief The DescribeGlobalTableSettingsRequest class provides an interface for DynamoDb DescribeGlobalTableSettings requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeGlobalTableSettings
+ * \sa DynamoDbClient::describeGlobalTableSettings
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeGlobalTableSettingsRequest::DescribeGlobalTableSettingsRequest(const DescribeGlobalTableSettingsRequest &other)
-    : DynamoDBRequest(new DescribeGlobalTableSettingsRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeGlobalTableSettingsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeGlobalTableSettingsRequest::DescribeGlobalTableSettingsRequest(const Des
  * Constructs a DescribeGlobalTableSettingsRequest object.
  */
 DescribeGlobalTableSettingsRequest::DescribeGlobalTableSettingsRequest()
-    : DynamoDBRequest(new DescribeGlobalTableSettingsRequestPrivate(DynamoDBRequest::DescribeGlobalTableSettingsAction, this))
+    : DynamoDbRequest(new DescribeGlobalTableSettingsRequestPrivate(DynamoDbRequest::DescribeGlobalTableSettingsAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeGlobalTableSettingsRequest::response(
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeGlobalTableSettingsRequestPrivate
+ * \class QtAws::DynamoDb::DescribeGlobalTableSettingsRequestPrivate
  * \brief The DescribeGlobalTableSettingsRequestPrivate class provides private implementation for DescribeGlobalTableSettingsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeGlobalTableSettingsRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeGlobalTableSettingsRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeGlobalTableSettingsRequestPrivate::DescribeGlobalTableSettingsRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeGlobalTableSettingsRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeGlobalTableSettingsRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeGlobalTableSettingsRequestPrivate::DescribeGlobalTableSettingsRequestPri
  */
 DescribeGlobalTableSettingsRequestPrivate::DescribeGlobalTableSettingsRequestPrivate(
     const DescribeGlobalTableSettingsRequestPrivate &other, DescribeGlobalTableSettingsRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

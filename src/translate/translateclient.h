@@ -44,6 +44,8 @@ class GetTerminologyRequest;
 class GetTerminologyResponse;
 class ImportTerminologyRequest;
 class ImportTerminologyResponse;
+class ListLanguagesRequest;
+class ListLanguagesResponse;
 class ListParallelDataRequest;
 class ListParallelDataResponse;
 class ListTerminologiesRequest;
@@ -82,6 +84,7 @@ public slots:
     GetParallelDataResponse * getParallelData(const GetParallelDataRequest &request);
     GetTerminologyResponse * getTerminology(const GetTerminologyRequest &request);
     ImportTerminologyResponse * importTerminology(const ImportTerminologyRequest &request);
+    ListLanguagesResponse * listLanguages(const ListLanguagesRequest &request);
     ListParallelDataResponse * listParallelData(const ListParallelDataRequest &request);
     ListTerminologiesResponse * listTerminologies(const ListTerminologiesRequest &request);
     ListTextTranslationJobsResponse * listTextTranslationJobs(const ListTextTranslationJobsRequest &request);

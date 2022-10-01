@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CopyDBSnapshotRequest
- * \brief The CopyDBSnapshotRequest class provides an interface for RDS CopyDBSnapshot requests.
+ * \class QtAws::Rds::CopyDBSnapshotRequest
+ * \brief The CopyDBSnapshotRequest class provides an interface for Rds CopyDBSnapshot requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::RDS::CopyDBSnapshotRequestPrivate
+ * \class QtAws::Rds::CopyDBSnapshotRequestPrivate
  * \brief The CopyDBSnapshotRequestPrivate class provides private implementation for CopyDBSnapshotRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

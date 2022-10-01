@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlansRequest
- * \brief The GetUsagePlansRequest class provides an interface for APIGateway GetUsagePlans requests.
+ * \class QtAws::ApiGateway::GetUsagePlansRequest
+ * \brief The GetUsagePlansRequest class provides an interface for ApiGateway GetUsagePlans requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getUsagePlans
+ * \sa ApiGatewayClient::getUsagePlans
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUsagePlansRequest::GetUsagePlansRequest(const GetUsagePlansRequest &other)
-    : APIGatewayRequest(new GetUsagePlansRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetUsagePlansRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetUsagePlansRequest::GetUsagePlansRequest(const GetUsagePlansRequest &other)
  * Constructs a GetUsagePlansRequest object.
  */
 GetUsagePlansRequest::GetUsagePlansRequest()
-    : APIGatewayRequest(new GetUsagePlansRequestPrivate(APIGatewayRequest::GetUsagePlansAction, this))
+    : ApiGatewayRequest(new GetUsagePlansRequestPrivate(ApiGatewayRequest::GetUsagePlansAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlansRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlansRequestPrivate
+ * \class QtAws::ApiGateway::GetUsagePlansRequestPrivate
  * \brief The GetUsagePlansRequestPrivate class provides private implementation for GetUsagePlansRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetUsagePlansRequestPrivate object for APIGateway \a action,
+ * Constructs a GetUsagePlansRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
-    const APIGatewayRequest::Action action, GetUsagePlansRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetUsagePlansRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
  */
 GetUsagePlansRequestPrivate::GetUsagePlansRequestPrivate(
     const GetUsagePlansRequestPrivate &other, GetUsagePlansRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

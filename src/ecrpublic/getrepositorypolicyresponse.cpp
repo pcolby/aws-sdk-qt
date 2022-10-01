@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryPolicyResponse
- * \brief The GetRepositoryPolicyResponse class provides an interace for ECRPublic GetRepositoryPolicy responses.
+ * \class QtAws::EcrPublic::GetRepositoryPolicyResponse
+ * \brief The GetRepositoryPolicyResponse class provides an interace for EcrPublic GetRepositoryPolicy responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getRepositoryPolicy
+ * \sa EcrPublicClient::getRepositoryPolicy
  */
 
 /*!
@@ -52,7 +52,7 @@ GetRepositoryPolicyResponse::GetRepositoryPolicyResponse(
         const GetRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new GetRepositoryPolicyResponsePrivate(this), parent)
+    : EcrPublicResponse(new GetRepositoryPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetRepositoryPolicyRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const GetRepositoryPolicyRequest * GetRepositoryPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic GetRepositoryPolicy \a response.
+ * Parses a successful EcrPublic GetRepositoryPolicy \a response.
  */
 void GetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void GetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryPolicyResponsePrivate
+ * \class QtAws::EcrPublic::GetRepositoryPolicyResponsePrivate
  * \brief The GetRepositoryPolicyResponsePrivate class provides private implementation for GetRepositoryPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a GetRepositoryPolicyResponsePrivate object with public implementation \a q.
  */
 GetRepositoryPolicyResponsePrivate::GetRepositoryPolicyResponsePrivate(
-    GetRepositoryPolicyResponse * const q) : ECRPublicResponsePrivate(q)
+    GetRepositoryPolicyResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic GetRepositoryPolicy response element from \a xml.
+ * Parses a EcrPublic GetRepositoryPolicy response element from \a xml.
  */
 void GetRepositoryPolicyResponsePrivate::parseGetRepositoryPolicyResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void GetRepositoryPolicyResponsePrivate::parseGetRepositoryPolicyResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

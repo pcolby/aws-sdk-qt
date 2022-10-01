@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateAuthorizerResponse
- * \brief The UpdateAuthorizerResponse class provides an interace for APIGateway UpdateAuthorizer responses.
+ * \class QtAws::ApiGateway::UpdateAuthorizerResponse
+ * \brief The UpdateAuthorizerResponse class provides an interace for ApiGateway UpdateAuthorizer responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateAuthorizer
+ * \sa ApiGatewayClient::updateAuthorizer
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateAuthorizerResponse::UpdateAuthorizerResponse(
         const UpdateAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateAuthorizerResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new UpdateAuthorizerRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateAuthorizerRequest * UpdateAuthorizerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateAuthorizer \a response.
+ * Parses a successful ApiGateway UpdateAuthorizer \a response.
  */
 void UpdateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateAuthorizerResponsePrivate
+ * \class QtAws::ApiGateway::UpdateAuthorizerResponsePrivate
  * \brief The UpdateAuthorizerResponsePrivate class provides private implementation for UpdateAuthorizerResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateAuthorizerResponsePrivate object with public implementation \a q.
  */
 UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponsePrivate(
-    UpdateAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateAuthorizerResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateAuthorizer response element from \a xml.
+ * Parses a ApiGateway UpdateAuthorizer response element from \a xml.
  */
 void UpdateAuthorizerResponsePrivate::parseUpdateAuthorizerResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateAuthorizerResponsePrivate::parseUpdateAuthorizerResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

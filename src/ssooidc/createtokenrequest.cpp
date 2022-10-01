@@ -23,13 +23,13 @@
 #include "ssooidcrequest_p.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::CreateTokenRequest
- * \brief The CreateTokenRequest class provides an interface for SSOOIDC CreateToken requests.
+ * \class QtAws::SsoOidc::CreateTokenRequest
+ * \brief The CreateTokenRequest class provides an interface for SsoOidc CreateToken requests.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -54,14 +54,14 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::createToken
+ * \sa SsoOidcClient::createToken
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateTokenRequest::CreateTokenRequest(const CreateTokenRequest &other)
-    : SsooidcRequest(new CreateTokenRequestPrivate(*other.d_func(), this))
+    : SsoOidcRequest(new CreateTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -70,7 +70,7 @@ CreateTokenRequest::CreateTokenRequest(const CreateTokenRequest &other)
  * Constructs a CreateTokenRequest object.
  */
 CreateTokenRequest::CreateTokenRequest()
-    : SsooidcRequest(new CreateTokenRequestPrivate(SsooidcRequest::CreateTokenAction, this))
+    : SsoOidcRequest(new CreateTokenRequestPrivate(SsoOidcRequest::CreateTokenAction, this))
 {
 
 }
@@ -95,20 +95,20 @@ QtAws::Core::AwsAbstractResponse * CreateTokenRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SSOOIDC::CreateTokenRequestPrivate
+ * \class QtAws::SsoOidc::CreateTokenRequestPrivate
  * \brief The CreateTokenRequestPrivate class provides private implementation for CreateTokenRequest.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a CreateTokenRequestPrivate object for Ssooidc \a action,
+ * Constructs a CreateTokenRequestPrivate object for SsoOidc \a action,
  * with public implementation \a q.
  */
 CreateTokenRequestPrivate::CreateTokenRequestPrivate(
-    const SsooidcRequest::Action action, CreateTokenRequest * const q)
-    : SsooidcRequestPrivate(action, q)
+    const SsoOidcRequest::Action action, CreateTokenRequest * const q)
+    : SsoOidcRequestPrivate(action, q)
 {
 
 }
@@ -121,10 +121,10 @@ CreateTokenRequestPrivate::CreateTokenRequestPrivate(
  */
 CreateTokenRequestPrivate::CreateTokenRequestPrivate(
     const CreateTokenRequestPrivate &other, CreateTokenRequest * const q)
-    : SsooidcRequestPrivate(other, q)
+    : SsoOidcRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

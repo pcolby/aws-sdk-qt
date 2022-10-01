@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetIdentityVerificationAttributesRequest
- * \brief The GetIdentityVerificationAttributesRequest class provides an interface for SES GetIdentityVerificationAttributes requests.
+ * \class QtAws::Ses::GetIdentityVerificationAttributesRequest
+ * \brief The GetIdentityVerificationAttributesRequest class provides an interface for Ses GetIdentityVerificationAttributes requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::res
 }
 
 /*!
- * \class QtAws::SES::GetIdentityVerificationAttributesRequestPrivate
+ * \class QtAws::Ses::GetIdentityVerificationAttributesRequestPrivate
  * \brief The GetIdentityVerificationAttributesRequestPrivate class provides private implementation for GetIdentityVerificationAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttribut
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

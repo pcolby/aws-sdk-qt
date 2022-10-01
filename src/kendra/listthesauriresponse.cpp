@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListThesauriResponse
- * \brief The ListThesauriResponse class provides an interace for kendra ListThesauri responses.
+ * \class QtAws::Kendra::ListThesauriResponse
+ * \brief The ListThesauriResponse class provides an interace for Kendra ListThesauri responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listThesauri
+ * \sa KendraClient::listThesauri
  */
 
 /*!
@@ -45,7 +45,7 @@ ListThesauriResponse::ListThesauriResponse(
         const ListThesauriRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ListThesauriResponsePrivate(this), parent)
+    : KendraResponse(new ListThesauriResponsePrivate(this), parent)
 {
     setRequest(new ListThesauriRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListThesauriRequest * ListThesauriResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra ListThesauri \a response.
+ * Parses a successful Kendra ListThesauri \a response.
  */
 void ListThesauriResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListThesauriResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ListThesauriResponsePrivate
+ * \class QtAws::Kendra::ListThesauriResponsePrivate
  * \brief The ListThesauriResponsePrivate class provides private implementation for ListThesauriResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ListThesauriResponsePrivate object with public implementation \a q.
  */
 ListThesauriResponsePrivate::ListThesauriResponsePrivate(
-    ListThesauriResponse * const q) : kendraResponsePrivate(q)
+    ListThesauriResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ListThesauri response element from \a xml.
+ * Parses a Kendra ListThesauri response element from \a xml.
  */
 void ListThesauriResponsePrivate::parseListThesauriResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListThesauriResponsePrivate::parseListThesauriResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

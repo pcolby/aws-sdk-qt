@@ -31,6 +31,8 @@
 #include "createendpointresponse.h"
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionresponse.h"
+#include "createfleetadvisorcollectorrequest.h"
+#include "createfleetadvisorcollectorresponse.h"
 #include "createreplicationinstancerequest.h"
 #include "createreplicationinstanceresponse.h"
 #include "createreplicationsubnetgrouprequest.h"
@@ -45,6 +47,10 @@
 #include "deleteendpointresponse.h"
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionresponse.h"
+#include "deletefleetadvisorcollectorrequest.h"
+#include "deletefleetadvisorcollectorresponse.h"
+#include "deletefleetadvisordatabasesrequest.h"
+#include "deletefleetadvisordatabasesresponse.h"
 #include "deletereplicationinstancerequest.h"
 #include "deletereplicationinstanceresponse.h"
 #include "deletereplicationsubnetgrouprequest.h"
@@ -73,6 +79,16 @@
 #include "describeeventsubscriptionsresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describefleetadvisorcollectorsrequest.h"
+#include "describefleetadvisorcollectorsresponse.h"
+#include "describefleetadvisordatabasesrequest.h"
+#include "describefleetadvisordatabasesresponse.h"
+#include "describefleetadvisorlsaanalysisrequest.h"
+#include "describefleetadvisorlsaanalysisresponse.h"
+#include "describefleetadvisorschemaobjectsummaryrequest.h"
+#include "describefleetadvisorschemaobjectsummaryresponse.h"
+#include "describefleetadvisorschemasrequest.h"
+#include "describefleetadvisorschemasresponse.h"
 #include "describeorderablereplicationinstancesrequest.h"
 #include "describeorderablereplicationinstancesresponse.h"
 #include "describependingmaintenanceactionsrequest.h"
@@ -121,6 +137,8 @@
 #include "reloadtablesresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
+#include "runfleetadvisorlsaanalysisrequest.h"
+#include "runfleetadvisorlsaanalysisresponse.h"
 #include "startreplicationtaskrequest.h"
 #include "startreplicationtaskresponse.h"
 #include "startreplicationtaskassessmentrequest.h"
@@ -131,6 +149,8 @@
 #include "stopreplicationtaskresponse.h"
 #include "testconnectionrequest.h"
 #include "testconnectionresponse.h"
+#include "updatesubscriptionstoeventbridgerequest.h"
+#include "updatesubscriptionstoeventbridgeresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -154,17 +174,17 @@ namespace DatabaseMigrationService {
  * \ingroup aws-clients
  * \inmodule QtAwsDatabaseMigrationService
  *
- *  <fullname>AWS Database Migration Service</fullname>
+ *  <fullname>Database Migration Service</fullname>
  * 
- *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
- *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
- *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
- *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ *  Database Migration Service (DMS) can migrate your data to and from the most widely used commercial and open-source
+ *  databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL, and SAP
+ *  Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well as
+ *  heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
  * 
  *  PostgreSQL>
  * 
- *  For more information about AWS DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
- *  AWS Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
+ *  For more information about DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+ *  Database Migration Service?</a> in the <i>Database Migration Service User Guide.</i>
  */
 
 /*!
@@ -226,7 +246,7 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task.
+ * Adds metadata tags to an DMS resource, including replication instance, endpoint, security group, and migration task.
  * These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a
  * Condition statement in an IAM policy for DMS. For more information, see <a
  * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
@@ -274,6 +294,13 @@ CancelReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::can
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an endpoint using the provided
+ *
+ * settings> <note>
+ *
+ * For a MySQL source or target endpoint, don't explicitly specify the database using the <code>DatabaseName</code> request
+ * parameter on the <code>CreateEndpoint</code> API call. Specifying <code>DatabaseName</code> when you create a MySQL
+ * endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when
+ * you specify the schema in the table-mapping rules of the DMS
  */
 CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const CreateEndpointRequest &request)
 {
@@ -286,29 +313,41 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS DMS event notification subscription.
+ * Creates an DMS event notification subscription.
  *
  * </p
  *
- * You can specify the type of source (<code>SourceType</code>) you want to be notified of, provide a list of AWS DMS
- * source IDs (<code>SourceIds</code>) that triggers the events, and provide a list of event categories
+ * You can specify the type of source (<code>SourceType</code>) you want to be notified of, provide a list of DMS source
+ * IDs (<code>SourceIds</code>) that triggers the events, and provide a list of event categories
  * (<code>EventCategories</code>) for events you want to be notified of. If you specify both the <code>SourceType</code>
  * and <code>SourceIds</code>, such as <code>SourceType = replication-instance</code> and <code>SourceIdentifier =
  * my-replinstance</code>, you will be notified of all the replication instance events for the specified source. If you
  * specify a <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you receive notice of the events
- * for that source type for all your AWS DMS sources. If you don't specify either <code>SourceType</code> nor
- * <code>SourceIdentifier</code>, you will be notified of events generated from all AWS DMS sources belonging to your
- * customer
+ * for that source type for all your DMS sources. If you don't specify either <code>SourceType</code> nor
+ * <code>SourceIdentifier</code>, you will be notified of events generated from all DMS sources belonging to your customer
  *
  * account>
  *
- * For more information about AWS DMS events, see <a
+ * For more information about DMS events, see <a
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in
- * the <i>AWS Database Migration Service User Guide.</i>
+ * the <i>Database Migration Service User Guide.</i>
  */
 CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
     return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CreateFleetAdvisorCollectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Fleet Advisor collector using the specified
+ */
+CreateFleetAdvisorCollectorResponse * DatabaseMigrationServiceClient::createFleetAdvisorCollector(const CreateFleetAdvisorCollectorRequest &request)
+{
+    return qobject_cast<CreateFleetAdvisorCollectorResponse *>(send(request));
 }
 
 /*!
@@ -321,12 +360,12 @@ CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSub
  *
  * parameters>
  *
- * AWS DMS requires that your account have certain roles with appropriate permissions before you can create a replication
+ * DMS requires that your account have certain roles with appropriate permissions before you can create a replication
  * instance. For information on the required roles, see <a
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating the IAM Roles
- * to Use With the AWS CLI and AWS DMS API</a>. For information on the required permissions, see <a
+ * to Use With the CLI and DMS API</a>. For information on the required permissions, see <a
  * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM Permissions
- * Needed to Use AWS
+ * Needed to Use
  */
 CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
 {
@@ -340,6 +379,11 @@ CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplic
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a replication subnet group given a list of the subnet IDs in a
+ *
+ * VPC>
+ *
+ * The VPC needs to have at least one subnet in at least two availability zones in the Amazon Web Services Region,
+ * otherwise the service will throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code>
  */
 CreateReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request)
 {
@@ -396,6 +440,8 @@ DeleteConnectionResponse * DatabaseMigrationServiceClient::deleteConnection(cons
  * endpoint> <note>
  *
  * All tasks associated with the endpoint must be deleted before you can delete the
+ *
+ * endpoint> </note>
  */
 DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -408,11 +454,37 @@ DeleteEndpointResponse * DatabaseMigrationServiceClient::deleteEndpoint(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS DMS event subscription.
+ * Deletes an DMS event subscription.
  */
 DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteFleetAdvisorCollectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified Fleet Advisor
+ */
+DeleteFleetAdvisorCollectorResponse * DatabaseMigrationServiceClient::deleteFleetAdvisorCollector(const DeleteFleetAdvisorCollectorRequest &request)
+{
+    return qobject_cast<DeleteFleetAdvisorCollectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteFleetAdvisorDatabasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified Fleet Advisor collector
+ */
+DeleteFleetAdvisorDatabasesResponse * DatabaseMigrationServiceClient::deleteFleetAdvisorDatabases(const DeleteFleetAdvisorDatabasesRequest &request)
+{
+    return qobject_cast<DeleteFleetAdvisorDatabasesResponse *>(send(request));
 }
 
 /*!
@@ -426,6 +498,8 @@ DeleteEventSubscriptionResponse * DatabaseMigrationServiceClient::deleteEventSub
  * instance> <note>
  *
  * You must delete any migration tasks that are associated with the replication instance before you can delete
+ *
+ * it> </note>
  */
 DeleteReplicationInstanceResponse * DatabaseMigrationServiceClient::deleteReplicationInstance(const DeleteReplicationInstanceRequest &request)
 {
@@ -468,7 +542,7 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
  *
  * run>
  *
- * This operation removes all metadata that AWS DMS maintains about this assessment run. However, the operation leaves
+ * This operation removes all metadata that DMS maintains about this assessment run. However, the operation leaves
  * untouched all information about this assessment run that is stored in your Amazon S3
  */
 DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::deleteReplicationTaskAssessmentRun(const DeleteReplicationTaskAssessmentRunRequest &request)
@@ -482,11 +556,11 @@ DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::del
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the AWS DMS attributes for a customer account. These attributes include AWS DMS quotas for the account and
- * a unique account identifier in a particular DMS region. DMS quotas include a list of resource quotas supported by the
- * account, such as the number of replication instances allowed. The description for each resource quota, includes the
- * quota name, current usage toward that quota, and the quota's maximum value. DMS uses the unique account identifier to
- * name each artifact used by DMS in the given
+ * Lists all of the DMS attributes for a customer account. These attributes include DMS quotas for the account and a unique
+ * account identifier in a particular DMS region. DMS quotas include a list of resource quotas supported by the account,
+ * such as the number of replication instances allowed. The description for each resource quota, includes the quota name,
+ * current usage toward that quota, and the quota's maximum value. DMS uses the unique account identifier to name each
+ * artifact used by DMS in the given
  *
  * region>
  *
@@ -604,7 +678,7 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
  *
  * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
  * event categories and source types in <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
- * with Events and Notifications</a> in the <i>AWS Database Migration Service User Guide.</i>
+ * with Events and Notifications</a> in the <i>Database Migration Service User Guide.</i>
  */
 DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -637,12 +711,77 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
- * information on AWS DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
- * with Events and Notifications</a> in the <i>AWS Database Migration User Guide.</i>
+ * information on DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with
+ * Events and Notifications</a> in the <i>Database Migration Service User Guide.</i>
  */
 DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
 {
     return qobject_cast<DescribeEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeFleetAdvisorCollectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the Fleet Advisor collectors in your
+ */
+DescribeFleetAdvisorCollectorsResponse * DatabaseMigrationServiceClient::describeFleetAdvisorCollectors(const DescribeFleetAdvisorCollectorsRequest &request)
+{
+    return qobject_cast<DescribeFleetAdvisorCollectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeFleetAdvisorDatabasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of Fleet Advisor databases in your
+ */
+DescribeFleetAdvisorDatabasesResponse * DatabaseMigrationServiceClient::describeFleetAdvisorDatabases(const DescribeFleetAdvisorDatabasesRequest &request)
+{
+    return qobject_cast<DescribeFleetAdvisorDatabasesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeFleetAdvisorLsaAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides descriptions of large-scale assessment (LSA) analyses produced by your Fleet Advisor collectors.
+ */
+DescribeFleetAdvisorLsaAnalysisResponse * DatabaseMigrationServiceClient::describeFleetAdvisorLsaAnalysis(const DescribeFleetAdvisorLsaAnalysisRequest &request)
+{
+    return qobject_cast<DescribeFleetAdvisorLsaAnalysisResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeFleetAdvisorSchemaObjectSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides descriptions of the schemas discovered by your Fleet Advisor
+ */
+DescribeFleetAdvisorSchemaObjectSummaryResponse * DatabaseMigrationServiceClient::describeFleetAdvisorSchemaObjectSummary(const DescribeFleetAdvisorSchemaObjectSummaryRequest &request)
+{
+    return qobject_cast<DescribeFleetAdvisorSchemaObjectSummaryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeFleetAdvisorSchemasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of schemas detected by Fleet Advisor Collectors in your
+ */
+DescribeFleetAdvisorSchemasResponse * DatabaseMigrationServiceClient::describeFleetAdvisorSchemas(const DescribeFleetAdvisorSchemasRequest &request)
+{
+    return qobject_cast<DescribeFleetAdvisorSchemasResponse *>(send(request));
 }
 
 /*!
@@ -729,7 +868,14 @@ DescribeReplicationSubnetGroupsResponse * DatabaseMigrationServiceClient::descri
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the task assessment results from Amazon S3. This action always returns the latest
+ * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services account. This
+ * action always returns the latest
+ *
+ * results>
+ *
+ * For more information about DMS task assessments, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment
+ * report</a> in the <i>Database Migration Service User
  */
 DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults(const DescribeReplicationTaskAssessmentResultsRequest &request)
 {
@@ -796,6 +942,8 @@ DescribeReplicationTasksResponse * DatabaseMigrationServiceClient::describeRepli
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the schema for the specified
+ *
+ * endpoint>
  */
 DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const DescribeSchemasRequest &request)
 {
@@ -812,8 +960,8 @@ DescribeSchemasResponse * DatabaseMigrationServiceClient::describeSchemas(const 
  *
  * deleted>
  *
- * Note that the "last updated" column the DMS console only indicates the time that AWS DMS last updated the table
- * statistics record for a table. It does not indicate the time of the last update to the
+ * Note that the "last updated" column the DMS console only indicates the time that DMS last updated the table statistics
+ * record for a table. It does not indicate the time of the last update to the
  */
 DescribeTableStatisticsResponse * DatabaseMigrationServiceClient::describeTableStatistics(const DescribeTableStatisticsRequest &request)
 {
@@ -839,7 +987,7 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all metadata tags attached to an AWS DMS resource, including replication instance, endpoint, security group, and
+ * Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, security group, and
  * migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
  * <code>Tag</code> </a> data type
  */
@@ -855,6 +1003,13 @@ ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResourc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the specified
+ *
+ * endpoint> <note>
+ *
+ * For a MySQL source or target endpoint, don't explicitly specify the database using the <code>DatabaseName</code> request
+ * parameter on the <code>ModifyEndpoint</code> API call. Specifying <code>DatabaseName</code> when you modify a MySQL
+ * endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when
+ * you specify the schema in the table-mapping rules of the DMS
  */
 ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const ModifyEndpointRequest &request)
 {
@@ -867,7 +1022,7 @@ ModifyEndpointResponse * DatabaseMigrationServiceClient::modifyEndpoint(const Mo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an existing AWS DMS event notification subscription.
+ * Modifies an existing DMS event notification subscription.
  */
 ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
@@ -886,6 +1041,8 @@ ModifyEventSubscriptionResponse * DatabaseMigrationServiceClient::modifyEventSub
  * request>
  *
  * Some settings are applied during the maintenance
+ *
+ * window>
  */
 ModifyReplicationInstanceResponse * DatabaseMigrationServiceClient::modifyReplicationInstance(const ModifyReplicationInstanceRequest &request)
 {
@@ -919,9 +1076,9 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  *
  * </p
  *
- * For more information about AWS DMS tasks, see <a
- * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the <i>AWS
- * Database Migration Service User
+ * For more information about DMS tasks, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the
+ * <i>Database Migration Service User
  */
 ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
 {
@@ -935,8 +1092,8 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Moves a replication task from its current replication instance to a different target replication instance using the
- * specified parameters. The target replication instance must be created with the same or later AWS DMS version as the
- * current replication
+ * specified parameters. The target replication instance must be created with the same or later DMS version as the current
+ * replication
  */
 MoveReplicationTaskResponse * DatabaseMigrationServiceClient::moveReplicationTask(const MoveReplicationTaskRequest &request)
 {
@@ -978,6 +1135,11 @@ RefreshSchemasResponse * DatabaseMigrationServiceClient::refreshSchemas(const Re
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Reloads the target database table with the source data.
+ *
+ * </p
+ *
+ * You can only use this operation with a task in the <code>RUNNING</code> state, otherwise the service will throw an
+ * <code>InvalidResourceStateFault</code>
  */
 ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const ReloadTablesRequest &request)
 {
@@ -990,13 +1152,26 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes metadata tags from an AWS DMS resource, including replication instance, endpoint, security group, and migration
+ * Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and migration
  * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
  * <code>Tag</code> </a> data type
  */
 RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * RunFleetAdvisorLsaAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Runs large-scale assessment (LSA) analysis on every Fleet Advisor collector in your
+ */
+RunFleetAdvisorLsaAnalysisResponse * DatabaseMigrationServiceClient::runFleetAdvisorLsaAnalysis(const RunFleetAdvisorLsaAnalysisRequest &request)
+{
+    return qobject_cast<RunFleetAdvisorLsaAnalysisResponse *>(send(request));
 }
 
 /*!
@@ -1009,9 +1184,9 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
  *
  * task>
  *
- * For more information about AWS DMS tasks, see <a
- * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the <i>AWS
- * Database Migration Service User Guide.</i>
+ * For more information about DMS tasks, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the
+ * <i>Database Migration Service User Guide.</i>
  */
 StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
 {
@@ -1025,6 +1200,28 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts the replication task assessment for unsupported data types in the source database.
+ *
+ * </p
+ *
+ * You can only use this operation for a task if the following conditions are
+ *
+ * true> <ul> <li>
+ *
+ * The task must be in the <code>stopped</code>
+ *
+ * state> </li> <li>
+ *
+ * The task must have successful connections to the source and
+ *
+ * target> </li> </ul>
+ *
+ * If either of these conditions are not met, an <code>InvalidResourceStateFault</code> error will result.
+ *
+ * </p
+ *
+ * For information about DMS task assessments, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment
+ * report</a> in the <i>Database Migration Service User
  */
 StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
 {
@@ -1075,6 +1272,31 @@ StopReplicationTaskResponse * DatabaseMigrationServiceClient::stopReplicationTas
 TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const TestConnectionRequest &request)
 {
     return qobject_cast<TestConnectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * UpdateSubscriptionsToEventBridgeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Migrates 10 active and enabled Amazon SNS subscriptions at a time and converts them to corresponding Amazon EventBridge
+ * rules. By default, this operation migrates subscriptions only when all your replication instance versions are 3.4.6 or
+ * higher. If any replication instances are from versions earlier than 3.4.6, the operation raises an error and tells you
+ * to upgrade these instances to version 3.4.6 or higher. To enable migration regardless of version, set the
+ * <code>Force</code> option to true. However, if you don't upgrade instances earlier than version 3.4.6, some types of
+ * events might not be available when you use Amazon
+ *
+ * EventBridge>
+ *
+ * To call this operation, make sure that you have certain permissions added to your user account. For more information,
+ * see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html#CHAP_Events-migrate-to-eventbridge">Migrating
+ * event subscriptions to Amazon EventBridge</a> in the <i>Amazon Web Services Database Migration Service User
+ */
+UpdateSubscriptionsToEventBridgeResponse * DatabaseMigrationServiceClient::updateSubscriptionsToEventBridge(const UpdateSubscriptionsToEventBridgeRequest &request)
+{
+    return qobject_cast<UpdateSubscriptionsToEventBridgeResponse *>(send(request));
 }
 
 /*!

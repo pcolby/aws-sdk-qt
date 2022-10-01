@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateStageRequest
- * \brief The CreateStageRequest class provides an interface for APIGateway CreateStage requests.
+ * \class QtAws::ApiGateway::CreateStageRequest
+ * \brief The CreateStageRequest class provides an interface for ApiGateway CreateStage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createStage
+ * \sa ApiGatewayClient::createStage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateStageRequest::CreateStageRequest(const CreateStageRequest &other)
-    : APIGatewayRequest(new CreateStageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateStageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateStageRequest::CreateStageRequest(const CreateStageRequest &other)
  * Constructs a CreateStageRequest object.
  */
 CreateStageRequest::CreateStageRequest()
-    : APIGatewayRequest(new CreateStageRequestPrivate(APIGatewayRequest::CreateStageAction, this))
+    : ApiGatewayRequest(new CreateStageRequestPrivate(ApiGatewayRequest::CreateStageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::CreateStageRequestPrivate
+ * \class QtAws::ApiGateway::CreateStageRequestPrivate
  * \brief The CreateStageRequestPrivate class provides private implementation for CreateStageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateStageRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateStageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
-    const APIGatewayRequest::Action action, CreateStageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateStageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateStageRequestPrivate::CreateStageRequestPrivate(
  */
 CreateStageRequestPrivate::CreateStageRequestPrivate(
     const CreateStageRequestPrivate &other, CreateStageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

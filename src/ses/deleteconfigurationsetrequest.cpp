@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetRequest
- * \brief The DeleteConfigurationSetRequest class provides an interface for SES DeleteConfigurationSet requests.
+ * \class QtAws::Ses::DeleteConfigurationSetRequest
+ * \brief The DeleteConfigurationSetRequest class provides an interface for Ses DeleteConfigurationSet requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetRequestPrivate
+ * \class QtAws::Ses::DeleteConfigurationSetRequestPrivate
  * \brief The DeleteConfigurationSetRequestPrivate class provides private implementation for DeleteConfigurationSetRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

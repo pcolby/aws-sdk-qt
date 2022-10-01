@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UntagServerCertificateResponse
- * \brief The UntagServerCertificateResponse class provides an interace for IAM UntagServerCertificate responses.
+ * \class QtAws::Iam::UntagServerCertificateResponse
+ * \brief The UntagServerCertificateResponse class provides an interace for Iam UntagServerCertificate responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::untagServerCertificate
  */
@@ -68,7 +68,7 @@ const UntagServerCertificateRequest * UntagServerCertificateResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful IAM UntagServerCertificate \a response.
+ * Parses a successful Iam UntagServerCertificate \a response.
  */
 void UntagServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UntagServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UntagServerCertificateResponsePrivate
+ * \class QtAws::Iam::UntagServerCertificateResponsePrivate
  * \brief The UntagServerCertificateResponsePrivate class provides private implementation for UntagServerCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UntagServerCertificateResponsePrivate::UntagServerCertificateResponsePrivate(
 }
 
 /*!
- * Parses a IAM UntagServerCertificate response element from \a xml.
+ * Parses a Iam UntagServerCertificate response element from \a xml.
  */
 void UntagServerCertificateResponsePrivate::parseUntagServerCertificateResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UntagServerCertificateResponsePrivate::parseUntagServerCertificateResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

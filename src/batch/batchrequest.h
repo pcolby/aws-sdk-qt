@@ -42,14 +42,18 @@ public:
         CancelJobAction,
         CreateComputeEnvironmentAction,
         CreateJobQueueAction,
+        CreateSchedulingPolicyAction,
         DeleteComputeEnvironmentAction,
         DeleteJobQueueAction,
+        DeleteSchedulingPolicyAction,
         DeregisterJobDefinitionAction,
         DescribeComputeEnvironmentsAction,
         DescribeJobDefinitionsAction,
         DescribeJobQueuesAction,
         DescribeJobsAction,
+        DescribeSchedulingPoliciesAction,
         ListJobsAction,
+        ListSchedulingPoliciesAction,
         ListTagsForResourceAction,
         RegisterJobDefinitionAction,
         SubmitJobAction,
@@ -58,6 +62,7 @@ public:
         UntagResourceAction,
         UpdateComputeEnvironmentAction,
         UpdateJobQueueAction,
+        UpdateSchedulingPolicyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DescribeActiveReceiptRuleSetResponse
- * \brief The DescribeActiveReceiptRuleSetResponse class provides an interace for SES DescribeActiveReceiptRuleSet responses.
+ * \class QtAws::Ses::DescribeActiveReceiptRuleSetResponse
+ * \brief The DescribeActiveReceiptRuleSetResponse class provides an interace for Ses DescribeActiveReceiptRuleSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DescribeActiveReceiptRuleSetRequest * DescribeActiveReceiptRuleSetResponse
 
 /*!
  * \reimp
- * Parses a successful SES DescribeActiveReceiptRuleSet \a response.
+ * Parses a successful Ses DescribeActiveReceiptRuleSet \a response.
  */
 void DescribeActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DescribeActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::DescribeActiveReceiptRuleSetResponsePrivate
+ * \class QtAws::Ses::DescribeActiveReceiptRuleSetResponsePrivate
  * \brief The DescribeActiveReceiptRuleSetResponsePrivate class provides private implementation for DescribeActiveReceiptRuleSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetRespons
 }
 
 /*!
- * Parses a SES DescribeActiveReceiptRuleSet response element from \a xml.
+ * Parses a Ses DescribeActiveReceiptRuleSet response element from \a xml.
  */
 void DescribeActiveReceiptRuleSetResponsePrivate::parseDescribeActiveReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DescribeActiveReceiptRuleSetResponsePrivate::parseDescribeActiveReceiptRule
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

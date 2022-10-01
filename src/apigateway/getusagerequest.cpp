@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetUsageRequest
- * \brief The GetUsageRequest class provides an interface for APIGateway GetUsage requests.
+ * \class QtAws::ApiGateway::GetUsageRequest
+ * \brief The GetUsageRequest class provides an interface for ApiGateway GetUsage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getUsage
+ * \sa ApiGatewayClient::getUsage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUsageRequest::GetUsageRequest(const GetUsageRequest &other)
-    : APIGatewayRequest(new GetUsageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetUsageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetUsageRequest::GetUsageRequest(const GetUsageRequest &other)
  * Constructs a GetUsageRequest object.
  */
 GetUsageRequest::GetUsageRequest()
-    : APIGatewayRequest(new GetUsageRequestPrivate(APIGatewayRequest::GetUsageAction, this))
+    : ApiGatewayRequest(new GetUsageRequestPrivate(ApiGatewayRequest::GetUsageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::APIGateway::GetUsageRequestPrivate
+ * \class QtAws::ApiGateway::GetUsageRequestPrivate
  * \brief The GetUsageRequestPrivate class provides private implementation for GetUsageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetUsageRequestPrivate object for APIGateway \a action,
+ * Constructs a GetUsageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetUsageRequestPrivate::GetUsageRequestPrivate(
-    const APIGatewayRequest::Action action, GetUsageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetUsageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetUsageRequestPrivate::GetUsageRequestPrivate(
  */
 GetUsageRequestPrivate::GetUsageRequestPrivate(
     const GetUsageRequestPrivate &other, GetUsageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

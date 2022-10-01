@@ -24,7 +24,7 @@
 #include "createtagsrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class CreateTagsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

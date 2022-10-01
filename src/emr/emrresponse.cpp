@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::EmrResponse
- * \brief The EmrResponse class provides an interface for EMR responses.
+ * \class QtAws::Emr::EmrResponse
+ * \brief The EmrResponse class provides an interface for Emr responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -76,11 +76,11 @@ void EmrResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::EmrResponsePrivate
+ * \class QtAws::Emr::EmrResponsePrivate
  * \brief The EmrResponsePrivate class provides private implementation for EmrResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -92,5 +92,5 @@ EmrResponsePrivate::EmrResponsePrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

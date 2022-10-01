@@ -24,16 +24,16 @@
 #include "snsrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class SnsRequest;
 
 class SnsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SnsRequest::Action action; ///< SNS action to be performed.
-    QString apiVersion;        ///< SNS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SNS request (query string) parameters. @todo?
+    SnsRequest::Action action; ///< Sns action to be performed.
+    QString apiVersion;        ///< Sns API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sns request (query string) parameters. @todo?
 
     SnsRequestPrivate(const SnsRequest::Action action, SnsRequest * const q);
     SnsRequestPrivate(const SnsRequestPrivate &other, SnsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

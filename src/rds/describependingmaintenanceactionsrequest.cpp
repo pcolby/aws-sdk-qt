@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribePendingMaintenanceActionsRequest
- * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for RDS DescribePendingMaintenanceActions requests.
+ * \class QtAws::Rds::DescribePendingMaintenanceActionsRequest
+ * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for Rds DescribePendingMaintenanceActions requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
 }
 
 /*!
- * \class QtAws::RDS::DescribePendingMaintenanceActionsRequestPrivate
+ * \class QtAws::Rds::DescribePendingMaintenanceActionsRequestPrivate
  * \brief The DescribePendingMaintenanceActionsRequestPrivate class provides private implementation for DescribePendingMaintenanceActionsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActio
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

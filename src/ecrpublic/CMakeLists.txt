@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSECRPUBLIC_LIBRARY)
 
-add_library(QtAwsECRPublic
+add_library(QtAwsEcrPublic
+  qtawsecrpublicglobal.h
+  ecrpublicclient.h
+  ecrpublicclient_p.h
+  ecrpublicrequest.h
+  ecrpublicrequest_p.h
+  ecrpublicresponse.h
+  ecrpublicresponse_p.h
   batchchecklayeravailabilityrequest.h
   batchchecklayeravailabilityrequest_p.h
   batchchecklayeravailabilityresponse.h
@@ -17,22 +24,22 @@ add_library(QtAwsECRPublic
   createrepositoryrequest_p.h
   createrepositoryresponse.h
   createrepositoryresponse_p.h
-  deleterepositorypolicyrequest.h
-  deleterepositorypolicyrequest_p.h
-  deleterepositorypolicyresponse.h
-  deleterepositorypolicyresponse_p.h
   deleterepositoryrequest.h
   deleterepositoryrequest_p.h
   deleterepositoryresponse.h
   deleterepositoryresponse_p.h
-  describeimagesrequest.h
-  describeimagesrequest_p.h
-  describeimagesresponse.h
-  describeimagesresponse_p.h
+  deleterepositorypolicyrequest.h
+  deleterepositorypolicyrequest_p.h
+  deleterepositorypolicyresponse.h
+  deleterepositorypolicyresponse_p.h
   describeimagetagsrequest.h
   describeimagetagsrequest_p.h
   describeimagetagsresponse.h
   describeimagetagsresponse_p.h
+  describeimagesrequest.h
+  describeimagesrequest_p.h
+  describeimagesresponse.h
+  describeimagesresponse_p.h
   describeregistriesrequest.h
   describeregistriesrequest_p.h
   describeregistriesresponse.h
@@ -41,12 +48,6 @@ add_library(QtAwsECRPublic
   describerepositoriesrequest_p.h
   describerepositoriesresponse.h
   describerepositoriesresponse_p.h
-  ecrpublicclient.h
-  ecrpublicclient_p.h
-  ecrpublicrequest.h
-  ecrpublicrequest_p.h
-  ecrpublicresponse.h
-  ecrpublicresponse_p.h
   getauthorizationtokenrequest.h
   getauthorizationtokenrequest_p.h
   getauthorizationtokenresponse.h
@@ -83,7 +84,6 @@ add_library(QtAwsECRPublic
   putrepositorycatalogdatarequest_p.h
   putrepositorycatalogdataresponse.h
   putrepositorycatalogdataresponse_p.h
-  qtawsecrpublicglobal.h
   setrepositorypolicyrequest.h
   setrepositorypolicyrequest_p.h
   setrepositorypolicyresponse.h
@@ -100,6 +100,9 @@ add_library(QtAwsECRPublic
   uploadlayerpartrequest_p.h
   uploadlayerpartresponse.h
   uploadlayerpartresponse_p.h
+  ecrpublicclient.cpp
+  ecrpublicrequest.cpp
+  ecrpublicresponse.cpp
   batchchecklayeravailabilityrequest.cpp
   batchchecklayeravailabilityresponse.cpp
   batchdeleteimagerequest.cpp
@@ -108,21 +111,18 @@ add_library(QtAwsECRPublic
   completelayeruploadresponse.cpp
   createrepositoryrequest.cpp
   createrepositoryresponse.cpp
-  deleterepositorypolicyrequest.cpp
-  deleterepositorypolicyresponse.cpp
   deleterepositoryrequest.cpp
   deleterepositoryresponse.cpp
-  describeimagesrequest.cpp
-  describeimagesresponse.cpp
+  deleterepositorypolicyrequest.cpp
+  deleterepositorypolicyresponse.cpp
   describeimagetagsrequest.cpp
   describeimagetagsresponse.cpp
+  describeimagesrequest.cpp
+  describeimagesresponse.cpp
   describeregistriesrequest.cpp
   describeregistriesresponse.cpp
   describerepositoriesrequest.cpp
   describerepositoriesresponse.cpp
-  ecrpublicclient.cpp
-  ecrpublicrequest.cpp
-  ecrpublicresponse.cpp
   getauthorizationtokenrequest.cpp
   getauthorizationtokenresponse.cpp
   getregistrycatalogdatarequest.cpp
@@ -150,7 +150,7 @@ add_library(QtAwsECRPublic
   uploadlayerpartrequest.cpp
   uploadlayerpartresponse.cpp)
 
-target_link_libraries(QtAwsECRPublic
+target_link_libraries(QtAwsEcrPublic
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

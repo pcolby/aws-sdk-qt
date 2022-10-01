@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ConfirmSubscriptionRequest
- * \brief The ConfirmSubscriptionRequest class provides an interface for SNS ConfirmSubscription requests.
+ * \class QtAws::Sns::ConfirmSubscriptionRequest
+ * \brief The ConfirmSubscriptionRequest class provides an interface for Sns ConfirmSubscription requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SNS::ConfirmSubscriptionRequestPrivate
+ * \class QtAws::Sns::ConfirmSubscriptionRequestPrivate
  * \brief The ConfirmSubscriptionRequestPrivate class provides private implementation for ConfirmSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

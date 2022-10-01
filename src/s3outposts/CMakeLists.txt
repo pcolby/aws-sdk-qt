@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSS3OUTPOSTS_LIBRARY)
 
 add_library(QtAwsS3Outposts
+  qtawss3outpostsglobal.h
+  s3outpostsclient.h
+  s3outpostsclient_p.h
+  s3outpostsrequest.h
+  s3outpostsrequest_p.h
+  s3outpostsresponse.h
+  s3outpostsresponse_p.h
   createendpointrequest.h
   createendpointrequest_p.h
   createendpointresponse.h
@@ -13,22 +20,21 @@ add_library(QtAwsS3Outposts
   listendpointsrequest_p.h
   listendpointsresponse.h
   listendpointsresponse_p.h
-  qtawss3outpostsglobal.h
-  s3outpostsclient.h
-  s3outpostsclient_p.h
-  s3outpostsrequest.h
-  s3outpostsrequest_p.h
-  s3outpostsresponse.h
-  s3outpostsresponse_p.h
+  listsharedendpointsrequest.h
+  listsharedendpointsrequest_p.h
+  listsharedendpointsresponse.h
+  listsharedendpointsresponse_p.h
+  s3outpostsclient.cpp
+  s3outpostsrequest.cpp
+  s3outpostsresponse.cpp
   createendpointrequest.cpp
   createendpointresponse.cpp
   deleteendpointrequest.cpp
   deleteendpointresponse.cpp
   listendpointsrequest.cpp
   listendpointsresponse.cpp
-  s3outpostsclient.cpp
-  s3outpostsrequest.cpp
-  s3outpostsresponse.cpp)
+  listsharedendpointsrequest.cpp
+  listsharedendpointsresponse.cpp)
 
 target_link_libraries(QtAwsS3Outposts
   PRIVATE QtAwsCore

@@ -24,11 +24,11 @@
 #include "putitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class PutItemResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT PutItemResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT PutItemResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

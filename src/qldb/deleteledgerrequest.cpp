@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DeleteLedgerRequest
- * \brief The DeleteLedgerRequest class provides an interface for QLDB DeleteLedger requests.
+ * \class QtAws::Qldb::DeleteLedgerRequest
+ * \brief The DeleteLedgerRequest class provides an interface for Qldb DeleteLedger requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * DeleteLedgerRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::QLDB::DeleteLedgerRequestPrivate
+ * \class QtAws::Qldb::DeleteLedgerRequestPrivate
  * \brief The DeleteLedgerRequestPrivate class provides private implementation for DeleteLedgerRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ DeleteLedgerRequestPrivate::DeleteLedgerRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

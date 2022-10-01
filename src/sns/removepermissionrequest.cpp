@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::RemovePermissionRequest
- * \brief The RemovePermissionRequest class provides an interface for SNS RemovePermission requests.
+ * \class QtAws::Sns::RemovePermissionRequest
+ * \brief The RemovePermissionRequest class provides an interface for Sns RemovePermission requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SNS::RemovePermissionRequestPrivate
+ * \class QtAws::Sns::RemovePermissionRequestPrivate
  * \brief The RemovePermissionRequestPrivate class provides private implementation for RemovePermissionRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

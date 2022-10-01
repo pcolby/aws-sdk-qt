@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SendTaskFailureRequest
- * \brief The SendTaskFailureRequest class provides an interface for SFN SendTaskFailure requests.
+ * \class QtAws::Sfn::SendTaskFailureRequest
+ * \brief The SendTaskFailureRequest class provides an interface for Sfn SendTaskFailure requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::SFN::SendTaskFailureRequestPrivate
+ * \class QtAws::Sfn::SendTaskFailureRequestPrivate
  * \brief The SendTaskFailureRequestPrivate class provides private implementation for SendTaskFailureRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

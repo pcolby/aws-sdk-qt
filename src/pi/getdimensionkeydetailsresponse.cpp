@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 /*!
- * \class QtAws::PI::GetDimensionKeyDetailsResponse
- * \brief The GetDimensionKeyDetailsResponse class provides an interace for PI GetDimensionKeyDetails responses.
+ * \class QtAws::Pi::GetDimensionKeyDetailsResponse
+ * \brief The GetDimensionKeyDetailsResponse class provides an interace for Pi GetDimensionKeyDetails responses.
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  *
  *  <fullname>Amazon RDS Performance Insights</fullname>
  * 
@@ -42,25 +42,32 @@ namespace PI {
  *  errors>
  * 
  *  When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the performance
- *  of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended monitoring metrics.
- *  Performance Insights offers a domain-specific view of DB load.
+ *  of your DB instance. Amazon CloudWatch provides the authoritative source for Amazon Web Services service-vended
+ *  monitoring metrics. Performance Insights offers a domain-specific view of DB
  * 
- *  </p
+ *  load>
  * 
- *  DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ *  DB load is measured as average active sessions. Performance Insights provides the data to API consumers as a
  *  two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
  *  range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
  *  Examples include SQL, Wait event, User, and
  * 
  *  Host> <ul> <li>
  * 
- *  To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
- *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ *  To learn more about Performance Insights and Amazon Aurora DB instances, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User Guide</a>
+ *  </i>.
  * 
- *  Guide</a>> </li> <li>
+ *  </p </li> <li>
  * 
- *  To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User
+ *  To learn more about Performance Insights and Amazon RDS DB instances, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a> </i>.
+ * 
+ *  </p </li> <li>
+ * 
+ *  To learn more about Performance Insights and Amazon DocumentDB clusters, go to the <i> <a
+ *  href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html"> Amazon DocumentDB
+ *  Developer Guide</a>
  *
  * \sa PiClient::getDimensionKeyDetails
  */
@@ -89,7 +96,7 @@ const GetDimensionKeyDetailsRequest * GetDimensionKeyDetailsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful PI GetDimensionKeyDetails \a response.
+ * Parses a successful Pi GetDimensionKeyDetails \a response.
  */
 void GetDimensionKeyDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -99,11 +106,11 @@ void GetDimensionKeyDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PI::GetDimensionKeyDetailsResponsePrivate
+ * \class QtAws::Pi::GetDimensionKeyDetailsResponsePrivate
  * \brief The GetDimensionKeyDetailsResponsePrivate class provides private implementation for GetDimensionKeyDetailsResponse.
  * \internal
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
@@ -116,7 +123,7 @@ GetDimensionKeyDetailsResponsePrivate::GetDimensionKeyDetailsResponsePrivate(
 }
 
 /*!
- * Parses a PI GetDimensionKeyDetails response element from \a xml.
+ * Parses a Pi GetDimensionKeyDetails response element from \a xml.
  */
 void GetDimensionKeyDetailsResponsePrivate::parseGetDimensionKeyDetailsResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +131,5 @@ void GetDimensionKeyDetailsResponsePrivate::parseGetDimensionKeyDetailsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws

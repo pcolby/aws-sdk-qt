@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateReceiptRuleResponse
- * \brief The UpdateReceiptRuleResponse class provides an interace for SES UpdateReceiptRule responses.
+ * \class QtAws::Ses::UpdateReceiptRuleResponse
+ * \brief The UpdateReceiptRuleResponse class provides an interace for Ses UpdateReceiptRule responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const UpdateReceiptRuleRequest * UpdateReceiptRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES UpdateReceiptRule \a response.
+ * Parses a successful Ses UpdateReceiptRule \a response.
  */
 void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::UpdateReceiptRuleResponsePrivate
+ * \class QtAws::Ses::UpdateReceiptRuleResponsePrivate
  * \brief The UpdateReceiptRuleResponsePrivate class provides private implementation for UpdateReceiptRuleResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
 }
 
 /*!
- * Parses a SES UpdateReceiptRule response element from \a xml.
+ * Parses a Ses UpdateReceiptRule response element from \a xml.
  */
 void UpdateReceiptRuleResponsePrivate::parseUpdateReceiptRuleResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateReceiptRuleResponsePrivate::parseUpdateReceiptRuleResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

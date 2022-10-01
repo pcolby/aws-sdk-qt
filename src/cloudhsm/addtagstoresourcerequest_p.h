@@ -24,14 +24,14 @@
 #include "addtagstoresourcerequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class AddTagsToResourceRequest;
 
-class AddTagsToResourceRequestPrivate : public CloudHSMRequestPrivate {
+class AddTagsToResourceRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const CloudHSMRequest::Action action,
+    AddTagsToResourceRequestPrivate(const CloudHsmRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

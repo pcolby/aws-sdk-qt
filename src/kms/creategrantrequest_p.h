@@ -24,7 +24,7 @@
 #include "creategrantrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class CreateGrantRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

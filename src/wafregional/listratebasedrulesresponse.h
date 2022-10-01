@@ -24,11 +24,11 @@
 #include "listratebasedrulesrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListRateBasedRulesResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListRateBasedRulesResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListRateBasedRulesResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

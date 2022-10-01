@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSOPSWORKS_LIBRARY)
 
 add_library(QtAwsOpsWorks
+  qtawsopsworksglobal.h
+  opsworksclient.h
+  opsworksclient_p.h
+  opsworksrequest.h
+  opsworksrequest_p.h
+  opsworksresponse.h
+  opsworksresponse_p.h
   assigninstancerequest.h
   assigninstancerequest_p.h
   assigninstanceresponse.h
@@ -153,14 +160,14 @@ add_library(QtAwsOpsWorks
   describestackprovisioningparametersrequest_p.h
   describestackprovisioningparametersresponse.h
   describestackprovisioningparametersresponse_p.h
-  describestacksrequest.h
-  describestacksrequest_p.h
-  describestacksresponse.h
-  describestacksresponse_p.h
   describestacksummaryrequest.h
   describestacksummaryrequest_p.h
   describestacksummaryresponse.h
   describestacksummaryresponse_p.h
+  describestacksrequest.h
+  describestacksrequest_p.h
+  describestacksresponse.h
+  describestacksresponse_p.h
   describetimebasedautoscalingrequest.h
   describetimebasedautoscalingrequest_p.h
   describetimebasedautoscalingresponse.h
@@ -193,13 +200,6 @@ add_library(QtAwsOpsWorks
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
-  opsworksclient.h
-  opsworksclient_p.h
-  opsworksrequest.h
-  opsworksrequest_p.h
-  opsworksresponse.h
-  opsworksresponse_p.h
-  qtawsopsworksglobal.h
   rebootinstancerequest.h
   rebootinstancerequest_p.h
   rebootinstanceresponse.h
@@ -304,6 +304,9 @@ add_library(QtAwsOpsWorks
   updatevolumerequest_p.h
   updatevolumeresponse.h
   updatevolumeresponse_p.h
+  opsworksclient.cpp
+  opsworksrequest.cpp
+  opsworksresponse.cpp
   assigninstancerequest.cpp
   assigninstanceresponse.cpp
   assignvolumerequest.cpp
@@ -380,10 +383,10 @@ add_library(QtAwsOpsWorks
   describeserviceerrorsresponse.cpp
   describestackprovisioningparametersrequest.cpp
   describestackprovisioningparametersresponse.cpp
-  describestacksrequest.cpp
-  describestacksresponse.cpp
   describestacksummaryrequest.cpp
   describestacksummaryresponse.cpp
+  describestacksrequest.cpp
+  describestacksresponse.cpp
   describetimebasedautoscalingrequest.cpp
   describetimebasedautoscalingresponse.cpp
   describeuserprofilesrequest.cpp
@@ -400,9 +403,6 @@ add_library(QtAwsOpsWorks
   grantaccessresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
-  opsworksclient.cpp
-  opsworksrequest.cpp
-  opsworksresponse.cpp
   rebootinstancerequest.cpp
   rebootinstanceresponse.cpp
   registerecsclusterrequest.cpp

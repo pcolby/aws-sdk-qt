@@ -24,11 +24,11 @@
 #include "updatethesaurusrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class UpdateThesaurusResponsePrivate;
 
-class QTAWSKENDRA_EXPORT UpdateThesaurusResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT UpdateThesaurusResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

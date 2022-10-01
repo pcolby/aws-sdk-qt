@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::CreateStateMachineRequest
- * \brief The CreateStateMachineRequest class provides an interface for SFN CreateStateMachine requests.
+ * \class QtAws::Sfn::CreateStateMachineRequest
+ * \brief The CreateStateMachineRequest class provides an interface for Sfn CreateStateMachine requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SFN::CreateStateMachineRequestPrivate
+ * \class QtAws::Sfn::CreateStateMachineRequestPrivate
  * \brief The CreateStateMachineRequestPrivate class provides private implementation for CreateStateMachineRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

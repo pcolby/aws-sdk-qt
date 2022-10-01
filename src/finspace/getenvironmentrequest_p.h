@@ -24,14 +24,14 @@
 #include "getenvironmentrequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class GetEnvironmentRequest;
 
-class GetEnvironmentRequestPrivate : public finspaceRequestPrivate {
+class GetEnvironmentRequestPrivate : public FinspaceRequestPrivate {
 
 public:
-    GetEnvironmentRequestPrivate(const finspaceRequest::Action action,
+    GetEnvironmentRequestPrivate(const FinspaceRequest::Action action,
                                    GetEnvironmentRequest * const q);
     GetEnvironmentRequestPrivate(const GetEnvironmentRequestPrivate &other,
                                    GetEnvironmentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

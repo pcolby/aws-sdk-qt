@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDomainNameResponse
- * \brief The CreateDomainNameResponse class provides an interace for APIGateway CreateDomainName responses.
+ * \class QtAws::ApiGateway::CreateDomainNameResponse
+ * \brief The CreateDomainNameResponse class provides an interace for ApiGateway CreateDomainName responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDomainName
+ * \sa ApiGatewayClient::createDomainName
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateDomainNameResponse::CreateDomainNameResponse(
         const CreateDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDomainNameResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateDomainNameResponsePrivate(this), parent)
 {
     setRequest(new CreateDomainNameRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateDomainNameRequest * CreateDomainNameResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateDomainName \a response.
+ * Parses a successful ApiGateway CreateDomainName \a response.
  */
 void CreateDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDomainNameResponsePrivate
+ * \class QtAws::ApiGateway::CreateDomainNameResponsePrivate
  * \brief The CreateDomainNameResponsePrivate class provides private implementation for CreateDomainNameResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateDomainNameResponsePrivate object with public implementation \a q.
  */
 CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
-    CreateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateDomainNameResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateDomainName response element from \a xml.
+ * Parses a ApiGateway CreateDomainName response element from \a xml.
  */
 void CreateDomainNameResponsePrivate::parseCreateDomainNameResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateDomainNameResponsePrivate::parseCreateDomainNameResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

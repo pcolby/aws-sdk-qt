@@ -269,7 +269,7 @@ QNetworkRequest IoTEventsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTEventsRequestPrivate::IoTEventsRequestPrivate(const IoTEventsRequest::Action action, IoTEventsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-07-27"))
 {
 
 }

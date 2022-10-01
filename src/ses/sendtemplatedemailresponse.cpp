@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendTemplatedEmailResponse
- * \brief The SendTemplatedEmailResponse class provides an interace for SES SendTemplatedEmail responses.
+ * \class QtAws::Ses::SendTemplatedEmailResponse
+ * \brief The SendTemplatedEmailResponse class provides an interace for Ses SendTemplatedEmail responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SendTemplatedEmailRequest * SendTemplatedEmailResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES SendTemplatedEmail \a response.
+ * Parses a successful Ses SendTemplatedEmail \a response.
  */
 void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SendTemplatedEmailResponsePrivate
+ * \class QtAws::Ses::SendTemplatedEmailResponsePrivate
  * \brief The SendTemplatedEmailResponsePrivate class provides private implementation for SendTemplatedEmailResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SendTemplatedEmailResponsePrivate::SendTemplatedEmailResponsePrivate(
 }
 
 /*!
- * Parses a SES SendTemplatedEmail response element from \a xml.
+ * Parses a Ses SendTemplatedEmail response element from \a xml.
  */
 void SendTemplatedEmailResponsePrivate::parseSendTemplatedEmailResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SendTemplatedEmailResponsePrivate::parseSendTemplatedEmailResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "createchangesetrequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class CreateChangesetRequest;
 
-class CreateChangesetRequestPrivate : public FinSpaceDataRequestPrivate {
+class CreateChangesetRequestPrivate : public FinspaceDataRequestPrivate {
 
 public:
-    CreateChangesetRequestPrivate(const FinSpaceDataRequest::Action action,
+    CreateChangesetRequestPrivate(const FinspaceDataRequest::Action action,
                                    CreateChangesetRequest * const q);
     CreateChangesetRequestPrivate(const CreateChangesetRequestPrivate &other,
                                    CreateChangesetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

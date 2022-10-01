@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CreateHsmRequest
- * \brief The CreateHsmRequest class provides an interface for CloudHSMV2 CreateHsm requests.
+ * \class QtAws::CloudHsmV2::CreateHsmRequest
+ * \brief The CreateHsmRequest class provides an interface for CloudHsmV2 CreateHsm requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::createHsm
+ * \sa CloudHsmV2Client::createHsm
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateHsmRequest::CreateHsmRequest(const CreateHsmRequest &other)
-    : CloudHSMV2Request(new CreateHsmRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new CreateHsmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ CreateHsmRequest::CreateHsmRequest(const CreateHsmRequest &other)
  * Constructs a CreateHsmRequest object.
  */
 CreateHsmRequest::CreateHsmRequest()
-    : CloudHSMV2Request(new CreateHsmRequestPrivate(CloudHSMV2Request::CreateHsmAction, this))
+    : CloudHsmV2Request(new CreateHsmRequestPrivate(CloudHsmV2Request::CreateHsmAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CreateHsmRequestPrivate
+ * \class QtAws::CloudHsmV2::CreateHsmRequestPrivate
  * \brief The CreateHsmRequestPrivate class provides private implementation for CreateHsmRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a CreateHsmRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a CreateHsmRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 CreateHsmRequestPrivate::CreateHsmRequestPrivate(
-    const CloudHSMV2Request::Action action, CreateHsmRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, CreateHsmRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ CreateHsmRequestPrivate::CreateHsmRequestPrivate(
  */
 CreateHsmRequestPrivate::CreateHsmRequestPrivate(
     const CreateHsmRequestPrivate &other, CreateHsmRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

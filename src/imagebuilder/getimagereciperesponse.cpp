@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImageRecipeResponse
- * \brief The GetImageRecipeResponse class provides an interace for imagebuilder GetImageRecipe responses.
+ * \class QtAws::ImageBuilder::GetImageRecipeResponse
+ * \brief The GetImageRecipeResponse class provides an interace for ImageBuilder GetImageRecipe responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImageRecipe
+ * \sa ImageBuilderClient::getImageRecipe
  */
 
 /*!
@@ -47,7 +47,7 @@ GetImageRecipeResponse::GetImageRecipeResponse(
         const GetImageRecipeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetImageRecipeResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetImageRecipeResponsePrivate(this), parent)
 {
     setRequest(new GetImageRecipeRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetImageRecipeRequest * GetImageRecipeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetImageRecipe \a response.
+ * Parses a successful ImageBuilder GetImageRecipe \a response.
  */
 void GetImageRecipeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetImageRecipeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImageRecipeResponsePrivate
+ * \class QtAws::ImageBuilder::GetImageRecipeResponsePrivate
  * \brief The GetImageRecipeResponsePrivate class provides private implementation for GetImageRecipeResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetImageRecipeResponsePrivate object with public implementation \a q.
  */
 GetImageRecipeResponsePrivate::GetImageRecipeResponsePrivate(
-    GetImageRecipeResponse * const q) : imagebuilderResponsePrivate(q)
+    GetImageRecipeResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetImageRecipe response element from \a xml.
+ * Parses a ImageBuilder GetImageRecipe response element from \a xml.
  */
 void GetImageRecipeResponsePrivate::parseGetImageRecipeResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetImageRecipeResponsePrivate::parseGetImageRecipeResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "deletedistributionconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteDistributionConfigurationResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT DeleteDistributionConfigurationResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteDistributionConfigurationResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

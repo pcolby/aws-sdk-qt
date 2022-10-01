@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImagePipelineResponse
- * \brief The GetImagePipelineResponse class provides an interace for imagebuilder GetImagePipeline responses.
+ * \class QtAws::ImageBuilder::GetImagePipelineResponse
+ * \brief The GetImagePipelineResponse class provides an interace for ImageBuilder GetImagePipeline responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImagePipeline
+ * \sa ImageBuilderClient::getImagePipeline
  */
 
 /*!
@@ -47,7 +47,7 @@ GetImagePipelineResponse::GetImagePipelineResponse(
         const GetImagePipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetImagePipelineResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetImagePipelineResponsePrivate(this), parent)
 {
     setRequest(new GetImagePipelineRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetImagePipelineRequest * GetImagePipelineResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetImagePipeline \a response.
+ * Parses a successful ImageBuilder GetImagePipeline \a response.
  */
 void GetImagePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetImagePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImagePipelineResponsePrivate
+ * \class QtAws::ImageBuilder::GetImagePipelineResponsePrivate
  * \brief The GetImagePipelineResponsePrivate class provides private implementation for GetImagePipelineResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetImagePipelineResponsePrivate object with public implementation \a q.
  */
 GetImagePipelineResponsePrivate::GetImagePipelineResponsePrivate(
-    GetImagePipelineResponse * const q) : imagebuilderResponsePrivate(q)
+    GetImagePipelineResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetImagePipeline response element from \a xml.
+ * Parses a ImageBuilder GetImagePipeline response element from \a xml.
  */
 void GetImagePipelineResponsePrivate::parseGetImagePipelineResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetImagePipelineResponsePrivate::parseGetImagePipelineResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

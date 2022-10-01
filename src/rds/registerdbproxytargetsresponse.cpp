@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RegisterDBProxyTargetsResponse
- * \brief The RegisterDBProxyTargetsResponse class provides an interace for RDS RegisterDBProxyTargets responses.
+ * \class QtAws::Rds::RegisterDBProxyTargetsResponse
+ * \brief The RegisterDBProxyTargetsResponse class provides an interace for Rds RegisterDBProxyTargets responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RegisterDBProxyTargetsRequest * RegisterDBProxyTargetsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS RegisterDBProxyTargets \a response.
+ * Parses a successful Rds RegisterDBProxyTargets \a response.
  */
 void RegisterDBProxyTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RegisterDBProxyTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RegisterDBProxyTargetsResponsePrivate
+ * \class QtAws::Rds::RegisterDBProxyTargetsResponsePrivate
  * \brief The RegisterDBProxyTargetsResponsePrivate class provides private implementation for RegisterDBProxyTargetsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RegisterDBProxyTargetsResponsePrivate::RegisterDBProxyTargetsResponsePrivate(
 }
 
 /*!
- * Parses a RDS RegisterDBProxyTargets response element from \a xml.
+ * Parses a Rds RegisterDBProxyTargets response element from \a xml.
  */
 void RegisterDBProxyTargetsResponsePrivate::parseRegisterDBProxyTargetsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RegisterDBProxyTargetsResponsePrivate::parseRegisterDBProxyTargetsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "listusersrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class ListUsersRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

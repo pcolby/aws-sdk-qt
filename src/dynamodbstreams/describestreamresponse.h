@@ -24,11 +24,11 @@
 #include "describestreamrequest.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class DescribeStreamResponsePrivate;
 
-class QTAWSDYNAMODBSTREAMS_EXPORT DescribeStreamResponse : public DynamoDBStreamsResponse {
+class QTAWSDYNAMODBSTREAMS_EXPORT DescribeStreamResponse : public DynamoDbStreamsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

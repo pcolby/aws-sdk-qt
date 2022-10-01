@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSELASTICACHE_LIBRARY)
 
 add_library(QtAwsElastiCache
+  qtawselasticacheglobal.h
+  elasticacheclient.h
+  elasticacheclient_p.h
+  elasticacherequest.h
+  elasticacherequest_p.h
+  elasticacheresponse.h
+  elasticacheresponse_p.h
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
@@ -53,14 +60,14 @@ add_library(QtAwsElastiCache
   createsnapshotrequest_p.h
   createsnapshotresponse.h
   createsnapshotresponse_p.h
-  createusergrouprequest.h
-  createusergrouprequest_p.h
-  createusergroupresponse.h
-  createusergroupresponse_p.h
   createuserrequest.h
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  createusergrouprequest.h
+  createusergrouprequest_p.h
+  createusergroupresponse.h
+  createusergroupresponse_p.h
   decreasenodegroupsinglobalreplicationgrouprequest.h
   decreasenodegroupsinglobalreplicationgrouprequest_p.h
   decreasenodegroupsinglobalreplicationgroupresponse.h
@@ -97,14 +104,14 @@ add_library(QtAwsElastiCache
   deletesnapshotrequest_p.h
   deletesnapshotresponse.h
   deletesnapshotresponse_p.h
-  deleteusergrouprequest.h
-  deleteusergrouprequest_p.h
-  deleteusergroupresponse.h
-  deleteusergroupresponse_p.h
   deleteuserrequest.h
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  deleteusergrouprequest.h
+  deleteusergrouprequest_p.h
+  deleteusergroupresponse.h
+  deleteusergroupresponse_p.h
   describecacheclustersrequest.h
   describecacheclustersrequest_p.h
   describecacheclustersresponse.h
@@ -145,14 +152,14 @@ add_library(QtAwsElastiCache
   describereplicationgroupsrequest_p.h
   describereplicationgroupsresponse.h
   describereplicationgroupsresponse_p.h
-  describereservedcachenodesofferingsrequest.h
-  describereservedcachenodesofferingsrequest_p.h
-  describereservedcachenodesofferingsresponse.h
-  describereservedcachenodesofferingsresponse_p.h
   describereservedcachenodesrequest.h
   describereservedcachenodesrequest_p.h
   describereservedcachenodesresponse.h
   describereservedcachenodesresponse_p.h
+  describereservedcachenodesofferingsrequest.h
+  describereservedcachenodesofferingsrequest_p.h
+  describereservedcachenodesofferingsresponse.h
+  describereservedcachenodesofferingsresponse_p.h
   describeserviceupdatesrequest.h
   describeserviceupdatesrequest_p.h
   describeserviceupdatesresponse.h
@@ -177,12 +184,6 @@ add_library(QtAwsElastiCache
   disassociateglobalreplicationgrouprequest_p.h
   disassociateglobalreplicationgroupresponse.h
   disassociateglobalreplicationgroupresponse_p.h
-  elasticacheclient.h
-  elasticacheclient_p.h
-  elasticacherequest.h
-  elasticacherequest_p.h
-  elasticacheresponse.h
-  elasticacheresponse_p.h
   failoverglobalreplicationgrouprequest.h
   failoverglobalreplicationgrouprequest_p.h
   failoverglobalreplicationgroupresponse.h
@@ -227,19 +228,18 @@ add_library(QtAwsElastiCache
   modifyreplicationgroupshardconfigurationrequest_p.h
   modifyreplicationgroupshardconfigurationresponse.h
   modifyreplicationgroupshardconfigurationresponse_p.h
-  modifyusergrouprequest.h
-  modifyusergrouprequest_p.h
-  modifyusergroupresponse.h
-  modifyusergroupresponse_p.h
   modifyuserrequest.h
   modifyuserrequest_p.h
   modifyuserresponse.h
   modifyuserresponse_p.h
+  modifyusergrouprequest.h
+  modifyusergrouprequest_p.h
+  modifyusergroupresponse.h
+  modifyusergroupresponse_p.h
   purchasereservedcachenodesofferingrequest.h
   purchasereservedcachenodesofferingrequest_p.h
   purchasereservedcachenodesofferingresponse.h
   purchasereservedcachenodesofferingresponse_p.h
-  qtawselasticacheglobal.h
   rebalanceslotsinglobalreplicationgrouprequest.h
   rebalanceslotsinglobalreplicationgrouprequest_p.h
   rebalanceslotsinglobalreplicationgroupresponse.h
@@ -268,6 +268,9 @@ add_library(QtAwsElastiCache
   testfailoverrequest_p.h
   testfailoverresponse.h
   testfailoverresponse_p.h
+  elasticacheclient.cpp
+  elasticacherequest.cpp
+  elasticacheresponse.cpp
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
   authorizecachesecuritygroupingressrequest.cpp
@@ -294,10 +297,10 @@ add_library(QtAwsElastiCache
   createreplicationgroupresponse.cpp
   createsnapshotrequest.cpp
   createsnapshotresponse.cpp
-  createusergrouprequest.cpp
-  createusergroupresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  createusergrouprequest.cpp
+  createusergroupresponse.cpp
   decreasenodegroupsinglobalreplicationgrouprequest.cpp
   decreasenodegroupsinglobalreplicationgroupresponse.cpp
   decreasereplicacountrequest.cpp
@@ -316,10 +319,10 @@ add_library(QtAwsElastiCache
   deletereplicationgroupresponse.cpp
   deletesnapshotrequest.cpp
   deletesnapshotresponse.cpp
-  deleteusergrouprequest.cpp
-  deleteusergroupresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  deleteusergrouprequest.cpp
+  deleteusergroupresponse.cpp
   describecacheclustersrequest.cpp
   describecacheclustersresponse.cpp
   describecacheengineversionsrequest.cpp
@@ -340,10 +343,10 @@ add_library(QtAwsElastiCache
   describeglobalreplicationgroupsresponse.cpp
   describereplicationgroupsrequest.cpp
   describereplicationgroupsresponse.cpp
-  describereservedcachenodesofferingsrequest.cpp
-  describereservedcachenodesofferingsresponse.cpp
   describereservedcachenodesrequest.cpp
   describereservedcachenodesresponse.cpp
+  describereservedcachenodesofferingsrequest.cpp
+  describereservedcachenodesofferingsresponse.cpp
   describeserviceupdatesrequest.cpp
   describeserviceupdatesresponse.cpp
   describesnapshotsrequest.cpp
@@ -356,9 +359,6 @@ add_library(QtAwsElastiCache
   describeusersresponse.cpp
   disassociateglobalreplicationgrouprequest.cpp
   disassociateglobalreplicationgroupresponse.cpp
-  elasticacheclient.cpp
-  elasticacherequest.cpp
-  elasticacheresponse.cpp
   failoverglobalreplicationgrouprequest.cpp
   failoverglobalreplicationgroupresponse.cpp
   increasenodegroupsinglobalreplicationgrouprequest.cpp
@@ -381,10 +381,10 @@ add_library(QtAwsElastiCache
   modifyreplicationgroupresponse.cpp
   modifyreplicationgroupshardconfigurationrequest.cpp
   modifyreplicationgroupshardconfigurationresponse.cpp
-  modifyusergrouprequest.cpp
-  modifyusergroupresponse.cpp
   modifyuserrequest.cpp
   modifyuserresponse.cpp
+  modifyusergrouprequest.cpp
+  modifyusergroupresponse.cpp
   purchasereservedcachenodesofferingrequest.cpp
   purchasereservedcachenodesofferingresponse.cpp
   rebalanceslotsinglobalreplicationgrouprequest.cpp

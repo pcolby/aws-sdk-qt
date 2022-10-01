@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::UnsubscribeRequest
- * \brief The UnsubscribeRequest class provides an interface for CodeStarNotifications Unsubscribe requests.
+ * \class QtAws::CodestarNotifications::UnsubscribeRequest
+ * \brief The UnsubscribeRequest class provides an interface for CodestarNotifications Unsubscribe requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::unsubscribe
+ * \sa CodestarNotificationsClient::unsubscribe
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
-    : CodeStarNotificationsRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
  * Constructs a UnsubscribeRequest object.
  */
 UnsubscribeRequest::UnsubscribeRequest()
-    : CodeStarNotificationsRequest(new UnsubscribeRequestPrivate(CodeStarNotificationsRequest::UnsubscribeAction, this))
+    : CodestarNotificationsRequest(new UnsubscribeRequestPrivate(CodestarNotificationsRequest::UnsubscribeAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::UnsubscribeRequestPrivate
+ * \class QtAws::CodestarNotifications::UnsubscribeRequestPrivate
  * \brief The UnsubscribeRequestPrivate class provides private implementation for UnsubscribeRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a UnsubscribeRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a UnsubscribeRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, UnsubscribeRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, UnsubscribeRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const UnsubscribeRequestPrivate &other, UnsubscribeRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

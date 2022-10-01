@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::APIGatewayResponse
- * \brief The APIGatewayResponse class provides an interface for APIGateway responses.
+ * \class QtAws::ApiGateway::ApiGatewayResponse
+ * \brief The ApiGatewayResponse class provides an interface for ApiGateway responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a APIGatewayResponse object with parent \a parent.
+ * Constructs a ApiGatewayResponse object with parent \a parent.
  */
-APIGatewayResponse::APIGatewayResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new APIGatewayResponsePrivate(this), parent)
+ApiGatewayResponse::ApiGatewayResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ApiGatewayResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a APIGatewayResponse object with private implementation \a d,
+ * Constructs a ApiGatewayResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from APIGatewayResponsePrivate.
+ * implementation that inherits from ApiGatewayResponsePrivate.
  */
-APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObject * const parent)
+ApiGatewayResponse::ApiGatewayResponse(ApiGatewayResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObj
 /*!
  * \reimp
  */
-void APIGatewayResponse::parseFailure(QIODevice &response)
+void ApiGatewayResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(APIGatewayResponse);
+    //Q_D(ApiGatewayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::APIGatewayResponsePrivate
- * \brief The APIGatewayResponsePrivate class provides private implementation for APIGatewayResponse.
+ * \class QtAws::ApiGateway::ApiGatewayResponsePrivate
+ * \brief The ApiGatewayResponsePrivate class provides private implementation for ApiGatewayResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a APIGatewayResponsePrivate object with public implementation \a q.
+ * Constructs a ApiGatewayResponsePrivate object with public implementation \a q.
  */
-APIGatewayResponsePrivate::APIGatewayResponsePrivate(
-    APIGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ApiGatewayResponsePrivate::ApiGatewayResponsePrivate(
+    ApiGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

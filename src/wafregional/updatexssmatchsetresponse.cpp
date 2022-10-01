@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateXssMatchSetResponse
- * \brief The UpdateXssMatchSetResponse class provides an interace for WAFRegional UpdateXssMatchSet responses.
+ * \class QtAws::WafRegional::UpdateXssMatchSetResponse
+ * \brief The UpdateXssMatchSetResponse class provides an interace for WafRegional UpdateXssMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateXssMatchSet
+ * \sa WafRegionalClient::updateXssMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
         const UpdateXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateXssMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateXssMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateXssMatchSetRequest * UpdateXssMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateXssMatchSet \a response.
+ * Parses a successful WafRegional UpdateXssMatchSet \a response.
  */
 void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateXssMatchSetResponsePrivate
+ * \class QtAws::WafRegional::UpdateXssMatchSetResponsePrivate
  * \brief The UpdateXssMatchSetResponsePrivate class provides private implementation for UpdateXssMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateXssMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
-    UpdateXssMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateXssMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateXssMatchSet response element from \a xml.
+ * Parses a WafRegional UpdateXssMatchSet response element from \a xml.
  */
 void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

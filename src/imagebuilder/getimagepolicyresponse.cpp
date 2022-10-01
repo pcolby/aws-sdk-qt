@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImagePolicyResponse
- * \brief The GetImagePolicyResponse class provides an interace for imagebuilder GetImagePolicy responses.
+ * \class QtAws::ImageBuilder::GetImagePolicyResponse
+ * \brief The GetImagePolicyResponse class provides an interace for ImageBuilder GetImagePolicy responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImagePolicy
+ * \sa ImageBuilderClient::getImagePolicy
  */
 
 /*!
@@ -47,7 +47,7 @@ GetImagePolicyResponse::GetImagePolicyResponse(
         const GetImagePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetImagePolicyResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetImagePolicyResponsePrivate(this), parent)
 {
     setRequest(new GetImagePolicyRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetImagePolicyRequest * GetImagePolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetImagePolicy \a response.
+ * Parses a successful ImageBuilder GetImagePolicy \a response.
  */
 void GetImagePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetImagePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImagePolicyResponsePrivate
+ * \class QtAws::ImageBuilder::GetImagePolicyResponsePrivate
  * \brief The GetImagePolicyResponsePrivate class provides private implementation for GetImagePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetImagePolicyResponsePrivate object with public implementation \a q.
  */
 GetImagePolicyResponsePrivate::GetImagePolicyResponsePrivate(
-    GetImagePolicyResponse * const q) : imagebuilderResponsePrivate(q)
+    GetImagePolicyResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetImagePolicy response element from \a xml.
+ * Parses a ImageBuilder GetImagePolicy response element from \a xml.
  */
 void GetImagePolicyResponsePrivate::parseGetImagePolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetImagePolicyResponsePrivate::parseGetImagePolicyResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

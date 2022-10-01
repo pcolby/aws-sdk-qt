@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterFromS3Response
- * \brief The RestoreDBClusterFromS3Response class provides an interace for RDS RestoreDBClusterFromS3 responses.
+ * \class QtAws::Rds::RestoreDBClusterFromS3Response
+ * \brief The RestoreDBClusterFromS3Response class provides an interace for Rds RestoreDBClusterFromS3 responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RestoreDBClusterFromS3Request * RestoreDBClusterFromS3Response::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS RestoreDBClusterFromS3 \a response.
+ * Parses a successful Rds RestoreDBClusterFromS3 \a response.
  */
 void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterFromS3ResponsePrivate
+ * \class QtAws::Rds::RestoreDBClusterFromS3ResponsePrivate
  * \brief The RestoreDBClusterFromS3ResponsePrivate class provides private implementation for RestoreDBClusterFromS3Response.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
 }
 
 /*!
- * Parses a RDS RestoreDBClusterFromS3 response element from \a xml.
+ * Parses a Rds RestoreDBClusterFromS3 response element from \a xml.
  */
 void RestoreDBClusterFromS3ResponsePrivate::parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RestoreDBClusterFromS3ResponsePrivate::parseRestoreDBClusterFromS3Response(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "dynamodbstreamsrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::GetRecordsRequest
- * \brief The GetRecordsRequest class provides an interface for DynamoDBStreams GetRecords requests.
+ * \class QtAws::DynamoDbStreams::GetRecordsRequest
+ * \brief The GetRecordsRequest class provides an interface for DynamoDbStreams GetRecords requests.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -38,14 +38,14 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::getRecords
+ * \sa DynamoDbStreamsClient::getRecords
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
-    : DynamoDBStreamsRequest(new GetRecordsRequestPrivate(*other.d_func(), this))
+    : DynamoDbStreamsRequest(new GetRecordsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
  * Constructs a GetRecordsRequest object.
  */
 GetRecordsRequest::GetRecordsRequest()
-    : DynamoDBStreamsRequest(new GetRecordsRequestPrivate(DynamoDBStreamsRequest::GetRecordsAction, this))
+    : DynamoDbStreamsRequest(new GetRecordsRequestPrivate(DynamoDbStreamsRequest::GetRecordsAction, this))
 {
 
 }
@@ -79,20 +79,20 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::GetRecordsRequestPrivate
+ * \class QtAws::DynamoDbStreams::GetRecordsRequestPrivate
  * \brief The GetRecordsRequestPrivate class provides private implementation for GetRecordsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a GetRecordsRequestPrivate object for DynamoDBStreams \a action,
+ * Constructs a GetRecordsRequestPrivate object for DynamoDbStreams \a action,
  * with public implementation \a q.
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
-    const DynamoDBStreamsRequest::Action action, GetRecordsRequest * const q)
-    : DynamoDBStreamsRequestPrivate(action, q)
+    const DynamoDbStreamsRequest::Action action, GetRecordsRequest * const q)
+    : DynamoDbStreamsRequestPrivate(action, q)
 {
 
 }
@@ -105,10 +105,10 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const GetRecordsRequestPrivate &other, GetRecordsRequest * const q)
-    : DynamoDBStreamsRequestPrivate(other, q)
+    : DynamoDbStreamsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

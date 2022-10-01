@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetPermissionPolicyRequest
- * \brief The GetPermissionPolicyRequest class provides an interface for WAFRegional GetPermissionPolicy requests.
+ * \class QtAws::WafRegional::GetPermissionPolicyRequest
+ * \brief The GetPermissionPolicyRequest class provides an interface for WafRegional GetPermissionPolicy requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getPermissionPolicy
+ * \sa WafRegionalClient::getPermissionPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other)
-    : WAFRegionalRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicy
  * Constructs a GetPermissionPolicyRequest object.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest()
-    : WAFRegionalRequest(new GetPermissionPolicyRequestPrivate(WAFRegionalRequest::GetPermissionPolicyAction, this))
+    : WafRegionalRequest(new GetPermissionPolicyRequestPrivate(WafRegionalRequest::GetPermissionPolicyAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAFRegional::GetPermissionPolicyRequestPrivate
+ * \class QtAws::WafRegional::GetPermissionPolicyRequestPrivate
  * \brief The GetPermissionPolicyRequestPrivate class provides private implementation for GetPermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetPermissionPolicyRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetPermissionPolicyRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
-    const WAFRegionalRequest::Action action, GetPermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetPermissionPolicyRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const GetPermissionPolicyRequestPrivate &other, GetPermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

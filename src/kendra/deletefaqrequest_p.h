@@ -24,14 +24,14 @@
 #include "deletefaqrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteFaqRequest;
 
-class DeleteFaqRequestPrivate : public kendraRequestPrivate {
+class DeleteFaqRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DeleteFaqRequestPrivate(const kendraRequest::Action action,
+    DeleteFaqRequestPrivate(const KendraRequest::Action action,
                                    DeleteFaqRequest * const q);
     DeleteFaqRequestPrivate(const DeleteFaqRequestPrivate &other,
                                    DeleteFaqRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

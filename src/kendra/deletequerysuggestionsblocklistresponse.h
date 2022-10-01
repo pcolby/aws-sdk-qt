@@ -24,11 +24,11 @@
 #include "deletequerysuggestionsblocklistrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteQuerySuggestionsBlockListResponsePrivate;
 
-class QTAWSKENDRA_EXPORT DeleteQuerySuggestionsBlockListResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DeleteQuerySuggestionsBlockListResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

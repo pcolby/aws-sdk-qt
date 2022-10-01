@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsResponse;
+class CodestarNotificationsResponse;
 
-class CodeStarNotificationsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CodestarNotificationsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit CodeStarNotificationsResponsePrivate(CodeStarNotificationsResponse * const q);
+    explicit CodestarNotificationsResponsePrivate(CodestarNotificationsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(CodeStarNotificationsResponse)
-    Q_DISABLE_COPY(CodeStarNotificationsResponsePrivate)
+    Q_DECLARE_PUBLIC(CodestarNotificationsResponse)
+    Q_DISABLE_COPY(CodestarNotificationsResponsePrivate)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

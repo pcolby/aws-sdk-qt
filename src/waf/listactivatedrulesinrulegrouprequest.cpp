@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListActivatedRulesInRuleGroupRequest
- * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for WAF ListActivatedRulesInRuleGroup requests.
+ * \class QtAws::Waf::ListActivatedRulesInRuleGroupRequest
+ * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for Waf ListActivatedRulesInRuleGroup requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
 }
 
 /*!
- * \class QtAws::WAF::ListActivatedRulesInRuleGroupRequestPrivate
+ * \class QtAws::Waf::ListActivatedRulesInRuleGroupRequestPrivate
  * \brief The ListActivatedRulesInRuleGroupRequestPrivate class provides private implementation for ListActivatedRulesInRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

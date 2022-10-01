@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeKinesisStreamingDestinationRequest
- * \brief The DescribeKinesisStreamingDestinationRequest class provides an interface for DynamoDB DescribeKinesisStreamingDestination requests.
+ * \class QtAws::DynamoDb::DescribeKinesisStreamingDestinationRequest
+ * \brief The DescribeKinesisStreamingDestinationRequest class provides an interface for DynamoDb DescribeKinesisStreamingDestination requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeKinesisStreamingDestination
+ * \sa DynamoDbClient::describeKinesisStreamingDestination
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeKinesisStreamingDestinationRequest::DescribeKinesisStreamingDestinationRequest(const DescribeKinesisStreamingDestinationRequest &other)
-    : DynamoDBRequest(new DescribeKinesisStreamingDestinationRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeKinesisStreamingDestinationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeKinesisStreamingDestinationRequest::DescribeKinesisStreamingDestinationR
  * Constructs a DescribeKinesisStreamingDestinationRequest object.
  */
 DescribeKinesisStreamingDestinationRequest::DescribeKinesisStreamingDestinationRequest()
-    : DynamoDBRequest(new DescribeKinesisStreamingDestinationRequestPrivate(DynamoDBRequest::DescribeKinesisStreamingDestinationAction, this))
+    : DynamoDbRequest(new DescribeKinesisStreamingDestinationRequestPrivate(DynamoDbRequest::DescribeKinesisStreamingDestinationAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeKinesisStreamingDestinationRequest::r
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeKinesisStreamingDestinationRequestPrivate
+ * \class QtAws::DynamoDb::DescribeKinesisStreamingDestinationRequestPrivate
  * \brief The DescribeKinesisStreamingDestinationRequestPrivate class provides private implementation for DescribeKinesisStreamingDestinationRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeKinesisStreamingDestinationRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeKinesisStreamingDestinationRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeKinesisStreamingDestinationRequestPrivate::DescribeKinesisStreamingDestinationRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeKinesisStreamingDestinationRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeKinesisStreamingDestinationRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeKinesisStreamingDestinationRequestPrivate::DescribeKinesisStreamingDesti
  */
 DescribeKinesisStreamingDestinationRequestPrivate::DescribeKinesisStreamingDestinationRequestPrivate(
     const DescribeKinesisStreamingDestinationRequestPrivate &other, DescribeKinesisStreamingDestinationRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

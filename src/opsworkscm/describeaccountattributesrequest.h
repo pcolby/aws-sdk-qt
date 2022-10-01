@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeAccountAttributesRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DescribeAccountAttributesRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DescribeAccountAttributesRequest : public OpsWorksCmRequest {
 
 public:
     DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

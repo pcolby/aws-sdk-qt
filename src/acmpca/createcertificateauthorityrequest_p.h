@@ -24,14 +24,14 @@
 #include "createcertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class CreateCertificateAuthorityRequest;
 
-class CreateCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
+class CreateCertificateAuthorityRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    CreateCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,
+    CreateCertificateAuthorityRequestPrivate(const AcmPcaRequest::Action action,
                                    CreateCertificateAuthorityRequest * const q);
     CreateCertificateAuthorityRequestPrivate(const CreateCertificateAuthorityRequestPrivate &other,
                                    CreateCertificateAuthorityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

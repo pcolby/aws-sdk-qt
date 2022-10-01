@@ -24,7 +24,7 @@
 #include "setqueueattributesrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class SetQueueAttributesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

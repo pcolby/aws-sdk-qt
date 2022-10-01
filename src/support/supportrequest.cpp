@@ -257,7 +257,7 @@ QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action, SupportRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-04-15"))
 {
 
 }

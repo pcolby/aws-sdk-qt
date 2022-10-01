@@ -23,19 +23,19 @@
 #include "stsrequest_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::GetCallerIdentityRequest
- * \brief The GetCallerIdentityRequest class provides an interface for STS GetCallerIdentity requests.
+ * \class QtAws::Sts::GetCallerIdentityRequest
+ * \brief The GetCallerIdentityRequest class provides an interface for Sts GetCallerIdentity requests.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::getCallerIdentity
@@ -79,11 +79,11 @@ QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::STS::GetCallerIdentityRequestPrivate
+ * \class QtAws::Sts::GetCallerIdentityRequestPrivate
  * \brief The GetCallerIdentityRequestPrivate class provides private implementation for GetCallerIdentityRequest.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -110,5 +110,5 @@ GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
 
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

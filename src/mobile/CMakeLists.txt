@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMOBILE_LIBRARY)
 
 add_library(QtAwsMobile
+  qtawsmobileglobal.h
+  mobileclient.h
+  mobileclient_p.h
+  mobilerequest.h
+  mobilerequest_p.h
+  mobileresponse.h
+  mobileresponse_p.h
   createprojectrequest.h
   createprojectrequest_p.h
   createprojectresponse.h
@@ -33,17 +40,13 @@ add_library(QtAwsMobile
   listprojectsrequest_p.h
   listprojectsresponse.h
   listprojectsresponse_p.h
-  mobileclient.h
-  mobileclient_p.h
-  mobilerequest.h
-  mobilerequest_p.h
-  mobileresponse.h
-  mobileresponse_p.h
-  qtawsmobileglobal.h
   updateprojectrequest.h
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  mobileclient.cpp
+  mobilerequest.cpp
+  mobileresponse.cpp
   createprojectrequest.cpp
   createprojectresponse.cpp
   deleteprojectrequest.cpp
@@ -60,9 +63,6 @@ add_library(QtAwsMobile
   listbundlesresponse.cpp
   listprojectsrequest.cpp
   listprojectsresponse.cpp
-  mobileclient.cpp
-  mobilerequest.cpp
-  mobileresponse.cpp
   updateprojectrequest.cpp
   updateprojectresponse.cpp)
 

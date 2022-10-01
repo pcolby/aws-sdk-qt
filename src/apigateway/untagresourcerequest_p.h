@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public APIGatewayRequestPrivate {
+class UntagResourceRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const APIGatewayRequest::Action action,
+    UntagResourceRequestPrivate(const ApiGatewayRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

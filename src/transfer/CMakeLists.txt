@@ -1,10 +1,29 @@
 add_compile_definitions(QTAWSTRANSFER_LIBRARY)
 
 add_library(QtAwsTransfer
+  qtawstransferglobal.h
+  transferclient.h
+  transferclient_p.h
+  transferrequest.h
+  transferrequest_p.h
+  transferresponse.h
+  transferresponse_p.h
   createaccessrequest.h
   createaccessrequest_p.h
   createaccessresponse.h
   createaccessresponse_p.h
+  createagreementrequest.h
+  createagreementrequest_p.h
+  createagreementresponse.h
+  createagreementresponse_p.h
+  createconnectorrequest.h
+  createconnectorrequest_p.h
+  createconnectorresponse.h
+  createconnectorresponse_p.h
+  createprofilerequest.h
+  createprofilerequest_p.h
+  createprofileresponse.h
+  createprofileresponse_p.h
   createserverrequest.h
   createserverrequest_p.h
   createserverresponse.h
@@ -13,10 +32,34 @@ add_library(QtAwsTransfer
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  createworkflowrequest.h
+  createworkflowrequest_p.h
+  createworkflowresponse.h
+  createworkflowresponse_p.h
   deleteaccessrequest.h
   deleteaccessrequest_p.h
   deleteaccessresponse.h
   deleteaccessresponse_p.h
+  deleteagreementrequest.h
+  deleteagreementrequest_p.h
+  deleteagreementresponse.h
+  deleteagreementresponse_p.h
+  deletecertificaterequest.h
+  deletecertificaterequest_p.h
+  deletecertificateresponse.h
+  deletecertificateresponse_p.h
+  deleteconnectorrequest.h
+  deleteconnectorrequest_p.h
+  deleteconnectorresponse.h
+  deleteconnectorresponse_p.h
+  deletehostkeyrequest.h
+  deletehostkeyrequest_p.h
+  deletehostkeyresponse.h
+  deletehostkeyresponse_p.h
+  deleteprofilerequest.h
+  deleteprofilerequest_p.h
+  deleteprofileresponse.h
+  deleteprofileresponse_p.h
   deleteserverrequest.h
   deleteserverrequest_p.h
   deleteserverresponse.h
@@ -29,10 +72,38 @@ add_library(QtAwsTransfer
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  deleteworkflowrequest.h
+  deleteworkflowrequest_p.h
+  deleteworkflowresponse.h
+  deleteworkflowresponse_p.h
   describeaccessrequest.h
   describeaccessrequest_p.h
   describeaccessresponse.h
   describeaccessresponse_p.h
+  describeagreementrequest.h
+  describeagreementrequest_p.h
+  describeagreementresponse.h
+  describeagreementresponse_p.h
+  describecertificaterequest.h
+  describecertificaterequest_p.h
+  describecertificateresponse.h
+  describecertificateresponse_p.h
+  describeconnectorrequest.h
+  describeconnectorrequest_p.h
+  describeconnectorresponse.h
+  describeconnectorresponse_p.h
+  describeexecutionrequest.h
+  describeexecutionrequest_p.h
+  describeexecutionresponse.h
+  describeexecutionresponse_p.h
+  describehostkeyrequest.h
+  describehostkeyrequest_p.h
+  describehostkeyresponse.h
+  describehostkeyresponse_p.h
+  describeprofilerequest.h
+  describeprofilerequest_p.h
+  describeprofileresponse.h
+  describeprofileresponse_p.h
   describesecuritypolicyrequest.h
   describesecuritypolicyrequest_p.h
   describesecuritypolicyresponse.h
@@ -45,6 +116,18 @@ add_library(QtAwsTransfer
   describeuserrequest_p.h
   describeuserresponse.h
   describeuserresponse_p.h
+  describeworkflowrequest.h
+  describeworkflowrequest_p.h
+  describeworkflowresponse.h
+  describeworkflowresponse_p.h
+  importcertificaterequest.h
+  importcertificaterequest_p.h
+  importcertificateresponse.h
+  importcertificateresponse_p.h
+  importhostkeyrequest.h
+  importhostkeyrequest_p.h
+  importhostkeyresponse.h
+  importhostkeyresponse_p.h
   importsshpublickeyrequest.h
   importsshpublickeyrequest_p.h
   importsshpublickeyresponse.h
@@ -53,6 +136,30 @@ add_library(QtAwsTransfer
   listaccessesrequest_p.h
   listaccessesresponse.h
   listaccessesresponse_p.h
+  listagreementsrequest.h
+  listagreementsrequest_p.h
+  listagreementsresponse.h
+  listagreementsresponse_p.h
+  listcertificatesrequest.h
+  listcertificatesrequest_p.h
+  listcertificatesresponse.h
+  listcertificatesresponse_p.h
+  listconnectorsrequest.h
+  listconnectorsrequest_p.h
+  listconnectorsresponse.h
+  listconnectorsresponse_p.h
+  listexecutionsrequest.h
+  listexecutionsrequest_p.h
+  listexecutionsresponse.h
+  listexecutionsresponse_p.h
+  listhostkeysrequest.h
+  listhostkeysrequest_p.h
+  listhostkeysresponse.h
+  listhostkeysresponse_p.h
+  listprofilesrequest.h
+  listprofilesrequest_p.h
+  listprofilesresponse.h
+  listprofilesresponse_p.h
   listsecuritypoliciesrequest.h
   listsecuritypoliciesrequest_p.h
   listsecuritypoliciesresponse.h
@@ -69,7 +176,18 @@ add_library(QtAwsTransfer
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  qtawstransferglobal.h
+  listworkflowsrequest.h
+  listworkflowsrequest_p.h
+  listworkflowsresponse.h
+  listworkflowsresponse_p.h
+  sendworkflowstepstaterequest.h
+  sendworkflowstepstaterequest_p.h
+  sendworkflowstepstateresponse.h
+  sendworkflowstepstateresponse_p.h
+  startfiletransferrequest.h
+  startfiletransferrequest_p.h
+  startfiletransferresponse.h
+  startfiletransferresponse_p.h
   startserverrequest.h
   startserverrequest_p.h
   startserverresponse.h
@@ -86,12 +204,6 @@ add_library(QtAwsTransfer
   testidentityproviderrequest_p.h
   testidentityproviderresponse.h
   testidentityproviderresponse_p.h
-  transferclient.h
-  transferclient_p.h
-  transferrequest.h
-  transferrequest_p.h
-  transferresponse.h
-  transferresponse_p.h
   untagresourcerequest.h
   untagresourcerequest_p.h
   untagresourceresponse.h
@@ -100,6 +212,26 @@ add_library(QtAwsTransfer
   updateaccessrequest_p.h
   updateaccessresponse.h
   updateaccessresponse_p.h
+  updateagreementrequest.h
+  updateagreementrequest_p.h
+  updateagreementresponse.h
+  updateagreementresponse_p.h
+  updatecertificaterequest.h
+  updatecertificaterequest_p.h
+  updatecertificateresponse.h
+  updatecertificateresponse_p.h
+  updateconnectorrequest.h
+  updateconnectorrequest_p.h
+  updateconnectorresponse.h
+  updateconnectorresponse_p.h
+  updatehostkeyrequest.h
+  updatehostkeyrequest_p.h
+  updatehostkeyresponse.h
+  updatehostkeyresponse_p.h
+  updateprofilerequest.h
+  updateprofilerequest_p.h
+  updateprofileresponse.h
+  updateprofileresponse_p.h
   updateserverrequest.h
   updateserverrequest_p.h
   updateserverresponse.h
@@ -108,32 +240,85 @@ add_library(QtAwsTransfer
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
+  transferclient.cpp
+  transferrequest.cpp
+  transferresponse.cpp
   createaccessrequest.cpp
   createaccessresponse.cpp
+  createagreementrequest.cpp
+  createagreementresponse.cpp
+  createconnectorrequest.cpp
+  createconnectorresponse.cpp
+  createprofilerequest.cpp
+  createprofileresponse.cpp
   createserverrequest.cpp
   createserverresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  createworkflowrequest.cpp
+  createworkflowresponse.cpp
   deleteaccessrequest.cpp
   deleteaccessresponse.cpp
+  deleteagreementrequest.cpp
+  deleteagreementresponse.cpp
+  deletecertificaterequest.cpp
+  deletecertificateresponse.cpp
+  deleteconnectorrequest.cpp
+  deleteconnectorresponse.cpp
+  deletehostkeyrequest.cpp
+  deletehostkeyresponse.cpp
+  deleteprofilerequest.cpp
+  deleteprofileresponse.cpp
   deleteserverrequest.cpp
   deleteserverresponse.cpp
   deletesshpublickeyrequest.cpp
   deletesshpublickeyresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  deleteworkflowrequest.cpp
+  deleteworkflowresponse.cpp
   describeaccessrequest.cpp
   describeaccessresponse.cpp
+  describeagreementrequest.cpp
+  describeagreementresponse.cpp
+  describecertificaterequest.cpp
+  describecertificateresponse.cpp
+  describeconnectorrequest.cpp
+  describeconnectorresponse.cpp
+  describeexecutionrequest.cpp
+  describeexecutionresponse.cpp
+  describehostkeyrequest.cpp
+  describehostkeyresponse.cpp
+  describeprofilerequest.cpp
+  describeprofileresponse.cpp
   describesecuritypolicyrequest.cpp
   describesecuritypolicyresponse.cpp
   describeserverrequest.cpp
   describeserverresponse.cpp
   describeuserrequest.cpp
   describeuserresponse.cpp
+  describeworkflowrequest.cpp
+  describeworkflowresponse.cpp
+  importcertificaterequest.cpp
+  importcertificateresponse.cpp
+  importhostkeyrequest.cpp
+  importhostkeyresponse.cpp
   importsshpublickeyrequest.cpp
   importsshpublickeyresponse.cpp
   listaccessesrequest.cpp
   listaccessesresponse.cpp
+  listagreementsrequest.cpp
+  listagreementsresponse.cpp
+  listcertificatesrequest.cpp
+  listcertificatesresponse.cpp
+  listconnectorsrequest.cpp
+  listconnectorsresponse.cpp
+  listexecutionsrequest.cpp
+  listexecutionsresponse.cpp
+  listhostkeysrequest.cpp
+  listhostkeysresponse.cpp
+  listprofilesrequest.cpp
+  listprofilesresponse.cpp
   listsecuritypoliciesrequest.cpp
   listsecuritypoliciesresponse.cpp
   listserversrequest.cpp
@@ -142,6 +327,12 @@ add_library(QtAwsTransfer
   listtagsforresourceresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  listworkflowsrequest.cpp
+  listworkflowsresponse.cpp
+  sendworkflowstepstaterequest.cpp
+  sendworkflowstepstateresponse.cpp
+  startfiletransferrequest.cpp
+  startfiletransferresponse.cpp
   startserverrequest.cpp
   startserverresponse.cpp
   stopserverrequest.cpp
@@ -150,13 +341,20 @@ add_library(QtAwsTransfer
   tagresourceresponse.cpp
   testidentityproviderrequest.cpp
   testidentityproviderresponse.cpp
-  transferclient.cpp
-  transferrequest.cpp
-  transferresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateaccessrequest.cpp
   updateaccessresponse.cpp
+  updateagreementrequest.cpp
+  updateagreementresponse.cpp
+  updatecertificaterequest.cpp
+  updatecertificateresponse.cpp
+  updateconnectorrequest.cpp
+  updateconnectorresponse.cpp
+  updatehostkeyrequest.cpp
+  updatehostkeyresponse.cpp
+  updateprofilerequest.cpp
+  updateprofileresponse.cpp
   updateserverrequest.cpp
   updateserverresponse.cpp
   updateuserrequest.cpp

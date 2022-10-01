@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondDecisionTaskCompletedResponse
- * \brief The RespondDecisionTaskCompletedResponse class provides an interace for SWF RespondDecisionTaskCompleted responses.
+ * \class QtAws::Swf::RespondDecisionTaskCompletedResponse
+ * \brief The RespondDecisionTaskCompletedResponse class provides an interace for Swf RespondDecisionTaskCompleted responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RespondDecisionTaskCompletedRequest * RespondDecisionTaskCompletedResponse
 
 /*!
  * \reimp
- * Parses a successful SWF RespondDecisionTaskCompleted \a response.
+ * Parses a successful Swf RespondDecisionTaskCompleted \a response.
  */
 void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RespondDecisionTaskCompletedResponsePrivate
+ * \class QtAws::Swf::RespondDecisionTaskCompletedResponsePrivate
  * \brief The RespondDecisionTaskCompletedResponsePrivate class provides private implementation for RespondDecisionTaskCompletedResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedRespons
 }
 
 /*!
- * Parses a SWF RespondDecisionTaskCompleted response element from \a xml.
+ * Parses a Swf RespondDecisionTaskCompleted response element from \a xml.
  */
 void RespondDecisionTaskCompletedResponsePrivate::parseRespondDecisionTaskCompletedResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RespondDecisionTaskCompletedResponsePrivate::parseRespondDecisionTaskComple
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

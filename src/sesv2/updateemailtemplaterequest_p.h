@@ -24,14 +24,14 @@
 #include "updateemailtemplaterequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class UpdateEmailTemplateRequest;
 
-class UpdateEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class UpdateEmailTemplateRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    UpdateEmailTemplateRequestPrivate(const Sesv2Request::Action action,
+    UpdateEmailTemplateRequestPrivate(const SESv2Request::Action action,
                                    UpdateEmailTemplateRequest * const q);
     UpdateEmailTemplateRequestPrivate(const UpdateEmailTemplateRequestPrivate &other,
                                    UpdateEmailTemplateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

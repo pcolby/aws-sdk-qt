@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::ListExecutionsRequest
- * \brief The ListExecutionsRequest class provides an interface for SFN ListExecutions requests.
+ * \class QtAws::Sfn::ListExecutionsRequest
+ * \brief The ListExecutionsRequest class provides an interface for Sfn ListExecutions requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * ListExecutionsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SFN::ListExecutionsRequestPrivate
+ * \class QtAws::Sfn::ListExecutionsRequestPrivate
  * \brief The ListExecutionsRequestPrivate class provides private implementation for ListExecutionsRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

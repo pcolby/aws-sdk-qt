@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class FlushStageAuthorizersCacheRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT FlushStageAuthorizersCacheRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT FlushStageAuthorizersCacheRequest : public ApiGatewayRequest {
 
 public:
     FlushStageAuthorizersCacheRequest(const FlushStageAuthorizersCacheRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

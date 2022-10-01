@@ -24,7 +24,7 @@
 #include "createkeyrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class CreateKeyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

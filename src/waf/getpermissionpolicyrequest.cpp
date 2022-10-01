@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetPermissionPolicyRequest
- * \brief The GetPermissionPolicyRequest class provides an interface for WAF GetPermissionPolicy requests.
+ * \class QtAws::Waf::GetPermissionPolicyRequest
+ * \brief The GetPermissionPolicyRequest class provides an interface for Waf GetPermissionPolicy requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::GetPermissionPolicyRequestPrivate
+ * \class QtAws::Waf::GetPermissionPolicyRequestPrivate
  * \brief The GetPermissionPolicyRequestPrivate class provides private implementation for GetPermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListVerifiedEmailAddressesRequest
- * \brief The ListVerifiedEmailAddressesRequest class provides an interface for SES ListVerifiedEmailAddresses requests.
+ * \class QtAws::Ses::ListVerifiedEmailAddressesRequest
+ * \brief The ListVerifiedEmailAddressesRequest class provides an interface for Ses ListVerifiedEmailAddresses requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * ListVerifiedEmailAddressesRequest::response(Q
 }
 
 /*!
- * \class QtAws::SES::ListVerifiedEmailAddressesRequestPrivate
+ * \class QtAws::Ses::ListVerifiedEmailAddressesRequestPrivate
  * \brief The ListVerifiedEmailAddressesRequestPrivate class provides private implementation for ListVerifiedEmailAddressesRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ ListVerifiedEmailAddressesRequestPrivate::ListVerifiedEmailAddressesRequestPriva
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ResetDBClusterParameterGroupRequest
- * \brief The ResetDBClusterParameterGroupRequest class provides an interface for DocDB ResetDBClusterParameterGroup requests.
+ * \class QtAws::DocDb::ResetDBClusterParameterGroupRequest
+ * \brief The ResetDBClusterParameterGroupRequest class provides an interface for DocDb ResetDBClusterParameterGroup requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::resetDBClusterParameterGroup
+ * \sa DocDbClient::resetDBClusterParameterGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other)
-    : DocDBRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const R
  * Constructs a ResetDBClusterParameterGroupRequest object.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest()
-    : DocDBRequest(new ResetDBClusterParameterGroupRequestPrivate(DocDBRequest::ResetDBClusterParameterGroupAction, this))
+    : DocDbRequest(new ResetDBClusterParameterGroupRequestPrivate(DocDbRequest::ResetDBClusterParameterGroupAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response
 }
 
 /*!
- * \class QtAws::DocDB::ResetDBClusterParameterGroupRequestPrivate
+ * \class QtAws::DocDb::ResetDBClusterParameterGroupRequestPrivate
  * \brief The ResetDBClusterParameterGroupRequestPrivate class provides private implementation for ResetDBClusterParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ResetDBClusterParameterGroupRequestPrivate object for DocDB \a action,
+ * Constructs a ResetDBClusterParameterGroupRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
-    const DocDBRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestP
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
     const ResetDBClusterParameterGroupRequestPrivate &other, ResetDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

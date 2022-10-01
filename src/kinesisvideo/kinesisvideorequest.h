@@ -43,6 +43,8 @@ public:
         CreateStreamAction,
         DeleteSignalingChannelAction,
         DeleteStreamAction,
+        DescribeImageGenerationConfigurationAction,
+        DescribeNotificationConfigurationAction,
         DescribeSignalingChannelAction,
         DescribeStreamAction,
         GetDataEndpointAction,
@@ -56,6 +58,8 @@ public:
         UntagResourceAction,
         UntagStreamAction,
         UpdateDataRetentionAction,
+        UpdateImageGenerationConfigurationAction,
+        UpdateNotificationConfigurationAction,
         UpdateSignalingChannelAction,
         UpdateStreamAction,
     };

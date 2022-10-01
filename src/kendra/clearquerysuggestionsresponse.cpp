@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ClearQuerySuggestionsResponse
- * \brief The ClearQuerySuggestionsResponse class provides an interace for kendra ClearQuerySuggestions responses.
+ * \class QtAws::Kendra::ClearQuerySuggestionsResponse
+ * \brief The ClearQuerySuggestionsResponse class provides an interace for Kendra ClearQuerySuggestions responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::clearQuerySuggestions
+ * \sa KendraClient::clearQuerySuggestions
  */
 
 /*!
@@ -45,7 +45,7 @@ ClearQuerySuggestionsResponse::ClearQuerySuggestionsResponse(
         const ClearQuerySuggestionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ClearQuerySuggestionsResponsePrivate(this), parent)
+    : KendraResponse(new ClearQuerySuggestionsResponsePrivate(this), parent)
 {
     setRequest(new ClearQuerySuggestionsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ClearQuerySuggestionsRequest * ClearQuerySuggestionsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful kendra ClearQuerySuggestions \a response.
+ * Parses a successful Kendra ClearQuerySuggestions \a response.
  */
 void ClearQuerySuggestionsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ClearQuerySuggestionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ClearQuerySuggestionsResponsePrivate
+ * \class QtAws::Kendra::ClearQuerySuggestionsResponsePrivate
  * \brief The ClearQuerySuggestionsResponsePrivate class provides private implementation for ClearQuerySuggestionsResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ClearQuerySuggestionsResponsePrivate object with public implementation \a q.
  */
 ClearQuerySuggestionsResponsePrivate::ClearQuerySuggestionsResponsePrivate(
-    ClearQuerySuggestionsResponse * const q) : kendraResponsePrivate(q)
+    ClearQuerySuggestionsResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ClearQuerySuggestions response element from \a xml.
+ * Parses a Kendra ClearQuerySuggestions response element from \a xml.
  */
 void ClearQuerySuggestionsResponsePrivate::parseClearQuerySuggestionsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ClearQuerySuggestionsResponsePrivate::parseClearQuerySuggestionsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

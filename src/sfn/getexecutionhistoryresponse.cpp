@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::GetExecutionHistoryResponse
- * \brief The GetExecutionHistoryResponse class provides an interace for SFN GetExecutionHistory responses.
+ * \class QtAws::Sfn::GetExecutionHistoryResponse
+ * \brief The GetExecutionHistoryResponse class provides an interace for Sfn GetExecutionHistory responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN GetExecutionHistory \a response.
+ * Parses a successful Sfn GetExecutionHistory \a response.
  */
 void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::GetExecutionHistoryResponsePrivate
+ * \class QtAws::Sfn::GetExecutionHistoryResponsePrivate
  * \brief The GetExecutionHistoryResponsePrivate class provides private implementation for GetExecutionHistoryResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
 }
 
 /*!
- * Parses a SFN GetExecutionHistory response element from \a xml.
+ * Parses a Sfn GetExecutionHistory response element from \a xml.
  */
 void GetExecutionHistoryResponsePrivate::parseGetExecutionHistoryResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void GetExecutionHistoryResponsePrivate::parseGetExecutionHistoryResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

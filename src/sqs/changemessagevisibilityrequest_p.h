@@ -24,7 +24,7 @@
 #include "changemessagevisibilityrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class ChangeMessageVisibilityRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

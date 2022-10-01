@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListImagePipelinesResponse
- * \brief The ListImagePipelinesResponse class provides an interace for imagebuilder ListImagePipelines responses.
+ * \class QtAws::ImageBuilder::ListImagePipelinesResponse
+ * \brief The ListImagePipelinesResponse class provides an interace for ImageBuilder ListImagePipelines responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listImagePipelines
+ * \sa ImageBuilderClient::listImagePipelines
  */
 
 /*!
@@ -47,7 +47,7 @@ ListImagePipelinesResponse::ListImagePipelinesResponse(
         const ListImagePipelinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ListImagePipelinesResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ListImagePipelinesResponsePrivate(this), parent)
 {
     setRequest(new ListImagePipelinesRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ListImagePipelinesRequest * ListImagePipelinesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ListImagePipelines \a response.
+ * Parses a successful ImageBuilder ListImagePipelines \a response.
  */
 void ListImagePipelinesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ListImagePipelinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ListImagePipelinesResponsePrivate
+ * \class QtAws::ImageBuilder::ListImagePipelinesResponsePrivate
  * \brief The ListImagePipelinesResponsePrivate class provides private implementation for ListImagePipelinesResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ListImagePipelinesResponsePrivate object with public implementation \a q.
  */
 ListImagePipelinesResponsePrivate::ListImagePipelinesResponsePrivate(
-    ListImagePipelinesResponse * const q) : imagebuilderResponsePrivate(q)
+    ListImagePipelinesResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ListImagePipelines response element from \a xml.
+ * Parses a ImageBuilder ListImagePipelines response element from \a xml.
  */
 void ListImagePipelinesResponsePrivate::parseListImagePipelinesResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListImagePipelinesResponsePrivate::parseListImagePipelinesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

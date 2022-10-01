@@ -24,7 +24,7 @@
 #include "updateopsitemrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class UpdateOpsItemResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public imagebuilderRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const imagebuilderRequest::Action action,
+    ListTagsForResourceRequestPrivate(const ImageBuilderRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

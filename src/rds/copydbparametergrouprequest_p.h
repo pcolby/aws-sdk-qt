@@ -24,7 +24,7 @@
 #include "copydbparametergrouprequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class CopyDBParameterGroupRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

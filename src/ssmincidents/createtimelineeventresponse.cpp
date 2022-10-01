@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::CreateTimelineEventResponse
- * \brief The CreateTimelineEventResponse class provides an interace for SSMIncidents CreateTimelineEvent responses.
+ * \class QtAws::SsmIncidents::CreateTimelineEventResponse
+ * \brief The CreateTimelineEventResponse class provides an interace for SsmIncidents CreateTimelineEvent responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::createTimelineEvent
+ * \sa SsmIncidentsClient::createTimelineEvent
  */
 
 /*!
@@ -54,7 +54,7 @@ CreateTimelineEventResponse::CreateTimelineEventResponse(
         const CreateTimelineEventRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new CreateTimelineEventResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new CreateTimelineEventResponsePrivate(this), parent)
 {
     setRequest(new CreateTimelineEventRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const CreateTimelineEventRequest * CreateTimelineEventResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents CreateTimelineEvent \a response.
+ * Parses a successful SsmIncidents CreateTimelineEvent \a response.
  */
 void CreateTimelineEventResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void CreateTimelineEventResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::CreateTimelineEventResponsePrivate
+ * \class QtAws::SsmIncidents::CreateTimelineEventResponsePrivate
  * \brief The CreateTimelineEventResponsePrivate class provides private implementation for CreateTimelineEventResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a CreateTimelineEventResponsePrivate object with public implementation \a q.
  */
 CreateTimelineEventResponsePrivate::CreateTimelineEventResponsePrivate(
-    CreateTimelineEventResponse * const q) : SSMIncidentsResponsePrivate(q)
+    CreateTimelineEventResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents CreateTimelineEvent response element from \a xml.
+ * Parses a SsmIncidents CreateTimelineEvent response element from \a xml.
  */
 void CreateTimelineEventResponsePrivate::parseCreateTimelineEventResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateTimelineEventResponsePrivate::parseCreateTimelineEventResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

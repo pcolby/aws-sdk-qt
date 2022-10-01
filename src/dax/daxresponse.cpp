@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DaxResponse
- * \brief The DaxResponse class provides an interface for DAX responses.
+ * \class QtAws::Dax::DaxResponse
+ * \brief The DaxResponse class provides an interface for Dax responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -76,11 +76,11 @@ void DaxResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DaxResponsePrivate
+ * \class QtAws::Dax::DaxResponsePrivate
  * \brief The DaxResponsePrivate class provides private implementation for DaxResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,5 +92,5 @@ DaxResponsePrivate::DaxResponsePrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

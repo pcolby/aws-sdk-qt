@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SetEndpointAttributesRequest
- * \brief The SetEndpointAttributesRequest class provides an interface for SNS SetEndpointAttributes requests.
+ * \class QtAws::Sns::SetEndpointAttributesRequest
+ * \brief The SetEndpointAttributesRequest class provides an interface for Sns SetEndpointAttributes requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * SetEndpointAttributesRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::SNS::SetEndpointAttributesRequestPrivate
+ * \class QtAws::Sns::SetEndpointAttributesRequestPrivate
  * \brief The SetEndpointAttributesRequestPrivate class provides private implementation for SetEndpointAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

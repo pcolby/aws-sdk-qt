@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutImageScanningConfigurationResponse
- * \brief The PutImageScanningConfigurationResponse class provides an interace for ECR PutImageScanningConfiguration responses.
+ * \class QtAws::Ecr::PutImageScanningConfigurationResponse
+ * \brief The PutImageScanningConfigurationResponse class provides an interace for Ecr PutImageScanningConfiguration responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putImageScanningConfiguration
  */
@@ -68,7 +74,7 @@ const PutImageScanningConfigurationRequest * PutImageScanningConfigurationRespon
 
 /*!
  * \reimp
- * Parses a successful ECR PutImageScanningConfiguration \a response.
+ * Parses a successful Ecr PutImageScanningConfiguration \a response.
  */
 void PutImageScanningConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void PutImageScanningConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::PutImageScanningConfigurationResponsePrivate
+ * \class QtAws::Ecr::PutImageScanningConfigurationResponsePrivate
  * \brief The PutImageScanningConfigurationResponsePrivate class provides private implementation for PutImageScanningConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ PutImageScanningConfigurationResponsePrivate::PutImageScanningConfigurationRespo
 }
 
 /*!
- * Parses a ECR PutImageScanningConfiguration response element from \a xml.
+ * Parses a Ecr PutImageScanningConfiguration response element from \a xml.
  */
 void PutImageScanningConfigurationResponsePrivate::parsePutImageScanningConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void PutImageScanningConfigurationResponsePrivate::parsePutImageScanningConfigur
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

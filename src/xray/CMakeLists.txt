@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSXRAY_LIBRARY)
 
 add_library(QtAwsXRay
+  qtawsxrayglobal.h
+  xrayclient.h
+  xrayclient_p.h
+  xrayrequest.h
+  xrayrequest_p.h
+  xrayresponse.h
+  xrayresponse_p.h
   batchgettracesrequest.h
   batchgettracesrequest_p.h
   batchgettracesresponse.h
@@ -33,6 +40,10 @@ add_library(QtAwsXRay
   getgroupsrequest_p.h
   getgroupsresponse.h
   getgroupsresponse_p.h
+  getinsightrequest.h
+  getinsightrequest_p.h
+  getinsightresponse.h
+  getinsightresponse_p.h
   getinsighteventsrequest.h
   getinsighteventsrequest_p.h
   getinsighteventsresponse.h
@@ -41,10 +52,6 @@ add_library(QtAwsXRay
   getinsightimpactgraphrequest_p.h
   getinsightimpactgraphresponse.h
   getinsightimpactgraphresponse_p.h
-  getinsightrequest.h
-  getinsightrequest_p.h
-  getinsightresponse.h
-  getinsightresponse_p.h
   getinsightsummariesrequest.h
   getinsightsummariesrequest_p.h
   getinsightsummariesresponse.h
@@ -93,7 +100,6 @@ add_library(QtAwsXRay
   puttracesegmentsrequest_p.h
   puttracesegmentsresponse.h
   puttracesegmentsresponse_p.h
-  qtawsxrayglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -110,12 +116,9 @@ add_library(QtAwsXRay
   updatesamplingrulerequest_p.h
   updatesamplingruleresponse.h
   updatesamplingruleresponse_p.h
-  xrayclient.h
-  xrayclient_p.h
-  xrayrequest.h
-  xrayrequest_p.h
-  xrayresponse.h
-  xrayresponse_p.h
+  xrayclient.cpp
+  xrayrequest.cpp
+  xrayresponse.cpp
   batchgettracesrequest.cpp
   batchgettracesresponse.cpp
   creategrouprequest.cpp
@@ -132,12 +135,12 @@ add_library(QtAwsXRay
   getgroupresponse.cpp
   getgroupsrequest.cpp
   getgroupsresponse.cpp
+  getinsightrequest.cpp
+  getinsightresponse.cpp
   getinsighteventsrequest.cpp
   getinsighteventsresponse.cpp
   getinsightimpactgraphrequest.cpp
   getinsightimpactgraphresponse.cpp
-  getinsightrequest.cpp
-  getinsightresponse.cpp
   getinsightsummariesrequest.cpp
   getinsightsummariesresponse.cpp
   getsamplingrulesrequest.cpp
@@ -169,10 +172,7 @@ add_library(QtAwsXRay
   updategrouprequest.cpp
   updategroupresponse.cpp
   updatesamplingrulerequest.cpp
-  updatesamplingruleresponse.cpp
-  xrayclient.cpp
-  xrayrequest.cpp
-  xrayresponse.cpp)
+  updatesamplingruleresponse.cpp)
 
 target_link_libraries(QtAwsXRay
   PRIVATE QtAwsCore

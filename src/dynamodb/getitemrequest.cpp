@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::GetItemRequest
- * \brief The GetItemRequest class provides an interface for DynamoDB GetItem requests.
+ * \class QtAws::DynamoDb::GetItemRequest
+ * \brief The GetItemRequest class provides an interface for DynamoDb GetItem requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::getItem
+ * \sa DynamoDbClient::getItem
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetItemRequest::GetItemRequest(const GetItemRequest &other)
-    : DynamoDBRequest(new GetItemRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new GetItemRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ GetItemRequest::GetItemRequest(const GetItemRequest &other)
  * Constructs a GetItemRequest object.
  */
 GetItemRequest::GetItemRequest()
-    : DynamoDBRequest(new GetItemRequestPrivate(DynamoDBRequest::GetItemAction, this))
+    : DynamoDbRequest(new GetItemRequestPrivate(DynamoDbRequest::GetItemAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * GetItemRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::DynamoDB::GetItemRequestPrivate
+ * \class QtAws::DynamoDb::GetItemRequestPrivate
  * \brief The GetItemRequestPrivate class provides private implementation for GetItemRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a GetItemRequestPrivate object for DynamoDB \a action,
+ * Constructs a GetItemRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
-    const DynamoDBRequest::Action action, GetItemRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, GetItemRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ GetItemRequestPrivate::GetItemRequestPrivate(
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const GetItemRequestPrivate &other, GetItemRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

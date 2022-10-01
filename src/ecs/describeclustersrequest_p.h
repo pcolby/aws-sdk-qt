@@ -24,7 +24,7 @@
 #include "describeclustersrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class DescribeClustersRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

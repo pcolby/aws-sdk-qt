@@ -31,6 +31,8 @@
 #include "getexperimentresponse.h"
 #include "getexperimenttemplaterequest.h"
 #include "getexperimenttemplateresponse.h"
+#include "gettargetresourcetyperequest.h"
+#include "gettargetresourcetyperesponse.h"
 #include "listactionsrequest.h"
 #include "listactionsresponse.h"
 #include "listexperimenttemplatesrequest.h"
@@ -39,6 +41,8 @@
 #include "listexperimentsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtargetresourcetypesrequest.h"
+#include "listtargetresourcetypesresponse.h"
 #include "startexperimentrequest.h"
 #include "startexperimentresponse.h"
 #include "stopexperimentrequest.h"
@@ -54,8 +58,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::FIS
- * \brief Contains classess for accessing AWS Fault Injection Simulator (FIS).
+ * \namespace QtAws::Fis
+ * \brief Contains classess for accessing AWS Fault Injection Simulator.
  *
  * \inmodule QtAwsFis
  *
@@ -63,18 +67,18 @@
  */
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::FisClient
- * \brief The FisClient class provides access to the AWS Fault Injection Simulator (FIS) service.
+ * \class QtAws::Fis::FisClient
+ * \brief The FisClient class provides access to the AWS Fault Injection Simulator service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  */
 
 /*!
@@ -140,12 +144,12 @@ FisClient::FisClient(
  *
  * </p
  *
- * To create a template, specify the following information:
+ * An experiment template includes the following
  *
- * </p <ul> <li>
+ * components> <ul> <li>
  *
- * <b>Targets</b>: A target can be a specific resource in your AWS environment, or one or more resources that match
- * criteria that you specify, for example, resources that have specific
+ * <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more resources
+ * that match criteria that you specify, for example, resources that have specific
  *
  * tags> </li> <li>
  *
@@ -159,8 +163,9 @@ FisClient::FisClient(
  *
  * alarm> </li> </ul>
  *
- * For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection Simulator
- * User
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the
+ * <i>Fault Injection Simulator User
  */
 CreateExperimentTemplateResponse * FisClient::createExperimentTemplate(const CreateExperimentTemplateRequest &request)
 {
@@ -186,7 +191,7 @@ DeleteExperimentTemplateResponse * FisClient::deleteExperimentTemplate(const Del
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about the specified AWS FIS
+ * Gets information about the specified FIS
  */
 GetActionResponse * FisClient::getAction(const GetActionRequest &request)
 {
@@ -221,11 +226,24 @@ GetExperimentTemplateResponse * FisClient::getExperimentTemplate(const GetExperi
 
 /*!
  * Sends \a request to the FisClient service, and returns a pointer to an
+ * GetTargetResourceTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the specified resource
+ */
+GetTargetResourceTypeResponse * FisClient::getTargetResourceType(const GetTargetResourceTypeRequest &request)
+{
+    return qobject_cast<GetTargetResourceTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FisClient service, and returns a pointer to an
  * ListActionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the available AWS FIS
+ * Lists the available FIS
  */
 ListActionsResponse * FisClient::listActions(const ListActionsRequest &request)
 {
@@ -269,6 +287,19 @@ ListExperimentsResponse * FisClient::listExperiments(const ListExperimentsReques
 ListTagsForResourceResponse * FisClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FisClient service, and returns a pointer to an
+ * ListTargetResourceTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the target resource
+ */
+ListTargetResourceTypesResponse * FisClient::listTargetResourceTypes(const ListTargetResourceTypesRequest &request)
+{
+    return qobject_cast<ListTargetResourceTypesResponse *>(send(request));
 }
 
 /*!
@@ -337,12 +368,12 @@ UpdateExperimentTemplateResponse * FisClient::updateExperimentTemplate(const Upd
 }
 
 /*!
- * \class QtAws::FIS::FisClientPrivate
+ * \class QtAws::Fis::FisClientPrivate
  * \brief The FisClientPrivate class provides private implementation for FisClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -354,5 +385,5 @@ FisClientPrivate::FisClientPrivate(FisClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

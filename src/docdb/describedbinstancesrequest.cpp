@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBInstancesRequest
- * \brief The DescribeDBInstancesRequest class provides an interface for DocDB DescribeDBInstances requests.
+ * \class QtAws::DocDb::DescribeDBInstancesRequest
+ * \brief The DescribeDBInstancesRequest class provides an interface for DocDb DescribeDBInstances requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBInstances
+ * \sa DocDbClient::describeDBInstances
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDBInstancesRequest::DescribeDBInstancesRequest(const DescribeDBInstancesRequest &other)
-    : DocDBRequest(new DescribeDBInstancesRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeDBInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeDBInstancesRequest::DescribeDBInstancesRequest(const DescribeDBInstances
  * Constructs a DescribeDBInstancesRequest object.
  */
 DescribeDBInstancesRequest::DescribeDBInstancesRequest()
-    : DocDBRequest(new DescribeDBInstancesRequestPrivate(DocDBRequest::DescribeDBInstancesAction, this))
+    : DocDbRequest(new DescribeDBInstancesRequestPrivate(DocDbRequest::DescribeDBInstancesAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDBInstancesRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBInstancesRequestPrivate
+ * \class QtAws::DocDb::DescribeDBInstancesRequestPrivate
  * \brief The DescribeDBInstancesRequestPrivate class provides private implementation for DescribeDBInstancesRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeDBInstancesRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeDBInstancesRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
-    const DocDBRequest::Action action, DescribeDBInstancesRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeDBInstancesRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
  */
 DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
     const DescribeDBInstancesRequestPrivate &other, DescribeDBInstancesRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -73,7 +73,7 @@
 
 /*!
  * \namespace QtAws::ManagedBlockchain
- * \brief Contains classess for accessing Amazon Managed Blockchain (ManagedBlockchain).
+ * \brief Contains classess for accessing Amazon Managed Blockchain.
  *
  * \inmodule QtAwsManagedBlockchain
  *
@@ -85,12 +85,12 @@ namespace ManagedBlockchain {
 
 /*!
  * \class QtAws::ManagedBlockchain::ManagedBlockchainClient
- * \brief The ManagedBlockchainClient class provides access to the Amazon Managed Blockchain (ManagedBlockchain) service.
+ * \brief The ManagedBlockchainClient class provides access to the Amazon Managed Blockchain service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsManagedBlockchain
  *
- *  <p/>
+ *  </p
  * 
  *  Amazon Managed Blockchain is a fully managed service for creating and managing blockchain networks using open-source
  *  frameworks. Blockchain allows you to build applications where multiple parties can securely and transparently run

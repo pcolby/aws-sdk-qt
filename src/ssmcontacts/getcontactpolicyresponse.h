@@ -24,11 +24,11 @@
 #include "getcontactpolicyrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class GetContactPolicyResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT GetContactPolicyResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT GetContactPolicyResponse : public SsmContactsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

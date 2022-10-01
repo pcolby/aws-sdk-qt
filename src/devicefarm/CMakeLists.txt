@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDEVICEFARM_LIBRARY)
 
 add_library(QtAwsDeviceFarm
+  qtawsdevicefarmglobal.h
+  devicefarmclient.h
+  devicefarmclient_p.h
+  devicefarmrequest.h
+  devicefarmrequest_p.h
+  devicefarmresponse.h
+  devicefarmresponse_p.h
   createdevicepoolrequest.h
   createdevicepoolrequest_p.h
   createdevicepoolresponse.h
@@ -73,32 +80,26 @@ add_library(QtAwsDeviceFarm
   deletevpceconfigurationrequest_p.h
   deletevpceconfigurationresponse.h
   deletevpceconfigurationresponse_p.h
-  devicefarmclient.h
-  devicefarmclient_p.h
-  devicefarmrequest.h
-  devicefarmrequest_p.h
-  devicefarmresponse.h
-  devicefarmresponse_p.h
   getaccountsettingsrequest.h
   getaccountsettingsrequest_p.h
   getaccountsettingsresponse.h
   getaccountsettingsresponse_p.h
-  getdeviceinstancerequest.h
-  getdeviceinstancerequest_p.h
-  getdeviceinstanceresponse.h
-  getdeviceinstanceresponse_p.h
-  getdevicepoolcompatibilityrequest.h
-  getdevicepoolcompatibilityrequest_p.h
-  getdevicepoolcompatibilityresponse.h
-  getdevicepoolcompatibilityresponse_p.h
-  getdevicepoolrequest.h
-  getdevicepoolrequest_p.h
-  getdevicepoolresponse.h
-  getdevicepoolresponse_p.h
   getdevicerequest.h
   getdevicerequest_p.h
   getdeviceresponse.h
   getdeviceresponse_p.h
+  getdeviceinstancerequest.h
+  getdeviceinstancerequest_p.h
+  getdeviceinstanceresponse.h
+  getdeviceinstanceresponse_p.h
+  getdevicepoolrequest.h
+  getdevicepoolrequest_p.h
+  getdevicepoolresponse.h
+  getdevicepoolresponse_p.h
+  getdevicepoolcompatibilityrequest.h
+  getdevicepoolcompatibilityrequest_p.h
+  getdevicepoolcompatibilityresponse.h
+  getdevicepoolcompatibilityresponse_p.h
   getinstanceprofilerequest.h
   getinstanceprofilerequest_p.h
   getinstanceprofileresponse.h
@@ -131,6 +132,10 @@ add_library(QtAwsDeviceFarm
   getsuiterequest_p.h
   getsuiteresponse.h
   getsuiteresponse_p.h
+  gettestrequest.h
+  gettestrequest_p.h
+  gettestresponse.h
+  gettestresponse_p.h
   gettestgridprojectrequest.h
   gettestgridprojectrequest_p.h
   gettestgridprojectresponse.h
@@ -139,10 +144,6 @@ add_library(QtAwsDeviceFarm
   gettestgridsessionrequest_p.h
   gettestgridsessionresponse.h
   gettestgridsessionresponse_p.h
-  gettestrequest.h
-  gettestrequest_p.h
-  gettestresponse.h
-  gettestresponse_p.h
   getuploadrequest.h
   getuploadrequest_p.h
   getuploadresponse.h
@@ -187,14 +188,14 @@ add_library(QtAwsDeviceFarm
   listofferingpromotionsrequest_p.h
   listofferingpromotionsresponse.h
   listofferingpromotionsresponse_p.h
-  listofferingsrequest.h
-  listofferingsrequest_p.h
-  listofferingsresponse.h
-  listofferingsresponse_p.h
   listofferingtransactionsrequest.h
   listofferingtransactionsrequest_p.h
   listofferingtransactionsresponse.h
   listofferingtransactionsresponse_p.h
+  listofferingsrequest.h
+  listofferingsrequest_p.h
+  listofferingsresponse.h
+  listofferingsresponse_p.h
   listprojectsrequest.h
   listprojectsrequest_p.h
   listprojectsresponse.h
@@ -255,7 +256,6 @@ add_library(QtAwsDeviceFarm
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
-  qtawsdevicefarmglobal.h
   renewofferingrequest.h
   renewofferingrequest_p.h
   renewofferingresponse.h
@@ -316,6 +316,9 @@ add_library(QtAwsDeviceFarm
   updatevpceconfigurationrequest_p.h
   updatevpceconfigurationresponse.h
   updatevpceconfigurationresponse_p.h
+  devicefarmclient.cpp
+  devicefarmrequest.cpp
+  devicefarmresponse.cpp
   createdevicepoolrequest.cpp
   createdevicepoolresponse.cpp
   createinstanceprofilerequest.cpp
@@ -352,19 +355,16 @@ add_library(QtAwsDeviceFarm
   deleteuploadresponse.cpp
   deletevpceconfigurationrequest.cpp
   deletevpceconfigurationresponse.cpp
-  devicefarmclient.cpp
-  devicefarmrequest.cpp
-  devicefarmresponse.cpp
   getaccountsettingsrequest.cpp
   getaccountsettingsresponse.cpp
-  getdeviceinstancerequest.cpp
-  getdeviceinstanceresponse.cpp
-  getdevicepoolcompatibilityrequest.cpp
-  getdevicepoolcompatibilityresponse.cpp
-  getdevicepoolrequest.cpp
-  getdevicepoolresponse.cpp
   getdevicerequest.cpp
   getdeviceresponse.cpp
+  getdeviceinstancerequest.cpp
+  getdeviceinstanceresponse.cpp
+  getdevicepoolrequest.cpp
+  getdevicepoolresponse.cpp
+  getdevicepoolcompatibilityrequest.cpp
+  getdevicepoolcompatibilityresponse.cpp
   getinstanceprofilerequest.cpp
   getinstanceprofileresponse.cpp
   getjobrequest.cpp
@@ -381,12 +381,12 @@ add_library(QtAwsDeviceFarm
   getrunresponse.cpp
   getsuiterequest.cpp
   getsuiteresponse.cpp
+  gettestrequest.cpp
+  gettestresponse.cpp
   gettestgridprojectrequest.cpp
   gettestgridprojectresponse.cpp
   gettestgridsessionrequest.cpp
   gettestgridsessionresponse.cpp
-  gettestrequest.cpp
-  gettestresponse.cpp
   getuploadrequest.cpp
   getuploadresponse.cpp
   getvpceconfigurationrequest.cpp
@@ -409,10 +409,10 @@ add_library(QtAwsDeviceFarm
   listnetworkprofilesresponse.cpp
   listofferingpromotionsrequest.cpp
   listofferingpromotionsresponse.cpp
-  listofferingsrequest.cpp
-  listofferingsresponse.cpp
   listofferingtransactionsrequest.cpp
   listofferingtransactionsresponse.cpp
+  listofferingsrequest.cpp
+  listofferingsresponse.cpp
   listprojectsrequest.cpp
   listprojectsresponse.cpp
   listremoteaccesssessionsrequest.cpp

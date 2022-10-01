@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::GetWorkflowExecutionHistoryResponse
- * \brief The GetWorkflowExecutionHistoryResponse class provides an interace for SWF GetWorkflowExecutionHistory responses.
+ * \class QtAws::Swf::GetWorkflowExecutionHistoryResponse
+ * \brief The GetWorkflowExecutionHistoryResponse class provides an interace for Swf GetWorkflowExecutionHistory responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const GetWorkflowExecutionHistoryRequest * GetWorkflowExecutionHistoryResponse::
 
 /*!
  * \reimp
- * Parses a successful SWF GetWorkflowExecutionHistory \a response.
+ * Parses a successful Swf GetWorkflowExecutionHistory \a response.
  */
 void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::GetWorkflowExecutionHistoryResponsePrivate
+ * \class QtAws::Swf::GetWorkflowExecutionHistoryResponsePrivate
  * \brief The GetWorkflowExecutionHistoryResponsePrivate class provides private implementation for GetWorkflowExecutionHistoryResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponseP
 }
 
 /*!
- * Parses a SWF GetWorkflowExecutionHistory response element from \a xml.
+ * Parses a Swf GetWorkflowExecutionHistory response element from \a xml.
  */
 void GetWorkflowExecutionHistoryResponsePrivate::parseGetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void GetWorkflowExecutionHistoryResponsePrivate::parseGetWorkflowExecutionHistor
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

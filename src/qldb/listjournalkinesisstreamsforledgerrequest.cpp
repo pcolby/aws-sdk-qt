@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ListJournalKinesisStreamsForLedgerRequest
- * \brief The ListJournalKinesisStreamsForLedgerRequest class provides an interface for QLDB ListJournalKinesisStreamsForLedger requests.
+ * \class QtAws::Qldb::ListJournalKinesisStreamsForLedgerRequest
+ * \brief The ListJournalKinesisStreamsForLedgerRequest class provides an interface for Qldb ListJournalKinesisStreamsForLedger requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * ListJournalKinesisStreamsForLedgerRequest::re
 }
 
 /*!
- * \class QtAws::QLDB::ListJournalKinesisStreamsForLedgerRequestPrivate
+ * \class QtAws::Qldb::ListJournalKinesisStreamsForLedgerRequestPrivate
  * \brief The ListJournalKinesisStreamsForLedgerRequestPrivate class provides private implementation for ListJournalKinesisStreamsForLedgerRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ ListJournalKinesisStreamsForLedgerRequestPrivate::ListJournalKinesisStreamsForLe
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

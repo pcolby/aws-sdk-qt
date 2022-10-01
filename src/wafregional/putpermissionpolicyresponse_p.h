@@ -23,11 +23,11 @@
 #include "wafregionalresponse_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class PutPermissionPolicyResponse;
 
-class PutPermissionPolicyResponsePrivate : public WAFRegionalResponsePrivate {
+class PutPermissionPolicyResponsePrivate : public WafRegionalResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

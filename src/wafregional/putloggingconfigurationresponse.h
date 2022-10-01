@@ -24,11 +24,11 @@
 #include "putloggingconfigurationrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class PutLoggingConfigurationResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT PutLoggingConfigurationResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT PutLoggingConfigurationResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

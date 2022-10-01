@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyBackupAttributesRequest
- * \brief The ModifyBackupAttributesRequest class provides an interface for CloudHSMV2 ModifyBackupAttributes requests.
+ * \class QtAws::CloudHsmV2::ModifyBackupAttributesRequest
+ * \brief The ModifyBackupAttributesRequest class provides an interface for CloudHsmV2 ModifyBackupAttributes requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::modifyBackupAttributes
+ * \sa CloudHsmV2Client::modifyBackupAttributes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyBackupAttributesRequest::ModifyBackupAttributesRequest(const ModifyBackupAttributesRequest &other)
-    : CloudHSMV2Request(new ModifyBackupAttributesRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new ModifyBackupAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ModifyBackupAttributesRequest::ModifyBackupAttributesRequest(const ModifyBackupA
  * Constructs a ModifyBackupAttributesRequest object.
  */
 ModifyBackupAttributesRequest::ModifyBackupAttributesRequest()
-    : CloudHSMV2Request(new ModifyBackupAttributesRequestPrivate(CloudHSMV2Request::ModifyBackupAttributesAction, this))
+    : CloudHsmV2Request(new ModifyBackupAttributesRequestPrivate(CloudHsmV2Request::ModifyBackupAttributesAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * ModifyBackupAttributesRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyBackupAttributesRequestPrivate
+ * \class QtAws::CloudHsmV2::ModifyBackupAttributesRequestPrivate
  * \brief The ModifyBackupAttributesRequestPrivate class provides private implementation for ModifyBackupAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a ModifyBackupAttributesRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a ModifyBackupAttributesRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 ModifyBackupAttributesRequestPrivate::ModifyBackupAttributesRequestPrivate(
-    const CloudHSMV2Request::Action action, ModifyBackupAttributesRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, ModifyBackupAttributesRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ ModifyBackupAttributesRequestPrivate::ModifyBackupAttributesRequestPrivate(
  */
 ModifyBackupAttributesRequestPrivate::ModifyBackupAttributesRequestPrivate(
     const ModifyBackupAttributesRequestPrivate &other, ModifyBackupAttributesRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

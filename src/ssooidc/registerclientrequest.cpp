@@ -23,13 +23,13 @@
 #include "ssooidcrequest_p.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::RegisterClientRequest
- * \brief The RegisterClientRequest class provides an interface for SSOOIDC RegisterClient requests.
+ * \class QtAws::SsoOidc::RegisterClientRequest
+ * \brief The RegisterClientRequest class provides an interface for SsoOidc RegisterClient requests.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -54,14 +54,14 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::registerClient
+ * \sa SsoOidcClient::registerClient
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RegisterClientRequest::RegisterClientRequest(const RegisterClientRequest &other)
-    : SsooidcRequest(new RegisterClientRequestPrivate(*other.d_func(), this))
+    : SsoOidcRequest(new RegisterClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -70,7 +70,7 @@ RegisterClientRequest::RegisterClientRequest(const RegisterClientRequest &other)
  * Constructs a RegisterClientRequest object.
  */
 RegisterClientRequest::RegisterClientRequest()
-    : SsooidcRequest(new RegisterClientRequestPrivate(SsooidcRequest::RegisterClientAction, this))
+    : SsoOidcRequest(new RegisterClientRequestPrivate(SsoOidcRequest::RegisterClientAction, this))
 {
 
 }
@@ -95,20 +95,20 @@ QtAws::Core::AwsAbstractResponse * RegisterClientRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SSOOIDC::RegisterClientRequestPrivate
+ * \class QtAws::SsoOidc::RegisterClientRequestPrivate
  * \brief The RegisterClientRequestPrivate class provides private implementation for RegisterClientRequest.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a RegisterClientRequestPrivate object for Ssooidc \a action,
+ * Constructs a RegisterClientRequestPrivate object for SsoOidc \a action,
  * with public implementation \a q.
  */
 RegisterClientRequestPrivate::RegisterClientRequestPrivate(
-    const SsooidcRequest::Action action, RegisterClientRequest * const q)
-    : SsooidcRequestPrivate(action, q)
+    const SsoOidcRequest::Action action, RegisterClientRequest * const q)
+    : SsoOidcRequestPrivate(action, q)
 {
 
 }
@@ -121,10 +121,10 @@ RegisterClientRequestPrivate::RegisterClientRequestPrivate(
  */
 RegisterClientRequestPrivate::RegisterClientRequestPrivate(
     const RegisterClientRequestPrivate &other, RegisterClientRequest * const q)
-    : SsooidcRequestPrivate(other, q)
+    : SsoOidcRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

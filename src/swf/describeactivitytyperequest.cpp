@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::DescribeActivityTypeRequest
- * \brief The DescribeActivityTypeRequest class provides an interface for SWF DescribeActivityType requests.
+ * \class QtAws::Swf::DescribeActivityTypeRequest
+ * \brief The DescribeActivityTypeRequest class provides an interface for Swf DescribeActivityType requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SWF::DescribeActivityTypeRequestPrivate
+ * \class QtAws::Swf::DescribeActivityTypeRequestPrivate
  * \brief The DescribeActivityTypeRequestPrivate class provides private implementation for DescribeActivityTypeRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ DescribeActivityTypeRequestPrivate::DescribeActivityTypeRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

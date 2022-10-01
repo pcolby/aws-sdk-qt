@@ -24,14 +24,14 @@
 #include "getemailidentitypoliciesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetEmailIdentityPoliciesRequest;
 
-class GetEmailIdentityPoliciesRequestPrivate : public Sesv2RequestPrivate {
+class GetEmailIdentityPoliciesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetEmailIdentityPoliciesRequestPrivate(const Sesv2Request::Action action,
+    GetEmailIdentityPoliciesRequestPrivate(const SESv2Request::Action action,
                                    GetEmailIdentityPoliciesRequest * const q);
     GetEmailIdentityPoliciesRequestPrivate(const GetEmailIdentityPoliciesRequestPrivate &other,
                                    GetEmailIdentityPoliciesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

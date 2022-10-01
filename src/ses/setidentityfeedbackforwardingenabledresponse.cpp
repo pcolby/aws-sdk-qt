@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledResponse
- * \brief The SetIdentityFeedbackForwardingEnabledResponse class provides an interace for SES SetIdentityFeedbackForwardingEnabled responses.
+ * \class QtAws::Ses::SetIdentityFeedbackForwardingEnabledResponse
+ * \brief The SetIdentityFeedbackForwardingEnabledResponse class provides an interace for Ses SetIdentityFeedbackForwardingEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetIdentityFeedbackForwardingEnabledRequest * SetIdentityFeedbackForwardin
 
 /*!
  * \reimp
- * Parses a successful SES SetIdentityFeedbackForwardingEnabled \a response.
+ * Parses a successful Ses SetIdentityFeedbackForwardingEnabled \a response.
  */
 void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
- * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledResponsePrivate
+ * \class QtAws::Ses::SetIdentityFeedbackForwardingEnabledResponsePrivate
  * \brief The SetIdentityFeedbackForwardingEnabledResponsePrivate class provides private implementation for SetIdentityFeedbackForwardingEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardi
 }
 
 /*!
- * Parses a SES SetIdentityFeedbackForwardingEnabled response element from \a xml.
+ * Parses a Ses SetIdentityFeedbackForwardingEnabled response element from \a xml.
  */
 void SetIdentityFeedbackForwardingEnabledResponsePrivate::parseSetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetIdentityFeedbackForwardingEnabledResponsePrivate::parseSetIdentityFeedba
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

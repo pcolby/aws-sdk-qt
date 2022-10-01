@@ -24,11 +24,11 @@
 #include "deleteinfrastructureconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteInfrastructureConfigurationResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT DeleteInfrastructureConfigurationResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteInfrastructureConfigurationResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

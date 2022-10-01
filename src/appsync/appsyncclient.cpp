@@ -21,12 +21,16 @@
 #include "appsyncclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associateapirequest.h"
+#include "associateapiresponse.h"
 #include "createapicacherequest.h"
 #include "createapicacheresponse.h"
 #include "createapikeyrequest.h"
 #include "createapikeyresponse.h"
 #include "createdatasourcerequest.h"
 #include "createdatasourceresponse.h"
+#include "createdomainnamerequest.h"
+#include "createdomainnameresponse.h"
 #include "createfunctionrequest.h"
 #include "createfunctionresponse.h"
 #include "creategraphqlapirequest.h"
@@ -41,6 +45,8 @@
 #include "deleteapikeyresponse.h"
 #include "deletedatasourcerequest.h"
 #include "deletedatasourceresponse.h"
+#include "deletedomainnamerequest.h"
+#include "deletedomainnameresponse.h"
 #include "deletefunctionrequest.h"
 #include "deletefunctionresponse.h"
 #include "deletegraphqlapirequest.h"
@@ -49,12 +55,20 @@
 #include "deleteresolverresponse.h"
 #include "deletetyperequest.h"
 #include "deletetyperesponse.h"
+#include "disassociateapirequest.h"
+#include "disassociateapiresponse.h"
+#include "evaluatemappingtemplaterequest.h"
+#include "evaluatemappingtemplateresponse.h"
 #include "flushapicacherequest.h"
 #include "flushapicacheresponse.h"
+#include "getapiassociationrequest.h"
+#include "getapiassociationresponse.h"
 #include "getapicacherequest.h"
 #include "getapicacheresponse.h"
 #include "getdatasourcerequest.h"
 #include "getdatasourceresponse.h"
+#include "getdomainnamerequest.h"
+#include "getdomainnameresponse.h"
 #include "getfunctionrequest.h"
 #include "getfunctionresponse.h"
 #include "getgraphqlapirequest.h"
@@ -71,6 +85,8 @@
 #include "listapikeysresponse.h"
 #include "listdatasourcesrequest.h"
 #include "listdatasourcesresponse.h"
+#include "listdomainnamesrequest.h"
+#include "listdomainnamesresponse.h"
 #include "listfunctionsrequest.h"
 #include "listfunctionsresponse.h"
 #include "listgraphqlapisrequest.h"
@@ -95,6 +111,8 @@
 #include "updateapikeyresponse.h"
 #include "updatedatasourcerequest.h"
 #include "updatedatasourceresponse.h"
+#include "updatedomainnamerequest.h"
+#include "updatedomainnameresponse.h"
 #include "updatefunctionrequest.h"
 #include "updatefunctionresponse.h"
 #include "updategraphqlapirequest.h"
@@ -126,7 +144,7 @@ namespace AppSync {
  * \ingroup aws-clients
  * \inmodule QtAwsAppSync
  *
- *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
+ *  AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  */
 
 /*!
@@ -184,6 +202,19 @@ AppSyncClient::AppSyncClient(
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * AssociateApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Maps an endpoint to your custom
+ */
+AssociateApiResponse * AppSyncClient::associateApi(const AssociateApiRequest &request)
+{
+    return qobject_cast<AssociateApiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * CreateApiCacheResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -201,7 +232,7 @@ CreateApiCacheResponse * AppSyncClient::createApiCache(const CreateApiCacheReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a unique key that you can distribute to clients who are executing your
+ * Creates a unique key that you can distribute to clients who invoke your
  */
 CreateApiKeyResponse * AppSyncClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -223,6 +254,19 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a custom <code>DomainName</code>
+ */
+CreateDomainNameResponse * AppSyncClient::createDomainName(const CreateDomainNameRequest &request)
+{
+    return qobject_cast<CreateDomainNameResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * CreateFunctionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -231,7 +275,7 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
  *
  * object>
  *
- * A function is a reusable entity. Multiple functions can be used to compose the resolver
+ * A function is a reusable entity. You can use multiple functions to compose the resolver
  */
 CreateFunctionResponse * AppSyncClient::createFunction(const CreateFunctionRequest &request)
 {
@@ -261,7 +305,7 @@ CreateGraphqlApiResponse * AppSyncClient::createGraphqlApi(const CreateGraphqlAp
  *
  * object>
  *
- * A resolver converts incoming requests into a format that a data source can understand and converts the data source's
+ * A resolver converts incoming requests into a format that a data source can understand, and converts the data source's
  * responses into
  */
 CreateResolverResponse * AppSyncClient::createResolver(const CreateResolverRequest &request)
@@ -323,6 +367,19 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom <code>DomainName</code>
+ */
+DeleteDomainNameResponse * AppSyncClient::deleteDomainName(const DeleteDomainNameRequest &request)
+{
+    return qobject_cast<DeleteDomainNameResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * DeleteFunctionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -375,6 +432,42 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DisassociateApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an <code>ApiAssociation</code> object from a custom
+ */
+DisassociateApiResponse * AppSyncClient::disassociateApi(const DisassociateApiRequest &request)
+{
+    return qobject_cast<DisassociateApiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * EvaluateMappingTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Evaluates a given template and returns the response. The mapping template can be a request or response
+ *
+ * template>
+ *
+ * Request templates take the incoming request after a GraphQL operation is parsed and convert it into a request
+ * configuration for the selected data source operation. Response templates interpret responses from the data source and
+ * map it to the shape of the GraphQL field output
+ *
+ * type>
+ *
+ * Mapping templates are written in the Apache Velocity Template Language
+ */
+EvaluateMappingTemplateResponse * AppSyncClient::evaluateMappingTemplate(const EvaluateMappingTemplateRequest &request)
+{
+    return qobject_cast<EvaluateMappingTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * FlushApiCacheResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -384,6 +477,19 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 FlushApiCacheResponse * AppSyncClient::flushApiCache(const FlushApiCacheRequest &request)
 {
     return qobject_cast<FlushApiCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetApiAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves an <code>ApiAssociation</code>
+ */
+GetApiAssociationResponse * AppSyncClient::getApiAssociation(const GetApiAssociationRequest &request)
+{
+    return qobject_cast<GetApiAssociationResponse *>(send(request));
 }
 
 /*!
@@ -410,6 +516,19 @@ GetApiCacheResponse * AppSyncClient::getApiCache(const GetApiCacheRequest &reque
 GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
 {
     return qobject_cast<GetDataSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a custom <code>DomainName</code>
+ */
+GetDomainNameResponse * AppSyncClient::getDomainName(const GetDomainNameRequest &request)
+{
+    return qobject_cast<GetDomainNameResponse *>(send(request));
 }
 
 /*!
@@ -520,6 +639,19 @@ ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &reque
 ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRequest &request)
 {
     return qobject_cast<ListDataSourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListDomainNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists multiple custom domain
+ */
+ListDomainNamesResponse * AppSyncClient::listDomainNames(const ListDomainNamesRequest &request)
+{
+    return qobject_cast<ListDomainNamesResponse *>(send(request));
 }
 
 /*!
@@ -662,7 +794,7 @@ UpdateApiCacheResponse * AppSyncClient::updateApiCache(const UpdateApiCacheReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an API key. The key can be updated while it is not
+ * Updates an API key. You can update the key as long as it's not
  */
 UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
 {
@@ -680,6 +812,19 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
 UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
     return qobject_cast<UpdateDataSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateDomainNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a custom <code>DomainName</code>
+ */
+UpdateDomainNameResponse * AppSyncClient::updateDomainName(const UpdateDomainNameRequest &request)
+{
+    return qobject_cast<UpdateDomainNameResponse *>(send(request));
 }
 
 /*!

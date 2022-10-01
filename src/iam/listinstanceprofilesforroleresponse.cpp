@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ListInstanceProfilesForRoleResponse
- * \brief The ListInstanceProfilesForRoleResponse class provides an interace for IAM ListInstanceProfilesForRole responses.
+ * \class QtAws::Iam::ListInstanceProfilesForRoleResponse
+ * \brief The ListInstanceProfilesForRoleResponse class provides an interace for Iam ListInstanceProfilesForRole responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::listInstanceProfilesForRole
  */
@@ -68,7 +68,7 @@ const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::
 
 /*!
  * \reimp
- * Parses a successful IAM ListInstanceProfilesForRole \a response.
+ * Parses a successful Iam ListInstanceProfilesForRole \a response.
  */
 void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::ListInstanceProfilesForRoleResponsePrivate
+ * \class QtAws::Iam::ListInstanceProfilesForRoleResponsePrivate
  * \brief The ListInstanceProfilesForRoleResponsePrivate class provides private implementation for ListInstanceProfilesForRoleResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponseP
 }
 
 /*!
- * Parses a IAM ListInstanceProfilesForRole response element from \a xml.
+ * Parses a Iam ListInstanceProfilesForRole response element from \a xml.
  */
 void ListInstanceProfilesForRoleResponsePrivate::parseListInstanceProfilesForRoleResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ListInstanceProfilesForRoleResponsePrivate::parseListInstanceProfilesForRol
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

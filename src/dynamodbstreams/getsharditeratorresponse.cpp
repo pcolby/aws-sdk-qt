@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::GetShardIteratorResponse
- * \brief The GetShardIteratorResponse class provides an interace for DynamoDBStreams GetShardIterator responses.
+ * \class QtAws::DynamoDbStreams::GetShardIteratorResponse
+ * \brief The GetShardIteratorResponse class provides an interace for DynamoDbStreams GetShardIterator responses.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -40,7 +40,7 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::getShardIterator
+ * \sa DynamoDbStreamsClient::getShardIterator
  */
 
 /*!
@@ -50,7 +50,7 @@ GetShardIteratorResponse::GetShardIteratorResponse(
         const GetShardIteratorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBStreamsResponse(new GetShardIteratorResponsePrivate(this), parent)
+    : DynamoDbStreamsResponse(new GetShardIteratorResponsePrivate(this), parent)
 {
     setRequest(new GetShardIteratorRequest(request));
     setReply(reply);
@@ -67,7 +67,7 @@ const GetShardIteratorRequest * GetShardIteratorResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDBStreams GetShardIterator \a response.
+ * Parses a successful DynamoDbStreams GetShardIterator \a response.
  */
 void GetShardIteratorResponse::parseSuccess(QIODevice &response)
 {
@@ -77,24 +77,24 @@ void GetShardIteratorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::GetShardIteratorResponsePrivate
+ * \class QtAws::DynamoDbStreams::GetShardIteratorResponsePrivate
  * \brief The GetShardIteratorResponsePrivate class provides private implementation for GetShardIteratorResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
  * Constructs a GetShardIteratorResponsePrivate object with public implementation \a q.
  */
 GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
-    GetShardIteratorResponse * const q) : DynamoDBStreamsResponsePrivate(q)
+    GetShardIteratorResponse * const q) : DynamoDbStreamsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDBStreams GetShardIterator response element from \a xml.
+ * Parses a DynamoDbStreams GetShardIterator response element from \a xml.
  */
 void GetShardIteratorResponsePrivate::parseGetShardIteratorResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetShardIteratorResponsePrivate::parseGetShardIteratorResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

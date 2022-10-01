@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::UpdateClusterResponse
- * \brief The UpdateClusterResponse class provides an interace for DAX UpdateCluster responses.
+ * \class QtAws::Dax::UpdateClusterResponse
+ * \brief The UpdateClusterResponse class provides an interace for Dax UpdateCluster responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const UpdateClusterRequest * UpdateClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX UpdateCluster \a response.
+ * Parses a successful Dax UpdateCluster \a response.
  */
 void UpdateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::UpdateClusterResponsePrivate
+ * \class QtAws::Dax::UpdateClusterResponsePrivate
  * \brief The UpdateClusterResponsePrivate class provides private implementation for UpdateClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
 }
 
 /*!
- * Parses a DAX UpdateCluster response element from \a xml.
+ * Parses a Dax UpdateCluster response element from \a xml.
  */
 void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "respondactivitytaskcanceledrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class RespondActivityTaskCanceledResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

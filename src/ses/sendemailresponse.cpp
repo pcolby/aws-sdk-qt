@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendEmailResponse
- * \brief The SendEmailResponse class provides an interace for SES SendEmail responses.
+ * \class QtAws::Ses::SendEmailResponse
+ * \brief The SendEmailResponse class provides an interace for Ses SendEmail responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SendEmailRequest * SendEmailResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES SendEmail \a response.
+ * Parses a successful Ses SendEmail \a response.
  */
 void SendEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SendEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SendEmailResponsePrivate
+ * \class QtAws::Ses::SendEmailResponsePrivate
  * \brief The SendEmailResponsePrivate class provides private implementation for SendEmailResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SendEmailResponsePrivate::SendEmailResponsePrivate(
 }
 
 /*!
- * Parses a SES SendEmail response element from \a xml.
+ * Parses a Ses SendEmail response element from \a xml.
  */
 void SendEmailResponsePrivate::parseSendEmailResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SendEmailResponsePrivate::parseSendEmailResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

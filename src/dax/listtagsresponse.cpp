@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::ListTagsResponse
- * \brief The ListTagsResponse class provides an interace for DAX ListTags responses.
+ * \class QtAws::Dax::ListTagsResponse
+ * \brief The ListTagsResponse class provides an interace for Dax ListTags responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const ListTagsRequest * ListTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX ListTags \a response.
+ * Parses a successful Dax ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::ListTagsResponsePrivate
+ * \class QtAws::Dax::ListTagsResponsePrivate
  * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * Parses a DAX ListTags response element from \a xml.
+ * Parses a Dax ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

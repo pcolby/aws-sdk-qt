@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSREDSHIFT_LIBRARY)
 
 add_library(QtAwsRedshift
+  qtawsredshiftglobal.h
+  redshiftclient.h
+  redshiftclient_p.h
+  redshiftrequest.h
+  redshiftrequest_p.h
+  redshiftresponse.h
+  redshiftresponse_p.h
   acceptreservednodeexchangerequest.h
   acceptreservednodeexchangerequest_p.h
   acceptreservednodeexchangeresponse.h
@@ -9,10 +16,18 @@ add_library(QtAwsRedshift
   addpartnerrequest_p.h
   addpartnerresponse.h
   addpartnerresponse_p.h
+  associatedatashareconsumerrequest.h
+  associatedatashareconsumerrequest_p.h
+  associatedatashareconsumerresponse.h
+  associatedatashareconsumerresponse_p.h
   authorizeclustersecuritygroupingressrequest.h
   authorizeclustersecuritygroupingressrequest_p.h
   authorizeclustersecuritygroupingressresponse.h
   authorizeclustersecuritygroupingressresponse_p.h
+  authorizedatasharerequest.h
+  authorizedatasharerequest_p.h
+  authorizedatashareresponse.h
+  authorizedatashareresponse_p.h
   authorizeendpointaccessrequest.h
   authorizeendpointaccessrequest_p.h
   authorizeendpointaccessresponse.h
@@ -37,14 +52,18 @@ add_library(QtAwsRedshift
   copyclustersnapshotrequest_p.h
   copyclustersnapshotresponse.h
   copyclustersnapshotresponse_p.h
-  createclusterparametergrouprequest.h
-  createclusterparametergrouprequest_p.h
-  createclusterparametergroupresponse.h
-  createclusterparametergroupresponse_p.h
+  createauthenticationprofilerequest.h
+  createauthenticationprofilerequest_p.h
+  createauthenticationprofileresponse.h
+  createauthenticationprofileresponse_p.h
   createclusterrequest.h
   createclusterrequest_p.h
   createclusterresponse.h
   createclusterresponse_p.h
+  createclusterparametergrouprequest.h
+  createclusterparametergrouprequest_p.h
+  createclusterparametergroupresponse.h
+  createclusterparametergroupresponse_p.h
   createclustersecuritygrouprequest.h
   createclustersecuritygrouprequest_p.h
   createclustersecuritygroupresponse.h
@@ -93,14 +112,22 @@ add_library(QtAwsRedshift
   createusagelimitrequest_p.h
   createusagelimitresponse.h
   createusagelimitresponse_p.h
-  deleteclusterparametergrouprequest.h
-  deleteclusterparametergrouprequest_p.h
-  deleteclusterparametergroupresponse.h
-  deleteclusterparametergroupresponse_p.h
+  deauthorizedatasharerequest.h
+  deauthorizedatasharerequest_p.h
+  deauthorizedatashareresponse.h
+  deauthorizedatashareresponse_p.h
+  deleteauthenticationprofilerequest.h
+  deleteauthenticationprofilerequest_p.h
+  deleteauthenticationprofileresponse.h
+  deleteauthenticationprofileresponse_p.h
   deleteclusterrequest.h
   deleteclusterrequest_p.h
   deleteclusterresponse.h
   deleteclusterresponse_p.h
+  deleteclusterparametergrouprequest.h
+  deleteclusterparametergrouprequest_p.h
+  deleteclusterparametergroupresponse.h
+  deleteclusterparametergroupresponse_p.h
   deleteclustersecuritygrouprequest.h
   deleteclustersecuritygrouprequest_p.h
   deleteclustersecuritygroupresponse.h
@@ -157,6 +184,10 @@ add_library(QtAwsRedshift
   describeaccountattributesrequest_p.h
   describeaccountattributesresponse.h
   describeaccountattributesresponse_p.h
+  describeauthenticationprofilesrequest.h
+  describeauthenticationprofilesrequest_p.h
+  describeauthenticationprofilesresponse.h
+  describeauthenticationprofilesresponse_p.h
   describeclusterdbrevisionsrequest.h
   describeclusterdbrevisionsrequest_p.h
   describeclusterdbrevisionsresponse.h
@@ -177,10 +208,6 @@ add_library(QtAwsRedshift
   describeclustersnapshotsrequest_p.h
   describeclustersnapshotsresponse.h
   describeclustersnapshotsresponse_p.h
-  describeclustersrequest.h
-  describeclustersrequest_p.h
-  describeclustersresponse.h
-  describeclustersresponse_p.h
   describeclustersubnetgroupsrequest.h
   describeclustersubnetgroupsrequest_p.h
   describeclustersubnetgroupsresponse.h
@@ -193,6 +220,22 @@ add_library(QtAwsRedshift
   describeclusterversionsrequest_p.h
   describeclusterversionsresponse.h
   describeclusterversionsresponse_p.h
+  describeclustersrequest.h
+  describeclustersrequest_p.h
+  describeclustersresponse.h
+  describeclustersresponse_p.h
+  describedatasharesrequest.h
+  describedatasharesrequest_p.h
+  describedatasharesresponse.h
+  describedatasharesresponse_p.h
+  describedatasharesforconsumerrequest.h
+  describedatasharesforconsumerrequest_p.h
+  describedatasharesforconsumerresponse.h
+  describedatasharesforconsumerresponse_p.h
+  describedatasharesforproducerrequest.h
+  describedatasharesforproducerrequest_p.h
+  describedatasharesforproducerresponse.h
+  describedatasharesforproducerresponse_p.h
   describedefaultclusterparametersrequest.h
   describedefaultclusterparametersrequest_p.h
   describedefaultclusterparametersresponse.h
@@ -209,14 +252,14 @@ add_library(QtAwsRedshift
   describeeventcategoriesrequest_p.h
   describeeventcategoriesresponse.h
   describeeventcategoriesresponse_p.h
-  describeeventsrequest.h
-  describeeventsrequest_p.h
-  describeeventsresponse.h
-  describeeventsresponse_p.h
   describeeventsubscriptionsrequest.h
   describeeventsubscriptionsrequest_p.h
   describeeventsubscriptionsresponse.h
   describeeventsubscriptionsresponse_p.h
+  describeeventsrequest.h
+  describeeventsrequest_p.h
+  describeeventsresponse.h
+  describeeventsresponse_p.h
   describehsmclientcertificatesrequest.h
   describehsmclientcertificatesrequest_p.h
   describehsmclientcertificatesresponse.h
@@ -241,6 +284,10 @@ add_library(QtAwsRedshift
   describepartnersrequest_p.h
   describepartnersresponse.h
   describepartnersresponse_p.h
+  describereservednodeexchangestatusrequest.h
+  describereservednodeexchangestatusrequest_p.h
+  describereservednodeexchangestatusresponse.h
+  describereservednodeexchangestatusresponse_p.h
   describereservednodeofferingsrequest.h
   describereservednodeofferingsrequest_p.h
   describereservednodeofferingsresponse.h
@@ -289,6 +336,10 @@ add_library(QtAwsRedshift
   disablesnapshotcopyrequest_p.h
   disablesnapshotcopyresponse.h
   disablesnapshotcopyresponse_p.h
+  disassociatedatashareconsumerrequest.h
+  disassociatedatashareconsumerrequest_p.h
+  disassociatedatashareconsumerresponse.h
+  disassociatedatashareconsumerresponse_p.h
   enableloggingrequest.h
   enableloggingrequest_p.h
   enableloggingresponse.h
@@ -301,6 +352,14 @@ add_library(QtAwsRedshift
   getclustercredentialsrequest_p.h
   getclustercredentialsresponse.h
   getclustercredentialsresponse_p.h
+  getclustercredentialswithiamrequest.h
+  getclustercredentialswithiamrequest_p.h
+  getclustercredentialswithiamresponse.h
+  getclustercredentialswithiamresponse_p.h
+  getreservednodeexchangeconfigurationoptionsrequest.h
+  getreservednodeexchangeconfigurationoptionsrequest_p.h
+  getreservednodeexchangeconfigurationoptionsresponse.h
+  getreservednodeexchangeconfigurationoptionsresponse_p.h
   getreservednodeexchangeofferingsrequest.h
   getreservednodeexchangeofferingsrequest_p.h
   getreservednodeexchangeofferingsresponse.h
@@ -309,6 +368,14 @@ add_library(QtAwsRedshift
   modifyaquaconfigurationrequest_p.h
   modifyaquaconfigurationresponse.h
   modifyaquaconfigurationresponse_p.h
+  modifyauthenticationprofilerequest.h
+  modifyauthenticationprofilerequest_p.h
+  modifyauthenticationprofileresponse.h
+  modifyauthenticationprofileresponse_p.h
+  modifyclusterrequest.h
+  modifyclusterrequest_p.h
+  modifyclusterresponse.h
+  modifyclusterresponse_p.h
   modifyclusterdbrevisionrequest.h
   modifyclusterdbrevisionrequest_p.h
   modifyclusterdbrevisionresponse.h
@@ -325,10 +392,6 @@ add_library(QtAwsRedshift
   modifyclusterparametergrouprequest_p.h
   modifyclusterparametergroupresponse.h
   modifyclusterparametergroupresponse_p.h
-  modifyclusterrequest.h
-  modifyclusterrequest_p.h
-  modifyclusterresponse.h
-  modifyclusterresponse_p.h
   modifyclustersnapshotrequest.h
   modifyclustersnapshotrequest_p.h
   modifyclustersnapshotresponse.h
@@ -373,17 +436,14 @@ add_library(QtAwsRedshift
   purchasereservednodeofferingrequest_p.h
   purchasereservednodeofferingresponse.h
   purchasereservednodeofferingresponse_p.h
-  qtawsredshiftglobal.h
   rebootclusterrequest.h
   rebootclusterrequest_p.h
   rebootclusterresponse.h
   rebootclusterresponse_p.h
-  redshiftclient.h
-  redshiftclient_p.h
-  redshiftrequest.h
-  redshiftrequest_p.h
-  redshiftresponse.h
-  redshiftresponse_p.h
+  rejectdatasharerequest.h
+  rejectdatasharerequest_p.h
+  rejectdatashareresponse.h
+  rejectdatashareresponse_p.h
   resetclusterparametergrouprequest.h
   resetclusterparametergrouprequest_p.h
   resetclusterparametergroupresponse.h
@@ -424,12 +484,19 @@ add_library(QtAwsRedshift
   updatepartnerstatusrequest_p.h
   updatepartnerstatusresponse.h
   updatepartnerstatusresponse_p.h
+  redshiftclient.cpp
+  redshiftrequest.cpp
+  redshiftresponse.cpp
   acceptreservednodeexchangerequest.cpp
   acceptreservednodeexchangeresponse.cpp
   addpartnerrequest.cpp
   addpartnerresponse.cpp
+  associatedatashareconsumerrequest.cpp
+  associatedatashareconsumerresponse.cpp
   authorizeclustersecuritygroupingressrequest.cpp
   authorizeclustersecuritygroupingressresponse.cpp
+  authorizedatasharerequest.cpp
+  authorizedatashareresponse.cpp
   authorizeendpointaccessrequest.cpp
   authorizeendpointaccessresponse.cpp
   authorizesnapshotaccessrequest.cpp
@@ -442,10 +509,12 @@ add_library(QtAwsRedshift
   cancelresizeresponse.cpp
   copyclustersnapshotrequest.cpp
   copyclustersnapshotresponse.cpp
-  createclusterparametergrouprequest.cpp
-  createclusterparametergroupresponse.cpp
+  createauthenticationprofilerequest.cpp
+  createauthenticationprofileresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
+  createclusterparametergrouprequest.cpp
+  createclusterparametergroupresponse.cpp
   createclustersecuritygrouprequest.cpp
   createclustersecuritygroupresponse.cpp
   createclustersnapshotrequest.cpp
@@ -470,10 +539,14 @@ add_library(QtAwsRedshift
   createtagsresponse.cpp
   createusagelimitrequest.cpp
   createusagelimitresponse.cpp
-  deleteclusterparametergrouprequest.cpp
-  deleteclusterparametergroupresponse.cpp
+  deauthorizedatasharerequest.cpp
+  deauthorizedatashareresponse.cpp
+  deleteauthenticationprofilerequest.cpp
+  deleteauthenticationprofileresponse.cpp
   deleteclusterrequest.cpp
   deleteclusterresponse.cpp
+  deleteclusterparametergrouprequest.cpp
+  deleteclusterparametergroupresponse.cpp
   deleteclustersecuritygrouprequest.cpp
   deleteclustersecuritygroupresponse.cpp
   deleteclustersnapshotrequest.cpp
@@ -502,6 +575,8 @@ add_library(QtAwsRedshift
   deleteusagelimitresponse.cpp
   describeaccountattributesrequest.cpp
   describeaccountattributesresponse.cpp
+  describeauthenticationprofilesrequest.cpp
+  describeauthenticationprofilesresponse.cpp
   describeclusterdbrevisionsrequest.cpp
   describeclusterdbrevisionsresponse.cpp
   describeclusterparametergroupsrequest.cpp
@@ -512,14 +587,20 @@ add_library(QtAwsRedshift
   describeclustersecuritygroupsresponse.cpp
   describeclustersnapshotsrequest.cpp
   describeclustersnapshotsresponse.cpp
-  describeclustersrequest.cpp
-  describeclustersresponse.cpp
   describeclustersubnetgroupsrequest.cpp
   describeclustersubnetgroupsresponse.cpp
   describeclustertracksrequest.cpp
   describeclustertracksresponse.cpp
   describeclusterversionsrequest.cpp
   describeclusterversionsresponse.cpp
+  describeclustersrequest.cpp
+  describeclustersresponse.cpp
+  describedatasharesrequest.cpp
+  describedatasharesresponse.cpp
+  describedatasharesforconsumerrequest.cpp
+  describedatasharesforconsumerresponse.cpp
+  describedatasharesforproducerrequest.cpp
+  describedatasharesforproducerresponse.cpp
   describedefaultclusterparametersrequest.cpp
   describedefaultclusterparametersresponse.cpp
   describeendpointaccessrequest.cpp
@@ -528,10 +609,10 @@ add_library(QtAwsRedshift
   describeendpointauthorizationresponse.cpp
   describeeventcategoriesrequest.cpp
   describeeventcategoriesresponse.cpp
-  describeeventsrequest.cpp
-  describeeventsresponse.cpp
   describeeventsubscriptionsrequest.cpp
   describeeventsubscriptionsresponse.cpp
+  describeeventsrequest.cpp
+  describeeventsresponse.cpp
   describehsmclientcertificatesrequest.cpp
   describehsmclientcertificatesresponse.cpp
   describehsmconfigurationsrequest.cpp
@@ -544,6 +625,8 @@ add_library(QtAwsRedshift
   describeorderableclusteroptionsresponse.cpp
   describepartnersrequest.cpp
   describepartnersresponse.cpp
+  describereservednodeexchangestatusrequest.cpp
+  describereservednodeexchangestatusresponse.cpp
   describereservednodeofferingsrequest.cpp
   describereservednodeofferingsresponse.cpp
   describereservednodesrequest.cpp
@@ -568,16 +651,26 @@ add_library(QtAwsRedshift
   disableloggingresponse.cpp
   disablesnapshotcopyrequest.cpp
   disablesnapshotcopyresponse.cpp
+  disassociatedatashareconsumerrequest.cpp
+  disassociatedatashareconsumerresponse.cpp
   enableloggingrequest.cpp
   enableloggingresponse.cpp
   enablesnapshotcopyrequest.cpp
   enablesnapshotcopyresponse.cpp
   getclustercredentialsrequest.cpp
   getclustercredentialsresponse.cpp
+  getclustercredentialswithiamrequest.cpp
+  getclustercredentialswithiamresponse.cpp
+  getreservednodeexchangeconfigurationoptionsrequest.cpp
+  getreservednodeexchangeconfigurationoptionsresponse.cpp
   getreservednodeexchangeofferingsrequest.cpp
   getreservednodeexchangeofferingsresponse.cpp
   modifyaquaconfigurationrequest.cpp
   modifyaquaconfigurationresponse.cpp
+  modifyauthenticationprofilerequest.cpp
+  modifyauthenticationprofileresponse.cpp
+  modifyclusterrequest.cpp
+  modifyclusterresponse.cpp
   modifyclusterdbrevisionrequest.cpp
   modifyclusterdbrevisionresponse.cpp
   modifyclusteriamrolesrequest.cpp
@@ -586,8 +679,6 @@ add_library(QtAwsRedshift
   modifyclustermaintenanceresponse.cpp
   modifyclusterparametergrouprequest.cpp
   modifyclusterparametergroupresponse.cpp
-  modifyclusterrequest.cpp
-  modifyclusterresponse.cpp
   modifyclustersnapshotrequest.cpp
   modifyclustersnapshotresponse.cpp
   modifyclustersnapshotschedulerequest.cpp
@@ -612,9 +703,8 @@ add_library(QtAwsRedshift
   purchasereservednodeofferingresponse.cpp
   rebootclusterrequest.cpp
   rebootclusterresponse.cpp
-  redshiftclient.cpp
-  redshiftrequest.cpp
-  redshiftresponse.cpp
+  rejectdatasharerequest.cpp
+  rejectdatashareresponse.cpp
   resetclusterparametergrouprequest.cpp
   resetclusterparametergroupresponse.cpp
   resizeclusterrequest.cpp

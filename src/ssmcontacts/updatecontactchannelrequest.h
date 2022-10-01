@@ -23,11 +23,11 @@
 #include "ssmcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class UpdateContactChannelRequestPrivate;
 
-class QTAWSSSMCONTACTS_EXPORT UpdateContactChannelRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT UpdateContactChannelRequest : public SsmContactsRequest {
 
 public:
     UpdateContactChannelRequest(const UpdateContactChannelRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

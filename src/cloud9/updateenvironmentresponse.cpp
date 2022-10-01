@@ -33,23 +33,22 @@ namespace Cloud9 {
  *
  * \inmodule QtAwsCloud9
  *
- *  <fullname>AWS Cloud9</fullname>
+ *  <fullname>Cloud9</fullname>
  * 
- *  AWS Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
+ *  Cloud9 is a collection of tools that you can use to code, build, run, test, debug, and release software in the
  * 
  *  cloud>
  * 
- *  For more information about AWS Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">AWS Cloud9
- *  User
+ *  For more information about Cloud9, see the <a href="https://docs.aws.amazon.com/cloud9/latest/user-guide">Cloud9 User
  * 
  *  Guide</a>>
  * 
- *  AWS Cloud9 supports these
+ *  Cloud9 supports these
  * 
  *  operations> <ul> <li>
  * 
- *  <code>CreateEnvironmentEC2</code>: Creates an AWS Cloud9 development environment, launches an Amazon EC2 instance, and
- *  then connects from the instance to the
+ *  <code>CreateEnvironmentEC2</code>: Creates an Cloud9 development environment, launches an Amazon EC2 instance, and then
+ *  connects from the instance to the
  * 
  *  environment> </li> <li>
  * 

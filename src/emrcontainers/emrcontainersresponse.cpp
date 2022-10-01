@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersResponse
- * \brief The EMRContainersResponse class provides an interface for EMRContainers responses.
+ * \class QtAws::Emrcontainers::EmrcontainersResponse
+ * \brief The EmrcontainersResponse class provides an interface for Emrcontainers responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a EMRContainersResponse object with parent \a parent.
+ * Constructs a EmrcontainersResponse object with parent \a parent.
  */
-EMRContainersResponse::EMRContainersResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EMRContainersResponsePrivate(this), parent)
+EmrcontainersResponse::EmrcontainersResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EmrcontainersResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a EMRContainersResponse object with private implementation \a d,
+ * Constructs a EmrcontainersResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EMRContainersResponsePrivate.
+ * implementation that inherits from EmrcontainersResponsePrivate.
  */
-EMRContainersResponse::EMRContainersResponse(EMRContainersResponsePrivate * const d, QObject * const parent)
+EmrcontainersResponse::EmrcontainersResponse(EmrcontainersResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ EMRContainersResponse::EMRContainersResponse(EMRContainersResponsePrivate * cons
 /*!
  * \reimp
  */
-void EMRContainersResponse::parseFailure(QIODevice &response)
+void EmrcontainersResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(EMRContainersResponse);
+    //Q_D(EmrcontainersResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void EMRContainersResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersResponsePrivate
- * \brief The EMRContainersResponsePrivate class provides private implementation for EMRContainersResponse.
+ * \class QtAws::Emrcontainers::EmrcontainersResponsePrivate
+ * \brief The EmrcontainersResponsePrivate class provides private implementation for EmrcontainersResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a EMRContainersResponsePrivate object with public implementation \a q.
+ * Constructs a EmrcontainersResponsePrivate object with public implementation \a q.
  */
-EMRContainersResponsePrivate::EMRContainersResponsePrivate(
-    EMRContainersResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+EmrcontainersResponsePrivate::EmrcontainersResponsePrivate(
+    EmrcontainersResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

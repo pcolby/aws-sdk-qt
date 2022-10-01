@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::GetRecordsResponse
- * \brief The GetRecordsResponse class provides an interace for DynamoDBStreams GetRecords responses.
+ * \class QtAws::DynamoDbStreams::GetRecordsResponse
+ * \brief The GetRecordsResponse class provides an interace for DynamoDbStreams GetRecords responses.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -40,7 +40,7 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::getRecords
+ * \sa DynamoDbStreamsClient::getRecords
  */
 
 /*!
@@ -50,7 +50,7 @@ GetRecordsResponse::GetRecordsResponse(
         const GetRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBStreamsResponse(new GetRecordsResponsePrivate(this), parent)
+    : DynamoDbStreamsResponse(new GetRecordsResponsePrivate(this), parent)
 {
     setRequest(new GetRecordsRequest(request));
     setReply(reply);
@@ -67,7 +67,7 @@ const GetRecordsRequest * GetRecordsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDBStreams GetRecords \a response.
+ * Parses a successful DynamoDbStreams GetRecords \a response.
  */
 void GetRecordsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,24 +77,24 @@ void GetRecordsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::GetRecordsResponsePrivate
+ * \class QtAws::DynamoDbStreams::GetRecordsResponsePrivate
  * \brief The GetRecordsResponsePrivate class provides private implementation for GetRecordsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
  * Constructs a GetRecordsResponsePrivate object with public implementation \a q.
  */
 GetRecordsResponsePrivate::GetRecordsResponsePrivate(
-    GetRecordsResponse * const q) : DynamoDBStreamsResponsePrivate(q)
+    GetRecordsResponse * const q) : DynamoDbStreamsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDBStreams GetRecords response element from \a xml.
+ * Parses a DynamoDbStreams GetRecords response element from \a xml.
  */
 void GetRecordsResponsePrivate::parseGetRecordsResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetRecordsResponsePrivate::parseGetRecordsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

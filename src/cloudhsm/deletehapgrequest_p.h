@@ -24,14 +24,14 @@
 #include "deletehapgrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class DeleteHapgRequest;
 
-class DeleteHapgRequestPrivate : public CloudHSMRequestPrivate {
+class DeleteHapgRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    DeleteHapgRequestPrivate(const CloudHSMRequest::Action action,
+    DeleteHapgRequestPrivate(const CloudHsmRequest::Action action,
                                    DeleteHapgRequest * const q);
     DeleteHapgRequestPrivate(const DeleteHapgRequestPrivate &other,
                                    DeleteHapgRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

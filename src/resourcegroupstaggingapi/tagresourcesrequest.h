@@ -23,11 +23,11 @@
 #include "resourcegroupstaggingapirequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 class TagResourcesRequestPrivate;
 
-class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT TagResourcesRequest : public ResourceGroupsTaggingAPIRequest {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT TagResourcesRequest : public ResourceGroupsTaggingApiRequest {
 
 public:
     TagResourcesRequest(const TagResourcesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

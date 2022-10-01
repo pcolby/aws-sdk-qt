@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyGlobalClusterResponse
- * \brief The ModifyGlobalClusterResponse class provides an interace for RDS ModifyGlobalCluster responses.
+ * \class QtAws::Rds::ModifyGlobalClusterResponse
+ * \brief The ModifyGlobalClusterResponse class provides an interace for Rds ModifyGlobalCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyGlobalClusterRequest * ModifyGlobalClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyGlobalCluster \a response.
+ * Parses a successful Rds ModifyGlobalCluster \a response.
  */
 void ModifyGlobalClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyGlobalClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyGlobalClusterResponsePrivate
+ * \class QtAws::Rds::ModifyGlobalClusterResponsePrivate
  * \brief The ModifyGlobalClusterResponsePrivate class provides private implementation for ModifyGlobalClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyGlobalClusterResponsePrivate::ModifyGlobalClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyGlobalCluster response element from \a xml.
+ * Parses a Rds ModifyGlobalCluster response element from \a xml.
  */
 void ModifyGlobalClusterResponsePrivate::parseModifyGlobalClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyGlobalClusterResponsePrivate::parseModifyGlobalClusterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

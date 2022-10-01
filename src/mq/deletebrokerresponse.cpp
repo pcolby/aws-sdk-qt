@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DeleteBrokerResponse
- * \brief The DeleteBrokerResponse class provides an interace for MQ DeleteBroker responses.
+ * \class QtAws::Mq::DeleteBrokerResponse
+ * \brief The DeleteBrokerResponse class provides an interace for Mq DeleteBroker responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::deleteBroker
  */
@@ -63,7 +64,7 @@ const DeleteBrokerRequest * DeleteBrokerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ DeleteBroker \a response.
+ * Parses a successful Mq DeleteBroker \a response.
  */
 void DeleteBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DeleteBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DeleteBrokerResponsePrivate
+ * \class QtAws::Mq::DeleteBrokerResponsePrivate
  * \brief The DeleteBrokerResponsePrivate class provides private implementation for DeleteBrokerResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
 }
 
 /*!
- * Parses a MQ DeleteBroker response element from \a xml.
+ * Parses a Mq DeleteBroker response element from \a xml.
  */
 void DeleteBrokerResponsePrivate::parseDeleteBrokerResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DeleteBrokerResponsePrivate::parseDeleteBrokerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

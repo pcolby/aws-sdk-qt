@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::ResendValidationEmailResponse
- * \brief The ResendValidationEmailResponse class provides an interace for ACM ResendValidationEmail responses.
+ * \class QtAws::Acm::ResendValidationEmailResponse
+ * \brief The ResendValidationEmailResponse class provides an interace for Acm ResendValidationEmail responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::resendValidationEmail
  */
@@ -66,7 +66,7 @@ const ResendValidationEmailRequest * ResendValidationEmailResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ACM ResendValidationEmail \a response.
+ * Parses a successful Acm ResendValidationEmail \a response.
  */
 void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::ResendValidationEmailResponsePrivate
+ * \class QtAws::Acm::ResendValidationEmailResponsePrivate
  * \brief The ResendValidationEmailResponsePrivate class provides private implementation for ResendValidationEmailResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
 }
 
 /*!
- * Parses a ACM ResendValidationEmail response element from \a xml.
+ * Parses a Acm ResendValidationEmail response element from \a xml.
  */
 void ResendValidationEmailResponsePrivate::parseResendValidationEmailResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void ResendValidationEmailResponsePrivate::parseResendValidationEmailResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

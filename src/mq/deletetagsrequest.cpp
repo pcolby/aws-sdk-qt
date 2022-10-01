@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DeleteTagsRequest
- * \brief The DeleteTagsRequest class provides an interface for MQ DeleteTags requests.
+ * \class QtAws::Mq::DeleteTagsRequest
+ * \brief The DeleteTagsRequest class provides an interface for Mq DeleteTags requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::deleteTags
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::MQ::DeleteTagsRequestPrivate
+ * \class QtAws::Mq::DeleteTagsRequestPrivate
  * \brief The DeleteTagsRequestPrivate class provides private implementation for DeleteTagsRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

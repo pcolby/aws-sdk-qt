@@ -23,10 +23,30 @@
 #include "core/awssignaturev4.h"
 #include "cancelqueryrequest.h"
 #include "cancelqueryresponse.h"
+#include "createscheduledqueryrequest.h"
+#include "createscheduledqueryresponse.h"
+#include "deletescheduledqueryrequest.h"
+#include "deletescheduledqueryresponse.h"
 #include "describeendpointsrequest.h"
 #include "describeendpointsresponse.h"
+#include "describescheduledqueryrequest.h"
+#include "describescheduledqueryresponse.h"
+#include "executescheduledqueryrequest.h"
+#include "executescheduledqueryresponse.h"
+#include "listscheduledqueriesrequest.h"
+#include "listscheduledqueriesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "preparequeryrequest.h"
+#include "preparequeryresponse.h"
 #include "queryrequest.h"
 #include "queryresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
+#include "updatescheduledqueryrequest.h"
+#include "updatescheduledqueryresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -50,6 +70,7 @@ namespace TimestreamQuery {
  * \ingroup aws-clients
  * \inmodule QtAwsTimestreamQuery
  *
+ *  <fullname>Amazon Timestream Query </fullname>
  */
 
 /*!
@@ -111,13 +132,43 @@ TimestreamQueryClient::TimestreamQueryClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels a query that has been issued. Cancellation is guaranteed only if the query has not completed execution before
- * the cancellation request was issued. Because cancellation is an idempotent operation, subsequent cancellation requests
- * will return a <code>CancellationMessage</code>, indicating that the query has already been canceled.
+ * Cancels a query that has been issued. Cancellation is provided only if the query has not completed running before the
+ * cancellation request was issued. Because cancellation is an idempotent operation, subsequent cancellation requests will
+ * return a <code>CancellationMessage</code>, indicating that the query has already been canceled. See <a
+ * href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.cancel-query.html">code sample</a> for
+ * details.
  */
 CancelQueryResponse * TimestreamQueryClient::cancelQuery(const CancelQueryRequest &request)
 {
     return qobject_cast<CancelQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * CreateScheduledQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a scheduled query that will be run on your behalf at the configured schedule. Timestream assumes the execution
+ * role provided as part of the <code>ScheduledQueryExecutionRoleArn</code> parameter to run the query. You can use the
+ * <code>NotificationConfiguration</code> parameter to configure notification for your scheduled query
+ */
+CreateScheduledQueryResponse * TimestreamQueryClient::createScheduledQuery(const CreateScheduledQueryRequest &request)
+{
+    return qobject_cast<CreateScheduledQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * DeleteScheduledQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a given scheduled query. This is an irreversible operation.
+ */
+DeleteScheduledQueryResponse * TimestreamQueryClient::deleteScheduledQuery(const DeleteScheduledQueryRequest &request)
+{
+    return qobject_cast<DeleteScheduledQueryResponse *>(send(request));
 }
 
 /*!
@@ -131,10 +182,15 @@ CancelQueryResponse * TimestreamQueryClient::cancelQuery(const CancelQueryReques
  *
  * Query>
  *
- * Because Timestream’s SDKs are designed to transparently work with the service’s architecture, including the management
+ * Because the Timestream SDKs are designed to transparently work with the service’s architecture, including the management
  * and mapping of the service endpoints, <i>it is not recommended that you use this API
  *
  * unless</i>> <ul> <li>
+ *
+ * You are using <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/VPCEndpoints">VPC endpoints (Amazon
+ * Web Services PrivateLink) with Timestream </a>
+ *
+ * </p </li> <li>
  *
  * Your application uses a programming language that does not yet have SDK
  *
@@ -144,9 +200,9 @@ CancelQueryResponse * TimestreamQueryClient::cancelQuery(const CancelQueryReques
  *
  * implementatio> </li> </ul>
  *
- * For detailed information on how to use DescribeEndpoints, see <a
- * href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html">The Endpoint
- * Discovery Pattern and REST
+ * For detailed information on how and when to use and implement DescribeEndpoints, see <a
+ * href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using.API.html#Using-API.endpoint-discovery">The
+ * Endpoint Discovery
  */
 DescribeEndpointsResponse * TimestreamQueryClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
@@ -155,17 +211,155 @@ DescribeEndpointsResponse * TimestreamQueryClient::describeEndpoints(const Descr
 
 /*!
  * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * DescribeScheduledQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides detailed information about a scheduled
+ */
+DescribeScheduledQueryResponse * TimestreamQueryClient::describeScheduledQuery(const DescribeScheduledQueryRequest &request)
+{
+    return qobject_cast<DescribeScheduledQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * ExecuteScheduledQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * You can use this API to run a scheduled query manually.
+ */
+ExecuteScheduledQueryResponse * TimestreamQueryClient::executeScheduledQuery(const ExecuteScheduledQueryRequest &request)
+{
+    return qobject_cast<ExecuteScheduledQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * ListScheduledQueriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of all scheduled queries in the caller's Amazon account and Region. <code>ListScheduledQueries</code> is
+ * eventually consistent.
+ */
+ListScheduledQueriesResponse * TimestreamQueryClient::listScheduledQueries(const ListScheduledQueriesRequest &request)
+{
+    return qobject_cast<ListScheduledQueriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List all tags on a Timestream query
+ */
+ListTagsForResourceResponse * TimestreamQueryClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * PrepareQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A synchronous operation that allows you to submit a query with parameters to be stored by Timestream for later running.
+ * Timestream only supports using this operation with the <code>PrepareQueryRequest$ValidateOnly</code> set to
+ * <code>true</code>.
+ */
+PrepareQueryResponse * TimestreamQueryClient::prepareQuery(const PrepareQueryRequest &request)
+{
+    return qobject_cast<PrepareQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
  * QueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Query is a synchronous operation that enables you to execute a query. Query will timeout after 60 seconds. You must
- * update the default timeout in the SDK to support a timeout of 60 seconds. The result set will be truncated to 1MB.
- * Service quotas apply. For more information, see Quotas in the Timestream Developer Guide.
+ * <code>Query</code> is a synchronous operation that enables you to run a query against your Amazon Timestream data.
+ * <code>Query</code> will time out after 60 seconds. You must update the default timeout in the SDK to support a timeout
+ * of 60 seconds. See the <a
+ * href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.run-query.html">code sample</a> for
+ * details.
+ *
+ * </p
+ *
+ * Your query request will fail in the following
+ *
+ * cases> <ul> <li>
+ *
+ * If you submit a <code>Query</code> request with the same client token outside of the 5-minute idempotency window.
+ *
+ * </p </li> <li>
+ *
+ * If you submit a <code>Query</code> request with the same client token, but change other parameters, within the 5-minute
+ * idempotency window.
+ *
+ * </p </li> <li>
+ *
+ * If the size of the row (including the query metadata) exceeds 1 MB, then the query will fail with the following error
+ * message:
+ *
+ * </p
+ *
+ * <code>Query aborted as max page response size has been exceeded by the output result row</code>
+ *
+ * </p </li> <li>
+ *
+ * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and the
+ * result reader do not have the same query string in the query requests, the query will fail with an <code>Invalid
+ * pagination token</code> error.
  */
 QueryResponse * TimestreamQueryClient::query(const QueryRequest &request)
 {
     return qobject_cast<QueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associate a set of tags with a Timestream resource. You can then activate these user-defined tags so that they appear on
+ * the Billing and Cost Management console for cost allocation tracking.
+ */
+TagResourceResponse * TimestreamQueryClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the association of tags from a Timestream query
+ */
+UntagResourceResponse * TimestreamQueryClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TimestreamQueryClient service, and returns a pointer to an
+ * UpdateScheduledQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update a scheduled
+ */
+UpdateScheduledQueryResponse * TimestreamQueryClient::updateScheduledQuery(const UpdateScheduledQueryRequest &request)
+{
+    return qobject_cast<UpdateScheduledQueryResponse *>(send(request));
 }
 
 /*!

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSKAFKA_LIBRARY)
 
 add_library(QtAwsKafka
+  qtawskafkaglobal.h
+  kafkaclient.h
+  kafkaclient_p.h
+  kafkarequest.h
+  kafkarequest_p.h
+  kafkaresponse.h
+  kafkaresponse_p.h
   batchassociatescramsecretrequest.h
   batchassociatescramsecretrequest_p.h
   batchassociatescramsecretresponse.h
@@ -13,6 +20,10 @@ add_library(QtAwsKafka
   createclusterrequest_p.h
   createclusterresponse.h
   createclusterresponse_p.h
+  createclusterv2request.h
+  createclusterv2request_p.h
+  createclusterv2response.h
+  createclusterv2response_p.h
   createconfigurationrequest.h
   createconfigurationrequest_p.h
   createconfigurationresponse.h
@@ -25,14 +36,18 @@ add_library(QtAwsKafka
   deleteconfigurationrequest_p.h
   deleteconfigurationresponse.h
   deleteconfigurationresponse_p.h
-  describeclusteroperationrequest.h
-  describeclusteroperationrequest_p.h
-  describeclusteroperationresponse.h
-  describeclusteroperationresponse_p.h
   describeclusterrequest.h
   describeclusterrequest_p.h
   describeclusterresponse.h
   describeclusterresponse_p.h
+  describeclusteroperationrequest.h
+  describeclusteroperationrequest_p.h
+  describeclusteroperationresponse.h
+  describeclusteroperationresponse_p.h
+  describeclusterv2request.h
+  describeclusterv2request_p.h
+  describeclusterv2response.h
+  describeclusterv2response_p.h
   describeconfigurationrequest.h
   describeconfigurationrequest_p.h
   describeconfigurationresponse.h
@@ -49,12 +64,6 @@ add_library(QtAwsKafka
   getcompatiblekafkaversionsrequest_p.h
   getcompatiblekafkaversionsresponse.h
   getcompatiblekafkaversionsresponse_p.h
-  kafkaclient.h
-  kafkaclient_p.h
-  kafkarequest.h
-  kafkarequest_p.h
-  kafkaresponse.h
-  kafkaresponse_p.h
   listclusteroperationsrequest.h
   listclusteroperationsrequest_p.h
   listclusteroperationsresponse.h
@@ -63,6 +72,10 @@ add_library(QtAwsKafka
   listclustersrequest_p.h
   listclustersresponse.h
   listclustersresponse_p.h
+  listclustersv2request.h
+  listclustersv2request_p.h
+  listclustersv2response.h
+  listclustersv2response_p.h
   listconfigurationrevisionsrequest.h
   listconfigurationrevisionsrequest_p.h
   listconfigurationrevisionsresponse.h
@@ -87,7 +100,6 @@ add_library(QtAwsKafka
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawskafkaglobal.h
   rebootbrokerrequest.h
   rebootbrokerrequest_p.h
   rebootbrokerresponse.h
@@ -124,26 +136,41 @@ add_library(QtAwsKafka
   updateconfigurationrequest_p.h
   updateconfigurationresponse.h
   updateconfigurationresponse_p.h
+  updateconnectivityrequest.h
+  updateconnectivityrequest_p.h
+  updateconnectivityresponse.h
+  updateconnectivityresponse_p.h
   updatemonitoringrequest.h
   updatemonitoringrequest_p.h
   updatemonitoringresponse.h
   updatemonitoringresponse_p.h
+  updatesecurityrequest.h
+  updatesecurityrequest_p.h
+  updatesecurityresponse.h
+  updatesecurityresponse_p.h
+  kafkaclient.cpp
+  kafkarequest.cpp
+  kafkaresponse.cpp
   batchassociatescramsecretrequest.cpp
   batchassociatescramsecretresponse.cpp
   batchdisassociatescramsecretrequest.cpp
   batchdisassociatescramsecretresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
+  createclusterv2request.cpp
+  createclusterv2response.cpp
   createconfigurationrequest.cpp
   createconfigurationresponse.cpp
   deleteclusterrequest.cpp
   deleteclusterresponse.cpp
   deleteconfigurationrequest.cpp
   deleteconfigurationresponse.cpp
-  describeclusteroperationrequest.cpp
-  describeclusteroperationresponse.cpp
   describeclusterrequest.cpp
   describeclusterresponse.cpp
+  describeclusteroperationrequest.cpp
+  describeclusteroperationresponse.cpp
+  describeclusterv2request.cpp
+  describeclusterv2response.cpp
   describeconfigurationrequest.cpp
   describeconfigurationresponse.cpp
   describeconfigurationrevisionrequest.cpp
@@ -152,13 +179,12 @@ add_library(QtAwsKafka
   getbootstrapbrokersresponse.cpp
   getcompatiblekafkaversionsrequest.cpp
   getcompatiblekafkaversionsresponse.cpp
-  kafkaclient.cpp
-  kafkarequest.cpp
-  kafkaresponse.cpp
   listclusteroperationsrequest.cpp
   listclusteroperationsresponse.cpp
   listclustersrequest.cpp
   listclustersresponse.cpp
+  listclustersv2request.cpp
+  listclustersv2response.cpp
   listconfigurationrevisionsrequest.cpp
   listconfigurationrevisionsresponse.cpp
   listconfigurationsrequest.cpp
@@ -189,8 +215,12 @@ add_library(QtAwsKafka
   updateclusterkafkaversionresponse.cpp
   updateconfigurationrequest.cpp
   updateconfigurationresponse.cpp
+  updateconnectivityrequest.cpp
+  updateconnectivityresponse.cpp
   updatemonitoringrequest.cpp
-  updatemonitoringresponse.cpp)
+  updatemonitoringresponse.cpp
+  updatesecurityrequest.cpp
+  updatesecurityresponse.cpp)
 
 target_link_libraries(QtAwsKafka
   PRIVATE QtAwsCore

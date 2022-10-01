@@ -24,14 +24,14 @@
 #include "tagresourcesrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 class TagResourcesRequest;
 
-class TagResourcesRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class TagResourcesRequestPrivate : public ResourceGroupsTaggingApiRequestPrivate {
 
 public:
-    TagResourcesRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,
+    TagResourcesRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action,
                                    TagResourcesRequest * const q);
     TagResourcesRequestPrivate(const TagResourcesRequestPrivate &other,
                                    TagResourcesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

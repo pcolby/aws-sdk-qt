@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIAM_LIBRARY)
 
 add_library(QtAwsIam
+  qtawsiamglobal.h
+  iamclient.h
+  iamclient_p.h
+  iamrequest.h
+  iamrequest_p.h
+  iamresponse.h
+  iamresponse_p.h
   addclientidtoopenidconnectproviderrequest.h
   addclientidtoopenidconnectproviderrequest_p.h
   addclientidtoopenidconnectproviderresponse.h
@@ -101,14 +108,14 @@ add_library(QtAwsIam
   deleteaccountpasswordpolicyrequest_p.h
   deleteaccountpasswordpolicyresponse.h
   deleteaccountpasswordpolicyresponse_p.h
-  deletegrouppolicyrequest.h
-  deletegrouppolicyrequest_p.h
-  deletegrouppolicyresponse.h
-  deletegrouppolicyresponse_p.h
   deletegrouprequest.h
   deletegrouprequest_p.h
   deletegroupresponse.h
   deletegroupresponse_p.h
+  deletegrouppolicyrequest.h
+  deletegrouppolicyrequest_p.h
+  deletegrouppolicyresponse.h
+  deletegrouppolicyresponse_p.h
   deleteinstanceprofilerequest.h
   deleteinstanceprofilerequest_p.h
   deleteinstanceprofileresponse.h
@@ -129,6 +136,10 @@ add_library(QtAwsIam
   deletepolicyversionrequest_p.h
   deletepolicyversionresponse.h
   deletepolicyversionresponse_p.h
+  deleterolerequest.h
+  deleterolerequest_p.h
+  deleteroleresponse.h
+  deleteroleresponse_p.h
   deleterolepermissionsboundaryrequest.h
   deleterolepermissionsboundaryrequest_p.h
   deleterolepermissionsboundaryresponse.h
@@ -137,14 +148,14 @@ add_library(QtAwsIam
   deleterolepolicyrequest_p.h
   deleterolepolicyresponse.h
   deleterolepolicyresponse_p.h
-  deleterolerequest.h
-  deleterolerequest_p.h
-  deleteroleresponse.h
-  deleteroleresponse_p.h
   deletesamlproviderrequest.h
   deletesamlproviderrequest_p.h
   deletesamlproviderresponse.h
   deletesamlproviderresponse_p.h
+  deletesshpublickeyrequest.h
+  deletesshpublickeyrequest_p.h
+  deletesshpublickeyresponse.h
+  deletesshpublickeyresponse_p.h
   deleteservercertificaterequest.h
   deleteservercertificaterequest_p.h
   deleteservercertificateresponse.h
@@ -161,10 +172,10 @@ add_library(QtAwsIam
   deletesigningcertificaterequest_p.h
   deletesigningcertificateresponse.h
   deletesigningcertificateresponse_p.h
-  deletesshpublickeyrequest.h
-  deletesshpublickeyrequest_p.h
-  deletesshpublickeyresponse.h
-  deletesshpublickeyresponse_p.h
+  deleteuserrequest.h
+  deleteuserrequest_p.h
+  deleteuserresponse.h
+  deleteuserresponse_p.h
   deleteuserpermissionsboundaryrequest.h
   deleteuserpermissionsboundaryrequest_p.h
   deleteuserpermissionsboundaryresponse.h
@@ -173,10 +184,6 @@ add_library(QtAwsIam
   deleteuserpolicyrequest_p.h
   deleteuserpolicyresponse.h
   deleteuserpolicyresponse_p.h
-  deleteuserrequest.h
-  deleteuserrequest_p.h
-  deleteuserresponse.h
-  deleteuserresponse_p.h
   deletevirtualmfadevicerequest.h
   deletevirtualmfadevicerequest_p.h
   deletevirtualmfadeviceresponse.h
@@ -237,14 +244,14 @@ add_library(QtAwsIam
   getcredentialreportrequest_p.h
   getcredentialreportresponse.h
   getcredentialreportresponse_p.h
-  getgrouppolicyrequest.h
-  getgrouppolicyrequest_p.h
-  getgrouppolicyresponse.h
-  getgrouppolicyresponse_p.h
   getgrouprequest.h
   getgrouprequest_p.h
   getgroupresponse.h
   getgroupresponse_p.h
+  getgrouppolicyrequest.h
+  getgrouppolicyrequest_p.h
+  getgrouppolicyresponse.h
+  getgrouppolicyresponse_p.h
   getinstanceprofilerequest.h
   getinstanceprofilerequest_p.h
   getinstanceprofileresponse.h
@@ -269,18 +276,22 @@ add_library(QtAwsIam
   getpolicyversionrequest_p.h
   getpolicyversionresponse.h
   getpolicyversionresponse_p.h
-  getrolepolicyrequest.h
-  getrolepolicyrequest_p.h
-  getrolepolicyresponse.h
-  getrolepolicyresponse_p.h
   getrolerequest.h
   getrolerequest_p.h
   getroleresponse.h
   getroleresponse_p.h
+  getrolepolicyrequest.h
+  getrolepolicyrequest_p.h
+  getrolepolicyresponse.h
+  getrolepolicyresponse_p.h
   getsamlproviderrequest.h
   getsamlproviderrequest_p.h
   getsamlproviderresponse.h
   getsamlproviderresponse_p.h
+  getsshpublickeyrequest.h
+  getsshpublickeyrequest_p.h
+  getsshpublickeyresponse.h
+  getsshpublickeyresponse_p.h
   getservercertificaterequest.h
   getservercertificaterequest_p.h
   getservercertificateresponse.h
@@ -297,24 +308,14 @@ add_library(QtAwsIam
   getservicelinkedroledeletionstatusrequest_p.h
   getservicelinkedroledeletionstatusresponse.h
   getservicelinkedroledeletionstatusresponse_p.h
-  getsshpublickeyrequest.h
-  getsshpublickeyrequest_p.h
-  getsshpublickeyresponse.h
-  getsshpublickeyresponse_p.h
-  getuserpolicyrequest.h
-  getuserpolicyrequest_p.h
-  getuserpolicyresponse.h
-  getuserpolicyresponse_p.h
   getuserrequest.h
   getuserrequest_p.h
   getuserresponse.h
   getuserresponse_p.h
-  iamclient.h
-  iamclient_p.h
-  iamrequest.h
-  iamrequest_p.h
-  iamresponse.h
-  iamresponse_p.h
+  getuserpolicyrequest.h
+  getuserpolicyrequest_p.h
+  getuserpolicyresponse.h
+  getuserpolicyresponse_p.h
   listaccesskeysrequest.h
   listaccesskeysrequest_p.h
   listaccesskeysresponse.h
@@ -343,50 +344,50 @@ add_library(QtAwsIam
   listgrouppoliciesrequest_p.h
   listgrouppoliciesresponse.h
   listgrouppoliciesresponse_p.h
-  listgroupsforuserrequest.h
-  listgroupsforuserrequest_p.h
-  listgroupsforuserresponse.h
-  listgroupsforuserresponse_p.h
   listgroupsrequest.h
   listgroupsrequest_p.h
   listgroupsresponse.h
   listgroupsresponse_p.h
-  listinstanceprofilesforrolerequest.h
-  listinstanceprofilesforrolerequest_p.h
-  listinstanceprofilesforroleresponse.h
-  listinstanceprofilesforroleresponse_p.h
-  listinstanceprofilesrequest.h
-  listinstanceprofilesrequest_p.h
-  listinstanceprofilesresponse.h
-  listinstanceprofilesresponse_p.h
+  listgroupsforuserrequest.h
+  listgroupsforuserrequest_p.h
+  listgroupsforuserresponse.h
+  listgroupsforuserresponse_p.h
   listinstanceprofiletagsrequest.h
   listinstanceprofiletagsrequest_p.h
   listinstanceprofiletagsresponse.h
   listinstanceprofiletagsresponse_p.h
-  listmfadevicesrequest.h
-  listmfadevicesrequest_p.h
-  listmfadevicesresponse.h
-  listmfadevicesresponse_p.h
+  listinstanceprofilesrequest.h
+  listinstanceprofilesrequest_p.h
+  listinstanceprofilesresponse.h
+  listinstanceprofilesresponse_p.h
+  listinstanceprofilesforrolerequest.h
+  listinstanceprofilesforrolerequest_p.h
+  listinstanceprofilesforroleresponse.h
+  listinstanceprofilesforroleresponse_p.h
   listmfadevicetagsrequest.h
   listmfadevicetagsrequest_p.h
   listmfadevicetagsresponse.h
   listmfadevicetagsresponse_p.h
-  listopenidconnectprovidersrequest.h
-  listopenidconnectprovidersrequest_p.h
-  listopenidconnectprovidersresponse.h
-  listopenidconnectprovidersresponse_p.h
+  listmfadevicesrequest.h
+  listmfadevicesrequest_p.h
+  listmfadevicesresponse.h
+  listmfadevicesresponse_p.h
   listopenidconnectprovidertagsrequest.h
   listopenidconnectprovidertagsrequest_p.h
   listopenidconnectprovidertagsresponse.h
   listopenidconnectprovidertagsresponse_p.h
-  listpoliciesgrantingserviceaccessrequest.h
-  listpoliciesgrantingserviceaccessrequest_p.h
-  listpoliciesgrantingserviceaccessresponse.h
-  listpoliciesgrantingserviceaccessresponse_p.h
+  listopenidconnectprovidersrequest.h
+  listopenidconnectprovidersrequest_p.h
+  listopenidconnectprovidersresponse.h
+  listopenidconnectprovidersresponse_p.h
   listpoliciesrequest.h
   listpoliciesrequest_p.h
   listpoliciesresponse.h
   listpoliciesresponse_p.h
+  listpoliciesgrantingserviceaccessrequest.h
+  listpoliciesgrantingserviceaccessrequest_p.h
+  listpoliciesgrantingserviceaccessresponse.h
+  listpoliciesgrantingserviceaccessresponse_p.h
   listpolicytagsrequest.h
   listpolicytagsrequest_p.h
   listpolicytagsresponse.h
@@ -399,30 +400,34 @@ add_library(QtAwsIam
   listrolepoliciesrequest_p.h
   listrolepoliciesresponse.h
   listrolepoliciesresponse_p.h
-  listrolesrequest.h
-  listrolesrequest_p.h
-  listrolesresponse.h
-  listrolesresponse_p.h
   listroletagsrequest.h
   listroletagsrequest_p.h
   listroletagsresponse.h
   listroletagsresponse_p.h
-  listsamlprovidersrequest.h
-  listsamlprovidersrequest_p.h
-  listsamlprovidersresponse.h
-  listsamlprovidersresponse_p.h
+  listrolesrequest.h
+  listrolesrequest_p.h
+  listrolesresponse.h
+  listrolesresponse_p.h
   listsamlprovidertagsrequest.h
   listsamlprovidertagsrequest_p.h
   listsamlprovidertagsresponse.h
   listsamlprovidertagsresponse_p.h
-  listservercertificatesrequest.h
-  listservercertificatesrequest_p.h
-  listservercertificatesresponse.h
-  listservercertificatesresponse_p.h
+  listsamlprovidersrequest.h
+  listsamlprovidersrequest_p.h
+  listsamlprovidersresponse.h
+  listsamlprovidersresponse_p.h
+  listsshpublickeysrequest.h
+  listsshpublickeysrequest_p.h
+  listsshpublickeysresponse.h
+  listsshpublickeysresponse_p.h
   listservercertificatetagsrequest.h
   listservercertificatetagsrequest_p.h
   listservercertificatetagsresponse.h
   listservercertificatetagsresponse_p.h
+  listservercertificatesrequest.h
+  listservercertificatesrequest_p.h
+  listservercertificatesresponse.h
+  listservercertificatesresponse_p.h
   listservicespecificcredentialsrequest.h
   listservicespecificcredentialsrequest_p.h
   listservicespecificcredentialsresponse.h
@@ -431,22 +436,18 @@ add_library(QtAwsIam
   listsigningcertificatesrequest_p.h
   listsigningcertificatesresponse.h
   listsigningcertificatesresponse_p.h
-  listsshpublickeysrequest.h
-  listsshpublickeysrequest_p.h
-  listsshpublickeysresponse.h
-  listsshpublickeysresponse_p.h
   listuserpoliciesrequest.h
   listuserpoliciesrequest_p.h
   listuserpoliciesresponse.h
   listuserpoliciesresponse_p.h
-  listusersrequest.h
-  listusersrequest_p.h
-  listusersresponse.h
-  listusersresponse_p.h
   listusertagsrequest.h
   listusertagsrequest_p.h
   listusertagsresponse.h
   listusertagsresponse_p.h
+  listusersrequest.h
+  listusersrequest_p.h
+  listusersresponse.h
+  listusersresponse_p.h
   listvirtualmfadevicesrequest.h
   listvirtualmfadevicesrequest_p.h
   listvirtualmfadevicesresponse.h
@@ -471,7 +472,6 @@ add_library(QtAwsIam
   putuserpolicyrequest_p.h
   putuserpolicyresponse.h
   putuserpolicyresponse_p.h
-  qtawsiamglobal.h
   removeclientidfromopenidconnectproviderrequest.h
   removeclientidfromopenidconnectproviderrequest_p.h
   removeclientidfromopenidconnectproviderresponse.h
@@ -596,18 +596,22 @@ add_library(QtAwsIam
   updateopenidconnectproviderthumbprintrequest_p.h
   updateopenidconnectproviderthumbprintresponse.h
   updateopenidconnectproviderthumbprintresponse_p.h
-  updateroledescriptionrequest.h
-  updateroledescriptionrequest_p.h
-  updateroledescriptionresponse.h
-  updateroledescriptionresponse_p.h
   updaterolerequest.h
   updaterolerequest_p.h
   updateroleresponse.h
   updateroleresponse_p.h
+  updateroledescriptionrequest.h
+  updateroledescriptionrequest_p.h
+  updateroledescriptionresponse.h
+  updateroledescriptionresponse_p.h
   updatesamlproviderrequest.h
   updatesamlproviderrequest_p.h
   updatesamlproviderresponse.h
   updatesamlproviderresponse_p.h
+  updatesshpublickeyrequest.h
+  updatesshpublickeyrequest_p.h
+  updatesshpublickeyresponse.h
+  updatesshpublickeyresponse_p.h
   updateservercertificaterequest.h
   updateservercertificaterequest_p.h
   updateservercertificateresponse.h
@@ -620,14 +624,14 @@ add_library(QtAwsIam
   updatesigningcertificaterequest_p.h
   updatesigningcertificateresponse.h
   updatesigningcertificateresponse_p.h
-  updatesshpublickeyrequest.h
-  updatesshpublickeyrequest_p.h
-  updatesshpublickeyresponse.h
-  updatesshpublickeyresponse_p.h
   updateuserrequest.h
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
+  uploadsshpublickeyrequest.h
+  uploadsshpublickeyrequest_p.h
+  uploadsshpublickeyresponse.h
+  uploadsshpublickeyresponse_p.h
   uploadservercertificaterequest.h
   uploadservercertificaterequest_p.h
   uploadservercertificateresponse.h
@@ -636,10 +640,9 @@ add_library(QtAwsIam
   uploadsigningcertificaterequest_p.h
   uploadsigningcertificateresponse.h
   uploadsigningcertificateresponse_p.h
-  uploadsshpublickeyrequest.h
-  uploadsshpublickeyrequest_p.h
-  uploadsshpublickeyresponse.h
-  uploadsshpublickeyresponse_p.h
+  iamclient.cpp
+  iamrequest.cpp
+  iamresponse.cpp
   addclientidtoopenidconnectproviderrequest.cpp
   addclientidtoopenidconnectproviderresponse.cpp
   addroletoinstanceprofilerequest.cpp
@@ -690,10 +693,10 @@ add_library(QtAwsIam
   deleteaccountaliasresponse.cpp
   deleteaccountpasswordpolicyrequest.cpp
   deleteaccountpasswordpolicyresponse.cpp
-  deletegrouppolicyrequest.cpp
-  deletegrouppolicyresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
+  deletegrouppolicyrequest.cpp
+  deletegrouppolicyresponse.cpp
   deleteinstanceprofilerequest.cpp
   deleteinstanceprofileresponse.cpp
   deleteloginprofilerequest.cpp
@@ -704,14 +707,16 @@ add_library(QtAwsIam
   deletepolicyresponse.cpp
   deletepolicyversionrequest.cpp
   deletepolicyversionresponse.cpp
+  deleterolerequest.cpp
+  deleteroleresponse.cpp
   deleterolepermissionsboundaryrequest.cpp
   deleterolepermissionsboundaryresponse.cpp
   deleterolepolicyrequest.cpp
   deleterolepolicyresponse.cpp
-  deleterolerequest.cpp
-  deleteroleresponse.cpp
   deletesamlproviderrequest.cpp
   deletesamlproviderresponse.cpp
+  deletesshpublickeyrequest.cpp
+  deletesshpublickeyresponse.cpp
   deleteservercertificaterequest.cpp
   deleteservercertificateresponse.cpp
   deleteservicelinkedrolerequest.cpp
@@ -720,14 +725,12 @@ add_library(QtAwsIam
   deleteservicespecificcredentialresponse.cpp
   deletesigningcertificaterequest.cpp
   deletesigningcertificateresponse.cpp
-  deletesshpublickeyrequest.cpp
-  deletesshpublickeyresponse.cpp
+  deleteuserrequest.cpp
+  deleteuserresponse.cpp
   deleteuserpermissionsboundaryrequest.cpp
   deleteuserpermissionsboundaryresponse.cpp
   deleteuserpolicyrequest.cpp
   deleteuserpolicyresponse.cpp
-  deleteuserrequest.cpp
-  deleteuserresponse.cpp
   deletevirtualmfadevicerequest.cpp
   deletevirtualmfadeviceresponse.cpp
   detachgrouppolicyrequest.cpp
@@ -758,10 +761,10 @@ add_library(QtAwsIam
   getcontextkeysforprincipalpolicyresponse.cpp
   getcredentialreportrequest.cpp
   getcredentialreportresponse.cpp
-  getgrouppolicyrequest.cpp
-  getgrouppolicyresponse.cpp
   getgrouprequest.cpp
   getgroupresponse.cpp
+  getgrouppolicyrequest.cpp
+  getgrouppolicyresponse.cpp
   getinstanceprofilerequest.cpp
   getinstanceprofileresponse.cpp
   getloginprofilerequest.cpp
@@ -774,12 +777,14 @@ add_library(QtAwsIam
   getpolicyresponse.cpp
   getpolicyversionrequest.cpp
   getpolicyversionresponse.cpp
-  getrolepolicyrequest.cpp
-  getrolepolicyresponse.cpp
   getrolerequest.cpp
   getroleresponse.cpp
+  getrolepolicyrequest.cpp
+  getrolepolicyresponse.cpp
   getsamlproviderrequest.cpp
   getsamlproviderresponse.cpp
+  getsshpublickeyrequest.cpp
+  getsshpublickeyresponse.cpp
   getservercertificaterequest.cpp
   getservercertificateresponse.cpp
   getservicelastaccesseddetailsrequest.cpp
@@ -788,15 +793,10 @@ add_library(QtAwsIam
   getservicelastaccesseddetailswithentitiesresponse.cpp
   getservicelinkedroledeletionstatusrequest.cpp
   getservicelinkedroledeletionstatusresponse.cpp
-  getsshpublickeyrequest.cpp
-  getsshpublickeyresponse.cpp
-  getuserpolicyrequest.cpp
-  getuserpolicyresponse.cpp
   getuserrequest.cpp
   getuserresponse.cpp
-  iamclient.cpp
-  iamrequest.cpp
-  iamresponse.cpp
+  getuserpolicyrequest.cpp
+  getuserpolicyresponse.cpp
   listaccesskeysrequest.cpp
   listaccesskeysresponse.cpp
   listaccountaliasesrequest.cpp
@@ -811,58 +811,58 @@ add_library(QtAwsIam
   listentitiesforpolicyresponse.cpp
   listgrouppoliciesrequest.cpp
   listgrouppoliciesresponse.cpp
-  listgroupsforuserrequest.cpp
-  listgroupsforuserresponse.cpp
   listgroupsrequest.cpp
   listgroupsresponse.cpp
-  listinstanceprofilesforrolerequest.cpp
-  listinstanceprofilesforroleresponse.cpp
-  listinstanceprofilesrequest.cpp
-  listinstanceprofilesresponse.cpp
+  listgroupsforuserrequest.cpp
+  listgroupsforuserresponse.cpp
   listinstanceprofiletagsrequest.cpp
   listinstanceprofiletagsresponse.cpp
-  listmfadevicesrequest.cpp
-  listmfadevicesresponse.cpp
+  listinstanceprofilesrequest.cpp
+  listinstanceprofilesresponse.cpp
+  listinstanceprofilesforrolerequest.cpp
+  listinstanceprofilesforroleresponse.cpp
   listmfadevicetagsrequest.cpp
   listmfadevicetagsresponse.cpp
-  listopenidconnectprovidersrequest.cpp
-  listopenidconnectprovidersresponse.cpp
+  listmfadevicesrequest.cpp
+  listmfadevicesresponse.cpp
   listopenidconnectprovidertagsrequest.cpp
   listopenidconnectprovidertagsresponse.cpp
-  listpoliciesgrantingserviceaccessrequest.cpp
-  listpoliciesgrantingserviceaccessresponse.cpp
+  listopenidconnectprovidersrequest.cpp
+  listopenidconnectprovidersresponse.cpp
   listpoliciesrequest.cpp
   listpoliciesresponse.cpp
+  listpoliciesgrantingserviceaccessrequest.cpp
+  listpoliciesgrantingserviceaccessresponse.cpp
   listpolicytagsrequest.cpp
   listpolicytagsresponse.cpp
   listpolicyversionsrequest.cpp
   listpolicyversionsresponse.cpp
   listrolepoliciesrequest.cpp
   listrolepoliciesresponse.cpp
-  listrolesrequest.cpp
-  listrolesresponse.cpp
   listroletagsrequest.cpp
   listroletagsresponse.cpp
-  listsamlprovidersrequest.cpp
-  listsamlprovidersresponse.cpp
+  listrolesrequest.cpp
+  listrolesresponse.cpp
   listsamlprovidertagsrequest.cpp
   listsamlprovidertagsresponse.cpp
-  listservercertificatesrequest.cpp
-  listservercertificatesresponse.cpp
+  listsamlprovidersrequest.cpp
+  listsamlprovidersresponse.cpp
+  listsshpublickeysrequest.cpp
+  listsshpublickeysresponse.cpp
   listservercertificatetagsrequest.cpp
   listservercertificatetagsresponse.cpp
+  listservercertificatesrequest.cpp
+  listservercertificatesresponse.cpp
   listservicespecificcredentialsrequest.cpp
   listservicespecificcredentialsresponse.cpp
   listsigningcertificatesrequest.cpp
   listsigningcertificatesresponse.cpp
-  listsshpublickeysrequest.cpp
-  listsshpublickeysresponse.cpp
   listuserpoliciesrequest.cpp
   listuserpoliciesresponse.cpp
-  listusersrequest.cpp
-  listusersresponse.cpp
   listusertagsrequest.cpp
   listusertagsresponse.cpp
+  listusersrequest.cpp
+  listusersresponse.cpp
   listvirtualmfadevicesrequest.cpp
   listvirtualmfadevicesresponse.cpp
   putgrouppolicyrequest.cpp
@@ -937,28 +937,28 @@ add_library(QtAwsIam
   updateloginprofileresponse.cpp
   updateopenidconnectproviderthumbprintrequest.cpp
   updateopenidconnectproviderthumbprintresponse.cpp
-  updateroledescriptionrequest.cpp
-  updateroledescriptionresponse.cpp
   updaterolerequest.cpp
   updateroleresponse.cpp
+  updateroledescriptionrequest.cpp
+  updateroledescriptionresponse.cpp
   updatesamlproviderrequest.cpp
   updatesamlproviderresponse.cpp
+  updatesshpublickeyrequest.cpp
+  updatesshpublickeyresponse.cpp
   updateservercertificaterequest.cpp
   updateservercertificateresponse.cpp
   updateservicespecificcredentialrequest.cpp
   updateservicespecificcredentialresponse.cpp
   updatesigningcertificaterequest.cpp
   updatesigningcertificateresponse.cpp
-  updatesshpublickeyrequest.cpp
-  updatesshpublickeyresponse.cpp
   updateuserrequest.cpp
   updateuserresponse.cpp
+  uploadsshpublickeyrequest.cpp
+  uploadsshpublickeyresponse.cpp
   uploadservercertificaterequest.cpp
   uploadservercertificateresponse.cpp
   uploadsigningcertificaterequest.cpp
-  uploadsigningcertificateresponse.cpp
-  uploadsshpublickeyrequest.cpp
-  uploadsshpublickeyresponse.cpp)
+  uploadsigningcertificateresponse.cpp)
 
 target_link_libraries(QtAwsIam
   PRIVATE QtAwsCore

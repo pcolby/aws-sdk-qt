@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteMethodResponseRequest
- * \brief The DeleteMethodResponseRequest class provides an interface for APIGateway DeleteMethodResponse requests.
+ * \class QtAws::ApiGateway::DeleteMethodResponseRequest
+ * \brief The DeleteMethodResponseRequest class provides an interface for ApiGateway DeleteMethodResponse requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteMethodResponse
+ * \sa ApiGatewayClient::deleteMethodResponse
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteMethodResponseRequest::DeleteMethodResponseRequest(const DeleteMethodResponseRequest &other)
-    : APIGatewayRequest(new DeleteMethodResponseRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteMethodResponseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteMethodResponseRequest::DeleteMethodResponseRequest(const DeleteMethodRespo
  * Constructs a DeleteMethodResponseRequest object.
  */
 DeleteMethodResponseRequest::DeleteMethodResponseRequest()
-    : APIGatewayRequest(new DeleteMethodResponseRequestPrivate(APIGatewayRequest::DeleteMethodResponseAction, this))
+    : ApiGatewayRequest(new DeleteMethodResponseRequestPrivate(ApiGatewayRequest::DeleteMethodResponseAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodResponseRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteMethodResponseRequestPrivate
+ * \class QtAws::ApiGateway::DeleteMethodResponseRequestPrivate
  * \brief The DeleteMethodResponseRequestPrivate class provides private implementation for DeleteMethodResponseRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteMethodResponseRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteMethodResponseRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteMethodResponseRequestPrivate::DeleteMethodResponseRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteMethodResponseRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteMethodResponseRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteMethodResponseRequestPrivate::DeleteMethodResponseRequestPrivate(
  */
 DeleteMethodResponseRequestPrivate::DeleteMethodResponseRequestPrivate(
     const DeleteMethodResponseRequestPrivate &other, DeleteMethodResponseRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "deletebackuprequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DeleteBackupRequest;
 
-class DeleteBackupRequestPrivate : public CloudHSMV2RequestPrivate {
+class DeleteBackupRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    DeleteBackupRequestPrivate(const CloudHSMV2Request::Action action,
+    DeleteBackupRequestPrivate(const CloudHsmV2Request::Action action,
                                    DeleteBackupRequest * const q);
     DeleteBackupRequestPrivate(const DeleteBackupRequestPrivate &other,
                                    DeleteBackupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

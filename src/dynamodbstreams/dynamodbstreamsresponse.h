@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
-class DynamoDBStreamsResponsePrivate;
+class DynamoDbStreamsResponsePrivate;
 
-class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDBStreamsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDbStreamsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    DynamoDBStreamsResponse(QObject * const parent = 0);
+    DynamoDbStreamsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate * const d, QObject * const parent);
+    DynamoDbStreamsResponse(DynamoDbStreamsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DynamoDBStreamsResponse)
-    Q_DISABLE_COPY(DynamoDBStreamsResponse)
+    Q_DECLARE_PRIVATE(DynamoDbStreamsResponse)
+    Q_DISABLE_COPY(DynamoDbStreamsResponse)
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

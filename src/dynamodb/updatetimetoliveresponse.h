@@ -24,11 +24,11 @@
 #include "updatetimetoliverequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateTimeToLiveResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT UpdateTimeToLiveResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT UpdateTimeToLiveResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

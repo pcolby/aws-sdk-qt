@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerRequestPrivate;
+class SignerRequestPrivate;
 
-class QTAWSSIGNER_EXPORT signerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSIGNER_EXPORT SignerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by signer.
+    /// Actions supported by Signer.
     enum Action {
         AddProfilePermissionAction,
         CancelSigningProfileAction,
@@ -59,9 +59,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    signerRequest(const Action action);
-    signerRequest(const signerRequest &other);
-    signerRequest &operator=(const signerRequest &other);
+    SignerRequest(const Action action);
+    SignerRequest(const SignerRequest &other);
+    SignerRequest &operator=(const SignerRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -70,12 +70,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const signerRequest &other) const;
+    virtual bool operator==(const SignerRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit signerRequest(signerRequestPrivate * const d);
+    explicit SignerRequest(SignerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -88,11 +88,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(signerRequest)
+    Q_DECLARE_PRIVATE(SignerRequest)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

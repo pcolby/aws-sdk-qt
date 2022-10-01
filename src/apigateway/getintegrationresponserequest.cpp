@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetIntegrationResponseRequest
- * \brief The GetIntegrationResponseRequest class provides an interface for APIGateway GetIntegrationResponse requests.
+ * \class QtAws::ApiGateway::GetIntegrationResponseRequest
+ * \brief The GetIntegrationResponseRequest class provides an interface for ApiGateway GetIntegrationResponse requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getIntegrationResponse
+ * \sa ApiGatewayClient::getIntegrationResponse
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetIntegrationResponseRequest::GetIntegrationResponseRequest(const GetIntegrationResponseRequest &other)
-    : APIGatewayRequest(new GetIntegrationResponseRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetIntegrationResponseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetIntegrationResponseRequest::GetIntegrationResponseRequest(const GetIntegratio
  * Constructs a GetIntegrationResponseRequest object.
  */
 GetIntegrationResponseRequest::GetIntegrationResponseRequest()
-    : APIGatewayRequest(new GetIntegrationResponseRequestPrivate(APIGatewayRequest::GetIntegrationResponseAction, this))
+    : ApiGatewayRequest(new GetIntegrationResponseRequestPrivate(ApiGatewayRequest::GetIntegrationResponseAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::APIGateway::GetIntegrationResponseRequestPrivate
+ * \class QtAws::ApiGateway::GetIntegrationResponseRequestPrivate
  * \brief The GetIntegrationResponseRequestPrivate class provides private implementation for GetIntegrationResponseRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetIntegrationResponseRequestPrivate object for APIGateway \a action,
+ * Constructs a GetIntegrationResponseRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
-    const APIGatewayRequest::Action action, GetIntegrationResponseRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetIntegrationResponseRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
  */
 GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
     const GetIntegrationResponseRequestPrivate &other, GetIntegrationResponseRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -21,51 +21,51 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::ECRPublicRequest
- * \brief The ECRPublicRequest class provides an interface for ECRPublic requests.
+ * \class QtAws::EcrPublic::EcrPublicRequest
+ * \brief The EcrPublicRequest class provides an interface for EcrPublic requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * \enum ECRPublicRequest::Action
+ * \enum EcrPublicRequest::Action
  *
- * This enum describes the actions that can be performed as ECRPublic
+ * This enum describes the actions that can be performed as EcrPublic
  * requests.
  *
- * \value BatchCheckLayerAvailabilityAction ECRPublic BatchCheckLayerAvailability action.
- * \value BatchDeleteImageAction ECRPublic BatchDeleteImage action.
- * \value CompleteLayerUploadAction ECRPublic CompleteLayerUpload action.
- * \value CreateRepositoryAction ECRPublic CreateRepository action.
- * \value DeleteRepositoryAction ECRPublic DeleteRepository action.
- * \value DeleteRepositoryPolicyAction ECRPublic DeleteRepositoryPolicy action.
- * \value DescribeImageTagsAction ECRPublic DescribeImageTags action.
- * \value DescribeImagesAction ECRPublic DescribeImages action.
- * \value DescribeRegistriesAction ECRPublic DescribeRegistries action.
- * \value DescribeRepositoriesAction ECRPublic DescribeRepositories action.
- * \value GetAuthorizationTokenAction ECRPublic GetAuthorizationToken action.
- * \value GetRegistryCatalogDataAction ECRPublic GetRegistryCatalogData action.
- * \value GetRepositoryCatalogDataAction ECRPublic GetRepositoryCatalogData action.
- * \value GetRepositoryPolicyAction ECRPublic GetRepositoryPolicy action.
- * \value InitiateLayerUploadAction ECRPublic InitiateLayerUpload action.
- * \value ListTagsForResourceAction ECRPublic ListTagsForResource action.
- * \value PutImageAction ECRPublic PutImage action.
- * \value PutRegistryCatalogDataAction ECRPublic PutRegistryCatalogData action.
- * \value PutRepositoryCatalogDataAction ECRPublic PutRepositoryCatalogData action.
- * \value SetRepositoryPolicyAction ECRPublic SetRepositoryPolicy action.
- * \value TagResourceAction ECRPublic TagResource action.
- * \value UntagResourceAction ECRPublic UntagResource action.
- * \value UploadLayerPartAction ECRPublic UploadLayerPart action.
+ * \value BatchCheckLayerAvailabilityAction EcrPublic BatchCheckLayerAvailability action.
+ * \value BatchDeleteImageAction EcrPublic BatchDeleteImage action.
+ * \value CompleteLayerUploadAction EcrPublic CompleteLayerUpload action.
+ * \value CreateRepositoryAction EcrPublic CreateRepository action.
+ * \value DeleteRepositoryAction EcrPublic DeleteRepository action.
+ * \value DeleteRepositoryPolicyAction EcrPublic DeleteRepositoryPolicy action.
+ * \value DescribeImageTagsAction EcrPublic DescribeImageTags action.
+ * \value DescribeImagesAction EcrPublic DescribeImages action.
+ * \value DescribeRegistriesAction EcrPublic DescribeRegistries action.
+ * \value DescribeRepositoriesAction EcrPublic DescribeRepositories action.
+ * \value GetAuthorizationTokenAction EcrPublic GetAuthorizationToken action.
+ * \value GetRegistryCatalogDataAction EcrPublic GetRegistryCatalogData action.
+ * \value GetRepositoryCatalogDataAction EcrPublic GetRepositoryCatalogData action.
+ * \value GetRepositoryPolicyAction EcrPublic GetRepositoryPolicy action.
+ * \value InitiateLayerUploadAction EcrPublic InitiateLayerUpload action.
+ * \value ListTagsForResourceAction EcrPublic ListTagsForResource action.
+ * \value PutImageAction EcrPublic PutImage action.
+ * \value PutRegistryCatalogDataAction EcrPublic PutRegistryCatalogData action.
+ * \value PutRepositoryCatalogDataAction EcrPublic PutRepositoryCatalogData action.
+ * \value SetRepositoryPolicyAction EcrPublic SetRepositoryPolicy action.
+ * \value TagResourceAction EcrPublic TagResource action.
+ * \value UntagResourceAction EcrPublic UntagResource action.
+ * \value UploadLayerPartAction EcrPublic UploadLayerPart action.
  */
 
 /*!
- * Constructs a ECRPublicRequest object for ECRPublic \a action.
+ * Constructs a EcrPublicRequest object for EcrPublic \a action.
  */
-ECRPublicRequest::ECRPublicRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ECRPublicRequestPrivate(action, this))
+EcrPublicRequest::EcrPublicRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EcrPublicRequestPrivate(action, this))
 {
 
 }
@@ -73,18 +73,18 @@ ECRPublicRequest::ECRPublicRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-ECRPublicRequest::ECRPublicRequest(const ECRPublicRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ECRPublicRequestPrivate(*other.d_func(), this))
+EcrPublicRequest::EcrPublicRequest(const EcrPublicRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EcrPublicRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ECRPublicRequest object to be equal to \a other.
+ * Sets the EcrPublicRequest object to be equal to \a other.
  */
-ECRPublicRequest& ECRPublicRequest::operator=(const ECRPublicRequest &other)
+EcrPublicRequest& EcrPublicRequest::operator=(const EcrPublicRequest &other)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -92,57 +92,57 @@ ECRPublicRequest& ECRPublicRequest::operator=(const ECRPublicRequest &other)
 }
 
 /*!
- * Constructs aa ECRPublicRequest object with private implementation \a d.
+ * Constructs aa EcrPublicRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ECRPublicRequestPrivate.
+ * implementation that inherits from EcrPublicRequestPrivate.
  */
-ECRPublicRequest::ECRPublicRequest(ECRPublicRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EcrPublicRequest::EcrPublicRequest(EcrPublicRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the ECRPublic action to be performed by this request.
+ * Returns the EcrPublic action to be performed by this request.
  */
-ECRPublicRequest::Action ECRPublicRequest::action() const
+EcrPublicRequest::Action EcrPublicRequest::action() const
 {
-    Q_D(const ECRPublicRequest);
+    Q_D(const EcrPublicRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the ECRPublic action to be performed by this request.
+ * Returns the name of the EcrPublic action to be performed by this request.
  */
-QString ECRPublicRequest::actionString() const
+QString EcrPublicRequest::actionString() const
 {
-    return ECRPublicRequestPrivate::toString(action());
+    return EcrPublicRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the ECRPublic API version implemented by this request.
+ * Returns the EcrPublic API version implemented by this request.
  */
-QString ECRPublicRequest::apiVersion() const
+QString EcrPublicRequest::apiVersion() const
 {
-    Q_D(const ECRPublicRequest);
+    Q_D(const EcrPublicRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the ECRPublic action to be performed by this request to \a action.
+ * Sets the EcrPublic action to be performed by this request to \a action.
  */
-void ECRPublicRequest::setAction(const Action action)
+void EcrPublicRequest::setAction(const Action action)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->action = action;
 }
 
 /*!
- * Sets the ECRPublic API version to include in this request to \a version.
+ * Sets the EcrPublic API version to include in this request to \a version.
  */
-void ECRPublicRequest::setApiVersion(const QString &version)
+void EcrPublicRequest::setApiVersion(const QString &version)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->apiVersion = version;
 }
 
@@ -154,7 +154,7 @@ void ECRPublicRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ECRPublicRequest::operator==(const ECRPublicRequest &other) const
+bool EcrPublicRequest::operator==(const EcrPublicRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -163,19 +163,19 @@ bool ECRPublicRequest::operator==(const ECRPublicRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ECRPublic queue name.
+ * Returns \c tue if \a queueName is a valid EcrPublic queue name.
  *
- * @par From ECRPublic FAQs:
+ * @par From EcrPublic FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ECRPublic queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid EcrPublic queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ECRPublicRequest::isValidQueueName(const QString &queueName)
+/*bool EcrPublicRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -185,45 +185,45 @@ bool ECRPublicRequest::operator==(const ECRPublicRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ECRPublicRequest::clearParameter(const QString &name)
+int EcrPublicRequest::clearParameter(const QString &name)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ECRPublicRequest::clearParameters()
+void EcrPublicRequest::clearParameters()
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ECRPublicRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EcrPublicRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ECRPublicRequest);
+    Q_D(const EcrPublicRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ECRPublicRequest::parameters() const
+const QVariantMap &EcrPublicRequest::parameters() const
 {
-    Q_D(const ECRPublicRequest);
+    Q_D(const EcrPublicRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ECRPublicRequest::setParameter(const QString &name, const QVariant &value)
+void EcrPublicRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->parameters.insert(name, value);
 }
 
@@ -231,42 +231,42 @@ void ECRPublicRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ECRPublicRequest::setParameters(const QVariantMap &parameters)
+void EcrPublicRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ECRPublicRequest);
+    Q_D(EcrPublicRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the ECRPublic request using the given
+ * Returns a network request for the EcrPublic request using the given
  * \a endpoint.
  *
- * This ECRPublic implementation builds request URLs by combining the
+ * This EcrPublic implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ECRPublicRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EcrPublicRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const ECRPublicRequest);
+    //Q_D(const EcrPublicRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ECRPublic::ECRPublicRequestPrivate
- * \brief The ECRPublicRequestPrivate class provides private implementation for ECRPublicRequest.
+ * \class QtAws::EcrPublic::EcrPublicRequestPrivate
+ * \brief The EcrPublicRequestPrivate class provides private implementation for EcrPublicRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a ECRPublicRequestPrivate object for ECRPublic \a action,
+ * Constructs a EcrPublicRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
-ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequest::Action action, ECRPublicRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+EcrPublicRequestPrivate::EcrPublicRequestPrivate(const EcrPublicRequest::Action action, EcrPublicRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-10-30"))
 {
 
 }
@@ -277,10 +277,10 @@ ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequest::Action 
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ECRPublicRequest class's copy constructor.
+ * This is required to support the EcrPublicRequest class's copy constructor.
  */
-ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequestPrivate &other,
-                                     ECRPublicRequest * const q)
+EcrPublicRequestPrivate::EcrPublicRequestPrivate(const EcrPublicRequestPrivate &other,
+                                     EcrPublicRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -291,14 +291,14 @@ ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequestPrivate &
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ECRPublicRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ECRPublic service's Action
+ * This function converts EcrPublicRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the EcrPublic service's Action
  * query parameters.
  */
-QString ECRPublicRequestPrivate::toString(const ECRPublicRequest::Action &action)
+QString EcrPublicRequestPrivate::toString(const EcrPublicRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ECRPublicRequest::action##Action: return QStringLiteral(#action)
+        case EcrPublicRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(BatchCheckLayerAvailability);
         ActionToString(BatchDeleteImage);
@@ -330,5 +330,5 @@ QString ECRPublicRequestPrivate::toString(const ECRPublicRequest::Action &action
     return QString();
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

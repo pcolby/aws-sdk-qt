@@ -71,6 +71,8 @@
 #include "getfirewallrulegroupassociationresponse.h"
 #include "getfirewallrulegrouppolicyrequest.h"
 #include "getfirewallrulegrouppolicyresponse.h"
+#include "getresolverconfigrequest.h"
+#include "getresolverconfigresponse.h"
 #include "getresolverdnssecconfigrequest.h"
 #include "getresolverdnssecconfigresponse.h"
 #include "getresolverendpointrequest.h"
@@ -101,6 +103,8 @@
 #include "listfirewallrulegroupsresponse.h"
 #include "listfirewallrulesrequest.h"
 #include "listfirewallrulesresponse.h"
+#include "listresolverconfigsrequest.h"
+#include "listresolverconfigsresponse.h"
 #include "listresolverdnssecconfigsrequest.h"
 #include "listresolverdnssecconfigsresponse.h"
 #include "listresolverendpointipaddressesrequest.h"
@@ -135,6 +139,8 @@
 #include "updatefirewallruleresponse.h"
 #include "updatefirewallrulegroupassociationrequest.h"
 #include "updatefirewallrulegroupassociationresponse.h"
+#include "updateresolverconfigrequest.h"
+#include "updateresolverconfigresponse.h"
 #include "updateresolverdnssecconfigrequest.h"
 #include "updateresolverdnssecconfigresponse.h"
 #include "updateresolverendpointrequest.h"
@@ -147,7 +153,7 @@
 
 /*!
  * \namespace QtAws::Route53Resolver
- * \brief Contains classess for accessing Amazon Route 53 Resolver (Route53Resolver).
+ * \brief Contains classess for accessing Amazon Route 53 Resolver.
  *
  * \inmodule QtAwsRoute53Resolver
  *
@@ -159,7 +165,7 @@ namespace Route53Resolver {
 
 /*!
  * \class QtAws::Route53Resolver::Route53ResolverClient
- * \brief The Route53ResolverClient class provides access to the Amazon Route 53 Resolver (Route53Resolver) service.
+ * \brief The Route53ResolverClient class provides access to the Amazon Route 53 Resolver service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsRoute53Resolver
@@ -179,8 +185,8 @@ namespace Route53Resolver {
  *  </p
  * 
  *  DNS resolvers on your network can forward DNS queries to Resolver in a specified VPC. This allows your DNS resolvers to
- *  easily resolve domain names for AWS resources such as EC2 instances or records in a Route 53 private hosted zone. For
- *  more information, see <a
+ *  easily resolve domain names for Amazon Web Services resources such as EC2 instances or records in a Route 53 private
+ *  hosted zone. For more information, see <a
  *  href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html#resolver-overview-forward-network-to-vpc">How
  *  DNS Resolvers on Your Network Forward DNS Queries to Route 53 Resolver</a> in the <i>Amazon Route 53 Developer
  * 
@@ -409,9 +415,9 @@ CreateResolverEndpointResponse * Route53ResolverClient::createResolverEndpoint(c
  *
  * </p
  *
- * You can optionally use AWS Resource Access Manager (AWS RAM) to share a query logging configuration with other AWS
- * accounts. The other accounts can then associate VPCs with the configuration. The query logs that Resolver creates for a
- * configuration include all DNS queries that originate in all VPCs that are associated with the
+ * You can optionally use Resource Access Manager (RAM) to share a query logging configuration with other Amazon Web
+ * Services accounts. The other accounts can then associate VPCs with the configuration. The query logs that Resolver
+ * creates for a configuration include all DNS queries that originate in all VPCs that are associated with the
  */
 CreateResolverQueryLogConfigResponse * Route53ResolverClient::createResolverQueryLogConfig(const CreateResolverQueryLogConfigRequest &request)
 {
@@ -501,7 +507,7 @@ DeleteResolverEndpointResponse * Route53ResolverClient::deleteResolverEndpoint(c
  *
  * Deletes a query logging configuration. When you delete a configuration, Resolver stops logging DNS queries for all of
  * the Amazon VPCs that are associated with the configuration. This also applies if the query logging configuration is
- * shared with other AWS accounts, and the other accounts have associated VPCs with the shared
+ * shared with other Amazon Web Services accounts, and the other accounts have associated VPCs with the shared
  *
  * configuration>
  *
@@ -576,8 +582,8 @@ DisassociateResolverEndpointIpAddressResponse * Route53ResolverClient::disassoci
  * configuration> <note>
  *
  * Before you can delete a query logging configuration, you must first disassociate all VPCs from the configuration. If you
- * used AWS Resource Access Manager (AWS RAM) to share a query logging configuration with other accounts, VPCs can be
- * disassociated from the configuration in the following
+ * used Resource Access Manager (RAM) to share a query logging configuration with other accounts, VPCs can be disassociated
+ * from the configuration in the following
  *
  * ways> <ul> <li>
  *
@@ -670,12 +676,25 @@ GetFirewallRuleGroupAssociationResponse * Route53ResolverClient::getFirewallRule
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the AWS Identity and Access Management (AWS IAM) policy for sharing the specified rule group. You can use the
- * policy to share the rule group using AWS Resource Access Manager (AWS RAM).
+ * Returns the Identity and Access Management (Amazon Web Services IAM) policy for sharing the specified rule group. You
+ * can use the policy to share the rule group using Resource Access Manager (RAM).
  */
 GetFirewallRuleGroupPolicyResponse * Route53ResolverClient::getFirewallRuleGroupPolicy(const GetFirewallRuleGroupPolicyRequest &request)
 {
     return qobject_cast<GetFirewallRuleGroupPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53ResolverClient service, and returns a pointer to an
+ * GetResolverConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+ */
+GetResolverConfigResponse * Route53ResolverClient::getResolverConfig(const GetResolverConfigRequest &request)
+{
+    return qobject_cast<GetResolverConfigResponse *>(send(request));
 }
 
 /*!
@@ -740,7 +759,7 @@ GetResolverQueryLogConfigAssociationResponse * Route53ResolverClient::getResolve
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a query logging policy. A query logging policy specifies the Resolver query logging operations
- * and resources that you want to allow another AWS account to be able to
+ * and resources that you want to allow another Amazon Web Services account to be able to
  */
 GetResolverQueryLogConfigPolicyResponse * Route53ResolverClient::getResolverQueryLogConfigPolicy(const GetResolverQueryLogConfigPolicyRequest &request)
 {
@@ -930,11 +949,25 @@ ListFirewallRulesResponse * Route53ResolverClient::listFirewallRules(const ListF
 
 /*!
  * Sends \a request to the Route53ResolverClient service, and returns a pointer to an
+ * ListResolverConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage DNS
+ * resolution behavior for your
+ */
+ListResolverConfigsResponse * Route53ResolverClient::listResolverConfigs(const ListResolverConfigsRequest &request)
+{
+    return qobject_cast<ListResolverConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53ResolverClient service, and returns a pointer to an
  * ListResolverDnssecConfigsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the configurations for DNSSEC validation that are associated with the current AWS
+ * Lists the configurations for DNSSEC validation that are associated with the current Amazon Web Services
  */
 ListResolverDnssecConfigsResponse * Route53ResolverClient::listResolverDnssecConfigs(const ListResolverDnssecConfigsRequest &request)
 {
@@ -960,7 +993,7 @@ ListResolverEndpointIpAddressesResponse * Route53ResolverClient::listResolverEnd
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the Resolver endpoints that were created using the current AWS
+ * Lists all the Resolver endpoints that were created using the current Amazon Web Services
  */
 ListResolverEndpointsResponse * Route53ResolverClient::listResolverEndpoints(const ListResolverEndpointsRequest &request)
 {
@@ -1000,7 +1033,7 @@ ListResolverQueryLogConfigsResponse * Route53ResolverClient::listResolverQueryLo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the associations that were created between Resolver rules and VPCs using the current AWS
+ * Lists the associations that were created between Resolver rules and VPCs using the current Amazon Web Services
  */
 ListResolverRuleAssociationsResponse * Route53ResolverClient::listResolverRuleAssociations(const ListResolverRuleAssociationsRequest &request)
 {
@@ -1013,7 +1046,7 @@ ListResolverRuleAssociationsResponse * Route53ResolverClient::listResolverRuleAs
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Resolver rules that were created using the current AWS
+ * Lists the Resolver rules that were created using the current Amazon Web Services
  */
 ListResolverRulesResponse * Route53ResolverClient::listResolverRules(const ListResolverRulesRequest &request)
 {
@@ -1039,8 +1072,8 @@ ListTagsForResourceResponse * Route53ResolverClient::listTagsForResource(const L
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches an AWS Identity and Access Management (AWS IAM) policy for sharing the rule group. You can use the policy to
- * share the rule group using AWS Resource Access Manager (AWS RAM).
+ * Attaches an Identity and Access Management (Amazon Web Services IAM) policy for sharing the rule group. You can use the
+ * policy to share the rule group using Resource Access Manager (RAM).
  */
 PutFirewallRuleGroupPolicyResponse * Route53ResolverClient::putFirewallRuleGroupPolicy(const PutFirewallRuleGroupPolicyRequest &request)
 {
@@ -1053,8 +1086,8 @@ PutFirewallRuleGroupPolicyResponse * Route53ResolverClient::putFirewallRuleGroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Specifies an AWS account that you want to share a query logging configuration with, the query logging configuration that
- * you want to share, and the operations that you want the account to be able to perform on the
+ * Specifies an Amazon Web Services account that you want to share a query logging configuration with, the query logging
+ * configuration that you want to share, and the operations that you want the account to be able to perform on the
  */
 PutResolverQueryLogConfigPolicyResponse * Route53ResolverClient::putResolverQueryLogConfigPolicy(const PutResolverQueryLogConfigPolicyRequest &request)
 {
@@ -1067,8 +1100,8 @@ PutResolverQueryLogConfigPolicyResponse * Route53ResolverClient::putResolverQuer
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Specifies an AWS rule that you want to share with another account, the account that you want to share the rule with, and
- * the operations that you want the account to be able to perform on the
+ * Specifies an Amazon Web Services rule that you want to share with another account, the account that you want to share
+ * the rule with, and the operations that you want the account to be able to perform on the
  */
 PutResolverRulePolicyResponse * Route53ResolverClient::putResolverRulePolicy(const PutResolverRulePolicyRequest &request)
 {
@@ -1152,6 +1185,19 @@ UpdateFirewallRuleResponse * Route53ResolverClient::updateFirewallRule(const Upd
 UpdateFirewallRuleGroupAssociationResponse * Route53ResolverClient::updateFirewallRuleGroupAssociation(const UpdateFirewallRuleGroupAssociationRequest &request)
 {
     return qobject_cast<UpdateFirewallRuleGroupAssociationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53ResolverClient service, and returns a pointer to an
+ * UpdateResolverConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+ */
+UpdateResolverConfigResponse * Route53ResolverClient::updateResolverConfig(const UpdateResolverConfigRequest &request)
+{
+    return qobject_cast<UpdateResolverConfigResponse *>(send(request));
 }
 
 /*!

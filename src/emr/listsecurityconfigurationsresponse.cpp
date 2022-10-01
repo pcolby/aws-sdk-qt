@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListSecurityConfigurationsResponse
- * \brief The ListSecurityConfigurationsResponse class provides an interace for EMR ListSecurityConfigurations responses.
+ * \class QtAws::Emr::ListSecurityConfigurationsResponse
+ * \brief The ListSecurityConfigurationsResponse class provides an interace for Emr ListSecurityConfigurations responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listSecurityConfigurations
  */
@@ -64,7 +64,7 @@ const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::re
 
 /*!
  * \reimp
- * Parses a successful EMR ListSecurityConfigurations \a response.
+ * Parses a successful Emr ListSecurityConfigurations \a response.
  */
 void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ListSecurityConfigurationsResponsePrivate
+ * \class QtAws::Emr::ListSecurityConfigurationsResponsePrivate
  * \brief The ListSecurityConfigurationsResponsePrivate class provides private implementation for ListSecurityConfigurationsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsResponsePri
 }
 
 /*!
- * Parses a EMR ListSecurityConfigurations response element from \a xml.
+ * Parses a Emr ListSecurityConfigurations response element from \a xml.
  */
 void ListSecurityConfigurationsResponsePrivate::parseListSecurityConfigurationsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListSecurityConfigurationsResponsePrivate::parseListSecurityConfigurationsR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

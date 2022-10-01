@@ -100,8 +100,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SWF
- * \brief Contains classess for accessing Amazon Simple Workflow Service ( SWF).
+ * \namespace QtAws::Swf
+ * \brief Contains classess for accessing Amazon Simple Workflow Service.
  *
  * \inmodule QtAwsSwf
  *
@@ -109,14 +109,14 @@
  */
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::SwfClient
- * \brief The SwfClient class provides access to the Amazon Simple Workflow Service ( SWF) service.
+ * \class QtAws::Swf::SwfClient
+ * \brief The SwfClient class provides access to the Amazon Simple Workflow Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -2013,12 +2013,12 @@ UntagResourceResponse * SwfClient::untagResource(const UntagResourceRequest &req
 }
 
 /*!
- * \class QtAws::SWF::SwfClientPrivate
+ * \class QtAws::Swf::SwfClientPrivate
  * \brief The SwfClientPrivate class provides private implementation for SwfClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -2030,5 +2030,5 @@ SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

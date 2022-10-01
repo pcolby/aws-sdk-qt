@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeEventCategoriesRequestPrivate;
 
-class QTAWSDOCDB_EXPORT DescribeEventCategoriesRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DescribeEventCategoriesRequest : public DocDbRequest {
 
 public:
     DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

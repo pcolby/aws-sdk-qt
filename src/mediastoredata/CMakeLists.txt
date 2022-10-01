@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIASTOREDATA_LIBRARY)
 
 add_library(QtAwsMediaStoreData
+  qtawsmediastoredataglobal.h
+  mediastoredataclient.h
+  mediastoredataclient_p.h
+  mediastoredatarequest.h
+  mediastoredatarequest_p.h
+  mediastoredataresponse.h
+  mediastoredataresponse_p.h
   deleteobjectrequest.h
   deleteobjectrequest_p.h
   deleteobjectresponse.h
@@ -17,17 +24,13 @@ add_library(QtAwsMediaStoreData
   listitemsrequest_p.h
   listitemsresponse.h
   listitemsresponse_p.h
-  mediastoredataclient.h
-  mediastoredataclient_p.h
-  mediastoredatarequest.h
-  mediastoredatarequest_p.h
-  mediastoredataresponse.h
-  mediastoredataresponse_p.h
   putobjectrequest.h
   putobjectrequest_p.h
   putobjectresponse.h
   putobjectresponse_p.h
-  qtawsmediastoredataglobal.h
+  mediastoredataclient.cpp
+  mediastoredatarequest.cpp
+  mediastoredataresponse.cpp
   deleteobjectrequest.cpp
   deleteobjectresponse.cpp
   describeobjectrequest.cpp
@@ -36,9 +39,6 @@ add_library(QtAwsMediaStoreData
   getobjectresponse.cpp
   listitemsrequest.cpp
   listitemsresponse.cpp
-  mediastoredataclient.cpp
-  mediastoredatarequest.cpp
-  mediastoredataresponse.cpp
   putobjectrequest.cpp
   putobjectresponse.cpp)
 

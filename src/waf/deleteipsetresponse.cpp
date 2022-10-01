@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteIPSetResponse
- * \brief The DeleteIPSetResponse class provides an interace for WAF DeleteIPSet responses.
+ * \class QtAws::Waf::DeleteIPSetResponse
+ * \brief The DeleteIPSetResponse class provides an interace for Waf DeleteIPSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteIPSet \a response.
+ * Parses a successful Waf DeleteIPSet \a response.
  */
 void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteIPSetResponsePrivate
+ * \class QtAws::Waf::DeleteIPSetResponsePrivate
  * \brief The DeleteIPSetResponsePrivate class provides private implementation for DeleteIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteIPSet response element from \a xml.
+ * Parses a Waf DeleteIPSet response element from \a xml.
  */
 void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

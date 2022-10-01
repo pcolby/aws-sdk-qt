@@ -24,7 +24,7 @@
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class RemoveTagsFromResourceResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

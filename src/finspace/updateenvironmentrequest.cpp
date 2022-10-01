@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::UpdateEnvironmentRequest
- * \brief The UpdateEnvironmentRequest class provides an interface for finspace UpdateEnvironment requests.
+ * \class QtAws::Finspace::UpdateEnvironmentRequest
+ * \brief The UpdateEnvironmentRequest class provides an interface for Finspace UpdateEnvironment requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::updateEnvironment
+ * \sa FinspaceClient::updateEnvironment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other)
-    : finspaceRequest(new UpdateEnvironmentRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new UpdateEnvironmentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateEnvironmentRequest::UpdateEnvironmentRequest(const UpdateEnvironmentReques
  * Constructs a UpdateEnvironmentRequest object.
  */
 UpdateEnvironmentRequest::UpdateEnvironmentRequest()
-    : finspaceRequest(new UpdateEnvironmentRequestPrivate(finspaceRequest::UpdateEnvironmentAction, this))
+    : FinspaceRequest(new UpdateEnvironmentRequestPrivate(FinspaceRequest::UpdateEnvironmentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::finspace::UpdateEnvironmentRequestPrivate
+ * \class QtAws::Finspace::UpdateEnvironmentRequestPrivate
  * \brief The UpdateEnvironmentRequestPrivate class provides private implementation for UpdateEnvironmentRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a UpdateEnvironmentRequestPrivate object for finspace \a action,
+ * Constructs a UpdateEnvironmentRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
-    const finspaceRequest::Action action, UpdateEnvironmentRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, UpdateEnvironmentRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const UpdateEnvironmentRequestPrivate &other, UpdateEnvironmentRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

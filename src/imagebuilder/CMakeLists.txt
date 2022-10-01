@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIMAGEBUILDER_LIBRARY)
 
-add_library(QtAwsimagebuilder
+add_library(QtAwsImageBuilder
+  qtawsimagebuilderglobal.h
+  imagebuilderclient.h
+  imagebuilderclient_p.h
+  imagebuilderrequest.h
+  imagebuilderrequest_p.h
+  imagebuilderresponse.h
+  imagebuilderresponse_p.h
   cancelimagecreationrequest.h
   cancelimagecreationrequest_p.h
   cancelimagecreationresponse.h
@@ -17,6 +24,10 @@ add_library(QtAwsimagebuilder
   createdistributionconfigurationrequest_p.h
   createdistributionconfigurationresponse.h
   createdistributionconfigurationresponse_p.h
+  createimagerequest.h
+  createimagerequest_p.h
+  createimageresponse.h
+  createimageresponse_p.h
   createimagepipelinerequest.h
   createimagepipelinerequest_p.h
   createimagepipelineresponse.h
@@ -25,10 +36,6 @@ add_library(QtAwsimagebuilder
   createimagereciperequest_p.h
   createimagereciperesponse.h
   createimagereciperesponse_p.h
-  createimagerequest.h
-  createimagerequest_p.h
-  createimageresponse.h
-  createimageresponse_p.h
   createinfrastructureconfigurationrequest.h
   createinfrastructureconfigurationrequest_p.h
   createinfrastructureconfigurationresponse.h
@@ -45,6 +52,10 @@ add_library(QtAwsimagebuilder
   deletedistributionconfigurationrequest_p.h
   deletedistributionconfigurationresponse.h
   deletedistributionconfigurationresponse_p.h
+  deleteimagerequest.h
+  deleteimagerequest_p.h
+  deleteimageresponse.h
+  deleteimageresponse_p.h
   deleteimagepipelinerequest.h
   deleteimagepipelinerequest_p.h
   deleteimagepipelineresponse.h
@@ -53,34 +64,34 @@ add_library(QtAwsimagebuilder
   deleteimagereciperequest_p.h
   deleteimagereciperesponse.h
   deleteimagereciperesponse_p.h
-  deleteimagerequest.h
-  deleteimagerequest_p.h
-  deleteimageresponse.h
-  deleteimageresponse_p.h
   deleteinfrastructureconfigurationrequest.h
   deleteinfrastructureconfigurationrequest_p.h
   deleteinfrastructureconfigurationresponse.h
   deleteinfrastructureconfigurationresponse_p.h
-  getcomponentpolicyrequest.h
-  getcomponentpolicyrequest_p.h
-  getcomponentpolicyresponse.h
-  getcomponentpolicyresponse_p.h
   getcomponentrequest.h
   getcomponentrequest_p.h
   getcomponentresponse.h
   getcomponentresponse_p.h
-  getcontainerrecipepolicyrequest.h
-  getcontainerrecipepolicyrequest_p.h
-  getcontainerrecipepolicyresponse.h
-  getcontainerrecipepolicyresponse_p.h
+  getcomponentpolicyrequest.h
+  getcomponentpolicyrequest_p.h
+  getcomponentpolicyresponse.h
+  getcomponentpolicyresponse_p.h
   getcontainerreciperequest.h
   getcontainerreciperequest_p.h
   getcontainerreciperesponse.h
   getcontainerreciperesponse_p.h
+  getcontainerrecipepolicyrequest.h
+  getcontainerrecipepolicyrequest_p.h
+  getcontainerrecipepolicyresponse.h
+  getcontainerrecipepolicyresponse_p.h
   getdistributionconfigurationrequest.h
   getdistributionconfigurationrequest_p.h
   getdistributionconfigurationresponse.h
   getdistributionconfigurationresponse_p.h
+  getimagerequest.h
+  getimagerequest_p.h
+  getimageresponse.h
+  getimageresponse_p.h
   getimagepipelinerequest.h
   getimagepipelinerequest_p.h
   getimagepipelineresponse.h
@@ -89,32 +100,26 @@ add_library(QtAwsimagebuilder
   getimagepolicyrequest_p.h
   getimagepolicyresponse.h
   getimagepolicyresponse_p.h
-  getimagerecipepolicyrequest.h
-  getimagerecipepolicyrequest_p.h
-  getimagerecipepolicyresponse.h
-  getimagerecipepolicyresponse_p.h
   getimagereciperequest.h
   getimagereciperequest_p.h
   getimagereciperesponse.h
   getimagereciperesponse_p.h
-  getimagerequest.h
-  getimagerequest_p.h
-  getimageresponse.h
-  getimageresponse_p.h
+  getimagerecipepolicyrequest.h
+  getimagerecipepolicyrequest_p.h
+  getimagerecipepolicyresponse.h
+  getimagerecipepolicyresponse_p.h
   getinfrastructureconfigurationrequest.h
   getinfrastructureconfigurationrequest_p.h
   getinfrastructureconfigurationresponse.h
   getinfrastructureconfigurationresponse_p.h
-  imagebuilderclient.h
-  imagebuilderclient_p.h
-  imagebuilderrequest.h
-  imagebuilderrequest_p.h
-  imagebuilderresponse.h
-  imagebuilderresponse_p.h
   importcomponentrequest.h
   importcomponentrequest_p.h
   importcomponentresponse.h
   importcomponentresponse_p.h
+  importvmimagerequest.h
+  importvmimagerequest_p.h
+  importvmimageresponse.h
+  importvmimageresponse_p.h
   listcomponentbuildversionsrequest.h
   listcomponentbuildversionsrequest_p.h
   listcomponentbuildversionsresponse.h
@@ -179,7 +184,6 @@ add_library(QtAwsimagebuilder
   putimagerecipepolicyrequest_p.h
   putimagerecipepolicyresponse.h
   putimagerecipepolicyresponse_p.h
-  qtawsimagebuilderglobal.h
   startimagepipelineexecutionrequest.h
   startimagepipelineexecutionrequest_p.h
   startimagepipelineexecutionresponse.h
@@ -204,6 +208,9 @@ add_library(QtAwsimagebuilder
   updateinfrastructureconfigurationrequest_p.h
   updateinfrastructureconfigurationresponse.h
   updateinfrastructureconfigurationresponse_p.h
+  imagebuilderclient.cpp
+  imagebuilderrequest.cpp
+  imagebuilderresponse.cpp
   cancelimagecreationrequest.cpp
   cancelimagecreationresponse.cpp
   createcomponentrequest.cpp
@@ -212,12 +219,12 @@ add_library(QtAwsimagebuilder
   createcontainerreciperesponse.cpp
   createdistributionconfigurationrequest.cpp
   createdistributionconfigurationresponse.cpp
+  createimagerequest.cpp
+  createimageresponse.cpp
   createimagepipelinerequest.cpp
   createimagepipelineresponse.cpp
   createimagereciperequest.cpp
   createimagereciperesponse.cpp
-  createimagerequest.cpp
-  createimageresponse.cpp
   createinfrastructureconfigurationrequest.cpp
   createinfrastructureconfigurationresponse.cpp
   deletecomponentrequest.cpp
@@ -226,41 +233,40 @@ add_library(QtAwsimagebuilder
   deletecontainerreciperesponse.cpp
   deletedistributionconfigurationrequest.cpp
   deletedistributionconfigurationresponse.cpp
+  deleteimagerequest.cpp
+  deleteimageresponse.cpp
   deleteimagepipelinerequest.cpp
   deleteimagepipelineresponse.cpp
   deleteimagereciperequest.cpp
   deleteimagereciperesponse.cpp
-  deleteimagerequest.cpp
-  deleteimageresponse.cpp
   deleteinfrastructureconfigurationrequest.cpp
   deleteinfrastructureconfigurationresponse.cpp
-  getcomponentpolicyrequest.cpp
-  getcomponentpolicyresponse.cpp
   getcomponentrequest.cpp
   getcomponentresponse.cpp
-  getcontainerrecipepolicyrequest.cpp
-  getcontainerrecipepolicyresponse.cpp
+  getcomponentpolicyrequest.cpp
+  getcomponentpolicyresponse.cpp
   getcontainerreciperequest.cpp
   getcontainerreciperesponse.cpp
+  getcontainerrecipepolicyrequest.cpp
+  getcontainerrecipepolicyresponse.cpp
   getdistributionconfigurationrequest.cpp
   getdistributionconfigurationresponse.cpp
+  getimagerequest.cpp
+  getimageresponse.cpp
   getimagepipelinerequest.cpp
   getimagepipelineresponse.cpp
   getimagepolicyrequest.cpp
   getimagepolicyresponse.cpp
-  getimagerecipepolicyrequest.cpp
-  getimagerecipepolicyresponse.cpp
   getimagereciperequest.cpp
   getimagereciperesponse.cpp
-  getimagerequest.cpp
-  getimageresponse.cpp
+  getimagerecipepolicyrequest.cpp
+  getimagerecipepolicyresponse.cpp
   getinfrastructureconfigurationrequest.cpp
   getinfrastructureconfigurationresponse.cpp
-  imagebuilderclient.cpp
-  imagebuilderrequest.cpp
-  imagebuilderresponse.cpp
   importcomponentrequest.cpp
   importcomponentresponse.cpp
+  importvmimagerequest.cpp
+  importvmimageresponse.cpp
   listcomponentbuildversionsrequest.cpp
   listcomponentbuildversionsresponse.cpp
   listcomponentsrequest.cpp
@@ -306,7 +312,7 @@ add_library(QtAwsimagebuilder
   updateinfrastructureconfigurationrequest.cpp
   updateinfrastructureconfigurationresponse.cpp)
 
-target_link_libraries(QtAwsimagebuilder
+target_link_libraries(QtAwsImageBuilder
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

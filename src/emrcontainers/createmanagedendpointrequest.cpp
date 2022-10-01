@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CreateManagedEndpointRequest
- * \brief The CreateManagedEndpointRequest class provides an interface for EMRContainers CreateManagedEndpoint requests.
+ * \class QtAws::Emrcontainers::CreateManagedEndpointRequest
+ * \brief The CreateManagedEndpointRequest class provides an interface for Emrcontainers CreateManagedEndpoint requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::createManagedEndpoint
+ * \sa EmrcontainersClient::createManagedEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateManagedEndpointRequest::CreateManagedEndpointRequest(const CreateManagedEndpointRequest &other)
-    : EMRContainersRequest(new CreateManagedEndpointRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new CreateManagedEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ CreateManagedEndpointRequest::CreateManagedEndpointRequest(const CreateManagedEn
  * Constructs a CreateManagedEndpointRequest object.
  */
 CreateManagedEndpointRequest::CreateManagedEndpointRequest()
-    : EMRContainersRequest(new CreateManagedEndpointRequestPrivate(EMRContainersRequest::CreateManagedEndpointAction, this))
+    : EmrcontainersRequest(new CreateManagedEndpointRequestPrivate(EmrcontainersRequest::CreateManagedEndpointAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * CreateManagedEndpointRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::EMRContainers::CreateManagedEndpointRequestPrivate
+ * \class QtAws::Emrcontainers::CreateManagedEndpointRequestPrivate
  * \brief The CreateManagedEndpointRequestPrivate class provides private implementation for CreateManagedEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a CreateManagedEndpointRequestPrivate object for EMRContainers \a action,
+ * Constructs a CreateManagedEndpointRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 CreateManagedEndpointRequestPrivate::CreateManagedEndpointRequestPrivate(
-    const EMRContainersRequest::Action action, CreateManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, CreateManagedEndpointRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ CreateManagedEndpointRequestPrivate::CreateManagedEndpointRequestPrivate(
  */
 CreateManagedEndpointRequestPrivate::CreateManagedEndpointRequestPrivate(
     const CreateManagedEndpointRequestPrivate &other, CreateManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

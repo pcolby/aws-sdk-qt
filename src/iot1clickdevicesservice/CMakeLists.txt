@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOT1CLICKDEVICESSERVICE_LIBRARY)
 
 add_library(QtAwsIoT1ClickDevicesService
+  qtawsiot1clickdevicesserviceglobal.h
+  iot1clickdevicesserviceclient.h
+  iot1clickdevicesserviceclient_p.h
+  iot1clickdevicesservicerequest.h
+  iot1clickdevicesservicerequest_p.h
+  iot1clickdevicesserviceresponse.h
+  iot1clickdevicesserviceresponse_p.h
   claimdevicesbyclaimcoderequest.h
   claimdevicesbyclaimcoderequest_p.h
   claimdevicesbyclaimcoderesponse.h
@@ -25,12 +32,6 @@ add_library(QtAwsIoT1ClickDevicesService
   invokedevicemethodrequest_p.h
   invokedevicemethodresponse.h
   invokedevicemethodresponse_p.h
-  iot1clickdevicesserviceclient.h
-  iot1clickdevicesserviceclient_p.h
-  iot1clickdevicesservicerequest.h
-  iot1clickdevicesservicerequest_p.h
-  iot1clickdevicesserviceresponse.h
-  iot1clickdevicesserviceresponse_p.h
   listdeviceeventsrequest.h
   listdeviceeventsrequest_p.h
   listdeviceeventsresponse.h
@@ -43,7 +44,6 @@ add_library(QtAwsIoT1ClickDevicesService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsiot1clickdevicesserviceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -60,6 +60,9 @@ add_library(QtAwsIoT1ClickDevicesService
   updatedevicestaterequest_p.h
   updatedevicestateresponse.h
   updatedevicestateresponse_p.h
+  iot1clickdevicesserviceclient.cpp
+  iot1clickdevicesservicerequest.cpp
+  iot1clickdevicesserviceresponse.cpp
   claimdevicesbyclaimcoderequest.cpp
   claimdevicesbyclaimcoderesponse.cpp
   describedevicerequest.cpp
@@ -72,9 +75,6 @@ add_library(QtAwsIoT1ClickDevicesService
   initiatedeviceclaimresponse.cpp
   invokedevicemethodrequest.cpp
   invokedevicemethodresponse.cpp
-  iot1clickdevicesserviceclient.cpp
-  iot1clickdevicesservicerequest.cpp
-  iot1clickdevicesserviceresponse.cpp
   listdeviceeventsrequest.cpp
   listdeviceeventsresponse.cpp
   listdevicesrequest.cpp

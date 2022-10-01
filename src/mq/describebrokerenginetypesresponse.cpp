@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DescribeBrokerEngineTypesResponse
- * \brief The DescribeBrokerEngineTypesResponse class provides an interace for MQ DescribeBrokerEngineTypes responses.
+ * \class QtAws::Mq::DescribeBrokerEngineTypesResponse
+ * \brief The DescribeBrokerEngineTypesResponse class provides an interace for Mq DescribeBrokerEngineTypes responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::describeBrokerEngineTypes
  */
@@ -63,7 +64,7 @@ const DescribeBrokerEngineTypesRequest * DescribeBrokerEngineTypesResponse::requ
 
 /*!
  * \reimp
- * Parses a successful MQ DescribeBrokerEngineTypes \a response.
+ * Parses a successful Mq DescribeBrokerEngineTypes \a response.
  */
 void DescribeBrokerEngineTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DescribeBrokerEngineTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DescribeBrokerEngineTypesResponsePrivate
+ * \class QtAws::Mq::DescribeBrokerEngineTypesResponsePrivate
  * \brief The DescribeBrokerEngineTypesResponsePrivate class provides private implementation for DescribeBrokerEngineTypesResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DescribeBrokerEngineTypesResponsePrivate::DescribeBrokerEngineTypesResponsePriva
 }
 
 /*!
- * Parses a MQ DescribeBrokerEngineTypes response element from \a xml.
+ * Parses a Mq DescribeBrokerEngineTypes response element from \a xml.
  */
 void DescribeBrokerEngineTypesResponsePrivate::parseDescribeBrokerEngineTypesResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DescribeBrokerEngineTypesResponsePrivate::parseDescribeBrokerEngineTypesRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

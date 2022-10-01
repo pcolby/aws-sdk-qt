@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::PollForDecisionTaskResponse
- * \brief The PollForDecisionTaskResponse class provides an interace for SWF PollForDecisionTask responses.
+ * \class QtAws::Swf::PollForDecisionTaskResponse
+ * \brief The PollForDecisionTaskResponse class provides an interace for Swf PollForDecisionTask responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const PollForDecisionTaskRequest * PollForDecisionTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF PollForDecisionTask \a response.
+ * Parses a successful Swf PollForDecisionTask \a response.
  */
 void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::PollForDecisionTaskResponsePrivate
+ * \class QtAws::Swf::PollForDecisionTaskResponsePrivate
  * \brief The PollForDecisionTaskResponsePrivate class provides private implementation for PollForDecisionTaskResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
 }
 
 /*!
- * Parses a SWF PollForDecisionTask response element from \a xml.
+ * Parses a Swf PollForDecisionTask response element from \a xml.
  */
 void PollForDecisionTaskResponsePrivate::parsePollForDecisionTaskResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void PollForDecisionTaskResponsePrivate::parsePollForDecisionTaskResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

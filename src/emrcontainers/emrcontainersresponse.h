@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
-class EMRContainersResponsePrivate;
+class EmrcontainersResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT EMRContainersResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEMRCONTAINERS_EXPORT EmrcontainersResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    EMRContainersResponse(QObject * const parent = 0);
+    EmrcontainersResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    EMRContainersResponse(EMRContainersResponsePrivate * const d, QObject * const parent);
+    EmrcontainersResponse(EmrcontainersResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(EMRContainersResponse)
-    Q_DISABLE_COPY(EMRContainersResponse)
+    Q_DECLARE_PRIVATE(EmrcontainersResponse)
+    Q_DISABLE_COPY(EmrcontainersResponse)
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

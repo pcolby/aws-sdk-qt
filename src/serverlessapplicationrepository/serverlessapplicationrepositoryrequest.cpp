@@ -257,7 +257,7 @@ QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QU
  * with public implementation \a q.
  */
 ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action, ServerlessApplicationRepositoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-08"))
 {
 
 }

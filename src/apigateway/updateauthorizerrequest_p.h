@@ -24,14 +24,14 @@
 #include "updateauthorizerrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateAuthorizerRequest;
 
-class UpdateAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateAuthorizerRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UpdateAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
+    UpdateAuthorizerRequestPrivate(const ApiGatewayRequest::Action action,
                                    UpdateAuthorizerRequest * const q);
     UpdateAuthorizerRequestPrivate(const UpdateAuthorizerRequestPrivate &other,
                                    UpdateAuthorizerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

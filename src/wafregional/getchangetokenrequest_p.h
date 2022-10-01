@@ -24,14 +24,14 @@
 #include "getchangetokenrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetChangeTokenRequest;
 
-class GetChangeTokenRequestPrivate : public WAFRegionalRequestPrivate {
+class GetChangeTokenRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    GetChangeTokenRequestPrivate(const WAFRegionalRequest::Action action,
+    GetChangeTokenRequestPrivate(const WafRegionalRequest::Action action,
                                    GetChangeTokenRequest * const q);
     GetChangeTokenRequestPrivate(const GetChangeTokenRequestPrivate &other,
                                    GetChangeTokenRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

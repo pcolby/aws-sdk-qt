@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::VerifyDomainDkimResponse
- * \brief The VerifyDomainDkimResponse class provides an interace for SES VerifyDomainDkim responses.
+ * \class QtAws::Ses::VerifyDomainDkimResponse
+ * \brief The VerifyDomainDkimResponse class provides an interace for Ses VerifyDomainDkim responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES VerifyDomainDkim \a response.
+ * Parses a successful Ses VerifyDomainDkim \a response.
  */
 void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::VerifyDomainDkimResponsePrivate
+ * \class QtAws::Ses::VerifyDomainDkimResponsePrivate
  * \brief The VerifyDomainDkimResponsePrivate class provides private implementation for VerifyDomainDkimResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
 }
 
 /*!
- * Parses a SES VerifyDomainDkim response element from \a xml.
+ * Parses a Ses VerifyDomainDkim response element from \a xml.
  */
 void VerifyDomainDkimResponsePrivate::parseVerifyDomainDkimResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void VerifyDomainDkimResponsePrivate::parseVerifyDomainDkimResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

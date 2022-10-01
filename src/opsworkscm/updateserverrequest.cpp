@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerRequest
- * \brief The UpdateServerRequest class provides an interface for OpsWorksCM UpdateServer requests.
+ * \class QtAws::OpsWorksCm::UpdateServerRequest
+ * \brief The UpdateServerRequest class provides an interface for OpsWorksCm UpdateServer requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::updateServer
+ * \sa OpsWorksCmClient::updateServer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateServerRequest::UpdateServerRequest(const UpdateServerRequest &other)
-    : OpsWorksCMRequest(new UpdateServerRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new UpdateServerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ UpdateServerRequest::UpdateServerRequest(const UpdateServerRequest &other)
  * Constructs a UpdateServerRequest object.
  */
 UpdateServerRequest::UpdateServerRequest()
-    : OpsWorksCMRequest(new UpdateServerRequestPrivate(OpsWorksCMRequest::UpdateServerAction, this))
+    : OpsWorksCmRequest(new UpdateServerRequestPrivate(OpsWorksCmRequest::UpdateServerAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * UpdateServerRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerRequestPrivate
+ * \class QtAws::OpsWorksCm::UpdateServerRequestPrivate
  * \brief The UpdateServerRequestPrivate class provides private implementation for UpdateServerRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a UpdateServerRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a UpdateServerRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
-    const OpsWorksCMRequest::Action action, UpdateServerRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, UpdateServerRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ UpdateServerRequestPrivate::UpdateServerRequestPrivate(
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const UpdateServerRequestPrivate &other, UpdateServerRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

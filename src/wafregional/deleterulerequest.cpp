@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteRuleRequest
- * \brief The DeleteRuleRequest class provides an interface for WAFRegional DeleteRule requests.
+ * \class QtAws::WafRegional::DeleteRuleRequest
+ * \brief The DeleteRuleRequest class provides an interface for WafRegional DeleteRule requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteRule
+ * \sa WafRegionalClient::deleteRule
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
-    : WAFRegionalRequest(new DeleteRuleRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
  * Constructs a DeleteRuleRequest object.
  */
 DeleteRuleRequest::DeleteRuleRequest()
-    : WAFRegionalRequest(new DeleteRuleRequestPrivate(WAFRegionalRequest::DeleteRuleAction, this))
+    : WafRegionalRequest(new DeleteRuleRequestPrivate(WafRegionalRequest::DeleteRuleAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteRuleRequestPrivate
+ * \class QtAws::WafRegional::DeleteRuleRequestPrivate
  * \brief The DeleteRuleRequestPrivate class provides private implementation for DeleteRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteRuleRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteRuleRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteRuleRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteRuleRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const DeleteRuleRequestPrivate &other, DeleteRuleRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

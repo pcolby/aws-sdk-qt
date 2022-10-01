@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CreateManagedEndpointResponse
- * \brief The CreateManagedEndpointResponse class provides an interace for EMRContainers CreateManagedEndpoint responses.
+ * \class QtAws::Emrcontainers::CreateManagedEndpointResponse
+ * \brief The CreateManagedEndpointResponse class provides an interace for Emrcontainers CreateManagedEndpoint responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::createManagedEndpoint
+ * \sa EmrcontainersClient::createManagedEndpoint
  */
 
 /*!
@@ -72,7 +72,7 @@ CreateManagedEndpointResponse::CreateManagedEndpointResponse(
         const CreateManagedEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new CreateManagedEndpointResponsePrivate(this), parent)
+    : EmrcontainersResponse(new CreateManagedEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreateManagedEndpointRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const CreateManagedEndpointRequest * CreateManagedEndpointResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful EMRContainers CreateManagedEndpoint \a response.
+ * Parses a successful Emrcontainers CreateManagedEndpoint \a response.
  */
 void CreateManagedEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void CreateManagedEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::CreateManagedEndpointResponsePrivate
+ * \class QtAws::Emrcontainers::CreateManagedEndpointResponsePrivate
  * \brief The CreateManagedEndpointResponsePrivate class provides private implementation for CreateManagedEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a CreateManagedEndpointResponsePrivate object with public implementation \a q.
  */
 CreateManagedEndpointResponsePrivate::CreateManagedEndpointResponsePrivate(
-    CreateManagedEndpointResponse * const q) : EMRContainersResponsePrivate(q)
+    CreateManagedEndpointResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers CreateManagedEndpoint response element from \a xml.
+ * Parses a Emrcontainers CreateManagedEndpoint response element from \a xml.
  */
 void CreateManagedEndpointResponsePrivate::parseCreateManagedEndpointResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void CreateManagedEndpointResponsePrivate::parseCreateManagedEndpointResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

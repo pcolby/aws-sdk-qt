@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsConfigResponse
- * \brief The UpdateQuerySuggestionsConfigResponse class provides an interace for kendra UpdateQuerySuggestionsConfig responses.
+ * \class QtAws::Kendra::UpdateQuerySuggestionsConfigResponse
+ * \brief The UpdateQuerySuggestionsConfigResponse class provides an interace for Kendra UpdateQuerySuggestionsConfig responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateQuerySuggestionsConfig
+ * \sa KendraClient::updateQuerySuggestionsConfig
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateQuerySuggestionsConfigResponse::UpdateQuerySuggestionsConfigResponse(
         const UpdateQuerySuggestionsConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new UpdateQuerySuggestionsConfigResponsePrivate(this), parent)
+    : KendraResponse(new UpdateQuerySuggestionsConfigResponsePrivate(this), parent)
 {
     setRequest(new UpdateQuerySuggestionsConfigRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateQuerySuggestionsConfigRequest * UpdateQuerySuggestionsConfigResponse
 
 /*!
  * \reimp
- * Parses a successful kendra UpdateQuerySuggestionsConfig \a response.
+ * Parses a successful Kendra UpdateQuerySuggestionsConfig \a response.
  */
 void UpdateQuerySuggestionsConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateQuerySuggestionsConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::UpdateQuerySuggestionsConfigResponsePrivate
+ * \class QtAws::Kendra::UpdateQuerySuggestionsConfigResponsePrivate
  * \brief The UpdateQuerySuggestionsConfigResponsePrivate class provides private implementation for UpdateQuerySuggestionsConfigResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a UpdateQuerySuggestionsConfigResponsePrivate object with public implementation \a q.
  */
 UpdateQuerySuggestionsConfigResponsePrivate::UpdateQuerySuggestionsConfigResponsePrivate(
-    UpdateQuerySuggestionsConfigResponse * const q) : kendraResponsePrivate(q)
+    UpdateQuerySuggestionsConfigResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra UpdateQuerySuggestionsConfig response element from \a xml.
+ * Parses a Kendra UpdateQuerySuggestionsConfig response element from \a xml.
  */
 void UpdateQuerySuggestionsConfigResponsePrivate::parseUpdateQuerySuggestionsConfigResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateQuerySuggestionsConfigResponsePrivate::parseUpdateQuerySuggestionsCon
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

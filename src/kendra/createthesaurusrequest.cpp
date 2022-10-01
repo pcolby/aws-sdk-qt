@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateThesaurusRequest
- * \brief The CreateThesaurusRequest class provides an interface for kendra CreateThesaurus requests.
+ * \class QtAws::Kendra::CreateThesaurusRequest
+ * \brief The CreateThesaurusRequest class provides an interface for Kendra CreateThesaurus requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createThesaurus
+ * \sa KendraClient::createThesaurus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateThesaurusRequest::CreateThesaurusRequest(const CreateThesaurusRequest &other)
-    : kendraRequest(new CreateThesaurusRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new CreateThesaurusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateThesaurusRequest::CreateThesaurusRequest(const CreateThesaurusRequest &oth
  * Constructs a CreateThesaurusRequest object.
  */
 CreateThesaurusRequest::CreateThesaurusRequest()
-    : kendraRequest(new CreateThesaurusRequestPrivate(kendraRequest::CreateThesaurusAction, this))
+    : KendraRequest(new CreateThesaurusRequestPrivate(KendraRequest::CreateThesaurusAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateThesaurusRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::kendra::CreateThesaurusRequestPrivate
+ * \class QtAws::Kendra::CreateThesaurusRequestPrivate
  * \brief The CreateThesaurusRequestPrivate class provides private implementation for CreateThesaurusRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a CreateThesaurusRequestPrivate object for kendra \a action,
+ * Constructs a CreateThesaurusRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 CreateThesaurusRequestPrivate::CreateThesaurusRequestPrivate(
-    const kendraRequest::Action action, CreateThesaurusRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, CreateThesaurusRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateThesaurusRequestPrivate::CreateThesaurusRequestPrivate(
  */
 CreateThesaurusRequestPrivate::CreateThesaurusRequestPrivate(
     const CreateThesaurusRequestPrivate &other, CreateThesaurusRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

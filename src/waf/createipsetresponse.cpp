@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateIPSetResponse
- * \brief The CreateIPSetResponse class provides an interace for WAF CreateIPSet responses.
+ * \class QtAws::Waf::CreateIPSetResponse
+ * \brief The CreateIPSetResponse class provides an interace for Waf CreateIPSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateIPSet \a response.
+ * Parses a successful Waf CreateIPSet \a response.
  */
 void CreateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateIPSetResponsePrivate
+ * \class QtAws::Waf::CreateIPSetResponsePrivate
  * \brief The CreateIPSetResponsePrivate class provides private implementation for CreateIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateIPSet response element from \a xml.
+ * Parses a Waf CreateIPSet response element from \a xml.
  */
 void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

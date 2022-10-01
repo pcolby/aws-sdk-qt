@@ -23,11 +23,11 @@
 #include "kendraresponse_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DescribeQuerySuggestionsBlockListResponse;
 
-class DescribeQuerySuggestionsBlockListResponsePrivate : public kendraResponsePrivate {
+class DescribeQuerySuggestionsBlockListResponsePrivate : public KendraResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

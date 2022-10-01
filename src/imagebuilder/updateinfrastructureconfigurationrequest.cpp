@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::UpdateInfrastructureConfigurationRequest
- * \brief The UpdateInfrastructureConfigurationRequest class provides an interface for imagebuilder UpdateInfrastructureConfiguration requests.
+ * \class QtAws::ImageBuilder::UpdateInfrastructureConfigurationRequest
+ * \brief The UpdateInfrastructureConfigurationRequest class provides an interface for ImageBuilder UpdateInfrastructureConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::updateInfrastructureConfiguration
+ * \sa ImageBuilderClient::updateInfrastructureConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateInfrastructureConfigurationRequest::UpdateInfrastructureConfigurationRequest(const UpdateInfrastructureConfigurationRequest &other)
-    : imagebuilderRequest(new UpdateInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new UpdateInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ UpdateInfrastructureConfigurationRequest::UpdateInfrastructureConfigurationReque
  * Constructs a UpdateInfrastructureConfigurationRequest object.
  */
 UpdateInfrastructureConfigurationRequest::UpdateInfrastructureConfigurationRequest()
-    : imagebuilderRequest(new UpdateInfrastructureConfigurationRequestPrivate(imagebuilderRequest::UpdateInfrastructureConfigurationAction, this))
+    : ImageBuilderRequest(new UpdateInfrastructureConfigurationRequestPrivate(ImageBuilderRequest::UpdateInfrastructureConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * UpdateInfrastructureConfigurationRequest::res
 }
 
 /*!
- * \class QtAws::imagebuilder::UpdateInfrastructureConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::UpdateInfrastructureConfigurationRequestPrivate
  * \brief The UpdateInfrastructureConfigurationRequestPrivate class provides private implementation for UpdateInfrastructureConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a UpdateInfrastructureConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a UpdateInfrastructureConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 UpdateInfrastructureConfigurationRequestPrivate::UpdateInfrastructureConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, UpdateInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, UpdateInfrastructureConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ UpdateInfrastructureConfigurationRequestPrivate::UpdateInfrastructureConfigurati
  */
 UpdateInfrastructureConfigurationRequestPrivate::UpdateInfrastructureConfigurationRequestPrivate(
     const UpdateInfrastructureConfigurationRequestPrivate &other, UpdateInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

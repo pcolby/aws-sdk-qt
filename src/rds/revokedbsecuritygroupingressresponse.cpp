@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RevokeDBSecurityGroupIngressResponse
- * \brief The RevokeDBSecurityGroupIngressResponse class provides an interace for RDS RevokeDBSecurityGroupIngress responses.
+ * \class QtAws::Rds::RevokeDBSecurityGroupIngressResponse
+ * \brief The RevokeDBSecurityGroupIngressResponse class provides an interace for Rds RevokeDBSecurityGroupIngress responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RevokeDBSecurityGroupIngressRequest * RevokeDBSecurityGroupIngressResponse
 
 /*!
  * \reimp
- * Parses a successful RDS RevokeDBSecurityGroupIngress \a response.
+ * Parses a successful Rds RevokeDBSecurityGroupIngress \a response.
  */
 void RevokeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RevokeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RevokeDBSecurityGroupIngressResponsePrivate
+ * \class QtAws::Rds::RevokeDBSecurityGroupIngressResponsePrivate
  * \brief The RevokeDBSecurityGroupIngressResponsePrivate class provides private implementation for RevokeDBSecurityGroupIngressResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressRespons
 }
 
 /*!
- * Parses a RDS RevokeDBSecurityGroupIngress response element from \a xml.
+ * Parses a Rds RevokeDBSecurityGroupIngress response element from \a xml.
  */
 void RevokeDBSecurityGroupIngressResponsePrivate::parseRevokeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RevokeDBSecurityGroupIngressResponsePrivate::parseRevokeDBSecurityGroupIngr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

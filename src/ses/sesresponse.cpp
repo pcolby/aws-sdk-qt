@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SesResponse
- * \brief The SesResponse class provides an interface for SES responses.
+ * \class QtAws::Ses::SesResponse
+ * \brief The SesResponse class provides an interface for Ses responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -76,11 +76,11 @@ void SesResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SesResponsePrivate
+ * \class QtAws::Ses::SesResponsePrivate
  * \brief The SesResponsePrivate class provides private implementation for SesResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -92,5 +92,5 @@ SesResponsePrivate::SesResponsePrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

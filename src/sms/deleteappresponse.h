@@ -24,7 +24,7 @@
 #include "deleteapprequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class DeleteAppResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

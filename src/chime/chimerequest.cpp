@@ -58,6 +58,7 @@ namespace Chime {
  * \value CreateChannelBanAction Chime CreateChannelBan action.
  * \value CreateChannelMembershipAction Chime CreateChannelMembership action.
  * \value CreateChannelModeratorAction Chime CreateChannelModerator action.
+ * \value CreateMediaCapturePipelineAction Chime CreateMediaCapturePipeline action.
  * \value CreateMeetingAction Chime CreateMeeting action.
  * \value CreateMeetingDialOutAction Chime CreateMeetingDialOut action.
  * \value CreateMeetingWithAttendeesAction Chime CreateMeetingWithAttendees action.
@@ -83,6 +84,7 @@ namespace Chime {
  * \value DeleteChannelMessageAction Chime DeleteChannelMessage action.
  * \value DeleteChannelModeratorAction Chime DeleteChannelModerator action.
  * \value DeleteEventsConfigurationAction Chime DeleteEventsConfiguration action.
+ * \value DeleteMediaCapturePipelineAction Chime DeleteMediaCapturePipeline action.
  * \value DeleteMeetingAction Chime DeleteMeeting action.
  * \value DeletePhoneNumberAction Chime DeletePhoneNumber action.
  * \value DeleteProxySessionAction Chime DeleteProxySession action.
@@ -120,6 +122,7 @@ namespace Chime {
  * \value GetChannelMessageAction Chime GetChannelMessage action.
  * \value GetEventsConfigurationAction Chime GetEventsConfiguration action.
  * \value GetGlobalSettingsAction Chime GetGlobalSettings action.
+ * \value GetMediaCapturePipelineAction Chime GetMediaCapturePipeline action.
  * \value GetMeetingAction Chime GetMeeting action.
  * \value GetMessagingSessionEndpointAction Chime GetMessagingSessionEndpoint action.
  * \value GetPhoneNumberAction Chime GetPhoneNumber action.
@@ -157,6 +160,7 @@ namespace Chime {
  * \value ListChannelModeratorsAction Chime ListChannelModerators action.
  * \value ListChannelsAction Chime ListChannels action.
  * \value ListChannelsModeratedByAppInstanceUserAction Chime ListChannelsModeratedByAppInstanceUser action.
+ * \value ListMediaCapturePipelinesAction Chime ListMediaCapturePipelines action.
  * \value ListMeetingTagsAction Chime ListMeetingTags action.
  * \value ListMeetingsAction Chime ListMeetings action.
  * \value ListPhoneNumberOrdersAction Chime ListPhoneNumberOrders action.
@@ -193,6 +197,8 @@ namespace Chime {
  * \value RestorePhoneNumberAction Chime RestorePhoneNumber action.
  * \value SearchAvailablePhoneNumbersAction Chime SearchAvailablePhoneNumbers action.
  * \value SendChannelMessageAction Chime SendChannelMessage action.
+ * \value StartMeetingTranscriptionAction Chime StartMeetingTranscription action.
+ * \value StopMeetingTranscriptionAction Chime StopMeetingTranscription action.
  * \value TagAttendeeAction Chime TagAttendee action.
  * \value TagMeetingAction Chime TagMeeting action.
  * \value TagResourceAction Chime TagResource action.
@@ -214,11 +220,13 @@ namespace Chime {
  * \value UpdateRoomAction Chime UpdateRoom action.
  * \value UpdateRoomMembershipAction Chime UpdateRoomMembership action.
  * \value UpdateSipMediaApplicationAction Chime UpdateSipMediaApplication action.
+ * \value UpdateSipMediaApplicationCallAction Chime UpdateSipMediaApplicationCall action.
  * \value UpdateSipRuleAction Chime UpdateSipRule action.
  * \value UpdateUserAction Chime UpdateUser action.
  * \value UpdateUserSettingsAction Chime UpdateUserSettings action.
  * \value UpdateVoiceConnectorAction Chime UpdateVoiceConnector action.
  * \value UpdateVoiceConnectorGroupAction Chime UpdateVoiceConnectorGroup action.
+ * \value ValidateE911AddressAction Chime ValidateE911Address action.
  */
 
 /*!
@@ -426,7 +434,7 @@ QNetworkRequest ChimeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ChimeRequestPrivate::ChimeRequestPrivate(const ChimeRequest::Action action, ChimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-01"))
 {
 
 }
@@ -482,6 +490,7 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(CreateChannelBan);
         ActionToString(CreateChannelMembership);
         ActionToString(CreateChannelModerator);
+        ActionToString(CreateMediaCapturePipeline);
         ActionToString(CreateMeeting);
         ActionToString(CreateMeetingDialOut);
         ActionToString(CreateMeetingWithAttendees);
@@ -507,6 +516,7 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(DeleteChannelMessage);
         ActionToString(DeleteChannelModerator);
         ActionToString(DeleteEventsConfiguration);
+        ActionToString(DeleteMediaCapturePipeline);
         ActionToString(DeleteMeeting);
         ActionToString(DeletePhoneNumber);
         ActionToString(DeleteProxySession);
@@ -544,6 +554,7 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(GetChannelMessage);
         ActionToString(GetEventsConfiguration);
         ActionToString(GetGlobalSettings);
+        ActionToString(GetMediaCapturePipeline);
         ActionToString(GetMeeting);
         ActionToString(GetMessagingSessionEndpoint);
         ActionToString(GetPhoneNumber);
@@ -581,6 +592,7 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(ListChannelModerators);
         ActionToString(ListChannels);
         ActionToString(ListChannelsModeratedByAppInstanceUser);
+        ActionToString(ListMediaCapturePipelines);
         ActionToString(ListMeetingTags);
         ActionToString(ListMeetings);
         ActionToString(ListPhoneNumberOrders);
@@ -617,6 +629,8 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(RestorePhoneNumber);
         ActionToString(SearchAvailablePhoneNumbers);
         ActionToString(SendChannelMessage);
+        ActionToString(StartMeetingTranscription);
+        ActionToString(StopMeetingTranscription);
         ActionToString(TagAttendee);
         ActionToString(TagMeeting);
         ActionToString(TagResource);
@@ -638,11 +652,13 @@ QString ChimeRequestPrivate::toString(const ChimeRequest::Action &action)
         ActionToString(UpdateRoom);
         ActionToString(UpdateRoomMembership);
         ActionToString(UpdateSipMediaApplication);
+        ActionToString(UpdateSipMediaApplicationCall);
         ActionToString(UpdateSipRule);
         ActionToString(UpdateUser);
         ActionToString(UpdateUserSettings);
         ActionToString(UpdateVoiceConnector);
         ActionToString(UpdateVoiceConnectorGroup);
+        ActionToString(ValidateE911Address);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

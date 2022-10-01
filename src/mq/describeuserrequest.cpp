@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DescribeUserRequest
- * \brief The DescribeUserRequest class provides an interface for MQ DescribeUser requests.
+ * \class QtAws::Mq::DescribeUserRequest
+ * \brief The DescribeUserRequest class provides an interface for Mq DescribeUser requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::describeUser
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::MQ::DescribeUserRequestPrivate
+ * \class QtAws::Mq::DescribeUserRequestPrivate
  * \brief The DescribeUserRequestPrivate class provides private implementation for DescribeUserRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ DescribeUserRequestPrivate::DescribeUserRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

@@ -24,16 +24,16 @@
 #include "dlmrequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class DlmRequest;
 
 class DlmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DlmRequest::Action action; ///< DLM action to be performed.
-    QString apiVersion;        ///< DLM API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< DLM request (query string) parameters. @todo?
+    DlmRequest::Action action; ///< Dlm action to be performed.
+    QString apiVersion;        ///< Dlm API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Dlm request (query string) parameters. @todo?
 
     DlmRequestPrivate(const DlmRequest::Action action, DlmRequest * const q);
     DlmRequestPrivate(const DlmRequestPrivate &other, DlmRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

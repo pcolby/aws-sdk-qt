@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DeleteSecurityConfigurationResponse
- * \brief The DeleteSecurityConfigurationResponse class provides an interace for EMR DeleteSecurityConfiguration responses.
+ * \class QtAws::Emr::DeleteSecurityConfigurationResponse
+ * \brief The DeleteSecurityConfigurationResponse class provides an interace for Emr DeleteSecurityConfiguration responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::deleteSecurityConfiguration
  */
@@ -64,7 +64,7 @@ const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::
 
 /*!
  * \reimp
- * Parses a successful EMR DeleteSecurityConfiguration \a response.
+ * Parses a successful Emr DeleteSecurityConfiguration \a response.
  */
 void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DeleteSecurityConfigurationResponsePrivate
+ * \class QtAws::Emr::DeleteSecurityConfigurationResponsePrivate
  * \brief The DeleteSecurityConfigurationResponsePrivate class provides private implementation for DeleteSecurityConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponseP
 }
 
 /*!
- * Parses a EMR DeleteSecurityConfiguration response element from \a xml.
+ * Parses a Emr DeleteSecurityConfiguration response element from \a xml.
  */
 void DeleteSecurityConfigurationResponsePrivate::parseDeleteSecurityConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteSecurityConfigurationResponsePrivate::parseDeleteSecurityConfiguratio
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

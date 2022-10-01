@@ -38,19 +38,23 @@ namespace FraudDetector {
  *
  * \value BatchCreateVariableAction FraudDetector BatchCreateVariable action.
  * \value BatchGetVariableAction FraudDetector BatchGetVariable action.
+ * \value CancelBatchImportJobAction FraudDetector CancelBatchImportJob action.
  * \value CancelBatchPredictionJobAction FraudDetector CancelBatchPredictionJob action.
+ * \value CreateBatchImportJobAction FraudDetector CreateBatchImportJob action.
  * \value CreateBatchPredictionJobAction FraudDetector CreateBatchPredictionJob action.
  * \value CreateDetectorVersionAction FraudDetector CreateDetectorVersion action.
  * \value CreateModelAction FraudDetector CreateModel action.
  * \value CreateModelVersionAction FraudDetector CreateModelVersion action.
  * \value CreateRuleAction FraudDetector CreateRule action.
  * \value CreateVariableAction FraudDetector CreateVariable action.
+ * \value DeleteBatchImportJobAction FraudDetector DeleteBatchImportJob action.
  * \value DeleteBatchPredictionJobAction FraudDetector DeleteBatchPredictionJob action.
  * \value DeleteDetectorAction FraudDetector DeleteDetector action.
  * \value DeleteDetectorVersionAction FraudDetector DeleteDetectorVersion action.
  * \value DeleteEntityTypeAction FraudDetector DeleteEntityType action.
  * \value DeleteEventAction FraudDetector DeleteEvent action.
  * \value DeleteEventTypeAction FraudDetector DeleteEventType action.
+ * \value DeleteEventsByEventTypeAction FraudDetector DeleteEventsByEventType action.
  * \value DeleteExternalModelAction FraudDetector DeleteExternalModel action.
  * \value DeleteLabelAction FraudDetector DeleteLabel action.
  * \value DeleteModelAction FraudDetector DeleteModel action.
@@ -60,11 +64,15 @@ namespace FraudDetector {
  * \value DeleteVariableAction FraudDetector DeleteVariable action.
  * \value DescribeDetectorAction FraudDetector DescribeDetector action.
  * \value DescribeModelVersionsAction FraudDetector DescribeModelVersions action.
+ * \value GetBatchImportJobsAction FraudDetector GetBatchImportJobs action.
  * \value GetBatchPredictionJobsAction FraudDetector GetBatchPredictionJobs action.
+ * \value GetDeleteEventsByEventTypeStatusAction FraudDetector GetDeleteEventsByEventTypeStatus action.
  * \value GetDetectorVersionAction FraudDetector GetDetectorVersion action.
  * \value GetDetectorsAction FraudDetector GetDetectors action.
  * \value GetEntityTypesAction FraudDetector GetEntityTypes action.
+ * \value GetEventAction FraudDetector GetEvent action.
  * \value GetEventPredictionAction FraudDetector GetEventPrediction action.
+ * \value GetEventPredictionMetadataAction FraudDetector GetEventPredictionMetadata action.
  * \value GetEventTypesAction FraudDetector GetEventTypes action.
  * \value GetExternalModelsAction FraudDetector GetExternalModels action.
  * \value GetKMSEncryptionKeyAction FraudDetector GetKMSEncryptionKey action.
@@ -74,6 +82,7 @@ namespace FraudDetector {
  * \value GetOutcomesAction FraudDetector GetOutcomes action.
  * \value GetRulesAction FraudDetector GetRules action.
  * \value GetVariablesAction FraudDetector GetVariables action.
+ * \value ListEventPredictionsAction FraudDetector ListEventPredictions action.
  * \value ListTagsForResourceAction FraudDetector ListTagsForResource action.
  * \value PutDetectorAction FraudDetector PutDetector action.
  * \value PutEntityTypeAction FraudDetector PutEntityType action.
@@ -82,11 +91,13 @@ namespace FraudDetector {
  * \value PutKMSEncryptionKeyAction FraudDetector PutKMSEncryptionKey action.
  * \value PutLabelAction FraudDetector PutLabel action.
  * \value PutOutcomeAction FraudDetector PutOutcome action.
+ * \value SendEventAction FraudDetector SendEvent action.
  * \value TagResourceAction FraudDetector TagResource action.
  * \value UntagResourceAction FraudDetector UntagResource action.
  * \value UpdateDetectorVersionAction FraudDetector UpdateDetectorVersion action.
  * \value UpdateDetectorVersionMetadataAction FraudDetector UpdateDetectorVersionMetadata action.
  * \value UpdateDetectorVersionStatusAction FraudDetector UpdateDetectorVersionStatus action.
+ * \value UpdateEventLabelAction FraudDetector UpdateEventLabel action.
  * \value UpdateModelAction FraudDetector UpdateModel action.
  * \value UpdateModelVersionAction FraudDetector UpdateModelVersion action.
  * \value UpdateModelVersionStatusAction FraudDetector UpdateModelVersionStatus action.
@@ -300,7 +311,7 @@ QNetworkRequest FraudDetectorRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 FraudDetectorRequestPrivate::FraudDetectorRequestPrivate(const FraudDetectorRequest::Action action, FraudDetectorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-11-15"))
 {
 
 }
@@ -336,19 +347,23 @@ QString FraudDetectorRequestPrivate::toString(const FraudDetectorRequest::Action
     switch (action) {
         ActionToString(BatchCreateVariable);
         ActionToString(BatchGetVariable);
+        ActionToString(CancelBatchImportJob);
         ActionToString(CancelBatchPredictionJob);
+        ActionToString(CreateBatchImportJob);
         ActionToString(CreateBatchPredictionJob);
         ActionToString(CreateDetectorVersion);
         ActionToString(CreateModel);
         ActionToString(CreateModelVersion);
         ActionToString(CreateRule);
         ActionToString(CreateVariable);
+        ActionToString(DeleteBatchImportJob);
         ActionToString(DeleteBatchPredictionJob);
         ActionToString(DeleteDetector);
         ActionToString(DeleteDetectorVersion);
         ActionToString(DeleteEntityType);
         ActionToString(DeleteEvent);
         ActionToString(DeleteEventType);
+        ActionToString(DeleteEventsByEventType);
         ActionToString(DeleteExternalModel);
         ActionToString(DeleteLabel);
         ActionToString(DeleteModel);
@@ -358,11 +373,15 @@ QString FraudDetectorRequestPrivate::toString(const FraudDetectorRequest::Action
         ActionToString(DeleteVariable);
         ActionToString(DescribeDetector);
         ActionToString(DescribeModelVersions);
+        ActionToString(GetBatchImportJobs);
         ActionToString(GetBatchPredictionJobs);
+        ActionToString(GetDeleteEventsByEventTypeStatus);
         ActionToString(GetDetectorVersion);
         ActionToString(GetDetectors);
         ActionToString(GetEntityTypes);
+        ActionToString(GetEvent);
         ActionToString(GetEventPrediction);
+        ActionToString(GetEventPredictionMetadata);
         ActionToString(GetEventTypes);
         ActionToString(GetExternalModels);
         ActionToString(GetKMSEncryptionKey);
@@ -372,6 +391,7 @@ QString FraudDetectorRequestPrivate::toString(const FraudDetectorRequest::Action
         ActionToString(GetOutcomes);
         ActionToString(GetRules);
         ActionToString(GetVariables);
+        ActionToString(ListEventPredictions);
         ActionToString(ListTagsForResource);
         ActionToString(PutDetector);
         ActionToString(PutEntityType);
@@ -380,11 +400,13 @@ QString FraudDetectorRequestPrivate::toString(const FraudDetectorRequest::Action
         ActionToString(PutKMSEncryptionKey);
         ActionToString(PutLabel);
         ActionToString(PutOutcome);
+        ActionToString(SendEvent);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateDetectorVersion);
         ActionToString(UpdateDetectorVersionMetadata);
         ActionToString(UpdateDetectorVersionStatus);
+        ActionToString(UpdateEventLabel);
         ActionToString(UpdateModel);
         ActionToString(UpdateModelVersion);
         ActionToString(UpdateModelVersionStatus);

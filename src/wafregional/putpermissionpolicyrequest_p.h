@@ -24,14 +24,14 @@
 #include "putpermissionpolicyrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class PutPermissionPolicyRequest;
 
-class PutPermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
+class PutPermissionPolicyRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    PutPermissionPolicyRequestPrivate(const WAFRegionalRequest::Action action,
+    PutPermissionPolicyRequestPrivate(const WafRegionalRequest::Action action,
                                    PutPermissionPolicyRequest * const q);
     PutPermissionPolicyRequestPrivate(const PutPermissionPolicyRequestPrivate &other,
                                    PutPermissionPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

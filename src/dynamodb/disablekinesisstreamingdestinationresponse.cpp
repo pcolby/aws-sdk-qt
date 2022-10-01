@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DisableKinesisStreamingDestinationResponse
- * \brief The DisableKinesisStreamingDestinationResponse class provides an interace for DynamoDB DisableKinesisStreamingDestination responses.
+ * \class QtAws::DynamoDb::DisableKinesisStreamingDestinationResponse
+ * \brief The DisableKinesisStreamingDestinationResponse class provides an interace for DynamoDb DisableKinesisStreamingDestination responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::disableKinesisStreamingDestination
+ * \sa DynamoDbClient::disableKinesisStreamingDestination
  */
 
 /*!
@@ -63,7 +63,7 @@ DisableKinesisStreamingDestinationResponse::DisableKinesisStreamingDestinationRe
         const DisableKinesisStreamingDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DisableKinesisStreamingDestinationResponsePrivate(this), parent)
+    : DynamoDbResponse(new DisableKinesisStreamingDestinationResponsePrivate(this), parent)
 {
     setRequest(new DisableKinesisStreamingDestinationRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DisableKinesisStreamingDestinationRequest * DisableKinesisStreamingDestina
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DisableKinesisStreamingDestination \a response.
+ * Parses a successful DynamoDb DisableKinesisStreamingDestination \a response.
  */
 void DisableKinesisStreamingDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DisableKinesisStreamingDestinationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::DynamoDB::DisableKinesisStreamingDestinationResponsePrivate
+ * \class QtAws::DynamoDb::DisableKinesisStreamingDestinationResponsePrivate
  * \brief The DisableKinesisStreamingDestinationResponsePrivate class provides private implementation for DisableKinesisStreamingDestinationResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DisableKinesisStreamingDestinationResponsePrivate object with public implementation \a q.
  */
 DisableKinesisStreamingDestinationResponsePrivate::DisableKinesisStreamingDestinationResponsePrivate(
-    DisableKinesisStreamingDestinationResponse * const q) : DynamoDBResponsePrivate(q)
+    DisableKinesisStreamingDestinationResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DisableKinesisStreamingDestination response element from \a xml.
+ * Parses a DynamoDb DisableKinesisStreamingDestination response element from \a xml.
  */
 void DisableKinesisStreamingDestinationResponsePrivate::parseDisableKinesisStreamingDestinationResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DisableKinesisStreamingDestinationResponsePrivate::parseDisableKinesisStrea
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

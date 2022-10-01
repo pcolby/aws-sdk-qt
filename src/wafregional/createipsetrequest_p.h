@@ -24,14 +24,14 @@
 #include "createipsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateIPSetRequest;
 
-class CreateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateIPSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateIPSetRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateIPSetRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateIPSetRequest * const q);
     CreateIPSetRequestPrivate(const CreateIPSetRequestPrivate &other,
                                    CreateIPSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

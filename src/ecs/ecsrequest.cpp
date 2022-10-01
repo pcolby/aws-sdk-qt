@@ -21,77 +21,77 @@
 #include "ecsrequest_p.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 /*!
- * \class QtAws::ECS::EcsRequest
- * \brief The EcsRequest class provides an interface for ECS requests.
+ * \class QtAws::Ecs::EcsRequest
+ * \brief The EcsRequest class provides an interface for Ecs requests.
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  */
 
 /*!
  * \enum EcsRequest::Action
  *
- * This enum describes the actions that can be performed as ECS
+ * This enum describes the actions that can be performed as Ecs
  * requests.
  *
- * \value CreateCapacityProviderAction ECS CreateCapacityProvider action.
- * \value CreateClusterAction ECS CreateCluster action.
- * \value CreateServiceAction ECS CreateService action.
- * \value CreateTaskSetAction ECS CreateTaskSet action.
- * \value DeleteAccountSettingAction ECS DeleteAccountSetting action.
- * \value DeleteAttributesAction ECS DeleteAttributes action.
- * \value DeleteCapacityProviderAction ECS DeleteCapacityProvider action.
- * \value DeleteClusterAction ECS DeleteCluster action.
- * \value DeleteServiceAction ECS DeleteService action.
- * \value DeleteTaskSetAction ECS DeleteTaskSet action.
- * \value DeregisterContainerInstanceAction ECS DeregisterContainerInstance action.
- * \value DeregisterTaskDefinitionAction ECS DeregisterTaskDefinition action.
- * \value DescribeCapacityProvidersAction ECS DescribeCapacityProviders action.
- * \value DescribeClustersAction ECS DescribeClusters action.
- * \value DescribeContainerInstancesAction ECS DescribeContainerInstances action.
- * \value DescribeServicesAction ECS DescribeServices action.
- * \value DescribeTaskDefinitionAction ECS DescribeTaskDefinition action.
- * \value DescribeTaskSetsAction ECS DescribeTaskSets action.
- * \value DescribeTasksAction ECS DescribeTasks action.
- * \value DiscoverPollEndpointAction ECS DiscoverPollEndpoint action.
- * \value ExecuteCommandAction ECS ExecuteCommand action.
- * \value ListAccountSettingsAction ECS ListAccountSettings action.
- * \value ListAttributesAction ECS ListAttributes action.
- * \value ListClustersAction ECS ListClusters action.
- * \value ListContainerInstancesAction ECS ListContainerInstances action.
- * \value ListServicesAction ECS ListServices action.
- * \value ListTagsForResourceAction ECS ListTagsForResource action.
- * \value ListTaskDefinitionFamiliesAction ECS ListTaskDefinitionFamilies action.
- * \value ListTaskDefinitionsAction ECS ListTaskDefinitions action.
- * \value ListTasksAction ECS ListTasks action.
- * \value PutAccountSettingAction ECS PutAccountSetting action.
- * \value PutAccountSettingDefaultAction ECS PutAccountSettingDefault action.
- * \value PutAttributesAction ECS PutAttributes action.
- * \value PutClusterCapacityProvidersAction ECS PutClusterCapacityProviders action.
- * \value RegisterContainerInstanceAction ECS RegisterContainerInstance action.
- * \value RegisterTaskDefinitionAction ECS RegisterTaskDefinition action.
- * \value RunTaskAction ECS RunTask action.
- * \value StartTaskAction ECS StartTask action.
- * \value StopTaskAction ECS StopTask action.
- * \value SubmitAttachmentStateChangesAction ECS SubmitAttachmentStateChanges action.
- * \value SubmitContainerStateChangeAction ECS SubmitContainerStateChange action.
- * \value SubmitTaskStateChangeAction ECS SubmitTaskStateChange action.
- * \value TagResourceAction ECS TagResource action.
- * \value UntagResourceAction ECS UntagResource action.
- * \value UpdateCapacityProviderAction ECS UpdateCapacityProvider action.
- * \value UpdateClusterAction ECS UpdateCluster action.
- * \value UpdateClusterSettingsAction ECS UpdateClusterSettings action.
- * \value UpdateContainerAgentAction ECS UpdateContainerAgent action.
- * \value UpdateContainerInstancesStateAction ECS UpdateContainerInstancesState action.
- * \value UpdateServiceAction ECS UpdateService action.
- * \value UpdateServicePrimaryTaskSetAction ECS UpdateServicePrimaryTaskSet action.
- * \value UpdateTaskSetAction ECS UpdateTaskSet action.
+ * \value CreateCapacityProviderAction Ecs CreateCapacityProvider action.
+ * \value CreateClusterAction Ecs CreateCluster action.
+ * \value CreateServiceAction Ecs CreateService action.
+ * \value CreateTaskSetAction Ecs CreateTaskSet action.
+ * \value DeleteAccountSettingAction Ecs DeleteAccountSetting action.
+ * \value DeleteAttributesAction Ecs DeleteAttributes action.
+ * \value DeleteCapacityProviderAction Ecs DeleteCapacityProvider action.
+ * \value DeleteClusterAction Ecs DeleteCluster action.
+ * \value DeleteServiceAction Ecs DeleteService action.
+ * \value DeleteTaskSetAction Ecs DeleteTaskSet action.
+ * \value DeregisterContainerInstanceAction Ecs DeregisterContainerInstance action.
+ * \value DeregisterTaskDefinitionAction Ecs DeregisterTaskDefinition action.
+ * \value DescribeCapacityProvidersAction Ecs DescribeCapacityProviders action.
+ * \value DescribeClustersAction Ecs DescribeClusters action.
+ * \value DescribeContainerInstancesAction Ecs DescribeContainerInstances action.
+ * \value DescribeServicesAction Ecs DescribeServices action.
+ * \value DescribeTaskDefinitionAction Ecs DescribeTaskDefinition action.
+ * \value DescribeTaskSetsAction Ecs DescribeTaskSets action.
+ * \value DescribeTasksAction Ecs DescribeTasks action.
+ * \value DiscoverPollEndpointAction Ecs DiscoverPollEndpoint action.
+ * \value ExecuteCommandAction Ecs ExecuteCommand action.
+ * \value ListAccountSettingsAction Ecs ListAccountSettings action.
+ * \value ListAttributesAction Ecs ListAttributes action.
+ * \value ListClustersAction Ecs ListClusters action.
+ * \value ListContainerInstancesAction Ecs ListContainerInstances action.
+ * \value ListServicesAction Ecs ListServices action.
+ * \value ListTagsForResourceAction Ecs ListTagsForResource action.
+ * \value ListTaskDefinitionFamiliesAction Ecs ListTaskDefinitionFamilies action.
+ * \value ListTaskDefinitionsAction Ecs ListTaskDefinitions action.
+ * \value ListTasksAction Ecs ListTasks action.
+ * \value PutAccountSettingAction Ecs PutAccountSetting action.
+ * \value PutAccountSettingDefaultAction Ecs PutAccountSettingDefault action.
+ * \value PutAttributesAction Ecs PutAttributes action.
+ * \value PutClusterCapacityProvidersAction Ecs PutClusterCapacityProviders action.
+ * \value RegisterContainerInstanceAction Ecs RegisterContainerInstance action.
+ * \value RegisterTaskDefinitionAction Ecs RegisterTaskDefinition action.
+ * \value RunTaskAction Ecs RunTask action.
+ * \value StartTaskAction Ecs StartTask action.
+ * \value StopTaskAction Ecs StopTask action.
+ * \value SubmitAttachmentStateChangesAction Ecs SubmitAttachmentStateChanges action.
+ * \value SubmitContainerStateChangeAction Ecs SubmitContainerStateChange action.
+ * \value SubmitTaskStateChangeAction Ecs SubmitTaskStateChange action.
+ * \value TagResourceAction Ecs TagResource action.
+ * \value UntagResourceAction Ecs UntagResource action.
+ * \value UpdateCapacityProviderAction Ecs UpdateCapacityProvider action.
+ * \value UpdateClusterAction Ecs UpdateCluster action.
+ * \value UpdateClusterSettingsAction Ecs UpdateClusterSettings action.
+ * \value UpdateContainerAgentAction Ecs UpdateContainerAgent action.
+ * \value UpdateContainerInstancesStateAction Ecs UpdateContainerInstancesState action.
+ * \value UpdateServiceAction Ecs UpdateService action.
+ * \value UpdateServicePrimaryTaskSetAction Ecs UpdateServicePrimaryTaskSet action.
+ * \value UpdateTaskSetAction Ecs UpdateTaskSet action.
  */
 
 /*!
- * Constructs a EcsRequest object for ECS \a action.
+ * Constructs a EcsRequest object for Ecs \a action.
  */
 EcsRequest::EcsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EcsRequestPrivate(action, this))
@@ -132,7 +132,7 @@ EcsRequest::EcsRequest(EcsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the ECS action to be performed by this request.
+ * Returns the Ecs action to be performed by this request.
  */
 EcsRequest::Action EcsRequest::action() const
 {
@@ -141,7 +141,7 @@ EcsRequest::Action EcsRequest::action() const
 }
 
 /*!
- * Returns the name of the ECS action to be performed by this request.
+ * Returns the name of the Ecs action to be performed by this request.
  */
 QString EcsRequest::actionString() const
 {
@@ -149,7 +149,7 @@ QString EcsRequest::actionString() const
 }
 
 /*!
- * Returns the ECS API version implemented by this request.
+ * Returns the Ecs API version implemented by this request.
  */
 QString EcsRequest::apiVersion() const
 {
@@ -158,7 +158,7 @@ QString EcsRequest::apiVersion() const
 }
 
 /*!
- * Sets the ECS action to be performed by this request to \a action.
+ * Sets the Ecs action to be performed by this request to \a action.
  */
 void EcsRequest::setAction(const Action action)
 {
@@ -167,7 +167,7 @@ void EcsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the ECS API version to include in this request to \a version.
+ * Sets the Ecs API version to include in this request to \a version.
  */
 void EcsRequest::setApiVersion(const QString &version)
 {
@@ -192,15 +192,15 @@ bool EcsRequest::operator==(const EcsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid ECS queue name.
+ * Returns \c tue if \a queueName is a valid Ecs queue name.
  *
- * @par From ECS FAQs:
+ * @par From Ecs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid ECS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ecs queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -267,10 +267,10 @@ void EcsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the ECS request using the given
+ * Returns a network request for the Ecs request using the given
  * \a endpoint.
  *
- * This ECS implementation builds request URLs by combining the
+ * This Ecs implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -283,19 +283,19 @@ QNetworkRequest EcsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::ECS::EcsRequestPrivate
+ * \class QtAws::Ecs::EcsRequestPrivate
  * \brief The EcsRequestPrivate class provides private implementation for EcsRequest.
  * \internal
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  */
 
 /*!
- * Constructs a EcsRequestPrivate object for ECS \a action,
+ * Constructs a EcsRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 EcsRequestPrivate::EcsRequestPrivate(const EcsRequest::Action action, EcsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-11-13"))
 {
 
 }
@@ -321,7 +321,7 @@ EcsRequestPrivate::EcsRequestPrivate(const EcsRequestPrivate &other,
  * invalid.
  *
  * This function converts EcsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the ECS service's Action
+ * string representations, appropriate for use with the Ecs service's Action
  * query parameters.
  */
 QString EcsRequestPrivate::toString(const EcsRequest::Action &action)
@@ -388,5 +388,5 @@ QString EcsRequestPrivate::toString(const EcsRequest::Action &action)
     return QString();
 }
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws

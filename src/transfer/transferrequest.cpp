@@ -37,28 +37,61 @@ namespace Transfer {
  * requests.
  *
  * \value CreateAccessAction Transfer CreateAccess action.
+ * \value CreateAgreementAction Transfer CreateAgreement action.
+ * \value CreateConnectorAction Transfer CreateConnector action.
+ * \value CreateProfileAction Transfer CreateProfile action.
  * \value CreateServerAction Transfer CreateServer action.
  * \value CreateUserAction Transfer CreateUser action.
+ * \value CreateWorkflowAction Transfer CreateWorkflow action.
  * \value DeleteAccessAction Transfer DeleteAccess action.
+ * \value DeleteAgreementAction Transfer DeleteAgreement action.
+ * \value DeleteCertificateAction Transfer DeleteCertificate action.
+ * \value DeleteConnectorAction Transfer DeleteConnector action.
+ * \value DeleteHostKeyAction Transfer DeleteHostKey action.
+ * \value DeleteProfileAction Transfer DeleteProfile action.
  * \value DeleteServerAction Transfer DeleteServer action.
  * \value DeleteSshPublicKeyAction Transfer DeleteSshPublicKey action.
  * \value DeleteUserAction Transfer DeleteUser action.
+ * \value DeleteWorkflowAction Transfer DeleteWorkflow action.
  * \value DescribeAccessAction Transfer DescribeAccess action.
+ * \value DescribeAgreementAction Transfer DescribeAgreement action.
+ * \value DescribeCertificateAction Transfer DescribeCertificate action.
+ * \value DescribeConnectorAction Transfer DescribeConnector action.
+ * \value DescribeExecutionAction Transfer DescribeExecution action.
+ * \value DescribeHostKeyAction Transfer DescribeHostKey action.
+ * \value DescribeProfileAction Transfer DescribeProfile action.
  * \value DescribeSecurityPolicyAction Transfer DescribeSecurityPolicy action.
  * \value DescribeServerAction Transfer DescribeServer action.
  * \value DescribeUserAction Transfer DescribeUser action.
+ * \value DescribeWorkflowAction Transfer DescribeWorkflow action.
+ * \value ImportCertificateAction Transfer ImportCertificate action.
+ * \value ImportHostKeyAction Transfer ImportHostKey action.
  * \value ImportSshPublicKeyAction Transfer ImportSshPublicKey action.
  * \value ListAccessesAction Transfer ListAccesses action.
+ * \value ListAgreementsAction Transfer ListAgreements action.
+ * \value ListCertificatesAction Transfer ListCertificates action.
+ * \value ListConnectorsAction Transfer ListConnectors action.
+ * \value ListExecutionsAction Transfer ListExecutions action.
+ * \value ListHostKeysAction Transfer ListHostKeys action.
+ * \value ListProfilesAction Transfer ListProfiles action.
  * \value ListSecurityPoliciesAction Transfer ListSecurityPolicies action.
  * \value ListServersAction Transfer ListServers action.
  * \value ListTagsForResourceAction Transfer ListTagsForResource action.
  * \value ListUsersAction Transfer ListUsers action.
+ * \value ListWorkflowsAction Transfer ListWorkflows action.
+ * \value SendWorkflowStepStateAction Transfer SendWorkflowStepState action.
+ * \value StartFileTransferAction Transfer StartFileTransfer action.
  * \value StartServerAction Transfer StartServer action.
  * \value StopServerAction Transfer StopServer action.
  * \value TagResourceAction Transfer TagResource action.
  * \value TestIdentityProviderAction Transfer TestIdentityProvider action.
  * \value UntagResourceAction Transfer UntagResource action.
  * \value UpdateAccessAction Transfer UpdateAccess action.
+ * \value UpdateAgreementAction Transfer UpdateAgreement action.
+ * \value UpdateCertificateAction Transfer UpdateCertificate action.
+ * \value UpdateConnectorAction Transfer UpdateConnector action.
+ * \value UpdateHostKeyAction Transfer UpdateHostKey action.
+ * \value UpdateProfileAction Transfer UpdateProfile action.
  * \value UpdateServerAction Transfer UpdateServer action.
  * \value UpdateUserAction Transfer UpdateUser action.
  */
@@ -268,7 +301,7 @@ QNetworkRequest TransferRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 TransferRequestPrivate::TransferRequestPrivate(const TransferRequest::Action action, TransferRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-05"))
 {
 
 }
@@ -303,28 +336,61 @@ QString TransferRequestPrivate::toString(const TransferRequest::Action &action)
         case TransferRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateAccess);
+        ActionToString(CreateAgreement);
+        ActionToString(CreateConnector);
+        ActionToString(CreateProfile);
         ActionToString(CreateServer);
         ActionToString(CreateUser);
+        ActionToString(CreateWorkflow);
         ActionToString(DeleteAccess);
+        ActionToString(DeleteAgreement);
+        ActionToString(DeleteCertificate);
+        ActionToString(DeleteConnector);
+        ActionToString(DeleteHostKey);
+        ActionToString(DeleteProfile);
         ActionToString(DeleteServer);
         ActionToString(DeleteSshPublicKey);
         ActionToString(DeleteUser);
+        ActionToString(DeleteWorkflow);
         ActionToString(DescribeAccess);
+        ActionToString(DescribeAgreement);
+        ActionToString(DescribeCertificate);
+        ActionToString(DescribeConnector);
+        ActionToString(DescribeExecution);
+        ActionToString(DescribeHostKey);
+        ActionToString(DescribeProfile);
         ActionToString(DescribeSecurityPolicy);
         ActionToString(DescribeServer);
         ActionToString(DescribeUser);
+        ActionToString(DescribeWorkflow);
+        ActionToString(ImportCertificate);
+        ActionToString(ImportHostKey);
         ActionToString(ImportSshPublicKey);
         ActionToString(ListAccesses);
+        ActionToString(ListAgreements);
+        ActionToString(ListCertificates);
+        ActionToString(ListConnectors);
+        ActionToString(ListExecutions);
+        ActionToString(ListHostKeys);
+        ActionToString(ListProfiles);
         ActionToString(ListSecurityPolicies);
         ActionToString(ListServers);
         ActionToString(ListTagsForResource);
         ActionToString(ListUsers);
+        ActionToString(ListWorkflows);
+        ActionToString(SendWorkflowStepState);
+        ActionToString(StartFileTransfer);
         ActionToString(StartServer);
         ActionToString(StopServer);
         ActionToString(TagResource);
         ActionToString(TestIdentityProvider);
         ActionToString(UntagResource);
         ActionToString(UpdateAccess);
+        ActionToString(UpdateAgreement);
+        ActionToString(UpdateCertificate);
+        ActionToString(UpdateConnector);
+        ActionToString(UpdateHostKey);
+        ActionToString(UpdateProfile);
         ActionToString(UpdateServer);
         ActionToString(UpdateUser);
         default:

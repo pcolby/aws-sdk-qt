@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateTimelineEventResponse
- * \brief The UpdateTimelineEventResponse class provides an interace for SSMIncidents UpdateTimelineEvent responses.
+ * \class QtAws::SsmIncidents::UpdateTimelineEventResponse
+ * \brief The UpdateTimelineEventResponse class provides an interace for SsmIncidents UpdateTimelineEvent responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateTimelineEvent
+ * \sa SsmIncidentsClient::updateTimelineEvent
  */
 
 /*!
@@ -54,7 +54,7 @@ UpdateTimelineEventResponse::UpdateTimelineEventResponse(
         const UpdateTimelineEventRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new UpdateTimelineEventResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new UpdateTimelineEventResponsePrivate(this), parent)
 {
     setRequest(new UpdateTimelineEventRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const UpdateTimelineEventRequest * UpdateTimelineEventResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents UpdateTimelineEvent \a response.
+ * Parses a successful SsmIncidents UpdateTimelineEvent \a response.
  */
 void UpdateTimelineEventResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void UpdateTimelineEventResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateTimelineEventResponsePrivate
+ * \class QtAws::SsmIncidents::UpdateTimelineEventResponsePrivate
  * \brief The UpdateTimelineEventResponsePrivate class provides private implementation for UpdateTimelineEventResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a UpdateTimelineEventResponsePrivate object with public implementation \a q.
  */
 UpdateTimelineEventResponsePrivate::UpdateTimelineEventResponsePrivate(
-    UpdateTimelineEventResponse * const q) : SSMIncidentsResponsePrivate(q)
+    UpdateTimelineEventResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents UpdateTimelineEvent response element from \a xml.
+ * Parses a SsmIncidents UpdateTimelineEvent response element from \a xml.
  */
 void UpdateTimelineEventResponsePrivate::parseUpdateTimelineEventResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateTimelineEventResponsePrivate::parseUpdateTimelineEventResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

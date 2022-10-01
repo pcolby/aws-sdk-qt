@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class AcmClientPrivate;
 class AddTagsToCertificateRequest;
@@ -100,7 +100,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

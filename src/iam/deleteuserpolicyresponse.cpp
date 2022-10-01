@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteUserPolicyResponse
- * \brief The DeleteUserPolicyResponse class provides an interace for IAM DeleteUserPolicy responses.
+ * \class QtAws::Iam::DeleteUserPolicyResponse
+ * \brief The DeleteUserPolicyResponse class provides an interace for Iam DeleteUserPolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteUserPolicy
  */
@@ -68,7 +68,7 @@ const DeleteUserPolicyRequest * DeleteUserPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteUserPolicy \a response.
+ * Parses a successful Iam DeleteUserPolicy \a response.
  */
 void DeleteUserPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteUserPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteUserPolicyResponsePrivate
+ * \class QtAws::Iam::DeleteUserPolicyResponsePrivate
  * \brief The DeleteUserPolicyResponsePrivate class provides private implementation for DeleteUserPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteUserPolicyResponsePrivate::DeleteUserPolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeleteUserPolicy response element from \a xml.
+ * Parses a Iam DeleteUserPolicy response element from \a xml.
  */
 void DeleteUserPolicyResponsePrivate::parseDeleteUserPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteUserPolicyResponsePrivate::parseDeleteUserPolicyResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

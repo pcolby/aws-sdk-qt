@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ConfirmSubscriptionResponse
- * \brief The ConfirmSubscriptionResponse class provides an interace for SNS ConfirmSubscription responses.
+ * \class QtAws::Sns::ConfirmSubscriptionResponse
+ * \brief The ConfirmSubscriptionResponse class provides an interace for Sns ConfirmSubscription responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ConfirmSubscriptionRequest * ConfirmSubscriptionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS ConfirmSubscription \a response.
+ * Parses a successful Sns ConfirmSubscription \a response.
  */
 void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::ConfirmSubscriptionResponsePrivate
+ * \class QtAws::Sns::ConfirmSubscriptionResponsePrivate
  * \brief The ConfirmSubscriptionResponsePrivate class provides private implementation for ConfirmSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponsePrivate(
 }
 
 /*!
- * Parses a SNS ConfirmSubscription response element from \a xml.
+ * Parses a Sns ConfirmSubscription response element from \a xml.
  */
 void ConfirmSubscriptionResponsePrivate::parseConfirmSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ConfirmSubscriptionResponsePrivate::parseConfirmSubscriptionResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

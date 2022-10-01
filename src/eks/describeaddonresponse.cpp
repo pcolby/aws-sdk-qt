@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeAddonResponse
- * \brief The DescribeAddonResponse class provides an interace for EKS DescribeAddon responses.
+ * \class QtAws::Eks::DescribeAddonResponse
+ * \brief The DescribeAddonResponse class provides an interace for Eks DescribeAddon responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeAddonRequest * DescribeAddonResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeAddon \a response.
+ * Parses a successful Eks DescribeAddon \a response.
  */
 void DescribeAddonResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeAddonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeAddonResponsePrivate
+ * \class QtAws::Eks::DescribeAddonResponsePrivate
  * \brief The DescribeAddonResponsePrivate class provides private implementation for DescribeAddonResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeAddonResponsePrivate::DescribeAddonResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeAddon response element from \a xml.
+ * Parses a Eks DescribeAddon response element from \a xml.
  */
 void DescribeAddonResponsePrivate::parseDescribeAddonResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeAddonResponsePrivate::parseDescribeAddonResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "mgnrequest_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::InitializeServiceRequest
- * \brief The InitializeServiceRequest class provides an interface for mgn InitializeService requests.
+ * \class QtAws::Mgn::InitializeServiceRequest
+ * \brief The InitializeServiceRequest class provides an interface for Mgn InitializeService requests.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::initializeService
+ * \sa MgnClient::initializeService
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 InitializeServiceRequest::InitializeServiceRequest(const InitializeServiceRequest &other)
-    : mgnRequest(new InitializeServiceRequestPrivate(*other.d_func(), this))
+    : MgnRequest(new InitializeServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ InitializeServiceRequest::InitializeServiceRequest(const InitializeServiceReques
  * Constructs a InitializeServiceRequest object.
  */
 InitializeServiceRequest::InitializeServiceRequest()
-    : mgnRequest(new InitializeServiceRequestPrivate(mgnRequest::InitializeServiceAction, this))
+    : MgnRequest(new InitializeServiceRequestPrivate(MgnRequest::InitializeServiceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * InitializeServiceRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::mgn::InitializeServiceRequestPrivate
+ * \class QtAws::Mgn::InitializeServiceRequestPrivate
  * \brief The InitializeServiceRequestPrivate class provides private implementation for InitializeServiceRequest.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a InitializeServiceRequestPrivate object for mgn \a action,
+ * Constructs a InitializeServiceRequestPrivate object for Mgn \a action,
  * with public implementation \a q.
  */
 InitializeServiceRequestPrivate::InitializeServiceRequestPrivate(
-    const mgnRequest::Action action, InitializeServiceRequest * const q)
-    : mgnRequestPrivate(action, q)
+    const MgnRequest::Action action, InitializeServiceRequest * const q)
+    : MgnRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ InitializeServiceRequestPrivate::InitializeServiceRequestPrivate(
  */
 InitializeServiceRequestPrivate::InitializeServiceRequestPrivate(
     const InitializeServiceRequestPrivate &other, InitializeServiceRequest * const q)
-    : mgnRequestPrivate(other, q)
+    : MgnRequestPrivate(other, q)
 {
 
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

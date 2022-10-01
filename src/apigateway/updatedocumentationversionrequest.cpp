@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationVersionRequest
- * \brief The UpdateDocumentationVersionRequest class provides an interface for APIGateway UpdateDocumentationVersion requests.
+ * \class QtAws::ApiGateway::UpdateDocumentationVersionRequest
+ * \brief The UpdateDocumentationVersionRequest class provides an interface for ApiGateway UpdateDocumentationVersion requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDocumentationVersion
+ * \sa ApiGatewayClient::updateDocumentationVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest(const UpdateDocumentationVersionRequest &other)
-    : APIGatewayRequest(new UpdateDocumentationVersionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateDocumentationVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest(const Updat
  * Constructs a UpdateDocumentationVersionRequest object.
  */
 UpdateDocumentationVersionRequest::UpdateDocumentationVersionRequest()
-    : APIGatewayRequest(new UpdateDocumentationVersionRequestPrivate(APIGatewayRequest::UpdateDocumentationVersionAction, this))
+    : ApiGatewayRequest(new UpdateDocumentationVersionRequestPrivate(ApiGatewayRequest::UpdateDocumentationVersionAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationVersionRequest::response(Q
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationVersionRequestPrivate
+ * \class QtAws::ApiGateway::UpdateDocumentationVersionRequestPrivate
  * \brief The UpdateDocumentationVersionRequestPrivate class provides private implementation for UpdateDocumentationVersionRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateDocumentationVersionRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateDocumentationVersionRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateDocumentationVersionRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPriva
  */
 UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPrivate(
     const UpdateDocumentationVersionRequestPrivate &other, UpdateDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

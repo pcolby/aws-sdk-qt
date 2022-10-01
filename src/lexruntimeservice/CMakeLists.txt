@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLEXRUNTIMESERVICE_LIBRARY)
 
 add_library(QtAwsLexRuntimeService
+  qtawslexruntimeserviceglobal.h
+  lexruntimeserviceclient.h
+  lexruntimeserviceclient_p.h
+  lexruntimeservicerequest.h
+  lexruntimeservicerequest_p.h
+  lexruntimeserviceresponse.h
+  lexruntimeserviceresponse_p.h
   deletesessionrequest.h
   deletesessionrequest_p.h
   deletesessionresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsLexRuntimeService
   getsessionrequest_p.h
   getsessionresponse.h
   getsessionresponse_p.h
-  lexruntimeserviceclient.h
-  lexruntimeserviceclient_p.h
-  lexruntimeservicerequest.h
-  lexruntimeservicerequest_p.h
-  lexruntimeserviceresponse.h
-  lexruntimeserviceresponse_p.h
   postcontentrequest.h
   postcontentrequest_p.h
   postcontentresponse.h
@@ -27,14 +28,13 @@ add_library(QtAwsLexRuntimeService
   putsessionrequest_p.h
   putsessionresponse.h
   putsessionresponse_p.h
-  qtawslexruntimeserviceglobal.h
+  lexruntimeserviceclient.cpp
+  lexruntimeservicerequest.cpp
+  lexruntimeserviceresponse.cpp
   deletesessionrequest.cpp
   deletesessionresponse.cpp
   getsessionrequest.cpp
   getsessionresponse.cpp
-  lexruntimeserviceclient.cpp
-  lexruntimeservicerequest.cpp
-  lexruntimeserviceresponse.cpp
   postcontentrequest.cpp
   postcontentresponse.cpp
   posttextrequest.cpp

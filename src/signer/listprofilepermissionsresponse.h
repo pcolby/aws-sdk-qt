@@ -24,11 +24,11 @@
 #include "listprofilepermissionsrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListProfilePermissionsResponsePrivate;
 
-class QTAWSSIGNER_EXPORT ListProfilePermissionsResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT ListProfilePermissionsResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

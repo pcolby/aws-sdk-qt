@@ -1,14 +1,21 @@
 add_compile_definitions(QTAWSS3CONTROL_LIBRARY)
 
 add_library(QtAwsS3Control
-  createaccesspointforobjectlambdarequest.h
-  createaccesspointforobjectlambdarequest_p.h
-  createaccesspointforobjectlambdaresponse.h
-  createaccesspointforobjectlambdaresponse_p.h
+  qtawss3controlglobal.h
+  s3controlclient.h
+  s3controlclient_p.h
+  s3controlrequest.h
+  s3controlrequest_p.h
+  s3controlresponse.h
+  s3controlresponse_p.h
   createaccesspointrequest.h
   createaccesspointrequest_p.h
   createaccesspointresponse.h
   createaccesspointresponse_p.h
+  createaccesspointforobjectlambdarequest.h
+  createaccesspointforobjectlambdarequest_p.h
+  createaccesspointforobjectlambdaresponse.h
+  createaccesspointforobjectlambdaresponse_p.h
   createbucketrequest.h
   createbucketrequest_p.h
   createbucketresponse.h
@@ -17,22 +24,30 @@ add_library(QtAwsS3Control
   createjobrequest_p.h
   createjobresponse.h
   createjobresponse_p.h
-  deleteaccesspointforobjectlambdarequest.h
-  deleteaccesspointforobjectlambdarequest_p.h
-  deleteaccesspointforobjectlambdaresponse.h
-  deleteaccesspointforobjectlambdaresponse_p.h
-  deleteaccesspointpolicyforobjectlambdarequest.h
-  deleteaccesspointpolicyforobjectlambdarequest_p.h
-  deleteaccesspointpolicyforobjectlambdaresponse.h
-  deleteaccesspointpolicyforobjectlambdaresponse_p.h
-  deleteaccesspointpolicyrequest.h
-  deleteaccesspointpolicyrequest_p.h
-  deleteaccesspointpolicyresponse.h
-  deleteaccesspointpolicyresponse_p.h
+  createmultiregionaccesspointrequest.h
+  createmultiregionaccesspointrequest_p.h
+  createmultiregionaccesspointresponse.h
+  createmultiregionaccesspointresponse_p.h
   deleteaccesspointrequest.h
   deleteaccesspointrequest_p.h
   deleteaccesspointresponse.h
   deleteaccesspointresponse_p.h
+  deleteaccesspointforobjectlambdarequest.h
+  deleteaccesspointforobjectlambdarequest_p.h
+  deleteaccesspointforobjectlambdaresponse.h
+  deleteaccesspointforobjectlambdaresponse_p.h
+  deleteaccesspointpolicyrequest.h
+  deleteaccesspointpolicyrequest_p.h
+  deleteaccesspointpolicyresponse.h
+  deleteaccesspointpolicyresponse_p.h
+  deleteaccesspointpolicyforobjectlambdarequest.h
+  deleteaccesspointpolicyforobjectlambdarequest_p.h
+  deleteaccesspointpolicyforobjectlambdaresponse.h
+  deleteaccesspointpolicyforobjectlambdaresponse_p.h
+  deletebucketrequest.h
+  deletebucketrequest_p.h
+  deletebucketresponse.h
+  deletebucketresponse_p.h
   deletebucketlifecycleconfigurationrequest.h
   deletebucketlifecycleconfigurationrequest_p.h
   deletebucketlifecycleconfigurationresponse.h
@@ -41,10 +56,6 @@ add_library(QtAwsS3Control
   deletebucketpolicyrequest_p.h
   deletebucketpolicyresponse.h
   deletebucketpolicyresponse_p.h
-  deletebucketrequest.h
-  deletebucketrequest_p.h
-  deletebucketresponse.h
-  deletebucketresponse_p.h
   deletebuckettaggingrequest.h
   deletebuckettaggingrequest_p.h
   deletebuckettaggingresponse.h
@@ -53,6 +64,10 @@ add_library(QtAwsS3Control
   deletejobtaggingrequest_p.h
   deletejobtaggingresponse.h
   deletejobtaggingresponse_p.h
+  deletemultiregionaccesspointrequest.h
+  deletemultiregionaccesspointrequest_p.h
+  deletemultiregionaccesspointresponse.h
+  deletemultiregionaccesspointresponse_p.h
   deletepublicaccessblockrequest.h
   deletepublicaccessblockrequest_p.h
   deletepublicaccessblockresponse.h
@@ -69,6 +84,14 @@ add_library(QtAwsS3Control
   describejobrequest_p.h
   describejobresponse.h
   describejobresponse_p.h
+  describemultiregionaccesspointoperationrequest.h
+  describemultiregionaccesspointoperationrequest_p.h
+  describemultiregionaccesspointoperationresponse.h
+  describemultiregionaccesspointoperationresponse_p.h
+  getaccesspointrequest.h
+  getaccesspointrequest_p.h
+  getaccesspointresponse.h
+  getaccesspointresponse_p.h
   getaccesspointconfigurationforobjectlambdarequest.h
   getaccesspointconfigurationforobjectlambdarequest_p.h
   getaccesspointconfigurationforobjectlambdaresponse.h
@@ -77,26 +100,26 @@ add_library(QtAwsS3Control
   getaccesspointforobjectlambdarequest_p.h
   getaccesspointforobjectlambdaresponse.h
   getaccesspointforobjectlambdaresponse_p.h
-  getaccesspointpolicyforobjectlambdarequest.h
-  getaccesspointpolicyforobjectlambdarequest_p.h
-  getaccesspointpolicyforobjectlambdaresponse.h
-  getaccesspointpolicyforobjectlambdaresponse_p.h
   getaccesspointpolicyrequest.h
   getaccesspointpolicyrequest_p.h
   getaccesspointpolicyresponse.h
   getaccesspointpolicyresponse_p.h
-  getaccesspointpolicystatusforobjectlambdarequest.h
-  getaccesspointpolicystatusforobjectlambdarequest_p.h
-  getaccesspointpolicystatusforobjectlambdaresponse.h
-  getaccesspointpolicystatusforobjectlambdaresponse_p.h
+  getaccesspointpolicyforobjectlambdarequest.h
+  getaccesspointpolicyforobjectlambdarequest_p.h
+  getaccesspointpolicyforobjectlambdaresponse.h
+  getaccesspointpolicyforobjectlambdaresponse_p.h
   getaccesspointpolicystatusrequest.h
   getaccesspointpolicystatusrequest_p.h
   getaccesspointpolicystatusresponse.h
   getaccesspointpolicystatusresponse_p.h
-  getaccesspointrequest.h
-  getaccesspointrequest_p.h
-  getaccesspointresponse.h
-  getaccesspointresponse_p.h
+  getaccesspointpolicystatusforobjectlambdarequest.h
+  getaccesspointpolicystatusforobjectlambdarequest_p.h
+  getaccesspointpolicystatusforobjectlambdaresponse.h
+  getaccesspointpolicystatusforobjectlambdaresponse_p.h
+  getbucketrequest.h
+  getbucketrequest_p.h
+  getbucketresponse.h
+  getbucketresponse_p.h
   getbucketlifecycleconfigurationrequest.h
   getbucketlifecycleconfigurationrequest_p.h
   getbucketlifecycleconfigurationresponse.h
@@ -105,18 +128,30 @@ add_library(QtAwsS3Control
   getbucketpolicyrequest_p.h
   getbucketpolicyresponse.h
   getbucketpolicyresponse_p.h
-  getbucketrequest.h
-  getbucketrequest_p.h
-  getbucketresponse.h
-  getbucketresponse_p.h
   getbuckettaggingrequest.h
   getbuckettaggingrequest_p.h
   getbuckettaggingresponse.h
   getbuckettaggingresponse_p.h
+  getbucketversioningrequest.h
+  getbucketversioningrequest_p.h
+  getbucketversioningresponse.h
+  getbucketversioningresponse_p.h
   getjobtaggingrequest.h
   getjobtaggingrequest_p.h
   getjobtaggingresponse.h
   getjobtaggingresponse_p.h
+  getmultiregionaccesspointrequest.h
+  getmultiregionaccesspointrequest_p.h
+  getmultiregionaccesspointresponse.h
+  getmultiregionaccesspointresponse_p.h
+  getmultiregionaccesspointpolicyrequest.h
+  getmultiregionaccesspointpolicyrequest_p.h
+  getmultiregionaccesspointpolicyresponse.h
+  getmultiregionaccesspointpolicyresponse_p.h
+  getmultiregionaccesspointpolicystatusrequest.h
+  getmultiregionaccesspointpolicystatusrequest_p.h
+  getmultiregionaccesspointpolicystatusresponse.h
+  getmultiregionaccesspointpolicystatusresponse_p.h
   getpublicaccessblockrequest.h
   getpublicaccessblockrequest_p.h
   getpublicaccessblockresponse.h
@@ -129,18 +164,22 @@ add_library(QtAwsS3Control
   getstoragelensconfigurationtaggingrequest_p.h
   getstoragelensconfigurationtaggingresponse.h
   getstoragelensconfigurationtaggingresponse_p.h
-  listaccesspointsforobjectlambdarequest.h
-  listaccesspointsforobjectlambdarequest_p.h
-  listaccesspointsforobjectlambdaresponse.h
-  listaccesspointsforobjectlambdaresponse_p.h
   listaccesspointsrequest.h
   listaccesspointsrequest_p.h
   listaccesspointsresponse.h
   listaccesspointsresponse_p.h
+  listaccesspointsforobjectlambdarequest.h
+  listaccesspointsforobjectlambdarequest_p.h
+  listaccesspointsforobjectlambdaresponse.h
+  listaccesspointsforobjectlambdaresponse_p.h
   listjobsrequest.h
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  listmultiregionaccesspointsrequest.h
+  listmultiregionaccesspointsrequest_p.h
+  listmultiregionaccesspointsresponse.h
+  listmultiregionaccesspointsresponse_p.h
   listregionalbucketsrequest.h
   listregionalbucketsrequest_p.h
   listregionalbucketsresponse.h
@@ -153,14 +192,14 @@ add_library(QtAwsS3Control
   putaccesspointconfigurationforobjectlambdarequest_p.h
   putaccesspointconfigurationforobjectlambdaresponse.h
   putaccesspointconfigurationforobjectlambdaresponse_p.h
-  putaccesspointpolicyforobjectlambdarequest.h
-  putaccesspointpolicyforobjectlambdarequest_p.h
-  putaccesspointpolicyforobjectlambdaresponse.h
-  putaccesspointpolicyforobjectlambdaresponse_p.h
   putaccesspointpolicyrequest.h
   putaccesspointpolicyrequest_p.h
   putaccesspointpolicyresponse.h
   putaccesspointpolicyresponse_p.h
+  putaccesspointpolicyforobjectlambdarequest.h
+  putaccesspointpolicyforobjectlambdarequest_p.h
+  putaccesspointpolicyforobjectlambdaresponse.h
+  putaccesspointpolicyforobjectlambdaresponse_p.h
   putbucketlifecycleconfigurationrequest.h
   putbucketlifecycleconfigurationrequest_p.h
   putbucketlifecycleconfigurationresponse.h
@@ -173,10 +212,18 @@ add_library(QtAwsS3Control
   putbuckettaggingrequest_p.h
   putbuckettaggingresponse.h
   putbuckettaggingresponse_p.h
+  putbucketversioningrequest.h
+  putbucketversioningrequest_p.h
+  putbucketversioningresponse.h
+  putbucketversioningresponse_p.h
   putjobtaggingrequest.h
   putjobtaggingrequest_p.h
   putjobtaggingresponse.h
   putjobtaggingresponse_p.h
+  putmultiregionaccesspointpolicyrequest.h
+  putmultiregionaccesspointpolicyrequest_p.h
+  putmultiregionaccesspointpolicyresponse.h
+  putmultiregionaccesspointpolicyresponse_p.h
   putpublicaccessblockrequest.h
   putpublicaccessblockrequest_p.h
   putpublicaccessblockresponse.h
@@ -189,13 +236,6 @@ add_library(QtAwsS3Control
   putstoragelensconfigurationtaggingrequest_p.h
   putstoragelensconfigurationtaggingresponse.h
   putstoragelensconfigurationtaggingresponse_p.h
-  qtawss3controlglobal.h
-  s3controlclient.h
-  s3controlclient_p.h
-  s3controlrequest.h
-  s3controlrequest_p.h
-  s3controlresponse.h
-  s3controlresponse_p.h
   updatejobpriorityrequest.h
   updatejobpriorityrequest_p.h
   updatejobpriorityresponse.h
@@ -204,32 +244,39 @@ add_library(QtAwsS3Control
   updatejobstatusrequest_p.h
   updatejobstatusresponse.h
   updatejobstatusresponse_p.h
-  createaccesspointforobjectlambdarequest.cpp
-  createaccesspointforobjectlambdaresponse.cpp
+  s3controlclient.cpp
+  s3controlrequest.cpp
+  s3controlresponse.cpp
   createaccesspointrequest.cpp
   createaccesspointresponse.cpp
+  createaccesspointforobjectlambdarequest.cpp
+  createaccesspointforobjectlambdaresponse.cpp
   createbucketrequest.cpp
   createbucketresponse.cpp
   createjobrequest.cpp
   createjobresponse.cpp
-  deleteaccesspointforobjectlambdarequest.cpp
-  deleteaccesspointforobjectlambdaresponse.cpp
-  deleteaccesspointpolicyforobjectlambdarequest.cpp
-  deleteaccesspointpolicyforobjectlambdaresponse.cpp
-  deleteaccesspointpolicyrequest.cpp
-  deleteaccesspointpolicyresponse.cpp
+  createmultiregionaccesspointrequest.cpp
+  createmultiregionaccesspointresponse.cpp
   deleteaccesspointrequest.cpp
   deleteaccesspointresponse.cpp
+  deleteaccesspointforobjectlambdarequest.cpp
+  deleteaccesspointforobjectlambdaresponse.cpp
+  deleteaccesspointpolicyrequest.cpp
+  deleteaccesspointpolicyresponse.cpp
+  deleteaccesspointpolicyforobjectlambdarequest.cpp
+  deleteaccesspointpolicyforobjectlambdaresponse.cpp
+  deletebucketrequest.cpp
+  deletebucketresponse.cpp
   deletebucketlifecycleconfigurationrequest.cpp
   deletebucketlifecycleconfigurationresponse.cpp
   deletebucketpolicyrequest.cpp
   deletebucketpolicyresponse.cpp
-  deletebucketrequest.cpp
-  deletebucketresponse.cpp
   deletebuckettaggingrequest.cpp
   deletebuckettaggingresponse.cpp
   deletejobtaggingrequest.cpp
   deletejobtaggingresponse.cpp
+  deletemultiregionaccesspointrequest.cpp
+  deletemultiregionaccesspointresponse.cpp
   deletepublicaccessblockrequest.cpp
   deletepublicaccessblockresponse.cpp
   deletestoragelensconfigurationrequest.cpp
@@ -238,69 +285,82 @@ add_library(QtAwsS3Control
   deletestoragelensconfigurationtaggingresponse.cpp
   describejobrequest.cpp
   describejobresponse.cpp
+  describemultiregionaccesspointoperationrequest.cpp
+  describemultiregionaccesspointoperationresponse.cpp
+  getaccesspointrequest.cpp
+  getaccesspointresponse.cpp
   getaccesspointconfigurationforobjectlambdarequest.cpp
   getaccesspointconfigurationforobjectlambdaresponse.cpp
   getaccesspointforobjectlambdarequest.cpp
   getaccesspointforobjectlambdaresponse.cpp
-  getaccesspointpolicyforobjectlambdarequest.cpp
-  getaccesspointpolicyforobjectlambdaresponse.cpp
   getaccesspointpolicyrequest.cpp
   getaccesspointpolicyresponse.cpp
-  getaccesspointpolicystatusforobjectlambdarequest.cpp
-  getaccesspointpolicystatusforobjectlambdaresponse.cpp
+  getaccesspointpolicyforobjectlambdarequest.cpp
+  getaccesspointpolicyforobjectlambdaresponse.cpp
   getaccesspointpolicystatusrequest.cpp
   getaccesspointpolicystatusresponse.cpp
-  getaccesspointrequest.cpp
-  getaccesspointresponse.cpp
+  getaccesspointpolicystatusforobjectlambdarequest.cpp
+  getaccesspointpolicystatusforobjectlambdaresponse.cpp
+  getbucketrequest.cpp
+  getbucketresponse.cpp
   getbucketlifecycleconfigurationrequest.cpp
   getbucketlifecycleconfigurationresponse.cpp
   getbucketpolicyrequest.cpp
   getbucketpolicyresponse.cpp
-  getbucketrequest.cpp
-  getbucketresponse.cpp
   getbuckettaggingrequest.cpp
   getbuckettaggingresponse.cpp
+  getbucketversioningrequest.cpp
+  getbucketversioningresponse.cpp
   getjobtaggingrequest.cpp
   getjobtaggingresponse.cpp
+  getmultiregionaccesspointrequest.cpp
+  getmultiregionaccesspointresponse.cpp
+  getmultiregionaccesspointpolicyrequest.cpp
+  getmultiregionaccesspointpolicyresponse.cpp
+  getmultiregionaccesspointpolicystatusrequest.cpp
+  getmultiregionaccesspointpolicystatusresponse.cpp
   getpublicaccessblockrequest.cpp
   getpublicaccessblockresponse.cpp
   getstoragelensconfigurationrequest.cpp
   getstoragelensconfigurationresponse.cpp
   getstoragelensconfigurationtaggingrequest.cpp
   getstoragelensconfigurationtaggingresponse.cpp
-  listaccesspointsforobjectlambdarequest.cpp
-  listaccesspointsforobjectlambdaresponse.cpp
   listaccesspointsrequest.cpp
   listaccesspointsresponse.cpp
+  listaccesspointsforobjectlambdarequest.cpp
+  listaccesspointsforobjectlambdaresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
+  listmultiregionaccesspointsrequest.cpp
+  listmultiregionaccesspointsresponse.cpp
   listregionalbucketsrequest.cpp
   listregionalbucketsresponse.cpp
   liststoragelensconfigurationsrequest.cpp
   liststoragelensconfigurationsresponse.cpp
   putaccesspointconfigurationforobjectlambdarequest.cpp
   putaccesspointconfigurationforobjectlambdaresponse.cpp
-  putaccesspointpolicyforobjectlambdarequest.cpp
-  putaccesspointpolicyforobjectlambdaresponse.cpp
   putaccesspointpolicyrequest.cpp
   putaccesspointpolicyresponse.cpp
+  putaccesspointpolicyforobjectlambdarequest.cpp
+  putaccesspointpolicyforobjectlambdaresponse.cpp
   putbucketlifecycleconfigurationrequest.cpp
   putbucketlifecycleconfigurationresponse.cpp
   putbucketpolicyrequest.cpp
   putbucketpolicyresponse.cpp
   putbuckettaggingrequest.cpp
   putbuckettaggingresponse.cpp
+  putbucketversioningrequest.cpp
+  putbucketversioningresponse.cpp
   putjobtaggingrequest.cpp
   putjobtaggingresponse.cpp
+  putmultiregionaccesspointpolicyrequest.cpp
+  putmultiregionaccesspointpolicyresponse.cpp
   putpublicaccessblockrequest.cpp
   putpublicaccessblockresponse.cpp
   putstoragelensconfigurationrequest.cpp
   putstoragelensconfigurationresponse.cpp
   putstoragelensconfigurationtaggingrequest.cpp
   putstoragelensconfigurationtaggingresponse.cpp
-  s3controlclient.cpp
-  s3controlrequest.cpp
-  s3controlresponse.cpp
   updatejobpriorityrequest.cpp
   updatejobpriorityresponse.cpp
   updatejobstatusrequest.cpp

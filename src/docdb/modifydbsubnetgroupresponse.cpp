@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBSubnetGroupResponse
- * \brief The ModifyDBSubnetGroupResponse class provides an interace for DocDB ModifyDBSubnetGroup responses.
+ * \class QtAws::DocDb::ModifyDBSubnetGroupResponse
+ * \brief The ModifyDBSubnetGroupResponse class provides an interace for DocDb ModifyDBSubnetGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBSubnetGroup
+ * \sa DocDbClient::modifyDBSubnetGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
         const ModifyDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyDBSubnetGroupResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBSubnetGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyDBSubnetGroup \a response.
+ * Parses a successful DocDb ModifyDBSubnetGroup \a response.
  */
 void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBSubnetGroupResponsePrivate
+ * \class QtAws::DocDb::ModifyDBSubnetGroupResponsePrivate
  * \brief The ModifyDBSubnetGroupResponsePrivate class provides private implementation for ModifyDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
-    ModifyDBSubnetGroupResponse * const q) : DocDBResponsePrivate(q)
+    ModifyDBSubnetGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyDBSubnetGroup response element from \a xml.
+ * Parses a DocDb ModifyDBSubnetGroup response element from \a xml.
  */
 void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

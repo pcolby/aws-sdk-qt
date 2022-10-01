@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorResponsePrivate;
+class IotDeviceAdvisorResponsePrivate;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTDEVICEADVISOR_EXPORT IotDeviceAdvisorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    IoTDeviceAdvisorResponse(QObject * const parent = 0);
+    IotDeviceAdvisorResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    IoTDeviceAdvisorResponse(IoTDeviceAdvisorResponsePrivate * const d, QObject * const parent);
+    IotDeviceAdvisorResponse(IotDeviceAdvisorResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(IoTDeviceAdvisorResponse)
-    Q_DISABLE_COPY(IoTDeviceAdvisorResponse)
+    Q_DECLARE_PRIVATE(IotDeviceAdvisorResponse)
+    Q_DISABLE_COPY(IotDeviceAdvisorResponse)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

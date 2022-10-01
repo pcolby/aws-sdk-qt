@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagInstanceProfileResponse
- * \brief The TagInstanceProfileResponse class provides an interace for IAM TagInstanceProfile responses.
+ * \class QtAws::Iam::TagInstanceProfileResponse
+ * \brief The TagInstanceProfileResponse class provides an interace for Iam TagInstanceProfile responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagInstanceProfile
  */
@@ -68,7 +68,7 @@ const TagInstanceProfileRequest * TagInstanceProfileResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM TagInstanceProfile \a response.
+ * Parses a successful Iam TagInstanceProfile \a response.
  */
 void TagInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void TagInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::TagInstanceProfileResponsePrivate
+ * \class QtAws::Iam::TagInstanceProfileResponsePrivate
  * \brief The TagInstanceProfileResponsePrivate class provides private implementation for TagInstanceProfileResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ TagInstanceProfileResponsePrivate::TagInstanceProfileResponsePrivate(
 }
 
 /*!
- * Parses a IAM TagInstanceProfile response element from \a xml.
+ * Parses a Iam TagInstanceProfile response element from \a xml.
  */
 void TagInstanceProfileResponsePrivate::parseTagInstanceProfileResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void TagInstanceProfileResponsePrivate::parseTagInstanceProfileResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

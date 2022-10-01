@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutEmailIdentityDkimAttributesRequestPrivate;
 
-class QTAWSSESV2_EXPORT PutEmailIdentityDkimAttributesRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutEmailIdentityDkimAttributesRequest : public SESv2Request {
 
 public:
     PutEmailIdentityDkimAttributesRequest(const PutEmailIdentityDkimAttributesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

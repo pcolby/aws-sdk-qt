@@ -39,6 +39,7 @@ namespace Organizations {
  * \value AcceptHandshakeAction Organizations AcceptHandshake action.
  * \value AttachPolicyAction Organizations AttachPolicy action.
  * \value CancelHandshakeAction Organizations CancelHandshake action.
+ * \value CloseAccountAction Organizations CloseAccount action.
  * \value CreateAccountAction Organizations CreateAccount action.
  * \value CreateGovCloudAccountAction Organizations CreateGovCloudAccount action.
  * \value CreateOrganizationAction Organizations CreateOrganization action.
@@ -294,7 +295,7 @@ QNetworkRequest OrganizationsRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 OrganizationsRequestPrivate::OrganizationsRequestPrivate(const OrganizationsRequest::Action action, OrganizationsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-11-28"))
 {
 
 }
@@ -331,6 +332,7 @@ QString OrganizationsRequestPrivate::toString(const OrganizationsRequest::Action
         ActionToString(AcceptHandshake);
         ActionToString(AttachPolicy);
         ActionToString(CancelHandshake);
+        ActionToString(CloseAccount);
         ActionToString(CreateAccount);
         ActionToString(CreateGovCloudAccount);
         ActionToString(CreateOrganization);

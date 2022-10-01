@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterParameterGroupResponse
- * \brief The ModifyDBClusterParameterGroupResponse class provides an interace for DocDB ModifyDBClusterParameterGroup responses.
+ * \class QtAws::DocDb::ModifyDBClusterParameterGroupResponse
+ * \brief The ModifyDBClusterParameterGroupResponse class provides an interace for DocDb ModifyDBClusterParameterGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBClusterParameterGroup
+ * \sa DocDbClient::modifyDBClusterParameterGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyDBClusterParameterGroupResponse::ModifyDBClusterParameterGroupResponse(
         const ModifyDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyDBClusterParameterGroupResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyDBClusterParameterGroupRequest * ModifyDBClusterParameterGroupRespon
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyDBClusterParameterGroup \a response.
+ * Parses a successful DocDb ModifyDBClusterParameterGroup \a response.
  */
 void ModifyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBClusterParameterGroupResponsePrivate
+ * \class QtAws::DocDb::ModifyDBClusterParameterGroupResponsePrivate
  * \brief The ModifyDBClusterParameterGroupResponsePrivate class provides private implementation for ModifyDBClusterParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 ModifyDBClusterParameterGroupResponsePrivate::ModifyDBClusterParameterGroupResponsePrivate(
-    ModifyDBClusterParameterGroupResponse * const q) : DocDBResponsePrivate(q)
+    ModifyDBClusterParameterGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyDBClusterParameterGroup response element from \a xml.
+ * Parses a DocDb ModifyDBClusterParameterGroup response element from \a xml.
  */
 void ModifyDBClusterParameterGroupResponsePrivate::parseModifyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyDBClusterParameterGroupResponsePrivate::parseModifyDBClusterParameter
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

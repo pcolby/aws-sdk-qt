@@ -24,14 +24,14 @@
 #include "scanrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ScanRequest;
 
-class ScanRequestPrivate : public DynamoDBRequestPrivate {
+class ScanRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ScanRequestPrivate(const DynamoDBRequest::Action action,
+    ScanRequestPrivate(const DynamoDbRequest::Action action,
                                    ScanRequest * const q);
     ScanRequestPrivate(const ScanRequestPrivate &other,
                                    ScanRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

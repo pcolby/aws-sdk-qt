@@ -23,11 +23,11 @@
 #include "ssoadminrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListPermissionSetProvisioningStatusRequestPrivate;
 
-class QTAWSSSOADMIN_EXPORT ListPermissionSetProvisioningStatusRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT ListPermissionSetProvisioningStatusRequest : public SsoAdminRequest {
 
 public:
     ListPermissionSetProvisioningStatusRequest(const ListPermissionSetProvisioningStatusRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

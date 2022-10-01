@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class SfnClientPrivate;
 class CreateActivityRequest;
@@ -123,7 +123,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

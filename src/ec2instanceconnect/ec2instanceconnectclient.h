@@ -27,25 +27,25 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
-class EC2InstanceConnectClientPrivate;
+class Ec2InstanceConnectClientPrivate;
 class SendSSHPublicKeyRequest;
 class SendSSHPublicKeyResponse;
 class SendSerialConsoleSSHPublicKeyRequest;
 class SendSerialConsoleSSHPublicKeyResponse;
 
-class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEC2INSTANCECONNECT_EXPORT Ec2InstanceConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    EC2InstanceConnectClient(
+    Ec2InstanceConnectClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit EC2InstanceConnectClient(
+    explicit Ec2InstanceConnectClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -55,12 +55,12 @@ public slots:
     SendSerialConsoleSSHPublicKeyResponse * sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(EC2InstanceConnectClient)
-    Q_DISABLE_COPY(EC2InstanceConnectClient)
+    Q_DECLARE_PRIVATE(Ec2InstanceConnectClient)
+    Q_DISABLE_COPY(Ec2InstanceConnectClient)
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

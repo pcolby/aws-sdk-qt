@@ -24,11 +24,11 @@
 #include "getrulerequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetRuleResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetRuleResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetRuleResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

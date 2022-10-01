@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ListAccessKeysResponse
- * \brief The ListAccessKeysResponse class provides an interace for IAM ListAccessKeys responses.
+ * \class QtAws::Iam::ListAccessKeysResponse
+ * \brief The ListAccessKeysResponse class provides an interace for Iam ListAccessKeys responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::listAccessKeys
  */
@@ -68,7 +68,7 @@ const ListAccessKeysRequest * ListAccessKeysResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM ListAccessKeys \a response.
+ * Parses a successful Iam ListAccessKeys \a response.
  */
 void ListAccessKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void ListAccessKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::ListAccessKeysResponsePrivate
+ * \class QtAws::Iam::ListAccessKeysResponsePrivate
  * \brief The ListAccessKeysResponsePrivate class provides private implementation for ListAccessKeysResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
 }
 
 /*!
- * Parses a IAM ListAccessKeys response element from \a xml.
+ * Parses a Iam ListAccessKeys response element from \a xml.
  */
 void ListAccessKeysResponsePrivate::parseListAccessKeysResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ListAccessKeysResponsePrivate::parseListAccessKeysResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

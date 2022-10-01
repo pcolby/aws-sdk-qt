@@ -24,7 +24,7 @@
 #include "describeeventsrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DescribeEventsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

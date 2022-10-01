@@ -24,14 +24,14 @@
 #include "deleteauthorizerrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteAuthorizerRequest;
 
-class DeleteAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteAuthorizerRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteAuthorizerRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteAuthorizerRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteAuthorizerRequest * const q);
     DeleteAuthorizerRequestPrivate(const DeleteAuthorizerRequestPrivate &other,
                                    DeleteAuthorizerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

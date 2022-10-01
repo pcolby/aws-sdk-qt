@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateDataSourceResponse
- * \brief The CreateDataSourceResponse class provides an interace for kendra CreateDataSource responses.
+ * \class QtAws::Kendra::CreateDataSourceResponse
+ * \brief The CreateDataSourceResponse class provides an interace for Kendra CreateDataSource responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createDataSource
+ * \sa KendraClient::createDataSource
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateDataSourceResponse::CreateDataSourceResponse(
         const CreateDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new CreateDataSourceResponsePrivate(this), parent)
+    : KendraResponse(new CreateDataSourceResponsePrivate(this), parent)
 {
     setRequest(new CreateDataSourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateDataSourceRequest * CreateDataSourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra CreateDataSource \a response.
+ * Parses a successful Kendra CreateDataSource \a response.
  */
 void CreateDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::CreateDataSourceResponsePrivate
+ * \class QtAws::Kendra::CreateDataSourceResponsePrivate
  * \brief The CreateDataSourceResponsePrivate class provides private implementation for CreateDataSourceResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a CreateDataSourceResponsePrivate object with public implementation \a q.
  */
 CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
-    CreateDataSourceResponse * const q) : kendraResponsePrivate(q)
+    CreateDataSourceResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra CreateDataSource response element from \a xml.
+ * Parses a Kendra CreateDataSource response element from \a xml.
  */
 void CreateDataSourceResponsePrivate::parseCreateDataSourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateDataSourceResponsePrivate::parseCreateDataSourceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

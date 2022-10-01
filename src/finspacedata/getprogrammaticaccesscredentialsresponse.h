@@ -24,11 +24,11 @@
 #include "getprogrammaticaccesscredentialsrequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class GetProgrammaticAccessCredentialsResponsePrivate;
 
-class QTAWSFINSPACEDATA_EXPORT GetProgrammaticAccessCredentialsResponse : public FinSpaceDataResponse {
+class QTAWSFINSPACEDATA_EXPORT GetProgrammaticAccessCredentialsResponse : public FinspaceDataResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

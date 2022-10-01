@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteEventSubscriptionResponse
- * \brief The DeleteEventSubscriptionResponse class provides an interace for RDS DeleteEventSubscription responses.
+ * \class QtAws::Rds::DeleteEventSubscriptionResponse
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for Rds DeleteEventSubscription responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteEventSubscription \a response.
+ * Parses a successful Rds DeleteEventSubscription \a response.
  */
 void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteEventSubscriptionResponsePrivate
+ * \class QtAws::Rds::DeleteEventSubscriptionResponsePrivate
  * \brief The DeleteEventSubscriptionResponsePrivate class provides private implementation for DeleteEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteEventSubscription response element from \a xml.
+ * Parses a Rds DeleteEventSubscription response element from \a xml.
  */
 void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

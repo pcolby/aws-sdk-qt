@@ -24,7 +24,7 @@
 #include "deleterecordingconfigurationrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class DeleteRecordingConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

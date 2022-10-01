@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::TagResourceResponse
- * \brief The TagResourceResponse class provides an interace for finspace TagResource responses.
+ * \class QtAws::Finspace::TagResourceResponse
+ * \brief The TagResourceResponse class provides an interace for Finspace TagResource responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::tagResource
+ * \sa FinspaceClient::tagResource
  */
 
 /*!
@@ -45,7 +45,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new TagResourceResponsePrivate(this), parent)
+    : FinspaceResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const TagResourceRequest * TagResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace TagResource \a response.
+ * Parses a successful Finspace TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::TagResourceResponsePrivate
+ * \class QtAws::Finspace::TagResourceResponsePrivate
  * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : finspaceResponsePrivate(q)
+    TagResourceResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace TagResource response element from \a xml.
+ * Parses a Finspace TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

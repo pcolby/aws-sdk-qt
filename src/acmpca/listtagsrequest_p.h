@@ -24,14 +24,14 @@
 #include "listtagsrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class ListTagsRequest;
 
-class ListTagsRequestPrivate : public AcmpcaRequestPrivate {
+class ListTagsRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const AcmpcaRequest::Action action,
+    ListTagsRequestPrivate(const AcmPcaRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

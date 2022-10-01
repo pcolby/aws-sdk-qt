@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for OpsWorksCM UntagResource requests.
+ * \class QtAws::OpsWorksCm::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for OpsWorksCm UntagResource requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::untagResource
+ * \sa OpsWorksCmClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : OpsWorksCMRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : OpsWorksCMRequest(new UntagResourceRequestPrivate(OpsWorksCMRequest::UntagResourceAction, this))
+    : OpsWorksCmRequest(new UntagResourceRequestPrivate(OpsWorksCmRequest::UntagResourceAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::OpsWorksCM::UntagResourceRequestPrivate
+ * \class QtAws::OpsWorksCm::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a UntagResourceRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const OpsWorksCMRequest::Action action, UntagResourceRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, UntagResourceRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetSendStatisticsRequest
- * \brief The GetSendStatisticsRequest class provides an interface for SES GetSendStatistics requests.
+ * \class QtAws::Ses::GetSendStatisticsRequest
+ * \brief The GetSendStatisticsRequest class provides an interface for Ses GetSendStatistics requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * GetSendStatisticsRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SES::GetSendStatisticsRequestPrivate
+ * \class QtAws::Ses::GetSendStatisticsRequestPrivate
  * \brief The GetSendStatisticsRequestPrivate class provides private implementation for GetSendStatisticsRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ GetSendStatisticsRequestPrivate::GetSendStatisticsRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

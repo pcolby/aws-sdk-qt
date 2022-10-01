@@ -24,16 +24,16 @@
 #include "ec2request.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class Ec2Request;
 
 class Ec2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    Ec2Request::Action action; ///< EC2 action to be performed.
-    QString apiVersion;        ///< EC2 API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EC2 request (query string) parameters. @todo?
+    Ec2Request::Action action; ///< Ec2 action to be performed.
+    QString apiVersion;        ///< Ec2 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ec2 request (query string) parameters. @todo?
 
     Ec2RequestPrivate(const Ec2Request::Action action, Ec2Request * const q);
     Ec2RequestPrivate(const Ec2RequestPrivate &other, Ec2Request * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

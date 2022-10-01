@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::ListNodegroupsResponse
- * \brief The ListNodegroupsResponse class provides an interace for EKS ListNodegroups responses.
+ * \class QtAws::Eks::ListNodegroupsResponse
+ * \brief The ListNodegroupsResponse class provides an interace for Eks ListNodegroups responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const ListNodegroupsRequest * ListNodegroupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS ListNodegroups \a response.
+ * Parses a successful Eks ListNodegroups \a response.
  */
 void ListNodegroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void ListNodegroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::ListNodegroupsResponsePrivate
+ * \class QtAws::Eks::ListNodegroupsResponsePrivate
  * \brief The ListNodegroupsResponsePrivate class provides private implementation for ListNodegroupsResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ ListNodegroupsResponsePrivate::ListNodegroupsResponsePrivate(
 }
 
 /*!
- * Parses a EKS ListNodegroups response element from \a xml.
+ * Parses a Eks ListNodegroups response element from \a xml.
  */
 void ListNodegroupsResponsePrivate::parseListNodegroupsResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void ListNodegroupsResponsePrivate::parseListNodegroupsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

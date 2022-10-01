@@ -39,6 +39,7 @@ namespace S3Outposts {
  * \value CreateEndpointAction S3Outposts CreateEndpoint action.
  * \value DeleteEndpointAction S3Outposts DeleteEndpoint action.
  * \value ListEndpointsAction S3Outposts ListEndpoints action.
+ * \value ListSharedEndpointsAction S3Outposts ListSharedEndpoints action.
  */
 
 /*!
@@ -246,7 +247,7 @@ QNetworkRequest S3OutpostsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3OutpostsRequestPrivate::S3OutpostsRequestPrivate(const S3OutpostsRequest::Action action, S3OutpostsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }
@@ -283,6 +284,7 @@ QString S3OutpostsRequestPrivate::toString(const S3OutpostsRequest::Action &acti
         ActionToString(CreateEndpoint);
         ActionToString(DeleteEndpoint);
         ActionToString(ListEndpoints);
+        ActionToString(ListSharedEndpoints);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

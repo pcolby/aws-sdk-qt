@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListLunaClientsResponse
- * \brief The ListLunaClientsResponse class provides an interace for CloudHSM ListLunaClients responses.
+ * \class QtAws::CloudHsm::ListLunaClientsResponse
+ * \brief The ListLunaClientsResponse class provides an interace for CloudHsm ListLunaClients responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listLunaClients
+ * \sa CloudHsmClient::listLunaClients
  */
 
 /*!
@@ -56,7 +56,7 @@ ListLunaClientsResponse::ListLunaClientsResponse(
         const ListLunaClientsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ListLunaClientsResponsePrivate(this), parent)
+    : CloudHsmResponse(new ListLunaClientsResponsePrivate(this), parent)
 {
     setRequest(new ListLunaClientsRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const ListLunaClientsRequest * ListLunaClientsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM ListLunaClients \a response.
+ * Parses a successful CloudHsm ListLunaClients \a response.
  */
 void ListLunaClientsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void ListLunaClientsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::ListLunaClientsResponsePrivate
+ * \class QtAws::CloudHsm::ListLunaClientsResponsePrivate
  * \brief The ListLunaClientsResponsePrivate class provides private implementation for ListLunaClientsResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a ListLunaClientsResponsePrivate object with public implementation \a q.
  */
 ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
-    ListLunaClientsResponse * const q) : CloudHSMResponsePrivate(q)
+    ListLunaClientsResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM ListLunaClients response element from \a xml.
+ * Parses a CloudHsm ListLunaClients response element from \a xml.
  */
 void ListLunaClientsResponsePrivate::parseListLunaClientsResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void ListLunaClientsResponsePrivate::parseListLunaClientsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

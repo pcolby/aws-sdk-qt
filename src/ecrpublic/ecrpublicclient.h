@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicClientPrivate;
+class EcrPublicClientPrivate;
 class BatchCheckLayerAvailabilityRequest;
 class BatchCheckLayerAvailabilityResponse;
 class BatchDeleteImageRequest;
@@ -77,17 +77,17 @@ class UntagResourceResponse;
 class UploadLayerPartRequest;
 class UploadLayerPartResponse;
 
-class QTAWSECRPUBLIC_EXPORT ECRPublicClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSECRPUBLIC_EXPORT EcrPublicClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    ECRPublicClient(
+    EcrPublicClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit ECRPublicClient(
+    explicit EcrPublicClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -118,12 +118,12 @@ public slots:
     UploadLayerPartResponse * uploadLayerPart(const UploadLayerPartRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(ECRPublicClient)
-    Q_DISABLE_COPY(ECRPublicClient)
+    Q_DECLARE_PRIVATE(EcrPublicClient)
+    Q_DISABLE_COPY(EcrPublicClient)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

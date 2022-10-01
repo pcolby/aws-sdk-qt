@@ -24,7 +24,7 @@
 #include "deletenotificationchannelrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class DeleteNotificationChannelRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

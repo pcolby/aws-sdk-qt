@@ -24,14 +24,14 @@
 #include "deletedistributionconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteDistributionConfigurationRequest;
 
-class DeleteDistributionConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class DeleteDistributionConfigurationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    DeleteDistributionConfigurationRequestPrivate(const imagebuilderRequest::Action action,
+    DeleteDistributionConfigurationRequestPrivate(const ImageBuilderRequest::Action action,
                                    DeleteDistributionConfigurationRequest * const q);
     DeleteDistributionConfigurationRequestPrivate(const DeleteDistributionConfigurationRequestPrivate &other,
                                    DeleteDistributionConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

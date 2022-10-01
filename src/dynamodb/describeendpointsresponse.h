@@ -24,11 +24,11 @@
 #include "describeendpointsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeEndpointsResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeEndpointsResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT DescribeEndpointsResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

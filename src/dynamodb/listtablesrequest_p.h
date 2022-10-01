@@ -24,14 +24,14 @@
 #include "listtablesrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListTablesRequest;
 
-class ListTablesRequestPrivate : public DynamoDBRequestPrivate {
+class ListTablesRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ListTablesRequestPrivate(const DynamoDBRequest::Action action,
+    ListTablesRequestPrivate(const DynamoDbRequest::Action action,
                                    ListTablesRequest * const q);
     ListTablesRequestPrivate(const ListTablesRequestPrivate &other,
                                    ListTablesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeAccountAttributesResponse
- * \brief The DescribeAccountAttributesResponse class provides an interace for RDS DescribeAccountAttributes responses.
+ * \class QtAws::Rds::DescribeAccountAttributesResponse
+ * \brief The DescribeAccountAttributesResponse class provides an interace for Rds DescribeAccountAttributes responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeAccountAttributes \a response.
+ * Parses a successful Rds DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeAccountAttributesResponsePrivate
+ * \class QtAws::Rds::DescribeAccountAttributesResponsePrivate
  * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePriva
 }
 
 /*!
- * Parses a RDS DescribeAccountAttributes response element from \a xml.
+ * Parses a Rds DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

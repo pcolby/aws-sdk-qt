@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::CreateClusterResponse
- * \brief The CreateClusterResponse class provides an interace for EKS CreateCluster responses.
+ * \class QtAws::Eks::CreateClusterResponse
+ * \brief The CreateClusterResponse class provides an interace for Eks CreateCluster responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS CreateCluster \a response.
+ * Parses a successful Eks CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::CreateClusterResponsePrivate
+ * \class QtAws::Eks::CreateClusterResponsePrivate
  * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * Parses a EKS CreateCluster response element from \a xml.
+ * Parses a Eks CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

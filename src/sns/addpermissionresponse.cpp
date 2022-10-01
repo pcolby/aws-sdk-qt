@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::AddPermissionResponse
- * \brief The AddPermissionResponse class provides an interace for SNS AddPermission responses.
+ * \class QtAws::Sns::AddPermissionResponse
+ * \brief The AddPermissionResponse class provides an interace for Sns AddPermission responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const AddPermissionRequest * AddPermissionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS AddPermission \a response.
+ * Parses a successful Sns AddPermission \a response.
  */
 void AddPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void AddPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::AddPermissionResponsePrivate
+ * \class QtAws::Sns::AddPermissionResponsePrivate
  * \brief The AddPermissionResponsePrivate class provides private implementation for AddPermissionResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ AddPermissionResponsePrivate::AddPermissionResponsePrivate(
 }
 
 /*!
- * Parses a SNS AddPermission response element from \a xml.
+ * Parses a Sns AddPermission response element from \a xml.
  */
 void AddPermissionResponsePrivate::parseAddPermissionResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void AddPermissionResponsePrivate::parseAddPermissionResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DeleteManagedEndpointRequest
- * \brief The DeleteManagedEndpointRequest class provides an interface for EMRContainers DeleteManagedEndpoint requests.
+ * \class QtAws::Emrcontainers::DeleteManagedEndpointRequest
+ * \brief The DeleteManagedEndpointRequest class provides an interface for Emrcontainers DeleteManagedEndpoint requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::deleteManagedEndpoint
+ * \sa EmrcontainersClient::deleteManagedEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteManagedEndpointRequest::DeleteManagedEndpointRequest(const DeleteManagedEndpointRequest &other)
-    : EMRContainersRequest(new DeleteManagedEndpointRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new DeleteManagedEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ DeleteManagedEndpointRequest::DeleteManagedEndpointRequest(const DeleteManagedEn
  * Constructs a DeleteManagedEndpointRequest object.
  */
 DeleteManagedEndpointRequest::DeleteManagedEndpointRequest()
-    : EMRContainersRequest(new DeleteManagedEndpointRequestPrivate(EMRContainersRequest::DeleteManagedEndpointAction, this))
+    : EmrcontainersRequest(new DeleteManagedEndpointRequestPrivate(EmrcontainersRequest::DeleteManagedEndpointAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * DeleteManagedEndpointRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::EMRContainers::DeleteManagedEndpointRequestPrivate
+ * \class QtAws::Emrcontainers::DeleteManagedEndpointRequestPrivate
  * \brief The DeleteManagedEndpointRequestPrivate class provides private implementation for DeleteManagedEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a DeleteManagedEndpointRequestPrivate object for EMRContainers \a action,
+ * Constructs a DeleteManagedEndpointRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 DeleteManagedEndpointRequestPrivate::DeleteManagedEndpointRequestPrivate(
-    const EMRContainersRequest::Action action, DeleteManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, DeleteManagedEndpointRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ DeleteManagedEndpointRequestPrivate::DeleteManagedEndpointRequestPrivate(
  */
 DeleteManagedEndpointRequestPrivate::DeleteManagedEndpointRequestPrivate(
     const DeleteManagedEndpointRequestPrivate &other, DeleteManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

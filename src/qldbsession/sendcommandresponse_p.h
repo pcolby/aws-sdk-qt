@@ -23,11 +23,11 @@
 #include "qldbsessionresponse_p.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 class SendCommandResponse;
 
-class SendCommandResponsePrivate : public QLDBSessionResponsePrivate {
+class SendCommandResponsePrivate : public QldbSessionResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

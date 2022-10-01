@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyCurrentDBClusterCapacityRequest
- * \brief The ModifyCurrentDBClusterCapacityRequest class provides an interface for RDS ModifyCurrentDBClusterCapacity requests.
+ * \class QtAws::Rds::ModifyCurrentDBClusterCapacityRequest
+ * \brief The ModifyCurrentDBClusterCapacityRequest class provides an interface for Rds ModifyCurrentDBClusterCapacity requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ModifyCurrentDBClusterCapacityRequest::respon
 }
 
 /*!
- * \class QtAws::RDS::ModifyCurrentDBClusterCapacityRequestPrivate
+ * \class QtAws::Rds::ModifyCurrentDBClusterCapacityRequestPrivate
  * \brief The ModifyCurrentDBClusterCapacityRequestPrivate class provides private implementation for ModifyCurrentDBClusterCapacityRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ModifyCurrentDBClusterCapacityRequestPrivate::ModifyCurrentDBClusterCapacityRequ
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -36,11 +36,16 @@ namespace AppStream {
  * This enum describes the actions that can be performed as AppStream
  * requests.
  *
+ * \value AssociateApplicationFleetAction AppStream AssociateApplicationFleet action.
+ * \value AssociateApplicationToEntitlementAction AppStream AssociateApplicationToEntitlement action.
  * \value AssociateFleetAction AppStream AssociateFleet action.
  * \value BatchAssociateUserStackAction AppStream BatchAssociateUserStack action.
  * \value BatchDisassociateUserStackAction AppStream BatchDisassociateUserStack action.
  * \value CopyImageAction AppStream CopyImage action.
+ * \value CreateAppBlockAction AppStream CreateAppBlock action.
+ * \value CreateApplicationAction AppStream CreateApplication action.
  * \value CreateDirectoryConfigAction AppStream CreateDirectoryConfig action.
+ * \value CreateEntitlementAction AppStream CreateEntitlement action.
  * \value CreateFleetAction AppStream CreateFleet action.
  * \value CreateImageBuilderAction AppStream CreateImageBuilder action.
  * \value CreateImageBuilderStreamingURLAction AppStream CreateImageBuilderStreamingURL action.
@@ -49,7 +54,10 @@ namespace AppStream {
  * \value CreateUpdatedImageAction AppStream CreateUpdatedImage action.
  * \value CreateUsageReportSubscriptionAction AppStream CreateUsageReportSubscription action.
  * \value CreateUserAction AppStream CreateUser action.
+ * \value DeleteAppBlockAction AppStream DeleteAppBlock action.
+ * \value DeleteApplicationAction AppStream DeleteApplication action.
  * \value DeleteDirectoryConfigAction AppStream DeleteDirectoryConfig action.
+ * \value DeleteEntitlementAction AppStream DeleteEntitlement action.
  * \value DeleteFleetAction AppStream DeleteFleet action.
  * \value DeleteImageAction AppStream DeleteImage action.
  * \value DeleteImageBuilderAction AppStream DeleteImageBuilder action.
@@ -57,7 +65,11 @@ namespace AppStream {
  * \value DeleteStackAction AppStream DeleteStack action.
  * \value DeleteUsageReportSubscriptionAction AppStream DeleteUsageReportSubscription action.
  * \value DeleteUserAction AppStream DeleteUser action.
+ * \value DescribeAppBlocksAction AppStream DescribeAppBlocks action.
+ * \value DescribeApplicationFleetAssociationsAction AppStream DescribeApplicationFleetAssociations action.
+ * \value DescribeApplicationsAction AppStream DescribeApplications action.
  * \value DescribeDirectoryConfigsAction AppStream DescribeDirectoryConfigs action.
+ * \value DescribeEntitlementsAction AppStream DescribeEntitlements action.
  * \value DescribeFleetsAction AppStream DescribeFleets action.
  * \value DescribeImageBuildersAction AppStream DescribeImageBuilders action.
  * \value DescribeImagePermissionsAction AppStream DescribeImagePermissions action.
@@ -68,11 +80,14 @@ namespace AppStream {
  * \value DescribeUserStackAssociationsAction AppStream DescribeUserStackAssociations action.
  * \value DescribeUsersAction AppStream DescribeUsers action.
  * \value DisableUserAction AppStream DisableUser action.
+ * \value DisassociateApplicationFleetAction AppStream DisassociateApplicationFleet action.
+ * \value DisassociateApplicationFromEntitlementAction AppStream DisassociateApplicationFromEntitlement action.
  * \value DisassociateFleetAction AppStream DisassociateFleet action.
  * \value EnableUserAction AppStream EnableUser action.
  * \value ExpireSessionAction AppStream ExpireSession action.
  * \value ListAssociatedFleetsAction AppStream ListAssociatedFleets action.
  * \value ListAssociatedStacksAction AppStream ListAssociatedStacks action.
+ * \value ListEntitledApplicationsAction AppStream ListEntitledApplications action.
  * \value ListTagsForResourceAction AppStream ListTagsForResource action.
  * \value StartFleetAction AppStream StartFleet action.
  * \value StartImageBuilderAction AppStream StartImageBuilder action.
@@ -80,7 +95,9 @@ namespace AppStream {
  * \value StopImageBuilderAction AppStream StopImageBuilder action.
  * \value TagResourceAction AppStream TagResource action.
  * \value UntagResourceAction AppStream UntagResource action.
+ * \value UpdateApplicationAction AppStream UpdateApplication action.
  * \value UpdateDirectoryConfigAction AppStream UpdateDirectoryConfig action.
+ * \value UpdateEntitlementAction AppStream UpdateEntitlement action.
  * \value UpdateFleetAction AppStream UpdateFleet action.
  * \value UpdateImagePermissionsAction AppStream UpdateImagePermissions action.
  * \value UpdateStackAction AppStream UpdateStack action.
@@ -291,7 +308,7 @@ QNetworkRequest AppStreamRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequest::Action action, AppStreamRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-12-01"))
 {
 
 }
@@ -325,11 +342,16 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
     #define ActionToString(action) \
         case AppStreamRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AssociateApplicationFleet);
+        ActionToString(AssociateApplicationToEntitlement);
         ActionToString(AssociateFleet);
         ActionToString(BatchAssociateUserStack);
         ActionToString(BatchDisassociateUserStack);
         ActionToString(CopyImage);
+        ActionToString(CreateAppBlock);
+        ActionToString(CreateApplication);
         ActionToString(CreateDirectoryConfig);
+        ActionToString(CreateEntitlement);
         ActionToString(CreateFleet);
         ActionToString(CreateImageBuilder);
         ActionToString(CreateImageBuilderStreamingURL);
@@ -338,7 +360,10 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
         ActionToString(CreateUpdatedImage);
         ActionToString(CreateUsageReportSubscription);
         ActionToString(CreateUser);
+        ActionToString(DeleteAppBlock);
+        ActionToString(DeleteApplication);
         ActionToString(DeleteDirectoryConfig);
+        ActionToString(DeleteEntitlement);
         ActionToString(DeleteFleet);
         ActionToString(DeleteImage);
         ActionToString(DeleteImageBuilder);
@@ -346,7 +371,11 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
         ActionToString(DeleteStack);
         ActionToString(DeleteUsageReportSubscription);
         ActionToString(DeleteUser);
+        ActionToString(DescribeAppBlocks);
+        ActionToString(DescribeApplicationFleetAssociations);
+        ActionToString(DescribeApplications);
         ActionToString(DescribeDirectoryConfigs);
+        ActionToString(DescribeEntitlements);
         ActionToString(DescribeFleets);
         ActionToString(DescribeImageBuilders);
         ActionToString(DescribeImagePermissions);
@@ -357,11 +386,14 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
         ActionToString(DescribeUserStackAssociations);
         ActionToString(DescribeUsers);
         ActionToString(DisableUser);
+        ActionToString(DisassociateApplicationFleet);
+        ActionToString(DisassociateApplicationFromEntitlement);
         ActionToString(DisassociateFleet);
         ActionToString(EnableUser);
         ActionToString(ExpireSession);
         ActionToString(ListAssociatedFleets);
         ActionToString(ListAssociatedStacks);
+        ActionToString(ListEntitledApplications);
         ActionToString(ListTagsForResource);
         ActionToString(StartFleet);
         ActionToString(StartImageBuilder);
@@ -369,7 +401,9 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
         ActionToString(StopImageBuilder);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
         ActionToString(UpdateDirectoryConfig);
+        ActionToString(UpdateEntitlement);
         ActionToString(UpdateFleet);
         ActionToString(UpdateImagePermissions);
         ActionToString(UpdateStack);

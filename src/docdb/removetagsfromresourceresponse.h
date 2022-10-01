@@ -24,11 +24,11 @@
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveTagsFromResourceResponsePrivate;
 
-class QTAWSDOCDB_EXPORT RemoveTagsFromResourceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RemoveTagsFromResourceResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

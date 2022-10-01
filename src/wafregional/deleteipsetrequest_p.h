@@ -24,14 +24,14 @@
 #include "deleteipsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteIPSetRequest;
 
-class DeleteIPSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteIPSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteIPSetRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteIPSetRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteIPSetRequest * const q);
     DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
                                    DeleteIPSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

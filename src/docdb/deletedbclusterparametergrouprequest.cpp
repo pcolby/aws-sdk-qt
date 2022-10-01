@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterParameterGroupRequest
- * \brief The DeleteDBClusterParameterGroupRequest class provides an interface for DocDB DeleteDBClusterParameterGroup requests.
+ * \class QtAws::DocDb::DeleteDBClusterParameterGroupRequest
+ * \brief The DeleteDBClusterParameterGroupRequest class provides an interface for DocDb DeleteDBClusterParameterGroup requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBClusterParameterGroup
+ * \sa DocDbClient::deleteDBClusterParameterGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDBClusterParameterGroupRequest::DeleteDBClusterParameterGroupRequest(const DeleteDBClusterParameterGroupRequest &other)
-    : DocDBRequest(new DeleteDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DeleteDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteDBClusterParameterGroupRequest::DeleteDBClusterParameterGroupRequest(const
  * Constructs a DeleteDBClusterParameterGroupRequest object.
  */
 DeleteDBClusterParameterGroupRequest::DeleteDBClusterParameterGroupRequest()
-    : DocDBRequest(new DeleteDBClusterParameterGroupRequestPrivate(DocDBRequest::DeleteDBClusterParameterGroupAction, this))
+    : DocDbRequest(new DeleteDBClusterParameterGroupRequestPrivate(DocDbRequest::DeleteDBClusterParameterGroupAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterParameterGroupRequest::respons
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterParameterGroupRequestPrivate
+ * \class QtAws::DocDb::DeleteDBClusterParameterGroupRequestPrivate
  * \brief The DeleteDBClusterParameterGroupRequestPrivate class provides private implementation for DeleteDBClusterParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DeleteDBClusterParameterGroupRequestPrivate object for DocDB \a action,
+ * Constructs a DeleteDBClusterParameterGroupRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupRequestPrivate(
-    const DocDBRequest::Action action, DeleteDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DeleteDBClusterParameterGroupRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupReques
  */
 DeleteDBClusterParameterGroupRequestPrivate::DeleteDBClusterParameterGroupRequestPrivate(
     const DeleteDBClusterParameterGroupRequestPrivate &other, DeleteDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

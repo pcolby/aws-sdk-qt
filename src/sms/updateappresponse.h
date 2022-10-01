@@ -24,7 +24,7 @@
 #include "updateapprequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class UpdateAppResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

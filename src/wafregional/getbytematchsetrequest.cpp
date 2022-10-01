@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetByteMatchSetRequest
- * \brief The GetByteMatchSetRequest class provides an interface for WAFRegional GetByteMatchSet requests.
+ * \class QtAws::WafRegional::GetByteMatchSetRequest
+ * \brief The GetByteMatchSetRequest class provides an interface for WafRegional GetByteMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getByteMatchSet
+ * \sa WafRegionalClient::getByteMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &other)
-    : WAFRegionalRequest(new GetByteMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetByteMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &oth
  * Constructs a GetByteMatchSetRequest object.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest()
-    : WAFRegionalRequest(new GetByteMatchSetRequestPrivate(WAFRegionalRequest::GetByteMatchSetAction, this))
+    : WafRegionalRequest(new GetByteMatchSetRequestPrivate(WafRegionalRequest::GetByteMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::WAFRegional::GetByteMatchSetRequestPrivate
+ * \class QtAws::WafRegional::GetByteMatchSetRequestPrivate
  * \brief The GetByteMatchSetRequestPrivate class provides private implementation for GetByteMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetByteMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetByteMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, GetByteMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetByteMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
     const GetByteMatchSetRequestPrivate &other, GetByteMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

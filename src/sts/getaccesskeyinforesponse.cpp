@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::GetAccessKeyInfoResponse
- * \brief The GetAccessKeyInfoResponse class provides an interace for STS GetAccessKeyInfo responses.
+ * \class QtAws::Sts::GetAccessKeyInfoResponse
+ * \brief The GetAccessKeyInfoResponse class provides an interace for Sts GetAccessKeyInfo responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::getAccessKeyInfo
@@ -67,7 +67,7 @@ const GetAccessKeyInfoRequest * GetAccessKeyInfoResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS GetAccessKeyInfo \a response.
+ * Parses a successful Sts GetAccessKeyInfo \a response.
  */
 void GetAccessKeyInfoResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void GetAccessKeyInfoResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::GetAccessKeyInfoResponsePrivate
+ * \class QtAws::Sts::GetAccessKeyInfoResponsePrivate
  * \brief The GetAccessKeyInfoResponsePrivate class provides private implementation for GetAccessKeyInfoResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ GetAccessKeyInfoResponsePrivate::GetAccessKeyInfoResponsePrivate(
 }
 
 /*!
- * Parses a STS GetAccessKeyInfo response element from \a xml.
+ * Parses a Sts GetAccessKeyInfo response element from \a xml.
  */
 void GetAccessKeyInfoResponsePrivate::parseGetAccessKeyInfoResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetAccessKeyInfoResponsePrivate::parseGetAccessKeyInfoResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

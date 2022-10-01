@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::GetContactPolicyResponse
- * \brief The GetContactPolicyResponse class provides an interace for SSMContacts GetContactPolicy responses.
+ * \class QtAws::SsmContacts::GetContactPolicyResponse
+ * \brief The GetContactPolicyResponse class provides an interace for SsmContacts GetContactPolicy responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::getContactPolicy
+ * \sa SsmContactsClient::getContactPolicy
  */
 
 /*!
@@ -44,7 +54,7 @@ GetContactPolicyResponse::GetContactPolicyResponse(
         const GetContactPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new GetContactPolicyResponsePrivate(this), parent)
+    : SsmContactsResponse(new GetContactPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetContactPolicyRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const GetContactPolicyRequest * GetContactPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts GetContactPolicy \a response.
+ * Parses a successful SsmContacts GetContactPolicy \a response.
  */
 void GetContactPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void GetContactPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::GetContactPolicyResponsePrivate
+ * \class QtAws::SsmContacts::GetContactPolicyResponsePrivate
  * \brief The GetContactPolicyResponsePrivate class provides private implementation for GetContactPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a GetContactPolicyResponsePrivate object with public implementation \a q.
  */
 GetContactPolicyResponsePrivate::GetContactPolicyResponsePrivate(
-    GetContactPolicyResponse * const q) : SSMContactsResponsePrivate(q)
+    GetContactPolicyResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts GetContactPolicy response element from \a xml.
+ * Parses a SsmContacts GetContactPolicy response element from \a xml.
  */
 void GetContactPolicyResponsePrivate::parseGetContactPolicyResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void GetContactPolicyResponsePrivate::parseGetContactPolicyResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

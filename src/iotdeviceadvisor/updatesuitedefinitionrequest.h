@@ -23,11 +23,11 @@
 #include "iotdeviceadvisorrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class UpdateSuiteDefinitionRequestPrivate;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT UpdateSuiteDefinitionRequest : public IoTDeviceAdvisorRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT UpdateSuiteDefinitionRequest : public IotDeviceAdvisorRequest {
 
 public:
     UpdateSuiteDefinitionRequest(const UpdateSuiteDefinitionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

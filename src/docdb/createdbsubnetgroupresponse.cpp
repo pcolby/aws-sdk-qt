@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateDBSubnetGroupResponse
- * \brief The CreateDBSubnetGroupResponse class provides an interace for DocDB CreateDBSubnetGroup responses.
+ * \class QtAws::DocDb::CreateDBSubnetGroupResponse
+ * \brief The CreateDBSubnetGroupResponse class provides an interace for DocDb CreateDBSubnetGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createDBSubnetGroup
+ * \sa DocDbClient::createDBSubnetGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
         const CreateDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
+    : DocDbResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSubnetGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB CreateDBSubnetGroup \a response.
+ * Parses a successful DocDb CreateDBSubnetGroup \a response.
  */
 void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CreateDBSubnetGroupResponsePrivate
+ * \class QtAws::DocDb::CreateDBSubnetGroupResponsePrivate
  * \brief The CreateDBSubnetGroupResponsePrivate class provides private implementation for CreateDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CreateDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
-    CreateDBSubnetGroupResponse * const q) : DocDBResponsePrivate(q)
+    CreateDBSubnetGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CreateDBSubnetGroup response element from \a xml.
+ * Parses a DocDb CreateDBSubnetGroup response element from \a xml.
  */
 void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -24,16 +24,16 @@
 #include "wafrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class WafRequest;
 
 class WafRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    WafRequest::Action action; ///< WAF action to be performed.
-    QString apiVersion;        ///< WAF API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< WAF request (query string) parameters. @todo?
+    WafRequest::Action action; ///< Waf action to be performed.
+    QString apiVersion;        ///< Waf API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Waf request (query string) parameters. @todo?
 
     WafRequestPrivate(const WafRequest::Action action, WafRequest * const q);
     WafRequestPrivate(const WafRequestPrivate &other, WafRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

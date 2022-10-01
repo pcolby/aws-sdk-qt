@@ -36,6 +36,8 @@ class BatchDisassociateScramSecretRequest;
 class BatchDisassociateScramSecretResponse;
 class CreateClusterRequest;
 class CreateClusterResponse;
+class CreateClusterV2Request;
+class CreateClusterV2Response;
 class CreateConfigurationRequest;
 class CreateConfigurationResponse;
 class DeleteClusterRequest;
@@ -46,6 +48,8 @@ class DescribeClusterRequest;
 class DescribeClusterResponse;
 class DescribeClusterOperationRequest;
 class DescribeClusterOperationResponse;
+class DescribeClusterV2Request;
+class DescribeClusterV2Response;
 class DescribeConfigurationRequest;
 class DescribeConfigurationResponse;
 class DescribeConfigurationRevisionRequest;
@@ -58,6 +62,8 @@ class ListClusterOperationsRequest;
 class ListClusterOperationsResponse;
 class ListClustersRequest;
 class ListClustersResponse;
+class ListClustersV2Request;
+class ListClustersV2Response;
 class ListConfigurationRevisionsRequest;
 class ListConfigurationRevisionsResponse;
 class ListConfigurationsRequest;
@@ -88,8 +94,12 @@ class UpdateClusterKafkaVersionRequest;
 class UpdateClusterKafkaVersionResponse;
 class UpdateConfigurationRequest;
 class UpdateConfigurationResponse;
+class UpdateConnectivityRequest;
+class UpdateConnectivityResponse;
 class UpdateMonitoringRequest;
 class UpdateMonitoringResponse;
+class UpdateSecurityRequest;
+class UpdateSecurityResponse;
 
 class QTAWSKAFKA_EXPORT KafkaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -110,17 +120,20 @@ public slots:
     BatchAssociateScramSecretResponse * batchAssociateScramSecret(const BatchAssociateScramSecretRequest &request);
     BatchDisassociateScramSecretResponse * batchDisassociateScramSecret(const BatchDisassociateScramSecretRequest &request);
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
+    CreateClusterV2Response * createClusterV2(const CreateClusterV2Request &request);
     CreateConfigurationResponse * createConfiguration(const CreateConfigurationRequest &request);
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DeleteConfigurationResponse * deleteConfiguration(const DeleteConfigurationRequest &request);
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
     DescribeClusterOperationResponse * describeClusterOperation(const DescribeClusterOperationRequest &request);
+    DescribeClusterV2Response * describeClusterV2(const DescribeClusterV2Request &request);
     DescribeConfigurationResponse * describeConfiguration(const DescribeConfigurationRequest &request);
     DescribeConfigurationRevisionResponse * describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request);
     GetBootstrapBrokersResponse * getBootstrapBrokers(const GetBootstrapBrokersRequest &request);
     GetCompatibleKafkaVersionsResponse * getCompatibleKafkaVersions(const GetCompatibleKafkaVersionsRequest &request);
     ListClusterOperationsResponse * listClusterOperations(const ListClusterOperationsRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListClustersV2Response * listClustersV2(const ListClustersV2Request &request);
     ListConfigurationRevisionsResponse * listConfigurationRevisions(const ListConfigurationRevisionsRequest &request);
     ListConfigurationsResponse * listConfigurations(const ListConfigurationsRequest &request);
     ListKafkaVersionsResponse * listKafkaVersions(const ListKafkaVersionsRequest &request);
@@ -136,7 +149,9 @@ public slots:
     UpdateClusterConfigurationResponse * updateClusterConfiguration(const UpdateClusterConfigurationRequest &request);
     UpdateClusterKafkaVersionResponse * updateClusterKafkaVersion(const UpdateClusterKafkaVersionRequest &request);
     UpdateConfigurationResponse * updateConfiguration(const UpdateConfigurationRequest &request);
+    UpdateConnectivityResponse * updateConnectivity(const UpdateConnectivityRequest &request);
     UpdateMonitoringResponse * updateMonitoring(const UpdateMonitoringRequest &request);
+    UpdateSecurityResponse * updateSecurity(const UpdateSecurityRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KafkaClient)

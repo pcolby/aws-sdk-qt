@@ -21,51 +21,53 @@
 #include "ivsrequest_p.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 /*!
- * \class QtAws::IVS::IvsRequest
- * \brief The IvsRequest class provides an interface for IVS requests.
+ * \class QtAws::Ivs::IvsRequest
+ * \brief The IvsRequest class provides an interface for Ivs requests.
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  */
 
 /*!
  * \enum IvsRequest::Action
  *
- * This enum describes the actions that can be performed as IVS
+ * This enum describes the actions that can be performed as Ivs
  * requests.
  *
- * \value BatchGetChannelAction IVS BatchGetChannel action.
- * \value BatchGetStreamKeyAction IVS BatchGetStreamKey action.
- * \value CreateChannelAction IVS CreateChannel action.
- * \value CreateRecordingConfigurationAction IVS CreateRecordingConfiguration action.
- * \value CreateStreamKeyAction IVS CreateStreamKey action.
- * \value DeleteChannelAction IVS DeleteChannel action.
- * \value DeletePlaybackKeyPairAction IVS DeletePlaybackKeyPair action.
- * \value DeleteRecordingConfigurationAction IVS DeleteRecordingConfiguration action.
- * \value DeleteStreamKeyAction IVS DeleteStreamKey action.
- * \value GetChannelAction IVS GetChannel action.
- * \value GetPlaybackKeyPairAction IVS GetPlaybackKeyPair action.
- * \value GetRecordingConfigurationAction IVS GetRecordingConfiguration action.
- * \value GetStreamAction IVS GetStream action.
- * \value GetStreamKeyAction IVS GetStreamKey action.
- * \value ImportPlaybackKeyPairAction IVS ImportPlaybackKeyPair action.
- * \value ListChannelsAction IVS ListChannels action.
- * \value ListPlaybackKeyPairsAction IVS ListPlaybackKeyPairs action.
- * \value ListRecordingConfigurationsAction IVS ListRecordingConfigurations action.
- * \value ListStreamKeysAction IVS ListStreamKeys action.
- * \value ListStreamsAction IVS ListStreams action.
- * \value ListTagsForResourceAction IVS ListTagsForResource action.
- * \value PutMetadataAction IVS PutMetadata action.
- * \value StopStreamAction IVS StopStream action.
- * \value TagResourceAction IVS TagResource action.
- * \value UntagResourceAction IVS UntagResource action.
- * \value UpdateChannelAction IVS UpdateChannel action.
+ * \value BatchGetChannelAction Ivs BatchGetChannel action.
+ * \value BatchGetStreamKeyAction Ivs BatchGetStreamKey action.
+ * \value CreateChannelAction Ivs CreateChannel action.
+ * \value CreateRecordingConfigurationAction Ivs CreateRecordingConfiguration action.
+ * \value CreateStreamKeyAction Ivs CreateStreamKey action.
+ * \value DeleteChannelAction Ivs DeleteChannel action.
+ * \value DeletePlaybackKeyPairAction Ivs DeletePlaybackKeyPair action.
+ * \value DeleteRecordingConfigurationAction Ivs DeleteRecordingConfiguration action.
+ * \value DeleteStreamKeyAction Ivs DeleteStreamKey action.
+ * \value GetChannelAction Ivs GetChannel action.
+ * \value GetPlaybackKeyPairAction Ivs GetPlaybackKeyPair action.
+ * \value GetRecordingConfigurationAction Ivs GetRecordingConfiguration action.
+ * \value GetStreamAction Ivs GetStream action.
+ * \value GetStreamKeyAction Ivs GetStreamKey action.
+ * \value GetStreamSessionAction Ivs GetStreamSession action.
+ * \value ImportPlaybackKeyPairAction Ivs ImportPlaybackKeyPair action.
+ * \value ListChannelsAction Ivs ListChannels action.
+ * \value ListPlaybackKeyPairsAction Ivs ListPlaybackKeyPairs action.
+ * \value ListRecordingConfigurationsAction Ivs ListRecordingConfigurations action.
+ * \value ListStreamKeysAction Ivs ListStreamKeys action.
+ * \value ListStreamSessionsAction Ivs ListStreamSessions action.
+ * \value ListStreamsAction Ivs ListStreams action.
+ * \value ListTagsForResourceAction Ivs ListTagsForResource action.
+ * \value PutMetadataAction Ivs PutMetadata action.
+ * \value StopStreamAction Ivs StopStream action.
+ * \value TagResourceAction Ivs TagResource action.
+ * \value UntagResourceAction Ivs UntagResource action.
+ * \value UpdateChannelAction Ivs UpdateChannel action.
  */
 
 /*!
- * Constructs a IvsRequest object for IVS \a action.
+ * Constructs a IvsRequest object for Ivs \a action.
  */
 IvsRequest::IvsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IvsRequestPrivate(action, this))
@@ -106,7 +108,7 @@ IvsRequest::IvsRequest(IvsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the IVS action to be performed by this request.
+ * Returns the Ivs action to be performed by this request.
  */
 IvsRequest::Action IvsRequest::action() const
 {
@@ -115,7 +117,7 @@ IvsRequest::Action IvsRequest::action() const
 }
 
 /*!
- * Returns the name of the IVS action to be performed by this request.
+ * Returns the name of the Ivs action to be performed by this request.
  */
 QString IvsRequest::actionString() const
 {
@@ -123,7 +125,7 @@ QString IvsRequest::actionString() const
 }
 
 /*!
- * Returns the IVS API version implemented by this request.
+ * Returns the Ivs API version implemented by this request.
  */
 QString IvsRequest::apiVersion() const
 {
@@ -132,7 +134,7 @@ QString IvsRequest::apiVersion() const
 }
 
 /*!
- * Sets the IVS action to be performed by this request to \a action.
+ * Sets the Ivs action to be performed by this request to \a action.
  */
 void IvsRequest::setAction(const Action action)
 {
@@ -141,7 +143,7 @@ void IvsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the IVS API version to include in this request to \a version.
+ * Sets the Ivs API version to include in this request to \a version.
  */
 void IvsRequest::setApiVersion(const QString &version)
 {
@@ -166,15 +168,15 @@ bool IvsRequest::operator==(const IvsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid IVS queue name.
+ * Returns \c tue if \a queueName is a valid Ivs queue name.
  *
- * @par From IVS FAQs:
+ * @par From Ivs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid IVS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ivs queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -241,10 +243,10 @@ void IvsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the IVS request using the given
+ * Returns a network request for the Ivs request using the given
  * \a endpoint.
  *
- * This IVS implementation builds request URLs by combining the
+ * This Ivs implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -257,19 +259,19 @@ QNetworkRequest IvsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::IVS::IvsRequestPrivate
+ * \class QtAws::Ivs::IvsRequestPrivate
  * \brief The IvsRequestPrivate class provides private implementation for IvsRequest.
  * \internal
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  */
 
 /*!
- * Constructs a IvsRequestPrivate object for IVS \a action,
+ * Constructs a IvsRequestPrivate object for Ivs \a action,
  * with public implementation \a q.
  */
 IvsRequestPrivate::IvsRequestPrivate(const IvsRequest::Action action, IvsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-07-14"))
 {
 
 }
@@ -295,7 +297,7 @@ IvsRequestPrivate::IvsRequestPrivate(const IvsRequestPrivate &other,
  * invalid.
  *
  * This function converts IvsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the IVS service's Action
+ * string representations, appropriate for use with the Ivs service's Action
  * query parameters.
  */
 QString IvsRequestPrivate::toString(const IvsRequest::Action &action)
@@ -317,11 +319,13 @@ QString IvsRequestPrivate::toString(const IvsRequest::Action &action)
         ActionToString(GetRecordingConfiguration);
         ActionToString(GetStream);
         ActionToString(GetStreamKey);
+        ActionToString(GetStreamSession);
         ActionToString(ImportPlaybackKeyPair);
         ActionToString(ListChannels);
         ActionToString(ListPlaybackKeyPairs);
         ActionToString(ListRecordingConfigurations);
         ActionToString(ListStreamKeys);
+        ActionToString(ListStreamSessions);
         ActionToString(ListStreams);
         ActionToString(ListTagsForResource);
         ActionToString(PutMetadata);
@@ -336,5 +340,5 @@ QString IvsRequestPrivate::toString(const IvsRequest::Action &action)
     return QString();
 }
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws

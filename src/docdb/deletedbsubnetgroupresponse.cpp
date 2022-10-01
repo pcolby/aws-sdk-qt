@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBSubnetGroupResponse
- * \brief The DeleteDBSubnetGroupResponse class provides an interace for DocDB DeleteDBSubnetGroup responses.
+ * \class QtAws::DocDb::DeleteDBSubnetGroupResponse
+ * \brief The DeleteDBSubnetGroupResponse class provides an interace for DocDb DeleteDBSubnetGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBSubnetGroup
+ * \sa DocDbClient::deleteDBSubnetGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
         const DeleteDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSubnetGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteDBSubnetGroup \a response.
+ * Parses a successful DocDb DeleteDBSubnetGroup \a response.
  */
 void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBSubnetGroupResponsePrivate
+ * \class QtAws::DocDb::DeleteDBSubnetGroupResponsePrivate
  * \brief The DeleteDBSubnetGroupResponsePrivate class provides private implementation for DeleteDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
-    DeleteDBSubnetGroupResponse * const q) : DocDBResponsePrivate(q)
+    DeleteDBSubnetGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteDBSubnetGroup response element from \a xml.
+ * Parses a DocDb DeleteDBSubnetGroup response element from \a xml.
  */
 void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

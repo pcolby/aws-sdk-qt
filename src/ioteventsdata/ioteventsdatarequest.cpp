@@ -37,6 +37,7 @@ namespace IoTEventsData {
  * requests.
  *
  * \value BatchAcknowledgeAlarmAction IoTEventsData BatchAcknowledgeAlarm action.
+ * \value BatchDeleteDetectorAction IoTEventsData BatchDeleteDetector action.
  * \value BatchDisableAlarmAction IoTEventsData BatchDisableAlarm action.
  * \value BatchEnableAlarmAction IoTEventsData BatchEnableAlarm action.
  * \value BatchPutMessageAction IoTEventsData BatchPutMessage action.
@@ -254,7 +255,7 @@ QNetworkRequest IoTEventsDataRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 IoTEventsDataRequestPrivate::IoTEventsDataRequestPrivate(const IoTEventsDataRequest::Action action, IoTEventsDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-10-23"))
 {
 
 }
@@ -289,6 +290,7 @@ QString IoTEventsDataRequestPrivate::toString(const IoTEventsDataRequest::Action
         case IoTEventsDataRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(BatchAcknowledgeAlarm);
+        ActionToString(BatchDeleteDetector);
         ActionToString(BatchDisableAlarm);
         ActionToString(BatchEnableAlarm);
         ActionToString(BatchPutMessage);

@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagUserResponse
- * \brief The TagUserResponse class provides an interace for IAM TagUser responses.
+ * \class QtAws::Iam::TagUserResponse
+ * \brief The TagUserResponse class provides an interace for Iam TagUser responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagUser
  */
@@ -68,7 +68,7 @@ const TagUserRequest * TagUserResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM TagUser \a response.
+ * Parses a successful Iam TagUser \a response.
  */
 void TagUserResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void TagUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::TagUserResponsePrivate
+ * \class QtAws::Iam::TagUserResponsePrivate
  * \brief The TagUserResponsePrivate class provides private implementation for TagUserResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ TagUserResponsePrivate::TagUserResponsePrivate(
 }
 
 /*!
- * Parses a IAM TagUser response element from \a xml.
+ * Parses a Iam TagUser response element from \a xml.
  */
 void TagUserResponsePrivate::parseTagUserResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void TagUserResponsePrivate::parseTagUserResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

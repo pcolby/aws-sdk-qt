@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class IvsClientPrivate;
 class BatchGetChannelRequest;
@@ -58,6 +58,8 @@ class GetStreamRequest;
 class GetStreamResponse;
 class GetStreamKeyRequest;
 class GetStreamKeyResponse;
+class GetStreamSessionRequest;
+class GetStreamSessionResponse;
 class ImportPlaybackKeyPairRequest;
 class ImportPlaybackKeyPairResponse;
 class ListChannelsRequest;
@@ -68,6 +70,8 @@ class ListRecordingConfigurationsRequest;
 class ListRecordingConfigurationsResponse;
 class ListStreamKeysRequest;
 class ListStreamKeysResponse;
+class ListStreamSessionsRequest;
+class ListStreamSessionsResponse;
 class ListStreamsRequest;
 class ListStreamsResponse;
 class ListTagsForResourceRequest;
@@ -113,11 +117,13 @@ public slots:
     GetRecordingConfigurationResponse * getRecordingConfiguration(const GetRecordingConfigurationRequest &request);
     GetStreamResponse * getStream(const GetStreamRequest &request);
     GetStreamKeyResponse * getStreamKey(const GetStreamKeyRequest &request);
+    GetStreamSessionResponse * getStreamSession(const GetStreamSessionRequest &request);
     ImportPlaybackKeyPairResponse * importPlaybackKeyPair(const ImportPlaybackKeyPairRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
     ListPlaybackKeyPairsResponse * listPlaybackKeyPairs(const ListPlaybackKeyPairsRequest &request);
     ListRecordingConfigurationsResponse * listRecordingConfigurations(const ListRecordingConfigurationsRequest &request);
     ListStreamKeysResponse * listStreamKeys(const ListStreamKeysRequest &request);
+    ListStreamSessionsResponse * listStreamSessions(const ListStreamSessionsRequest &request);
     ListStreamsResponse * listStreams(const ListStreamsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutMetadataResponse * putMetadata(const PutMetadataRequest &request);
@@ -132,7 +138,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

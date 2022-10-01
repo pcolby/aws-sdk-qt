@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeletePermissionPolicyRequest
- * \brief The DeletePermissionPolicyRequest class provides an interface for WAFRegional DeletePermissionPolicy requests.
+ * \class QtAws::WafRegional::DeletePermissionPolicyRequest
+ * \brief The DeletePermissionPolicyRequest class provides an interface for WafRegional DeletePermissionPolicy requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deletePermissionPolicy
+ * \sa WafRegionalClient::deletePermissionPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other)
-    : WAFRegionalRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermiss
  * Constructs a DeletePermissionPolicyRequest object.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest()
-    : WAFRegionalRequest(new DeletePermissionPolicyRequestPrivate(WAFRegionalRequest::DeletePermissionPolicyAction, this))
+    : WafRegionalRequest(new DeletePermissionPolicyRequestPrivate(WafRegionalRequest::DeletePermissionPolicyAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::WAFRegional::DeletePermissionPolicyRequestPrivate
+ * \class QtAws::WafRegional::DeletePermissionPolicyRequestPrivate
  * \brief The DeletePermissionPolicyRequestPrivate class provides private implementation for DeletePermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeletePermissionPolicyRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeletePermissionPolicyRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
-    const WAFRegionalRequest::Action action, DeletePermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeletePermissionPolicyRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const DeletePermissionPolicyRequestPrivate &other, DeletePermissionPolicyRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

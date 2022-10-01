@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::PutAccountConfigurationResponse
- * \brief The PutAccountConfigurationResponse class provides an interace for ACM PutAccountConfiguration responses.
+ * \class QtAws::Acm::PutAccountConfigurationResponse
+ * \brief The PutAccountConfigurationResponse class provides an interace for Acm PutAccountConfiguration responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::putAccountConfiguration
  */
@@ -66,7 +66,7 @@ const PutAccountConfigurationRequest * PutAccountConfigurationResponse::request(
 
 /*!
  * \reimp
- * Parses a successful ACM PutAccountConfiguration \a response.
+ * Parses a successful Acm PutAccountConfiguration \a response.
  */
 void PutAccountConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void PutAccountConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::PutAccountConfigurationResponsePrivate
+ * \class QtAws::Acm::PutAccountConfigurationResponsePrivate
  * \brief The PutAccountConfigurationResponsePrivate class provides private implementation for PutAccountConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ PutAccountConfigurationResponsePrivate::PutAccountConfigurationResponsePrivate(
 }
 
 /*!
- * Parses a ACM PutAccountConfiguration response element from \a xml.
+ * Parses a Acm PutAccountConfiguration response element from \a xml.
  */
 void PutAccountConfigurationResponsePrivate::parsePutAccountConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void PutAccountConfigurationResponsePrivate::parsePutAccountConfigurationRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

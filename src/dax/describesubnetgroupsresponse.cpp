@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeSubnetGroupsResponse
- * \brief The DescribeSubnetGroupsResponse class provides an interace for DAX DescribeSubnetGroups responses.
+ * \class QtAws::Dax::DescribeSubnetGroupsResponse
+ * \brief The DescribeSubnetGroupsResponse class provides an interace for Dax DescribeSubnetGroups responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DescribeSubnetGroupsRequest * DescribeSubnetGroupsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DAX DescribeSubnetGroups \a response.
+ * Parses a successful Dax DescribeSubnetGroups \a response.
  */
 void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DescribeSubnetGroupsResponsePrivate
+ * \class QtAws::Dax::DescribeSubnetGroupsResponsePrivate
  * \brief The DescribeSubnetGroupsResponsePrivate class provides private implementation for DescribeSubnetGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
 }
 
 /*!
- * Parses a DAX DescribeSubnetGroups response element from \a xml.
+ * Parses a Dax DescribeSubnetGroups response element from \a xml.
  */
 void DescribeSubnetGroupsResponsePrivate::parseDescribeSubnetGroupsResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DescribeSubnetGroupsResponsePrivate::parseDescribeSubnetGroupsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

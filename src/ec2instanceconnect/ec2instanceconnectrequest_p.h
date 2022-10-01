@@ -24,28 +24,28 @@
 #include "ec2instanceconnectrequest.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
-class EC2InstanceConnectRequest;
+class Ec2InstanceConnectRequest;
 
-class EC2InstanceConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Ec2InstanceConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EC2InstanceConnectRequest::Action action; ///< EC2InstanceConnect action to be performed.
-    QString apiVersion;        ///< EC2InstanceConnect API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EC2InstanceConnect request (query string) parameters. @todo?
+    Ec2InstanceConnectRequest::Action action; ///< Ec2InstanceConnect action to be performed.
+    QString apiVersion;        ///< Ec2InstanceConnect API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ec2InstanceConnect request (query string) parameters. @todo?
 
-    EC2InstanceConnectRequestPrivate(const EC2InstanceConnectRequest::Action action, EC2InstanceConnectRequest * const q);
-    EC2InstanceConnectRequestPrivate(const EC2InstanceConnectRequestPrivate &other, EC2InstanceConnectRequest * const q);
+    Ec2InstanceConnectRequestPrivate(const Ec2InstanceConnectRequest::Action action, Ec2InstanceConnectRequest * const q);
+    Ec2InstanceConnectRequestPrivate(const Ec2InstanceConnectRequestPrivate &other, Ec2InstanceConnectRequest * const q);
 
-    static QString toString(const EC2InstanceConnectRequest::Action &action);
+    static QString toString(const Ec2InstanceConnectRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(EC2InstanceConnectRequest)
+    Q_DECLARE_PUBLIC(Ec2InstanceConnectRequest)
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

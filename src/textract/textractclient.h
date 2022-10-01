@@ -32,16 +32,24 @@ namespace Textract {
 class TextractClientPrivate;
 class AnalyzeDocumentRequest;
 class AnalyzeDocumentResponse;
+class AnalyzeExpenseRequest;
+class AnalyzeExpenseResponse;
+class AnalyzeIDRequest;
+class AnalyzeIDResponse;
 class DetectDocumentTextRequest;
 class DetectDocumentTextResponse;
 class GetDocumentAnalysisRequest;
 class GetDocumentAnalysisResponse;
 class GetDocumentTextDetectionRequest;
 class GetDocumentTextDetectionResponse;
+class GetExpenseAnalysisRequest;
+class GetExpenseAnalysisResponse;
 class StartDocumentAnalysisRequest;
 class StartDocumentAnalysisResponse;
 class StartDocumentTextDetectionRequest;
 class StartDocumentTextDetectionResponse;
+class StartExpenseAnalysisRequest;
+class StartExpenseAnalysisResponse;
 
 class QTAWSTEXTRACT_EXPORT TextractClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -60,11 +68,15 @@ public:
 
 public slots:
     AnalyzeDocumentResponse * analyzeDocument(const AnalyzeDocumentRequest &request);
+    AnalyzeExpenseResponse * analyzeExpense(const AnalyzeExpenseRequest &request);
+    AnalyzeIDResponse * analyzeID(const AnalyzeIDRequest &request);
     DetectDocumentTextResponse * detectDocumentText(const DetectDocumentTextRequest &request);
     GetDocumentAnalysisResponse * getDocumentAnalysis(const GetDocumentAnalysisRequest &request);
     GetDocumentTextDetectionResponse * getDocumentTextDetection(const GetDocumentTextDetectionRequest &request);
+    GetExpenseAnalysisResponse * getExpenseAnalysis(const GetExpenseAnalysisRequest &request);
     StartDocumentAnalysisResponse * startDocumentAnalysis(const StartDocumentAnalysisRequest &request);
     StartDocumentTextDetectionResponse * startDocumentTextDetection(const StartDocumentTextDetectionRequest &request);
+    StartExpenseAnalysisResponse * startExpenseAnalysis(const StartExpenseAnalysisRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(TextractClient)

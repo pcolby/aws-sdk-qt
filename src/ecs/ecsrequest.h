@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class EcsRequestPrivate;
 
 class QTAWSECS_EXPORT EcsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ECS.
+    /// Actions supported by Ecs.
     enum Action {
         CreateCapacityProviderAction,
         CreateClusterAction,
@@ -127,7 +127,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

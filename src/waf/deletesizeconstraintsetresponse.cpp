@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteSizeConstraintSetResponse
- * \brief The DeleteSizeConstraintSetResponse class provides an interace for WAF DeleteSizeConstraintSet responses.
+ * \class QtAws::Waf::DeleteSizeConstraintSetResponse
+ * \brief The DeleteSizeConstraintSetResponse class provides an interace for Waf DeleteSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteSizeConstraintSetRequest * DeleteSizeConstraintSetResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteSizeConstraintSet \a response.
+ * Parses a successful Waf DeleteSizeConstraintSet \a response.
  */
 void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteSizeConstraintSetResponsePrivate
+ * \class QtAws::Waf::DeleteSizeConstraintSetResponsePrivate
  * \brief The DeleteSizeConstraintSetResponsePrivate class provides private implementation for DeleteSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteSizeConstraintSet response element from \a xml.
+ * Parses a Waf DeleteSizeConstraintSet response element from \a xml.
  */
 void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

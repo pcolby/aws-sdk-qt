@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteAuthorizerRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteAuthorizerRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteAuthorizerRequest : public ApiGatewayRequest {
 
 public:
     DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

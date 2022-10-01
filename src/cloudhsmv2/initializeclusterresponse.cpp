@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::InitializeClusterResponse
- * \brief The InitializeClusterResponse class provides an interace for CloudHSMV2 InitializeCluster responses.
+ * \class QtAws::CloudHsmV2::InitializeClusterResponse
+ * \brief The InitializeClusterResponse class provides an interace for CloudHsmV2 InitializeCluster responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::initializeCluster
+ * \sa CloudHsmV2Client::initializeCluster
  */
 
 /*!
@@ -46,7 +46,7 @@ InitializeClusterResponse::InitializeClusterResponse(
         const InitializeClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new InitializeClusterResponsePrivate(this), parent)
+    : CloudHsmV2Response(new InitializeClusterResponsePrivate(this), parent)
 {
     setRequest(new InitializeClusterRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const InitializeClusterRequest * InitializeClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 InitializeCluster \a response.
+ * Parses a successful CloudHsmV2 InitializeCluster \a response.
  */
 void InitializeClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void InitializeClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::InitializeClusterResponsePrivate
+ * \class QtAws::CloudHsmV2::InitializeClusterResponsePrivate
  * \brief The InitializeClusterResponsePrivate class provides private implementation for InitializeClusterResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a InitializeClusterResponsePrivate object with public implementation \a q.
  */
 InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
-    InitializeClusterResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    InitializeClusterResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 InitializeCluster response element from \a xml.
+ * Parses a CloudHsmV2 InitializeCluster response element from \a xml.
  */
 void InitializeClusterResponsePrivate::parseInitializeClusterResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void InitializeClusterResponsePrivate::parseInitializeClusterResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

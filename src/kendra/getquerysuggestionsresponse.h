@@ -24,11 +24,11 @@
 #include "getquerysuggestionsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class GetQuerySuggestionsResponsePrivate;
 
-class QTAWSKENDRA_EXPORT GetQuerySuggestionsResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT GetQuerySuggestionsResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

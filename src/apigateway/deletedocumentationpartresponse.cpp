@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationPartResponse
- * \brief The DeleteDocumentationPartResponse class provides an interace for APIGateway DeleteDocumentationPart responses.
+ * \class QtAws::ApiGateway::DeleteDocumentationPartResponse
+ * \brief The DeleteDocumentationPartResponse class provides an interace for ApiGateway DeleteDocumentationPart responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDocumentationPart
+ * \sa ApiGatewayClient::deleteDocumentationPart
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteDocumentationPartResponse::DeleteDocumentationPartResponse(
         const DeleteDocumentationPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteDocumentationPartResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteDocumentationPartResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentationPartRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteDocumentationPartRequest * DeleteDocumentationPartResponse::request(
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteDocumentationPart \a response.
+ * Parses a successful ApiGateway DeleteDocumentationPart \a response.
  */
 void DeleteDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteDocumentationPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationPartResponsePrivate
+ * \class QtAws::ApiGateway::DeleteDocumentationPartResponsePrivate
  * \brief The DeleteDocumentationPartResponsePrivate class provides private implementation for DeleteDocumentationPartResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteDocumentationPartResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponsePrivate(
-    DeleteDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteDocumentationPartResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteDocumentationPart response element from \a xml.
+ * Parses a ApiGateway DeleteDocumentationPart response element from \a xml.
  */
 void DeleteDocumentationPartResponsePrivate::parseDeleteDocumentationPartResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteDocumentationPartResponsePrivate::parseDeleteDocumentationPartRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

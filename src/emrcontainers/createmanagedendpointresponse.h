@@ -24,11 +24,11 @@
 #include "createmanagedendpointrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class CreateManagedEndpointResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT CreateManagedEndpointResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT CreateManagedEndpointResponse : public EmrcontainersResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

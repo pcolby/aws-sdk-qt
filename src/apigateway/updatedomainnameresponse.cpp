@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDomainNameResponse
- * \brief The UpdateDomainNameResponse class provides an interace for APIGateway UpdateDomainName responses.
+ * \class QtAws::ApiGateway::UpdateDomainNameResponse
+ * \brief The UpdateDomainNameResponse class provides an interace for ApiGateway UpdateDomainName responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDomainName
+ * \sa ApiGatewayClient::updateDomainName
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateDomainNameResponse::UpdateDomainNameResponse(
         const UpdateDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateDomainNameResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateDomainNameResponsePrivate(this), parent)
 {
     setRequest(new UpdateDomainNameRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateDomainName \a response.
+ * Parses a successful ApiGateway UpdateDomainName \a response.
  */
 void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDomainNameResponsePrivate
+ * \class QtAws::ApiGateway::UpdateDomainNameResponsePrivate
  * \brief The UpdateDomainNameResponsePrivate class provides private implementation for UpdateDomainNameResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateDomainNameResponsePrivate object with public implementation \a q.
  */
 UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
-    UpdateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateDomainNameResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateDomainName response element from \a xml.
+ * Parses a ApiGateway UpdateDomainName response element from \a xml.
  */
 void UpdateDomainNameResponsePrivate::parseUpdateDomainNameResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateDomainNameResponsePrivate::parseUpdateDomainNameResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RebootDBInstanceRequest
- * \brief The RebootDBInstanceRequest class provides an interface for RDS RebootDBInstance requests.
+ * \class QtAws::Rds::RebootDBInstanceRequest
+ * \brief The RebootDBInstanceRequest class provides an interface for Rds RebootDBInstance requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::RDS::RebootDBInstanceRequestPrivate
+ * \class QtAws::Rds::RebootDBInstanceRequestPrivate
  * \brief The RebootDBInstanceRequestPrivate class provides private implementation for RebootDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

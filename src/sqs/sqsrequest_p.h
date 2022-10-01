@@ -24,16 +24,16 @@
 #include "sqsrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class SqsRequest;
 
 class SqsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SqsRequest::Action action; ///< SQS action to be performed.
-    QString apiVersion;        ///< SQS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SQS request (query string) parameters. @todo?
+    SqsRequest::Action action; ///< Sqs action to be performed.
+    QString apiVersion;        ///< Sqs API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sqs request (query string) parameters. @todo?
 
     SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q);
     SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

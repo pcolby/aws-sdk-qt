@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::GetViolationDetailsResponse
- * \brief The GetViolationDetailsResponse class provides an interace for FMS GetViolationDetails responses.
+ * \class QtAws::Fms::GetViolationDetailsResponse
+ * \brief The GetViolationDetailsResponse class provides an interace for Fms GetViolationDetails responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const GetViolationDetailsRequest * GetViolationDetailsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS GetViolationDetails \a response.
+ * Parses a successful Fms GetViolationDetails \a response.
  */
 void GetViolationDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void GetViolationDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::GetViolationDetailsResponsePrivate
+ * \class QtAws::Fms::GetViolationDetailsResponsePrivate
  * \brief The GetViolationDetailsResponsePrivate class provides private implementation for GetViolationDetailsResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ GetViolationDetailsResponsePrivate::GetViolationDetailsResponsePrivate(
 }
 
 /*!
- * Parses a FMS GetViolationDetails response element from \a xml.
+ * Parses a Fms GetViolationDetails response element from \a xml.
  */
 void GetViolationDetailsResponsePrivate::parseGetViolationDetailsResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void GetViolationDetailsResponsePrivate::parseGetViolationDetailsResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

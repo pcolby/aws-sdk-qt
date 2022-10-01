@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetClientCertificateRequest
- * \brief The GetClientCertificateRequest class provides an interface for APIGateway GetClientCertificate requests.
+ * \class QtAws::ApiGateway::GetClientCertificateRequest
+ * \brief The GetClientCertificateRequest class provides an interface for ApiGateway GetClientCertificate requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getClientCertificate
+ * \sa ApiGatewayClient::getClientCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetClientCertificateRequest::GetClientCertificateRequest(const GetClientCertificateRequest &other)
-    : APIGatewayRequest(new GetClientCertificateRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetClientCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetClientCertificateRequest::GetClientCertificateRequest(const GetClientCertific
  * Constructs a GetClientCertificateRequest object.
  */
 GetClientCertificateRequest::GetClientCertificateRequest()
-    : APIGatewayRequest(new GetClientCertificateRequestPrivate(APIGatewayRequest::GetClientCertificateAction, this))
+    : ApiGatewayRequest(new GetClientCertificateRequestPrivate(ApiGatewayRequest::GetClientCertificateAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificateRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::APIGateway::GetClientCertificateRequestPrivate
+ * \class QtAws::ApiGateway::GetClientCertificateRequestPrivate
  * \brief The GetClientCertificateRequestPrivate class provides private implementation for GetClientCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetClientCertificateRequestPrivate object for APIGateway \a action,
+ * Constructs a GetClientCertificateRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
-    const APIGatewayRequest::Action action, GetClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetClientCertificateRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
  */
 GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
     const GetClientCertificateRequestPrivate &other, GetClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

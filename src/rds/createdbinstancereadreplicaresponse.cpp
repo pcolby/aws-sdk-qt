@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBInstanceReadReplicaResponse
- * \brief The CreateDBInstanceReadReplicaResponse class provides an interace for RDS CreateDBInstanceReadReplica responses.
+ * \class QtAws::Rds::CreateDBInstanceReadReplicaResponse
+ * \brief The CreateDBInstanceReadReplicaResponse class provides an interace for Rds CreateDBInstanceReadReplica responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBInstanceReadReplicaRequest * CreateDBInstanceReadReplicaResponse::
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBInstanceReadReplica \a response.
+ * Parses a successful Rds CreateDBInstanceReadReplica \a response.
  */
 void CreateDBInstanceReadReplicaResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBInstanceReadReplicaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBInstanceReadReplicaResponsePrivate
+ * \class QtAws::Rds::CreateDBInstanceReadReplicaResponsePrivate
  * \brief The CreateDBInstanceReadReplicaResponsePrivate class provides private implementation for CreateDBInstanceReadReplicaResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBInstanceReadReplicaResponsePrivate::CreateDBInstanceReadReplicaResponseP
 }
 
 /*!
- * Parses a RDS CreateDBInstanceReadReplica response element from \a xml.
+ * Parses a Rds CreateDBInstanceReadReplica response element from \a xml.
  */
 void CreateDBInstanceReadReplicaResponsePrivate::parseCreateDBInstanceReadReplicaResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBInstanceReadReplicaResponsePrivate::parseCreateDBInstanceReadReplic
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

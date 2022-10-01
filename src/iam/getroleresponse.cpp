@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetRoleResponse
- * \brief The GetRoleResponse class provides an interace for IAM GetRole responses.
+ * \class QtAws::Iam::GetRoleResponse
+ * \brief The GetRoleResponse class provides an interace for Iam GetRole responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getRole
  */
@@ -68,7 +68,7 @@ const GetRoleRequest * GetRoleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM GetRole \a response.
+ * Parses a successful Iam GetRole \a response.
  */
 void GetRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetRoleResponsePrivate
+ * \class QtAws::Iam::GetRoleResponsePrivate
  * \brief The GetRoleResponsePrivate class provides private implementation for GetRoleResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetRoleResponsePrivate::GetRoleResponsePrivate(
 }
 
 /*!
- * Parses a IAM GetRole response element from \a xml.
+ * Parses a Iam GetRole response element from \a xml.
  */
 void GetRoleResponsePrivate::parseGetRoleResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetRoleResponsePrivate::parseGetRoleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

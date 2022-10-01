@@ -37,16 +37,21 @@ namespace Rekognition {
  * requests.
  *
  * \value CompareFacesAction Rekognition CompareFaces action.
+ * \value CopyProjectVersionAction Rekognition CopyProjectVersion action.
  * \value CreateCollectionAction Rekognition CreateCollection action.
+ * \value CreateDatasetAction Rekognition CreateDataset action.
  * \value CreateProjectAction Rekognition CreateProject action.
  * \value CreateProjectVersionAction Rekognition CreateProjectVersion action.
  * \value CreateStreamProcessorAction Rekognition CreateStreamProcessor action.
  * \value DeleteCollectionAction Rekognition DeleteCollection action.
+ * \value DeleteDatasetAction Rekognition DeleteDataset action.
  * \value DeleteFacesAction Rekognition DeleteFaces action.
  * \value DeleteProjectAction Rekognition DeleteProject action.
+ * \value DeleteProjectPolicyAction Rekognition DeleteProjectPolicy action.
  * \value DeleteProjectVersionAction Rekognition DeleteProjectVersion action.
  * \value DeleteStreamProcessorAction Rekognition DeleteStreamProcessor action.
  * \value DescribeCollectionAction Rekognition DescribeCollection action.
+ * \value DescribeDatasetAction Rekognition DescribeDataset action.
  * \value DescribeProjectVersionsAction Rekognition DescribeProjectVersions action.
  * \value DescribeProjectsAction Rekognition DescribeProjects action.
  * \value DescribeStreamProcessorAction Rekognition DescribeStreamProcessor action.
@@ -56,6 +61,7 @@ namespace Rekognition {
  * \value DetectModerationLabelsAction Rekognition DetectModerationLabels action.
  * \value DetectProtectiveEquipmentAction Rekognition DetectProtectiveEquipment action.
  * \value DetectTextAction Rekognition DetectText action.
+ * \value DistributeDatasetEntriesAction Rekognition DistributeDatasetEntries action.
  * \value GetCelebrityInfoAction Rekognition GetCelebrityInfo action.
  * \value GetCelebrityRecognitionAction Rekognition GetCelebrityRecognition action.
  * \value GetContentModerationAction Rekognition GetContentModeration action.
@@ -67,9 +73,13 @@ namespace Rekognition {
  * \value GetTextDetectionAction Rekognition GetTextDetection action.
  * \value IndexFacesAction Rekognition IndexFaces action.
  * \value ListCollectionsAction Rekognition ListCollections action.
+ * \value ListDatasetEntriesAction Rekognition ListDatasetEntries action.
+ * \value ListDatasetLabelsAction Rekognition ListDatasetLabels action.
  * \value ListFacesAction Rekognition ListFaces action.
+ * \value ListProjectPoliciesAction Rekognition ListProjectPolicies action.
  * \value ListStreamProcessorsAction Rekognition ListStreamProcessors action.
  * \value ListTagsForResourceAction Rekognition ListTagsForResource action.
+ * \value PutProjectPolicyAction Rekognition PutProjectPolicy action.
  * \value RecognizeCelebritiesAction Rekognition RecognizeCelebrities action.
  * \value SearchFacesAction Rekognition SearchFaces action.
  * \value SearchFacesByImageAction Rekognition SearchFacesByImage action.
@@ -87,6 +97,8 @@ namespace Rekognition {
  * \value StopStreamProcessorAction Rekognition StopStreamProcessor action.
  * \value TagResourceAction Rekognition TagResource action.
  * \value UntagResourceAction Rekognition UntagResource action.
+ * \value UpdateDatasetEntriesAction Rekognition UpdateDatasetEntries action.
+ * \value UpdateStreamProcessorAction Rekognition UpdateStreamProcessor action.
  */
 
 /*!
@@ -294,7 +306,7 @@ QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::Action action, RekognitionRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-06-27"))
 {
 
 }
@@ -329,16 +341,21 @@ QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &ac
         case RekognitionRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CompareFaces);
+        ActionToString(CopyProjectVersion);
         ActionToString(CreateCollection);
+        ActionToString(CreateDataset);
         ActionToString(CreateProject);
         ActionToString(CreateProjectVersion);
         ActionToString(CreateStreamProcessor);
         ActionToString(DeleteCollection);
+        ActionToString(DeleteDataset);
         ActionToString(DeleteFaces);
         ActionToString(DeleteProject);
+        ActionToString(DeleteProjectPolicy);
         ActionToString(DeleteProjectVersion);
         ActionToString(DeleteStreamProcessor);
         ActionToString(DescribeCollection);
+        ActionToString(DescribeDataset);
         ActionToString(DescribeProjectVersions);
         ActionToString(DescribeProjects);
         ActionToString(DescribeStreamProcessor);
@@ -348,6 +365,7 @@ QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &ac
         ActionToString(DetectModerationLabels);
         ActionToString(DetectProtectiveEquipment);
         ActionToString(DetectText);
+        ActionToString(DistributeDatasetEntries);
         ActionToString(GetCelebrityInfo);
         ActionToString(GetCelebrityRecognition);
         ActionToString(GetContentModeration);
@@ -359,9 +377,13 @@ QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &ac
         ActionToString(GetTextDetection);
         ActionToString(IndexFaces);
         ActionToString(ListCollections);
+        ActionToString(ListDatasetEntries);
+        ActionToString(ListDatasetLabels);
         ActionToString(ListFaces);
+        ActionToString(ListProjectPolicies);
         ActionToString(ListStreamProcessors);
         ActionToString(ListTagsForResource);
+        ActionToString(PutProjectPolicy);
         ActionToString(RecognizeCelebrities);
         ActionToString(SearchFaces);
         ActionToString(SearchFacesByImage);
@@ -379,6 +401,8 @@ QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &ac
         ActionToString(StopStreamProcessor);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateDatasetEntries);
+        ActionToString(UpdateStreamProcessor);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

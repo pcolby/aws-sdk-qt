@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ScanRequest
- * \brief The ScanRequest class provides an interface for DynamoDB Scan requests.
+ * \class QtAws::DynamoDb::ScanRequest
+ * \brief The ScanRequest class provides an interface for DynamoDb Scan requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::scan
+ * \sa DynamoDbClient::scan
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ScanRequest::ScanRequest(const ScanRequest &other)
-    : DynamoDBRequest(new ScanRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new ScanRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ ScanRequest::ScanRequest(const ScanRequest &other)
  * Constructs a ScanRequest object.
  */
 ScanRequest::ScanRequest()
-    : DynamoDBRequest(new ScanRequestPrivate(DynamoDBRequest::ScanAction, this))
+    : DynamoDbRequest(new ScanRequestPrivate(DynamoDbRequest::ScanAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
 }
 
 /*!
- * \class QtAws::DynamoDB::ScanRequestPrivate
+ * \class QtAws::DynamoDb::ScanRequestPrivate
  * \brief The ScanRequestPrivate class provides private implementation for ScanRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a ScanRequestPrivate object for DynamoDB \a action,
+ * Constructs a ScanRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 ScanRequestPrivate::ScanRequestPrivate(
-    const DynamoDBRequest::Action action, ScanRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, ScanRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ ScanRequestPrivate::ScanRequestPrivate(
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const ScanRequestPrivate &other, ScanRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

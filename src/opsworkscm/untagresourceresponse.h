@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT UntagResourceResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT UntagResourceResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

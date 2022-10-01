@@ -24,14 +24,14 @@
 #include "describenotificationrulerequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class DescribeNotificationRuleRequest;
 
-class DescribeNotificationRuleRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class DescribeNotificationRuleRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    DescribeNotificationRuleRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    DescribeNotificationRuleRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    DescribeNotificationRuleRequest * const q);
     DescribeNotificationRuleRequestPrivate(const DescribeNotificationRuleRequestPrivate &other,
                                    DescribeNotificationRuleRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

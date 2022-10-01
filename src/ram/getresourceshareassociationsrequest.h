@@ -23,7 +23,7 @@
 #include "ramrequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class GetResourceShareAssociationsRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

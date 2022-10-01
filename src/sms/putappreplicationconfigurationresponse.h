@@ -24,7 +24,7 @@
 #include "putappreplicationconfigurationrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class PutAppReplicationConfigurationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RequestCancelWorkflowExecutionResponse
- * \brief The RequestCancelWorkflowExecutionResponse class provides an interace for SWF RequestCancelWorkflowExecution responses.
+ * \class QtAws::Swf::RequestCancelWorkflowExecutionResponse
+ * \brief The RequestCancelWorkflowExecutionResponse class provides an interace for Swf RequestCancelWorkflowExecution responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResp
 
 /*!
  * \reimp
- * Parses a successful SWF RequestCancelWorkflowExecution \a response.
+ * Parses a successful Swf RequestCancelWorkflowExecution \a response.
  */
 void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RequestCancelWorkflowExecutionResponsePrivate
+ * \class QtAws::Swf::RequestCancelWorkflowExecutionResponsePrivate
  * \brief The RequestCancelWorkflowExecutionResponsePrivate class provides private implementation for RequestCancelWorkflowExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionRes
 }
 
 /*!
- * Parses a SWF RequestCancelWorkflowExecution response element from \a xml.
+ * Parses a Swf RequestCancelWorkflowExecution response element from \a xml.
  */
 void RequestCancelWorkflowExecutionResponsePrivate::parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RequestCancelWorkflowExecutionResponsePrivate::parseRequestCancelWorkflowEx
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

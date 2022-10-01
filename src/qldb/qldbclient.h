@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class QldbClientPrivate;
 class CancelJournalKinesisStreamRequest;
@@ -114,7 +114,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

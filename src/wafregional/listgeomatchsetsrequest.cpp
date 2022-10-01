@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListGeoMatchSetsRequest
- * \brief The ListGeoMatchSetsRequest class provides an interface for WAFRegional ListGeoMatchSets requests.
+ * \class QtAws::WafRegional::ListGeoMatchSetsRequest
+ * \brief The ListGeoMatchSetsRequest class provides an interface for WafRegional ListGeoMatchSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listGeoMatchSets
+ * \sa WafRegionalClient::listGeoMatchSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other)
-    : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListGeoMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &
  * Constructs a ListGeoMatchSetsRequest object.
  */
 ListGeoMatchSetsRequest::ListGeoMatchSetsRequest()
-    : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(WAFRegionalRequest::ListGeoMatchSetsAction, this))
+    : WafRegionalRequest(new ListGeoMatchSetsRequestPrivate(WafRegionalRequest::ListGeoMatchSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::WAFRegional::ListGeoMatchSetsRequestPrivate
+ * \class QtAws::WafRegional::ListGeoMatchSetsRequestPrivate
  * \brief The ListGeoMatchSetsRequestPrivate class provides private implementation for ListGeoMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListGeoMatchSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListGeoMatchSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListGeoMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListGeoMatchSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
  */
 ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
     const ListGeoMatchSetsRequestPrivate &other, ListGeoMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

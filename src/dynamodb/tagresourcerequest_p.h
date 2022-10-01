@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public DynamoDBRequestPrivate {
+class TagResourceRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const DynamoDBRequest::Action action,
+    TagResourceRequestPrivate(const DynamoDbRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

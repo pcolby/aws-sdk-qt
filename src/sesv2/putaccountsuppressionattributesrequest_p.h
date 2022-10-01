@@ -24,14 +24,14 @@
 #include "putaccountsuppressionattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountSuppressionAttributesRequest;
 
-class PutAccountSuppressionAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutAccountSuppressionAttributesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutAccountSuppressionAttributesRequestPrivate(const Sesv2Request::Action action,
+    PutAccountSuppressionAttributesRequestPrivate(const SESv2Request::Action action,
                                    PutAccountSuppressionAttributesRequest * const q);
     PutAccountSuppressionAttributesRequestPrivate(const PutAccountSuppressionAttributesRequestPrivate &other,
                                    PutAccountSuppressionAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

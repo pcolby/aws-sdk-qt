@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCODEDEPLOY_LIBRARY)
 
 add_library(QtAwsCodeDeploy
+  qtawscodedeployglobal.h
+  codedeployclient.h
+  codedeployclient_p.h
+  codedeployrequest.h
+  codedeployrequest_p.h
+  codedeployresponse.h
+  codedeployresponse_p.h
   addtagstoonpremisesinstancesrequest.h
   addtagstoonpremisesinstancesrequest_p.h
   addtagstoonpremisesinstancesresponse.h
@@ -21,24 +28,18 @@ add_library(QtAwsCodeDeploy
   batchgetdeploymentinstancesrequest_p.h
   batchgetdeploymentinstancesresponse.h
   batchgetdeploymentinstancesresponse_p.h
-  batchgetdeploymentsrequest.h
-  batchgetdeploymentsrequest_p.h
-  batchgetdeploymentsresponse.h
-  batchgetdeploymentsresponse_p.h
   batchgetdeploymenttargetsrequest.h
   batchgetdeploymenttargetsrequest_p.h
   batchgetdeploymenttargetsresponse.h
   batchgetdeploymenttargetsresponse_p.h
+  batchgetdeploymentsrequest.h
+  batchgetdeploymentsrequest_p.h
+  batchgetdeploymentsresponse.h
+  batchgetdeploymentsresponse_p.h
   batchgetonpremisesinstancesrequest.h
   batchgetonpremisesinstancesrequest_p.h
   batchgetonpremisesinstancesresponse.h
   batchgetonpremisesinstancesresponse_p.h
-  codedeployclient.h
-  codedeployclient_p.h
-  codedeployrequest.h
-  codedeployrequest_p.h
-  codedeployresponse.h
-  codedeployresponse_p.h
   continuedeploymentrequest.h
   continuedeploymentrequest_p.h
   continuedeploymentresponse.h
@@ -47,6 +48,10 @@ add_library(QtAwsCodeDeploy
   createapplicationrequest_p.h
   createapplicationresponse.h
   createapplicationresponse_p.h
+  createdeploymentrequest.h
+  createdeploymentrequest_p.h
+  createdeploymentresponse.h
+  createdeploymentresponse_p.h
   createdeploymentconfigrequest.h
   createdeploymentconfigrequest_p.h
   createdeploymentconfigresponse.h
@@ -55,10 +60,6 @@ add_library(QtAwsCodeDeploy
   createdeploymentgrouprequest_p.h
   createdeploymentgroupresponse.h
   createdeploymentgroupresponse_p.h
-  createdeploymentrequest.h
-  createdeploymentrequest_p.h
-  createdeploymentresponse.h
-  createdeploymentresponse_p.h
   deleteapplicationrequest.h
   deleteapplicationrequest_p.h
   deleteapplicationresponse.h
@@ -91,6 +92,10 @@ add_library(QtAwsCodeDeploy
   getapplicationrevisionrequest_p.h
   getapplicationrevisionresponse.h
   getapplicationrevisionresponse_p.h
+  getdeploymentrequest.h
+  getdeploymentrequest_p.h
+  getdeploymentresponse.h
+  getdeploymentresponse_p.h
   getdeploymentconfigrequest.h
   getdeploymentconfigrequest_p.h
   getdeploymentconfigresponse.h
@@ -103,10 +108,6 @@ add_library(QtAwsCodeDeploy
   getdeploymentinstancerequest_p.h
   getdeploymentinstanceresponse.h
   getdeploymentinstanceresponse_p.h
-  getdeploymentrequest.h
-  getdeploymentrequest_p.h
-  getdeploymentresponse.h
-  getdeploymentresponse_p.h
   getdeploymenttargetrequest.h
   getdeploymenttargetrequest_p.h
   getdeploymenttargetresponse.h
@@ -135,14 +136,14 @@ add_library(QtAwsCodeDeploy
   listdeploymentinstancesrequest_p.h
   listdeploymentinstancesresponse.h
   listdeploymentinstancesresponse_p.h
-  listdeploymentsrequest.h
-  listdeploymentsrequest_p.h
-  listdeploymentsresponse.h
-  listdeploymentsresponse_p.h
   listdeploymenttargetsrequest.h
   listdeploymenttargetsrequest_p.h
   listdeploymenttargetsresponse.h
   listdeploymenttargetsresponse_p.h
+  listdeploymentsrequest.h
+  listdeploymentsrequest_p.h
+  listdeploymentsresponse.h
+  listdeploymentsresponse_p.h
   listgithubaccounttokennamesrequest.h
   listgithubaccounttokennamesrequest_p.h
   listgithubaccounttokennamesresponse.h
@@ -159,7 +160,6 @@ add_library(QtAwsCodeDeploy
   putlifecycleeventhookexecutionstatusrequest_p.h
   putlifecycleeventhookexecutionstatusresponse.h
   putlifecycleeventhookexecutionstatusresponse_p.h
-  qtawscodedeployglobal.h
   registerapplicationrevisionrequest.h
   registerapplicationrevisionrequest_p.h
   registerapplicationrevisionresponse.h
@@ -196,6 +196,9 @@ add_library(QtAwsCodeDeploy
   updatedeploymentgrouprequest_p.h
   updatedeploymentgroupresponse.h
   updatedeploymentgroupresponse_p.h
+  codedeployclient.cpp
+  codedeployrequest.cpp
+  codedeployresponse.cpp
   addtagstoonpremisesinstancesrequest.cpp
   addtagstoonpremisesinstancesresponse.cpp
   batchgetapplicationrevisionsrequest.cpp
@@ -206,25 +209,22 @@ add_library(QtAwsCodeDeploy
   batchgetdeploymentgroupsresponse.cpp
   batchgetdeploymentinstancesrequest.cpp
   batchgetdeploymentinstancesresponse.cpp
-  batchgetdeploymentsrequest.cpp
-  batchgetdeploymentsresponse.cpp
   batchgetdeploymenttargetsrequest.cpp
   batchgetdeploymenttargetsresponse.cpp
+  batchgetdeploymentsrequest.cpp
+  batchgetdeploymentsresponse.cpp
   batchgetonpremisesinstancesrequest.cpp
   batchgetonpremisesinstancesresponse.cpp
-  codedeployclient.cpp
-  codedeployrequest.cpp
-  codedeployresponse.cpp
   continuedeploymentrequest.cpp
   continuedeploymentresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
+  createdeploymentrequest.cpp
+  createdeploymentresponse.cpp
   createdeploymentconfigrequest.cpp
   createdeploymentconfigresponse.cpp
   createdeploymentgrouprequest.cpp
   createdeploymentgroupresponse.cpp
-  createdeploymentrequest.cpp
-  createdeploymentresponse.cpp
   deleteapplicationrequest.cpp
   deleteapplicationresponse.cpp
   deletedeploymentconfigrequest.cpp
@@ -241,14 +241,14 @@ add_library(QtAwsCodeDeploy
   getapplicationresponse.cpp
   getapplicationrevisionrequest.cpp
   getapplicationrevisionresponse.cpp
+  getdeploymentrequest.cpp
+  getdeploymentresponse.cpp
   getdeploymentconfigrequest.cpp
   getdeploymentconfigresponse.cpp
   getdeploymentgrouprequest.cpp
   getdeploymentgroupresponse.cpp
   getdeploymentinstancerequest.cpp
   getdeploymentinstanceresponse.cpp
-  getdeploymentrequest.cpp
-  getdeploymentresponse.cpp
   getdeploymenttargetrequest.cpp
   getdeploymenttargetresponse.cpp
   getonpremisesinstancerequest.cpp
@@ -263,10 +263,10 @@ add_library(QtAwsCodeDeploy
   listdeploymentgroupsresponse.cpp
   listdeploymentinstancesrequest.cpp
   listdeploymentinstancesresponse.cpp
-  listdeploymentsrequest.cpp
-  listdeploymentsresponse.cpp
   listdeploymenttargetsrequest.cpp
   listdeploymenttargetsresponse.cpp
+  listdeploymentsrequest.cpp
+  listdeploymentsresponse.cpp
   listgithubaccounttokennamesrequest.cpp
   listgithubaccounttokennamesresponse.cpp
   listonpremisesinstancesrequest.cpp

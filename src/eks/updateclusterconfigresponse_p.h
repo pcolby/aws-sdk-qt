@@ -23,7 +23,7 @@
 #include "eksresponse_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class UpdateClusterConfigResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

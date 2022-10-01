@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteStageRequest
- * \brief The DeleteStageRequest class provides an interface for APIGateway DeleteStage requests.
+ * \class QtAws::ApiGateway::DeleteStageRequest
+ * \brief The DeleteStageRequest class provides an interface for ApiGateway DeleteStage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteStage
+ * \sa ApiGatewayClient::deleteStage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteStageRequest::DeleteStageRequest(const DeleteStageRequest &other)
-    : APIGatewayRequest(new DeleteStageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteStageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteStageRequest::DeleteStageRequest(const DeleteStageRequest &other)
  * Constructs a DeleteStageRequest object.
  */
 DeleteStageRequest::DeleteStageRequest()
-    : APIGatewayRequest(new DeleteStageRequestPrivate(APIGatewayRequest::DeleteStageAction, this))
+    : ApiGatewayRequest(new DeleteStageRequestPrivate(ApiGatewayRequest::DeleteStageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteStageRequestPrivate
+ * \class QtAws::ApiGateway::DeleteStageRequestPrivate
  * \brief The DeleteStageRequestPrivate class provides private implementation for DeleteStageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteStageRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteStageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteStageRequestPrivate::DeleteStageRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteStageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteStageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteStageRequestPrivate::DeleteStageRequestPrivate(
  */
 DeleteStageRequestPrivate::DeleteStageRequestPrivate(
     const DeleteStageRequestPrivate &other, DeleteStageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

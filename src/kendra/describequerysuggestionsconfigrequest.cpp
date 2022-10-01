@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeQuerySuggestionsConfigRequest
- * \brief The DescribeQuerySuggestionsConfigRequest class provides an interface for kendra DescribeQuerySuggestionsConfig requests.
+ * \class QtAws::Kendra::DescribeQuerySuggestionsConfigRequest
+ * \brief The DescribeQuerySuggestionsConfigRequest class provides an interface for Kendra DescribeQuerySuggestionsConfig requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeQuerySuggestionsConfig
+ * \sa KendraClient::describeQuerySuggestionsConfig
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeQuerySuggestionsConfigRequest::DescribeQuerySuggestionsConfigRequest(const DescribeQuerySuggestionsConfigRequest &other)
-    : kendraRequest(new DescribeQuerySuggestionsConfigRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DescribeQuerySuggestionsConfigRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeQuerySuggestionsConfigRequest::DescribeQuerySuggestionsConfigRequest(con
  * Constructs a DescribeQuerySuggestionsConfigRequest object.
  */
 DescribeQuerySuggestionsConfigRequest::DescribeQuerySuggestionsConfigRequest()
-    : kendraRequest(new DescribeQuerySuggestionsConfigRequestPrivate(kendraRequest::DescribeQuerySuggestionsConfigAction, this))
+    : KendraRequest(new DescribeQuerySuggestionsConfigRequestPrivate(KendraRequest::DescribeQuerySuggestionsConfigAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeQuerySuggestionsConfigRequest::respon
 }
 
 /*!
- * \class QtAws::kendra::DescribeQuerySuggestionsConfigRequestPrivate
+ * \class QtAws::Kendra::DescribeQuerySuggestionsConfigRequestPrivate
  * \brief The DescribeQuerySuggestionsConfigRequestPrivate class provides private implementation for DescribeQuerySuggestionsConfigRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DescribeQuerySuggestionsConfigRequestPrivate object for kendra \a action,
+ * Constructs a DescribeQuerySuggestionsConfigRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DescribeQuerySuggestionsConfigRequestPrivate::DescribeQuerySuggestionsConfigRequestPrivate(
-    const kendraRequest::Action action, DescribeQuerySuggestionsConfigRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DescribeQuerySuggestionsConfigRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeQuerySuggestionsConfigRequestPrivate::DescribeQuerySuggestionsConfigRequ
  */
 DescribeQuerySuggestionsConfigRequestPrivate::DescribeQuerySuggestionsConfigRequestPrivate(
     const DescribeQuerySuggestionsConfigRequestPrivate &other, DescribeQuerySuggestionsConfigRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListDataSourcesResponse
- * \brief The ListDataSourcesResponse class provides an interace for kendra ListDataSources responses.
+ * \class QtAws::Kendra::ListDataSourcesResponse
+ * \brief The ListDataSourcesResponse class provides an interace for Kendra ListDataSources responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listDataSources
+ * \sa KendraClient::listDataSources
  */
 
 /*!
@@ -45,7 +45,7 @@ ListDataSourcesResponse::ListDataSourcesResponse(
         const ListDataSourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ListDataSourcesResponsePrivate(this), parent)
+    : KendraResponse(new ListDataSourcesResponsePrivate(this), parent)
 {
     setRequest(new ListDataSourcesRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListDataSourcesRequest * ListDataSourcesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra ListDataSources \a response.
+ * Parses a successful Kendra ListDataSources \a response.
  */
 void ListDataSourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListDataSourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ListDataSourcesResponsePrivate
+ * \class QtAws::Kendra::ListDataSourcesResponsePrivate
  * \brief The ListDataSourcesResponsePrivate class provides private implementation for ListDataSourcesResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ListDataSourcesResponsePrivate object with public implementation \a q.
  */
 ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
-    ListDataSourcesResponse * const q) : kendraResponsePrivate(q)
+    ListDataSourcesResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ListDataSources response element from \a xml.
+ * Parses a Kendra ListDataSources response element from \a xml.
  */
 void ListDataSourcesResponsePrivate::parseListDataSourcesResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListDataSourcesResponsePrivate::parseListDataSourcesResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

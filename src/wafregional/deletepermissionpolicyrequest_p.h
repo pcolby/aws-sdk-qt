@@ -24,14 +24,14 @@
 #include "deletepermissionpolicyrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeletePermissionPolicyRequest;
 
-class DeletePermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
+class DeletePermissionPolicyRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeletePermissionPolicyRequestPrivate(const WAFRegionalRequest::Action action,
+    DeletePermissionPolicyRequestPrivate(const WafRegionalRequest::Action action,
                                    DeletePermissionPolicyRequest * const q);
     DeletePermissionPolicyRequestPrivate(const DeletePermissionPolicyRequestPrivate &other,
                                    DeletePermissionPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

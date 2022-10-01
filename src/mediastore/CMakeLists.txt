@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSMEDIASTORE_LIBRARY)
 
 add_library(QtAwsMediaStore
+  qtawsmediastoreglobal.h
+  mediastoreclient.h
+  mediastoreclient_p.h
+  mediastorerequest.h
+  mediastorerequest_p.h
+  mediastoreresponse.h
+  mediastoreresponse_p.h
   createcontainerrequest.h
   createcontainerrequest_p.h
   createcontainerresponse.h
   createcontainerresponse_p.h
-  deletecontainerpolicyrequest.h
-  deletecontainerpolicyrequest_p.h
-  deletecontainerpolicyresponse.h
-  deletecontainerpolicyresponse_p.h
   deletecontainerrequest.h
   deletecontainerrequest_p.h
   deletecontainerresponse.h
   deletecontainerresponse_p.h
+  deletecontainerpolicyrequest.h
+  deletecontainerpolicyrequest_p.h
+  deletecontainerpolicyresponse.h
+  deletecontainerpolicyresponse_p.h
   deletecorspolicyrequest.h
   deletecorspolicyrequest_p.h
   deletecorspolicyresponse.h
@@ -53,12 +60,6 @@ add_library(QtAwsMediaStore
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mediastoreclient.h
-  mediastoreclient_p.h
-  mediastorerequest.h
-  mediastorerequest_p.h
-  mediastoreresponse.h
-  mediastoreresponse_p.h
   putcontainerpolicyrequest.h
   putcontainerpolicyrequest_p.h
   putcontainerpolicyresponse.h
@@ -75,7 +76,6 @@ add_library(QtAwsMediaStore
   putmetricpolicyrequest_p.h
   putmetricpolicyresponse.h
   putmetricpolicyresponse_p.h
-  qtawsmediastoreglobal.h
   startaccessloggingrequest.h
   startaccessloggingrequest_p.h
   startaccessloggingresponse.h
@@ -92,12 +92,15 @@ add_library(QtAwsMediaStore
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  mediastoreclient.cpp
+  mediastorerequest.cpp
+  mediastoreresponse.cpp
   createcontainerrequest.cpp
   createcontainerresponse.cpp
-  deletecontainerpolicyrequest.cpp
-  deletecontainerpolicyresponse.cpp
   deletecontainerrequest.cpp
   deletecontainerresponse.cpp
+  deletecontainerpolicyrequest.cpp
+  deletecontainerpolicyresponse.cpp
   deletecorspolicyrequest.cpp
   deletecorspolicyresponse.cpp
   deletelifecyclepolicyrequest.cpp
@@ -118,9 +121,6 @@ add_library(QtAwsMediaStore
   listcontainersresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mediastoreclient.cpp
-  mediastorerequest.cpp
-  mediastoreresponse.cpp
   putcontainerpolicyrequest.cpp
   putcontainerpolicyresponse.cpp
   putcorspolicyrequest.cpp

@@ -269,7 +269,7 @@ QNetworkRequest CloudSearchRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudSearchRequestPrivate::CloudSearchRequestPrivate(const CloudSearchRequest::Action action, CloudSearchRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-01-01"))
 {
 
 }

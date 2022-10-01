@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::ListTagsForResourceResponse
- * \brief The ListTagsForResourceResponse class provides an interace for mgn ListTagsForResource responses.
+ * \class QtAws::Mgn::ListTagsForResourceResponse
+ * \brief The ListTagsForResourceResponse class provides an interace for Mgn ListTagsForResource responses.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::listTagsForResource
+ * \sa MgnClient::listTagsForResource
  */
 
 /*!
@@ -45,7 +45,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : mgnResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : MgnResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful mgn ListTagsForResource \a response.
+ * Parses a successful Mgn ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::mgn::ListTagsForResourceResponsePrivate
+ * \class QtAws::Mgn::ListTagsForResourceResponsePrivate
  * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
  * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
-    ListTagsForResourceResponse * const q) : mgnResponsePrivate(q)
+    ListTagsForResourceResponse * const q) : MgnResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a mgn ListTagsForResource response element from \a xml.
+ * Parses a Mgn ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

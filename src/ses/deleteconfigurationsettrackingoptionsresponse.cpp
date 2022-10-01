@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsResponse
- * \brief The DeleteConfigurationSetTrackingOptionsResponse class provides an interace for SES DeleteConfigurationSetTrackingOptions responses.
+ * \class QtAws::Ses::DeleteConfigurationSetTrackingOptionsResponse
+ * \brief The DeleteConfigurationSetTrackingOptionsResponse class provides an interace for Ses DeleteConfigurationSetTrackingOptions responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrack
 
 /*!
  * \reimp
- * Parses a successful SES DeleteConfigurationSetTrackingOptions \a response.
+ * Parses a successful Ses DeleteConfigurationSetTrackingOptions \a response.
  */
 void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsResponsePrivate
+ * \class QtAws::Ses::DeleteConfigurationSetTrackingOptionsResponsePrivate
  * \brief The DeleteConfigurationSetTrackingOptionsResponsePrivate class provides private implementation for DeleteConfigurationSetTrackingOptionsResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrac
 }
 
 /*!
- * Parses a SES DeleteConfigurationSetTrackingOptions response element from \a xml.
+ * Parses a Ses DeleteConfigurationSetTrackingOptions response element from \a xml.
  */
 void DeleteConfigurationSetTrackingOptionsResponsePrivate::parseDeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteConfigurationSetTrackingOptionsResponsePrivate::parseDeleteConfigurat
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

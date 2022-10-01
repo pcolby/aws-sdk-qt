@@ -220,10 +220,10 @@ namespace ServiceCatalog {
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
- *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
- *  catalogs of IT services that are approved for AWS. To get the most out of this documentation, you should be familiar
- *  with the terminology discussed in <a
- *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
+ *  <a href="https://aws.amazon.com/servicecatalog/">Service Catalog</a> enables organizations to create and manage catalogs
+ *  of IT services that are approved for Amazon Web Services. To get the most out of this documentation, you should be
+ *  familiar with the terminology discussed in <a
+ *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">Service Catalog
  */
 
 /*!
@@ -397,9 +397,10 @@ BatchDisassociateServiceActionFromProvisioningArtifactResponse * ServiceCatalogC
  *
  * product>
  *
- * You can copy a product to the same account or another account. You can copy a product to the same region or another
+ * You can copy a product to the same account or another account. You can copy a product to the same Region or another
+ * Region. If you copy a product to another account, you must first share the product in a portfolio using
  *
- * region>
+ * <a>CreatePortfolioShare</a>>
  *
  * This operation is performed asynchronously. To track the progress of the operation, use
  */
@@ -503,13 +504,17 @@ CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when
- * updating a provisioned product) when the plan is
+ * Creates a
+ *
+ * plan>
+ *
+ * A plan includes the list of resources to be created (when provisioning a new product) or modified (when updating a
+ * provisioned product) when the plan is
  *
  * executed>
  *
- * You can create one plan per provisioned product. To create a plan for an existing provisioned product, the product
- * status must be AVAILBLE or
+ * You can create one plan for each provisioned product. To create a plan for an existing provisioned product, the product
+ * status must be AVAILABLE or
  *
  * TAINTED>
  *
@@ -955,18 +960,25 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it
- * will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your
- * organization structure if it changes after calling this API. This API can only be called by the management account in
- * the
+ * Disable portfolio sharing through the Organizations service. This command will not delete your current shares, but
+ * prevents you from creating new shares throughout your organization. Current shares are not kept in sync with your
+ * organization structure if the structure changes after calling this API. Only the management account in the organization
+ * can call this
  *
- * organization>
+ * API>
  *
- * This API can't be invoked if there are active delegated administrators in the
+ * You cannot call this API if there are active delegated administrators in the
  *
  * organization>
  *
  * Note that a delegated administrator is not authorized to invoke
+ *
+ * <code>DisableAWSOrganizationsAccess</code>> <b>
+ *
+ * If you share an Service Catalog portfolio in an organization within Organizations, and then disable Organizations access
+ * for Service Catalog, the portfolio access permissions will not sync with the latest changes to the organization
+ * structure. Specifically, accounts that you removed from the organization after disabling Service Catalog access will
+ * retain access to the previously shared
  */
 DisableAWSOrganizationsAccessResponse * ServiceCatalogClient::disableAWSOrganizationsAccess(const DisableAWSOrganizationsAccessRequest &request)
 {
@@ -1048,18 +1060,27 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on
- * your organization in order to sync your shares with the current structure. This API can only be called by the management
+ * Enable portfolio sharing feature through Organizations. This API will allow Service Catalog to receive updates on your
+ * organization in order to sync your shares with the current structure. This API can only be called by the management
  * account in the
  *
  * organization>
  *
- * By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your
- * shares can be in sync with any changes in your AWS Organizations
+ * When you call this API, Service Catalog calls <code>organizations:EnableAWSServiceAccess</code> on your behalf so that
+ * your shares stay in sync with any changes in your Organizations
  *
  * structure>
  *
  * Note that a delegated administrator is not authorized to invoke
+ *
+ * <code>EnableAWSOrganizationsAccess</code>> <b>
+ *
+ * If you have previously disabled Organizations access for Service Catalog, and then enable access again, the portfolio
+ * access permissions might not sync with the latest changes to the organization structure. Specifically, accounts that you
+ * removed from the organization after disabling Service Catalog access, and before you enabled access again, can retain
+ * access to the previously shared portfolio. As a result, an account that has been removed from the organization might
+ * still be able to create or manage Amazon Web Services resources when it is no longer authorized to do so. Amazon Web
+ * Services is working to resolve this
  */
 EnableAWSOrganizationsAccessResponse * ServiceCatalogClient::enableAWSOrganizationsAccess(const EnableAWSOrganizationsAccessRequest &request)
 {
@@ -1098,8 +1119,8 @@ ExecuteProvisionedProductServiceActionResponse * ServiceCatalogClient::executePr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the management
- * account in the organization or by a delegated
+ * Get the Access Status for Organizations portfolio share feature. This API can only be called by the management account
+ * in the organization or by a delegated
  */
 GetAWSOrganizationsAccessStatusResponse * ServiceCatalogClient::getAWSOrganizationsAccessStatus(const GetAWSOrganizationsAccessStatusRequest &request)
 {
@@ -1126,9 +1147,9 @@ GetProvisionedProductOutputsResponse * ServiceCatalogClient::getProvisionedProdu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests the import of a resource as a Service Catalog provisioned product that is associated to a Service Catalog
- * product and provisioning artifact. Once imported, all supported Service Catalog governance actions are supported on the
- * provisioned
+ * Requests the import of a resource as a Amazon Web Services Service Catalog provisioned product that is associated to a
+ * Amazon Web Services Service Catalog product and provisioning artifact. Once imported, all supported Amazon Web Services
+ * Service Catalog governance actions are supported on the provisioned
  *
  * product>
  *
@@ -1141,8 +1162,8 @@ GetProvisionedProductOutputsResponse * ServiceCatalogClient::getProvisionedProdu
  *
  * <code>IMPORT_ROLLBACK_COMPLETE</code>>
  *
- * Import of the resource requires that the CloudFormation stack template matches the associated Service Catalog product
- * provisioning artifact.
+ * Import of the resource requires that the CloudFormation stack template matches the associated Amazon Web Services
+ * Service Catalog product provisioning artifact.
  *
  * </p
  *
@@ -1160,7 +1181,8 @@ ImportAsProvisionedProductResponse * ServiceCatalogClient::importAsProvisionedPr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all portfolios for which sharing was accepted by this
+ * Lists all imported portfolios for which account-to-account shares were accepted by this account. By specifying the
+ * <code>PortfolioShareType</code>, you can list portfolios for which organizational shares were accepted by this
  */
 ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request)
 {
@@ -1380,7 +1402,8 @@ ListServiceActionsForProvisioningArtifactResponse * ServiceCatalogClient::listSe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns summary information about stack instances that are associated with the specified <code>CFN_STACKSET</code> type
- * provisioned product. You can filter for stack instances that are associated with a specific AWS account name or region.
+ * provisioned product. You can filter for stack instances that are associated with a specific Amazon Web Services account
+ * name or Region.
  */
 ListStackInstancesForProvisionedProductResponse * ServiceCatalogClient::listStackInstancesForProvisionedProduct(const ListStackInstancesForProvisionedProductRequest &request)
 {
@@ -1487,6 +1510,18 @@ SearchProductsAsAdminResponse * ServiceCatalogClient::searchProductsAsAdmin(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the provisioned products that meet the specified
+ *
+ * criteria> <note>
+ *
+ * To ensure a complete list of provisioned products and remove duplicate products, use <code>sort-by createdTime</code>.
+ *
+ * </p
+ *
+ * Here is a CLI example: <code> </code>
+ *
+ * </p
+ *
+ * <code>aws servicecatalog search-provisioned-products --sort-by createdTime </code>
  */
 SearchProvisionedProductsResponse * ServiceCatalogClient::searchProvisionedProducts(const SearchProvisionedProductsRequest &request)
 {

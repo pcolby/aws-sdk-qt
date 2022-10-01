@@ -40,6 +40,7 @@ namespace S3Control {
  * \value CreateAccessPointForObjectLambdaAction S3Control CreateAccessPointForObjectLambda action.
  * \value CreateBucketAction S3Control CreateBucket action.
  * \value CreateJobAction S3Control CreateJob action.
+ * \value CreateMultiRegionAccessPointAction S3Control CreateMultiRegionAccessPoint action.
  * \value DeleteAccessPointAction S3Control DeleteAccessPoint action.
  * \value DeleteAccessPointForObjectLambdaAction S3Control DeleteAccessPointForObjectLambda action.
  * \value DeleteAccessPointPolicyAction S3Control DeleteAccessPointPolicy action.
@@ -49,10 +50,12 @@ namespace S3Control {
  * \value DeleteBucketPolicyAction S3Control DeleteBucketPolicy action.
  * \value DeleteBucketTaggingAction S3Control DeleteBucketTagging action.
  * \value DeleteJobTaggingAction S3Control DeleteJobTagging action.
+ * \value DeleteMultiRegionAccessPointAction S3Control DeleteMultiRegionAccessPoint action.
  * \value DeletePublicAccessBlockAction S3Control DeletePublicAccessBlock action.
  * \value DeleteStorageLensConfigurationAction S3Control DeleteStorageLensConfiguration action.
  * \value DeleteStorageLensConfigurationTaggingAction S3Control DeleteStorageLensConfigurationTagging action.
  * \value DescribeJobAction S3Control DescribeJob action.
+ * \value DescribeMultiRegionAccessPointOperationAction S3Control DescribeMultiRegionAccessPointOperation action.
  * \value GetAccessPointAction S3Control GetAccessPoint action.
  * \value GetAccessPointConfigurationForObjectLambdaAction S3Control GetAccessPointConfigurationForObjectLambda action.
  * \value GetAccessPointForObjectLambdaAction S3Control GetAccessPointForObjectLambda action.
@@ -64,13 +67,18 @@ namespace S3Control {
  * \value GetBucketLifecycleConfigurationAction S3Control GetBucketLifecycleConfiguration action.
  * \value GetBucketPolicyAction S3Control GetBucketPolicy action.
  * \value GetBucketTaggingAction S3Control GetBucketTagging action.
+ * \value GetBucketVersioningAction S3Control GetBucketVersioning action.
  * \value GetJobTaggingAction S3Control GetJobTagging action.
+ * \value GetMultiRegionAccessPointAction S3Control GetMultiRegionAccessPoint action.
+ * \value GetMultiRegionAccessPointPolicyAction S3Control GetMultiRegionAccessPointPolicy action.
+ * \value GetMultiRegionAccessPointPolicyStatusAction S3Control GetMultiRegionAccessPointPolicyStatus action.
  * \value GetPublicAccessBlockAction S3Control GetPublicAccessBlock action.
  * \value GetStorageLensConfigurationAction S3Control GetStorageLensConfiguration action.
  * \value GetStorageLensConfigurationTaggingAction S3Control GetStorageLensConfigurationTagging action.
  * \value ListAccessPointsAction S3Control ListAccessPoints action.
  * \value ListAccessPointsForObjectLambdaAction S3Control ListAccessPointsForObjectLambda action.
  * \value ListJobsAction S3Control ListJobs action.
+ * \value ListMultiRegionAccessPointsAction S3Control ListMultiRegionAccessPoints action.
  * \value ListRegionalBucketsAction S3Control ListRegionalBuckets action.
  * \value ListStorageLensConfigurationsAction S3Control ListStorageLensConfigurations action.
  * \value PutAccessPointConfigurationForObjectLambdaAction S3Control PutAccessPointConfigurationForObjectLambda action.
@@ -79,7 +87,9 @@ namespace S3Control {
  * \value PutBucketLifecycleConfigurationAction S3Control PutBucketLifecycleConfiguration action.
  * \value PutBucketPolicyAction S3Control PutBucketPolicy action.
  * \value PutBucketTaggingAction S3Control PutBucketTagging action.
+ * \value PutBucketVersioningAction S3Control PutBucketVersioning action.
  * \value PutJobTaggingAction S3Control PutJobTagging action.
+ * \value PutMultiRegionAccessPointPolicyAction S3Control PutMultiRegionAccessPointPolicy action.
  * \value PutPublicAccessBlockAction S3Control PutPublicAccessBlock action.
  * \value PutStorageLensConfigurationAction S3Control PutStorageLensConfiguration action.
  * \value PutStorageLensConfigurationTaggingAction S3Control PutStorageLensConfigurationTagging action.
@@ -292,7 +302,7 @@ QNetworkRequest S3ControlRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3ControlRequestPrivate::S3ControlRequestPrivate(const S3ControlRequest::Action action, S3ControlRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-08-20"))
 {
 
 }
@@ -330,6 +340,7 @@ QString S3ControlRequestPrivate::toString(const S3ControlRequest::Action &action
         ActionToString(CreateAccessPointForObjectLambda);
         ActionToString(CreateBucket);
         ActionToString(CreateJob);
+        ActionToString(CreateMultiRegionAccessPoint);
         ActionToString(DeleteAccessPoint);
         ActionToString(DeleteAccessPointForObjectLambda);
         ActionToString(DeleteAccessPointPolicy);
@@ -339,10 +350,12 @@ QString S3ControlRequestPrivate::toString(const S3ControlRequest::Action &action
         ActionToString(DeleteBucketPolicy);
         ActionToString(DeleteBucketTagging);
         ActionToString(DeleteJobTagging);
+        ActionToString(DeleteMultiRegionAccessPoint);
         ActionToString(DeletePublicAccessBlock);
         ActionToString(DeleteStorageLensConfiguration);
         ActionToString(DeleteStorageLensConfigurationTagging);
         ActionToString(DescribeJob);
+        ActionToString(DescribeMultiRegionAccessPointOperation);
         ActionToString(GetAccessPoint);
         ActionToString(GetAccessPointConfigurationForObjectLambda);
         ActionToString(GetAccessPointForObjectLambda);
@@ -354,13 +367,18 @@ QString S3ControlRequestPrivate::toString(const S3ControlRequest::Action &action
         ActionToString(GetBucketLifecycleConfiguration);
         ActionToString(GetBucketPolicy);
         ActionToString(GetBucketTagging);
+        ActionToString(GetBucketVersioning);
         ActionToString(GetJobTagging);
+        ActionToString(GetMultiRegionAccessPoint);
+        ActionToString(GetMultiRegionAccessPointPolicy);
+        ActionToString(GetMultiRegionAccessPointPolicyStatus);
         ActionToString(GetPublicAccessBlock);
         ActionToString(GetStorageLensConfiguration);
         ActionToString(GetStorageLensConfigurationTagging);
         ActionToString(ListAccessPoints);
         ActionToString(ListAccessPointsForObjectLambda);
         ActionToString(ListJobs);
+        ActionToString(ListMultiRegionAccessPoints);
         ActionToString(ListRegionalBuckets);
         ActionToString(ListStorageLensConfigurations);
         ActionToString(PutAccessPointConfigurationForObjectLambda);
@@ -369,7 +387,9 @@ QString S3ControlRequestPrivate::toString(const S3ControlRequest::Action &action
         ActionToString(PutBucketLifecycleConfiguration);
         ActionToString(PutBucketPolicy);
         ActionToString(PutBucketTagging);
+        ActionToString(PutBucketVersioning);
         ActionToString(PutJobTagging);
+        ActionToString(PutMultiRegionAccessPointPolicy);
         ActionToString(PutPublicAccessBlock);
         ActionToString(PutStorageLensConfiguration);
         ActionToString(PutStorageLensConfigurationTagging);

@@ -24,7 +24,7 @@
 #include "setidentitydkimenabledrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SetIdentityDkimEnabledResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

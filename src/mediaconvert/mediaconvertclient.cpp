@@ -35,6 +35,8 @@
 #include "createqueueresponse.h"
 #include "deletejobtemplaterequest.h"
 #include "deletejobtemplateresponse.h"
+#include "deletepolicyrequest.h"
+#include "deletepolicyresponse.h"
 #include "deletepresetrequest.h"
 #include "deletepresetresponse.h"
 #include "deletequeuerequest.h"
@@ -47,6 +49,8 @@
 #include "getjobresponse.h"
 #include "getjobtemplaterequest.h"
 #include "getjobtemplateresponse.h"
+#include "getpolicyrequest.h"
+#include "getpolicyresponse.h"
 #include "getpresetrequest.h"
 #include "getpresetresponse.h"
 #include "getqueuerequest.h"
@@ -61,6 +65,8 @@
 #include "listqueuesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "putpolicyrequest.h"
+#include "putpolicyresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -239,6 +245,18 @@ DeleteJobTemplateResponse * MediaConvertClient::deleteJobTemplate(const DeleteJo
 
 /*!
  * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DeletePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeletePolicyResponse * MediaConvertClient::deletePolicy(const DeletePolicyRequest &request)
+{
+    return qobject_cast<DeletePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
  * DeletePresetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -308,6 +326,18 @@ GetJobResponse * MediaConvertClient::getJob(const GetJobRequest &request)
 GetJobTemplateResponse * MediaConvertClient::getJobTemplate(const GetJobTemplateRequest &request)
 {
     return qobject_cast<GetJobTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * GetPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetPolicyResponse * MediaConvertClient::getPolicy(const GetPolicyRequest &request)
+{
+    return qobject_cast<GetPolicyResponse *>(send(request));
 }
 
 /*!
@@ -397,6 +427,19 @@ ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &req
 ListTagsForResourceResponse * MediaConvertClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * PutPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create or change your policy. For more information about policies, see the user guide at
+ */
+PutPolicyResponse * MediaConvertClient::putPolicy(const PutPolicyRequest &request)
+{
+    return qobject_cast<PutPolicyResponse *>(send(request));
 }
 
 /*!

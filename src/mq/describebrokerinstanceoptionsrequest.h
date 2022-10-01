@@ -23,7 +23,7 @@
 #include "mqrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class DescribeBrokerInstanceOptionsRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

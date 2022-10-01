@@ -24,14 +24,14 @@
 #include "updatewebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UpdateWebACLRequest;
 
-class UpdateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class UpdateWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    UpdateWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    UpdateWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    UpdateWebACLRequest * const q);
     UpdateWebACLRequestPrivate(const UpdateWebACLRequestPrivate &other,
                                    UpdateWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

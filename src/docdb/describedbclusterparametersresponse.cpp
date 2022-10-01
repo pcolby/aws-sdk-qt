@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParametersResponse
- * \brief The DescribeDBClusterParametersResponse class provides an interace for DocDB DescribeDBClusterParameters responses.
+ * \class QtAws::DocDb::DescribeDBClusterParametersResponse
+ * \brief The DescribeDBClusterParametersResponse class provides an interace for DocDb DescribeDBClusterParameters responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBClusterParameters
+ * \sa DocDbClient::describeDBClusterParameters
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
         const DescribeDBClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClusterParametersRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDBClusterParametersRequest * DescribeDBClusterParametersResponse::
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeDBClusterParameters \a response.
+ * Parses a successful DocDb DescribeDBClusterParameters \a response.
  */
 void DescribeDBClusterParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDBClusterParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParametersResponsePrivate
+ * \class QtAws::DocDb::DescribeDBClusterParametersResponsePrivate
  * \brief The DescribeDBClusterParametersResponsePrivate class provides private implementation for DescribeDBClusterParametersResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeDBClusterParametersResponsePrivate object with public implementation \a q.
  */
 DescribeDBClusterParametersResponsePrivate::DescribeDBClusterParametersResponsePrivate(
-    DescribeDBClusterParametersResponse * const q) : DocDBResponsePrivate(q)
+    DescribeDBClusterParametersResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeDBClusterParameters response element from \a xml.
+ * Parses a DocDb DescribeDBClusterParameters response element from \a xml.
  */
 void DescribeDBClusterParametersResponsePrivate::parseDescribeDBClusterParametersResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDBClusterParametersResponsePrivate::parseDescribeDBClusterParameter
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

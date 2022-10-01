@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::BatchGetItemResponse
- * \brief The BatchGetItemResponse class provides an interace for DynamoDB BatchGetItem responses.
+ * \class QtAws::DynamoDb::BatchGetItemResponse
+ * \brief The BatchGetItemResponse class provides an interace for DynamoDb BatchGetItem responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::batchGetItem
+ * \sa DynamoDbClient::batchGetItem
  */
 
 /*!
@@ -63,7 +63,7 @@ BatchGetItemResponse::BatchGetItemResponse(
         const BatchGetItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new BatchGetItemResponsePrivate(this), parent)
+    : DynamoDbResponse(new BatchGetItemResponsePrivate(this), parent)
 {
     setRequest(new BatchGetItemRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const BatchGetItemRequest * BatchGetItemResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB BatchGetItem \a response.
+ * Parses a successful DynamoDb BatchGetItem \a response.
  */
 void BatchGetItemResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void BatchGetItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::BatchGetItemResponsePrivate
+ * \class QtAws::DynamoDb::BatchGetItemResponsePrivate
  * \brief The BatchGetItemResponsePrivate class provides private implementation for BatchGetItemResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a BatchGetItemResponsePrivate object with public implementation \a q.
  */
 BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
-    BatchGetItemResponse * const q) : DynamoDBResponsePrivate(q)
+    BatchGetItemResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB BatchGetItem response element from \a xml.
+ * Parses a DynamoDb BatchGetItem response element from \a xml.
  */
 void BatchGetItemResponsePrivate::parseBatchGetItemResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void BatchGetItemResponsePrivate::parseBatchGetItemResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

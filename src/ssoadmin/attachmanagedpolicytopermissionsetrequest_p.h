@@ -24,14 +24,14 @@
 #include "attachmanagedpolicytopermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class AttachManagedPolicyToPermissionSetRequest;
 
-class AttachManagedPolicyToPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class AttachManagedPolicyToPermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    AttachManagedPolicyToPermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    AttachManagedPolicyToPermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    AttachManagedPolicyToPermissionSetRequest * const q);
     AttachManagedPolicyToPermissionSetRequestPrivate(const AttachManagedPolicyToPermissionSetRequestPrivate &other,
                                    AttachManagedPolicyToPermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

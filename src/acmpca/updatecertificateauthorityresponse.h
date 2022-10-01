@@ -24,11 +24,11 @@
 #include "updatecertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class UpdateCertificateAuthorityResponsePrivate;
 
-class QTAWSACMPCA_EXPORT UpdateCertificateAuthorityResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT UpdateCertificateAuthorityResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

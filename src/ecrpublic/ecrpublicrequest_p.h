@@ -24,28 +24,28 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicRequest;
+class EcrPublicRequest;
 
-class ECRPublicRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EcrPublicRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ECRPublicRequest::Action action; ///< ECRPublic action to be performed.
-    QString apiVersion;        ///< ECRPublic API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ECRPublic request (query string) parameters. @todo?
+    EcrPublicRequest::Action action; ///< EcrPublic action to be performed.
+    QString apiVersion;        ///< EcrPublic API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< EcrPublic request (query string) parameters. @todo?
 
-    ECRPublicRequestPrivate(const ECRPublicRequest::Action action, ECRPublicRequest * const q);
-    ECRPublicRequestPrivate(const ECRPublicRequestPrivate &other, ECRPublicRequest * const q);
+    EcrPublicRequestPrivate(const EcrPublicRequest::Action action, EcrPublicRequest * const q);
+    EcrPublicRequestPrivate(const EcrPublicRequestPrivate &other, EcrPublicRequest * const q);
 
-    static QString toString(const ECRPublicRequest::Action &action);
+    static QString toString(const EcrPublicRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ECRPublicRequest)
+    Q_DECLARE_PUBLIC(EcrPublicRequest)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

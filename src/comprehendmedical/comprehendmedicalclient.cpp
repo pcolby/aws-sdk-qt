@@ -29,6 +29,8 @@
 #include "describephidetectionjobresponse.h"
 #include "describerxnorminferencejobrequest.h"
 #include "describerxnorminferencejobresponse.h"
+#include "describesnomedctinferencejobrequest.h"
+#include "describesnomedctinferencejobresponse.h"
 #include "detectentitiesrequest.h"
 #include "detectentitiesresponse.h"
 #include "detectentitiesv2request.h"
@@ -39,6 +41,8 @@
 #include "infericd10cmresponse.h"
 #include "inferrxnormrequest.h"
 #include "inferrxnormresponse.h"
+#include "infersnomedctrequest.h"
+#include "infersnomedctresponse.h"
 #include "listentitiesdetectionv2jobsrequest.h"
 #include "listentitiesdetectionv2jobsresponse.h"
 #include "listicd10cminferencejobsrequest.h"
@@ -47,6 +51,8 @@
 #include "listphidetectionjobsresponse.h"
 #include "listrxnorminferencejobsrequest.h"
 #include "listrxnorminferencejobsresponse.h"
+#include "listsnomedctinferencejobsrequest.h"
+#include "listsnomedctinferencejobsresponse.h"
 #include "startentitiesdetectionv2jobrequest.h"
 #include "startentitiesdetectionv2jobresponse.h"
 #include "starticd10cminferencejobrequest.h"
@@ -55,6 +61,8 @@
 #include "startphidetectionjobresponse.h"
 #include "startrxnorminferencejobrequest.h"
 #include "startrxnorminferencejobresponse.h"
+#include "startsnomedctinferencejobrequest.h"
+#include "startsnomedctinferencejobresponse.h"
 #include "stopentitiesdetectionv2jobrequest.h"
 #include "stopentitiesdetectionv2jobresponse.h"
 #include "stopicd10cminferencejobrequest.h"
@@ -63,13 +71,15 @@
 #include "stopphidetectionjobresponse.h"
 #include "stoprxnorminferencejobrequest.h"
 #include "stoprxnorminferencejobresponse.h"
+#include "stopsnomedctinferencejobrequest.h"
+#include "stopsnomedctinferencejobresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 /*!
  * \namespace QtAws::ComprehendMedical
- * \brief Contains classess for accessing AWS Comprehend Medical (ComprehendMedical).
+ * \brief Contains classess for accessing AWS Comprehend Medical.
  *
  * \inmodule QtAwsComprehendMedical
  *
@@ -81,13 +91,13 @@ namespace ComprehendMedical {
 
 /*!
  * \class QtAws::ComprehendMedical::ComprehendMedicalClient
- * \brief The ComprehendMedicalClient class provides access to the AWS Comprehend Medical (ComprehendMedical) service.
+ * \brief The ComprehendMedicalClient class provides access to the AWS Comprehend Medical service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsComprehendMedical
  *
- *  Amazon Comprehend Medical extracts structured information from unstructured clinical text. Use these actions to gain
- *  insight in your documents.
+ *  Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain insight
+ *  in your documents.
  */
 
 /*!
@@ -199,6 +209,19 @@ DescribeRxNormInferenceJobResponse * ComprehendMedicalClient::describeRxNormInfe
 
 /*!
  * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
+ * DescribeSNOMEDCTInferenceJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with an InferSNOMEDCT job. Use this operation to get the status of an inference job.
+ */
+DescribeSNOMEDCTInferenceJobResponse * ComprehendMedicalClient::describeSNOMEDCTInferenceJob(const DescribeSNOMEDCTInferenceJobRequest &request)
+{
+    return qobject_cast<DescribeSNOMEDCTInferenceJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
  * DetectEntitiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -287,6 +310,20 @@ InferRxNormResponse * ComprehendMedicalClient::inferRxNorm(const InferRxNormRequ
 
 /*!
  * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
+ * InferSNOMEDCTResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * InferSNOMEDCT detects possible medical concepts as entities and links them to codes from the Systematized Nomenclature
+ * of Medicine, Clinical Terms (SNOMED-CT)
+ */
+InferSNOMEDCTResponse * ComprehendMedicalClient::inferSNOMEDCT(const InferSNOMEDCTRequest &request)
+{
+    return qobject_cast<InferSNOMEDCTResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
  * ListEntitiesDetectionV2JobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -335,6 +372,19 @@ ListPHIDetectionJobsResponse * ComprehendMedicalClient::listPHIDetectionJobs(con
 ListRxNormInferenceJobsResponse * ComprehendMedicalClient::listRxNormInferenceJobs(const ListRxNormInferenceJobsRequest &request)
 {
     return qobject_cast<ListRxNormInferenceJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
+ * ListSNOMEDCTInferenceJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of InferSNOMEDCT jobs a user has submitted.
+ */
+ListSNOMEDCTInferenceJobsResponse * ComprehendMedicalClient::listSNOMEDCTInferenceJobs(const ListSNOMEDCTInferenceJobsRequest &request)
+{
+    return qobject_cast<ListSNOMEDCTInferenceJobsResponse *>(send(request));
 }
 
 /*!
@@ -395,6 +445,20 @@ StartRxNormInferenceJobResponse * ComprehendMedicalClient::startRxNormInferenceJ
 
 /*!
  * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
+ * StartSNOMEDCTInferenceJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous job to detect medical concepts and link them to the SNOMED-CT ontology. Use the
+ * DescribeSNOMEDCTInferenceJob operation to track the status of a job.
+ */
+StartSNOMEDCTInferenceJobResponse * ComprehendMedicalClient::startSNOMEDCTInferenceJob(const StartSNOMEDCTInferenceJobRequest &request)
+{
+    return qobject_cast<StartSNOMEDCTInferenceJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
  * StopEntitiesDetectionV2JobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -443,6 +507,19 @@ StopPHIDetectionJobResponse * ComprehendMedicalClient::stopPHIDetectionJob(const
 StopRxNormInferenceJobResponse * ComprehendMedicalClient::stopRxNormInferenceJob(const StopRxNormInferenceJobRequest &request)
 {
     return qobject_cast<StopRxNormInferenceJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendMedicalClient service, and returns a pointer to an
+ * StopSNOMEDCTInferenceJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an InferSNOMEDCT inference job in progress.
+ */
+StopSNOMEDCTInferenceJobResponse * ComprehendMedicalClient::stopSNOMEDCTInferenceJob(const StopSNOMEDCTInferenceJobRequest &request)
+{
+    return qobject_cast<StopSNOMEDCTInferenceJobResponse *>(send(request));
 }
 
 /*!

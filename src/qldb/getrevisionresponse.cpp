@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetRevisionResponse
- * \brief The GetRevisionResponse class provides an interace for QLDB GetRevision responses.
+ * \class QtAws::Qldb::GetRevisionResponse
+ * \brief The GetRevisionResponse class provides an interace for Qldb GetRevision responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const GetRevisionRequest * GetRevisionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB GetRevision \a response.
+ * Parses a successful Qldb GetRevision \a response.
  */
 void GetRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void GetRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::GetRevisionResponsePrivate
+ * \class QtAws::Qldb::GetRevisionResponsePrivate
  * \brief The GetRevisionResponsePrivate class provides private implementation for GetRevisionResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ GetRevisionResponsePrivate::GetRevisionResponsePrivate(
 }
 
 /*!
- * Parses a QLDB GetRevision response element from \a xml.
+ * Parses a Qldb GetRevision response element from \a xml.
  */
 void GetRevisionResponsePrivate::parseGetRevisionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetRevisionResponsePrivate::parseGetRevisionResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

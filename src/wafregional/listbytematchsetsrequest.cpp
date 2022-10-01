@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListByteMatchSetsRequest
- * \brief The ListByteMatchSetsRequest class provides an interface for WAFRegional ListByteMatchSets requests.
+ * \class QtAws::WafRegional::ListByteMatchSetsRequest
+ * \brief The ListByteMatchSetsRequest class provides an interface for WafRegional ListByteMatchSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listByteMatchSets
+ * \sa WafRegionalClient::listByteMatchSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other)
-    : WAFRegionalRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsReques
  * Constructs a ListByteMatchSetsRequest object.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest()
-    : WAFRegionalRequest(new ListByteMatchSetsRequestPrivate(WAFRegionalRequest::ListByteMatchSetsAction, this))
+    : WafRegionalRequest(new ListByteMatchSetsRequestPrivate(WafRegionalRequest::ListByteMatchSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::ListByteMatchSetsRequestPrivate
+ * \class QtAws::WafRegional::ListByteMatchSetsRequestPrivate
  * \brief The ListByteMatchSetsRequestPrivate class provides private implementation for ListByteMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListByteMatchSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListByteMatchSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListByteMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListByteMatchSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

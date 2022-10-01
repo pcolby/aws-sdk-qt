@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteDataSourceRequestPrivate;
 
-class QTAWSKENDRA_EXPORT DeleteDataSourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT DeleteDataSourceRequest : public KendraRequest {
 
 public:
     DeleteDataSourceRequest(const DeleteDataSourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

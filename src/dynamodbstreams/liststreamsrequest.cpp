@@ -23,13 +23,13 @@
 #include "dynamodbstreamsrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::ListStreamsRequest
- * \brief The ListStreamsRequest class provides an interface for DynamoDBStreams ListStreams requests.
+ * \class QtAws::DynamoDbStreams::ListStreamsRequest
+ * \brief The ListStreamsRequest class provides an interface for DynamoDbStreams ListStreams requests.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -38,14 +38,14 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::listStreams
+ * \sa DynamoDbStreamsClient::listStreams
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
-    : DynamoDBStreamsRequest(new ListStreamsRequestPrivate(*other.d_func(), this))
+    : DynamoDbStreamsRequest(new ListStreamsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ ListStreamsRequest::ListStreamsRequest(const ListStreamsRequest &other)
  * Constructs a ListStreamsRequest object.
  */
 ListStreamsRequest::ListStreamsRequest()
-    : DynamoDBStreamsRequest(new ListStreamsRequestPrivate(DynamoDBStreamsRequest::ListStreamsAction, this))
+    : DynamoDbStreamsRequest(new ListStreamsRequestPrivate(DynamoDbStreamsRequest::ListStreamsAction, this))
 {
 
 }
@@ -79,20 +79,20 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::ListStreamsRequestPrivate
+ * \class QtAws::DynamoDbStreams::ListStreamsRequestPrivate
  * \brief The ListStreamsRequestPrivate class provides private implementation for ListStreamsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a ListStreamsRequestPrivate object for DynamoDBStreams \a action,
+ * Constructs a ListStreamsRequestPrivate object for DynamoDbStreams \a action,
  * with public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
-    const DynamoDBStreamsRequest::Action action, ListStreamsRequest * const q)
-    : DynamoDBStreamsRequestPrivate(action, q)
+    const DynamoDbStreamsRequest::Action action, ListStreamsRequest * const q)
+    : DynamoDbStreamsRequestPrivate(action, q)
 {
 
 }
@@ -105,10 +105,10 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const ListStreamsRequestPrivate &other, ListStreamsRequest * const q)
-    : DynamoDBStreamsRequestPrivate(other, q)
+    : DynamoDbStreamsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

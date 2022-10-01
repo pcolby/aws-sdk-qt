@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetIdentityMailFromDomainAttributesResponse
- * \brief The GetIdentityMailFromDomainAttributesResponse class provides an interace for SES GetIdentityMailFromDomainAttributes responses.
+ * \class QtAws::Ses::GetIdentityMailFromDomainAttributesResponse
+ * \brief The GetIdentityMailFromDomainAttributesResponse class provides an interace for Ses GetIdentityMailFromDomainAttributes responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttr
 
 /*!
  * \reimp
- * Parses a successful SES GetIdentityMailFromDomainAttributes \a response.
+ * Parses a successful Ses GetIdentityMailFromDomainAttributes \a response.
  */
 void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
- * \class QtAws::SES::GetIdentityMailFromDomainAttributesResponsePrivate
+ * \class QtAws::Ses::GetIdentityMailFromDomainAttributesResponsePrivate
  * \brief The GetIdentityMailFromDomainAttributesResponsePrivate class provides private implementation for GetIdentityMailFromDomainAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAtt
 }
 
 /*!
- * Parses a SES GetIdentityMailFromDomainAttributes response element from \a xml.
+ * Parses a Ses GetIdentityMailFromDomainAttributes response element from \a xml.
  */
 void GetIdentityMailFromDomainAttributesResponsePrivate::parseGetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetIdentityMailFromDomainAttributesResponsePrivate::parseGetIdentityMailFro
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -56,6 +56,8 @@ class DescribeBudgetActionsForAccountRequest;
 class DescribeBudgetActionsForAccountResponse;
 class DescribeBudgetActionsForBudgetRequest;
 class DescribeBudgetActionsForBudgetResponse;
+class DescribeBudgetNotificationsForAccountRequest;
+class DescribeBudgetNotificationsForAccountResponse;
 class DescribeBudgetPerformanceHistoryRequest;
 class DescribeBudgetPerformanceHistoryResponse;
 class DescribeBudgetsRequest;
@@ -104,6 +106,7 @@ public slots:
     DescribeBudgetActionHistoriesResponse * describeBudgetActionHistories(const DescribeBudgetActionHistoriesRequest &request);
     DescribeBudgetActionsForAccountResponse * describeBudgetActionsForAccount(const DescribeBudgetActionsForAccountRequest &request);
     DescribeBudgetActionsForBudgetResponse * describeBudgetActionsForBudget(const DescribeBudgetActionsForBudgetRequest &request);
+    DescribeBudgetNotificationsForAccountResponse * describeBudgetNotificationsForAccount(const DescribeBudgetNotificationsForAccountRequest &request);
     DescribeBudgetPerformanceHistoryResponse * describeBudgetPerformanceHistory(const DescribeBudgetPerformanceHistoryRequest &request);
     DescribeBudgetsResponse * describeBudgets(const DescribeBudgetsRequest &request);
     DescribeNotificationsForBudgetResponse * describeNotificationsForBudget(const DescribeNotificationsForBudgetRequest &request);

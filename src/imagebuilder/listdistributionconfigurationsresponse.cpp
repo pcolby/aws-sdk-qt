@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListDistributionConfigurationsResponse
- * \brief The ListDistributionConfigurationsResponse class provides an interace for imagebuilder ListDistributionConfigurations responses.
+ * \class QtAws::ImageBuilder::ListDistributionConfigurationsResponse
+ * \brief The ListDistributionConfigurationsResponse class provides an interace for ImageBuilder ListDistributionConfigurations responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listDistributionConfigurations
+ * \sa ImageBuilderClient::listDistributionConfigurations
  */
 
 /*!
@@ -47,7 +47,7 @@ ListDistributionConfigurationsResponse::ListDistributionConfigurationsResponse(
         const ListDistributionConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ListDistributionConfigurationsResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ListDistributionConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListDistributionConfigurationsRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ListDistributionConfigurationsRequest * ListDistributionConfigurationsResp
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ListDistributionConfigurations \a response.
+ * Parses a successful ImageBuilder ListDistributionConfigurations \a response.
  */
 void ListDistributionConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ListDistributionConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ListDistributionConfigurationsResponsePrivate
+ * \class QtAws::ImageBuilder::ListDistributionConfigurationsResponsePrivate
  * \brief The ListDistributionConfigurationsResponsePrivate class provides private implementation for ListDistributionConfigurationsResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ListDistributionConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListDistributionConfigurationsResponsePrivate::ListDistributionConfigurationsResponsePrivate(
-    ListDistributionConfigurationsResponse * const q) : imagebuilderResponsePrivate(q)
+    ListDistributionConfigurationsResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ListDistributionConfigurations response element from \a xml.
+ * Parses a ImageBuilder ListDistributionConfigurations response element from \a xml.
  */
 void ListDistributionConfigurationsResponsePrivate::parseListDistributionConfigurationsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListDistributionConfigurationsResponsePrivate::parseListDistributionConfigu
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

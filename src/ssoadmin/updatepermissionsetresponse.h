@@ -24,11 +24,11 @@
 #include "updatepermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class UpdatePermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT UpdatePermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT UpdatePermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

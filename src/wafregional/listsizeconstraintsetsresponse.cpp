@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListSizeConstraintSetsResponse
- * \brief The ListSizeConstraintSetsResponse class provides an interace for WAFRegional ListSizeConstraintSets responses.
+ * \class QtAws::WafRegional::ListSizeConstraintSetsResponse
+ * \brief The ListSizeConstraintSetsResponse class provides an interace for WafRegional ListSizeConstraintSets responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listSizeConstraintSets
+ * \sa WafRegionalClient::listSizeConstraintSets
  */
 
 /*!
@@ -67,7 +67,7 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
         const ListSizeConstraintSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
 {
     setRequest(new ListSizeConstraintSetsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListSizeConstraintSets \a response.
+ * Parses a successful WafRegional ListSizeConstraintSets \a response.
  */
 void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListSizeConstraintSetsResponsePrivate
+ * \class QtAws::WafRegional::ListSizeConstraintSetsResponsePrivate
  * \brief The ListSizeConstraintSetsResponsePrivate class provides private implementation for ListSizeConstraintSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListSizeConstraintSetsResponsePrivate object with public implementation \a q.
  */
 ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
-    ListSizeConstraintSetsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListSizeConstraintSetsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListSizeConstraintSets response element from \a xml.
+ * Parses a WafRegional ListSizeConstraintSets response element from \a xml.
  */
 void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

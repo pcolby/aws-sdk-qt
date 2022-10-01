@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetExportRequest
- * \brief The GetExportRequest class provides an interface for APIGateway GetExport requests.
+ * \class QtAws::ApiGateway::GetExportRequest
+ * \brief The GetExportRequest class provides an interface for ApiGateway GetExport requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getExport
+ * \sa ApiGatewayClient::getExport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetExportRequest::GetExportRequest(const GetExportRequest &other)
-    : APIGatewayRequest(new GetExportRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetExportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetExportRequest::GetExportRequest(const GetExportRequest &other)
  * Constructs a GetExportRequest object.
  */
 GetExportRequest::GetExportRequest()
-    : APIGatewayRequest(new GetExportRequestPrivate(APIGatewayRequest::GetExportAction, this))
+    : ApiGatewayRequest(new GetExportRequestPrivate(ApiGatewayRequest::GetExportAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::APIGateway::GetExportRequestPrivate
+ * \class QtAws::ApiGateway::GetExportRequestPrivate
  * \brief The GetExportRequestPrivate class provides private implementation for GetExportRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetExportRequestPrivate object for APIGateway \a action,
+ * Constructs a GetExportRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
-    const APIGatewayRequest::Action action, GetExportRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetExportRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetExportRequestPrivate::GetExportRequestPrivate(
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const GetExportRequestPrivate &other, GetExportRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

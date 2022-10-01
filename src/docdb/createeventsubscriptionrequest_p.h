@@ -24,14 +24,14 @@
 #include "createeventsubscriptionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateEventSubscriptionRequest;
 
-class CreateEventSubscriptionRequestPrivate : public DocDBRequestPrivate {
+class CreateEventSubscriptionRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    CreateEventSubscriptionRequestPrivate(const DocDBRequest::Action action,
+    CreateEventSubscriptionRequestPrivate(const DocDbRequest::Action action,
                                    CreateEventSubscriptionRequest * const q);
     CreateEventSubscriptionRequestPrivate(const CreateEventSubscriptionRequestPrivate &other,
                                    CreateEventSubscriptionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

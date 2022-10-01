@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::PutUserPermissionsBoundaryResponse
- * \brief The PutUserPermissionsBoundaryResponse class provides an interace for IAM PutUserPermissionsBoundary responses.
+ * \class QtAws::Iam::PutUserPermissionsBoundaryResponse
+ * \brief The PutUserPermissionsBoundaryResponse class provides an interace for Iam PutUserPermissionsBoundary responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::putUserPermissionsBoundary
  */
@@ -68,7 +68,7 @@ const PutUserPermissionsBoundaryRequest * PutUserPermissionsBoundaryResponse::re
 
 /*!
  * \reimp
- * Parses a successful IAM PutUserPermissionsBoundary \a response.
+ * Parses a successful Iam PutUserPermissionsBoundary \a response.
  */
 void PutUserPermissionsBoundaryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void PutUserPermissionsBoundaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::PutUserPermissionsBoundaryResponsePrivate
+ * \class QtAws::Iam::PutUserPermissionsBoundaryResponsePrivate
  * \brief The PutUserPermissionsBoundaryResponsePrivate class provides private implementation for PutUserPermissionsBoundaryResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ PutUserPermissionsBoundaryResponsePrivate::PutUserPermissionsBoundaryResponsePri
 }
 
 /*!
- * Parses a IAM PutUserPermissionsBoundary response element from \a xml.
+ * Parses a Iam PutUserPermissionsBoundary response element from \a xml.
  */
 void PutUserPermissionsBoundaryResponsePrivate::parsePutUserPermissionsBoundaryResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void PutUserPermissionsBoundaryResponsePrivate::parsePutUserPermissionsBoundaryR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

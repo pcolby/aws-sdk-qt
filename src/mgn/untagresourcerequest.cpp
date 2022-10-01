@@ -23,24 +23,24 @@
 #include "mgnrequest_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for mgn UntagResource requests.
+ * \class QtAws::Mgn::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for Mgn UntagResource requests.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::untagResource
+ * \sa MgnClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : mgnRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : MgnRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : mgnRequest(new UntagResourceRequestPrivate(mgnRequest::UntagResourceAction, this))
+    : MgnRequest(new UntagResourceRequestPrivate(MgnRequest::UntagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::mgn::UntagResourceRequestPrivate
+ * \class QtAws::Mgn::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for mgn \a action,
+ * Constructs a UntagResourceRequestPrivate object for Mgn \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const mgnRequest::Action action, UntagResourceRequest * const q)
-    : mgnRequestPrivate(action, q)
+    const MgnRequest::Action action, UntagResourceRequest * const q)
+    : MgnRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : mgnRequestPrivate(other, q)
+    : MgnRequestPrivate(other, q)
 {
 
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

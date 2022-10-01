@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetRequestValidatorRequest
- * \brief The GetRequestValidatorRequest class provides an interface for APIGateway GetRequestValidator requests.
+ * \class QtAws::ApiGateway::GetRequestValidatorRequest
+ * \brief The GetRequestValidatorRequest class provides an interface for ApiGateway GetRequestValidator requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getRequestValidator
+ * \sa ApiGatewayClient::getRequestValidator
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRequestValidatorRequest::GetRequestValidatorRequest(const GetRequestValidatorRequest &other)
-    : APIGatewayRequest(new GetRequestValidatorRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetRequestValidatorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetRequestValidatorRequest::GetRequestValidatorRequest(const GetRequestValidator
  * Constructs a GetRequestValidatorRequest object.
  */
 GetRequestValidatorRequest::GetRequestValidatorRequest()
-    : APIGatewayRequest(new GetRequestValidatorRequestPrivate(APIGatewayRequest::GetRequestValidatorAction, this))
+    : ApiGatewayRequest(new GetRequestValidatorRequestPrivate(ApiGatewayRequest::GetRequestValidatorAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetRequestValidatorRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::APIGateway::GetRequestValidatorRequestPrivate
+ * \class QtAws::ApiGateway::GetRequestValidatorRequestPrivate
  * \brief The GetRequestValidatorRequestPrivate class provides private implementation for GetRequestValidatorRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetRequestValidatorRequestPrivate object for APIGateway \a action,
+ * Constructs a GetRequestValidatorRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetRequestValidatorRequestPrivate::GetRequestValidatorRequestPrivate(
-    const APIGatewayRequest::Action action, GetRequestValidatorRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetRequestValidatorRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetRequestValidatorRequestPrivate::GetRequestValidatorRequestPrivate(
  */
 GetRequestValidatorRequestPrivate::GetRequestValidatorRequestPrivate(
     const GetRequestValidatorRequestPrivate &other, GetRequestValidatorRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

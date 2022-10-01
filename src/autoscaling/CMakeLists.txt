@@ -1,24 +1,25 @@
 add_compile_definitions(QTAWSAUTOSCALING_LIBRARY)
 
 add_library(QtAwsAutoScaling
-  attachinstancesrequest.h
-  attachinstancesrequest_p.h
-  attachinstancesresponse.h
-  attachinstancesresponse_p.h
-  attachloadbalancersrequest.h
-  attachloadbalancersrequest_p.h
-  attachloadbalancersresponse.h
-  attachloadbalancersresponse_p.h
-  attachloadbalancertargetgroupsrequest.h
-  attachloadbalancertargetgroupsrequest_p.h
-  attachloadbalancertargetgroupsresponse.h
-  attachloadbalancertargetgroupsresponse_p.h
+  qtawsautoscalingglobal.h
   autoscalingclient.h
   autoscalingclient_p.h
   autoscalingrequest.h
   autoscalingrequest_p.h
   autoscalingresponse.h
   autoscalingresponse_p.h
+  attachinstancesrequest.h
+  attachinstancesrequest_p.h
+  attachinstancesresponse.h
+  attachinstancesresponse_p.h
+  attachloadbalancertargetgroupsrequest.h
+  attachloadbalancertargetgroupsrequest_p.h
+  attachloadbalancertargetgroupsresponse.h
+  attachloadbalancertargetgroupsresponse_p.h
+  attachloadbalancersrequest.h
+  attachloadbalancersrequest_p.h
+  attachloadbalancersresponse.h
+  attachloadbalancersresponse_p.h
   batchdeletescheduledactionrequest.h
   batchdeletescheduledactionrequest_p.h
   batchdeletescheduledactionresponse.h
@@ -107,22 +108,22 @@ add_library(QtAwsAutoScaling
   describelaunchconfigurationsrequest_p.h
   describelaunchconfigurationsresponse.h
   describelaunchconfigurationsresponse_p.h
-  describelifecyclehooksrequest.h
-  describelifecyclehooksrequest_p.h
-  describelifecyclehooksresponse.h
-  describelifecyclehooksresponse_p.h
   describelifecyclehooktypesrequest.h
   describelifecyclehooktypesrequest_p.h
   describelifecyclehooktypesresponse.h
   describelifecyclehooktypesresponse_p.h
-  describeloadbalancersrequest.h
-  describeloadbalancersrequest_p.h
-  describeloadbalancersresponse.h
-  describeloadbalancersresponse_p.h
+  describelifecyclehooksrequest.h
+  describelifecyclehooksrequest_p.h
+  describelifecyclehooksresponse.h
+  describelifecyclehooksresponse_p.h
   describeloadbalancertargetgroupsrequest.h
   describeloadbalancertargetgroupsrequest_p.h
   describeloadbalancertargetgroupsresponse.h
   describeloadbalancertargetgroupsresponse_p.h
+  describeloadbalancersrequest.h
+  describeloadbalancersrequest_p.h
+  describeloadbalancersresponse.h
+  describeloadbalancersresponse_p.h
   describemetriccollectiontypesrequest.h
   describemetriccollectiontypesrequest_p.h
   describemetriccollectiontypesresponse.h
@@ -163,14 +164,14 @@ add_library(QtAwsAutoScaling
   detachinstancesrequest_p.h
   detachinstancesresponse.h
   detachinstancesresponse_p.h
-  detachloadbalancersrequest.h
-  detachloadbalancersrequest_p.h
-  detachloadbalancersresponse.h
-  detachloadbalancersresponse_p.h
   detachloadbalancertargetgroupsrequest.h
   detachloadbalancertargetgroupsrequest_p.h
   detachloadbalancertargetgroupsresponse.h
   detachloadbalancertargetgroupsresponse_p.h
+  detachloadbalancersrequest.h
+  detachloadbalancersrequest_p.h
+  detachloadbalancersresponse.h
+  detachloadbalancersresponse_p.h
   disablemetricscollectionrequest.h
   disablemetricscollectionrequest_p.h
   disablemetricscollectionresponse.h
@@ -215,7 +216,6 @@ add_library(QtAwsAutoScaling
   putwarmpoolrequest_p.h
   putwarmpoolresponse.h
   putwarmpoolresponse_p.h
-  qtawsautoscalingglobal.h
   recordlifecycleactionheartbeatrequest.h
   recordlifecycleactionheartbeatrequest_p.h
   recordlifecycleactionheartbeatresponse.h
@@ -252,15 +252,15 @@ add_library(QtAwsAutoScaling
   updateautoscalinggrouprequest_p.h
   updateautoscalinggroupresponse.h
   updateautoscalinggroupresponse_p.h
-  attachinstancesrequest.cpp
-  attachinstancesresponse.cpp
-  attachloadbalancersrequest.cpp
-  attachloadbalancersresponse.cpp
-  attachloadbalancertargetgroupsrequest.cpp
-  attachloadbalancertargetgroupsresponse.cpp
   autoscalingclient.cpp
   autoscalingrequest.cpp
   autoscalingresponse.cpp
+  attachinstancesrequest.cpp
+  attachinstancesresponse.cpp
+  attachloadbalancertargetgroupsrequest.cpp
+  attachloadbalancertargetgroupsresponse.cpp
+  attachloadbalancersrequest.cpp
+  attachloadbalancersresponse.cpp
   batchdeletescheduledactionrequest.cpp
   batchdeletescheduledactionresponse.cpp
   batchputscheduledupdategroupactionrequest.cpp
@@ -305,14 +305,14 @@ add_library(QtAwsAutoScaling
   describeinstancerefreshesresponse.cpp
   describelaunchconfigurationsrequest.cpp
   describelaunchconfigurationsresponse.cpp
-  describelifecyclehooksrequest.cpp
-  describelifecyclehooksresponse.cpp
   describelifecyclehooktypesrequest.cpp
   describelifecyclehooktypesresponse.cpp
-  describeloadbalancersrequest.cpp
-  describeloadbalancersresponse.cpp
+  describelifecyclehooksrequest.cpp
+  describelifecyclehooksresponse.cpp
   describeloadbalancertargetgroupsrequest.cpp
   describeloadbalancertargetgroupsresponse.cpp
+  describeloadbalancersrequest.cpp
+  describeloadbalancersresponse.cpp
   describemetriccollectiontypesrequest.cpp
   describemetriccollectiontypesresponse.cpp
   describenotificationconfigurationsrequest.cpp
@@ -333,10 +333,10 @@ add_library(QtAwsAutoScaling
   describewarmpoolresponse.cpp
   detachinstancesrequest.cpp
   detachinstancesresponse.cpp
-  detachloadbalancersrequest.cpp
-  detachloadbalancersresponse.cpp
   detachloadbalancertargetgroupsrequest.cpp
   detachloadbalancertargetgroupsresponse.cpp
+  detachloadbalancersrequest.cpp
+  detachloadbalancersresponse.cpp
   disablemetricscollectionrequest.cpp
   disablemetricscollectionresponse.cpp
   enablemetricscollectionrequest.cpp

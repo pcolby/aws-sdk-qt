@@ -24,7 +24,7 @@
 #include "modifydbclusterendpointrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class ModifyDBClusterEndpointRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

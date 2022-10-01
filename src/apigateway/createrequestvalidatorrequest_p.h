@@ -24,14 +24,14 @@
 #include "createrequestvalidatorrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateRequestValidatorRequest;
 
-class CreateRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
+class CreateRequestValidatorRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,
+    CreateRequestValidatorRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateRequestValidatorRequest * const q);
     CreateRequestValidatorRequestPrivate(const CreateRequestValidatorRequestPrivate &other,
                                    CreateRequestValidatorRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

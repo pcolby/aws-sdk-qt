@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteLoggingConfigurationRequest
- * \brief The DeleteLoggingConfigurationRequest class provides an interface for WAF DeleteLoggingConfiguration requests.
+ * \class QtAws::Waf::DeleteLoggingConfigurationRequest
+ * \brief The DeleteLoggingConfigurationRequest class provides an interface for Waf DeleteLoggingConfiguration requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggingConfigurationRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAF::DeleteLoggingConfigurationRequestPrivate
+ * \class QtAws::Waf::DeleteLoggingConfigurationRequestPrivate
  * \brief The DeleteLoggingConfigurationRequestPrivate class provides private implementation for DeleteLoggingConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteLoggingConfigurationRequestPrivate::DeleteLoggingConfigurationRequestPriva
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

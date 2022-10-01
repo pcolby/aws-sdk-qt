@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSCHEMAS_LIBRARY)
 
 add_library(QtAwsSchemas
+  qtawsschemasglobal.h
+  schemasclient.h
+  schemasclient_p.h
+  schemasrequest.h
+  schemasrequest_p.h
+  schemasresponse.h
+  schemasresponse_p.h
   creatediscovererrequest.h
   creatediscovererrequest_p.h
   creatediscovererresponse.h
@@ -73,14 +80,14 @@ add_library(QtAwsSchemas
   listregistriesrequest_p.h
   listregistriesresponse.h
   listregistriesresponse_p.h
-  listschemasrequest.h
-  listschemasrequest_p.h
-  listschemasresponse.h
-  listschemasresponse_p.h
   listschemaversionsrequest.h
   listschemaversionsrequest_p.h
   listschemaversionsresponse.h
   listschemaversionsresponse_p.h
+  listschemasrequest.h
+  listschemasrequest_p.h
+  listschemasresponse.h
+  listschemasresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -93,13 +100,6 @@ add_library(QtAwsSchemas
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
-  qtawsschemasglobal.h
-  schemasclient.h
-  schemasclient_p.h
-  schemasrequest.h
-  schemasrequest_p.h
-  schemasresponse.h
-  schemasresponse_p.h
   searchschemasrequest.h
   searchschemasrequest_p.h
   searchschemasresponse.h
@@ -132,6 +132,9 @@ add_library(QtAwsSchemas
   updateschemarequest_p.h
   updateschemaresponse.h
   updateschemaresponse_p.h
+  schemasclient.cpp
+  schemasrequest.cpp
+  schemasresponse.cpp
   creatediscovererrequest.cpp
   creatediscovererresponse.cpp
   createregistryrequest.cpp
@@ -168,19 +171,16 @@ add_library(QtAwsSchemas
   listdiscoverersresponse.cpp
   listregistriesrequest.cpp
   listregistriesresponse.cpp
-  listschemasrequest.cpp
-  listschemasresponse.cpp
   listschemaversionsrequest.cpp
   listschemaversionsresponse.cpp
+  listschemasrequest.cpp
+  listschemasresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putcodebindingrequest.cpp
   putcodebindingresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
-  schemasclient.cpp
-  schemasrequest.cpp
-  schemasresponse.cpp
   searchschemasrequest.cpp
   searchschemasresponse.cpp
   startdiscovererrequest.cpp

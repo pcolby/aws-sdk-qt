@@ -1,6 +1,17 @@
 add_compile_definitions(QTAWSGREENGRASSV2_LIBRARY)
 
 add_library(QtAwsGreengrassV2
+  qtawsgreengrassv2global.h
+  greengrassv2client.h
+  greengrassv2client_p.h
+  greengrassv2request.h
+  greengrassv2request_p.h
+  greengrassv2response.h
+  greengrassv2response_p.h
+  associateserviceroletoaccountrequest.h
+  associateserviceroletoaccountrequest_p.h
+  associateserviceroletoaccountresponse.h
+  associateserviceroletoaccountresponse_p.h
   batchassociateclientdevicewithcoredevicerequest.h
   batchassociateclientdevicewithcoredevicerequest_p.h
   batchassociateclientdevicewithcoredeviceresponse.h
@@ -29,10 +40,18 @@ add_library(QtAwsGreengrassV2
   deletecoredevicerequest_p.h
   deletecoredeviceresponse.h
   deletecoredeviceresponse_p.h
+  deletedeploymentrequest.h
+  deletedeploymentrequest_p.h
+  deletedeploymentresponse.h
+  deletedeploymentresponse_p.h
   describecomponentrequest.h
   describecomponentrequest_p.h
   describecomponentresponse.h
   describecomponentresponse_p.h
+  disassociateservicerolefromaccountrequest.h
+  disassociateservicerolefromaccountrequest_p.h
+  disassociateservicerolefromaccountresponse.h
+  disassociateservicerolefromaccountresponse_p.h
   getcomponentrequest.h
   getcomponentrequest_p.h
   getcomponentresponse.h
@@ -41,6 +60,10 @@ add_library(QtAwsGreengrassV2
   getcomponentversionartifactrequest_p.h
   getcomponentversionartifactresponse.h
   getcomponentversionartifactresponse_p.h
+  getconnectivityinforequest.h
+  getconnectivityinforequest_p.h
+  getconnectivityinforesponse.h
+  getconnectivityinforesponse_p.h
   getcoredevicerequest.h
   getcoredevicerequest_p.h
   getcoredeviceresponse.h
@@ -49,24 +72,22 @@ add_library(QtAwsGreengrassV2
   getdeploymentrequest_p.h
   getdeploymentresponse.h
   getdeploymentresponse_p.h
-  greengrassv2client.h
-  greengrassv2client_p.h
-  greengrassv2request.h
-  greengrassv2request_p.h
-  greengrassv2response.h
-  greengrassv2response_p.h
+  getserviceroleforaccountrequest.h
+  getserviceroleforaccountrequest_p.h
+  getserviceroleforaccountresponse.h
+  getserviceroleforaccountresponse_p.h
   listclientdevicesassociatedwithcoredevicerequest.h
   listclientdevicesassociatedwithcoredevicerequest_p.h
   listclientdevicesassociatedwithcoredeviceresponse.h
   listclientdevicesassociatedwithcoredeviceresponse_p.h
-  listcomponentsrequest.h
-  listcomponentsrequest_p.h
-  listcomponentsresponse.h
-  listcomponentsresponse_p.h
   listcomponentversionsrequest.h
   listcomponentversionsrequest_p.h
   listcomponentversionsresponse.h
   listcomponentversionsresponse_p.h
+  listcomponentsrequest.h
+  listcomponentsrequest_p.h
+  listcomponentsresponse.h
+  listcomponentsresponse_p.h
   listcoredevicesrequest.h
   listcoredevicesrequest_p.h
   listcoredevicesresponse.h
@@ -87,7 +108,6 @@ add_library(QtAwsGreengrassV2
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsgreengrassv2global.h
   resolvecomponentcandidatesrequest.h
   resolvecomponentcandidatesrequest_p.h
   resolvecomponentcandidatesresponse.h
@@ -100,6 +120,15 @@ add_library(QtAwsGreengrassV2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateconnectivityinforequest.h
+  updateconnectivityinforequest_p.h
+  updateconnectivityinforesponse.h
+  updateconnectivityinforesponse_p.h
+  greengrassv2client.cpp
+  greengrassv2request.cpp
+  greengrassv2response.cpp
+  associateserviceroletoaccountrequest.cpp
+  associateserviceroletoaccountresponse.cpp
   batchassociateclientdevicewithcoredevicerequest.cpp
   batchassociateclientdevicewithcoredeviceresponse.cpp
   batchdisassociateclientdevicefromcoredevicerequest.cpp
@@ -114,25 +143,30 @@ add_library(QtAwsGreengrassV2
   deletecomponentresponse.cpp
   deletecoredevicerequest.cpp
   deletecoredeviceresponse.cpp
+  deletedeploymentrequest.cpp
+  deletedeploymentresponse.cpp
   describecomponentrequest.cpp
   describecomponentresponse.cpp
+  disassociateservicerolefromaccountrequest.cpp
+  disassociateservicerolefromaccountresponse.cpp
   getcomponentrequest.cpp
   getcomponentresponse.cpp
   getcomponentversionartifactrequest.cpp
   getcomponentversionartifactresponse.cpp
+  getconnectivityinforequest.cpp
+  getconnectivityinforesponse.cpp
   getcoredevicerequest.cpp
   getcoredeviceresponse.cpp
   getdeploymentrequest.cpp
   getdeploymentresponse.cpp
-  greengrassv2client.cpp
-  greengrassv2request.cpp
-  greengrassv2response.cpp
+  getserviceroleforaccountrequest.cpp
+  getserviceroleforaccountresponse.cpp
   listclientdevicesassociatedwithcoredevicerequest.cpp
   listclientdevicesassociatedwithcoredeviceresponse.cpp
-  listcomponentsrequest.cpp
-  listcomponentsresponse.cpp
   listcomponentversionsrequest.cpp
   listcomponentversionsresponse.cpp
+  listcomponentsrequest.cpp
+  listcomponentsresponse.cpp
   listcoredevicesrequest.cpp
   listcoredevicesresponse.cpp
   listdeploymentsrequest.cpp
@@ -148,7 +182,9 @@ add_library(QtAwsGreengrassV2
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updateconnectivityinforequest.cpp
+  updateconnectivityinforesponse.cpp)
 
 target_link_libraries(QtAwsGreengrassV2
   PRIVATE QtAwsCore

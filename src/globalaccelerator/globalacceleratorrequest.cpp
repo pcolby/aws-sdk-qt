@@ -290,7 +290,7 @@ QNetworkRequest GlobalAcceleratorRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 GlobalAcceleratorRequestPrivate::GlobalAcceleratorRequestPrivate(const GlobalAcceleratorRequest::Action action, GlobalAcceleratorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-08-08"))
 {
 
 }

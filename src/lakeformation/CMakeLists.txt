@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSLAKEFORMATION_LIBRARY)
 
 add_library(QtAwsLakeFormation
+  qtawslakeformationglobal.h
+  lakeformationclient.h
+  lakeformationclient_p.h
+  lakeformationrequest.h
+  lakeformationrequest_p.h
+  lakeformationresponse.h
+  lakeformationresponse_p.h
   addlftagstoresourcerequest.h
   addlftagstoresourcerequest_p.h
   addlftagstoresourceresponse.h
   addlftagstoresourceresponse_p.h
+  assumedecoratedrolewithsamlrequest.h
+  assumedecoratedrolewithsamlrequest_p.h
+  assumedecoratedrolewithsamlresponse.h
+  assumedecoratedrolewithsamlresponse_p.h
   batchgrantpermissionsrequest.h
   batchgrantpermissionsrequest_p.h
   batchgrantpermissionsresponse.h
@@ -13,14 +24,34 @@ add_library(QtAwsLakeFormation
   batchrevokepermissionsrequest_p.h
   batchrevokepermissionsresponse.h
   batchrevokepermissionsresponse_p.h
+  canceltransactionrequest.h
+  canceltransactionrequest_p.h
+  canceltransactionresponse.h
+  canceltransactionresponse_p.h
+  committransactionrequest.h
+  committransactionrequest_p.h
+  committransactionresponse.h
+  committransactionresponse_p.h
+  createdatacellsfilterrequest.h
+  createdatacellsfilterrequest_p.h
+  createdatacellsfilterresponse.h
+  createdatacellsfilterresponse_p.h
   createlftagrequest.h
   createlftagrequest_p.h
   createlftagresponse.h
   createlftagresponse_p.h
+  deletedatacellsfilterrequest.h
+  deletedatacellsfilterrequest_p.h
+  deletedatacellsfilterresponse.h
+  deletedatacellsfilterresponse_p.h
   deletelftagrequest.h
   deletelftagrequest_p.h
   deletelftagresponse.h
   deletelftagresponse_p.h
+  deleteobjectsoncancelrequest.h
+  deleteobjectsoncancelrequest_p.h
+  deleteobjectsoncancelresponse.h
+  deleteobjectsoncancelresponse_p.h
   deregisterresourcerequest.h
   deregisterresourcerequest_p.h
   deregisterresourceresponse.h
@@ -29,6 +60,14 @@ add_library(QtAwsLakeFormation
   describeresourcerequest_p.h
   describeresourceresponse.h
   describeresourceresponse_p.h
+  describetransactionrequest.h
+  describetransactionrequest_p.h
+  describetransactionresponse.h
+  describetransactionresponse_p.h
+  extendtransactionrequest.h
+  extendtransactionrequest_p.h
+  extendtransactionresponse.h
+  extendtransactionresponse_p.h
   getdatalakesettingsrequest.h
   getdatalakesettingsrequest_p.h
   getdatalakesettingsresponse.h
@@ -41,20 +80,46 @@ add_library(QtAwsLakeFormation
   getlftagrequest_p.h
   getlftagresponse.h
   getlftagresponse_p.h
+  getquerystaterequest.h
+  getquerystaterequest_p.h
+  getquerystateresponse.h
+  getquerystateresponse_p.h
+  getquerystatisticsrequest.h
+  getquerystatisticsrequest_p.h
+  getquerystatisticsresponse.h
+  getquerystatisticsresponse_p.h
   getresourcelftagsrequest.h
   getresourcelftagsrequest_p.h
   getresourcelftagsresponse.h
   getresourcelftagsresponse_p.h
+  gettableobjectsrequest.h
+  gettableobjectsrequest_p.h
+  gettableobjectsresponse.h
+  gettableobjectsresponse_p.h
+  gettemporarygluepartitioncredentialsrequest.h
+  gettemporarygluepartitioncredentialsrequest_p.h
+  gettemporarygluepartitioncredentialsresponse.h
+  gettemporarygluepartitioncredentialsresponse_p.h
+  gettemporarygluetablecredentialsrequest.h
+  gettemporarygluetablecredentialsrequest_p.h
+  gettemporarygluetablecredentialsresponse.h
+  gettemporarygluetablecredentialsresponse_p.h
+  getworkunitresultsrequest.h
+  getworkunitresultsrequest_p.h
+  getworkunitresultsresponse.h
+  getworkunitresultsresponse_p.h
+  getworkunitsrequest.h
+  getworkunitsrequest_p.h
+  getworkunitsresponse.h
+  getworkunitsresponse_p.h
   grantpermissionsrequest.h
   grantpermissionsrequest_p.h
   grantpermissionsresponse.h
   grantpermissionsresponse_p.h
-  lakeformationclient.h
-  lakeformationclient_p.h
-  lakeformationrequest.h
-  lakeformationrequest_p.h
-  lakeformationresponse.h
-  lakeformationresponse_p.h
+  listdatacellsfilterrequest.h
+  listdatacellsfilterrequest_p.h
+  listdatacellsfilterresponse.h
+  listdatacellsfilterresponse_p.h
   listlftagsrequest.h
   listlftagsrequest_p.h
   listlftagsresponse.h
@@ -67,11 +132,18 @@ add_library(QtAwsLakeFormation
   listresourcesrequest_p.h
   listresourcesresponse.h
   listresourcesresponse_p.h
+  listtablestorageoptimizersrequest.h
+  listtablestorageoptimizersrequest_p.h
+  listtablestorageoptimizersresponse.h
+  listtablestorageoptimizersresponse_p.h
+  listtransactionsrequest.h
+  listtransactionsrequest_p.h
+  listtransactionsresponse.h
+  listtransactionsresponse_p.h
   putdatalakesettingsrequest.h
   putdatalakesettingsrequest_p.h
   putdatalakesettingsresponse.h
   putdatalakesettingsresponse_p.h
-  qtawslakeformationglobal.h
   registerresourcerequest.h
   registerresourcerequest_p.h
   registerresourceresponse.h
@@ -92,6 +164,14 @@ add_library(QtAwsLakeFormation
   searchtablesbylftagsrequest_p.h
   searchtablesbylftagsresponse.h
   searchtablesbylftagsresponse_p.h
+  startqueryplanningrequest.h
+  startqueryplanningrequest_p.h
+  startqueryplanningresponse.h
+  startqueryplanningresponse_p.h
+  starttransactionrequest.h
+  starttransactionrequest_p.h
+  starttransactionresponse.h
+  starttransactionresponse_p.h
   updatelftagrequest.h
   updatelftagrequest_p.h
   updatelftagresponse.h
@@ -100,39 +180,83 @@ add_library(QtAwsLakeFormation
   updateresourcerequest_p.h
   updateresourceresponse.h
   updateresourceresponse_p.h
+  updatetableobjectsrequest.h
+  updatetableobjectsrequest_p.h
+  updatetableobjectsresponse.h
+  updatetableobjectsresponse_p.h
+  updatetablestorageoptimizerrequest.h
+  updatetablestorageoptimizerrequest_p.h
+  updatetablestorageoptimizerresponse.h
+  updatetablestorageoptimizerresponse_p.h
+  lakeformationclient.cpp
+  lakeformationrequest.cpp
+  lakeformationresponse.cpp
   addlftagstoresourcerequest.cpp
   addlftagstoresourceresponse.cpp
+  assumedecoratedrolewithsamlrequest.cpp
+  assumedecoratedrolewithsamlresponse.cpp
   batchgrantpermissionsrequest.cpp
   batchgrantpermissionsresponse.cpp
   batchrevokepermissionsrequest.cpp
   batchrevokepermissionsresponse.cpp
+  canceltransactionrequest.cpp
+  canceltransactionresponse.cpp
+  committransactionrequest.cpp
+  committransactionresponse.cpp
+  createdatacellsfilterrequest.cpp
+  createdatacellsfilterresponse.cpp
   createlftagrequest.cpp
   createlftagresponse.cpp
+  deletedatacellsfilterrequest.cpp
+  deletedatacellsfilterresponse.cpp
   deletelftagrequest.cpp
   deletelftagresponse.cpp
+  deleteobjectsoncancelrequest.cpp
+  deleteobjectsoncancelresponse.cpp
   deregisterresourcerequest.cpp
   deregisterresourceresponse.cpp
   describeresourcerequest.cpp
   describeresourceresponse.cpp
+  describetransactionrequest.cpp
+  describetransactionresponse.cpp
+  extendtransactionrequest.cpp
+  extendtransactionresponse.cpp
   getdatalakesettingsrequest.cpp
   getdatalakesettingsresponse.cpp
   geteffectivepermissionsforpathrequest.cpp
   geteffectivepermissionsforpathresponse.cpp
   getlftagrequest.cpp
   getlftagresponse.cpp
+  getquerystaterequest.cpp
+  getquerystateresponse.cpp
+  getquerystatisticsrequest.cpp
+  getquerystatisticsresponse.cpp
   getresourcelftagsrequest.cpp
   getresourcelftagsresponse.cpp
+  gettableobjectsrequest.cpp
+  gettableobjectsresponse.cpp
+  gettemporarygluepartitioncredentialsrequest.cpp
+  gettemporarygluepartitioncredentialsresponse.cpp
+  gettemporarygluetablecredentialsrequest.cpp
+  gettemporarygluetablecredentialsresponse.cpp
+  getworkunitresultsrequest.cpp
+  getworkunitresultsresponse.cpp
+  getworkunitsrequest.cpp
+  getworkunitsresponse.cpp
   grantpermissionsrequest.cpp
   grantpermissionsresponse.cpp
-  lakeformationclient.cpp
-  lakeformationrequest.cpp
-  lakeformationresponse.cpp
+  listdatacellsfilterrequest.cpp
+  listdatacellsfilterresponse.cpp
   listlftagsrequest.cpp
   listlftagsresponse.cpp
   listpermissionsrequest.cpp
   listpermissionsresponse.cpp
   listresourcesrequest.cpp
   listresourcesresponse.cpp
+  listtablestorageoptimizersrequest.cpp
+  listtablestorageoptimizersresponse.cpp
+  listtransactionsrequest.cpp
+  listtransactionsresponse.cpp
   putdatalakesettingsrequest.cpp
   putdatalakesettingsresponse.cpp
   registerresourcerequest.cpp
@@ -145,10 +269,18 @@ add_library(QtAwsLakeFormation
   searchdatabasesbylftagsresponse.cpp
   searchtablesbylftagsrequest.cpp
   searchtablesbylftagsresponse.cpp
+  startqueryplanningrequest.cpp
+  startqueryplanningresponse.cpp
+  starttransactionrequest.cpp
+  starttransactionresponse.cpp
   updatelftagrequest.cpp
   updatelftagresponse.cpp
   updateresourcerequest.cpp
-  updateresourceresponse.cpp)
+  updateresourceresponse.cpp
+  updatetableobjectsrequest.cpp
+  updatetableobjectsresponse.cpp
+  updatetablestorageoptimizerrequest.cpp
+  updatetablestorageoptimizerresponse.cpp)
 
 target_link_libraries(QtAwsLakeFormation
   PRIVATE QtAwsCore

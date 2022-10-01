@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeactivateMFADeviceResponse
- * \brief The DeactivateMFADeviceResponse class provides an interace for IAM DeactivateMFADevice responses.
+ * \class QtAws::Iam::DeactivateMFADeviceResponse
+ * \brief The DeactivateMFADeviceResponse class provides an interace for Iam DeactivateMFADevice responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deactivateMFADevice
  */
@@ -68,7 +68,7 @@ const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeactivateMFADevice \a response.
+ * Parses a successful Iam DeactivateMFADevice \a response.
  */
 void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeactivateMFADeviceResponsePrivate
+ * \class QtAws::Iam::DeactivateMFADeviceResponsePrivate
  * \brief The DeactivateMFADeviceResponsePrivate class provides private implementation for DeactivateMFADeviceResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeactivateMFADevice response element from \a xml.
+ * Parses a Iam DeactivateMFADevice response element from \a xml.
  */
 void DeactivateMFADeviceResponsePrivate::parseDeactivateMFADeviceResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeactivateMFADeviceResponsePrivate::parseDeactivateMFADeviceResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

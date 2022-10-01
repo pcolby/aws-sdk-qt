@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeBackupsRequest
- * \brief The DescribeBackupsRequest class provides an interface for CloudHSMV2 DescribeBackups requests.
+ * \class QtAws::CloudHsmV2::DescribeBackupsRequest
+ * \brief The DescribeBackupsRequest class provides an interface for CloudHsmV2 DescribeBackups requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::describeBackups
+ * \sa CloudHsmV2Client::describeBackups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &other)
-    : CloudHSMV2Request(new DescribeBackupsRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new DescribeBackupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &oth
  * Constructs a DescribeBackupsRequest object.
  */
 DescribeBackupsRequest::DescribeBackupsRequest()
-    : CloudHSMV2Request(new DescribeBackupsRequestPrivate(CloudHSMV2Request::DescribeBackupsAction, this))
+    : CloudHsmV2Request(new DescribeBackupsRequestPrivate(CloudHsmV2Request::DescribeBackupsAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeBackupsRequestPrivate
+ * \class QtAws::CloudHsmV2::DescribeBackupsRequestPrivate
  * \brief The DescribeBackupsRequestPrivate class provides private implementation for DescribeBackupsRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a DescribeBackupsRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a DescribeBackupsRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
-    const CloudHSMV2Request::Action action, DescribeBackupsRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, DescribeBackupsRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const DescribeBackupsRequestPrivate &other, DescribeBackupsRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

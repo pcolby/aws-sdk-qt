@@ -24,7 +24,7 @@
 #include "updatechannelrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class UpdateChannelRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

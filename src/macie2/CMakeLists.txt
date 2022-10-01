@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMACIE2_LIBRARY)
 
 add_library(QtAwsMacie2
+  qtawsmacie2global.h
+  macie2client.h
+  macie2client_p.h
+  macie2request.h
+  macie2request_p.h
+  macie2response.h
+  macie2response_p.h
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
   acceptinvitationresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsMacie2
   batchgetcustomdataidentifiersrequest_p.h
   batchgetcustomdataidentifiersresponse.h
   batchgetcustomdataidentifiersresponse_p.h
+  createallowlistrequest.h
+  createallowlistrequest_p.h
+  createallowlistresponse.h
+  createallowlistresponse_p.h
   createclassificationjobrequest.h
   createclassificationjobrequest_p.h
   createclassificationjobresponse.h
@@ -37,6 +48,10 @@ add_library(QtAwsMacie2
   declineinvitationsrequest_p.h
   declineinvitationsresponse.h
   declineinvitationsresponse_p.h
+  deleteallowlistrequest.h
+  deleteallowlistrequest_p.h
+  deleteallowlistresponse.h
+  deleteallowlistresponse_p.h
   deletecustomdataidentifierrequest.h
   deletecustomdataidentifierrequest_p.h
   deletecustomdataidentifierresponse.h
@@ -97,6 +112,10 @@ add_library(QtAwsMacie2
   getadministratoraccountrequest_p.h
   getadministratoraccountresponse.h
   getadministratoraccountresponse_p.h
+  getallowlistrequest.h
+  getallowlistrequest_p.h
+  getallowlistresponse.h
+  getallowlistresponse_p.h
   getbucketstatisticsrequest.h
   getbucketstatisticsrequest_p.h
   getbucketstatisticsresponse.h
@@ -109,6 +128,14 @@ add_library(QtAwsMacie2
   getcustomdataidentifierrequest_p.h
   getcustomdataidentifierresponse.h
   getcustomdataidentifierresponse_p.h
+  getfindingstatisticsrequest.h
+  getfindingstatisticsrequest_p.h
+  getfindingstatisticsresponse.h
+  getfindingstatisticsresponse_p.h
+  getfindingsrequest.h
+  getfindingsrequest_p.h
+  getfindingsresponse.h
+  getfindingsresponse_p.h
   getfindingsfilterrequest.h
   getfindingsfilterrequest_p.h
   getfindingsfilterresponse.h
@@ -117,14 +144,6 @@ add_library(QtAwsMacie2
   getfindingspublicationconfigurationrequest_p.h
   getfindingspublicationconfigurationresponse.h
   getfindingspublicationconfigurationresponse_p.h
-  getfindingsrequest.h
-  getfindingsrequest_p.h
-  getfindingsresponse.h
-  getfindingsresponse_p.h
-  getfindingstatisticsrequest.h
-  getfindingstatisticsrequest_p.h
-  getfindingstatisticsresponse.h
-  getfindingstatisticsresponse_p.h
   getinvitationscountrequest.h
   getinvitationscountrequest_p.h
   getinvitationscountresponse.h
@@ -141,6 +160,18 @@ add_library(QtAwsMacie2
   getmemberrequest_p.h
   getmemberresponse.h
   getmemberresponse_p.h
+  getrevealconfigurationrequest.h
+  getrevealconfigurationrequest_p.h
+  getrevealconfigurationresponse.h
+  getrevealconfigurationresponse_p.h
+  getsensitivedataoccurrencesrequest.h
+  getsensitivedataoccurrencesrequest_p.h
+  getsensitivedataoccurrencesresponse.h
+  getsensitivedataoccurrencesresponse_p.h
+  getsensitivedataoccurrencesavailabilityrequest.h
+  getsensitivedataoccurrencesavailabilityrequest_p.h
+  getsensitivedataoccurrencesavailabilityresponse.h
+  getsensitivedataoccurrencesavailabilityresponse_p.h
   getusagestatisticsrequest.h
   getusagestatisticsrequest_p.h
   getusagestatisticsresponse.h
@@ -149,6 +180,10 @@ add_library(QtAwsMacie2
   getusagetotalsrequest_p.h
   getusagetotalsresponse.h
   getusagetotalsresponse_p.h
+  listallowlistsrequest.h
+  listallowlistsrequest_p.h
+  listallowlistsresponse.h
+  listallowlistsresponse_p.h
   listclassificationjobsrequest.h
   listclassificationjobsrequest_p.h
   listclassificationjobsresponse.h
@@ -157,18 +192,22 @@ add_library(QtAwsMacie2
   listcustomdataidentifiersrequest_p.h
   listcustomdataidentifiersresponse.h
   listcustomdataidentifiersresponse_p.h
-  listfindingsfiltersrequest.h
-  listfindingsfiltersrequest_p.h
-  listfindingsfiltersresponse.h
-  listfindingsfiltersresponse_p.h
   listfindingsrequest.h
   listfindingsrequest_p.h
   listfindingsresponse.h
   listfindingsresponse_p.h
+  listfindingsfiltersrequest.h
+  listfindingsfiltersrequest_p.h
+  listfindingsfiltersresponse.h
+  listfindingsfiltersresponse_p.h
   listinvitationsrequest.h
   listinvitationsrequest_p.h
   listinvitationsresponse.h
   listinvitationsresponse_p.h
+  listmanageddataidentifiersrequest.h
+  listmanageddataidentifiersrequest_p.h
+  listmanageddataidentifiersresponse.h
+  listmanageddataidentifiersresponse_p.h
   listmembersrequest.h
   listmembersrequest_p.h
   listmembersresponse.h
@@ -181,12 +220,6 @@ add_library(QtAwsMacie2
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  macie2client.h
-  macie2client_p.h
-  macie2request.h
-  macie2request_p.h
-  macie2response.h
-  macie2response_p.h
   putclassificationexportconfigurationrequest.h
   putclassificationexportconfigurationrequest_p.h
   putclassificationexportconfigurationresponse.h
@@ -195,7 +228,6 @@ add_library(QtAwsMacie2
   putfindingspublicationconfigurationrequest_p.h
   putfindingspublicationconfigurationresponse.h
   putfindingspublicationconfigurationresponse_p.h
-  qtawsmacie2global.h
   searchresourcesrequest.h
   searchresourcesrequest_p.h
   searchresourcesresponse.h
@@ -212,6 +244,10 @@ add_library(QtAwsMacie2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateallowlistrequest.h
+  updateallowlistrequest_p.h
+  updateallowlistresponse.h
+  updateallowlistresponse_p.h
   updateclassificationjobrequest.h
   updateclassificationjobrequest_p.h
   updateclassificationjobresponse.h
@@ -232,10 +268,19 @@ add_library(QtAwsMacie2
   updateorganizationconfigurationrequest_p.h
   updateorganizationconfigurationresponse.h
   updateorganizationconfigurationresponse_p.h
+  updaterevealconfigurationrequest.h
+  updaterevealconfigurationrequest_p.h
+  updaterevealconfigurationresponse.h
+  updaterevealconfigurationresponse_p.h
+  macie2client.cpp
+  macie2request.cpp
+  macie2response.cpp
   acceptinvitationrequest.cpp
   acceptinvitationresponse.cpp
   batchgetcustomdataidentifiersrequest.cpp
   batchgetcustomdataidentifiersresponse.cpp
+  createallowlistrequest.cpp
+  createallowlistresponse.cpp
   createclassificationjobrequest.cpp
   createclassificationjobresponse.cpp
   createcustomdataidentifierrequest.cpp
@@ -250,6 +295,8 @@ add_library(QtAwsMacie2
   createsamplefindingsresponse.cpp
   declineinvitationsrequest.cpp
   declineinvitationsresponse.cpp
+  deleteallowlistrequest.cpp
+  deleteallowlistresponse.cpp
   deletecustomdataidentifierrequest.cpp
   deletecustomdataidentifierresponse.cpp
   deletefindingsfilterrequest.cpp
@@ -280,20 +327,22 @@ add_library(QtAwsMacie2
   enableorganizationadminaccountresponse.cpp
   getadministratoraccountrequest.cpp
   getadministratoraccountresponse.cpp
+  getallowlistrequest.cpp
+  getallowlistresponse.cpp
   getbucketstatisticsrequest.cpp
   getbucketstatisticsresponse.cpp
   getclassificationexportconfigurationrequest.cpp
   getclassificationexportconfigurationresponse.cpp
   getcustomdataidentifierrequest.cpp
   getcustomdataidentifierresponse.cpp
+  getfindingstatisticsrequest.cpp
+  getfindingstatisticsresponse.cpp
+  getfindingsrequest.cpp
+  getfindingsresponse.cpp
   getfindingsfilterrequest.cpp
   getfindingsfilterresponse.cpp
   getfindingspublicationconfigurationrequest.cpp
   getfindingspublicationconfigurationresponse.cpp
-  getfindingsrequest.cpp
-  getfindingsresponse.cpp
-  getfindingstatisticsrequest.cpp
-  getfindingstatisticsresponse.cpp
   getinvitationscountrequest.cpp
   getinvitationscountresponse.cpp
   getmaciesessionrequest.cpp
@@ -302,29 +351,36 @@ add_library(QtAwsMacie2
   getmasteraccountresponse.cpp
   getmemberrequest.cpp
   getmemberresponse.cpp
+  getrevealconfigurationrequest.cpp
+  getrevealconfigurationresponse.cpp
+  getsensitivedataoccurrencesrequest.cpp
+  getsensitivedataoccurrencesresponse.cpp
+  getsensitivedataoccurrencesavailabilityrequest.cpp
+  getsensitivedataoccurrencesavailabilityresponse.cpp
   getusagestatisticsrequest.cpp
   getusagestatisticsresponse.cpp
   getusagetotalsrequest.cpp
   getusagetotalsresponse.cpp
+  listallowlistsrequest.cpp
+  listallowlistsresponse.cpp
   listclassificationjobsrequest.cpp
   listclassificationjobsresponse.cpp
   listcustomdataidentifiersrequest.cpp
   listcustomdataidentifiersresponse.cpp
-  listfindingsfiltersrequest.cpp
-  listfindingsfiltersresponse.cpp
   listfindingsrequest.cpp
   listfindingsresponse.cpp
+  listfindingsfiltersrequest.cpp
+  listfindingsfiltersresponse.cpp
   listinvitationsrequest.cpp
   listinvitationsresponse.cpp
+  listmanageddataidentifiersrequest.cpp
+  listmanageddataidentifiersresponse.cpp
   listmembersrequest.cpp
   listmembersresponse.cpp
   listorganizationadminaccountsrequest.cpp
   listorganizationadminaccountsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  macie2client.cpp
-  macie2request.cpp
-  macie2response.cpp
   putclassificationexportconfigurationrequest.cpp
   putclassificationexportconfigurationresponse.cpp
   putfindingspublicationconfigurationrequest.cpp
@@ -337,6 +393,8 @@ add_library(QtAwsMacie2
   testcustomdataidentifierresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateallowlistrequest.cpp
+  updateallowlistresponse.cpp
   updateclassificationjobrequest.cpp
   updateclassificationjobresponse.cpp
   updatefindingsfilterrequest.cpp
@@ -346,7 +404,9 @@ add_library(QtAwsMacie2
   updatemembersessionrequest.cpp
   updatemembersessionresponse.cpp
   updateorganizationconfigurationrequest.cpp
-  updateorganizationconfigurationresponse.cpp)
+  updateorganizationconfigurationresponse.cpp
+  updaterevealconfigurationrequest.cpp
+  updaterevealconfigurationresponse.cpp)
 
 target_link_libraries(QtAwsMacie2
   PRIVATE QtAwsCore

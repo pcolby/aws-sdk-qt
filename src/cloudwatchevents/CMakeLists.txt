@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCLOUDWATCHEVENTS_LIBRARY)
 
 add_library(QtAwsCloudWatchEvents
+  qtawscloudwatcheventsglobal.h
+  cloudwatcheventsclient.h
+  cloudwatcheventsclient_p.h
+  cloudwatcheventsrequest.h
+  cloudwatcheventsrequest_p.h
+  cloudwatcheventsresponse.h
+  cloudwatcheventsresponse_p.h
   activateeventsourcerequest.h
   activateeventsourcerequest_p.h
   activateeventsourceresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsCloudWatchEvents
   cancelreplayrequest_p.h
   cancelreplayresponse.h
   cancelreplayresponse_p.h
-  cloudwatcheventsclient.h
-  cloudwatcheventsclient_p.h
-  cloudwatcheventsrequest.h
-  cloudwatcheventsrequest_p.h
-  cloudwatcheventsresponse.h
-  cloudwatcheventsresponse_p.h
   createapidestinationrequest.h
   createapidestinationrequest_p.h
   createapidestinationresponse.h
@@ -175,7 +176,6 @@ add_library(QtAwsCloudWatchEvents
   puttargetsrequest_p.h
   puttargetsresponse.h
   puttargetsresponse_p.h
-  qtawscloudwatcheventsglobal.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h
@@ -212,13 +212,13 @@ add_library(QtAwsCloudWatchEvents
   updateconnectionrequest_p.h
   updateconnectionresponse.h
   updateconnectionresponse_p.h
+  cloudwatcheventsclient.cpp
+  cloudwatcheventsrequest.cpp
+  cloudwatcheventsresponse.cpp
   activateeventsourcerequest.cpp
   activateeventsourceresponse.cpp
   cancelreplayrequest.cpp
   cancelreplayresponse.cpp
-  cloudwatcheventsclient.cpp
-  cloudwatcheventsrequest.cpp
-  cloudwatcheventsresponse.cpp
   createapidestinationrequest.cpp
   createapidestinationresponse.cpp
   createarchiverequest.cpp

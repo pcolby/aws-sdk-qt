@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteTemplateRequest
- * \brief The DeleteTemplateRequest class provides an interface for SES DeleteTemplate requests.
+ * \class QtAws::Ses::DeleteTemplateRequest
+ * \brief The DeleteTemplateRequest class provides an interface for Ses DeleteTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SES::DeleteTemplateRequestPrivate
+ * \class QtAws::Ses::DeleteTemplateRequestPrivate
  * \brief The DeleteTemplateRequestPrivate class provides private implementation for DeleteTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

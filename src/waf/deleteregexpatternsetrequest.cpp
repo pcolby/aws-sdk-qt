@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteRegexPatternSetRequest
- * \brief The DeleteRegexPatternSetRequest class provides an interface for WAF DeleteRegexPatternSet requests.
+ * \class QtAws::Waf::DeleteRegexPatternSetRequest
+ * \brief The DeleteRegexPatternSetRequest class provides an interface for Waf DeleteRegexPatternSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::WAF::DeleteRegexPatternSetRequestPrivate
+ * \class QtAws::Waf::DeleteRegexPatternSetRequestPrivate
  * \brief The DeleteRegexPatternSetRequestPrivate class provides private implementation for DeleteRegexPatternSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

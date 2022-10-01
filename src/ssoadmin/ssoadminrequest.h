@@ -30,15 +30,16 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
-class SSOAdminRequestPrivate;
+class SsoAdminRequestPrivate;
 
-class QTAWSSSOADMIN_EXPORT SSOAdminRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSOADMIN_EXPORT SsoAdminRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSOAdmin.
+    /// Actions supported by SsoAdmin.
     enum Action {
+        AttachCustomerManagedPolicyReferenceToPermissionSetAction,
         AttachManagedPolicyToPermissionSetAction,
         CreateAccountAssignmentAction,
         CreateInstanceAccessControlAttributeConfigurationAction,
@@ -47,17 +48,21 @@ public:
         DeleteInlinePolicyFromPermissionSetAction,
         DeleteInstanceAccessControlAttributeConfigurationAction,
         DeletePermissionSetAction,
+        DeletePermissionsBoundaryFromPermissionSetAction,
         DescribeAccountAssignmentCreationStatusAction,
         DescribeAccountAssignmentDeletionStatusAction,
         DescribeInstanceAccessControlAttributeConfigurationAction,
         DescribePermissionSetAction,
         DescribePermissionSetProvisioningStatusAction,
+        DetachCustomerManagedPolicyReferenceFromPermissionSetAction,
         DetachManagedPolicyFromPermissionSetAction,
         GetInlinePolicyForPermissionSetAction,
+        GetPermissionsBoundaryForPermissionSetAction,
         ListAccountAssignmentCreationStatusAction,
         ListAccountAssignmentDeletionStatusAction,
         ListAccountAssignmentsAction,
         ListAccountsForProvisionedPermissionSetAction,
+        ListCustomerManagedPolicyReferencesInPermissionSetAction,
         ListInstancesAction,
         ListManagedPoliciesInPermissionSetAction,
         ListPermissionSetProvisioningStatusAction,
@@ -66,6 +71,7 @@ public:
         ListTagsForResourceAction,
         ProvisionPermissionSetAction,
         PutInlinePolicyToPermissionSetAction,
+        PutPermissionsBoundaryToPermissionSetAction,
         TagResourceAction,
         UntagResourceAction,
         UpdateInstanceAccessControlAttributeConfigurationAction,
@@ -73,9 +79,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SSOAdminRequest(const Action action);
-    SSOAdminRequest(const SSOAdminRequest &other);
-    SSOAdminRequest &operator=(const SSOAdminRequest &other);
+    SsoAdminRequest(const Action action);
+    SsoAdminRequest(const SsoAdminRequest &other);
+    SsoAdminRequest &operator=(const SsoAdminRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -84,12 +90,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SSOAdminRequest &other) const;
+    virtual bool operator==(const SsoAdminRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit SSOAdminRequest(SSOAdminRequestPrivate * const d);
+    explicit SsoAdminRequest(SsoAdminRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -102,11 +108,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SSOAdminRequest)
+    Q_DECLARE_PRIVATE(SsoAdminRequest)
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

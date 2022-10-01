@@ -33,15 +33,15 @@ namespace CodeArtifact {
  *
  * \inmodule QtAwsCodeArtifact
  *
- *  AWS CodeArtifact is a fully managed artifact repository compatible with language-native package managers and build tools
- *  such as npm, Apache Maven, and pip. You can use CodeArtifact to share packages with development teams and pull packages.
- *  Packages can be pulled from both public and CodeArtifact repositories. You can also create an upstream relationship
- *  between a CodeArtifact repository and another repository, which effectively merges their contents from the point of view
- *  of a package manager client.
+ *  CodeArtifact is a fully managed artifact repository compatible with language-native package managers and build tools
+ *  such as npm, Apache Maven, pip, and dotnet. You can use CodeArtifact to share packages with development teams and pull
+ *  packages. Packages can be pulled from both public and CodeArtifact repositories. You can also create an upstream
+ *  relationship between a CodeArtifact repository and another repository, which effectively merges their contents from the
+ *  point of view of a package manager client.
  * 
  *  </p
  * 
- *  <b>AWS CodeArtifact Components</b>
+ *  <b>CodeArtifact Components</b>
  * 
  *  </p
  * 
@@ -53,16 +53,17 @@ namespace CodeArtifact {
  *  href="https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html#welcome-concepts-package-version">package
  *  versions</a>, each of which maps to a set of assets, or files. Repositories are polyglot, so a single repository can
  *  contain packages of any supported type. Each repository exposes endpoints for fetching and publishing packages using
- *  tools like the <b> <code>npm</code> </b> CLI, the Maven CLI (<b> <code>mvn</code> </b>), and <b> <code>pip</code>
+ *  tools like the <b> <code>npm</code> </b> CLI, the Maven CLI (<b> <code>mvn</code> </b>), Python CLIs (<b>
+ *  <code>pip</code> </b> and <code>twine</code>), and NuGet CLIs (<code>nuget</code> and
  * 
- *  </b>> </li> <li>
+ *  <code>dotnet</code>)> </li> <li>
  * 
  *  <b>Domain</b>: Repositories are aggregated into a higher-level entity known as a <i>domain</i>. All package assets and
  *  metadata are stored in the domain, but are consumed through repositories. A given package asset, such as a Maven JAR
  *  file, is stored once per domain, no matter how many repositories it's present in. All of the assets and metadata in a
- *  domain are encrypted with the same customer master key (CMK) stored in AWS Key Management Service (AWS
+ *  domain are encrypted with the same customer master key (CMK) stored in Key Management Service
  * 
- *  KMS)>
+ *  (KMS)>
  * 
  *  Each repository is a member of a single domain and can't be moved to a different
  * 
@@ -80,8 +81,9 @@ namespace CodeArtifact {
  * 
  *  <b>Package</b>: A <i>package</i> is a bundle of software and the metadata required to resolve dependencies and install
  *  the software. CodeArtifact supports <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-npm.html">npm</a>,
- *  <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-python.html">PyPI</a>, and <a
- *  href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-maven">Maven</a> package
+ *  <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-python.html">PyPI</a>, <a
+ *  href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-maven">Maven</a>, and <a
+ *  href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-nuget">NuGet</a> package
  * 
  *  formats>
  * 
@@ -169,6 +171,12 @@ namespace CodeArtifact {
  * 
  *  domain> </li> <li>
  * 
+ *  <code>DescribePackage</code>: Returns a <a
+ *  href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html">PackageDescription</a>
+ *  object that contains details about a package.
+ * 
+ *  </p </li> <li>
+ * 
  *  <code>DescribePackageVersion</code>: Returns a <a
  *  href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html">PackageVersionDescription</a>
  *  object that contains details about a package version.
@@ -212,15 +220,19 @@ namespace CodeArtifact {
  * 
  *  </p <ul> <li>
  * 
+ *  <code>maven</code>
+ * 
+ *  </p </li> <li>
+ * 
  *  <code>npm</code>
  * 
  *  </p </li> <li>
  * 
- *  <code>pypi</code>
+ *  <code>nuget</code>
  * 
  *  </p </li> <li>
  * 
- *  <code>maven</code>
+ *  <code>pypi</code>
  * 
  *  </p </li> </ul> </li> <li>
  * 
@@ -249,7 +261,7 @@ namespace CodeArtifact {
  * 
  *  repository> </li> <li>
  * 
- *  <code>ListRepositories</code>: Returns a list of repositories owned by the AWS account that called this
+ *  <code>ListRepositories</code>: Returns a list of repositories owned by the Amazon Web Services account that called this
  * 
  *  method> </li> <li>
  * 
@@ -260,6 +272,11 @@ namespace CodeArtifact {
  *  <code>PutDomainPermissionsPolicy</code>: Attaches a resource policy to a
  * 
  *  domain> </li> <li>
+ * 
+ *  <code>PutPackageOriginConfiguration</code>: Sets the package origin configuration for a package, which determine how new
+ *  versions of the package can be added to a specific
+ * 
+ *  repository> </li> <li>
  * 
  *  <code>PutRepositoryPermissionsPolicy</code>: Sets the resource policy on a repository that specifies permissions to
  *  access it.

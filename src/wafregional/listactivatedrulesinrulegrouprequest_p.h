@@ -24,14 +24,14 @@
 #include "listactivatedrulesinrulegrouprequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListActivatedRulesInRuleGroupRequest;
 
-class ListActivatedRulesInRuleGroupRequestPrivate : public WAFRegionalRequestPrivate {
+class ListActivatedRulesInRuleGroupRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListActivatedRulesInRuleGroupRequestPrivate(const WAFRegionalRequest::Action action,
+    ListActivatedRulesInRuleGroupRequestPrivate(const WafRegionalRequest::Action action,
                                    ListActivatedRulesInRuleGroupRequest * const q);
     ListActivatedRulesInRuleGroupRequestPrivate(const ListActivatedRulesInRuleGroupRequestPrivate &other,
                                    ListActivatedRulesInRuleGroupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

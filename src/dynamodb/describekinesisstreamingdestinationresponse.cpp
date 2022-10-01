@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeKinesisStreamingDestinationResponse
- * \brief The DescribeKinesisStreamingDestinationResponse class provides an interace for DynamoDB DescribeKinesisStreamingDestination responses.
+ * \class QtAws::DynamoDb::DescribeKinesisStreamingDestinationResponse
+ * \brief The DescribeKinesisStreamingDestinationResponse class provides an interace for DynamoDb DescribeKinesisStreamingDestination responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeKinesisStreamingDestination
+ * \sa DynamoDbClient::describeKinesisStreamingDestination
  */
 
 /*!
@@ -63,7 +63,7 @@ DescribeKinesisStreamingDestinationResponse::DescribeKinesisStreamingDestination
         const DescribeKinesisStreamingDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeKinesisStreamingDestinationResponsePrivate(this), parent)
+    : DynamoDbResponse(new DescribeKinesisStreamingDestinationResponsePrivate(this), parent)
 {
     setRequest(new DescribeKinesisStreamingDestinationRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DescribeKinesisStreamingDestinationRequest * DescribeKinesisStreamingDesti
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DescribeKinesisStreamingDestination \a response.
+ * Parses a successful DynamoDb DescribeKinesisStreamingDestination \a response.
  */
 void DescribeKinesisStreamingDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DescribeKinesisStreamingDestinationResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeKinesisStreamingDestinationResponsePrivate
+ * \class QtAws::DynamoDb::DescribeKinesisStreamingDestinationResponsePrivate
  * \brief The DescribeKinesisStreamingDestinationResponsePrivate class provides private implementation for DescribeKinesisStreamingDestinationResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DescribeKinesisStreamingDestinationResponsePrivate object with public implementation \a q.
  */
 DescribeKinesisStreamingDestinationResponsePrivate::DescribeKinesisStreamingDestinationResponsePrivate(
-    DescribeKinesisStreamingDestinationResponse * const q) : DynamoDBResponsePrivate(q)
+    DescribeKinesisStreamingDestinationResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DescribeKinesisStreamingDestination response element from \a xml.
+ * Parses a DynamoDb DescribeKinesisStreamingDestination response element from \a xml.
  */
 void DescribeKinesisStreamingDestinationResponsePrivate::parseDescribeKinesisStreamingDestinationResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeKinesisStreamingDestinationResponsePrivate::parseDescribeKinesisStr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

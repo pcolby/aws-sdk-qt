@@ -24,14 +24,14 @@
 #include "tagcertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class TagCertificateAuthorityRequest;
 
-class TagCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
+class TagCertificateAuthorityRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    TagCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,
+    TagCertificateAuthorityRequestPrivate(const AcmPcaRequest::Action action,
                                    TagCertificateAuthorityRequest * const q);
     TagCertificateAuthorityRequestPrivate(const TagCertificateAuthorityRequestPrivate &other,
                                    TagCertificateAuthorityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

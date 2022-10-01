@@ -24,7 +24,7 @@
 #include "updatenodegroupconfigrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class UpdateNodegroupConfigRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

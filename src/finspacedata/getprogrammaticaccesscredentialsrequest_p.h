@@ -24,14 +24,14 @@
 #include "getprogrammaticaccesscredentialsrequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class GetProgrammaticAccessCredentialsRequest;
 
-class GetProgrammaticAccessCredentialsRequestPrivate : public FinSpaceDataRequestPrivate {
+class GetProgrammaticAccessCredentialsRequestPrivate : public FinspaceDataRequestPrivate {
 
 public:
-    GetProgrammaticAccessCredentialsRequestPrivate(const FinSpaceDataRequest::Action action,
+    GetProgrammaticAccessCredentialsRequestPrivate(const FinspaceDataRequest::Action action,
                                    GetProgrammaticAccessCredentialsRequest * const q);
     GetProgrammaticAccessCredentialsRequestPrivate(const GetProgrammaticAccessCredentialsRequestPrivate &other,
                                    GetProgrammaticAccessCredentialsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

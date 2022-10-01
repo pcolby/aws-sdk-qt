@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class TagResourceResponsePrivate;
 
-class QTAWSFINSPACE_EXPORT TagResourceResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT TagResourceResponse : public FinspaceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

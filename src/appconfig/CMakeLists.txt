@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPCONFIG_LIBRARY)
 
 add_library(QtAwsAppConfig
+  qtawsappconfigglobal.h
   appconfigclient.h
   appconfigclient_p.h
   appconfigrequest.h
@@ -23,6 +24,14 @@ add_library(QtAwsAppConfig
   createenvironmentrequest_p.h
   createenvironmentresponse.h
   createenvironmentresponse_p.h
+  createextensionrequest.h
+  createextensionrequest_p.h
+  createextensionresponse.h
+  createextensionresponse_p.h
+  createextensionassociationrequest.h
+  createextensionassociationrequest_p.h
+  createextensionassociationresponse.h
+  createextensionassociationresponse_p.h
   createhostedconfigurationversionrequest.h
   createhostedconfigurationversionrequest_p.h
   createhostedconfigurationversionresponse.h
@@ -43,6 +52,14 @@ add_library(QtAwsAppConfig
   deleteenvironmentrequest_p.h
   deleteenvironmentresponse.h
   deleteenvironmentresponse_p.h
+  deleteextensionrequest.h
+  deleteextensionrequest_p.h
+  deleteextensionresponse.h
+  deleteextensionresponse_p.h
+  deleteextensionassociationrequest.h
+  deleteextensionassociationrequest_p.h
+  deleteextensionassociationresponse.h
+  deleteextensionassociationresponse_p.h
   deletehostedconfigurationversionrequest.h
   deletehostedconfigurationversionrequest_p.h
   deletehostedconfigurationversionresponse.h
@@ -51,14 +68,14 @@ add_library(QtAwsAppConfig
   getapplicationrequest_p.h
   getapplicationresponse.h
   getapplicationresponse_p.h
-  getconfigurationprofilerequest.h
-  getconfigurationprofilerequest_p.h
-  getconfigurationprofileresponse.h
-  getconfigurationprofileresponse_p.h
   getconfigurationrequest.h
   getconfigurationrequest_p.h
   getconfigurationresponse.h
   getconfigurationresponse_p.h
+  getconfigurationprofilerequest.h
+  getconfigurationprofilerequest_p.h
+  getconfigurationprofileresponse.h
+  getconfigurationprofileresponse_p.h
   getdeploymentrequest.h
   getdeploymentrequest_p.h
   getdeploymentresponse.h
@@ -71,6 +88,14 @@ add_library(QtAwsAppConfig
   getenvironmentrequest_p.h
   getenvironmentresponse.h
   getenvironmentresponse_p.h
+  getextensionrequest.h
+  getextensionrequest_p.h
+  getextensionresponse.h
+  getextensionresponse_p.h
+  getextensionassociationrequest.h
+  getextensionassociationrequest_p.h
+  getextensionassociationresponse.h
+  getextensionassociationresponse_p.h
   gethostedconfigurationversionrequest.h
   gethostedconfigurationversionrequest_p.h
   gethostedconfigurationversionresponse.h
@@ -83,18 +108,26 @@ add_library(QtAwsAppConfig
   listconfigurationprofilesrequest_p.h
   listconfigurationprofilesresponse.h
   listconfigurationprofilesresponse_p.h
-  listdeploymentsrequest.h
-  listdeploymentsrequest_p.h
-  listdeploymentsresponse.h
-  listdeploymentsresponse_p.h
   listdeploymentstrategiesrequest.h
   listdeploymentstrategiesrequest_p.h
   listdeploymentstrategiesresponse.h
   listdeploymentstrategiesresponse_p.h
+  listdeploymentsrequest.h
+  listdeploymentsrequest_p.h
+  listdeploymentsresponse.h
+  listdeploymentsresponse_p.h
   listenvironmentsrequest.h
   listenvironmentsrequest_p.h
   listenvironmentsresponse.h
   listenvironmentsresponse_p.h
+  listextensionassociationsrequest.h
+  listextensionassociationsrequest_p.h
+  listextensionassociationsresponse.h
+  listextensionassociationsresponse_p.h
+  listextensionsrequest.h
+  listextensionsrequest_p.h
+  listextensionsresponse.h
+  listextensionsresponse_p.h
   listhostedconfigurationversionsrequest.h
   listhostedconfigurationversionsrequest_p.h
   listhostedconfigurationversionsresponse.h
@@ -103,7 +136,6 @@ add_library(QtAwsAppConfig
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsappconfigglobal.h
   startdeploymentrequest.h
   startdeploymentrequest_p.h
   startdeploymentresponse.h
@@ -136,6 +168,14 @@ add_library(QtAwsAppConfig
   updateenvironmentrequest_p.h
   updateenvironmentresponse.h
   updateenvironmentresponse_p.h
+  updateextensionrequest.h
+  updateextensionrequest_p.h
+  updateextensionresponse.h
+  updateextensionresponse_p.h
+  updateextensionassociationrequest.h
+  updateextensionassociationrequest_p.h
+  updateextensionassociationresponse.h
+  updateextensionassociationresponse_p.h
   validateconfigurationrequest.h
   validateconfigurationrequest_p.h
   validateconfigurationresponse.h
@@ -151,6 +191,10 @@ add_library(QtAwsAppConfig
   createdeploymentstrategyresponse.cpp
   createenvironmentrequest.cpp
   createenvironmentresponse.cpp
+  createextensionrequest.cpp
+  createextensionresponse.cpp
+  createextensionassociationrequest.cpp
+  createextensionassociationresponse.cpp
   createhostedconfigurationversionrequest.cpp
   createhostedconfigurationversionresponse.cpp
   deleteapplicationrequest.cpp
@@ -161,32 +205,44 @@ add_library(QtAwsAppConfig
   deletedeploymentstrategyresponse.cpp
   deleteenvironmentrequest.cpp
   deleteenvironmentresponse.cpp
+  deleteextensionrequest.cpp
+  deleteextensionresponse.cpp
+  deleteextensionassociationrequest.cpp
+  deleteextensionassociationresponse.cpp
   deletehostedconfigurationversionrequest.cpp
   deletehostedconfigurationversionresponse.cpp
   getapplicationrequest.cpp
   getapplicationresponse.cpp
-  getconfigurationprofilerequest.cpp
-  getconfigurationprofileresponse.cpp
   getconfigurationrequest.cpp
   getconfigurationresponse.cpp
+  getconfigurationprofilerequest.cpp
+  getconfigurationprofileresponse.cpp
   getdeploymentrequest.cpp
   getdeploymentresponse.cpp
   getdeploymentstrategyrequest.cpp
   getdeploymentstrategyresponse.cpp
   getenvironmentrequest.cpp
   getenvironmentresponse.cpp
+  getextensionrequest.cpp
+  getextensionresponse.cpp
+  getextensionassociationrequest.cpp
+  getextensionassociationresponse.cpp
   gethostedconfigurationversionrequest.cpp
   gethostedconfigurationversionresponse.cpp
   listapplicationsrequest.cpp
   listapplicationsresponse.cpp
   listconfigurationprofilesrequest.cpp
   listconfigurationprofilesresponse.cpp
-  listdeploymentsrequest.cpp
-  listdeploymentsresponse.cpp
   listdeploymentstrategiesrequest.cpp
   listdeploymentstrategiesresponse.cpp
+  listdeploymentsrequest.cpp
+  listdeploymentsresponse.cpp
   listenvironmentsrequest.cpp
   listenvironmentsresponse.cpp
+  listextensionassociationsrequest.cpp
+  listextensionassociationsresponse.cpp
+  listextensionsrequest.cpp
+  listextensionsresponse.cpp
   listhostedconfigurationversionsrequest.cpp
   listhostedconfigurationversionsresponse.cpp
   listtagsforresourcerequest.cpp
@@ -207,6 +263,10 @@ add_library(QtAwsAppConfig
   updatedeploymentstrategyresponse.cpp
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp
+  updateextensionrequest.cpp
+  updateextensionresponse.cpp
+  updateextensionassociationrequest.cpp
+  updateextensionassociationresponse.cpp
   validateconfigurationrequest.cpp
   validateconfigurationresponse.cpp)
 

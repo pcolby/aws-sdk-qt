@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetOpenIDConnectProviderResponse
- * \brief The GetOpenIDConnectProviderResponse class provides an interace for IAM GetOpenIDConnectProvider responses.
+ * \class QtAws::Iam::GetOpenIDConnectProviderResponse
+ * \brief The GetOpenIDConnectProviderResponse class provides an interace for Iam GetOpenIDConnectProvider responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getOpenIDConnectProvider
  */
@@ -68,7 +68,7 @@ const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::reques
 
 /*!
  * \reimp
- * Parses a successful IAM GetOpenIDConnectProvider \a response.
+ * Parses a successful Iam GetOpenIDConnectProvider \a response.
  */
 void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetOpenIDConnectProviderResponsePrivate
+ * \class QtAws::Iam::GetOpenIDConnectProviderResponsePrivate
  * \brief The GetOpenIDConnectProviderResponsePrivate class provides private implementation for GetOpenIDConnectProviderResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate
 }
 
 /*!
- * Parses a IAM GetOpenIDConnectProvider response element from \a xml.
+ * Parses a Iam GetOpenIDConnectProvider response element from \a xml.
  */
 void GetOpenIDConnectProviderResponsePrivate::parseGetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetOpenIDConnectProviderResponsePrivate::parseGetOpenIDConnectProviderRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

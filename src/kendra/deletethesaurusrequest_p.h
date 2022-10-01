@@ -24,14 +24,14 @@
 #include "deletethesaurusrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteThesaurusRequest;
 
-class DeleteThesaurusRequestPrivate : public kendraRequestPrivate {
+class DeleteThesaurusRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DeleteThesaurusRequestPrivate(const kendraRequest::Action action,
+    DeleteThesaurusRequestPrivate(const KendraRequest::Action action,
                                    DeleteThesaurusRequest * const q);
     DeleteThesaurusRequestPrivate(const DeleteThesaurusRequestPrivate &other,
                                    DeleteThesaurusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

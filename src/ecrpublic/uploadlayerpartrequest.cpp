@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::UploadLayerPartRequest
- * \brief The UploadLayerPartRequest class provides an interface for ECRPublic UploadLayerPart requests.
+ * \class QtAws::EcrPublic::UploadLayerPartRequest
+ * \brief The UploadLayerPartRequest class provides an interface for EcrPublic UploadLayerPart requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::uploadLayerPart
+ * \sa EcrPublicClient::uploadLayerPart
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &other)
-    : ECRPublicRequest(new UploadLayerPartRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new UploadLayerPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &oth
  * Constructs a UploadLayerPartRequest object.
  */
 UploadLayerPartRequest::UploadLayerPartRequest()
-    : ECRPublicRequest(new UploadLayerPartRequestPrivate(ECRPublicRequest::UploadLayerPartAction, this))
+    : EcrPublicRequest(new UploadLayerPartRequestPrivate(EcrPublicRequest::UploadLayerPartAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::ECRPublic::UploadLayerPartRequestPrivate
+ * \class QtAws::EcrPublic::UploadLayerPartRequestPrivate
  * \brief The UploadLayerPartRequestPrivate class provides private implementation for UploadLayerPartRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a UploadLayerPartRequestPrivate object for ECRPublic \a action,
+ * Constructs a UploadLayerPartRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
-    const ECRPublicRequest::Action action, UploadLayerPartRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, UploadLayerPartRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const UploadLayerPartRequestPrivate &other, UploadLayerPartRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetResourceRequest
- * \brief The GetResourceRequest class provides an interface for APIGateway GetResource requests.
+ * \class QtAws::ApiGateway::GetResourceRequest
+ * \brief The GetResourceRequest class provides an interface for ApiGateway GetResource requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getResource
+ * \sa ApiGatewayClient::getResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetResourceRequest::GetResourceRequest(const GetResourceRequest &other)
-    : APIGatewayRequest(new GetResourceRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetResourceRequest::GetResourceRequest(const GetResourceRequest &other)
  * Constructs a GetResourceRequest object.
  */
 GetResourceRequest::GetResourceRequest()
-    : APIGatewayRequest(new GetResourceRequestPrivate(APIGatewayRequest::GetResourceAction, this))
+    : ApiGatewayRequest(new GetResourceRequestPrivate(ApiGatewayRequest::GetResourceAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::GetResourceRequestPrivate
+ * \class QtAws::ApiGateway::GetResourceRequestPrivate
  * \brief The GetResourceRequestPrivate class provides private implementation for GetResourceRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetResourceRequestPrivate object for APIGateway \a action,
+ * Constructs a GetResourceRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
-    const APIGatewayRequest::Action action, GetResourceRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetResourceRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetResourceRequestPrivate::GetResourceRequestPrivate(
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const GetResourceRequestPrivate &other, GetResourceRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

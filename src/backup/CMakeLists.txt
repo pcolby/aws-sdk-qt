@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSBACKUP_LIBRARY)
 
 add_library(QtAwsBackup
+  qtawsbackupglobal.h
   backupclient.h
   backupclient_p.h
   backuprequest.h
@@ -19,6 +20,14 @@ add_library(QtAwsBackup
   createbackupvaultrequest_p.h
   createbackupvaultresponse.h
   createbackupvaultresponse_p.h
+  createframeworkrequest.h
+  createframeworkrequest_p.h
+  createframeworkresponse.h
+  createframeworkresponse_p.h
+  createreportplanrequest.h
+  createreportplanrequest_p.h
+  createreportplanresponse.h
+  createreportplanresponse_p.h
   deletebackupplanrequest.h
   deletebackupplanrequest_p.h
   deletebackupplanresponse.h
@@ -27,22 +36,34 @@ add_library(QtAwsBackup
   deletebackupselectionrequest_p.h
   deletebackupselectionresponse.h
   deletebackupselectionresponse_p.h
-  deletebackupvaultaccesspolicyrequest.h
-  deletebackupvaultaccesspolicyrequest_p.h
-  deletebackupvaultaccesspolicyresponse.h
-  deletebackupvaultaccesspolicyresponse_p.h
-  deletebackupvaultnotificationsrequest.h
-  deletebackupvaultnotificationsrequest_p.h
-  deletebackupvaultnotificationsresponse.h
-  deletebackupvaultnotificationsresponse_p.h
   deletebackupvaultrequest.h
   deletebackupvaultrequest_p.h
   deletebackupvaultresponse.h
   deletebackupvaultresponse_p.h
+  deletebackupvaultaccesspolicyrequest.h
+  deletebackupvaultaccesspolicyrequest_p.h
+  deletebackupvaultaccesspolicyresponse.h
+  deletebackupvaultaccesspolicyresponse_p.h
+  deletebackupvaultlockconfigurationrequest.h
+  deletebackupvaultlockconfigurationrequest_p.h
+  deletebackupvaultlockconfigurationresponse.h
+  deletebackupvaultlockconfigurationresponse_p.h
+  deletebackupvaultnotificationsrequest.h
+  deletebackupvaultnotificationsrequest_p.h
+  deletebackupvaultnotificationsresponse.h
+  deletebackupvaultnotificationsresponse_p.h
+  deleteframeworkrequest.h
+  deleteframeworkrequest_p.h
+  deleteframeworkresponse.h
+  deleteframeworkresponse_p.h
   deleterecoverypointrequest.h
   deleterecoverypointrequest_p.h
   deleterecoverypointresponse.h
   deleterecoverypointresponse_p.h
+  deletereportplanrequest.h
+  deletereportplanrequest_p.h
+  deletereportplanresponse.h
+  deletereportplanresponse_p.h
   describebackupjobrequest.h
   describebackupjobrequest_p.h
   describebackupjobresponse.h
@@ -55,6 +76,10 @@ add_library(QtAwsBackup
   describecopyjobrequest_p.h
   describecopyjobresponse.h
   describecopyjobresponse_p.h
+  describeframeworkrequest.h
+  describeframeworkrequest_p.h
+  describeframeworkresponse.h
+  describeframeworkresponse_p.h
   describeglobalsettingsrequest.h
   describeglobalsettingsrequest_p.h
   describeglobalsettingsresponse.h
@@ -71,6 +96,14 @@ add_library(QtAwsBackup
   describeregionsettingsrequest_p.h
   describeregionsettingsresponse.h
   describeregionsettingsresponse_p.h
+  describereportjobrequest.h
+  describereportjobrequest_p.h
+  describereportjobresponse.h
+  describereportjobresponse_p.h
+  describereportplanrequest.h
+  describereportplanrequest_p.h
+  describereportplanresponse.h
+  describereportplanresponse_p.h
   describerestorejobrequest.h
   describerestorejobrequest_p.h
   describerestorejobresponse.h
@@ -83,6 +116,10 @@ add_library(QtAwsBackup
   exportbackupplantemplaterequest_p.h
   exportbackupplantemplateresponse.h
   exportbackupplantemplateresponse_p.h
+  getbackupplanrequest.h
+  getbackupplanrequest_p.h
+  getbackupplanresponse.h
+  getbackupplanresponse_p.h
   getbackupplanfromjsonrequest.h
   getbackupplanfromjsonrequest_p.h
   getbackupplanfromjsonresponse.h
@@ -91,10 +128,6 @@ add_library(QtAwsBackup
   getbackupplanfromtemplaterequest_p.h
   getbackupplanfromtemplateresponse.h
   getbackupplanfromtemplateresponse_p.h
-  getbackupplanrequest.h
-  getbackupplanrequest_p.h
-  getbackupplanresponse.h
-  getbackupplanresponse_p.h
   getbackupselectionrequest.h
   getbackupselectionrequest_p.h
   getbackupselectionresponse.h
@@ -119,10 +152,6 @@ add_library(QtAwsBackup
   listbackupjobsrequest_p.h
   listbackupjobsresponse.h
   listbackupjobsresponse_p.h
-  listbackupplansrequest.h
-  listbackupplansrequest_p.h
-  listbackupplansresponse.h
-  listbackupplansresponse_p.h
   listbackupplantemplatesrequest.h
   listbackupplantemplatesrequest_p.h
   listbackupplantemplatesresponse.h
@@ -131,6 +160,10 @@ add_library(QtAwsBackup
   listbackupplanversionsrequest_p.h
   listbackupplanversionsresponse.h
   listbackupplanversionsresponse_p.h
+  listbackupplansrequest.h
+  listbackupplansrequest_p.h
+  listbackupplansresponse.h
+  listbackupplansresponse_p.h
   listbackupselectionsrequest.h
   listbackupselectionsrequest_p.h
   listbackupselectionsresponse.h
@@ -143,6 +176,10 @@ add_library(QtAwsBackup
   listcopyjobsrequest_p.h
   listcopyjobsresponse.h
   listcopyjobsresponse_p.h
+  listframeworksrequest.h
+  listframeworksrequest_p.h
+  listframeworksresponse.h
+  listframeworksresponse_p.h
   listprotectedresourcesrequest.h
   listprotectedresourcesrequest_p.h
   listprotectedresourcesresponse.h
@@ -155,6 +192,14 @@ add_library(QtAwsBackup
   listrecoverypointsbyresourcerequest_p.h
   listrecoverypointsbyresourceresponse.h
   listrecoverypointsbyresourceresponse_p.h
+  listreportjobsrequest.h
+  listreportjobsrequest_p.h
+  listreportjobsresponse.h
+  listreportjobsresponse_p.h
+  listreportplansrequest.h
+  listreportplansrequest_p.h
+  listreportplansresponse.h
+  listreportplansresponse_p.h
   listrestorejobsrequest.h
   listrestorejobsrequest_p.h
   listrestorejobsresponse.h
@@ -167,11 +212,14 @@ add_library(QtAwsBackup
   putbackupvaultaccesspolicyrequest_p.h
   putbackupvaultaccesspolicyresponse.h
   putbackupvaultaccesspolicyresponse_p.h
+  putbackupvaultlockconfigurationrequest.h
+  putbackupvaultlockconfigurationrequest_p.h
+  putbackupvaultlockconfigurationresponse.h
+  putbackupvaultlockconfigurationresponse_p.h
   putbackupvaultnotificationsrequest.h
   putbackupvaultnotificationsrequest_p.h
   putbackupvaultnotificationsresponse.h
   putbackupvaultnotificationsresponse_p.h
-  qtawsbackupglobal.h
   startbackupjobrequest.h
   startbackupjobrequest_p.h
   startbackupjobresponse.h
@@ -180,6 +228,10 @@ add_library(QtAwsBackup
   startcopyjobrequest_p.h
   startcopyjobresponse.h
   startcopyjobresponse_p.h
+  startreportjobrequest.h
+  startreportjobrequest_p.h
+  startreportjobresponse.h
+  startreportjobresponse_p.h
   startrestorejobrequest.h
   startrestorejobrequest_p.h
   startrestorejobresponse.h
@@ -200,6 +252,10 @@ add_library(QtAwsBackup
   updatebackupplanrequest_p.h
   updatebackupplanresponse.h
   updatebackupplanresponse_p.h
+  updateframeworkrequest.h
+  updateframeworkrequest_p.h
+  updateframeworkresponse.h
+  updateframeworkresponse_p.h
   updateglobalsettingsrequest.h
   updateglobalsettingsrequest_p.h
   updateglobalsettingsresponse.h
@@ -212,6 +268,10 @@ add_library(QtAwsBackup
   updateregionsettingsrequest_p.h
   updateregionsettingsresponse.h
   updateregionsettingsresponse_p.h
+  updatereportplanrequest.h
+  updatereportplanrequest_p.h
+  updatereportplanresponse.h
+  updatereportplanresponse_p.h
   backupclient.cpp
   backuprequest.cpp
   backupresponse.cpp
@@ -221,24 +281,36 @@ add_library(QtAwsBackup
   createbackupselectionresponse.cpp
   createbackupvaultrequest.cpp
   createbackupvaultresponse.cpp
+  createframeworkrequest.cpp
+  createframeworkresponse.cpp
+  createreportplanrequest.cpp
+  createreportplanresponse.cpp
   deletebackupplanrequest.cpp
   deletebackupplanresponse.cpp
   deletebackupselectionrequest.cpp
   deletebackupselectionresponse.cpp
-  deletebackupvaultaccesspolicyrequest.cpp
-  deletebackupvaultaccesspolicyresponse.cpp
-  deletebackupvaultnotificationsrequest.cpp
-  deletebackupvaultnotificationsresponse.cpp
   deletebackupvaultrequest.cpp
   deletebackupvaultresponse.cpp
+  deletebackupvaultaccesspolicyrequest.cpp
+  deletebackupvaultaccesspolicyresponse.cpp
+  deletebackupvaultlockconfigurationrequest.cpp
+  deletebackupvaultlockconfigurationresponse.cpp
+  deletebackupvaultnotificationsrequest.cpp
+  deletebackupvaultnotificationsresponse.cpp
+  deleteframeworkrequest.cpp
+  deleteframeworkresponse.cpp
   deleterecoverypointrequest.cpp
   deleterecoverypointresponse.cpp
+  deletereportplanrequest.cpp
+  deletereportplanresponse.cpp
   describebackupjobrequest.cpp
   describebackupjobresponse.cpp
   describebackupvaultrequest.cpp
   describebackupvaultresponse.cpp
   describecopyjobrequest.cpp
   describecopyjobresponse.cpp
+  describeframeworkrequest.cpp
+  describeframeworkresponse.cpp
   describeglobalsettingsrequest.cpp
   describeglobalsettingsresponse.cpp
   describeprotectedresourcerequest.cpp
@@ -247,18 +319,22 @@ add_library(QtAwsBackup
   describerecoverypointresponse.cpp
   describeregionsettingsrequest.cpp
   describeregionsettingsresponse.cpp
+  describereportjobrequest.cpp
+  describereportjobresponse.cpp
+  describereportplanrequest.cpp
+  describereportplanresponse.cpp
   describerestorejobrequest.cpp
   describerestorejobresponse.cpp
   disassociaterecoverypointrequest.cpp
   disassociaterecoverypointresponse.cpp
   exportbackupplantemplaterequest.cpp
   exportbackupplantemplateresponse.cpp
+  getbackupplanrequest.cpp
+  getbackupplanresponse.cpp
   getbackupplanfromjsonrequest.cpp
   getbackupplanfromjsonresponse.cpp
   getbackupplanfromtemplaterequest.cpp
   getbackupplanfromtemplateresponse.cpp
-  getbackupplanrequest.cpp
-  getbackupplanresponse.cpp
   getbackupselectionrequest.cpp
   getbackupselectionresponse.cpp
   getbackupvaultaccesspolicyrequest.cpp
@@ -271,36 +347,46 @@ add_library(QtAwsBackup
   getsupportedresourcetypesresponse.cpp
   listbackupjobsrequest.cpp
   listbackupjobsresponse.cpp
-  listbackupplansrequest.cpp
-  listbackupplansresponse.cpp
   listbackupplantemplatesrequest.cpp
   listbackupplantemplatesresponse.cpp
   listbackupplanversionsrequest.cpp
   listbackupplanversionsresponse.cpp
+  listbackupplansrequest.cpp
+  listbackupplansresponse.cpp
   listbackupselectionsrequest.cpp
   listbackupselectionsresponse.cpp
   listbackupvaultsrequest.cpp
   listbackupvaultsresponse.cpp
   listcopyjobsrequest.cpp
   listcopyjobsresponse.cpp
+  listframeworksrequest.cpp
+  listframeworksresponse.cpp
   listprotectedresourcesrequest.cpp
   listprotectedresourcesresponse.cpp
   listrecoverypointsbybackupvaultrequest.cpp
   listrecoverypointsbybackupvaultresponse.cpp
   listrecoverypointsbyresourcerequest.cpp
   listrecoverypointsbyresourceresponse.cpp
+  listreportjobsrequest.cpp
+  listreportjobsresponse.cpp
+  listreportplansrequest.cpp
+  listreportplansresponse.cpp
   listrestorejobsrequest.cpp
   listrestorejobsresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
   putbackupvaultaccesspolicyrequest.cpp
   putbackupvaultaccesspolicyresponse.cpp
+  putbackupvaultlockconfigurationrequest.cpp
+  putbackupvaultlockconfigurationresponse.cpp
   putbackupvaultnotificationsrequest.cpp
   putbackupvaultnotificationsresponse.cpp
   startbackupjobrequest.cpp
   startbackupjobresponse.cpp
   startcopyjobrequest.cpp
   startcopyjobresponse.cpp
+  startreportjobrequest.cpp
+  startreportjobresponse.cpp
   startrestorejobrequest.cpp
   startrestorejobresponse.cpp
   stopbackupjobrequest.cpp
@@ -311,12 +397,16 @@ add_library(QtAwsBackup
   untagresourceresponse.cpp
   updatebackupplanrequest.cpp
   updatebackupplanresponse.cpp
+  updateframeworkrequest.cpp
+  updateframeworkresponse.cpp
   updateglobalsettingsrequest.cpp
   updateglobalsettingsresponse.cpp
   updaterecoverypointlifecyclerequest.cpp
   updaterecoverypointlifecycleresponse.cpp
   updateregionsettingsrequest.cpp
-  updateregionsettingsresponse.cpp)
+  updateregionsettingsresponse.cpp
+  updatereportplanrequest.cpp
+  updatereportplanresponse.cpp)
 
 target_link_libraries(QtAwsBackup
   PRIVATE QtAwsCore

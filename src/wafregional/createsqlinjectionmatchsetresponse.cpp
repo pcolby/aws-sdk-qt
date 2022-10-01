@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetResponse
- * \brief The CreateSqlInjectionMatchSetResponse class provides an interace for WAFRegional CreateSqlInjectionMatchSet responses.
+ * \class QtAws::WafRegional::CreateSqlInjectionMatchSetResponse
+ * \brief The CreateSqlInjectionMatchSetResponse class provides an interace for WafRegional CreateSqlInjectionMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createSqlInjectionMatchSet
+ * \sa WafRegionalClient::createSqlInjectionMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
         const CreateSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateSqlInjectionMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateSqlInjectionMatchSetRequest * CreateSqlInjectionMatchSetResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateSqlInjectionMatchSet \a response.
+ * Parses a successful WafRegional CreateSqlInjectionMatchSet \a response.
  */
 void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetResponsePrivate
+ * \class QtAws::WafRegional::CreateSqlInjectionMatchSetResponsePrivate
  * \brief The CreateSqlInjectionMatchSetResponsePrivate class provides private implementation for CreateSqlInjectionMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePrivate(
-    CreateSqlInjectionMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateSqlInjectionMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateSqlInjectionMatchSet response element from \a xml.
+ * Parses a WafRegional CreateSqlInjectionMatchSet response element from \a xml.
  */
 void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

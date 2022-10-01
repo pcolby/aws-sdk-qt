@@ -24,7 +24,7 @@
 #include "describeparametersrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DescribeParametersResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

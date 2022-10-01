@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class TagResourceResponsePrivate;
 
-class QTAWSKENDRA_EXPORT TagResourceResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT TagResourceResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

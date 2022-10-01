@@ -23,6 +23,10 @@
 #include "core/awssignaturev4.h"
 #include "acceptinvitationrequest.h"
 #include "acceptinvitationresponse.h"
+#include "batchgetgraphmemberdatasourcesrequest.h"
+#include "batchgetgraphmemberdatasourcesresponse.h"
+#include "batchgetmembershipdatasourcesrequest.h"
+#include "batchgetmembershipdatasourcesresponse.h"
 #include "creategraphrequest.h"
 #include "creategraphresponse.h"
 #include "createmembersrequest.h"
@@ -31,16 +35,26 @@
 #include "deletegraphresponse.h"
 #include "deletemembersrequest.h"
 #include "deletemembersresponse.h"
+#include "describeorganizationconfigurationrequest.h"
+#include "describeorganizationconfigurationresponse.h"
+#include "disableorganizationadminaccountrequest.h"
+#include "disableorganizationadminaccountresponse.h"
 #include "disassociatemembershiprequest.h"
 #include "disassociatemembershipresponse.h"
+#include "enableorganizationadminaccountrequest.h"
+#include "enableorganizationadminaccountresponse.h"
 #include "getmembersrequest.h"
 #include "getmembersresponse.h"
+#include "listdatasourcepackagesrequest.h"
+#include "listdatasourcepackagesresponse.h"
 #include "listgraphsrequest.h"
 #include "listgraphsresponse.h"
 #include "listinvitationsrequest.h"
 #include "listinvitationsresponse.h"
 #include "listmembersrequest.h"
 #include "listmembersresponse.h"
+#include "listorganizationadminaccountsrequest.h"
+#include "listorganizationadminaccountsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "rejectinvitationrequest.h"
@@ -51,6 +65,10 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatedatasourcepackagesrequest.h"
+#include "updatedatasourcepackagesresponse.h"
+#include "updateorganizationconfigurationrequest.h"
+#include "updateorganizationconfigurationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -74,10 +92,10 @@ namespace Detective {
  * \ingroup aws-clients
  * \inmodule QtAwsDetective
  *
- *  Detective uses machine learning and purpose-built visualizations to help you analyze and investigate security issues
- *  across your Amazon Web Services (AWS) workloads. Detective automatically extracts time-based events such as login
- *  attempts, API calls, and network traffic from AWS CloudTrail and Amazon Virtual Private Cloud (Amazon VPC) flow logs. It
- *  also extracts findings detected by Amazon
+ *  Detective uses machine learning and purpose-built visualizations to help you to analyze and investigate security issues
+ *  across your Amazon Web Services (Amazon Web Services) workloads. Detective automatically extracts time-based events such
+ *  as login attempts, API calls, and network traffic from CloudTrail and Amazon Virtual Private Cloud (Amazon VPC) flow
+ *  logs. It also extracts findings detected by Amazon
  * 
  *  GuardDuty>
  * 
@@ -86,12 +104,29 @@ namespace Detective {
  * 
  *  account>
  * 
- *  Every behavior graph is specific to a Region. You can only use the API to manage graphs that belong to the Region that
- *  is associated with the currently selected
+ *  To add a member account to the behavior graph, the administrator account sends an invitation to the account. When the
+ *  account accepts the invitation, it becomes a member account in the behavior
+ * 
+ *  graph>
+ * 
+ *  Detective is also integrated with Organizations. The organization management account designates the Detective
+ *  administrator account for the organization. That account becomes the administrator account for the organization behavior
+ *  graph. The Detective administrator account is also the delegated administrator account for Detective in
+ * 
+ *  Organizations>
+ * 
+ *  The Detective administrator account can enable any organization account as a member account in the organization behavior
+ *  graph. The organization accounts do not receive invitations. The Detective administrator account can also invite other
+ *  accounts to the organization behavior
+ * 
+ *  graph>
+ * 
+ *  Every behavior graph is specific to a Region. You can only use the API to manage behavior graphs that belong to the
+ *  Region that is associated with the currently selected
  * 
  *  endpoint>
  * 
- *  A Detective administrator account can use the Detective API to do the
+ *  The administrator account for a behavior graph can use the Detective API to do the
  * 
  *  following> <ul> <li>
  * 
@@ -109,9 +144,29 @@ namespace Detective {
  * 
  *  Remove member accounts from a behavior
  * 
+ *  graph> </li> <li>
+ * 
+ *  Apply tags to a behavior
+ * 
  *  graph> </li> </ul>
  * 
- *  A member account can use the Detective API to do the
+ *  The organization management account can use the Detective API to select the delegated administrator for
+ * 
+ *  Detective>
+ * 
+ *  The Detective administrator account for an organization can use the Detective API to do the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  Perform all of the functions of an administrator
+ * 
+ *  account> </li> <li>
+ * 
+ *  Determine whether to automatically enable new organization accounts as member accounts in the organization behavior
+ * 
+ *  graph> </li> </ul>
+ * 
+ *  An invited member account can use the Detective API to do the
  * 
  *  following> <ul> <li>
  * 
@@ -219,6 +274,32 @@ AcceptInvitationResponse * DetectiveClient::acceptInvitation(const AcceptInvitat
 
 /*!
  * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * BatchGetGraphMemberDatasourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets data source package information for the behavior
+ */
+BatchGetGraphMemberDatasourcesResponse * DetectiveClient::batchGetGraphMemberDatasources(const BatchGetGraphMemberDatasourcesRequest &request)
+{
+    return qobject_cast<BatchGetGraphMemberDatasourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * BatchGetMembershipDatasourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information on the data source package history for an
+ */
+BatchGetMembershipDatasourcesResponse * DetectiveClient::batchGetMembershipDatasources(const BatchGetMembershipDatasourcesRequest &request)
+{
+    return qobject_cast<BatchGetMembershipDatasourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
  * CreateGraphResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -259,8 +340,14 @@ CreateGraphResponse * DetectiveClient::createGraph(const CreateGraphRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends a request to invite the specified AWS accounts to be member accounts in the behavior graph. This operation can
- * only be called by the administrator account for a behavior graph.
+ * <code>CreateMembers</code> is used to send invitations to accounts. For the organization behavior graph, the Detective
+ * administrator account uses <code>CreateMembers</code> to enable organization accounts as member
+ *
+ * accounts>
+ *
+ * For invited accounts, <code>CreateMembers</code> sends a request to invite the specified Amazon Web Services accounts to
+ * be member accounts in the behavior graph. This operation can only be called by the administrator account for a behavior
+ * graph.
  *
  * </p
  *
@@ -270,18 +357,24 @@ CreateGraphResponse * DetectiveClient::createGraph(const CreateGraphRequest &req
  *
  * centrally>
  *
- * The request provides the behavior graph ARN and the list of accounts to
+ * For organization accounts in the organization behavior graph, <code>CreateMembers</code> attempts to enable the
+ * accounts. The organization accounts do not receive
  *
- * invite>
+ * invitations>
+ *
+ * The request provides the behavior graph ARN and the list of accounts to invite or to
+ *
+ * enable>
  *
  * The response separates the requested accounts into two
  *
  * lists> <ul> <li>
  *
- * The accounts that <code>CreateMembers</code> was able to start the verification for. This list includes member accounts
- * that are being verified, that have passed verification and are to be invited, and that have failed
+ * The accounts that <code>CreateMembers</code> was able to process. For invited accounts, includes member accounts that
+ * are being verified, that have passed verification and are to be invited, and that have failed verification. For
+ * organization accounts in the organization behavior graph, includes accounts that can be enabled and that cannot be
  *
- * verification> </li> <li>
+ * enabled> </li> <li>
  *
  * The accounts that <code>CreateMembers</code> was unable to process. This list includes accounts that were already
  * invited to be member accounts in the behavior
@@ -297,8 +390,8 @@ CreateMembersResponse * DetectiveClient::createMembers(const CreateMembersReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables the specified behavior graph and queues it to be deleted. This operation removes the graph from each member
- * account's list of behavior
+ * Disables the specified behavior graph and queues it to be deleted. This operation removes the behavior graph from each
+ * member account's list of behavior
  *
  * graphs>
  *
@@ -315,9 +408,24 @@ DeleteGraphResponse * DetectiveClient::deleteGraph(const DeleteGraphRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes one or more member accounts from the administrator account's behavior graph. This operation can only be called
- * by a Detective administrator account. That account cannot use <code>DeleteMembers</code> to delete their own account
- * from the behavior graph. To disable a behavior graph, the administrator account uses the <code>DeleteGraph</code> API
+ * Removes the specified member accounts from the behavior graph. The removed accounts no longer contribute data to the
+ * behavior graph. This operation can only be called by the administrator account for the behavior
+ *
+ * graph>
+ *
+ * For invited accounts, the removed accounts are deleted from the list of accounts in the behavior graph. To restore the
+ * account, the administrator account must send another
+ *
+ * invitation>
+ *
+ * For organization accounts in the organization behavior graph, the Detective administrator account can always enable the
+ * organization account again. Organization accounts that are not enabled as member accounts are not included in the
+ * <code>ListMembers</code> results for the organization behavior
+ *
+ * graph>
+ *
+ * An administrator account cannot use <code>DeleteMembers</code> to remove their own account from the behavior graph. To
+ * disable a behavior graph, the administrator account uses the <code>DeleteGraph</code> API
  */
 DeleteMembersResponse * DetectiveClient::deleteMembers(const DeleteMembersRequest &request)
 {
@@ -326,16 +434,100 @@ DeleteMembersResponse * DetectiveClient::deleteMembers(const DeleteMembersReques
 
 /*!
  * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * DescribeOrganizationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the configuration for the organization behavior graph. Currently indicates whether to
+ * automatically enable new organization accounts as member
+ *
+ * accounts>
+ *
+ * Can only be called by the Detective administrator account for the organization.
+ */
+DescribeOrganizationConfigurationResponse * DetectiveClient::describeOrganizationConfiguration(const DescribeOrganizationConfigurationRequest &request)
+{
+    return qobject_cast<DescribeOrganizationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * DisableOrganizationAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the Detective administrator account in the current Region. Deletes the organization behavior
+ *
+ * graph>
+ *
+ * Can only be called by the organization management
+ *
+ * account>
+ *
+ * Removing the Detective administrator account does not affect the delegated administrator account for Detective in
+ *
+ * Organizations>
+ *
+ * To remove the delegated administrator account in Organizations, use the Organizations API. Removing the delegated
+ * administrator account also removes the Detective administrator account in all Regions, except for Regions where the
+ * Detective administrator account is the organization management
+ */
+DisableOrganizationAdminAccountResponse * DetectiveClient::disableOrganizationAdminAccount(const DisableOrganizationAdminAccountRequest &request)
+{
+    return qobject_cast<DisableOrganizationAdminAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
  * DisassociateMembershipResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the member account from the specified behavior graph. This operation can only be called by a member account that
- * has the <code>ENABLED</code>
+ * Removes the member account from the specified behavior graph. This operation can only be called by an invited member
+ * account that has the <code>ENABLED</code>
+ *
+ * status>
+ *
+ * <code>DisassociateMembership</code> cannot be called by an organization account in the organization behavior graph. For
+ * the organization behavior graph, the Detective administrator account determines which organization accounts to enable or
+ * disable as member
  */
 DisassociateMembershipResponse * DetectiveClient::disassociateMembership(const DisassociateMembershipRequest &request)
 {
     return qobject_cast<DisassociateMembershipResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * EnableOrganizationAdminAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Designates the Detective administrator account for the organization in the current
+ *
+ * Region>
+ *
+ * If the account does not have Detective enabled, then enables Detective for that account and creates a new behavior
+ *
+ * graph>
+ *
+ * Can only be called by the organization management
+ *
+ * account>
+ *
+ * If the organization has a delegated administrator account in Organizations, then the Detective administrator account
+ * must be either the delegated administrator account or the organization management
+ *
+ * account>
+ *
+ * If the organization does not have a delegated administrator account in Organizations, then you can choose any account in
+ * the organization. If you choose an account other than the organization management account, Detective calls Organizations
+ * to make that account the delegated administrator account for Detective. The organization management account cannot be
+ * the delegated administrator
+ */
+EnableOrganizationAdminAccountResponse * DetectiveClient::enableOrganizationAdminAccount(const EnableOrganizationAdminAccountRequest &request)
+{
+    return qobject_cast<EnableOrganizationAdminAccountResponse *>(send(request));
 }
 
 /*!
@@ -349,6 +541,19 @@ DisassociateMembershipResponse * DetectiveClient::disassociateMembership(const D
 GetMembersResponse * DetectiveClient::getMembers(const GetMembersRequest &request)
 {
     return qobject_cast<GetMembersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * ListDatasourcePackagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists data source packages in the behavior
+ */
+ListDatasourcePackagesResponse * DetectiveClient::listDatasourcePackages(const ListDatasourcePackagesRequest &request)
+{
+    return qobject_cast<ListDatasourcePackagesResponse *>(send(request));
 }
 
 /*!
@@ -377,7 +582,7 @@ ListGraphsResponse * DetectiveClient::listGraphs(const ListGraphsRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the list of open and accepted behavior graph invitations for the member account. This operation can only be
- * called by a member
+ * called by an invited member
  *
  * account>
  *
@@ -399,12 +604,34 @@ ListInvitationsResponse * DetectiveClient::listInvitations(const ListInvitations
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the list of member accounts for a behavior graph. Does not return member accounts that were removed from the
- * behavior
+ * Retrieves the list of member accounts for a behavior
+ *
+ * graph>
+ *
+ * For invited accounts, the results do not include member accounts that were removed from the behavior
+ *
+ * graph>
+ *
+ * For the organization behavior graph, the results do not include organization accounts that the Detective administrator
+ * account has not enabled as member
  */
 ListMembersResponse * DetectiveClient::listMembers(const ListMembersRequest &request)
 {
     return qobject_cast<ListMembersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * ListOrganizationAdminAccountsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the Detective administrator account for an organization. Can only be called by the
+ * organization management
+ */
+ListOrganizationAdminAccountsResponse * DetectiveClient::listOrganizationAdminAccounts(const ListOrganizationAdminAccountsRequest &request)
+{
+    return qobject_cast<ListOrganizationAdminAccountsResponse *>(send(request));
 }
 
 /*!
@@ -426,8 +653,13 @@ ListTagsForResourceResponse * DetectiveClient::listTagsForResource(const ListTag
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Rejects an invitation to contribute the account data to a behavior graph. This operation must be called by a member
- * account that has the <code>INVITED</code>
+ * Rejects an invitation to contribute the account data to a behavior graph. This operation must be called by an invited
+ * member account that has the <code>INVITED</code>
+ *
+ * status>
+ *
+ * <code>RejectInvitation</code> cannot be called by an organization account in the organization behavior graph. In the
+ * organization behavior graph, organization accounts do not receive an
  */
 RejectInvitationResponse * DetectiveClient::rejectInvitation(const RejectInvitationRequest &request)
 {
@@ -483,6 +715,33 @@ TagResourceResponse * DetectiveClient::tagResource(const TagResourceRequest &req
 UntagResourceResponse * DetectiveClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * UpdateDatasourcePackagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a data source packages for the behavior
+ */
+UpdateDatasourcePackagesResponse * DetectiveClient::updateDatasourcePackages(const UpdateDatasourcePackagesRequest &request)
+{
+    return qobject_cast<UpdateDatasourcePackagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DetectiveClient service, and returns a pointer to an
+ * UpdateOrganizationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configuration for the Organizations integration in the current Region. Can only be called by the Detective
+ * administrator account for the
+ */
+UpdateOrganizationConfigurationResponse * DetectiveClient::updateOrganizationConfiguration(const UpdateOrganizationConfigurationRequest &request)
+{
+    return qobject_cast<UpdateOrganizationConfigurationResponse *>(send(request));
 }
 
 /*!

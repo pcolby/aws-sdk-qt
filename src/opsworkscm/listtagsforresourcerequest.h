@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT ListTagsForResourceRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT ListTagsForResourceRequest : public OpsWorksCmRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

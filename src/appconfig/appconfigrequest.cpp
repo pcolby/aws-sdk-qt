@@ -40,11 +40,15 @@ namespace AppConfig {
  * \value CreateConfigurationProfileAction AppConfig CreateConfigurationProfile action.
  * \value CreateDeploymentStrategyAction AppConfig CreateDeploymentStrategy action.
  * \value CreateEnvironmentAction AppConfig CreateEnvironment action.
+ * \value CreateExtensionAction AppConfig CreateExtension action.
+ * \value CreateExtensionAssociationAction AppConfig CreateExtensionAssociation action.
  * \value CreateHostedConfigurationVersionAction AppConfig CreateHostedConfigurationVersion action.
  * \value DeleteApplicationAction AppConfig DeleteApplication action.
  * \value DeleteConfigurationProfileAction AppConfig DeleteConfigurationProfile action.
  * \value DeleteDeploymentStrategyAction AppConfig DeleteDeploymentStrategy action.
  * \value DeleteEnvironmentAction AppConfig DeleteEnvironment action.
+ * \value DeleteExtensionAction AppConfig DeleteExtension action.
+ * \value DeleteExtensionAssociationAction AppConfig DeleteExtensionAssociation action.
  * \value DeleteHostedConfigurationVersionAction AppConfig DeleteHostedConfigurationVersion action.
  * \value GetApplicationAction AppConfig GetApplication action.
  * \value GetConfigurationAction AppConfig GetConfiguration action.
@@ -52,12 +56,16 @@ namespace AppConfig {
  * \value GetDeploymentAction AppConfig GetDeployment action.
  * \value GetDeploymentStrategyAction AppConfig GetDeploymentStrategy action.
  * \value GetEnvironmentAction AppConfig GetEnvironment action.
+ * \value GetExtensionAction AppConfig GetExtension action.
+ * \value GetExtensionAssociationAction AppConfig GetExtensionAssociation action.
  * \value GetHostedConfigurationVersionAction AppConfig GetHostedConfigurationVersion action.
  * \value ListApplicationsAction AppConfig ListApplications action.
  * \value ListConfigurationProfilesAction AppConfig ListConfigurationProfiles action.
  * \value ListDeploymentStrategiesAction AppConfig ListDeploymentStrategies action.
  * \value ListDeploymentsAction AppConfig ListDeployments action.
  * \value ListEnvironmentsAction AppConfig ListEnvironments action.
+ * \value ListExtensionAssociationsAction AppConfig ListExtensionAssociations action.
+ * \value ListExtensionsAction AppConfig ListExtensions action.
  * \value ListHostedConfigurationVersionsAction AppConfig ListHostedConfigurationVersions action.
  * \value ListTagsForResourceAction AppConfig ListTagsForResource action.
  * \value StartDeploymentAction AppConfig StartDeployment action.
@@ -68,6 +76,8 @@ namespace AppConfig {
  * \value UpdateConfigurationProfileAction AppConfig UpdateConfigurationProfile action.
  * \value UpdateDeploymentStrategyAction AppConfig UpdateDeploymentStrategy action.
  * \value UpdateEnvironmentAction AppConfig UpdateEnvironment action.
+ * \value UpdateExtensionAction AppConfig UpdateExtension action.
+ * \value UpdateExtensionAssociationAction AppConfig UpdateExtensionAssociation action.
  * \value ValidateConfigurationAction AppConfig ValidateConfiguration action.
  */
 
@@ -276,7 +286,7 @@ QNetworkRequest AppConfigRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppConfigRequestPrivate::AppConfigRequestPrivate(const AppConfigRequest::Action action, AppConfigRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-10-09"))
 {
 
 }
@@ -314,11 +324,15 @@ QString AppConfigRequestPrivate::toString(const AppConfigRequest::Action &action
         ActionToString(CreateConfigurationProfile);
         ActionToString(CreateDeploymentStrategy);
         ActionToString(CreateEnvironment);
+        ActionToString(CreateExtension);
+        ActionToString(CreateExtensionAssociation);
         ActionToString(CreateHostedConfigurationVersion);
         ActionToString(DeleteApplication);
         ActionToString(DeleteConfigurationProfile);
         ActionToString(DeleteDeploymentStrategy);
         ActionToString(DeleteEnvironment);
+        ActionToString(DeleteExtension);
+        ActionToString(DeleteExtensionAssociation);
         ActionToString(DeleteHostedConfigurationVersion);
         ActionToString(GetApplication);
         ActionToString(GetConfiguration);
@@ -326,12 +340,16 @@ QString AppConfigRequestPrivate::toString(const AppConfigRequest::Action &action
         ActionToString(GetDeployment);
         ActionToString(GetDeploymentStrategy);
         ActionToString(GetEnvironment);
+        ActionToString(GetExtension);
+        ActionToString(GetExtensionAssociation);
         ActionToString(GetHostedConfigurationVersion);
         ActionToString(ListApplications);
         ActionToString(ListConfigurationProfiles);
         ActionToString(ListDeploymentStrategies);
         ActionToString(ListDeployments);
         ActionToString(ListEnvironments);
+        ActionToString(ListExtensionAssociations);
+        ActionToString(ListExtensions);
         ActionToString(ListHostedConfigurationVersions);
         ActionToString(ListTagsForResource);
         ActionToString(StartDeployment);
@@ -342,6 +360,8 @@ QString AppConfigRequestPrivate::toString(const AppConfigRequest::Action &action
         ActionToString(UpdateConfigurationProfile);
         ActionToString(UpdateDeploymentStrategy);
         ActionToString(UpdateEnvironment);
+        ActionToString(UpdateExtension);
+        ActionToString(UpdateExtensionAssociation);
         ActionToString(ValidateConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

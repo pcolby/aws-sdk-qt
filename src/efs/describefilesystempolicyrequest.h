@@ -23,7 +23,7 @@
 #include "efsrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class DescribeFileSystemPolicyRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

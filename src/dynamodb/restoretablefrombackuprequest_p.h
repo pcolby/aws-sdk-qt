@@ -24,14 +24,14 @@
 #include "restoretablefrombackuprequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class RestoreTableFromBackupRequest;
 
-class RestoreTableFromBackupRequestPrivate : public DynamoDBRequestPrivate {
+class RestoreTableFromBackupRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    RestoreTableFromBackupRequestPrivate(const DynamoDBRequest::Action action,
+    RestoreTableFromBackupRequestPrivate(const DynamoDbRequest::Action action,
                                    RestoreTableFromBackupRequest * const q);
     RestoreTableFromBackupRequestPrivate(const RestoreTableFromBackupRequestPrivate &other,
                                    RestoreTableFromBackupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

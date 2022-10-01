@@ -24,14 +24,14 @@
 #include "updatepermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class UpdatePermissionSetRequest;
 
-class UpdatePermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class UpdatePermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    UpdatePermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    UpdatePermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    UpdatePermissionSetRequest * const q);
     UpdatePermissionSetRequestPrivate(const UpdatePermissionSetRequestPrivate &other,
                                    UpdatePermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

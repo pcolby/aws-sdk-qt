@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 /*!
- * \class QtAws::KMS::KmsResponse
- * \brief The KmsResponse class provides an interface for KMS responses.
+ * \class QtAws::Kms::KmsResponse
+ * \brief The KmsResponse class provides an interface for Kms responses.
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  */
 
 /*!
@@ -76,11 +76,11 @@ void KmsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::KMS::KmsResponsePrivate
+ * \class QtAws::Kms::KmsResponsePrivate
  * \brief The KmsResponsePrivate class provides private implementation for KmsResponse.
  * \internal
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  */
 
 /*!
@@ -92,5 +92,5 @@ KmsResponsePrivate::KmsResponsePrivate(
 
 }
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws

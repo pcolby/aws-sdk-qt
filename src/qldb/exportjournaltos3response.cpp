@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ExportJournalToS3Response
- * \brief The ExportJournalToS3Response class provides an interace for QLDB ExportJournalToS3 responses.
+ * \class QtAws::Qldb::ExportJournalToS3Response
+ * \brief The ExportJournalToS3Response class provides an interace for Qldb ExportJournalToS3 responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const ExportJournalToS3Request * ExportJournalToS3Response::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB ExportJournalToS3 \a response.
+ * Parses a successful Qldb ExportJournalToS3 \a response.
  */
 void ExportJournalToS3Response::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void ExportJournalToS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::ExportJournalToS3ResponsePrivate
+ * \class QtAws::Qldb::ExportJournalToS3ResponsePrivate
  * \brief The ExportJournalToS3ResponsePrivate class provides private implementation for ExportJournalToS3Response.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ ExportJournalToS3ResponsePrivate::ExportJournalToS3ResponsePrivate(
 }
 
 /*!
- * Parses a QLDB ExportJournalToS3 response element from \a xml.
+ * Parses a Qldb ExportJournalToS3 response element from \a xml.
  */
 void ExportJournalToS3ResponsePrivate::parseExportJournalToS3Response(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ExportJournalToS3ResponsePrivate::parseExportJournalToS3Response(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

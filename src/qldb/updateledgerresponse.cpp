@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::UpdateLedgerResponse
- * \brief The UpdateLedgerResponse class provides an interace for QLDB UpdateLedger responses.
+ * \class QtAws::Qldb::UpdateLedgerResponse
+ * \brief The UpdateLedgerResponse class provides an interace for Qldb UpdateLedger responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const UpdateLedgerRequest * UpdateLedgerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB UpdateLedger \a response.
+ * Parses a successful Qldb UpdateLedger \a response.
  */
 void UpdateLedgerResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void UpdateLedgerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::UpdateLedgerResponsePrivate
+ * \class QtAws::Qldb::UpdateLedgerResponsePrivate
  * \brief The UpdateLedgerResponsePrivate class provides private implementation for UpdateLedgerResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ UpdateLedgerResponsePrivate::UpdateLedgerResponsePrivate(
 }
 
 /*!
- * Parses a QLDB UpdateLedger response element from \a xml.
+ * Parses a Qldb UpdateLedger response element from \a xml.
  */
 void UpdateLedgerResponsePrivate::parseUpdateLedgerResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateLedgerResponsePrivate::parseUpdateLedgerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

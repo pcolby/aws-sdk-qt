@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::ListExperimentsResponse
- * \brief The ListExperimentsResponse class provides an interace for FIS ListExperiments responses.
+ * \class QtAws::Fis::ListExperimentsResponse
+ * \brief The ListExperimentsResponse class provides an interace for Fis ListExperiments responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::listExperiments
  */
@@ -64,7 +64,7 @@ const ListExperimentsRequest * ListExperimentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS ListExperiments \a response.
+ * Parses a successful Fis ListExperiments \a response.
  */
 void ListExperimentsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListExperimentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::ListExperimentsResponsePrivate
+ * \class QtAws::Fis::ListExperimentsResponsePrivate
  * \brief The ListExperimentsResponsePrivate class provides private implementation for ListExperimentsResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ ListExperimentsResponsePrivate::ListExperimentsResponsePrivate(
 }
 
 /*!
- * Parses a FIS ListExperiments response element from \a xml.
+ * Parses a Fis ListExperiments response element from \a xml.
  */
 void ListExperimentsResponsePrivate::parseListExperimentsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListExperimentsResponsePrivate::parseListExperimentsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

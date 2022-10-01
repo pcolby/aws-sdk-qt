@@ -23,23 +23,23 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::SendVoiceMessageRequest
- * \brief The SendVoiceMessageRequest class provides an interface for PinpointSMSVoice SendVoiceMessage requests.
+ * \class QtAws::PinpointSmsVoice::SendVoiceMessageRequest
+ * \brief The SendVoiceMessageRequest class provides an interface for PinpointSmsVoice SendVoiceMessage requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::sendVoiceMessage
+ * \sa PinpointSmsVoiceClient::sendVoiceMessage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SendVoiceMessageRequest::SendVoiceMessageRequest(const SendVoiceMessageRequest &other)
-    : PinpointSMSVoiceRequest(new SendVoiceMessageRequestPrivate(*other.d_func(), this))
+    : PinpointSmsVoiceRequest(new SendVoiceMessageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ SendVoiceMessageRequest::SendVoiceMessageRequest(const SendVoiceMessageRequest &
  * Constructs a SendVoiceMessageRequest object.
  */
 SendVoiceMessageRequest::SendVoiceMessageRequest()
-    : PinpointSMSVoiceRequest(new SendVoiceMessageRequestPrivate(PinpointSMSVoiceRequest::SendVoiceMessageAction, this))
+    : PinpointSmsVoiceRequest(new SendVoiceMessageRequestPrivate(PinpointSmsVoiceRequest::SendVoiceMessageAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * SendVoiceMessageRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::SendVoiceMessageRequestPrivate
+ * \class QtAws::PinpointSmsVoice::SendVoiceMessageRequestPrivate
  * \brief The SendVoiceMessageRequestPrivate class provides private implementation for SendVoiceMessageRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a SendVoiceMessageRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a SendVoiceMessageRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
 SendVoiceMessageRequestPrivate::SendVoiceMessageRequestPrivate(
-    const PinpointSMSVoiceRequest::Action action, SendVoiceMessageRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(action, q)
+    const PinpointSmsVoiceRequest::Action action, SendVoiceMessageRequest * const q)
+    : PinpointSmsVoiceRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ SendVoiceMessageRequestPrivate::SendVoiceMessageRequestPrivate(
  */
 SendVoiceMessageRequestPrivate::SendVoiceMessageRequestPrivate(
     const SendVoiceMessageRequestPrivate &other, SendVoiceMessageRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(other, q)
+    : PinpointSmsVoiceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

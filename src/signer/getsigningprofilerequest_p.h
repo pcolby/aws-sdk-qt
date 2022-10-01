@@ -24,14 +24,14 @@
 #include "getsigningprofilerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class GetSigningProfileRequest;
 
-class GetSigningProfileRequestPrivate : public signerRequestPrivate {
+class GetSigningProfileRequestPrivate : public SignerRequestPrivate {
 
 public:
-    GetSigningProfileRequestPrivate(const signerRequest::Action action,
+    GetSigningProfileRequestPrivate(const SignerRequest::Action action,
                                    GetSigningProfileRequest * const q);
     GetSigningProfileRequestPrivate(const GetSigningProfileRequestPrivate &other,
                                    GetSigningProfileRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

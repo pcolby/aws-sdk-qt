@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSNEPTUNE_LIBRARY)
 
 add_library(QtAwsNeptune
+  qtawsneptuneglobal.h
+  neptuneclient.h
+  neptuneclient_p.h
+  neptunerequest.h
+  neptunerequest_p.h
+  neptuneresponse.h
+  neptuneresponse_p.h
   addroletodbclusterrequest.h
   addroletodbclusterrequest_p.h
   addroletodbclusterresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsNeptune
   copydbparametergrouprequest_p.h
   copydbparametergroupresponse.h
   copydbparametergroupresponse_p.h
+  createdbclusterrequest.h
+  createdbclusterrequest_p.h
+  createdbclusterresponse.h
+  createdbclusterresponse_p.h
   createdbclusterendpointrequest.h
   createdbclusterendpointrequest_p.h
   createdbclusterendpointresponse.h
@@ -37,10 +48,6 @@ add_library(QtAwsNeptune
   createdbclusterparametergrouprequest_p.h
   createdbclusterparametergroupresponse.h
   createdbclusterparametergroupresponse_p.h
-  createdbclusterrequest.h
-  createdbclusterrequest_p.h
-  createdbclusterresponse.h
-  createdbclusterresponse_p.h
   createdbclustersnapshotrequest.h
   createdbclustersnapshotrequest_p.h
   createdbclustersnapshotresponse.h
@@ -61,6 +68,14 @@ add_library(QtAwsNeptune
   createeventsubscriptionrequest_p.h
   createeventsubscriptionresponse.h
   createeventsubscriptionresponse_p.h
+  createglobalclusterrequest.h
+  createglobalclusterrequest_p.h
+  createglobalclusterresponse.h
+  createglobalclusterresponse_p.h
+  deletedbclusterrequest.h
+  deletedbclusterrequest_p.h
+  deletedbclusterresponse.h
+  deletedbclusterresponse_p.h
   deletedbclusterendpointrequest.h
   deletedbclusterendpointrequest_p.h
   deletedbclusterendpointresponse.h
@@ -69,10 +84,6 @@ add_library(QtAwsNeptune
   deletedbclusterparametergrouprequest_p.h
   deletedbclusterparametergroupresponse.h
   deletedbclusterparametergroupresponse_p.h
-  deletedbclusterrequest.h
-  deletedbclusterrequest_p.h
-  deletedbclusterresponse.h
-  deletedbclusterresponse_p.h
   deletedbclustersnapshotrequest.h
   deletedbclustersnapshotrequest_p.h
   deletedbclustersnapshotresponse.h
@@ -93,6 +104,10 @@ add_library(QtAwsNeptune
   deleteeventsubscriptionrequest_p.h
   deleteeventsubscriptionresponse.h
   deleteeventsubscriptionresponse_p.h
+  deleteglobalclusterrequest.h
+  deleteglobalclusterrequest_p.h
+  deleteglobalclusterresponse.h
+  deleteglobalclusterresponse_p.h
   describedbclusterendpointsrequest.h
   describedbclusterendpointsrequest_p.h
   describedbclusterendpointsresponse.h
@@ -149,14 +164,18 @@ add_library(QtAwsNeptune
   describeeventcategoriesrequest_p.h
   describeeventcategoriesresponse.h
   describeeventcategoriesresponse_p.h
-  describeeventsrequest.h
-  describeeventsrequest_p.h
-  describeeventsresponse.h
-  describeeventsresponse_p.h
   describeeventsubscriptionsrequest.h
   describeeventsubscriptionsrequest_p.h
   describeeventsubscriptionsresponse.h
   describeeventsubscriptionsresponse_p.h
+  describeeventsrequest.h
+  describeeventsrequest_p.h
+  describeeventsresponse.h
+  describeeventsresponse_p.h
+  describeglobalclustersrequest.h
+  describeglobalclustersrequest_p.h
+  describeglobalclustersresponse.h
+  describeglobalclustersresponse_p.h
   describeorderabledbinstanceoptionsrequest.h
   describeorderabledbinstanceoptionsrequest_p.h
   describeorderabledbinstanceoptionsresponse.h
@@ -173,10 +192,18 @@ add_library(QtAwsNeptune
   failoverdbclusterrequest_p.h
   failoverdbclusterresponse.h
   failoverdbclusterresponse_p.h
+  failoverglobalclusterrequest.h
+  failoverglobalclusterrequest_p.h
+  failoverglobalclusterresponse.h
+  failoverglobalclusterresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  modifydbclusterrequest.h
+  modifydbclusterrequest_p.h
+  modifydbclusterresponse.h
+  modifydbclusterresponse_p.h
   modifydbclusterendpointrequest.h
   modifydbclusterendpointrequest_p.h
   modifydbclusterendpointresponse.h
@@ -185,10 +212,6 @@ add_library(QtAwsNeptune
   modifydbclusterparametergrouprequest_p.h
   modifydbclusterparametergroupresponse.h
   modifydbclusterparametergroupresponse_p.h
-  modifydbclusterrequest.h
-  modifydbclusterrequest_p.h
-  modifydbclusterresponse.h
-  modifydbclusterresponse_p.h
   modifydbclustersnapshotattributerequest.h
   modifydbclustersnapshotattributerequest_p.h
   modifydbclustersnapshotattributeresponse.h
@@ -209,21 +232,22 @@ add_library(QtAwsNeptune
   modifyeventsubscriptionrequest_p.h
   modifyeventsubscriptionresponse.h
   modifyeventsubscriptionresponse_p.h
-  neptuneclient.h
-  neptuneclient_p.h
-  neptunerequest.h
-  neptunerequest_p.h
-  neptuneresponse.h
-  neptuneresponse_p.h
+  modifyglobalclusterrequest.h
+  modifyglobalclusterrequest_p.h
+  modifyglobalclusterresponse.h
+  modifyglobalclusterresponse_p.h
   promotereadreplicadbclusterrequest.h
   promotereadreplicadbclusterrequest_p.h
   promotereadreplicadbclusterresponse.h
   promotereadreplicadbclusterresponse_p.h
-  qtawsneptuneglobal.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h
   rebootdbinstanceresponse_p.h
+  removefromglobalclusterrequest.h
+  removefromglobalclusterrequest_p.h
+  removefromglobalclusterresponse.h
+  removefromglobalclusterresponse_p.h
   removerolefromdbclusterrequest.h
   removerolefromdbclusterrequest_p.h
   removerolefromdbclusterresponse.h
@@ -260,6 +284,9 @@ add_library(QtAwsNeptune
   stopdbclusterrequest_p.h
   stopdbclusterresponse.h
   stopdbclusterresponse_p.h
+  neptuneclient.cpp
+  neptunerequest.cpp
+  neptuneresponse.cpp
   addroletodbclusterrequest.cpp
   addroletodbclusterresponse.cpp
   addsourceidentifiertosubscriptionrequest.cpp
@@ -274,12 +301,12 @@ add_library(QtAwsNeptune
   copydbclustersnapshotresponse.cpp
   copydbparametergrouprequest.cpp
   copydbparametergroupresponse.cpp
+  createdbclusterrequest.cpp
+  createdbclusterresponse.cpp
   createdbclusterendpointrequest.cpp
   createdbclusterendpointresponse.cpp
   createdbclusterparametergrouprequest.cpp
   createdbclusterparametergroupresponse.cpp
-  createdbclusterrequest.cpp
-  createdbclusterresponse.cpp
   createdbclustersnapshotrequest.cpp
   createdbclustersnapshotresponse.cpp
   createdbinstancerequest.cpp
@@ -290,12 +317,14 @@ add_library(QtAwsNeptune
   createdbsubnetgroupresponse.cpp
   createeventsubscriptionrequest.cpp
   createeventsubscriptionresponse.cpp
+  createglobalclusterrequest.cpp
+  createglobalclusterresponse.cpp
+  deletedbclusterrequest.cpp
+  deletedbclusterresponse.cpp
   deletedbclusterendpointrequest.cpp
   deletedbclusterendpointresponse.cpp
   deletedbclusterparametergrouprequest.cpp
   deletedbclusterparametergroupresponse.cpp
-  deletedbclusterrequest.cpp
-  deletedbclusterresponse.cpp
   deletedbclustersnapshotrequest.cpp
   deletedbclustersnapshotresponse.cpp
   deletedbinstancerequest.cpp
@@ -306,6 +335,8 @@ add_library(QtAwsNeptune
   deletedbsubnetgroupresponse.cpp
   deleteeventsubscriptionrequest.cpp
   deleteeventsubscriptionresponse.cpp
+  deleteglobalclusterrequest.cpp
+  deleteglobalclusterresponse.cpp
   describedbclusterendpointsrequest.cpp
   describedbclusterendpointsresponse.cpp
   describedbclusterparametergroupsrequest.cpp
@@ -334,10 +365,12 @@ add_library(QtAwsNeptune
   describeenginedefaultparametersresponse.cpp
   describeeventcategoriesrequest.cpp
   describeeventcategoriesresponse.cpp
-  describeeventsrequest.cpp
-  describeeventsresponse.cpp
   describeeventsubscriptionsrequest.cpp
   describeeventsubscriptionsresponse.cpp
+  describeeventsrequest.cpp
+  describeeventsresponse.cpp
+  describeglobalclustersrequest.cpp
+  describeglobalclustersresponse.cpp
   describeorderabledbinstanceoptionsrequest.cpp
   describeorderabledbinstanceoptionsresponse.cpp
   describependingmaintenanceactionsrequest.cpp
@@ -346,14 +379,16 @@ add_library(QtAwsNeptune
   describevaliddbinstancemodificationsresponse.cpp
   failoverdbclusterrequest.cpp
   failoverdbclusterresponse.cpp
+  failoverglobalclusterrequest.cpp
+  failoverglobalclusterresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  modifydbclusterrequest.cpp
+  modifydbclusterresponse.cpp
   modifydbclusterendpointrequest.cpp
   modifydbclusterendpointresponse.cpp
   modifydbclusterparametergrouprequest.cpp
   modifydbclusterparametergroupresponse.cpp
-  modifydbclusterrequest.cpp
-  modifydbclusterresponse.cpp
   modifydbclustersnapshotattributerequest.cpp
   modifydbclustersnapshotattributeresponse.cpp
   modifydbinstancerequest.cpp
@@ -364,13 +399,14 @@ add_library(QtAwsNeptune
   modifydbsubnetgroupresponse.cpp
   modifyeventsubscriptionrequest.cpp
   modifyeventsubscriptionresponse.cpp
-  neptuneclient.cpp
-  neptunerequest.cpp
-  neptuneresponse.cpp
+  modifyglobalclusterrequest.cpp
+  modifyglobalclusterresponse.cpp
   promotereadreplicadbclusterrequest.cpp
   promotereadreplicadbclusterresponse.cpp
   rebootdbinstancerequest.cpp
   rebootdbinstanceresponse.cpp
+  removefromglobalclusterrequest.cpp
+  removefromglobalclusterresponse.cpp
   removerolefromdbclusterrequest.cpp
   removerolefromdbclusterresponse.cpp
   removesourceidentifierfromsubscriptionrequest.cpp

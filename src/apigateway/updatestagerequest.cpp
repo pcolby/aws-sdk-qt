@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateStageRequest
- * \brief The UpdateStageRequest class provides an interface for APIGateway UpdateStage requests.
+ * \class QtAws::ApiGateway::UpdateStageRequest
+ * \brief The UpdateStageRequest class provides an interface for ApiGateway UpdateStage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateStage
+ * \sa ApiGatewayClient::updateStage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateStageRequest::UpdateStageRequest(const UpdateStageRequest &other)
-    : APIGatewayRequest(new UpdateStageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateStageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateStageRequest::UpdateStageRequest(const UpdateStageRequest &other)
  * Constructs a UpdateStageRequest object.
  */
 UpdateStageRequest::UpdateStageRequest()
-    : APIGatewayRequest(new UpdateStageRequestPrivate(APIGatewayRequest::UpdateStageAction, this))
+    : ApiGatewayRequest(new UpdateStageRequestPrivate(ApiGatewayRequest::UpdateStageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateStageRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateStageRequestPrivate
+ * \class QtAws::ApiGateway::UpdateStageRequestPrivate
  * \brief The UpdateStageRequestPrivate class provides private implementation for UpdateStageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateStageRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateStageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateStageRequestPrivate::UpdateStageRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateStageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateStageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateStageRequestPrivate::UpdateStageRequestPrivate(
  */
 UpdateStageRequestPrivate::UpdateStageRequestPrivate(
     const UpdateStageRequestPrivate &other, UpdateStageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "kendraresponse_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class UpdateQuerySuggestionsConfigResponse;
 
-class UpdateQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate {
+class UpdateQuerySuggestionsConfigResponsePrivate : public KendraResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

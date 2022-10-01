@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class MwaaResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

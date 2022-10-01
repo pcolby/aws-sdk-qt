@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::UpdateClusterConfigResponse
- * \brief The UpdateClusterConfigResponse class provides an interace for EKS UpdateClusterConfig responses.
+ * \class QtAws::Eks::UpdateClusterConfigResponse
+ * \brief The UpdateClusterConfigResponse class provides an interace for Eks UpdateClusterConfig responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const UpdateClusterConfigRequest * UpdateClusterConfigResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS UpdateClusterConfig \a response.
+ * Parses a successful Eks UpdateClusterConfig \a response.
  */
 void UpdateClusterConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void UpdateClusterConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::UpdateClusterConfigResponsePrivate
+ * \class QtAws::Eks::UpdateClusterConfigResponsePrivate
  * \brief The UpdateClusterConfigResponsePrivate class provides private implementation for UpdateClusterConfigResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ UpdateClusterConfigResponsePrivate::UpdateClusterConfigResponsePrivate(
 }
 
 /*!
- * Parses a EKS UpdateClusterConfig response element from \a xml.
+ * Parses a Eks UpdateClusterConfig response element from \a xml.
  */
 void UpdateClusterConfigResponsePrivate::parseUpdateClusterConfigResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateClusterConfigResponsePrivate::parseUpdateClusterConfigResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

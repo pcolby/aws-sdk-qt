@@ -24,11 +24,11 @@
 #include "setrepositorypolicyrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class SetRepositoryPolicyResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT SetRepositoryPolicyResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT SetRepositoryPolicyResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

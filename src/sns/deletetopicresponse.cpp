@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeleteTopicResponse
- * \brief The DeleteTopicResponse class provides an interace for SNS DeleteTopic responses.
+ * \class QtAws::Sns::DeleteTopicResponse
+ * \brief The DeleteTopicResponse class provides an interace for Sns DeleteTopic responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const DeleteTopicRequest * DeleteTopicResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS DeleteTopic \a response.
+ * Parses a successful Sns DeleteTopic \a response.
  */
 void DeleteTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void DeleteTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::DeleteTopicResponsePrivate
+ * \class QtAws::Sns::DeleteTopicResponsePrivate
  * \brief The DeleteTopicResponsePrivate class provides private implementation for DeleteTopicResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
 }
 
 /*!
- * Parses a SNS DeleteTopic response element from \a xml.
+ * Parses a Sns DeleteTopic response element from \a xml.
  */
 void DeleteTopicResponsePrivate::parseDeleteTopicResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void DeleteTopicResponsePrivate::parseDeleteTopicResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

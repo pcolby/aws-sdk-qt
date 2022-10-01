@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListComponentsRequest
- * \brief The ListComponentsRequest class provides an interface for imagebuilder ListComponents requests.
+ * \class QtAws::ImageBuilder::ListComponentsRequest
+ * \brief The ListComponentsRequest class provides an interface for ImageBuilder ListComponents requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listComponents
+ * \sa ImageBuilderClient::listComponents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListComponentsRequest::ListComponentsRequest(const ListComponentsRequest &other)
-    : imagebuilderRequest(new ListComponentsRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListComponentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListComponentsRequest::ListComponentsRequest(const ListComponentsRequest &other)
  * Constructs a ListComponentsRequest object.
  */
 ListComponentsRequest::ListComponentsRequest()
-    : imagebuilderRequest(new ListComponentsRequestPrivate(imagebuilderRequest::ListComponentsAction, this))
+    : ImageBuilderRequest(new ListComponentsRequestPrivate(ImageBuilderRequest::ListComponentsAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListComponentsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::imagebuilder::ListComponentsRequestPrivate
+ * \class QtAws::ImageBuilder::ListComponentsRequestPrivate
  * \brief The ListComponentsRequestPrivate class provides private implementation for ListComponentsRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListComponentsRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListComponentsRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListComponentsRequestPrivate::ListComponentsRequestPrivate(
-    const imagebuilderRequest::Action action, ListComponentsRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListComponentsRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListComponentsRequestPrivate::ListComponentsRequestPrivate(
  */
 ListComponentsRequestPrivate::ListComponentsRequestPrivate(
     const ListComponentsRequestPrivate &other, ListComponentsRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

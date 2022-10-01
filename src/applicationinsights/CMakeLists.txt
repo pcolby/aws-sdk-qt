@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPLICATIONINSIGHTS_LIBRARY)
 
 add_library(QtAwsApplicationInsights
+  qtawsapplicationinsightsglobal.h
   applicationinsightsclient.h
   applicationinsightsclient_p.h
   applicationinsightsrequest.h
@@ -35,18 +36,18 @@ add_library(QtAwsApplicationInsights
   describeapplicationrequest_p.h
   describeapplicationresponse.h
   describeapplicationresponse_p.h
-  describecomponentconfigurationrecommendationrequest.h
-  describecomponentconfigurationrecommendationrequest_p.h
-  describecomponentconfigurationrecommendationresponse.h
-  describecomponentconfigurationrecommendationresponse_p.h
-  describecomponentconfigurationrequest.h
-  describecomponentconfigurationrequest_p.h
-  describecomponentconfigurationresponse.h
-  describecomponentconfigurationresponse_p.h
   describecomponentrequest.h
   describecomponentrequest_p.h
   describecomponentresponse.h
   describecomponentresponse_p.h
+  describecomponentconfigurationrequest.h
+  describecomponentconfigurationrequest_p.h
+  describecomponentconfigurationresponse.h
+  describecomponentconfigurationresponse_p.h
+  describecomponentconfigurationrecommendationrequest.h
+  describecomponentconfigurationrecommendationrequest_p.h
+  describecomponentconfigurationrecommendationresponse.h
+  describecomponentconfigurationrecommendationresponse_p.h
   describelogpatternrequest.h
   describelogpatternrequest_p.h
   describelogpatternresponse.h
@@ -55,14 +56,14 @@ add_library(QtAwsApplicationInsights
   describeobservationrequest_p.h
   describeobservationresponse.h
   describeobservationresponse_p.h
-  describeproblemobservationsrequest.h
-  describeproblemobservationsrequest_p.h
-  describeproblemobservationsresponse.h
-  describeproblemobservationsresponse_p.h
   describeproblemrequest.h
   describeproblemrequest_p.h
   describeproblemresponse.h
   describeproblemresponse_p.h
+  describeproblemobservationsrequest.h
+  describeproblemobservationsrequest_p.h
+  describeproblemobservationsresponse.h
+  describeproblemobservationsresponse_p.h
   listapplicationsrequest.h
   listapplicationsrequest_p.h
   listapplicationsresponse.h
@@ -91,7 +92,6 @@ add_library(QtAwsApplicationInsights
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsapplicationinsightsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -104,14 +104,14 @@ add_library(QtAwsApplicationInsights
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
-  updatecomponentconfigurationrequest.h
-  updatecomponentconfigurationrequest_p.h
-  updatecomponentconfigurationresponse.h
-  updatecomponentconfigurationresponse_p.h
   updatecomponentrequest.h
   updatecomponentrequest_p.h
   updatecomponentresponse.h
   updatecomponentresponse_p.h
+  updatecomponentconfigurationrequest.h
+  updatecomponentconfigurationrequest_p.h
+  updatecomponentconfigurationresponse.h
+  updatecomponentconfigurationresponse_p.h
   updatelogpatternrequest.h
   updatelogpatternrequest_p.h
   updatelogpatternresponse.h
@@ -133,20 +133,20 @@ add_library(QtAwsApplicationInsights
   deletelogpatternresponse.cpp
   describeapplicationrequest.cpp
   describeapplicationresponse.cpp
-  describecomponentconfigurationrecommendationrequest.cpp
-  describecomponentconfigurationrecommendationresponse.cpp
-  describecomponentconfigurationrequest.cpp
-  describecomponentconfigurationresponse.cpp
   describecomponentrequest.cpp
   describecomponentresponse.cpp
+  describecomponentconfigurationrequest.cpp
+  describecomponentconfigurationresponse.cpp
+  describecomponentconfigurationrecommendationrequest.cpp
+  describecomponentconfigurationrecommendationresponse.cpp
   describelogpatternrequest.cpp
   describelogpatternresponse.cpp
   describeobservationrequest.cpp
   describeobservationresponse.cpp
-  describeproblemobservationsrequest.cpp
-  describeproblemobservationsresponse.cpp
   describeproblemrequest.cpp
   describeproblemresponse.cpp
+  describeproblemobservationsrequest.cpp
+  describeproblemobservationsresponse.cpp
   listapplicationsrequest.cpp
   listapplicationsresponse.cpp
   listcomponentsrequest.cpp
@@ -167,10 +167,10 @@ add_library(QtAwsApplicationInsights
   untagresourceresponse.cpp
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp
-  updatecomponentconfigurationrequest.cpp
-  updatecomponentconfigurationresponse.cpp
   updatecomponentrequest.cpp
   updatecomponentresponse.cpp
+  updatecomponentconfigurationrequest.cpp
+  updatecomponentconfigurationresponse.cpp
   updatelogpatternrequest.cpp
   updatelogpatternresponse.cpp)
 

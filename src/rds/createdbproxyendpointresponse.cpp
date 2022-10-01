@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBProxyEndpointResponse
- * \brief The CreateDBProxyEndpointResponse class provides an interace for RDS CreateDBProxyEndpoint responses.
+ * \class QtAws::Rds::CreateDBProxyEndpointResponse
+ * \brief The CreateDBProxyEndpointResponse class provides an interace for Rds CreateDBProxyEndpoint responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBProxyEndpointRequest * CreateDBProxyEndpointResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBProxyEndpoint \a response.
+ * Parses a successful Rds CreateDBProxyEndpoint \a response.
  */
 void CreateDBProxyEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBProxyEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBProxyEndpointResponsePrivate
+ * \class QtAws::Rds::CreateDBProxyEndpointResponsePrivate
  * \brief The CreateDBProxyEndpointResponsePrivate class provides private implementation for CreateDBProxyEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBProxyEndpointResponsePrivate::CreateDBProxyEndpointResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBProxyEndpoint response element from \a xml.
+ * Parses a Rds CreateDBProxyEndpoint response element from \a xml.
  */
 void CreateDBProxyEndpointResponsePrivate::parseCreateDBProxyEndpointResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBProxyEndpointResponsePrivate::parseCreateDBProxyEndpointResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

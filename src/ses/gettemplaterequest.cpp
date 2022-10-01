@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetTemplateRequest
- * \brief The GetTemplateRequest class provides an interface for SES GetTemplate requests.
+ * \class QtAws::Ses::GetTemplateRequest
+ * \brief The GetTemplateRequest class provides an interface for Ses GetTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SES::GetTemplateRequestPrivate
+ * \class QtAws::Ses::GetTemplateRequestPrivate
  * \brief The GetTemplateRequestPrivate class provides private implementation for GetTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

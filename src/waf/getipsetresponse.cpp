@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetIPSetResponse
- * \brief The GetIPSetResponse class provides an interace for WAF GetIPSet responses.
+ * \class QtAws::Waf::GetIPSetResponse
+ * \brief The GetIPSetResponse class provides an interace for Waf GetIPSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetIPSetRequest * GetIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetIPSet \a response.
+ * Parses a successful Waf GetIPSet \a response.
  */
 void GetIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetIPSetResponsePrivate
+ * \class QtAws::Waf::GetIPSetResponsePrivate
  * \brief The GetIPSetResponsePrivate class provides private implementation for GetIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetIPSetResponsePrivate::GetIPSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetIPSet response element from \a xml.
+ * Parses a Waf GetIPSet response element from \a xml.
  */
 void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

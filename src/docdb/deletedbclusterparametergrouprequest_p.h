@@ -24,14 +24,14 @@
 #include "deletedbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBClusterParameterGroupRequest;
 
-class DeleteDBClusterParameterGroupRequestPrivate : public DocDBRequestPrivate {
+class DeleteDBClusterParameterGroupRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteDBClusterParameterGroupRequestPrivate(const DocDBRequest::Action action,
+    DeleteDBClusterParameterGroupRequestPrivate(const DocDbRequest::Action action,
                                    DeleteDBClusterParameterGroupRequest * const q);
     DeleteDBClusterParameterGroupRequestPrivate(const DeleteDBClusterParameterGroupRequestPrivate &other,
                                    DeleteDBClusterParameterGroupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

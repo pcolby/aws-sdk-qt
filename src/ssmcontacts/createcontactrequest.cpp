@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::CreateContactRequest
- * \brief The CreateContactRequest class provides an interface for SSMContacts CreateContact requests.
+ * \class QtAws::SsmContacts::CreateContactRequest
+ * \brief The CreateContactRequest class provides an interface for SsmContacts CreateContact requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::createContact
+ * \sa SsmContactsClient::createContact
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateContactRequest::CreateContactRequest(const CreateContactRequest &other)
-    : SSMContactsRequest(new CreateContactRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new CreateContactRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ CreateContactRequest::CreateContactRequest(const CreateContactRequest &other)
  * Constructs a CreateContactRequest object.
  */
 CreateContactRequest::CreateContactRequest()
-    : SSMContactsRequest(new CreateContactRequestPrivate(SSMContactsRequest::CreateContactAction, this))
+    : SsmContactsRequest(new CreateContactRequestPrivate(SsmContactsRequest::CreateContactAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * CreateContactRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::SSMContacts::CreateContactRequestPrivate
+ * \class QtAws::SsmContacts::CreateContactRequestPrivate
  * \brief The CreateContactRequestPrivate class provides private implementation for CreateContactRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a CreateContactRequestPrivate object for SSMContacts \a action,
+ * Constructs a CreateContactRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 CreateContactRequestPrivate::CreateContactRequestPrivate(
-    const SSMContactsRequest::Action action, CreateContactRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, CreateContactRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ CreateContactRequestPrivate::CreateContactRequestPrivate(
  */
 CreateContactRequestPrivate::CreateContactRequestPrivate(
     const CreateContactRequestPrivate &other, CreateContactRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

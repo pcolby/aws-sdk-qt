@@ -168,8 +168,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SES
- * \brief Contains classess for accessing Amazon Simple Email Service ( SES).
+ * \namespace QtAws::Ses
+ * \brief Contains classess for accessing Amazon Simple Email Service.
  *
  * \inmodule QtAwsSes
  *
@@ -177,14 +177,14 @@
  */
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SesClient
- * \brief The SesClient class provides access to the Amazon Simple Email Service ( SES) service.
+ * \class QtAws::Ses::SesClient
+ * \brief The SesClient class provides access to the Amazon Simple Email Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -2127,12 +2127,12 @@ VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailId
 }
 
 /*!
- * \class QtAws::SES::SesClientPrivate
+ * \class QtAws::Ses::SesClientPrivate
  * \brief The SesClientPrivate class provides private implementation for SesClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -2144,5 +2144,5 @@ SesClientPrivate::SesClientPrivate(SesClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

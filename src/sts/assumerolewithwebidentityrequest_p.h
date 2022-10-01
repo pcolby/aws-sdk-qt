@@ -24,7 +24,7 @@
 #include "assumerolewithwebidentityrequest.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class AssumeRoleWithWebIdentityRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

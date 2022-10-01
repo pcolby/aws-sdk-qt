@@ -1,20 +1,21 @@
 add_compile_definitions(QTAWSACMPCA_LIBRARY)
 
-add_library(QtAwsAcmpca
+add_library(QtAwsAcmPca
+  qtawsacmpcaglobal.h
   acmpcaclient.h
   acmpcaclient_p.h
   acmpcarequest.h
   acmpcarequest_p.h
   acmpcaresponse.h
   acmpcaresponse_p.h
-  createcertificateauthorityauditreportrequest.h
-  createcertificateauthorityauditreportrequest_p.h
-  createcertificateauthorityauditreportresponse.h
-  createcertificateauthorityauditreportresponse_p.h
   createcertificateauthorityrequest.h
   createcertificateauthorityrequest_p.h
   createcertificateauthorityresponse.h
   createcertificateauthorityresponse_p.h
+  createcertificateauthorityauditreportrequest.h
+  createcertificateauthorityauditreportrequest_p.h
+  createcertificateauthorityauditreportresponse.h
+  createcertificateauthorityauditreportresponse_p.h
   createpermissionrequest.h
   createpermissionrequest_p.h
   createpermissionresponse.h
@@ -31,14 +32,18 @@ add_library(QtAwsAcmpca
   deletepolicyrequest_p.h
   deletepolicyresponse.h
   deletepolicyresponse_p.h
-  describecertificateauthorityauditreportrequest.h
-  describecertificateauthorityauditreportrequest_p.h
-  describecertificateauthorityauditreportresponse.h
-  describecertificateauthorityauditreportresponse_p.h
   describecertificateauthorityrequest.h
   describecertificateauthorityrequest_p.h
   describecertificateauthorityresponse.h
   describecertificateauthorityresponse_p.h
+  describecertificateauthorityauditreportrequest.h
+  describecertificateauthorityauditreportrequest_p.h
+  describecertificateauthorityauditreportresponse.h
+  describecertificateauthorityauditreportresponse_p.h
+  getcertificaterequest.h
+  getcertificaterequest_p.h
+  getcertificateresponse.h
+  getcertificateresponse_p.h
   getcertificateauthoritycertificaterequest.h
   getcertificateauthoritycertificaterequest_p.h
   getcertificateauthoritycertificateresponse.h
@@ -47,10 +52,6 @@ add_library(QtAwsAcmpca
   getcertificateauthoritycsrrequest_p.h
   getcertificateauthoritycsrresponse.h
   getcertificateauthoritycsrresponse_p.h
-  getcertificaterequest.h
-  getcertificaterequest_p.h
-  getcertificateresponse.h
-  getcertificateresponse_p.h
   getpolicyrequest.h
   getpolicyrequest_p.h
   getpolicyresponse.h
@@ -79,7 +80,6 @@ add_library(QtAwsAcmpca
   putpolicyrequest_p.h
   putpolicyresponse.h
   putpolicyresponse_p.h
-  qtawsacmpcaglobal.h
   restorecertificateauthorityrequest.h
   restorecertificateauthorityrequest_p.h
   restorecertificateauthorityresponse.h
@@ -103,10 +103,10 @@ add_library(QtAwsAcmpca
   acmpcaclient.cpp
   acmpcarequest.cpp
   acmpcaresponse.cpp
-  createcertificateauthorityauditreportrequest.cpp
-  createcertificateauthorityauditreportresponse.cpp
   createcertificateauthorityrequest.cpp
   createcertificateauthorityresponse.cpp
+  createcertificateauthorityauditreportrequest.cpp
+  createcertificateauthorityauditreportresponse.cpp
   createpermissionrequest.cpp
   createpermissionresponse.cpp
   deletecertificateauthorityrequest.cpp
@@ -115,16 +115,16 @@ add_library(QtAwsAcmpca
   deletepermissionresponse.cpp
   deletepolicyrequest.cpp
   deletepolicyresponse.cpp
-  describecertificateauthorityauditreportrequest.cpp
-  describecertificateauthorityauditreportresponse.cpp
   describecertificateauthorityrequest.cpp
   describecertificateauthorityresponse.cpp
+  describecertificateauthorityauditreportrequest.cpp
+  describecertificateauthorityauditreportresponse.cpp
+  getcertificaterequest.cpp
+  getcertificateresponse.cpp
   getcertificateauthoritycertificaterequest.cpp
   getcertificateauthoritycertificateresponse.cpp
   getcertificateauthoritycsrrequest.cpp
   getcertificateauthoritycsrresponse.cpp
-  getcertificaterequest.cpp
-  getcertificateresponse.cpp
   getpolicyrequest.cpp
   getpolicyresponse.cpp
   importcertificateauthoritycertificaterequest.cpp
@@ -150,7 +150,7 @@ add_library(QtAwsAcmpca
   updatecertificateauthorityrequest.cpp
   updatecertificateauthorityresponse.cpp)
 
-target_link_libraries(QtAwsAcmpca
+target_link_libraries(QtAwsAcmPca
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

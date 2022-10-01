@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableRequest
- * \brief The DescribeTableRequest class provides an interface for DynamoDB DescribeTable requests.
+ * \class QtAws::DynamoDb::DescribeTableRequest
+ * \brief The DescribeTableRequest class provides an interface for DynamoDb DescribeTable requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeTable
+ * \sa DynamoDbClient::describeTable
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeTableRequest::DescribeTableRequest(const DescribeTableRequest &other)
-    : DynamoDBRequest(new DescribeTableRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeTableRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeTableRequest::DescribeTableRequest(const DescribeTableRequest &other)
  * Constructs a DescribeTableRequest object.
  */
 DescribeTableRequest::DescribeTableRequest()
-    : DynamoDBRequest(new DescribeTableRequestPrivate(DynamoDBRequest::DescribeTableAction, this))
+    : DynamoDbRequest(new DescribeTableRequestPrivate(DynamoDbRequest::DescribeTableAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeTableRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableRequestPrivate
+ * \class QtAws::DynamoDb::DescribeTableRequestPrivate
  * \brief The DescribeTableRequestPrivate class provides private implementation for DescribeTableRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeTableRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeTableRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeTableRequestPrivate::DescribeTableRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeTableRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeTableRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeTableRequestPrivate::DescribeTableRequestPrivate(
  */
 DescribeTableRequestPrivate::DescribeTableRequestPrivate(
     const DescribeTableRequestPrivate &other, DescribeTableRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

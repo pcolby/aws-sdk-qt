@@ -24,16 +24,16 @@
 #include "emrrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class EmrRequest;
 
 class EmrRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EmrRequest::Action action; ///< EMR action to be performed.
-    QString apiVersion;        ///< EMR API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< EMR request (query string) parameters. @todo?
+    EmrRequest::Action action; ///< Emr action to be performed.
+    QString apiVersion;        ///< Emr API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Emr request (query string) parameters. @todo?
 
     EmrRequestPrivate(const EmrRequest::Action action, EmrRequest * const q);
     EmrRequestPrivate(const EmrRequestPrivate &other, EmrRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

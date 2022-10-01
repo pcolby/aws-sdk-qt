@@ -39,6 +39,7 @@ namespace KinesisVideoArchivedMedia {
  * \value GetClipAction KinesisVideoArchivedMedia GetClip action.
  * \value GetDASHStreamingSessionURLAction KinesisVideoArchivedMedia GetDASHStreamingSessionURL action.
  * \value GetHLSStreamingSessionURLAction KinesisVideoArchivedMedia GetHLSStreamingSessionURL action.
+ * \value GetImagesAction KinesisVideoArchivedMedia GetImages action.
  * \value GetMediaForFragmentListAction KinesisVideoArchivedMedia GetMediaForFragmentList action.
  * \value ListFragmentsAction KinesisVideoArchivedMedia ListFragments action.
  */
@@ -248,7 +249,7 @@ QNetworkRequest KinesisVideoArchivedMediaRequest::unsignedRequest(const QUrl &en
  * with public implementation \a q.
  */
 KinesisVideoArchivedMediaRequestPrivate::KinesisVideoArchivedMediaRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action, KinesisVideoArchivedMediaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-30"))
 {
 
 }
@@ -285,6 +286,7 @@ QString KinesisVideoArchivedMediaRequestPrivate::toString(const KinesisVideoArch
         ActionToString(GetClip);
         ActionToString(GetDASHStreamingSessionURL);
         ActionToString(GetHLSStreamingSessionURL);
+        ActionToString(GetImages);
         ActionToString(GetMediaForFragmentList);
         ActionToString(ListFragments);
         default:

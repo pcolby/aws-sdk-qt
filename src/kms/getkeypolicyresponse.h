@@ -24,7 +24,7 @@
 #include "getkeypolicyrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class GetKeyPolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "deletewebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteWebACLRequest;
 
-class DeleteWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteWebACLRequest * const q);
     DeleteWebACLRequestPrivate(const DeleteWebACLRequestPrivate &other,
                                    DeleteWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

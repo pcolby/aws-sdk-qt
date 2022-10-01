@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsResponse;
+class SsmContactsResponse;
 
-class SSMContactsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SsmContactsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit SSMContactsResponsePrivate(SSMContactsResponse * const q);
+    explicit SsmContactsResponsePrivate(SsmContactsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SSMContactsResponse)
-    Q_DISABLE_COPY(SSMContactsResponsePrivate)
+    Q_DECLARE_PUBLIC(SsmContactsResponse)
+    Q_DISABLE_COPY(SsmContactsResponsePrivate)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

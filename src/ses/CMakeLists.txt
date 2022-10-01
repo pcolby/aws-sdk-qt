@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSSES_LIBRARY)
 
 add_library(QtAwsSes
+  qtawssesglobal.h
+  sesclient.h
+  sesclient_p.h
+  sesrequest.h
+  sesrequest_p.h
+  sesresponse.h
+  sesresponse_p.h
   clonereceiptrulesetrequest.h
   clonereceiptrulesetrequest_p.h
   clonereceiptrulesetresponse.h
   clonereceiptrulesetresponse_p.h
-  createconfigurationseteventdestinationrequest.h
-  createconfigurationseteventdestinationrequest_p.h
-  createconfigurationseteventdestinationresponse.h
-  createconfigurationseteventdestinationresponse_p.h
   createconfigurationsetrequest.h
   createconfigurationsetrequest_p.h
   createconfigurationsetresponse.h
   createconfigurationsetresponse_p.h
+  createconfigurationseteventdestinationrequest.h
+  createconfigurationseteventdestinationrequest_p.h
+  createconfigurationseteventdestinationresponse.h
+  createconfigurationseteventdestinationresponse_p.h
   createconfigurationsettrackingoptionsrequest.h
   createconfigurationsettrackingoptionsrequest_p.h
   createconfigurationsettrackingoptionsresponse.h
@@ -37,14 +44,14 @@ add_library(QtAwsSes
   createtemplaterequest_p.h
   createtemplateresponse.h
   createtemplateresponse_p.h
-  deleteconfigurationseteventdestinationrequest.h
-  deleteconfigurationseteventdestinationrequest_p.h
-  deleteconfigurationseteventdestinationresponse.h
-  deleteconfigurationseteventdestinationresponse_p.h
   deleteconfigurationsetrequest.h
   deleteconfigurationsetrequest_p.h
   deleteconfigurationsetresponse.h
   deleteconfigurationsetresponse_p.h
+  deleteconfigurationseteventdestinationrequest.h
+  deleteconfigurationseteventdestinationrequest_p.h
+  deleteconfigurationseteventdestinationresponse.h
+  deleteconfigurationseteventdestinationresponse_p.h
   deleteconfigurationsettrackingoptionsrequest.h
   deleteconfigurationsettrackingoptionsrequest_p.h
   deleteconfigurationsettrackingoptionsresponse.h
@@ -53,14 +60,14 @@ add_library(QtAwsSes
   deletecustomverificationemailtemplaterequest_p.h
   deletecustomverificationemailtemplateresponse.h
   deletecustomverificationemailtemplateresponse_p.h
-  deleteidentitypolicyrequest.h
-  deleteidentitypolicyrequest_p.h
-  deleteidentitypolicyresponse.h
-  deleteidentitypolicyresponse_p.h
   deleteidentityrequest.h
   deleteidentityrequest_p.h
   deleteidentityresponse.h
   deleteidentityresponse_p.h
+  deleteidentitypolicyrequest.h
+  deleteidentitypolicyrequest_p.h
+  deleteidentitypolicyresponse.h
+  deleteidentitypolicyresponse_p.h
   deletereceiptfilterrequest.h
   deletereceiptfilterrequest_p.h
   deletereceiptfilterresponse.h
@@ -177,7 +184,6 @@ add_library(QtAwsSes
   putidentitypolicyrequest_p.h
   putidentitypolicyresponse.h
   putidentitypolicyresponse_p.h
-  qtawssesglobal.h
   reorderreceiptrulesetrequest.h
   reorderreceiptrulesetrequest_p.h
   reorderreceiptrulesetresponse.h
@@ -206,12 +212,6 @@ add_library(QtAwsSes
   sendtemplatedemailrequest_p.h
   sendtemplatedemailresponse.h
   sendtemplatedemailresponse_p.h
-  sesclient.h
-  sesclient_p.h
-  sesrequest.h
-  sesrequest_p.h
-  sesresponse.h
-  sesresponse_p.h
   setactivereceiptrulesetrequest.h
   setactivereceiptrulesetrequest_p.h
   setactivereceiptrulesetresponse.h
@@ -292,12 +292,15 @@ add_library(QtAwsSes
   verifyemailidentityrequest_p.h
   verifyemailidentityresponse.h
   verifyemailidentityresponse_p.h
+  sesclient.cpp
+  sesrequest.cpp
+  sesresponse.cpp
   clonereceiptrulesetrequest.cpp
   clonereceiptrulesetresponse.cpp
-  createconfigurationseteventdestinationrequest.cpp
-  createconfigurationseteventdestinationresponse.cpp
   createconfigurationsetrequest.cpp
   createconfigurationsetresponse.cpp
+  createconfigurationseteventdestinationrequest.cpp
+  createconfigurationseteventdestinationresponse.cpp
   createconfigurationsettrackingoptionsrequest.cpp
   createconfigurationsettrackingoptionsresponse.cpp
   createcustomverificationemailtemplaterequest.cpp
@@ -310,18 +313,18 @@ add_library(QtAwsSes
   createreceiptrulesetresponse.cpp
   createtemplaterequest.cpp
   createtemplateresponse.cpp
-  deleteconfigurationseteventdestinationrequest.cpp
-  deleteconfigurationseteventdestinationresponse.cpp
   deleteconfigurationsetrequest.cpp
   deleteconfigurationsetresponse.cpp
+  deleteconfigurationseteventdestinationrequest.cpp
+  deleteconfigurationseteventdestinationresponse.cpp
   deleteconfigurationsettrackingoptionsrequest.cpp
   deleteconfigurationsettrackingoptionsresponse.cpp
   deletecustomverificationemailtemplaterequest.cpp
   deletecustomverificationemailtemplateresponse.cpp
-  deleteidentitypolicyrequest.cpp
-  deleteidentitypolicyresponse.cpp
   deleteidentityrequest.cpp
   deleteidentityresponse.cpp
+  deleteidentitypolicyrequest.cpp
+  deleteidentitypolicyresponse.cpp
   deletereceiptfilterrequest.cpp
   deletereceiptfilterresponse.cpp
   deletereceiptrulerequest.cpp
@@ -394,9 +397,6 @@ add_library(QtAwsSes
   sendrawemailresponse.cpp
   sendtemplatedemailrequest.cpp
   sendtemplatedemailresponse.cpp
-  sesclient.cpp
-  sesrequest.cpp
-  sesresponse.cpp
   setactivereceiptrulesetrequest.cpp
   setactivereceiptrulesetresponse.cpp
   setidentitydkimenabledrequest.cpp

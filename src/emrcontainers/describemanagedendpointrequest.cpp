@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DescribeManagedEndpointRequest
- * \brief The DescribeManagedEndpointRequest class provides an interface for EMRContainers DescribeManagedEndpoint requests.
+ * \class QtAws::Emrcontainers::DescribeManagedEndpointRequest
+ * \brief The DescribeManagedEndpointRequest class provides an interface for Emrcontainers DescribeManagedEndpoint requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::describeManagedEndpoint
+ * \sa EmrcontainersClient::describeManagedEndpoint
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeManagedEndpointRequest::DescribeManagedEndpointRequest(const DescribeManagedEndpointRequest &other)
-    : EMRContainersRequest(new DescribeManagedEndpointRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new DescribeManagedEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ DescribeManagedEndpointRequest::DescribeManagedEndpointRequest(const DescribeMan
  * Constructs a DescribeManagedEndpointRequest object.
  */
 DescribeManagedEndpointRequest::DescribeManagedEndpointRequest()
-    : EMRContainersRequest(new DescribeManagedEndpointRequestPrivate(EMRContainersRequest::DescribeManagedEndpointAction, this))
+    : EmrcontainersRequest(new DescribeManagedEndpointRequestPrivate(EmrcontainersRequest::DescribeManagedEndpointAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * DescribeManagedEndpointRequest::response(QNet
 }
 
 /*!
- * \class QtAws::EMRContainers::DescribeManagedEndpointRequestPrivate
+ * \class QtAws::Emrcontainers::DescribeManagedEndpointRequestPrivate
  * \brief The DescribeManagedEndpointRequestPrivate class provides private implementation for DescribeManagedEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a DescribeManagedEndpointRequestPrivate object for EMRContainers \a action,
+ * Constructs a DescribeManagedEndpointRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 DescribeManagedEndpointRequestPrivate::DescribeManagedEndpointRequestPrivate(
-    const EMRContainersRequest::Action action, DescribeManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, DescribeManagedEndpointRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ DescribeManagedEndpointRequestPrivate::DescribeManagedEndpointRequestPrivate(
  */
 DescribeManagedEndpointRequestPrivate::DescribeManagedEndpointRequestPrivate(
     const DescribeManagedEndpointRequestPrivate &other, DescribeManagedEndpointRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

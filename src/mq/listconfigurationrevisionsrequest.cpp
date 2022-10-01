@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::ListConfigurationRevisionsRequest
- * \brief The ListConfigurationRevisionsRequest class provides an interface for MQ ListConfigurationRevisions requests.
+ * \class QtAws::Mq::ListConfigurationRevisionsRequest
+ * \brief The ListConfigurationRevisionsRequest class provides an interface for Mq ListConfigurationRevisions requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::listConfigurationRevisions
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
 }
 
 /*!
- * \class QtAws::MQ::ListConfigurationRevisionsRequestPrivate
+ * \class QtAws::Mq::ListConfigurationRevisionsRequestPrivate
  * \brief The ListConfigurationRevisionsRequestPrivate class provides private implementation for ListConfigurationRevisionsRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

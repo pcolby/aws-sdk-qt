@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UntagSAMLProviderResponse
- * \brief The UntagSAMLProviderResponse class provides an interace for IAM UntagSAMLProvider responses.
+ * \class QtAws::Iam::UntagSAMLProviderResponse
+ * \brief The UntagSAMLProviderResponse class provides an interace for Iam UntagSAMLProvider responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::untagSAMLProvider
  */
@@ -68,7 +68,7 @@ const UntagSAMLProviderRequest * UntagSAMLProviderResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UntagSAMLProvider \a response.
+ * Parses a successful Iam UntagSAMLProvider \a response.
  */
 void UntagSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UntagSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UntagSAMLProviderResponsePrivate
+ * \class QtAws::Iam::UntagSAMLProviderResponsePrivate
  * \brief The UntagSAMLProviderResponsePrivate class provides private implementation for UntagSAMLProviderResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UntagSAMLProviderResponsePrivate::UntagSAMLProviderResponsePrivate(
 }
 
 /*!
- * Parses a IAM UntagSAMLProvider response element from \a xml.
+ * Parses a Iam UntagSAMLProvider response element from \a xml.
  */
 void UntagSAMLProviderResponsePrivate::parseUntagSAMLProviderResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UntagSAMLProviderResponsePrivate::parseUntagSAMLProviderResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

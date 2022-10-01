@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaResponse
- * \brief The PromoteReadReplicaResponse class provides an interace for RDS PromoteReadReplica responses.
+ * \class QtAws::Rds::PromoteReadReplicaResponse
+ * \brief The PromoteReadReplicaResponse class provides an interace for Rds PromoteReadReplica responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS PromoteReadReplica \a response.
+ * Parses a successful Rds PromoteReadReplica \a response.
  */
 void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaResponsePrivate
+ * \class QtAws::Rds::PromoteReadReplicaResponsePrivate
  * \brief The PromoteReadReplicaResponsePrivate class provides private implementation for PromoteReadReplicaResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
 }
 
 /*!
- * Parses a RDS PromoteReadReplica response element from \a xml.
+ * Parses a Rds PromoteReadReplica response element from \a xml.
  */
 void PromoteReadReplicaResponsePrivate::parsePromoteReadReplicaResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void PromoteReadReplicaResponsePrivate::parsePromoteReadReplicaResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

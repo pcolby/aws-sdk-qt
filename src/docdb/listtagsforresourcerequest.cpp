@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for DocDB ListTagsForResource requests.
+ * \class QtAws::DocDb::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for DocDb ListTagsForResource requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::listTagsForResource
+ * \sa DocDbClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : DocDBRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : DocDBRequest(new ListTagsForResourceRequestPrivate(DocDBRequest::ListTagsForResourceAction, this))
+    : DocDbRequest(new ListTagsForResourceRequestPrivate(DocDbRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::ListTagsForResourceRequestPrivate
+ * \class QtAws::DocDb::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for DocDB \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const DocDBRequest::Action action, ListTagsForResourceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ListTagsForResourceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

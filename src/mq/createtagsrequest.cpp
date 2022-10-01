@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::CreateTagsRequest
- * \brief The CreateTagsRequest class provides an interface for MQ CreateTags requests.
+ * \class QtAws::Mq::CreateTagsRequest
+ * \brief The CreateTagsRequest class provides an interface for Mq CreateTags requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::createTags
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::MQ::CreateTagsRequestPrivate
+ * \class QtAws::Mq::CreateTagsRequestPrivate
  * \brief The CreateTagsRequestPrivate class provides private implementation for CreateTagsRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

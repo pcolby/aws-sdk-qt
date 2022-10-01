@@ -24,11 +24,11 @@
 #include "deleterepositorypolicyrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DeleteRepositoryPolicyResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT DeleteRepositoryPolicyResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT DeleteRepositoryPolicyResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

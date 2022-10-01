@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListSuppressedDestinationsRequestPrivate;
 
-class QTAWSSESV2_EXPORT ListSuppressedDestinationsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT ListSuppressedDestinationsRequest : public SESv2Request {
 
 public:
     ListSuppressedDestinationsRequest(const ListSuppressedDestinationsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

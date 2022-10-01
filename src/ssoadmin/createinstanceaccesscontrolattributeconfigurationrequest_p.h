@@ -24,14 +24,14 @@
 #include "createinstanceaccesscontrolattributeconfigurationrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class CreateInstanceAccessControlAttributeConfigurationRequest;
 
-class CreateInstanceAccessControlAttributeConfigurationRequestPrivate : public SSOAdminRequestPrivate {
+class CreateInstanceAccessControlAttributeConfigurationRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    CreateInstanceAccessControlAttributeConfigurationRequestPrivate(const SSOAdminRequest::Action action,
+    CreateInstanceAccessControlAttributeConfigurationRequestPrivate(const SsoAdminRequest::Action action,
                                    CreateInstanceAccessControlAttributeConfigurationRequest * const q);
     CreateInstanceAccessControlAttributeConfigurationRequestPrivate(const CreateInstanceAccessControlAttributeConfigurationRequestPrivate &other,
                                    CreateInstanceAccessControlAttributeConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

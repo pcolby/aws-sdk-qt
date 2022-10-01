@@ -24,11 +24,11 @@
 #include "describedbclustersrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeDBClustersResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DescribeDBClustersResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeDBClustersResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

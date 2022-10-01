@@ -24,11 +24,11 @@
 #include "tagcertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class TagCertificateAuthorityResponsePrivate;
 
-class QTAWSACMPCA_EXPORT TagCertificateAuthorityResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT TagCertificateAuthorityResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

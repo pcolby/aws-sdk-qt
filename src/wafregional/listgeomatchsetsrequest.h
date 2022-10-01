@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListGeoMatchSetsRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListGeoMatchSetsRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT ListGeoMatchSetsRequest : public WafRegionalRequest {
 
 public:
     ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

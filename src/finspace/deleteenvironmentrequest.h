@@ -23,11 +23,11 @@
 #include "finspacerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class DeleteEnvironmentRequestPrivate;
 
-class QTAWSFINSPACE_EXPORT DeleteEnvironmentRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT DeleteEnvironmentRequest : public FinspaceRequest {
 
 public:
     DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

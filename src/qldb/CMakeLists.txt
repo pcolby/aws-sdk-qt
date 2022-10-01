@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSQLDB_LIBRARY)
 
 add_library(QtAwsQldb
+  qtawsqldbglobal.h
+  qldbclient.h
+  qldbclient_p.h
+  qldbrequest.h
+  qldbrequest_p.h
+  qldbresponse.h
+  qldbresponse_p.h
   canceljournalkinesisstreamrequest.h
   canceljournalkinesisstreamrequest_p.h
   canceljournalkinesisstreamresponse.h
@@ -45,14 +52,14 @@ add_library(QtAwsQldb
   listjournalkinesisstreamsforledgerrequest_p.h
   listjournalkinesisstreamsforledgerresponse.h
   listjournalkinesisstreamsforledgerresponse_p.h
-  listjournals3exportsforledgerrequest.h
-  listjournals3exportsforledgerrequest_p.h
-  listjournals3exportsforledgerresponse.h
-  listjournals3exportsforledgerresponse_p.h
   listjournals3exportsrequest.h
   listjournals3exportsrequest_p.h
   listjournals3exportsresponse.h
   listjournals3exportsresponse_p.h
+  listjournals3exportsforledgerrequest.h
+  listjournals3exportsforledgerrequest_p.h
+  listjournals3exportsforledgerresponse.h
+  listjournals3exportsforledgerresponse_p.h
   listledgersrequest.h
   listledgersrequest_p.h
   listledgersresponse.h
@@ -61,13 +68,6 @@ add_library(QtAwsQldb
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qldbclient.h
-  qldbclient_p.h
-  qldbrequest.h
-  qldbrequest_p.h
-  qldbresponse.h
-  qldbresponse_p.h
-  qtawsqldbglobal.h
   streamjournaltokinesisrequest.h
   streamjournaltokinesisrequest_p.h
   streamjournaltokinesisresponse.h
@@ -80,14 +80,17 @@ add_library(QtAwsQldb
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updateledgerpermissionsmoderequest.h
-  updateledgerpermissionsmoderequest_p.h
-  updateledgerpermissionsmoderesponse.h
-  updateledgerpermissionsmoderesponse_p.h
   updateledgerrequest.h
   updateledgerrequest_p.h
   updateledgerresponse.h
   updateledgerresponse_p.h
+  updateledgerpermissionsmoderequest.h
+  updateledgerpermissionsmoderequest_p.h
+  updateledgerpermissionsmoderesponse.h
+  updateledgerpermissionsmoderesponse_p.h
+  qldbclient.cpp
+  qldbrequest.cpp
+  qldbresponse.cpp
   canceljournalkinesisstreamrequest.cpp
   canceljournalkinesisstreamresponse.cpp
   createledgerrequest.cpp
@@ -110,27 +113,24 @@ add_library(QtAwsQldb
   getrevisionresponse.cpp
   listjournalkinesisstreamsforledgerrequest.cpp
   listjournalkinesisstreamsforledgerresponse.cpp
-  listjournals3exportsforledgerrequest.cpp
-  listjournals3exportsforledgerresponse.cpp
   listjournals3exportsrequest.cpp
   listjournals3exportsresponse.cpp
+  listjournals3exportsforledgerrequest.cpp
+  listjournals3exportsforledgerresponse.cpp
   listledgersrequest.cpp
   listledgersresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  qldbclient.cpp
-  qldbrequest.cpp
-  qldbresponse.cpp
   streamjournaltokinesisrequest.cpp
   streamjournaltokinesisresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updateledgerpermissionsmoderequest.cpp
-  updateledgerpermissionsmoderesponse.cpp
   updateledgerrequest.cpp
-  updateledgerresponse.cpp)
+  updateledgerresponse.cpp
+  updateledgerpermissionsmoderequest.cpp
+  updateledgerpermissionsmoderesponse.cpp)
 
 target_link_libraries(QtAwsQldb
   PRIVATE QtAwsCore

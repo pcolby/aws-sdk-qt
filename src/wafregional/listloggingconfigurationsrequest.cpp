@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListLoggingConfigurationsRequest
- * \brief The ListLoggingConfigurationsRequest class provides an interface for WAFRegional ListLoggingConfigurations requests.
+ * \class QtAws::WafRegional::ListLoggingConfigurationsRequest
+ * \brief The ListLoggingConfigurationsRequest class provides an interface for WafRegional ListLoggingConfigurations requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listLoggingConfigurations
+ * \sa WafRegionalClient::listLoggingConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListLoggingConfigurationsRequest::ListLoggingConfigurationsRequest(const ListLoggingConfigurationsRequest &other)
-    : WAFRegionalRequest(new ListLoggingConfigurationsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListLoggingConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListLoggingConfigurationsRequest::ListLoggingConfigurationsRequest(const ListLog
  * Constructs a ListLoggingConfigurationsRequest object.
  */
 ListLoggingConfigurationsRequest::ListLoggingConfigurationsRequest()
-    : WAFRegionalRequest(new ListLoggingConfigurationsRequestPrivate(WAFRegionalRequest::ListLoggingConfigurationsAction, this))
+    : WafRegionalRequest(new ListLoggingConfigurationsRequestPrivate(WafRegionalRequest::ListLoggingConfigurationsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListLoggingConfigurationsRequest::response(QN
 }
 
 /*!
- * \class QtAws::WAFRegional::ListLoggingConfigurationsRequestPrivate
+ * \class QtAws::WafRegional::ListLoggingConfigurationsRequestPrivate
  * \brief The ListLoggingConfigurationsRequestPrivate class provides private implementation for ListLoggingConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListLoggingConfigurationsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListLoggingConfigurationsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListLoggingConfigurationsRequestPrivate::ListLoggingConfigurationsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListLoggingConfigurationsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListLoggingConfigurationsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListLoggingConfigurationsRequestPrivate::ListLoggingConfigurationsRequestPrivate
  */
 ListLoggingConfigurationsRequestPrivate::ListLoggingConfigurationsRequestPrivate(
     const ListLoggingConfigurationsRequestPrivate &other, ListLoggingConfigurationsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

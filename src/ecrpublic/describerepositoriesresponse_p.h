@@ -23,11 +23,11 @@
 #include "ecrpublicresponse_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DescribeRepositoriesResponse;
 
-class DescribeRepositoriesResponsePrivate : public ECRPublicResponsePrivate {
+class DescribeRepositoriesResponsePrivate : public EcrPublicResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

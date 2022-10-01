@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::AddTagsToResourceRequest
- * \brief The AddTagsToResourceRequest class provides an interface for DocDB AddTagsToResource requests.
+ * \class QtAws::DocDb::AddTagsToResourceRequest
+ * \brief The AddTagsToResourceRequest class provides an interface for DocDb AddTagsToResource requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::addTagsToResource
+ * \sa DocDbClient::addTagsToResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
-    : DocDBRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
  * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
-    : DocDBRequest(new AddTagsToResourceRequestPrivate(DocDBRequest::AddTagsToResourceAction, this))
+    : DocDbRequest(new AddTagsToResourceRequestPrivate(DocDbRequest::AddTagsToResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DocDB::AddTagsToResourceRequestPrivate
+ * \class QtAws::DocDb::AddTagsToResourceRequestPrivate
  * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a AddTagsToResourceRequestPrivate object for DocDB \a action,
+ * Constructs a AddTagsToResourceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
-    const DocDBRequest::Action action, AddTagsToResourceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, AddTagsToResourceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

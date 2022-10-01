@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public SSOAdminRequestPrivate {
+class TagResourceRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const SSOAdminRequest::Action action,
+    TagResourceRequestPrivate(const SsoAdminRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

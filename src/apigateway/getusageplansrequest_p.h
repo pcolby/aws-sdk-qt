@@ -24,14 +24,14 @@
 #include "getusageplansrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetUsagePlansRequest;
 
-class GetUsagePlansRequestPrivate : public APIGatewayRequestPrivate {
+class GetUsagePlansRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetUsagePlansRequestPrivate(const APIGatewayRequest::Action action,
+    GetUsagePlansRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetUsagePlansRequest * const q);
     GetUsagePlansRequestPrivate(const GetUsagePlansRequestPrivate &other,
                                    GetUsagePlansRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

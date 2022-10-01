@@ -23,24 +23,24 @@
 #include "finspacedatarequest_p.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::GetWorkingLocationRequest
- * \brief The GetWorkingLocationRequest class provides an interface for FinSpaceData GetWorkingLocation requests.
+ * \class QtAws::FinspaceData::GetWorkingLocationRequest
+ * \brief The GetWorkingLocationRequest class provides an interface for FinspaceData GetWorkingLocation requests.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::getWorkingLocation
+ * \sa FinspaceDataClient::getWorkingLocation
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetWorkingLocationRequest::GetWorkingLocationRequest(const GetWorkingLocationRequest &other)
-    : FinSpaceDataRequest(new GetWorkingLocationRequestPrivate(*other.d_func(), this))
+    : FinspaceDataRequest(new GetWorkingLocationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ GetWorkingLocationRequest::GetWorkingLocationRequest(const GetWorkingLocationReq
  * Constructs a GetWorkingLocationRequest object.
  */
 GetWorkingLocationRequest::GetWorkingLocationRequest()
-    : FinSpaceDataRequest(new GetWorkingLocationRequestPrivate(FinSpaceDataRequest::GetWorkingLocationAction, this))
+    : FinspaceDataRequest(new GetWorkingLocationRequestPrivate(FinspaceDataRequest::GetWorkingLocationAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * GetWorkingLocationRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::FinSpaceData::GetWorkingLocationRequestPrivate
+ * \class QtAws::FinspaceData::GetWorkingLocationRequestPrivate
  * \brief The GetWorkingLocationRequestPrivate class provides private implementation for GetWorkingLocationRequest.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
- * Constructs a GetWorkingLocationRequestPrivate object for FinSpaceData \a action,
+ * Constructs a GetWorkingLocationRequestPrivate object for FinspaceData \a action,
  * with public implementation \a q.
  */
 GetWorkingLocationRequestPrivate::GetWorkingLocationRequestPrivate(
-    const FinSpaceDataRequest::Action action, GetWorkingLocationRequest * const q)
-    : FinSpaceDataRequestPrivate(action, q)
+    const FinspaceDataRequest::Action action, GetWorkingLocationRequest * const q)
+    : FinspaceDataRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ GetWorkingLocationRequestPrivate::GetWorkingLocationRequestPrivate(
  */
 GetWorkingLocationRequestPrivate::GetWorkingLocationRequestPrivate(
     const GetWorkingLocationRequestPrivate &other, GetWorkingLocationRequest * const q)
-    : FinSpaceDataRequestPrivate(other, q)
+    : FinspaceDataRequestPrivate(other, q)
 {
 
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

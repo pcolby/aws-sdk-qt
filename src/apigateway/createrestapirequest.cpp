@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateRestApiRequest
- * \brief The CreateRestApiRequest class provides an interface for APIGateway CreateRestApi requests.
+ * \class QtAws::ApiGateway::CreateRestApiRequest
+ * \brief The CreateRestApiRequest class provides an interface for ApiGateway CreateRestApi requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createRestApi
+ * \sa ApiGatewayClient::createRestApi
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateRestApiRequest::CreateRestApiRequest(const CreateRestApiRequest &other)
-    : APIGatewayRequest(new CreateRestApiRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateRestApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateRestApiRequest::CreateRestApiRequest(const CreateRestApiRequest &other)
  * Constructs a CreateRestApiRequest object.
  */
 CreateRestApiRequest::CreateRestApiRequest()
-    : APIGatewayRequest(new CreateRestApiRequestPrivate(APIGatewayRequest::CreateRestApiAction, this))
+    : ApiGatewayRequest(new CreateRestApiRequestPrivate(ApiGatewayRequest::CreateRestApiAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::CreateRestApiRequestPrivate
+ * \class QtAws::ApiGateway::CreateRestApiRequestPrivate
  * \brief The CreateRestApiRequestPrivate class provides private implementation for CreateRestApiRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateRestApiRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateRestApiRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
-    const APIGatewayRequest::Action action, CreateRestApiRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateRestApiRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
  */
 CreateRestApiRequestPrivate::CreateRestApiRequestPrivate(
     const CreateRestApiRequestPrivate &other, CreateRestApiRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

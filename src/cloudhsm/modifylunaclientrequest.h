@@ -23,11 +23,11 @@
 #include "cloudhsmrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ModifyLunaClientRequestPrivate;
 
-class QTAWSCLOUDHSM_EXPORT ModifyLunaClientRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT ModifyLunaClientRequest : public CloudHsmRequest {
 
 public:
     ModifyLunaClientRequest(const ModifyLunaClientRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

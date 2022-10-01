@@ -24,14 +24,14 @@
 #include "describetimetoliverequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeTimeToLiveRequest;
 
-class DescribeTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeTimeToLiveRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    DescribeTimeToLiveRequestPrivate(const DynamoDBRequest::Action action,
+    DescribeTimeToLiveRequestPrivate(const DynamoDbRequest::Action action,
                                    DescribeTimeToLiveRequest * const q);
     DescribeTimeToLiveRequestPrivate(const DescribeTimeToLiveRequestPrivate &other,
                                    DescribeTimeToLiveRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

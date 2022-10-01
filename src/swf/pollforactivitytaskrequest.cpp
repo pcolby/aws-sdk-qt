@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::PollForActivityTaskRequest
- * \brief The PollForActivityTaskRequest class provides an interface for SWF PollForActivityTask requests.
+ * \class QtAws::Swf::PollForActivityTaskRequest
+ * \brief The PollForActivityTaskRequest class provides an interface for Swf PollForActivityTask requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SWF::PollForActivityTaskRequestPrivate
+ * \class QtAws::Swf::PollForActivityTaskRequestPrivate
  * \brief The PollForActivityTaskRequestPrivate class provides private implementation for PollForActivityTaskRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

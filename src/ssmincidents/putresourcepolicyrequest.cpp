@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::PutResourcePolicyRequest
- * \brief The PutResourcePolicyRequest class provides an interface for SSMIncidents PutResourcePolicy requests.
+ * \class QtAws::SsmIncidents::PutResourcePolicyRequest
+ * \brief The PutResourcePolicyRequest class provides an interface for SsmIncidents PutResourcePolicy requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::putResourcePolicy
+ * \sa SsmIncidentsClient::putResourcePolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutResourcePolicyRequest::PutResourcePolicyRequest(const PutResourcePolicyRequest &other)
-    : SSMIncidentsRequest(new PutResourcePolicyRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new PutResourcePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ PutResourcePolicyRequest::PutResourcePolicyRequest(const PutResourcePolicyReques
  * Constructs a PutResourcePolicyRequest object.
  */
 PutResourcePolicyRequest::PutResourcePolicyRequest()
-    : SSMIncidentsRequest(new PutResourcePolicyRequestPrivate(SSMIncidentsRequest::PutResourcePolicyAction, this))
+    : SsmIncidentsRequest(new PutResourcePolicyRequestPrivate(SsmIncidentsRequest::PutResourcePolicyAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SSMIncidents::PutResourcePolicyRequestPrivate
+ * \class QtAws::SsmIncidents::PutResourcePolicyRequestPrivate
  * \brief The PutResourcePolicyRequestPrivate class provides private implementation for PutResourcePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a PutResourcePolicyRequestPrivate object for SSMIncidents \a action,
+ * Constructs a PutResourcePolicyRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
-    const SSMIncidentsRequest::Action action, PutResourcePolicyRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, PutResourcePolicyRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const PutResourcePolicyRequestPrivate &other, PutResourcePolicyRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

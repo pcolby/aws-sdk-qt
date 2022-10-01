@@ -24,14 +24,14 @@
 #include "getcompliancesummaryrequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 class GetComplianceSummaryRequest;
 
-class GetComplianceSummaryRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class GetComplianceSummaryRequestPrivate : public ResourceGroupsTaggingApiRequestPrivate {
 
 public:
-    GetComplianceSummaryRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,
+    GetComplianceSummaryRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action,
                                    GetComplianceSummaryRequest * const q);
     GetComplianceSummaryRequestPrivate(const GetComplianceSummaryRequestPrivate &other,
                                    GetComplianceSummaryRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

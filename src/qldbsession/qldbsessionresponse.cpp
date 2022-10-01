@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 /*!
- * \class QtAws::QLDBSession::QLDBSessionResponse
- * \brief The QLDBSessionResponse class provides an interface for QLDBSession responses.
+ * \class QtAws::QldbSession::QldbSessionResponse
+ * \brief The QldbSessionResponse class provides an interface for QldbSession responses.
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  */
 
 /*!
- * Constructs a QLDBSessionResponse object with parent \a parent.
+ * Constructs a QldbSessionResponse object with parent \a parent.
  */
-QLDBSessionResponse::QLDBSessionResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new QLDBSessionResponsePrivate(this), parent)
+QldbSessionResponse::QldbSessionResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new QldbSessionResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a QLDBSessionResponse object with private implementation \a d,
+ * Constructs a QldbSessionResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from QLDBSessionResponsePrivate.
+ * implementation that inherits from QldbSessionResponsePrivate.
  */
-QLDBSessionResponse::QLDBSessionResponse(QLDBSessionResponsePrivate * const d, QObject * const parent)
+QldbSessionResponse::QldbSessionResponse(QldbSessionResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ QLDBSessionResponse::QLDBSessionResponse(QLDBSessionResponsePrivate * const d, Q
 /*!
  * \reimp
  */
-void QLDBSessionResponse::parseFailure(QIODevice &response)
+void QldbSessionResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(QLDBSessionResponse);
+    //Q_D(QldbSessionResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void QLDBSessionResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDBSession::QLDBSessionResponsePrivate
- * \brief The QLDBSessionResponsePrivate class provides private implementation for QLDBSessionResponse.
+ * \class QtAws::QldbSession::QldbSessionResponsePrivate
+ * \brief The QldbSessionResponsePrivate class provides private implementation for QldbSessionResponse.
  * \internal
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  */
 
 /*!
- * Constructs a QLDBSessionResponsePrivate object with public implementation \a q.
+ * Constructs a QldbSessionResponsePrivate object with public implementation \a q.
  */
-QLDBSessionResponsePrivate::QLDBSessionResponsePrivate(
-    QLDBSessionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+QldbSessionResponsePrivate::QldbSessionResponsePrivate(
+    QldbSessionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws

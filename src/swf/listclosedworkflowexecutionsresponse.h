@@ -24,7 +24,7 @@
 #include "listclosedworkflowexecutionsrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class ListClosedWorkflowExecutionsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

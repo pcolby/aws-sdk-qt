@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class IamRequestPrivate;
 
 class QTAWSIAM_EXPORT IamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by IAM.
+    /// Actions supported by Iam.
     enum Action {
         AddClientIDToOpenIDConnectProviderAction,
         AddRoleToInstanceProfileAction,
@@ -233,7 +233,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

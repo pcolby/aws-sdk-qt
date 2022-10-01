@@ -24,11 +24,11 @@
 #include "deletebackuprequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DeleteBackupResponsePrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT DeleteBackupResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT DeleteBackupResponse : public CloudHsmV2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

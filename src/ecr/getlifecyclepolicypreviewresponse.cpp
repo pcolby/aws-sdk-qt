@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::GetLifecyclePolicyPreviewResponse
- * \brief The GetLifecyclePolicyPreviewResponse class provides an interace for ECR GetLifecyclePolicyPreview responses.
+ * \class QtAws::Ecr::GetLifecyclePolicyPreviewResponse
+ * \brief The GetLifecyclePolicyPreviewResponse class provides an interace for Ecr GetLifecyclePolicyPreview responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::getLifecyclePolicyPreview
  */
@@ -68,7 +74,7 @@ const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::requ
 
 /*!
  * \reimp
- * Parses a successful ECR GetLifecyclePolicyPreview \a response.
+ * Parses a successful Ecr GetLifecyclePolicyPreview \a response.
  */
 void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::GetLifecyclePolicyPreviewResponsePrivate
+ * \class QtAws::Ecr::GetLifecyclePolicyPreviewResponsePrivate
  * \brief The GetLifecyclePolicyPreviewResponsePrivate class provides private implementation for GetLifecyclePolicyPreviewResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponsePriva
 }
 
 /*!
- * Parses a ECR GetLifecyclePolicyPreview response element from \a xml.
+ * Parses a Ecr GetLifecyclePolicyPreview response element from \a xml.
  */
 void GetLifecyclePolicyPreviewResponsePrivate::parseGetLifecyclePolicyPreviewResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void GetLifecyclePolicyPreviewResponsePrivate::parseGetLifecyclePolicyPreviewRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

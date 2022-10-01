@@ -24,14 +24,14 @@
 #include "completelayeruploadrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class CompleteLayerUploadRequest;
 
-class CompleteLayerUploadRequestPrivate : public ECRPublicRequestPrivate {
+class CompleteLayerUploadRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    CompleteLayerUploadRequestPrivate(const ECRPublicRequest::Action action,
+    CompleteLayerUploadRequestPrivate(const EcrPublicRequest::Action action,
                                    CompleteLayerUploadRequest * const q);
     CompleteLayerUploadRequestPrivate(const CompleteLayerUploadRequestPrivate &other,
                                    CompleteLayerUploadRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

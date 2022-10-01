@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableToPointInTimeResponse
- * \brief The RestoreTableToPointInTimeResponse class provides an interace for DynamoDB RestoreTableToPointInTime responses.
+ * \class QtAws::DynamoDb::RestoreTableToPointInTimeResponse
+ * \brief The RestoreTableToPointInTimeResponse class provides an interace for DynamoDb RestoreTableToPointInTime responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::restoreTableToPointInTime
+ * \sa DynamoDbClient::restoreTableToPointInTime
  */
 
 /*!
@@ -63,7 +63,7 @@ RestoreTableToPointInTimeResponse::RestoreTableToPointInTimeResponse(
         const RestoreTableToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new RestoreTableToPointInTimeResponsePrivate(this), parent)
+    : DynamoDbResponse(new RestoreTableToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreTableToPointInTimeRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const RestoreTableToPointInTimeRequest * RestoreTableToPointInTimeResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DynamoDB RestoreTableToPointInTime \a response.
+ * Parses a successful DynamoDb RestoreTableToPointInTime \a response.
  */
 void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::RestoreTableToPointInTimeResponsePrivate
+ * \class QtAws::DynamoDb::RestoreTableToPointInTimeResponsePrivate
  * \brief The RestoreTableToPointInTimeResponsePrivate class provides private implementation for RestoreTableToPointInTimeResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a RestoreTableToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePrivate(
-    RestoreTableToPointInTimeResponse * const q) : DynamoDBResponsePrivate(q)
+    RestoreTableToPointInTimeResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB RestoreTableToPointInTime response element from \a xml.
+ * Parses a DynamoDb RestoreTableToPointInTime response element from \a xml.
  */
 void RestoreTableToPointInTimeResponsePrivate::parseRestoreTableToPointInTimeResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void RestoreTableToPointInTimeResponsePrivate::parseRestoreTableToPointInTimeRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

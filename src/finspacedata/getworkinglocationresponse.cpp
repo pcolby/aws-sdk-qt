@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::GetWorkingLocationResponse
- * \brief The GetWorkingLocationResponse class provides an interace for FinSpaceData GetWorkingLocation responses.
+ * \class QtAws::FinspaceData::GetWorkingLocationResponse
+ * \brief The GetWorkingLocationResponse class provides an interace for FinspaceData GetWorkingLocation responses.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::getWorkingLocation
+ * \sa FinspaceDataClient::getWorkingLocation
  */
 
 /*!
@@ -45,7 +45,7 @@ GetWorkingLocationResponse::GetWorkingLocationResponse(
         const GetWorkingLocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FinSpaceDataResponse(new GetWorkingLocationResponsePrivate(this), parent)
+    : FinspaceDataResponse(new GetWorkingLocationResponsePrivate(this), parent)
 {
     setRequest(new GetWorkingLocationRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const GetWorkingLocationRequest * GetWorkingLocationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FinSpaceData GetWorkingLocation \a response.
+ * Parses a successful FinspaceData GetWorkingLocation \a response.
  */
 void GetWorkingLocationResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void GetWorkingLocationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FinSpaceData::GetWorkingLocationResponsePrivate
+ * \class QtAws::FinspaceData::GetWorkingLocationResponsePrivate
  * \brief The GetWorkingLocationResponsePrivate class provides private implementation for GetWorkingLocationResponse.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
  * Constructs a GetWorkingLocationResponsePrivate object with public implementation \a q.
  */
 GetWorkingLocationResponsePrivate::GetWorkingLocationResponsePrivate(
-    GetWorkingLocationResponse * const q) : FinSpaceDataResponsePrivate(q)
+    GetWorkingLocationResponse * const q) : FinspaceDataResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a FinSpaceData GetWorkingLocation response element from \a xml.
+ * Parses a FinspaceData GetWorkingLocation response element from \a xml.
  */
 void GetWorkingLocationResponsePrivate::parseGetWorkingLocationResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetWorkingLocationResponsePrivate::parseGetWorkingLocationResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "listcontributorinsightsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListContributorInsightsRequest;
 
-class ListContributorInsightsRequestPrivate : public DynamoDBRequestPrivate {
+class ListContributorInsightsRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ListContributorInsightsRequestPrivate(const DynamoDBRequest::Action action,
+    ListContributorInsightsRequestPrivate(const DynamoDbRequest::Action action,
                                    ListContributorInsightsRequest * const q);
     ListContributorInsightsRequestPrivate(const ListContributorInsightsRequestPrivate &other,
                                    ListContributorInsightsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "listsqlinjectionmatchsetsrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class ListSqlInjectionMatchSetsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

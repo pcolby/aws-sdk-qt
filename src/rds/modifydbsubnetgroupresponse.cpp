@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBSubnetGroupResponse
- * \brief The ModifyDBSubnetGroupResponse class provides an interace for RDS ModifyDBSubnetGroup responses.
+ * \class QtAws::Rds::ModifyDBSubnetGroupResponse
+ * \brief The ModifyDBSubnetGroupResponse class provides an interace for Rds ModifyDBSubnetGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBSubnetGroup \a response.
+ * Parses a successful Rds ModifyDBSubnetGroup \a response.
  */
 void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBSubnetGroupResponsePrivate
+ * \class QtAws::Rds::ModifyDBSubnetGroupResponsePrivate
  * \brief The ModifyDBSubnetGroupResponsePrivate class provides private implementation for ModifyDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyDBSubnetGroup response element from \a xml.
+ * Parses a Rds ModifyDBSubnetGroup response element from \a xml.
  */
 void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

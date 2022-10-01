@@ -72,23 +72,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ECRPublic
- * \brief Contains classess for accessing Amazon Elastic Container Registry Public ( ECR Public).
+ * \namespace QtAws::EcrPublic
+ * \brief Contains classess for accessing Amazon Elastic Container Registry Public.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::ECRPublicClient
- * \brief The ECRPublicClient class provides access to the Amazon Elastic Container Registry Public ( ECR Public) service.
+ * \class QtAws::EcrPublic::EcrPublicClient
+ * \brief The EcrPublicClient class provides access to the Amazon Elastic Container Registry Public service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -101,21 +101,21 @@ namespace ECRPublic {
  */
 
 /*!
- * \brief Constructs a ECRPublicClient object.
+ * \brief Constructs a EcrPublicClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-ECRPublicClient::ECRPublicClient(
+EcrPublicClient::EcrPublicClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ECRPublicClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcrPublicClientPrivate(this), parent)
 {
-    Q_D(ECRPublicClient);
+    Q_D(EcrPublicClient);
     d->apiVersion = QStringLiteral("2020-10-30");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("api.ecr-public");
@@ -126,7 +126,7 @@ ECRPublicClient::ECRPublicClient(
 }
 
 /*!
- * \overload ECRPublicClient()
+ * \overload EcrPublicClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -136,14 +136,14 @@ ECRPublicClient::ECRPublicClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-ECRPublicClient::ECRPublicClient(
+EcrPublicClient::EcrPublicClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ECRPublicClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EcrPublicClientPrivate(this), parent)
 {
-    Q_D(ECRPublicClient);
+    Q_D(EcrPublicClient);
     d->apiVersion = QStringLiteral("2020-10-30");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -154,7 +154,7 @@ ECRPublicClient::ECRPublicClient(
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * BatchCheckLayerAvailabilityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -168,13 +168,13 @@ ECRPublicClient::ECRPublicClient(
  * This operation is used by the Amazon ECR proxy and is not generally used by customers for pulling and pushing images. In
  * most cases, you should use the <code>docker</code> CLI to pull, tag, and push
  */
-BatchCheckLayerAvailabilityResponse * ECRPublicClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
+BatchCheckLayerAvailabilityResponse * EcrPublicClient::batchCheckLayerAvailability(const BatchCheckLayerAvailabilityRequest &request)
 {
     return qobject_cast<BatchCheckLayerAvailabilityResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * BatchDeleteImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -191,13 +191,13 @@ BatchCheckLayerAvailabilityResponse * ECRPublicClient::batchCheckLayerAvailabili
  *
  * You can completely delete an image (and all of its tags) by specifying the image's digest in your
  */
-BatchDeleteImageResponse * ECRPublicClient::batchDeleteImage(const BatchDeleteImageRequest &request)
+BatchDeleteImageResponse * EcrPublicClient::batchDeleteImage(const BatchDeleteImageRequest &request)
 {
     return qobject_cast<BatchDeleteImageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * CompleteLayerUploadResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -215,13 +215,13 @@ BatchDeleteImageResponse * ECRPublicClient::batchDeleteImage(const BatchDeleteIm
  * This operation is used by the Amazon ECR proxy and is not generally used by customers for pulling and pushing images. In
  * most cases, you should use the <code>docker</code> CLI to pull, tag, and push
  */
-CompleteLayerUploadResponse * ECRPublicClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
+CompleteLayerUploadResponse * EcrPublicClient::completeLayerUpload(const CompleteLayerUploadRequest &request)
 {
     return qobject_cast<CompleteLayerUploadResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * CreateRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -230,13 +230,13 @@ CompleteLayerUploadResponse * ECRPublicClient::completeLayerUpload(const Complet
  * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR repositories</a> in the
  * <i>Amazon Elastic Container Registry User
  */
-CreateRepositoryResponse * ECRPublicClient::createRepository(const CreateRepositoryRequest &request)
+CreateRepositoryResponse * EcrPublicClient::createRepository(const CreateRepositoryRequest &request)
 {
     return qobject_cast<CreateRepositoryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DeleteRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -244,39 +244,39 @@ CreateRepositoryResponse * ECRPublicClient::createRepository(const CreateReposit
  * Deletes a repository in a public registry. If the repository contains images, you must either delete all images in the
  * repository or use the <code>force</code> option which deletes all images on your behalf before deleting the
  */
-DeleteRepositoryResponse * ECRPublicClient::deleteRepository(const DeleteRepositoryRequest &request)
+DeleteRepositoryResponse * EcrPublicClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
     return qobject_cast<DeleteRepositoryResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DeleteRepositoryPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the repository policy associated with the specified
  */
-DeleteRepositoryPolicyResponse * ECRPublicClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
+DeleteRepositoryPolicyResponse * EcrPublicClient::deleteRepositoryPolicy(const DeleteRepositoryPolicyRequest &request)
 {
     return qobject_cast<DeleteRepositoryPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DescribeImageTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the image tag details for a repository in a public
  */
-DescribeImageTagsResponse * ECRPublicClient::describeImageTags(const DescribeImageTagsRequest &request)
+DescribeImageTagsResponse * EcrPublicClient::describeImageTags(const DescribeImageTagsRequest &request)
 {
     return qobject_cast<DescribeImageTagsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DescribeImagesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -289,39 +289,39 @@ DescribeImageTagsResponse * ECRPublicClient::describeImageTags(const DescribeIma
  * registry. The output of the <code>docker images</code> command shows the uncompressed image size, so it may return a
  * larger image size than the image sizes returned by
  */
-DescribeImagesResponse * ECRPublicClient::describeImages(const DescribeImagesRequest &request)
+DescribeImagesResponse * EcrPublicClient::describeImages(const DescribeImagesRequest &request)
 {
     return qobject_cast<DescribeImagesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DescribeRegistriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns details for a public
  */
-DescribeRegistriesResponse * ECRPublicClient::describeRegistries(const DescribeRegistriesRequest &request)
+DescribeRegistriesResponse * EcrPublicClient::describeRegistries(const DescribeRegistriesRequest &request)
 {
     return qobject_cast<DescribeRegistriesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * DescribeRepositoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes repositories in a public
  */
-DescribeRepositoriesResponse * ECRPublicClient::describeRepositories(const DescribeRepositoriesRequest &request)
+DescribeRepositoriesResponse * EcrPublicClient::describeRepositories(const DescribeRepositoriesRequest &request)
 {
     return qobject_cast<DescribeRepositoriesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * GetAuthorizationTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -330,26 +330,26 @@ DescribeRepositoriesResponse * ECRPublicClient::describeRepositories(const Descr
  * to access any Amazon ECR registry that your IAM principal has access to. The authorization token is valid for 12 hours.
  * This API requires the <code>ecr-public:GetAuthorizationToken</code> and <code>sts:GetServiceBearerToken</code>
  */
-GetAuthorizationTokenResponse * ECRPublicClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
+GetAuthorizationTokenResponse * EcrPublicClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
 {
     return qobject_cast<GetAuthorizationTokenResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * GetRegistryCatalogDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves catalog metadata for a public
  */
-GetRegistryCatalogDataResponse * ECRPublicClient::getRegistryCatalogData(const GetRegistryCatalogDataRequest &request)
+GetRegistryCatalogDataResponse * EcrPublicClient::getRegistryCatalogData(const GetRegistryCatalogDataRequest &request)
 {
     return qobject_cast<GetRegistryCatalogDataResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * GetRepositoryCatalogDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -357,26 +357,26 @@ GetRegistryCatalogDataResponse * ECRPublicClient::getRegistryCatalogData(const G
  * Retrieve catalog metadata for a repository in a public registry. This metadata is displayed publicly in the Amazon ECR
  * Public
  */
-GetRepositoryCatalogDataResponse * ECRPublicClient::getRepositoryCatalogData(const GetRepositoryCatalogDataRequest &request)
+GetRepositoryCatalogDataResponse * EcrPublicClient::getRepositoryCatalogData(const GetRepositoryCatalogDataRequest &request)
 {
     return qobject_cast<GetRepositoryCatalogDataResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * GetRepositoryPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the repository policy for the specified
  */
-GetRepositoryPolicyResponse * ECRPublicClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
+GetRepositoryPolicyResponse * EcrPublicClient::getRepositoryPolicy(const GetRepositoryPolicyRequest &request)
 {
     return qobject_cast<GetRepositoryPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * InitiateLayerUploadResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -393,26 +393,26 @@ GetRepositoryPolicyResponse * ECRPublicClient::getRepositoryPolicy(const GetRepo
  * This operation is used by the Amazon ECR proxy and is not generally used by customers for pulling and pushing images. In
  * most cases, you should use the <code>docker</code> CLI to pull, tag, and push
  */
-InitiateLayerUploadResponse * ECRPublicClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
+InitiateLayerUploadResponse * EcrPublicClient::initiateLayerUpload(const InitiateLayerUploadRequest &request)
 {
     return qobject_cast<InitiateLayerUploadResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List the tags for an Amazon ECR Public
  */
-ListTagsForResourceResponse * ECRPublicClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * EcrPublicClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * PutImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -429,39 +429,39 @@ ListTagsForResourceResponse * ECRPublicClient::listTagsForResource(const ListTag
  * This operation is used by the Amazon ECR proxy and is not generally used by customers for pulling and pushing images. In
  * most cases, you should use the <code>docker</code> CLI to pull, tag, and push
  */
-PutImageResponse * ECRPublicClient::putImage(const PutImageRequest &request)
+PutImageResponse * EcrPublicClient::putImage(const PutImageRequest &request)
 {
     return qobject_cast<PutImageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * PutRegistryCatalogDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Create or updates the catalog data for a public
  */
-PutRegistryCatalogDataResponse * ECRPublicClient::putRegistryCatalogData(const PutRegistryCatalogDataRequest &request)
+PutRegistryCatalogDataResponse * EcrPublicClient::putRegistryCatalogData(const PutRegistryCatalogDataRequest &request)
 {
     return qobject_cast<PutRegistryCatalogDataResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * PutRepositoryCatalogDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates or updates the catalog data for a repository in a public
  */
-PutRepositoryCatalogDataResponse * ECRPublicClient::putRepositoryCatalogData(const PutRepositoryCatalogDataRequest &request)
+PutRepositoryCatalogDataResponse * EcrPublicClient::putRepositoryCatalogData(const PutRepositoryCatalogDataRequest &request)
 {
     return qobject_cast<PutRepositoryCatalogDataResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * SetRepositoryPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -470,13 +470,13 @@ PutRepositoryCatalogDataResponse * ECRPublicClient::putRepositoryCatalogData(con
  * <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html">Amazon ECR Repository
  * Policies</a> in the <i>Amazon Elastic Container Registry User
  */
-SetRepositoryPolicyResponse * ECRPublicClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
+SetRepositoryPolicyResponse * EcrPublicClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
 {
     return qobject_cast<SetRepositoryPolicyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -485,26 +485,26 @@ SetRepositoryPolicyResponse * ECRPublicClient::setRepositoryPolicy(const SetRepo
  * are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with
  * that resource are deleted as
  */
-TagResourceResponse * ECRPublicClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * EcrPublicClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes specified tags from a
  */
-UntagResourceResponse * ECRPublicClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * EcrPublicClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the ECRPublicClient service, and returns a pointer to an
+ * Sends \a request to the EcrPublicClient service, and returns a pointer to an
  * UploadLayerPartResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -521,28 +521,28 @@ UntagResourceResponse * ECRPublicClient::untagResource(const UntagResourceReques
  * This operation is used by the Amazon ECR proxy and is not generally used by customers for pulling and pushing images. In
  * most cases, you should use the <code>docker</code> CLI to pull, tag, and push
  */
-UploadLayerPartResponse * ECRPublicClient::uploadLayerPart(const UploadLayerPartRequest &request)
+UploadLayerPartResponse * EcrPublicClient::uploadLayerPart(const UploadLayerPartRequest &request)
 {
     return qobject_cast<UploadLayerPartResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::ECRPublic::ECRPublicClientPrivate
- * \brief The ECRPublicClientPrivate class provides private implementation for ECRPublicClient.
+ * \class QtAws::EcrPublic::EcrPublicClientPrivate
+ * \brief The EcrPublicClientPrivate class provides private implementation for EcrPublicClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a ECRPublicClientPrivate object with public implementation \a q.
+ * Constructs a EcrPublicClientPrivate object with public implementation \a q.
  */
-ECRPublicClientPrivate::ECRPublicClientPrivate(ECRPublicClient * const q)
+EcrPublicClientPrivate::EcrPublicClientPrivate(EcrPublicClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

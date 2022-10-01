@@ -24,14 +24,14 @@
 #include "disassociatenoderequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DisassociateNodeRequest;
 
-class DisassociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
+class DisassociateNodeRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DisassociateNodeRequestPrivate(const OpsWorksCMRequest::Action action,
+    DisassociateNodeRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DisassociateNodeRequest * const q);
     DisassociateNodeRequestPrivate(const DisassociateNodeRequestPrivate &other,
                                    DisassociateNodeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

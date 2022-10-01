@@ -24,7 +24,7 @@
 #include "describejournalkinesisstreamrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class DescribeJournalKinesisStreamRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

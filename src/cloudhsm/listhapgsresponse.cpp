@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListHapgsResponse
- * \brief The ListHapgsResponse class provides an interace for CloudHSM ListHapgs responses.
+ * \class QtAws::CloudHsm::ListHapgsResponse
+ * \brief The ListHapgsResponse class provides an interace for CloudHsm ListHapgs responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listHapgs
+ * \sa CloudHsmClient::listHapgs
  */
 
 /*!
@@ -56,7 +56,7 @@ ListHapgsResponse::ListHapgsResponse(
         const ListHapgsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ListHapgsResponsePrivate(this), parent)
+    : CloudHsmResponse(new ListHapgsResponsePrivate(this), parent)
 {
     setRequest(new ListHapgsRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const ListHapgsRequest * ListHapgsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM ListHapgs \a response.
+ * Parses a successful CloudHsm ListHapgs \a response.
  */
 void ListHapgsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void ListHapgsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::ListHapgsResponsePrivate
+ * \class QtAws::CloudHsm::ListHapgsResponsePrivate
  * \brief The ListHapgsResponsePrivate class provides private implementation for ListHapgsResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a ListHapgsResponsePrivate object with public implementation \a q.
  */
 ListHapgsResponsePrivate::ListHapgsResponsePrivate(
-    ListHapgsResponse * const q) : CloudHSMResponsePrivate(q)
+    ListHapgsResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM ListHapgs response element from \a xml.
+ * Parses a CloudHsm ListHapgs response element from \a xml.
  */
 void ListHapgsResponsePrivate::parseListHapgsResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void ListHapgsResponsePrivate::parseListHapgsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

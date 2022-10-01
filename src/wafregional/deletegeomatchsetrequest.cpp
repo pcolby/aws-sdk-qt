@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteGeoMatchSetRequest
- * \brief The DeleteGeoMatchSetRequest class provides an interface for WAFRegional DeleteGeoMatchSet requests.
+ * \class QtAws::WafRegional::DeleteGeoMatchSetRequest
+ * \brief The DeleteGeoMatchSetRequest class provides an interface for WafRegional DeleteGeoMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteGeoMatchSet
+ * \sa WafRegionalClient::deleteGeoMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetRequest &other)
-    : WAFRegionalRequest(new DeleteGeoMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteGeoMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetReques
  * Constructs a DeleteGeoMatchSetRequest object.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest()
-    : WAFRegionalRequest(new DeleteGeoMatchSetRequestPrivate(WAFRegionalRequest::DeleteGeoMatchSetAction, this))
+    : WafRegionalRequest(new DeleteGeoMatchSetRequestPrivate(WafRegionalRequest::DeleteGeoMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteGeoMatchSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteGeoMatchSetRequestPrivate
  * \brief The DeleteGeoMatchSetRequestPrivate class provides private implementation for DeleteGeoMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteGeoMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteGeoMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteGeoMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const DeleteGeoMatchSetRequestPrivate &other, DeleteGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

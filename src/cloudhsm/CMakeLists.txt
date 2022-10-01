@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCLOUDHSM_LIBRARY)
 
-add_library(QtAwsCloudHSM
-  addtagstoresourcerequest.h
-  addtagstoresourcerequest_p.h
-  addtagstoresourceresponse.h
-  addtagstoresourceresponse_p.h
+add_library(QtAwsCloudHsm
+  qtawscloudhsmglobal.h
   cloudhsmclient.h
   cloudhsmclient_p.h
   cloudhsmrequest.h
   cloudhsmrequest_p.h
   cloudhsmresponse.h
   cloudhsmresponse_p.h
+  addtagstoresourcerequest.h
+  addtagstoresourcerequest_p.h
+  addtagstoresourceresponse.h
+  addtagstoresourceresponse_p.h
   createhapgrequest.h
   createhapgrequest_p.h
   createhapgresponse.h
@@ -83,16 +84,15 @@ add_library(QtAwsCloudHSM
   modifylunaclientrequest_p.h
   modifylunaclientresponse.h
   modifylunaclientresponse_p.h
-  qtawscloudhsmglobal.h
   removetagsfromresourcerequest.h
   removetagsfromresourcerequest_p.h
   removetagsfromresourceresponse.h
   removetagsfromresourceresponse_p.h
-  addtagstoresourcerequest.cpp
-  addtagstoresourceresponse.cpp
   cloudhsmclient.cpp
   cloudhsmrequest.cpp
   cloudhsmresponse.cpp
+  addtagstoresourcerequest.cpp
+  addtagstoresourceresponse.cpp
   createhapgrequest.cpp
   createhapgresponse.cpp
   createhsmrequest.cpp
@@ -132,7 +132,7 @@ add_library(QtAwsCloudHSM
   removetagsfromresourcerequest.cpp
   removetagsfromresourceresponse.cpp)
 
-target_link_libraries(QtAwsCloudHSM
+target_link_libraries(QtAwsCloudHsm
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

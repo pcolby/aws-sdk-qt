@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIACONVERT_LIBRARY)
 
 add_library(QtAwsMediaConvert
+  qtawsmediaconvertglobal.h
+  mediaconvertclient.h
+  mediaconvertclient_p.h
+  mediaconvertrequest.h
+  mediaconvertrequest_p.h
+  mediaconvertresponse.h
+  mediaconvertresponse_p.h
   associatecertificaterequest.h
   associatecertificaterequest_p.h
   associatecertificateresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsMediaConvert
   deletejobtemplaterequest_p.h
   deletejobtemplateresponse.h
   deletejobtemplateresponse_p.h
+  deletepolicyrequest.h
+  deletepolicyrequest_p.h
+  deletepolicyresponse.h
+  deletepolicyresponse_p.h
   deletepresetrequest.h
   deletepresetrequest_p.h
   deletepresetresponse.h
@@ -53,6 +64,10 @@ add_library(QtAwsMediaConvert
   getjobtemplaterequest_p.h
   getjobtemplateresponse.h
   getjobtemplateresponse_p.h
+  getpolicyrequest.h
+  getpolicyrequest_p.h
+  getpolicyresponse.h
+  getpolicyresponse_p.h
   getpresetrequest.h
   getpresetrequest_p.h
   getpresetresponse.h
@@ -61,14 +76,14 @@ add_library(QtAwsMediaConvert
   getqueuerequest_p.h
   getqueueresponse.h
   getqueueresponse_p.h
-  listjobsrequest.h
-  listjobsrequest_p.h
-  listjobsresponse.h
-  listjobsresponse_p.h
   listjobtemplatesrequest.h
   listjobtemplatesrequest_p.h
   listjobtemplatesresponse.h
   listjobtemplatesresponse_p.h
+  listjobsrequest.h
+  listjobsrequest_p.h
+  listjobsresponse.h
+  listjobsresponse_p.h
   listpresetsrequest.h
   listpresetsrequest_p.h
   listpresetsresponse.h
@@ -81,13 +96,10 @@ add_library(QtAwsMediaConvert
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mediaconvertclient.h
-  mediaconvertclient_p.h
-  mediaconvertrequest.h
-  mediaconvertrequest_p.h
-  mediaconvertresponse.h
-  mediaconvertresponse_p.h
-  qtawsmediaconvertglobal.h
+  putpolicyrequest.h
+  putpolicyrequest_p.h
+  putpolicyresponse.h
+  putpolicyresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -108,6 +120,9 @@ add_library(QtAwsMediaConvert
   updatequeuerequest_p.h
   updatequeueresponse.h
   updatequeueresponse_p.h
+  mediaconvertclient.cpp
+  mediaconvertrequest.cpp
+  mediaconvertresponse.cpp
   associatecertificaterequest.cpp
   associatecertificateresponse.cpp
   canceljobrequest.cpp
@@ -122,6 +137,8 @@ add_library(QtAwsMediaConvert
   createqueueresponse.cpp
   deletejobtemplaterequest.cpp
   deletejobtemplateresponse.cpp
+  deletepolicyrequest.cpp
+  deletepolicyresponse.cpp
   deletepresetrequest.cpp
   deletepresetresponse.cpp
   deletequeuerequest.cpp
@@ -134,23 +151,24 @@ add_library(QtAwsMediaConvert
   getjobresponse.cpp
   getjobtemplaterequest.cpp
   getjobtemplateresponse.cpp
+  getpolicyrequest.cpp
+  getpolicyresponse.cpp
   getpresetrequest.cpp
   getpresetresponse.cpp
   getqueuerequest.cpp
   getqueueresponse.cpp
-  listjobsrequest.cpp
-  listjobsresponse.cpp
   listjobtemplatesrequest.cpp
   listjobtemplatesresponse.cpp
+  listjobsrequest.cpp
+  listjobsresponse.cpp
   listpresetsrequest.cpp
   listpresetsresponse.cpp
   listqueuesrequest.cpp
   listqueuesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mediaconvertclient.cpp
-  mediaconvertrequest.cpp
-  mediaconvertresponse.cpp
+  putpolicyrequest.cpp
+  putpolicyresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

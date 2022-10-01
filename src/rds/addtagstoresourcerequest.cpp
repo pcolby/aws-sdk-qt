@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddTagsToResourceRequest
- * \brief The AddTagsToResourceRequest class provides an interface for RDS AddTagsToResource requests.
+ * \class QtAws::Rds::AddTagsToResourceRequest
+ * \brief The AddTagsToResourceRequest class provides an interface for Rds AddTagsToResource requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::RDS::AddTagsToResourceRequestPrivate
+ * \class QtAws::Rds::AddTagsToResourceRequestPrivate
  * \brief The AddTagsToResourceRequestPrivate class provides private implementation for AddTagsToResourceRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

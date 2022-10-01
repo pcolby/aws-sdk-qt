@@ -24,14 +24,14 @@
 #include "getdeliverabilitydashboardoptionsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetDeliverabilityDashboardOptionsRequest;
 
-class GetDeliverabilityDashboardOptionsRequestPrivate : public Sesv2RequestPrivate {
+class GetDeliverabilityDashboardOptionsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetDeliverabilityDashboardOptionsRequestPrivate(const Sesv2Request::Action action,
+    GetDeliverabilityDashboardOptionsRequestPrivate(const SESv2Request::Action action,
                                    GetDeliverabilityDashboardOptionsRequest * const q);
     GetDeliverabilityDashboardOptionsRequestPrivate(const GetDeliverabilityDashboardOptionsRequestPrivate &other,
                                    GetDeliverabilityDashboardOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

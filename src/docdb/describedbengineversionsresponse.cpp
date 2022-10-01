@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBEngineVersionsResponse
- * \brief The DescribeDBEngineVersionsResponse class provides an interace for DocDB DescribeDBEngineVersions responses.
+ * \class QtAws::DocDb::DescribeDBEngineVersionsResponse
+ * \brief The DescribeDBEngineVersionsResponse class provides an interace for DocDb DescribeDBEngineVersions responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBEngineVersions
+ * \sa DocDbClient::describeDBEngineVersions
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
         const DescribeDBEngineVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBEngineVersionsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeDBEngineVersions \a response.
+ * Parses a successful DocDb DescribeDBEngineVersions \a response.
  */
 void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBEngineVersionsResponsePrivate
+ * \class QtAws::DocDb::DescribeDBEngineVersionsResponsePrivate
  * \brief The DescribeDBEngineVersionsResponsePrivate class provides private implementation for DescribeDBEngineVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeDBEngineVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate(
-    DescribeDBEngineVersionsResponse * const q) : DocDBResponsePrivate(q)
+    DescribeDBEngineVersionsResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeDBEngineVersions response element from \a xml.
+ * Parses a DocDb DescribeDBEngineVersions response element from \a xml.
  */
 void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

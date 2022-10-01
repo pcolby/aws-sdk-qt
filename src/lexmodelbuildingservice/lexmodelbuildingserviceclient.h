@@ -84,6 +84,10 @@ class GetIntentVersionsRequest;
 class GetIntentVersionsResponse;
 class GetIntentsRequest;
 class GetIntentsResponse;
+class GetMigrationRequest;
+class GetMigrationResponse;
+class GetMigrationsRequest;
+class GetMigrationsResponse;
 class GetSlotTypeRequest;
 class GetSlotTypeResponse;
 class GetSlotTypeVersionsRequest;
@@ -104,6 +108,8 @@ class PutSlotTypeRequest;
 class PutSlotTypeResponse;
 class StartImportRequest;
 class StartImportResponse;
+class StartMigrationRequest;
+class StartMigrationResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -152,6 +158,8 @@ public slots:
     GetIntentResponse * getIntent(const GetIntentRequest &request);
     GetIntentVersionsResponse * getIntentVersions(const GetIntentVersionsRequest &request);
     GetIntentsResponse * getIntents(const GetIntentsRequest &request);
+    GetMigrationResponse * getMigration(const GetMigrationRequest &request);
+    GetMigrationsResponse * getMigrations(const GetMigrationsRequest &request);
     GetSlotTypeResponse * getSlotType(const GetSlotTypeRequest &request);
     GetSlotTypeVersionsResponse * getSlotTypeVersions(const GetSlotTypeVersionsRequest &request);
     GetSlotTypesResponse * getSlotTypes(const GetSlotTypesRequest &request);
@@ -162,6 +170,7 @@ public slots:
     PutIntentResponse * putIntent(const PutIntentRequest &request);
     PutSlotTypeResponse * putSlotType(const PutSlotTypeRequest &request);
     StartImportResponse * startImport(const StartImportRequest &request);
+    StartMigrationResponse * startMigration(const StartMigrationRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 

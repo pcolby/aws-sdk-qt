@@ -24,14 +24,14 @@
 #include "createenvironmentrequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class CreateEnvironmentRequest;
 
-class CreateEnvironmentRequestPrivate : public finspaceRequestPrivate {
+class CreateEnvironmentRequestPrivate : public FinspaceRequestPrivate {
 
 public:
-    CreateEnvironmentRequestPrivate(const finspaceRequest::Action action,
+    CreateEnvironmentRequestPrivate(const FinspaceRequest::Action action,
                                    CreateEnvironmentRequest * const q);
     CreateEnvironmentRequestPrivate(const CreateEnvironmentRequestPrivate &other,
                                    CreateEnvironmentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

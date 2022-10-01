@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexMatchSetResponse
- * \brief The UpdateRegexMatchSetResponse class provides an interace for WAFRegional UpdateRegexMatchSet responses.
+ * \class QtAws::WafRegional::UpdateRegexMatchSetResponse
+ * \brief The UpdateRegexMatchSetResponse class provides an interace for WafRegional UpdateRegexMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRegexMatchSet
+ * \sa WafRegionalClient::updateRegexMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
         const UpdateRegexMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRegexMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateRegexMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateRegexMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateRegexMatchSet \a response.
+ * Parses a successful WafRegional UpdateRegexMatchSet \a response.
  */
 void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexMatchSetResponsePrivate
+ * \class QtAws::WafRegional::UpdateRegexMatchSetResponsePrivate
  * \brief The UpdateRegexMatchSetResponsePrivate class provides private implementation for UpdateRegexMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
-    UpdateRegexMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateRegexMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateRegexMatchSet response element from \a xml.
+ * Parses a WafRegional UpdateRegexMatchSet response element from \a xml.
  */
 void UpdateRegexMatchSetResponsePrivate::parseUpdateRegexMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateRegexMatchSetResponsePrivate::parseUpdateRegexMatchSetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

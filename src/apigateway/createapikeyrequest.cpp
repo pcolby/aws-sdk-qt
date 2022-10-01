@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateApiKeyRequest
- * \brief The CreateApiKeyRequest class provides an interface for APIGateway CreateApiKey requests.
+ * \class QtAws::ApiGateway::CreateApiKeyRequest
+ * \brief The CreateApiKeyRequest class provides an interface for ApiGateway CreateApiKey requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createApiKey
+ * \sa ApiGatewayClient::createApiKey
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
-    : APIGatewayRequest(new CreateApiKeyRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateApiKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateApiKeyRequest::CreateApiKeyRequest(const CreateApiKeyRequest &other)
  * Constructs a CreateApiKeyRequest object.
  */
 CreateApiKeyRequest::CreateApiKeyRequest()
-    : APIGatewayRequest(new CreateApiKeyRequestPrivate(APIGatewayRequest::CreateApiKeyAction, this))
+    : ApiGatewayRequest(new CreateApiKeyRequestPrivate(ApiGatewayRequest::CreateApiKeyAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::APIGateway::CreateApiKeyRequestPrivate
+ * \class QtAws::ApiGateway::CreateApiKeyRequestPrivate
  * \brief The CreateApiKeyRequestPrivate class provides private implementation for CreateApiKeyRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateApiKeyRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateApiKeyRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
-    const APIGatewayRequest::Action action, CreateApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateApiKeyRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const CreateApiKeyRequestPrivate &other, CreateApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "createconfigurationsetrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class CreateConfigurationSetResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

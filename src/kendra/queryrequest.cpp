@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::QueryRequest
- * \brief The QueryRequest class provides an interface for kendra Query requests.
+ * \class QtAws::Kendra::QueryRequest
+ * \brief The QueryRequest class provides an interface for Kendra Query requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::query
+ * \sa KendraClient::query
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 QueryRequest::QueryRequest(const QueryRequest &other)
-    : kendraRequest(new QueryRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new QueryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ QueryRequest::QueryRequest(const QueryRequest &other)
  * Constructs a QueryRequest object.
  */
 QueryRequest::QueryRequest()
-    : kendraRequest(new QueryRequestPrivate(kendraRequest::QueryAction, this))
+    : KendraRequest(new QueryRequestPrivate(KendraRequest::QueryAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
 }
 
 /*!
- * \class QtAws::kendra::QueryRequestPrivate
+ * \class QtAws::Kendra::QueryRequestPrivate
  * \brief The QueryRequestPrivate class provides private implementation for QueryRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a QueryRequestPrivate object for kendra \a action,
+ * Constructs a QueryRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 QueryRequestPrivate::QueryRequestPrivate(
-    const kendraRequest::Action action, QueryRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, QueryRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ QueryRequestPrivate::QueryRequestPrivate(
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const QueryRequestPrivate &other, QueryRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

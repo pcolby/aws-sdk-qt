@@ -125,6 +125,10 @@ namespace IoTThingsGraph {
  * 
  *  For more information about how AWS IoT Things Graph works, see the <a
  *  href="https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html">User
+ * 
+ *  Guide</a>>
+ * 
+ *  The AWS IoT Things Graph service is
  */
 
 /*!
@@ -284,7 +288,7 @@ DeleteFlowTemplateResponse * IoTThingsGraphClient::deleteFlowTemplate(const Dele
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified namespace. This action deletes all of the entities in the namespace. Delete the systems and flows
- * that use entities in the namespace before performing this
+ * that use entities in the namespace before performing this action. This action takes no request
  */
 DeleteNamespaceResponse * IoTThingsGraphClient::deleteNamespace(const DeleteNamespaceRequest &request)
 {

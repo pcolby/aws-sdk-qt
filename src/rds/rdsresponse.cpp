@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RdsResponse
- * \brief The RdsResponse class provides an interface for RDS responses.
+ * \class QtAws::Rds::RdsResponse
+ * \brief The RdsResponse class provides an interface for Rds responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -76,11 +76,11 @@ void RdsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RdsResponsePrivate
+ * \class QtAws::Rds::RdsResponsePrivate
  * \brief The RdsResponsePrivate class provides private implementation for RdsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -92,5 +92,5 @@ RdsResponsePrivate::RdsResponsePrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

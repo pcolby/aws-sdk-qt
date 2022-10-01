@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DescribeEngagementRequest
- * \brief The DescribeEngagementRequest class provides an interface for SSMContacts DescribeEngagement requests.
+ * \class QtAws::SsmContacts::DescribeEngagementRequest
+ * \brief The DescribeEngagementRequest class provides an interface for SsmContacts DescribeEngagement requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::describeEngagement
+ * \sa SsmContactsClient::describeEngagement
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEngagementRequest::DescribeEngagementRequest(const DescribeEngagementRequest &other)
-    : SSMContactsRequest(new DescribeEngagementRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new DescribeEngagementRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ DescribeEngagementRequest::DescribeEngagementRequest(const DescribeEngagementReq
  * Constructs a DescribeEngagementRequest object.
  */
 DescribeEngagementRequest::DescribeEngagementRequest()
-    : SSMContactsRequest(new DescribeEngagementRequestPrivate(SSMContactsRequest::DescribeEngagementAction, this))
+    : SsmContactsRequest(new DescribeEngagementRequestPrivate(SsmContactsRequest::DescribeEngagementAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEngagementRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SSMContacts::DescribeEngagementRequestPrivate
+ * \class QtAws::SsmContacts::DescribeEngagementRequestPrivate
  * \brief The DescribeEngagementRequestPrivate class provides private implementation for DescribeEngagementRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a DescribeEngagementRequestPrivate object for SSMContacts \a action,
+ * Constructs a DescribeEngagementRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 DescribeEngagementRequestPrivate::DescribeEngagementRequestPrivate(
-    const SSMContactsRequest::Action action, DescribeEngagementRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, DescribeEngagementRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ DescribeEngagementRequestPrivate::DescribeEngagementRequestPrivate(
  */
 DescribeEngagementRequestPrivate::DescribeEngagementRequestPrivate(
     const DescribeEngagementRequestPrivate &other, DescribeEngagementRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

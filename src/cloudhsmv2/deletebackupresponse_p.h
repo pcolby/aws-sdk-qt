@@ -23,11 +23,11 @@
 #include "cloudhsmv2response_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DeleteBackupResponse;
 
-class DeleteBackupResponsePrivate : public CloudHSMV2ResponsePrivate {
+class DeleteBackupResponsePrivate : public CloudHsmV2ResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

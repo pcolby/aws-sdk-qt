@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListRegexMatchSetsRequest
- * \brief The ListRegexMatchSetsRequest class provides an interface for WAFRegional ListRegexMatchSets requests.
+ * \class QtAws::WafRegional::ListRegexMatchSetsRequest
+ * \brief The ListRegexMatchSetsRequest class provides an interface for WafRegional ListRegexMatchSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listRegexMatchSets
+ * \sa WafRegionalClient::listRegexMatchSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsRequest &other)
-    : WAFRegionalRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsReq
  * Constructs a ListRegexMatchSetsRequest object.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest()
-    : WAFRegionalRequest(new ListRegexMatchSetsRequestPrivate(WAFRegionalRequest::ListRegexMatchSetsAction, this))
+    : WafRegionalRequest(new ListRegexMatchSetsRequestPrivate(WafRegionalRequest::ListRegexMatchSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAFRegional::ListRegexMatchSetsRequestPrivate
+ * \class QtAws::WafRegional::ListRegexMatchSetsRequestPrivate
  * \brief The ListRegexMatchSetsRequestPrivate class provides private implementation for ListRegexMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListRegexMatchSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListRegexMatchSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListRegexMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListRegexMatchSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const ListRegexMatchSetsRequestPrivate &other, ListRegexMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

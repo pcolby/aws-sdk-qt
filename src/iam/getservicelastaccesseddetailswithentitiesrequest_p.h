@@ -24,7 +24,7 @@
 #include "getservicelastaccesseddetailswithentitiesrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class GetServiceLastAccessedDetailsWithEntitiesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

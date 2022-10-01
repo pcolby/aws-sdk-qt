@@ -24,14 +24,14 @@
 #include "deletesqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteSqlInjectionMatchSetRequest;
 
-class DeleteSqlInjectionMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteSqlInjectionMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteSqlInjectionMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteSqlInjectionMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteSqlInjectionMatchSetRequest * const q);
     DeleteSqlInjectionMatchSetRequestPrivate(const DeleteSqlInjectionMatchSetRequestPrivate &other,
                                    DeleteSqlInjectionMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

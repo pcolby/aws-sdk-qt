@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::PutImageRecipePolicyResponse
- * \brief The PutImageRecipePolicyResponse class provides an interace for imagebuilder PutImageRecipePolicy responses.
+ * \class QtAws::ImageBuilder::PutImageRecipePolicyResponse
+ * \brief The PutImageRecipePolicyResponse class provides an interace for ImageBuilder PutImageRecipePolicy responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::putImageRecipePolicy
+ * \sa ImageBuilderClient::putImageRecipePolicy
  */
 
 /*!
@@ -47,7 +47,7 @@ PutImageRecipePolicyResponse::PutImageRecipePolicyResponse(
         const PutImageRecipePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new PutImageRecipePolicyResponsePrivate(this), parent)
+    : ImageBuilderResponse(new PutImageRecipePolicyResponsePrivate(this), parent)
 {
     setRequest(new PutImageRecipePolicyRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const PutImageRecipePolicyRequest * PutImageRecipePolicyResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful imagebuilder PutImageRecipePolicy \a response.
+ * Parses a successful ImageBuilder PutImageRecipePolicy \a response.
  */
 void PutImageRecipePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void PutImageRecipePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::PutImageRecipePolicyResponsePrivate
+ * \class QtAws::ImageBuilder::PutImageRecipePolicyResponsePrivate
  * \brief The PutImageRecipePolicyResponsePrivate class provides private implementation for PutImageRecipePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a PutImageRecipePolicyResponsePrivate object with public implementation \a q.
  */
 PutImageRecipePolicyResponsePrivate::PutImageRecipePolicyResponsePrivate(
-    PutImageRecipePolicyResponse * const q) : imagebuilderResponsePrivate(q)
+    PutImageRecipePolicyResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder PutImageRecipePolicy response element from \a xml.
+ * Parses a ImageBuilder PutImageRecipePolicy response element from \a xml.
  */
 void PutImageRecipePolicyResponsePrivate::parsePutImageRecipePolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void PutImageRecipePolicyResponsePrivate::parsePutImageRecipePolicyResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

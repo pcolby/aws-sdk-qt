@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayClientPrivate;
+class ApiGatewayClientPrivate;
 class CreateApiKeyRequest;
 class CreateApiKeyResponse;
 class CreateAuthorizerRequest;
@@ -271,17 +271,17 @@ class UpdateUsagePlanResponse;
 class UpdateVpcLinkRequest;
 class UpdateVpcLinkResponse;
 
-class QTAWSAPIGATEWAY_EXPORT APIGatewayClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPIGATEWAY_EXPORT ApiGatewayClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    APIGatewayClient(
+    ApiGatewayClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit APIGatewayClient(
+    explicit ApiGatewayClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -409,12 +409,12 @@ public slots:
     UpdateVpcLinkResponse * updateVpcLink(const UpdateVpcLinkRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(APIGatewayClient)
-    Q_DISABLE_COPY(APIGatewayClient)
+    Q_DECLARE_PRIVATE(ApiGatewayClient)
+    Q_DISABLE_COPY(ApiGatewayClient)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

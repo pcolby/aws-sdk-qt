@@ -23,37 +23,46 @@
 #include "acmpcarequest_p.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::GetPolicyRequest
- * \brief The GetPolicyRequest class provides an interface for ACMPCA GetPolicy requests.
+ * \class QtAws::AcmPca::GetPolicyRequest
+ * \brief The GetPolicyRequest class provides an interface for AcmPca GetPolicy requests.
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  *
- *  This is the <i>ACM Private CA API Reference</i>. It provides descriptions, syntax, and usage examples for each of the
- *  actions and data types involved in creating and managing private certificate authorities (CA) for your
+ *  This is the <i>Certificate Manager Private Certificate Authority (PCA) API Reference</i>. It provides descriptions,
+ *  syntax, and usage examples for each of the actions and data types involved in creating and managing a private
+ *  certificate authority (CA) for your
  * 
  *  organization>
  * 
- *  The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can
- *  use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For
- *  more information, see <a href="https://aws.amazon.com/tools/#SDKs">AWS
+ *  The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one
+ *  of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you
+ *  prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services
  * 
- *  SDKs</a>> <note>
+ *  SDKs</a>>
  * 
- *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
- *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
- *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API operation has a quota that determines the number of times the operation can be called per
+ *  second. ACM Private CA throttles API requests at different rates depending on the operation. Throttling means that ACM
+ *  Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of
+ *  requests per second. When a request is throttled, ACM Private CA returns a <a
+ *  href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. ACM
+ *  Private CA does not guarantee a minimum request rate for APIs.
+ * 
+ *  </p
+ * 
+ *  To see an up-to-date list of your ACM Private CA quotas, or to request a quota increase, log into your Amazon Web
+ *  Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a>
  *
- * \sa AcmpcaClient::getPolicy
+ * \sa AcmPcaClient::getPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
-    : AcmpcaRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
+    : AcmPcaRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +71,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
  * Constructs a GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
-    : AcmpcaRequest(new GetPolicyRequestPrivate(AcmpcaRequest::GetPolicyAction, this))
+    : AcmPcaRequest(new GetPolicyRequestPrivate(AcmPcaRequest::GetPolicyAction, this))
 {
 
 }
@@ -87,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::ACMPCA::GetPolicyRequestPrivate
+ * \class QtAws::AcmPca::GetPolicyRequestPrivate
  * \brief The GetPolicyRequestPrivate class provides private implementation for GetPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
- * Constructs a GetPolicyRequestPrivate object for Acmpca \a action,
+ * Constructs a GetPolicyRequestPrivate object for AcmPca \a action,
  * with public implementation \a q.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
-    const AcmpcaRequest::Action action, GetPolicyRequest * const q)
-    : AcmpcaRequestPrivate(action, q)
+    const AcmPcaRequest::Action action, GetPolicyRequest * const q)
+    : AcmPcaRequestPrivate(action, q)
 {
 
 }
@@ -113,10 +122,10 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)
-    : AcmpcaRequestPrivate(other, q)
+    : AcmPcaRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

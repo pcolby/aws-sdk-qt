@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::BatchCheckLayerAvailabilityRequest
- * \brief The BatchCheckLayerAvailabilityRequest class provides an interface for ECRPublic BatchCheckLayerAvailability requests.
+ * \class QtAws::EcrPublic::BatchCheckLayerAvailabilityRequest
+ * \brief The BatchCheckLayerAvailabilityRequest class provides an interface for EcrPublic BatchCheckLayerAvailability requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::batchCheckLayerAvailability
+ * \sa EcrPublicClient::batchCheckLayerAvailability
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const BatchCheckLayerAvailabilityRequest &other)
-    : ECRPublicRequest(new BatchCheckLayerAvailabilityRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new BatchCheckLayerAvailabilityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const Bat
  * Constructs a BatchCheckLayerAvailabilityRequest object.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest()
-    : ECRPublicRequest(new BatchCheckLayerAvailabilityRequestPrivate(ECRPublicRequest::BatchCheckLayerAvailabilityAction, this))
+    : EcrPublicRequest(new BatchCheckLayerAvailabilityRequestPrivate(EcrPublicRequest::BatchCheckLayerAvailabilityAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
 }
 
 /*!
- * \class QtAws::ECRPublic::BatchCheckLayerAvailabilityRequestPrivate
+ * \class QtAws::EcrPublic::BatchCheckLayerAvailabilityRequestPrivate
  * \brief The BatchCheckLayerAvailabilityRequestPrivate class provides private implementation for BatchCheckLayerAvailabilityRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for ECRPublic \a action,
+ * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
-    const ECRPublicRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const BatchCheckLayerAvailabilityRequestPrivate &other, BatchCheckLayerAvailabilityRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterRequest
- * \brief The DeleteDBClusterRequest class provides an interface for DocDB DeleteDBCluster requests.
+ * \class QtAws::DocDb::DeleteDBClusterRequest
+ * \brief The DeleteDBClusterRequest class provides an interface for DocDb DeleteDBCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBCluster
+ * \sa DocDbClient::deleteDBCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDBClusterRequest::DeleteDBClusterRequest(const DeleteDBClusterRequest &other)
-    : DocDBRequest(new DeleteDBClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DeleteDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteDBClusterRequest::DeleteDBClusterRequest(const DeleteDBClusterRequest &oth
  * Constructs a DeleteDBClusterRequest object.
  */
 DeleteDBClusterRequest::DeleteDBClusterRequest()
-    : DocDBRequest(new DeleteDBClusterRequestPrivate(DocDBRequest::DeleteDBClusterAction, this))
+    : DocDbRequest(new DeleteDBClusterRequestPrivate(DocDbRequest::DeleteDBClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterRequestPrivate
+ * \class QtAws::DocDb::DeleteDBClusterRequestPrivate
  * \brief The DeleteDBClusterRequestPrivate class provides private implementation for DeleteDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DeleteDBClusterRequestPrivate object for DocDB \a action,
+ * Constructs a DeleteDBClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
-    const DocDBRequest::Action action, DeleteDBClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DeleteDBClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
  */
 DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
     const DeleteDBClusterRequestPrivate &other, DeleteDBClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

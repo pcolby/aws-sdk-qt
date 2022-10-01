@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateSqlInjectionMatchSetResponse
- * \brief The CreateSqlInjectionMatchSetResponse class provides an interace for WAF CreateSqlInjectionMatchSet responses.
+ * \class QtAws::Waf::CreateSqlInjectionMatchSetResponse
+ * \brief The CreateSqlInjectionMatchSetResponse class provides an interace for Waf CreateSqlInjectionMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateSqlInjectionMatchSetRequest * CreateSqlInjectionMatchSetResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAF CreateSqlInjectionMatchSet \a response.
+ * Parses a successful Waf CreateSqlInjectionMatchSet \a response.
  */
 void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateSqlInjectionMatchSetResponsePrivate
+ * \class QtAws::Waf::CreateSqlInjectionMatchSetResponsePrivate
  * \brief The CreateSqlInjectionMatchSetResponsePrivate class provides private implementation for CreateSqlInjectionMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * Parses a WAF CreateSqlInjectionMatchSet response element from \a xml.
+ * Parses a Waf CreateSqlInjectionMatchSet response element from \a xml.
  */
 void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
-class CloudHSMClient;
+class CloudHsmClient;
 
-class CloudHSMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CloudHsmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit CloudHSMClientPrivate(CloudHSMClient * const q);
+    explicit CloudHsmClientPrivate(CloudHsmClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(CloudHSMClient)
-    Q_DISABLE_COPY(CloudHSMClientPrivate)
+    Q_DECLARE_PUBLIC(CloudHsmClient)
+    Q_DISABLE_COPY(CloudHsmClientPrivate)
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

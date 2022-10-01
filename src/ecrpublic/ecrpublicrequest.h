@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicRequestPrivate;
+class EcrPublicRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT ECRPublicRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSECRPUBLIC_EXPORT EcrPublicRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ECRPublic.
+    /// Actions supported by EcrPublic.
     enum Action {
         BatchCheckLayerAvailabilityAction,
         BatchDeleteImageAction,
@@ -65,9 +65,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ECRPublicRequest(const Action action);
-    ECRPublicRequest(const ECRPublicRequest &other);
-    ECRPublicRequest &operator=(const ECRPublicRequest &other);
+    EcrPublicRequest(const Action action);
+    EcrPublicRequest(const EcrPublicRequest &other);
+    EcrPublicRequest &operator=(const EcrPublicRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -76,12 +76,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ECRPublicRequest &other) const;
+    virtual bool operator==(const EcrPublicRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit ECRPublicRequest(ECRPublicRequestPrivate * const d);
+    explicit EcrPublicRequest(EcrPublicRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -94,11 +94,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(ECRPublicRequest)
+    Q_DECLARE_PRIVATE(EcrPublicRequest)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

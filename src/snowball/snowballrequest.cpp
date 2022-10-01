@@ -268,7 +268,7 @@ QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action action, SnowballRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-06-30"))
 {
 
 }

@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionResponsePrivate;
+class QldbSessionResponsePrivate;
 
-class QTAWSQLDBSESSION_EXPORT QLDBSessionResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSQLDBSESSION_EXPORT QldbSessionResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    QLDBSessionResponse(QObject * const parent = 0);
+    QldbSessionResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    QLDBSessionResponse(QLDBSessionResponsePrivate * const d, QObject * const parent);
+    QldbSessionResponse(QldbSessionResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(QLDBSessionResponse)
-    Q_DISABLE_COPY(QLDBSessionResponse)
+    Q_DECLARE_PRIVATE(QldbSessionResponse)
+    Q_DISABLE_COPY(QldbSessionResponse)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

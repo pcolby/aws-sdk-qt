@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDeploymentRequest
- * \brief The DeleteDeploymentRequest class provides an interface for APIGateway DeleteDeployment requests.
+ * \class QtAws::ApiGateway::DeleteDeploymentRequest
+ * \brief The DeleteDeploymentRequest class provides an interface for ApiGateway DeleteDeployment requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDeployment
+ * \sa ApiGatewayClient::deleteDeployment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDeploymentRequest::DeleteDeploymentRequest(const DeleteDeploymentRequest &other)
-    : APIGatewayRequest(new DeleteDeploymentRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteDeploymentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteDeploymentRequest::DeleteDeploymentRequest(const DeleteDeploymentRequest &
  * Constructs a DeleteDeploymentRequest object.
  */
 DeleteDeploymentRequest::DeleteDeploymentRequest()
-    : APIGatewayRequest(new DeleteDeploymentRequestPrivate(APIGatewayRequest::DeleteDeploymentAction, this))
+    : ApiGatewayRequest(new DeleteDeploymentRequestPrivate(ApiGatewayRequest::DeleteDeploymentAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDeploymentRequestPrivate
+ * \class QtAws::ApiGateway::DeleteDeploymentRequestPrivate
  * \brief The DeleteDeploymentRequestPrivate class provides private implementation for DeleteDeploymentRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteDeploymentRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteDeploymentRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteDeploymentRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteDeploymentRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const DeleteDeploymentRequestPrivate &other, DeleteDeploymentRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "putloggingconfigurationrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class PutLoggingConfigurationRequest;
 
-class PutLoggingConfigurationRequestPrivate : public WAFRegionalRequestPrivate {
+class PutLoggingConfigurationRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    PutLoggingConfigurationRequestPrivate(const WAFRegionalRequest::Action action,
+    PutLoggingConfigurationRequestPrivate(const WafRegionalRequest::Action action,
                                    PutLoggingConfigurationRequest * const q);
     PutLoggingConfigurationRequestPrivate(const PutLoggingConfigurationRequestPrivate &other,
                                    PutLoggingConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::imagebuilderResponse
- * \brief The imagebuilderResponse class provides an interface for imagebuilder responses.
+ * \class QtAws::ImageBuilder::ImageBuilderResponse
+ * \brief The ImageBuilderResponse class provides an interface for ImageBuilder responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a imagebuilderResponse object with parent \a parent.
+ * Constructs a ImageBuilderResponse object with parent \a parent.
  */
-imagebuilderResponse::imagebuilderResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new imagebuilderResponsePrivate(this), parent)
+ImageBuilderResponse::ImageBuilderResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new ImageBuilderResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a imagebuilderResponse object with private implementation \a d,
+ * Constructs a ImageBuilderResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from imagebuilderResponsePrivate.
+ * implementation that inherits from ImageBuilderResponsePrivate.
  */
-imagebuilderResponse::imagebuilderResponse(imagebuilderResponsePrivate * const d, QObject * const parent)
+ImageBuilderResponse::ImageBuilderResponse(ImageBuilderResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ imagebuilderResponse::imagebuilderResponse(imagebuilderResponsePrivate * const d
 /*!
  * \reimp
  */
-void imagebuilderResponse::parseFailure(QIODevice &response)
+void ImageBuilderResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(imagebuilderResponse);
+    //Q_D(ImageBuilderResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void imagebuilderResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::imagebuilderResponsePrivate
- * \brief The imagebuilderResponsePrivate class provides private implementation for imagebuilderResponse.
+ * \class QtAws::ImageBuilder::ImageBuilderResponsePrivate
+ * \brief The ImageBuilderResponsePrivate class provides private implementation for ImageBuilderResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a imagebuilderResponsePrivate object with public implementation \a q.
+ * Constructs a ImageBuilderResponsePrivate object with public implementation \a q.
  */
-imagebuilderResponsePrivate::imagebuilderResponsePrivate(
-    imagebuilderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+ImageBuilderResponsePrivate::ImageBuilderResponsePrivate(
+    ImageBuilderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

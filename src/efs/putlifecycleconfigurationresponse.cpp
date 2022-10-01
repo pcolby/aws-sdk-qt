@@ -25,21 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::PutLifecycleConfigurationResponse
- * \brief The PutLifecycleConfigurationResponse class provides an interace for EFS PutLifecycleConfiguration responses.
+ * \class QtAws::Efs::PutLifecycleConfigurationResponse
+ * \brief The PutLifecycleConfigurationResponse class provides an interace for Efs PutLifecycleConfiguration responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  *
  * \sa EfsClient::putLifecycleConfiguration
  */
@@ -68,7 +69,7 @@ const PutLifecycleConfigurationRequest * PutLifecycleConfigurationResponse::requ
 
 /*!
  * \reimp
- * Parses a successful EFS PutLifecycleConfiguration \a response.
+ * Parses a successful Efs PutLifecycleConfiguration \a response.
  */
 void PutLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +79,11 @@ void PutLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::PutLifecycleConfigurationResponsePrivate
+ * \class QtAws::Efs::PutLifecycleConfigurationResponsePrivate
  * \brief The PutLifecycleConfigurationResponsePrivate class provides private implementation for PutLifecycleConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -95,7 +96,7 @@ PutLifecycleConfigurationResponsePrivate::PutLifecycleConfigurationResponsePriva
 }
 
 /*!
- * Parses a EFS PutLifecycleConfiguration response element from \a xml.
+ * Parses a Efs PutLifecycleConfiguration response element from \a xml.
  */
 void PutLifecycleConfigurationResponsePrivate::parsePutLifecycleConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +104,5 @@ void PutLifecycleConfigurationResponsePrivate::parsePutLifecycleConfigurationRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetResponse
- * \brief The DeleteConfigurationSetResponse class provides an interace for PinpointSMSVoice DeleteConfigurationSet responses.
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetResponse
+ * \brief The DeleteConfigurationSetResponse class provides an interace for PinpointSmsVoice DeleteConfigurationSet responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::deleteConfigurationSet
+ * \sa PinpointSmsVoiceClient::deleteConfigurationSet
  */
 
 /*!
@@ -44,7 +44,7 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
         const DeleteConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice DeleteConfigurationSet \a response.
+ * Parses a successful PinpointSmsVoice DeleteConfigurationSet \a response.
  */
 void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetResponsePrivate
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetResponsePrivate
  * \brief The DeleteConfigurationSetResponsePrivate class provides private implementation for DeleteConfigurationSetResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a DeleteConfigurationSetResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
-    DeleteConfigurationSetResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    DeleteConfigurationSetResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice DeleteConfigurationSet response element from \a xml.
+ * Parses a PinpointSmsVoice DeleteConfigurationSet response element from \a xml.
  */
 void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

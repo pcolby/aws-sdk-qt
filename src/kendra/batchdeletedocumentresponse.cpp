@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchDeleteDocumentResponse
- * \brief The BatchDeleteDocumentResponse class provides an interace for kendra BatchDeleteDocument responses.
+ * \class QtAws::Kendra::BatchDeleteDocumentResponse
+ * \brief The BatchDeleteDocumentResponse class provides an interace for Kendra BatchDeleteDocument responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchDeleteDocument
+ * \sa KendraClient::batchDeleteDocument
  */
 
 /*!
@@ -45,7 +45,7 @@ BatchDeleteDocumentResponse::BatchDeleteDocumentResponse(
         const BatchDeleteDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new BatchDeleteDocumentResponsePrivate(this), parent)
+    : KendraResponse(new BatchDeleteDocumentResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteDocumentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const BatchDeleteDocumentRequest * BatchDeleteDocumentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra BatchDeleteDocument \a response.
+ * Parses a successful Kendra BatchDeleteDocument \a response.
  */
 void BatchDeleteDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void BatchDeleteDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::BatchDeleteDocumentResponsePrivate
+ * \class QtAws::Kendra::BatchDeleteDocumentResponsePrivate
  * \brief The BatchDeleteDocumentResponsePrivate class provides private implementation for BatchDeleteDocumentResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a BatchDeleteDocumentResponsePrivate object with public implementation \a q.
  */
 BatchDeleteDocumentResponsePrivate::BatchDeleteDocumentResponsePrivate(
-    BatchDeleteDocumentResponse * const q) : kendraResponsePrivate(q)
+    BatchDeleteDocumentResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra BatchDeleteDocument response element from \a xml.
+ * Parses a Kendra BatchDeleteDocument response element from \a xml.
  */
 void BatchDeleteDocumentResponsePrivate::parseBatchDeleteDocumentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void BatchDeleteDocumentResponsePrivate::parseBatchDeleteDocumentResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

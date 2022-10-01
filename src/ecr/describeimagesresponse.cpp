@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DescribeImagesResponse
- * \brief The DescribeImagesResponse class provides an interace for ECR DescribeImages responses.
+ * \class QtAws::Ecr::DescribeImagesResponse
+ * \brief The DescribeImagesResponse class provides an interace for Ecr DescribeImages responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::describeImages
  */
@@ -68,7 +74,7 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR DescribeImages \a response.
+ * Parses a successful Ecr DescribeImages \a response.
  */
 void DescribeImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DescribeImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DescribeImagesResponsePrivate
+ * \class QtAws::Ecr::DescribeImagesResponsePrivate
  * \brief The DescribeImagesResponsePrivate class provides private implementation for DescribeImagesResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
 }
 
 /*!
- * Parses a ECR DescribeImages response element from \a xml.
+ * Parses a Ecr DescribeImages response element from \a xml.
  */
 void DescribeImagesResponsePrivate::parseDescribeImagesResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DescribeImagesResponsePrivate::parseDescribeImagesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

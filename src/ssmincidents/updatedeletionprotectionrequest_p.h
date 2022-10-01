@@ -24,14 +24,14 @@
 #include "updatedeletionprotectionrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class UpdateDeletionProtectionRequest;
 
-class UpdateDeletionProtectionRequestPrivate : public SSMIncidentsRequestPrivate {
+class UpdateDeletionProtectionRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    UpdateDeletionProtectionRequestPrivate(const SSMIncidentsRequest::Action action,
+    UpdateDeletionProtectionRequestPrivate(const SsmIncidentsRequest::Action action,
                                    UpdateDeletionProtectionRequest * const q);
     UpdateDeletionProtectionRequestPrivate(const UpdateDeletionProtectionRequestPrivate &other,
                                    UpdateDeletionProtectionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

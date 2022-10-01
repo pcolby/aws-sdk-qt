@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ActivateContactChannelResponse
- * \brief The ActivateContactChannelResponse class provides an interace for SSMContacts ActivateContactChannel responses.
+ * \class QtAws::SsmContacts::ActivateContactChannelResponse
+ * \brief The ActivateContactChannelResponse class provides an interace for SsmContacts ActivateContactChannel responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::activateContactChannel
+ * \sa SsmContactsClient::activateContactChannel
  */
 
 /*!
@@ -44,7 +54,7 @@ ActivateContactChannelResponse::ActivateContactChannelResponse(
         const ActivateContactChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new ActivateContactChannelResponsePrivate(this), parent)
+    : SsmContactsResponse(new ActivateContactChannelResponsePrivate(this), parent)
 {
     setRequest(new ActivateContactChannelRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const ActivateContactChannelRequest * ActivateContactChannelResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SSMContacts ActivateContactChannel \a response.
+ * Parses a successful SsmContacts ActivateContactChannel \a response.
  */
 void ActivateContactChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void ActivateContactChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::ActivateContactChannelResponsePrivate
+ * \class QtAws::SsmContacts::ActivateContactChannelResponsePrivate
  * \brief The ActivateContactChannelResponsePrivate class provides private implementation for ActivateContactChannelResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a ActivateContactChannelResponsePrivate object with public implementation \a q.
  */
 ActivateContactChannelResponsePrivate::ActivateContactChannelResponsePrivate(
-    ActivateContactChannelResponse * const q) : SSMContactsResponsePrivate(q)
+    ActivateContactChannelResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts ActivateContactChannel response element from \a xml.
+ * Parses a SsmContacts ActivateContactChannel response element from \a xml.
  */
 void ActivateContactChannelResponsePrivate::parseActivateContactChannelResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void ActivateContactChannelResponsePrivate::parseActivateContactChannelResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

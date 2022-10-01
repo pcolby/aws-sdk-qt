@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryPolicyRequest
- * \brief The DeleteRepositoryPolicyRequest class provides an interface for ECRPublic DeleteRepositoryPolicy requests.
+ * \class QtAws::EcrPublic::DeleteRepositoryPolicyRequest
+ * \brief The DeleteRepositoryPolicyRequest class provides an interface for EcrPublic DeleteRepositoryPolicy requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::deleteRepositoryPolicy
+ * \sa EcrPublicClient::deleteRepositoryPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteRepositoryPolicyRequest &other)
-    : ECRPublicRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteReposit
  * Constructs a DeleteRepositoryPolicyRequest object.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
-    : ECRPublicRequest(new DeleteRepositoryPolicyRequestPrivate(ECRPublicRequest::DeleteRepositoryPolicyAction, this))
+    : EcrPublicRequest(new DeleteRepositoryPolicyRequestPrivate(EcrPublicRequest::DeleteRepositoryPolicyAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryPolicyRequestPrivate
+ * \class QtAws::EcrPublic::DeleteRepositoryPolicyRequestPrivate
  * \brief The DeleteRepositoryPolicyRequestPrivate class provides private implementation for DeleteRepositoryPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a DeleteRepositoryPolicyRequestPrivate object for ECRPublic \a action,
+ * Constructs a DeleteRepositoryPolicyRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
-    const ECRPublicRequest::Action action, DeleteRepositoryPolicyRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, DeleteRepositoryPolicyRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const DeleteRepositoryPolicyRequestPrivate &other, DeleteRepositoryPolicyRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

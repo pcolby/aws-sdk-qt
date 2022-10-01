@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::GetManagedScalingPolicyRequest
- * \brief The GetManagedScalingPolicyRequest class provides an interface for EMR GetManagedScalingPolicy requests.
+ * \class QtAws::Emr::GetManagedScalingPolicyRequest
+ * \brief The GetManagedScalingPolicyRequest class provides an interface for Emr GetManagedScalingPolicy requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::getManagedScalingPolicy
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * GetManagedScalingPolicyRequest::response(QNet
 }
 
 /*!
- * \class QtAws::EMR::GetManagedScalingPolicyRequestPrivate
+ * \class QtAws::Emr::GetManagedScalingPolicyRequestPrivate
  * \brief The GetManagedScalingPolicyRequestPrivate class provides private implementation for GetManagedScalingPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ GetManagedScalingPolicyRequestPrivate::GetManagedScalingPolicyRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

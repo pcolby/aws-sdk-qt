@@ -23,18 +23,18 @@
 #include "dlmrequest_p.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for DLM UntagResource requests.
+ * \class QtAws::Dlm::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for Dlm UntagResource requests.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::DLM::UntagResourceRequestPrivate
+ * \class QtAws::Dlm::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -114,5 +114,5 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

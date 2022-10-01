@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::FlushStageCacheRequest
- * \brief The FlushStageCacheRequest class provides an interface for APIGateway FlushStageCache requests.
+ * \class QtAws::ApiGateway::FlushStageCacheRequest
+ * \brief The FlushStageCacheRequest class provides an interface for ApiGateway FlushStageCache requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::flushStageCache
+ * \sa ApiGatewayClient::flushStageCache
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &other)
-    : APIGatewayRequest(new FlushStageCacheRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new FlushStageCacheRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &oth
  * Constructs a FlushStageCacheRequest object.
  */
 FlushStageCacheRequest::FlushStageCacheRequest()
-    : APIGatewayRequest(new FlushStageCacheRequestPrivate(APIGatewayRequest::FlushStageCacheAction, this))
+    : ApiGatewayRequest(new FlushStageCacheRequestPrivate(ApiGatewayRequest::FlushStageCacheAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::APIGateway::FlushStageCacheRequestPrivate
+ * \class QtAws::ApiGateway::FlushStageCacheRequestPrivate
  * \brief The FlushStageCacheRequestPrivate class provides private implementation for FlushStageCacheRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a FlushStageCacheRequestPrivate object for APIGateway \a action,
+ * Constructs a FlushStageCacheRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
-    const APIGatewayRequest::Action action, FlushStageCacheRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, FlushStageCacheRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const FlushStageCacheRequestPrivate &other, FlushStageCacheRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

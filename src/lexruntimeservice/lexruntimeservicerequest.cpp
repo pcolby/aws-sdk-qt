@@ -248,7 +248,7 @@ QNetworkRequest LexRuntimeServiceRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequest::Action action, LexRuntimeServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-11-28"))
 {
 
 }

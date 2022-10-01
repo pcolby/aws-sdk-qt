@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::SignalWorkflowExecutionResponse
- * \brief The SignalWorkflowExecutionResponse class provides an interace for SWF SignalWorkflowExecution responses.
+ * \class QtAws::Swf::SignalWorkflowExecutionResponse
+ * \brief The SignalWorkflowExecutionResponse class provides an interace for Swf SignalWorkflowExecution responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful SWF SignalWorkflowExecution \a response.
+ * Parses a successful Swf SignalWorkflowExecution \a response.
  */
 void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::SignalWorkflowExecutionResponsePrivate
+ * \class QtAws::Swf::SignalWorkflowExecutionResponsePrivate
  * \brief The SignalWorkflowExecutionResponsePrivate class provides private implementation for SignalWorkflowExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
 }
 
 /*!
- * Parses a SWF SignalWorkflowExecution response element from \a xml.
+ * Parses a Swf SignalWorkflowExecution response element from \a xml.
  */
 void SignalWorkflowExecutionResponsePrivate::parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void SignalWorkflowExecutionResponsePrivate::parseSignalWorkflowExecutionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

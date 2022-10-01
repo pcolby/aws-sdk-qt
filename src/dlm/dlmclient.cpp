@@ -42,8 +42,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::DLM
- * \brief Contains classess for accessing Amazon Data Lifecycle Manager ( DLM).
+ * \namespace QtAws::Dlm
+ * \brief Contains classess for accessing Amazon Data Lifecycle Manager.
  *
  * \inmodule QtAwsDlm
  *
@@ -51,19 +51,19 @@
  */
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::DlmClient
- * \brief The DlmClient class provides access to the Amazon Data Lifecycle Manager ( DLM) service.
+ * \class QtAws::Dlm::DlmClient
+ * \brief The DlmClient class provides access to the Amazon Data Lifecycle Manager service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -131,7 +131,8 @@ DlmClient::DlmClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a policy to manage the lifecycle of the specified AWS resources. You can create up to 100 lifecycle
+ * Creates a policy to manage the lifecycle of the specified Amazon Web Services resources. You can create up to 100
+ * lifecycle
  */
 CreateLifecyclePolicyResponse * DlmClient::createLifecyclePolicy(const CreateLifecyclePolicyRequest &request)
 {
@@ -234,12 +235,12 @@ UpdateLifecyclePolicyResponse * DlmClient::updateLifecyclePolicy(const UpdateLif
 }
 
 /*!
- * \class QtAws::DLM::DlmClientPrivate
+ * \class QtAws::Dlm::DlmClientPrivate
  * \brief The DlmClientPrivate class provides private implementation for DlmClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -251,5 +252,5 @@ DlmClientPrivate::DlmClientPrivate(DlmClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

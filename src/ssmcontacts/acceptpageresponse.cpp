@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::AcceptPageResponse
- * \brief The AcceptPageResponse class provides an interace for SSMContacts AcceptPage responses.
+ * \class QtAws::SsmContacts::AcceptPageResponse
+ * \brief The AcceptPageResponse class provides an interace for SsmContacts AcceptPage responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::acceptPage
+ * \sa SsmContactsClient::acceptPage
  */
 
 /*!
@@ -44,7 +54,7 @@ AcceptPageResponse::AcceptPageResponse(
         const AcceptPageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new AcceptPageResponsePrivate(this), parent)
+    : SsmContactsResponse(new AcceptPageResponsePrivate(this), parent)
 {
     setRequest(new AcceptPageRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const AcceptPageRequest * AcceptPageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts AcceptPage \a response.
+ * Parses a successful SsmContacts AcceptPage \a response.
  */
 void AcceptPageResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void AcceptPageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::AcceptPageResponsePrivate
+ * \class QtAws::SsmContacts::AcceptPageResponsePrivate
  * \brief The AcceptPageResponsePrivate class provides private implementation for AcceptPageResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a AcceptPageResponsePrivate object with public implementation \a q.
  */
 AcceptPageResponsePrivate::AcceptPageResponsePrivate(
-    AcceptPageResponse * const q) : SSMContactsResponsePrivate(q)
+    AcceptPageResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts AcceptPage response element from \a xml.
+ * Parses a SsmContacts AcceptPage response element from \a xml.
  */
 void AcceptPageResponsePrivate::parseAcceptPageResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void AcceptPageResponsePrivate::parseAcceptPageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

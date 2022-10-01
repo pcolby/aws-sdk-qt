@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteRegexPatternSetRequest
- * \brief The DeleteRegexPatternSetRequest class provides an interface for WAFRegional DeleteRegexPatternSet requests.
+ * \class QtAws::WafRegional::DeleteRegexPatternSetRequest
+ * \brief The DeleteRegexPatternSetRequest class provides an interface for WafRegional DeleteRegexPatternSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteRegexPatternSet
+ * \sa WafRegionalClient::deleteRegexPatternSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatternSetRequest &other)
-    : WAFRegionalRequest(new DeleteRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatt
  * Constructs a DeleteRegexPatternSetRequest object.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest()
-    : WAFRegionalRequest(new DeleteRegexPatternSetRequestPrivate(WAFRegionalRequest::DeleteRegexPatternSetAction, this))
+    : WafRegionalRequest(new DeleteRegexPatternSetRequestPrivate(WafRegionalRequest::DeleteRegexPatternSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteRegexPatternSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteRegexPatternSetRequestPrivate
  * \brief The DeleteRegexPatternSetRequestPrivate class provides private implementation for DeleteRegexPatternSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteRegexPatternSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteRegexPatternSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteRegexPatternSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const DeleteRegexPatternSetRequestPrivate &other, DeleteRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

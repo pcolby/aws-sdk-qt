@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsClientPrivate;
+class CodestarNotificationsClientPrivate;
 class CreateNotificationRuleRequest;
 class CreateNotificationRuleResponse;
 class DeleteNotificationRuleRequest;
@@ -57,17 +57,17 @@ class UntagResourceResponse;
 class UpdateNotificationRuleRequest;
 class UpdateNotificationRuleResponse;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT CodeStarNotificationsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT CodestarNotificationsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    CodeStarNotificationsClient(
+    CodestarNotificationsClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit CodeStarNotificationsClient(
+    explicit CodestarNotificationsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -88,12 +88,12 @@ public slots:
     UpdateNotificationRuleResponse * updateNotificationRule(const UpdateNotificationRuleRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(CodeStarNotificationsClient)
-    Q_DISABLE_COPY(CodeStarNotificationsClient)
+    Q_DECLARE_PRIVATE(CodestarNotificationsClient)
+    Q_DISABLE_COPY(CodestarNotificationsClient)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateGlobalTableResponse
- * \brief The UpdateGlobalTableResponse class provides an interace for DynamoDB UpdateGlobalTable responses.
+ * \class QtAws::DynamoDb::UpdateGlobalTableResponse
+ * \brief The UpdateGlobalTableResponse class provides an interace for DynamoDb UpdateGlobalTable responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateGlobalTable
+ * \sa DynamoDbClient::updateGlobalTable
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateGlobalTableResponse::UpdateGlobalTableResponse(
         const UpdateGlobalTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateGlobalTableResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateGlobalTableResponsePrivate(this), parent)
 {
     setRequest(new UpdateGlobalTableRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateGlobalTableRequest * UpdateGlobalTableResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateGlobalTable \a response.
+ * Parses a successful DynamoDb UpdateGlobalTable \a response.
  */
 void UpdateGlobalTableResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateGlobalTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateGlobalTableResponsePrivate
+ * \class QtAws::DynamoDb::UpdateGlobalTableResponsePrivate
  * \brief The UpdateGlobalTableResponsePrivate class provides private implementation for UpdateGlobalTableResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateGlobalTableResponsePrivate object with public implementation \a q.
  */
 UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponsePrivate(
-    UpdateGlobalTableResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateGlobalTableResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateGlobalTable response element from \a xml.
+ * Parses a DynamoDb UpdateGlobalTable response element from \a xml.
  */
 void UpdateGlobalTableResponsePrivate::parseUpdateGlobalTableResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateGlobalTableResponsePrivate::parseUpdateGlobalTableResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateWebACLRequest
- * \brief The CreateWebACLRequest class provides an interface for WAF CreateWebACL requests.
+ * \class QtAws::Waf::CreateWebACLRequest
+ * \brief The CreateWebACLRequest class provides an interface for Waf CreateWebACL requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAF::CreateWebACLRequestPrivate
+ * \class QtAws::Waf::CreateWebACLRequestPrivate
  * \brief The CreateWebACLRequestPrivate class provides private implementation for CreateWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

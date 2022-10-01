@@ -268,7 +268,7 @@ QNetworkRequest GroundStationRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 GroundStationRequestPrivate::GroundStationRequestPrivate(const GroundStationRequest::Action action, GroundStationRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-05-23"))
 {
 
 }

@@ -24,7 +24,7 @@
 #include "updatestudiorequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class UpdateStudioRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

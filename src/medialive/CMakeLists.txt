@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIALIVE_LIBRARY)
 
 add_library(QtAwsMediaLive
+  qtawsmedialiveglobal.h
+  medialiveclient.h
+  medialiveclient_p.h
+  medialiverequest.h
+  medialiverequest_p.h
+  medialiveresponse.h
+  medialiveresponse_p.h
   acceptinputdevicetransferrequest.h
   acceptinputdevicetransferrequest_p.h
   acceptinputdevicetransferresponse.h
@@ -25,6 +32,10 @@ add_library(QtAwsMediaLive
   cancelinputdevicetransferrequest_p.h
   cancelinputdevicetransferresponse.h
   cancelinputdevicetransferresponse_p.h
+  claimdevicerequest.h
+  claimdevicerequest_p.h
+  claimdeviceresponse.h
+  claimdeviceresponse_p.h
   createchannelrequest.h
   createchannelrequest_p.h
   createchannelresponse.h
@@ -37,14 +48,14 @@ add_library(QtAwsMediaLive
   createinputsecuritygrouprequest_p.h
   createinputsecuritygroupresponse.h
   createinputsecuritygroupresponse_p.h
-  createmultiplexprogramrequest.h
-  createmultiplexprogramrequest_p.h
-  createmultiplexprogramresponse.h
-  createmultiplexprogramresponse_p.h
   createmultiplexrequest.h
   createmultiplexrequest_p.h
   createmultiplexresponse.h
   createmultiplexresponse_p.h
+  createmultiplexprogramrequest.h
+  createmultiplexprogramrequest_p.h
+  createmultiplexprogramresponse.h
+  createmultiplexprogramresponse_p.h
   createpartnerinputrequest.h
   createpartnerinputrequest_p.h
   createpartnerinputresponse.h
@@ -65,14 +76,14 @@ add_library(QtAwsMediaLive
   deleteinputsecuritygrouprequest_p.h
   deleteinputsecuritygroupresponse.h
   deleteinputsecuritygroupresponse_p.h
-  deletemultiplexprogramrequest.h
-  deletemultiplexprogramrequest_p.h
-  deletemultiplexprogramresponse.h
-  deletemultiplexprogramresponse_p.h
   deletemultiplexrequest.h
   deletemultiplexrequest_p.h
   deletemultiplexresponse.h
   deletemultiplexresponse_p.h
+  deletemultiplexprogramrequest.h
+  deletemultiplexprogramrequest_p.h
+  deletemultiplexprogramresponse.h
+  deletemultiplexprogramresponse_p.h
   deletereservationrequest.h
   deletereservationrequest_p.h
   deletereservationresponse.h
@@ -89,6 +100,10 @@ add_library(QtAwsMediaLive
   describechannelrequest_p.h
   describechannelresponse.h
   describechannelresponse_p.h
+  describeinputrequest.h
+  describeinputrequest_p.h
+  describeinputresponse.h
+  describeinputresponse_p.h
   describeinputdevicerequest.h
   describeinputdevicerequest_p.h
   describeinputdeviceresponse.h
@@ -97,22 +112,18 @@ add_library(QtAwsMediaLive
   describeinputdevicethumbnailrequest_p.h
   describeinputdevicethumbnailresponse.h
   describeinputdevicethumbnailresponse_p.h
-  describeinputrequest.h
-  describeinputrequest_p.h
-  describeinputresponse.h
-  describeinputresponse_p.h
   describeinputsecuritygrouprequest.h
   describeinputsecuritygrouprequest_p.h
   describeinputsecuritygroupresponse.h
   describeinputsecuritygroupresponse_p.h
-  describemultiplexprogramrequest.h
-  describemultiplexprogramrequest_p.h
-  describemultiplexprogramresponse.h
-  describemultiplexprogramresponse_p.h
   describemultiplexrequest.h
   describemultiplexrequest_p.h
   describemultiplexresponse.h
   describemultiplexresponse_p.h
+  describemultiplexprogramrequest.h
+  describemultiplexprogramrequest_p.h
+  describemultiplexprogramresponse.h
+  describemultiplexprogramresponse_p.h
   describeofferingrequest.h
   describeofferingrequest_p.h
   describeofferingresponse.h
@@ -129,14 +140,14 @@ add_library(QtAwsMediaLive
   listchannelsrequest_p.h
   listchannelsresponse.h
   listchannelsresponse_p.h
-  listinputdevicesrequest.h
-  listinputdevicesrequest_p.h
-  listinputdevicesresponse.h
-  listinputdevicesresponse_p.h
   listinputdevicetransfersrequest.h
   listinputdevicetransfersrequest_p.h
   listinputdevicetransfersresponse.h
   listinputdevicetransfersresponse_p.h
+  listinputdevicesrequest.h
+  listinputdevicesrequest_p.h
+  listinputdevicesresponse.h
+  listinputdevicesresponse_p.h
   listinputsecuritygroupsrequest.h
   listinputsecuritygroupsrequest_p.h
   listinputsecuritygroupsresponse.h
@@ -145,14 +156,14 @@ add_library(QtAwsMediaLive
   listinputsrequest_p.h
   listinputsresponse.h
   listinputsresponse_p.h
-  listmultiplexesrequest.h
-  listmultiplexesrequest_p.h
-  listmultiplexesresponse.h
-  listmultiplexesresponse_p.h
   listmultiplexprogramsrequest.h
   listmultiplexprogramsrequest_p.h
   listmultiplexprogramsresponse.h
   listmultiplexprogramsresponse_p.h
+  listmultiplexesrequest.h
+  listmultiplexesrequest_p.h
+  listmultiplexesresponse.h
+  listmultiplexesresponse_p.h
   listofferingsrequest.h
   listofferingsrequest_p.h
   listofferingsresponse.h
@@ -165,17 +176,14 @@ add_library(QtAwsMediaLive
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  medialiveclient.h
-  medialiveclient_p.h
-  medialiverequest.h
-  medialiverequest_p.h
-  medialiveresponse.h
-  medialiveresponse_p.h
   purchaseofferingrequest.h
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
-  qtawsmedialiveglobal.h
+  rebootinputdevicerequest.h
+  rebootinputdevicerequest_p.h
+  rebootinputdeviceresponse.h
+  rebootinputdeviceresponse_p.h
   rejectinputdevicetransferrequest.h
   rejectinputdevicetransferrequest_p.h
   rejectinputdevicetransferresponse.h
@@ -184,6 +192,10 @@ add_library(QtAwsMediaLive
   startchannelrequest_p.h
   startchannelresponse.h
   startchannelresponse_p.h
+  startinputdevicemaintenancewindowrequest.h
+  startinputdevicemaintenancewindowrequest_p.h
+  startinputdevicemaintenancewindowresponse.h
+  startinputdevicemaintenancewindowresponse_p.h
   startmultiplexrequest.h
   startmultiplexrequest_p.h
   startmultiplexresponse.h
@@ -200,38 +212,41 @@ add_library(QtAwsMediaLive
   transferinputdevicerequest_p.h
   transferinputdeviceresponse.h
   transferinputdeviceresponse_p.h
-  updatechannelclassrequest.h
-  updatechannelclassrequest_p.h
-  updatechannelclassresponse.h
-  updatechannelclassresponse_p.h
   updatechannelrequest.h
   updatechannelrequest_p.h
   updatechannelresponse.h
   updatechannelresponse_p.h
-  updateinputdevicerequest.h
-  updateinputdevicerequest_p.h
-  updateinputdeviceresponse.h
-  updateinputdeviceresponse_p.h
+  updatechannelclassrequest.h
+  updatechannelclassrequest_p.h
+  updatechannelclassresponse.h
+  updatechannelclassresponse_p.h
   updateinputrequest.h
   updateinputrequest_p.h
   updateinputresponse.h
   updateinputresponse_p.h
+  updateinputdevicerequest.h
+  updateinputdevicerequest_p.h
+  updateinputdeviceresponse.h
+  updateinputdeviceresponse_p.h
   updateinputsecuritygrouprequest.h
   updateinputsecuritygrouprequest_p.h
   updateinputsecuritygroupresponse.h
   updateinputsecuritygroupresponse_p.h
-  updatemultiplexprogramrequest.h
-  updatemultiplexprogramrequest_p.h
-  updatemultiplexprogramresponse.h
-  updatemultiplexprogramresponse_p.h
   updatemultiplexrequest.h
   updatemultiplexrequest_p.h
   updatemultiplexresponse.h
   updatemultiplexresponse_p.h
+  updatemultiplexprogramrequest.h
+  updatemultiplexprogramrequest_p.h
+  updatemultiplexprogramresponse.h
+  updatemultiplexprogramresponse_p.h
   updatereservationrequest.h
   updatereservationrequest_p.h
   updatereservationresponse.h
   updatereservationresponse_p.h
+  medialiveclient.cpp
+  medialiverequest.cpp
+  medialiveresponse.cpp
   acceptinputdevicetransferrequest.cpp
   acceptinputdevicetransferresponse.cpp
   batchdeleterequest.cpp
@@ -244,16 +259,18 @@ add_library(QtAwsMediaLive
   batchupdatescheduleresponse.cpp
   cancelinputdevicetransferrequest.cpp
   cancelinputdevicetransferresponse.cpp
+  claimdevicerequest.cpp
+  claimdeviceresponse.cpp
   createchannelrequest.cpp
   createchannelresponse.cpp
   createinputrequest.cpp
   createinputresponse.cpp
   createinputsecuritygrouprequest.cpp
   createinputsecuritygroupresponse.cpp
-  createmultiplexprogramrequest.cpp
-  createmultiplexprogramresponse.cpp
   createmultiplexrequest.cpp
   createmultiplexresponse.cpp
+  createmultiplexprogramrequest.cpp
+  createmultiplexprogramresponse.cpp
   createpartnerinputrequest.cpp
   createpartnerinputresponse.cpp
   createtagsrequest.cpp
@@ -264,10 +281,10 @@ add_library(QtAwsMediaLive
   deleteinputresponse.cpp
   deleteinputsecuritygrouprequest.cpp
   deleteinputsecuritygroupresponse.cpp
-  deletemultiplexprogramrequest.cpp
-  deletemultiplexprogramresponse.cpp
   deletemultiplexrequest.cpp
   deletemultiplexresponse.cpp
+  deletemultiplexprogramrequest.cpp
+  deletemultiplexprogramresponse.cpp
   deletereservationrequest.cpp
   deletereservationresponse.cpp
   deleteschedulerequest.cpp
@@ -276,18 +293,18 @@ add_library(QtAwsMediaLive
   deletetagsresponse.cpp
   describechannelrequest.cpp
   describechannelresponse.cpp
+  describeinputrequest.cpp
+  describeinputresponse.cpp
   describeinputdevicerequest.cpp
   describeinputdeviceresponse.cpp
   describeinputdevicethumbnailrequest.cpp
   describeinputdevicethumbnailresponse.cpp
-  describeinputrequest.cpp
-  describeinputresponse.cpp
   describeinputsecuritygrouprequest.cpp
   describeinputsecuritygroupresponse.cpp
-  describemultiplexprogramrequest.cpp
-  describemultiplexprogramresponse.cpp
   describemultiplexrequest.cpp
   describemultiplexresponse.cpp
+  describemultiplexprogramrequest.cpp
+  describemultiplexprogramresponse.cpp
   describeofferingrequest.cpp
   describeofferingresponse.cpp
   describereservationrequest.cpp
@@ -296,33 +313,34 @@ add_library(QtAwsMediaLive
   describescheduleresponse.cpp
   listchannelsrequest.cpp
   listchannelsresponse.cpp
-  listinputdevicesrequest.cpp
-  listinputdevicesresponse.cpp
   listinputdevicetransfersrequest.cpp
   listinputdevicetransfersresponse.cpp
+  listinputdevicesrequest.cpp
+  listinputdevicesresponse.cpp
   listinputsecuritygroupsrequest.cpp
   listinputsecuritygroupsresponse.cpp
   listinputsrequest.cpp
   listinputsresponse.cpp
-  listmultiplexesrequest.cpp
-  listmultiplexesresponse.cpp
   listmultiplexprogramsrequest.cpp
   listmultiplexprogramsresponse.cpp
+  listmultiplexesrequest.cpp
+  listmultiplexesresponse.cpp
   listofferingsrequest.cpp
   listofferingsresponse.cpp
   listreservationsrequest.cpp
   listreservationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  medialiveclient.cpp
-  medialiverequest.cpp
-  medialiveresponse.cpp
   purchaseofferingrequest.cpp
   purchaseofferingresponse.cpp
+  rebootinputdevicerequest.cpp
+  rebootinputdeviceresponse.cpp
   rejectinputdevicetransferrequest.cpp
   rejectinputdevicetransferresponse.cpp
   startchannelrequest.cpp
   startchannelresponse.cpp
+  startinputdevicemaintenancewindowrequest.cpp
+  startinputdevicemaintenancewindowresponse.cpp
   startmultiplexrequest.cpp
   startmultiplexresponse.cpp
   stopchannelrequest.cpp
@@ -331,20 +349,20 @@ add_library(QtAwsMediaLive
   stopmultiplexresponse.cpp
   transferinputdevicerequest.cpp
   transferinputdeviceresponse.cpp
-  updatechannelclassrequest.cpp
-  updatechannelclassresponse.cpp
   updatechannelrequest.cpp
   updatechannelresponse.cpp
-  updateinputdevicerequest.cpp
-  updateinputdeviceresponse.cpp
+  updatechannelclassrequest.cpp
+  updatechannelclassresponse.cpp
   updateinputrequest.cpp
   updateinputresponse.cpp
+  updateinputdevicerequest.cpp
+  updateinputdeviceresponse.cpp
   updateinputsecuritygrouprequest.cpp
   updateinputsecuritygroupresponse.cpp
-  updatemultiplexprogramrequest.cpp
-  updatemultiplexprogramresponse.cpp
   updatemultiplexrequest.cpp
   updatemultiplexresponse.cpp
+  updatemultiplexprogramrequest.cpp
+  updatemultiplexprogramresponse.cpp
   updatereservationrequest.cpp
   updatereservationresponse.cpp)
 

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::DescribeDomainResponse
- * \brief The DescribeDomainResponse class provides an interace for SWF DescribeDomain responses.
+ * \class QtAws::Swf::DescribeDomainResponse
+ * \brief The DescribeDomainResponse class provides an interace for Swf DescribeDomain responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const DescribeDomainRequest * DescribeDomainResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF DescribeDomain \a response.
+ * Parses a successful Swf DescribeDomain \a response.
  */
 void DescribeDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void DescribeDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::DescribeDomainResponsePrivate
+ * \class QtAws::Swf::DescribeDomainResponsePrivate
  * \brief The DescribeDomainResponsePrivate class provides private implementation for DescribeDomainResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
 }
 
 /*!
- * Parses a SWF DescribeDomain response element from \a xml.
+ * Parses a Swf DescribeDomain response element from \a xml.
  */
 void DescribeDomainResponsePrivate::parseDescribeDomainResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void DescribeDomainResponsePrivate::parseDescribeDomainResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

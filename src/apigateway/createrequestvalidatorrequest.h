@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateRequestValidatorRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT CreateRequestValidatorRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateRequestValidatorRequest : public ApiGatewayRequest {
 
 public:
     CreateRequestValidatorRequest(const CreateRequestValidatorRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

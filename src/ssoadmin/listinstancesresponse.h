@@ -24,11 +24,11 @@
 #include "listinstancesrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListInstancesResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT ListInstancesResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT ListInstancesResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

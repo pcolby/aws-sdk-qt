@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteVpcLinkRequest
- * \brief The DeleteVpcLinkRequest class provides an interface for APIGateway DeleteVpcLink requests.
+ * \class QtAws::ApiGateway::DeleteVpcLinkRequest
+ * \brief The DeleteVpcLinkRequest class provides an interface for ApiGateway DeleteVpcLink requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteVpcLink
+ * \sa ApiGatewayClient::deleteVpcLink
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteVpcLinkRequest::DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other)
-    : APIGatewayRequest(new DeleteVpcLinkRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteVpcLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteVpcLinkRequest::DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other)
  * Constructs a DeleteVpcLinkRequest object.
  */
 DeleteVpcLinkRequest::DeleteVpcLinkRequest()
-    : APIGatewayRequest(new DeleteVpcLinkRequestPrivate(APIGatewayRequest::DeleteVpcLinkAction, this))
+    : ApiGatewayRequest(new DeleteVpcLinkRequestPrivate(ApiGatewayRequest::DeleteVpcLinkAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteVpcLinkRequestPrivate
+ * \class QtAws::ApiGateway::DeleteVpcLinkRequestPrivate
  * \brief The DeleteVpcLinkRequestPrivate class provides private implementation for DeleteVpcLinkRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteVpcLinkRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteVpcLinkRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteVpcLinkRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const DeleteVpcLinkRequestPrivate &other, DeleteVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

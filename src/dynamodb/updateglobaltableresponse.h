@@ -24,11 +24,11 @@
 #include "updateglobaltablerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateGlobalTableResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT UpdateGlobalTableResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT UpdateGlobalTableResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
-class AcmpcaClient;
+class AcmPcaClient;
 
-class AcmpcaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AcmPcaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit AcmpcaClientPrivate(AcmpcaClient * const q);
+    explicit AcmPcaClientPrivate(AcmPcaClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(AcmpcaClient)
-    Q_DISABLE_COPY(AcmpcaClientPrivate)
+    Q_DECLARE_PUBLIC(AcmPcaClient)
+    Q_DISABLE_COPY(AcmPcaClientPrivate)
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

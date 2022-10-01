@@ -24,14 +24,14 @@
 #include "deletedocumentationpartrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteDocumentationPartRequest;
 
-class DeleteDocumentationPartRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteDocumentationPartRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteDocumentationPartRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteDocumentationPartRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteDocumentationPartRequest * const q);
     DeleteDocumentationPartRequestPrivate(const DeleteDocumentationPartRequestPrivate &other,
                                    DeleteDocumentationPartRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

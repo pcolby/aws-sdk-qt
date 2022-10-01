@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetDigestRequest
- * \brief The GetDigestRequest class provides an interface for QLDB GetDigest requests.
+ * \class QtAws::Qldb::GetDigestRequest
+ * \brief The GetDigestRequest class provides an interface for Qldb GetDigest requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * GetDigestRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::QLDB::GetDigestRequestPrivate
+ * \class QtAws::Qldb::GetDigestRequestPrivate
  * \brief The GetDigestRequestPrivate class provides private implementation for GetDigestRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ GetDigestRequestPrivate::GetDigestRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

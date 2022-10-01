@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeEngineDefaultParametersResponse
- * \brief The DescribeEngineDefaultParametersResponse class provides an interace for RDS DescribeEngineDefaultParameters responses.
+ * \class QtAws::Rds::DescribeEngineDefaultParametersResponse
+ * \brief The DescribeEngineDefaultParametersResponse class provides an interace for Rds DescribeEngineDefaultParameters responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeEngineDefaultParametersRequest * DescribeEngineDefaultParametersRe
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeEngineDefaultParameters \a response.
+ * Parses a successful Rds DescribeEngineDefaultParameters \a response.
  */
 void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeEngineDefaultParametersResponsePrivate
+ * \class QtAws::Rds::DescribeEngineDefaultParametersResponsePrivate
  * \brief The DescribeEngineDefaultParametersResponsePrivate class provides private implementation for DescribeEngineDefaultParametersResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersR
 }
 
 /*!
- * Parses a RDS DescribeEngineDefaultParameters response element from \a xml.
+ * Parses a Rds DescribeEngineDefaultParameters response element from \a xml.
  */
 void DescribeEngineDefaultParametersResponsePrivate::parseDescribeEngineDefaultParametersResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeEngineDefaultParametersResponsePrivate::parseDescribeEngineDefaultP
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

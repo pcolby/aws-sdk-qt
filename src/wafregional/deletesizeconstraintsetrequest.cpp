@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteSizeConstraintSetRequest
- * \brief The DeleteSizeConstraintSetRequest class provides an interface for WAFRegional DeleteSizeConstraintSet requests.
+ * \class QtAws::WafRegional::DeleteSizeConstraintSetRequest
+ * \brief The DeleteSizeConstraintSetRequest class provides an interface for WafRegional DeleteSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteSizeConstraintSet
+ * \sa WafRegionalClient::deleteSizeConstraintSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeConstraintSetRequest &other)
-    : WAFRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeC
  * Constructs a DeleteSizeConstraintSetRequest object.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest()
-    : WAFRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(WAFRegionalRequest::DeleteSizeConstraintSetAction, this))
+    : WafRegionalRequest(new DeleteSizeConstraintSetRequestPrivate(WafRegionalRequest::DeleteSizeConstraintSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteSizeConstraintSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteSizeConstraintSetRequestPrivate
  * \brief The DeleteSizeConstraintSetRequestPrivate class provides private implementation for DeleteSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteSizeConstraintSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteSizeConstraintSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteSizeConstraintSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const DeleteSizeConstraintSetRequestPrivate &other, DeleteSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

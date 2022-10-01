@@ -24,11 +24,11 @@
 #include "untagcertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class UntagCertificateAuthorityResponsePrivate;
 
-class QTAWSACMPCA_EXPORT UntagCertificateAuthorityResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT UntagCertificateAuthorityResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateUsagePlanRequest
- * \brief The CreateUsagePlanRequest class provides an interface for APIGateway CreateUsagePlan requests.
+ * \class QtAws::ApiGateway::CreateUsagePlanRequest
+ * \brief The CreateUsagePlanRequest class provides an interface for ApiGateway CreateUsagePlan requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createUsagePlan
+ * \sa ApiGatewayClient::createUsagePlan
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateUsagePlanRequest::CreateUsagePlanRequest(const CreateUsagePlanRequest &other)
-    : APIGatewayRequest(new CreateUsagePlanRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateUsagePlanRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateUsagePlanRequest::CreateUsagePlanRequest(const CreateUsagePlanRequest &oth
  * Constructs a CreateUsagePlanRequest object.
  */
 CreateUsagePlanRequest::CreateUsagePlanRequest()
-    : APIGatewayRequest(new CreateUsagePlanRequestPrivate(APIGatewayRequest::CreateUsagePlanAction, this))
+    : ApiGatewayRequest(new CreateUsagePlanRequestPrivate(ApiGatewayRequest::CreateUsagePlanAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::APIGateway::CreateUsagePlanRequestPrivate
+ * \class QtAws::ApiGateway::CreateUsagePlanRequestPrivate
  * \brief The CreateUsagePlanRequestPrivate class provides private implementation for CreateUsagePlanRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateUsagePlanRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateUsagePlanRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
-    const APIGatewayRequest::Action action, CreateUsagePlanRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateUsagePlanRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
  */
 CreateUsagePlanRequestPrivate::CreateUsagePlanRequestPrivate(
     const CreateUsagePlanRequestPrivate &other, CreateUsagePlanRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

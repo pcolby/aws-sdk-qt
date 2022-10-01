@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeContinuousBackupsRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeContinuousBackupsRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeContinuousBackupsRequest : public DynamoDbRequest {
 
 public:
     DescribeContinuousBackupsRequest(const DescribeContinuousBackupsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

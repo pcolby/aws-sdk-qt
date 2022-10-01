@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeSubnetGroupsRequest
- * \brief The DescribeSubnetGroupsRequest class provides an interface for DAX DescribeSubnetGroups requests.
+ * \class QtAws::Dax::DescribeSubnetGroupsRequest
+ * \brief The DescribeSubnetGroupsRequest class provides an interface for Dax DescribeSubnetGroups requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DAX::DescribeSubnetGroupsRequestPrivate
+ * \class QtAws::Dax::DescribeSubnetGroupsRequestPrivate
  * \brief The DescribeSubnetGroupsRequestPrivate class provides private implementation for DescribeSubnetGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

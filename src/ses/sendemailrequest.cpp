@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendEmailRequest
- * \brief The SendEmailRequest class provides an interface for SES SendEmail requests.
+ * \class QtAws::Ses::SendEmailRequest
+ * \brief The SendEmailRequest class provides an interface for Ses SendEmail requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::SES::SendEmailRequestPrivate
+ * \class QtAws::Ses::SendEmailRequestPrivate
  * \brief The SendEmailRequestPrivate class provides private implementation for SendEmailRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ SendEmailRequestPrivate::SendEmailRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

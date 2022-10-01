@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetEventDestinationResponse
- * \brief The CreateConfigurationSetEventDestinationResponse class provides an interace for PinpointSMSVoice CreateConfigurationSetEventDestination responses.
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetEventDestinationResponse
+ * \brief The CreateConfigurationSetEventDestinationResponse class provides an interace for PinpointSmsVoice CreateConfigurationSetEventDestination responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::createConfigurationSetEventDestination
+ * \sa PinpointSmsVoiceClient::createConfigurationSetEventDestination
  */
 
 /*!
@@ -44,7 +44,7 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
         const CreateConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetEventDestinationRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEven
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice CreateConfigurationSetEventDestination \a response.
+ * Parses a successful PinpointSmsVoice CreateConfigurationSetEventDestination \a response.
  */
 void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetEventDestinationResponsePrivate
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetEventDestinationResponsePrivate
  * \brief The CreateConfigurationSetEventDestinationResponsePrivate class provides private implementation for CreateConfigurationSetEventDestinationResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a CreateConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEventDestinationResponsePrivate(
-    CreateConfigurationSetEventDestinationResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    CreateConfigurationSetEventDestinationResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice CreateConfigurationSetEventDestination response element from \a xml.
+ * Parses a PinpointSmsVoice CreateConfigurationSetEventDestination response element from \a xml.
  */
 void CreateConfigurationSetEventDestinationResponsePrivate::parseCreateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void CreateConfigurationSetEventDestinationResponsePrivate::parseCreateConfigura
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

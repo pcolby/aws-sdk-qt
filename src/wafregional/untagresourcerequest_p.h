@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public WAFRegionalRequestPrivate {
+class UntagResourceRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const WAFRegionalRequest::Action action,
+    UntagResourceRequestPrivate(const WafRegionalRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

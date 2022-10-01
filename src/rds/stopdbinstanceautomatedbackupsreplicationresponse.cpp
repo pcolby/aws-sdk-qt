@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StopDBInstanceAutomatedBackupsReplicationResponse
- * \brief The StopDBInstanceAutomatedBackupsReplicationResponse class provides an interace for RDS StopDBInstanceAutomatedBackupsReplication responses.
+ * \class QtAws::Rds::StopDBInstanceAutomatedBackupsReplicationResponse
+ * \brief The StopDBInstanceAutomatedBackupsReplicationResponse class provides an interace for Rds StopDBInstanceAutomatedBackupsReplication responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StopDBInstanceAutomatedBackupsReplicationRequest * StopDBInstanceAutomated
 
 /*!
  * \reimp
- * Parses a successful RDS StopDBInstanceAutomatedBackupsReplication \a response.
+ * Parses a successful Rds StopDBInstanceAutomatedBackupsReplication \a response.
  */
 void StopDBInstanceAutomatedBackupsReplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StopDBInstanceAutomatedBackupsReplicationResponse::parseSuccess(QIODevice &
 }
 
 /*!
- * \class QtAws::RDS::StopDBInstanceAutomatedBackupsReplicationResponsePrivate
+ * \class QtAws::Rds::StopDBInstanceAutomatedBackupsReplicationResponsePrivate
  * \brief The StopDBInstanceAutomatedBackupsReplicationResponsePrivate class provides private implementation for StopDBInstanceAutomatedBackupsReplicationResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StopDBInstanceAutomatedBackupsReplicationResponsePrivate::StopDBInstanceAutomate
 }
 
 /*!
- * Parses a RDS StopDBInstanceAutomatedBackupsReplication response element from \a xml.
+ * Parses a Rds StopDBInstanceAutomatedBackupsReplication response element from \a xml.
  */
 void StopDBInstanceAutomatedBackupsReplicationResponsePrivate::parseStopDBInstanceAutomatedBackupsReplicationResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StopDBInstanceAutomatedBackupsReplicationResponsePrivate::parseStopDBInstan
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

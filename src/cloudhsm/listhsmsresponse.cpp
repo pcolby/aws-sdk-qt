@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListHsmsResponse
- * \brief The ListHsmsResponse class provides an interace for CloudHSM ListHsms responses.
+ * \class QtAws::CloudHsm::ListHsmsResponse
+ * \brief The ListHsmsResponse class provides an interace for CloudHsm ListHsms responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listHsms
+ * \sa CloudHsmClient::listHsms
  */
 
 /*!
@@ -56,7 +56,7 @@ ListHsmsResponse::ListHsmsResponse(
         const ListHsmsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ListHsmsResponsePrivate(this), parent)
+    : CloudHsmResponse(new ListHsmsResponsePrivate(this), parent)
 {
     setRequest(new ListHsmsRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const ListHsmsRequest * ListHsmsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM ListHsms \a response.
+ * Parses a successful CloudHsm ListHsms \a response.
  */
 void ListHsmsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void ListHsmsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::ListHsmsResponsePrivate
+ * \class QtAws::CloudHsm::ListHsmsResponsePrivate
  * \brief The ListHsmsResponsePrivate class provides private implementation for ListHsmsResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a ListHsmsResponsePrivate object with public implementation \a q.
  */
 ListHsmsResponsePrivate::ListHsmsResponsePrivate(
-    ListHsmsResponse * const q) : CloudHSMResponsePrivate(q)
+    ListHsmsResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM ListHsms response element from \a xml.
+ * Parses a CloudHsm ListHsms response element from \a xml.
  */
 void ListHsmsResponsePrivate::parseListHsmsResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void ListHsmsResponsePrivate::parseListHsmsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

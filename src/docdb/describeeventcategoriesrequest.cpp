@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEventCategoriesRequest
- * \brief The DescribeEventCategoriesRequest class provides an interface for DocDB DescribeEventCategories requests.
+ * \class QtAws::DocDb::DescribeEventCategoriesRequest
+ * \brief The DescribeEventCategoriesRequest class provides an interface for DocDb DescribeEventCategories requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEventCategories
+ * \sa DocDbClient::describeEventCategories
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other)
-    : DocDBRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEve
  * Constructs a DescribeEventCategoriesRequest object.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
-    : DocDBRequest(new DescribeEventCategoriesRequestPrivate(DocDBRequest::DescribeEventCategoriesAction, this))
+    : DocDbRequest(new DescribeEventCategoriesRequestPrivate(DocDbRequest::DescribeEventCategoriesAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEventCategoriesRequestPrivate
+ * \class QtAws::DocDb::DescribeEventCategoriesRequestPrivate
  * \brief The DescribeEventCategoriesRequestPrivate class provides private implementation for DescribeEventCategoriesRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeEventCategoriesRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeEventCategoriesRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
-    const DocDBRequest::Action action, DescribeEventCategoriesRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeEventCategoriesRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DescribeEventCategoriesRequestPrivate &other, DescribeEventCategoriesRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

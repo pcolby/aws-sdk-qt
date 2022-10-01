@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLMigrationStackResponse
- * \brief The CreateWebACLMigrationStackResponse class provides an interace for WAFRegional CreateWebACLMigrationStack responses.
+ * \class QtAws::WafRegional::CreateWebACLMigrationStackResponse
+ * \brief The CreateWebACLMigrationStackResponse class provides an interace for WafRegional CreateWebACLMigrationStack responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createWebACLMigrationStack
+ * \sa WafRegionalClient::createWebACLMigrationStack
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateWebACLMigrationStackResponse::CreateWebACLMigrationStackResponse(
         const CreateWebACLMigrationStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateWebACLMigrationStackResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateWebACLMigrationStackResponsePrivate(this), parent)
 {
     setRequest(new CreateWebACLMigrationStackRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateWebACLMigrationStackRequest * CreateWebACLMigrationStackResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateWebACLMigrationStack \a response.
+ * Parses a successful WafRegional CreateWebACLMigrationStack \a response.
  */
 void CreateWebACLMigrationStackResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateWebACLMigrationStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLMigrationStackResponsePrivate
+ * \class QtAws::WafRegional::CreateWebACLMigrationStackResponsePrivate
  * \brief The CreateWebACLMigrationStackResponsePrivate class provides private implementation for CreateWebACLMigrationStackResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateWebACLMigrationStackResponsePrivate object with public implementation \a q.
  */
 CreateWebACLMigrationStackResponsePrivate::CreateWebACLMigrationStackResponsePrivate(
-    CreateWebACLMigrationStackResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateWebACLMigrationStackResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateWebACLMigrationStack response element from \a xml.
+ * Parses a WafRegional CreateWebACLMigrationStack response element from \a xml.
  */
 void CreateWebACLMigrationStackResponsePrivate::parseCreateWebACLMigrationStackResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateWebACLMigrationStackResponsePrivate::parseCreateWebACLMigrationStackR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

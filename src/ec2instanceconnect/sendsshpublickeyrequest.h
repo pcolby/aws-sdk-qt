@@ -23,11 +23,11 @@
 #include "ec2instanceconnectrequest.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 class SendSSHPublicKeyRequestPrivate;
 
-class QTAWSEC2INSTANCECONNECT_EXPORT SendSSHPublicKeyRequest : public EC2InstanceConnectRequest {
+class QTAWSEC2INSTANCECONNECT_EXPORT SendSSHPublicKeyRequest : public Ec2InstanceConnectRequest {
 
 public:
     SendSSHPublicKeyRequest(const SendSSHPublicKeyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

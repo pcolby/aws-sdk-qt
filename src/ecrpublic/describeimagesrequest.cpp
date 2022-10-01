@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DescribeImagesRequest
- * \brief The DescribeImagesRequest class provides an interface for ECRPublic DescribeImages requests.
+ * \class QtAws::EcrPublic::DescribeImagesRequest
+ * \brief The DescribeImagesRequest class provides an interface for EcrPublic DescribeImages requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::describeImages
+ * \sa EcrPublicClient::describeImages
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
-    : ECRPublicRequest(new DescribeImagesRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new DescribeImagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
  * Constructs a DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
-    : ECRPublicRequest(new DescribeImagesRequestPrivate(ECRPublicRequest::DescribeImagesAction, this))
+    : EcrPublicRequest(new DescribeImagesRequestPrivate(EcrPublicRequest::DescribeImagesAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::ECRPublic::DescribeImagesRequestPrivate
+ * \class QtAws::EcrPublic::DescribeImagesRequestPrivate
  * \brief The DescribeImagesRequestPrivate class provides private implementation for DescribeImagesRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a DescribeImagesRequestPrivate object for ECRPublic \a action,
+ * Constructs a DescribeImagesRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
-    const ECRPublicRequest::Action action, DescribeImagesRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, DescribeImagesRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

@@ -248,7 +248,7 @@ QNetworkRequest MediaStoreDataRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 MediaStoreDataRequestPrivate::MediaStoreDataRequestPrivate(const MediaStoreDataRequest::Action action, MediaStoreDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-01"))
 {
 
 }

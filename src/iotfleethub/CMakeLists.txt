@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTFLEETHUB_LIBRARY)
 
 add_library(QtAwsIoTFleetHub
+  qtawsiotfleethubglobal.h
+  iotfleethubclient.h
+  iotfleethubclient_p.h
+  iotfleethubrequest.h
+  iotfleethubrequest_p.h
+  iotfleethubresponse.h
+  iotfleethubresponse_p.h
   createapplicationrequest.h
   createapplicationrequest_p.h
   createapplicationresponse.h
@@ -13,12 +20,6 @@ add_library(QtAwsIoTFleetHub
   describeapplicationrequest_p.h
   describeapplicationresponse.h
   describeapplicationresponse_p.h
-  iotfleethubclient.h
-  iotfleethubclient_p.h
-  iotfleethubrequest.h
-  iotfleethubrequest_p.h
-  iotfleethubresponse.h
-  iotfleethubresponse_p.h
   listapplicationsrequest.h
   listapplicationsrequest_p.h
   listapplicationsresponse.h
@@ -27,7 +28,6 @@ add_library(QtAwsIoTFleetHub
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsiotfleethubglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -40,15 +40,15 @@ add_library(QtAwsIoTFleetHub
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
+  iotfleethubclient.cpp
+  iotfleethubrequest.cpp
+  iotfleethubresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
   deleteapplicationrequest.cpp
   deleteapplicationresponse.cpp
   describeapplicationrequest.cpp
   describeapplicationresponse.cpp
-  iotfleethubclient.cpp
-  iotfleethubrequest.cpp
-  iotfleethubresponse.cpp
   listapplicationsrequest.cpp
   listapplicationsresponse.cpp
   listtagsforresourcerequest.cpp

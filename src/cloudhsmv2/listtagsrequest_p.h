@@ -24,14 +24,14 @@
 #include "listtagsrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class ListTagsRequest;
 
-class ListTagsRequestPrivate : public CloudHSMV2RequestPrivate {
+class ListTagsRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const CloudHSMV2Request::Action action,
+    ListTagsRequestPrivate(const CloudHsmV2Request::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

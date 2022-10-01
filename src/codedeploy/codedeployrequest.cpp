@@ -290,7 +290,7 @@ QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Action action, CodeDeployRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-10-06"))
 {
 
 }

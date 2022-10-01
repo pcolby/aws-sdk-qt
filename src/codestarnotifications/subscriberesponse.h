@@ -24,11 +24,11 @@
 #include "subscriberequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class SubscribeResponsePrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT SubscribeResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT SubscribeResponse : public CodestarNotificationsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

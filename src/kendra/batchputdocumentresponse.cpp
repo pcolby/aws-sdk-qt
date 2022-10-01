@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchPutDocumentResponse
- * \brief The BatchPutDocumentResponse class provides an interace for kendra BatchPutDocument responses.
+ * \class QtAws::Kendra::BatchPutDocumentResponse
+ * \brief The BatchPutDocumentResponse class provides an interace for Kendra BatchPutDocument responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchPutDocument
+ * \sa KendraClient::batchPutDocument
  */
 
 /*!
@@ -45,7 +45,7 @@ BatchPutDocumentResponse::BatchPutDocumentResponse(
         const BatchPutDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new BatchPutDocumentResponsePrivate(this), parent)
+    : KendraResponse(new BatchPutDocumentResponsePrivate(this), parent)
 {
     setRequest(new BatchPutDocumentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const BatchPutDocumentRequest * BatchPutDocumentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra BatchPutDocument \a response.
+ * Parses a successful Kendra BatchPutDocument \a response.
  */
 void BatchPutDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void BatchPutDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::BatchPutDocumentResponsePrivate
+ * \class QtAws::Kendra::BatchPutDocumentResponsePrivate
  * \brief The BatchPutDocumentResponsePrivate class provides private implementation for BatchPutDocumentResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a BatchPutDocumentResponsePrivate object with public implementation \a q.
  */
 BatchPutDocumentResponsePrivate::BatchPutDocumentResponsePrivate(
-    BatchPutDocumentResponse * const q) : kendraResponsePrivate(q)
+    BatchPutDocumentResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra BatchPutDocument response element from \a xml.
+ * Parses a Kendra BatchPutDocument response element from \a xml.
  */
 void BatchPutDocumentResponsePrivate::parseBatchPutDocumentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void BatchPutDocumentResponsePrivate::parseBatchPutDocumentResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

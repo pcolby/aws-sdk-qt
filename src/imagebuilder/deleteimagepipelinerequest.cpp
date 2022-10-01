@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteImagePipelineRequest
- * \brief The DeleteImagePipelineRequest class provides an interface for imagebuilder DeleteImagePipeline requests.
+ * \class QtAws::ImageBuilder::DeleteImagePipelineRequest
+ * \brief The DeleteImagePipelineRequest class provides an interface for ImageBuilder DeleteImagePipeline requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteImagePipeline
+ * \sa ImageBuilderClient::deleteImagePipeline
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteImagePipelineRequest::DeleteImagePipelineRequest(const DeleteImagePipelineRequest &other)
-    : imagebuilderRequest(new DeleteImagePipelineRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new DeleteImagePipelineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DeleteImagePipelineRequest::DeleteImagePipelineRequest(const DeleteImagePipeline
  * Constructs a DeleteImagePipelineRequest object.
  */
 DeleteImagePipelineRequest::DeleteImagePipelineRequest()
-    : imagebuilderRequest(new DeleteImagePipelineRequestPrivate(imagebuilderRequest::DeleteImagePipelineAction, this))
+    : ImageBuilderRequest(new DeleteImagePipelineRequestPrivate(ImageBuilderRequest::DeleteImagePipelineAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * DeleteImagePipelineRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteImagePipelineRequestPrivate
+ * \class QtAws::ImageBuilder::DeleteImagePipelineRequestPrivate
  * \brief The DeleteImagePipelineRequestPrivate class provides private implementation for DeleteImagePipelineRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a DeleteImagePipelineRequestPrivate object for imagebuilder \a action,
+ * Constructs a DeleteImagePipelineRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 DeleteImagePipelineRequestPrivate::DeleteImagePipelineRequestPrivate(
-    const imagebuilderRequest::Action action, DeleteImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, DeleteImagePipelineRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ DeleteImagePipelineRequestPrivate::DeleteImagePipelineRequestPrivate(
  */
 DeleteImagePipelineRequestPrivate::DeleteImagePipelineRequestPrivate(
     const DeleteImagePipelineRequestPrivate &other, DeleteImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

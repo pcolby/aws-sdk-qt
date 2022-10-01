@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::CreateFargateProfileResponse
- * \brief The CreateFargateProfileResponse class provides an interace for EKS CreateFargateProfile responses.
+ * \class QtAws::Eks::CreateFargateProfileResponse
+ * \brief The CreateFargateProfileResponse class provides an interace for Eks CreateFargateProfile responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const CreateFargateProfileRequest * CreateFargateProfileResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EKS CreateFargateProfile \a response.
+ * Parses a successful Eks CreateFargateProfile \a response.
  */
 void CreateFargateProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void CreateFargateProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::CreateFargateProfileResponsePrivate
+ * \class QtAws::Eks::CreateFargateProfileResponsePrivate
  * \brief The CreateFargateProfileResponsePrivate class provides private implementation for CreateFargateProfileResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ CreateFargateProfileResponsePrivate::CreateFargateProfileResponsePrivate(
 }
 
 /*!
- * Parses a EKS CreateFargateProfile response element from \a xml.
+ * Parses a Eks CreateFargateProfile response element from \a xml.
  */
 void CreateFargateProfileResponsePrivate::parseCreateFargateProfileResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateFargateProfileResponsePrivate::parseCreateFargateProfileResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

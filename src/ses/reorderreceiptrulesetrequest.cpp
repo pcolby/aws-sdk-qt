@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ReorderReceiptRuleSetRequest
- * \brief The ReorderReceiptRuleSetRequest class provides an interface for SES ReorderReceiptRuleSet requests.
+ * \class QtAws::Ses::ReorderReceiptRuleSetRequest
+ * \brief The ReorderReceiptRuleSetRequest class provides an interface for Ses ReorderReceiptRuleSet requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::SES::ReorderReceiptRuleSetRequestPrivate
+ * \class QtAws::Ses::ReorderReceiptRuleSetRequestPrivate
  * \brief The ReorderReceiptRuleSetRequestPrivate class provides private implementation for ReorderReceiptRuleSetRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

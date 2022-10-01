@@ -24,28 +24,28 @@
 #include "pinpointsmsvoicerequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceRequest;
+class PinpointSmsVoiceRequest;
 
-class PinpointSMSVoiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PinpointSmsVoiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    PinpointSMSVoiceRequest::Action action; ///< PinpointSMSVoice action to be performed.
-    QString apiVersion;        ///< PinpointSMSVoice API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< PinpointSMSVoice request (query string) parameters. @todo?
+    PinpointSmsVoiceRequest::Action action; ///< PinpointSmsVoice action to be performed.
+    QString apiVersion;        ///< PinpointSmsVoice API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< PinpointSmsVoice request (query string) parameters. @todo?
 
-    PinpointSMSVoiceRequestPrivate(const PinpointSMSVoiceRequest::Action action, PinpointSMSVoiceRequest * const q);
-    PinpointSMSVoiceRequestPrivate(const PinpointSMSVoiceRequestPrivate &other, PinpointSMSVoiceRequest * const q);
+    PinpointSmsVoiceRequestPrivate(const PinpointSmsVoiceRequest::Action action, PinpointSmsVoiceRequest * const q);
+    PinpointSmsVoiceRequestPrivate(const PinpointSmsVoiceRequestPrivate &other, PinpointSmsVoiceRequest * const q);
 
-    static QString toString(const PinpointSMSVoiceRequest::Action &action);
+    static QString toString(const PinpointSmsVoiceRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(PinpointSMSVoiceRequest)
+    Q_DECLARE_PUBLIC(PinpointSmsVoiceRequest)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

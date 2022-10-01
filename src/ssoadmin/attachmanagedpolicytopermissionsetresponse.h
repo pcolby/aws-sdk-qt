@@ -24,11 +24,11 @@
 #include "attachmanagedpolicytopermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class AttachManagedPolicyToPermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT AttachManagedPolicyToPermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT AttachManagedPolicyToPermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

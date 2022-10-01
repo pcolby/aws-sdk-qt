@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UpdateRoleResponse
- * \brief The UpdateRoleResponse class provides an interace for IAM UpdateRole responses.
+ * \class QtAws::Iam::UpdateRoleResponse
+ * \brief The UpdateRoleResponse class provides an interace for Iam UpdateRole responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::updateRole
  */
@@ -68,7 +68,7 @@ const UpdateRoleRequest * UpdateRoleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UpdateRole \a response.
+ * Parses a successful Iam UpdateRole \a response.
  */
 void UpdateRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UpdateRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UpdateRoleResponsePrivate
+ * \class QtAws::Iam::UpdateRoleResponsePrivate
  * \brief The UpdateRoleResponsePrivate class provides private implementation for UpdateRoleResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
 }
 
 /*!
- * Parses a IAM UpdateRole response element from \a xml.
+ * Parses a Iam UpdateRole response element from \a xml.
  */
 void UpdateRoleResponsePrivate::parseUpdateRoleResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UpdateRoleResponsePrivate::parseUpdateRoleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

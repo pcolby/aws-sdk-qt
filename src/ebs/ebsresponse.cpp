@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 /*!
- * \class QtAws::EBS::EbsResponse
- * \brief The EbsResponse class provides an interface for EBS responses.
+ * \class QtAws::Ebs::EbsResponse
+ * \brief The EbsResponse class provides an interface for Ebs responses.
  *
- * \inmodule QtAwsEBS
+ * \inmodule QtAwsEbs
  */
 
 /*!
@@ -76,11 +76,11 @@ void EbsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EBS::EbsResponsePrivate
+ * \class QtAws::Ebs::EbsResponsePrivate
  * \brief The EbsResponsePrivate class provides private implementation for EbsResponse.
  * \internal
  *
- * \inmodule QtAwsEBS
+ * \inmodule QtAwsEbs
  */
 
 /*!
@@ -92,5 +92,5 @@ EbsResponsePrivate::EbsResponsePrivate(
 
 }
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws

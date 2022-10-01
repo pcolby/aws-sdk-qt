@@ -23,11 +23,11 @@
 #include "emrcontainersrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class ListManagedEndpointsRequestPrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT ListManagedEndpointsRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT ListManagedEndpointsRequest : public EmrcontainersRequest {
 
 public:
     ListManagedEndpointsRequest(const ListManagedEndpointsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

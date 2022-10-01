@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::DescribeWorkflowExecutionResponse
- * \brief The DescribeWorkflowExecutionResponse class provides an interace for SWF DescribeWorkflowExecution responses.
+ * \class QtAws::Swf::DescribeWorkflowExecutionResponse
+ * \brief The DescribeWorkflowExecutionResponse class provides an interace for Swf DescribeWorkflowExecution responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const DescribeWorkflowExecutionRequest * DescribeWorkflowExecutionResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SWF DescribeWorkflowExecution \a response.
+ * Parses a successful Swf DescribeWorkflowExecution \a response.
  */
 void DescribeWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void DescribeWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::DescribeWorkflowExecutionResponsePrivate
+ * \class QtAws::Swf::DescribeWorkflowExecutionResponsePrivate
  * \brief The DescribeWorkflowExecutionResponsePrivate class provides private implementation for DescribeWorkflowExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ DescribeWorkflowExecutionResponsePrivate::DescribeWorkflowExecutionResponsePriva
 }
 
 /*!
- * Parses a SWF DescribeWorkflowExecution response element from \a xml.
+ * Parses a Swf DescribeWorkflowExecution response element from \a xml.
  */
 void DescribeWorkflowExecutionResponsePrivate::parseDescribeWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void DescribeWorkflowExecutionResponsePrivate::parseDescribeWorkflowExecutionRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

@@ -30,24 +30,52 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
-class FinSpaceDataRequestPrivate;
+class FinspaceDataRequestPrivate;
 
-class QTAWSFINSPACEDATA_EXPORT FinSpaceDataRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFINSPACEDATA_EXPORT FinspaceDataRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by FinSpaceData.
+    /// Actions supported by FinspaceData.
     enum Action {
+        AssociateUserToPermissionGroupAction,
         CreateChangesetAction,
+        CreateDataViewAction,
+        CreateDatasetAction,
+        CreatePermissionGroupAction,
+        CreateUserAction,
+        DeleteDatasetAction,
+        DeletePermissionGroupAction,
+        DisableUserAction,
+        DisassociateUserFromPermissionGroupAction,
+        EnableUserAction,
+        GetChangesetAction,
+        GetDataViewAction,
+        GetDatasetAction,
+        GetExternalDataViewAccessDetailsAction,
+        GetPermissionGroupAction,
         GetProgrammaticAccessCredentialsAction,
+        GetUserAction,
         GetWorkingLocationAction,
+        ListChangesetsAction,
+        ListDataViewsAction,
+        ListDatasetsAction,
+        ListPermissionGroupsAction,
+        ListPermissionGroupsByUserAction,
+        ListUsersAction,
+        ListUsersByPermissionGroupAction,
+        ResetUserPasswordAction,
+        UpdateChangesetAction,
+        UpdateDatasetAction,
+        UpdatePermissionGroupAction,
+        UpdateUserAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    FinSpaceDataRequest(const Action action);
-    FinSpaceDataRequest(const FinSpaceDataRequest &other);
-    FinSpaceDataRequest &operator=(const FinSpaceDataRequest &other);
+    FinspaceDataRequest(const Action action);
+    FinspaceDataRequest(const FinspaceDataRequest &other);
+    FinspaceDataRequest &operator=(const FinspaceDataRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -56,12 +84,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const FinSpaceDataRequest &other) const;
+    virtual bool operator==(const FinspaceDataRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit FinSpaceDataRequest(FinSpaceDataRequestPrivate * const d);
+    explicit FinspaceDataRequest(FinspaceDataRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -74,11 +102,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(FinSpaceDataRequest)
+    Q_DECLARE_PRIVATE(FinspaceDataRequest)
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

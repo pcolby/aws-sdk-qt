@@ -245,7 +245,7 @@ QNetworkRequest PersonalizeRuntimeRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 PersonalizeRuntimeRequestPrivate::PersonalizeRuntimeRequestPrivate(const PersonalizeRuntimeRequest::Action action, PersonalizeRuntimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-22"))
 {
 
 }

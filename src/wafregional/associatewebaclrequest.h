@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class AssociateWebACLRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT AssociateWebACLRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT AssociateWebACLRequest : public WafRegionalRequest {
 
 public:
     AssociateWebACLRequest(const AssociateWebACLRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

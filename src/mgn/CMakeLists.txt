@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSMGN_LIBRARY)
 
-add_library(QtAwsmgn
+add_library(QtAwsMgn
+  qtawsmgnglobal.h
+  mgnclient.h
+  mgnclient_p.h
+  mgnrequest.h
+  mgnrequest_p.h
+  mgnresponse.h
+  mgnresponse_p.h
   changeserverlifecyclestaterequest.h
   changeserverlifecyclestaterequest_p.h
   changeserverlifecyclestateresponse.h
   changeserverlifecyclestateresponse_p.h
+  createlaunchconfigurationtemplaterequest.h
+  createlaunchconfigurationtemplaterequest_p.h
+  createlaunchconfigurationtemplateresponse.h
+  createlaunchconfigurationtemplateresponse_p.h
   createreplicationconfigurationtemplaterequest.h
   createreplicationconfigurationtemplaterequest_p.h
   createreplicationconfigurationtemplateresponse.h
@@ -13,6 +24,10 @@ add_library(QtAwsmgn
   deletejobrequest_p.h
   deletejobresponse.h
   deletejobresponse_p.h
+  deletelaunchconfigurationtemplaterequest.h
+  deletelaunchconfigurationtemplaterequest_p.h
+  deletelaunchconfigurationtemplateresponse.h
+  deletelaunchconfigurationtemplateresponse_p.h
   deletereplicationconfigurationtemplaterequest.h
   deletereplicationconfigurationtemplaterequest_p.h
   deletereplicationconfigurationtemplateresponse.h
@@ -21,6 +36,10 @@ add_library(QtAwsmgn
   deletesourceserverrequest_p.h
   deletesourceserverresponse.h
   deletesourceserverresponse_p.h
+  deletevcenterclientrequest.h
+  deletevcenterclientrequest_p.h
+  deletevcenterclientresponse.h
+  deletevcenterclientresponse_p.h
   describejoblogitemsrequest.h
   describejoblogitemsrequest_p.h
   describejoblogitemsresponse.h
@@ -29,6 +48,10 @@ add_library(QtAwsmgn
   describejobsrequest_p.h
   describejobsresponse.h
   describejobsresponse_p.h
+  describelaunchconfigurationtemplatesrequest.h
+  describelaunchconfigurationtemplatesrequest_p.h
+  describelaunchconfigurationtemplatesresponse.h
+  describelaunchconfigurationtemplatesresponse_p.h
   describereplicationconfigurationtemplatesrequest.h
   describereplicationconfigurationtemplatesrequest_p.h
   describereplicationconfigurationtemplatesresponse.h
@@ -37,6 +60,10 @@ add_library(QtAwsmgn
   describesourceserversrequest_p.h
   describesourceserversresponse.h
   describesourceserversresponse_p.h
+  describevcenterclientsrequest.h
+  describevcenterclientsrequest_p.h
+  describevcenterclientsresponse.h
+  describevcenterclientsresponse_p.h
   disconnectfromservicerequest.h
   disconnectfromservicerequest_p.h
   disconnectfromserviceresponse.h
@@ -65,13 +92,6 @@ add_library(QtAwsmgn
   markasarchivedrequest_p.h
   markasarchivedresponse.h
   markasarchivedresponse_p.h
-  mgnclient.h
-  mgnclient_p.h
-  mgnrequest.h
-  mgnrequest_p.h
-  mgnresponse.h
-  mgnresponse_p.h
-  qtawsmgnglobal.h
   retrydatareplicationrequest.h
   retrydatareplicationrequest_p.h
   retrydatareplicationresponse.h
@@ -80,6 +100,10 @@ add_library(QtAwsmgn
   startcutoverrequest_p.h
   startcutoverresponse.h
   startcutoverresponse_p.h
+  startreplicationrequest.h
+  startreplicationrequest_p.h
+  startreplicationresponse.h
+  startreplicationresponse_p.h
   starttestrequest.h
   starttestrequest_p.h
   starttestresponse.h
@@ -100,6 +124,10 @@ add_library(QtAwsmgn
   updatelaunchconfigurationrequest_p.h
   updatelaunchconfigurationresponse.h
   updatelaunchconfigurationresponse_p.h
+  updatelaunchconfigurationtemplaterequest.h
+  updatelaunchconfigurationtemplaterequest_p.h
+  updatelaunchconfigurationtemplateresponse.h
+  updatelaunchconfigurationtemplateresponse_p.h
   updatereplicationconfigurationrequest.h
   updatereplicationconfigurationrequest_p.h
   updatereplicationconfigurationresponse.h
@@ -108,24 +136,41 @@ add_library(QtAwsmgn
   updatereplicationconfigurationtemplaterequest_p.h
   updatereplicationconfigurationtemplateresponse.h
   updatereplicationconfigurationtemplateresponse_p.h
+  updatesourceserverreplicationtyperequest.h
+  updatesourceserverreplicationtyperequest_p.h
+  updatesourceserverreplicationtyperesponse.h
+  updatesourceserverreplicationtyperesponse_p.h
+  mgnclient.cpp
+  mgnrequest.cpp
+  mgnresponse.cpp
   changeserverlifecyclestaterequest.cpp
   changeserverlifecyclestateresponse.cpp
+  createlaunchconfigurationtemplaterequest.cpp
+  createlaunchconfigurationtemplateresponse.cpp
   createreplicationconfigurationtemplaterequest.cpp
   createreplicationconfigurationtemplateresponse.cpp
   deletejobrequest.cpp
   deletejobresponse.cpp
+  deletelaunchconfigurationtemplaterequest.cpp
+  deletelaunchconfigurationtemplateresponse.cpp
   deletereplicationconfigurationtemplaterequest.cpp
   deletereplicationconfigurationtemplateresponse.cpp
   deletesourceserverrequest.cpp
   deletesourceserverresponse.cpp
+  deletevcenterclientrequest.cpp
+  deletevcenterclientresponse.cpp
   describejoblogitemsrequest.cpp
   describejoblogitemsresponse.cpp
   describejobsrequest.cpp
   describejobsresponse.cpp
+  describelaunchconfigurationtemplatesrequest.cpp
+  describelaunchconfigurationtemplatesresponse.cpp
   describereplicationconfigurationtemplatesrequest.cpp
   describereplicationconfigurationtemplatesresponse.cpp
   describesourceserversrequest.cpp
   describesourceserversresponse.cpp
+  describevcenterclientsrequest.cpp
+  describevcenterclientsresponse.cpp
   disconnectfromservicerequest.cpp
   disconnectfromserviceresponse.cpp
   finalizecutoverrequest.cpp
@@ -140,13 +185,12 @@ add_library(QtAwsmgn
   listtagsforresourceresponse.cpp
   markasarchivedrequest.cpp
   markasarchivedresponse.cpp
-  mgnclient.cpp
-  mgnrequest.cpp
-  mgnresponse.cpp
   retrydatareplicationrequest.cpp
   retrydatareplicationresponse.cpp
   startcutoverrequest.cpp
   startcutoverresponse.cpp
+  startreplicationrequest.cpp
+  startreplicationresponse.cpp
   starttestrequest.cpp
   starttestresponse.cpp
   tagresourcerequest.cpp
@@ -157,12 +201,16 @@ add_library(QtAwsmgn
   untagresourceresponse.cpp
   updatelaunchconfigurationrequest.cpp
   updatelaunchconfigurationresponse.cpp
+  updatelaunchconfigurationtemplaterequest.cpp
+  updatelaunchconfigurationtemplateresponse.cpp
   updatereplicationconfigurationrequest.cpp
   updatereplicationconfigurationresponse.cpp
   updatereplicationconfigurationtemplaterequest.cpp
-  updatereplicationconfigurationtemplateresponse.cpp)
+  updatereplicationconfigurationtemplateresponse.cpp
+  updatesourceserverreplicationtyperequest.cpp
+  updatesourceserverreplicationtyperesponse.cpp)
 
-target_link_libraries(QtAwsmgn
+target_link_libraries(QtAwsMgn
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

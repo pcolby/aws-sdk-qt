@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSNS_LIBRARY)
 
 add_library(QtAwsSns
+  qtawssnsglobal.h
+  snsclient.h
+  snsclient_p.h
+  snsrequest.h
+  snsrequest_p.h
+  snsresponse.h
+  snsresponse_p.h
   addpermissionrequest.h
   addpermissionrequest_p.h
   addpermissionresponse.h
@@ -45,6 +52,10 @@ add_library(QtAwsSns
   deletetopicrequest_p.h
   deletetopicresponse.h
   deletetopicresponse_p.h
+  getdataprotectionpolicyrequest.h
+  getdataprotectionpolicyrequest_p.h
+  getdataprotectionpolicyresponse.h
+  getdataprotectionpolicyresponse_p.h
   getendpointattributesrequest.h
   getendpointattributesrequest_p.h
   getendpointattributesresponse.h
@@ -89,14 +100,14 @@ add_library(QtAwsSns
   listsmssandboxphonenumbersrequest_p.h
   listsmssandboxphonenumbersresponse.h
   listsmssandboxphonenumbersresponse_p.h
-  listsubscriptionsbytopicrequest.h
-  listsubscriptionsbytopicrequest_p.h
-  listsubscriptionsbytopicresponse.h
-  listsubscriptionsbytopicresponse_p.h
   listsubscriptionsrequest.h
   listsubscriptionsrequest_p.h
   listsubscriptionsresponse.h
   listsubscriptionsresponse_p.h
+  listsubscriptionsbytopicrequest.h
+  listsubscriptionsbytopicrequest_p.h
+  listsubscriptionsbytopicresponse.h
+  listsubscriptionsbytopicresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -113,7 +124,14 @@ add_library(QtAwsSns
   publishrequest_p.h
   publishresponse.h
   publishresponse_p.h
-  qtawssnsglobal.h
+  publishbatchrequest.h
+  publishbatchrequest_p.h
+  publishbatchresponse.h
+  publishbatchresponse_p.h
+  putdataprotectionpolicyrequest.h
+  putdataprotectionpolicyrequest_p.h
+  putdataprotectionpolicyresponse.h
+  putdataprotectionpolicyresponse_p.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h
@@ -138,12 +156,6 @@ add_library(QtAwsSns
   settopicattributesrequest_p.h
   settopicattributesresponse.h
   settopicattributesresponse_p.h
-  snsclient.h
-  snsclient_p.h
-  snsrequest.h
-  snsrequest_p.h
-  snsresponse.h
-  snsresponse_p.h
   subscriberequest.h
   subscriberequest_p.h
   subscriberesponse.h
@@ -164,6 +176,9 @@ add_library(QtAwsSns
   verifysmssandboxphonenumberrequest_p.h
   verifysmssandboxphonenumberresponse.h
   verifysmssandboxphonenumberresponse_p.h
+  snsclient.cpp
+  snsrequest.cpp
+  snsresponse.cpp
   addpermissionrequest.cpp
   addpermissionresponse.cpp
   checkifphonenumberisoptedoutrequest.cpp
@@ -186,6 +201,8 @@ add_library(QtAwsSns
   deletesmssandboxphonenumberresponse.cpp
   deletetopicrequest.cpp
   deletetopicresponse.cpp
+  getdataprotectionpolicyrequest.cpp
+  getdataprotectionpolicyresponse.cpp
   getendpointattributesrequest.cpp
   getendpointattributesresponse.cpp
   getplatformapplicationattributesrequest.cpp
@@ -208,10 +225,10 @@ add_library(QtAwsSns
   listplatformapplicationsresponse.cpp
   listsmssandboxphonenumbersrequest.cpp
   listsmssandboxphonenumbersresponse.cpp
-  listsubscriptionsbytopicrequest.cpp
-  listsubscriptionsbytopicresponse.cpp
   listsubscriptionsrequest.cpp
   listsubscriptionsresponse.cpp
+  listsubscriptionsbytopicrequest.cpp
+  listsubscriptionsbytopicresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listtopicsrequest.cpp
@@ -220,6 +237,10 @@ add_library(QtAwsSns
   optinphonenumberresponse.cpp
   publishrequest.cpp
   publishresponse.cpp
+  publishbatchrequest.cpp
+  publishbatchresponse.cpp
+  putdataprotectionpolicyrequest.cpp
+  putdataprotectionpolicyresponse.cpp
   removepermissionrequest.cpp
   removepermissionresponse.cpp
   setendpointattributesrequest.cpp
@@ -232,9 +253,6 @@ add_library(QtAwsSns
   setsubscriptionattributesresponse.cpp
   settopicattributesrequest.cpp
   settopicattributesresponse.cpp
-  snsclient.cpp
-  snsrequest.cpp
-  snsresponse.cpp
   subscriberequest.cpp
   subscriberesponse.cpp
   tagresourcerequest.cpp

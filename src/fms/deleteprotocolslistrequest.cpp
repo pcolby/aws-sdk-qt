@@ -23,20 +23,17 @@
 #include "fmsrequest_p.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::DeleteProtocolsListRequest
- * \brief The DeleteProtocolsListRequest class provides an interface for FMS DeleteProtocolsList requests.
+ * \class QtAws::Fms::DeleteProtocolsListRequest
+ * \brief The DeleteProtocolsListRequest class provides an interface for Fms DeleteProtocolsList requests.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -85,11 +82,11 @@ QtAws::Core::AwsAbstractResponse * DeleteProtocolsListRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::FMS::DeleteProtocolsListRequestPrivate
+ * \class QtAws::Fms::DeleteProtocolsListRequestPrivate
  * \brief The DeleteProtocolsListRequestPrivate class provides private implementation for DeleteProtocolsListRequest.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -116,5 +113,5 @@ DeleteProtocolsListRequestPrivate::DeleteProtocolsListRequestPrivate(
 
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

@@ -53,10 +53,12 @@ namespace Shield {
  * \value DescribeProtectionAction Shield DescribeProtection action.
  * \value DescribeProtectionGroupAction Shield DescribeProtectionGroup action.
  * \value DescribeSubscriptionAction Shield DescribeSubscription action.
+ * \value DisableApplicationLayerAutomaticResponseAction Shield DisableApplicationLayerAutomaticResponse action.
  * \value DisableProactiveEngagementAction Shield DisableProactiveEngagement action.
  * \value DisassociateDRTLogBucketAction Shield DisassociateDRTLogBucket action.
  * \value DisassociateDRTRoleAction Shield DisassociateDRTRole action.
  * \value DisassociateHealthCheckAction Shield DisassociateHealthCheck action.
+ * \value EnableApplicationLayerAutomaticResponseAction Shield EnableApplicationLayerAutomaticResponse action.
  * \value EnableProactiveEngagementAction Shield EnableProactiveEngagement action.
  * \value GetSubscriptionStateAction Shield GetSubscriptionState action.
  * \value ListAttacksAction Shield ListAttacks action.
@@ -66,6 +68,7 @@ namespace Shield {
  * \value ListTagsForResourceAction Shield ListTagsForResource action.
  * \value TagResourceAction Shield TagResource action.
  * \value UntagResourceAction Shield UntagResource action.
+ * \value UpdateApplicationLayerAutomaticResponseAction Shield UpdateApplicationLayerAutomaticResponse action.
  * \value UpdateEmergencyContactSettingsAction Shield UpdateEmergencyContactSettings action.
  * \value UpdateProtectionGroupAction Shield UpdateProtectionGroup action.
  * \value UpdateSubscriptionAction Shield UpdateSubscription action.
@@ -276,7 +279,7 @@ QNetworkRequest ShieldRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ShieldRequestPrivate::ShieldRequestPrivate(const ShieldRequest::Action action, ShieldRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-06-02"))
 {
 
 }
@@ -327,10 +330,12 @@ QString ShieldRequestPrivate::toString(const ShieldRequest::Action &action)
         ActionToString(DescribeProtection);
         ActionToString(DescribeProtectionGroup);
         ActionToString(DescribeSubscription);
+        ActionToString(DisableApplicationLayerAutomaticResponse);
         ActionToString(DisableProactiveEngagement);
         ActionToString(DisassociateDRTLogBucket);
         ActionToString(DisassociateDRTRole);
         ActionToString(DisassociateHealthCheck);
+        ActionToString(EnableApplicationLayerAutomaticResponse);
         ActionToString(EnableProactiveEngagement);
         ActionToString(GetSubscriptionState);
         ActionToString(ListAttacks);
@@ -340,6 +345,7 @@ QString ShieldRequestPrivate::toString(const ShieldRequest::Action &action)
         ActionToString(ListTagsForResource);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateApplicationLayerAutomaticResponse);
         ActionToString(UpdateEmergencyContactSettings);
         ActionToString(UpdateProtectionGroup);
         ActionToString(UpdateSubscription);

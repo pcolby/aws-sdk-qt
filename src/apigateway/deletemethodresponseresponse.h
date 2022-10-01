@@ -24,11 +24,11 @@
 #include "deletemethodresponserequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteMethodResponseResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteMethodResponseResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteMethodResponseResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

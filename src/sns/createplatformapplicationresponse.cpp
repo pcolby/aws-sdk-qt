@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CreatePlatformApplicationResponse
- * \brief The CreatePlatformApplicationResponse class provides an interace for SNS CreatePlatformApplication responses.
+ * \class QtAws::Sns::CreatePlatformApplicationResponse
+ * \brief The CreatePlatformApplicationResponse class provides an interace for Sns CreatePlatformApplication responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SNS CreatePlatformApplication \a response.
+ * Parses a successful Sns CreatePlatformApplication \a response.
  */
 void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::CreatePlatformApplicationResponsePrivate
+ * \class QtAws::Sns::CreatePlatformApplicationResponsePrivate
  * \brief The CreatePlatformApplicationResponsePrivate class provides private implementation for CreatePlatformApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePriva
 }
 
 /*!
- * Parses a SNS CreatePlatformApplication response element from \a xml.
+ * Parses a Sns CreatePlatformApplication response element from \a xml.
  */
 void CreatePlatformApplicationResponsePrivate::parseCreatePlatformApplicationResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void CreatePlatformApplicationResponsePrivate::parseCreatePlatformApplicationRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

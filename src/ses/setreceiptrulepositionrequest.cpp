@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetReceiptRulePositionRequest
- * \brief The SetReceiptRulePositionRequest class provides an interface for SES SetReceiptRulePosition requests.
+ * \class QtAws::Ses::SetReceiptRulePositionRequest
+ * \brief The SetReceiptRulePositionRequest class provides an interface for Ses SetReceiptRulePosition requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SES::SetReceiptRulePositionRequestPrivate
+ * \class QtAws::Ses::SetReceiptRulePositionRequestPrivate
  * \brief The SetReceiptRulePositionRequestPrivate class provides private implementation for SetReceiptRulePositionRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

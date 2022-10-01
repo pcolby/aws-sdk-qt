@@ -98,7 +98,8 @@ namespace XRay {
  * \ingroup aws-clients
  * \inmodule QtAwsXRay
  *
- *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
+ *  Amazon Web Services X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by
+ *  processing those
  */
 
 /*!
@@ -187,11 +188,13 @@ CreateGroupResponse * XRayClient::createGroup(const CreateGroupRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a rule to control sampling behavior for instrumented applications. Services retrieve rules with
- * <a>GetSamplingRules</a>, and evaluate each rule in ascending order of <i>priority</i> for each request. If a rule
- * matches, the service records a trace, borrowing it from the reservoir size. After 10 seconds, the service reports back
- * to X-Ray with <a>GetSamplingTargets</a> to get updated versions of each in-use rule. The updated rule contains a trace
- * quota that the service can use instead of borrowing from the
+ * Creates a rule to control sampling behavior for instrumented applications. Services retrieve rules with <a
+ * href="https://docs.aws.amazon.com/xray/latest/api/API_GetSamplingRules.html">GetSamplingRules</a>, and evaluate each
+ * rule in ascending order of <i>priority</i> for each request. If a rule matches, the service records a trace, borrowing
+ * it from the reservoir size. After 10 seconds, the service reports back to X-Ray with <a
+ * href="https://docs.aws.amazon.com/xray/latest/api/API_GetSamplingTargets.html">GetSamplingTargets</a> to get updated
+ * versions of each in-use rule. The updated rule contains a trace quota that the service can use instead of borrowing from
+ * the
  */
 CreateSamplingRuleResponse * XRayClient::createSamplingRule(const CreateSamplingRuleRequest &request)
 {
@@ -365,8 +368,8 @@ GetSamplingTargetsResponse * XRayClient::getSamplingTargets(const GetSamplingTar
  *
  * Retrieves a document that describes services that process incoming requests, and downstream services that they call as a
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
- * that use the <a href="https://docs.aws.amazon.com/xray/index.html">AWS X-Ray SDK</a>. Downstream services can be other
- * applications, AWS resources, HTTP web APIs, or SQL
+ * that use the <a href="https://docs.aws.amazon.com/xray/index.html">Amazon Web Services X-Ray SDK</a>. Downstream
+ * services can be other applications, Amazon Web Services resources, HTTP web APIs, or SQL
  */
 GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphRequest &request)
 {
@@ -429,7 +432,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  *
  * For a full list of indexed fields and keywords that you can use in filter expressions, see <a
  * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
- * <i>AWS X-Ray Developer
+ * <i>Amazon Web Services X-Ray Developer
  */
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)
 {
@@ -442,7 +445,7 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of tags that are applied to the specified AWS X-Ray group or sampling
+ * Returns a list of tags that are applied to the specified Amazon Web Services X-Ray group or sampling
  */
 ListTagsForResourceResponse * XRayClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -468,7 +471,7 @@ PutEncryptionConfigResponse * XRayClient::putEncryptionConfig(const PutEncryptio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Used by the AWS X-Ray daemon to upload
+ * Used by the Amazon Web Services X-Ray daemon to upload
  */
 PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetryRecordsRequest &request)
 {
@@ -481,15 +484,15 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Uploads segment documents to AWS X-Ray. The <a href="https://docs.aws.amazon.com/xray/index.html">X-Ray SDK</a>
- * generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be
- * a completed segment, an in-progress segment, or an array of
+ * Uploads segment documents to Amazon Web Services X-Ray. The <a href="https://docs.aws.amazon.com/xray/index.html">X-Ray
+ * SDK</a> generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment
+ * document can be a completed segment, an in-progress segment, or an array of
  *
  * subsegments>
  *
  * Segments must include the following fields. For the full segment document schema, see <a
- * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html">AWS X-Ray Segment Documents</a>
- * in the <i>AWS X-Ray Developer
+ * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html">Amazon Web Services X-Ray Segment
+ * Documents</a> in the <i>Amazon Web Services X-Ray Developer
  *
  * Guide</i>> <p class="title"> <b>Required segment document fields</b>
  *
@@ -553,7 +556,7 @@ PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Applies tags to an existing AWS X-Ray group or sampling
+ * Applies tags to an existing Amazon Web Services X-Ray group or sampling
  */
 TagResourceResponse * XRayClient::tagResource(const TagResourceRequest &request)
 {
@@ -566,8 +569,8 @@ TagResourceResponse * XRayClient::tagResource(const TagResourceRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes tags from an AWS X-Ray group or sampling rule. You cannot edit or delete system tags (those with an
- * <code>aws:</code>
+ * Removes tags from an Amazon Web Services X-Ray group or sampling rule. You cannot edit or delete system tags (those with
+ * an <code>aws:</code>
  */
 UntagResourceResponse * XRayClient::untagResource(const UntagResourceRequest &request)
 {

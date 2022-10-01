@@ -21,28 +21,31 @@
 #include "pirequest_p.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 /*!
- * \class QtAws::PI::PiRequest
- * \brief The PiRequest class provides an interface for PI requests.
+ * \class QtAws::Pi::PiRequest
+ * \brief The PiRequest class provides an interface for Pi requests.
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
  * \enum PiRequest::Action
  *
- * This enum describes the actions that can be performed as PI
+ * This enum describes the actions that can be performed as Pi
  * requests.
  *
- * \value DescribeDimensionKeysAction PI DescribeDimensionKeys action.
- * \value GetDimensionKeyDetailsAction PI GetDimensionKeyDetails action.
- * \value GetResourceMetricsAction PI GetResourceMetrics action.
+ * \value DescribeDimensionKeysAction Pi DescribeDimensionKeys action.
+ * \value GetDimensionKeyDetailsAction Pi GetDimensionKeyDetails action.
+ * \value GetResourceMetadataAction Pi GetResourceMetadata action.
+ * \value GetResourceMetricsAction Pi GetResourceMetrics action.
+ * \value ListAvailableResourceDimensionsAction Pi ListAvailableResourceDimensions action.
+ * \value ListAvailableResourceMetricsAction Pi ListAvailableResourceMetrics action.
  */
 
 /*!
- * Constructs a PiRequest object for PI \a action.
+ * Constructs a PiRequest object for Pi \a action.
  */
 PiRequest::PiRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PiRequestPrivate(action, this))
@@ -83,7 +86,7 @@ PiRequest::PiRequest(PiRequestPrivate * const d) : QtAws::Core::AwsAbstractReque
 }
 
 /*!
- * Returns the PI action to be performed by this request.
+ * Returns the Pi action to be performed by this request.
  */
 PiRequest::Action PiRequest::action() const
 {
@@ -92,7 +95,7 @@ PiRequest::Action PiRequest::action() const
 }
 
 /*!
- * Returns the name of the PI action to be performed by this request.
+ * Returns the name of the Pi action to be performed by this request.
  */
 QString PiRequest::actionString() const
 {
@@ -100,7 +103,7 @@ QString PiRequest::actionString() const
 }
 
 /*!
- * Returns the PI API version implemented by this request.
+ * Returns the Pi API version implemented by this request.
  */
 QString PiRequest::apiVersion() const
 {
@@ -109,7 +112,7 @@ QString PiRequest::apiVersion() const
 }
 
 /*!
- * Sets the PI action to be performed by this request to \a action.
+ * Sets the Pi action to be performed by this request to \a action.
  */
 void PiRequest::setAction(const Action action)
 {
@@ -118,7 +121,7 @@ void PiRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the PI API version to include in this request to \a version.
+ * Sets the Pi API version to include in this request to \a version.
  */
 void PiRequest::setApiVersion(const QString &version)
 {
@@ -143,15 +146,15 @@ bool PiRequest::operator==(const PiRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid PI queue name.
+ * Returns \c tue if \a queueName is a valid Pi queue name.
  *
- * @par From PI FAQs:
+ * @par From Pi FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid PI queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Pi queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -218,10 +221,10 @@ void PiRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the PI request using the given
+ * Returns a network request for the Pi request using the given
  * \a endpoint.
  *
- * This PI implementation builds request URLs by combining the
+ * This Pi implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -234,19 +237,19 @@ QNetworkRequest PiRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::PI::PiRequestPrivate
+ * \class QtAws::Pi::PiRequestPrivate
  * \brief The PiRequestPrivate class provides private implementation for PiRequest.
  * \internal
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
- * Constructs a PiRequestPrivate object for PI \a action,
+ * Constructs a PiRequestPrivate object for Pi \a action,
  * with public implementation \a q.
  */
 PiRequestPrivate::PiRequestPrivate(const PiRequest::Action action, PiRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-02-27"))
 {
 
 }
@@ -272,7 +275,7 @@ PiRequestPrivate::PiRequestPrivate(const PiRequestPrivate &other,
  * invalid.
  *
  * This function converts PiRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the PI service's Action
+ * string representations, appropriate for use with the Pi service's Action
  * query parameters.
  */
 QString PiRequestPrivate::toString(const PiRequest::Action &action)
@@ -282,7 +285,10 @@ QString PiRequestPrivate::toString(const PiRequest::Action &action)
     switch (action) {
         ActionToString(DescribeDimensionKeys);
         ActionToString(GetDimensionKeyDetails);
+        ActionToString(GetResourceMetadata);
         ActionToString(GetResourceMetrics);
+        ActionToString(ListAvailableResourceDimensions);
+        ActionToString(ListAvailableResourceMetrics);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
@@ -290,5 +296,5 @@ QString PiRequestPrivate::toString(const PiRequest::Action &action)
     return QString();
 }
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws

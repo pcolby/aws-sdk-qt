@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderResponse;
+class ImageBuilderResponse;
 
-class imagebuilderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ImageBuilderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit imagebuilderResponsePrivate(imagebuilderResponse * const q);
+    explicit ImageBuilderResponsePrivate(ImageBuilderResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(imagebuilderResponse)
-    Q_DISABLE_COPY(imagebuilderResponsePrivate)
+    Q_DECLARE_PUBLIC(ImageBuilderResponse)
+    Q_DISABLE_COPY(ImageBuilderResponsePrivate)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

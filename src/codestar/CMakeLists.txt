@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCODESTAR_LIBRARY)
 
 add_library(QtAwsCodeStar
-  associateteammemberrequest.h
-  associateteammemberrequest_p.h
-  associateteammemberresponse.h
-  associateteammemberresponse_p.h
+  qtawscodestarglobal.h
   codestarclient.h
   codestarclient_p.h
   codestarrequest.h
   codestarrequest_p.h
   codestarresponse.h
   codestarresponse_p.h
+  associateteammemberrequest.h
+  associateteammemberrequest_p.h
+  associateteammemberresponse.h
+  associateteammemberresponse_p.h
   createprojectrequest.h
   createprojectrequest_p.h
   createprojectresponse.h
@@ -59,7 +60,6 @@ add_library(QtAwsCodeStar
   listuserprofilesrequest_p.h
   listuserprofilesresponse.h
   listuserprofilesresponse_p.h
-  qtawscodestarglobal.h
   tagprojectrequest.h
   tagprojectrequest_p.h
   tagprojectresponse.h
@@ -80,11 +80,11 @@ add_library(QtAwsCodeStar
   updateuserprofilerequest_p.h
   updateuserprofileresponse.h
   updateuserprofileresponse_p.h
-  associateteammemberrequest.cpp
-  associateteammemberresponse.cpp
   codestarclient.cpp
   codestarrequest.cpp
   codestarresponse.cpp
+  associateteammemberrequest.cpp
+  associateteammemberresponse.cpp
   createprojectrequest.cpp
   createprojectresponse.cpp
   createuserprofilerequest.cpp

@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class DlmRequestPrivate;
 
 class QTAWSDLM_EXPORT DlmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DLM.
+    /// Actions supported by Dlm.
     enum Action {
         CreateLifecyclePolicyAction,
         DeleteLifecyclePolicyAction,
@@ -83,7 +83,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

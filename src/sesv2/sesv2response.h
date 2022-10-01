@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2ResponsePrivate;
+class SESv2ResponsePrivate;
 
-class QTAWSSESV2_EXPORT Sesv2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSESV2_EXPORT SESv2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    Sesv2Response(QObject * const parent = 0);
+    SESv2Response(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    Sesv2Response(Sesv2ResponsePrivate * const d, QObject * const parent);
+    SESv2Response(SESv2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(Sesv2Response)
-    Q_DISABLE_COPY(Sesv2Response)
+    Q_DECLARE_PRIVATE(SESv2Response)
+    Q_DISABLE_COPY(SESv2Response)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

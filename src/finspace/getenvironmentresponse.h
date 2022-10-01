@@ -24,11 +24,11 @@
 #include "getenvironmentrequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class GetEnvironmentResponsePrivate;
 
-class QTAWSFINSPACE_EXPORT GetEnvironmentResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT GetEnvironmentResponse : public FinspaceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

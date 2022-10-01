@@ -24,7 +24,7 @@
 #include "logoutrequest.h"
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class LogoutRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

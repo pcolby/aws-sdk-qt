@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public CloudHSMRequestPrivate {
+class ListTagsForResourceRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const CloudHSMRequest::Action action,
+    ListTagsForResourceRequestPrivate(const CloudHsmRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

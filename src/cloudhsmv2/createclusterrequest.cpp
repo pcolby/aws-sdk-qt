@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CreateClusterRequest
- * \brief The CreateClusterRequest class provides an interface for CloudHSMV2 CreateCluster requests.
+ * \class QtAws::CloudHsmV2::CreateClusterRequest
+ * \brief The CreateClusterRequest class provides an interface for CloudHsmV2 CreateCluster requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::createCluster
+ * \sa CloudHsmV2Client::createCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
-    : CloudHSMV2Request(new CreateClusterRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new CreateClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
  * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
-    : CloudHSMV2Request(new CreateClusterRequestPrivate(CloudHSMV2Request::CreateClusterAction, this))
+    : CloudHsmV2Request(new CreateClusterRequestPrivate(CloudHsmV2Request::CreateClusterAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CreateClusterRequestPrivate
+ * \class QtAws::CloudHsmV2::CreateClusterRequestPrivate
  * \brief The CreateClusterRequestPrivate class provides private implementation for CreateClusterRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a CreateClusterRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a CreateClusterRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
-    const CloudHSMV2Request::Action action, CreateClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, CreateClusterRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

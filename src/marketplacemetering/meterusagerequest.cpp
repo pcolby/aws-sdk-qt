@@ -43,7 +43,7 @@ namespace MarketplaceMetering {
  * 
  *  For information on the permissions you need to use this API, see <a
  *  href="https://docs.aws.amazon.com/marketplace/latest/userguide/iam-user-policy-for-aws-marketplace-actions.html">AWS
- *  Marketing metering and entitlement API permissions</a> in the <i>AWS Marketplace Seller Guide.</i>
+ *  Marketplace metering and entitlement API permissions</a> in the <i>AWS Marketplace Seller Guide.</i>
  * 
  *  </p
  * 
@@ -51,13 +51,13 @@ namespace MarketplaceMetering {
  * 
  *  </p <ul> <li>
  * 
- *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2 instance or a
- *  container running on EKS or
+ *  <i>MeterUsage</i> - Submits the metering record for an AWS Marketplace product. <code>MeterUsage</code> is called from
+ *  an EC2 instance or a container running on EKS or
  * 
  *  ECS> </li> <li>
  * 
- *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
- *  software-as-a-service (SaaS)
+ *  <i>BatchMeterUsage</i> - Submits the metering record for a set of customers. <code>BatchMeterUsage</code> is called from
+ *  a software-as-a-service (SaaS)
  * 
  *  application> </li> </ul>
  * 
@@ -65,29 +65,31 @@ namespace MarketplaceMetering {
  * 
  *  </p <ul> <li>
  * 
- *  <i>ResolveCustomer</i>- Called by a SaaS application during the registration process. When a buyer visits your website
+ *  <i>ResolveCustomer</i> - Called by a SaaS application during the registration process. When a buyer visits your website
  *  during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is
- *  resolved through this API to obtain a CustomerIdentifier and Product
+ *  resolved through this API to obtain a <code>CustomerIdentifier</code> along with the <code>CustomerAWSAccountId</code>
+ *  and
  * 
- *  Code> </li> </ul>
+ *  <code>ProductCode</code>> </li> </ul>
  * 
  *  <b>Entitlement and Metering for Paid Container Products</b>
  * 
  *  </p <ul> <li>
  * 
  *  Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service
- *  and call the RegisterUsage operation for software entitlement and metering. Free and BYOL products for Amazon ECS or
- *  Amazon EKS aren't required to call RegisterUsage, but you can do so if you want to receive usage data in your seller
- *  reports. For more information on using the RegisterUsage operation, see <a
+ *  and call the <code>RegisterUsage</code> operation for software entitlement and metering. Free and BYOL products for
+ *  Amazon ECS or Amazon EKS aren't required to call <code>RegisterUsage</code>, but you can do so if you want to receive
+ *  usage data in your seller reports. For more information on using the <code>RegisterUsage</code> operation, see <a
  *  href="https://docs.aws.amazon.com/marketplace/latest/userguide/container-based-products.html">Container-Based
  *  Products</a>.
  * 
  *  </p </li> </ul>
  * 
- *  BatchMeterUsage API calls are captured by AWS CloudTrail. You can use Cloudtrail to verify that the SaaS metering
- *  records that you sent are accurate by searching for records with the eventName of BatchMeterUsage. You can also use
- *  CloudTrail to audit records over time. For more information, see the <i> <a
- *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html">AWS CloudTrail User Guide</a>
+ *  <code>BatchMeterUsage</code> API calls are captured by AWS CloudTrail. You can use Cloudtrail to verify that the SaaS
+ *  metering records that you sent are accurate by searching for records with the <code>eventName</code> of
+ *  <code>BatchMeterUsage</code>. You can also use CloudTrail to audit records over time. For more information, see the <i>
+ *  <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html">AWS CloudTrail User
+ *  Guide</a>.</i>
  *
  * \sa MarketplaceMeteringClient::meterUsage
  */

@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutReplicationConfigurationRequest
- * \brief The PutReplicationConfigurationRequest class provides an interface for ECR PutReplicationConfiguration requests.
+ * \class QtAws::Ecr::PutReplicationConfigurationRequest
+ * \brief The PutReplicationConfigurationRequest class provides an interface for Ecr PutReplicationConfiguration requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putReplicationConfiguration
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * PutReplicationConfigurationRequest::response(
 }
 
 /*!
- * \class QtAws::ECR::PutReplicationConfigurationRequestPrivate
+ * \class QtAws::Ecr::PutReplicationConfigurationRequestPrivate
  * \brief The PutReplicationConfigurationRequestPrivate class provides private implementation for PutReplicationConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ PutReplicationConfigurationRequestPrivate::PutReplicationConfigurationRequestPri
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

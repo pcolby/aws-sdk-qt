@@ -23,7 +23,7 @@
 #include "fmsresponse_p.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class PutProtocolsListResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

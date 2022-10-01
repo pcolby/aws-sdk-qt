@@ -24,16 +24,16 @@
 #include "ecrrequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class EcrRequest;
 
 class EcrRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EcrRequest::Action action; ///< ECR action to be performed.
-    QString apiVersion;        ///< ECR API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ECR request (query string) parameters. @todo?
+    EcrRequest::Action action; ///< Ecr action to be performed.
+    QString apiVersion;        ///< Ecr API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ecr request (query string) parameters. @todo?
 
     EcrRequestPrivate(const EcrRequest::Action action, EcrRequest * const q);
     EcrRequestPrivate(const EcrRequestPrivate &other, EcrRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

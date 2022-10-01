@@ -71,14 +71,24 @@
 #include "gettagsresponse.h"
 #include "getusageforecastrequest.h"
 #include "getusageforecastresponse.h"
+#include "listcostallocationtagsrequest.h"
+#include "listcostallocationtagsresponse.h"
 #include "listcostcategorydefinitionsrequest.h"
 #include "listcostcategorydefinitionsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "provideanomalyfeedbackrequest.h"
 #include "provideanomalyfeedbackresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateanomalymonitorrequest.h"
 #include "updateanomalymonitorresponse.h"
 #include "updateanomalysubscriptionrequest.h"
 #include "updateanomalysubscriptionresponse.h"
+#include "updatecostallocationtagsstatusrequest.h"
+#include "updatecostallocationtagsstatusresponse.h"
 #include "updatecostcategorydefinitionrequest.h"
 #include "updatecostcategorydefinitionresponse.h"
 
@@ -104,9 +114,9 @@ namespace CostExplorer {
  * \ingroup aws-clients
  * \inmodule QtAwsCostExplorer
  *
- *  The Cost Explorer API enables you to programmatically query your cost and usage data. You can query for aggregated data
- *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
- *  write operations for Amazon DynamoDB database tables in your production environment.
+ *  You can use the Cost Explorer API to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data. This might include the number of
+ *  daily write operations for Amazon DynamoDB database tables in your production environment.
  * 
  *  </p
  * 
@@ -122,8 +132,8 @@ namespace CostExplorer {
  * 
  *  </p </li> </ul>
  * 
- *  For information about costs associated with the Cost Explorer API, see <a
- *  href="http://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
+ *  For information about the costs that are associated with the Cost Explorer API, see <a
+ *  href="http://aws.amazon.com/aws-cost-management/pricing/">Amazon Web Services Cost Management
  */
 
 /*!
@@ -264,13 +274,14 @@ DeleteCostCategoryDefinitionResponse * CostExplorerClient::deleteCostCategoryDef
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the name, ARN, rules, definition, and effective dates of a Cost Category that's defined in the
+ * Returns the name, Amazon Resource Name (ARN), rules, definition, and effective dates of a Cost Category that's defined
+ * in the
  *
  * account>
  *
- * You have the option to use <code>EffectiveOn</code> to return a Cost Category that is active on a specific date. If
- * there is no <code>EffectiveOn</code> specified, you’ll see a Cost Category that is effective on the current date. If
- * Cost Category is still effective, <code>EffectiveEnd</code> is omitted in the response.
+ * You have the option to use <code>EffectiveOn</code> to return a Cost Category that's active on a specific date. If
+ * there's no <code>EffectiveOn</code> specified, you see a Cost Category that's effective on the current date. If Cost
+ * Category is still effective, <code>EffectiveEnd</code> is omitted in the response.
  */
 DescribeCostCategoryDefinitionResponse * CostExplorerClient::describeCostCategoryDefinition(const DescribeCostCategoryDefinitionRequest &request)
 {
@@ -283,7 +294,7 @@ DescribeCostCategoryDefinitionResponse * CostExplorerClient::describeCostCategor
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves all of the cost anomalies detected on your account, during the time period specified by the
+ * Retrieves all of the cost anomalies detected on your account during the time period that's specified by the
  * <code>DateInterval</code> object.
  */
 GetAnomaliesResponse * CostExplorerClient::getAnomalies(const GetAnomaliesRequest &request)
@@ -325,12 +336,12 @@ GetAnomalySubscriptionsResponse * CostExplorerClient::getAnomalySubscriptions(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as
- * <code>BlendedCosts</code> or <code>UsageQuantity</code>, that you want the request to return. You can also filter and
- * group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time range. For a
- * complete list of valid dimensions, see the <a
+ * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric that you want the
+ * request to return. For example, you can specify <code>BlendedCosts</code> or <code>UsageQuantity</code>. You can also
+ * filter and group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time
+ * range. For a complete list of valid dimensions, see the <a
  * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html">GetDimensionValues</a>
- * operation. Management account in an organization in AWS Organizations have access to all member
+ * operation. Management account in an organization in Organizations have access to all member
  *
  * accounts>
  *
@@ -354,15 +365,15 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
  * filter and group your data by various dimensions, such as <code>SERVICE</code> or <code>AZ</code>, in a specific time
  * range. For a complete list of valid dimensions, see the <a
  * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html">GetDimensionValues</a>
- * operation. Management account in an organization in AWS Organizations have access to all member accounts. This API is
+ * operation. Management account in an organization in Organizations have access to all member accounts. This API is
  * currently available for the Amazon Elastic Compute Cloud – Compute service
  *
  * only> <note>
  *
- * This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how
- * to access the Settings page, see <a
+ * This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information about
+ * how to access the Settings page, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-access.html">Controlling Access for Cost
- * Explorer</a> in the <i>AWS Billing and Cost Management User
+ * Explorer</a> in the <i>Billing and Cost Management User
  */
 GetCostAndUsageWithResourcesResponse * CostExplorerClient::getCostAndUsageWithResources(const GetCostAndUsageWithResourcesRequest &request)
 {
@@ -420,7 +431,7 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute
+ * Retrieves the reservation coverage for your account, which you can use to see how much of your Amazon Elastic Compute
  * Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An
  * organization's management account can see the coverage of the associated member accounts. This supports dimensions, Cost
  * Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following
@@ -464,24 +475,24 @@ GetReservationCoverageResponse * CostExplorerClient::getReservationCoverage(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets recommendations for which reservations to purchase. These recommendations could help you reduce your costs.
- * Reservations provide a discounted hourly rate (up to 75%) compared to On-Demand
+ * Gets recommendations for reservation purchases. These recommendations might help you to reduce your costs. Reservations
+ * provide a discounted hourly rate (up to 75%) compared to On-Demand
  *
  * pricing>
  *
- * AWS generates your recommendations by identifying your On-Demand usage during a specific time period and collecting your
- * usage into categories that are eligible for a reservation. After AWS has these categories, it simulates every
- * combination of reservations in each category of usage to identify the best number of each type of RI to purchase to
- * maximize your estimated savings.
+ * Amazon Web Services generates your recommendations by identifying your On-Demand usage during a specific time period and
+ * collecting your usage into categories that are eligible for a reservation. After Amazon Web Services has these
+ * categories, it simulates every combination of reservations in each category of usage to identify the best number of each
+ * type of Reserved Instance (RI) to purchase to maximize your estimated savings.
  *
  * </p
  *
- * For example, AWS automatically aggregates your Amazon EC2 Linux, shared tenancy, and c4 family usage in the US West
- * (Oregon) Region and recommends that you buy size-flexible regional reservations to apply to the c4 family usage. AWS
- * recommends the smallest size instance in an instance family. This makes it easier to purchase a size-flexible RI. AWS
- * also shows the equal number of normalized units so that you can purchase any instance size that you want. For this
- * example, your RI recommendation would be for <code>c4.large</code> because that is the smallest size instance in the c4
- * instance
+ * For example, Amazon Web Services automatically aggregates your Amazon EC2 Linux, shared tenancy, and c4 family usage in
+ * the US West (Oregon) Region and recommends that you buy size-flexible regional reservations to apply to the c4 family
+ * usage. Amazon Web Services recommends the smallest size instance in an instance family. This makes it easier to purchase
+ * a size-flexible Reserved Instance (RI). Amazon Web Services also shows the equal number of normalized units. This way,
+ * you can purchase any instance size that you want. For this example, your RI recommendation is for <code>c4.large</code>
+ * because that is the smallest size instance in the c4 instance
  */
 GetReservationPurchaseRecommendationResponse * CostExplorerClient::getReservationPurchaseRecommendation(const GetReservationPurchaseRecommendationRequest &request)
 {
@@ -514,9 +525,9 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
  * instances>
  *
  * Recommendations are generated to either downsize or terminate instances, along with providing savings detail and
- * metrics. For details on calculation and function, see <a
+ * metrics. For more information about calculation and function, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-rightsizing.html">Optimizing Your Cost with
- * Rightsizing Recommendations</a> in the <i>AWS Billing and Cost Management User
+ * Rightsizing Recommendations</a> in the <i>Billing and Cost Management User
  */
 GetRightsizingRecommendationResponse * CostExplorerClient::getRightsizingRecommendation(const GetRightsizingRecommendationRequest &request)
 {
@@ -584,7 +595,7 @@ GetSavingsPlansPurchaseRecommendationResponse * CostExplorerClient::getSavingsPl
  *
  * values> <note>
  *
- * You cannot group by any dimension values for
+ * You can't group by any dimension values for
  */
 GetSavingsPlansUtilizationResponse * CostExplorerClient::getSavingsPlansUtilization(const GetSavingsPlansUtilizationRequest &request)
 {
@@ -642,19 +653,47 @@ GetUsageForecastResponse * CostExplorerClient::getUsageForecast(const GetUsageFo
 
 /*!
  * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * ListCostAllocationTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get a list of cost allocation tags. All inputs in the API are optional and serve as filters. By default, all cost
+ * allocation tags are returned.
+ */
+ListCostAllocationTagsResponse * CostExplorerClient::listCostAllocationTags(const ListCostAllocationTagsRequest &request)
+{
+    return qobject_cast<ListCostAllocationTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
  * ListCostCategoryDefinitionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the name, ARN, <code>NumberOfRules</code> and effective dates of all Cost Categories defined in the account. You
- * have the option to use <code>EffectiveOn</code> to return a list of Cost Categories that were active on a specific date.
- * If there is no <code>EffectiveOn</code> specified, you’ll see Cost Categories that are effective on the current date. If
- * Cost Category is still effective, <code>EffectiveEnd</code> is omitted in the response.
- * <code>ListCostCategoryDefinitions</code> supports pagination. The request can have a <code>MaxResults</code> range up to
+ * Returns the name, Amazon Resource Name (ARN), <code>NumberOfRules</code> and effective dates of all Cost Categories
+ * defined in the account. You have the option to use <code>EffectiveOn</code> to return a list of Cost Categories that
+ * were active on a specific date. If there is no <code>EffectiveOn</code> specified, you’ll see Cost Categories that are
+ * effective on the current date. If Cost Category is still effective, <code>EffectiveEnd</code> is omitted in the
+ * response. <code>ListCostCategoryDefinitions</code> supports pagination. The request can have a <code>MaxResults</code>
+ * range up to
  */
 ListCostCategoryDefinitionsResponse * CostExplorerClient::listCostCategoryDefinitions(const ListCostCategoryDefinitionsRequest &request)
 {
     return qobject_cast<ListCostCategoryDefinitionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource tags associated with the resource specified by the Amazon Resource Name (ARN).
+ */
+ListTagsForResourceResponse * CostExplorerClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -672,11 +711,48 @@ ProvideAnomalyFeedbackResponse * CostExplorerClient::provideAnomalyFeedback(cons
 
 /*!
  * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * An API operation for adding one or more tags (key-value pairs) to a
+ *
+ * resource>
+ *
+ * You can use the <code>TagResource</code> operation with a resource that already has tags. If you specify a new tag key
+ * for the resource, this tag is appended to the list of tags associated with the resource. If you specify a tag key that
+ * is already associated with the resource, the new tag value you specify replaces the previous value for that
+ *
+ * tag>
+ *
+ * Although the maximum number of array members is 200, user-tag maximum is 50. The remaining are reserved for Amazon Web
+ * Services
+ */
+TagResourceResponse * CostExplorerClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from a resource. Specify only tag keys in your request. Don't specify the value.
+ */
+UntagResourceResponse * CostExplorerClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
  * UpdateAnomalyMonitorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing cost anomaly monitor. The changes made are applied going forward, and does not change anomalies
+ * Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn't change anomalies
  * detected in the past.
  */
 UpdateAnomalyMonitorResponse * CostExplorerClient::updateAnomalyMonitor(const UpdateAnomalyMonitorRequest &request)
@@ -695,6 +771,21 @@ UpdateAnomalyMonitorResponse * CostExplorerClient::updateAnomalyMonitor(const Up
 UpdateAnomalySubscriptionResponse * CostExplorerClient::updateAnomalySubscription(const UpdateAnomalySubscriptionRequest &request)
 {
     return qobject_cast<UpdateAnomalySubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * UpdateCostAllocationTagsStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates status for cost allocation tags in bulk, with maximum batch size of 20. If the tag status that's updated is the
+ * same as the existing tag status, the request doesn't fail. Instead, it doesn't have any effect on the tag status (for
+ * example, activating the active tag).
+ */
+UpdateCostAllocationTagsStatusResponse * CostExplorerClient::updateCostAllocationTagsStatus(const UpdateCostAllocationTagsStatusRequest &request)
+{
+    return qobject_cast<UpdateCostAllocationTagsStatusResponse *>(send(request));
 }
 
 /*!

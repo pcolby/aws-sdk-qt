@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateSizeConstraintSetRequest
- * \brief The CreateSizeConstraintSetRequest class provides an interface for WAF CreateSizeConstraintSet requests.
+ * \class QtAws::Waf::CreateSizeConstraintSetRequest
+ * \brief The CreateSizeConstraintSetRequest class provides an interface for Waf CreateSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAF::CreateSizeConstraintSetRequestPrivate
+ * \class QtAws::Waf::CreateSizeConstraintSetRequestPrivate
  * \brief The CreateSizeConstraintSetRequestPrivate class provides private implementation for CreateSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

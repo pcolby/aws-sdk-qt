@@ -24,14 +24,14 @@
 #include "unsubscriberequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class UnsubscribeRequest;
 
-class UnsubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class UnsubscribeRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    UnsubscribeRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    UnsubscribeRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    UnsubscribeRequest * const q);
     UnsubscribeRequestPrivate(const UnsubscribeRequestPrivate &other,
                                    UnsubscribeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

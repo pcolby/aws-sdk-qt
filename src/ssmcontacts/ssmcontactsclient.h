@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsClientPrivate;
+class SsmContactsClientPrivate;
 class AcceptPageRequest;
 class AcceptPageResponse;
 class ActivateContactChannelRequest;
@@ -85,17 +85,17 @@ class UpdateContactResponse;
 class UpdateContactChannelRequest;
 class UpdateContactChannelResponse;
 
-class QTAWSSSMCONTACTS_EXPORT SSMContactsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSMCONTACTS_EXPORT SsmContactsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SSMContactsClient(
+    SsmContactsClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit SSMContactsClient(
+    explicit SsmContactsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -130,12 +130,12 @@ public slots:
     UpdateContactChannelResponse * updateContactChannel(const UpdateContactChannelRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SSMContactsClient)
-    Q_DISABLE_COPY(SSMContactsClient)
+    Q_DECLARE_PRIVATE(SsmContactsClient)
+    Q_DISABLE_COPY(SsmContactsClient)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

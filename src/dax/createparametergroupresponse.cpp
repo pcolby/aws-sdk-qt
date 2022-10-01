@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::CreateParameterGroupResponse
- * \brief The CreateParameterGroupResponse class provides an interace for DAX CreateParameterGroup responses.
+ * \class QtAws::Dax::CreateParameterGroupResponse
+ * \brief The CreateParameterGroupResponse class provides an interace for Dax CreateParameterGroup responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const CreateParameterGroupRequest * CreateParameterGroupResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DAX CreateParameterGroup \a response.
+ * Parses a successful Dax CreateParameterGroup \a response.
  */
 void CreateParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void CreateParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::CreateParameterGroupResponsePrivate
+ * \class QtAws::Dax::CreateParameterGroupResponsePrivate
  * \brief The CreateParameterGroupResponsePrivate class provides private implementation for CreateParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ CreateParameterGroupResponsePrivate::CreateParameterGroupResponsePrivate(
 }
 
 /*!
- * Parses a DAX CreateParameterGroup response element from \a xml.
+ * Parses a Dax CreateParameterGroup response element from \a xml.
  */
 void CreateParameterGroupResponsePrivate::parseCreateParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void CreateParameterGroupResponsePrivate::parseCreateParameterGroupResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

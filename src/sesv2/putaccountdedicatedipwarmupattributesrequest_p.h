@@ -24,14 +24,14 @@
 #include "putaccountdedicatedipwarmupattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountDedicatedIpWarmupAttributesRequest;
 
-class PutAccountDedicatedIpWarmupAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutAccountDedicatedIpWarmupAttributesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutAccountDedicatedIpWarmupAttributesRequestPrivate(const Sesv2Request::Action action,
+    PutAccountDedicatedIpWarmupAttributesRequestPrivate(const SESv2Request::Action action,
                                    PutAccountDedicatedIpWarmupAttributesRequest * const q);
     PutAccountDedicatedIpWarmupAttributesRequestPrivate(const PutAccountDedicatedIpWarmupAttributesRequestPrivate &other,
                                    PutAccountDedicatedIpWarmupAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

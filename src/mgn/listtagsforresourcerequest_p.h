@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public mgnRequestPrivate {
+class ListTagsForResourceRequestPrivate : public MgnRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const mgnRequest::Action action,
+    ListTagsForResourceRequestPrivate(const MgnRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

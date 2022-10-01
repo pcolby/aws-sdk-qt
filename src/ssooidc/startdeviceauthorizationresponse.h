@@ -24,11 +24,11 @@
 #include "startdeviceauthorizationrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class StartDeviceAuthorizationResponsePrivate;
 
-class QTAWSSSOOIDC_EXPORT StartDeviceAuthorizationResponse : public SsooidcResponse {
+class QTAWSSSOOIDC_EXPORT StartDeviceAuthorizationResponse : public SsoOidcResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

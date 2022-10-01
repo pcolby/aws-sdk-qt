@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ListBackupsResponse
- * \brief The ListBackupsResponse class provides an interace for DynamoDB ListBackups responses.
+ * \class QtAws::DynamoDb::ListBackupsResponse
+ * \brief The ListBackupsResponse class provides an interace for DynamoDb ListBackups responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::listBackups
+ * \sa DynamoDbClient::listBackups
  */
 
 /*!
@@ -63,7 +63,7 @@ ListBackupsResponse::ListBackupsResponse(
         const ListBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ListBackupsResponsePrivate(this), parent)
+    : DynamoDbResponse(new ListBackupsResponsePrivate(this), parent)
 {
     setRequest(new ListBackupsRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const ListBackupsRequest * ListBackupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB ListBackups \a response.
+ * Parses a successful DynamoDb ListBackups \a response.
  */
 void ListBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void ListBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::ListBackupsResponsePrivate
+ * \class QtAws::DynamoDb::ListBackupsResponsePrivate
  * \brief The ListBackupsResponsePrivate class provides private implementation for ListBackupsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a ListBackupsResponsePrivate object with public implementation \a q.
  */
 ListBackupsResponsePrivate::ListBackupsResponsePrivate(
-    ListBackupsResponse * const q) : DynamoDBResponsePrivate(q)
+    ListBackupsResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB ListBackups response element from \a xml.
+ * Parses a DynamoDb ListBackups response element from \a xml.
  */
 void ListBackupsResponsePrivate::parseListBackupsResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ListBackupsResponsePrivate::parseListBackupsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

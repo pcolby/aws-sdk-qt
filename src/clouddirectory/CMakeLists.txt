@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCLOUDDIRECTORY_LIBRARY)
 
 add_library(QtAwsCloudDirectory
+  qtawsclouddirectoryglobal.h
+  clouddirectoryclient.h
+  clouddirectoryclient_p.h
+  clouddirectoryrequest.h
+  clouddirectoryrequest_p.h
+  clouddirectoryresponse.h
+  clouddirectoryresponse_p.h
   addfacettoobjectrequest.h
   addfacettoobjectrequest_p.h
   addfacettoobjectresponse.h
@@ -33,12 +40,6 @@ add_library(QtAwsCloudDirectory
   batchwriterequest_p.h
   batchwriteresponse.h
   batchwriteresponse_p.h
-  clouddirectoryclient.h
-  clouddirectoryclient_p.h
-  clouddirectoryrequest.h
-  clouddirectoryrequest_p.h
-  clouddirectoryresponse.h
-  clouddirectoryresponse_p.h
   createdirectoryrequest.h
   createdirectoryrequest_p.h
   createdirectoryresponse.h
@@ -231,7 +232,6 @@ add_library(QtAwsCloudDirectory
   putschemafromjsonrequest_p.h
   putschemafromjsonresponse.h
   putschemafromjsonresponse_p.h
-  qtawsclouddirectoryglobal.h
   removefacetfromobjectrequest.h
   removefacetfromobjectrequest_p.h
   removefacetfromobjectresponse.h
@@ -272,6 +272,9 @@ add_library(QtAwsCloudDirectory
   upgradepublishedschemarequest_p.h
   upgradepublishedschemaresponse.h
   upgradepublishedschemaresponse_p.h
+  clouddirectoryclient.cpp
+  clouddirectoryrequest.cpp
+  clouddirectoryresponse.cpp
   addfacettoobjectrequest.cpp
   addfacettoobjectresponse.cpp
   applyschemarequest.cpp
@@ -288,9 +291,6 @@ add_library(QtAwsCloudDirectory
   batchreadresponse.cpp
   batchwriterequest.cpp
   batchwriteresponse.cpp
-  clouddirectoryclient.cpp
-  clouddirectoryrequest.cpp
-  clouddirectoryresponse.cpp
   createdirectoryrequest.cpp
   createdirectoryresponse.cpp
   createfacetrequest.cpp

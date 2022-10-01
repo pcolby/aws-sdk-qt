@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::PutIdentityPolicyRequest
- * \brief The PutIdentityPolicyRequest class provides an interface for SES PutIdentityPolicy requests.
+ * \class QtAws::Ses::PutIdentityPolicyRequest
+ * \brief The PutIdentityPolicyRequest class provides an interface for Ses PutIdentityPolicy requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SES::PutIdentityPolicyRequestPrivate
+ * \class QtAws::Ses::PutIdentityPolicyRequestPrivate
  * \brief The PutIdentityPolicyRequestPrivate class provides private implementation for PutIdentityPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

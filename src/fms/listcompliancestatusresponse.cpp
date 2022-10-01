@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::ListComplianceStatusResponse
- * \brief The ListComplianceStatusResponse class provides an interace for FMS ListComplianceStatus responses.
+ * \class QtAws::Fms::ListComplianceStatusResponse
+ * \brief The ListComplianceStatusResponse class provides an interace for Fms ListComplianceStatus responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const ListComplianceStatusRequest * ListComplianceStatusResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful FMS ListComplianceStatus \a response.
+ * Parses a successful Fms ListComplianceStatus \a response.
  */
 void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::ListComplianceStatusResponsePrivate
+ * \class QtAws::Fms::ListComplianceStatusResponsePrivate
  * \brief The ListComplianceStatusResponsePrivate class provides private implementation for ListComplianceStatusResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
 }
 
 /*!
- * Parses a FMS ListComplianceStatus response element from \a xml.
+ * Parses a Fms ListComplianceStatus response element from \a xml.
  */
 void ListComplianceStatusResponsePrivate::parseListComplianceStatusResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void ListComplianceStatusResponsePrivate::parseListComplianceStatusResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

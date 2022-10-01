@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterSnapshotResponse
- * \brief The DeleteDBClusterSnapshotResponse class provides an interace for DocDB DeleteDBClusterSnapshot responses.
+ * \class QtAws::DocDb::DeleteDBClusterSnapshotResponse
+ * \brief The DeleteDBClusterSnapshotResponse class provides an interace for DocDb DeleteDBClusterSnapshot responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBClusterSnapshot
+ * \sa DocDbClient::deleteDBClusterSnapshot
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
         const DeleteDBClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteDBClusterSnapshotResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteDBClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterSnapshotRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteDBClusterSnapshot \a response.
+ * Parses a successful DocDb DeleteDBClusterSnapshot \a response.
  */
 void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBClusterSnapshotResponsePrivate
+ * \class QtAws::DocDb::DeleteDBClusterSnapshotResponsePrivate
  * \brief The DeleteDBClusterSnapshotResponsePrivate class provides private implementation for DeleteDBClusterSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteDBClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
-    DeleteDBClusterSnapshotResponse * const q) : DocDBResponsePrivate(q)
+    DeleteDBClusterSnapshotResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteDBClusterSnapshot response element from \a xml.
+ * Parses a DocDb DeleteDBClusterSnapshot response element from \a xml.
  */
 void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

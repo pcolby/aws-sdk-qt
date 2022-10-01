@@ -24,7 +24,7 @@
 #include "deregistertaskfrommaintenancewindowrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DeregisterTaskFromMaintenanceWindowRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

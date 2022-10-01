@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::AssumeRoleWithSAMLResponse
- * \brief The AssumeRoleWithSAMLResponse class provides an interace for STS AssumeRoleWithSAML responses.
+ * \class QtAws::Sts::AssumeRoleWithSAMLResponse
+ * \brief The AssumeRoleWithSAMLResponse class provides an interace for Sts AssumeRoleWithSAML responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::assumeRoleWithSAML
@@ -67,7 +67,7 @@ const AssumeRoleWithSAMLRequest * AssumeRoleWithSAMLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS AssumeRoleWithSAML \a response.
+ * Parses a successful Sts AssumeRoleWithSAML \a response.
  */
 void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::AssumeRoleWithSAMLResponsePrivate
+ * \class QtAws::Sts::AssumeRoleWithSAMLResponsePrivate
  * \brief The AssumeRoleWithSAMLResponsePrivate class provides private implementation for AssumeRoleWithSAMLResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
 }
 
 /*!
- * Parses a STS AssumeRoleWithSAML response element from \a xml.
+ * Parses a Sts AssumeRoleWithSAML response element from \a xml.
  */
 void AssumeRoleWithSAMLResponsePrivate::parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void AssumeRoleWithSAMLResponsePrivate::parseAssumeRoleWithSAMLResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

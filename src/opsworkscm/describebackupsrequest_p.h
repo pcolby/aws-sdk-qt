@@ -24,14 +24,14 @@
 #include "describebackupsrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeBackupsRequest;
 
-class DescribeBackupsRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeBackupsRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DescribeBackupsRequestPrivate(const OpsWorksCMRequest::Action action,
+    DescribeBackupsRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DescribeBackupsRequest * const q);
     DescribeBackupsRequestPrivate(const DescribeBackupsRequestPrivate &other,
                                    DescribeBackupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

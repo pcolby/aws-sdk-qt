@@ -24,7 +24,7 @@
 #include "modifymounttargetsecuritygroupsrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class ModifyMountTargetSecurityGroupsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

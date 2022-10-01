@@ -24,11 +24,11 @@
 #include "getratebasedrulemanagedkeysrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetRateBasedRuleManagedKeysResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetRateBasedRuleManagedKeysResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetRateBasedRuleManagedKeysResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

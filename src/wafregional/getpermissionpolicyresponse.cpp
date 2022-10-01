@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetPermissionPolicyResponse
- * \brief The GetPermissionPolicyResponse class provides an interace for WAFRegional GetPermissionPolicy responses.
+ * \class QtAws::WafRegional::GetPermissionPolicyResponse
+ * \brief The GetPermissionPolicyResponse class provides an interace for WafRegional GetPermissionPolicy responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getPermissionPolicy
+ * \sa WafRegionalClient::getPermissionPolicy
  */
 
 /*!
@@ -67,7 +67,7 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
         const GetPermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetPermissionPolicyResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetPermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetPermissionPolicyRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetPermissionPolicy \a response.
+ * Parses a successful WafRegional GetPermissionPolicy \a response.
  */
 void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetPermissionPolicyResponsePrivate
+ * \class QtAws::WafRegional::GetPermissionPolicyResponsePrivate
  * \brief The GetPermissionPolicyResponsePrivate class provides private implementation for GetPermissionPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetPermissionPolicyResponsePrivate object with public implementation \a q.
  */
 GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
-    GetPermissionPolicyResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetPermissionPolicyResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetPermissionPolicy response element from \a xml.
+ * Parses a WafRegional GetPermissionPolicy response element from \a xml.
  */
 void GetPermissionPolicyResponsePrivate::parseGetPermissionPolicyResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetPermissionPolicyResponsePrivate::parseGetPermissionPolicyResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

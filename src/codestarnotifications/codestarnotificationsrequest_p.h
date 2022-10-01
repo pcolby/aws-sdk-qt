@@ -24,28 +24,28 @@
 #include "codestarnotificationsrequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsRequest;
+class CodestarNotificationsRequest;
 
-class CodeStarNotificationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodestarNotificationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    CodeStarNotificationsRequest::Action action; ///< CodeStarNotifications action to be performed.
-    QString apiVersion;        ///< CodeStarNotifications API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< CodeStarNotifications request (query string) parameters. @todo?
+    CodestarNotificationsRequest::Action action; ///< CodestarNotifications action to be performed.
+    QString apiVersion;        ///< CodestarNotifications API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CodestarNotifications request (query string) parameters. @todo?
 
-    CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequest::Action action, CodeStarNotificationsRequest * const q);
-    CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequestPrivate &other, CodeStarNotificationsRequest * const q);
+    CodestarNotificationsRequestPrivate(const CodestarNotificationsRequest::Action action, CodestarNotificationsRequest * const q);
+    CodestarNotificationsRequestPrivate(const CodestarNotificationsRequestPrivate &other, CodestarNotificationsRequest * const q);
 
-    static QString toString(const CodeStarNotificationsRequest::Action &action);
+    static QString toString(const CodestarNotificationsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(CodeStarNotificationsRequest)
+    Q_DECLARE_PUBLIC(CodestarNotificationsRequest)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

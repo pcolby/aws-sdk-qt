@@ -24,7 +24,7 @@
 #include "deleteappvalidationconfigurationrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class DeleteAppValidationConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

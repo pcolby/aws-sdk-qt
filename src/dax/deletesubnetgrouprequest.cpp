@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DeleteSubnetGroupRequest
- * \brief The DeleteSubnetGroupRequest class provides an interface for DAX DeleteSubnetGroup requests.
+ * \class QtAws::Dax::DeleteSubnetGroupRequest
+ * \brief The DeleteSubnetGroupRequest class provides an interface for Dax DeleteSubnetGroup requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::DAX::DeleteSubnetGroupRequestPrivate
+ * \class QtAws::Dax::DeleteSubnetGroupRequestPrivate
  * \brief The DeleteSubnetGroupRequestPrivate class provides private implementation for DeleteSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

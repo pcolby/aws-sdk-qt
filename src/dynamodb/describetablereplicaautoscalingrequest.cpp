@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableReplicaAutoScalingRequest
- * \brief The DescribeTableReplicaAutoScalingRequest class provides an interface for DynamoDB DescribeTableReplicaAutoScaling requests.
+ * \class QtAws::DynamoDb::DescribeTableReplicaAutoScalingRequest
+ * \brief The DescribeTableReplicaAutoScalingRequest class provides an interface for DynamoDb DescribeTableReplicaAutoScaling requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeTableReplicaAutoScaling
+ * \sa DynamoDbClient::describeTableReplicaAutoScaling
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeTableReplicaAutoScalingRequest::DescribeTableReplicaAutoScalingRequest(const DescribeTableReplicaAutoScalingRequest &other)
-    : DynamoDBRequest(new DescribeTableReplicaAutoScalingRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeTableReplicaAutoScalingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeTableReplicaAutoScalingRequest::DescribeTableReplicaAutoScalingRequest(c
  * Constructs a DescribeTableReplicaAutoScalingRequest object.
  */
 DescribeTableReplicaAutoScalingRequest::DescribeTableReplicaAutoScalingRequest()
-    : DynamoDBRequest(new DescribeTableReplicaAutoScalingRequestPrivate(DynamoDBRequest::DescribeTableReplicaAutoScalingAction, this))
+    : DynamoDbRequest(new DescribeTableReplicaAutoScalingRequestPrivate(DynamoDbRequest::DescribeTableReplicaAutoScalingAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeTableReplicaAutoScalingRequest::respo
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeTableReplicaAutoScalingRequestPrivate
+ * \class QtAws::DynamoDb::DescribeTableReplicaAutoScalingRequestPrivate
  * \brief The DescribeTableReplicaAutoScalingRequestPrivate class provides private implementation for DescribeTableReplicaAutoScalingRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeTableReplicaAutoScalingRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeTableReplicaAutoScalingRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeTableReplicaAutoScalingRequestPrivate::DescribeTableReplicaAutoScalingRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeTableReplicaAutoScalingRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeTableReplicaAutoScalingRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeTableReplicaAutoScalingRequestPrivate::DescribeTableReplicaAutoScalingRe
  */
 DescribeTableReplicaAutoScalingRequestPrivate::DescribeTableReplicaAutoScalingRequestPrivate(
     const DescribeTableReplicaAutoScalingRequestPrivate &other, DescribeTableReplicaAutoScalingRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

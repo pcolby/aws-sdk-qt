@@ -25,30 +25,39 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::DeleteCertificateAuthorityResponse
- * \brief The DeleteCertificateAuthorityResponse class provides an interace for ACMPCA DeleteCertificateAuthority responses.
+ * \class QtAws::AcmPca::DeleteCertificateAuthorityResponse
+ * \brief The DeleteCertificateAuthorityResponse class provides an interace for AcmPca DeleteCertificateAuthority responses.
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  *
- *  This is the <i>ACM Private CA API Reference</i>. It provides descriptions, syntax, and usage examples for each of the
- *  actions and data types involved in creating and managing private certificate authorities (CA) for your
+ *  This is the <i>Certificate Manager Private Certificate Authority (PCA) API Reference</i>. It provides descriptions,
+ *  syntax, and usage examples for each of the actions and data types involved in creating and managing a private
+ *  certificate authority (CA) for your
  * 
  *  organization>
  * 
- *  The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can
- *  use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For
- *  more information, see <a href="https://aws.amazon.com/tools/#SDKs">AWS
+ *  The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one
+ *  of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you
+ *  prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services
  * 
- *  SDKs</a>> <note>
+ *  SDKs</a>>
  * 
- *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
- *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
- *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API operation has a quota that determines the number of times the operation can be called per
+ *  second. ACM Private CA throttles API requests at different rates depending on the operation. Throttling means that ACM
+ *  Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of
+ *  requests per second. When a request is throttled, ACM Private CA returns a <a
+ *  href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. ACM
+ *  Private CA does not guarantee a minimum request rate for APIs.
+ * 
+ *  </p
+ * 
+ *  To see an up-to-date list of your ACM Private CA quotas, or to request a quota increase, log into your Amazon Web
+ *  Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a>
  *
- * \sa AcmpcaClient::deleteCertificateAuthority
+ * \sa AcmPcaClient::deleteCertificateAuthority
  */
 
 /*!
@@ -58,7 +67,7 @@ DeleteCertificateAuthorityResponse::DeleteCertificateAuthorityResponse(
         const DeleteCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcmpcaResponse(new DeleteCertificateAuthorityResponsePrivate(this), parent)
+    : AcmPcaResponse(new DeleteCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new DeleteCertificateAuthorityRequest(request));
     setReply(reply);
@@ -75,7 +84,7 @@ const DeleteCertificateAuthorityRequest * DeleteCertificateAuthorityResponse::re
 
 /*!
  * \reimp
- * Parses a successful ACMPCA DeleteCertificateAuthority \a response.
+ * Parses a successful AcmPca DeleteCertificateAuthority \a response.
  */
 void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
@@ -85,24 +94,24 @@ void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACMPCA::DeleteCertificateAuthorityResponsePrivate
+ * \class QtAws::AcmPca::DeleteCertificateAuthorityResponsePrivate
  * \brief The DeleteCertificateAuthorityResponsePrivate class provides private implementation for DeleteCertificateAuthorityResponse.
  * \internal
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
  * Constructs a DeleteCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateAuthorityResponsePrivate::DeleteCertificateAuthorityResponsePrivate(
-    DeleteCertificateAuthorityResponse * const q) : AcmpcaResponsePrivate(q)
+    DeleteCertificateAuthorityResponse * const q) : AcmPcaResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ACMPCA DeleteCertificateAuthority response element from \a xml.
+ * Parses a AcmPca DeleteCertificateAuthority response element from \a xml.
  */
 void DeleteCertificateAuthorityResponsePrivate::parseDeleteCertificateAuthorityResponse(QXmlStreamReader &xml)
 {
@@ -110,5 +119,5 @@ void DeleteCertificateAuthorityResponsePrivate::parseDeleteCertificateAuthorityR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

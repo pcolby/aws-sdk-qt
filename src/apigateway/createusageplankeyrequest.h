@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateUsagePlanKeyRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT CreateUsagePlanKeyRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateUsagePlanKeyRequest : public ApiGatewayRequest {
 
 public:
     CreateUsagePlanKeyRequest(const CreateUsagePlanKeyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

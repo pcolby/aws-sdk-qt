@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteSizeConstraintSetResponse
- * \brief The DeleteSizeConstraintSetResponse class provides an interace for WAFRegional DeleteSizeConstraintSet responses.
+ * \class QtAws::WafRegional::DeleteSizeConstraintSetResponse
+ * \brief The DeleteSizeConstraintSetResponse class provides an interace for WafRegional DeleteSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteSizeConstraintSet
+ * \sa WafRegionalClient::deleteSizeConstraintSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteSizeConstraintSetResponse::DeleteSizeConstraintSetResponse(
         const DeleteSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSizeConstraintSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteSizeConstraintSetRequest * DeleteSizeConstraintSetResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteSizeConstraintSet \a response.
+ * Parses a successful WafRegional DeleteSizeConstraintSet \a response.
  */
 void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteSizeConstraintSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteSizeConstraintSetResponsePrivate
  * \brief The DeleteSizeConstraintSetResponsePrivate class provides private implementation for DeleteSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
-    DeleteSizeConstraintSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteSizeConstraintSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteSizeConstraintSet response element from \a xml.
+ * Parses a WafRegional DeleteSizeConstraintSet response element from \a xml.
  */
 void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

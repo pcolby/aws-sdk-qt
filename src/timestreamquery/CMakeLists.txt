@@ -1,34 +1,94 @@
 add_compile_definitions(QTAWSTIMESTREAMQUERY_LIBRARY)
 
 add_library(QtAwsTimestreamQuery
-  cancelqueryrequest.h
-  cancelqueryrequest_p.h
-  cancelqueryresponse.h
-  cancelqueryresponse_p.h
-  describeendpointsrequest.h
-  describeendpointsrequest_p.h
-  describeendpointsresponse.h
-  describeendpointsresponse_p.h
   qtawstimestreamqueryglobal.h
-  queryrequest.h
-  queryrequest_p.h
-  queryresponse.h
-  queryresponse_p.h
   timestreamqueryclient.h
   timestreamqueryclient_p.h
   timestreamqueryrequest.h
   timestreamqueryrequest_p.h
   timestreamqueryresponse.h
   timestreamqueryresponse_p.h
-  cancelqueryrequest.cpp
-  cancelqueryresponse.cpp
-  describeendpointsrequest.cpp
-  describeendpointsresponse.cpp
-  queryrequest.cpp
-  queryresponse.cpp
+  cancelqueryrequest.h
+  cancelqueryrequest_p.h
+  cancelqueryresponse.h
+  cancelqueryresponse_p.h
+  createscheduledqueryrequest.h
+  createscheduledqueryrequest_p.h
+  createscheduledqueryresponse.h
+  createscheduledqueryresponse_p.h
+  deletescheduledqueryrequest.h
+  deletescheduledqueryrequest_p.h
+  deletescheduledqueryresponse.h
+  deletescheduledqueryresponse_p.h
+  describeendpointsrequest.h
+  describeendpointsrequest_p.h
+  describeendpointsresponse.h
+  describeendpointsresponse_p.h
+  describescheduledqueryrequest.h
+  describescheduledqueryrequest_p.h
+  describescheduledqueryresponse.h
+  describescheduledqueryresponse_p.h
+  executescheduledqueryrequest.h
+  executescheduledqueryrequest_p.h
+  executescheduledqueryresponse.h
+  executescheduledqueryresponse_p.h
+  listscheduledqueriesrequest.h
+  listscheduledqueriesrequest_p.h
+  listscheduledqueriesresponse.h
+  listscheduledqueriesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  preparequeryrequest.h
+  preparequeryrequest_p.h
+  preparequeryresponse.h
+  preparequeryresponse_p.h
+  queryrequest.h
+  queryrequest_p.h
+  queryresponse.h
+  queryresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updatescheduledqueryrequest.h
+  updatescheduledqueryrequest_p.h
+  updatescheduledqueryresponse.h
+  updatescheduledqueryresponse_p.h
   timestreamqueryclient.cpp
   timestreamqueryrequest.cpp
-  timestreamqueryresponse.cpp)
+  timestreamqueryresponse.cpp
+  cancelqueryrequest.cpp
+  cancelqueryresponse.cpp
+  createscheduledqueryrequest.cpp
+  createscheduledqueryresponse.cpp
+  deletescheduledqueryrequest.cpp
+  deletescheduledqueryresponse.cpp
+  describeendpointsrequest.cpp
+  describeendpointsresponse.cpp
+  describescheduledqueryrequest.cpp
+  describescheduledqueryresponse.cpp
+  executescheduledqueryrequest.cpp
+  executescheduledqueryresponse.cpp
+  listscheduledqueriesrequest.cpp
+  listscheduledqueriesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  preparequeryrequest.cpp
+  preparequeryresponse.cpp
+  queryrequest.cpp
+  queryresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updatescheduledqueryrequest.cpp
+  updatescheduledqueryresponse.cpp)
 
 target_link_libraries(QtAwsTimestreamQuery
   PRIVATE QtAwsCore

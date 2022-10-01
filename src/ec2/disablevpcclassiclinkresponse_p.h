@@ -23,7 +23,7 @@
 #include "ec2response_p.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class DisableVpcClassicLinkResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

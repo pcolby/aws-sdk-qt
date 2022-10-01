@@ -23,17 +23,17 @@
 #include "fisrequest_p.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::ListExperimentsRequest
- * \brief The ListExperimentsRequest class provides an interface for FIS ListExperiments requests.
+ * \class QtAws::Fis::ListExperimentsRequest
+ * \brief The ListExperimentsRequest class provides an interface for Fis ListExperiments requests.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::listExperiments
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * ListExperimentsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::FIS::ListExperimentsRequestPrivate
+ * \class QtAws::Fis::ListExperimentsRequestPrivate
  * \brief The ListExperimentsRequestPrivate class provides private implementation for ListExperimentsRequest.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -107,5 +107,5 @@ ListExperimentsRequestPrivate::ListExperimentsRequestPrivate(
 
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

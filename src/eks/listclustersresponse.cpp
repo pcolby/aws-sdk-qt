@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::ListClustersResponse
- * \brief The ListClustersResponse class provides an interace for EKS ListClusters responses.
+ * \class QtAws::Eks::ListClustersResponse
+ * \brief The ListClustersResponse class provides an interace for Eks ListClusters responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const ListClustersRequest * ListClustersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS ListClusters \a response.
+ * Parses a successful Eks ListClusters \a response.
  */
 void ListClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void ListClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::ListClustersResponsePrivate
+ * \class QtAws::Eks::ListClustersResponsePrivate
  * \brief The ListClustersResponsePrivate class provides private implementation for ListClustersResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ ListClustersResponsePrivate::ListClustersResponsePrivate(
 }
 
 /*!
- * Parses a EKS ListClusters response element from \a xml.
+ * Parses a Eks ListClusters response element from \a xml.
  */
 void ListClustersResponsePrivate::parseListClustersResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void ListClustersResponsePrivate::parseListClustersResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

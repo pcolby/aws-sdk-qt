@@ -24,14 +24,14 @@
 #include "importcomponentrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ImportComponentRequest;
 
-class ImportComponentRequestPrivate : public imagebuilderRequestPrivate {
+class ImportComponentRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    ImportComponentRequestPrivate(const imagebuilderRequest::Action action,
+    ImportComponentRequestPrivate(const ImageBuilderRequest::Action action,
                                    ImportComponentRequest * const q);
     ImportComponentRequestPrivate(const ImportComponentRequestPrivate &other,
                                    ImportComponentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

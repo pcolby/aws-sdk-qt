@@ -112,9 +112,9 @@ namespace IoTAnalytics {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTAnalytics
  *
- *  AWS IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then
- *  query the data and run sophisticated analytics on it. AWS IoT Analytics enables advanced data exploration through
- *  integration with Jupyter Notebooks and data visualization through integration with Amazon
+ *  IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then query
+ *  the data and run sophisticated analytics on it. IoT Analytics enables advanced data exploration through integration with
+ *  Jupyter Notebooks and data visualization through integration with Amazon
  * 
  *  QuickSight>
  * 
@@ -125,11 +125,11 @@ namespace IoTAnalytics {
  * 
  *  </p
  * 
- *  AWS IoT Analytics automates the steps required to analyze data from IoT devices. AWS IoT Analytics filters, transforms,
- *  and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect
- *  only the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with
+ *  IoT Analytics automates the steps required to analyze data from IoT devices. IoT Analytics filters, transforms, and
+ *  enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect only
+ *  the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with
  *  device-specific metadata such as device type and location before storing it. Then, you can analyze your data by running
- *  queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. AWS IoT
+ *  queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. IoT
  *  Analytics includes pre-built models for common IoT use cases so you can answer questions like which devices are about to
  *  fail or which customers are at risk of abandoning their wearable
  */
@@ -219,7 +219,7 @@ CancelPipelineReprocessingResponse * IoTAnalyticsClient::cancelPipelineReprocess
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a channel. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before
+ * Used to create a channel. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before
  * publishing the data to a
  */
 CreateChannelResponse * IoTAnalyticsClient::createChannel(const CreateChannelRequest &request)
@@ -233,10 +233,10 @@ CreateChannelResponse * IoTAnalyticsClient::createChannel(const CreateChannelReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a dataset. A dataset stores data retrieved from a data store by applying a <code>queryAction</code> (a SQL
- * query) or a <code>containerAction</code> (executing a containerized application). This operation creates the skeleton of
- * a dataset. The dataset can be populated manually by calling <code>CreateDatasetContent</code> or automatically according
- * to a trigger you
+ * Used to create a dataset. A dataset stores data retrieved from a data store by applying a <code>queryAction</code> (a
+ * SQL query) or a <code>containerAction</code> (executing a containerized application). This operation creates the
+ * skeleton of a dataset. The dataset can be populated manually by calling <code>CreateDatasetContent</code> or
+ * automatically according to a trigger you
  */
 CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetRequest &request)
 {
@@ -249,7 +249,7 @@ CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates the content of a data set by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code>
+ * Creates the content of a dataset by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code>
  * (executing a containerized
  */
 CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const CreateDatasetContentRequest &request)
@@ -263,8 +263,7 @@ CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const Cr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a data store, which is a repository for messages. Only data stores that are used to save pipeline data can be
- * configured with
+ * Creates a data store, which is a repository for
  */
 CreateDatastoreResponse * IoTAnalyticsClient::createDatastore(const CreateDatastoreRequest &request)
 {
@@ -400,7 +399,7 @@ DescribeDatastoreResponse * IoTAnalyticsClient::describeDatastore(const Describe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the current settings of the AWS IoT Analytics logging
+ * Retrieves the current settings of the IoT Analytics logging
  */
 DescribeLoggingOptionsResponse * IoTAnalyticsClient::describeLoggingOptions(const DescribeLoggingOptionsRequest &request)
 {
@@ -426,7 +425,7 @@ DescribePipelineResponse * IoTAnalyticsClient::describePipeline(const DescribePi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the contents of a data set as presigned
+ * Retrieves the contents of a dataset as presigned
  */
 GetDatasetContentResponse * IoTAnalyticsClient::getDatasetContent(const GetDatasetContentRequest &request)
 {
@@ -452,7 +451,7 @@ ListChannelsResponse * IoTAnalyticsClient::listChannels(const ListChannelsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists information about data set contents that have been
+ * Lists information about dataset contents that have been
  */
 ListDatasetContentsResponse * IoTAnalyticsClient::listDatasetContents(const ListDatasetContentsRequest &request)
 {
@@ -465,7 +464,7 @@ ListDatasetContentsResponse * IoTAnalyticsClient::listDatasetContents(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about data
+ * Retrieves information about
  */
 ListDatasetsResponse * IoTAnalyticsClient::listDatasets(const ListDatasetsRequest &request)
 {
@@ -517,7 +516,7 @@ ListTagsForResourceResponse * IoTAnalyticsClient::listTagsForResource(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets or updates the AWS IoT Analytics logging
+ * Sets or updates the IoT Analytics logging
  *
  * options>
  *
@@ -602,7 +601,7 @@ UntagResourceResponse * IoTAnalyticsClient::untagResource(const UntagResourceReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings of a
+ * Used to update the settings of a
  */
 UpdateChannelResponse * IoTAnalyticsClient::updateChannel(const UpdateChannelRequest &request)
 {
@@ -615,7 +614,7 @@ UpdateChannelResponse * IoTAnalyticsClient::updateChannel(const UpdateChannelReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings of a data
+ * Updates the settings of a
  */
 UpdateDatasetResponse * IoTAnalyticsClient::updateDataset(const UpdateDatasetRequest &request)
 {
@@ -628,7 +627,7 @@ UpdateDatasetResponse * IoTAnalyticsClient::updateDataset(const UpdateDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings of a data
+ * Used to update the settings of a data
  */
 UpdateDatastoreResponse * IoTAnalyticsClient::updateDatastore(const UpdateDatastoreRequest &request)
 {

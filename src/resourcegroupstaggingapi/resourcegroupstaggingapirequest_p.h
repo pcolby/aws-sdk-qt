@@ -24,28 +24,28 @@
 #include "resourcegroupstaggingapirequest.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIRequest;
+class ResourceGroupsTaggingApiRequest;
 
-class ResourceGroupsTaggingAPIRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ResourceGroupsTaggingApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ResourceGroupsTaggingAPIRequest::Action action; ///< ResourceGroupsTaggingAPI action to be performed.
-    QString apiVersion;        ///< ResourceGroupsTaggingAPI API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< ResourceGroupsTaggingAPI request (query string) parameters. @todo?
+    ResourceGroupsTaggingApiRequest::Action action; ///< ResourceGroupsTaggingApi action to be performed.
+    QString apiVersion;        ///< ResourceGroupsTaggingApi API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ResourceGroupsTaggingApi request (query string) parameters. @todo?
 
-    ResourceGroupsTaggingAPIRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action, ResourceGroupsTaggingAPIRequest * const q);
-    ResourceGroupsTaggingAPIRequestPrivate(const ResourceGroupsTaggingAPIRequestPrivate &other, ResourceGroupsTaggingAPIRequest * const q);
+    ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequest::Action action, ResourceGroupsTaggingApiRequest * const q);
+    ResourceGroupsTaggingApiRequestPrivate(const ResourceGroupsTaggingApiRequestPrivate &other, ResourceGroupsTaggingApiRequest * const q);
 
-    static QString toString(const ResourceGroupsTaggingAPIRequest::Action &action);
+    static QString toString(const ResourceGroupsTaggingApiRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIRequest)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiRequest)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

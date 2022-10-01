@@ -24,7 +24,7 @@
 #include "deletestudiorequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class DeleteStudioResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

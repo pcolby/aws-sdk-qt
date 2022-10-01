@@ -24,7 +24,7 @@
 #include "deletelifecyclepolicyrequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class DeleteLifecyclePolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

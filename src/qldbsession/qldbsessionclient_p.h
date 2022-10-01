@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionClient;
+class QldbSessionClient;
 
-class QLDBSessionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class QldbSessionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit QLDBSessionClientPrivate(QLDBSessionClient * const q);
+    explicit QldbSessionClientPrivate(QldbSessionClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(QLDBSessionClient)
-    Q_DISABLE_COPY(QLDBSessionClientPrivate)
+    Q_DECLARE_PUBLIC(QldbSessionClient)
+    Q_DISABLE_COPY(QldbSessionClientPrivate)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

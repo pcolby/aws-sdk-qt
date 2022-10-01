@@ -23,11 +23,11 @@
 #include "ssoadminrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class PutInlinePolicyToPermissionSetRequestPrivate;
 
-class QTAWSSSOADMIN_EXPORT PutInlinePolicyToPermissionSetRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT PutInlinePolicyToPermissionSetRequest : public SsoAdminRequest {
 
 public:
     PutInlinePolicyToPermissionSetRequest(const PutInlinePolicyToPermissionSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

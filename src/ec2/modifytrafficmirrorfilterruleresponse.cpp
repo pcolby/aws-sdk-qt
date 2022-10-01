@@ -25,22 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::ModifyTrafficMirrorFilterRuleResponse
- * \brief The ModifyTrafficMirrorFilterRuleResponse class provides an interace for EC2 ModifyTrafficMirrorFilterRule responses.
+ * \class QtAws::Ec2::ModifyTrafficMirrorFilterRuleResponse
+ * \brief The ModifyTrafficMirrorFilterRuleResponse class provides an interace for Ec2 ModifyTrafficMirrorFilterRule responses.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -63,8 +63,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  *
  * \sa Ec2Client::modifyTrafficMirrorFilterRule
  */
@@ -93,7 +93,7 @@ const ModifyTrafficMirrorFilterRuleRequest * ModifyTrafficMirrorFilterRuleRespon
 
 /*!
  * \reimp
- * Parses a successful EC2 ModifyTrafficMirrorFilterRule \a response.
+ * Parses a successful Ec2 ModifyTrafficMirrorFilterRule \a response.
  */
 void ModifyTrafficMirrorFilterRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -103,11 +103,11 @@ void ModifyTrafficMirrorFilterRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::ModifyTrafficMirrorFilterRuleResponsePrivate
+ * \class QtAws::Ec2::ModifyTrafficMirrorFilterRuleResponsePrivate
  * \brief The ModifyTrafficMirrorFilterRuleResponsePrivate class provides private implementation for ModifyTrafficMirrorFilterRuleResponse.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -120,7 +120,7 @@ ModifyTrafficMirrorFilterRuleResponsePrivate::ModifyTrafficMirrorFilterRuleRespo
 }
 
 /*!
- * Parses a EC2 ModifyTrafficMirrorFilterRule response element from \a xml.
+ * Parses a Ec2 ModifyTrafficMirrorFilterRule response element from \a xml.
  */
 void ModifyTrafficMirrorFilterRuleResponsePrivate::parseModifyTrafficMirrorFilterRuleResponse(QXmlStreamReader &xml)
 {
@@ -128,5 +128,5 @@ void ModifyTrafficMirrorFilterRuleResponsePrivate::parseModifyTrafficMirrorFilte
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

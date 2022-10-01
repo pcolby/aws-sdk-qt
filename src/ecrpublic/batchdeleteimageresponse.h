@@ -24,11 +24,11 @@
 #include "batchdeleteimagerequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class BatchDeleteImageResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT BatchDeleteImageResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT BatchDeleteImageResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

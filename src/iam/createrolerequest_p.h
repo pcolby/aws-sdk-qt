@@ -24,7 +24,7 @@
 #include "createrolerequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class CreateRoleRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

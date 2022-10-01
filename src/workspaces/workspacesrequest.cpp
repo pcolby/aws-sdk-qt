@@ -40,11 +40,16 @@ namespace WorkSpaces {
  * \value AssociateIpGroupsAction WorkSpaces AssociateIpGroups action.
  * \value AuthorizeIpRulesAction WorkSpaces AuthorizeIpRules action.
  * \value CopyWorkspaceImageAction WorkSpaces CopyWorkspaceImage action.
+ * \value CreateConnectClientAddInAction WorkSpaces CreateConnectClientAddIn action.
  * \value CreateConnectionAliasAction WorkSpaces CreateConnectionAlias action.
  * \value CreateIpGroupAction WorkSpaces CreateIpGroup action.
  * \value CreateTagsAction WorkSpaces CreateTags action.
+ * \value CreateUpdatedWorkspaceImageAction WorkSpaces CreateUpdatedWorkspaceImage action.
  * \value CreateWorkspaceBundleAction WorkSpaces CreateWorkspaceBundle action.
+ * \value CreateWorkspaceImageAction WorkSpaces CreateWorkspaceImage action.
  * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.
+ * \value DeleteClientBrandingAction WorkSpaces DeleteClientBranding action.
+ * \value DeleteConnectClientAddInAction WorkSpaces DeleteConnectClientAddIn action.
  * \value DeleteConnectionAliasAction WorkSpaces DeleteConnectionAlias action.
  * \value DeleteIpGroupAction WorkSpaces DeleteIpGroup action.
  * \value DeleteTagsAction WorkSpaces DeleteTags action.
@@ -53,7 +58,9 @@ namespace WorkSpaces {
  * \value DeregisterWorkspaceDirectoryAction WorkSpaces DeregisterWorkspaceDirectory action.
  * \value DescribeAccountAction WorkSpaces DescribeAccount action.
  * \value DescribeAccountModificationsAction WorkSpaces DescribeAccountModifications action.
+ * \value DescribeClientBrandingAction WorkSpaces DescribeClientBranding action.
  * \value DescribeClientPropertiesAction WorkSpaces DescribeClientProperties action.
+ * \value DescribeConnectClientAddInsAction WorkSpaces DescribeConnectClientAddIns action.
  * \value DescribeConnectionAliasPermissionsAction WorkSpaces DescribeConnectionAliasPermissions action.
  * \value DescribeConnectionAliasesAction WorkSpaces DescribeConnectionAliases action.
  * \value DescribeIpGroupsAction WorkSpaces DescribeIpGroups action.
@@ -67,11 +74,13 @@ namespace WorkSpaces {
  * \value DescribeWorkspacesConnectionStatusAction WorkSpaces DescribeWorkspacesConnectionStatus action.
  * \value DisassociateConnectionAliasAction WorkSpaces DisassociateConnectionAlias action.
  * \value DisassociateIpGroupsAction WorkSpaces DisassociateIpGroups action.
+ * \value ImportClientBrandingAction WorkSpaces ImportClientBranding action.
  * \value ImportWorkspaceImageAction WorkSpaces ImportWorkspaceImage action.
  * \value ListAvailableManagementCidrRangesAction WorkSpaces ListAvailableManagementCidrRanges action.
  * \value MigrateWorkspaceAction WorkSpaces MigrateWorkspace action.
  * \value ModifyAccountAction WorkSpaces ModifyAccount action.
  * \value ModifyClientPropertiesAction WorkSpaces ModifyClientProperties action.
+ * \value ModifySamlPropertiesAction WorkSpaces ModifySamlProperties action.
  * \value ModifySelfservicePermissionsAction WorkSpaces ModifySelfservicePermissions action.
  * \value ModifyWorkspaceAccessPropertiesAction WorkSpaces ModifyWorkspaceAccessProperties action.
  * \value ModifyWorkspaceCreationPropertiesAction WorkSpaces ModifyWorkspaceCreationProperties action.
@@ -85,6 +94,7 @@ namespace WorkSpaces {
  * \value StartWorkspacesAction WorkSpaces StartWorkspaces action.
  * \value StopWorkspacesAction WorkSpaces StopWorkspaces action.
  * \value TerminateWorkspacesAction WorkSpaces TerminateWorkspaces action.
+ * \value UpdateConnectClientAddInAction WorkSpaces UpdateConnectClientAddIn action.
  * \value UpdateConnectionAliasPermissionAction WorkSpaces UpdateConnectionAliasPermission action.
  * \value UpdateRulesOfIpGroupAction WorkSpaces UpdateRulesOfIpGroup action.
  * \value UpdateWorkspaceBundleAction WorkSpaces UpdateWorkspaceBundle action.
@@ -296,7 +306,7 @@ QNetworkRequest WorkSpacesRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Action action, WorkSpacesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-04-08"))
 {
 
 }
@@ -334,11 +344,16 @@ QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &acti
         ActionToString(AssociateIpGroups);
         ActionToString(AuthorizeIpRules);
         ActionToString(CopyWorkspaceImage);
+        ActionToString(CreateConnectClientAddIn);
         ActionToString(CreateConnectionAlias);
         ActionToString(CreateIpGroup);
         ActionToString(CreateTags);
+        ActionToString(CreateUpdatedWorkspaceImage);
         ActionToString(CreateWorkspaceBundle);
+        ActionToString(CreateWorkspaceImage);
         ActionToString(CreateWorkspaces);
+        ActionToString(DeleteClientBranding);
+        ActionToString(DeleteConnectClientAddIn);
         ActionToString(DeleteConnectionAlias);
         ActionToString(DeleteIpGroup);
         ActionToString(DeleteTags);
@@ -347,7 +362,9 @@ QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &acti
         ActionToString(DeregisterWorkspaceDirectory);
         ActionToString(DescribeAccount);
         ActionToString(DescribeAccountModifications);
+        ActionToString(DescribeClientBranding);
         ActionToString(DescribeClientProperties);
+        ActionToString(DescribeConnectClientAddIns);
         ActionToString(DescribeConnectionAliasPermissions);
         ActionToString(DescribeConnectionAliases);
         ActionToString(DescribeIpGroups);
@@ -361,11 +378,13 @@ QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &acti
         ActionToString(DescribeWorkspacesConnectionStatus);
         ActionToString(DisassociateConnectionAlias);
         ActionToString(DisassociateIpGroups);
+        ActionToString(ImportClientBranding);
         ActionToString(ImportWorkspaceImage);
         ActionToString(ListAvailableManagementCidrRanges);
         ActionToString(MigrateWorkspace);
         ActionToString(ModifyAccount);
         ActionToString(ModifyClientProperties);
+        ActionToString(ModifySamlProperties);
         ActionToString(ModifySelfservicePermissions);
         ActionToString(ModifyWorkspaceAccessProperties);
         ActionToString(ModifyWorkspaceCreationProperties);
@@ -379,6 +398,7 @@ QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &acti
         ActionToString(StartWorkspaces);
         ActionToString(StopWorkspaces);
         ActionToString(TerminateWorkspaces);
+        ActionToString(UpdateConnectClientAddIn);
         ActionToString(UpdateConnectionAliasPermission);
         ActionToString(UpdateRulesOfIpGroup);
         ActionToString(UpdateWorkspaceBundle);

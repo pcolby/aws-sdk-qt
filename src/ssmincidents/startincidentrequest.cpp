@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::StartIncidentRequest
- * \brief The StartIncidentRequest class provides an interface for SSMIncidents StartIncident requests.
+ * \class QtAws::SsmIncidents::StartIncidentRequest
+ * \brief The StartIncidentRequest class provides an interface for SsmIncidents StartIncident requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::startIncident
+ * \sa SsmIncidentsClient::startIncident
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartIncidentRequest::StartIncidentRequest(const StartIncidentRequest &other)
-    : SSMIncidentsRequest(new StartIncidentRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new StartIncidentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ StartIncidentRequest::StartIncidentRequest(const StartIncidentRequest &other)
  * Constructs a StartIncidentRequest object.
  */
 StartIncidentRequest::StartIncidentRequest()
-    : SSMIncidentsRequest(new StartIncidentRequestPrivate(SSMIncidentsRequest::StartIncidentAction, this))
+    : SsmIncidentsRequest(new StartIncidentRequestPrivate(SsmIncidentsRequest::StartIncidentAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * StartIncidentRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::SSMIncidents::StartIncidentRequestPrivate
+ * \class QtAws::SsmIncidents::StartIncidentRequestPrivate
  * \brief The StartIncidentRequestPrivate class provides private implementation for StartIncidentRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a StartIncidentRequestPrivate object for SSMIncidents \a action,
+ * Constructs a StartIncidentRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 StartIncidentRequestPrivate::StartIncidentRequestPrivate(
-    const SSMIncidentsRequest::Action action, StartIncidentRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, StartIncidentRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ StartIncidentRequestPrivate::StartIncidentRequestPrivate(
  */
 StartIncidentRequestPrivate::StartIncidentRequestPrivate(
     const StartIncidentRequestPrivate &other, StartIncidentRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

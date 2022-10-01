@@ -21,64 +21,67 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SnsRequest
- * \brief The SnsRequest class provides an interface for SNS requests.
+ * \class QtAws::Sns::SnsRequest
+ * \brief The SnsRequest class provides an interface for Sns requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
  * \enum SnsRequest::Action
  *
- * This enum describes the actions that can be performed as SNS
+ * This enum describes the actions that can be performed as Sns
  * requests.
  *
- * \value AddPermissionAction SNS AddPermission action.
- * \value CheckIfPhoneNumberIsOptedOutAction SNS CheckIfPhoneNumberIsOptedOut action.
- * \value ConfirmSubscriptionAction SNS ConfirmSubscription action.
- * \value CreatePlatformApplicationAction SNS CreatePlatformApplication action.
- * \value CreatePlatformEndpointAction SNS CreatePlatformEndpoint action.
- * \value CreateSMSSandboxPhoneNumberAction SNS CreateSMSSandboxPhoneNumber action.
- * \value CreateTopicAction SNS CreateTopic action.
- * \value DeleteEndpointAction SNS DeleteEndpoint action.
- * \value DeletePlatformApplicationAction SNS DeletePlatformApplication action.
- * \value DeleteSMSSandboxPhoneNumberAction SNS DeleteSMSSandboxPhoneNumber action.
- * \value DeleteTopicAction SNS DeleteTopic action.
- * \value GetEndpointAttributesAction SNS GetEndpointAttributes action.
- * \value GetPlatformApplicationAttributesAction SNS GetPlatformApplicationAttributes action.
- * \value GetSMSAttributesAction SNS GetSMSAttributes action.
- * \value GetSMSSandboxAccountStatusAction SNS GetSMSSandboxAccountStatus action.
- * \value GetSubscriptionAttributesAction SNS GetSubscriptionAttributes action.
- * \value GetTopicAttributesAction SNS GetTopicAttributes action.
- * \value ListEndpointsByPlatformApplicationAction SNS ListEndpointsByPlatformApplication action.
- * \value ListOriginationNumbersAction SNS ListOriginationNumbers action.
- * \value ListPhoneNumbersOptedOutAction SNS ListPhoneNumbersOptedOut action.
- * \value ListPlatformApplicationsAction SNS ListPlatformApplications action.
- * \value ListSMSSandboxPhoneNumbersAction SNS ListSMSSandboxPhoneNumbers action.
- * \value ListSubscriptionsAction SNS ListSubscriptions action.
- * \value ListSubscriptionsByTopicAction SNS ListSubscriptionsByTopic action.
- * \value ListTagsForResourceAction SNS ListTagsForResource action.
- * \value ListTopicsAction SNS ListTopics action.
- * \value OptInPhoneNumberAction SNS OptInPhoneNumber action.
- * \value PublishAction SNS Publish action.
- * \value RemovePermissionAction SNS RemovePermission action.
- * \value SetEndpointAttributesAction SNS SetEndpointAttributes action.
- * \value SetPlatformApplicationAttributesAction SNS SetPlatformApplicationAttributes action.
- * \value SetSMSAttributesAction SNS SetSMSAttributes action.
- * \value SetSubscriptionAttributesAction SNS SetSubscriptionAttributes action.
- * \value SetTopicAttributesAction SNS SetTopicAttributes action.
- * \value SubscribeAction SNS Subscribe action.
- * \value TagResourceAction SNS TagResource action.
- * \value UnsubscribeAction SNS Unsubscribe action.
- * \value UntagResourceAction SNS UntagResource action.
- * \value VerifySMSSandboxPhoneNumberAction SNS VerifySMSSandboxPhoneNumber action.
+ * \value AddPermissionAction Sns AddPermission action.
+ * \value CheckIfPhoneNumberIsOptedOutAction Sns CheckIfPhoneNumberIsOptedOut action.
+ * \value ConfirmSubscriptionAction Sns ConfirmSubscription action.
+ * \value CreatePlatformApplicationAction Sns CreatePlatformApplication action.
+ * \value CreatePlatformEndpointAction Sns CreatePlatformEndpoint action.
+ * \value CreateSMSSandboxPhoneNumberAction Sns CreateSMSSandboxPhoneNumber action.
+ * \value CreateTopicAction Sns CreateTopic action.
+ * \value DeleteEndpointAction Sns DeleteEndpoint action.
+ * \value DeletePlatformApplicationAction Sns DeletePlatformApplication action.
+ * \value DeleteSMSSandboxPhoneNumberAction Sns DeleteSMSSandboxPhoneNumber action.
+ * \value DeleteTopicAction Sns DeleteTopic action.
+ * \value GetDataProtectionPolicyAction Sns GetDataProtectionPolicy action.
+ * \value GetEndpointAttributesAction Sns GetEndpointAttributes action.
+ * \value GetPlatformApplicationAttributesAction Sns GetPlatformApplicationAttributes action.
+ * \value GetSMSAttributesAction Sns GetSMSAttributes action.
+ * \value GetSMSSandboxAccountStatusAction Sns GetSMSSandboxAccountStatus action.
+ * \value GetSubscriptionAttributesAction Sns GetSubscriptionAttributes action.
+ * \value GetTopicAttributesAction Sns GetTopicAttributes action.
+ * \value ListEndpointsByPlatformApplicationAction Sns ListEndpointsByPlatformApplication action.
+ * \value ListOriginationNumbersAction Sns ListOriginationNumbers action.
+ * \value ListPhoneNumbersOptedOutAction Sns ListPhoneNumbersOptedOut action.
+ * \value ListPlatformApplicationsAction Sns ListPlatformApplications action.
+ * \value ListSMSSandboxPhoneNumbersAction Sns ListSMSSandboxPhoneNumbers action.
+ * \value ListSubscriptionsAction Sns ListSubscriptions action.
+ * \value ListSubscriptionsByTopicAction Sns ListSubscriptionsByTopic action.
+ * \value ListTagsForResourceAction Sns ListTagsForResource action.
+ * \value ListTopicsAction Sns ListTopics action.
+ * \value OptInPhoneNumberAction Sns OptInPhoneNumber action.
+ * \value PublishAction Sns Publish action.
+ * \value PublishBatchAction Sns PublishBatch action.
+ * \value PutDataProtectionPolicyAction Sns PutDataProtectionPolicy action.
+ * \value RemovePermissionAction Sns RemovePermission action.
+ * \value SetEndpointAttributesAction Sns SetEndpointAttributes action.
+ * \value SetPlatformApplicationAttributesAction Sns SetPlatformApplicationAttributes action.
+ * \value SetSMSAttributesAction Sns SetSMSAttributes action.
+ * \value SetSubscriptionAttributesAction Sns SetSubscriptionAttributes action.
+ * \value SetTopicAttributesAction Sns SetTopicAttributes action.
+ * \value SubscribeAction Sns Subscribe action.
+ * \value TagResourceAction Sns TagResource action.
+ * \value UnsubscribeAction Sns Unsubscribe action.
+ * \value UntagResourceAction Sns UntagResource action.
+ * \value VerifySMSSandboxPhoneNumberAction Sns VerifySMSSandboxPhoneNumber action.
  */
 
 /*!
- * Constructs a SnsRequest object for SNS \a action.
+ * Constructs a SnsRequest object for Sns \a action.
  */
 SnsRequest::SnsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SnsRequestPrivate(action, this))
@@ -119,7 +122,7 @@ SnsRequest::SnsRequest(SnsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SNS action to be performed by this request.
+ * Returns the Sns action to be performed by this request.
  */
 SnsRequest::Action SnsRequest::action() const
 {
@@ -128,7 +131,7 @@ SnsRequest::Action SnsRequest::action() const
 }
 
 /*!
- * Returns the name of the SNS action to be performed by this request.
+ * Returns the name of the Sns action to be performed by this request.
  */
 QString SnsRequest::actionString() const
 {
@@ -136,7 +139,7 @@ QString SnsRequest::actionString() const
 }
 
 /*!
- * Returns the SNS API version implemented by this request.
+ * Returns the Sns API version implemented by this request.
  */
 QString SnsRequest::apiVersion() const
 {
@@ -145,7 +148,7 @@ QString SnsRequest::apiVersion() const
 }
 
 /*!
- * Sets the SNS action to be performed by this request to \a action.
+ * Sets the Sns action to be performed by this request to \a action.
  */
 void SnsRequest::setAction(const Action action)
 {
@@ -154,7 +157,7 @@ void SnsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SNS API version to include in this request to \a version.
+ * Sets the Sns API version to include in this request to \a version.
  */
 void SnsRequest::setApiVersion(const QString &version)
 {
@@ -179,15 +182,15 @@ bool SnsRequest::operator==(const SnsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SNS queue name.
+ * Returns \c tue if \a queueName is a valid Sns queue name.
  *
- * @par From SNS FAQs:
+ * @par From Sns FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SNS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Sns queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -254,10 +257,10 @@ void SnsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SNS request using the given
+ * Returns a network request for the Sns request using the given
  * \a endpoint.
  *
- * This SNS implementation builds request URLs by combining the
+ * This Sns implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -270,19 +273,19 @@ QNetworkRequest SnsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SNS::SnsRequestPrivate
+ * \class QtAws::Sns::SnsRequestPrivate
  * \brief The SnsRequestPrivate class provides private implementation for SnsRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
- * Constructs a SnsRequestPrivate object for SNS \a action,
+ * Constructs a SnsRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 SnsRequestPrivate::SnsRequestPrivate(const SnsRequest::Action action, SnsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-03-31"))
 {
 
 }
@@ -308,7 +311,7 @@ SnsRequestPrivate::SnsRequestPrivate(const SnsRequestPrivate &other,
  * invalid.
  *
  * This function converts SnsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SNS service's Action
+ * string representations, appropriate for use with the Sns service's Action
  * query parameters.
  */
 QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
@@ -327,6 +330,7 @@ QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
         ActionToString(DeletePlatformApplication);
         ActionToString(DeleteSMSSandboxPhoneNumber);
         ActionToString(DeleteTopic);
+        ActionToString(GetDataProtectionPolicy);
         ActionToString(GetEndpointAttributes);
         ActionToString(GetPlatformApplicationAttributes);
         ActionToString(GetSMSAttributes);
@@ -344,6 +348,8 @@ QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
         ActionToString(ListTopics);
         ActionToString(OptInPhoneNumber);
         ActionToString(Publish);
+        ActionToString(PublishBatch);
+        ActionToString(PutDataProtectionPolicy);
         ActionToString(RemovePermission);
         ActionToString(SetEndpointAttributes);
         ActionToString(SetPlatformApplicationAttributes);
@@ -362,5 +368,5 @@ QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
     return QString();
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

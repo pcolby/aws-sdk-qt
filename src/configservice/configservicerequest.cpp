@@ -90,12 +90,15 @@ namespace ConfigService {
  * \value GetComplianceSummaryByResourceTypeAction ConfigService GetComplianceSummaryByResourceType action.
  * \value GetConformancePackComplianceDetailsAction ConfigService GetConformancePackComplianceDetails action.
  * \value GetConformancePackComplianceSummaryAction ConfigService GetConformancePackComplianceSummary action.
+ * \value GetCustomRulePolicyAction ConfigService GetCustomRulePolicy action.
  * \value GetDiscoveredResourceCountsAction ConfigService GetDiscoveredResourceCounts action.
  * \value GetOrganizationConfigRuleDetailedStatusAction ConfigService GetOrganizationConfigRuleDetailedStatus action.
  * \value GetOrganizationConformancePackDetailedStatusAction ConfigService GetOrganizationConformancePackDetailedStatus action.
+ * \value GetOrganizationCustomRulePolicyAction ConfigService GetOrganizationCustomRulePolicy action.
  * \value GetResourceConfigHistoryAction ConfigService GetResourceConfigHistory action.
  * \value GetStoredQueryAction ConfigService GetStoredQuery action.
  * \value ListAggregateDiscoveredResourcesAction ConfigService ListAggregateDiscoveredResources action.
+ * \value ListConformancePackComplianceScoresAction ConfigService ListConformancePackComplianceScores action.
  * \value ListDiscoveredResourcesAction ConfigService ListDiscoveredResources action.
  * \value ListStoredQueriesAction ConfigService ListStoredQueries action.
  * \value ListTagsForResourceAction ConfigService ListTagsForResource action.
@@ -329,7 +332,7 @@ QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequest::Action action, ConfigServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-11-12"))
 {
 
 }
@@ -417,12 +420,15 @@ QString ConfigServiceRequestPrivate::toString(const ConfigServiceRequest::Action
         ActionToString(GetComplianceSummaryByResourceType);
         ActionToString(GetConformancePackComplianceDetails);
         ActionToString(GetConformancePackComplianceSummary);
+        ActionToString(GetCustomRulePolicy);
         ActionToString(GetDiscoveredResourceCounts);
         ActionToString(GetOrganizationConfigRuleDetailedStatus);
         ActionToString(GetOrganizationConformancePackDetailedStatus);
+        ActionToString(GetOrganizationCustomRulePolicy);
         ActionToString(GetResourceConfigHistory);
         ActionToString(GetStoredQuery);
         ActionToString(ListAggregateDiscoveredResources);
+        ActionToString(ListConformancePackComplianceScores);
         ActionToString(ListDiscoveredResources);
         ActionToString(ListStoredQueries);
         ActionToString(ListTagsForResource);

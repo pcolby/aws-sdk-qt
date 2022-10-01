@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CreatePlatformEndpointRequest
- * \brief The CreatePlatformEndpointRequest class provides an interface for SNS CreatePlatformEndpoint requests.
+ * \class QtAws::Sns::CreatePlatformEndpointRequest
+ * \brief The CreatePlatformEndpointRequest class provides an interface for Sns CreatePlatformEndpoint requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SNS::CreatePlatformEndpointRequestPrivate
+ * \class QtAws::Sns::CreatePlatformEndpointRequestPrivate
  * \brief The CreatePlatformEndpointRequestPrivate class provides private implementation for CreatePlatformEndpointRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

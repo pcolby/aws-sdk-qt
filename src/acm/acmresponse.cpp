@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::AcmResponse
- * \brief The AcmResponse class provides an interface for ACM responses.
+ * \class QtAws::Acm::AcmResponse
+ * \brief The AcmResponse class provides an interface for Acm responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -76,11 +76,11 @@ void AcmResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::AcmResponsePrivate
+ * \class QtAws::Acm::AcmResponsePrivate
  * \brief The AcmResponsePrivate class provides private implementation for AcmResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -92,5 +92,5 @@ AcmResponsePrivate::AcmResponsePrivate(
 
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

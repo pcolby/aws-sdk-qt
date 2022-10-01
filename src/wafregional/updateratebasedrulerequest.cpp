@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRateBasedRuleRequest
- * \brief The UpdateRateBasedRuleRequest class provides an interface for WAFRegional UpdateRateBasedRule requests.
+ * \class QtAws::WafRegional::UpdateRateBasedRuleRequest
+ * \brief The UpdateRateBasedRuleRequest class provides an interface for WafRegional UpdateRateBasedRule requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRateBasedRule
+ * \sa WafRegionalClient::updateRateBasedRule
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest(const UpdateRateBasedRuleRequest &other)
-    : WAFRegionalRequest(new UpdateRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest(const UpdateRateBasedRule
  * Constructs a UpdateRateBasedRuleRequest object.
  */
 UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest()
-    : WAFRegionalRequest(new UpdateRateBasedRuleRequestPrivate(WAFRegionalRequest::UpdateRateBasedRuleAction, this))
+    : WafRegionalRequest(new UpdateRateBasedRuleRequestPrivate(WafRegionalRequest::UpdateRateBasedRuleAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRateBasedRuleRequestPrivate
+ * \class QtAws::WafRegional::UpdateRateBasedRuleRequestPrivate
  * \brief The UpdateRateBasedRuleRequestPrivate class provides private implementation for UpdateRateBasedRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateRateBasedRuleRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateRateBasedRuleRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateRateBasedRuleRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
     const UpdateRateBasedRuleRequestPrivate &other, UpdateRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

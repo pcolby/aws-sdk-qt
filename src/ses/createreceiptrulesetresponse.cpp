@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateReceiptRuleSetResponse
- * \brief The CreateReceiptRuleSetResponse class provides an interace for SES CreateReceiptRuleSet responses.
+ * \class QtAws::Ses::CreateReceiptRuleSetResponse
+ * \brief The CreateReceiptRuleSetResponse class provides an interace for Ses CreateReceiptRuleSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const CreateReceiptRuleSetRequest * CreateReceiptRuleSetResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SES CreateReceiptRuleSet \a response.
+ * Parses a successful Ses CreateReceiptRuleSet \a response.
  */
 void CreateReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void CreateReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::CreateReceiptRuleSetResponsePrivate
+ * \class QtAws::Ses::CreateReceiptRuleSetResponsePrivate
  * \brief The CreateReceiptRuleSetResponsePrivate class provides private implementation for CreateReceiptRuleSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ CreateReceiptRuleSetResponsePrivate::CreateReceiptRuleSetResponsePrivate(
 }
 
 /*!
- * Parses a SES CreateReceiptRuleSet response element from \a xml.
+ * Parses a Ses CreateReceiptRuleSet response element from \a xml.
  */
 void CreateReceiptRuleSetResponsePrivate::parseCreateReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateReceiptRuleSetResponsePrivate::parseCreateReceiptRuleSetResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -27,32 +27,48 @@
 #include "createautoscalingconfigurationresponse.h"
 #include "createconnectionrequest.h"
 #include "createconnectionresponse.h"
+#include "createobservabilityconfigurationrequest.h"
+#include "createobservabilityconfigurationresponse.h"
 #include "createservicerequest.h"
 #include "createserviceresponse.h"
+#include "createvpcconnectorrequest.h"
+#include "createvpcconnectorresponse.h"
 #include "deleteautoscalingconfigurationrequest.h"
 #include "deleteautoscalingconfigurationresponse.h"
 #include "deleteconnectionrequest.h"
 #include "deleteconnectionresponse.h"
+#include "deleteobservabilityconfigurationrequest.h"
+#include "deleteobservabilityconfigurationresponse.h"
 #include "deleteservicerequest.h"
 #include "deleteserviceresponse.h"
+#include "deletevpcconnectorrequest.h"
+#include "deletevpcconnectorresponse.h"
 #include "describeautoscalingconfigurationrequest.h"
 #include "describeautoscalingconfigurationresponse.h"
 #include "describecustomdomainsrequest.h"
 #include "describecustomdomainsresponse.h"
+#include "describeobservabilityconfigurationrequest.h"
+#include "describeobservabilityconfigurationresponse.h"
 #include "describeservicerequest.h"
 #include "describeserviceresponse.h"
+#include "describevpcconnectorrequest.h"
+#include "describevpcconnectorresponse.h"
 #include "disassociatecustomdomainrequest.h"
 #include "disassociatecustomdomainresponse.h"
 #include "listautoscalingconfigurationsrequest.h"
 #include "listautoscalingconfigurationsresponse.h"
 #include "listconnectionsrequest.h"
 #include "listconnectionsresponse.h"
+#include "listobservabilityconfigurationsrequest.h"
+#include "listobservabilityconfigurationsresponse.h"
 #include "listoperationsrequest.h"
 #include "listoperationsresponse.h"
 #include "listservicesrequest.h"
 #include "listservicesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listvpcconnectorsrequest.h"
+#include "listvpcconnectorsresponse.h"
 #include "pauseservicerequest.h"
 #include "pauseserviceresponse.h"
 #include "resumeservicerequest.h"
@@ -88,11 +104,12 @@ namespace AppRunner {
  * \ingroup aws-clients
  * \inmodule QtAwsAppRunner
  *
- *  <fullname>AWS App Runner</fullname>
+ *  <fullname>App Runner</fullname>
  * 
- *  AWS App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
- *  existing container image or source code to a running service in the AWS cloud in seconds. You don't need to learn new
- *  technologies, decide which compute service to use, or understand how to provision and configure AWS
+ *  App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
+ *  existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need
+ *  to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web
+ *  Services
  * 
  *  resources>
  * 
@@ -101,9 +118,9 @@ namespace AppRunner {
  * 
  *  security>
  * 
- *  For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">AWS App Runner
+ *  For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner
  *  Developer Guide</a>. For release information, see the <a
- *  href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">AWS App Runner Release
+ *  href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release
  * 
  *  Notes</a>>
  * 
@@ -117,8 +134,8 @@ namespace AppRunner {
  *  </p
  * 
  *  For a list of Region-specific endpoints that App Runner supports, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">AWS App Runner endpoints and quotas</a> in the
- *  <i>AWS General
+ *  href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon
+ *  Web Services General
  */
 
 /*!
@@ -180,7 +197,7 @@ AppRunnerClient::AppRunnerClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associate your own domain name with the AWS App Runner subdomain URL of your App Runner
+ * Associate your own domain name with the App Runner subdomain URL of your App Runner
  *
  * service>
  *
@@ -201,20 +218,21 @@ AssociateCustomDomainResponse * AppRunnerClient::associateCustomDomain(const Ass
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create an AWS App Runner automatic scaling configuration resource. App Runner requires this resource when you create App
- * Runner services that require non-default auto scaling settings. You can share an auto scaling configuration across
- * multiple
+ * Create an App Runner automatic scaling configuration resource. App Runner requires this resource when you create or
+ * update App Runner services and you require non-default auto scaling settings. You can share an auto scaling
+ * configuration across multiple
  *
  * services>
  *
- * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and different
- * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest active
- * revision of an auto scaling configuration or a specific
+ * Create multiple revisions of a configuration by calling this action multiple times using the same
+ * <code>AutoScalingConfigurationName</code>. The call returns incremental <code>AutoScalingConfigurationRevision</code>
+ * values. When you create a service and configure an auto scaling configuration resource, the service uses the latest
+ * active revision of the auto scaling configuration by default. You can optionally configure the service to use a specific
  *
  * revision>
  *
  * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability Zones
- * in the AWS Region. The tradeoff is a higher minimal
+ * in the Amazon Web Services Region. The tradeoff is a higher minimal
  *
  * cost>
  *
@@ -231,8 +249,8 @@ CreateAutoScalingConfigurationResponse * AppRunnerClient::createAutoScalingConfi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create an AWS App Runner connection resource. App Runner requires a connection resource when you create App Runner
- * services that access private repositories from certain third-party providers. You can share a connection across multiple
+ * Create an App Runner connection resource. App Runner requires a connection resource when you create App Runner services
+ * that access private repositories from certain third-party providers. You can share a connection across multiple
  *
  * services>
  *
@@ -246,11 +264,40 @@ CreateConnectionResponse * AppRunnerClient::createConnection(const CreateConnect
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * CreateObservabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create an App Runner observability configuration resource. App Runner requires this resource when you create or update
+ * App Runner services and you want to enable non-default observability features. You can share an observability
+ * configuration across multiple
+ *
+ * services>
+ *
+ * Create multiple revisions of a configuration by calling this action multiple times using the same
+ * <code>ObservabilityConfigurationName</code>. The call returns incremental
+ * <code>ObservabilityConfigurationRevision</code> values. When you create a service and configure an observability
+ * configuration resource, the service uses the latest active revision of the observability configuration by default. You
+ * can optionally configure the service to use a specific
+ *
+ * revision>
+ *
+ * The observability configuration resource is designed to configure multiple features (currently one feature, tracing).
+ * This action takes optional parameters that describe the configuration of these features (currently one parameter,
+ * <code>TraceConfiguration</code>). If you don't specify a feature parameter, App Runner doesn't enable the
+ */
+CreateObservabilityConfigurationResponse * AppRunnerClient::createObservabilityConfiguration(const CreateObservabilityConfigurationRequest &request)
+{
+    return qobject_cast<CreateObservabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * CreateServiceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create an AWS App Runner service. After the service is created, the action also automatically starts a
+ * Create an App Runner service. After the service is created, the action also automatically starts a
  *
  * deployment>
  *
@@ -265,12 +312,26 @@ CreateServiceResponse * AppRunnerClient::createService(const CreateServiceReques
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * CreateVpcConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create an App Runner VPC connector resource. App Runner requires this resource when you want to associate your App
+ * Runner service to a custom Amazon Virtual Private Cloud (Amazon
+ */
+CreateVpcConnectorResponse * AppRunnerClient::createVpcConnector(const CreateVpcConnectorRequest &request)
+{
+    return qobject_cast<CreateVpcConnectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * DeleteAutoScalingConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete an AWS App Runner automatic scaling configuration resource. You can delete a specific revision or the latest
- * active revision. You can't delete a configuration that's used by one or more App Runner
+ * Delete an App Runner automatic scaling configuration resource. You can delete a specific revision or the latest active
+ * revision. You can't delete a configuration that's used by one or more App Runner
  */
 DeleteAutoScalingConfigurationResponse * AppRunnerClient::deleteAutoScalingConfiguration(const DeleteAutoScalingConfigurationRequest &request)
 {
@@ -283,7 +344,7 @@ DeleteAutoScalingConfigurationResponse * AppRunnerClient::deleteAutoScalingConfi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete an AWS App Runner connection. You must first ensure that there are no running App Runner services that use this
+ * Delete an App Runner connection. You must first ensure that there are no running App Runner services that use this
  * connection. If there are any, the <code>DeleteConnection</code> action
  */
 DeleteConnectionResponse * AppRunnerClient::deleteConnection(const DeleteConnectionRequest &request)
@@ -293,11 +354,25 @@ DeleteConnectionResponse * AppRunnerClient::deleteConnection(const DeleteConnect
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * DeleteObservabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete an App Runner observability configuration resource. You can delete a specific revision or the latest active
+ * revision. You can't delete a configuration that's used by one or more App Runner
+ */
+DeleteObservabilityConfigurationResponse * AppRunnerClient::deleteObservabilityConfiguration(const DeleteObservabilityConfigurationRequest &request)
+{
+    return qobject_cast<DeleteObservabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * DeleteServiceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete an AWS App Runner
+ * Delete an App Runner
  *
  * service>
  *
@@ -311,11 +386,24 @@ DeleteServiceResponse * AppRunnerClient::deleteService(const DeleteServiceReques
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * DeleteVpcConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete an App Runner VPC connector resource. You can't delete a connector that's used by one or more App Runner
+ */
+DeleteVpcConnectorResponse * AppRunnerClient::deleteVpcConnector(const DeleteVpcConnectorRequest &request)
+{
+    return qobject_cast<DeleteVpcConnectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * DescribeAutoScalingConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Return a full description of an AWS App Runner automatic scaling configuration
+ * Return a full description of an App Runner automatic scaling configuration
  */
 DescribeAutoScalingConfigurationResponse * AppRunnerClient::describeAutoScalingConfiguration(const DescribeAutoScalingConfigurationRequest &request)
 {
@@ -328,7 +416,7 @@ DescribeAutoScalingConfigurationResponse * AppRunnerClient::describeAutoScalingC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Return a description of custom domain names that are associated with an AWS App Runner
+ * Return a description of custom domain names that are associated with an App Runner
  */
 DescribeCustomDomainsResponse * AppRunnerClient::describeCustomDomains(const DescribeCustomDomainsRequest &request)
 {
@@ -337,11 +425,24 @@ DescribeCustomDomainsResponse * AppRunnerClient::describeCustomDomains(const Des
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * DescribeObservabilityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Return a full description of an App Runner observability configuration
+ */
+DescribeObservabilityConfigurationResponse * AppRunnerClient::describeObservabilityConfiguration(const DescribeObservabilityConfigurationRequest &request)
+{
+    return qobject_cast<DescribeObservabilityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * DescribeServiceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Return a full description of an AWS App Runner
+ * Return a full description of an App Runner
  */
 DescribeServiceResponse * AppRunnerClient::describeService(const DescribeServiceRequest &request)
 {
@@ -350,11 +451,24 @@ DescribeServiceResponse * AppRunnerClient::describeService(const DescribeService
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * DescribeVpcConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Return a description of an App Runner VPC connector
+ */
+DescribeVpcConnectorResponse * AppRunnerClient::describeVpcConnector(const DescribeVpcConnectorRequest &request)
+{
+    return qobject_cast<DescribeVpcConnectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * DisassociateCustomDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociate a custom domain name from an AWS App Runner
+ * Disassociate a custom domain name from an App Runner
  *
  * service>
  *
@@ -374,9 +488,13 @@ DisassociateCustomDomainResponse * AppRunnerClient::disassociateCustomDomain(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of AWS App Runner automatic scaling configurations in your AWS account. You can query the revisions for a
- * specific configuration name or the revisions for all configurations in your account. You can optionally query only the
- * latest revision of each requested
+ * Returns a list of active App Runner automatic scaling configurations in your Amazon Web Services account. You can query
+ * the revisions for a specific configuration name or the revisions for all active configurations in your account. You can
+ * optionally query only the latest revision of each requested
+ *
+ * name>
+ *
+ * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned by
  */
 ListAutoScalingConfigurationsResponse * AppRunnerClient::listAutoScalingConfigurations(const ListAutoScalingConfigurationsRequest &request)
 {
@@ -389,7 +507,7 @@ ListAutoScalingConfigurationsResponse * AppRunnerClient::listAutoScalingConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of AWS App Runner connections that are associated with your AWS
+ * Returns a list of App Runner connections that are associated with your Amazon Web Services
  */
 ListConnectionsResponse * AppRunnerClient::listConnections(const ListConnectionsRequest &request)
 {
@@ -398,11 +516,30 @@ ListConnectionsResponse * AppRunnerClient::listConnections(const ListConnections
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * ListObservabilityConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of active App Runner observability configurations in your Amazon Web Services account. You can query the
+ * revisions for a specific configuration name or the revisions for all active configurations in your account. You can
+ * optionally query only the latest revision of each requested
+ *
+ * name>
+ *
+ * To retrieve a full description of a particular configuration revision, call and provide one of the ARNs returned by
+ */
+ListObservabilityConfigurationsResponse * AppRunnerClient::listObservabilityConfigurations(const ListObservabilityConfigurationsRequest &request)
+{
+    return qobject_cast<ListObservabilityConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * ListOperationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Return a list of operations that occurred on an AWS App Runner
+ * Return a list of operations that occurred on an App Runner
  *
  * service>
  *
@@ -420,7 +557,7 @@ ListOperationsResponse * AppRunnerClient::listOperations(const ListOperationsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of running AWS App Runner services in your AWS
+ * Returns a list of running App Runner services in your Amazon Web Services
  */
 ListServicesResponse * AppRunnerClient::listServices(const ListServicesRequest &request)
 {
@@ -433,7 +570,7 @@ ListServicesResponse * AppRunnerClient::listServices(const ListServicesRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List tags that are associated with for an AWS App Runner resource. The response contains a list of tag key-value
+ * List tags that are associated with for an App Runner resource. The response contains a list of tag key-value
  */
 ListTagsForResourceResponse * AppRunnerClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -442,11 +579,24 @@ ListTagsForResourceResponse * AppRunnerClient::listTagsForResource(const ListTag
 
 /*!
  * Sends \a request to the AppRunnerClient service, and returns a pointer to an
+ * ListVpcConnectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of App Runner VPC connectors in your Amazon Web Services
+ */
+ListVpcConnectorsResponse * AppRunnerClient::listVpcConnectors(const ListVpcConnectorsRequest &request)
+{
+    return qobject_cast<ListVpcConnectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppRunnerClient service, and returns a pointer to an
  * PauseServiceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Pause an active AWS App Runner service. App Runner reduces compute capacity for the service to zero and loses state (for
+ * Pause an active App Runner service. App Runner reduces compute capacity for the service to zero and loses state (for
  * example, ephemeral storage is
  *
  * removed)>
@@ -465,7 +615,7 @@ PauseServiceResponse * AppRunnerClient::pauseService(const PauseServiceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resume an active AWS App Runner service. App Runner provisions compute capacity for the
+ * Resume an active App Runner service. App Runner provisions compute capacity for the
  *
  * service>
  *
@@ -484,7 +634,7 @@ ResumeServiceResponse * AppRunnerClient::resumeService(const ResumeServiceReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Initiate a manual deployment of the latest commit in a source code repository or the latest image in a source image
- * repository to an AWS App Runner
+ * repository to an App Runner
  *
  * service>
  *
@@ -534,9 +684,9 @@ UntagResourceResponse * AppRunnerClient::untagResource(const UntagResourceReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Update an AWS App Runner service. You can update the source configuration and instance configuration of the service. You
- * can also update the ARN of the auto scaling configuration resource that's associated with the service. However, you
- * can't change the name or the encryption configuration of the service. These can be set only when you create the
+ * Update an App Runner service. You can update the source configuration and instance configuration of the service. You can
+ * also update the ARN of the auto scaling configuration resource that's associated with the service. However, you can't
+ * change the name or the encryption configuration of the service. These can be set only when you create the
  *
  * service>
  *

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRegexPatternSetResponse
- * \brief The UpdateRegexPatternSetResponse class provides an interace for WAF UpdateRegexPatternSet responses.
+ * \class QtAws::Waf::UpdateRegexPatternSetResponse
+ * \brief The UpdateRegexPatternSetResponse class provides an interace for Waf UpdateRegexPatternSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateRegexPatternSet \a response.
+ * Parses a successful Waf UpdateRegexPatternSet \a response.
  */
 void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateRegexPatternSetResponsePrivate
+ * \class QtAws::Waf::UpdateRegexPatternSetResponsePrivate
  * \brief The UpdateRegexPatternSetResponsePrivate class provides private implementation for UpdateRegexPatternSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateRegexPatternSetResponsePrivate::UpdateRegexPatternSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateRegexPatternSet response element from \a xml.
+ * Parses a Waf UpdateRegexPatternSet response element from \a xml.
  */
 void UpdateRegexPatternSetResponsePrivate::parseUpdateRegexPatternSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateRegexPatternSetResponsePrivate::parseUpdateRegexPatternSetResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

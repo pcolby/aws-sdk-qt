@@ -24,7 +24,7 @@
 #include "getkeyrotationstatusrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class GetKeyRotationStatusResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

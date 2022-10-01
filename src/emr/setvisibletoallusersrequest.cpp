@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::SetVisibleToAllUsersRequest
- * \brief The SetVisibleToAllUsersRequest class provides an interface for EMR SetVisibleToAllUsers requests.
+ * \class QtAws::Emr::SetVisibleToAllUsersRequest
+ * \brief The SetVisibleToAllUsersRequest class provides an interface for Emr SetVisibleToAllUsers requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::setVisibleToAllUsers
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EMR::SetVisibleToAllUsersRequestPrivate
+ * \class QtAws::Emr::SetVisibleToAllUsersRequestPrivate
  * \brief The SetVisibleToAllUsersRequestPrivate class provides private implementation for SetVisibleToAllUsersRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -42,42 +42,42 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::PinpointSMSVoice
- * \brief Contains classess for accessing Amazon Pinpoint SMS and Voice Service (Pinpoint SMS Voice).
+ * \namespace QtAws::PinpointSmsVoice
+ * \brief Contains classess for accessing Amazon Pinpoint SMS and Voice Service.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceClient
- * \brief The PinpointSMSVoiceClient class provides access to the Amazon Pinpoint SMS and Voice Service (Pinpoint SMS Voice) service.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceClient
+ * \brief The PinpointSmsVoiceClient class provides access to the Amazon Pinpoint SMS and Voice Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  */
 
 /*!
- * \brief Constructs a PinpointSMSVoiceClient object.
+ * \brief Constructs a PinpointSmsVoiceClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-PinpointSMSVoiceClient::PinpointSMSVoiceClient(
+PinpointSmsVoiceClient::PinpointSmsVoiceClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointSMSVoiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PinpointSmsVoiceClientPrivate(this), parent)
 {
-    Q_D(PinpointSMSVoiceClient);
+    Q_D(PinpointSmsVoiceClient);
     d->apiVersion = QStringLiteral("2018-09-05");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("sms-voice.pinpoint");
@@ -88,7 +88,7 @@ PinpointSMSVoiceClient::PinpointSMSVoiceClient(
 }
 
 /*!
- * \overload PinpointSMSVoiceClient()
+ * \overload PinpointSmsVoiceClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -98,14 +98,14 @@ PinpointSMSVoiceClient::PinpointSMSVoiceClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-PinpointSMSVoiceClient::PinpointSMSVoiceClient(
+PinpointSmsVoiceClient::PinpointSmsVoiceClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointSMSVoiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new PinpointSmsVoiceClientPrivate(this), parent)
 {
-    Q_D(PinpointSMSVoiceClient);
+    Q_D(PinpointSmsVoiceClient);
     d->apiVersion = QStringLiteral("2018-09-05");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -116,121 +116,121 @@ PinpointSMSVoiceClient::PinpointSMSVoiceClient(
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * CreateConfigurationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Create a new configuration set. After you create the configuration set, you can add one or more event destinations to
  */
-CreateConfigurationSetResponse * PinpointSMSVoiceClient::createConfigurationSet(const CreateConfigurationSetRequest &request)
+CreateConfigurationSetResponse * PinpointSmsVoiceClient::createConfigurationSet(const CreateConfigurationSetRequest &request)
 {
     return qobject_cast<CreateConfigurationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * CreateConfigurationSetEventDestinationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  */
-CreateConfigurationSetEventDestinationResponse * PinpointSMSVoiceClient::createConfigurationSetEventDestination(const CreateConfigurationSetEventDestinationRequest &request)
+CreateConfigurationSetEventDestinationResponse * PinpointSmsVoiceClient::createConfigurationSetEventDestination(const CreateConfigurationSetEventDestinationRequest &request)
 {
     return qobject_cast<CreateConfigurationSetEventDestinationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * DeleteConfigurationSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  */
-DeleteConfigurationSetResponse * PinpointSMSVoiceClient::deleteConfigurationSet(const DeleteConfigurationSetRequest &request)
+DeleteConfigurationSetResponse * PinpointSmsVoiceClient::deleteConfigurationSet(const DeleteConfigurationSetRequest &request)
 {
     return qobject_cast<DeleteConfigurationSetResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * DeleteConfigurationSetEventDestinationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  */
-DeleteConfigurationSetEventDestinationResponse * PinpointSMSVoiceClient::deleteConfigurationSetEventDestination(const DeleteConfigurationSetEventDestinationRequest &request)
+DeleteConfigurationSetEventDestinationResponse * PinpointSmsVoiceClient::deleteConfigurationSetEventDestination(const DeleteConfigurationSetEventDestinationRequest &request)
 {
     return qobject_cast<DeleteConfigurationSetEventDestinationResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * GetConfigurationSetEventDestinationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Obtain information about an event destination, including the types of events it reports, the Amazon Resource Name (ARN)
  */
-GetConfigurationSetEventDestinationsResponse * PinpointSMSVoiceClient::getConfigurationSetEventDestinations(const GetConfigurationSetEventDestinationsRequest &request)
+GetConfigurationSetEventDestinationsResponse * PinpointSmsVoiceClient::getConfigurationSetEventDestinations(const GetConfigurationSetEventDestinationsRequest &request)
 {
     return qobject_cast<GetConfigurationSetEventDestinationsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * ListConfigurationSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  */
-ListConfigurationSetsResponse * PinpointSMSVoiceClient::listConfigurationSets(const ListConfigurationSetsRequest &request)
+ListConfigurationSetsResponse * PinpointSmsVoiceClient::listConfigurationSets(const ListConfigurationSetsRequest &request)
 {
     return qobject_cast<ListConfigurationSetsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * SendVoiceMessageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  */
-SendVoiceMessageResponse * PinpointSMSVoiceClient::sendVoiceMessage(const SendVoiceMessageRequest &request)
+SendVoiceMessageResponse * PinpointSmsVoiceClient::sendVoiceMessage(const SendVoiceMessageRequest &request)
 {
     return qobject_cast<SendVoiceMessageResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * Sends \a request to the PinpointSmsVoiceClient service, and returns a pointer to an
  * UpdateConfigurationSetEventDestinationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Update an event destination in a configuration set. An event destination is a location that you publish information
  */
-UpdateConfigurationSetEventDestinationResponse * PinpointSMSVoiceClient::updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request)
+UpdateConfigurationSetEventDestinationResponse * PinpointSmsVoiceClient::updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request)
 {
     return qobject_cast<UpdateConfigurationSetEventDestinationResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceClientPrivate
- * \brief The PinpointSMSVoiceClientPrivate class provides private implementation for PinpointSMSVoiceClient.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceClientPrivate
+ * \brief The PinpointSmsVoiceClientPrivate class provides private implementation for PinpointSmsVoiceClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a PinpointSMSVoiceClientPrivate object with public implementation \a q.
+ * Constructs a PinpointSmsVoiceClientPrivate object with public implementation \a q.
  */
-PinpointSMSVoiceClientPrivate::PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q)
+PinpointSmsVoiceClientPrivate::PinpointSmsVoiceClientPrivate(PinpointSmsVoiceClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

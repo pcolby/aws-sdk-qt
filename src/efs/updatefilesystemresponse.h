@@ -24,7 +24,7 @@
 #include "updatefilesystemrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class UpdateFileSystemResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

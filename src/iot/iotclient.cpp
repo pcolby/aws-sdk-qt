@@ -69,6 +69,8 @@
 #include "createdomainconfigurationresponse.h"
 #include "createdynamicthinggrouprequest.h"
 #include "createdynamicthinggroupresponse.h"
+#include "createfleetmetricrequest.h"
+#include "createfleetmetricresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
 #include "createjobtemplaterequest.h"
@@ -127,6 +129,8 @@
 #include "deletedomainconfigurationresponse.h"
 #include "deletedynamicthinggrouprequest.h"
 #include "deletedynamicthinggroupresponse.h"
+#include "deletefleetmetricrequest.h"
+#include "deletefleetmetricresponse.h"
 #include "deletejobrequest.h"
 #include "deletejobresponse.h"
 #include "deletejobexecutionrequest.h"
@@ -201,6 +205,8 @@
 #include "describeendpointresponse.h"
 #include "describeeventconfigurationsrequest.h"
 #include "describeeventconfigurationsresponse.h"
+#include "describefleetmetricrequest.h"
+#include "describefleetmetricresponse.h"
 #include "describeindexrequest.h"
 #include "describeindexresponse.h"
 #include "describejobrequest.h"
@@ -209,6 +215,8 @@
 #include "describejobexecutionresponse.h"
 #include "describejobtemplaterequest.h"
 #include "describejobtemplateresponse.h"
+#include "describemanagedjobtemplaterequest.h"
+#include "describemanagedjobtemplateresponse.h"
 #include "describemitigationactionrequest.h"
 #include "describemitigationactionresponse.h"
 #include "describeprovisioningtemplaterequest.h"
@@ -245,6 +253,8 @@
 #include "enabletopicruleresponse.h"
 #include "getbehaviormodeltrainingsummariesrequest.h"
 #include "getbehaviormodeltrainingsummariesresponse.h"
+#include "getbucketsaggregationrequest.h"
+#include "getbucketsaggregationresponse.h"
 #include "getcardinalityrequest.h"
 #include "getcardinalityresponse.h"
 #include "geteffectivepoliciesrequest.h"
@@ -307,6 +317,8 @@
 #include "listdimensionsresponse.h"
 #include "listdomainconfigurationsrequest.h"
 #include "listdomainconfigurationsresponse.h"
+#include "listfleetmetricsrequest.h"
+#include "listfleetmetricsresponse.h"
 #include "listindicesrequest.h"
 #include "listindicesresponse.h"
 #include "listjobexecutionsforjobrequest.h"
@@ -317,6 +329,10 @@
 #include "listjobtemplatesresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listmanagedjobtemplatesrequest.h"
+#include "listmanagedjobtemplatesresponse.h"
+#include "listmetricvaluesrequest.h"
+#include "listmetricvaluesresponse.h"
 #include "listmitigationactionsrequest.h"
 #include "listmitigationactionsresponse.h"
 #include "listotaupdatesrequest.h"
@@ -379,6 +395,8 @@
 #include "listv2logginglevelsresponse.h"
 #include "listviolationeventsrequest.h"
 #include "listviolationeventsresponse.h"
+#include "putverificationstateonviolationrequest.h"
+#include "putverificationstateonviolationresponse.h"
 #include "registercacertificaterequest.h"
 #include "registercacertificateresponse.h"
 #include "registercertificaterequest.h"
@@ -449,6 +467,8 @@
 #include "updatedynamicthinggroupresponse.h"
 #include "updateeventconfigurationsrequest.h"
 #include "updateeventconfigurationsresponse.h"
+#include "updatefleetmetricrequest.h"
+#include "updatefleetmetricresponse.h"
 #include "updateindexingconfigurationrequest.h"
 #include "updateindexingconfigurationresponse.h"
 #include "updatejobrequest.h"
@@ -498,33 +518,35 @@ namespace IoT {
  * \ingroup aws-clients
  * \inmodule QtAwsIoT
  *
- *  <fullname>AWS IoT</fullname>
+ *  <fullname>IoT</fullname>
  * 
- *  AWS IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators,
- *  embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate
- *  with, configure rules for data processing and integration with other services, organize resources associated with each
- *  device (Registry), configure logging, and create and manage policies and credentials to authenticate
+ *  IoT provides secure, bi-directional communication between Internet-connected devices (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the Amazon Web Services cloud. You can discover your custom IoT-Data endpoint
+ *  to communicate with, configure rules for data processing and integration with other services, organize resources
+ *  associated with each device (Registry), configure logging, and create and manage policies and credentials to
+ *  authenticate
  * 
  *  devices>
  * 
  *  The service endpoints that expose this API are listed in <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html">AWS IoT Core Endpoints and Quotas</a>. You must use
- *  the endpoint for the region that has the resources you want to
+ *  href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html">Amazon Web Services IoT Core Endpoints and
+ *  Quotas</a>. You must use the endpoint for the region that has the resources you want to
  * 
  *  access>
  * 
- *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS Signature
- *  Version 4</a> to sign the request is:
+ *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon Web
+ *  Services Signature Version 4</a> to sign the request is:
  * 
  *  <i>execute-api</i>>
  * 
- *  For more information about how AWS IoT works, see the <a
+ *  For more information about how IoT works, see the <a
  *  href="https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
  * 
  *  Guide</a>>
  * 
- *  For information about how to use the credentials provider for AWS IoT, see <a
- *  href="https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to AWS
+ *  For information about how to use the credentials provider for IoT, see <a
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to
+ *  Amazon Web Services
  */
 
 /*!
@@ -591,6 +613,11 @@ IoTClient::IoTClient(
  * INACTIVE>
  *
  * To check for pending certificate transfers, call <a>ListCertificates</a> to enumerate your
+ *
+ * certificates>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AcceptCertificateTransfer</a>
  */
 AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const AcceptCertificateTransferRequest &request)
 {
@@ -604,6 +631,11 @@ AcceptCertificateTransferResponse * IoTClient::acceptCertificateTransfer(const A
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds a thing to a billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AddThingToBillingGroup</a>
  */
 AddThingToBillingGroupResponse * IoTClient::addThingToBillingGroup(const AddThingToBillingGroupRequest &request)
 {
@@ -617,6 +649,11 @@ AddThingToBillingGroupResponse * IoTClient::addThingToBillingGroup(const AddThin
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds a thing to a thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AddThingToThingGroup</a>
  */
 AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToThingGroupRequest &request)
 {
@@ -642,6 +679,11 @@ AddThingToThingGroupResponse * IoTClient::addThingToThingGroup(const AddThingToT
  * "IN_PROGRESS"> </li> <li>
  *
  * The total number of targets associated with a job must not exceed
+ *
+ * 100> </li> </ul>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AssociateTargetsWithJob</a>
  */
 AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const AssociateTargetsWithJobRequest &request)
 {
@@ -654,7 +696,12 @@ AssociateTargetsWithJobResponse * IoTClient::associateTargetsWithJob(const Assoc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches a policy to the specified
+ * Attaches the specified policy to the specified principal (certificate or other
+ *
+ * credential)>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachPolicy</a>
  */
 AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &request)
 {
@@ -671,7 +718,13 @@ AttachPolicyResponse * IoTClient::attachPolicy(const AttachPolicyRequest &reques
  *
  * credential)>
  *
- * <b>Note:</b> This API is deprecated. Please use <a>AttachPolicy</a>
+ * <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements.
+ * Use <a>AttachPolicy</a>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachPrincipalPolicy</a>
  */
 AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPrincipalPolicyRequest &request)
 {
@@ -686,6 +739,11 @@ AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPri
  *
  * Associates a Device Defender security profile with a thing group or this account. Each thing group or account can have
  * up to five security profiles associated with
+ *
+ * it>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachSecurityProfile</a>
  */
 AttachSecurityProfileResponse * IoTClient::attachSecurityProfile(const AttachSecurityProfileRequest &request)
 {
@@ -700,6 +758,11 @@ AttachSecurityProfileResponse * IoTClient::attachSecurityProfile(const AttachSec
  *
  * Attaches the specified principal to the specified thing. A principal can be X.509 certificates, IAM users, groups, and
  * roles, Amazon Cognito identities or federated
+ *
+ * identities>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">AttachThingPrincipal</a>
  */
 AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThingPrincipalRequest &request)
 {
@@ -713,6 +776,11 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels a mitigation action task that is in progress. If the task is not in progress, an InvalidRequestException
+ *
+ * occurs>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelAuditMitigationActionsTask</a>
  */
 CancelAuditMitigationActionsTaskResponse * IoTClient::cancelAuditMitigationActionsTask(const CancelAuditMitigationActionsTaskRequest &request)
 {
@@ -727,6 +795,11 @@ CancelAuditMitigationActionsTaskResponse * IoTClient::cancelAuditMitigationActio
  *
  * Cancels an audit that is in progress. The audit can be either scheduled or on demand. If the audit isn't in progress, an
  * "InvalidRequestException"
+ *
+ * occurs>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelAuditTask</a>
  */
 CancelAuditTaskResponse * IoTClient::cancelAuditTask(const CancelAuditTaskRequest &request)
 {
@@ -744,12 +817,17 @@ CancelAuditTaskResponse * IoTClient::cancelAuditTask(const CancelAuditTaskReques
  * certificate>
  *
  * <b>Note</b> Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use
- * <a>RejectCertificateTransfer</a> instead.) After transfer, AWS IoT returns the certificate to the source account in the
+ * <a>RejectCertificateTransfer</a> instead.) After transfer, IoT returns the certificate to the source account in the
  * INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be
  *
  * cancelled>
  *
  * After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to
+ *
+ * INACTIVE>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelCertificateTransfer</a>
  */
 CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const CancelCertificateTransferRequest &request)
 {
@@ -763,6 +841,11 @@ CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const C
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels a Device Defender ML Detect mitigation action.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelDetectMitigationActionsTask</a>
  */
 CancelDetectMitigationActionsTaskResponse * IoTClient::cancelDetectMitigationActionsTask(const CancelDetectMitigationActionsTaskRequest &request)
 {
@@ -776,6 +859,11 @@ CancelDetectMitigationActionsTaskResponse * IoTClient::cancelDetectMitigationAct
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels a
+ *
+ * job>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelJob</a>
  */
 CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 {
@@ -789,6 +877,11 @@ CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels the execution of a job for a given
+ *
+ * thing>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CancelJobExecution</a>
  */
 CancelJobExecutionResponse * IoTClient::cancelJobExecution(const CancelJobExecutionRequest &request)
 {
@@ -802,6 +895,11 @@ CancelJobExecutionResponse * IoTClient::cancelJobExecution(const CancelJobExecut
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Clears the default
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ClearDefaultAuthorizer</a>
  */
 ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDefaultAuthorizerRequest &request)
 {
@@ -814,9 +912,14 @@ ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Confirms a topic rule destination. When you create a rule requiring a destination, AWS IoT sends a confirmation message
- * to the endpoint or base address you specify. The message includes a token which you pass back when calling
+ * Confirms a topic rule destination. When you create a rule requiring a destination, IoT sends a confirmation message to
+ * the endpoint or base address you specify. The message includes a token which you pass back when calling
  * <code>ConfirmTopicRuleDestination</code> to confirm that you own or have access to the
+ *
+ * endpoint>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ConfirmTopicRuleDestination</a>
  */
 ConfirmTopicRuleDestinationResponse * IoTClient::confirmTopicRuleDestination(const ConfirmTopicRuleDestinationRequest &request)
 {
@@ -830,6 +933,11 @@ ConfirmTopicRuleDestinationResponse * IoTClient::confirmTopicRuleDestination(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a Device Defender audit suppression.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateAuditSuppression</a>
  */
 CreateAuditSuppressionResponse * IoTClient::createAuditSuppression(const CreateAuditSuppressionRequest &request)
 {
@@ -843,6 +951,11 @@ CreateAuditSuppressionResponse * IoTClient::createAuditSuppression(const CreateA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateAuthorizer</a>
  */
 CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerRequest &request)
 {
@@ -856,6 +969,11 @@ CreateAuthorizerResponse * IoTClient::createAuthorizer(const CreateAuthorizerReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateBillingGroup</a>
  */
 CreateBillingGroupResponse * IoTClient::createBillingGroup(const CreateBillingGroupRequest &request)
 {
@@ -873,13 +991,20 @@ CreateBillingGroupResponse * IoTClient::createBillingGroup(const CreateBillingGr
  * request>
  *
  * <b>Note:</b> The CSR must include a public key that is either an RSA key with a length of at least 2048 bits or an ECC
- * key from NIST P-256 or NIST P-384 curves.
+ * key from NIST P-256, NIST P-384, or NIST P-512 curves. For supported certificates, consult <a
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html#x509-cert-algorithms"> Certificate
+ * signing algorithms supported by
  *
- * </p
+ * IoT</a>>
  *
  * <b>Note:</b> Reusing the same certificate signing request (CSR) results in a distinct
  *
  * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateCertificateFromCsr</a>
+ *
+ * action>
  *
  * You can create multiple certificates in a batch by creating a directory, copying multiple .csr files into that
  * directory, and then specifying that directory on the command line. The following commands show how to create a batch of
@@ -900,7 +1025,7 @@ CreateBillingGroupResponse * IoTClient::createBillingGroup(const CreateBillingGr
  * file://my-csr-directory/{>
  *
  * This command lists all of the CSRs in my-csr-directory and pipes each CSR file name to the aws iot
- * create-certificate-from-csr AWS CLI command to create a certificate for the corresponding
+ * create-certificate-from-csr Amazon Web Services CLI command to create a certificate for the corresponding
  *
  * CSR>
  *
@@ -917,7 +1042,7 @@ CreateBillingGroupResponse * IoTClient::createBillingGroup(const CreateBillingGr
  *
  * is>
  *
- * &gt; ls -Name my-csr-directory | %{aws iot create-certificate-from-csr --certificate-signing-request
+ * > ls -Name my-csr-directory | %{aws iot create-certificate-from-csr --certificate-signing-request
  *
  * file://my-csr-directory/$_>
  *
@@ -925,7 +1050,7 @@ CreateBillingGroupResponse * IoTClient::createBillingGroup(const CreateBillingGr
  *
  * is>
  *
- * &gt; forfiles /p my-csr-directory /c "cmd /c aws iot create-certificate-from-csr --certificate-signing-request
+ * > forfiles /p my-csr-directory /c "cmd /c aws iot create-certificate-from-csr --certificate-signing-request
  */
 CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const CreateCertificateFromCsrRequest &request)
 {
@@ -939,6 +1064,11 @@ CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const Cre
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Use this API to define a Custom Metric published by your devices to Device Defender.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateCustomMetric</a>
  */
 CreateCustomMetricResponse * IoTClient::createCustomMetric(const CreateCustomMetricRequest &request)
 {
@@ -951,9 +1081,14 @@ CreateCustomMetricResponse * IoTClient::createCustomMetric(const CreateCustomMet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a dimension that you can use to limit the scope of a metric used in a security profile for AWS IoT Device
- * Defender. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to
- * MQTT topics whose name match the pattern specified in the
+ * Create a dimension that you can use to limit the scope of a metric used in a security profile for IoT Device Defender.
+ * For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to MQTT
+ * topics whose name match the pattern specified in the
+ *
+ * dimension>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDimension</a>
  */
 CreateDimensionResponse * IoTClient::createDimension(const CreateDimensionRequest &request)
 {
@@ -967,6 +1102,11 @@ CreateDimensionResponse * IoTClient::createDimension(const CreateDimensionReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a domain
+ *
+ * configuration>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDomainConfiguration</a>
  */
 CreateDomainConfigurationResponse * IoTClient::createDomainConfiguration(const CreateDomainConfigurationRequest &request)
 {
@@ -980,10 +1120,33 @@ CreateDomainConfigurationResponse * IoTClient::createDomainConfiguration(const C
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a dynamic thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateDynamicThingGroup</a>
  */
 CreateDynamicThingGroupResponse * IoTClient::createDynamicThingGroup(const CreateDynamicThingGroupRequest &request)
 {
     return qobject_cast<CreateDynamicThingGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateFleetMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a fleet
+ *
+ * metric>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateFleetMetric</a>
+ */
+CreateFleetMetricResponse * IoTClient::createFleetMetric(const CreateFleetMetricRequest &request)
+{
+    return qobject_cast<CreateFleetMetricResponse *>(send(request));
 }
 
 /*!
@@ -993,6 +1156,11 @@ CreateDynamicThingGroupResponse * IoTClient::createDynamicThingGroup(const Creat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * job>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateJob</a>
  */
 CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 {
@@ -1006,6 +1174,11 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a job
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateJobTemplate</a>
  */
 CreateJobTemplateResponse * IoTClient::createJobTemplate(const CreateJobTemplateRequest &request)
 {
@@ -1024,8 +1197,13 @@ CreateJobTemplateResponse * IoTClient::createJobTemplate(const CreateJobTemplate
  *
  * API</a>>
  *
- * <b>Note</b> This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in
- * a secure
+ * <b>Note</b> This is the only time IoT issues the private key for this certificate, so it is important to keep it in a
+ * secure
+ *
+ * location>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateKeysAndCertificate</a>
  */
 CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const CreateKeysAndCertificateRequest &request)
 {
@@ -1042,6 +1220,11 @@ CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const Cre
  * mitigation actions can be applied to specific check names. For more information, see <a
  * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-mitigation-actions.html">Mitigation
  * actions</a>. Each mitigation action can apply only one type of
+ *
+ * change>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateMitigationAction</a>
  */
 CreateMitigationActionResponse * IoTClient::createMitigationAction(const CreateMitigationActionRequest &request)
 {
@@ -1054,7 +1237,12 @@ CreateMitigationActionResponse * IoTClient::createMitigationAction(const CreateM
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS IoT OTAUpdate on a target group of things or
+ * Creates an IoT OTA update on a target group of things or
+ *
+ * groups>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateOTAUpdate</a>
  */
 CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateRequest &request)
 {
@@ -1067,12 +1255,17 @@ CreateOTAUpdateResponse * IoTClient::createOTAUpdate(const CreateOTAUpdateReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS IoT
+ * Creates an IoT
  *
  * policy>
  *
  * The created policy is the default version for the policy. This operation creates a policy version with a version
  * identifier of <b>1</b> and sets <b>1</b> as the policy's default
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreatePolicy</a>
  */
 CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &request)
 {
@@ -1085,14 +1278,19 @@ CreatePolicyResponse * IoTClient::createPolicy(const CreatePolicyRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new version of the specified AWS IoT policy. To update a policy, create a new policy version. A managed policy
- * can have up to five versions. If the policy has five versions, you must use <a>DeletePolicyVersion</a> to delete an
- * existing version before you create a new
+ * Creates a new version of the specified IoT policy. To update a policy, create a new policy version. A managed policy can
+ * have up to five versions. If the policy has five versions, you must use <a>DeletePolicyVersion</a> to delete an existing
+ * version before you create a new
  *
  * one>
  *
  * Optionally, you can set the new version as the policy's default version. The default version is the operative version
  * (that is, the version that is in effect for the certificates to which the policy is
+ *
+ * attached)>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreatePolicyVersion</a>
  */
 CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyVersionRequest &request)
 {
@@ -1106,6 +1304,11 @@ CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyV
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a provisioning
+ *
+ * claim>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateProvisioningClaim</a>
  */
 CreateProvisioningClaimResponse * IoTClient::createProvisioningClaim(const CreateProvisioningClaimRequest &request)
 {
@@ -1118,7 +1321,12 @@ CreateProvisioningClaimResponse * IoTClient::createProvisioningClaim(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a fleet provisioning
+ * Creates a provisioning
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateProvisioningTemplate</a>
  */
 CreateProvisioningTemplateResponse * IoTClient::createProvisioningTemplate(const CreateProvisioningTemplateRequest &request)
 {
@@ -1131,7 +1339,12 @@ CreateProvisioningTemplateResponse * IoTClient::createProvisioningTemplate(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new version of a fleet provisioning
+ * Creates a new version of a provisioning
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateProvisioningTemplateVersion</a>
  */
 CreateProvisioningTemplateVersionResponse * IoTClient::createProvisioningTemplateVersion(const CreateProvisioningTemplateVersionRequest &request)
 {
@@ -1145,6 +1358,11 @@ CreateProvisioningTemplateVersionResponse * IoTClient::createProvisioningTemplat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a role
+ *
+ * alias>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateRoleAlias</a>
  */
 CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasRequest &request)
 {
@@ -1158,6 +1376,11 @@ CreateRoleAliasResponse * IoTClient::createRoleAlias(const CreateRoleAliasReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a scheduled audit that is run at a specified time
+ *
+ * interval>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateScheduledAudit</a>
  */
 CreateScheduledAuditResponse * IoTClient::createScheduledAudit(const CreateScheduledAuditRequest &request)
 {
@@ -1171,6 +1394,11 @@ CreateScheduledAuditResponse * IoTClient::createScheduledAudit(const CreateSched
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateSecurityProfile</a>
  */
 CreateSecurityProfileResponse * IoTClient::createSecurityProfile(const CreateSecurityProfileRequest &request)
 {
@@ -1185,6 +1413,11 @@ CreateSecurityProfileResponse * IoTClient::createSecurityProfile(const CreateSec
  *
  * Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or
  * blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a
+ *
+ * stream>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateStream</a>
  */
 CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &request)
 {
@@ -1206,6 +1439,11 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
  * This is a control plane operation. See <a
  * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information
  * about authorizing control plane
+ *
+ * actions> </note>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThing</a>
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 {
@@ -1225,6 +1463,11 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
  * This is a control plane operation. See <a
  * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information
  * about authorizing control plane
+ *
+ * actions> </note>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThingGroup</a>
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
 {
@@ -1238,6 +1481,11 @@ CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new thing
+ *
+ * type>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateThingType</a>
  */
 CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeRequest &request)
 {
@@ -1252,6 +1500,11 @@ CreateThingTypeResponse * IoTClient::createThingType(const CreateThingTypeReques
  *
  * Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be
  * able to access data processed by the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateTopicRule</a>
  */
 CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleRequest &request)
 {
@@ -1265,6 +1518,11 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a topic rule destination. The destination must be confirmed prior to
+ *
+ * use>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateTopicRuleDestination</a>
  */
 CreateTopicRuleDestinationResponse * IoTClient::createTopicRuleDestination(const CreateTopicRuleDestinationRequest &request)
 {
@@ -1279,6 +1537,11 @@ CreateTopicRuleDestinationResponse * IoTClient::createTopicRuleDestination(const
  *
  * Restores the default settings for Device Defender audits for this account. Any configuration data you entered is deleted
  * and all audit checks are reset to disabled.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteAccountAuditConfiguration</a>
  */
 DeleteAccountAuditConfigurationResponse * IoTClient::deleteAccountAuditConfiguration(const DeleteAccountAuditConfigurationRequest &request)
 {
@@ -1292,6 +1555,11 @@ DeleteAccountAuditConfigurationResponse * IoTClient::deleteAccountAuditConfigura
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a Device Defender audit suppression.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteAuditSuppression</a>
  */
 DeleteAuditSuppressionResponse * IoTClient::deleteAuditSuppression(const DeleteAuditSuppressionRequest &request)
 {
@@ -1305,6 +1573,11 @@ DeleteAuditSuppressionResponse * IoTClient::deleteAuditSuppression(const DeleteA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteAuthorizer</a>
  */
 DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
@@ -1318,6 +1591,11 @@ DeleteAuthorizerResponse * IoTClient::deleteAuthorizer(const DeleteAuthorizerReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteBillingGroup</a>
  */
 DeleteBillingGroupResponse * IoTClient::deleteBillingGroup(const DeleteBillingGroupRequest &request)
 {
@@ -1331,6 +1609,11 @@ DeleteBillingGroupResponse * IoTClient::deleteBillingGroup(const DeleteBillingGr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a registered CA
+ *
+ * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCACertificate</a>
  */
 DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACertificateRequest &request)
 {
@@ -1348,8 +1631,13 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
  * certificate>
  *
  * A certificate cannot be deleted if it has a policy or IoT thing attached to it or if its status is set to ACTIVE. To
- * delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the
- * <a>UpdateCertificate</a> API to set the certificate to the INACTIVE
+ * delete a certificate, first use the <a>DetachPolicy</a> action to detach all policies. Next, use the
+ * <a>UpdateCertificate</a> action to set the certificate to the INACTIVE
+ *
+ * status>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCertificate</a>
  */
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -1362,16 +1650,19 @@ DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <note>
+ * Deletes a Device Defender detect custom metric.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteCustomMetric</a>
+ *
+ * action> <note>
  *
  * Before you can delete a custom metric, you must first remove the custom metric from all security profiles it's a part
  * of. The security profile associated with the custom metric can be found using the <a
  * href="https://docs.aws.amazon.com/iot/latest/apireference/API_ListSecurityProfiles.html">ListSecurityProfiles</a> API
  * with <code>metricName</code> set to your custom metric
- *
- * name> </note>
- *
- * Deletes a Device Defender detect custom metric.
  */
 DeleteCustomMetricResponse * IoTClient::deleteCustomMetric(const DeleteCustomMetricRequest &request)
 {
@@ -1384,7 +1675,12 @@ DeleteCustomMetricResponse * IoTClient::deleteCustomMetric(const DeleteCustomMet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified dimension from your AWS
+ * Removes the specified dimension from your Amazon Web Services
+ *
+ * accounts>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDimension</a>
  */
 DeleteDimensionResponse * IoTClient::deleteDimension(const DeleteDimensionRequest &request)
 {
@@ -1398,6 +1694,11 @@ DeleteDimensionResponse * IoTClient::deleteDimension(const DeleteDimensionReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified domain
+ *
+ * configuration>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDomainConfiguration</a>
  */
 DeleteDomainConfigurationResponse * IoTClient::deleteDomainConfiguration(const DeleteDomainConfigurationRequest &request)
 {
@@ -1411,10 +1712,34 @@ DeleteDomainConfigurationResponse * IoTClient::deleteDomainConfiguration(const D
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a dynamic thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteDynamicThingGroup</a>
  */
 DeleteDynamicThingGroupResponse * IoTClient::deleteDynamicThingGroup(const DeleteDynamicThingGroupRequest &request)
 {
     return qobject_cast<DeleteDynamicThingGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteFleetMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified fleet metric. Returns successfully with no error if the deletion is successful or you specify a
+ * fleet metric that doesn't
+ *
+ * exist>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteFleetMetric</a>
+ */
+DeleteFleetMetricResponse * IoTClient::deleteFleetMetric(const DeleteFleetMetricRequest &request)
+{
+    return qobject_cast<DeleteFleetMetricResponse *>(send(request));
 }
 
 /*!
@@ -1434,6 +1759,11 @@ DeleteDynamicThingGroupResponse * IoTClient::deleteDynamicThingGroup(const Delet
  * error>
  *
  * Only 10 jobs may have status "DELETION_IN_PROGRESS" at the same time, or a LimitExceededException will
+ *
+ * occur>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteJob</a>
  */
 DeleteJobResponse * IoTClient::deleteJob(const DeleteJobRequest &request)
 {
@@ -1447,6 +1777,11 @@ DeleteJobResponse * IoTClient::deleteJob(const DeleteJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a job
+ *
+ * execution>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteJobExecution</a>
  */
 DeleteJobExecutionResponse * IoTClient::deleteJobExecution(const DeleteJobExecutionRequest &request)
 {
@@ -1472,7 +1807,12 @@ DeleteJobTemplateResponse * IoTClient::deleteJobTemplate(const DeleteJobTemplate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a defined mitigation action from your AWS
+ * Deletes a defined mitigation action from your Amazon Web Services
+ *
+ * accounts>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteMitigationAction</a>
  */
 DeleteMitigationActionResponse * IoTClient::deleteMitigationAction(const DeleteMitigationActionRequest &request)
 {
@@ -1486,6 +1826,11 @@ DeleteMitigationActionResponse * IoTClient::deleteMitigationAction(const DeleteM
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Delete an OTA
+ *
+ * update>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteOTAUpdate</a>
  */
 DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateRequest &request)
 {
@@ -1506,12 +1851,22 @@ DeleteOTAUpdateResponse * IoTClient::deleteOTAUpdate(const DeleteOTAUpdateReques
  *
  * certificate>
  *
- * To delete a policy, use the DeletePolicyVersion API to delete all non-default versions of the policy; use the
- * DetachPrincipalPolicy API to detach the policy from any certificate; and then use the DeletePolicy API to delete the
+ * To delete a policy, use the <a>DeletePolicyVersion</a> action to delete all non-default versions of the policy; use the
+ * <a>DetachPolicy</a> action to detach the policy from any certificate; and then use the DeletePolicy action to delete the
  *
  * policy>
  *
  * When a policy is deleted using DeletePolicy, its default version is deleted with
+ *
+ * it> <note>
+ *
+ * Because of the distributed nature of Amazon Web Services, it can take up to five minutes after a policy is detached
+ * before it's ready to be
+ *
+ * deleted> </note>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeletePolicy</a>
  */
 DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -1524,9 +1879,14 @@ DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API.
- * To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is marked as
- * the default version, use
+ * Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this
+ * action. To delete the default version of a policy, use <a>DeletePolicy</a>. To find out which version of a policy is
+ * marked as the default version, use
+ *
+ * ListPolicyVersions>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeletePolicyVersion</a>
  */
 DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
@@ -1539,7 +1899,12 @@ DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyV
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a fleet provisioning
+ * Deletes a provisioning
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteProvisioningTemplate</a>
  */
 DeleteProvisioningTemplateResponse * IoTClient::deleteProvisioningTemplate(const DeleteProvisioningTemplateRequest &request)
 {
@@ -1552,7 +1917,12 @@ DeleteProvisioningTemplateResponse * IoTClient::deleteProvisioningTemplate(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a fleet provisioning template
+ * Deletes a provisioning template
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteProvisioningTemplateVersion</a>
  */
 DeleteProvisioningTemplateVersionResponse * IoTClient::deleteProvisioningTemplateVersion(const DeleteProvisioningTemplateVersionRequest &request)
 {
@@ -1566,6 +1936,11 @@ DeleteProvisioningTemplateVersionResponse * IoTClient::deleteProvisioningTemplat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a CA certificate registration
+ *
+ * code>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteRegistrationCode</a>
  */
 DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteRegistrationCodeRequest &request)
 {
@@ -1579,6 +1954,11 @@ DeleteRegistrationCodeResponse * IoTClient::deleteRegistrationCode(const DeleteR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a role
+ *
+ * alia>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteRoleAlias</a>
  */
 DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasRequest &request)
 {
@@ -1592,6 +1972,11 @@ DeleteRoleAliasResponse * IoTClient::deleteRoleAlias(const DeleteRoleAliasReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a scheduled
+ *
+ * audit>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteScheduledAudit</a>
  */
 DeleteScheduledAuditResponse * IoTClient::deleteScheduledAudit(const DeleteScheduledAuditRequest &request)
 {
@@ -1605,6 +1990,11 @@ DeleteScheduledAuditResponse * IoTClient::deleteScheduledAudit(const DeleteSched
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteSecurityProfile</a>
  */
 DeleteSecurityProfileResponse * IoTClient::deleteSecurityProfile(const DeleteSecurityProfileRequest &request)
 {
@@ -1618,6 +2008,11 @@ DeleteSecurityProfileResponse * IoTClient::deleteSecurityProfile(const DeleteSec
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a
+ *
+ * stream>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteStream</a>
  */
 DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &request)
 {
@@ -1632,6 +2027,11 @@ DeleteStreamResponse * IoTClient::deleteStream(const DeleteStreamRequest &reques
  *
  * Deletes the specified thing. Returns successfully with no error if the deletion is successful or you specify a thing
  * that doesn't
+ *
+ * exist>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThing</a>
  */
 DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
 {
@@ -1645,6 +2045,11 @@ DeleteThingResponse * IoTClient::deleteThing(const DeleteThingRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingGroup</a>
  */
 DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupRequest &request)
 {
@@ -1661,6 +2066,11 @@ DeleteThingGroupResponse * IoTClient::deleteThingGroup(const DeleteThingGroupReq
  * type, first mark it as deprecated by calling <a>DeprecateThingType</a>, then remove any associated things by calling
  * <a>UpdateThing</a> to change the thing type on any associated thing, and finally use <a>DeleteThingType</a> to delete
  * the thing
+ *
+ * type>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingType</a>
  */
 DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeRequest &request)
 {
@@ -1674,6 +2084,11 @@ DeleteThingTypeResponse * IoTClient::deleteThingType(const DeleteThingTypeReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteTopicRule</a>
  */
 DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleRequest &request)
 {
@@ -1687,6 +2102,11 @@ DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a topic rule
+ *
+ * destination>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteTopicRuleDestination</a>
  */
 DeleteTopicRuleDestinationResponse * IoTClient::deleteTopicRuleDestination(const DeleteTopicRuleDestinationRequest &request)
 {
@@ -1700,6 +2120,11 @@ DeleteTopicRuleDestinationResponse * IoTClient::deleteTopicRuleDestination(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a logging
+ *
+ * level>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteV2LoggingLevel</a>
  */
 DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2LoggingLevelRequest &request)
 {
@@ -1713,6 +2138,11 @@ DeleteV2LoggingLevelResponse * IoTClient::deleteV2LoggingLevel(const DeleteV2Log
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deprecates a thing type. You can not associate new things with deprecated thing
+ *
+ * type>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeprecateThingType</a>
  */
 DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingTypeRequest &request)
 {
@@ -1727,6 +2157,11 @@ DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingT
  *
  * Gets information about the Device Defender audit settings for this account. Settings include how audit notifications are
  * sent and which audit checks are enabled or
+ *
+ * disabled>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAccountAuditConfiguration</a>
  */
 DescribeAccountAuditConfigurationResponse * IoTClient::describeAccountAuditConfiguration(const DescribeAccountAuditConfigurationRequest &request)
 {
@@ -1741,6 +2176,11 @@ DescribeAccountAuditConfigurationResponse * IoTClient::describeAccountAuditConfi
  *
  * Gets information about a single audit finding. Properties include the reason for noncompliance, the severity of the
  * issue, and the start time when the audit that returned the
+ *
+ * finding>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuditFinding</a>
  */
 DescribeAuditFindingResponse * IoTClient::describeAuditFinding(const DescribeAuditFindingRequest &request)
 {
@@ -1782,6 +2222,11 @@ DescribeAuditSuppressionResponse * IoTClient::describeAuditSuppression(const Des
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Defender
+ *
+ * audit>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuditTask</a>
  */
 DescribeAuditTaskResponse * IoTClient::describeAuditTask(const DescribeAuditTaskRequest &request)
 {
@@ -1795,6 +2240,11 @@ DescribeAuditTaskResponse * IoTClient::describeAuditTask(const DescribeAuditTask
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes an
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeAuthorizer</a>
  */
 DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthorizerRequest &request)
 {
@@ -1808,6 +2258,11 @@ DescribeAuthorizerResponse * IoTClient::describeAuthorizer(const DescribeAuthori
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about a billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeBillingGroup</a>
  */
 DescribeBillingGroupResponse * IoTClient::describeBillingGroup(const DescribeBillingGroupRequest &request)
 {
@@ -1821,6 +2276,11 @@ DescribeBillingGroupResponse * IoTClient::describeBillingGroup(const DescribeBil
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a registered CA
+ *
+ * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCACertificate</a>
  */
 DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeCACertificateRequest &request)
 {
@@ -1834,6 +2294,11 @@ DescribeCACertificateResponse * IoTClient::describeCACertificate(const DescribeC
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified
+ *
+ * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCertificate</a>
  */
 DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCertificateRequest &request)
 {
@@ -1847,6 +2312,11 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Defender detect custom metric.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeCustomMetric</a>
  */
 DescribeCustomMetricResponse * IoTClient::describeCustomMetric(const DescribeCustomMetricRequest &request)
 {
@@ -1860,6 +2330,11 @@ DescribeCustomMetricResponse * IoTClient::describeCustomMetric(const DescribeCus
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes the default
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDefaultAuthorizer</a>
  */
 DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const DescribeDefaultAuthorizerRequest &request)
 {
@@ -1873,6 +2348,11 @@ DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const D
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Defender ML Detect mitigation action.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDetectMitigationActionsTask</a>
  */
 DescribeDetectMitigationActionsTaskResponse * IoTClient::describeDetectMitigationActionsTask(const DescribeDetectMitigationActionsTaskRequest &request)
 {
@@ -1885,7 +2365,12 @@ DescribeDetectMitigationActionsTaskResponse * IoTClient::describeDetectMitigatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides details about a dimension that is defined in your AWS
+ * Provides details about a dimension that is defined in your Amazon Web Services
+ *
+ * accounts>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDimension</a>
  */
 DescribeDimensionResponse * IoTClient::describeDimension(const DescribeDimensionRequest &request)
 {
@@ -1899,6 +2384,11 @@ DescribeDimensionResponse * IoTClient::describeDimension(const DescribeDimension
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets summary information about a domain
+ *
+ * configuration>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeDomainConfiguration</a>
  */
 DescribeDomainConfigurationResponse * IoTClient::describeDomainConfiguration(const DescribeDomainConfigurationRequest &request)
 {
@@ -1911,7 +2401,12 @@ DescribeDomainConfigurationResponse * IoTClient::describeDomainConfiguration(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a unique endpoint specific to the AWS account making the
+ * Returns a unique endpoint specific to the Amazon Web Services account making the
+ *
+ * call>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeEndpoint</a>
  */
 DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointRequest &request)
 {
@@ -1925,10 +2420,33 @@ DescribeEndpointResponse * IoTClient::describeEndpoint(const DescribeEndpointReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes event
+ *
+ * configurations>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeEventConfigurations</a>
  */
 DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(const DescribeEventConfigurationsRequest &request)
 {
     return qobject_cast<DescribeEventConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeFleetMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the specified fleet
+ *
+ * metric>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeFleetMetric</a>
+ */
+DescribeFleetMetricResponse * IoTClient::describeFleetMetric(const DescribeFleetMetricRequest &request)
+{
+    return qobject_cast<DescribeFleetMetricResponse *>(send(request));
 }
 
 /*!
@@ -1938,6 +2456,11 @@ DescribeEventConfigurationsResponse * IoTClient::describeEventConfigurations(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a search
+ *
+ * index>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeIndex</a>
  */
 DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &request)
 {
@@ -1951,6 +2474,11 @@ DescribeIndexResponse * IoTClient::describeIndex(const DescribeIndexRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a
+ *
+ * job>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeJob</a>
  */
 DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 {
@@ -1964,6 +2492,11 @@ DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a job
+ *
+ * execution>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeJobExecution</a>
  */
 DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
@@ -1985,11 +2518,29 @@ DescribeJobTemplateResponse * IoTClient::describeJobTemplate(const DescribeJobTe
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeManagedJobTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * View details of a managed job
+ */
+DescribeManagedJobTemplateResponse * IoTClient::describeManagedJobTemplate(const DescribeManagedJobTemplateRequest &request)
+{
+    return qobject_cast<DescribeManagedJobTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * DescribeMitigationActionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a mitigation
+ *
+ * action>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeMitigationAction</a>
  */
 DescribeMitigationActionResponse * IoTClient::describeMitigationAction(const DescribeMitigationActionRequest &request)
 {
@@ -2002,7 +2553,12 @@ DescribeMitigationActionResponse * IoTClient::describeMitigationAction(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a fleet provisioning
+ * Returns information about a provisioning
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeProvisioningTemplate</a>
  */
 DescribeProvisioningTemplateResponse * IoTClient::describeProvisioningTemplate(const DescribeProvisioningTemplateRequest &request)
 {
@@ -2015,7 +2571,12 @@ DescribeProvisioningTemplateResponse * IoTClient::describeProvisioningTemplate(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a fleet provisioning template
+ * Returns information about a provisioning template
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeProvisioningTemplateVersion</a>
  */
 DescribeProvisioningTemplateVersionResponse * IoTClient::describeProvisioningTemplateVersion(const DescribeProvisioningTemplateVersionRequest &request)
 {
@@ -2029,6 +2590,11 @@ DescribeProvisioningTemplateVersionResponse * IoTClient::describeProvisioningTem
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a role
+ *
+ * alias>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeRoleAlias</a>
  */
 DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAliasRequest &request)
 {
@@ -2042,6 +2608,11 @@ DescribeRoleAliasResponse * IoTClient::describeRoleAlias(const DescribeRoleAlias
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a scheduled
+ *
+ * audit>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeScheduledAudit</a>
  */
 DescribeScheduledAuditResponse * IoTClient::describeScheduledAudit(const DescribeScheduledAuditRequest &request)
 {
@@ -2055,6 +2626,11 @@ DescribeScheduledAuditResponse * IoTClient::describeScheduledAudit(const Describ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeSecurityProfile</a>
  */
 DescribeSecurityProfileResponse * IoTClient::describeSecurityProfile(const DescribeSecurityProfileRequest &request)
 {
@@ -2068,6 +2644,11 @@ DescribeSecurityProfileResponse * IoTClient::describeSecurityProfile(const Descr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a
+ *
+ * stream>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeStream</a>
  */
 DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -2081,6 +2662,11 @@ DescribeStreamResponse * IoTClient::describeStream(const DescribeStreamRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified
+ *
+ * thing>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThing</a>
  */
 DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &request)
 {
@@ -2094,6 +2680,11 @@ DescribeThingResponse * IoTClient::describeThing(const DescribeThingRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describe a thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingGroup</a>
  */
 DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGroupRequest &request)
 {
@@ -2107,6 +2698,11 @@ DescribeThingGroupResponse * IoTClient::describeThingGroup(const DescribeThingGr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a bulk thing provisioning
+ *
+ * task>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingRegistrationTask</a>
  */
 DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask(const DescribeThingRegistrationTaskRequest &request)
 {
@@ -2120,6 +2716,11 @@ DescribeThingRegistrationTaskResponse * IoTClient::describeThingRegistrationTask
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified thing
+ *
+ * type>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeThingType</a>
  */
 DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingTypeRequest &request)
 {
@@ -2133,6 +2734,16 @@ DescribeThingTypeResponse * IoTClient::describeThingType(const DescribeThingType
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Detaches a policy from the specified
+ *
+ * target> <note>
+ *
+ * Because of the distributed nature of Amazon Web Services, it can take up to five minutes after a policy is detached
+ * before it's ready to be
+ *
+ * deleted> </note>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachPolicy</a>
  */
 DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &request)
 {
@@ -2149,7 +2760,13 @@ DetachPolicyResponse * IoTClient::detachPolicy(const DetachPolicyRequest &reques
  *
  * certificate>
  *
- * <b>Note:</b> This API is deprecated. Please use <a>DetachPolicy</a>
+ * <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements.
+ * Use <a>DetachPolicy</a>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachPrincipalPolicy</a>
  */
 DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPrincipalPolicyRequest &request)
 {
@@ -2163,6 +2780,11 @@ DetachPrincipalPolicyResponse * IoTClient::detachPrincipalPolicy(const DetachPri
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates a Device Defender security profile from a thing group or from this
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachSecurityProfile</a>
  */
 DetachSecurityProfileResponse * IoTClient::detachSecurityProfile(const DetachSecurityProfileRequest &request)
 {
@@ -2181,6 +2803,11 @@ DetachSecurityProfileResponse * IoTClient::detachSecurityProfile(const DetachSec
  * identities> <note>
  *
  * This call is asynchronous. It might take several seconds for the detachment to
+ *
+ * propagate> </note>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DetachThingPrincipal</a>
  */
 DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThingPrincipalRequest &request)
 {
@@ -2194,6 +2821,11 @@ DetachThingPrincipalResponse * IoTClient::detachThingPrincipal(const DetachThing
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disables the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DisableTopicRule</a>
  */
 DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleRequest &request)
 {
@@ -2207,6 +2839,11 @@ DisableTopicRuleResponse * IoTClient::disableTopicRule(const DisableTopicRuleReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">EnableTopicRule</a>
  */
 EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleRequest &request)
 {
@@ -2220,10 +2857,33 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a Device Defender's ML Detect Security Profile training model's status.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetBehaviorModelTrainingSummaries</a>
  */
 GetBehaviorModelTrainingSummariesResponse * IoTClient::getBehaviorModelTrainingSummaries(const GetBehaviorModelTrainingSummariesRequest &request)
 {
     return qobject_cast<GetBehaviorModelTrainingSummariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetBucketsAggregationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Aggregates on indexed data with search queries pertaining to particular fields.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetBucketsAggregation</a>
+ */
+GetBucketsAggregationResponse * IoTClient::getBucketsAggregation(const GetBucketsAggregationRequest &request)
+{
+    return qobject_cast<GetBucketsAggregationResponse *>(send(request));
 }
 
 /*!
@@ -2233,6 +2893,11 @@ GetBehaviorModelTrainingSummariesResponse * IoTClient::getBehaviorModelTrainingS
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the approximate count of unique values that match the
+ *
+ * query>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetCardinality</a>
  */
 GetCardinalityResponse * IoTClient::getCardinality(const GetCardinalityRequest &request)
 {
@@ -2246,7 +2911,12 @@ GetCardinalityResponse * IoTClient::getCardinality(const GetCardinalityRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of the policies that have an effect on the authorization behavior of the specified device when it connects
- * to the AWS IoT device
+ * to the IoT device
+ *
+ * gateway>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetEffectivePolicies</a>
  */
 GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectivePoliciesRequest &request)
 {
@@ -2260,6 +2930,11 @@ GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectiv
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets the indexing
+ *
+ * configuration>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetIndexingConfiguration</a>
  */
 GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const GetIndexingConfigurationRequest &request)
 {
@@ -2273,6 +2948,11 @@ GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const Get
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a job
+ *
+ * document>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetJobDocument</a>
  */
 GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &request)
 {
@@ -2290,6 +2970,11 @@ GetJobDocumentResponse * IoTClient::getJobDocument(const GetJobDocumentRequest &
  * options>
  *
  * NOTE: use of this command is not recommended. Use <code>GetV2LoggingOptions</code>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetLoggingOptions</a>
  */
 GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptionsRequest &request)
 {
@@ -2303,6 +2988,11 @@ GetLoggingOptionsResponse * IoTClient::getLoggingOptions(const GetLoggingOptions
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets an OTA
+ *
+ * update>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetOTAUpdate</a>
  */
 GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &request)
 {
@@ -2321,6 +3011,11 @@ GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &reques
  * aggregated field value that occurs in approximately one percent of the values that match the query. The percentile group
  * "5" contains the aggregated field value that occurs in approximately five percent of the values that match the query,
  * and so on. The result is an approximation, the more values that match the query, the more accurate the percentile
+ *
+ * values>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetPercentiles</a>
  */
 GetPercentilesResponse * IoTClient::getPercentiles(const GetPercentilesRequest &request)
 {
@@ -2334,6 +3029,11 @@ GetPercentilesResponse * IoTClient::getPercentiles(const GetPercentilesRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified policy with the policy document of the default
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetPolicy</a>
  */
 GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
 {
@@ -2347,6 +3047,11 @@ GetPolicyResponse * IoTClient::getPolicy(const GetPolicyRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified policy
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetPolicyVersion</a>
  */
 GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionRequest &request)
 {
@@ -2359,7 +3064,12 @@ GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a registration code used to register a CA certificate with AWS
+ * Gets a registration code used to register a CA certificate with
+ *
+ * IoT>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetRegistrationCode</a>
  */
 GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrationCodeRequest &request)
 {
@@ -2374,6 +3084,11 @@ GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrati
  *
  * Returns the count, average, sum, minimum, maximum, sum of squares, variance, and standard deviation for the specified
  * aggregated field. If the aggregation field is of type <code>String</code>, only the count statistic is
+ *
+ * returned>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetStatistics</a>
  */
 GetStatisticsResponse * IoTClient::getStatistics(const GetStatisticsRequest &request)
 {
@@ -2387,6 +3102,11 @@ GetStatisticsResponse * IoTClient::getStatistics(const GetStatisticsRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetTopicRule</a>
  */
 GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &request)
 {
@@ -2400,6 +3120,11 @@ GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a topic rule
+ *
+ * destination>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetTopicRuleDestination</a>
  */
 GetTopicRuleDestinationResponse * IoTClient::getTopicRuleDestination(const GetTopicRuleDestinationRequest &request)
 {
@@ -2413,6 +3138,11 @@ GetTopicRuleDestinationResponse * IoTClient::getTopicRuleDestination(const GetTo
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets the fine grained logging
+ *
+ * options>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetV2LoggingOptions</a>
  */
 GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingOptionsRequest &request)
 {
@@ -2426,6 +3156,11 @@ GetV2LoggingOptionsResponse * IoTClient::getV2LoggingOptions(const GetV2LoggingO
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the active violations for a given Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListActiveViolations</a>
  */
 ListActiveViolationsResponse * IoTClient::listActiveViolations(const ListActiveViolationsRequest &request)
 {
@@ -2439,6 +3174,11 @@ ListActiveViolationsResponse * IoTClient::listActiveViolations(const ListActiveV
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the policies attached to the specified thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAttachedPolicies</a>
  */
 ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttachedPoliciesRequest &request)
 {
@@ -2453,6 +3193,11 @@ ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttache
  *
  * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period.
  * (Findings are retained for 90
+ *
+ * days.>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuditFindings</a>
  */
 ListAuditFindingsResponse * IoTClient::listAuditFindings(const ListAuditFindingsRequest &request)
 {
@@ -2466,6 +3211,11 @@ ListAuditFindingsResponse * IoTClient::listAuditFindings(const ListAuditFindings
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets the status of audit mitigation action tasks that were
+ *
+ * executed>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuditMitigationActionsExecutions</a>
  */
 ListAuditMitigationActionsExecutionsResponse * IoTClient::listAuditMitigationActionsExecutions(const ListAuditMitigationActionsExecutionsRequest &request)
 {
@@ -2479,6 +3229,11 @@ ListAuditMitigationActionsExecutionsResponse * IoTClient::listAuditMitigationAct
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of audit mitigation action tasks that match the specified
+ *
+ * filters>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuditMitigationActionsTasks</a>
  */
 ListAuditMitigationActionsTasksResponse * IoTClient::listAuditMitigationActionsTasks(const ListAuditMitigationActionsTasksRequest &request)
 {
@@ -2492,6 +3247,11 @@ ListAuditMitigationActionsTasksResponse * IoTClient::listAuditMitigationActionsT
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists your Device Defender audit listings.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuditSuppressions</a>
  */
 ListAuditSuppressionsResponse * IoTClient::listAuditSuppressions(const ListAuditSuppressionsRequest &request)
 {
@@ -2505,6 +3265,11 @@ ListAuditSuppressionsResponse * IoTClient::listAuditSuppressions(const ListAudit
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the Device Defender audits that have been performed during a given time
+ *
+ * period>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuditTasks</a>
  */
 ListAuditTasksResponse * IoTClient::listAuditTasks(const ListAuditTasksRequest &request)
 {
@@ -2518,6 +3283,11 @@ ListAuditTasksResponse * IoTClient::listAuditTasks(const ListAuditTasksRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the authorizers registered in your
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListAuthorizers</a>
  */
 ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersRequest &request)
 {
@@ -2531,6 +3301,11 @@ ListAuthorizersResponse * IoTClient::listAuthorizers(const ListAuthorizersReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the billing groups you have
+ *
+ * created>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListBillingGroups</a>
  */
 ListBillingGroupsResponse * IoTClient::listBillingGroups(const ListBillingGroupsRequest &request)
 {
@@ -2543,11 +3318,16 @@ ListBillingGroupsResponse * IoTClient::listBillingGroups(const ListBillingGroups
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the CA certificates registered for your AWS
+ * Lists the CA certificates registered for your Amazon Web Services
  *
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
+ *
+ * results>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListCACertificates</a>
  */
 ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertificatesRequest &request)
 {
@@ -2560,11 +3340,16 @@ ListCACertificatesResponse * IoTClient::listCACertificates(const ListCACertifica
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the certificates registered in your AWS
+ * Lists the certificates registered in your Amazon Web Services
  *
  * account>
  *
  * The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional
+ *
+ * results>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListCertificates</a>
  */
 ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesRequest &request)
 {
@@ -2578,6 +3363,11 @@ ListCertificatesResponse * IoTClient::listCertificates(const ListCertificatesReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List the device certificates signed by the specified CA
+ *
+ * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListCertificatesByCA</a>
  */
 ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertificatesByCARequest &request)
 {
@@ -2591,6 +3381,11 @@ ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertifi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists your Device Defender detect custom metrics.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListCustomMetrics</a>
  */
 ListCustomMetricsResponse * IoTClient::listCustomMetrics(const ListCustomMetricsRequest &request)
 {
@@ -2604,6 +3399,11 @@ ListCustomMetricsResponse * IoTClient::listCustomMetrics(const ListCustomMetrics
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists mitigation actions executions for a Device Defender ML Detect Security Profile.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListDetectMitigationActionsExecutions</a>
  */
 ListDetectMitigationActionsExecutionsResponse * IoTClient::listDetectMitigationActionsExecutions(const ListDetectMitigationActionsExecutionsRequest &request)
 {
@@ -2617,6 +3417,11 @@ ListDetectMitigationActionsExecutionsResponse * IoTClient::listDetectMitigationA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List of Device Defender ML Detect mitigation actions tasks.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListDetectMitigationActionsTasks</a>
  */
 ListDetectMitigationActionsTasksResponse * IoTClient::listDetectMitigationActionsTasks(const ListDetectMitigationActionsTasksRequest &request)
 {
@@ -2629,7 +3434,12 @@ ListDetectMitigationActionsTasksResponse * IoTClient::listDetectMitigationAction
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List the set of dimensions that are defined for your AWS
+ * List the set of dimensions that are defined for your Amazon Web Services
+ *
+ * accounts>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListDimensions</a>
  */
 ListDimensionsResponse * IoTClient::listDimensions(const ListDimensionsRequest &request)
 {
@@ -2643,10 +3453,33 @@ ListDimensionsResponse * IoTClient::listDimensions(const ListDimensionsRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of domain configurations for the user. This list is sorted alphabetically by domain configuration
+ *
+ * name>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListDomainConfigurations</a>
  */
 ListDomainConfigurationsResponse * IoTClient::listDomainConfigurations(const ListDomainConfigurationsRequest &request)
 {
     return qobject_cast<ListDomainConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListFleetMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all your fleet metrics.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListFleetMetrics</a>
+ */
+ListFleetMetricsResponse * IoTClient::listFleetMetrics(const ListFleetMetricsRequest &request)
+{
+    return qobject_cast<ListFleetMetricsResponse *>(send(request));
 }
 
 /*!
@@ -2656,6 +3489,11 @@ ListDomainConfigurationsResponse * IoTClient::listDomainConfigurations(const Lis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the search
+ *
+ * indices>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListIndices</a>
  */
 ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
 {
@@ -2669,6 +3507,11 @@ ListIndicesResponse * IoTClient::listIndices(const ListIndicesRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the job executions for a
+ *
+ * job>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobExecutionsForJob</a>
  */
 ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJobExecutionsForJobRequest &request)
 {
@@ -2682,6 +3525,11 @@ ListJobExecutionsForJobResponse * IoTClient::listJobExecutionsForJob(const ListJ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the job executions for the specified
+ *
+ * thing>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobExecutionsForThing</a>
  */
 ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const ListJobExecutionsForThingRequest &request)
 {
@@ -2695,6 +3543,11 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of job
+ *
+ * templates>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobTemplates</a>
  */
 ListJobTemplatesResponse * IoTClient::listJobTemplates(const ListJobTemplatesRequest &request)
 {
@@ -2708,10 +3561,42 @@ ListJobTemplatesResponse * IoTClient::listJobTemplates(const ListJobTemplatesReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists
+ *
+ * jobs>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListJobs</a>
  */
 ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 {
     return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListManagedJobTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of managed job
+ */
+ListManagedJobTemplatesResponse * IoTClient::listManagedJobTemplates(const ListManagedJobTemplatesRequest &request)
+{
+    return qobject_cast<ListManagedJobTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListMetricValuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the values reported for an IoT Device Defender metric (device-side metric, cloud-side metric, or custom metric) by
+ * the given thing during the specified time
+ */
+ListMetricValuesResponse * IoTClient::listMetricValues(const ListMetricValuesRequest &request)
+{
+    return qobject_cast<ListMetricValuesResponse *>(send(request));
 }
 
 /*!
@@ -2721,6 +3606,11 @@ ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of all mitigation actions that match the specified filter
+ *
+ * criteria>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListMitigationActions</a>
  */
 ListMitigationActionsResponse * IoTClient::listMitigationActions(const ListMitigationActionsRequest &request)
 {
@@ -2734,6 +3624,11 @@ ListMitigationActionsResponse * IoTClient::listMitigationActions(const ListMitig
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists OTA
+ *
+ * updates>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListOTAUpdates</a>
  */
 ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &request)
 {
@@ -2747,6 +3642,11 @@ ListOTAUpdatesResponse * IoTClient::listOTAUpdates(const ListOTAUpdatesRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists certificates that are being transferred but not yet
+ *
+ * accepted>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListOutgoingCertificates</a>
  */
 ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const ListOutgoingCertificatesRequest &request)
 {
@@ -2760,6 +3660,11 @@ ListOutgoingCertificatesResponse * IoTClient::listOutgoingCertificates(const Lis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists your
+ *
+ * policies>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPolicies</a>
  */
 ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &request)
 {
@@ -2776,7 +3681,13 @@ ListPoliciesResponse * IoTClient::listPolicies(const ListPoliciesRequest &reques
  *
  * policy>
  *
- * <b>Note:</b> This API is deprecated. Please use <a>ListTargetsForPolicy</a>
+ * <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements.
+ * Use <a>ListTargetsForPolicy</a>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPolicyPrincipals</a>
  */
 ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyPrincipalsRequest &request)
 {
@@ -2790,6 +3701,11 @@ ListPolicyPrincipalsResponse * IoTClient::listPolicyPrincipals(const ListPolicyP
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the versions of the specified policy and identifies the default
+ *
+ * version>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPolicyVersions</a>
  */
 ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersionsRequest &request)
 {
@@ -2808,7 +3724,13 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
  *
  * format</a>>
  *
- * <b>Note:</b> This API is deprecated. Please use <a>ListAttachedPolicies</a>
+ * <b>Note:</b> This action is deprecated and works as expected for backward compatibility, but we won't add enhancements.
+ * Use <a>ListAttachedPolicies</a>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPrincipalPolicies</a>
  */
 ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrincipalPoliciesRequest &request)
 {
@@ -2823,6 +3745,11 @@ ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrinc
  *
  * Lists the things associated with the specified principal. A principal can be X.509 certificates, IAM users, groups, and
  * roles, Amazon Cognito identities or federated identities.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListPrincipalThings</a>
  */
 ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipalThingsRequest &request)
 {
@@ -2835,7 +3762,12 @@ ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipal
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * A list of fleet provisioning template
+ * A list of provisioning template
+ *
+ * versions>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListProvisioningTemplateVersions</a>
  */
 ListProvisioningTemplateVersionsResponse * IoTClient::listProvisioningTemplateVersions(const ListProvisioningTemplateVersionsRequest &request)
 {
@@ -2848,7 +3780,12 @@ ListProvisioningTemplateVersionsResponse * IoTClient::listProvisioningTemplateVe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the fleet provisioning templates in your AWS
+ * Lists the provisioning templates in your Amazon Web Services
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListProvisioningTemplates</a>
  */
 ListProvisioningTemplatesResponse * IoTClient::listProvisioningTemplates(const ListProvisioningTemplatesRequest &request)
 {
@@ -2862,6 +3799,11 @@ ListProvisioningTemplatesResponse * IoTClient::listProvisioningTemplates(const L
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the role aliases registered in your
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListRoleAliases</a>
  */
 ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesRequest &request)
 {
@@ -2875,6 +3817,11 @@ ListRoleAliasesResponse * IoTClient::listRoleAliases(const ListRoleAliasesReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all of your scheduled
+ *
+ * audits>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListScheduledAudits</a>
  */
 ListScheduledAuditsResponse * IoTClient::listScheduledAudits(const ListScheduledAuditsRequest &request)
 {
@@ -2889,7 +3836,12 @@ ListScheduledAuditsResponse * IoTClient::listScheduledAudits(const ListScheduled
  *
  * Lists the Device Defender security profiles you've created. You can filter security profiles by dimension or custom
  *
- * metric> <note>
+ * metric>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSecurityProfiles</a>
+ *
+ * action> <note>
  *
  * <code>dimensionName</code> and <code>metricName</code> cannot be used in the same
  */
@@ -2905,6 +3857,11 @@ ListSecurityProfilesResponse * IoTClient::listSecurityProfiles(const ListSecurit
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the Device Defender security profiles attached to a target (thing
+ *
+ * group)>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSecurityProfilesForTarget</a>
  */
 ListSecurityProfilesForTargetResponse * IoTClient::listSecurityProfilesForTarget(const ListSecurityProfilesForTargetRequest &request)
 {
@@ -2917,7 +3874,12 @@ ListSecurityProfilesForTargetResponse * IoTClient::listSecurityProfilesForTarget
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the streams in your AWS
+ * Lists all of the streams in your Amazon Web Services
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListStreams</a>
  */
 ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
 {
@@ -2931,6 +3893,11 @@ ListStreamsResponse * IoTClient::listStreams(const ListStreamsRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the tags (metadata) you have assigned to the
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTagsForResource</a>
  */
 ListTagsForResourceResponse * IoTClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -2944,6 +3911,11 @@ ListTagsForResourceResponse * IoTClient::listTagsForResource(const ListTagsForRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List targets for the specified
+ *
+ * policy>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTargetsForPolicy</a>
  */
 ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargetsForPolicyRequest &request)
 {
@@ -2957,6 +3929,11 @@ ListTargetsForPolicyResponse * IoTClient::listTargetsForPolicy(const ListTargets
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the targets (thing groups) associated with a given Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTargetsForSecurityProfile</a>
  */
 ListTargetsForSecurityProfileResponse * IoTClient::listTargetsForSecurityProfile(const ListTargetsForSecurityProfileRequest &request)
 {
@@ -2970,6 +3947,11 @@ ListTargetsForSecurityProfileResponse * IoTClient::listTargetsForSecurityProfile
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List the thing groups in your
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingGroups</a>
  */
 ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsRequest &request)
 {
@@ -2983,6 +3965,11 @@ ListThingGroupsResponse * IoTClient::listThingGroups(const ListThingGroupsReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List the thing groups to which the specified thing
+ *
+ * belongs>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingGroupsForThing</a>
  */
 ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListThingGroupsForThingRequest &request)
 {
@@ -2997,6 +3984,11 @@ ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListT
  *
  * Lists the principals associated with the specified thing. A principal can be X.509 certificates, IAM users, groups, and
  * roles, Amazon Cognito identities or federated
+ *
+ * identities>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingPrincipals</a>
  */
 ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrincipalsRequest &request)
 {
@@ -3023,6 +4015,11 @@ ListThingRegistrationTaskReportsResponse * IoTClient::listThingRegistrationTaskR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List bulk thing provisioning
+ *
+ * tasks>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingRegistrationTasks</a>
  */
 ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const ListThingRegistrationTasksRequest &request)
 {
@@ -3036,6 +4033,11 @@ ListThingRegistrationTasksResponse * IoTClient::listThingRegistrationTasks(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the existing thing
+ *
+ * types>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingTypes</a>
  */
 ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &request)
 {
@@ -3052,7 +4054,12 @@ ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &
  * calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry
  * that contain an attribute <b>Color</b> with the value <b>Red</b>.
  *
- * </p <note>
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThings</a>
+ *
+ * action> <note>
  *
  * You will not be charged for calling this API if an <code>Access denied</code> error is returned. You will also not be
  * charged if no attributes or pagination token was provided in request and no pagination token and no results were
@@ -3069,6 +4076,11 @@ ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the things you have added to the given billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingsInBillingGroup</a>
  */
 ListThingsInBillingGroupResponse * IoTClient::listThingsInBillingGroup(const ListThingsInBillingGroupRequest &request)
 {
@@ -3082,6 +4094,11 @@ ListThingsInBillingGroupResponse * IoTClient::listThingsInBillingGroup(const Lis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the things in the specified
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListThingsInThingGroup</a>
  */
 ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThingsInThingGroupRequest &request)
 {
@@ -3094,7 +4111,12 @@ ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the topic rule destinations in your AWS
+ * Lists all the topic rule destinations in your Amazon Web Services
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTopicRuleDestinations</a>
  */
 ListTopicRuleDestinationsResponse * IoTClient::listTopicRuleDestinations(const ListTopicRuleDestinationsRequest &request)
 {
@@ -3108,6 +4130,11 @@ ListTopicRuleDestinationsResponse * IoTClient::listTopicRuleDestinations(const L
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the rules for the specific
+ *
+ * topic>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTopicRules</a>
  */
 ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &request)
 {
@@ -3121,6 +4148,11 @@ ListTopicRulesResponse * IoTClient::listTopicRules(const ListTopicRulesRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists logging
+ *
+ * levels>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListV2LoggingLevels</a>
  */
 ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2LoggingLevelsRequest &request)
 {
@@ -3135,6 +4167,11 @@ ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2Logging
  *
  * Lists the Device Defender security profile violations discovered during the given time period. You can use filters to
  * limit the results to those alerts issued for a particular security profile, behavior, or thing
+ *
+ * (device)>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListViolationEvents</a>
  */
 ListViolationEventsResponse * IoTClient::listViolationEvents(const ListViolationEventsRequest &request)
 {
@@ -3143,15 +4180,31 @@ ListViolationEventsResponse * IoTClient::listViolationEvents(const ListViolation
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * PutVerificationStateOnViolationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Set a verification state and provide a description of that verification state on a violation (detect
+ */
+PutVerificationStateOnViolationResponse * IoTClient::putVerificationStateOnViolation(const PutVerificationStateOnViolationRequest &request)
+{
+    return qobject_cast<PutVerificationStateOnViolationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * RegisterCACertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers a CA certificate with AWS IoT. This CA certificate can then be used to sign device certificates, which can be
- * then registered with AWS IoT. You can register up to 10 CA certificates per AWS account that have the same subject
- * field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than
- * one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the
- * RegisterCertificate
+ * Registers a CA certificate with Amazon Web Services IoT Core. There is no limit to the number of CA certificates you can
+ * register in your Amazon Web Services account. You can register up to 10 CA certificates with the same <code>CA subject
+ * field</code> per Amazon Web Services
+ *
+ * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RegisterCACertificate</a>
  */
 RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterCACertificateRequest &request)
 {
@@ -3164,8 +4217,15 @@ RegisterCACertificateResponse * IoTClient::registerCACertificate(const RegisterC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field,
- * you must specify the CA certificate that was used to sign the device certificate being
+ * Registers a device certificate with IoT in the same <a
+ * href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate
+ * mode</a> as the signing CA. If you have more than one CA certificate that has the same subject field, you must specify
+ * the CA certificate that was used to sign the device certificate being
+ *
+ * registered>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RegisterCertificate</a>
  */
 RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCertificateRequest &request)
 {
@@ -3178,7 +4238,9 @@ RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCerti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Register a certificate that does not have a certificate authority
+ * Register a certificate that does not have a certificate authority (CA). For supported certificates, consult <a
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html#x509-cert-algorithms"> Certificate
+ * signing algorithms supported by IoT</a>.
  */
 RegisterCertificateWithoutCAResponse * IoTClient::registerCertificateWithoutCA(const RegisterCertificateWithoutCARequest &request)
 {
@@ -3191,10 +4253,16 @@ RegisterCertificateWithoutCAResponse * IoTClient::registerCertificateWithoutCA(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provisions a thing in the device registry. RegisterThing calls other AWS IoT control plane APIs. These calls might
- * exceed your account level <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_iot">
- * AWS IoT Throttling Limits</a> and cause throttle errors. Please contact <a
- * href="https://console.aws.amazon.com/support/home">AWS Customer Support</a> to raise your throttling limits if
+ * Provisions a thing in the device registry. RegisterThing calls other IoT control plane APIs. These calls might exceed
+ * your account level <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_iot"> IoT
+ * Throttling Limits</a> and cause throttle errors. Please contact <a
+ * href="https://console.aws.amazon.com/support/home">Amazon Web Services Customer Support</a> to raise your throttling
+ * limits if
+ *
+ * necessary>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RegisterThing</a>
  */
 RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &request)
 {
@@ -3207,8 +4275,8 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes
- * from <b>PENDING_TRANSFER</b> to
+ * Rejects a pending certificate transfer. After IoT rejects a certificate transfer, the certificate status changes from
+ * <b>PENDING_TRANSFER</b> to
  *
  * <b>INACTIVE</b>>
  *
@@ -3218,6 +4286,11 @@ RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &req
  *
  * This operation can only be called by the transfer destination. After it is called, the certificate will be returned to
  * the source's account in the INACTIVE
+ *
+ * state>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RejectCertificateTransfer</a>
  */
 RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const RejectCertificateTransferRequest &request)
 {
@@ -3231,6 +4304,15 @@ RejectCertificateTransferResponse * IoTClient::rejectCertificateTransfer(const R
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the given thing from the billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RemoveThingFromBillingGroup</a>
+ *
+ * action> <note>
+ *
+ * This call is asynchronous. It might take several seconds for the detachment to
  */
 RemoveThingFromBillingGroupResponse * IoTClient::removeThingFromBillingGroup(const RemoveThingFromBillingGroupRequest &request)
 {
@@ -3249,6 +4331,11 @@ RemoveThingFromBillingGroupResponse * IoTClient::removeThingFromBillingGroup(con
  *
  * You must specify either a <code>thingGroupArn</code> or a <code>thingGroupName</code> to identify the thing group and
  * either a <code>thingArn</code> or a <code>thingName</code> to identify the thing to remove from the thing group.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RemoveThingFromThingGroup</a>
  */
 RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const RemoveThingFromThingGroupRequest &request)
 {
@@ -3263,6 +4350,11 @@ RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const R
  *
  * Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action.
  * Any user who has permission to create rules will be able to access data processed by the
+ *
+ * rule>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ReplaceTopicRule</a>
  */
 ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleRequest &request)
 {
@@ -3276,6 +4368,11 @@ ReplaceTopicRuleResponse * IoTClient::replaceTopicRule(const ReplaceTopicRuleReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * The query search
+ *
+ * index>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SearchIndex</a>
  */
 SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
 {
@@ -3289,6 +4386,11 @@ SearchIndexResponse * IoTClient::searchIndex(const SearchIndexRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the default authorizer. This will be used if a websocket connection is made without specifying an
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetDefaultAuthorizer</a>
  */
 SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultAuthorizerRequest &request)
 {
@@ -3303,7 +4405,12 @@ SetDefaultAuthorizerResponse * IoTClient::setDefaultAuthorizer(const SetDefaultA
  *
  * Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all
  * certificates to which the policy is attached. To list the principals the policy is attached to, use the
- * ListPrincipalPolicy
+ * <a>ListPrincipalPolicies</a>
+ *
+ * action>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetDefaultPolicyVersion</a>
  */
 SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDefaultPolicyVersionRequest &request)
 {
@@ -3321,6 +4428,11 @@ SetDefaultPolicyVersionResponse * IoTClient::setDefaultPolicyVersion(const SetDe
  * options>
  *
  * NOTE: use of this command is not recommended. Use <code>SetV2LoggingOptions</code>
+ *
+ * instead>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetLoggingOptions</a>
  */
 SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptionsRequest &request)
 {
@@ -3334,6 +4446,11 @@ SetLoggingOptionsResponse * IoTClient::setLoggingOptions(const SetLoggingOptions
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the logging
+ *
+ * level>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetV2LoggingLevel</a>
  */
 SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevelRequest &request)
 {
@@ -3347,6 +4464,11 @@ SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevel
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the logging options for the V2 logging
+ *
+ * service>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">SetV2LoggingOptions</a>
  */
 SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingOptionsRequest &request)
 {
@@ -3360,6 +4482,11 @@ SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingO
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts a task that applies a set of mitigation actions to the specified
+ *
+ * target>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartAuditMitigationActionsTask</a>
  */
 StartAuditMitigationActionsTaskResponse * IoTClient::startAuditMitigationActionsTask(const StartAuditMitigationActionsTaskRequest &request)
 {
@@ -3373,6 +4500,11 @@ StartAuditMitigationActionsTaskResponse * IoTClient::startAuditMitigationActions
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts a Device Defender ML Detect mitigation actions task.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartDetectMitigationActionsTask</a>
  */
 StartDetectMitigationActionsTaskResponse * IoTClient::startDetectMitigationActionsTask(const StartDetectMitigationActionsTaskRequest &request)
 {
@@ -3386,6 +4518,11 @@ StartDetectMitigationActionsTaskResponse * IoTClient::startDetectMitigationActio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts an on-demand Device Defender
+ *
+ * audit>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartOnDemandAuditTask</a>
  */
 StartOnDemandAuditTaskResponse * IoTClient::startOnDemandAuditTask(const StartOnDemandAuditTaskRequest &request)
 {
@@ -3399,6 +4536,11 @@ StartOnDemandAuditTaskResponse * IoTClient::startOnDemandAuditTask(const StartOn
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a bulk thing provisioning
+ *
+ * task>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartThingRegistrationTask</a>
  */
 StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const StartThingRegistrationTaskRequest &request)
 {
@@ -3412,6 +4554,11 @@ StartThingRegistrationTaskResponse * IoTClient::startThingRegistrationTask(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels a bulk thing provisioning
+ *
+ * task>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopThingRegistrationTask</a>
  */
 StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const StopThingRegistrationTaskRequest &request)
 {
@@ -3425,6 +4572,11 @@ StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const S
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TagResource</a>
  */
 TagResourceResponse * IoTClient::tagResource(const TagResourceRequest &request)
 {
@@ -3437,8 +4589,13 @@ TagResourceResponse * IoTClient::tagResource(const TagResourceRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Tests if a specified principal is authorized to perform an AWS IoT action on a specified resource. Use this to test and
- * debug the authorization behavior of devices that connect to the AWS IoT device
+ * Tests if a specified principal is authorized to perform an IoT action on a specified resource. Use this to test and
+ * debug the authorization behavior of devices that connect to the IoT device
+ *
+ * gateway>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TestAuthorization</a>
  */
 TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorizationRequest &request)
 {
@@ -3452,7 +4609,12 @@ TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorization
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Tests a custom authorization behavior by invoking a specified custom authorizer. Use this to test and debug the custom
- * authorization behavior of devices that connect to the AWS IoT device
+ * authorization behavior of devices that connect to the IoT device
+ *
+ * gateway>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TestInvokeAuthorizer</a>
  */
 TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {
@@ -3465,9 +4627,14 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Transfers the specified certificate to the specified AWS
+ * Transfers the specified certificate to the specified Amazon Web Services
  *
  * account>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TransferCertificate</a>
+ *
+ * action>
  *
  * You can cancel the transfer until it is acknowledged by the
  *
@@ -3477,11 +4644,12 @@ TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeA
  *
  * target>
  *
- * The certificate being transferred must not be in the ACTIVE state. You can use the UpdateCertificate API to deactivate
+ * The certificate being transferred must not be in the ACTIVE state. You can use the <a>UpdateCertificate</a> action to
+ * deactivate
  *
  * it>
  *
- * The certificate must not have any policies attached to it. You can use the DetachPrincipalPolicy API to detach
+ * The certificate must not have any policies attached to it. You can use the <a>DetachPolicy</a> action to detach
  */
 TransferCertificateResponse * IoTClient::transferCertificate(const TransferCertificateRequest &request)
 {
@@ -3495,6 +4663,11 @@ TransferCertificateResponse * IoTClient::transferCertificate(const TransferCerti
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the given tags (metadata) from the
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UntagResource</a>
  */
 UntagResourceResponse * IoTClient::untagResource(const UntagResourceRequest &request)
 {
@@ -3509,6 +4682,11 @@ UntagResourceResponse * IoTClient::untagResource(const UntagResourceRequest &req
  *
  * Configures or reconfigures the Device Defender audit settings for this account. Settings include how audit notifications
  * are sent and which audit checks are enabled or
+ *
+ * disabled>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateAccountAuditConfiguration</a>
  */
 UpdateAccountAuditConfigurationResponse * IoTClient::updateAccountAuditConfiguration(const UpdateAccountAuditConfigurationRequest &request)
 {
@@ -3535,6 +4713,11 @@ UpdateAuditSuppressionResponse * IoTClient::updateAuditSuppression(const UpdateA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an
+ *
+ * authorizer>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateAuthorizer</a>
  */
 UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerRequest &request)
 {
@@ -3548,6 +4731,11 @@ UpdateAuthorizerResponse * IoTClient::updateAuthorizer(const UpdateAuthorizerReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates information about the billing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateBillingGroup</a>
  */
 UpdateBillingGroupResponse * IoTClient::updateBillingGroup(const UpdateBillingGroupRequest &request)
 {
@@ -3561,6 +4749,11 @@ UpdateBillingGroupResponse * IoTClient::updateBillingGroup(const UpdateBillingGr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a registered CA
+ *
+ * certificate>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCACertificate</a>
  */
 UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACertificateRequest &request)
 {
@@ -3577,11 +4770,16 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
  *
  * idempotent>
  *
- * Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to AWS
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCertificate</a>
+ *
+ * action>
+ *
+ * Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to
  *
  * IoT>
  *
- * Within a few minutes of updating a certificate from the ACTIVE state to any other state, AWS IoT disconnects all devices
+ * Within a few minutes of updating a certificate from the ACTIVE state to any other state, IoT disconnects all devices
  * that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to
  */
 UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificateRequest &request)
@@ -3596,6 +4794,11 @@ UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificate
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a Device Defender detect custom metric.
+ *
+ * </p
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateCustomMetric</a>
  */
 UpdateCustomMetricResponse * IoTClient::updateCustomMetric(const UpdateCustomMetricRequest &request)
 {
@@ -3610,6 +4813,11 @@ UpdateCustomMetricResponse * IoTClient::updateCustomMetric(const UpdateCustomMet
  *
  * Updates the definition for a dimension. You cannot change the type of a dimension after it is created (you can delete it
  * and recreate
+ *
+ * it)>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDimension</a>
  */
 UpdateDimensionResponse * IoTClient::updateDimension(const UpdateDimensionRequest &request)
 {
@@ -3623,6 +4831,11 @@ UpdateDimensionResponse * IoTClient::updateDimension(const UpdateDimensionReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates values stored in the domain configuration. Domain configurations for default endpoints can't be
+ *
+ * updated>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDomainConfiguration</a>
  */
 UpdateDomainConfigurationResponse * IoTClient::updateDomainConfiguration(const UpdateDomainConfigurationRequest &request)
 {
@@ -3636,6 +4849,11 @@ UpdateDomainConfigurationResponse * IoTClient::updateDomainConfiguration(const U
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a dynamic thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateDynamicThingGroup</a>
  */
 UpdateDynamicThingGroupResponse * IoTClient::updateDynamicThingGroup(const UpdateDynamicThingGroupRequest &request)
 {
@@ -3649,10 +4867,33 @@ UpdateDynamicThingGroupResponse * IoTClient::updateDynamicThingGroup(const Updat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the event
+ *
+ * configurations>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateEventConfigurations</a>
  */
 UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const UpdateEventConfigurationsRequest &request)
 {
     return qobject_cast<UpdateEventConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateFleetMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the data for a fleet
+ *
+ * metric>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateFleetMetric</a>
+ */
+UpdateFleetMetricResponse * IoTClient::updateFleetMetric(const UpdateFleetMetricRequest &request)
+{
+    return qobject_cast<UpdateFleetMetricResponse *>(send(request));
 }
 
 /*!
@@ -3662,6 +4903,11 @@ UpdateEventConfigurationsResponse * IoTClient::updateEventConfigurations(const U
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the search
+ *
+ * configuration>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateIndexingConfiguration</a>
  */
 UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(const UpdateIndexingConfigurationRequest &request)
 {
@@ -3675,6 +4921,11 @@ UpdateIndexingConfigurationResponse * IoTClient::updateIndexingConfiguration(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates supported fields of the specified
+ *
+ * job>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateJob</a>
  */
 UpdateJobResponse * IoTClient::updateJob(const UpdateJobRequest &request)
 {
@@ -3688,6 +4939,11 @@ UpdateJobResponse * IoTClient::updateJob(const UpdateJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the definition for the specified mitigation
+ *
+ * action>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateMitigationAction</a>
  */
 UpdateMitigationActionResponse * IoTClient::updateMitigationAction(const UpdateMitigationActionRequest &request)
 {
@@ -3700,7 +4956,12 @@ UpdateMitigationActionResponse * IoTClient::updateMitigationAction(const UpdateM
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a fleet provisioning
+ * Updates a provisioning
+ *
+ * template>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateProvisioningTemplate</a>
  */
 UpdateProvisioningTemplateResponse * IoTClient::updateProvisioningTemplate(const UpdateProvisioningTemplateRequest &request)
 {
@@ -3714,6 +4975,11 @@ UpdateProvisioningTemplateResponse * IoTClient::updateProvisioningTemplate(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a role
+ *
+ * alias>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateRoleAlias</a>
  */
 UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasRequest &request)
 {
@@ -3727,6 +4993,11 @@ UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a scheduled audit, including which checks are performed and how often the audit takes
+ *
+ * place>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateScheduledAudit</a>
  */
 UpdateScheduledAuditResponse * IoTClient::updateScheduledAudit(const UpdateScheduledAuditRequest &request)
 {
@@ -3740,6 +5011,11 @@ UpdateScheduledAuditResponse * IoTClient::updateScheduledAudit(const UpdateSched
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a Device Defender security
+ *
+ * profile>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateSecurityProfile</a>
  */
 UpdateSecurityProfileResponse * IoTClient::updateSecurityProfile(const UpdateSecurityProfileRequest &request)
 {
@@ -3753,6 +5029,11 @@ UpdateSecurityProfileResponse * IoTClient::updateSecurityProfile(const UpdateSec
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an existing stream. The stream version will be incremented by
+ *
+ * one>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateStream</a>
  */
 UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &request)
 {
@@ -3766,6 +5047,11 @@ UpdateStreamResponse * IoTClient::updateStream(const UpdateStreamRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the data for a
+ *
+ * thing>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThing</a>
  */
 UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
 {
@@ -3779,6 +5065,11 @@ UpdateThingResponse * IoTClient::updateThing(const UpdateThingRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Update a thing
+ *
+ * group>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingGroup</a>
  */
 UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupRequest &request)
 {
@@ -3792,6 +5083,11 @@ UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the groups to which the thing
+ *
+ * belongs>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingGroupsForThing</a>
  */
 UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const UpdateThingGroupsForThingRequest &request)
 {
@@ -3805,6 +5101,11 @@ UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const U
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a topic rule destination. You use this to change the status, endpoint URL, or confirmation URL of the
+ *
+ * destination>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateTopicRuleDestination</a>
  */
 UpdateTopicRuleDestinationResponse * IoTClient::updateTopicRuleDestination(const UpdateTopicRuleDestinationRequest &request)
 {
@@ -3818,6 +5119,11 @@ UpdateTopicRuleDestinationResponse * IoTClient::updateTopicRuleDestination(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Validates a Device Defender security profile behaviors
+ *
+ * specification>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ValidateSecurityProfileBehaviors</a>
  */
 ValidateSecurityProfileBehaviorsResponse * IoTClient::validateSecurityProfileBehaviors(const ValidateSecurityProfileBehaviorsRequest &request)
 {

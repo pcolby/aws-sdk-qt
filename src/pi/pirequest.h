@@ -30,18 +30,21 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class PiRequestPrivate;
 
 class QTAWSPI_EXPORT PiRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by PI.
+    /// Actions supported by Pi.
     enum Action {
         DescribeDimensionKeysAction,
         GetDimensionKeyDetailsAction,
+        GetResourceMetadataAction,
         GetResourceMetricsAction,
+        ListAvailableResourceDimensionsAction,
+        ListAvailableResourceMetricsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
@@ -78,7 +81,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

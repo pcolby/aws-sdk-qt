@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateRateBasedRuleRequest
- * \brief The CreateRateBasedRuleRequest class provides an interface for WAFRegional CreateRateBasedRule requests.
+ * \class QtAws::WafRegional::CreateRateBasedRuleRequest
+ * \brief The CreateRateBasedRuleRequest class provides an interface for WafRegional CreateRateBasedRule requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createRateBasedRule
+ * \sa WafRegionalClient::createRateBasedRule
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRuleRequest &other)
-    : WAFRegionalRequest(new CreateRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRule
  * Constructs a CreateRateBasedRuleRequest object.
  */
 CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
-    : WAFRegionalRequest(new CreateRateBasedRuleRequestPrivate(WAFRegionalRequest::CreateRateBasedRuleAction, this))
+    : WafRegionalRequest(new CreateRateBasedRuleRequestPrivate(WafRegionalRequest::CreateRateBasedRuleAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateRateBasedRuleRequestPrivate
+ * \class QtAws::WafRegional::CreateRateBasedRuleRequestPrivate
  * \brief The CreateRateBasedRuleRequestPrivate class provides private implementation for CreateRateBasedRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateRateBasedRuleRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateRateBasedRuleRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateRateBasedRuleRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
  */
 CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
     const CreateRateBasedRuleRequestPrivate &other, CreateRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

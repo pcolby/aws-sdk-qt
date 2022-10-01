@@ -95,7 +95,7 @@
 
 /*!
  * \namespace QtAws::ElasticLoadBalancingv2
- * \brief Contains classess for accessing Elastic Load Balancing (Elastic Load Balancing v2).
+ * \brief Contains classess for accessing Elastic Load Balancing.
  *
  * \inmodule QtAwsElasticLoadBalancingv2
  *
@@ -107,7 +107,7 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Client
- * \brief The ElasticLoadBalancingv2Client class provides access to the Elastic Load Balancing (Elastic Load Balancing v2) service.
+ * \brief The ElasticLoadBalancingv2Client class provides access to the Elastic Load Balancing service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsElasticLoadBalancingv2
@@ -476,7 +476,7 @@ DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the current Elastic Load Balancing resource limits for your AWS
+ * Describes the current Elastic Load Balancing resource limits for your Amazon Web Services
  *
  * account>
  *
@@ -768,6 +768,11 @@ ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the health checks used when evaluating the health state of the targets in the specified target
+ *
+ * group>
+ *
+ * If the protocol of the target group is TCP, TLS, UDP, or TCP_UDP, you can't modify the health check protocol, interval,
+ * timeout, or success
  */
 ModifyTargetGroupResponse * ElasticLoadBalancingv2Client::modifyTargetGroup(const ModifyTargetGroupRequest &request)
 {

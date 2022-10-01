@@ -24,28 +24,28 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
-class APIGatewayRequest;
+class ApiGatewayRequest;
 
-class APIGatewayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApiGatewayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    APIGatewayRequest::Action action; ///< APIGateway action to be performed.
-    QString apiVersion;        ///< APIGateway API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< APIGateway request (query string) parameters. @todo?
+    ApiGatewayRequest::Action action; ///< ApiGateway action to be performed.
+    QString apiVersion;        ///< ApiGateway API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ApiGateway request (query string) parameters. @todo?
 
-    APIGatewayRequestPrivate(const APIGatewayRequest::Action action, APIGatewayRequest * const q);
-    APIGatewayRequestPrivate(const APIGatewayRequestPrivate &other, APIGatewayRequest * const q);
+    ApiGatewayRequestPrivate(const ApiGatewayRequest::Action action, ApiGatewayRequest * const q);
+    ApiGatewayRequestPrivate(const ApiGatewayRequestPrivate &other, ApiGatewayRequest * const q);
 
-    static QString toString(const APIGatewayRequest::Action &action);
+    static QString toString(const ApiGatewayRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(APIGatewayRequest)
+    Q_DECLARE_PUBLIC(ApiGatewayRequest)
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

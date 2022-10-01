@@ -34,8 +34,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SSO
- * \brief Contains classess for accessing AWS Single Sign-On (SSO).
+ * \namespace QtAws::Sso
+ * \brief Contains classess for accessing AWS Single Sign-On.
  *
  * \inmodule QtAwsSso
  *
@@ -43,35 +43,36 @@
  */
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 /*!
- * \class QtAws::SSO::SsoClient
- * \brief The SsoClient class provides access to the AWS Single Sign-On (SSO) service.
+ * \class QtAws::Sso::SsoClient
+ * \brief The SsoClient class provides access to the AWS Single Sign-On service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  *
- *  AWS Single Sign-On Portal is a web service that makes it easy for you to assign user access to AWS SSO resources such as
- *  the user portal. Users can get AWS account applications and roles assigned to them and get federated into the
+ *  AWS IAM Identity Center (successor to AWS Single Sign-On) Portal is a web service that makes it easy for you to assign
+ *  user access to IAM Identity Center resources such as the AWS access portal. Users can get AWS account applications and
+ *  roles assigned to them and get federated into the
  * 
- *  application>
+ *  application> <note>
  * 
- *  For general information about AWS SSO, see <a
- *  href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">What is AWS Single Sign-On?</a> in the
- *  <i>AWS SSO User
+ *  Although AWS Single Sign-On was renamed, the <code>sso</code> and <code>identitystore</code> API namespaces will
+ *  continue to retain their original name for backward compatibility purposes. For more information, see <a
+ *  href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">IAM Identity Center
  * 
- *  Guide</i>>
+ *  rename</a>> </note>
  * 
- *  This API reference guide describes the AWS SSO Portal operations that you can call programatically and includes detailed
- *  information on data types and
+ *  This reference guide describes the IAM Identity Center Portal operations that you can call programatically and includes
+ *  detailed information on data types and
  * 
  *  errors> <note>
  * 
  *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms, such as
- *  Java, Ruby, .Net, iOS, or Android. The SDKs provide a convenient way to create programmatic access to AWS SSO and other
- *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
- *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  Java, Ruby, .Net, iOS, or Android. The SDKs provide a convenient way to create programmatic access to IAM Identity
+ *  Center and other AWS services. For more information about the AWS SDKs, including how to download and install them, see
+ *  <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  */
 
 /*!
@@ -162,7 +163,7 @@ ListAccountRolesResponse * SsoClient::listAccountRoles(const ListAccountRolesReq
  * Lists all AWS accounts assigned to the user. These AWS accounts are assigned by the administrator of the account. For
  * more information, see <a
  * href="https://docs.aws.amazon.com/singlesignon/latest/userguide/useraccess.html#assignusers">Assign User Access</a> in
- * the <i>AWS SSO User Guide</i>. This operation returns a paginated
+ * the <i>IAM Identity Center User Guide</i>. This operation returns a paginated
  */
 ListAccountsResponse * SsoClient::listAccounts(const ListAccountsRequest &request)
 {
@@ -175,7 +176,22 @@ ListAccountsResponse * SsoClient::listAccounts(const ListAccountsRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the client- and server-side session that is associated with the
+ * Removes the locally stored SSO tokens from the client-side cache and sends an API call to the IAM Identity Center
+ * service to invalidate the corresponding server-side IAM Identity Center sign in
+ *
+ * session> <note>
+ *
+ * If a user uses IAM Identity Center to access the AWS CLI, the user’s IAM Identity Center sign in session is used to
+ * obtain an IAM session, as specified in the corresponding IAM Identity Center permission set. More specifically, IAM
+ * Identity Center assumes an IAM role in the target account on behalf of the user, and the corresponding temporary AWS
+ * credentials are returned to the
+ *
+ * client>
+ *
+ * After user logout, any existing IAM role sessions that were created by using IAM Identity Center permission sets
+ * continue based on the duration configured in the permission set. For more information, see <a
+ * href="https://docs.aws.amazon.com/singlesignon/latest/userguide/authconcept.html">User authentications</a> in the <i>IAM
+ * Identity Center User
  */
 LogoutResponse * SsoClient::logout(const LogoutRequest &request)
 {
@@ -183,12 +199,12 @@ LogoutResponse * SsoClient::logout(const LogoutRequest &request)
 }
 
 /*!
- * \class QtAws::SSO::SsoClientPrivate
+ * \class QtAws::Sso::SsoClientPrivate
  * \brief The SsoClientPrivate class provides private implementation for SsoClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
@@ -200,5 +216,5 @@ SsoClientPrivate::SsoClientPrivate(SsoClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws

@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImageRecipeRequest
- * \brief The GetImageRecipeRequest class provides an interface for imagebuilder GetImageRecipe requests.
+ * \class QtAws::ImageBuilder::GetImageRecipeRequest
+ * \brief The GetImageRecipeRequest class provides an interface for ImageBuilder GetImageRecipe requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImageRecipe
+ * \sa ImageBuilderClient::getImageRecipe
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetImageRecipeRequest::GetImageRecipeRequest(const GetImageRecipeRequest &other)
-    : imagebuilderRequest(new GetImageRecipeRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetImageRecipeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetImageRecipeRequest::GetImageRecipeRequest(const GetImageRecipeRequest &other)
  * Constructs a GetImageRecipeRequest object.
  */
 GetImageRecipeRequest::GetImageRecipeRequest()
-    : imagebuilderRequest(new GetImageRecipeRequestPrivate(imagebuilderRequest::GetImageRecipeAction, this))
+    : ImageBuilderRequest(new GetImageRecipeRequestPrivate(ImageBuilderRequest::GetImageRecipeAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetImageRecipeRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImageRecipeRequestPrivate
+ * \class QtAws::ImageBuilder::GetImageRecipeRequestPrivate
  * \brief The GetImageRecipeRequestPrivate class provides private implementation for GetImageRecipeRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetImageRecipeRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetImageRecipeRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetImageRecipeRequestPrivate::GetImageRecipeRequestPrivate(
-    const imagebuilderRequest::Action action, GetImageRecipeRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetImageRecipeRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetImageRecipeRequestPrivate::GetImageRecipeRequestPrivate(
  */
 GetImageRecipeRequestPrivate::GetImageRecipeRequestPrivate(
     const GetImageRecipeRequestPrivate &other, GetImageRecipeRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

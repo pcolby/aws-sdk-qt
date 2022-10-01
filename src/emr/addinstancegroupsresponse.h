@@ -24,7 +24,7 @@
 #include "addinstancegroupsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class AddInstanceGroupsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

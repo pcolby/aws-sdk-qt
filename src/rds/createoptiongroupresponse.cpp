@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateOptionGroupResponse
- * \brief The CreateOptionGroupResponse class provides an interace for RDS CreateOptionGroup responses.
+ * \class QtAws::Rds::CreateOptionGroupResponse
+ * \brief The CreateOptionGroupResponse class provides an interace for Rds CreateOptionGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateOptionGroupRequest * CreateOptionGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS CreateOptionGroup \a response.
+ * Parses a successful Rds CreateOptionGroup \a response.
  */
 void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateOptionGroupResponsePrivate
+ * \class QtAws::Rds::CreateOptionGroupResponsePrivate
  * \brief The CreateOptionGroupResponsePrivate class provides private implementation for CreateOptionGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateOptionGroup response element from \a xml.
+ * Parses a Rds CreateOptionGroup response element from \a xml.
  */
 void CreateOptionGroupResponsePrivate::parseCreateOptionGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateOptionGroupResponsePrivate::parseCreateOptionGroupResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

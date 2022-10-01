@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::GetWorkflowExecutionHistoryRequest
- * \brief The GetWorkflowExecutionHistoryRequest class provides an interface for SWF GetWorkflowExecutionHistory requests.
+ * \class QtAws::Swf::GetWorkflowExecutionHistoryRequest
+ * \brief The GetWorkflowExecutionHistoryRequest class provides an interface for Swf GetWorkflowExecutionHistory requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(
 }
 
 /*!
- * \class QtAws::SWF::GetWorkflowExecutionHistoryRequestPrivate
+ * \class QtAws::Swf::GetWorkflowExecutionHistoryRequestPrivate
  * \brief The GetWorkflowExecutionHistoryRequestPrivate class provides private implementation for GetWorkflowExecutionHistoryRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPri
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

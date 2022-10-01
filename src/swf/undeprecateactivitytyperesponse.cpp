@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::UndeprecateActivityTypeResponse
- * \brief The UndeprecateActivityTypeResponse class provides an interace for SWF UndeprecateActivityType responses.
+ * \class QtAws::Swf::UndeprecateActivityTypeResponse
+ * \brief The UndeprecateActivityTypeResponse class provides an interace for Swf UndeprecateActivityType responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const UndeprecateActivityTypeRequest * UndeprecateActivityTypeResponse::request(
 
 /*!
  * \reimp
- * Parses a successful SWF UndeprecateActivityType \a response.
+ * Parses a successful Swf UndeprecateActivityType \a response.
  */
 void UndeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void UndeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::UndeprecateActivityTypeResponsePrivate
+ * \class QtAws::Swf::UndeprecateActivityTypeResponsePrivate
  * \brief The UndeprecateActivityTypeResponsePrivate class provides private implementation for UndeprecateActivityTypeResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ UndeprecateActivityTypeResponsePrivate::UndeprecateActivityTypeResponsePrivate(
 }
 
 /*!
- * Parses a SWF UndeprecateActivityType response element from \a xml.
+ * Parses a Swf UndeprecateActivityType response element from \a xml.
  */
 void UndeprecateActivityTypeResponsePrivate::parseUndeprecateActivityTypeResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void UndeprecateActivityTypeResponsePrivate::parseUndeprecateActivityTypeRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

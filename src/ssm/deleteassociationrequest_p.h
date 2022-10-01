@@ -24,7 +24,7 @@
 #include "deleteassociationrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DeleteAssociationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

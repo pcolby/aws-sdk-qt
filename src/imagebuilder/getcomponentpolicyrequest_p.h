@@ -24,14 +24,14 @@
 #include "getcomponentpolicyrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class GetComponentPolicyRequest;
 
-class GetComponentPolicyRequestPrivate : public imagebuilderRequestPrivate {
+class GetComponentPolicyRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    GetComponentPolicyRequestPrivate(const imagebuilderRequest::Action action,
+    GetComponentPolicyRequestPrivate(const ImageBuilderRequest::Action action,
                                    GetComponentPolicyRequest * const q);
     GetComponentPolicyRequestPrivate(const GetComponentPolicyRequestPrivate &other,
                                    GetComponentPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

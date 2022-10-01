@@ -68,8 +68,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::DAX
- * \brief Contains classess for accessing Amazon DynamoDB Accelerator (DAX) ( DAX).
+ * \namespace QtAws::Dax
+ * \brief Contains classess for accessing Amazon DynamoDB Accelerator (DAX).
  *
  * \inmodule QtAwsDax
  *
@@ -77,14 +77,14 @@
  */
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DaxClient
- * \brief The DaxClient class provides access to the Amazon DynamoDB Accelerator (DAX) ( DAX) service.
+ * \class QtAws::Dax::DaxClient
+ * \brief The DaxClient class provides access to the Amazon DynamoDB Accelerator (DAX) service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -468,12 +468,12 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
 }
 
 /*!
- * \class QtAws::DAX::DaxClientPrivate
+ * \class QtAws::Dax::DaxClientPrivate
  * \brief The DaxClientPrivate class provides private implementation for DaxClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -485,5 +485,5 @@ DaxClientPrivate::DaxClientPrivate(DaxClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

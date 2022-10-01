@@ -24,11 +24,11 @@
 #include "describeeventsubscriptionsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeEventSubscriptionsResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DescribeEventSubscriptionsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeEventSubscriptionsResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetSdkTypesResponse
- * \brief The GetSdkTypesResponse class provides an interace for APIGateway GetSdkTypes responses.
+ * \class QtAws::ApiGateway::GetSdkTypesResponse
+ * \brief The GetSdkTypesResponse class provides an interace for ApiGateway GetSdkTypes responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getSdkTypes
+ * \sa ApiGatewayClient::getSdkTypes
  */
 
 /*!
@@ -49,7 +49,7 @@ GetSdkTypesResponse::GetSdkTypesResponse(
         const GetSdkTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetSdkTypesResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetSdkTypesResponsePrivate(this), parent)
 {
     setRequest(new GetSdkTypesRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetSdkTypesRequest * GetSdkTypesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetSdkTypes \a response.
+ * Parses a successful ApiGateway GetSdkTypes \a response.
  */
 void GetSdkTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetSdkTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetSdkTypesResponsePrivate
+ * \class QtAws::ApiGateway::GetSdkTypesResponsePrivate
  * \brief The GetSdkTypesResponsePrivate class provides private implementation for GetSdkTypesResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetSdkTypesResponsePrivate object with public implementation \a q.
  */
 GetSdkTypesResponsePrivate::GetSdkTypesResponsePrivate(
-    GetSdkTypesResponse * const q) : APIGatewayResponsePrivate(q)
+    GetSdkTypesResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetSdkTypes response element from \a xml.
+ * Parses a ApiGateway GetSdkTypes response element from \a xml.
  */
 void GetSdkTypesResponsePrivate::parseGetSdkTypesResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetSdkTypesResponsePrivate::parseGetSdkTypesResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

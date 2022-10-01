@@ -24,14 +24,14 @@
 #include "createdocumentationversionrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateDocumentationVersionRequest;
 
-class CreateDocumentationVersionRequestPrivate : public APIGatewayRequestPrivate {
+class CreateDocumentationVersionRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateDocumentationVersionRequestPrivate(const APIGatewayRequest::Action action,
+    CreateDocumentationVersionRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateDocumentationVersionRequest * const q);
     CreateDocumentationVersionRequestPrivate(const CreateDocumentationVersionRequestPrivate &other,
                                    CreateDocumentationVersionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

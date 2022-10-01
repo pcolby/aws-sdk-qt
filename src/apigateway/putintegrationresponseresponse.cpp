@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::PutIntegrationResponseResponse
- * \brief The PutIntegrationResponseResponse class provides an interace for APIGateway PutIntegrationResponse responses.
+ * \class QtAws::ApiGateway::PutIntegrationResponseResponse
+ * \brief The PutIntegrationResponseResponse class provides an interace for ApiGateway PutIntegrationResponse responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::putIntegrationResponse
+ * \sa ApiGatewayClient::putIntegrationResponse
  */
 
 /*!
@@ -49,7 +49,7 @@ PutIntegrationResponseResponse::PutIntegrationResponseResponse(
         const PutIntegrationResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new PutIntegrationResponseResponsePrivate(this), parent)
+    : ApiGatewayResponse(new PutIntegrationResponseResponsePrivate(this), parent)
 {
     setRequest(new PutIntegrationResponseRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const PutIntegrationResponseRequest * PutIntegrationResponseResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful APIGateway PutIntegrationResponse \a response.
+ * Parses a successful ApiGateway PutIntegrationResponse \a response.
  */
 void PutIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void PutIntegrationResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::PutIntegrationResponseResponsePrivate
+ * \class QtAws::ApiGateway::PutIntegrationResponseResponsePrivate
  * \brief The PutIntegrationResponseResponsePrivate class provides private implementation for PutIntegrationResponseResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a PutIntegrationResponseResponsePrivate object with public implementation \a q.
  */
 PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponsePrivate(
-    PutIntegrationResponseResponse * const q) : APIGatewayResponsePrivate(q)
+    PutIntegrationResponseResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway PutIntegrationResponse response element from \a xml.
+ * Parses a ApiGateway PutIntegrationResponse response element from \a xml.
  */
 void PutIntegrationResponseResponsePrivate::parsePutIntegrationResponseResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void PutIntegrationResponseResponsePrivate::parsePutIntegrationResponseResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

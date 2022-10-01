@@ -21,51 +21,55 @@
 #include "fmsrequest_p.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::FmsRequest
- * \brief The FmsRequest class provides an interface for FMS requests.
+ * \class QtAws::Fms::FmsRequest
+ * \brief The FmsRequest class provides an interface for Fms requests.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
  * \enum FmsRequest::Action
  *
- * This enum describes the actions that can be performed as FMS
+ * This enum describes the actions that can be performed as Fms
  * requests.
  *
- * \value AssociateAdminAccountAction FMS AssociateAdminAccount action.
- * \value DeleteAppsListAction FMS DeleteAppsList action.
- * \value DeleteNotificationChannelAction FMS DeleteNotificationChannel action.
- * \value DeletePolicyAction FMS DeletePolicy action.
- * \value DeleteProtocolsListAction FMS DeleteProtocolsList action.
- * \value DisassociateAdminAccountAction FMS DisassociateAdminAccount action.
- * \value GetAdminAccountAction FMS GetAdminAccount action.
- * \value GetAppsListAction FMS GetAppsList action.
- * \value GetComplianceDetailAction FMS GetComplianceDetail action.
- * \value GetNotificationChannelAction FMS GetNotificationChannel action.
- * \value GetPolicyAction FMS GetPolicy action.
- * \value GetProtectionStatusAction FMS GetProtectionStatus action.
- * \value GetProtocolsListAction FMS GetProtocolsList action.
- * \value GetViolationDetailsAction FMS GetViolationDetails action.
- * \value ListAppsListsAction FMS ListAppsLists action.
- * \value ListComplianceStatusAction FMS ListComplianceStatus action.
- * \value ListMemberAccountsAction FMS ListMemberAccounts action.
- * \value ListPoliciesAction FMS ListPolicies action.
- * \value ListProtocolsListsAction FMS ListProtocolsLists action.
- * \value ListTagsForResourceAction FMS ListTagsForResource action.
- * \value PutAppsListAction FMS PutAppsList action.
- * \value PutNotificationChannelAction FMS PutNotificationChannel action.
- * \value PutPolicyAction FMS PutPolicy action.
- * \value PutProtocolsListAction FMS PutProtocolsList action.
- * \value TagResourceAction FMS TagResource action.
- * \value UntagResourceAction FMS UntagResource action.
+ * \value AssociateAdminAccountAction Fms AssociateAdminAccount action.
+ * \value AssociateThirdPartyFirewallAction Fms AssociateThirdPartyFirewall action.
+ * \value DeleteAppsListAction Fms DeleteAppsList action.
+ * \value DeleteNotificationChannelAction Fms DeleteNotificationChannel action.
+ * \value DeletePolicyAction Fms DeletePolicy action.
+ * \value DeleteProtocolsListAction Fms DeleteProtocolsList action.
+ * \value DisassociateAdminAccountAction Fms DisassociateAdminAccount action.
+ * \value DisassociateThirdPartyFirewallAction Fms DisassociateThirdPartyFirewall action.
+ * \value GetAdminAccountAction Fms GetAdminAccount action.
+ * \value GetAppsListAction Fms GetAppsList action.
+ * \value GetComplianceDetailAction Fms GetComplianceDetail action.
+ * \value GetNotificationChannelAction Fms GetNotificationChannel action.
+ * \value GetPolicyAction Fms GetPolicy action.
+ * \value GetProtectionStatusAction Fms GetProtectionStatus action.
+ * \value GetProtocolsListAction Fms GetProtocolsList action.
+ * \value GetThirdPartyFirewallAssociationStatusAction Fms GetThirdPartyFirewallAssociationStatus action.
+ * \value GetViolationDetailsAction Fms GetViolationDetails action.
+ * \value ListAppsListsAction Fms ListAppsLists action.
+ * \value ListComplianceStatusAction Fms ListComplianceStatus action.
+ * \value ListMemberAccountsAction Fms ListMemberAccounts action.
+ * \value ListPoliciesAction Fms ListPolicies action.
+ * \value ListProtocolsListsAction Fms ListProtocolsLists action.
+ * \value ListTagsForResourceAction Fms ListTagsForResource action.
+ * \value ListThirdPartyFirewallFirewallPoliciesAction Fms ListThirdPartyFirewallFirewallPolicies action.
+ * \value PutAppsListAction Fms PutAppsList action.
+ * \value PutNotificationChannelAction Fms PutNotificationChannel action.
+ * \value PutPolicyAction Fms PutPolicy action.
+ * \value PutProtocolsListAction Fms PutProtocolsList action.
+ * \value TagResourceAction Fms TagResource action.
+ * \value UntagResourceAction Fms UntagResource action.
  */
 
 /*!
- * Constructs a FmsRequest object for FMS \a action.
+ * Constructs a FmsRequest object for Fms \a action.
  */
 FmsRequest::FmsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new FmsRequestPrivate(action, this))
@@ -106,7 +110,7 @@ FmsRequest::FmsRequest(FmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the FMS action to be performed by this request.
+ * Returns the Fms action to be performed by this request.
  */
 FmsRequest::Action FmsRequest::action() const
 {
@@ -115,7 +119,7 @@ FmsRequest::Action FmsRequest::action() const
 }
 
 /*!
- * Returns the name of the FMS action to be performed by this request.
+ * Returns the name of the Fms action to be performed by this request.
  */
 QString FmsRequest::actionString() const
 {
@@ -123,7 +127,7 @@ QString FmsRequest::actionString() const
 }
 
 /*!
- * Returns the FMS API version implemented by this request.
+ * Returns the Fms API version implemented by this request.
  */
 QString FmsRequest::apiVersion() const
 {
@@ -132,7 +136,7 @@ QString FmsRequest::apiVersion() const
 }
 
 /*!
- * Sets the FMS action to be performed by this request to \a action.
+ * Sets the Fms action to be performed by this request to \a action.
  */
 void FmsRequest::setAction(const Action action)
 {
@@ -141,7 +145,7 @@ void FmsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the FMS API version to include in this request to \a version.
+ * Sets the Fms API version to include in this request to \a version.
  */
 void FmsRequest::setApiVersion(const QString &version)
 {
@@ -166,15 +170,15 @@ bool FmsRequest::operator==(const FmsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid FMS queue name.
+ * Returns \c tue if \a queueName is a valid Fms queue name.
  *
- * @par From FMS FAQs:
+ * @par From Fms FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid FMS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Fms queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -241,10 +245,10 @@ void FmsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the FMS request using the given
+ * Returns a network request for the Fms request using the given
  * \a endpoint.
  *
- * This FMS implementation builds request URLs by combining the
+ * This Fms implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -257,19 +261,19 @@ QNetworkRequest FmsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::FMS::FmsRequestPrivate
+ * \class QtAws::Fms::FmsRequestPrivate
  * \brief The FmsRequestPrivate class provides private implementation for FmsRequest.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
- * Constructs a FmsRequestPrivate object for FMS \a action,
+ * Constructs a FmsRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 FmsRequestPrivate::FmsRequestPrivate(const FmsRequest::Action action, FmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-01-01"))
 {
 
 }
@@ -295,7 +299,7 @@ FmsRequestPrivate::FmsRequestPrivate(const FmsRequestPrivate &other,
  * invalid.
  *
  * This function converts FmsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the FMS service's Action
+ * string representations, appropriate for use with the Fms service's Action
  * query parameters.
  */
 QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
@@ -304,11 +308,13 @@ QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
         case FmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AssociateAdminAccount);
+        ActionToString(AssociateThirdPartyFirewall);
         ActionToString(DeleteAppsList);
         ActionToString(DeleteNotificationChannel);
         ActionToString(DeletePolicy);
         ActionToString(DeleteProtocolsList);
         ActionToString(DisassociateAdminAccount);
+        ActionToString(DisassociateThirdPartyFirewall);
         ActionToString(GetAdminAccount);
         ActionToString(GetAppsList);
         ActionToString(GetComplianceDetail);
@@ -316,6 +322,7 @@ QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
         ActionToString(GetPolicy);
         ActionToString(GetProtectionStatus);
         ActionToString(GetProtocolsList);
+        ActionToString(GetThirdPartyFirewallAssociationStatus);
         ActionToString(GetViolationDetails);
         ActionToString(ListAppsLists);
         ActionToString(ListComplianceStatus);
@@ -323,6 +330,7 @@ QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
         ActionToString(ListPolicies);
         ActionToString(ListProtocolsLists);
         ActionToString(ListTagsForResource);
+        ActionToString(ListThirdPartyFirewallFirewallPolicies);
         ActionToString(PutAppsList);
         ActionToString(PutNotificationChannel);
         ActionToString(PutPolicy);
@@ -336,5 +344,5 @@ QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
     return QString();
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteIPSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteIPSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteIPSetRequest : public WafRegionalRequest {
 
 public:
     DeleteIPSetRequest(const DeleteIPSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -27,13 +27,15 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorClientPrivate;
+class IotDeviceAdvisorClientPrivate;
 class CreateSuiteDefinitionRequest;
 class CreateSuiteDefinitionResponse;
 class DeleteSuiteDefinitionRequest;
 class DeleteSuiteDefinitionResponse;
+class GetEndpointRequest;
+class GetEndpointResponse;
 class GetSuiteDefinitionRequest;
 class GetSuiteDefinitionResponse;
 class GetSuiteRunRequest;
@@ -57,17 +59,17 @@ class UntagResourceResponse;
 class UpdateSuiteDefinitionRequest;
 class UpdateSuiteDefinitionResponse;
 
-class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTDEVICEADVISOR_EXPORT IotDeviceAdvisorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    IoTDeviceAdvisorClient(
+    IotDeviceAdvisorClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit IoTDeviceAdvisorClient(
+    explicit IotDeviceAdvisorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,6 +77,7 @@ public:
 public slots:
     CreateSuiteDefinitionResponse * createSuiteDefinition(const CreateSuiteDefinitionRequest &request);
     DeleteSuiteDefinitionResponse * deleteSuiteDefinition(const DeleteSuiteDefinitionRequest &request);
+    GetEndpointResponse * getEndpoint(const GetEndpointRequest &request);
     GetSuiteDefinitionResponse * getSuiteDefinition(const GetSuiteDefinitionRequest &request);
     GetSuiteRunResponse * getSuiteRun(const GetSuiteRunRequest &request);
     GetSuiteRunReportResponse * getSuiteRunReport(const GetSuiteRunReportRequest &request);
@@ -88,12 +91,12 @@ public slots:
     UpdateSuiteDefinitionResponse * updateSuiteDefinition(const UpdateSuiteDefinitionRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(IoTDeviceAdvisorClient)
-    Q_DISABLE_COPY(IoTDeviceAdvisorClient)
+    Q_DECLARE_PRIVATE(IotDeviceAdvisorClient)
+    Q_DISABLE_COPY(IotDeviceAdvisorClient)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

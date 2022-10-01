@@ -38,13 +38,16 @@ namespace Redshift {
  *
  * \value AcceptReservedNodeExchangeAction Redshift AcceptReservedNodeExchange action.
  * \value AddPartnerAction Redshift AddPartner action.
+ * \value AssociateDataShareConsumerAction Redshift AssociateDataShareConsumer action.
  * \value AuthorizeClusterSecurityGroupIngressAction Redshift AuthorizeClusterSecurityGroupIngress action.
+ * \value AuthorizeDataShareAction Redshift AuthorizeDataShare action.
  * \value AuthorizeEndpointAccessAction Redshift AuthorizeEndpointAccess action.
  * \value AuthorizeSnapshotAccessAction Redshift AuthorizeSnapshotAccess action.
  * \value BatchDeleteClusterSnapshotsAction Redshift BatchDeleteClusterSnapshots action.
  * \value BatchModifyClusterSnapshotsAction Redshift BatchModifyClusterSnapshots action.
  * \value CancelResizeAction Redshift CancelResize action.
  * \value CopyClusterSnapshotAction Redshift CopyClusterSnapshot action.
+ * \value CreateAuthenticationProfileAction Redshift CreateAuthenticationProfile action.
  * \value CreateClusterAction Redshift CreateCluster action.
  * \value CreateClusterParameterGroupAction Redshift CreateClusterParameterGroup action.
  * \value CreateClusterSecurityGroupAction Redshift CreateClusterSecurityGroup action.
@@ -59,6 +62,8 @@ namespace Redshift {
  * \value CreateSnapshotScheduleAction Redshift CreateSnapshotSchedule action.
  * \value CreateTagsAction Redshift CreateTags action.
  * \value CreateUsageLimitAction Redshift CreateUsageLimit action.
+ * \value DeauthorizeDataShareAction Redshift DeauthorizeDataShare action.
+ * \value DeleteAuthenticationProfileAction Redshift DeleteAuthenticationProfile action.
  * \value DeleteClusterAction Redshift DeleteCluster action.
  * \value DeleteClusterParameterGroupAction Redshift DeleteClusterParameterGroup action.
  * \value DeleteClusterSecurityGroupAction Redshift DeleteClusterSecurityGroup action.
@@ -75,6 +80,7 @@ namespace Redshift {
  * \value DeleteTagsAction Redshift DeleteTags action.
  * \value DeleteUsageLimitAction Redshift DeleteUsageLimit action.
  * \value DescribeAccountAttributesAction Redshift DescribeAccountAttributes action.
+ * \value DescribeAuthenticationProfilesAction Redshift DescribeAuthenticationProfiles action.
  * \value DescribeClusterDbRevisionsAction Redshift DescribeClusterDbRevisions action.
  * \value DescribeClusterParameterGroupsAction Redshift DescribeClusterParameterGroups action.
  * \value DescribeClusterParametersAction Redshift DescribeClusterParameters action.
@@ -84,6 +90,9 @@ namespace Redshift {
  * \value DescribeClusterTracksAction Redshift DescribeClusterTracks action.
  * \value DescribeClusterVersionsAction Redshift DescribeClusterVersions action.
  * \value DescribeClustersAction Redshift DescribeClusters action.
+ * \value DescribeDataSharesAction Redshift DescribeDataShares action.
+ * \value DescribeDataSharesForConsumerAction Redshift DescribeDataSharesForConsumer action.
+ * \value DescribeDataSharesForProducerAction Redshift DescribeDataSharesForProducer action.
  * \value DescribeDefaultClusterParametersAction Redshift DescribeDefaultClusterParameters action.
  * \value DescribeEndpointAccessAction Redshift DescribeEndpointAccess action.
  * \value DescribeEndpointAuthorizationAction Redshift DescribeEndpointAuthorization action.
@@ -96,6 +105,7 @@ namespace Redshift {
  * \value DescribeNodeConfigurationOptionsAction Redshift DescribeNodeConfigurationOptions action.
  * \value DescribeOrderableClusterOptionsAction Redshift DescribeOrderableClusterOptions action.
  * \value DescribePartnersAction Redshift DescribePartners action.
+ * \value DescribeReservedNodeExchangeStatusAction Redshift DescribeReservedNodeExchangeStatus action.
  * \value DescribeReservedNodeOfferingsAction Redshift DescribeReservedNodeOfferings action.
  * \value DescribeReservedNodesAction Redshift DescribeReservedNodes action.
  * \value DescribeResizeAction Redshift DescribeResize action.
@@ -108,11 +118,15 @@ namespace Redshift {
  * \value DescribeUsageLimitsAction Redshift DescribeUsageLimits action.
  * \value DisableLoggingAction Redshift DisableLogging action.
  * \value DisableSnapshotCopyAction Redshift DisableSnapshotCopy action.
+ * \value DisassociateDataShareConsumerAction Redshift DisassociateDataShareConsumer action.
  * \value EnableLoggingAction Redshift EnableLogging action.
  * \value EnableSnapshotCopyAction Redshift EnableSnapshotCopy action.
  * \value GetClusterCredentialsAction Redshift GetClusterCredentials action.
+ * \value GetClusterCredentialsWithIAMAction Redshift GetClusterCredentialsWithIAM action.
+ * \value GetReservedNodeExchangeConfigurationOptionsAction Redshift GetReservedNodeExchangeConfigurationOptions action.
  * \value GetReservedNodeExchangeOfferingsAction Redshift GetReservedNodeExchangeOfferings action.
  * \value ModifyAquaConfigurationAction Redshift ModifyAquaConfiguration action.
+ * \value ModifyAuthenticationProfileAction Redshift ModifyAuthenticationProfile action.
  * \value ModifyClusterAction Redshift ModifyCluster action.
  * \value ModifyClusterDbRevisionAction Redshift ModifyClusterDbRevision action.
  * \value ModifyClusterIamRolesAction Redshift ModifyClusterIamRoles action.
@@ -130,6 +144,7 @@ namespace Redshift {
  * \value PauseClusterAction Redshift PauseCluster action.
  * \value PurchaseReservedNodeOfferingAction Redshift PurchaseReservedNodeOffering action.
  * \value RebootClusterAction Redshift RebootCluster action.
+ * \value RejectDataShareAction Redshift RejectDataShare action.
  * \value ResetClusterParameterGroupAction Redshift ResetClusterParameterGroup action.
  * \value ResizeClusterAction Redshift ResizeCluster action.
  * \value RestoreFromClusterSnapshotAction Redshift RestoreFromClusterSnapshot action.
@@ -347,7 +362,7 @@ QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action action, RedshiftRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-12-01"))
 {
 
 }
@@ -383,13 +398,16 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
     switch (action) {
         ActionToString(AcceptReservedNodeExchange);
         ActionToString(AddPartner);
+        ActionToString(AssociateDataShareConsumer);
         ActionToString(AuthorizeClusterSecurityGroupIngress);
+        ActionToString(AuthorizeDataShare);
         ActionToString(AuthorizeEndpointAccess);
         ActionToString(AuthorizeSnapshotAccess);
         ActionToString(BatchDeleteClusterSnapshots);
         ActionToString(BatchModifyClusterSnapshots);
         ActionToString(CancelResize);
         ActionToString(CopyClusterSnapshot);
+        ActionToString(CreateAuthenticationProfile);
         ActionToString(CreateCluster);
         ActionToString(CreateClusterParameterGroup);
         ActionToString(CreateClusterSecurityGroup);
@@ -404,6 +422,8 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(CreateSnapshotSchedule);
         ActionToString(CreateTags);
         ActionToString(CreateUsageLimit);
+        ActionToString(DeauthorizeDataShare);
+        ActionToString(DeleteAuthenticationProfile);
         ActionToString(DeleteCluster);
         ActionToString(DeleteClusterParameterGroup);
         ActionToString(DeleteClusterSecurityGroup);
@@ -420,6 +440,7 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(DeleteTags);
         ActionToString(DeleteUsageLimit);
         ActionToString(DescribeAccountAttributes);
+        ActionToString(DescribeAuthenticationProfiles);
         ActionToString(DescribeClusterDbRevisions);
         ActionToString(DescribeClusterParameterGroups);
         ActionToString(DescribeClusterParameters);
@@ -429,6 +450,9 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(DescribeClusterTracks);
         ActionToString(DescribeClusterVersions);
         ActionToString(DescribeClusters);
+        ActionToString(DescribeDataShares);
+        ActionToString(DescribeDataSharesForConsumer);
+        ActionToString(DescribeDataSharesForProducer);
         ActionToString(DescribeDefaultClusterParameters);
         ActionToString(DescribeEndpointAccess);
         ActionToString(DescribeEndpointAuthorization);
@@ -441,6 +465,7 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(DescribeNodeConfigurationOptions);
         ActionToString(DescribeOrderableClusterOptions);
         ActionToString(DescribePartners);
+        ActionToString(DescribeReservedNodeExchangeStatus);
         ActionToString(DescribeReservedNodeOfferings);
         ActionToString(DescribeReservedNodes);
         ActionToString(DescribeResize);
@@ -453,11 +478,15 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(DescribeUsageLimits);
         ActionToString(DisableLogging);
         ActionToString(DisableSnapshotCopy);
+        ActionToString(DisassociateDataShareConsumer);
         ActionToString(EnableLogging);
         ActionToString(EnableSnapshotCopy);
         ActionToString(GetClusterCredentials);
+        ActionToString(GetClusterCredentialsWithIAM);
+        ActionToString(GetReservedNodeExchangeConfigurationOptions);
         ActionToString(GetReservedNodeExchangeOfferings);
         ActionToString(ModifyAquaConfiguration);
+        ActionToString(ModifyAuthenticationProfile);
         ActionToString(ModifyCluster);
         ActionToString(ModifyClusterDbRevision);
         ActionToString(ModifyClusterIamRoles);
@@ -475,6 +504,7 @@ QString RedshiftRequestPrivate::toString(const RedshiftRequest::Action &action)
         ActionToString(PauseCluster);
         ActionToString(PurchaseReservedNodeOffering);
         ActionToString(RebootCluster);
+        ActionToString(RejectDataShare);
         ActionToString(ResetClusterParameterGroup);
         ActionToString(ResizeCluster);
         ActionToString(RestoreFromClusterSnapshot);

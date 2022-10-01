@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeLimitsRequest
- * \brief The DescribeLimitsRequest class provides an interface for DynamoDB DescribeLimits requests.
+ * \class QtAws::DynamoDb::DescribeLimitsRequest
+ * \brief The DescribeLimitsRequest class provides an interface for DynamoDb DescribeLimits requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeLimits
+ * \sa DynamoDbClient::describeLimits
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
-    : DynamoDBRequest(new DescribeLimitsRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeLimitsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeLimitsRequest::DescribeLimitsRequest(const DescribeLimitsRequest &other)
  * Constructs a DescribeLimitsRequest object.
  */
 DescribeLimitsRequest::DescribeLimitsRequest()
-    : DynamoDBRequest(new DescribeLimitsRequestPrivate(DynamoDBRequest::DescribeLimitsAction, this))
+    : DynamoDbRequest(new DescribeLimitsRequestPrivate(DynamoDbRequest::DescribeLimitsAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeLimitsRequestPrivate
+ * \class QtAws::DynamoDb::DescribeLimitsRequestPrivate
  * \brief The DescribeLimitsRequestPrivate class provides private implementation for DescribeLimitsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeLimitsRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeLimitsRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeLimitsRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeLimitsRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DescribeLimitsRequestPrivate &other, DescribeLimitsRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

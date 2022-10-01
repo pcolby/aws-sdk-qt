@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSKINESISANALYTICSV2_LIBRARY)
 
 add_library(QtAwsKinesisAnalyticsV2
+  qtawskinesisanalyticsv2global.h
+  kinesisanalyticsv2client.h
+  kinesisanalyticsv2client_p.h
+  kinesisanalyticsv2request.h
+  kinesisanalyticsv2request_p.h
+  kinesisanalyticsv2response.h
+  kinesisanalyticsv2response_p.h
   addapplicationcloudwatchloggingoptionrequest.h
   addapplicationcloudwatchloggingoptionrequest_p.h
   addapplicationcloudwatchloggingoptionresponse.h
   addapplicationcloudwatchloggingoptionresponse_p.h
-  addapplicationinputprocessingconfigurationrequest.h
-  addapplicationinputprocessingconfigurationrequest_p.h
-  addapplicationinputprocessingconfigurationresponse.h
-  addapplicationinputprocessingconfigurationresponse_p.h
   addapplicationinputrequest.h
   addapplicationinputrequest_p.h
   addapplicationinputresponse.h
   addapplicationinputresponse_p.h
+  addapplicationinputprocessingconfigurationrequest.h
+  addapplicationinputprocessingconfigurationrequest_p.h
+  addapplicationinputprocessingconfigurationresponse.h
+  addapplicationinputprocessingconfigurationresponse_p.h
   addapplicationoutputrequest.h
   addapplicationoutputrequest_p.h
   addapplicationoutputresponse.h
@@ -25,18 +32,22 @@ add_library(QtAwsKinesisAnalyticsV2
   addapplicationvpcconfigurationrequest_p.h
   addapplicationvpcconfigurationresponse.h
   addapplicationvpcconfigurationresponse_p.h
-  createapplicationpresignedurlrequest.h
-  createapplicationpresignedurlrequest_p.h
-  createapplicationpresignedurlresponse.h
-  createapplicationpresignedurlresponse_p.h
   createapplicationrequest.h
   createapplicationrequest_p.h
   createapplicationresponse.h
   createapplicationresponse_p.h
+  createapplicationpresignedurlrequest.h
+  createapplicationpresignedurlrequest_p.h
+  createapplicationpresignedurlresponse.h
+  createapplicationpresignedurlresponse_p.h
   createapplicationsnapshotrequest.h
   createapplicationsnapshotrequest_p.h
   createapplicationsnapshotresponse.h
   createapplicationsnapshotresponse_p.h
+  deleteapplicationrequest.h
+  deleteapplicationrequest_p.h
+  deleteapplicationresponse.h
+  deleteapplicationresponse_p.h
   deleteapplicationcloudwatchloggingoptionrequest.h
   deleteapplicationcloudwatchloggingoptionrequest_p.h
   deleteapplicationcloudwatchloggingoptionresponse.h
@@ -53,10 +64,6 @@ add_library(QtAwsKinesisAnalyticsV2
   deleteapplicationreferencedatasourcerequest_p.h
   deleteapplicationreferencedatasourceresponse.h
   deleteapplicationreferencedatasourceresponse_p.h
-  deleteapplicationrequest.h
-  deleteapplicationrequest_p.h
-  deleteapplicationresponse.h
-  deleteapplicationresponse_p.h
   deleteapplicationsnapshotrequest.h
   deleteapplicationsnapshotrequest_p.h
   deleteapplicationsnapshotresponse.h
@@ -81,29 +88,22 @@ add_library(QtAwsKinesisAnalyticsV2
   discoverinputschemarequest_p.h
   discoverinputschemaresponse.h
   discoverinputschemaresponse_p.h
-  kinesisanalyticsv2client.h
-  kinesisanalyticsv2client_p.h
-  kinesisanalyticsv2request.h
-  kinesisanalyticsv2request_p.h
-  kinesisanalyticsv2response.h
-  kinesisanalyticsv2response_p.h
   listapplicationsnapshotsrequest.h
   listapplicationsnapshotsrequest_p.h
   listapplicationsnapshotsresponse.h
   listapplicationsnapshotsresponse_p.h
-  listapplicationsrequest.h
-  listapplicationsrequest_p.h
-  listapplicationsresponse.h
-  listapplicationsresponse_p.h
   listapplicationversionsrequest.h
   listapplicationversionsrequest_p.h
   listapplicationversionsresponse.h
   listapplicationversionsresponse_p.h
+  listapplicationsrequest.h
+  listapplicationsrequest_p.h
+  listapplicationsresponse.h
+  listapplicationsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawskinesisanalyticsv2global.h
   rollbackapplicationrequest.h
   rollbackapplicationrequest_p.h
   rollbackapplicationresponse.h
@@ -124,32 +124,37 @@ add_library(QtAwsKinesisAnalyticsV2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updateapplicationmaintenanceconfigurationrequest.h
-  updateapplicationmaintenanceconfigurationrequest_p.h
-  updateapplicationmaintenanceconfigurationresponse.h
-  updateapplicationmaintenanceconfigurationresponse_p.h
   updateapplicationrequest.h
   updateapplicationrequest_p.h
   updateapplicationresponse.h
   updateapplicationresponse_p.h
+  updateapplicationmaintenanceconfigurationrequest.h
+  updateapplicationmaintenanceconfigurationrequest_p.h
+  updateapplicationmaintenanceconfigurationresponse.h
+  updateapplicationmaintenanceconfigurationresponse_p.h
+  kinesisanalyticsv2client.cpp
+  kinesisanalyticsv2request.cpp
+  kinesisanalyticsv2response.cpp
   addapplicationcloudwatchloggingoptionrequest.cpp
   addapplicationcloudwatchloggingoptionresponse.cpp
-  addapplicationinputprocessingconfigurationrequest.cpp
-  addapplicationinputprocessingconfigurationresponse.cpp
   addapplicationinputrequest.cpp
   addapplicationinputresponse.cpp
+  addapplicationinputprocessingconfigurationrequest.cpp
+  addapplicationinputprocessingconfigurationresponse.cpp
   addapplicationoutputrequest.cpp
   addapplicationoutputresponse.cpp
   addapplicationreferencedatasourcerequest.cpp
   addapplicationreferencedatasourceresponse.cpp
   addapplicationvpcconfigurationrequest.cpp
   addapplicationvpcconfigurationresponse.cpp
-  createapplicationpresignedurlrequest.cpp
-  createapplicationpresignedurlresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
+  createapplicationpresignedurlrequest.cpp
+  createapplicationpresignedurlresponse.cpp
   createapplicationsnapshotrequest.cpp
   createapplicationsnapshotresponse.cpp
+  deleteapplicationrequest.cpp
+  deleteapplicationresponse.cpp
   deleteapplicationcloudwatchloggingoptionrequest.cpp
   deleteapplicationcloudwatchloggingoptionresponse.cpp
   deleteapplicationinputprocessingconfigurationrequest.cpp
@@ -158,8 +163,6 @@ add_library(QtAwsKinesisAnalyticsV2
   deleteapplicationoutputresponse.cpp
   deleteapplicationreferencedatasourcerequest.cpp
   deleteapplicationreferencedatasourceresponse.cpp
-  deleteapplicationrequest.cpp
-  deleteapplicationresponse.cpp
   deleteapplicationsnapshotrequest.cpp
   deleteapplicationsnapshotresponse.cpp
   deleteapplicationvpcconfigurationrequest.cpp
@@ -172,15 +175,12 @@ add_library(QtAwsKinesisAnalyticsV2
   describeapplicationversionresponse.cpp
   discoverinputschemarequest.cpp
   discoverinputschemaresponse.cpp
-  kinesisanalyticsv2client.cpp
-  kinesisanalyticsv2request.cpp
-  kinesisanalyticsv2response.cpp
   listapplicationsnapshotsrequest.cpp
   listapplicationsnapshotsresponse.cpp
-  listapplicationsrequest.cpp
-  listapplicationsresponse.cpp
   listapplicationversionsrequest.cpp
   listapplicationversionsresponse.cpp
+  listapplicationsrequest.cpp
+  listapplicationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   rollbackapplicationrequest.cpp
@@ -193,10 +193,10 @@ add_library(QtAwsKinesisAnalyticsV2
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updateapplicationmaintenanceconfigurationrequest.cpp
-  updateapplicationmaintenanceconfigurationresponse.cpp
   updateapplicationrequest.cpp
-  updateapplicationresponse.cpp)
+  updateapplicationresponse.cpp
+  updateapplicationmaintenanceconfigurationrequest.cpp
+  updateapplicationmaintenanceconfigurationresponse.cpp)
 
 target_link_libraries(QtAwsKinesisAnalyticsV2
   PRIVATE QtAwsCore

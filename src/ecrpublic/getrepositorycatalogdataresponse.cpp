@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryCatalogDataResponse
- * \brief The GetRepositoryCatalogDataResponse class provides an interace for ECRPublic GetRepositoryCatalogData responses.
+ * \class QtAws::EcrPublic::GetRepositoryCatalogDataResponse
+ * \brief The GetRepositoryCatalogDataResponse class provides an interace for EcrPublic GetRepositoryCatalogData responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getRepositoryCatalogData
+ * \sa EcrPublicClient::getRepositoryCatalogData
  */
 
 /*!
@@ -52,7 +52,7 @@ GetRepositoryCatalogDataResponse::GetRepositoryCatalogDataResponse(
         const GetRepositoryCatalogDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new GetRepositoryCatalogDataResponsePrivate(this), parent)
+    : EcrPublicResponse(new GetRepositoryCatalogDataResponsePrivate(this), parent)
 {
     setRequest(new GetRepositoryCatalogDataRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const GetRepositoryCatalogDataRequest * GetRepositoryCatalogDataResponse::reques
 
 /*!
  * \reimp
- * Parses a successful ECRPublic GetRepositoryCatalogData \a response.
+ * Parses a successful EcrPublic GetRepositoryCatalogData \a response.
  */
 void GetRepositoryCatalogDataResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void GetRepositoryCatalogDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::GetRepositoryCatalogDataResponsePrivate
+ * \class QtAws::EcrPublic::GetRepositoryCatalogDataResponsePrivate
  * \brief The GetRepositoryCatalogDataResponsePrivate class provides private implementation for GetRepositoryCatalogDataResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a GetRepositoryCatalogDataResponsePrivate object with public implementation \a q.
  */
 GetRepositoryCatalogDataResponsePrivate::GetRepositoryCatalogDataResponsePrivate(
-    GetRepositoryCatalogDataResponse * const q) : ECRPublicResponsePrivate(q)
+    GetRepositoryCatalogDataResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic GetRepositoryCatalogData response element from \a xml.
+ * Parses a EcrPublic GetRepositoryCatalogData response element from \a xml.
  */
 void GetRepositoryCatalogDataResponsePrivate::parseGetRepositoryCatalogDataResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void GetRepositoryCatalogDataResponsePrivate::parseGetRepositoryCatalogDataRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

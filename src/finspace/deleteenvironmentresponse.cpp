@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::DeleteEnvironmentResponse
- * \brief The DeleteEnvironmentResponse class provides an interace for finspace DeleteEnvironment responses.
+ * \class QtAws::Finspace::DeleteEnvironmentResponse
+ * \brief The DeleteEnvironmentResponse class provides an interace for Finspace DeleteEnvironment responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::deleteEnvironment
+ * \sa FinspaceClient::deleteEnvironment
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteEnvironmentResponse::DeleteEnvironmentResponse(
         const DeleteEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new DeleteEnvironmentResponsePrivate(this), parent)
+    : FinspaceResponse(new DeleteEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new DeleteEnvironmentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace DeleteEnvironment \a response.
+ * Parses a successful Finspace DeleteEnvironment \a response.
  */
 void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::DeleteEnvironmentResponsePrivate
+ * \class QtAws::Finspace::DeleteEnvironmentResponsePrivate
  * \brief The DeleteEnvironmentResponsePrivate class provides private implementation for DeleteEnvironmentResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a DeleteEnvironmentResponsePrivate object with public implementation \a q.
  */
 DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponsePrivate(
-    DeleteEnvironmentResponse * const q) : finspaceResponsePrivate(q)
+    DeleteEnvironmentResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace DeleteEnvironment response element from \a xml.
+ * Parses a Finspace DeleteEnvironment response element from \a xml.
  */
 void DeleteEnvironmentResponsePrivate::parseDeleteEnvironmentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteEnvironmentResponsePrivate::parseDeleteEnvironmentResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

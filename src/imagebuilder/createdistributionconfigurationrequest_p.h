@@ -24,14 +24,14 @@
 #include "createdistributionconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class CreateDistributionConfigurationRequest;
 
-class CreateDistributionConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class CreateDistributionConfigurationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    CreateDistributionConfigurationRequestPrivate(const imagebuilderRequest::Action action,
+    CreateDistributionConfigurationRequestPrivate(const ImageBuilderRequest::Action action,
                                    CreateDistributionConfigurationRequest * const q);
     CreateDistributionConfigurationRequestPrivate(const CreateDistributionConfigurationRequestPrivate &other,
                                    CreateDistributionConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

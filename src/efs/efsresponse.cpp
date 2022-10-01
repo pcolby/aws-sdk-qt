@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::EfsResponse
- * \brief The EfsResponse class provides an interface for EFS responses.
+ * \class QtAws::Efs::EfsResponse
+ * \brief The EfsResponse class provides an interface for Efs responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -76,11 +76,11 @@ void EfsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::EfsResponsePrivate
+ * \class QtAws::Efs::EfsResponsePrivate
  * \brief The EfsResponsePrivate class provides private implementation for EfsResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -92,5 +92,5 @@ EfsResponsePrivate::EfsResponsePrivate(
 
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

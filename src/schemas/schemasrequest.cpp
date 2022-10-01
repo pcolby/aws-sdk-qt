@@ -274,7 +274,7 @@ QNetworkRequest SchemasRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SchemasRequestPrivate::SchemasRequestPrivate(const SchemasRequest::Action action, SchemasRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-12-02"))
 {
 
 }

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSELASTICTRANSCODER_LIBRARY)
 
 add_library(QtAwsElasticTranscoder
+  qtawselastictranscoderglobal.h
+  elastictranscoderclient.h
+  elastictranscoderclient_p.h
+  elastictranscoderrequest.h
+  elastictranscoderrequest_p.h
+  elastictranscoderresponse.h
+  elastictranscoderresponse_p.h
   canceljobrequest.h
   canceljobrequest_p.h
   canceljobresponse.h
@@ -25,12 +32,6 @@ add_library(QtAwsElasticTranscoder
   deletepresetrequest_p.h
   deletepresetresponse.h
   deletepresetresponse_p.h
-  elastictranscoderclient.h
-  elastictranscoderclient_p.h
-  elastictranscoderrequest.h
-  elastictranscoderrequest_p.h
-  elastictranscoderresponse.h
-  elastictranscoderresponse_p.h
   listjobsbypipelinerequest.h
   listjobsbypipelinerequest_p.h
   listjobsbypipelineresponse.h
@@ -47,7 +48,6 @@ add_library(QtAwsElasticTranscoder
   listpresetsrequest_p.h
   listpresetsresponse.h
   listpresetsresponse_p.h
-  qtawselastictranscoderglobal.h
   readjobrequest.h
   readjobrequest_p.h
   readjobresponse.h
@@ -64,18 +64,21 @@ add_library(QtAwsElasticTranscoder
   testrolerequest_p.h
   testroleresponse.h
   testroleresponse_p.h
-  updatepipelinenotificationsrequest.h
-  updatepipelinenotificationsrequest_p.h
-  updatepipelinenotificationsresponse.h
-  updatepipelinenotificationsresponse_p.h
   updatepipelinerequest.h
   updatepipelinerequest_p.h
   updatepipelineresponse.h
   updatepipelineresponse_p.h
+  updatepipelinenotificationsrequest.h
+  updatepipelinenotificationsrequest_p.h
+  updatepipelinenotificationsresponse.h
+  updatepipelinenotificationsresponse_p.h
   updatepipelinestatusrequest.h
   updatepipelinestatusrequest_p.h
   updatepipelinestatusresponse.h
   updatepipelinestatusresponse_p.h
+  elastictranscoderclient.cpp
+  elastictranscoderrequest.cpp
+  elastictranscoderresponse.cpp
   canceljobrequest.cpp
   canceljobresponse.cpp
   createjobrequest.cpp
@@ -88,9 +91,6 @@ add_library(QtAwsElasticTranscoder
   deletepipelineresponse.cpp
   deletepresetrequest.cpp
   deletepresetresponse.cpp
-  elastictranscoderclient.cpp
-  elastictranscoderrequest.cpp
-  elastictranscoderresponse.cpp
   listjobsbypipelinerequest.cpp
   listjobsbypipelineresponse.cpp
   listjobsbystatusrequest.cpp
@@ -107,10 +107,10 @@ add_library(QtAwsElasticTranscoder
   readpresetresponse.cpp
   testrolerequest.cpp
   testroleresponse.cpp
-  updatepipelinenotificationsrequest.cpp
-  updatepipelinenotificationsresponse.cpp
   updatepipelinerequest.cpp
   updatepipelineresponse.cpp
+  updatepipelinenotificationsrequest.cpp
+  updatepipelinenotificationsresponse.cpp
   updatepipelinestatusrequest.cpp
   updatepipelinestatusresponse.cpp)
 

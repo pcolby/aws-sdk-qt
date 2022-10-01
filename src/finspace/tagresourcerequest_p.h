@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public finspaceRequestPrivate {
+class TagResourceRequestPrivate : public FinspaceRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const finspaceRequest::Action action,
+    TagResourceRequestPrivate(const FinspaceRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

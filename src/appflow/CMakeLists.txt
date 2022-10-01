@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPFLOW_LIBRARY)
 
 add_library(QtAwsAppflow
+  qtawsappflowglobal.h
   appflowclient.h
   appflowclient_p.h
   appflowrequest.h
@@ -23,6 +24,10 @@ add_library(QtAwsAppflow
   deleteflowrequest_p.h
   deleteflowresponse.h
   deleteflowresponse_p.h
+  describeconnectorrequest.h
+  describeconnectorrequest_p.h
+  describeconnectorresponse.h
+  describeconnectorresponse_p.h
   describeconnectorentityrequest.h
   describeconnectorentityrequest_p.h
   describeconnectorentityresponse.h
@@ -35,18 +40,22 @@ add_library(QtAwsAppflow
   describeconnectorsrequest_p.h
   describeconnectorsresponse.h
   describeconnectorsresponse_p.h
-  describeflowexecutionrecordsrequest.h
-  describeflowexecutionrecordsrequest_p.h
-  describeflowexecutionrecordsresponse.h
-  describeflowexecutionrecordsresponse_p.h
   describeflowrequest.h
   describeflowrequest_p.h
   describeflowresponse.h
   describeflowresponse_p.h
+  describeflowexecutionrecordsrequest.h
+  describeflowexecutionrecordsrequest_p.h
+  describeflowexecutionrecordsresponse.h
+  describeflowexecutionrecordsresponse_p.h
   listconnectorentitiesrequest.h
   listconnectorentitiesrequest_p.h
   listconnectorentitiesresponse.h
   listconnectorentitiesresponse_p.h
+  listconnectorsrequest.h
+  listconnectorsrequest_p.h
+  listconnectorsresponse.h
+  listconnectorsresponse_p.h
   listflowsrequest.h
   listflowsrequest_p.h
   listflowsresponse.h
@@ -55,7 +64,10 @@ add_library(QtAwsAppflow
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsappflowglobal.h
+  registerconnectorrequest.h
+  registerconnectorrequest_p.h
+  registerconnectorresponse.h
+  registerconnectorresponse_p.h
   startflowrequest.h
   startflowrequest_p.h
   startflowresponse.h
@@ -68,6 +80,10 @@ add_library(QtAwsAppflow
   tagresourcerequest_p.h
   tagresourceresponse.h
   tagresourceresponse_p.h
+  unregisterconnectorrequest.h
+  unregisterconnectorrequest_p.h
+  unregisterconnectorresponse.h
+  unregisterconnectorresponse_p.h
   untagresourcerequest.h
   untagresourcerequest_p.h
   untagresourceresponse.h
@@ -91,28 +107,36 @@ add_library(QtAwsAppflow
   deleteconnectorprofileresponse.cpp
   deleteflowrequest.cpp
   deleteflowresponse.cpp
+  describeconnectorrequest.cpp
+  describeconnectorresponse.cpp
   describeconnectorentityrequest.cpp
   describeconnectorentityresponse.cpp
   describeconnectorprofilesrequest.cpp
   describeconnectorprofilesresponse.cpp
   describeconnectorsrequest.cpp
   describeconnectorsresponse.cpp
-  describeflowexecutionrecordsrequest.cpp
-  describeflowexecutionrecordsresponse.cpp
   describeflowrequest.cpp
   describeflowresponse.cpp
+  describeflowexecutionrecordsrequest.cpp
+  describeflowexecutionrecordsresponse.cpp
   listconnectorentitiesrequest.cpp
   listconnectorentitiesresponse.cpp
+  listconnectorsrequest.cpp
+  listconnectorsresponse.cpp
   listflowsrequest.cpp
   listflowsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  registerconnectorrequest.cpp
+  registerconnectorresponse.cpp
   startflowrequest.cpp
   startflowresponse.cpp
   stopflowrequest.cpp
   stopflowresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
+  unregisterconnectorrequest.cpp
+  unregisterconnectorresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateconnectorprofilerequest.cpp

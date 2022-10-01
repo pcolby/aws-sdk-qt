@@ -24,11 +24,11 @@
 #include "putcomponentpolicyrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class PutComponentPolicyResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT PutComponentPolicyResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT PutComponentPolicyResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2Response;
+class SESv2Response;
 
-class Sesv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SESv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit Sesv2ResponsePrivate(Sesv2Response * const q);
+    explicit SESv2ResponsePrivate(SESv2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(Sesv2Response)
-    Q_DISABLE_COPY(Sesv2ResponsePrivate)
+    Q_DECLARE_PUBLIC(SESv2Response)
+    Q_DISABLE_COPY(SESv2ResponsePrivate)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

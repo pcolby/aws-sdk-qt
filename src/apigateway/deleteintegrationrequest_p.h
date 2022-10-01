@@ -24,14 +24,14 @@
 #include "deleteintegrationrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteIntegrationRequest;
 
-class DeleteIntegrationRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteIntegrationRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteIntegrationRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteIntegrationRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteIntegrationRequest * const q);
     DeleteIntegrationRequestPrivate(const DeleteIntegrationRequestPrivate &other,
                                    DeleteIntegrationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

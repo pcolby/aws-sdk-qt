@@ -24,11 +24,11 @@
 #include "deletecomponentrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteComponentResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT DeleteComponentResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteComponentResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SubscribeResponse
- * \brief The SubscribeResponse class provides an interace for SNS Subscribe responses.
+ * \class QtAws::Sns::SubscribeResponse
+ * \brief The SubscribeResponse class provides an interace for Sns Subscribe responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const SubscribeRequest * SubscribeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS Subscribe \a response.
+ * Parses a successful Sns Subscribe \a response.
  */
 void SubscribeResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void SubscribeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::SubscribeResponsePrivate
+ * \class QtAws::Sns::SubscribeResponsePrivate
  * \brief The SubscribeResponsePrivate class provides private implementation for SubscribeResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ SubscribeResponsePrivate::SubscribeResponsePrivate(
 }
 
 /*!
- * Parses a SNS Subscribe response element from \a xml.
+ * Parses a Sns Subscribe response element from \a xml.
  */
 void SubscribeResponsePrivate::parseSubscribeResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void SubscribeResponsePrivate::parseSubscribeResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

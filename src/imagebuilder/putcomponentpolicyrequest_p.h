@@ -24,14 +24,14 @@
 #include "putcomponentpolicyrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class PutComponentPolicyRequest;
 
-class PutComponentPolicyRequestPrivate : public imagebuilderRequestPrivate {
+class PutComponentPolicyRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    PutComponentPolicyRequestPrivate(const imagebuilderRequest::Action action,
+    PutComponentPolicyRequestPrivate(const ImageBuilderRequest::Action action,
                                    PutComponentPolicyRequest * const q);
     PutComponentPolicyRequestPrivate(const PutComponentPolicyRequestPrivate &other,
                                    PutComponentPolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

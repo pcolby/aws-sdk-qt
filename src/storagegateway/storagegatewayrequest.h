@@ -125,6 +125,7 @@ public:
         UpdateNFSFileShareAction,
         UpdateSMBFileShareAction,
         UpdateSMBFileShareVisibilityAction,
+        UpdateSMBLocalGroupsAction,
         UpdateSMBSecurityStrategyAction,
         UpdateSnapshotScheduleAction,
         UpdateVTLDeviceTypeAction,

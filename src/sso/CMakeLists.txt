@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSSO_LIBRARY)
 
 add_library(QtAwsSso
+  qtawsssoglobal.h
+  ssoclient.h
+  ssoclient_p.h
+  ssorequest.h
+  ssorequest_p.h
+  ssoresponse.h
+  ssoresponse_p.h
   getrolecredentialsrequest.h
   getrolecredentialsrequest_p.h
   getrolecredentialsresponse.h
@@ -17,13 +24,9 @@ add_library(QtAwsSso
   logoutrequest_p.h
   logoutresponse.h
   logoutresponse_p.h
-  qtawsssoglobal.h
-  ssoclient.h
-  ssoclient_p.h
-  ssorequest.h
-  ssorequest_p.h
-  ssoresponse.h
-  ssoresponse_p.h
+  ssoclient.cpp
+  ssorequest.cpp
+  ssoresponse.cpp
   getrolecredentialsrequest.cpp
   getrolecredentialsresponse.cpp
   listaccountrolesrequest.cpp
@@ -31,10 +34,7 @@ add_library(QtAwsSso
   listaccountsrequest.cpp
   listaccountsresponse.cpp
   logoutrequest.cpp
-  logoutresponse.cpp
-  ssoclient.cpp
-  ssorequest.cpp
-  ssoresponse.cpp)
+  logoutresponse.cpp)
 
 target_link_libraries(QtAwsSso
   PRIVATE QtAwsCore

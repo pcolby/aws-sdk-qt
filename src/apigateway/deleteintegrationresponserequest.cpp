@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteIntegrationResponseRequest
- * \brief The DeleteIntegrationResponseRequest class provides an interface for APIGateway DeleteIntegrationResponse requests.
+ * \class QtAws::ApiGateway::DeleteIntegrationResponseRequest
+ * \brief The DeleteIntegrationResponseRequest class provides an interface for ApiGateway DeleteIntegrationResponse requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteIntegrationResponse
+ * \sa ApiGatewayClient::deleteIntegrationResponse
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest(const DeleteIntegrationResponseRequest &other)
-    : APIGatewayRequest(new DeleteIntegrationResponseRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteIntegrationResponseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest(const DeleteI
  * Constructs a DeleteIntegrationResponseRequest object.
  */
 DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest()
-    : APIGatewayRequest(new DeleteIntegrationResponseRequestPrivate(APIGatewayRequest::DeleteIntegrationResponseAction, this))
+    : ApiGatewayRequest(new DeleteIntegrationResponseRequestPrivate(ApiGatewayRequest::DeleteIntegrationResponseAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QN
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteIntegrationResponseRequestPrivate
+ * \class QtAws::ApiGateway::DeleteIntegrationResponseRequestPrivate
  * \brief The DeleteIntegrationResponseRequestPrivate class provides private implementation for DeleteIntegrationResponseRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteIntegrationResponseRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteIntegrationResponseRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteIntegrationResponseRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteIntegrationResponseRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate
  */
 DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate(
     const DeleteIntegrationResponseRequestPrivate &other, DeleteIntegrationResponseRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

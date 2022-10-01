@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBClientPrivate;
+class DocDbClientPrivate;
 class AddSourceIdentifierToSubscriptionRequest;
 class AddSourceIdentifierToSubscriptionResponse;
 class AddTagsToResourceRequest;
@@ -137,17 +137,17 @@ class StartDBClusterResponse;
 class StopDBClusterRequest;
 class StopDBClusterResponse;
 
-class QTAWSDOCDB_EXPORT DocDBClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDOCDB_EXPORT DocDbClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    DocDBClient(
+    DocDbClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit DocDBClient(
+    explicit DocDbClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -208,12 +208,12 @@ public slots:
     StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(DocDBClient)
-    Q_DISABLE_COPY(DocDBClient)
+    Q_DECLARE_PRIVATE(DocDbClient)
+    Q_DISABLE_COPY(DocDbClient)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "getpatchbaselinerequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class GetPatchBaselineRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

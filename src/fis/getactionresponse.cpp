@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::GetActionResponse
- * \brief The GetActionResponse class provides an interace for FIS GetAction responses.
+ * \class QtAws::Fis::GetActionResponse
+ * \brief The GetActionResponse class provides an interace for Fis GetAction responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::getAction
  */
@@ -64,7 +64,7 @@ const GetActionRequest * GetActionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FIS GetAction \a response.
+ * Parses a successful Fis GetAction \a response.
  */
 void GetActionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void GetActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::GetActionResponsePrivate
+ * \class QtAws::Fis::GetActionResponsePrivate
  * \brief The GetActionResponsePrivate class provides private implementation for GetActionResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ GetActionResponsePrivate::GetActionResponsePrivate(
 }
 
 /*!
- * Parses a FIS GetAction response element from \a xml.
+ * Parses a Fis GetAction response element from \a xml.
  */
 void GetActionResponsePrivate::parseGetActionResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetActionResponsePrivate::parseGetActionResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteGlobalClusterResponse
- * \brief The DeleteGlobalClusterResponse class provides an interace for DocDB DeleteGlobalCluster responses.
+ * \class QtAws::DocDb::DeleteGlobalClusterResponse
+ * \brief The DeleteGlobalClusterResponse class provides an interace for DocDb DeleteGlobalCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteGlobalCluster
+ * \sa DocDbClient::deleteGlobalCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteGlobalClusterResponse::DeleteGlobalClusterResponse(
         const DeleteGlobalClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DeleteGlobalClusterResponsePrivate(this), parent)
+    : DocDbResponse(new DeleteGlobalClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteGlobalClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteGlobalClusterRequest * DeleteGlobalClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DeleteGlobalCluster \a response.
+ * Parses a successful DocDb DeleteGlobalCluster \a response.
  */
 void DeleteGlobalClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteGlobalClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DeleteGlobalClusterResponsePrivate
+ * \class QtAws::DocDb::DeleteGlobalClusterResponsePrivate
  * \brief The DeleteGlobalClusterResponsePrivate class provides private implementation for DeleteGlobalClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DeleteGlobalClusterResponsePrivate object with public implementation \a q.
  */
 DeleteGlobalClusterResponsePrivate::DeleteGlobalClusterResponsePrivate(
-    DeleteGlobalClusterResponse * const q) : DocDBResponsePrivate(q)
+    DeleteGlobalClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DeleteGlobalCluster response element from \a xml.
+ * Parses a DocDb DeleteGlobalCluster response element from \a xml.
  */
 void DeleteGlobalClusterResponsePrivate::parseDeleteGlobalClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteGlobalClusterResponsePrivate::parseDeleteGlobalClusterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCODESTARCONNECTIONS_LIBRARY)
 
 add_library(QtAwsCodeStarconnections
+  qtawscodestarconnectionsglobal.h
   codestarconnectionsclient.h
   codestarconnectionsclient_p.h
   codestarconnectionsrequest.h
@@ -43,7 +44,6 @@ add_library(QtAwsCodeStarconnections
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawscodestarconnectionsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

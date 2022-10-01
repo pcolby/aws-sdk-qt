@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetResourcePoliciesResponse
- * \brief The GetResourcePoliciesResponse class provides an interace for SSMIncidents GetResourcePolicies responses.
+ * \class QtAws::SsmIncidents::GetResourcePoliciesResponse
+ * \brief The GetResourcePoliciesResponse class provides an interace for SsmIncidents GetResourcePolicies responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getResourcePolicies
+ * \sa SsmIncidentsClient::getResourcePolicies
  */
 
 /*!
@@ -54,7 +54,7 @@ GetResourcePoliciesResponse::GetResourcePoliciesResponse(
         const GetResourcePoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new GetResourcePoliciesResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new GetResourcePoliciesResponsePrivate(this), parent)
 {
     setRequest(new GetResourcePoliciesRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const GetResourcePoliciesRequest * GetResourcePoliciesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents GetResourcePolicies \a response.
+ * Parses a successful SsmIncidents GetResourcePolicies \a response.
  */
 void GetResourcePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void GetResourcePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetResourcePoliciesResponsePrivate
+ * \class QtAws::SsmIncidents::GetResourcePoliciesResponsePrivate
  * \brief The GetResourcePoliciesResponsePrivate class provides private implementation for GetResourcePoliciesResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a GetResourcePoliciesResponsePrivate object with public implementation \a q.
  */
 GetResourcePoliciesResponsePrivate::GetResourcePoliciesResponsePrivate(
-    GetResourcePoliciesResponse * const q) : SSMIncidentsResponsePrivate(q)
+    GetResourcePoliciesResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents GetResourcePolicies response element from \a xml.
+ * Parses a SsmIncidents GetResourcePolicies response element from \a xml.
  */
 void GetResourcePoliciesResponsePrivate::parseGetResourcePoliciesResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void GetResourcePoliciesResponsePrivate::parseGetResourcePoliciesResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DeleteClusterResponse
- * \brief The DeleteClusterResponse class provides an interace for DAX DeleteCluster responses.
+ * \class QtAws::Dax::DeleteClusterResponse
+ * \brief The DeleteClusterResponse class provides an interace for Dax DeleteCluster responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX DeleteCluster \a response.
+ * Parses a successful Dax DeleteCluster \a response.
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DeleteClusterResponsePrivate
+ * \class QtAws::Dax::DeleteClusterResponsePrivate
  * \brief The DeleteClusterResponsePrivate class provides private implementation for DeleteClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 }
 
 /*!
- * Parses a DAX DeleteCluster response element from \a xml.
+ * Parses a Dax DeleteCluster response element from \a xml.
  */
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

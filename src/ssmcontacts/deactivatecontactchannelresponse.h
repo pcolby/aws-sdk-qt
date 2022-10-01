@@ -24,11 +24,11 @@
 #include "deactivatecontactchannelrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class DeactivateContactChannelResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT DeactivateContactChannelResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT DeactivateContactChannelResponse : public SsmContactsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

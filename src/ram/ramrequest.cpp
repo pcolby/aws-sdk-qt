@@ -21,49 +21,50 @@
 #include "ramrequest_p.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 /*!
- * \class QtAws::RAM::RamRequest
- * \brief The RamRequest class provides an interface for RAM requests.
+ * \class QtAws::Ram::RamRequest
+ * \brief The RamRequest class provides an interface for Ram requests.
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
  * \enum RamRequest::Action
  *
- * This enum describes the actions that can be performed as RAM
+ * This enum describes the actions that can be performed as Ram
  * requests.
  *
- * \value AcceptResourceShareInvitationAction RAM AcceptResourceShareInvitation action.
- * \value AssociateResourceShareAction RAM AssociateResourceShare action.
- * \value AssociateResourceSharePermissionAction RAM AssociateResourceSharePermission action.
- * \value CreateResourceShareAction RAM CreateResourceShare action.
- * \value DeleteResourceShareAction RAM DeleteResourceShare action.
- * \value DisassociateResourceShareAction RAM DisassociateResourceShare action.
- * \value DisassociateResourceSharePermissionAction RAM DisassociateResourceSharePermission action.
- * \value EnableSharingWithAwsOrganizationAction RAM EnableSharingWithAwsOrganization action.
- * \value GetPermissionAction RAM GetPermission action.
- * \value GetResourcePoliciesAction RAM GetResourcePolicies action.
- * \value GetResourceShareAssociationsAction RAM GetResourceShareAssociations action.
- * \value GetResourceShareInvitationsAction RAM GetResourceShareInvitations action.
- * \value GetResourceSharesAction RAM GetResourceShares action.
- * \value ListPendingInvitationResourcesAction RAM ListPendingInvitationResources action.
- * \value ListPermissionsAction RAM ListPermissions action.
- * \value ListPrincipalsAction RAM ListPrincipals action.
- * \value ListResourceSharePermissionsAction RAM ListResourceSharePermissions action.
- * \value ListResourceTypesAction RAM ListResourceTypes action.
- * \value ListResourcesAction RAM ListResources action.
- * \value PromoteResourceShareCreatedFromPolicyAction RAM PromoteResourceShareCreatedFromPolicy action.
- * \value RejectResourceShareInvitationAction RAM RejectResourceShareInvitation action.
- * \value TagResourceAction RAM TagResource action.
- * \value UntagResourceAction RAM UntagResource action.
- * \value UpdateResourceShareAction RAM UpdateResourceShare action.
+ * \value AcceptResourceShareInvitationAction Ram AcceptResourceShareInvitation action.
+ * \value AssociateResourceShareAction Ram AssociateResourceShare action.
+ * \value AssociateResourceSharePermissionAction Ram AssociateResourceSharePermission action.
+ * \value CreateResourceShareAction Ram CreateResourceShare action.
+ * \value DeleteResourceShareAction Ram DeleteResourceShare action.
+ * \value DisassociateResourceShareAction Ram DisassociateResourceShare action.
+ * \value DisassociateResourceSharePermissionAction Ram DisassociateResourceSharePermission action.
+ * \value EnableSharingWithAwsOrganizationAction Ram EnableSharingWithAwsOrganization action.
+ * \value GetPermissionAction Ram GetPermission action.
+ * \value GetResourcePoliciesAction Ram GetResourcePolicies action.
+ * \value GetResourceShareAssociationsAction Ram GetResourceShareAssociations action.
+ * \value GetResourceShareInvitationsAction Ram GetResourceShareInvitations action.
+ * \value GetResourceSharesAction Ram GetResourceShares action.
+ * \value ListPendingInvitationResourcesAction Ram ListPendingInvitationResources action.
+ * \value ListPermissionVersionsAction Ram ListPermissionVersions action.
+ * \value ListPermissionsAction Ram ListPermissions action.
+ * \value ListPrincipalsAction Ram ListPrincipals action.
+ * \value ListResourceSharePermissionsAction Ram ListResourceSharePermissions action.
+ * \value ListResourceTypesAction Ram ListResourceTypes action.
+ * \value ListResourcesAction Ram ListResources action.
+ * \value PromoteResourceShareCreatedFromPolicyAction Ram PromoteResourceShareCreatedFromPolicy action.
+ * \value RejectResourceShareInvitationAction Ram RejectResourceShareInvitation action.
+ * \value TagResourceAction Ram TagResource action.
+ * \value UntagResourceAction Ram UntagResource action.
+ * \value UpdateResourceShareAction Ram UpdateResourceShare action.
  */
 
 /*!
- * Constructs a RamRequest object for RAM \a action.
+ * Constructs a RamRequest object for Ram \a action.
  */
 RamRequest::RamRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RamRequestPrivate(action, this))
@@ -104,7 +105,7 @@ RamRequest::RamRequest(RamRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the RAM action to be performed by this request.
+ * Returns the Ram action to be performed by this request.
  */
 RamRequest::Action RamRequest::action() const
 {
@@ -113,7 +114,7 @@ RamRequest::Action RamRequest::action() const
 }
 
 /*!
- * Returns the name of the RAM action to be performed by this request.
+ * Returns the name of the Ram action to be performed by this request.
  */
 QString RamRequest::actionString() const
 {
@@ -121,7 +122,7 @@ QString RamRequest::actionString() const
 }
 
 /*!
- * Returns the RAM API version implemented by this request.
+ * Returns the Ram API version implemented by this request.
  */
 QString RamRequest::apiVersion() const
 {
@@ -130,7 +131,7 @@ QString RamRequest::apiVersion() const
 }
 
 /*!
- * Sets the RAM action to be performed by this request to \a action.
+ * Sets the Ram action to be performed by this request to \a action.
  */
 void RamRequest::setAction(const Action action)
 {
@@ -139,7 +140,7 @@ void RamRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the RAM API version to include in this request to \a version.
+ * Sets the Ram API version to include in this request to \a version.
  */
 void RamRequest::setApiVersion(const QString &version)
 {
@@ -164,15 +165,15 @@ bool RamRequest::operator==(const RamRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid RAM queue name.
+ * Returns \c tue if \a queueName is a valid Ram queue name.
  *
- * @par From RAM FAQs:
+ * @par From Ram FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid RAM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ram queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -239,10 +240,10 @@ void RamRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the RAM request using the given
+ * Returns a network request for the Ram request using the given
  * \a endpoint.
  *
- * This RAM implementation builds request URLs by combining the
+ * This Ram implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -255,19 +256,19 @@ QNetworkRequest RamRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::RAM::RamRequestPrivate
+ * \class QtAws::Ram::RamRequestPrivate
  * \brief The RamRequestPrivate class provides private implementation for RamRequest.
  * \internal
  *
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
- * Constructs a RamRequestPrivate object for RAM \a action,
+ * Constructs a RamRequestPrivate object for Ram \a action,
  * with public implementation \a q.
  */
 RamRequestPrivate::RamRequestPrivate(const RamRequest::Action action, RamRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-01-04"))
 {
 
 }
@@ -293,7 +294,7 @@ RamRequestPrivate::RamRequestPrivate(const RamRequestPrivate &other,
  * invalid.
  *
  * This function converts RamRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the RAM service's Action
+ * string representations, appropriate for use with the Ram service's Action
  * query parameters.
  */
 QString RamRequestPrivate::toString(const RamRequest::Action &action)
@@ -315,6 +316,7 @@ QString RamRequestPrivate::toString(const RamRequest::Action &action)
         ActionToString(GetResourceShareInvitations);
         ActionToString(GetResourceShares);
         ActionToString(ListPendingInvitationResources);
+        ActionToString(ListPermissionVersions);
         ActionToString(ListPermissions);
         ActionToString(ListPrincipals);
         ActionToString(ListResourceSharePermissions);
@@ -332,5 +334,5 @@ QString RamRequestPrivate::toString(const RamRequest::Action &action)
     return QString();
 }
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::TerminateWorkflowExecutionResponse
- * \brief The TerminateWorkflowExecutionResponse class provides an interace for SWF TerminateWorkflowExecution responses.
+ * \class QtAws::Swf::TerminateWorkflowExecutionResponse
+ * \brief The TerminateWorkflowExecutionResponse class provides an interace for Swf TerminateWorkflowExecution responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::re
 
 /*!
  * \reimp
- * Parses a successful SWF TerminateWorkflowExecution \a response.
+ * Parses a successful Swf TerminateWorkflowExecution \a response.
  */
 void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::TerminateWorkflowExecutionResponsePrivate
+ * \class QtAws::Swf::TerminateWorkflowExecutionResponsePrivate
  * \brief The TerminateWorkflowExecutionResponsePrivate class provides private implementation for TerminateWorkflowExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePri
 }
 
 /*!
- * Parses a SWF TerminateWorkflowExecution response element from \a xml.
+ * Parses a Swf TerminateWorkflowExecution response element from \a xml.
  */
 void TerminateWorkflowExecutionResponsePrivate::parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void TerminateWorkflowExecutionResponsePrivate::parseTerminateWorkflowExecutionR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

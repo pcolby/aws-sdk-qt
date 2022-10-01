@@ -24,14 +24,14 @@
 #include "createconfigurationseteventdestinationrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateConfigurationSetEventDestinationRequest;
 
-class CreateConfigurationSetEventDestinationRequestPrivate : public Sesv2RequestPrivate {
+class CreateConfigurationSetEventDestinationRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    CreateConfigurationSetEventDestinationRequestPrivate(const Sesv2Request::Action action,
+    CreateConfigurationSetEventDestinationRequestPrivate(const SESv2Request::Action action,
                                    CreateConfigurationSetEventDestinationRequest * const q);
     CreateConfigurationSetEventDestinationRequestPrivate(const CreateConfigurationSetEventDestinationRequestPrivate &other,
                                    CreateConfigurationSetEventDestinationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

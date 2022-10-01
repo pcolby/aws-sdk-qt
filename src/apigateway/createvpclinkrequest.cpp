@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateVpcLinkRequest
- * \brief The CreateVpcLinkRequest class provides an interface for APIGateway CreateVpcLink requests.
+ * \class QtAws::ApiGateway::CreateVpcLinkRequest
+ * \brief The CreateVpcLinkRequest class provides an interface for ApiGateway CreateVpcLink requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createVpcLink
+ * \sa ApiGatewayClient::createVpcLink
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateVpcLinkRequest::CreateVpcLinkRequest(const CreateVpcLinkRequest &other)
-    : APIGatewayRequest(new CreateVpcLinkRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateVpcLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateVpcLinkRequest::CreateVpcLinkRequest(const CreateVpcLinkRequest &other)
  * Constructs a CreateVpcLinkRequest object.
  */
 CreateVpcLinkRequest::CreateVpcLinkRequest()
-    : APIGatewayRequest(new CreateVpcLinkRequestPrivate(APIGatewayRequest::CreateVpcLinkAction, this))
+    : ApiGatewayRequest(new CreateVpcLinkRequestPrivate(ApiGatewayRequest::CreateVpcLinkAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::CreateVpcLinkRequestPrivate
+ * \class QtAws::ApiGateway::CreateVpcLinkRequestPrivate
  * \brief The CreateVpcLinkRequestPrivate class provides private implementation for CreateVpcLinkRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateVpcLinkRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateVpcLinkRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
-    const APIGatewayRequest::Action action, CreateVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateVpcLinkRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
  */
 CreateVpcLinkRequestPrivate::CreateVpcLinkRequestPrivate(
     const CreateVpcLinkRequestPrivate &other, CreateVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

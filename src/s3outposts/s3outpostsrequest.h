@@ -42,6 +42,7 @@ public:
         CreateEndpointAction,
         DeleteEndpointAction,
         ListEndpointsAction,
+        ListSharedEndpointsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

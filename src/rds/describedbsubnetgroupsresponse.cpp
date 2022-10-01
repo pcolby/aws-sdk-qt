@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBSubnetGroupsResponse
- * \brief The DescribeDBSubnetGroupsResponse class provides an interace for RDS DescribeDBSubnetGroups responses.
+ * \class QtAws::Rds::DescribeDBSubnetGroupsResponse
+ * \brief The DescribeDBSubnetGroupsResponse class provides an interace for Rds DescribeDBSubnetGroups responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBSubnetGroups \a response.
+ * Parses a successful Rds DescribeDBSubnetGroups \a response.
  */
 void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBSubnetGroupsResponsePrivate
+ * \class QtAws::Rds::DescribeDBSubnetGroupsResponsePrivate
  * \brief The DescribeDBSubnetGroupsResponsePrivate class provides private implementation for DescribeDBSubnetGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeDBSubnetGroups response element from \a xml.
+ * Parses a Rds DescribeDBSubnetGroups response element from \a xml.
  */
 void DescribeDBSubnetGroupsResponsePrivate::parseDescribeDBSubnetGroupsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBSubnetGroupsResponsePrivate::parseDescribeDBSubnetGroupsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

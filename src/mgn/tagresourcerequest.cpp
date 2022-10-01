@@ -23,24 +23,24 @@
 #include "mgnrequest_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for mgn TagResource requests.
+ * \class QtAws::Mgn::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for Mgn TagResource requests.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::tagResource
+ * \sa MgnClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : mgnRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : MgnRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : mgnRequest(new TagResourceRequestPrivate(mgnRequest::TagResourceAction, this))
+    : MgnRequest(new TagResourceRequestPrivate(MgnRequest::TagResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::mgn::TagResourceRequestPrivate
+ * \class QtAws::Mgn::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for mgn \a action,
+ * Constructs a TagResourceRequestPrivate object for Mgn \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const mgnRequest::Action action, TagResourceRequest * const q)
-    : mgnRequestPrivate(action, q)
+    const MgnRequest::Action action, TagResourceRequest * const q)
+    : MgnRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : mgnRequestPrivate(other, q)
+    : MgnRequestPrivate(other, q)
 {
 
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

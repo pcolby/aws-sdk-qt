@@ -64,6 +64,7 @@ namespace Kinesis {
  * \value StopStreamEncryptionAction Kinesis StopStreamEncryption action.
  * \value SubscribeToShardAction Kinesis SubscribeToShard action.
  * \value UpdateShardCountAction Kinesis UpdateShardCount action.
+ * \value UpdateStreamModeAction Kinesis UpdateStreamMode action.
  */
 
 /*!
@@ -271,7 +272,7 @@ QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action, KinesisRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-12-02"))
 {
 
 }
@@ -333,6 +334,7 @@ QString KinesisRequestPrivate::toString(const KinesisRequest::Action &action)
         ActionToString(StopStreamEncryption);
         ActionToString(SubscribeToShard);
         ActionToString(UpdateShardCount);
+        ActionToString(UpdateStreamMode);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

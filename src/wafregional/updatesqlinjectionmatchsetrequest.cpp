@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateSqlInjectionMatchSetRequest
- * \brief The UpdateSqlInjectionMatchSetRequest class provides an interface for WAFRegional UpdateSqlInjectionMatchSet requests.
+ * \class QtAws::WafRegional::UpdateSqlInjectionMatchSetRequest
+ * \brief The UpdateSqlInjectionMatchSetRequest class provides an interface for WafRegional UpdateSqlInjectionMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateSqlInjectionMatchSet
+ * \sa WafRegionalClient::updateSqlInjectionMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest(const UpdateSqlInjectionMatchSetRequest &other)
-    : WAFRegionalRequest(new UpdateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest(const Updat
  * Constructs a UpdateSqlInjectionMatchSetRequest object.
  */
 UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest()
-    : WAFRegionalRequest(new UpdateSqlInjectionMatchSetRequestPrivate(WAFRegionalRequest::UpdateSqlInjectionMatchSetAction, this))
+    : WafRegionalRequest(new UpdateSqlInjectionMatchSetRequestPrivate(WafRegionalRequest::UpdateSqlInjectionMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateSqlInjectionMatchSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateSqlInjectionMatchSetRequestPrivate
  * \brief The UpdateSqlInjectionMatchSetRequestPrivate class provides private implementation for UpdateSqlInjectionMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateSqlInjectionMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateSqlInjectionMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateSqlInjectionMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPriva
  */
 UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPrivate(
     const UpdateSqlInjectionMatchSetRequestPrivate &other, UpdateSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

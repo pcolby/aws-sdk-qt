@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::DeleteEnvironmentRequest
- * \brief The DeleteEnvironmentRequest class provides an interface for finspace DeleteEnvironment requests.
+ * \class QtAws::Finspace::DeleteEnvironmentRequest
+ * \brief The DeleteEnvironmentRequest class provides an interface for Finspace DeleteEnvironment requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::deleteEnvironment
+ * \sa FinspaceClient::deleteEnvironment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteEnvironmentRequest::DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other)
-    : finspaceRequest(new DeleteEnvironmentRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new DeleteEnvironmentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteEnvironmentRequest::DeleteEnvironmentRequest(const DeleteEnvironmentReques
  * Constructs a DeleteEnvironmentRequest object.
  */
 DeleteEnvironmentRequest::DeleteEnvironmentRequest()
-    : finspaceRequest(new DeleteEnvironmentRequestPrivate(finspaceRequest::DeleteEnvironmentAction, this))
+    : FinspaceRequest(new DeleteEnvironmentRequestPrivate(FinspaceRequest::DeleteEnvironmentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::finspace::DeleteEnvironmentRequestPrivate
+ * \class QtAws::Finspace::DeleteEnvironmentRequestPrivate
  * \brief The DeleteEnvironmentRequestPrivate class provides private implementation for DeleteEnvironmentRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a DeleteEnvironmentRequestPrivate object for finspace \a action,
+ * Constructs a DeleteEnvironmentRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
-    const finspaceRequest::Action action, DeleteEnvironmentRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, DeleteEnvironmentRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const DeleteEnvironmentRequestPrivate &other, DeleteEnvironmentRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

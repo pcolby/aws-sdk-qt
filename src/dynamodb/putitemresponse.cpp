@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::PutItemResponse
- * \brief The PutItemResponse class provides an interace for DynamoDB PutItem responses.
+ * \class QtAws::DynamoDb::PutItemResponse
+ * \brief The PutItemResponse class provides an interace for DynamoDb PutItem responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::putItem
+ * \sa DynamoDbClient::putItem
  */
 
 /*!
@@ -63,7 +63,7 @@ PutItemResponse::PutItemResponse(
         const PutItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new PutItemResponsePrivate(this), parent)
+    : DynamoDbResponse(new PutItemResponsePrivate(this), parent)
 {
     setRequest(new PutItemRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const PutItemRequest * PutItemResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB PutItem \a response.
+ * Parses a successful DynamoDb PutItem \a response.
  */
 void PutItemResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void PutItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::PutItemResponsePrivate
+ * \class QtAws::DynamoDb::PutItemResponsePrivate
  * \brief The PutItemResponsePrivate class provides private implementation for PutItemResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a PutItemResponsePrivate object with public implementation \a q.
  */
 PutItemResponsePrivate::PutItemResponsePrivate(
-    PutItemResponse * const q) : DynamoDBResponsePrivate(q)
+    PutItemResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB PutItem response element from \a xml.
+ * Parses a DynamoDb PutItem response element from \a xml.
  */
 void PutItemResponsePrivate::parsePutItemResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void PutItemResponsePrivate::parsePutItemResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

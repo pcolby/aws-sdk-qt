@@ -256,7 +256,7 @@ QNetworkRequest IoT1ClickDevicesServiceRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 IoT1ClickDevicesServiceRequestPrivate::IoT1ClickDevicesServiceRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action, IoT1ClickDevicesServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-14"))
 {
 
 }

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetTagsRequest
- * \brief The GetTagsRequest class provides an interface for APIGateway GetTags requests.
+ * \class QtAws::ApiGateway::GetTagsRequest
+ * \brief The GetTagsRequest class provides an interface for ApiGateway GetTags requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getTags
+ * \sa ApiGatewayClient::getTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
-    : APIGatewayRequest(new GetTagsRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
  * Constructs a GetTagsRequest object.
  */
 GetTagsRequest::GetTagsRequest()
-    : APIGatewayRequest(new GetTagsRequestPrivate(APIGatewayRequest::GetTagsAction, this))
+    : ApiGatewayRequest(new GetTagsRequestPrivate(ApiGatewayRequest::GetTagsAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::APIGateway::GetTagsRequestPrivate
+ * \class QtAws::ApiGateway::GetTagsRequestPrivate
  * \brief The GetTagsRequestPrivate class provides private implementation for GetTagsRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetTagsRequestPrivate object for APIGateway \a action,
+ * Constructs a GetTagsRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
-    const APIGatewayRequest::Action action, GetTagsRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetTagsRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const GetTagsRequestPrivate &other, GetTagsRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

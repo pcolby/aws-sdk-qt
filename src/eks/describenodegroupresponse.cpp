@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeNodegroupResponse
- * \brief The DescribeNodegroupResponse class provides an interace for EKS DescribeNodegroup responses.
+ * \class QtAws::Eks::DescribeNodegroupResponse
+ * \brief The DescribeNodegroupResponse class provides an interace for Eks DescribeNodegroup responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeNodegroupRequest * DescribeNodegroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeNodegroup \a response.
+ * Parses a successful Eks DescribeNodegroup \a response.
  */
 void DescribeNodegroupResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeNodegroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeNodegroupResponsePrivate
+ * \class QtAws::Eks::DescribeNodegroupResponsePrivate
  * \brief The DescribeNodegroupResponsePrivate class provides private implementation for DescribeNodegroupResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeNodegroupResponsePrivate::DescribeNodegroupResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeNodegroup response element from \a xml.
+ * Parses a Eks DescribeNodegroup response element from \a xml.
  */
 void DescribeNodegroupResponsePrivate::parseDescribeNodegroupResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeNodegroupResponsePrivate::parseDescribeNodegroupResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

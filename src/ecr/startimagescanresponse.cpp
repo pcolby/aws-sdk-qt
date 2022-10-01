@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::StartImageScanResponse
- * \brief The StartImageScanResponse class provides an interace for ECR StartImageScan responses.
+ * \class QtAws::Ecr::StartImageScanResponse
+ * \brief The StartImageScanResponse class provides an interace for Ecr StartImageScan responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::startImageScan
  */
@@ -68,7 +74,7 @@ const StartImageScanRequest * StartImageScanResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR StartImageScan \a response.
+ * Parses a successful Ecr StartImageScan \a response.
  */
 void StartImageScanResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void StartImageScanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::StartImageScanResponsePrivate
+ * \class QtAws::Ecr::StartImageScanResponsePrivate
  * \brief The StartImageScanResponsePrivate class provides private implementation for StartImageScanResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ StartImageScanResponsePrivate::StartImageScanResponsePrivate(
 }
 
 /*!
- * Parses a ECR StartImageScan response element from \a xml.
+ * Parses a Ecr StartImageScan response element from \a xml.
  */
 void StartImageScanResponsePrivate::parseStartImageScanResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void StartImageScanResponsePrivate::parseStartImageScanResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

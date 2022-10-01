@@ -24,7 +24,7 @@
 #include "describefargateprofilerequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DescribeFargateProfileRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

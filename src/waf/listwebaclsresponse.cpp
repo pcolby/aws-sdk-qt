@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListWebACLsResponse
- * \brief The ListWebACLsResponse class provides an interace for WAF ListWebACLs responses.
+ * \class QtAws::Waf::ListWebACLsResponse
+ * \brief The ListWebACLsResponse class provides an interace for Waf ListWebACLs responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListWebACLsRequest * ListWebACLsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListWebACLs \a response.
+ * Parses a successful Waf ListWebACLs \a response.
  */
 void ListWebACLsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListWebACLsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListWebACLsResponsePrivate
+ * \class QtAws::Waf::ListWebACLsResponsePrivate
  * \brief The ListWebACLsResponsePrivate class provides private implementation for ListWebACLsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListWebACLs response element from \a xml.
+ * Parses a Waf ListWebACLs response element from \a xml.
  */
 void ListWebACLsResponsePrivate::parseListWebACLsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListWebACLsResponsePrivate::parseListWebACLsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

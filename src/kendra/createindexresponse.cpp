@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateIndexResponse
- * \brief The CreateIndexResponse class provides an interace for kendra CreateIndex responses.
+ * \class QtAws::Kendra::CreateIndexResponse
+ * \brief The CreateIndexResponse class provides an interace for Kendra CreateIndex responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createIndex
+ * \sa KendraClient::createIndex
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateIndexResponse::CreateIndexResponse(
         const CreateIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new CreateIndexResponsePrivate(this), parent)
+    : KendraResponse(new CreateIndexResponsePrivate(this), parent)
 {
     setRequest(new CreateIndexRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateIndexRequest * CreateIndexResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra CreateIndex \a response.
+ * Parses a successful Kendra CreateIndex \a response.
  */
 void CreateIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::CreateIndexResponsePrivate
+ * \class QtAws::Kendra::CreateIndexResponsePrivate
  * \brief The CreateIndexResponsePrivate class provides private implementation for CreateIndexResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a CreateIndexResponsePrivate object with public implementation \a q.
  */
 CreateIndexResponsePrivate::CreateIndexResponsePrivate(
-    CreateIndexResponse * const q) : kendraResponsePrivate(q)
+    CreateIndexResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra CreateIndex response element from \a xml.
+ * Parses a Kendra CreateIndex response element from \a xml.
  */
 void CreateIndexResponsePrivate::parseCreateIndexResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateIndexResponsePrivate::parseCreateIndexResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "getendpointattributesrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class GetEndpointAttributesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

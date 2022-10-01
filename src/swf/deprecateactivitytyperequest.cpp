@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::DeprecateActivityTypeRequest
- * \brief The DeprecateActivityTypeRequest class provides an interface for SWF DeprecateActivityType requests.
+ * \class QtAws::Swf::DeprecateActivityTypeRequest
+ * \brief The DeprecateActivityTypeRequest class provides an interface for Swf DeprecateActivityType requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::SWF::DeprecateActivityTypeRequestPrivate
+ * \class QtAws::Swf::DeprecateActivityTypeRequestPrivate
  * \brief The DeprecateActivityTypeRequestPrivate class provides private implementation for DeprecateActivityTypeRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

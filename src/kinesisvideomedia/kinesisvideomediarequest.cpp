@@ -244,7 +244,7 @@ QNetworkRequest KinesisVideoMediaRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVideoMediaRequest::Action action, KinesisVideoMediaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-30"))
 {
 
 }

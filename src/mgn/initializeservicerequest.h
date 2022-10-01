@@ -23,11 +23,11 @@
 #include "mgnrequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class InitializeServiceRequestPrivate;
 
-class QTAWSMGN_EXPORT InitializeServiceRequest : public mgnRequest {
+class QTAWSMGN_EXPORT InitializeServiceRequest : public MgnRequest {
 
 public:
     InitializeServiceRequest(const InitializeServiceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

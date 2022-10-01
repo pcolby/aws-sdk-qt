@@ -24,14 +24,14 @@
 #include "listgeomatchsetsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListGeoMatchSetsRequest;
 
-class ListGeoMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
+class ListGeoMatchSetsRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListGeoMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,
+    ListGeoMatchSetsRequestPrivate(const WafRegionalRequest::Action action,
                                    ListGeoMatchSetsRequest * const q);
     ListGeoMatchSetsRequestPrivate(const ListGeoMatchSetsRequestPrivate &other,
                                    ListGeoMatchSetsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

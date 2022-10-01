@@ -40,8 +40,18 @@ public:
     /// Actions supported by TimestreamQuery.
     enum Action {
         CancelQueryAction,
+        CreateScheduledQueryAction,
+        DeleteScheduledQueryAction,
         DescribeEndpointsAction,
+        DescribeScheduledQueryAction,
+        ExecuteScheduledQueryAction,
+        ListScheduledQueriesAction,
+        ListTagsForResourceAction,
+        PrepareQueryAction,
         QueryAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateScheduledQueryAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

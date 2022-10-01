@@ -33,9 +33,9 @@ namespace Proton {
  *
  * \inmodule QtAwsProton
  *
- *  This is the AWS Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
+ *  This is the Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
  *  href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Operations.html">actions</a> and <a
- *  href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the AWS Proton
+ *  href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the Proton
  * 
  *  service>
  * 
@@ -43,35 +43,36 @@ namespace Proton {
  * 
  *  response>
  * 
- *  Alternatively, you can use the AWS CLI to access an API. For more information, see the <a
- *  href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS Command Line Interface User
+ *  Alternatively, you can use the Amazon Web Services CLI to access an API. For more information, see the <a
+ *  href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">Amazon Web Services Command Line Interface
+ *  User
  * 
  *  Guide</a>>
  * 
- *  The AWS Proton service is a two-pronged automation framework. Administrators create service templates to provide
+ *  The Proton service is a two-pronged automation framework. Administrators create service templates to provide
  *  standardized infrastructure and deployment tooling for serverless and container based applications. Developers, in turn,
  *  select from the available service templates to automate their application or service
  * 
  *  deployments>
  * 
- *  Because administrators define the infrastructure and tooling that AWS Proton deploys and manages, they need permissions
- *  to use all of the listed API
+ *  Because administrators define the infrastructure and tooling that Proton deploys and manages, they need permissions to
+ *  use all of the listed API
  * 
  *  operations>
  * 
- *  When developers select a specific infrastructure and tooling set, AWS Proton deploys their applications. To monitor
- *  their applications that are running on AWS Proton, developers need permissions to the service <i>create</i>,
- *  <i>list</i>, <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API
+ *  When developers select a specific infrastructure and tooling set, Proton deploys their applications. To monitor their
+ *  applications that are running on Proton, developers need permissions to the service <i>create</i>, <i>list</i>,
+ *  <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API
  * 
  *  operations>
  * 
- *  To learn more about AWS Proton administration, see the <a
- *  href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administration
+ *  To learn more about Proton administration, see the <a
+ *  href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">Proton Administrator
  * 
  *  Guide</a>>
  * 
- *  To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
- *  href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">AWS Proton User
+ *  To learn more about deploying serverless and containerized applications on Proton, see the <a
+ *  href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton User
  * 
  *  Guide</a>>
  * 
@@ -102,11 +103,11 @@ namespace Proton {
  * 
  *  </p
  * 
- *  The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding AWS CLI
- *  commands also support idempotency using a client token. A client token is a unique, case-sensitive string of up to 64
- *  ASCII characters. To make an idempotent API request using one of these actions, specify a client token in the request.
- *  We recommend that you <i>don't</i> reuse the same client token for other API requests. If you don’t provide a client
- *  token for these APIs, a default client token is automatically provided by
+ *  The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding Amazon Web
+ *  Services CLI commands also support idempotency using a client token. A client token is a unique, case-sensitive string
+ *  of up to 64 ASCII characters. To make an idempotent API request using one of these actions, specify a client token in
+ *  the request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you don’t provide
+ *  a client token for these APIs, a default client token is automatically provided by
  * 
  *  SDKs>
  * 
@@ -141,20 +142,99 @@ namespace Proton {
  * 
  *  CreateServiceTemplateVersio> </li> <li>
  * 
- *  CreateEnvironmentAccountConnectio> </li> </ul> <pre><code> &lt;p&gt; &lt;b&gt;Idempotent delete APIs&lt;/b&gt;
- *  &lt;/p&gt; &lt;p&gt;Given a request action that has succeeded:&lt;/p&gt; &lt;p&gt;When you retry the request with an API
- *  from this group and the resource was deleted, its metadata is returned in the response.&lt;/p&gt; &lt;p&gt;If you retry
- *  and the resource doesn't exist, the response is empty.&lt;/p&gt; &lt;p&gt;In both cases, the retry succeeds.&lt;/p&gt;
- *  &lt;p&gt;Idempotent delete APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplate&lt;/p&gt;
- *  &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplateVersion&lt;/p&gt; &lt;/li&gt; &lt;li&gt;
- *  &lt;p&gt;DeleteServiceTemplate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteServiceTemplateVersion&lt;/p&gt;
- *  &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentAccountConnection&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;
- *  &lt;b&gt;Asynchronous idempotent delete APIs&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Given a request action that has
- *  succeeded:&lt;/p&gt; &lt;p&gt;If you retry the request with an API from this group, if the original request delete
- *  operation status is &lt;code&gt;DELETE_IN_PROGRESS&lt;/code&gt;, the retry returns the resource detail data in the
- *  response without performing any further actions.&lt;/p&gt; &lt;p&gt;If the original request delete operation is
- *  complete, a retry returns an empty response.&lt;/p&gt; &lt;p&gt;Asynchronous idempotent delete APIs:&lt;/p&gt;
- *  &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironment&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteService&lt;/p&gt;
+ *  CreateEnvironmentAccountConnectio> </li> </ul>
+ * 
+ *  <b>Idempotent create APIs</b>
+ * 
+ *  </p
+ * 
+ *  Given a request action that has
+ * 
+ *  succeeded>
+ * 
+ *  If you retry the request with an API from this group, and the original resource <i>hasn't</i> been modified, the retry
+ *  succeeds without performing any further actions other than returning the original resource detail data in the
+ * 
+ *  response>
+ * 
+ *  If the original resource has been modified, the retry throws a
+ * 
+ *  <code>ConflictException</code>>
+ * 
+ *  If you retry with different input parameters, the retry throws a <code>ValidationException</code> with an
+ *  <code>IdempotentParameterMismatch</code>
+ * 
+ *  error>
+ * 
+ *  Idempotent create
+ * 
+ *  APIs> <ul> <li>
+ * 
+ *  CreateEnvironmentTemplat> </li> <li>
+ * 
+ *  CreateServiceTemplat> </li> <li>
+ * 
+ *  CreateEnvironmen> </li> <li>
+ * 
+ *  CreateServic> </li> </ul>
+ * 
+ *  <b>Idempotent delete APIs</b>
+ * 
+ *  </p
+ * 
+ *  Given a request action that has
+ * 
+ *  succeeded>
+ * 
+ *  When you retry the request with an API from this group and the resource was deleted, its metadata is returned in the
+ * 
+ *  response>
+ * 
+ *  If you retry and the resource doesn't exist, the response is
+ * 
+ *  empty>
+ * 
+ *  In both cases, the retry
+ * 
+ *  succeeds>
+ * 
+ *  Idempotent delete
+ * 
+ *  APIs> <ul> <li>
+ * 
+ *  DeleteEnvironmentTemplat> </li> <li>
+ * 
+ *  DeleteEnvironmentTemplateVersio> </li> <li>
+ * 
+ *  DeleteServiceTemplat> </li> <li>
+ * 
+ *  DeleteServiceTemplateVersio> </li> <li>
+ * 
+ *  DeleteEnvironmentAccountConnectio> </li> </ul>
+ * 
+ *  <b>Asynchronous idempotent delete APIs</b>
+ * 
+ *  </p
+ * 
+ *  Given a request action that has
+ * 
+ *  succeeded>
+ * 
+ *  If you retry the request with an API from this group, if the original request delete operation status is
+ *  <code>DELETE_IN_PROGRESS</code>, the retry returns the resource detail data in the response without performing any
+ *  further
+ * 
+ *  actions>
+ * 
+ *  If the original request delete operation is complete, a retry returns an empty
+ * 
+ *  response>
+ * 
+ *  Asynchronous idempotent delete
+ * 
+ *  APIs> <ul> <li>
+ * 
+ *  DeleteEnvironmen> </li> <li>
  *
  * \sa ProtonClient::tagResource
  */

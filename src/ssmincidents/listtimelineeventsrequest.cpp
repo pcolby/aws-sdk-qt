@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::ListTimelineEventsRequest
- * \brief The ListTimelineEventsRequest class provides an interface for SSMIncidents ListTimelineEvents requests.
+ * \class QtAws::SsmIncidents::ListTimelineEventsRequest
+ * \brief The ListTimelineEventsRequest class provides an interface for SsmIncidents ListTimelineEvents requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::listTimelineEvents
+ * \sa SsmIncidentsClient::listTimelineEvents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTimelineEventsRequest::ListTimelineEventsRequest(const ListTimelineEventsRequest &other)
-    : SSMIncidentsRequest(new ListTimelineEventsRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new ListTimelineEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ ListTimelineEventsRequest::ListTimelineEventsRequest(const ListTimelineEventsReq
  * Constructs a ListTimelineEventsRequest object.
  */
 ListTimelineEventsRequest::ListTimelineEventsRequest()
-    : SSMIncidentsRequest(new ListTimelineEventsRequestPrivate(SSMIncidentsRequest::ListTimelineEventsAction, this))
+    : SsmIncidentsRequest(new ListTimelineEventsRequestPrivate(SsmIncidentsRequest::ListTimelineEventsAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListTimelineEventsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SSMIncidents::ListTimelineEventsRequestPrivate
+ * \class QtAws::SsmIncidents::ListTimelineEventsRequestPrivate
  * \brief The ListTimelineEventsRequestPrivate class provides private implementation for ListTimelineEventsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a ListTimelineEventsRequestPrivate object for SSMIncidents \a action,
+ * Constructs a ListTimelineEventsRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 ListTimelineEventsRequestPrivate::ListTimelineEventsRequestPrivate(
-    const SSMIncidentsRequest::Action action, ListTimelineEventsRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, ListTimelineEventsRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ ListTimelineEventsRequestPrivate::ListTimelineEventsRequestPrivate(
  */
 ListTimelineEventsRequestPrivate::ListTimelineEventsRequestPrivate(
     const ListTimelineEventsRequestPrivate &other, ListTimelineEventsRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

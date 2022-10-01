@@ -21,45 +21,45 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::QldbRequest
- * \brief The QldbRequest class provides an interface for QLDB requests.
+ * \class QtAws::Qldb::QldbRequest
+ * \brief The QldbRequest class provides an interface for Qldb requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
  * \enum QldbRequest::Action
  *
- * This enum describes the actions that can be performed as QLDB
+ * This enum describes the actions that can be performed as Qldb
  * requests.
  *
- * \value CancelJournalKinesisStreamAction QLDB CancelJournalKinesisStream action.
- * \value CreateLedgerAction QLDB CreateLedger action.
- * \value DeleteLedgerAction QLDB DeleteLedger action.
- * \value DescribeJournalKinesisStreamAction QLDB DescribeJournalKinesisStream action.
- * \value DescribeJournalS3ExportAction QLDB DescribeJournalS3Export action.
- * \value DescribeLedgerAction QLDB DescribeLedger action.
- * \value ExportJournalToS3Action QLDB ExportJournalToS3 action.
- * \value GetBlockAction QLDB GetBlock action.
- * \value GetDigestAction QLDB GetDigest action.
- * \value GetRevisionAction QLDB GetRevision action.
- * \value ListJournalKinesisStreamsForLedgerAction QLDB ListJournalKinesisStreamsForLedger action.
- * \value ListJournalS3ExportsAction QLDB ListJournalS3Exports action.
- * \value ListJournalS3ExportsForLedgerAction QLDB ListJournalS3ExportsForLedger action.
- * \value ListLedgersAction QLDB ListLedgers action.
- * \value ListTagsForResourceAction QLDB ListTagsForResource action.
- * \value StreamJournalToKinesisAction QLDB StreamJournalToKinesis action.
- * \value TagResourceAction QLDB TagResource action.
- * \value UntagResourceAction QLDB UntagResource action.
- * \value UpdateLedgerAction QLDB UpdateLedger action.
- * \value UpdateLedgerPermissionsModeAction QLDB UpdateLedgerPermissionsMode action.
+ * \value CancelJournalKinesisStreamAction Qldb CancelJournalKinesisStream action.
+ * \value CreateLedgerAction Qldb CreateLedger action.
+ * \value DeleteLedgerAction Qldb DeleteLedger action.
+ * \value DescribeJournalKinesisStreamAction Qldb DescribeJournalKinesisStream action.
+ * \value DescribeJournalS3ExportAction Qldb DescribeJournalS3Export action.
+ * \value DescribeLedgerAction Qldb DescribeLedger action.
+ * \value ExportJournalToS3Action Qldb ExportJournalToS3 action.
+ * \value GetBlockAction Qldb GetBlock action.
+ * \value GetDigestAction Qldb GetDigest action.
+ * \value GetRevisionAction Qldb GetRevision action.
+ * \value ListJournalKinesisStreamsForLedgerAction Qldb ListJournalKinesisStreamsForLedger action.
+ * \value ListJournalS3ExportsAction Qldb ListJournalS3Exports action.
+ * \value ListJournalS3ExportsForLedgerAction Qldb ListJournalS3ExportsForLedger action.
+ * \value ListLedgersAction Qldb ListLedgers action.
+ * \value ListTagsForResourceAction Qldb ListTagsForResource action.
+ * \value StreamJournalToKinesisAction Qldb StreamJournalToKinesis action.
+ * \value TagResourceAction Qldb TagResource action.
+ * \value UntagResourceAction Qldb UntagResource action.
+ * \value UpdateLedgerAction Qldb UpdateLedger action.
+ * \value UpdateLedgerPermissionsModeAction Qldb UpdateLedgerPermissionsMode action.
  */
 
 /*!
- * Constructs a QldbRequest object for QLDB \a action.
+ * Constructs a QldbRequest object for Qldb \a action.
  */
 QldbRequest::QldbRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new QldbRequestPrivate(action, this))
@@ -100,7 +100,7 @@ QldbRequest::QldbRequest(QldbRequestPrivate * const d) : QtAws::Core::AwsAbstrac
 }
 
 /*!
- * Returns the QLDB action to be performed by this request.
+ * Returns the Qldb action to be performed by this request.
  */
 QldbRequest::Action QldbRequest::action() const
 {
@@ -109,7 +109,7 @@ QldbRequest::Action QldbRequest::action() const
 }
 
 /*!
- * Returns the name of the QLDB action to be performed by this request.
+ * Returns the name of the Qldb action to be performed by this request.
  */
 QString QldbRequest::actionString() const
 {
@@ -117,7 +117,7 @@ QString QldbRequest::actionString() const
 }
 
 /*!
- * Returns the QLDB API version implemented by this request.
+ * Returns the Qldb API version implemented by this request.
  */
 QString QldbRequest::apiVersion() const
 {
@@ -126,7 +126,7 @@ QString QldbRequest::apiVersion() const
 }
 
 /*!
- * Sets the QLDB action to be performed by this request to \a action.
+ * Sets the Qldb action to be performed by this request to \a action.
  */
 void QldbRequest::setAction(const Action action)
 {
@@ -135,7 +135,7 @@ void QldbRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the QLDB API version to include in this request to \a version.
+ * Sets the Qldb API version to include in this request to \a version.
  */
 void QldbRequest::setApiVersion(const QString &version)
 {
@@ -160,15 +160,15 @@ bool QldbRequest::operator==(const QldbRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid QLDB queue name.
+ * Returns \c tue if \a queueName is a valid Qldb queue name.
  *
- * @par From QLDB FAQs:
+ * @par From Qldb FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid QLDB queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Qldb queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -235,10 +235,10 @@ void QldbRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the QLDB request using the given
+ * Returns a network request for the Qldb request using the given
  * \a endpoint.
  *
- * This QLDB implementation builds request URLs by combining the
+ * This Qldb implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -251,19 +251,19 @@ QNetworkRequest QldbRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::QLDB::QldbRequestPrivate
+ * \class QtAws::Qldb::QldbRequestPrivate
  * \brief The QldbRequestPrivate class provides private implementation for QldbRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
- * Constructs a QldbRequestPrivate object for QLDB \a action,
+ * Constructs a QldbRequestPrivate object for Qldb \a action,
  * with public implementation \a q.
  */
 QldbRequestPrivate::QldbRequestPrivate(const QldbRequest::Action action, QldbRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-01-02"))
 {
 
 }
@@ -289,7 +289,7 @@ QldbRequestPrivate::QldbRequestPrivate(const QldbRequestPrivate &other,
  * invalid.
  *
  * This function converts QldbRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the QLDB service's Action
+ * string representations, appropriate for use with the Qldb service's Action
  * query parameters.
  */
 QString QldbRequestPrivate::toString(const QldbRequest::Action &action)
@@ -324,5 +324,5 @@ QString QldbRequestPrivate::toString(const QldbRequest::Action &action)
     return QString();
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

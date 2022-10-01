@@ -25,6 +25,8 @@
 #include "addprofilekeyresponse.h"
 #include "createdomainrequest.h"
 #include "createdomainresponse.h"
+#include "createintegrationworkflowrequest.h"
+#include "createintegrationworkflowresponse.h"
 #include "createprofilerequest.h"
 #include "createprofileresponse.h"
 #include "deletedomainrequest.h"
@@ -39,8 +41,14 @@
 #include "deleteprofileobjectresponse.h"
 #include "deleteprofileobjecttyperequest.h"
 #include "deleteprofileobjecttyperesponse.h"
+#include "deleteworkflowrequest.h"
+#include "deleteworkflowresponse.h"
+#include "getautomergingpreviewrequest.h"
+#include "getautomergingpreviewresponse.h"
 #include "getdomainrequest.h"
 #include "getdomainresponse.h"
+#include "getidentityresolutionjobrequest.h"
+#include "getidentityresolutionjobresponse.h"
 #include "getintegrationrequest.h"
 #include "getintegrationresponse.h"
 #include "getmatchesrequest.h"
@@ -49,10 +57,16 @@
 #include "getprofileobjecttyperesponse.h"
 #include "getprofileobjecttypetemplaterequest.h"
 #include "getprofileobjecttypetemplateresponse.h"
+#include "getworkflowrequest.h"
+#include "getworkflowresponse.h"
+#include "getworkflowstepsrequest.h"
+#include "getworkflowstepsresponse.h"
 #include "listaccountintegrationsrequest.h"
 #include "listaccountintegrationsresponse.h"
 #include "listdomainsrequest.h"
 #include "listdomainsresponse.h"
+#include "listidentityresolutionjobsrequest.h"
+#include "listidentityresolutionjobsresponse.h"
 #include "listintegrationsrequest.h"
 #include "listintegrationsresponse.h"
 #include "listprofileobjecttypetemplatesrequest.h"
@@ -63,6 +77,8 @@
 #include "listprofileobjectsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listworkflowsrequest.h"
+#include "listworkflowsresponse.h"
 #include "mergeprofilesrequest.h"
 #include "mergeprofilesresponse.h"
 #include "putintegrationrequest.h"
@@ -181,7 +197,7 @@ CustomerProfilesClient::CustomerProfilesClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a new key value with a specific profile, such as a Contact Trace Record (CTR)
+ * Associates a new key value with a specific profile, such as a Contact Record
  *
  * ContactId>
  *
@@ -206,10 +222,37 @@ AddProfileKeyResponse * CustomerProfilesClient::addProfileKey(const AddProfileKe
  *
  * Each Amazon Connect instance can be associated with only one domain. Multiple Amazon Connect instances can be associated
  * with one
+ *
+ * domain>
+ *
+ * Use this API or <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a> to enable
+ * <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity resolution</a>:
+ * set <code>Matching</code> to true.
+ *
+ * </p
+ *
+ * To prevent cross-service impersonation when you call this API, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html">Cross-service
+ * confused deputy prevention</a> for sample policies that you should apply.
  */
 CreateDomainResponse * CustomerProfilesClient::createDomain(const CreateDomainRequest &request)
 {
     return qobject_cast<CreateDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * CreateIntegrationWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets up an
+ * integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and Marketo.
+ */
+CreateIntegrationWorkflowResponse * CustomerProfilesClient::createIntegrationWorkflow(const CreateIntegrationWorkflowRequest &request)
+{
+    return qobject_cast<CreateIntegrationWorkflowResponse *>(send(request));
 }
 
 /*!
@@ -311,6 +354,46 @@ DeleteProfileObjectTypeResponse * CustomerProfilesClient::deleteProfileObjectTyp
 
 /*!
  * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * DeleteWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified workflow and all its corresponding resources. This is an async
+ */
+DeleteWorkflowResponse * CustomerProfilesClient::deleteWorkflow(const DeleteWorkflowRequest &request)
+{
+    return qobject_cast<DeleteWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * GetAutoMergingPreviewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a sample
+ * of matching groups from the existing matching results, and applies the automerging settings that you provided. You can
+ * then view the number of profiles in the sample, the number of matches, and the number of profiles identified to be
+ * merged. This enables you to evaluate the accuracy of the attributes in your matching list.
+ *
+ * </p
+ *
+ * You can't view which profiles are matched and would be
+ *
+ * merged> <b>
+ *
+ * We strongly recommend you use this API to do a dry run of the automerging process before running the Identity Resolution
+ * Job. Include <b>at least</b> two matching attributes. If your matching list includes too few attributes (such as only
+ * <code>FirstName</code> or only <code>LastName</code>), there may be a large number of matches. This increases the
+ * chances of erroneous
+ */
+GetAutoMergingPreviewResponse * CustomerProfilesClient::getAutoMergingPreview(const GetAutoMergingPreviewRequest &request)
+{
+    return qobject_cast<GetAutoMergingPreviewResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
  * GetDomainResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -320,6 +403,25 @@ DeleteProfileObjectTypeResponse * CustomerProfilesClient::deleteProfileObjectTyp
 GetDomainResponse * CustomerProfilesClient::getDomain(const GetDomainRequest &request)
 {
     return qobject_cast<GetDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * GetIdentityResolutionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about an Identity Resolution Job in a specific domain.
+ *
+ * </p
+ *
+ * Identity Resolution Jobs are set up using the Amazon Connect admin console. For more information, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/use-identity-resolution.html">Use Identity Resolution to
+ * consolidate similar
+ */
+GetIdentityResolutionJobResponse * CustomerProfilesClient::getIdentityResolutionJob(const GetIdentityResolutionJobRequest &request)
+{
+    return qobject_cast<GetIdentityResolutionJobResponse *>(send(request));
 }
 
 /*!
@@ -341,10 +443,6 @@ GetIntegrationResponse * CustomerProfilesClient::getIntegration(const GetIntegra
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and subject to
- *
- * change>
- *
  * Before calling this API, use <a
  * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> or <a
  * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a> to enable
@@ -356,10 +454,19 @@ GetIntegrationResponse * CustomerProfilesClient::getIntegration(const GetIntegra
  *
  * </p <b>
  *
- * Amazon Connect runs a batch process every Saturday at 12AM UTC to identify matching profiles. The results are returned
- * up to seven days after the Saturday
+ * The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer
+ * Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for
+ * Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in your
+ * domains.
  *
- * run> </b>
+ * </p
+ *
+ * After the Identity Resolution Job completes, use the <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to return
+ * and review the results. Or, if you have configured <code>ExportingConfig</code> in the <code>MatchingRequest</code>, you
+ * can download the results from
+ *
+ * S3> </b>
  *
  * Amazon Connect uses the following profile attributes to identify
  *
@@ -379,7 +486,12 @@ GetIntegrationResponse * CustomerProfilesClient::getIntegration(const GetIntegra
  *
  * BusinessEmailAddres> </li> <li>
  *
- * FullNam> </li> <li>
+ * FullNam> </li> </ul>
+ *
+ * For example, two or more profiles—with spelling mistakes such as <b>John Doe</b> and <b>Jhn Doe</b>, or different casing
+ * email addresses such as <b>JOHN_DOE@ANYCOMPANY.COM</b> and <b>johndoe@anycompany.com</b>, or different phone number
+ * formats such as <b>555-010-0000</b> and <b>+1-555-010-0000</b>—can be detected as belonging to the same customer <b>John
+ * Doe</b> and merged into a unified
  */
 GetMatchesResponse * CustomerProfilesClient::getMatches(const GetMatchesRequest &request)
 {
@@ -420,6 +532,32 @@ GetProfileObjectTypeTemplateResponse * CustomerProfilesClient::getProfileObjectT
 
 /*!
  * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * GetWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get details of specified
+ */
+GetWorkflowResponse * CustomerProfilesClient::getWorkflow(const GetWorkflowRequest &request)
+{
+    return qobject_cast<GetWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * GetWorkflowStepsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get granular list of steps in
+ */
+GetWorkflowStepsResponse * CustomerProfilesClient::getWorkflowSteps(const GetWorkflowStepsRequest &request)
+{
+    return qobject_cast<GetWorkflowStepsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
  * ListAccountIntegrationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -442,6 +580,19 @@ ListAccountIntegrationsResponse * CustomerProfilesClient::listAccountIntegration
 ListDomainsResponse * CustomerProfilesClient::listDomains(const ListDomainsRequest &request)
 {
     return qobject_cast<ListDomainsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * ListIdentityResolutionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all of the Identity Resolution Jobs in your domain. The response sorts the list by
+ */
+ListIdentityResolutionJobsResponse * CustomerProfilesClient::listIdentityResolutionJobs(const ListIdentityResolutionJobsRequest &request)
+{
+    return qobject_cast<ListIdentityResolutionJobsResponse *>(send(request));
 }
 
 /*!
@@ -512,13 +663,22 @@ ListTagsForResourceResponse * CustomerProfilesClient::listTagsForResource(const 
 
 /*!
  * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
- * MergeProfilesResponse object to track the result.
+ * ListWorkflowsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and subject to
+ * Query to list all
+ */
+ListWorkflowsResponse * CustomerProfilesClient::listWorkflows(const ListWorkflowsRequest &request)
+{
+    return qobject_cast<ListWorkflowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CustomerProfilesClient service, and returns a pointer to an
+ * MergeProfilesResponse object to track the result.
  *
- * change>
+ * \note The caller is to take responsbility for the resulting pointer.
  *
  * Runs an AWS Lambda job that does the
  *
@@ -581,6 +741,12 @@ MergeProfilesResponse * CustomerProfilesClient::mergeProfiles(const MergeProfile
  * Connect>
  *
  * An integration can belong to only one
+ *
+ * domain>
+ *
+ * To add or remove tags on an existing Integration, see <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_TagResource.html"> TagResource </a>/<a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UntagResource.html">
  */
 PutIntegrationResponse * CustomerProfilesClient::putIntegration(const PutIntegrationRequest &request)
 {
@@ -597,9 +763,9 @@ PutIntegrationResponse * CustomerProfilesClient::putIntegration(const PutIntegra
  *
  * ObjectType>
  *
- * When adding a specific profile object, like a Contact Trace Record (CTR), an inferred profile can get created if it is
- * not mapped to an existing profile. The resulting profile will only have a phone number populated in the standard
- * ProfileObject. Any additional CTRs with the same phone number will be mapped to the same inferred
+ * When adding a specific profile object, like a Contact Record, an inferred profile can get created if it is not mapped to
+ * an existing profile. The resulting profile will only have a phone number populated in the standard ProfileObject. Any
+ * additional Contact Records with the same phone number will be mapped to the same inferred
  *
  * profile>
  *
@@ -622,6 +788,11 @@ PutProfileObjectResponse * CustomerProfilesClient::putProfileObject(const PutPro
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Defines a
+ *
+ * ProfileObjectType>
+ *
+ * To add or remove tags on an existing ObjectType, see <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_TagResource.html"> TagResource</a>/<a
  */
 PutProfileObjectTypeResponse * CustomerProfilesClient::putProfileObjectType(const PutProfileObjectTypeRequest &request)
 {
@@ -697,6 +868,24 @@ UntagResourceResponse * CustomerProfilesClient::untagResource(const UntagResourc
  * key>
  *
  * After a domain is created, the name can’t be
+ *
+ * changed>
+ *
+ * Use this API or <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> to enable
+ * <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity resolution</a>:
+ * set <code>Matching</code> to true.
+ *
+ * </p
+ *
+ * To prevent cross-service impersonation when you call this API, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html">Cross-service
+ * confused deputy prevention</a> for sample policies that you should apply.
+ *
+ * </p
+ *
+ * To add or remove tags on an existing Domain, see <a
+ * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_TagResource.html">TagResource</a>/<a
  */
 UpdateDomainResponse * CustomerProfilesClient::updateDomain(const UpdateDomainRequest &request)
 {

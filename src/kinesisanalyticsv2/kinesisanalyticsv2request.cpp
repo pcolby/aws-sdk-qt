@@ -274,7 +274,7 @@ QNetworkRequest KinesisAnalyticsV2Request::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 KinesisAnalyticsV2RequestPrivate::KinesisAnalyticsV2RequestPrivate(const KinesisAnalyticsV2Request::Action action, KinesisAnalyticsV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-05-23"))
 {
 
 }

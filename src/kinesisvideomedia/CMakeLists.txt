@@ -1,22 +1,22 @@
 add_compile_definitions(QTAWSKINESISVIDEOMEDIA_LIBRARY)
 
 add_library(QtAwsKinesisVideoMedia
-  getmediarequest.h
-  getmediarequest_p.h
-  getmediaresponse.h
-  getmediaresponse_p.h
+  qtawskinesisvideomediaglobal.h
   kinesisvideomediaclient.h
   kinesisvideomediaclient_p.h
   kinesisvideomediarequest.h
   kinesisvideomediarequest_p.h
   kinesisvideomediaresponse.h
   kinesisvideomediaresponse_p.h
-  qtawskinesisvideomediaglobal.h
-  getmediarequest.cpp
-  getmediaresponse.cpp
+  getmediarequest.h
+  getmediarequest_p.h
+  getmediaresponse.h
+  getmediaresponse_p.h
   kinesisvideomediaclient.cpp
   kinesisvideomediarequest.cpp
-  kinesisvideomediaresponse.cpp)
+  kinesisvideomediaresponse.cpp
+  getmediarequest.cpp
+  getmediaresponse.cpp)
 
 target_link_libraries(QtAwsKinesisVideoMedia
   PRIVATE QtAwsCore

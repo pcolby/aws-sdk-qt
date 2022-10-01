@@ -24,7 +24,7 @@
 #include "getadminaccountrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class GetAdminAccountRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

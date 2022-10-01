@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCOGNITOSYNC_LIBRARY)
 
 add_library(QtAwsCognitoSync
-  bulkpublishrequest.h
-  bulkpublishrequest_p.h
-  bulkpublishresponse.h
-  bulkpublishresponse_p.h
+  qtawscognitosyncglobal.h
   cognitosyncclient.h
   cognitosyncclient_p.h
   cognitosyncrequest.h
   cognitosyncrequest_p.h
   cognitosyncresponse.h
   cognitosyncresponse_p.h
+  bulkpublishrequest.h
+  bulkpublishrequest_p.h
+  bulkpublishresponse.h
+  bulkpublishresponse_p.h
   deletedatasetrequest.h
   deletedatasetrequest_p.h
   deletedatasetresponse.h
@@ -51,7 +52,6 @@ add_library(QtAwsCognitoSync
   listrecordsrequest_p.h
   listrecordsresponse.h
   listrecordsresponse_p.h
-  qtawscognitosyncglobal.h
   registerdevicerequest.h
   registerdevicerequest_p.h
   registerdeviceresponse.h
@@ -76,11 +76,11 @@ add_library(QtAwsCognitoSync
   updaterecordsrequest_p.h
   updaterecordsresponse.h
   updaterecordsresponse_p.h
-  bulkpublishrequest.cpp
-  bulkpublishresponse.cpp
   cognitosyncclient.cpp
   cognitosyncrequest.cpp
   cognitosyncresponse.cpp
+  bulkpublishrequest.cpp
+  bulkpublishresponse.cpp
   deletedatasetrequest.cpp
   deletedatasetresponse.cpp
   describedatasetrequest.cpp

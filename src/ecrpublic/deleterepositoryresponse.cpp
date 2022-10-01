@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryResponse
- * \brief The DeleteRepositoryResponse class provides an interace for ECRPublic DeleteRepository responses.
+ * \class QtAws::EcrPublic::DeleteRepositoryResponse
+ * \brief The DeleteRepositoryResponse class provides an interace for EcrPublic DeleteRepository responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::deleteRepository
+ * \sa EcrPublicClient::deleteRepository
  */
 
 /*!
@@ -52,7 +52,7 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
         const DeleteRepositoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new DeleteRepositoryResponsePrivate(this), parent)
+    : EcrPublicResponse(new DeleteRepositoryResponsePrivate(this), parent)
 {
     setRequest(new DeleteRepositoryRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic DeleteRepository \a response.
+ * Parses a successful EcrPublic DeleteRepository \a response.
  */
 void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::DeleteRepositoryResponsePrivate
+ * \class QtAws::EcrPublic::DeleteRepositoryResponsePrivate
  * \brief The DeleteRepositoryResponsePrivate class provides private implementation for DeleteRepositoryResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a DeleteRepositoryResponsePrivate object with public implementation \a q.
  */
 DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
-    DeleteRepositoryResponse * const q) : ECRPublicResponsePrivate(q)
+    DeleteRepositoryResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic DeleteRepository response element from \a xml.
+ * Parses a EcrPublic DeleteRepository response element from \a xml.
  */
 void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

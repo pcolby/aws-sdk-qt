@@ -24,7 +24,7 @@
 #include "describereceiptrulesetrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class DescribeReceiptRuleSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

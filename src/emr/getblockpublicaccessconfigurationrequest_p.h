@@ -24,7 +24,7 @@
 #include "getblockpublicaccessconfigurationrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class GetBlockPublicAccessConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

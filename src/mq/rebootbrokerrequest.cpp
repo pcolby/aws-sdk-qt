@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::RebootBrokerRequest
- * \brief The RebootBrokerRequest class provides an interface for MQ RebootBroker requests.
+ * \class QtAws::Mq::RebootBrokerRequest
+ * \brief The RebootBrokerRequest class provides an interface for Mq RebootBroker requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::rebootBroker
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::MQ::RebootBrokerRequestPrivate
+ * \class QtAws::Mq::RebootBrokerRequestPrivate
  * \brief The RebootBrokerRequestPrivate class provides private implementation for RebootBrokerRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

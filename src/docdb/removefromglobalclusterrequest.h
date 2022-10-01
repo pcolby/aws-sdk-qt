@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveFromGlobalClusterRequestPrivate;
 
-class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterRequest : public DocDbRequest {
 
 public:
     RemoveFromGlobalClusterRequest(const RemoveFromGlobalClusterRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

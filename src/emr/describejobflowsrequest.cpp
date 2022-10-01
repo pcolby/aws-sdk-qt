@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeJobFlowsRequest
- * \brief The DescribeJobFlowsRequest class provides an interface for EMR DescribeJobFlows requests.
+ * \class QtAws::Emr::DescribeJobFlowsRequest
+ * \brief The DescribeJobFlowsRequest class provides an interface for Emr DescribeJobFlows requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeJobFlows
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::EMR::DescribeJobFlowsRequestPrivate
+ * \class QtAws::Emr::DescribeJobFlowsRequestPrivate
  * \brief The DescribeJobFlowsRequestPrivate class provides private implementation for DescribeJobFlowsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

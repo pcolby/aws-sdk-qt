@@ -24,14 +24,14 @@
 #include "modifyclusterrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class ModifyClusterRequest;
 
-class ModifyClusterRequestPrivate : public CloudHSMV2RequestPrivate {
+class ModifyClusterRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    ModifyClusterRequestPrivate(const CloudHSMV2Request::Action action,
+    ModifyClusterRequestPrivate(const CloudHsmV2Request::Action action,
                                    ModifyClusterRequest * const q);
     ModifyClusterRequestPrivate(const ModifyClusterRequestPrivate &other,
                                    ModifyClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

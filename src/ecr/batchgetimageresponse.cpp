@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::BatchGetImageResponse
- * \brief The BatchGetImageResponse class provides an interace for ECR BatchGetImage responses.
+ * \class QtAws::Ecr::BatchGetImageResponse
+ * \brief The BatchGetImageResponse class provides an interace for Ecr BatchGetImage responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::batchGetImage
  */
@@ -68,7 +74,7 @@ const BatchGetImageRequest * BatchGetImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR BatchGetImage \a response.
+ * Parses a successful Ecr BatchGetImage \a response.
  */
 void BatchGetImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void BatchGetImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::BatchGetImageResponsePrivate
+ * \class QtAws::Ecr::BatchGetImageResponsePrivate
  * \brief The BatchGetImageResponsePrivate class provides private implementation for BatchGetImageResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
 }
 
 /*!
- * Parses a ECR BatchGetImage response element from \a xml.
+ * Parses a Ecr BatchGetImage response element from \a xml.
  */
 void BatchGetImageResponsePrivate::parseBatchGetImageResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void BatchGetImageResponsePrivate::parseBatchGetImageResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

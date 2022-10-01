@@ -246,7 +246,7 @@ QNetworkRequest PersonalizeEventsRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 PersonalizeEventsRequestPrivate::PersonalizeEventsRequestPrivate(const PersonalizeEventsRequest::Action action, PersonalizeEventsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-03-22"))
 {
 
 }

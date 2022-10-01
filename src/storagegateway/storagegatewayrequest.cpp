@@ -122,6 +122,7 @@ namespace StorageGateway {
  * \value UpdateNFSFileShareAction StorageGateway UpdateNFSFileShare action.
  * \value UpdateSMBFileShareAction StorageGateway UpdateSMBFileShare action.
  * \value UpdateSMBFileShareVisibilityAction StorageGateway UpdateSMBFileShareVisibility action.
+ * \value UpdateSMBLocalGroupsAction StorageGateway UpdateSMBLocalGroups action.
  * \value UpdateSMBSecurityStrategyAction StorageGateway UpdateSMBSecurityStrategy action.
  * \value UpdateSnapshotScheduleAction StorageGateway UpdateSnapshotSchedule action.
  * \value UpdateVTLDeviceTypeAction StorageGateway UpdateVTLDeviceType action.
@@ -332,7 +333,7 @@ QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 StorageGatewayRequestPrivate::StorageGatewayRequestPrivate(const StorageGatewayRequest::Action action, StorageGatewayRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-06-30"))
 {
 
 }
@@ -452,6 +453,7 @@ QString StorageGatewayRequestPrivate::toString(const StorageGatewayRequest::Acti
         ActionToString(UpdateNFSFileShare);
         ActionToString(UpdateSMBFileShare);
         ActionToString(UpdateSMBFileShareVisibility);
+        ActionToString(UpdateSMBLocalGroups);
         ActionToString(UpdateSMBSecurityStrategy);
         ActionToString(UpdateSnapshotSchedule);
         ActionToString(UpdateVTLDeviceType);

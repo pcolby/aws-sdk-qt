@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT ListTagsForResourceResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT ListTagsForResourceResponse : public EmrcontainersResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

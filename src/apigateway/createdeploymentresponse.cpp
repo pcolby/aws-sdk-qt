@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDeploymentResponse
- * \brief The CreateDeploymentResponse class provides an interace for APIGateway CreateDeployment responses.
+ * \class QtAws::ApiGateway::CreateDeploymentResponse
+ * \brief The CreateDeploymentResponse class provides an interace for ApiGateway CreateDeployment responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDeployment
+ * \sa ApiGatewayClient::createDeployment
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateDeploymentResponse::CreateDeploymentResponse(
         const CreateDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDeploymentResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateDeploymentResponsePrivate(this), parent)
 {
     setRequest(new CreateDeploymentRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateDeployment \a response.
+ * Parses a successful ApiGateway CreateDeployment \a response.
  */
 void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDeploymentResponsePrivate
+ * \class QtAws::ApiGateway::CreateDeploymentResponsePrivate
  * \brief The CreateDeploymentResponsePrivate class provides private implementation for CreateDeploymentResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateDeploymentResponsePrivate object with public implementation \a q.
  */
 CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
-    CreateDeploymentResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateDeploymentResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateDeployment response element from \a xml.
+ * Parses a ApiGateway CreateDeployment response element from \a xml.
  */
 void CreateDeploymentResponsePrivate::parseCreateDeploymentResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateDeploymentResponsePrivate::parseCreateDeploymentResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

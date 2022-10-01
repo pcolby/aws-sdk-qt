@@ -41,7 +41,9 @@ namespace Glue {
  * \value BatchDeletePartitionAction Glue BatchDeletePartition action.
  * \value BatchDeleteTableAction Glue BatchDeleteTable action.
  * \value BatchDeleteTableVersionAction Glue BatchDeleteTableVersion action.
+ * \value BatchGetBlueprintsAction Glue BatchGetBlueprints action.
  * \value BatchGetCrawlersAction Glue BatchGetCrawlers action.
+ * \value BatchGetCustomEntityTypesAction Glue BatchGetCustomEntityTypes action.
  * \value BatchGetDevEndpointsAction Glue BatchGetDevEndpoints action.
  * \value BatchGetJobsAction Glue BatchGetJobs action.
  * \value BatchGetPartitionAction Glue BatchGetPartition action.
@@ -50,10 +52,13 @@ namespace Glue {
  * \value BatchStopJobRunAction Glue BatchStopJobRun action.
  * \value BatchUpdatePartitionAction Glue BatchUpdatePartition action.
  * \value CancelMLTaskRunAction Glue CancelMLTaskRun action.
+ * \value CancelStatementAction Glue CancelStatement action.
  * \value CheckSchemaVersionValidityAction Glue CheckSchemaVersionValidity action.
+ * \value CreateBlueprintAction Glue CreateBlueprint action.
  * \value CreateClassifierAction Glue CreateClassifier action.
  * \value CreateConnectionAction Glue CreateConnection action.
  * \value CreateCrawlerAction Glue CreateCrawler action.
+ * \value CreateCustomEntityTypeAction Glue CreateCustomEntityType action.
  * \value CreateDatabaseAction Glue CreateDatabase action.
  * \value CreateDevEndpointAction Glue CreateDevEndpoint action.
  * \value CreateJobAction Glue CreateJob action.
@@ -64,15 +69,18 @@ namespace Glue {
  * \value CreateSchemaAction Glue CreateSchema action.
  * \value CreateScriptAction Glue CreateScript action.
  * \value CreateSecurityConfigurationAction Glue CreateSecurityConfiguration action.
+ * \value CreateSessionAction Glue CreateSession action.
  * \value CreateTableAction Glue CreateTable action.
  * \value CreateTriggerAction Glue CreateTrigger action.
  * \value CreateUserDefinedFunctionAction Glue CreateUserDefinedFunction action.
  * \value CreateWorkflowAction Glue CreateWorkflow action.
+ * \value DeleteBlueprintAction Glue DeleteBlueprint action.
  * \value DeleteClassifierAction Glue DeleteClassifier action.
  * \value DeleteColumnStatisticsForPartitionAction Glue DeleteColumnStatisticsForPartition action.
  * \value DeleteColumnStatisticsForTableAction Glue DeleteColumnStatisticsForTable action.
  * \value DeleteConnectionAction Glue DeleteConnection action.
  * \value DeleteCrawlerAction Glue DeleteCrawler action.
+ * \value DeleteCustomEntityTypeAction Glue DeleteCustomEntityType action.
  * \value DeleteDatabaseAction Glue DeleteDatabase action.
  * \value DeleteDevEndpointAction Glue DeleteDevEndpoint action.
  * \value DeleteJobAction Glue DeleteJob action.
@@ -84,11 +92,15 @@ namespace Glue {
  * \value DeleteSchemaAction Glue DeleteSchema action.
  * \value DeleteSchemaVersionsAction Glue DeleteSchemaVersions action.
  * \value DeleteSecurityConfigurationAction Glue DeleteSecurityConfiguration action.
+ * \value DeleteSessionAction Glue DeleteSession action.
  * \value DeleteTableAction Glue DeleteTable action.
  * \value DeleteTableVersionAction Glue DeleteTableVersion action.
  * \value DeleteTriggerAction Glue DeleteTrigger action.
  * \value DeleteUserDefinedFunctionAction Glue DeleteUserDefinedFunction action.
  * \value DeleteWorkflowAction Glue DeleteWorkflow action.
+ * \value GetBlueprintAction Glue GetBlueprint action.
+ * \value GetBlueprintRunAction Glue GetBlueprintRun action.
+ * \value GetBlueprintRunsAction Glue GetBlueprintRuns action.
  * \value GetCatalogImportStatusAction Glue GetCatalogImportStatus action.
  * \value GetClassifierAction Glue GetClassifier action.
  * \value GetClassifiersAction Glue GetClassifiers action.
@@ -99,6 +111,7 @@ namespace Glue {
  * \value GetCrawlerAction Glue GetCrawler action.
  * \value GetCrawlerMetricsAction Glue GetCrawlerMetrics action.
  * \value GetCrawlersAction Glue GetCrawlers action.
+ * \value GetCustomEntityTypeAction Glue GetCustomEntityType action.
  * \value GetDataCatalogEncryptionSettingsAction Glue GetDataCatalogEncryptionSettings action.
  * \value GetDatabaseAction Glue GetDatabase action.
  * \value GetDatabasesAction Glue GetDatabases action.
@@ -128,6 +141,8 @@ namespace Glue {
  * \value GetSchemaVersionsDiffAction Glue GetSchemaVersionsDiff action.
  * \value GetSecurityConfigurationAction Glue GetSecurityConfiguration action.
  * \value GetSecurityConfigurationsAction Glue GetSecurityConfigurations action.
+ * \value GetSessionAction Glue GetSession action.
+ * \value GetStatementAction Glue GetStatement action.
  * \value GetTableAction Glue GetTable action.
  * \value GetTableVersionAction Glue GetTableVersion action.
  * \value GetTableVersionsAction Glue GetTableVersions action.
@@ -135,6 +150,9 @@ namespace Glue {
  * \value GetTagsAction Glue GetTags action.
  * \value GetTriggerAction Glue GetTrigger action.
  * \value GetTriggersAction Glue GetTriggers action.
+ * \value GetUnfilteredPartitionMetadataAction Glue GetUnfilteredPartitionMetadata action.
+ * \value GetUnfilteredPartitionsMetadataAction Glue GetUnfilteredPartitionsMetadata action.
+ * \value GetUnfilteredTableMetadataAction Glue GetUnfilteredTableMetadata action.
  * \value GetUserDefinedFunctionAction Glue GetUserDefinedFunction action.
  * \value GetUserDefinedFunctionsAction Glue GetUserDefinedFunctions action.
  * \value GetWorkflowAction Glue GetWorkflow action.
@@ -142,13 +160,18 @@ namespace Glue {
  * \value GetWorkflowRunPropertiesAction Glue GetWorkflowRunProperties action.
  * \value GetWorkflowRunsAction Glue GetWorkflowRuns action.
  * \value ImportCatalogToGlueAction Glue ImportCatalogToGlue action.
+ * \value ListBlueprintsAction Glue ListBlueprints action.
  * \value ListCrawlersAction Glue ListCrawlers action.
+ * \value ListCrawlsAction Glue ListCrawls action.
+ * \value ListCustomEntityTypesAction Glue ListCustomEntityTypes action.
  * \value ListDevEndpointsAction Glue ListDevEndpoints action.
  * \value ListJobsAction Glue ListJobs action.
  * \value ListMLTransformsAction Glue ListMLTransforms action.
  * \value ListRegistriesAction Glue ListRegistries action.
  * \value ListSchemaVersionsAction Glue ListSchemaVersions action.
  * \value ListSchemasAction Glue ListSchemas action.
+ * \value ListSessionsAction Glue ListSessions action.
+ * \value ListStatementsAction Glue ListStatements action.
  * \value ListTriggersAction Glue ListTriggers action.
  * \value ListWorkflowsAction Glue ListWorkflows action.
  * \value PutDataCatalogEncryptionSettingsAction Glue PutDataCatalogEncryptionSettings action.
@@ -160,7 +183,9 @@ namespace Glue {
  * \value RemoveSchemaVersionMetadataAction Glue RemoveSchemaVersionMetadata action.
  * \value ResetJobBookmarkAction Glue ResetJobBookmark action.
  * \value ResumeWorkflowRunAction Glue ResumeWorkflowRun action.
+ * \value RunStatementAction Glue RunStatement action.
  * \value SearchTablesAction Glue SearchTables action.
+ * \value StartBlueprintRunAction Glue StartBlueprintRun action.
  * \value StartCrawlerAction Glue StartCrawler action.
  * \value StartCrawlerScheduleAction Glue StartCrawlerSchedule action.
  * \value StartExportLabelsTaskRunAction Glue StartExportLabelsTaskRun action.
@@ -172,10 +197,12 @@ namespace Glue {
  * \value StartWorkflowRunAction Glue StartWorkflowRun action.
  * \value StopCrawlerAction Glue StopCrawler action.
  * \value StopCrawlerScheduleAction Glue StopCrawlerSchedule action.
+ * \value StopSessionAction Glue StopSession action.
  * \value StopTriggerAction Glue StopTrigger action.
  * \value StopWorkflowRunAction Glue StopWorkflowRun action.
  * \value TagResourceAction Glue TagResource action.
  * \value UntagResourceAction Glue UntagResource action.
+ * \value UpdateBlueprintAction Glue UpdateBlueprint action.
  * \value UpdateClassifierAction Glue UpdateClassifier action.
  * \value UpdateColumnStatisticsForPartitionAction Glue UpdateColumnStatisticsForPartition action.
  * \value UpdateColumnStatisticsForTableAction Glue UpdateColumnStatisticsForTable action.
@@ -400,7 +427,7 @@ QNetworkRequest GlueRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GlueRequestPrivate::GlueRequestPrivate(const GlueRequest::Action action, GlueRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-03-31"))
 {
 
 }
@@ -439,7 +466,9 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(BatchDeletePartition);
         ActionToString(BatchDeleteTable);
         ActionToString(BatchDeleteTableVersion);
+        ActionToString(BatchGetBlueprints);
         ActionToString(BatchGetCrawlers);
+        ActionToString(BatchGetCustomEntityTypes);
         ActionToString(BatchGetDevEndpoints);
         ActionToString(BatchGetJobs);
         ActionToString(BatchGetPartition);
@@ -448,10 +477,13 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(BatchStopJobRun);
         ActionToString(BatchUpdatePartition);
         ActionToString(CancelMLTaskRun);
+        ActionToString(CancelStatement);
         ActionToString(CheckSchemaVersionValidity);
+        ActionToString(CreateBlueprint);
         ActionToString(CreateClassifier);
         ActionToString(CreateConnection);
         ActionToString(CreateCrawler);
+        ActionToString(CreateCustomEntityType);
         ActionToString(CreateDatabase);
         ActionToString(CreateDevEndpoint);
         ActionToString(CreateJob);
@@ -462,15 +494,18 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(CreateSchema);
         ActionToString(CreateScript);
         ActionToString(CreateSecurityConfiguration);
+        ActionToString(CreateSession);
         ActionToString(CreateTable);
         ActionToString(CreateTrigger);
         ActionToString(CreateUserDefinedFunction);
         ActionToString(CreateWorkflow);
+        ActionToString(DeleteBlueprint);
         ActionToString(DeleteClassifier);
         ActionToString(DeleteColumnStatisticsForPartition);
         ActionToString(DeleteColumnStatisticsForTable);
         ActionToString(DeleteConnection);
         ActionToString(DeleteCrawler);
+        ActionToString(DeleteCustomEntityType);
         ActionToString(DeleteDatabase);
         ActionToString(DeleteDevEndpoint);
         ActionToString(DeleteJob);
@@ -482,11 +517,15 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(DeleteSchema);
         ActionToString(DeleteSchemaVersions);
         ActionToString(DeleteSecurityConfiguration);
+        ActionToString(DeleteSession);
         ActionToString(DeleteTable);
         ActionToString(DeleteTableVersion);
         ActionToString(DeleteTrigger);
         ActionToString(DeleteUserDefinedFunction);
         ActionToString(DeleteWorkflow);
+        ActionToString(GetBlueprint);
+        ActionToString(GetBlueprintRun);
+        ActionToString(GetBlueprintRuns);
         ActionToString(GetCatalogImportStatus);
         ActionToString(GetClassifier);
         ActionToString(GetClassifiers);
@@ -497,6 +536,7 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(GetCrawler);
         ActionToString(GetCrawlerMetrics);
         ActionToString(GetCrawlers);
+        ActionToString(GetCustomEntityType);
         ActionToString(GetDataCatalogEncryptionSettings);
         ActionToString(GetDatabase);
         ActionToString(GetDatabases);
@@ -526,6 +566,8 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(GetSchemaVersionsDiff);
         ActionToString(GetSecurityConfiguration);
         ActionToString(GetSecurityConfigurations);
+        ActionToString(GetSession);
+        ActionToString(GetStatement);
         ActionToString(GetTable);
         ActionToString(GetTableVersion);
         ActionToString(GetTableVersions);
@@ -533,6 +575,9 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(GetTags);
         ActionToString(GetTrigger);
         ActionToString(GetTriggers);
+        ActionToString(GetUnfilteredPartitionMetadata);
+        ActionToString(GetUnfilteredPartitionsMetadata);
+        ActionToString(GetUnfilteredTableMetadata);
         ActionToString(GetUserDefinedFunction);
         ActionToString(GetUserDefinedFunctions);
         ActionToString(GetWorkflow);
@@ -540,13 +585,18 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(GetWorkflowRunProperties);
         ActionToString(GetWorkflowRuns);
         ActionToString(ImportCatalogToGlue);
+        ActionToString(ListBlueprints);
         ActionToString(ListCrawlers);
+        ActionToString(ListCrawls);
+        ActionToString(ListCustomEntityTypes);
         ActionToString(ListDevEndpoints);
         ActionToString(ListJobs);
         ActionToString(ListMLTransforms);
         ActionToString(ListRegistries);
         ActionToString(ListSchemaVersions);
         ActionToString(ListSchemas);
+        ActionToString(ListSessions);
+        ActionToString(ListStatements);
         ActionToString(ListTriggers);
         ActionToString(ListWorkflows);
         ActionToString(PutDataCatalogEncryptionSettings);
@@ -558,7 +608,9 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(RemoveSchemaVersionMetadata);
         ActionToString(ResetJobBookmark);
         ActionToString(ResumeWorkflowRun);
+        ActionToString(RunStatement);
         ActionToString(SearchTables);
+        ActionToString(StartBlueprintRun);
         ActionToString(StartCrawler);
         ActionToString(StartCrawlerSchedule);
         ActionToString(StartExportLabelsTaskRun);
@@ -570,10 +622,12 @@ QString GlueRequestPrivate::toString(const GlueRequest::Action &action)
         ActionToString(StartWorkflowRun);
         ActionToString(StopCrawler);
         ActionToString(StopCrawlerSchedule);
+        ActionToString(StopSession);
         ActionToString(StopTrigger);
         ActionToString(StopWorkflowRun);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateBlueprint);
         ActionToString(UpdateClassifier);
         ActionToString(UpdateColumnStatisticsForPartition);
         ActionToString(UpdateColumnStatisticsForTable);

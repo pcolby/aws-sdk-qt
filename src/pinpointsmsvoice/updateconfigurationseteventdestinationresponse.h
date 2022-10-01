@@ -24,11 +24,11 @@
 #include "updateconfigurationseteventdestinationrequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class UpdateConfigurationSetEventDestinationResponsePrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT UpdateConfigurationSetEventDestinationResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT UpdateConfigurationSetEventDestinationResponse : public PinpointSmsVoiceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

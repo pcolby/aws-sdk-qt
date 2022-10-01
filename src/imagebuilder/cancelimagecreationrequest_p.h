@@ -24,14 +24,14 @@
 #include "cancelimagecreationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class CancelImageCreationRequest;
 
-class CancelImageCreationRequestPrivate : public imagebuilderRequestPrivate {
+class CancelImageCreationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    CancelImageCreationRequestPrivate(const imagebuilderRequest::Action action,
+    CancelImageCreationRequestPrivate(const ImageBuilderRequest::Action action,
                                    CancelImageCreationRequest * const q);
     CancelImageCreationRequestPrivate(const CancelImageCreationRequestPrivate &other,
                                    CancelImageCreationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

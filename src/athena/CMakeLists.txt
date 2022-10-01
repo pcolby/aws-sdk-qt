@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSATHENA_LIBRARY)
 
 add_library(QtAwsAthena
+  qtawsathenaglobal.h
   athenaclient.h
   athenaclient_p.h
   athenarequest.h
@@ -11,6 +12,10 @@ add_library(QtAwsAthena
   batchgetnamedqueryrequest_p.h
   batchgetnamedqueryresponse.h
   batchgetnamedqueryresponse_p.h
+  batchgetpreparedstatementrequest.h
+  batchgetpreparedstatementrequest_p.h
+  batchgetpreparedstatementresponse.h
+  batchgetpreparedstatementresponse_p.h
   batchgetqueryexecutionrequest.h
   batchgetqueryexecutionrequest_p.h
   batchgetqueryexecutionresponse.h
@@ -47,14 +52,14 @@ add_library(QtAwsAthena
   deleteworkgrouprequest_p.h
   deleteworkgroupresponse.h
   deleteworkgroupresponse_p.h
-  getdatabaserequest.h
-  getdatabaserequest_p.h
-  getdatabaseresponse.h
-  getdatabaseresponse_p.h
   getdatacatalogrequest.h
   getdatacatalogrequest_p.h
   getdatacatalogresponse.h
   getdatacatalogresponse_p.h
+  getdatabaserequest.h
+  getdatabaserequest_p.h
+  getdatabaseresponse.h
+  getdatabaseresponse_p.h
   getnamedqueryrequest.h
   getnamedqueryrequest_p.h
   getnamedqueryresponse.h
@@ -71,6 +76,10 @@ add_library(QtAwsAthena
   getqueryresultsrequest_p.h
   getqueryresultsresponse.h
   getqueryresultsresponse_p.h
+  getqueryruntimestatisticsrequest.h
+  getqueryruntimestatisticsrequest_p.h
+  getqueryruntimestatisticsresponse.h
+  getqueryruntimestatisticsresponse_p.h
   gettablemetadatarequest.h
   gettablemetadatarequest_p.h
   gettablemetadataresponse.h
@@ -79,14 +88,14 @@ add_library(QtAwsAthena
   getworkgrouprequest_p.h
   getworkgroupresponse.h
   getworkgroupresponse_p.h
-  listdatabasesrequest.h
-  listdatabasesrequest_p.h
-  listdatabasesresponse.h
-  listdatabasesresponse_p.h
   listdatacatalogsrequest.h
   listdatacatalogsrequest_p.h
   listdatacatalogsresponse.h
   listdatacatalogsresponse_p.h
+  listdatabasesrequest.h
+  listdatabasesrequest_p.h
+  listdatabasesresponse.h
+  listdatabasesresponse_p.h
   listengineversionsrequest.h
   listengineversionsrequest_p.h
   listengineversionsresponse.h
@@ -115,7 +124,6 @@ add_library(QtAwsAthena
   listworkgroupsrequest_p.h
   listworkgroupsresponse.h
   listworkgroupsresponse_p.h
-  qtawsathenaglobal.h
   startqueryexecutionrequest.h
   startqueryexecutionrequest_p.h
   startqueryexecutionresponse.h
@@ -136,6 +144,10 @@ add_library(QtAwsAthena
   updatedatacatalogrequest_p.h
   updatedatacatalogresponse.h
   updatedatacatalogresponse_p.h
+  updatenamedqueryrequest.h
+  updatenamedqueryrequest_p.h
+  updatenamedqueryresponse.h
+  updatenamedqueryresponse_p.h
   updatepreparedstatementrequest.h
   updatepreparedstatementrequest_p.h
   updatepreparedstatementresponse.h
@@ -149,6 +161,8 @@ add_library(QtAwsAthena
   athenaresponse.cpp
   batchgetnamedqueryrequest.cpp
   batchgetnamedqueryresponse.cpp
+  batchgetpreparedstatementrequest.cpp
+  batchgetpreparedstatementresponse.cpp
   batchgetqueryexecutionrequest.cpp
   batchgetqueryexecutionresponse.cpp
   createdatacatalogrequest.cpp
@@ -167,10 +181,10 @@ add_library(QtAwsAthena
   deletepreparedstatementresponse.cpp
   deleteworkgrouprequest.cpp
   deleteworkgroupresponse.cpp
-  getdatabaserequest.cpp
-  getdatabaseresponse.cpp
   getdatacatalogrequest.cpp
   getdatacatalogresponse.cpp
+  getdatabaserequest.cpp
+  getdatabaseresponse.cpp
   getnamedqueryrequest.cpp
   getnamedqueryresponse.cpp
   getpreparedstatementrequest.cpp
@@ -179,14 +193,16 @@ add_library(QtAwsAthena
   getqueryexecutionresponse.cpp
   getqueryresultsrequest.cpp
   getqueryresultsresponse.cpp
+  getqueryruntimestatisticsrequest.cpp
+  getqueryruntimestatisticsresponse.cpp
   gettablemetadatarequest.cpp
   gettablemetadataresponse.cpp
   getworkgrouprequest.cpp
   getworkgroupresponse.cpp
-  listdatabasesrequest.cpp
-  listdatabasesresponse.cpp
   listdatacatalogsrequest.cpp
   listdatacatalogsresponse.cpp
+  listdatabasesrequest.cpp
+  listdatabasesresponse.cpp
   listengineversionsrequest.cpp
   listengineversionsresponse.cpp
   listnamedqueriesrequest.cpp
@@ -211,6 +227,8 @@ add_library(QtAwsAthena
   untagresourceresponse.cpp
   updatedatacatalogrequest.cpp
   updatedatacatalogresponse.cpp
+  updatenamedqueryrequest.cpp
+  updatenamedqueryresponse.cpp
   updatepreparedstatementrequest.cpp
   updatepreparedstatementresponse.cpp
   updateworkgrouprequest.cpp

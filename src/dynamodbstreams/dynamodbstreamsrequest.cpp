@@ -21,32 +21,32 @@
 #include "dynamodbstreamsrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsRequest
- * \brief The DynamoDBStreamsRequest class provides an interface for DynamoDBStreams requests.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsRequest
+ * \brief The DynamoDbStreamsRequest class provides an interface for DynamoDbStreams requests.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * \enum DynamoDBStreamsRequest::Action
+ * \enum DynamoDbStreamsRequest::Action
  *
- * This enum describes the actions that can be performed as DynamoDBStreams
+ * This enum describes the actions that can be performed as DynamoDbStreams
  * requests.
  *
- * \value DescribeStreamAction DynamoDBStreams DescribeStream action.
- * \value GetRecordsAction DynamoDBStreams GetRecords action.
- * \value GetShardIteratorAction DynamoDBStreams GetShardIterator action.
- * \value ListStreamsAction DynamoDBStreams ListStreams action.
+ * \value DescribeStreamAction DynamoDbStreams DescribeStream action.
+ * \value GetRecordsAction DynamoDbStreams GetRecords action.
+ * \value GetShardIteratorAction DynamoDbStreams GetShardIterator action.
+ * \value ListStreamsAction DynamoDbStreams ListStreams action.
  */
 
 /*!
- * Constructs a DynamoDBStreamsRequest object for DynamoDBStreams \a action.
+ * Constructs a DynamoDbStreamsRequest object for DynamoDbStreams \a action.
  */
-DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(action, this))
+DynamoDbStreamsRequest::DynamoDbStreamsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new DynamoDbStreamsRequestPrivate(action, this))
 {
 
 }
@@ -54,18 +54,18 @@ DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-DynamoDBStreamsRequest::DynamoDBStreamsRequest(const DynamoDBStreamsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(*other.d_func(), this))
+DynamoDbStreamsRequest::DynamoDbStreamsRequest(const DynamoDbStreamsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new DynamoDbStreamsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the DynamoDBStreamsRequest object to be equal to \a other.
+ * Sets the DynamoDbStreamsRequest object to be equal to \a other.
  */
-DynamoDBStreamsRequest& DynamoDBStreamsRequest::operator=(const DynamoDBStreamsRequest &other)
+DynamoDbStreamsRequest& DynamoDbStreamsRequest::operator=(const DynamoDbStreamsRequest &other)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -73,57 +73,57 @@ DynamoDBStreamsRequest& DynamoDBStreamsRequest::operator=(const DynamoDBStreamsR
 }
 
 /*!
- * Constructs aa DynamoDBStreamsRequest object with private implementation \a d.
+ * Constructs aa DynamoDbStreamsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DynamoDBStreamsRequestPrivate.
+ * implementation that inherits from DynamoDbStreamsRequestPrivate.
  */
-DynamoDBStreamsRequest::DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DynamoDbStreamsRequest::DynamoDbStreamsRequest(DynamoDbStreamsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the DynamoDBStreams action to be performed by this request.
+ * Returns the DynamoDbStreams action to be performed by this request.
  */
-DynamoDBStreamsRequest::Action DynamoDBStreamsRequest::action() const
+DynamoDbStreamsRequest::Action DynamoDbStreamsRequest::action() const
 {
-    Q_D(const DynamoDBStreamsRequest);
+    Q_D(const DynamoDbStreamsRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the DynamoDBStreams action to be performed by this request.
+ * Returns the name of the DynamoDbStreams action to be performed by this request.
  */
-QString DynamoDBStreamsRequest::actionString() const
+QString DynamoDbStreamsRequest::actionString() const
 {
-    return DynamoDBStreamsRequestPrivate::toString(action());
+    return DynamoDbStreamsRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the DynamoDBStreams API version implemented by this request.
+ * Returns the DynamoDbStreams API version implemented by this request.
  */
-QString DynamoDBStreamsRequest::apiVersion() const
+QString DynamoDbStreamsRequest::apiVersion() const
 {
-    Q_D(const DynamoDBStreamsRequest);
+    Q_D(const DynamoDbStreamsRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the DynamoDBStreams action to be performed by this request to \a action.
+ * Sets the DynamoDbStreams action to be performed by this request to \a action.
  */
-void DynamoDBStreamsRequest::setAction(const Action action)
+void DynamoDbStreamsRequest::setAction(const Action action)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->action = action;
 }
 
 /*!
- * Sets the DynamoDBStreams API version to include in this request to \a version.
+ * Sets the DynamoDbStreams API version to include in this request to \a version.
  */
-void DynamoDBStreamsRequest::setApiVersion(const QString &version)
+void DynamoDbStreamsRequest::setApiVersion(const QString &version)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->apiVersion = version;
 }
 
@@ -135,7 +135,7 @@ void DynamoDBStreamsRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool DynamoDBStreamsRequest::operator==(const DynamoDBStreamsRequest &other) const
+bool DynamoDbStreamsRequest::operator==(const DynamoDbStreamsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -144,19 +144,19 @@ bool DynamoDBStreamsRequest::operator==(const DynamoDBStreamsRequest &other) con
 }
 
 /*
- * Returns \c tue if \a queueName is a valid DynamoDBStreams queue name.
+ * Returns \c tue if \a queueName is a valid DynamoDbStreams queue name.
  *
- * @par From DynamoDBStreams FAQs:
+ * @par From DynamoDbStreams FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid DynamoDBStreams queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid DynamoDbStreams queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool DynamoDBStreamsRequest::isValidQueueName(const QString &queueName)
+/*bool DynamoDbStreamsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -166,45 +166,45 @@ bool DynamoDBStreamsRequest::operator==(const DynamoDBStreamsRequest &other) con
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int DynamoDBStreamsRequest::clearParameter(const QString &name)
+int DynamoDbStreamsRequest::clearParameter(const QString &name)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void DynamoDBStreamsRequest::clearParameters()
+void DynamoDbStreamsRequest::clearParameters()
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant DynamoDBStreamsRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant DynamoDbStreamsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const DynamoDBStreamsRequest);
+    Q_D(const DynamoDbStreamsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &DynamoDBStreamsRequest::parameters() const
+const QVariantMap &DynamoDbStreamsRequest::parameters() const
 {
-    Q_D(const DynamoDBStreamsRequest);
+    Q_D(const DynamoDbStreamsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void DynamoDBStreamsRequest::setParameter(const QString &name, const QVariant &value)
+void DynamoDbStreamsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -212,42 +212,42 @@ void DynamoDBStreamsRequest::setParameter(const QString &name, const QVariant &v
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void DynamoDBStreamsRequest::setParameters(const QVariantMap &parameters)
+void DynamoDbStreamsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(DynamoDBStreamsRequest);
+    Q_D(DynamoDbStreamsRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the DynamoDBStreams request using the given
+ * Returns a network request for the DynamoDbStreams request using the given
  * \a endpoint.
  *
- * This DynamoDBStreams implementation builds request URLs by combining the
+ * This DynamoDbStreams implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest DynamoDbStreamsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const DynamoDBStreamsRequest);
+    //Q_D(const DynamoDbStreamsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsRequestPrivate
- * \brief The DynamoDBStreamsRequestPrivate class provides private implementation for DynamoDBStreamsRequest.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsRequestPrivate
+ * \brief The DynamoDbStreamsRequestPrivate class provides private implementation for DynamoDbStreamsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a DynamoDBStreamsRequestPrivate object for DynamoDBStreams \a action,
+ * Constructs a DynamoDbStreamsRequestPrivate object for DynamoDbStreams \a action,
  * with public implementation \a q.
  */
-DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequest::Action action, DynamoDBStreamsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+DynamoDbStreamsRequestPrivate::DynamoDbStreamsRequestPrivate(const DynamoDbStreamsRequest::Action action, DynamoDbStreamsRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-08-10"))
 {
 
 }
@@ -258,10 +258,10 @@ DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStrea
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the DynamoDBStreamsRequest class's copy constructor.
+ * This is required to support the DynamoDbStreamsRequest class's copy constructor.
  */
-DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequestPrivate &other,
-                                     DynamoDBStreamsRequest * const q)
+DynamoDbStreamsRequestPrivate::DynamoDbStreamsRequestPrivate(const DynamoDbStreamsRequestPrivate &other,
+                                     DynamoDbStreamsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -272,14 +272,14 @@ DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStrea
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts DynamoDBStreamsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the DynamoDBStreams service's Action
+ * This function converts DynamoDbStreamsRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the DynamoDbStreams service's Action
  * query parameters.
  */
-QString DynamoDBStreamsRequestPrivate::toString(const DynamoDBStreamsRequest::Action &action)
+QString DynamoDbStreamsRequestPrivate::toString(const DynamoDbStreamsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case DynamoDBStreamsRequest::action##Action: return QStringLiteral(#action)
+        case DynamoDbStreamsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DescribeStream);
         ActionToString(GetRecords);
@@ -292,5 +292,5 @@ QString DynamoDBStreamsRequestPrivate::toString(const DynamoDBStreamsRequest::Ac
     return QString();
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

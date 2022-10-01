@@ -24,14 +24,14 @@
 #include "getbytematchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetByteMatchSetRequest;
 
-class GetByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class GetByteMatchSetRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    GetByteMatchSetRequestPrivate(const WAFRegionalRequest::Action action,
+    GetByteMatchSetRequestPrivate(const WafRegionalRequest::Action action,
                                    GetByteMatchSetRequest * const q);
     GetByteMatchSetRequestPrivate(const GetByteMatchSetRequestPrivate &other,
                                    GetByteMatchSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

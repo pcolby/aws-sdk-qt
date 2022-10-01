@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaDBClusterResponse
- * \brief The PromoteReadReplicaDBClusterResponse class provides an interace for RDS PromoteReadReplicaDBCluster responses.
+ * \class QtAws::Rds::PromoteReadReplicaDBClusterResponse
+ * \brief The PromoteReadReplicaDBClusterResponse class provides an interace for Rds PromoteReadReplicaDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const PromoteReadReplicaDBClusterRequest * PromoteReadReplicaDBClusterResponse::
 
 /*!
  * \reimp
- * Parses a successful RDS PromoteReadReplicaDBCluster \a response.
+ * Parses a successful Rds PromoteReadReplicaDBCluster \a response.
  */
 void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaDBClusterResponsePrivate
+ * \class QtAws::Rds::PromoteReadReplicaDBClusterResponsePrivate
  * \brief The PromoteReadReplicaDBClusterResponsePrivate class provides private implementation for PromoteReadReplicaDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponseP
 }
 
 /*!
- * Parses a RDS PromoteReadReplicaDBCluster response element from \a xml.
+ * Parses a Rds PromoteReadReplicaDBCluster response element from \a xml.
  */
 void PromoteReadReplicaDBClusterResponsePrivate::parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void PromoteReadReplicaDBClusterResponsePrivate::parsePromoteReadReplicaDBCluste
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

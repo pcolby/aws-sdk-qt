@@ -24,14 +24,14 @@
 #include "describenodeassociationstatusrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeNodeAssociationStatusRequest;
 
-class DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCMRequest::Action action,
+    DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DescribeNodeAssociationStatusRequest * const q);
     DescribeNodeAssociationStatusRequestPrivate(const DescribeNodeAssociationStatusRequestPrivate &other,
                                    DescribeNodeAssociationStatusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

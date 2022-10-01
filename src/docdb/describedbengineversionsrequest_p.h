@@ -24,14 +24,14 @@
 #include "describedbengineversionsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeDBEngineVersionsRequest;
 
-class DescribeDBEngineVersionsRequestPrivate : public DocDBRequestPrivate {
+class DescribeDBEngineVersionsRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeDBEngineVersionsRequestPrivate(const DocDBRequest::Action action,
+    DescribeDBEngineVersionsRequestPrivate(const DocDbRequest::Action action,
                                    DescribeDBEngineVersionsRequest * const q);
     DescribeDBEngineVersionsRequestPrivate(const DescribeDBEngineVersionsRequestPrivate &other,
                                    DescribeDBEngineVersionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

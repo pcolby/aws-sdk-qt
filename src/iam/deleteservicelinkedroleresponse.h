@@ -24,7 +24,7 @@
 #include "deleteservicelinkedrolerequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class DeleteServiceLinkedRoleResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

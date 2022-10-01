@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public ECRPublicRequestPrivate {
+class TagResourceRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const ECRPublicRequest::Action action,
+    TagResourceRequestPrivate(const EcrPublicRequest::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

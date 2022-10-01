@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetImageResponse
- * \brief The GetImageResponse class provides an interace for imagebuilder GetImage responses.
+ * \class QtAws::ImageBuilder::GetImageResponse
+ * \brief The GetImageResponse class provides an interace for ImageBuilder GetImage responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getImage
+ * \sa ImageBuilderClient::getImage
  */
 
 /*!
@@ -47,7 +47,7 @@ GetImageResponse::GetImageResponse(
         const GetImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetImageResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetImageResponsePrivate(this), parent)
 {
     setRequest(new GetImageRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetImageRequest * GetImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetImage \a response.
+ * Parses a successful ImageBuilder GetImage \a response.
  */
 void GetImageResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetImageResponsePrivate
+ * \class QtAws::ImageBuilder::GetImageResponsePrivate
  * \brief The GetImageResponsePrivate class provides private implementation for GetImageResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetImageResponsePrivate object with public implementation \a q.
  */
 GetImageResponsePrivate::GetImageResponsePrivate(
-    GetImageResponse * const q) : imagebuilderResponsePrivate(q)
+    GetImageResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetImage response element from \a xml.
+ * Parses a ImageBuilder GetImage response element from \a xml.
  */
 void GetImageResponsePrivate::parseGetImageResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetImageResponsePrivate::parseGetImageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

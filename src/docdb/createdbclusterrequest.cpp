@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateDBClusterRequest
- * \brief The CreateDBClusterRequest class provides an interface for DocDB CreateDBCluster requests.
+ * \class QtAws::DocDb::CreateDBClusterRequest
+ * \brief The CreateDBClusterRequest class provides an interface for DocDb CreateDBCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createDBCluster
+ * \sa DocDbClient::createDBCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &other)
-    : DocDBRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &oth
  * Constructs a CreateDBClusterRequest object.
  */
 CreateDBClusterRequest::CreateDBClusterRequest()
-    : DocDBRequest(new CreateDBClusterRequestPrivate(DocDBRequest::CreateDBClusterAction, this))
+    : DocDbRequest(new CreateDBClusterRequestPrivate(DocDbRequest::CreateDBClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::DocDB::CreateDBClusterRequestPrivate
+ * \class QtAws::DocDb::CreateDBClusterRequestPrivate
  * \brief The CreateDBClusterRequestPrivate class provides private implementation for CreateDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a CreateDBClusterRequestPrivate object for DocDB \a action,
+ * Constructs a CreateDBClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
-    const DocDBRequest::Action action, CreateDBClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, CreateDBClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const CreateDBClusterRequestPrivate &other, CreateDBClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

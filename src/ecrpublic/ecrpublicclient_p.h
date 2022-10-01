@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicClient;
+class EcrPublicClient;
 
-class ECRPublicClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EcrPublicClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ECRPublicClientPrivate(ECRPublicClient * const q);
+    explicit EcrPublicClientPrivate(EcrPublicClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ECRPublicClient)
-    Q_DISABLE_COPY(ECRPublicClientPrivate)
+    Q_DECLARE_PUBLIC(EcrPublicClient)
+    Q_DISABLE_COPY(EcrPublicClientPrivate)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

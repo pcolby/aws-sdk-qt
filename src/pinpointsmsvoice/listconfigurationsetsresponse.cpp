@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::ListConfigurationSetsResponse
- * \brief The ListConfigurationSetsResponse class provides an interace for PinpointSMSVoice ListConfigurationSets responses.
+ * \class QtAws::PinpointSmsVoice::ListConfigurationSetsResponse
+ * \brief The ListConfigurationSetsResponse class provides an interace for PinpointSmsVoice ListConfigurationSets responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::listConfigurationSets
+ * \sa PinpointSmsVoiceClient::listConfigurationSets
  */
 
 /*!
@@ -44,7 +44,7 @@ ListConfigurationSetsResponse::ListConfigurationSetsResponse(
         const ListConfigurationSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new ListConfigurationSetsResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new ListConfigurationSetsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationSetsRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice ListConfigurationSets \a response.
+ * Parses a successful PinpointSmsVoice ListConfigurationSets \a response.
  */
 void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::ListConfigurationSetsResponsePrivate
+ * \class QtAws::PinpointSmsVoice::ListConfigurationSetsResponsePrivate
  * \brief The ListConfigurationSetsResponsePrivate class provides private implementation for ListConfigurationSetsResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a ListConfigurationSetsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
-    ListConfigurationSetsResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    ListConfigurationSetsResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice ListConfigurationSets response element from \a xml.
+ * Parses a PinpointSmsVoice ListConfigurationSets response element from \a xml.
  */
 void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

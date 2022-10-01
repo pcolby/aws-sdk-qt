@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMResponse;
+class OpsWorksCmResponse;
 
-class OpsWorksCMResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class OpsWorksCmResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit OpsWorksCMResponsePrivate(OpsWorksCMResponse * const q);
+    explicit OpsWorksCmResponsePrivate(OpsWorksCmResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(OpsWorksCMResponse)
-    Q_DISABLE_COPY(OpsWorksCMResponsePrivate)
+    Q_DECLARE_PUBLIC(OpsWorksCmResponse)
+    Q_DISABLE_COPY(OpsWorksCmResponsePrivate)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

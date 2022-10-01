@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class QldbRequestPrivate;
 
 class QTAWSQLDB_EXPORT QldbRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by QLDB.
+    /// Actions supported by Qldb.
     enum Action {
         CancelJournalKinesisStreamAction,
         CreateLedgerAction,
@@ -95,7 +95,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

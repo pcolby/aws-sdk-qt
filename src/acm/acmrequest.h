@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class AcmRequestPrivate;
 
 class QTAWSACM_EXPORT AcmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ACM.
+    /// Actions supported by Acm.
     enum Action {
         AddTagsToCertificateAction,
         DeleteCertificateAction,
@@ -90,7 +90,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

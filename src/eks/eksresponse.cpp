@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::EksResponse
- * \brief The EksResponse class provides an interface for EKS responses.
+ * \class QtAws::Eks::EksResponse
+ * \brief The EksResponse class provides an interface for Eks responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -76,11 +76,11 @@ void EksResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::EksResponsePrivate
+ * \class QtAws::Eks::EksResponsePrivate
  * \brief The EksResponsePrivate class provides private implementation for EksResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -92,5 +92,5 @@ EksResponsePrivate::EksResponsePrivate(
 
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

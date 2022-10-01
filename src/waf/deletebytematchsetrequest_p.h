@@ -24,7 +24,7 @@
 #include "deletebytematchsetrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class DeleteByteMatchSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

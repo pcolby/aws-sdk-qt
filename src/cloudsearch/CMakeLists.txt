@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCLOUDSEARCH_LIBRARY)
 
 add_library(QtAwsCloudSearch
-  buildsuggestersrequest.h
-  buildsuggestersrequest_p.h
-  buildsuggestersresponse.h
-  buildsuggestersresponse_p.h
+  qtawscloudsearchglobal.h
   cloudsearchclient.h
   cloudsearchclient_p.h
   cloudsearchrequest.h
   cloudsearchrequest_p.h
   cloudsearchresponse.h
   cloudsearchresponse_p.h
+  buildsuggestersrequest.h
+  buildsuggestersrequest_p.h
+  buildsuggestersresponse.h
+  buildsuggestersresponse_p.h
   createdomainrequest.h
   createdomainrequest_p.h
   createdomainresponse.h
@@ -95,7 +96,6 @@ add_library(QtAwsCloudSearch
   listdomainnamesrequest_p.h
   listdomainnamesresponse.h
   listdomainnamesresponse_p.h
-  qtawscloudsearchglobal.h
   updateavailabilityoptionsrequest.h
   updateavailabilityoptionsrequest_p.h
   updateavailabilityoptionsresponse.h
@@ -112,11 +112,11 @@ add_library(QtAwsCloudSearch
   updateserviceaccesspoliciesrequest_p.h
   updateserviceaccesspoliciesresponse.h
   updateserviceaccesspoliciesresponse_p.h
-  buildsuggestersrequest.cpp
-  buildsuggestersresponse.cpp
   cloudsearchclient.cpp
   cloudsearchrequest.cpp
   cloudsearchresponse.cpp
+  buildsuggestersrequest.cpp
+  buildsuggestersresponse.cpp
   createdomainrequest.cpp
   createdomainresponse.cpp
   defineanalysisschemerequest.cpp

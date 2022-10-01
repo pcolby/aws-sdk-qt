@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterParameterGroupResponse
- * \brief The CopyDBClusterParameterGroupResponse class provides an interace for DocDB CopyDBClusterParameterGroup responses.
+ * \class QtAws::DocDb::CopyDBClusterParameterGroupResponse
+ * \brief The CopyDBClusterParameterGroupResponse class provides an interace for DocDb CopyDBClusterParameterGroup responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::copyDBClusterParameterGroup
+ * \sa DocDbClient::copyDBClusterParameterGroup
  */
 
 /*!
@@ -45,7 +45,7 @@ CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
         const CopyDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
+    : DocDbResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::
 
 /*!
  * \reimp
- * Parses a successful DocDB CopyDBClusterParameterGroup \a response.
+ * Parses a successful DocDb CopyDBClusterParameterGroup \a response.
  */
 void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterParameterGroupResponsePrivate
+ * \class QtAws::DocDb::CopyDBClusterParameterGroupResponsePrivate
  * \brief The CopyDBClusterParameterGroupResponsePrivate class provides private implementation for CopyDBClusterParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CopyDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponsePrivate(
-    CopyDBClusterParameterGroupResponse * const q) : DocDBResponsePrivate(q)
+    CopyDBClusterParameterGroupResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CopyDBClusterParameterGroup response element from \a xml.
+ * Parses a DocDb CopyDBClusterParameterGroup response element from \a xml.
  */
 void CopyDBClusterParameterGroupResponsePrivate::parseCopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CopyDBClusterParameterGroupResponsePrivate::parseCopyDBClusterParameterGrou
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

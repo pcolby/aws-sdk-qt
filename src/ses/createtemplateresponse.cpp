@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateTemplateResponse
- * \brief The CreateTemplateResponse class provides an interace for SES CreateTemplate responses.
+ * \class QtAws::Ses::CreateTemplateResponse
+ * \brief The CreateTemplateResponse class provides an interace for Ses CreateTemplate responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const CreateTemplateRequest * CreateTemplateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES CreateTemplate \a response.
+ * Parses a successful Ses CreateTemplate \a response.
  */
 void CreateTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void CreateTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::CreateTemplateResponsePrivate
+ * \class QtAws::Ses::CreateTemplateResponsePrivate
  * \brief The CreateTemplateResponsePrivate class provides private implementation for CreateTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
 }
 
 /*!
- * Parses a SES CreateTemplate response element from \a xml.
+ * Parses a Ses CreateTemplate response element from \a xml.
  */
 void CreateTemplateResponsePrivate::parseCreateTemplateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateTemplateResponsePrivate::parseCreateTemplateResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

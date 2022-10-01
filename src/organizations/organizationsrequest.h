@@ -42,6 +42,7 @@ public:
         AcceptHandshakeAction,
         AttachPolicyAction,
         CancelHandshakeAction,
+        CloseAccountAction,
         CreateAccountAction,
         CreateGovCloudAccountAction,
         CreateOrganizationAction,

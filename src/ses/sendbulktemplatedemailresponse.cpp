@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SendBulkTemplatedEmailResponse
- * \brief The SendBulkTemplatedEmailResponse class provides an interace for SES SendBulkTemplatedEmail responses.
+ * \class QtAws::Ses::SendBulkTemplatedEmailResponse
+ * \brief The SendBulkTemplatedEmailResponse class provides an interace for Ses SendBulkTemplatedEmail responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SendBulkTemplatedEmailRequest * SendBulkTemplatedEmailResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SES SendBulkTemplatedEmail \a response.
+ * Parses a successful Ses SendBulkTemplatedEmail \a response.
  */
 void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SendBulkTemplatedEmailResponsePrivate
+ * \class QtAws::Ses::SendBulkTemplatedEmailResponsePrivate
  * \brief The SendBulkTemplatedEmailResponsePrivate class provides private implementation for SendBulkTemplatedEmailResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
 }
 
 /*!
- * Parses a SES SendBulkTemplatedEmail response element from \a xml.
+ * Parses a Ses SendBulkTemplatedEmail response element from \a xml.
  */
 void SendBulkTemplatedEmailResponsePrivate::parseSendBulkTemplatedEmailResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SendBulkTemplatedEmailResponsePrivate::parseSendBulkTemplatedEmailResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -74,6 +74,8 @@ class CreateChannelMembershipRequest;
 class CreateChannelMembershipResponse;
 class CreateChannelModeratorRequest;
 class CreateChannelModeratorResponse;
+class CreateMediaCapturePipelineRequest;
+class CreateMediaCapturePipelineResponse;
 class CreateMeetingRequest;
 class CreateMeetingResponse;
 class CreateMeetingDialOutRequest;
@@ -124,6 +126,8 @@ class DeleteChannelModeratorRequest;
 class DeleteChannelModeratorResponse;
 class DeleteEventsConfigurationRequest;
 class DeleteEventsConfigurationResponse;
+class DeleteMediaCapturePipelineRequest;
+class DeleteMediaCapturePipelineResponse;
 class DeleteMeetingRequest;
 class DeleteMeetingResponse;
 class DeletePhoneNumberRequest;
@@ -198,6 +202,8 @@ class GetEventsConfigurationRequest;
 class GetEventsConfigurationResponse;
 class GetGlobalSettingsRequest;
 class GetGlobalSettingsResponse;
+class GetMediaCapturePipelineRequest;
+class GetMediaCapturePipelineResponse;
 class GetMeetingRequest;
 class GetMeetingResponse;
 class GetMessagingSessionEndpointRequest;
@@ -272,6 +278,8 @@ class ListChannelsRequest;
 class ListChannelsResponse;
 class ListChannelsModeratedByAppInstanceUserRequest;
 class ListChannelsModeratedByAppInstanceUserResponse;
+class ListMediaCapturePipelinesRequest;
+class ListMediaCapturePipelinesResponse;
 class ListMeetingTagsRequest;
 class ListMeetingTagsResponse;
 class ListMeetingsRequest;
@@ -344,6 +352,10 @@ class SearchAvailablePhoneNumbersRequest;
 class SearchAvailablePhoneNumbersResponse;
 class SendChannelMessageRequest;
 class SendChannelMessageResponse;
+class StartMeetingTranscriptionRequest;
+class StartMeetingTranscriptionResponse;
+class StopMeetingTranscriptionRequest;
+class StopMeetingTranscriptionResponse;
 class TagAttendeeRequest;
 class TagAttendeeResponse;
 class TagMeetingRequest;
@@ -386,6 +398,8 @@ class UpdateRoomMembershipRequest;
 class UpdateRoomMembershipResponse;
 class UpdateSipMediaApplicationRequest;
 class UpdateSipMediaApplicationResponse;
+class UpdateSipMediaApplicationCallRequest;
+class UpdateSipMediaApplicationCallResponse;
 class UpdateSipRuleRequest;
 class UpdateSipRuleResponse;
 class UpdateUserRequest;
@@ -396,6 +410,8 @@ class UpdateVoiceConnectorRequest;
 class UpdateVoiceConnectorResponse;
 class UpdateVoiceConnectorGroupRequest;
 class UpdateVoiceConnectorGroupResponse;
+class ValidateE911AddressRequest;
+class ValidateE911AddressResponse;
 
 class QTAWSCHIME_EXPORT ChimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -435,6 +451,7 @@ public slots:
     CreateChannelBanResponse * createChannelBan(const CreateChannelBanRequest &request);
     CreateChannelMembershipResponse * createChannelMembership(const CreateChannelMembershipRequest &request);
     CreateChannelModeratorResponse * createChannelModerator(const CreateChannelModeratorRequest &request);
+    CreateMediaCapturePipelineResponse * createMediaCapturePipeline(const CreateMediaCapturePipelineRequest &request);
     CreateMeetingResponse * createMeeting(const CreateMeetingRequest &request);
     CreateMeetingDialOutResponse * createMeetingDialOut(const CreateMeetingDialOutRequest &request);
     CreateMeetingWithAttendeesResponse * createMeetingWithAttendees(const CreateMeetingWithAttendeesRequest &request);
@@ -460,6 +477,7 @@ public slots:
     DeleteChannelMessageResponse * deleteChannelMessage(const DeleteChannelMessageRequest &request);
     DeleteChannelModeratorResponse * deleteChannelModerator(const DeleteChannelModeratorRequest &request);
     DeleteEventsConfigurationResponse * deleteEventsConfiguration(const DeleteEventsConfigurationRequest &request);
+    DeleteMediaCapturePipelineResponse * deleteMediaCapturePipeline(const DeleteMediaCapturePipelineRequest &request);
     DeleteMeetingResponse * deleteMeeting(const DeleteMeetingRequest &request);
     DeletePhoneNumberResponse * deletePhoneNumber(const DeletePhoneNumberRequest &request);
     DeleteProxySessionResponse * deleteProxySession(const DeleteProxySessionRequest &request);
@@ -498,6 +516,7 @@ public slots:
     GetEventsConfigurationResponse * getEventsConfiguration(const GetEventsConfigurationRequest &request);
     GetGlobalSettingsResponse * getGlobalSettings(const GetGlobalSettingsRequest &request);
     GetGlobalSettingsResponse * getGlobalSettings();
+    GetMediaCapturePipelineResponse * getMediaCapturePipeline(const GetMediaCapturePipelineRequest &request);
     GetMeetingResponse * getMeeting(const GetMeetingRequest &request);
     GetMessagingSessionEndpointResponse * getMessagingSessionEndpoint(const GetMessagingSessionEndpointRequest &request);
     GetPhoneNumberResponse * getPhoneNumber(const GetPhoneNumberRequest &request);
@@ -536,6 +555,7 @@ public slots:
     ListChannelModeratorsResponse * listChannelModerators(const ListChannelModeratorsRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
     ListChannelsModeratedByAppInstanceUserResponse * listChannelsModeratedByAppInstanceUser(const ListChannelsModeratedByAppInstanceUserRequest &request);
+    ListMediaCapturePipelinesResponse * listMediaCapturePipelines(const ListMediaCapturePipelinesRequest &request);
     ListMeetingTagsResponse * listMeetingTags(const ListMeetingTagsRequest &request);
     ListMeetingsResponse * listMeetings(const ListMeetingsRequest &request);
     ListPhoneNumberOrdersResponse * listPhoneNumberOrders(const ListPhoneNumberOrdersRequest &request);
@@ -572,6 +592,8 @@ public slots:
     RestorePhoneNumberResponse * restorePhoneNumber(const RestorePhoneNumberRequest &request);
     SearchAvailablePhoneNumbersResponse * searchAvailablePhoneNumbers(const SearchAvailablePhoneNumbersRequest &request);
     SendChannelMessageResponse * sendChannelMessage(const SendChannelMessageRequest &request);
+    StartMeetingTranscriptionResponse * startMeetingTranscription(const StartMeetingTranscriptionRequest &request);
+    StopMeetingTranscriptionResponse * stopMeetingTranscription(const StopMeetingTranscriptionRequest &request);
     TagAttendeeResponse * tagAttendee(const TagAttendeeRequest &request);
     TagMeetingResponse * tagMeeting(const TagMeetingRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
@@ -593,11 +615,13 @@ public slots:
     UpdateRoomResponse * updateRoom(const UpdateRoomRequest &request);
     UpdateRoomMembershipResponse * updateRoomMembership(const UpdateRoomMembershipRequest &request);
     UpdateSipMediaApplicationResponse * updateSipMediaApplication(const UpdateSipMediaApplicationRequest &request);
+    UpdateSipMediaApplicationCallResponse * updateSipMediaApplicationCall(const UpdateSipMediaApplicationCallRequest &request);
     UpdateSipRuleResponse * updateSipRule(const UpdateSipRuleRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
     UpdateUserSettingsResponse * updateUserSettings(const UpdateUserSettingsRequest &request);
     UpdateVoiceConnectorResponse * updateVoiceConnector(const UpdateVoiceConnectorRequest &request);
     UpdateVoiceConnectorGroupResponse * updateVoiceConnectorGroup(const UpdateVoiceConnectorGroupRequest &request);
+    ValidateE911AddressResponse * validateE911Address(const ValidateE911AddressRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ChimeClient)

@@ -24,14 +24,14 @@
 #include "updateenvironmentrequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class UpdateEnvironmentRequest;
 
-class UpdateEnvironmentRequestPrivate : public finspaceRequestPrivate {
+class UpdateEnvironmentRequestPrivate : public FinspaceRequestPrivate {
 
 public:
-    UpdateEnvironmentRequestPrivate(const finspaceRequest::Action action,
+    UpdateEnvironmentRequestPrivate(const FinspaceRequest::Action action,
                                    UpdateEnvironmentRequest * const q);
     UpdateEnvironmentRequestPrivate(const UpdateEnvironmentRequestPrivate &other,
                                    UpdateEnvironmentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

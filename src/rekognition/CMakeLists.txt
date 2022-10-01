@@ -1,14 +1,29 @@
 add_compile_definitions(QTAWSREKOGNITION_LIBRARY)
 
 add_library(QtAwsRekognition
+  qtawsrekognitionglobal.h
+  rekognitionclient.h
+  rekognitionclient_p.h
+  rekognitionrequest.h
+  rekognitionrequest_p.h
+  rekognitionresponse.h
+  rekognitionresponse_p.h
   comparefacesrequest.h
   comparefacesrequest_p.h
   comparefacesresponse.h
   comparefacesresponse_p.h
+  copyprojectversionrequest.h
+  copyprojectversionrequest_p.h
+  copyprojectversionresponse.h
+  copyprojectversionresponse_p.h
   createcollectionrequest.h
   createcollectionrequest_p.h
   createcollectionresponse.h
   createcollectionresponse_p.h
+  createdatasetrequest.h
+  createdatasetrequest_p.h
+  createdatasetresponse.h
+  createdatasetresponse_p.h
   createprojectrequest.h
   createprojectrequest_p.h
   createprojectresponse.h
@@ -25,6 +40,10 @@ add_library(QtAwsRekognition
   deletecollectionrequest_p.h
   deletecollectionresponse.h
   deletecollectionresponse_p.h
+  deletedatasetrequest.h
+  deletedatasetrequest_p.h
+  deletedatasetresponse.h
+  deletedatasetresponse_p.h
   deletefacesrequest.h
   deletefacesrequest_p.h
   deletefacesresponse.h
@@ -33,6 +52,10 @@ add_library(QtAwsRekognition
   deleteprojectrequest_p.h
   deleteprojectresponse.h
   deleteprojectresponse_p.h
+  deleteprojectpolicyrequest.h
+  deleteprojectpolicyrequest_p.h
+  deleteprojectpolicyresponse.h
+  deleteprojectpolicyresponse_p.h
   deleteprojectversionrequest.h
   deleteprojectversionrequest_p.h
   deleteprojectversionresponse.h
@@ -45,14 +68,18 @@ add_library(QtAwsRekognition
   describecollectionrequest_p.h
   describecollectionresponse.h
   describecollectionresponse_p.h
-  describeprojectsrequest.h
-  describeprojectsrequest_p.h
-  describeprojectsresponse.h
-  describeprojectsresponse_p.h
+  describedatasetrequest.h
+  describedatasetrequest_p.h
+  describedatasetresponse.h
+  describedatasetresponse_p.h
   describeprojectversionsrequest.h
   describeprojectversionsrequest_p.h
   describeprojectversionsresponse.h
   describeprojectversionsresponse_p.h
+  describeprojectsrequest.h
+  describeprojectsrequest_p.h
+  describeprojectsresponse.h
+  describeprojectsresponse_p.h
   describestreamprocessorrequest.h
   describestreamprocessorrequest_p.h
   describestreamprocessorresponse.h
@@ -81,6 +108,10 @@ add_library(QtAwsRekognition
   detecttextrequest_p.h
   detecttextresponse.h
   detecttextresponse_p.h
+  distributedatasetentriesrequest.h
+  distributedatasetentriesrequest_p.h
+  distributedatasetentriesresponse.h
+  distributedatasetentriesresponse_p.h
   getcelebrityinforequest.h
   getcelebrityinforequest_p.h
   getcelebrityinforesponse.h
@@ -125,10 +156,22 @@ add_library(QtAwsRekognition
   listcollectionsrequest_p.h
   listcollectionsresponse.h
   listcollectionsresponse_p.h
+  listdatasetentriesrequest.h
+  listdatasetentriesrequest_p.h
+  listdatasetentriesresponse.h
+  listdatasetentriesresponse_p.h
+  listdatasetlabelsrequest.h
+  listdatasetlabelsrequest_p.h
+  listdatasetlabelsresponse.h
+  listdatasetlabelsresponse_p.h
   listfacesrequest.h
   listfacesrequest_p.h
   listfacesresponse.h
   listfacesresponse_p.h
+  listprojectpoliciesrequest.h
+  listprojectpoliciesrequest_p.h
+  listprojectpoliciesresponse.h
+  listprojectpoliciesresponse_p.h
   liststreamprocessorsrequest.h
   liststreamprocessorsrequest_p.h
   liststreamprocessorsresponse.h
@@ -137,25 +180,22 @@ add_library(QtAwsRekognition
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsrekognitionglobal.h
+  putprojectpolicyrequest.h
+  putprojectpolicyrequest_p.h
+  putprojectpolicyresponse.h
+  putprojectpolicyresponse_p.h
   recognizecelebritiesrequest.h
   recognizecelebritiesrequest_p.h
   recognizecelebritiesresponse.h
   recognizecelebritiesresponse_p.h
-  rekognitionclient.h
-  rekognitionclient_p.h
-  rekognitionrequest.h
-  rekognitionrequest_p.h
-  rekognitionresponse.h
-  rekognitionresponse_p.h
-  searchfacesbyimagerequest.h
-  searchfacesbyimagerequest_p.h
-  searchfacesbyimageresponse.h
-  searchfacesbyimageresponse_p.h
   searchfacesrequest.h
   searchfacesrequest_p.h
   searchfacesresponse.h
   searchfacesresponse_p.h
+  searchfacesbyimagerequest.h
+  searchfacesbyimagerequest_p.h
+  searchfacesbyimageresponse.h
+  searchfacesbyimageresponse_p.h
   startcelebrityrecognitionrequest.h
   startcelebrityrecognitionrequest_p.h
   startcelebrityrecognitionresponse.h
@@ -212,10 +252,25 @@ add_library(QtAwsRekognition
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatedatasetentriesrequest.h
+  updatedatasetentriesrequest_p.h
+  updatedatasetentriesresponse.h
+  updatedatasetentriesresponse_p.h
+  updatestreamprocessorrequest.h
+  updatestreamprocessorrequest_p.h
+  updatestreamprocessorresponse.h
+  updatestreamprocessorresponse_p.h
+  rekognitionclient.cpp
+  rekognitionrequest.cpp
+  rekognitionresponse.cpp
   comparefacesrequest.cpp
   comparefacesresponse.cpp
+  copyprojectversionrequest.cpp
+  copyprojectversionresponse.cpp
   createcollectionrequest.cpp
   createcollectionresponse.cpp
+  createdatasetrequest.cpp
+  createdatasetresponse.cpp
   createprojectrequest.cpp
   createprojectresponse.cpp
   createprojectversionrequest.cpp
@@ -224,20 +279,26 @@ add_library(QtAwsRekognition
   createstreamprocessorresponse.cpp
   deletecollectionrequest.cpp
   deletecollectionresponse.cpp
+  deletedatasetrequest.cpp
+  deletedatasetresponse.cpp
   deletefacesrequest.cpp
   deletefacesresponse.cpp
   deleteprojectrequest.cpp
   deleteprojectresponse.cpp
+  deleteprojectpolicyrequest.cpp
+  deleteprojectpolicyresponse.cpp
   deleteprojectversionrequest.cpp
   deleteprojectversionresponse.cpp
   deletestreamprocessorrequest.cpp
   deletestreamprocessorresponse.cpp
   describecollectionrequest.cpp
   describecollectionresponse.cpp
-  describeprojectsrequest.cpp
-  describeprojectsresponse.cpp
+  describedatasetrequest.cpp
+  describedatasetresponse.cpp
   describeprojectversionsrequest.cpp
   describeprojectversionsresponse.cpp
+  describeprojectsrequest.cpp
+  describeprojectsresponse.cpp
   describestreamprocessorrequest.cpp
   describestreamprocessorresponse.cpp
   detectcustomlabelsrequest.cpp
@@ -252,6 +313,8 @@ add_library(QtAwsRekognition
   detectprotectiveequipmentresponse.cpp
   detecttextrequest.cpp
   detecttextresponse.cpp
+  distributedatasetentriesrequest.cpp
+  distributedatasetentriesresponse.cpp
   getcelebrityinforequest.cpp
   getcelebrityinforesponse.cpp
   getcelebrityrecognitionrequest.cpp
@@ -274,21 +337,26 @@ add_library(QtAwsRekognition
   indexfacesresponse.cpp
   listcollectionsrequest.cpp
   listcollectionsresponse.cpp
+  listdatasetentriesrequest.cpp
+  listdatasetentriesresponse.cpp
+  listdatasetlabelsrequest.cpp
+  listdatasetlabelsresponse.cpp
   listfacesrequest.cpp
   listfacesresponse.cpp
+  listprojectpoliciesrequest.cpp
+  listprojectpoliciesresponse.cpp
   liststreamprocessorsrequest.cpp
   liststreamprocessorsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  putprojectpolicyrequest.cpp
+  putprojectpolicyresponse.cpp
   recognizecelebritiesrequest.cpp
   recognizecelebritiesresponse.cpp
-  rekognitionclient.cpp
-  rekognitionrequest.cpp
-  rekognitionresponse.cpp
-  searchfacesbyimagerequest.cpp
-  searchfacesbyimageresponse.cpp
   searchfacesrequest.cpp
   searchfacesresponse.cpp
+  searchfacesbyimagerequest.cpp
+  searchfacesbyimageresponse.cpp
   startcelebrityrecognitionrequest.cpp
   startcelebrityrecognitionresponse.cpp
   startcontentmoderationrequest.cpp
@@ -316,7 +384,11 @@ add_library(QtAwsRekognition
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updatedatasetentriesrequest.cpp
+  updatedatasetentriesresponse.cpp
+  updatestreamprocessorrequest.cpp
+  updatestreamprocessorresponse.cpp)
 
 target_link_libraries(QtAwsRekognition
   PRIVATE QtAwsCore

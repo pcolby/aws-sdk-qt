@@ -24,11 +24,11 @@
 #include "transactgetitemsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class TransactGetItemsResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT TransactGetItemsResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT TransactGetItemsResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

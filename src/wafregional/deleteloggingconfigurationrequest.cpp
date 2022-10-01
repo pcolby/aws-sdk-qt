@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteLoggingConfigurationRequest
- * \brief The DeleteLoggingConfigurationRequest class provides an interface for WAFRegional DeleteLoggingConfiguration requests.
+ * \class QtAws::WafRegional::DeleteLoggingConfigurationRequest
+ * \brief The DeleteLoggingConfigurationRequest class provides an interface for WafRegional DeleteLoggingConfiguration requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteLoggingConfiguration
+ * \sa WafRegionalClient::deleteLoggingConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteLoggingConfigurationRequest::DeleteLoggingConfigurationRequest(const DeleteLoggingConfigurationRequest &other)
-    : WAFRegionalRequest(new DeleteLoggingConfigurationRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteLoggingConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteLoggingConfigurationRequest::DeleteLoggingConfigurationRequest(const Delet
  * Constructs a DeleteLoggingConfigurationRequest object.
  */
 DeleteLoggingConfigurationRequest::DeleteLoggingConfigurationRequest()
-    : WAFRegionalRequest(new DeleteLoggingConfigurationRequestPrivate(WAFRegionalRequest::DeleteLoggingConfigurationAction, this))
+    : WafRegionalRequest(new DeleteLoggingConfigurationRequestPrivate(WafRegionalRequest::DeleteLoggingConfigurationAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggingConfigurationRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteLoggingConfigurationRequestPrivate
+ * \class QtAws::WafRegional::DeleteLoggingConfigurationRequestPrivate
  * \brief The DeleteLoggingConfigurationRequestPrivate class provides private implementation for DeleteLoggingConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteLoggingConfigurationRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteLoggingConfigurationRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteLoggingConfigurationRequestPrivate::DeleteLoggingConfigurationRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteLoggingConfigurationRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteLoggingConfigurationRequestPrivate::DeleteLoggingConfigurationRequestPriva
  */
 DeleteLoggingConfigurationRequestPrivate::DeleteLoggingConfigurationRequestPrivate(
     const DeleteLoggingConfigurationRequestPrivate &other, DeleteLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

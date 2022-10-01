@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTEVENTS_LIBRARY)
 
 add_library(QtAwsIoTEvents
+  qtawsioteventsglobal.h
+  ioteventsclient.h
+  ioteventsclient_p.h
+  ioteventsrequest.h
+  ioteventsrequest_p.h
+  ioteventsresponse.h
+  ioteventsresponse_p.h
   createalarmmodelrequest.h
   createalarmmodelrequest_p.h
   createalarmmodelresponse.h
@@ -29,14 +36,14 @@ add_library(QtAwsIoTEvents
   describealarmmodelrequest_p.h
   describealarmmodelresponse.h
   describealarmmodelresponse_p.h
-  describedetectormodelanalysisrequest.h
-  describedetectormodelanalysisrequest_p.h
-  describedetectormodelanalysisresponse.h
-  describedetectormodelanalysisresponse_p.h
   describedetectormodelrequest.h
   describedetectormodelrequest_p.h
   describedetectormodelresponse.h
   describedetectormodelresponse_p.h
+  describedetectormodelanalysisrequest.h
+  describedetectormodelanalysisrequest_p.h
+  describedetectormodelanalysisresponse.h
+  describedetectormodelanalysisresponse_p.h
   describeinputrequest.h
   describeinputrequest_p.h
   describeinputresponse.h
@@ -49,28 +56,22 @@ add_library(QtAwsIoTEvents
   getdetectormodelanalysisresultsrequest_p.h
   getdetectormodelanalysisresultsresponse.h
   getdetectormodelanalysisresultsresponse_p.h
-  ioteventsclient.h
-  ioteventsclient_p.h
-  ioteventsrequest.h
-  ioteventsrequest_p.h
-  ioteventsresponse.h
-  ioteventsresponse_p.h
-  listalarmmodelsrequest.h
-  listalarmmodelsrequest_p.h
-  listalarmmodelsresponse.h
-  listalarmmodelsresponse_p.h
   listalarmmodelversionsrequest.h
   listalarmmodelversionsrequest_p.h
   listalarmmodelversionsresponse.h
   listalarmmodelversionsresponse_p.h
-  listdetectormodelsrequest.h
-  listdetectormodelsrequest_p.h
-  listdetectormodelsresponse.h
-  listdetectormodelsresponse_p.h
+  listalarmmodelsrequest.h
+  listalarmmodelsrequest_p.h
+  listalarmmodelsresponse.h
+  listalarmmodelsresponse_p.h
   listdetectormodelversionsrequest.h
   listdetectormodelversionsrequest_p.h
   listdetectormodelversionsresponse.h
   listdetectormodelversionsresponse_p.h
+  listdetectormodelsrequest.h
+  listdetectormodelsrequest_p.h
+  listdetectormodelsresponse.h
+  listdetectormodelsresponse_p.h
   listinputroutingsrequest.h
   listinputroutingsrequest_p.h
   listinputroutingsresponse.h
@@ -87,7 +88,6 @@ add_library(QtAwsIoTEvents
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
-  qtawsioteventsglobal.h
   startdetectormodelanalysisrequest.h
   startdetectormodelanalysisrequest_p.h
   startdetectormodelanalysisresponse.h
@@ -112,6 +112,9 @@ add_library(QtAwsIoTEvents
   updateinputrequest_p.h
   updateinputresponse.h
   updateinputresponse_p.h
+  ioteventsclient.cpp
+  ioteventsrequest.cpp
+  ioteventsresponse.cpp
   createalarmmodelrequest.cpp
   createalarmmodelresponse.cpp
   createdetectormodelrequest.cpp
@@ -126,27 +129,24 @@ add_library(QtAwsIoTEvents
   deleteinputresponse.cpp
   describealarmmodelrequest.cpp
   describealarmmodelresponse.cpp
-  describedetectormodelanalysisrequest.cpp
-  describedetectormodelanalysisresponse.cpp
   describedetectormodelrequest.cpp
   describedetectormodelresponse.cpp
+  describedetectormodelanalysisrequest.cpp
+  describedetectormodelanalysisresponse.cpp
   describeinputrequest.cpp
   describeinputresponse.cpp
   describeloggingoptionsrequest.cpp
   describeloggingoptionsresponse.cpp
   getdetectormodelanalysisresultsrequest.cpp
   getdetectormodelanalysisresultsresponse.cpp
-  ioteventsclient.cpp
-  ioteventsrequest.cpp
-  ioteventsresponse.cpp
-  listalarmmodelsrequest.cpp
-  listalarmmodelsresponse.cpp
   listalarmmodelversionsrequest.cpp
   listalarmmodelversionsresponse.cpp
-  listdetectormodelsrequest.cpp
-  listdetectormodelsresponse.cpp
+  listalarmmodelsrequest.cpp
+  listalarmmodelsresponse.cpp
   listdetectormodelversionsrequest.cpp
   listdetectormodelversionsresponse.cpp
+  listdetectormodelsrequest.cpp
+  listdetectormodelsresponse.cpp
   listinputroutingsrequest.cpp
   listinputroutingsresponse.cpp
   listinputsrequest.cpp

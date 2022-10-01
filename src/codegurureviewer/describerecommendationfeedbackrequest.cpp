@@ -33,7 +33,7 @@ namespace CodeGuruReviewer {
  *
  *  This section provides documentation for the Amazon CodeGuru Reviewer API operations. CodeGuru Reviewer is a service that
  *  uses program analysis and machine learning to detect potential defects that are difficult for developers to find and
- *  recommendations to address them in your Java and Python
+ *  recommends fixes in your Java and Python
  * 
  *  code>
  * 
@@ -47,7 +47,7 @@ namespace CodeGuruReviewer {
  *  To improve the security of your CodeGuru Reviewer API calls, you can establish a private connection between your VPC and
  *  CodeGuru Reviewer by creating an <i>interface VPC endpoint</i>. For more information, see <a
  *  href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/vpc-interface-endpoints.html">CodeGuru Reviewer and
- *  interface VPC endpoints (AWS PrivateLink)</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>.
+ *  interface VPC endpoints (Amazon Web Services PrivateLink)</a> in the <i>Amazon CodeGuru Reviewer User
  *
  * \sa CodeGuruReviewerClient::describeRecommendationFeedback
  */

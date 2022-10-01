@@ -25,30 +25,39 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::GetCertificateAuthorityCertificateResponse
- * \brief The GetCertificateAuthorityCertificateResponse class provides an interace for ACMPCA GetCertificateAuthorityCertificate responses.
+ * \class QtAws::AcmPca::GetCertificateAuthorityCertificateResponse
+ * \brief The GetCertificateAuthorityCertificateResponse class provides an interace for AcmPca GetCertificateAuthorityCertificate responses.
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  *
- *  This is the <i>ACM Private CA API Reference</i>. It provides descriptions, syntax, and usage examples for each of the
- *  actions and data types involved in creating and managing private certificate authorities (CA) for your
+ *  This is the <i>Certificate Manager Private Certificate Authority (PCA) API Reference</i>. It provides descriptions,
+ *  syntax, and usage examples for each of the actions and data types involved in creating and managing a private
+ *  certificate authority (CA) for your
  * 
  *  organization>
  * 
- *  The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can
- *  use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For
- *  more information, see <a href="https://aws.amazon.com/tools/#SDKs">AWS
+ *  The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one
+ *  of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you
+ *  prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services
  * 
- *  SDKs</a>> <note>
+ *  SDKs</a>>
  * 
- *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
- *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
- *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API operation has a quota that determines the number of times the operation can be called per
+ *  second. ACM Private CA throttles API requests at different rates depending on the operation. Throttling means that ACM
+ *  Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of
+ *  requests per second. When a request is throttled, ACM Private CA returns a <a
+ *  href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. ACM
+ *  Private CA does not guarantee a minimum request rate for APIs.
+ * 
+ *  </p
+ * 
+ *  To see an up-to-date list of your ACM Private CA quotas, or to request a quota increase, log into your Amazon Web
+ *  Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a>
  *
- * \sa AcmpcaClient::getCertificateAuthorityCertificate
+ * \sa AcmPcaClient::getCertificateAuthorityCertificate
  */
 
 /*!
@@ -58,7 +67,7 @@ GetCertificateAuthorityCertificateResponse::GetCertificateAuthorityCertificateRe
         const GetCertificateAuthorityCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcmpcaResponse(new GetCertificateAuthorityCertificateResponsePrivate(this), parent)
+    : AcmPcaResponse(new GetCertificateAuthorityCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetCertificateAuthorityCertificateRequest(request));
     setReply(reply);
@@ -75,7 +84,7 @@ const GetCertificateAuthorityCertificateRequest * GetCertificateAuthorityCertifi
 
 /*!
  * \reimp
- * Parses a successful ACMPCA GetCertificateAuthorityCertificate \a response.
+ * Parses a successful AcmPca GetCertificateAuthorityCertificate \a response.
  */
 void GetCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,24 +94,24 @@ void GetCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::ACMPCA::GetCertificateAuthorityCertificateResponsePrivate
+ * \class QtAws::AcmPca::GetCertificateAuthorityCertificateResponsePrivate
  * \brief The GetCertificateAuthorityCertificateResponsePrivate class provides private implementation for GetCertificateAuthorityCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
  * Constructs a GetCertificateAuthorityCertificateResponsePrivate object with public implementation \a q.
  */
 GetCertificateAuthorityCertificateResponsePrivate::GetCertificateAuthorityCertificateResponsePrivate(
-    GetCertificateAuthorityCertificateResponse * const q) : AcmpcaResponsePrivate(q)
+    GetCertificateAuthorityCertificateResponse * const q) : AcmPcaResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ACMPCA GetCertificateAuthorityCertificate response element from \a xml.
+ * Parses a AcmPca GetCertificateAuthorityCertificate response element from \a xml.
  */
 void GetCertificateAuthorityCertificateResponsePrivate::parseGetCertificateAuthorityCertificateResponse(QXmlStreamReader &xml)
 {
@@ -110,5 +119,5 @@ void GetCertificateAuthorityCertificateResponsePrivate::parseGetCertificateAutho
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

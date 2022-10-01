@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetRequestValidatorsResponse
- * \brief The GetRequestValidatorsResponse class provides an interace for APIGateway GetRequestValidators responses.
+ * \class QtAws::ApiGateway::GetRequestValidatorsResponse
+ * \brief The GetRequestValidatorsResponse class provides an interace for ApiGateway GetRequestValidators responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getRequestValidators
+ * \sa ApiGatewayClient::getRequestValidators
  */
 
 /*!
@@ -49,7 +49,7 @@ GetRequestValidatorsResponse::GetRequestValidatorsResponse(
         const GetRequestValidatorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetRequestValidatorsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetRequestValidatorsResponsePrivate(this), parent)
 {
     setRequest(new GetRequestValidatorsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetRequestValidatorsRequest * GetRequestValidatorsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetRequestValidators \a response.
+ * Parses a successful ApiGateway GetRequestValidators \a response.
  */
 void GetRequestValidatorsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetRequestValidatorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetRequestValidatorsResponsePrivate
+ * \class QtAws::ApiGateway::GetRequestValidatorsResponsePrivate
  * \brief The GetRequestValidatorsResponsePrivate class provides private implementation for GetRequestValidatorsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetRequestValidatorsResponsePrivate object with public implementation \a q.
  */
 GetRequestValidatorsResponsePrivate::GetRequestValidatorsResponsePrivate(
-    GetRequestValidatorsResponse * const q) : APIGatewayResponsePrivate(q)
+    GetRequestValidatorsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetRequestValidators response element from \a xml.
+ * Parses a ApiGateway GetRequestValidators response element from \a xml.
  */
 void GetRequestValidatorsResponsePrivate::parseGetRequestValidatorsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetRequestValidatorsResponsePrivate::parseGetRequestValidatorsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

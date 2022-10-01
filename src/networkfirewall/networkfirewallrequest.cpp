@@ -50,6 +50,7 @@ namespace NetworkFirewall {
  * \value DescribeLoggingConfigurationAction NetworkFirewall DescribeLoggingConfiguration action.
  * \value DescribeResourcePolicyAction NetworkFirewall DescribeResourcePolicy action.
  * \value DescribeRuleGroupAction NetworkFirewall DescribeRuleGroup action.
+ * \value DescribeRuleGroupMetadataAction NetworkFirewall DescribeRuleGroupMetadata action.
  * \value DisassociateSubnetsAction NetworkFirewall DisassociateSubnets action.
  * \value ListFirewallPoliciesAction NetworkFirewall ListFirewallPolicies action.
  * \value ListFirewallsAction NetworkFirewall ListFirewalls action.
@@ -60,6 +61,7 @@ namespace NetworkFirewall {
  * \value UntagResourceAction NetworkFirewall UntagResource action.
  * \value UpdateFirewallDeleteProtectionAction NetworkFirewall UpdateFirewallDeleteProtection action.
  * \value UpdateFirewallDescriptionAction NetworkFirewall UpdateFirewallDescription action.
+ * \value UpdateFirewallEncryptionConfigurationAction NetworkFirewall UpdateFirewallEncryptionConfiguration action.
  * \value UpdateFirewallPolicyAction NetworkFirewall UpdateFirewallPolicy action.
  * \value UpdateFirewallPolicyChangeProtectionAction NetworkFirewall UpdateFirewallPolicyChangeProtection action.
  * \value UpdateLoggingConfigurationAction NetworkFirewall UpdateLoggingConfiguration action.
@@ -272,7 +274,7 @@ QNetworkRequest NetworkFirewallRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 NetworkFirewallRequestPrivate::NetworkFirewallRequestPrivate(const NetworkFirewallRequest::Action action, NetworkFirewallRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-11-12"))
 {
 
 }
@@ -320,6 +322,7 @@ QString NetworkFirewallRequestPrivate::toString(const NetworkFirewallRequest::Ac
         ActionToString(DescribeLoggingConfiguration);
         ActionToString(DescribeResourcePolicy);
         ActionToString(DescribeRuleGroup);
+        ActionToString(DescribeRuleGroupMetadata);
         ActionToString(DisassociateSubnets);
         ActionToString(ListFirewallPolicies);
         ActionToString(ListFirewalls);
@@ -330,6 +333,7 @@ QString NetworkFirewallRequestPrivate::toString(const NetworkFirewallRequest::Ac
         ActionToString(UntagResource);
         ActionToString(UpdateFirewallDeleteProtection);
         ActionToString(UpdateFirewallDescription);
+        ActionToString(UpdateFirewallEncryptionConfiguration);
         ActionToString(UpdateFirewallPolicy);
         ActionToString(UpdateFirewallPolicyChangeProtection);
         ActionToString(UpdateLoggingConfiguration);

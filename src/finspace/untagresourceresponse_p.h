@@ -23,11 +23,11 @@
 #include "finspaceresponse_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class UntagResourceResponse;
 
-class UntagResourceResponsePrivate : public finspaceResponsePrivate {
+class UntagResourceResponsePrivate : public FinspaceResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "batchacknowledgealarmrequest.h"
 #include "batchacknowledgealarmresponse.h"
+#include "batchdeletedetectorrequest.h"
+#include "batchdeletedetectorresponse.h"
 #include "batchdisablealarmrequest.h"
 #include "batchdisablealarmresponse.h"
 #include "batchenablealarmrequest.h"
@@ -66,15 +68,15 @@ namespace IoTEventsData {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTEventsData
  *
- *  AWS IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when
- *  such events occur. You can use AWS IoT Events Data API commands to send inputs to detectors, list detectors, and view or
- *  update a detector's
+ *  IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when such
+ *  events occur. You can use IoT Events Data API commands to send inputs to detectors, list detectors, and view or update a
+ *  detector's
  * 
  *  status>
  * 
  *  For more information, see <a
- *  href="https://docs.aws.amazon.com/iotevents/latest/developerguide/what-is-iotevents.html">What is AWS IoT Events?</a> in
- *  the <i>AWS IoT Events Developer
+ *  href="https://docs.aws.amazon.com/iotevents/latest/developerguide/what-is-iotevents.html">What is IoT Events?</a> in the
+ *  <i>IoT Events Developer
  */
 
 /*!
@@ -145,6 +147,22 @@ BatchAcknowledgeAlarmResponse * IoTEventsDataClient::batchAcknowledgeAlarm(const
 
 /*!
  * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchDeleteDetectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes one or more detectors that were created. When a detector is deleted, its state will be cleared and the detector
+ * will be removed from the list of detectors. The deleted detector will no longer appear if referenced in the <a
+ * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_ListDetectors.html">ListDetectors</a>
+ * API
+ */
+BatchDeleteDetectorResponse * IoTEventsDataClient::batchDeleteDetector(const BatchDeleteDetectorRequest &request)
+{
+    return qobject_cast<BatchDeleteDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
  * BatchDisableAlarmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -175,7 +193,7 @@ BatchEnableAlarmResponse * IoTEventsDataClient::batchEnableAlarm(const BatchEnab
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends a set of messages to the AWS IoT Events system. Each message payload is transformed into the input you specify
+ * Sends a set of messages to the IoT Events system. Each message payload is transformed into the input you specify
  * (<code>"inputName"</code>) and ingested into any detectors that monitor that input. If multiple messages are sent, the
  * order in which the messages are processed isn't guaranteed. To guarantee ordering, you must send messages one at a time
  * and wait for a successful

@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSFINSPACE_EXPORT ListTagsForResourceResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT ListTagsForResourceResponse : public FinspaceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "listtagsofresourcerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListTagsOfResourceResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT ListTagsOfResourceResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ListTagsOfResourceResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

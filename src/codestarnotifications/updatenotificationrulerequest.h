@@ -23,11 +23,11 @@
 #include "codestarnotificationsrequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class UpdateNotificationRuleRequestPrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT UpdateNotificationRuleRequest : public CodeStarNotificationsRequest {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT UpdateNotificationRuleRequest : public CodestarNotificationsRequest {
 
 public:
     UpdateNotificationRuleRequest(const UpdateNotificationRuleRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

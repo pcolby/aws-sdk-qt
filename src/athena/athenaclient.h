@@ -32,6 +32,8 @@ namespace Athena {
 class AthenaClientPrivate;
 class BatchGetNamedQueryRequest;
 class BatchGetNamedQueryResponse;
+class BatchGetPreparedStatementRequest;
+class BatchGetPreparedStatementResponse;
 class BatchGetQueryExecutionRequest;
 class BatchGetQueryExecutionResponse;
 class CreateDataCatalogRequest;
@@ -62,6 +64,8 @@ class GetQueryExecutionRequest;
 class GetQueryExecutionResponse;
 class GetQueryResultsRequest;
 class GetQueryResultsResponse;
+class GetQueryRuntimeStatisticsRequest;
+class GetQueryRuntimeStatisticsResponse;
 class GetTableMetadataRequest;
 class GetTableMetadataResponse;
 class GetWorkGroupRequest;
@@ -94,6 +98,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateDataCatalogRequest;
 class UpdateDataCatalogResponse;
+class UpdateNamedQueryRequest;
+class UpdateNamedQueryResponse;
 class UpdatePreparedStatementRequest;
 class UpdatePreparedStatementResponse;
 class UpdateWorkGroupRequest;
@@ -116,6 +122,7 @@ public:
 
 public slots:
     BatchGetNamedQueryResponse * batchGetNamedQuery(const BatchGetNamedQueryRequest &request);
+    BatchGetPreparedStatementResponse * batchGetPreparedStatement(const BatchGetPreparedStatementRequest &request);
     BatchGetQueryExecutionResponse * batchGetQueryExecution(const BatchGetQueryExecutionRequest &request);
     CreateDataCatalogResponse * createDataCatalog(const CreateDataCatalogRequest &request);
     CreateNamedQueryResponse * createNamedQuery(const CreateNamedQueryRequest &request);
@@ -131,6 +138,7 @@ public slots:
     GetPreparedStatementResponse * getPreparedStatement(const GetPreparedStatementRequest &request);
     GetQueryExecutionResponse * getQueryExecution(const GetQueryExecutionRequest &request);
     GetQueryResultsResponse * getQueryResults(const GetQueryResultsRequest &request);
+    GetQueryRuntimeStatisticsResponse * getQueryRuntimeStatistics(const GetQueryRuntimeStatisticsRequest &request);
     GetTableMetadataResponse * getTableMetadata(const GetTableMetadataRequest &request);
     GetWorkGroupResponse * getWorkGroup(const GetWorkGroupRequest &request);
     ListDataCatalogsResponse * listDataCatalogs(const ListDataCatalogsRequest &request);
@@ -147,6 +155,7 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDataCatalogResponse * updateDataCatalog(const UpdateDataCatalogRequest &request);
+    UpdateNamedQueryResponse * updateNamedQuery(const UpdateNamedQueryRequest &request);
     UpdatePreparedStatementResponse * updatePreparedStatement(const UpdatePreparedStatementRequest &request);
     UpdateWorkGroupResponse * updateWorkGroup(const UpdateWorkGroupRequest &request);
 

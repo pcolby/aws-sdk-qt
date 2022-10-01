@@ -24,11 +24,11 @@
 #include "updatesqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UpdateSqlInjectionMatchSetResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT UpdateSqlInjectionMatchSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT UpdateSqlInjectionMatchSetResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

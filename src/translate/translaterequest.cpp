@@ -43,6 +43,7 @@ namespace Translate {
  * \value GetParallelDataAction Translate GetParallelData action.
  * \value GetTerminologyAction Translate GetTerminology action.
  * \value ImportTerminologyAction Translate ImportTerminology action.
+ * \value ListLanguagesAction Translate ListLanguages action.
  * \value ListParallelDataAction Translate ListParallelData action.
  * \value ListTerminologiesAction Translate ListTerminologies action.
  * \value ListTextTranslationJobsAction Translate ListTextTranslationJobs action.
@@ -257,7 +258,7 @@ QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action action, TranslateRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-01"))
 {
 
 }
@@ -298,6 +299,7 @@ QString TranslateRequestPrivate::toString(const TranslateRequest::Action &action
         ActionToString(GetParallelData);
         ActionToString(GetTerminology);
         ActionToString(ImportTerminology);
+        ActionToString(ListLanguages);
         ActionToString(ListParallelData);
         ActionToString(ListTerminologies);
         ActionToString(ListTextTranslationJobs);

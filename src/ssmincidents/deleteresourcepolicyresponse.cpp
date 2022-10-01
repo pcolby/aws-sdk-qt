@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResourcePolicyResponse
- * \brief The DeleteResourcePolicyResponse class provides an interace for SSMIncidents DeleteResourcePolicy responses.
+ * \class QtAws::SsmIncidents::DeleteResourcePolicyResponse
+ * \brief The DeleteResourcePolicyResponse class provides an interace for SsmIncidents DeleteResourcePolicy responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteResourcePolicy
+ * \sa SsmIncidentsClient::deleteResourcePolicy
  */
 
 /*!
@@ -54,7 +54,7 @@ DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
         const DeleteResourcePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new DeleteResourcePolicyResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new DeleteResourcePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourcePolicyRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents DeleteResourcePolicy \a response.
+ * Parses a successful SsmIncidents DeleteResourcePolicy \a response.
  */
 void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResourcePolicyResponsePrivate
+ * \class QtAws::SsmIncidents::DeleteResourcePolicyResponsePrivate
  * \brief The DeleteResourcePolicyResponsePrivate class provides private implementation for DeleteResourcePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a DeleteResourcePolicyResponsePrivate object with public implementation \a q.
  */
 DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponsePrivate(
-    DeleteResourcePolicyResponse * const q) : SSMIncidentsResponsePrivate(q)
+    DeleteResourcePolicyResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents DeleteResourcePolicy response element from \a xml.
+ * Parses a SsmIncidents DeleteResourcePolicy response element from \a xml.
  */
 void DeleteResourcePolicyResponsePrivate::parseDeleteResourcePolicyResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteResourcePolicyResponsePrivate::parseDeleteResourcePolicyResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

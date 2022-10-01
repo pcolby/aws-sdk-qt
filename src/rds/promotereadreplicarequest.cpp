@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaRequest
- * \brief The PromoteReadReplicaRequest class provides an interface for RDS PromoteReadReplica requests.
+ * \class QtAws::Rds::PromoteReadReplicaRequest
+ * \brief The PromoteReadReplicaRequest class provides an interface for Rds PromoteReadReplica requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::RDS::PromoteReadReplicaRequestPrivate
+ * \class QtAws::Rds::PromoteReadReplicaRequestPrivate
  * \brief The PromoteReadReplicaRequestPrivate class provides private implementation for PromoteReadReplicaRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSIOTEVENTSDATA_LIBRARY)
 
 add_library(QtAwsIoTEventsData
+  qtawsioteventsdataglobal.h
+  ioteventsdataclient.h
+  ioteventsdataclient_p.h
+  ioteventsdatarequest.h
+  ioteventsdatarequest_p.h
+  ioteventsdataresponse.h
+  ioteventsdataresponse_p.h
   batchacknowledgealarmrequest.h
   batchacknowledgealarmrequest_p.h
   batchacknowledgealarmresponse.h
   batchacknowledgealarmresponse_p.h
+  batchdeletedetectorrequest.h
+  batchdeletedetectorrequest_p.h
+  batchdeletedetectorresponse.h
+  batchdeletedetectorresponse_p.h
   batchdisablealarmrequest.h
   batchdisablealarmrequest_p.h
   batchdisablealarmresponse.h
@@ -37,12 +48,6 @@ add_library(QtAwsIoTEventsData
   describedetectorrequest_p.h
   describedetectorresponse.h
   describedetectorresponse_p.h
-  ioteventsdataclient.h
-  ioteventsdataclient_p.h
-  ioteventsdatarequest.h
-  ioteventsdatarequest_p.h
-  ioteventsdataresponse.h
-  ioteventsdataresponse_p.h
   listalarmsrequest.h
   listalarmsrequest_p.h
   listalarmsresponse.h
@@ -51,9 +56,13 @@ add_library(QtAwsIoTEventsData
   listdetectorsrequest_p.h
   listdetectorsresponse.h
   listdetectorsresponse_p.h
-  qtawsioteventsdataglobal.h
+  ioteventsdataclient.cpp
+  ioteventsdatarequest.cpp
+  ioteventsdataresponse.cpp
   batchacknowledgealarmrequest.cpp
   batchacknowledgealarmresponse.cpp
+  batchdeletedetectorrequest.cpp
+  batchdeletedetectorresponse.cpp
   batchdisablealarmrequest.cpp
   batchdisablealarmresponse.cpp
   batchenablealarmrequest.cpp
@@ -70,9 +79,6 @@ add_library(QtAwsIoTEventsData
   describealarmresponse.cpp
   describedetectorrequest.cpp
   describedetectorresponse.cpp
-  ioteventsdataclient.cpp
-  ioteventsdatarequest.cpp
-  ioteventsdataresponse.cpp
   listalarmsrequest.cpp
   listalarmsresponse.cpp
   listdetectorsrequest.cpp

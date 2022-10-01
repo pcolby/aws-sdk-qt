@@ -24,16 +24,16 @@
 #include "smsrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class SmsRequest;
 
 class SmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SmsRequest::Action action; ///< SMS action to be performed.
-    QString apiVersion;        ///< SMS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SMS request (query string) parameters. @todo?
+    SmsRequest::Action action; ///< Sms action to be performed.
+    QString apiVersion;        ///< Sms API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sms request (query string) parameters. @todo?
 
     SmsRequestPrivate(const SmsRequest::Action action, SmsRequest * const q);
     SmsRequestPrivate(const SmsRequestPrivate &other, SmsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

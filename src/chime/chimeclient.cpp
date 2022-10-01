@@ -65,6 +65,8 @@
 #include "createchannelmembershipresponse.h"
 #include "createchannelmoderatorrequest.h"
 #include "createchannelmoderatorresponse.h"
+#include "createmediacapturepipelinerequest.h"
+#include "createmediacapturepipelineresponse.h"
 #include "createmeetingrequest.h"
 #include "createmeetingresponse.h"
 #include "createmeetingdialoutrequest.h"
@@ -115,6 +117,8 @@
 #include "deletechannelmoderatorresponse.h"
 #include "deleteeventsconfigurationrequest.h"
 #include "deleteeventsconfigurationresponse.h"
+#include "deletemediacapturepipelinerequest.h"
+#include "deletemediacapturepipelineresponse.h"
 #include "deletemeetingrequest.h"
 #include "deletemeetingresponse.h"
 #include "deletephonenumberrequest.h"
@@ -189,6 +193,8 @@
 #include "geteventsconfigurationresponse.h"
 #include "getglobalsettingsrequest.h"
 #include "getglobalsettingsresponse.h"
+#include "getmediacapturepipelinerequest.h"
+#include "getmediacapturepipelineresponse.h"
 #include "getmeetingrequest.h"
 #include "getmeetingresponse.h"
 #include "getmessagingsessionendpointrequest.h"
@@ -263,6 +269,8 @@
 #include "listchannelsresponse.h"
 #include "listchannelsmoderatedbyappinstanceuserrequest.h"
 #include "listchannelsmoderatedbyappinstanceuserresponse.h"
+#include "listmediacapturepipelinesrequest.h"
+#include "listmediacapturepipelinesresponse.h"
 #include "listmeetingtagsrequest.h"
 #include "listmeetingtagsresponse.h"
 #include "listmeetingsrequest.h"
@@ -335,6 +343,10 @@
 #include "searchavailablephonenumbersresponse.h"
 #include "sendchannelmessagerequest.h"
 #include "sendchannelmessageresponse.h"
+#include "startmeetingtranscriptionrequest.h"
+#include "startmeetingtranscriptionresponse.h"
+#include "stopmeetingtranscriptionrequest.h"
+#include "stopmeetingtranscriptionresponse.h"
 #include "tagattendeerequest.h"
 #include "tagattendeeresponse.h"
 #include "tagmeetingrequest.h"
@@ -377,6 +389,8 @@
 #include "updateroommembershipresponse.h"
 #include "updatesipmediaapplicationrequest.h"
 #include "updatesipmediaapplicationresponse.h"
+#include "updatesipmediaapplicationcallrequest.h"
+#include "updatesipmediaapplicationcallresponse.h"
 #include "updatesiprulerequest.h"
 #include "updatesipruleresponse.h"
 #include "updateuserrequest.h"
@@ -387,6 +401,8 @@
 #include "updatevoiceconnectorresponse.h"
 #include "updatevoiceconnectorgrouprequest.h"
 #include "updatevoiceconnectorgroupresponse.h"
+#include "validatee911addressrequest.h"
+#include "validatee911addressresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -412,10 +428,10 @@ namespace Chime {
  *
  *  The Amazon Chime API (application programming interface) is designed for developers to perform key tasks, such as
  *  creating and managing Amazon Chime accounts, users, and Voice Connectors. This guide provides detailed information about
- *  the Amazon Chime API, including operations, types, inputs and outputs, and error codes. It also includes some
- *  server-side API actions to use with the Amazon Chime SDK. For more information about the Amazon Chime SDK, see <a
- *  href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html"> Using the Amazon Chime SDK </a> in the <i>Amazon
- *  Chime Developer
+ *  the Amazon Chime API, including operations, types, inputs and outputs, and error codes. It also includes API actions for
+ *  use with the Amazon Chime SDK, which developers use to build their own communication applications. For more information
+ *  about the Amazon Chime SDK, see <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html"> Using the
+ *  Amazon Chime SDK </a> in the <i>Amazon Chime Developer
  * 
  *  Guide</i>>
  * 
@@ -581,7 +597,7 @@ BatchCreateAttendeeResponse * ChimeClient::batchCreateAttendee(const BatchCreate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a specified number of users to a channel.
+ * Adds a specified number of users to a
  */
 BatchCreateChannelMembershipResponse * ChimeClient::batchCreateChannelMembership(const BatchCreateChannelMembershipRequest &request)
 {
@@ -661,10 +677,10 @@ BatchSuspendUserResponse * ChimeClient::batchSuspendUser(const BatchSuspendUserR
  * Removes the suspension from up to 50 previously suspended users for the specified Amazon Chime
  * <code>EnterpriseLWA</code> account. Only users on <code>EnterpriseLWA</code> accounts can be unsuspended using this
  * action. For more information about different account types, see <a
- * href="https://docs.aws.amazon.com/chime/latest/ag/manage-chime-account.html">Managing Your Amazon Chime Accounts</a> in
- * the <i>Amazon Chime Administration
+ * href="https://docs.aws.amazon.com/chime/latest/ag/manage-chime-account.html"> Managing Your Amazon Chime Accounts </a>
+ * in the account types, in the <i>Amazon Chime Administration Guide</i>.
  *
- * Guide</i>>
+ * </p
  *
  * Previously suspended users who are unsuspended using this action are returned to <code>Registered</code> status. Users
  * who are not previously suspended are ignored.
@@ -942,6 +958,19 @@ CreateChannelMembershipResponse * ChimeClient::createChannelMembership(const Cre
 CreateChannelModeratorResponse * ChimeClient::createChannelModerator(const CreateChannelModeratorRequest &request)
 {
     return qobject_cast<CreateChannelModeratorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * CreateMediaCapturePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a media capture
+ */
+CreateMediaCapturePipelineResponse * ChimeClient::createMediaCapturePipeline(const CreateMediaCapturePipelineRequest &request)
+{
+    return qobject_cast<CreateMediaCapturePipelineResponse *>(send(request));
 }
 
 /*!
@@ -1348,6 +1377,19 @@ DeleteEventsConfigurationResponse * ChimeClient::deleteEventsConfiguration(const
 
 /*!
  * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * DeleteMediaCapturePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the media capture
+ */
+DeleteMediaCapturePipelineResponse * ChimeClient::deleteMediaCapturePipeline(const DeleteMediaCapturePipelineRequest &request)
+{
+    return qobject_cast<DeleteMediaCapturePipelineResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
  * DeleteMeetingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1593,7 +1635,7 @@ DescribeAppInstanceAdminResponse * ChimeClient::describeAppInstanceAdmin(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the full details of an <code>AppInstanceUser</code> .
+ * Returns the full details of an
  */
 DescribeAppInstanceUserResponse * ChimeClient::describeAppInstanceUser(const DescribeAppInstanceUserRequest &request)
 {
@@ -1781,7 +1823,7 @@ GetAccountResponse * ChimeClient::getAccount(const GetAccountRequest &request)
  *
  * Retrieves account settings for the specified Amazon Chime account ID, such as remote control and dialout settings. For
  * more information about these settings, see <a href="https://docs.aws.amazon.com/chime/latest/ag/policies.html">Use the
- * Policies Page</a> in the <i>Amazon Chime Administration
+ * Policies Page</a> in the <i>Amazon Chime Administration Guide</i>.
  */
 GetAccountSettingsResponse * ChimeClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -1904,6 +1946,19 @@ GetGlobalSettingsResponse * ChimeClient::getGlobalSettings()
 
 /*!
  * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * GetMediaCapturePipelineResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets an existing media capture
+ */
+GetMediaCapturePipelineResponse * ChimeClient::getMediaCapturePipeline(const GetMediaCapturePipelineRequest &request)
+{
+    return qobject_cast<GetMediaCapturePipelineResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
  * GetMeetingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2004,7 +2059,7 @@ GetProxySessionResponse * ChimeClient::getProxySession(const GetProxySessionRequ
  *
  * Gets the retention settings for the specified Amazon Chime Enterprise account. For more information about retention
  * settings, see <a href="https://docs.aws.amazon.com/chime/latest/ag/chat-retention.html">Managing Chat Retention
- * Policies</a> in the <i>Amazon Chime Administration Guide</i> .
+ * Policies</a> in the <i>Amazon Chime Administration Guide</i>.
  */
 GetRetentionSettingsResponse * ChimeClient::getRetentionSettings(const GetRetentionSettingsRequest &request)
 {
@@ -2127,7 +2182,6 @@ GetVoiceConnectorEmergencyCallingConfigurationResponse * ChimeClient::getVoiceCo
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves details for the specified Amazon Chime Voice Connector group, such as timestamps,name, and associated
- * <code>VoiceConnectorItems</code> .
  */
 GetVoiceConnectorGroupResponse * ChimeClient::getVoiceConnectorGroup(const GetVoiceConnectorGroupRequest &request)
 {
@@ -2304,7 +2358,7 @@ ListAttendeeTagsResponse * ChimeClient::listAttendeeTags(const ListAttendeeTagsR
  *
  * Lists the attendees for the specified Amazon Chime SDK meeting. For more information about the Amazon Chime SDK, see <a
  * href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html">Using the Amazon Chime SDK</a> in the <i>Amazon
- * Chime Developer Guide</i> .
+ * Chime Developer Guide</i>.
  */
 ListAttendeesResponse * ChimeClient::listAttendees(const ListAttendeesRequest &request)
 {
@@ -2429,7 +2483,7 @@ ListChannelModeratorsResponse * ChimeClient::listChannelModerators(const ListCha
  *
  * Lists all Channels created under a single Chime App as a paginated list. You can specify filters to narrow
  *
- * results> <p class="title"> <b>Functionality &amp; restrictions</b>
+ * results> <p class="title"> <b>Functionality & restrictions</b>
  *
  * </p <ul> <li>
  *
@@ -2469,6 +2523,19 @@ ListChannelsModeratedByAppInstanceUserResponse * ChimeClient::listChannelsModera
 
 /*!
  * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * ListMediaCapturePipelinesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of media capture
+ */
+ListMediaCapturePipelinesResponse * ChimeClient::listMediaCapturePipelines(const ListMediaCapturePipelinesRequest &request)
+{
+    return qobject_cast<ListMediaCapturePipelinesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
  * ListMeetingTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2488,7 +2555,7 @@ ListMeetingTagsResponse * ChimeClient::listMeetingTags(const ListMeetingTagsRequ
  *
  * Lists up to 100 active Amazon Chime SDK meetings. For more information about the Amazon Chime SDK, see <a
  * href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html">Using the Amazon Chime SDK</a> in the <i>Amazon
- * Chime Developer Guide</i> .
+ * Chime Developer
  */
 ListMeetingsResponse * ChimeClient::listMeetings(const ListMeetingsRequest &request)
 {
@@ -2730,14 +2797,14 @@ PutEventsConfigurationResponse * ChimeClient::putEventsConfiguration(const PutEv
  * Puts retention settings for the specified Amazon Chime Enterprise account. We recommend using AWS CloudTrail to monitor
  * usage of this API for your account. For more information, see <a
  * href="https://docs.aws.amazon.com/chime/latest/ag/cloudtrail.html">Logging Amazon Chime API Calls with AWS
- * CloudTrail</a> in the <i>Amazon Chime Administration Guide</i> .
+ * CloudTrail</a> in the <i>Amazon Chime Administration
  *
- * </p
+ * Guide</i>>
  *
  * To turn off existing retention settings, remove the number of days from the corresponding <b>RetentionDays</b> field in
  * the <b>RetentionSettings</b> object. For more information about retention settings, see <a
  * href="https://docs.aws.amazon.com/chime/latest/ag/chat-retention.html">Managing Chat Retention Policies</a> in the
- * <i>Amazon Chime Administration Guide</i> .
+ * <i>Amazon Chime Administration
  */
 PutRetentionSettingsResponse * ChimeClient::putRetentionSettings(const PutRetentionSettingsRequest &request)
 {
@@ -2824,8 +2891,8 @@ PutVoiceConnectorProxyResponse * ChimeClient::putVoiceConnectorProxy(const PutVo
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds a streaming configuration for the specified Amazon Chime Voice Connector. The streaming configuration specifies
- * whether media streaming is enabled for sending to Indonesians. It also sets the retention period, in hours, for the
- * Amazon Kinesis
+ * whether media streaming is enabled for sending to Kinesis. It also sets the retention period, in hours, for the Amazon
+ * Kinesis
  */
 PutVoiceConnectorStreamingConfigurationResponse * ChimeClient::putVoiceConnectorStreamingConfiguration(const PutVoiceConnectorStreamingConfigurationRequest &request)
 {
@@ -2985,6 +3052,32 @@ SearchAvailablePhoneNumbersResponse * ChimeClient::searchAvailablePhoneNumbers(c
 SendChannelMessageResponse * ChimeClient::sendChannelMessage(const SendChannelMessageRequest &request)
 {
     return qobject_cast<SendChannelMessageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * StartMeetingTranscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts transcription for the specified <code>meetingId</code>.
+ */
+StartMeetingTranscriptionResponse * ChimeClient::startMeetingTranscription(const StartMeetingTranscriptionRequest &request)
+{
+    return qobject_cast<StartMeetingTranscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * StopMeetingTranscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops transcription for the specified
+ */
+StopMeetingTranscriptionResponse * ChimeClient::stopMeetingTranscription(const StopMeetingTranscriptionRequest &request)
+{
+    return qobject_cast<StopMeetingTranscriptionResponse *>(send(request));
 }
 
 /*!
@@ -3301,6 +3394,20 @@ UpdateSipMediaApplicationResponse * ChimeClient::updateSipMediaApplication(const
 
 /*!
  * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * UpdateSipMediaApplicationCallResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Invokes the AWS Lambda function associated with the SIP media application and transaction ID in an update request. The
+ * Lambda function can then return a new set of
+ */
+UpdateSipMediaApplicationCallResponse * ChimeClient::updateSipMediaApplicationCall(const UpdateSipMediaApplicationCallRequest &request)
+{
+    return qobject_cast<UpdateSipMediaApplicationCallResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
  * UpdateSipRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -3319,7 +3426,6 @@ UpdateSipRuleResponse * ChimeClient::updateSipRule(const UpdateSipRuleRequest &r
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates user details for a specified user ID. Currently, only <code>LicenseType</code> updates are supported for this
- * action.
  */
 UpdateUserResponse * ChimeClient::updateUser(const UpdateUserRequest &request)
 {
@@ -3364,6 +3470,21 @@ UpdateVoiceConnectorResponse * ChimeClient::updateVoiceConnector(const UpdateVoi
 UpdateVoiceConnectorGroupResponse * ChimeClient::updateVoiceConnectorGroup(const UpdateVoiceConnectorGroupRequest &request)
 {
     return qobject_cast<UpdateVoiceConnectorGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ChimeClient service, and returns a pointer to an
+ * ValidateE911AddressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Validates an address to be used for 911 calls made with Amazon Chime Voice Connectors. You can use validated addresses
+ * in a Presence Information Data Format Location Object file that you include in SIP requests. That helps ensure that
+ * addresses are routed to the appropriate Public Safety Answering
+ */
+ValidateE911AddressResponse * ChimeClient::validateE911Address(const ValidateE911AddressRequest &request)
+{
+    return qobject_cast<ValidateE911AddressResponse *>(send(request));
 }
 
 /*!

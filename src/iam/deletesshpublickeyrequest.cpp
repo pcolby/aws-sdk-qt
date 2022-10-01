@@ -23,21 +23,21 @@
 #include "iamrequest_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteSSHPublicKeyRequest
- * \brief The DeleteSSHPublicKeyRequest class provides an interface for IAM DeleteSSHPublicKey requests.
+ * \class QtAws::Iam::DeleteSSHPublicKeyRequest
+ * \brief The DeleteSSHPublicKeyRequest class provides an interface for Iam DeleteSSHPublicKey requests.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteSSHPublicKey
  */
@@ -80,11 +80,11 @@ QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::IAM::DeleteSSHPublicKeyRequestPrivate
+ * \class QtAws::Iam::DeleteSSHPublicKeyRequestPrivate
  * \brief The DeleteSSHPublicKeyRequestPrivate class provides private implementation for DeleteSSHPublicKeyRequest.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -111,5 +111,5 @@ DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
 
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

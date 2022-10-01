@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterToPointInTimeResponse
- * \brief The RestoreDBClusterToPointInTimeResponse class provides an interace for DocDB RestoreDBClusterToPointInTime responses.
+ * \class QtAws::DocDb::RestoreDBClusterToPointInTimeResponse
+ * \brief The RestoreDBClusterToPointInTimeResponse class provides an interace for DocDb RestoreDBClusterToPointInTime responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::restoreDBClusterToPointInTime
+ * \sa DocDbClient::restoreDBClusterToPointInTime
  */
 
 /*!
@@ -45,7 +45,7 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
         const RestoreDBClusterToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
+    : DocDbResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterToPointInTimeRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeRespon
 
 /*!
  * \reimp
- * Parses a successful DocDB RestoreDBClusterToPointInTime \a response.
+ * Parses a successful DocDb RestoreDBClusterToPointInTime \a response.
  */
 void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterToPointInTimeResponsePrivate
+ * \class QtAws::DocDb::RestoreDBClusterToPointInTimeResponsePrivate
  * \brief The RestoreDBClusterToPointInTimeResponsePrivate class provides private implementation for RestoreDBClusterToPointInTimeResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a RestoreDBClusterToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponsePrivate(
-    RestoreDBClusterToPointInTimeResponse * const q) : DocDBResponsePrivate(q)
+    RestoreDBClusterToPointInTimeResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB RestoreDBClusterToPointInTime response element from \a xml.
+ * Parses a DocDb RestoreDBClusterToPointInTime response element from \a xml.
  */
 void RestoreDBClusterToPointInTimeResponsePrivate::parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void RestoreDBClusterToPointInTimeResponsePrivate::parseRestoreDBClusterToPointI
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

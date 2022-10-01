@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetEventDestinationResponse
- * \brief The DeleteConfigurationSetEventDestinationResponse class provides an interace for PinpointSMSVoice DeleteConfigurationSetEventDestination responses.
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetEventDestinationResponse
+ * \brief The DeleteConfigurationSetEventDestinationResponse class provides an interace for PinpointSmsVoice DeleteConfigurationSetEventDestination responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::deleteConfigurationSetEventDestination
+ * \sa PinpointSmsVoiceClient::deleteConfigurationSetEventDestination
  */
 
 /*!
@@ -44,7 +44,7 @@ DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDesti
         const DeleteConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new DeleteConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new DeleteConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetEventDestinationRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEven
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice DeleteConfigurationSetEventDestination \a response.
+ * Parses a successful PinpointSmsVoice DeleteConfigurationSetEventDestination \a response.
  */
 void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::DeleteConfigurationSetEventDestinationResponsePrivate
+ * \class QtAws::PinpointSmsVoice::DeleteConfigurationSetEventDestinationResponsePrivate
  * \brief The DeleteConfigurationSetEventDestinationResponsePrivate class provides private implementation for DeleteConfigurationSetEventDestinationResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a DeleteConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEventDestinationResponsePrivate(
-    DeleteConfigurationSetEventDestinationResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    DeleteConfigurationSetEventDestinationResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice DeleteConfigurationSetEventDestination response element from \a xml.
+ * Parses a PinpointSmsVoice DeleteConfigurationSetEventDestination response element from \a xml.
  */
 void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigura
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

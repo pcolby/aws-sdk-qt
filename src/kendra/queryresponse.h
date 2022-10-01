@@ -24,11 +24,11 @@
 #include "queryrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class QueryResponsePrivate;
 
-class QTAWSKENDRA_EXPORT QueryResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT QueryResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

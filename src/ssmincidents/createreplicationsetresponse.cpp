@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::CreateReplicationSetResponse
- * \brief The CreateReplicationSetResponse class provides an interace for SSMIncidents CreateReplicationSet responses.
+ * \class QtAws::SsmIncidents::CreateReplicationSetResponse
+ * \brief The CreateReplicationSetResponse class provides an interace for SsmIncidents CreateReplicationSet responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::createReplicationSet
+ * \sa SsmIncidentsClient::createReplicationSet
  */
 
 /*!
@@ -54,7 +54,7 @@ CreateReplicationSetResponse::CreateReplicationSetResponse(
         const CreateReplicationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new CreateReplicationSetResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new CreateReplicationSetResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationSetRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const CreateReplicationSetRequest * CreateReplicationSetResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents CreateReplicationSet \a response.
+ * Parses a successful SsmIncidents CreateReplicationSet \a response.
  */
 void CreateReplicationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void CreateReplicationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::CreateReplicationSetResponsePrivate
+ * \class QtAws::SsmIncidents::CreateReplicationSetResponsePrivate
  * \brief The CreateReplicationSetResponsePrivate class provides private implementation for CreateReplicationSetResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a CreateReplicationSetResponsePrivate object with public implementation \a q.
  */
 CreateReplicationSetResponsePrivate::CreateReplicationSetResponsePrivate(
-    CreateReplicationSetResponse * const q) : SSMIncidentsResponsePrivate(q)
+    CreateReplicationSetResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents CreateReplicationSet response element from \a xml.
+ * Parses a SsmIncidents CreateReplicationSet response element from \a xml.
  */
 void CreateReplicationSetResponsePrivate::parseCreateReplicationSetResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateReplicationSetResponsePrivate::parseCreateReplicationSetResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

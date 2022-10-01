@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetGatewayResponsesRequest
- * \brief The GetGatewayResponsesRequest class provides an interface for APIGateway GetGatewayResponses requests.
+ * \class QtAws::ApiGateway::GetGatewayResponsesRequest
+ * \brief The GetGatewayResponsesRequest class provides an interface for ApiGateway GetGatewayResponses requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getGatewayResponses
+ * \sa ApiGatewayClient::getGatewayResponses
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetGatewayResponsesRequest::GetGatewayResponsesRequest(const GetGatewayResponsesRequest &other)
-    : APIGatewayRequest(new GetGatewayResponsesRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetGatewayResponsesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetGatewayResponsesRequest::GetGatewayResponsesRequest(const GetGatewayResponses
  * Constructs a GetGatewayResponsesRequest object.
  */
 GetGatewayResponsesRequest::GetGatewayResponsesRequest()
-    : APIGatewayRequest(new GetGatewayResponsesRequestPrivate(APIGatewayRequest::GetGatewayResponsesAction, this))
+    : ApiGatewayRequest(new GetGatewayResponsesRequestPrivate(ApiGatewayRequest::GetGatewayResponsesAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetGatewayResponsesRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::APIGateway::GetGatewayResponsesRequestPrivate
+ * \class QtAws::ApiGateway::GetGatewayResponsesRequestPrivate
  * \brief The GetGatewayResponsesRequestPrivate class provides private implementation for GetGatewayResponsesRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetGatewayResponsesRequestPrivate object for APIGateway \a action,
+ * Constructs a GetGatewayResponsesRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetGatewayResponsesRequestPrivate::GetGatewayResponsesRequestPrivate(
-    const APIGatewayRequest::Action action, GetGatewayResponsesRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetGatewayResponsesRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetGatewayResponsesRequestPrivate::GetGatewayResponsesRequestPrivate(
  */
 GetGatewayResponsesRequestPrivate::GetGatewayResponsesRequestPrivate(
     const GetGatewayResponsesRequestPrivate &other, GetGatewayResponsesRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

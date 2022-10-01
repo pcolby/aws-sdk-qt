@@ -24,11 +24,11 @@
 #include "deletedbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBClusterParameterGroupResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DeleteDBClusterParameterGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DeleteDBClusterParameterGroupResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

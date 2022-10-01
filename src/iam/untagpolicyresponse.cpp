@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UntagPolicyResponse
- * \brief The UntagPolicyResponse class provides an interace for IAM UntagPolicy responses.
+ * \class QtAws::Iam::UntagPolicyResponse
+ * \brief The UntagPolicyResponse class provides an interace for Iam UntagPolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::untagPolicy
  */
@@ -68,7 +68,7 @@ const UntagPolicyRequest * UntagPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UntagPolicy \a response.
+ * Parses a successful Iam UntagPolicy \a response.
  */
 void UntagPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UntagPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UntagPolicyResponsePrivate
+ * \class QtAws::Iam::UntagPolicyResponsePrivate
  * \brief The UntagPolicyResponsePrivate class provides private implementation for UntagPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UntagPolicyResponsePrivate::UntagPolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM UntagPolicy response element from \a xml.
+ * Parses a Iam UntagPolicy response element from \a xml.
  */
 void UntagPolicyResponsePrivate::parseUntagPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UntagPolicyResponsePrivate::parseUntagPolicyResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

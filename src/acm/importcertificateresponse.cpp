@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::ImportCertificateResponse
- * \brief The ImportCertificateResponse class provides an interace for ACM ImportCertificate responses.
+ * \class QtAws::Acm::ImportCertificateResponse
+ * \brief The ImportCertificateResponse class provides an interace for Acm ImportCertificate responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::importCertificate
  */
@@ -66,7 +66,7 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ACM ImportCertificate \a response.
+ * Parses a successful Acm ImportCertificate \a response.
  */
 void ImportCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::ImportCertificateResponsePrivate
+ * \class QtAws::Acm::ImportCertificateResponsePrivate
  * \brief The ImportCertificateResponsePrivate class provides private implementation for ImportCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
 }
 
 /*!
- * Parses a ACM ImportCertificate response element from \a xml.
+ * Parses a Acm ImportCertificate response element from \a xml.
  */
 void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

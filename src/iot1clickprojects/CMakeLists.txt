@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOT1CLICKPROJECTS_LIBRARY)
 
 add_library(QtAwsIoT1ClickProjects
+  qtawsiot1clickprojectsglobal.h
+  iot1clickprojectsclient.h
+  iot1clickprojectsclient_p.h
+  iot1clickprojectsrequest.h
+  iot1clickprojectsrequest_p.h
+  iot1clickprojectsresponse.h
+  iot1clickprojectsresponse_p.h
   associatedevicewithplacementrequest.h
   associatedevicewithplacementrequest_p.h
   associatedevicewithplacementresponse.h
@@ -37,12 +44,6 @@ add_library(QtAwsIoT1ClickProjects
   getdevicesinplacementrequest_p.h
   getdevicesinplacementresponse.h
   getdevicesinplacementresponse_p.h
-  iot1clickprojectsclient.h
-  iot1clickprojectsclient_p.h
-  iot1clickprojectsrequest.h
-  iot1clickprojectsrequest_p.h
-  iot1clickprojectsresponse.h
-  iot1clickprojectsresponse_p.h
   listplacementsrequest.h
   listplacementsrequest_p.h
   listplacementsresponse.h
@@ -55,7 +56,6 @@ add_library(QtAwsIoT1ClickProjects
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsiot1clickprojectsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -72,6 +72,9 @@ add_library(QtAwsIoT1ClickProjects
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  iot1clickprojectsclient.cpp
+  iot1clickprojectsrequest.cpp
+  iot1clickprojectsresponse.cpp
   associatedevicewithplacementrequest.cpp
   associatedevicewithplacementresponse.cpp
   createplacementrequest.cpp
@@ -90,9 +93,6 @@ add_library(QtAwsIoT1ClickProjects
   disassociatedevicefromplacementresponse.cpp
   getdevicesinplacementrequest.cpp
   getdevicesinplacementresponse.cpp
-  iot1clickprojectsclient.cpp
-  iot1clickprojectsrequest.cpp
-  iot1clickprojectsresponse.cpp
   listplacementsrequest.cpp
   listplacementsresponse.cpp
   listprojectsrequest.cpp

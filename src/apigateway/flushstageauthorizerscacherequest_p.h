@@ -24,14 +24,14 @@
 #include "flushstageauthorizerscacherequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class FlushStageAuthorizersCacheRequest;
 
-class FlushStageAuthorizersCacheRequestPrivate : public APIGatewayRequestPrivate {
+class FlushStageAuthorizersCacheRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    FlushStageAuthorizersCacheRequestPrivate(const APIGatewayRequest::Action action,
+    FlushStageAuthorizersCacheRequestPrivate(const ApiGatewayRequest::Action action,
                                    FlushStageAuthorizersCacheRequest * const q);
     FlushStageAuthorizersCacheRequestPrivate(const FlushStageAuthorizersCacheRequestPrivate &other,
                                    FlushStageAuthorizersCacheRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

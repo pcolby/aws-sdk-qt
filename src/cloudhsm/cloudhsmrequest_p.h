@@ -24,28 +24,28 @@
 #include "cloudhsmrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
-class CloudHSMRequest;
+class CloudHsmRequest;
 
-class CloudHSMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudHsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    CloudHSMRequest::Action action; ///< CloudHSM action to be performed.
-    QString apiVersion;        ///< CloudHSM API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< CloudHSM request (query string) parameters. @todo?
+    CloudHsmRequest::Action action; ///< CloudHsm action to be performed.
+    QString apiVersion;        ///< CloudHsm API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< CloudHsm request (query string) parameters. @todo?
 
-    CloudHSMRequestPrivate(const CloudHSMRequest::Action action, CloudHSMRequest * const q);
-    CloudHSMRequestPrivate(const CloudHSMRequestPrivate &other, CloudHSMRequest * const q);
+    CloudHsmRequestPrivate(const CloudHsmRequest::Action action, CloudHsmRequest * const q);
+    CloudHsmRequestPrivate(const CloudHsmRequestPrivate &other, CloudHsmRequest * const q);
 
-    static QString toString(const CloudHSMRequest::Action &action);
+    static QString toString(const CloudHsmRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(CloudHSMRequest)
+    Q_DECLARE_PUBLIC(CloudHsmRequest)
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

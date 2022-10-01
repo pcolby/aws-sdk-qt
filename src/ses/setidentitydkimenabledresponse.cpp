@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityDkimEnabledResponse
- * \brief The SetIdentityDkimEnabledResponse class provides an interace for SES SetIdentityDkimEnabled responses.
+ * \class QtAws::Ses::SetIdentityDkimEnabledResponse
+ * \brief The SetIdentityDkimEnabledResponse class provides an interace for Ses SetIdentityDkimEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetIdentityDkimEnabledRequest * SetIdentityDkimEnabledResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SES SetIdentityDkimEnabled \a response.
+ * Parses a successful Ses SetIdentityDkimEnabled \a response.
  */
 void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SetIdentityDkimEnabledResponsePrivate
+ * \class QtAws::Ses::SetIdentityDkimEnabledResponsePrivate
  * \brief The SetIdentityDkimEnabledResponsePrivate class provides private implementation for SetIdentityDkimEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
 }
 
 /*!
- * Parses a SES SetIdentityDkimEnabled response element from \a xml.
+ * Parses a Ses SetIdentityDkimEnabled response element from \a xml.
  */
 void SetIdentityDkimEnabledResponsePrivate::parseSetIdentityDkimEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetIdentityDkimEnabledResponsePrivate::parseSetIdentityDkimEnabledResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

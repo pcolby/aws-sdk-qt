@@ -24,16 +24,16 @@
 #include "wafv2request.h"
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class Wafv2Request;
 
 class Wafv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    Wafv2Request::Action action; ///< WAFV2 action to be performed.
-    QString apiVersion;        ///< WAFV2 API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< WAFV2 request (query string) parameters. @todo?
+    Wafv2Request::Action action; ///< Wafv2 action to be performed.
+    QString apiVersion;        ///< Wafv2 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Wafv2 request (query string) parameters. @todo?
 
     Wafv2RequestPrivate(const Wafv2Request::Action action, Wafv2Request * const q);
     Wafv2RequestPrivate(const Wafv2RequestPrivate &other, Wafv2Request * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

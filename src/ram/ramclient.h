@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class RamClientPrivate;
 class AcceptResourceShareInvitationRequest;
@@ -58,6 +58,8 @@ class GetResourceSharesRequest;
 class GetResourceSharesResponse;
 class ListPendingInvitationResourcesRequest;
 class ListPendingInvitationResourcesResponse;
+class ListPermissionVersionsRequest;
+class ListPermissionVersionsResponse;
 class ListPermissionsRequest;
 class ListPermissionsResponse;
 class ListPrincipalsRequest;
@@ -109,6 +111,7 @@ public slots:
     GetResourceShareInvitationsResponse * getResourceShareInvitations(const GetResourceShareInvitationsRequest &request);
     GetResourceSharesResponse * getResourceShares(const GetResourceSharesRequest &request);
     ListPendingInvitationResourcesResponse * listPendingInvitationResources(const ListPendingInvitationResourcesRequest &request);
+    ListPermissionVersionsResponse * listPermissionVersions(const ListPermissionVersionsRequest &request);
     ListPermissionsResponse * listPermissions(const ListPermissionsRequest &request);
     ListPrincipalsResponse * listPrincipals(const ListPrincipalsRequest &request);
     ListResourceSharePermissionsResponse * listResourceSharePermissions(const ListResourceSharePermissionsRequest &request);
@@ -126,7 +129,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

@@ -315,7 +315,7 @@ QNetworkRequest ApiGatewayV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ApiGatewayV2RequestPrivate::ApiGatewayV2RequestPrivate(const ApiGatewayV2Request::Action action, ApiGatewayV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-29"))
 {
 
 }

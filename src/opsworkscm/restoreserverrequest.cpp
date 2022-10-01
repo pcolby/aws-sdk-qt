@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::RestoreServerRequest
- * \brief The RestoreServerRequest class provides an interface for OpsWorksCM RestoreServer requests.
+ * \class QtAws::OpsWorksCm::RestoreServerRequest
+ * \brief The RestoreServerRequest class provides an interface for OpsWorksCm RestoreServer requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::restoreServer
+ * \sa OpsWorksCmClient::restoreServer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RestoreServerRequest::RestoreServerRequest(const RestoreServerRequest &other)
-    : OpsWorksCMRequest(new RestoreServerRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new RestoreServerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ RestoreServerRequest::RestoreServerRequest(const RestoreServerRequest &other)
  * Constructs a RestoreServerRequest object.
  */
 RestoreServerRequest::RestoreServerRequest()
-    : OpsWorksCMRequest(new RestoreServerRequestPrivate(OpsWorksCMRequest::RestoreServerAction, this))
+    : OpsWorksCmRequest(new RestoreServerRequestPrivate(OpsWorksCmRequest::RestoreServerAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * RestoreServerRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::OpsWorksCM::RestoreServerRequestPrivate
+ * \class QtAws::OpsWorksCm::RestoreServerRequestPrivate
  * \brief The RestoreServerRequestPrivate class provides private implementation for RestoreServerRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a RestoreServerRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a RestoreServerRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 RestoreServerRequestPrivate::RestoreServerRequestPrivate(
-    const OpsWorksCMRequest::Action action, RestoreServerRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, RestoreServerRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ RestoreServerRequestPrivate::RestoreServerRequestPrivate(
  */
 RestoreServerRequestPrivate::RestoreServerRequestPrivate(
     const RestoreServerRequestPrivate &other, RestoreServerRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::UpdateContactChannelResponse
- * \brief The UpdateContactChannelResponse class provides an interace for SSMContacts UpdateContactChannel responses.
+ * \class QtAws::SsmContacts::UpdateContactChannelResponse
+ * \brief The UpdateContactChannelResponse class provides an interace for SsmContacts UpdateContactChannel responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::updateContactChannel
+ * \sa SsmContactsClient::updateContactChannel
  */
 
 /*!
@@ -44,7 +54,7 @@ UpdateContactChannelResponse::UpdateContactChannelResponse(
         const UpdateContactChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new UpdateContactChannelResponsePrivate(this), parent)
+    : SsmContactsResponse(new UpdateContactChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateContactChannelRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const UpdateContactChannelRequest * UpdateContactChannelResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SSMContacts UpdateContactChannel \a response.
+ * Parses a successful SsmContacts UpdateContactChannel \a response.
  */
 void UpdateContactChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void UpdateContactChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::UpdateContactChannelResponsePrivate
+ * \class QtAws::SsmContacts::UpdateContactChannelResponsePrivate
  * \brief The UpdateContactChannelResponsePrivate class provides private implementation for UpdateContactChannelResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a UpdateContactChannelResponsePrivate object with public implementation \a q.
  */
 UpdateContactChannelResponsePrivate::UpdateContactChannelResponsePrivate(
-    UpdateContactChannelResponse * const q) : SSMContactsResponsePrivate(q)
+    UpdateContactChannelResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts UpdateContactChannel response element from \a xml.
+ * Parses a SsmContacts UpdateContactChannel response element from \a xml.
  */
 void UpdateContactChannelResponsePrivate::parseUpdateContactChannelResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void UpdateContactChannelResponsePrivate::parseUpdateContactChannelResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

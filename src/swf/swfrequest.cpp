@@ -21,62 +21,62 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::SwfRequest
- * \brief The SwfRequest class provides an interface for SWF requests.
+ * \class QtAws::Swf::SwfRequest
+ * \brief The SwfRequest class provides an interface for Swf requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
  * \enum SwfRequest::Action
  *
- * This enum describes the actions that can be performed as SWF
+ * This enum describes the actions that can be performed as Swf
  * requests.
  *
- * \value CountClosedWorkflowExecutionsAction SWF CountClosedWorkflowExecutions action.
- * \value CountOpenWorkflowExecutionsAction SWF CountOpenWorkflowExecutions action.
- * \value CountPendingActivityTasksAction SWF CountPendingActivityTasks action.
- * \value CountPendingDecisionTasksAction SWF CountPendingDecisionTasks action.
- * \value DeprecateActivityTypeAction SWF DeprecateActivityType action.
- * \value DeprecateDomainAction SWF DeprecateDomain action.
- * \value DeprecateWorkflowTypeAction SWF DeprecateWorkflowType action.
- * \value DescribeActivityTypeAction SWF DescribeActivityType action.
- * \value DescribeDomainAction SWF DescribeDomain action.
- * \value DescribeWorkflowExecutionAction SWF DescribeWorkflowExecution action.
- * \value DescribeWorkflowTypeAction SWF DescribeWorkflowType action.
- * \value GetWorkflowExecutionHistoryAction SWF GetWorkflowExecutionHistory action.
- * \value ListActivityTypesAction SWF ListActivityTypes action.
- * \value ListClosedWorkflowExecutionsAction SWF ListClosedWorkflowExecutions action.
- * \value ListDomainsAction SWF ListDomains action.
- * \value ListOpenWorkflowExecutionsAction SWF ListOpenWorkflowExecutions action.
- * \value ListTagsForResourceAction SWF ListTagsForResource action.
- * \value ListWorkflowTypesAction SWF ListWorkflowTypes action.
- * \value PollForActivityTaskAction SWF PollForActivityTask action.
- * \value PollForDecisionTaskAction SWF PollForDecisionTask action.
- * \value RecordActivityTaskHeartbeatAction SWF RecordActivityTaskHeartbeat action.
- * \value RegisterActivityTypeAction SWF RegisterActivityType action.
- * \value RegisterDomainAction SWF RegisterDomain action.
- * \value RegisterWorkflowTypeAction SWF RegisterWorkflowType action.
- * \value RequestCancelWorkflowExecutionAction SWF RequestCancelWorkflowExecution action.
- * \value RespondActivityTaskCanceledAction SWF RespondActivityTaskCanceled action.
- * \value RespondActivityTaskCompletedAction SWF RespondActivityTaskCompleted action.
- * \value RespondActivityTaskFailedAction SWF RespondActivityTaskFailed action.
- * \value RespondDecisionTaskCompletedAction SWF RespondDecisionTaskCompleted action.
- * \value SignalWorkflowExecutionAction SWF SignalWorkflowExecution action.
- * \value StartWorkflowExecutionAction SWF StartWorkflowExecution action.
- * \value TagResourceAction SWF TagResource action.
- * \value TerminateWorkflowExecutionAction SWF TerminateWorkflowExecution action.
- * \value UndeprecateActivityTypeAction SWF UndeprecateActivityType action.
- * \value UndeprecateDomainAction SWF UndeprecateDomain action.
- * \value UndeprecateWorkflowTypeAction SWF UndeprecateWorkflowType action.
- * \value UntagResourceAction SWF UntagResource action.
+ * \value CountClosedWorkflowExecutionsAction Swf CountClosedWorkflowExecutions action.
+ * \value CountOpenWorkflowExecutionsAction Swf CountOpenWorkflowExecutions action.
+ * \value CountPendingActivityTasksAction Swf CountPendingActivityTasks action.
+ * \value CountPendingDecisionTasksAction Swf CountPendingDecisionTasks action.
+ * \value DeprecateActivityTypeAction Swf DeprecateActivityType action.
+ * \value DeprecateDomainAction Swf DeprecateDomain action.
+ * \value DeprecateWorkflowTypeAction Swf DeprecateWorkflowType action.
+ * \value DescribeActivityTypeAction Swf DescribeActivityType action.
+ * \value DescribeDomainAction Swf DescribeDomain action.
+ * \value DescribeWorkflowExecutionAction Swf DescribeWorkflowExecution action.
+ * \value DescribeWorkflowTypeAction Swf DescribeWorkflowType action.
+ * \value GetWorkflowExecutionHistoryAction Swf GetWorkflowExecutionHistory action.
+ * \value ListActivityTypesAction Swf ListActivityTypes action.
+ * \value ListClosedWorkflowExecutionsAction Swf ListClosedWorkflowExecutions action.
+ * \value ListDomainsAction Swf ListDomains action.
+ * \value ListOpenWorkflowExecutionsAction Swf ListOpenWorkflowExecutions action.
+ * \value ListTagsForResourceAction Swf ListTagsForResource action.
+ * \value ListWorkflowTypesAction Swf ListWorkflowTypes action.
+ * \value PollForActivityTaskAction Swf PollForActivityTask action.
+ * \value PollForDecisionTaskAction Swf PollForDecisionTask action.
+ * \value RecordActivityTaskHeartbeatAction Swf RecordActivityTaskHeartbeat action.
+ * \value RegisterActivityTypeAction Swf RegisterActivityType action.
+ * \value RegisterDomainAction Swf RegisterDomain action.
+ * \value RegisterWorkflowTypeAction Swf RegisterWorkflowType action.
+ * \value RequestCancelWorkflowExecutionAction Swf RequestCancelWorkflowExecution action.
+ * \value RespondActivityTaskCanceledAction Swf RespondActivityTaskCanceled action.
+ * \value RespondActivityTaskCompletedAction Swf RespondActivityTaskCompleted action.
+ * \value RespondActivityTaskFailedAction Swf RespondActivityTaskFailed action.
+ * \value RespondDecisionTaskCompletedAction Swf RespondDecisionTaskCompleted action.
+ * \value SignalWorkflowExecutionAction Swf SignalWorkflowExecution action.
+ * \value StartWorkflowExecutionAction Swf StartWorkflowExecution action.
+ * \value TagResourceAction Swf TagResource action.
+ * \value TerminateWorkflowExecutionAction Swf TerminateWorkflowExecution action.
+ * \value UndeprecateActivityTypeAction Swf UndeprecateActivityType action.
+ * \value UndeprecateDomainAction Swf UndeprecateDomain action.
+ * \value UndeprecateWorkflowTypeAction Swf UndeprecateWorkflowType action.
+ * \value UntagResourceAction Swf UntagResource action.
  */
 
 /*!
- * Constructs a SwfRequest object for SWF \a action.
+ * Constructs a SwfRequest object for Swf \a action.
  */
 SwfRequest::SwfRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SwfRequestPrivate(action, this))
@@ -117,7 +117,7 @@ SwfRequest::SwfRequest(SwfRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SWF action to be performed by this request.
+ * Returns the Swf action to be performed by this request.
  */
 SwfRequest::Action SwfRequest::action() const
 {
@@ -126,7 +126,7 @@ SwfRequest::Action SwfRequest::action() const
 }
 
 /*!
- * Returns the name of the SWF action to be performed by this request.
+ * Returns the name of the Swf action to be performed by this request.
  */
 QString SwfRequest::actionString() const
 {
@@ -134,7 +134,7 @@ QString SwfRequest::actionString() const
 }
 
 /*!
- * Returns the SWF API version implemented by this request.
+ * Returns the Swf API version implemented by this request.
  */
 QString SwfRequest::apiVersion() const
 {
@@ -143,7 +143,7 @@ QString SwfRequest::apiVersion() const
 }
 
 /*!
- * Sets the SWF action to be performed by this request to \a action.
+ * Sets the Swf action to be performed by this request to \a action.
  */
 void SwfRequest::setAction(const Action action)
 {
@@ -152,7 +152,7 @@ void SwfRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SWF API version to include in this request to \a version.
+ * Sets the Swf API version to include in this request to \a version.
  */
 void SwfRequest::setApiVersion(const QString &version)
 {
@@ -177,15 +177,15 @@ bool SwfRequest::operator==(const SwfRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SWF queue name.
+ * Returns \c tue if \a queueName is a valid Swf queue name.
  *
- * @par From SWF FAQs:
+ * @par From Swf FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SWF queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Swf queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -252,10 +252,10 @@ void SwfRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SWF request using the given
+ * Returns a network request for the Swf request using the given
  * \a endpoint.
  *
- * This SWF implementation builds request URLs by combining the
+ * This Swf implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -268,19 +268,19 @@ QNetworkRequest SwfRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SWF::SwfRequestPrivate
+ * \class QtAws::Swf::SwfRequestPrivate
  * \brief The SwfRequestPrivate class provides private implementation for SwfRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
- * Constructs a SwfRequestPrivate object for SWF \a action,
+ * Constructs a SwfRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 SwfRequestPrivate::SwfRequestPrivate(const SwfRequest::Action action, SwfRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-01-25"))
 {
 
 }
@@ -306,7 +306,7 @@ SwfRequestPrivate::SwfRequestPrivate(const SwfRequestPrivate &other,
  * invalid.
  *
  * This function converts SwfRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SWF service's Action
+ * string representations, appropriate for use with the Swf service's Action
  * query parameters.
  */
 QString SwfRequestPrivate::toString(const SwfRequest::Action &action)
@@ -358,5 +358,5 @@ QString SwfRequestPrivate::toString(const SwfRequest::Action &action)
     return QString();
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

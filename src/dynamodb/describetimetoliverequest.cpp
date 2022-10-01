@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeTimeToLiveRequest
- * \brief The DescribeTimeToLiveRequest class provides an interface for DynamoDB DescribeTimeToLive requests.
+ * \class QtAws::DynamoDb::DescribeTimeToLiveRequest
+ * \brief The DescribeTimeToLiveRequest class provides an interface for DynamoDb DescribeTimeToLive requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeTimeToLive
+ * \sa DynamoDbClient::describeTimeToLive
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeTimeToLiveRequest::DescribeTimeToLiveRequest(const DescribeTimeToLiveRequest &other)
-    : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeTimeToLiveRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeTimeToLiveRequest::DescribeTimeToLiveRequest(const DescribeTimeToLiveReq
  * Constructs a DescribeTimeToLiveRequest object.
  */
 DescribeTimeToLiveRequest::DescribeTimeToLiveRequest()
-    : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(DynamoDBRequest::DescribeTimeToLiveAction, this))
+    : DynamoDbRequest(new DescribeTimeToLiveRequestPrivate(DynamoDbRequest::DescribeTimeToLiveAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeTimeToLiveRequestPrivate
+ * \class QtAws::DynamoDb::DescribeTimeToLiveRequestPrivate
  * \brief The DescribeTimeToLiveRequestPrivate class provides private implementation for DescribeTimeToLiveRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeTimeToLiveRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeTimeToLiveRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeTimeToLiveRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeTimeToLiveRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DescribeTimeToLiveRequestPrivate &other, DescribeTimeToLiveRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

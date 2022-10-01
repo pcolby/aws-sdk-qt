@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListHsmsRequest
- * \brief The ListHsmsRequest class provides an interface for CloudHSM ListHsms requests.
+ * \class QtAws::CloudHsm::ListHsmsRequest
+ * \brief The ListHsmsRequest class provides an interface for CloudHsm ListHsms requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listHsms
+ * \sa CloudHsmClient::listHsms
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListHsmsRequest::ListHsmsRequest(const ListHsmsRequest &other)
-    : CloudHSMRequest(new ListHsmsRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new ListHsmsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ ListHsmsRequest::ListHsmsRequest(const ListHsmsRequest &other)
  * Constructs a ListHsmsRequest object.
  */
 ListHsmsRequest::ListHsmsRequest()
-    : CloudHSMRequest(new ListHsmsRequestPrivate(CloudHSMRequest::ListHsmsAction, this))
+    : CloudHsmRequest(new ListHsmsRequestPrivate(CloudHsmRequest::ListHsmsAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * ListHsmsRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::CloudHSM::ListHsmsRequestPrivate
+ * \class QtAws::CloudHsm::ListHsmsRequestPrivate
  * \brief The ListHsmsRequestPrivate class provides private implementation for ListHsmsRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a ListHsmsRequestPrivate object for CloudHSM \a action,
+ * Constructs a ListHsmsRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
-    const CloudHSMRequest::Action action, ListHsmsRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, ListHsmsRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ ListHsmsRequestPrivate::ListHsmsRequestPrivate(
  */
 ListHsmsRequestPrivate::ListHsmsRequestPrivate(
     const ListHsmsRequestPrivate &other, ListHsmsRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

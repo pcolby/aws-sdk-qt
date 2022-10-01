@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBClusterBacktracksRequest
- * \brief The DescribeDBClusterBacktracksRequest class provides an interface for RDS DescribeDBClusterBacktracks requests.
+ * \class QtAws::Rds::DescribeDBClusterBacktracksRequest
+ * \brief The DescribeDBClusterBacktracksRequest class provides an interface for Rds DescribeDBClusterBacktracks requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterBacktracksRequest::response(
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBClusterBacktracksRequestPrivate
+ * \class QtAws::Rds::DescribeDBClusterBacktracksRequestPrivate
  * \brief The DescribeDBClusterBacktracksRequestPrivate class provides private implementation for DescribeDBClusterBacktracksRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBClusterBacktracksRequestPrivate::DescribeDBClusterBacktracksRequestPri
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::CancelJournalKinesisStreamResponse
- * \brief The CancelJournalKinesisStreamResponse class provides an interace for QLDB CancelJournalKinesisStream responses.
+ * \class QtAws::Qldb::CancelJournalKinesisStreamResponse
+ * \brief The CancelJournalKinesisStreamResponse class provides an interace for Qldb CancelJournalKinesisStream responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const CancelJournalKinesisStreamRequest * CancelJournalKinesisStreamResponse::re
 
 /*!
  * \reimp
- * Parses a successful QLDB CancelJournalKinesisStream \a response.
+ * Parses a successful Qldb CancelJournalKinesisStream \a response.
  */
 void CancelJournalKinesisStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void CancelJournalKinesisStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::CancelJournalKinesisStreamResponsePrivate
+ * \class QtAws::Qldb::CancelJournalKinesisStreamResponsePrivate
  * \brief The CancelJournalKinesisStreamResponsePrivate class provides private implementation for CancelJournalKinesisStreamResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ CancelJournalKinesisStreamResponsePrivate::CancelJournalKinesisStreamResponsePri
 }
 
 /*!
- * Parses a QLDB CancelJournalKinesisStream response element from \a xml.
+ * Parses a Qldb CancelJournalKinesisStream response element from \a xml.
  */
 void CancelJournalKinesisStreamResponsePrivate::parseCancelJournalKinesisStreamResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CancelJournalKinesisStreamResponsePrivate::parseCancelJournalKinesisStreamR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

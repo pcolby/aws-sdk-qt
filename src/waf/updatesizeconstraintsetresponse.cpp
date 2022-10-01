@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateSizeConstraintSetResponse
- * \brief The UpdateSizeConstraintSetResponse class provides an interace for WAF UpdateSizeConstraintSet responses.
+ * \class QtAws::Waf::UpdateSizeConstraintSetResponse
+ * \brief The UpdateSizeConstraintSetResponse class provides an interace for Waf UpdateSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateSizeConstraintSet \a response.
+ * Parses a successful Waf UpdateSizeConstraintSet \a response.
  */
 void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateSizeConstraintSetResponsePrivate
+ * \class QtAws::Waf::UpdateSizeConstraintSetResponsePrivate
  * \brief The UpdateSizeConstraintSetResponsePrivate class provides private implementation for UpdateSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateSizeConstraintSet response element from \a xml.
+ * Parses a Waf UpdateSizeConstraintSet response element from \a xml.
  */
 void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

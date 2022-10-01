@@ -24,14 +24,14 @@
 #include "removefromglobalclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveFromGlobalClusterRequest;
 
-class RemoveFromGlobalClusterRequestPrivate : public DocDBRequestPrivate {
+class RemoveFromGlobalClusterRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    RemoveFromGlobalClusterRequestPrivate(const DocDBRequest::Action action,
+    RemoveFromGlobalClusterRequestPrivate(const DocDbRequest::Action action,
                                    RemoveFromGlobalClusterRequest * const q);
     RemoveFromGlobalClusterRequestPrivate(const RemoveFromGlobalClusterRequestPrivate &other,
                                    RemoveFromGlobalClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderResponsePrivate;
+class ImageBuilderResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT imagebuilderResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIMAGEBUILDER_EXPORT ImageBuilderResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    imagebuilderResponse(QObject * const parent = 0);
+    ImageBuilderResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    imagebuilderResponse(imagebuilderResponsePrivate * const d, QObject * const parent);
+    ImageBuilderResponse(ImageBuilderResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(imagebuilderResponse)
-    Q_DISABLE_COPY(imagebuilderResponse)
+    Q_DECLARE_PRIVATE(ImageBuilderResponse)
+    Q_DISABLE_COPY(ImageBuilderResponse)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

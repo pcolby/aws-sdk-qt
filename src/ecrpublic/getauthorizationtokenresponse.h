@@ -24,11 +24,11 @@
 #include "getauthorizationtokenrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class GetAuthorizationTokenResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT GetAuthorizationTokenResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT GetAuthorizationTokenResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

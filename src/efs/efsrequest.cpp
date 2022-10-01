@@ -21,52 +21,55 @@
 #include "efsrequest_p.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::EfsRequest
- * \brief The EfsRequest class provides an interface for EFS requests.
+ * \class QtAws::Efs::EfsRequest
+ * \brief The EfsRequest class provides an interface for Efs requests.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
  * \enum EfsRequest::Action
  *
- * This enum describes the actions that can be performed as EFS
+ * This enum describes the actions that can be performed as Efs
  * requests.
  *
- * \value CreateAccessPointAction EFS CreateAccessPoint action.
- * \value CreateFileSystemAction EFS CreateFileSystem action.
- * \value CreateMountTargetAction EFS CreateMountTarget action.
- * \value CreateTagsAction EFS CreateTags action.
- * \value DeleteAccessPointAction EFS DeleteAccessPoint action.
- * \value DeleteFileSystemAction EFS DeleteFileSystem action.
- * \value DeleteFileSystemPolicyAction EFS DeleteFileSystemPolicy action.
- * \value DeleteMountTargetAction EFS DeleteMountTarget action.
- * \value DeleteTagsAction EFS DeleteTags action.
- * \value DescribeAccessPointsAction EFS DescribeAccessPoints action.
- * \value DescribeAccountPreferencesAction EFS DescribeAccountPreferences action.
- * \value DescribeBackupPolicyAction EFS DescribeBackupPolicy action.
- * \value DescribeFileSystemPolicyAction EFS DescribeFileSystemPolicy action.
- * \value DescribeFileSystemsAction EFS DescribeFileSystems action.
- * \value DescribeLifecycleConfigurationAction EFS DescribeLifecycleConfiguration action.
- * \value DescribeMountTargetSecurityGroupsAction EFS DescribeMountTargetSecurityGroups action.
- * \value DescribeMountTargetsAction EFS DescribeMountTargets action.
- * \value DescribeTagsAction EFS DescribeTags action.
- * \value ListTagsForResourceAction EFS ListTagsForResource action.
- * \value ModifyMountTargetSecurityGroupsAction EFS ModifyMountTargetSecurityGroups action.
- * \value PutAccountPreferencesAction EFS PutAccountPreferences action.
- * \value PutBackupPolicyAction EFS PutBackupPolicy action.
- * \value PutFileSystemPolicyAction EFS PutFileSystemPolicy action.
- * \value PutLifecycleConfigurationAction EFS PutLifecycleConfiguration action.
- * \value TagResourceAction EFS TagResource action.
- * \value UntagResourceAction EFS UntagResource action.
- * \value UpdateFileSystemAction EFS UpdateFileSystem action.
+ * \value CreateAccessPointAction Efs CreateAccessPoint action.
+ * \value CreateFileSystemAction Efs CreateFileSystem action.
+ * \value CreateMountTargetAction Efs CreateMountTarget action.
+ * \value CreateReplicationConfigurationAction Efs CreateReplicationConfiguration action.
+ * \value CreateTagsAction Efs CreateTags action.
+ * \value DeleteAccessPointAction Efs DeleteAccessPoint action.
+ * \value DeleteFileSystemAction Efs DeleteFileSystem action.
+ * \value DeleteFileSystemPolicyAction Efs DeleteFileSystemPolicy action.
+ * \value DeleteMountTargetAction Efs DeleteMountTarget action.
+ * \value DeleteReplicationConfigurationAction Efs DeleteReplicationConfiguration action.
+ * \value DeleteTagsAction Efs DeleteTags action.
+ * \value DescribeAccessPointsAction Efs DescribeAccessPoints action.
+ * \value DescribeAccountPreferencesAction Efs DescribeAccountPreferences action.
+ * \value DescribeBackupPolicyAction Efs DescribeBackupPolicy action.
+ * \value DescribeFileSystemPolicyAction Efs DescribeFileSystemPolicy action.
+ * \value DescribeFileSystemsAction Efs DescribeFileSystems action.
+ * \value DescribeLifecycleConfigurationAction Efs DescribeLifecycleConfiguration action.
+ * \value DescribeMountTargetSecurityGroupsAction Efs DescribeMountTargetSecurityGroups action.
+ * \value DescribeMountTargetsAction Efs DescribeMountTargets action.
+ * \value DescribeReplicationConfigurationsAction Efs DescribeReplicationConfigurations action.
+ * \value DescribeTagsAction Efs DescribeTags action.
+ * \value ListTagsForResourceAction Efs ListTagsForResource action.
+ * \value ModifyMountTargetSecurityGroupsAction Efs ModifyMountTargetSecurityGroups action.
+ * \value PutAccountPreferencesAction Efs PutAccountPreferences action.
+ * \value PutBackupPolicyAction Efs PutBackupPolicy action.
+ * \value PutFileSystemPolicyAction Efs PutFileSystemPolicy action.
+ * \value PutLifecycleConfigurationAction Efs PutLifecycleConfiguration action.
+ * \value TagResourceAction Efs TagResource action.
+ * \value UntagResourceAction Efs UntagResource action.
+ * \value UpdateFileSystemAction Efs UpdateFileSystem action.
  */
 
 /*!
- * Constructs a EfsRequest object for EFS \a action.
+ * Constructs a EfsRequest object for Efs \a action.
  */
 EfsRequest::EfsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EfsRequestPrivate(action, this))
@@ -107,7 +110,7 @@ EfsRequest::EfsRequest(EfsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the EFS action to be performed by this request.
+ * Returns the Efs action to be performed by this request.
  */
 EfsRequest::Action EfsRequest::action() const
 {
@@ -116,7 +119,7 @@ EfsRequest::Action EfsRequest::action() const
 }
 
 /*!
- * Returns the name of the EFS action to be performed by this request.
+ * Returns the name of the Efs action to be performed by this request.
  */
 QString EfsRequest::actionString() const
 {
@@ -124,7 +127,7 @@ QString EfsRequest::actionString() const
 }
 
 /*!
- * Returns the EFS API version implemented by this request.
+ * Returns the Efs API version implemented by this request.
  */
 QString EfsRequest::apiVersion() const
 {
@@ -133,7 +136,7 @@ QString EfsRequest::apiVersion() const
 }
 
 /*!
- * Sets the EFS action to be performed by this request to \a action.
+ * Sets the Efs action to be performed by this request to \a action.
  */
 void EfsRequest::setAction(const Action action)
 {
@@ -142,7 +145,7 @@ void EfsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the EFS API version to include in this request to \a version.
+ * Sets the Efs API version to include in this request to \a version.
  */
 void EfsRequest::setApiVersion(const QString &version)
 {
@@ -167,15 +170,15 @@ bool EfsRequest::operator==(const EfsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid EFS queue name.
+ * Returns \c tue if \a queueName is a valid Efs queue name.
  *
- * @par From EFS FAQs:
+ * @par From Efs FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid EFS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Efs queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -242,10 +245,10 @@ void EfsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the EFS request using the given
+ * Returns a network request for the Efs request using the given
  * \a endpoint.
  *
- * This EFS implementation builds request URLs by combining the
+ * This Efs implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -258,19 +261,19 @@ QNetworkRequest EfsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::EFS::EfsRequestPrivate
+ * \class QtAws::Efs::EfsRequestPrivate
  * \brief The EfsRequestPrivate class provides private implementation for EfsRequest.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
- * Constructs a EfsRequestPrivate object for EFS \a action,
+ * Constructs a EfsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 EfsRequestPrivate::EfsRequestPrivate(const EfsRequest::Action action, EfsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-02-01"))
 {
 
 }
@@ -296,7 +299,7 @@ EfsRequestPrivate::EfsRequestPrivate(const EfsRequestPrivate &other,
  * invalid.
  *
  * This function converts EfsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the EFS service's Action
+ * string representations, appropriate for use with the Efs service's Action
  * query parameters.
  */
 QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
@@ -307,11 +310,13 @@ QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
         ActionToString(CreateAccessPoint);
         ActionToString(CreateFileSystem);
         ActionToString(CreateMountTarget);
+        ActionToString(CreateReplicationConfiguration);
         ActionToString(CreateTags);
         ActionToString(DeleteAccessPoint);
         ActionToString(DeleteFileSystem);
         ActionToString(DeleteFileSystemPolicy);
         ActionToString(DeleteMountTarget);
+        ActionToString(DeleteReplicationConfiguration);
         ActionToString(DeleteTags);
         ActionToString(DescribeAccessPoints);
         ActionToString(DescribeAccountPreferences);
@@ -321,6 +326,7 @@ QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
         ActionToString(DescribeLifecycleConfiguration);
         ActionToString(DescribeMountTargetSecurityGroups);
         ActionToString(DescribeMountTargets);
+        ActionToString(DescribeReplicationConfigurations);
         ActionToString(DescribeTags);
         ActionToString(ListTagsForResource);
         ActionToString(ModifyMountTargetSecurityGroups);
@@ -338,5 +344,5 @@ QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
     return QString();
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

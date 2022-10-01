@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCODEGURUREVIEWER_LIBRARY)
 
 add_library(QtAwsCodeGuruReviewer
-  associaterepositoryrequest.h
-  associaterepositoryrequest_p.h
-  associaterepositoryresponse.h
-  associaterepositoryresponse_p.h
+  qtawscodegurureviewerglobal.h
   codegurureviewerclient.h
   codegurureviewerclient_p.h
   codegurureviewerrequest.h
   codegurureviewerrequest_p.h
   codegurureviewerresponse.h
   codegurureviewerresponse_p.h
+  associaterepositoryrequest.h
+  associaterepositoryrequest_p.h
+  associaterepositoryresponse.h
+  associaterepositoryresponse_p.h
   createcodereviewrequest.h
   createcodereviewrequest_p.h
   createcodereviewresponse.h
@@ -55,7 +56,6 @@ add_library(QtAwsCodeGuruReviewer
   putrecommendationfeedbackrequest_p.h
   putrecommendationfeedbackresponse.h
   putrecommendationfeedbackresponse_p.h
-  qtawscodegurureviewerglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -64,11 +64,11 @@ add_library(QtAwsCodeGuruReviewer
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  associaterepositoryrequest.cpp
-  associaterepositoryresponse.cpp
   codegurureviewerclient.cpp
   codegurureviewerrequest.cpp
   codegurureviewerresponse.cpp
+  associaterepositoryrequest.cpp
+  associaterepositoryresponse.cpp
   createcodereviewrequest.cpp
   createcodereviewresponse.cpp
   describecodereviewrequest.cpp

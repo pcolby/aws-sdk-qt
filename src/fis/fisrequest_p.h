@@ -24,16 +24,16 @@
 #include "fisrequest.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 class FisRequest;
 
 class FisRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    FisRequest::Action action; ///< FIS action to be performed.
-    QString apiVersion;        ///< FIS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< FIS request (query string) parameters. @todo?
+    FisRequest::Action action; ///< Fis action to be performed.
+    QString apiVersion;        ///< Fis API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Fis request (query string) parameters. @todo?
 
     FisRequestPrivate(const FisRequest::Action action, FisRequest * const q);
     FisRequestPrivate(const FisRequestPrivate &other, FisRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws
 
 #endif

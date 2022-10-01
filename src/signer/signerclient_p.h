@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerClient;
+class SignerClient;
 
-class signerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SignerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit signerClientPrivate(signerClient * const q);
+    explicit SignerClientPrivate(SignerClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(signerClient)
-    Q_DISABLE_COPY(signerClientPrivate)
+    Q_DECLARE_PUBLIC(SignerClient)
+    Q_DISABLE_COPY(SignerClientPrivate)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

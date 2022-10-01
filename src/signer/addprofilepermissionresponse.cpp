@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::AddProfilePermissionResponse
- * \brief The AddProfilePermissionResponse class provides an interace for signer AddProfilePermission responses.
+ * \class QtAws::Signer::AddProfilePermissionResponse
+ * \brief The AddProfilePermissionResponse class provides an interace for Signer AddProfilePermission responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::addProfilePermission
+ * \sa SignerClient::addProfilePermission
  */
 
 /*!
@@ -69,7 +71,7 @@ AddProfilePermissionResponse::AddProfilePermissionResponse(
         const AddProfilePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new AddProfilePermissionResponsePrivate(this), parent)
+    : SignerResponse(new AddProfilePermissionResponsePrivate(this), parent)
 {
     setRequest(new AddProfilePermissionRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const AddProfilePermissionRequest * AddProfilePermissionResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful signer AddProfilePermission \a response.
+ * Parses a successful Signer AddProfilePermission \a response.
  */
 void AddProfilePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void AddProfilePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::AddProfilePermissionResponsePrivate
+ * \class QtAws::Signer::AddProfilePermissionResponsePrivate
  * \brief The AddProfilePermissionResponsePrivate class provides private implementation for AddProfilePermissionResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a AddProfilePermissionResponsePrivate object with public implementation \a q.
  */
 AddProfilePermissionResponsePrivate::AddProfilePermissionResponsePrivate(
-    AddProfilePermissionResponse * const q) : signerResponsePrivate(q)
+    AddProfilePermissionResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer AddProfilePermission response element from \a xml.
+ * Parses a Signer AddProfilePermission response element from \a xml.
  */
 void AddProfilePermissionResponsePrivate::parseAddProfilePermissionResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void AddProfilePermissionResponsePrivate::parseAddProfilePermissionResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

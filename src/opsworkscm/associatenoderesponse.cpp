@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::AssociateNodeResponse
- * \brief The AssociateNodeResponse class provides an interace for OpsWorksCM AssociateNode responses.
+ * \class QtAws::OpsWorksCm::AssociateNodeResponse
+ * \brief The AssociateNodeResponse class provides an interace for OpsWorksCm AssociateNode responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::associateNode
+ * \sa OpsWorksCmClient::associateNode
  */
 
 /*!
@@ -123,7 +123,7 @@ AssociateNodeResponse::AssociateNodeResponse(
         const AssociateNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new AssociateNodeResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new AssociateNodeResponsePrivate(this), parent)
 {
     setRequest(new AssociateNodeRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const AssociateNodeRequest * AssociateNodeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM AssociateNode \a response.
+ * Parses a successful OpsWorksCm AssociateNode \a response.
  */
 void AssociateNodeResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void AssociateNodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::AssociateNodeResponsePrivate
+ * \class QtAws::OpsWorksCm::AssociateNodeResponsePrivate
  * \brief The AssociateNodeResponsePrivate class provides private implementation for AssociateNodeResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a AssociateNodeResponsePrivate object with public implementation \a q.
  */
 AssociateNodeResponsePrivate::AssociateNodeResponsePrivate(
-    AssociateNodeResponse * const q) : OpsWorksCMResponsePrivate(q)
+    AssociateNodeResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM AssociateNode response element from \a xml.
+ * Parses a OpsWorksCm AssociateNode response element from \a xml.
  */
 void AssociateNodeResponsePrivate::parseAssociateNodeResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void AssociateNodeResponsePrivate::parseAssociateNodeResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

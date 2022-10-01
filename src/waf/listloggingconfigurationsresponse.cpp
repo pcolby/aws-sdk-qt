@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListLoggingConfigurationsResponse
- * \brief The ListLoggingConfigurationsResponse class provides an interace for WAF ListLoggingConfigurations responses.
+ * \class QtAws::Waf::ListLoggingConfigurationsResponse
+ * \brief The ListLoggingConfigurationsResponse class provides an interace for Waf ListLoggingConfigurations responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListLoggingConfigurationsRequest * ListLoggingConfigurationsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful WAF ListLoggingConfigurations \a response.
+ * Parses a successful Waf ListLoggingConfigurations \a response.
  */
 void ListLoggingConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListLoggingConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListLoggingConfigurationsResponsePrivate
+ * \class QtAws::Waf::ListLoggingConfigurationsResponsePrivate
  * \brief The ListLoggingConfigurationsResponsePrivate class provides private implementation for ListLoggingConfigurationsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListLoggingConfigurationsResponsePrivate::ListLoggingConfigurationsResponsePriva
 }
 
 /*!
- * Parses a WAF ListLoggingConfigurations response element from \a xml.
+ * Parses a Waf ListLoggingConfigurations response element from \a xml.
  */
 void ListLoggingConfigurationsResponsePrivate::parseListLoggingConfigurationsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListLoggingConfigurationsResponsePrivate::parseListLoggingConfigurationsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

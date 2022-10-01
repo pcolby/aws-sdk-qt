@@ -24,14 +24,14 @@
 #include "queryrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class QueryRequest;
 
-class QueryRequestPrivate : public DynamoDBRequestPrivate {
+class QueryRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    QueryRequestPrivate(const DynamoDBRequest::Action action,
+    QueryRequestPrivate(const DynamoDbRequest::Action action,
                                    QueryRequest * const q);
     QueryRequestPrivate(const QueryRequestPrivate &other,
                                    QueryRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

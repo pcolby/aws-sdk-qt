@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class PutPermissionPolicyRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT PutPermissionPolicyRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT PutPermissionPolicyRequest : public WafRegionalRequest {
 
 public:
     PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

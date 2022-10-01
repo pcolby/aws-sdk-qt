@@ -24,11 +24,11 @@
 #include "deletecertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class DeleteCertificateAuthorityResponsePrivate;
 
-class QTAWSACMPCA_EXPORT DeleteCertificateAuthorityResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT DeleteCertificateAuthorityResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

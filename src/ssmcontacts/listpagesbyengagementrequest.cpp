@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListPagesByEngagementRequest
- * \brief The ListPagesByEngagementRequest class provides an interface for SSMContacts ListPagesByEngagement requests.
+ * \class QtAws::SsmContacts::ListPagesByEngagementRequest
+ * \brief The ListPagesByEngagementRequest class provides an interface for SsmContacts ListPagesByEngagement requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listPagesByEngagement
+ * \sa SsmContactsClient::listPagesByEngagement
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListPagesByEngagementRequest::ListPagesByEngagementRequest(const ListPagesByEngagementRequest &other)
-    : SSMContactsRequest(new ListPagesByEngagementRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new ListPagesByEngagementRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ ListPagesByEngagementRequest::ListPagesByEngagementRequest(const ListPagesByEnga
  * Constructs a ListPagesByEngagementRequest object.
  */
 ListPagesByEngagementRequest::ListPagesByEngagementRequest()
-    : SSMContactsRequest(new ListPagesByEngagementRequestPrivate(SSMContactsRequest::ListPagesByEngagementAction, this))
+    : SsmContactsRequest(new ListPagesByEngagementRequestPrivate(SsmContactsRequest::ListPagesByEngagementAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListPagesByEngagementRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::SSMContacts::ListPagesByEngagementRequestPrivate
+ * \class QtAws::SsmContacts::ListPagesByEngagementRequestPrivate
  * \brief The ListPagesByEngagementRequestPrivate class provides private implementation for ListPagesByEngagementRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a ListPagesByEngagementRequestPrivate object for SSMContacts \a action,
+ * Constructs a ListPagesByEngagementRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 ListPagesByEngagementRequestPrivate::ListPagesByEngagementRequestPrivate(
-    const SSMContactsRequest::Action action, ListPagesByEngagementRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, ListPagesByEngagementRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ ListPagesByEngagementRequestPrivate::ListPagesByEngagementRequestPrivate(
  */
 ListPagesByEngagementRequestPrivate::ListPagesByEngagementRequestPrivate(
     const ListPagesByEngagementRequestPrivate &other, ListPagesByEngagementRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

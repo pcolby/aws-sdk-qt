@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateDBInstanceResponse
- * \brief The CreateDBInstanceResponse class provides an interace for DocDB CreateDBInstance responses.
+ * \class QtAws::DocDb::CreateDBInstanceResponse
+ * \brief The CreateDBInstanceResponse class provides an interace for DocDb CreateDBInstance responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createDBInstance
+ * \sa DocDbClient::createDBInstance
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
         const CreateDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CreateDBInstanceResponsePrivate(this), parent)
+    : DocDbResponse(new CreateDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateDBInstanceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB CreateDBInstance \a response.
+ * Parses a successful DocDb CreateDBInstance \a response.
  */
 void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CreateDBInstanceResponsePrivate
+ * \class QtAws::DocDb::CreateDBInstanceResponsePrivate
  * \brief The CreateDBInstanceResponsePrivate class provides private implementation for CreateDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CreateDBInstanceResponsePrivate object with public implementation \a q.
  */
 CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
-    CreateDBInstanceResponse * const q) : DocDBResponsePrivate(q)
+    CreateDBInstanceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CreateDBInstance response element from \a xml.
+ * Parses a DocDb CreateDBInstance response element from \a xml.
  */
 void CreateDBInstanceResponsePrivate::parseCreateDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateDBInstanceResponsePrivate::parseCreateDBInstanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

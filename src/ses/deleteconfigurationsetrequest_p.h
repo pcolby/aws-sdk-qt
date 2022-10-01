@@ -24,7 +24,7 @@
 #include "deleteconfigurationsetrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class DeleteConfigurationSetRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

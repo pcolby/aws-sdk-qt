@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetXssMatchSetResponse
- * \brief The GetXssMatchSetResponse class provides an interace for WAF GetXssMatchSet responses.
+ * \class QtAws::Waf::GetXssMatchSetResponse
+ * \brief The GetXssMatchSetResponse class provides an interace for Waf GetXssMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetXssMatchSet \a response.
+ * Parses a successful Waf GetXssMatchSet \a response.
  */
 void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetXssMatchSetResponsePrivate
+ * \class QtAws::Waf::GetXssMatchSetResponsePrivate
  * \brief The GetXssMatchSetResponsePrivate class provides private implementation for GetXssMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetXssMatchSet response element from \a xml.
+ * Parses a Waf GetXssMatchSet response element from \a xml.
  */
 void GetXssMatchSetResponsePrivate::parseGetXssMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetXssMatchSetResponsePrivate::parseGetXssMatchSetResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

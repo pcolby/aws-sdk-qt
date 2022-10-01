@@ -24,14 +24,14 @@
 #include "deletedbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBInstanceRequest;
 
-class DeleteDBInstanceRequestPrivate : public DocDBRequestPrivate {
+class DeleteDBInstanceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteDBInstanceRequestPrivate(const DocDBRequest::Action action,
+    DeleteDBInstanceRequestPrivate(const DocDbRequest::Action action,
                                    DeleteDBInstanceRequest * const q);
     DeleteDBInstanceRequestPrivate(const DeleteDBInstanceRequestPrivate &other,
                                    DeleteDBInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

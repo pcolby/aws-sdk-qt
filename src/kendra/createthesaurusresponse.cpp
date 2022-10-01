@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateThesaurusResponse
- * \brief The CreateThesaurusResponse class provides an interace for kendra CreateThesaurus responses.
+ * \class QtAws::Kendra::CreateThesaurusResponse
+ * \brief The CreateThesaurusResponse class provides an interace for Kendra CreateThesaurus responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createThesaurus
+ * \sa KendraClient::createThesaurus
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateThesaurusResponse::CreateThesaurusResponse(
         const CreateThesaurusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new CreateThesaurusResponsePrivate(this), parent)
+    : KendraResponse(new CreateThesaurusResponsePrivate(this), parent)
 {
     setRequest(new CreateThesaurusRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateThesaurusRequest * CreateThesaurusResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra CreateThesaurus \a response.
+ * Parses a successful Kendra CreateThesaurus \a response.
  */
 void CreateThesaurusResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateThesaurusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::CreateThesaurusResponsePrivate
+ * \class QtAws::Kendra::CreateThesaurusResponsePrivate
  * \brief The CreateThesaurusResponsePrivate class provides private implementation for CreateThesaurusResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a CreateThesaurusResponsePrivate object with public implementation \a q.
  */
 CreateThesaurusResponsePrivate::CreateThesaurusResponsePrivate(
-    CreateThesaurusResponse * const q) : kendraResponsePrivate(q)
+    CreateThesaurusResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra CreateThesaurus response element from \a xml.
+ * Parses a Kendra CreateThesaurus response element from \a xml.
  */
 void CreateThesaurusResponsePrivate::parseCreateThesaurusResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateThesaurusResponsePrivate::parseCreateThesaurusResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

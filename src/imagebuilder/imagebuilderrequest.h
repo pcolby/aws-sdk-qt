@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderRequestPrivate;
+class ImageBuilderRequestPrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT imagebuilderRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIMAGEBUILDER_EXPORT ImageBuilderRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by imagebuilder.
+    /// Actions supported by ImageBuilder.
     enum Action {
         CancelImageCreationAction,
         CreateComponentAction,
@@ -66,6 +66,7 @@ public:
         GetImageRecipePolicyAction,
         GetInfrastructureConfigurationAction,
         ImportComponentAction,
+        ImportVmImageAction,
         ListComponentBuildVersionsAction,
         ListComponentsAction,
         ListContainerRecipesAction,
@@ -91,9 +92,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    imagebuilderRequest(const Action action);
-    imagebuilderRequest(const imagebuilderRequest &other);
-    imagebuilderRequest &operator=(const imagebuilderRequest &other);
+    ImageBuilderRequest(const Action action);
+    ImageBuilderRequest(const ImageBuilderRequest &other);
+    ImageBuilderRequest &operator=(const ImageBuilderRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -102,12 +103,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const imagebuilderRequest &other) const;
+    virtual bool operator==(const ImageBuilderRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit imagebuilderRequest(imagebuilderRequestPrivate * const d);
+    explicit ImageBuilderRequest(ImageBuilderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -120,11 +121,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(imagebuilderRequest)
+    Q_DECLARE_PRIVATE(ImageBuilderRequest)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

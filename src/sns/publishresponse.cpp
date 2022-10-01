@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::PublishResponse
- * \brief The PublishResponse class provides an interace for SNS Publish responses.
+ * \class QtAws::Sns::PublishResponse
+ * \brief The PublishResponse class provides an interace for Sns Publish responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const PublishRequest * PublishResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS Publish \a response.
+ * Parses a successful Sns Publish \a response.
  */
 void PublishResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void PublishResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::PublishResponsePrivate
+ * \class QtAws::Sns::PublishResponsePrivate
  * \brief The PublishResponsePrivate class provides private implementation for PublishResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ PublishResponsePrivate::PublishResponsePrivate(
 }
 
 /*!
- * Parses a SNS Publish response element from \a xml.
+ * Parses a Sns Publish response element from \a xml.
  */
 void PublishResponsePrivate::parsePublishResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void PublishResponsePrivate::parsePublishResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

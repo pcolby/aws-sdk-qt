@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::StopDataSourceSyncJobResponse
- * \brief The StopDataSourceSyncJobResponse class provides an interace for kendra StopDataSourceSyncJob responses.
+ * \class QtAws::Kendra::StopDataSourceSyncJobResponse
+ * \brief The StopDataSourceSyncJobResponse class provides an interace for Kendra StopDataSourceSyncJob responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::stopDataSourceSyncJob
+ * \sa KendraClient::stopDataSourceSyncJob
  */
 
 /*!
@@ -45,7 +45,7 @@ StopDataSourceSyncJobResponse::StopDataSourceSyncJobResponse(
         const StopDataSourceSyncJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new StopDataSourceSyncJobResponsePrivate(this), parent)
+    : KendraResponse(new StopDataSourceSyncJobResponsePrivate(this), parent)
 {
     setRequest(new StopDataSourceSyncJobRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const StopDataSourceSyncJobRequest * StopDataSourceSyncJobResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful kendra StopDataSourceSyncJob \a response.
+ * Parses a successful Kendra StopDataSourceSyncJob \a response.
  */
 void StopDataSourceSyncJobResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void StopDataSourceSyncJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::StopDataSourceSyncJobResponsePrivate
+ * \class QtAws::Kendra::StopDataSourceSyncJobResponsePrivate
  * \brief The StopDataSourceSyncJobResponsePrivate class provides private implementation for StopDataSourceSyncJobResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a StopDataSourceSyncJobResponsePrivate object with public implementation \a q.
  */
 StopDataSourceSyncJobResponsePrivate::StopDataSourceSyncJobResponsePrivate(
-    StopDataSourceSyncJobResponse * const q) : kendraResponsePrivate(q)
+    StopDataSourceSyncJobResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra StopDataSourceSyncJob response element from \a xml.
+ * Parses a Kendra StopDataSourceSyncJob response element from \a xml.
  */
 void StopDataSourceSyncJobResponsePrivate::parseStopDataSourceSyncJobResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void StopDataSourceSyncJobResponsePrivate::parseStopDataSourceSyncJobResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

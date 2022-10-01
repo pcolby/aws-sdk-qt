@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRuleGroupResponse
- * \brief The UpdateRuleGroupResponse class provides an interace for WAF UpdateRuleGroup responses.
+ * \class QtAws::Waf::UpdateRuleGroupResponse
+ * \brief The UpdateRuleGroupResponse class provides an interace for Waf UpdateRuleGroup responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateRuleGroupRequest * UpdateRuleGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateRuleGroup \a response.
+ * Parses a successful Waf UpdateRuleGroup \a response.
  */
 void UpdateRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateRuleGroupResponsePrivate
+ * \class QtAws::Waf::UpdateRuleGroupResponsePrivate
  * \brief The UpdateRuleGroupResponsePrivate class provides private implementation for UpdateRuleGroupResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateRuleGroupResponsePrivate::UpdateRuleGroupResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateRuleGroup response element from \a xml.
+ * Parses a Waf UpdateRuleGroup response element from \a xml.
  */
 void UpdateRuleGroupResponsePrivate::parseUpdateRuleGroupResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateRuleGroupResponsePrivate::parseUpdateRuleGroupResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

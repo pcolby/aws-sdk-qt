@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetRegistryCatalogDataRequest
- * \brief The GetRegistryCatalogDataRequest class provides an interface for ECRPublic GetRegistryCatalogData requests.
+ * \class QtAws::EcrPublic::GetRegistryCatalogDataRequest
+ * \brief The GetRegistryCatalogDataRequest class provides an interface for EcrPublic GetRegistryCatalogData requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getRegistryCatalogData
+ * \sa EcrPublicClient::getRegistryCatalogData
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRegistryCatalogDataRequest::GetRegistryCatalogDataRequest(const GetRegistryCatalogDataRequest &other)
-    : ECRPublicRequest(new GetRegistryCatalogDataRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new GetRegistryCatalogDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ GetRegistryCatalogDataRequest::GetRegistryCatalogDataRequest(const GetRegistryCa
  * Constructs a GetRegistryCatalogDataRequest object.
  */
 GetRegistryCatalogDataRequest::GetRegistryCatalogDataRequest()
-    : ECRPublicRequest(new GetRegistryCatalogDataRequestPrivate(ECRPublicRequest::GetRegistryCatalogDataAction, this))
+    : EcrPublicRequest(new GetRegistryCatalogDataRequestPrivate(EcrPublicRequest::GetRegistryCatalogDataAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * GetRegistryCatalogDataRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::ECRPublic::GetRegistryCatalogDataRequestPrivate
+ * \class QtAws::EcrPublic::GetRegistryCatalogDataRequestPrivate
  * \brief The GetRegistryCatalogDataRequestPrivate class provides private implementation for GetRegistryCatalogDataRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a GetRegistryCatalogDataRequestPrivate object for ECRPublic \a action,
+ * Constructs a GetRegistryCatalogDataRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 GetRegistryCatalogDataRequestPrivate::GetRegistryCatalogDataRequestPrivate(
-    const ECRPublicRequest::Action action, GetRegistryCatalogDataRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, GetRegistryCatalogDataRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ GetRegistryCatalogDataRequestPrivate::GetRegistryCatalogDataRequestPrivate(
  */
 GetRegistryCatalogDataRequestPrivate::GetRegistryCatalogDataRequestPrivate(
     const GetRegistryCatalogDataRequestPrivate &other, GetRegistryCatalogDataRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

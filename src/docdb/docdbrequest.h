@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBRequestPrivate;
+class DocDbRequestPrivate;
 
-class QTAWSDOCDB_EXPORT DocDBRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDOCDB_EXPORT DocDbRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DocDB.
+    /// Actions supported by DocDb.
     enum Action {
         AddSourceIdentifierToSubscriptionAction,
         AddTagsToResourceAction,
@@ -95,9 +95,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    DocDBRequest(const Action action);
-    DocDBRequest(const DocDBRequest &other);
-    DocDBRequest &operator=(const DocDBRequest &other);
+    DocDbRequest(const Action action);
+    DocDbRequest(const DocDbRequest &other);
+    DocDbRequest &operator=(const DocDbRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -106,12 +106,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DocDBRequest &other) const;
+    virtual bool operator==(const DocDbRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit DocDBRequest(DocDBRequestPrivate * const d);
+    explicit DocDbRequest(DocDbRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -124,11 +124,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DocDBRequest)
+    Q_DECLARE_PRIVATE(DocDbRequest)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

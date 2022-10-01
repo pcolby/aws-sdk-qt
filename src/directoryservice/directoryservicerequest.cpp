@@ -58,12 +58,14 @@ namespace DirectoryService {
  * \value DeregisterCertificateAction DirectoryService DeregisterCertificate action.
  * \value DeregisterEventTopicAction DirectoryService DeregisterEventTopic action.
  * \value DescribeCertificateAction DirectoryService DescribeCertificate action.
+ * \value DescribeClientAuthenticationSettingsAction DirectoryService DescribeClientAuthenticationSettings action.
  * \value DescribeConditionalForwardersAction DirectoryService DescribeConditionalForwarders action.
  * \value DescribeDirectoriesAction DirectoryService DescribeDirectories action.
  * \value DescribeDomainControllersAction DirectoryService DescribeDomainControllers action.
  * \value DescribeEventTopicsAction DirectoryService DescribeEventTopics action.
  * \value DescribeLDAPSSettingsAction DirectoryService DescribeLDAPSSettings action.
  * \value DescribeRegionsAction DirectoryService DescribeRegions action.
+ * \value DescribeSettingsAction DirectoryService DescribeSettings action.
  * \value DescribeSharedDirectoriesAction DirectoryService DescribeSharedDirectories action.
  * \value DescribeSnapshotsAction DirectoryService DescribeSnapshots action.
  * \value DescribeTrustsAction DirectoryService DescribeTrusts action.
@@ -96,6 +98,7 @@ namespace DirectoryService {
  * \value UpdateConditionalForwarderAction DirectoryService UpdateConditionalForwarder action.
  * \value UpdateNumberOfDomainControllersAction DirectoryService UpdateNumberOfDomainControllers action.
  * \value UpdateRadiusAction DirectoryService UpdateRadius action.
+ * \value UpdateSettingsAction DirectoryService UpdateSettings action.
  * \value UpdateTrustAction DirectoryService UpdateTrust action.
  * \value VerifyTrustAction DirectoryService VerifyTrust action.
  */
@@ -305,7 +308,7 @@ QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequest::Action action, DirectoryServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-04-16"))
 {
 
 }
@@ -361,12 +364,14 @@ QString DirectoryServiceRequestPrivate::toString(const DirectoryServiceRequest::
         ActionToString(DeregisterCertificate);
         ActionToString(DeregisterEventTopic);
         ActionToString(DescribeCertificate);
+        ActionToString(DescribeClientAuthenticationSettings);
         ActionToString(DescribeConditionalForwarders);
         ActionToString(DescribeDirectories);
         ActionToString(DescribeDomainControllers);
         ActionToString(DescribeEventTopics);
         ActionToString(DescribeLDAPSSettings);
         ActionToString(DescribeRegions);
+        ActionToString(DescribeSettings);
         ActionToString(DescribeSharedDirectories);
         ActionToString(DescribeSnapshots);
         ActionToString(DescribeTrusts);
@@ -399,6 +404,7 @@ QString DirectoryServiceRequestPrivate::toString(const DirectoryServiceRequest::
         ActionToString(UpdateConditionalForwarder);
         ActionToString(UpdateNumberOfDomainControllers);
         ActionToString(UpdateRadius);
+        ActionToString(UpdateSettings);
         ActionToString(UpdateTrust);
         ActionToString(VerifyTrust);
         default:

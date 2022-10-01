@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::UploadLayerPartResponse
- * \brief The UploadLayerPartResponse class provides an interace for ECR UploadLayerPart responses.
+ * \class QtAws::Ecr::UploadLayerPartResponse
+ * \brief The UploadLayerPartResponse class provides an interace for Ecr UploadLayerPart responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::uploadLayerPart
  */
@@ -68,7 +74,7 @@ const UploadLayerPartRequest * UploadLayerPartResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR UploadLayerPart \a response.
+ * Parses a successful Ecr UploadLayerPart \a response.
  */
 void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::UploadLayerPartResponsePrivate
+ * \class QtAws::Ecr::UploadLayerPartResponsePrivate
  * \brief The UploadLayerPartResponsePrivate class provides private implementation for UploadLayerPartResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
 }
 
 /*!
- * Parses a ECR UploadLayerPart response element from \a xml.
+ * Parses a Ecr UploadLayerPart response element from \a xml.
  */
 void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

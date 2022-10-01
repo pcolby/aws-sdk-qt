@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterToPointInTimeRequest
- * \brief The RestoreDBClusterToPointInTimeRequest class provides an interface for RDS RestoreDBClusterToPointInTime requests.
+ * \class QtAws::Rds::RestoreDBClusterToPointInTimeRequest
+ * \brief The RestoreDBClusterToPointInTimeRequest class provides an interface for Rds RestoreDBClusterToPointInTime requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterToPointInTimeRequestPrivate
+ * \class QtAws::Rds::RestoreDBClusterToPointInTimeRequestPrivate
  * \brief The RestoreDBClusterToPointInTimeRequestPrivate class provides private implementation for RestoreDBClusterToPointInTimeRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

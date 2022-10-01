@@ -24,7 +24,7 @@
 #include "getchangetokenstatusrequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class GetChangeTokenStatusRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

@@ -1,16 +1,25 @@
 add_compile_definitions(QTAWSBRAKET_LIBRARY)
 
 add_library(QtAwsBraket
+  qtawsbraketglobal.h
   braketclient.h
   braketclient_p.h
   braketrequest.h
   braketrequest_p.h
   braketresponse.h
   braketresponse_p.h
+  canceljobrequest.h
+  canceljobrequest_p.h
+  canceljobresponse.h
+  canceljobresponse_p.h
   cancelquantumtaskrequest.h
   cancelquantumtaskrequest_p.h
   cancelquantumtaskresponse.h
   cancelquantumtaskresponse_p.h
+  createjobrequest.h
+  createjobrequest_p.h
+  createjobresponse.h
+  createjobresponse_p.h
   createquantumtaskrequest.h
   createquantumtaskrequest_p.h
   createquantumtaskresponse.h
@@ -19,6 +28,10 @@ add_library(QtAwsBraket
   getdevicerequest_p.h
   getdeviceresponse.h
   getdeviceresponse_p.h
+  getjobrequest.h
+  getjobrequest_p.h
+  getjobresponse.h
+  getjobresponse_p.h
   getquantumtaskrequest.h
   getquantumtaskrequest_p.h
   getquantumtaskresponse.h
@@ -27,11 +40,14 @@ add_library(QtAwsBraket
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsbraketglobal.h
   searchdevicesrequest.h
   searchdevicesrequest_p.h
   searchdevicesresponse.h
   searchdevicesresponse_p.h
+  searchjobsrequest.h
+  searchjobsrequest_p.h
+  searchjobsresponse.h
+  searchjobsresponse_p.h
   searchquantumtasksrequest.h
   searchquantumtasksrequest_p.h
   searchquantumtasksresponse.h
@@ -47,18 +63,26 @@ add_library(QtAwsBraket
   braketclient.cpp
   braketrequest.cpp
   braketresponse.cpp
+  canceljobrequest.cpp
+  canceljobresponse.cpp
   cancelquantumtaskrequest.cpp
   cancelquantumtaskresponse.cpp
+  createjobrequest.cpp
+  createjobresponse.cpp
   createquantumtaskrequest.cpp
   createquantumtaskresponse.cpp
   getdevicerequest.cpp
   getdeviceresponse.cpp
+  getjobrequest.cpp
+  getjobresponse.cpp
   getquantumtaskrequest.cpp
   getquantumtaskresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   searchdevicesrequest.cpp
   searchdevicesresponse.cpp
+  searchjobsrequest.cpp
+  searchjobsresponse.cpp
   searchquantumtasksrequest.cpp
   searchquantumtasksresponse.cpp
   tagresourcerequest.cpp

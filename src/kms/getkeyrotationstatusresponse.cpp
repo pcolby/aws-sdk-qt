@@ -25,37 +25,50 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 /*!
- * \class QtAws::KMS::GetKeyRotationStatusResponse
- * \brief The GetKeyRotationStatusResponse class provides an interace for KMS GetKeyRotationStatus responses.
+ * \class QtAws::Kms::GetKeyRotationStatusResponse
+ * \brief The GetKeyRotationStatusResponse class provides an interace for Kms GetKeyRotationStatus responses.
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  *
- *  <fullname>AWS Key Management Service</fullname>
+ *  <fullname>Key Management Service</fullname>
  * 
- *  AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
- *  operations that you can call programmatically. For general information about AWS KMS, see the <a
- *  href="https://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
+ *  Key Management Service (KMS) is an encryption and key management web service. This guide describes the KMS operations
+ *  that you can call programmatically. For general information about KMS, see the <a
+ *  href="https://docs.aws.amazon.com/kms/latest/developerguide/"> <i>Key Management Service Developer Guide</i>
  * 
  *  </a>> <note>
  * 
- *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- *  .Net, macOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS
- *  services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying
- *  requests automatically. For more information about the AWS SDKs, including how to download and install them, see <a
- *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  KMS is replacing the term <i>customer master key (CMK)</i> with <i>KMS key</i> and <i>KMS key</i>. The concept has not
+ *  changed. To prevent breaking changes, KMS is keeping some variations of this
+ * 
+ *  term>
+ * 
+ *  Amazon Web Services provides SDKs that consist of libraries and sample code for various programming languages and
+ *  platforms (Java, Ruby, .Net, macOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to
+ *  KMS and other Amazon Web Services services. For example, the SDKs take care of tasks such as signing requests (see
+ *  below), managing errors, and retrying requests automatically. For more information about the Amazon Web Services SDKs,
+ *  including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  * 
  *  Services</a>> </note>
  * 
- *  We recommend that you use the AWS SDKs to make programmatic API calls to AWS
+ *  We recommend that you use the Amazon Web Services SDKs to make programmatic API calls to KMS.
  * 
- *  KMS>
+ *  </p
  * 
- *  Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher suites
- *  with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman
- *  (ECDHE). Most modern systems such as Java 7 and later support these
+ *  If you need to use FIPS 140-2 validated cryptographic modules when communicating with Amazon Web Services, use the FIPS
+ *  endpoint in your preferred Amazon Web Services Region. For more information about the available FIPS endpoints, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/kms.html#kms_region">Service endpoints</a> in the Key Management
+ *  Service topic of the <i>Amazon Web Services General
+ * 
+ *  Reference</i>>
+ * 
+ *  All KMS API calls must be signed and be transmitted using Transport Layer Security (TLS). KMS recommends you always use
+ *  the latest supported TLS version. Clients must also support cipher suites with Perfect Forward Secrecy (PFS) such as
+ *  Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman (ECDHE). Most modern systems such as Java 7
+ *  and later support these
  * 
  *  modes>
  * 
@@ -64,14 +77,14 @@ namespace KMS {
  *  </p
  * 
  *  Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i>
- *  use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID
- *  and secret access key for an IAM user. You can also use the AWS Security Token Service to generate temporary security
- *  credentials that you can use to sign
+ *  use your Amazon Web Services account (root) access key ID and secret key for everyday work with KMS. Instead, use the
+ *  access key ID and secret access key for an IAM user. You can also use the Amazon Web Services Security Token Service to
+ *  generate temporary security credentials that you can use to sign
  * 
  *  requests>
  * 
- *  All AWS KMS operations require <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version
+ *  All KMS operations require <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
+ *  Version
  * 
  *  4</a>>
  * 
@@ -79,11 +92,11 @@ namespace KMS {
  * 
  *  </p
  * 
- *  AWS KMS supports AWS CloudTrail, a service that logs AWS API calls and related events for your AWS account and delivers
- *  them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what
- *  requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail,
- *  including how to turn it on and find your log files, see the <a
- *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
+ *  KMS supports CloudTrail, a service that logs Amazon Web Services API calls and related events for your Amazon Web
+ *  Services account and delivers them to an Amazon S3 bucket that you specify. By using the information collected by
+ *  CloudTrail, you can determine what requests were made to KMS, who made the request, when it was made, and so on. To
+ *  learn more about CloudTrail, including how to turn it on and find your log files, see the <a
+ *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/">CloudTrail User
  * 
  *  Guide</a>>
  * 
@@ -95,10 +108,10 @@ namespace KMS {
  * 
  *  following> <ul> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> -
- *  This topic provides general information about the types of credentials used for accessing
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">Amazon Web Services Security
+ *  Credentials</a> - This topic provides general information about the types of credentials used to access Amazon Web
  * 
- *  AWS> </li> <li>
+ *  Services> </li> <li>
  * 
  *  <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
  *  This section of the <i>IAM User Guide</i> describes how to create and use temporary security
@@ -160,7 +173,7 @@ const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful KMS GetKeyRotationStatus \a response.
+ * Parses a successful Kms GetKeyRotationStatus \a response.
  */
 void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -170,11 +183,11 @@ void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::KMS::GetKeyRotationStatusResponsePrivate
+ * \class QtAws::Kms::GetKeyRotationStatusResponsePrivate
  * \brief The GetKeyRotationStatusResponsePrivate class provides private implementation for GetKeyRotationStatusResponse.
  * \internal
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  */
 
 /*!
@@ -187,7 +200,7 @@ GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
 }
 
 /*!
- * Parses a KMS GetKeyRotationStatus response element from \a xml.
+ * Parses a Kms GetKeyRotationStatus response element from \a xml.
  */
 void GetKeyRotationStatusResponsePrivate::parseGetKeyRotationStatusResponse(QXmlStreamReader &xml)
 {
@@ -195,5 +208,5 @@ void GetKeyRotationStatusResponsePrivate::parseGetKeyRotationStatusResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws

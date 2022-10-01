@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class StsRequestPrivate;
 
 class QTAWSSTS_EXPORT StsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by STS.
+    /// Actions supported by Sts.
     enum Action {
         AssumeRoleAction,
         AssumeRoleWithSAMLAction,
@@ -83,7 +83,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

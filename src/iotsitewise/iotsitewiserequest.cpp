@@ -37,12 +37,17 @@ namespace IoTSiteWise {
  * requests.
  *
  * \value AssociateAssetsAction IoTSiteWise AssociateAssets action.
+ * \value AssociateTimeSeriesToAssetPropertyAction IoTSiteWise AssociateTimeSeriesToAssetProperty action.
  * \value BatchAssociateProjectAssetsAction IoTSiteWise BatchAssociateProjectAssets action.
  * \value BatchDisassociateProjectAssetsAction IoTSiteWise BatchDisassociateProjectAssets action.
+ * \value BatchGetAssetPropertyAggregatesAction IoTSiteWise BatchGetAssetPropertyAggregates action.
+ * \value BatchGetAssetPropertyValueAction IoTSiteWise BatchGetAssetPropertyValue action.
+ * \value BatchGetAssetPropertyValueHistoryAction IoTSiteWise BatchGetAssetPropertyValueHistory action.
  * \value BatchPutAssetPropertyValueAction IoTSiteWise BatchPutAssetPropertyValue action.
  * \value CreateAccessPolicyAction IoTSiteWise CreateAccessPolicy action.
  * \value CreateAssetAction IoTSiteWise CreateAsset action.
  * \value CreateAssetModelAction IoTSiteWise CreateAssetModel action.
+ * \value CreateBulkImportJobAction IoTSiteWise CreateBulkImportJob action.
  * \value CreateDashboardAction IoTSiteWise CreateDashboard action.
  * \value CreateGatewayAction IoTSiteWise CreateGateway action.
  * \value CreatePortalAction IoTSiteWise CreatePortal action.
@@ -54,10 +59,12 @@ namespace IoTSiteWise {
  * \value DeleteGatewayAction IoTSiteWise DeleteGateway action.
  * \value DeletePortalAction IoTSiteWise DeletePortal action.
  * \value DeleteProjectAction IoTSiteWise DeleteProject action.
+ * \value DeleteTimeSeriesAction IoTSiteWise DeleteTimeSeries action.
  * \value DescribeAccessPolicyAction IoTSiteWise DescribeAccessPolicy action.
  * \value DescribeAssetAction IoTSiteWise DescribeAsset action.
  * \value DescribeAssetModelAction IoTSiteWise DescribeAssetModel action.
  * \value DescribeAssetPropertyAction IoTSiteWise DescribeAssetProperty action.
+ * \value DescribeBulkImportJobAction IoTSiteWise DescribeBulkImportJob action.
  * \value DescribeDashboardAction IoTSiteWise DescribeDashboard action.
  * \value DescribeDefaultEncryptionConfigurationAction IoTSiteWise DescribeDefaultEncryptionConfiguration action.
  * \value DescribeGatewayAction IoTSiteWise DescribeGateway action.
@@ -65,7 +72,10 @@ namespace IoTSiteWise {
  * \value DescribeLoggingOptionsAction IoTSiteWise DescribeLoggingOptions action.
  * \value DescribePortalAction IoTSiteWise DescribePortal action.
  * \value DescribeProjectAction IoTSiteWise DescribeProject action.
+ * \value DescribeStorageConfigurationAction IoTSiteWise DescribeStorageConfiguration action.
+ * \value DescribeTimeSeriesAction IoTSiteWise DescribeTimeSeries action.
  * \value DisassociateAssetsAction IoTSiteWise DisassociateAssets action.
+ * \value DisassociateTimeSeriesFromAssetPropertyAction IoTSiteWise DisassociateTimeSeriesFromAssetProperty action.
  * \value GetAssetPropertyAggregatesAction IoTSiteWise GetAssetPropertyAggregates action.
  * \value GetAssetPropertyValueAction IoTSiteWise GetAssetPropertyValue action.
  * \value GetAssetPropertyValueHistoryAction IoTSiteWise GetAssetPropertyValueHistory action.
@@ -75,14 +85,17 @@ namespace IoTSiteWise {
  * \value ListAssetRelationshipsAction IoTSiteWise ListAssetRelationships action.
  * \value ListAssetsAction IoTSiteWise ListAssets action.
  * \value ListAssociatedAssetsAction IoTSiteWise ListAssociatedAssets action.
+ * \value ListBulkImportJobsAction IoTSiteWise ListBulkImportJobs action.
  * \value ListDashboardsAction IoTSiteWise ListDashboards action.
  * \value ListGatewaysAction IoTSiteWise ListGateways action.
  * \value ListPortalsAction IoTSiteWise ListPortals action.
  * \value ListProjectAssetsAction IoTSiteWise ListProjectAssets action.
  * \value ListProjectsAction IoTSiteWise ListProjects action.
  * \value ListTagsForResourceAction IoTSiteWise ListTagsForResource action.
+ * \value ListTimeSeriesAction IoTSiteWise ListTimeSeries action.
  * \value PutDefaultEncryptionConfigurationAction IoTSiteWise PutDefaultEncryptionConfiguration action.
  * \value PutLoggingOptionsAction IoTSiteWise PutLoggingOptions action.
+ * \value PutStorageConfigurationAction IoTSiteWise PutStorageConfiguration action.
  * \value TagResourceAction IoTSiteWise TagResource action.
  * \value UntagResourceAction IoTSiteWise UntagResource action.
  * \value UpdateAccessPolicyAction IoTSiteWise UpdateAccessPolicy action.
@@ -301,7 +314,7 @@ QNetworkRequest IoTSiteWiseRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTSiteWiseRequestPrivate::IoTSiteWiseRequestPrivate(const IoTSiteWiseRequest::Action action, IoTSiteWiseRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-12-02"))
 {
 
 }
@@ -336,12 +349,17 @@ QString IoTSiteWiseRequestPrivate::toString(const IoTSiteWiseRequest::Action &ac
         case IoTSiteWiseRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AssociateAssets);
+        ActionToString(AssociateTimeSeriesToAssetProperty);
         ActionToString(BatchAssociateProjectAssets);
         ActionToString(BatchDisassociateProjectAssets);
+        ActionToString(BatchGetAssetPropertyAggregates);
+        ActionToString(BatchGetAssetPropertyValue);
+        ActionToString(BatchGetAssetPropertyValueHistory);
         ActionToString(BatchPutAssetPropertyValue);
         ActionToString(CreateAccessPolicy);
         ActionToString(CreateAsset);
         ActionToString(CreateAssetModel);
+        ActionToString(CreateBulkImportJob);
         ActionToString(CreateDashboard);
         ActionToString(CreateGateway);
         ActionToString(CreatePortal);
@@ -353,10 +371,12 @@ QString IoTSiteWiseRequestPrivate::toString(const IoTSiteWiseRequest::Action &ac
         ActionToString(DeleteGateway);
         ActionToString(DeletePortal);
         ActionToString(DeleteProject);
+        ActionToString(DeleteTimeSeries);
         ActionToString(DescribeAccessPolicy);
         ActionToString(DescribeAsset);
         ActionToString(DescribeAssetModel);
         ActionToString(DescribeAssetProperty);
+        ActionToString(DescribeBulkImportJob);
         ActionToString(DescribeDashboard);
         ActionToString(DescribeDefaultEncryptionConfiguration);
         ActionToString(DescribeGateway);
@@ -364,7 +384,10 @@ QString IoTSiteWiseRequestPrivate::toString(const IoTSiteWiseRequest::Action &ac
         ActionToString(DescribeLoggingOptions);
         ActionToString(DescribePortal);
         ActionToString(DescribeProject);
+        ActionToString(DescribeStorageConfiguration);
+        ActionToString(DescribeTimeSeries);
         ActionToString(DisassociateAssets);
+        ActionToString(DisassociateTimeSeriesFromAssetProperty);
         ActionToString(GetAssetPropertyAggregates);
         ActionToString(GetAssetPropertyValue);
         ActionToString(GetAssetPropertyValueHistory);
@@ -374,14 +397,17 @@ QString IoTSiteWiseRequestPrivate::toString(const IoTSiteWiseRequest::Action &ac
         ActionToString(ListAssetRelationships);
         ActionToString(ListAssets);
         ActionToString(ListAssociatedAssets);
+        ActionToString(ListBulkImportJobs);
         ActionToString(ListDashboards);
         ActionToString(ListGateways);
         ActionToString(ListPortals);
         ActionToString(ListProjectAssets);
         ActionToString(ListProjects);
         ActionToString(ListTagsForResource);
+        ActionToString(ListTimeSeries);
         ActionToString(PutDefaultEncryptionConfiguration);
         ActionToString(PutLoggingOptions);
+        ActionToString(PutStorageConfiguration);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAccessPolicy);

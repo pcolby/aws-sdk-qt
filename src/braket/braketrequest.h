@@ -39,12 +39,16 @@ class QTAWSBRAKET_EXPORT BraketRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by Braket.
     enum Action {
+        CancelJobAction,
         CancelQuantumTaskAction,
+        CreateJobAction,
         CreateQuantumTaskAction,
         GetDeviceAction,
+        GetJobAction,
         GetQuantumTaskAction,
         ListTagsForResourceAction,
         SearchDevicesAction,
+        SearchJobsAction,
         SearchQuantumTasksAction,
         TagResourceAction,
         UntagResourceAction,

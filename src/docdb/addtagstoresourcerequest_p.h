@@ -24,14 +24,14 @@
 #include "addtagstoresourcerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class AddTagsToResourceRequest;
 
-class AddTagsToResourceRequestPrivate : public DocDBRequestPrivate {
+class AddTagsToResourceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const DocDBRequest::Action action,
+    AddTagsToResourceRequestPrivate(const DocDbRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCanceledRequest
- * \brief The RespondActivityTaskCanceledRequest class provides an interface for SWF RespondActivityTaskCanceled requests.
+ * \class QtAws::Swf::RespondActivityTaskCanceledRequest
+ * \brief The RespondActivityTaskCanceledRequest class provides an interface for Swf RespondActivityTaskCanceled requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
 }
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCanceledRequestPrivate
+ * \class QtAws::Swf::RespondActivityTaskCanceledRequestPrivate
  * \brief The RespondActivityTaskCanceledRequestPrivate class provides private implementation for RespondActivityTaskCanceledRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

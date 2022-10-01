@@ -40,6 +40,7 @@ public:
     /// Actions supported by Athena.
     enum Action {
         BatchGetNamedQueryAction,
+        BatchGetPreparedStatementAction,
         BatchGetQueryExecutionAction,
         CreateDataCatalogAction,
         CreateNamedQueryAction,
@@ -55,6 +56,7 @@ public:
         GetPreparedStatementAction,
         GetQueryExecutionAction,
         GetQueryResultsAction,
+        GetQueryRuntimeStatisticsAction,
         GetTableMetadataAction,
         GetWorkGroupAction,
         ListDataCatalogsAction,
@@ -71,6 +73,7 @@ public:
         TagResourceAction,
         UntagResourceAction,
         UpdateDataCatalogAction,
+        UpdateNamedQueryAction,
         UpdatePreparedStatementAction,
         UpdateWorkGroupAction,
     };

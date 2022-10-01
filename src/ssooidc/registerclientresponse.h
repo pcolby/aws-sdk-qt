@@ -24,11 +24,11 @@
 #include "registerclientrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class RegisterClientResponsePrivate;
 
-class QTAWSSSOOIDC_EXPORT RegisterClientResponse : public SsooidcResponse {
+class QTAWSSSOOIDC_EXPORT RegisterClientResponse : public SsoOidcResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

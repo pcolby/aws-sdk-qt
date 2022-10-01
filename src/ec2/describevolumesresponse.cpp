@@ -25,22 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::DescribeVolumesResponse
- * \brief The DescribeVolumesResponse class provides an interace for EC2 DescribeVolumes responses.
+ * \class QtAws::Ec2::DescribeVolumesResponse
+ * \brief The DescribeVolumesResponse class provides an interace for Ec2 DescribeVolumes responses.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -63,8 +63,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  *
  * \sa Ec2Client::describeVolumes
  */
@@ -93,7 +93,7 @@ const DescribeVolumesRequest * DescribeVolumesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EC2 DescribeVolumes \a response.
+ * Parses a successful Ec2 DescribeVolumes \a response.
  */
 void DescribeVolumesResponse::parseSuccess(QIODevice &response)
 {
@@ -103,11 +103,11 @@ void DescribeVolumesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::DescribeVolumesResponsePrivate
+ * \class QtAws::Ec2::DescribeVolumesResponsePrivate
  * \brief The DescribeVolumesResponsePrivate class provides private implementation for DescribeVolumesResponse.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -120,7 +120,7 @@ DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
 }
 
 /*!
- * Parses a EC2 DescribeVolumes response element from \a xml.
+ * Parses a Ec2 DescribeVolumes response element from \a xml.
  */
 void DescribeVolumesResponsePrivate::parseDescribeVolumesResponse(QXmlStreamReader &xml)
 {
@@ -128,5 +128,5 @@ void DescribeVolumesResponsePrivate::parseDescribeVolumesResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

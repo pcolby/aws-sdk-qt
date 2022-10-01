@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSECRETSMANAGER_LIBRARY)
 
 add_library(QtAwsSecretsManager
+  qtawssecretsmanagerglobal.h
+  secretsmanagerclient.h
+  secretsmanagerclient_p.h
+  secretsmanagerrequest.h
+  secretsmanagerrequest_p.h
+  secretsmanagerresponse.h
+  secretsmanagerresponse_p.h
   cancelrotatesecretrequest.h
   cancelrotatesecretrequest_p.h
   cancelrotatesecretresponse.h
@@ -33,14 +40,14 @@ add_library(QtAwsSecretsManager
   getsecretvaluerequest_p.h
   getsecretvalueresponse.h
   getsecretvalueresponse_p.h
-  listsecretsrequest.h
-  listsecretsrequest_p.h
-  listsecretsresponse.h
-  listsecretsresponse_p.h
   listsecretversionidsrequest.h
   listsecretversionidsrequest_p.h
   listsecretversionidsresponse.h
   listsecretversionidsresponse_p.h
+  listsecretsrequest.h
+  listsecretsrequest_p.h
+  listsecretsresponse.h
+  listsecretsresponse_p.h
   putresourcepolicyrequest.h
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
@@ -49,7 +56,6 @@ add_library(QtAwsSecretsManager
   putsecretvaluerequest_p.h
   putsecretvalueresponse.h
   putsecretvalueresponse_p.h
-  qtawssecretsmanagerglobal.h
   removeregionsfromreplicationrequest.h
   removeregionsfromreplicationrequest_p.h
   removeregionsfromreplicationresponse.h
@@ -66,12 +72,6 @@ add_library(QtAwsSecretsManager
   rotatesecretrequest_p.h
   rotatesecretresponse.h
   rotatesecretresponse_p.h
-  secretsmanagerclient.h
-  secretsmanagerclient_p.h
-  secretsmanagerrequest.h
-  secretsmanagerrequest_p.h
-  secretsmanagerresponse.h
-  secretsmanagerresponse_p.h
   stopreplicationtoreplicarequest.h
   stopreplicationtoreplicarequest_p.h
   stopreplicationtoreplicaresponse.h
@@ -96,6 +96,9 @@ add_library(QtAwsSecretsManager
   validateresourcepolicyrequest_p.h
   validateresourcepolicyresponse.h
   validateresourcepolicyresponse_p.h
+  secretsmanagerclient.cpp
+  secretsmanagerrequest.cpp
+  secretsmanagerresponse.cpp
   cancelrotatesecretrequest.cpp
   cancelrotatesecretresponse.cpp
   createsecretrequest.cpp
@@ -112,10 +115,10 @@ add_library(QtAwsSecretsManager
   getresourcepolicyresponse.cpp
   getsecretvaluerequest.cpp
   getsecretvalueresponse.cpp
-  listsecretsrequest.cpp
-  listsecretsresponse.cpp
   listsecretversionidsrequest.cpp
   listsecretversionidsresponse.cpp
+  listsecretsrequest.cpp
+  listsecretsresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
   putsecretvaluerequest.cpp
@@ -128,9 +131,6 @@ add_library(QtAwsSecretsManager
   restoresecretresponse.cpp
   rotatesecretrequest.cpp
   rotatesecretresponse.cpp
-  secretsmanagerclient.cpp
-  secretsmanagerrequest.cpp
-  secretsmanagerresponse.cpp
   stopreplicationtoreplicarequest.cpp
   stopreplicationtoreplicaresponse.cpp
   tagresourcerequest.cpp

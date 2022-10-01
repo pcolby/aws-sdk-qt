@@ -24,7 +24,7 @@
 #include "putlifecycleconfigurationrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class PutLifecycleConfigurationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

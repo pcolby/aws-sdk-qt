@@ -24,11 +24,11 @@
 #include "updatemethodrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateMethodResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT UpdateMethodResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT UpdateMethodResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

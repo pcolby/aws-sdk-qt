@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::CreateNotificationRuleResponse
- * \brief The CreateNotificationRuleResponse class provides an interace for CodeStarNotifications CreateNotificationRule responses.
+ * \class QtAws::CodestarNotifications::CreateNotificationRuleResponse
+ * \brief The CreateNotificationRuleResponse class provides an interace for CodestarNotifications CreateNotificationRule responses.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -74,7 +74,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -106,9 +106,11 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::createNotificationRule
+ * \sa CodestarNotificationsClient::createNotificationRule
  */
 
 /*!
@@ -118,7 +120,7 @@ CreateNotificationRuleResponse::CreateNotificationRuleResponse(
         const CreateNotificationRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarNotificationsResponse(new CreateNotificationRuleResponsePrivate(this), parent)
+    : CodestarNotificationsResponse(new CreateNotificationRuleResponsePrivate(this), parent)
 {
     setRequest(new CreateNotificationRuleRequest(request));
     setReply(reply);
@@ -135,7 +137,7 @@ const CreateNotificationRuleRequest * CreateNotificationRuleResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CodeStarNotifications CreateNotificationRule \a response.
+ * Parses a successful CodestarNotifications CreateNotificationRule \a response.
  */
 void CreateNotificationRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -145,24 +147,24 @@ void CreateNotificationRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::CreateNotificationRuleResponsePrivate
+ * \class QtAws::CodestarNotifications::CreateNotificationRuleResponsePrivate
  * \brief The CreateNotificationRuleResponsePrivate class provides private implementation for CreateNotificationRuleResponse.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
  * Constructs a CreateNotificationRuleResponsePrivate object with public implementation \a q.
  */
 CreateNotificationRuleResponsePrivate::CreateNotificationRuleResponsePrivate(
-    CreateNotificationRuleResponse * const q) : CodeStarNotificationsResponsePrivate(q)
+    CreateNotificationRuleResponse * const q) : CodestarNotificationsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CodeStarNotifications CreateNotificationRule response element from \a xml.
+ * Parses a CodestarNotifications CreateNotificationRule response element from \a xml.
  */
 void CreateNotificationRuleResponsePrivate::parseCreateNotificationRuleResponse(QXmlStreamReader &xml)
 {
@@ -170,5 +172,5 @@ void CreateNotificationRuleResponsePrivate::parseCreateNotificationRuleResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class SnsClientPrivate;
 class AddPermissionRequest;
@@ -52,6 +52,8 @@ class DeleteSMSSandboxPhoneNumberRequest;
 class DeleteSMSSandboxPhoneNumberResponse;
 class DeleteTopicRequest;
 class DeleteTopicResponse;
+class GetDataProtectionPolicyRequest;
+class GetDataProtectionPolicyResponse;
 class GetEndpointAttributesRequest;
 class GetEndpointAttributesResponse;
 class GetPlatformApplicationAttributesRequest;
@@ -86,6 +88,10 @@ class OptInPhoneNumberRequest;
 class OptInPhoneNumberResponse;
 class PublishRequest;
 class PublishResponse;
+class PublishBatchRequest;
+class PublishBatchResponse;
+class PutDataProtectionPolicyRequest;
+class PutDataProtectionPolicyResponse;
 class RemovePermissionRequest;
 class RemovePermissionResponse;
 class SetEndpointAttributesRequest;
@@ -136,6 +142,7 @@ public slots:
     DeletePlatformApplicationResponse * deletePlatformApplication(const DeletePlatformApplicationRequest &request);
     DeleteSMSSandboxPhoneNumberResponse * deleteSMSSandboxPhoneNumber(const DeleteSMSSandboxPhoneNumberRequest &request);
     DeleteTopicResponse * deleteTopic(const DeleteTopicRequest &request);
+    GetDataProtectionPolicyResponse * getDataProtectionPolicy(const GetDataProtectionPolicyRequest &request);
     GetEndpointAttributesResponse * getEndpointAttributes(const GetEndpointAttributesRequest &request);
     GetPlatformApplicationAttributesResponse * getPlatformApplicationAttributes(const GetPlatformApplicationAttributesRequest &request);
     GetSMSAttributesResponse * getSMSAttributes(const GetSMSAttributesRequest &request);
@@ -153,6 +160,8 @@ public slots:
     ListTopicsResponse * listTopics(const ListTopicsRequest &request);
     OptInPhoneNumberResponse * optInPhoneNumber(const OptInPhoneNumberRequest &request);
     PublishResponse * publish(const PublishRequest &request);
+    PublishBatchResponse * publishBatch(const PublishBatchRequest &request);
+    PutDataProtectionPolicyResponse * putDataProtectionPolicy(const PutDataProtectionPolicyRequest &request);
     RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
     SetEndpointAttributesResponse * setEndpointAttributes(const SetEndpointAttributesRequest &request);
     SetPlatformApplicationAttributesResponse * setPlatformApplicationAttributes(const SetPlatformApplicationAttributesRequest &request);
@@ -171,7 +180,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

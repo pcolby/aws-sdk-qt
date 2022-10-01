@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::ImportRestApiResponse
- * \brief The ImportRestApiResponse class provides an interace for APIGateway ImportRestApi responses.
+ * \class QtAws::ApiGateway::ImportRestApiResponse
+ * \brief The ImportRestApiResponse class provides an interace for ApiGateway ImportRestApi responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::importRestApi
+ * \sa ApiGatewayClient::importRestApi
  */
 
 /*!
@@ -49,7 +49,7 @@ ImportRestApiResponse::ImportRestApiResponse(
         const ImportRestApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new ImportRestApiResponsePrivate(this), parent)
+    : ApiGatewayResponse(new ImportRestApiResponsePrivate(this), parent)
 {
     setRequest(new ImportRestApiRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const ImportRestApiRequest * ImportRestApiResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway ImportRestApi \a response.
+ * Parses a successful ApiGateway ImportRestApi \a response.
  */
 void ImportRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void ImportRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::ImportRestApiResponsePrivate
+ * \class QtAws::ApiGateway::ImportRestApiResponsePrivate
  * \brief The ImportRestApiResponsePrivate class provides private implementation for ImportRestApiResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a ImportRestApiResponsePrivate object with public implementation \a q.
  */
 ImportRestApiResponsePrivate::ImportRestApiResponsePrivate(
-    ImportRestApiResponse * const q) : APIGatewayResponsePrivate(q)
+    ImportRestApiResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway ImportRestApi response element from \a xml.
+ * Parses a ApiGateway ImportRestApi response element from \a xml.
  */
 void ImportRestApiResponsePrivate::parseImportRestApiResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void ImportRestApiResponsePrivate::parseImportRestApiResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -39,14 +39,18 @@ namespace Batch {
  * \value CancelJobAction Batch CancelJob action.
  * \value CreateComputeEnvironmentAction Batch CreateComputeEnvironment action.
  * \value CreateJobQueueAction Batch CreateJobQueue action.
+ * \value CreateSchedulingPolicyAction Batch CreateSchedulingPolicy action.
  * \value DeleteComputeEnvironmentAction Batch DeleteComputeEnvironment action.
  * \value DeleteJobQueueAction Batch DeleteJobQueue action.
+ * \value DeleteSchedulingPolicyAction Batch DeleteSchedulingPolicy action.
  * \value DeregisterJobDefinitionAction Batch DeregisterJobDefinition action.
  * \value DescribeComputeEnvironmentsAction Batch DescribeComputeEnvironments action.
  * \value DescribeJobDefinitionsAction Batch DescribeJobDefinitions action.
  * \value DescribeJobQueuesAction Batch DescribeJobQueues action.
  * \value DescribeJobsAction Batch DescribeJobs action.
+ * \value DescribeSchedulingPoliciesAction Batch DescribeSchedulingPolicies action.
  * \value ListJobsAction Batch ListJobs action.
+ * \value ListSchedulingPoliciesAction Batch ListSchedulingPolicies action.
  * \value ListTagsForResourceAction Batch ListTagsForResource action.
  * \value RegisterJobDefinitionAction Batch RegisterJobDefinition action.
  * \value SubmitJobAction Batch SubmitJob action.
@@ -55,6 +59,7 @@ namespace Batch {
  * \value UntagResourceAction Batch UntagResource action.
  * \value UpdateComputeEnvironmentAction Batch UpdateComputeEnvironment action.
  * \value UpdateJobQueueAction Batch UpdateJobQueue action.
+ * \value UpdateSchedulingPolicyAction Batch UpdateSchedulingPolicy action.
  */
 
 /*!
@@ -262,7 +267,7 @@ QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, BatchRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-08-10"))
 {
 
 }
@@ -299,14 +304,18 @@ QString BatchRequestPrivate::toString(const BatchRequest::Action &action)
         ActionToString(CancelJob);
         ActionToString(CreateComputeEnvironment);
         ActionToString(CreateJobQueue);
+        ActionToString(CreateSchedulingPolicy);
         ActionToString(DeleteComputeEnvironment);
         ActionToString(DeleteJobQueue);
+        ActionToString(DeleteSchedulingPolicy);
         ActionToString(DeregisterJobDefinition);
         ActionToString(DescribeComputeEnvironments);
         ActionToString(DescribeJobDefinitions);
         ActionToString(DescribeJobQueues);
         ActionToString(DescribeJobs);
+        ActionToString(DescribeSchedulingPolicies);
         ActionToString(ListJobs);
+        ActionToString(ListSchedulingPolicies);
         ActionToString(ListTagsForResource);
         ActionToString(RegisterJobDefinition);
         ActionToString(SubmitJob);
@@ -315,6 +324,7 @@ QString BatchRequestPrivate::toString(const BatchRequest::Action &action)
         ActionToString(UntagResource);
         ActionToString(UpdateComputeEnvironment);
         ActionToString(UpdateJobQueue);
+        ActionToString(UpdateSchedulingPolicy);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

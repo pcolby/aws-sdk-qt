@@ -1,10 +1,29 @@
 add_compile_definitions(QTAWSOUTPOSTS_LIBRARY)
 
 add_library(QtAwsOutposts
+  qtawsoutpostsglobal.h
+  outpostsclient.h
+  outpostsclient_p.h
+  outpostsrequest.h
+  outpostsrequest_p.h
+  outpostsresponse.h
+  outpostsresponse_p.h
+  cancelorderrequest.h
+  cancelorderrequest_p.h
+  cancelorderresponse.h
+  cancelorderresponse_p.h
+  createorderrequest.h
+  createorderrequest_p.h
+  createorderresponse.h
+  createorderresponse_p.h
   createoutpostrequest.h
   createoutpostrequest_p.h
   createoutpostresponse.h
   createoutpostresponse_p.h
+  createsiterequest.h
+  createsiterequest_p.h
+  createsiteresponse.h
+  createsiteresponse_p.h
   deleteoutpostrequest.h
   deleteoutpostrequest_p.h
   deleteoutpostresponse.h
@@ -13,14 +32,46 @@ add_library(QtAwsOutposts
   deletesiterequest_p.h
   deletesiteresponse.h
   deletesiteresponse_p.h
-  getoutpostinstancetypesrequest.h
-  getoutpostinstancetypesrequest_p.h
-  getoutpostinstancetypesresponse.h
-  getoutpostinstancetypesresponse_p.h
+  getcatalogitemrequest.h
+  getcatalogitemrequest_p.h
+  getcatalogitemresponse.h
+  getcatalogitemresponse_p.h
+  getconnectionrequest.h
+  getconnectionrequest_p.h
+  getconnectionresponse.h
+  getconnectionresponse_p.h
+  getorderrequest.h
+  getorderrequest_p.h
+  getorderresponse.h
+  getorderresponse_p.h
   getoutpostrequest.h
   getoutpostrequest_p.h
   getoutpostresponse.h
   getoutpostresponse_p.h
+  getoutpostinstancetypesrequest.h
+  getoutpostinstancetypesrequest_p.h
+  getoutpostinstancetypesresponse.h
+  getoutpostinstancetypesresponse_p.h
+  getsiterequest.h
+  getsiterequest_p.h
+  getsiteresponse.h
+  getsiteresponse_p.h
+  getsiteaddressrequest.h
+  getsiteaddressrequest_p.h
+  getsiteaddressresponse.h
+  getsiteaddressresponse_p.h
+  listassetsrequest.h
+  listassetsrequest_p.h
+  listassetsresponse.h
+  listassetsresponse_p.h
+  listcatalogitemsrequest.h
+  listcatalogitemsrequest_p.h
+  listcatalogitemsresponse.h
+  listcatalogitemsresponse_p.h
+  listordersrequest.h
+  listordersrequest_p.h
+  listordersresponse.h
+  listordersresponse_p.h
   listoutpostsrequest.h
   listoutpostsrequest_p.h
   listoutpostsresponse.h
@@ -33,13 +84,10 @@ add_library(QtAwsOutposts
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  outpostsclient.h
-  outpostsclient_p.h
-  outpostsrequest.h
-  outpostsrequest_p.h
-  outpostsresponse.h
-  outpostsresponse_p.h
-  qtawsoutpostsglobal.h
+  startconnectionrequest.h
+  startconnectionrequest_p.h
+  startconnectionresponse.h
+  startconnectionresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -48,29 +96,77 @@ add_library(QtAwsOutposts
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateoutpostrequest.h
+  updateoutpostrequest_p.h
+  updateoutpostresponse.h
+  updateoutpostresponse_p.h
+  updatesiterequest.h
+  updatesiterequest_p.h
+  updatesiteresponse.h
+  updatesiteresponse_p.h
+  updatesiteaddressrequest.h
+  updatesiteaddressrequest_p.h
+  updatesiteaddressresponse.h
+  updatesiteaddressresponse_p.h
+  updatesiterackphysicalpropertiesrequest.h
+  updatesiterackphysicalpropertiesrequest_p.h
+  updatesiterackphysicalpropertiesresponse.h
+  updatesiterackphysicalpropertiesresponse_p.h
+  outpostsclient.cpp
+  outpostsrequest.cpp
+  outpostsresponse.cpp
+  cancelorderrequest.cpp
+  cancelorderresponse.cpp
+  createorderrequest.cpp
+  createorderresponse.cpp
   createoutpostrequest.cpp
   createoutpostresponse.cpp
+  createsiterequest.cpp
+  createsiteresponse.cpp
   deleteoutpostrequest.cpp
   deleteoutpostresponse.cpp
   deletesiterequest.cpp
   deletesiteresponse.cpp
-  getoutpostinstancetypesrequest.cpp
-  getoutpostinstancetypesresponse.cpp
+  getcatalogitemrequest.cpp
+  getcatalogitemresponse.cpp
+  getconnectionrequest.cpp
+  getconnectionresponse.cpp
+  getorderrequest.cpp
+  getorderresponse.cpp
   getoutpostrequest.cpp
   getoutpostresponse.cpp
+  getoutpostinstancetypesrequest.cpp
+  getoutpostinstancetypesresponse.cpp
+  getsiterequest.cpp
+  getsiteresponse.cpp
+  getsiteaddressrequest.cpp
+  getsiteaddressresponse.cpp
+  listassetsrequest.cpp
+  listassetsresponse.cpp
+  listcatalogitemsrequest.cpp
+  listcatalogitemsresponse.cpp
+  listordersrequest.cpp
+  listordersresponse.cpp
   listoutpostsrequest.cpp
   listoutpostsresponse.cpp
   listsitesrequest.cpp
   listsitesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  outpostsclient.cpp
-  outpostsrequest.cpp
-  outpostsresponse.cpp
+  startconnectionrequest.cpp
+  startconnectionresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updateoutpostrequest.cpp
+  updateoutpostresponse.cpp
+  updatesiterequest.cpp
+  updatesiteresponse.cpp
+  updatesiteaddressrequest.cpp
+  updatesiteaddressresponse.cpp
+  updatesiterackphysicalpropertiesrequest.cpp
+  updatesiterackphysicalpropertiesresponse.cpp)
 
 target_link_libraries(QtAwsOutposts
   PRIVATE QtAwsCore

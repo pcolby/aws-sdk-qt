@@ -23,26 +23,28 @@
 #include "ivsrequest_p.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 /*!
- * \class QtAws::IVS::CreateRecordingConfigurationRequest
- * \brief The CreateRecordingConfigurationRequest class provides an interface for IVS CreateRecordingConfiguration requests.
+ * \class QtAws::Ivs::CreateRecordingConfigurationRequest
+ * \brief The CreateRecordingConfigurationRequest class provides an interface for Ivs CreateRecordingConfiguration requests.
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  *
  *  <b>Introduction</b>
  * 
  *  </p
  * 
- *  The Amazon Interactive Video Service (IVS) API is REST compatible, using a standard HTTP API and an AWS EventBridge
- *  event stream for responses. JSON is used for both requests and responses, including
+ *  The Amazon Interactive Video Service (IVS) API is REST compatible, using a standard HTTP API and an Amazon Web Services
+ *  EventBridge event stream for responses. JSON is used for both requests and responses, including
  * 
  *  errors>
  * 
- *  The API is an AWS regional service, currently in these regions: us-west-2, us-east-1, and
+ *  The API is an Amazon Web Services regional service. For a list of supported regions and Amazon IVS HTTPS service
+ *  endpoints, see the <a href="https://docs.aws.amazon.com/general/latest/gr/ivs.html">Amazon IVS page</a> in the <i>Amazon
+ *  Web Services General
  * 
- *  eu-west-1>
+ *  Reference</i>>
  * 
  *  <i> <b>All API request parameters and URLs are case sensitive. </b> </i>
  * 
@@ -52,50 +54,6 @@ namespace IVS {
  *  href="https://docs.aws.amazon.com/ivs/latest/userguide/doc-history.html"> Document
  * 
  *  History</a>>
- * 
- *  <b>Service Endpoints</b>
- * 
- *  </p
- * 
- *  The following are the Amazon IVS service endpoints (all HTTPS):
- * 
- *  </p
- * 
- *  Region name: US West
- * 
- *  (Oregon> <ul> <li>
- * 
- *  Region: <code>us-west-2</code>
- * 
- *  </p </li> <li>
- * 
- *  Endpoint: <code>ivs.us-west-2.amazonaws.com</code>
- * 
- *  </p </li> </ul>
- * 
- *  Region name: US East
- * 
- *  (Virginia> <ul> <li>
- * 
- *  Region: <code>us-east-1</code>
- * 
- *  </p </li> <li>
- * 
- *  Endpoint: <code>ivs.us-east-1.amazonaws.com</code>
- * 
- *  </p </li> </ul>
- * 
- *  Region name: EU West
- * 
- *  (Dublin> <ul> <li>
- * 
- *  Region: <code>eu-west-1</code>
- * 
- *  </p </li> <li>
- * 
- *  Endpoint: <code>ivs.eu-west-1.amazonaws.com</code>
- * 
- *  </p </li> </ul>
  * 
  *  <b>Allowed Header Values</b>
  * 
@@ -149,15 +107,16 @@ namespace IVS {
  * 
  *  </p
  * 
- *  A <i>tag</i> is a metadata label that you assign to an AWS resource. A tag comprises a <i>key</i> and a <i>value</i>,
- *  both set by you. For example, you might set a tag as <code>topic:nature</code> to label a particular video category. See
- *  <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> for more information,
- *  including restrictions that apply to
+ *  A <i>tag</i> is a metadata label that you assign to an Amazon Web Services resource. A tag comprises a <i>key</i> and a
+ *  <i>value</i>, both set by you. For example, you might set a tag as <code>topic:nature</code> to label a particular video
+ *  category. See <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+ *  Resources</a> for more information, including restrictions that apply to tags and "Tag naming limits and requirements";
+ *  Amazon IVS has no service-specific constraints beyond what is documented
  * 
- *  tags>
+ *  there>
  * 
- *  Tags can help you identify and organize your AWS resources. For example, you can use the same tag for different
- *  resources to indicate that they are related. You can also use tags to manage access (see <a
+ *  Tags can help you identify and organize your Amazon Web Services resources. For example, you can use the same tag for
+ *  different resources to indicate that they are related. You can also use tags to manage access (see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html"> Access Tags</a>).
  * 
  *  </p
@@ -167,6 +126,10 @@ namespace IVS {
  *  Recording
  * 
  *  Configurations>
+ * 
+ *  At most 50 tags can be applied to a resource.
+ * 
+ *  </p
  * 
  *  <b>Authentication versus Authorization</b>
  * 
@@ -180,7 +143,8 @@ namespace IVS {
  * 
  *  requests> </li> <li>
  * 
- *  <i>Authorization</i> is about granting permissions. You need to be authorized to view <a
+ *  <i>Authorization</i> is about granting permissions. Your IAM roles need to have permissions for Amazon IVS API requests.
+ *  In addition, authorization is needed to view <a
  *  href="https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html">Amazon IVS private channels</a>. (Private
  *  channels are channels that are enabled for "playback
  * 
@@ -190,14 +154,14 @@ namespace IVS {
  * 
  *  </p
  * 
- *  All Amazon IVS API requests must be authenticated with a signature. The AWS Command-Line Interface (CLI) and Amazon IVS
- *  Player SDKs take care of signing the underlying API calls for you. However, if your application calls the Amazon IVS API
- *  directly, it’s your responsibility to sign the
+ *  All Amazon IVS API requests must be authenticated with a signature. The Amazon Web Services Command-Line Interface (CLI)
+ *  and Amazon IVS Player SDKs take care of signing the underlying API calls for you. However, if your application calls the
+ *  Amazon IVS API directly, it’s your responsibility to sign the
  * 
  *  requests>
  * 
- *  You generate a signature using valid AWS credentials that have permission to perform the requested action. For example,
- *  you must sign PutMetadata requests with a signature generated from an IAM user account that has the
+ *  You generate a signature using valid Amazon Web Services credentials that have permission to perform the requested
+ *  action. For example, you must sign PutMetadata requests with a signature generated from an IAM user account that has the
  *  <code>ivs:PutMetadata</code>
  * 
  *  permission>
@@ -207,8 +171,8 @@ namespace IVS {
  *  information> <ul> <li>
  * 
  *  Authentication and generating signatures — See <a
- *  href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating Requests (AWS
- *  Signature Version 4)</a> in the <i>AWS General
+ *  href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating Requests
+ *  (Amazon Web Services Signature Version 4)</a> in the <i>Amazon Web Services General
  * 
  *  Reference</i>> </li> <li>
  * 
@@ -218,6 +182,17 @@ namespace IVS {
  * 
  *  Guide</i>> </li> </ul>
  * 
+ *  <b>Amazon Resource Names (ARNs)</b>
+ * 
+ *  </p
+ * 
+ *  ARNs uniquely identify AWS resources. An ARN is required when you need to specify a resource unambiguously across all of
+ *  AWS, such as in IAM policies and API calls. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names</a> in the
+ *  <i>AWS General
+ * 
+ *  Reference</i>>
+ * 
  *  <b>Channel Endpoints</b>
  * 
  *  </p <ul> <li>
@@ -226,17 +201,18 @@ namespace IVS {
  * 
  *  streaming> </li> <li>
  * 
- *  <a>GetChannel</a> — Gets the channel configuration for the specified channel ARN (Amazon Resource
+ *  <a>GetChannel</a> — Gets the channel configuration for the specified channel
  * 
- *  Name)> </li> <li>
+ *  ARN> </li> <li>
  * 
  *  <a>BatchGetChannel</a> — Performs <a>GetChannel</a> on multiple ARNs
  * 
  *  simultaneously> </li> <li>
  * 
- *  <a>ListChannels</a> — Gets summary information about all channels in your account, in the AWS region where the API
- *  request is processed. This list can be filtered to match a specified name or recording-configuration ARN. Filters are
- *  mutually exclusive and cannot be used together. If you try to use both filters, you will get an error (409 Conflict
+ *  <a>ListChannels</a> — Gets summary information about all channels in your account, in the Amazon Web Services region
+ *  where the API request is processed. This list can be filtered to match a specified name or recording-configuration ARN.
+ *  Filters are mutually exclusive and cannot be used together. If you try to use both filters, you will get an error (409
+ *  Conflict
  * 
  *  Exception)> </li> <li>
  * 
@@ -281,8 +257,17 @@ namespace IVS {
  * 
  *  channel> </li> <li>
  * 
- *  <a>ListStreams</a> — Gets summary information about live streams in your account, in the AWS region where the API
- *  request is
+ *  <a>GetStreamSession</a> — Gets metadata on a specified
+ * 
+ *  stream> </li> <li>
+ * 
+ *  <a>ListStreams</a> — Gets summary information about live streams in your account, in the Amazon Web Services region
+ *  where the API request is
+ * 
+ *  processed> </li> <li>
+ * 
+ *  <a>ListStreamSessions</a> — Gets a summary of current and previous streams for a specified channel in your account, in
+ *  the AWS region where the API request is
  * 
  *  processed> </li> <li>
  * 
@@ -291,11 +276,11 @@ namespace IVS {
  * 
  *  channel> </li> <li>
  * 
- *  <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. A maximum of 5 requests per
- *  second per channel is allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we
- *  recommend batching your data into a single PutMetadata
+ *  <a>PutMetadata</a> — Inserts metadata into the active stream of the specified channel. At most 5 requests per second per
+ *  channel are allowed, each with a maximum 1 KB payload. (If 5 TPS is not sufficient for your needs, we recommend batching
+ *  your data into a single PutMetadata call.) At most 155 requests per second per account are
  * 
- *  call.> </li> </ul>
+ *  allowed> </li> </ul>
  * 
  *  <b>PlaybackKeyPair Endpoints</b>
  * 
@@ -340,7 +325,7 @@ namespace IVS {
  *  ARN> </li> <li>
  * 
  *  <a>ListRecordingConfigurations</a> — Gets summary information about all recording configurations in your account, in the
- *  AWS region where the API request is
+ *  Amazon Web Services region where the API request is
  * 
  *  processed> </li> <li>
  * 
@@ -348,11 +333,11 @@ namespace IVS {
  * 
  *  ARN> </li> </ul>
  * 
- *  <b>AWS Tags Endpoints</b>
+ *  <b>Amazon Web Services Tags Endpoints</b>
  * 
  *  </p <ul> <li>
  * 
- *  <a>TagResource</a> — Adds or updates tags for the AWS resource with the specified
+ *  <a>TagResource</a> — Adds or updates tags for the Amazon Web Services resource with the specified
  * 
  *  ARN> </li> <li>
  * 
@@ -360,7 +345,7 @@ namespace IVS {
  * 
  *  ARN> </li> <li>
  * 
- *  <a>ListTagsForResource</a> — Gets information about AWS tags for the specified
+ *  <a>ListTagsForResource</a> — Gets information about Amazon Web Services tags for the specified
  *
  * \sa IvsClient::createRecordingConfiguration
  */
@@ -403,11 +388,11 @@ QtAws::Core::AwsAbstractResponse * CreateRecordingConfigurationRequest::response
 }
 
 /*!
- * \class QtAws::IVS::CreateRecordingConfigurationRequestPrivate
+ * \class QtAws::Ivs::CreateRecordingConfigurationRequestPrivate
  * \brief The CreateRecordingConfigurationRequestPrivate class provides private implementation for CreateRecordingConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  */
 
 /*!
@@ -434,5 +419,5 @@ CreateRecordingConfigurationRequestPrivate::CreateRecordingConfigurationRequestP
 
 }
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws

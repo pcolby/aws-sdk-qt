@@ -28,23 +28,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::QLDBSession
+ * \namespace QtAws::QldbSession
  * \brief Contains classess for accessing Amazon QLDB Session.
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 /*!
- * \class QtAws::QLDBSession::QLDBSessionClient
- * \brief The QLDBSessionClient class provides access to the Amazon QLDB Session service.
+ * \class QtAws::QldbSession::QldbSessionClient
+ * \brief The QldbSessionClient class provides access to the Amazon QLDB Session service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  *
  *  The transactional data APIs for Amazon
  * 
@@ -69,21 +69,21 @@ namespace QLDBSession {
  */
 
 /*!
- * \brief Constructs a QLDBSessionClient object.
+ * \brief Constructs a QldbSessionClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-QLDBSessionClient::QLDBSessionClient(
+QldbSessionClient::QldbSessionClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QLDBSessionClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new QldbSessionClientPrivate(this), parent)
 {
-    Q_D(QLDBSessionClient);
+    Q_D(QldbSessionClient);
     d->apiVersion = QStringLiteral("2019-07-11");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("session.qldb");
@@ -94,7 +94,7 @@ QLDBSessionClient::QLDBSessionClient(
 }
 
 /*!
- * \overload QLDBSessionClient()
+ * \overload QldbSessionClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -104,14 +104,14 @@ QLDBSessionClient::QLDBSessionClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-QLDBSessionClient::QLDBSessionClient(
+QldbSessionClient::QldbSessionClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QLDBSessionClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new QldbSessionClientPrivate(this), parent)
 {
-    Q_D(QLDBSessionClient);
+    Q_D(QldbSessionClient);
     d->apiVersion = QStringLiteral("2019-07-11");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -122,7 +122,7 @@ QLDBSessionClient::QLDBSessionClient(
 }
 
 /*!
- * Sends \a request to the QLDBSessionClient service, and returns a pointer to an
+ * Sends \a request to the QldbSessionClient service, and returns a pointer to an
  * SendCommandResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -148,28 +148,28 @@ QLDBSessionClient::QLDBSessionClient(
  * interface that uses the QLDB driver to interact with a ledger. For information, see <a
  * href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB
  */
-SendCommandResponse * QLDBSessionClient::sendCommand(const SendCommandRequest &request)
+SendCommandResponse * QldbSessionClient::sendCommand(const SendCommandRequest &request)
 {
     return qobject_cast<SendCommandResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::QLDBSession::QLDBSessionClientPrivate
- * \brief The QLDBSessionClientPrivate class provides private implementation for QLDBSessionClient.
+ * \class QtAws::QldbSession::QldbSessionClientPrivate
+ * \brief The QldbSessionClientPrivate class provides private implementation for QldbSessionClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  */
 
 /*!
- * Constructs a QLDBSessionClientPrivate object with public implementation \a q.
+ * Constructs a QldbSessionClientPrivate object with public implementation \a q.
  */
-QLDBSessionClientPrivate::QLDBSessionClientPrivate(QLDBSessionClient * const q)
+QldbSessionClientPrivate::QldbSessionClientPrivate(QldbSessionClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws

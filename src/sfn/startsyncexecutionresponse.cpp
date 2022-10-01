@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::StartSyncExecutionResponse
- * \brief The StartSyncExecutionResponse class provides an interace for SFN StartSyncExecution responses.
+ * \class QtAws::Sfn::StartSyncExecutionResponse
+ * \brief The StartSyncExecutionResponse class provides an interace for Sfn StartSyncExecution responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const StartSyncExecutionRequest * StartSyncExecutionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN StartSyncExecution \a response.
+ * Parses a successful Sfn StartSyncExecution \a response.
  */
 void StartSyncExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void StartSyncExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::StartSyncExecutionResponsePrivate
+ * \class QtAws::Sfn::StartSyncExecutionResponsePrivate
  * \brief The StartSyncExecutionResponsePrivate class provides private implementation for StartSyncExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ StartSyncExecutionResponsePrivate::StartSyncExecutionResponsePrivate(
 }
 
 /*!
- * Parses a SFN StartSyncExecution response element from \a xml.
+ * Parses a Sfn StartSyncExecution response element from \a xml.
  */
 void StartSyncExecutionResponsePrivate::parseStartSyncExecutionResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void StartSyncExecutionResponsePrivate::parseStartSyncExecutionResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

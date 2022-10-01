@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeValidDBInstanceModificationsResponse
- * \brief The DescribeValidDBInstanceModificationsResponse class provides an interace for RDS DescribeValidDBInstanceModifications responses.
+ * \class QtAws::Rds::DescribeValidDBInstanceModificationsResponse
+ * \brief The DescribeValidDBInstanceModificationsResponse class provides an interace for Rds DescribeValidDBInstanceModifications responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModif
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeValidDBInstanceModifications \a response.
+ * Parses a successful Rds DescribeValidDBInstanceModifications \a response.
  */
 void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
- * \class QtAws::RDS::DescribeValidDBInstanceModificationsResponsePrivate
+ * \class QtAws::Rds::DescribeValidDBInstanceModificationsResponsePrivate
  * \brief The DescribeValidDBInstanceModificationsResponsePrivate class provides private implementation for DescribeValidDBInstanceModificationsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModi
 }
 
 /*!
- * Parses a RDS DescribeValidDBInstanceModifications response element from \a xml.
+ * Parses a Rds DescribeValidDBInstanceModifications response element from \a xml.
  */
 void DescribeValidDBInstanceModificationsResponsePrivate::parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeValidDBInstanceModificationsResponsePrivate::parseDescribeValidDBIn
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "listcontactsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListContactsRequest;
 
-class ListContactsRequestPrivate : public Sesv2RequestPrivate {
+class ListContactsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListContactsRequestPrivate(const Sesv2Request::Action action,
+    ListContactsRequestPrivate(const SESv2Request::Action action,
                                    ListContactsRequest * const q);
     ListContactsRequestPrivate(const ListContactsRequestPrivate &other,
                                    ListContactsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

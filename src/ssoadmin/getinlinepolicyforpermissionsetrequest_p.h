@@ -24,14 +24,14 @@
 #include "getinlinepolicyforpermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class GetInlinePolicyForPermissionSetRequest;
 
-class GetInlinePolicyForPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class GetInlinePolicyForPermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    GetInlinePolicyForPermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    GetInlinePolicyForPermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    GetInlinePolicyForPermissionSetRequest * const q);
     GetInlinePolicyForPermissionSetRequestPrivate(const GetInlinePolicyForPermissionSetRequestPrivate &other,
                                    GetInlinePolicyForPermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

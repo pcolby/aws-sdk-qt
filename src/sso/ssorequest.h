@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class SsoRequestPrivate;
 
 class QTAWSSSO_EXPORT SsoRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSO.
+    /// Actions supported by Sso.
     enum Action {
         GetRoleCredentialsAction,
         ListAccountRolesAction,
@@ -79,7 +79,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

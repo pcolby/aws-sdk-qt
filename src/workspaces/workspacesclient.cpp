@@ -29,16 +29,26 @@
 #include "authorizeiprulesresponse.h"
 #include "copyworkspaceimagerequest.h"
 #include "copyworkspaceimageresponse.h"
+#include "createconnectclientaddinrequest.h"
+#include "createconnectclientaddinresponse.h"
 #include "createconnectionaliasrequest.h"
 #include "createconnectionaliasresponse.h"
 #include "createipgrouprequest.h"
 #include "createipgroupresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
+#include "createupdatedworkspaceimagerequest.h"
+#include "createupdatedworkspaceimageresponse.h"
 #include "createworkspacebundlerequest.h"
 #include "createworkspacebundleresponse.h"
+#include "createworkspaceimagerequest.h"
+#include "createworkspaceimageresponse.h"
 #include "createworkspacesrequest.h"
 #include "createworkspacesresponse.h"
+#include "deleteclientbrandingrequest.h"
+#include "deleteclientbrandingresponse.h"
+#include "deleteconnectclientaddinrequest.h"
+#include "deleteconnectclientaddinresponse.h"
 #include "deleteconnectionaliasrequest.h"
 #include "deleteconnectionaliasresponse.h"
 #include "deleteipgrouprequest.h"
@@ -55,8 +65,12 @@
 #include "describeaccountresponse.h"
 #include "describeaccountmodificationsrequest.h"
 #include "describeaccountmodificationsresponse.h"
+#include "describeclientbrandingrequest.h"
+#include "describeclientbrandingresponse.h"
 #include "describeclientpropertiesrequest.h"
 #include "describeclientpropertiesresponse.h"
+#include "describeconnectclientaddinsrequest.h"
+#include "describeconnectclientaddinsresponse.h"
 #include "describeconnectionaliaspermissionsrequest.h"
 #include "describeconnectionaliaspermissionsresponse.h"
 #include "describeconnectionaliasesrequest.h"
@@ -83,6 +97,8 @@
 #include "disassociateconnectionaliasresponse.h"
 #include "disassociateipgroupsrequest.h"
 #include "disassociateipgroupsresponse.h"
+#include "importclientbrandingrequest.h"
+#include "importclientbrandingresponse.h"
 #include "importworkspaceimagerequest.h"
 #include "importworkspaceimageresponse.h"
 #include "listavailablemanagementcidrrangesrequest.h"
@@ -93,6 +109,8 @@
 #include "modifyaccountresponse.h"
 #include "modifyclientpropertiesrequest.h"
 #include "modifyclientpropertiesresponse.h"
+#include "modifysamlpropertiesrequest.h"
+#include "modifysamlpropertiesresponse.h"
 #include "modifyselfservicepermissionsrequest.h"
 #include "modifyselfservicepermissionsresponse.h"
 #include "modifyworkspaceaccesspropertiesrequest.h"
@@ -119,6 +137,8 @@
 #include "stopworkspacesresponse.h"
 #include "terminateworkspacesrequest.h"
 #include "terminateworkspacesresponse.h"
+#include "updateconnectclientaddinrequest.h"
+#include "updateconnectclientaddinresponse.h"
 #include "updateconnectionaliaspermissionrequest.h"
 #include "updateconnectionaliaspermissionresponse.h"
 #include "updaterulesofipgrouprequest.h"
@@ -152,7 +172,27 @@ namespace WorkSpaces {
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
- *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows or Amazon Linux desktops for your
+ *  users, known as <i>WorkSpaces</i>. WorkSpaces eliminates the need to procure and deploy hardware or install complex
+ *  software. You can quickly add or remove users as your needs change. Users can access their virtual desktops from
+ *  multiple devices or web
+ * 
+ *  browsers>
+ * 
+ *  This API Reference provides detailed information about the actions, data types, parameters, and errors of the WorkSpaces
+ *  service. For more information about the supported Amazon Web Services Regions, endpoints, and service quotas of the
+ *  Amazon WorkSpaces service, see <a href="https://docs.aws.amazon.com/general/latest/gr/wsp.html">WorkSpaces endpoints and
+ *  quotas</a> in the <i>Amazon Web Services General
+ * 
+ *  Reference</i>>
+ * 
+ *  You can also manage your WorkSpaces resources using the WorkSpaces console, Command Line Interface (CLI), and SDKs. For
+ *  more information about administering WorkSpaces, see the <a
+ *  href="https://docs.aws.amazon.com/workspaces/latest/adminguide/">Amazon WorkSpaces Administration Guide</a>. For more
+ *  information about using the Amazon WorkSpaces client application or web browser to access provisioned WorkSpaces, see
+ *  the <a href="https://docs.aws.amazon.com/workspaces/latest/userguide/">Amazon WorkSpaces User Guide</a>. For more
+ *  information about using the CLI to manage your WorkSpaces resources, see the <a
+ *  href="https://docs.aws.amazon.com/cli/latest/reference/workspaces/index.html">WorkSpaces section of the CLI
  */
 
 /*!
@@ -268,18 +308,19 @@ AuthorizeIpRulesResponse * WorkSpacesClient::authorizeIpRules(const AuthorizeIpR
  * Copies the specified image from the specified Region to the current Region. For more information about copying images,
  * see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/copy-custom-image.html"> Copy a Custom WorkSpaces
  *
- * Image</a>> <note>
+ * Image</a>>
  *
  * In the China (Ningxia) Region, you can copy images only within the same
  *
  * Region>
  *
- * In the AWS GovCloud (US-West) Region, to copy images to and from other AWS Regions, contact AWS
+ * In Amazon Web Services GovCloud (US), to copy images to and from other Regions, contact Amazon Web Services
  *
- * Support> </note> <b>
+ * Support> <b>
  *
- * Before copying a shared image, be sure to verify that it has been shared from the correct AWS account. To determine if
- * an image has been shared and to see the AWS account ID that owns an image, use the <a
+ * Before copying a shared image, be sure to verify that it has been shared from the correct Amazon Web Services account.
+ * To determine if an image has been shared and to see the ID of the Amazon Web Services account that owns an image, use
+ * the <a
  * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImages.html">DescribeWorkSpaceImages</a>
  * and <a
  * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImagePermissions.html">DescribeWorkspaceImagePermissions</a>
@@ -288,6 +329,24 @@ AuthorizeIpRulesResponse * WorkSpacesClient::authorizeIpRules(const AuthorizeIpR
 CopyWorkspaceImageResponse * WorkSpacesClient::copyWorkspaceImage(const CopyWorkspaceImageRequest &request)
 {
     return qobject_cast<CopyWorkspaceImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * CreateConnectClientAddInResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a client-add-in for Amazon Connect within a directory. You can create only one Amazon Connect client add-in
+ * within a
+ *
+ * directory>
+ *
+ * This client add-in allows WorkSpaces users to seamlessly connect to Amazon
+ */
+CreateConnectClientAddInResponse * WorkSpacesClient::createConnectClientAddIn(const CreateConnectClientAddInRequest &request)
+{
+    return qobject_cast<CreateConnectClientAddInResponse *>(send(request));
 }
 
 /*!
@@ -345,6 +404,38 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * CreateUpdatedWorkspaceImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new updated WorkSpace image based on the specified source image. The new updated WorkSpace image has the
+ * latest drivers and other updates required by the Amazon WorkSpaces
+ *
+ * components>
+ *
+ * To determine which WorkSpace images need to be updated with the latest Amazon WorkSpaces requirements, use <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImages.html">
+ *
+ * DescribeWorkspaceImages</a>> <note> <ul> <li>
+ *
+ * Only Windows 10, Windows Sever 2016, and Windows Server 2019 WorkSpace images can be programmatically updated at this
+ *
+ * time> </li> <li>
+ *
+ * Microsoft Windows updates and other application updates are not included in the update
+ *
+ * process> </li> <li>
+ *
+ * The source WorkSpace image is not deleted. You can delete the source image after you've verified your new updated image
+ * and created a new bundle.
+ */
+CreateUpdatedWorkspaceImageResponse * WorkSpacesClient::createUpdatedWorkspaceImage(const CreateUpdatedWorkspaceImageRequest &request)
+{
+    return qobject_cast<CreateUpdatedWorkspaceImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * CreateWorkspaceBundleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -356,6 +447,19 @@ CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &reque
 CreateWorkspaceBundleResponse * WorkSpacesClient::createWorkspaceBundle(const CreateWorkspaceBundleRequest &request)
 {
     return qobject_cast<CreateWorkspaceBundleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * CreateWorkspaceImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new WorkSpace image from an existing
+ */
+CreateWorkspaceImageResponse * WorkSpacesClient::createWorkspaceImage(const CreateWorkspaceImageRequest &request)
+{
+    return qobject_cast<CreateWorkspaceImageResponse *>(send(request));
 }
 
 /*!
@@ -373,6 +477,38 @@ CreateWorkspaceBundleResponse * WorkSpacesClient::createWorkspaceBundle(const Cr
 CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorkspacesRequest &request)
 {
     return qobject_cast<CreateWorkspacesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DeleteClientBrandingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes customized client branding. Client branding allows you to customize your WorkSpace's client login portal. You
+ * can tailor your login portal company logo, the support email address, support link, link to reset password, and a custom
+ * message for users trying to sign
+ *
+ * in>
+ *
+ * After you delete your customized client branding, your login portal reverts to the default client
+ */
+DeleteClientBrandingResponse * WorkSpacesClient::deleteClientBranding(const DeleteClientBrandingRequest &request)
+{
+    return qobject_cast<DeleteClientBrandingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DeleteConnectClientAddInResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a client-add-in for Amazon Connect that is configured within a
+ */
+DeleteConnectClientAddInResponse * WorkSpacesClient::deleteConnectClientAddIn(const DeleteConnectClientAddInRequest &request)
+{
+    return qobject_cast<DeleteConnectClientAddInResponse *>(send(request));
 }
 
 /*!
@@ -476,7 +612,7 @@ DeleteWorkspaceImageResponse * WorkSpacesClient::deleteWorkspaceImage(const Dele
  * Simple AD and AD Connector are made available to you free of charge to use with WorkSpaces. If there are no WorkSpaces
  * being used with your Simple AD or AD Connector directory for 30 consecutive days, this directory will be automatically
  * deregistered for use with Amazon WorkSpaces, and you will be charged for this directory as per the <a
- * href="http://aws.amazon.com/directoryservice/pricing/">AWS Directory Services pricing
+ * href="http://aws.amazon.com/directoryservice/pricing/">Directory Service pricing
  *
  * terms</a>>
  *
@@ -518,6 +654,25 @@ DescribeAccountModificationsResponse * WorkSpacesClient::describeAccountModifica
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeClientBrandingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified client branding. Client branding allows you to customize the log in page of various device types
+ * for your users. You can add your company logo, the support email address, support link, link to reset password, and a
+ * custom message for users trying to sign
+ *
+ * in> <note>
+ *
+ * Only device types that have branding information configured will be shown in the
+ */
+DescribeClientBrandingResponse * WorkSpacesClient::describeClientBranding(const DescribeClientBrandingRequest &request)
+{
+    return qobject_cast<DescribeClientBrandingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DescribeClientPropertiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -531,12 +686,25 @@ DescribeClientPropertiesResponse * WorkSpacesClient::describeClientProperties(co
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeConnectClientAddInsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of Amazon Connect client add-ins that have been
+ */
+DescribeConnectClientAddInsResponse * WorkSpacesClient::describeConnectClientAddIns(const DescribeConnectClientAddInsRequest &request)
+{
+    return qobject_cast<DescribeConnectClientAddInsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DescribeConnectionAliasPermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the permissions that the owner of a connection alias has granted to another AWS account for the specified
- * connection alias. For more information, see <a
+ * Describes the permissions that the owner of a connection alias has granted to another Amazon Web Services account for
+ * the specified connection alias. For more information, see <a
  * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region Redirection
  * for Amazon
  */
@@ -622,7 +790,7 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the permissions that the owner of an image has granted to other AWS accounts for an
+ * Describes the permissions that the owner of an image has granted to other Amazon Web Services accounts for an
  */
 DescribeWorkspaceImagePermissionsResponse * WorkSpacesClient::describeWorkspaceImagePermissions(const DescribeWorkspaceImagePermissionsRequest &request)
 {
@@ -694,7 +862,7 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region redirection
- * between two directories in different AWS Regions. For more information, see <a
+ * between two directories in different Regions. For more information, see <a
  * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region Redirection
  * for Amazon
  *
@@ -724,14 +892,52 @@ DisassociateIpGroupsResponse * WorkSpacesClient::disassociateIpGroups(const Disa
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ImportClientBrandingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can tailor
+ * your login portal company logo, the support email address, support link, link to reset password, and a custom message
+ * for users trying to sign
+ *
+ * in>
+ *
+ * After you import client branding, the default branding experience for the specified platform type is replaced with the
+ * imported
+ *
+ * experienc> <note> <ul> <li>
+ *
+ * You must specify at least one platform type when importing client
+ *
+ * branding> </li> <li>
+ *
+ * You can import up to 6 MB of data with each request. If your request exceeds this limit, you can import client branding
+ * for different platform types using separate
+ *
+ * requests> </li> <li>
+ *
+ * In each platform type, the <code>SupportEmail</code> and <code>SupportLink</code> parameters are mutually exclusive. You
+ * can specify only one parameter for each platform type, but not
+ *
+ * both> </li> <li>
+ *
+ * Imported data can take up to a minute to appear in the WorkSpaces
+ */
+ImportClientBrandingResponse * WorkSpacesClient::importClientBranding(const ImportClientBrandingRequest &request)
+{
+    return qobject_cast<ImportClientBrandingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * ImportWorkspaceImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an
- * already licensed Amazon EC2 image that is in your AWS account, and you must own the image. For more information about
- * creating BYOL images, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html">
- * Bring Your Own Windows Desktop
+ * already licensed Amazon EC2 image that is in your Amazon Web Services account, and you must own the image. For more
+ * information about creating BYOL images, see <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html"> Bring Your Own Windows Desktop
  */
 ImportWorkspaceImageResponse * WorkSpacesClient::importWorkspaceImage(const ImportWorkspaceImageRequest &request)
 {
@@ -749,8 +955,8 @@ ImportWorkspaceImageResponse * WorkSpacesClient::importWorkspaceImage(const Impo
  *
  * </p
  *
- * This operation can be run only by AWS accounts that are enabled for BYOL. If your account isn't enabled for BYOL, you'll
- * receive an <code>AccessDeniedException</code>
+ * This operation can be run only by Amazon Web Services accounts that are enabled for BYOL. If your account isn't enabled
+ * for BYOL, you'll receive an <code>AccessDeniedException</code>
  *
  * error>
  *
@@ -813,6 +1019,20 @@ ModifyAccountResponse * WorkSpacesClient::modifyAccount(const ModifyAccountReque
 ModifyClientPropertiesResponse * WorkSpacesClient::modifyClientProperties(const ModifyClientPropertiesRequest &request)
 {
     return qobject_cast<ModifyClientPropertiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ModifySamlPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies multiple properties related to SAML 2.0 authentication, including the enablement status, user access URL, and
+ * relay state parameter name that are used for configuring federation with an SAML 2.0 identity
+ */
+ModifySamlPropertiesResponse * WorkSpacesClient::modifySamlProperties(const ModifySamlPropertiesRequest &request)
+{
+    return qobject_cast<ModifySamlPropertiesResponse *>(send(request));
 }
 
 /*!
@@ -1043,7 +1263,7 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
  * WorkSpaces> <b>
  *
  * Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive
- * any user data, contact AWS Support before terminating the
+ * any user data, contact Amazon Web Services Support before terminating the
  *
  * WorkSpace> </b>
  *
@@ -1062,7 +1282,7 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
  * Simple AD and AD Connector are made available to you free of charge to use with WorkSpaces. If there are no WorkSpaces
  * being used with your Simple AD or AD Connector directory for 30 consecutive days, this directory will be automatically
  * deregistered for use with Amazon WorkSpaces, and you will be charged for this directory as per the <a
- * href="http://aws.amazon.com/directoryservice/pricing/">AWS Directory Services pricing
+ * href="http://aws.amazon.com/directoryservice/pricing/">Directory Service pricing
  *
  * terms</a>>
  *
@@ -1074,6 +1294,19 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
 TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const TerminateWorkspacesRequest &request)
 {
     return qobject_cast<TerminateWorkspacesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * UpdateConnectClientAddInResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a Amazon Connect client add-in. Use this action to update the name and endpoint URL of a Amazon Connect client
+ */
+UpdateConnectClientAddInResponse * WorkSpacesClient::updateConnectClientAddIn(const UpdateConnectClientAddInRequest &request)
+{
+    return qobject_cast<UpdateConnectClientAddInResponse *>(send(request));
 }
 
 /*!
@@ -1144,23 +1377,23 @@ UpdateWorkspaceBundleResponse * WorkSpacesClient::updateWorkspaceBundle(const Up
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Shares or unshares an image with one account in the same AWS Region by specifying whether that account has permission to
- * copy the image. If the copy image permission is granted, the image is shared with that account. If the copy image
- * permission is revoked, the image is unshared with the
+ * Shares or unshares an image with one account in the same Amazon Web Services Region by specifying whether that account
+ * has permission to copy the image. If the copy image permission is granted, the image is shared with that account. If the
+ * copy image permission is revoked, the image is unshared with the
  *
  * account>
  *
- * After an image has been shared, the recipient account can copy the image to other AWS Regions as
+ * After an image has been shared, the recipient account can copy the image to other Regions as
  *
- * needed> <note>
+ * needed>
  *
  * In the China (Ningxia) Region, you can copy images only within the same
  *
  * Region>
  *
- * In the AWS GovCloud (US-West) Region, to copy images to and from other AWS Regions, contact AWS
+ * In Amazon Web Services GovCloud (US), to copy images to and from other Regions, contact Amazon Web Services
  *
- * Support> </note>
+ * Support>
  *
  * For more information about sharing images, see <a
  * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/share-custom-image.html"> Share or Unshare a Custom
@@ -1172,8 +1405,9 @@ UpdateWorkspaceBundleResponse * WorkSpacesClient::updateWorkspaceBundle(const Up
  *
  * it> </li> <li>
  *
- * Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud
- * (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS
+ * Sharing Bring Your Own License (BYOL) images across Amazon Web Services accounts isn't supported at this time in Amazon
+ * Web Services GovCloud (US). To share BYOL images across accounts in Amazon Web Services GovCloud (US), contact Amazon
+ * Web Services
  */
 UpdateWorkspaceImagePermissionResponse * WorkSpacesClient::updateWorkspaceImagePermission(const UpdateWorkspaceImagePermissionRequest &request)
 {

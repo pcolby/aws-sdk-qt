@@ -24,7 +24,7 @@
 #include "getresourcemetricsrequest.h"
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class GetResourceMetricsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

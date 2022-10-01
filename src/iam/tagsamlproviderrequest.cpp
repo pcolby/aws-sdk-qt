@@ -23,21 +23,21 @@
 #include "iamrequest_p.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagSAMLProviderRequest
- * \brief The TagSAMLProviderRequest class provides an interface for IAM TagSAMLProvider requests.
+ * \class QtAws::Iam::TagSAMLProviderRequest
+ * \brief The TagSAMLProviderRequest class provides an interface for Iam TagSAMLProvider requests.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagSAMLProvider
  */
@@ -80,11 +80,11 @@ QtAws::Core::AwsAbstractResponse * TagSAMLProviderRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::IAM::TagSAMLProviderRequestPrivate
+ * \class QtAws::Iam::TagSAMLProviderRequestPrivate
  * \brief The TagSAMLProviderRequestPrivate class provides private implementation for TagSAMLProviderRequest.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -111,5 +111,5 @@ TagSAMLProviderRequestPrivate::TagSAMLProviderRequestPrivate(
 
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

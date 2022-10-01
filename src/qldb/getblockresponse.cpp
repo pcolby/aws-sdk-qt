@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetBlockResponse
- * \brief The GetBlockResponse class provides an interace for QLDB GetBlock responses.
+ * \class QtAws::Qldb::GetBlockResponse
+ * \brief The GetBlockResponse class provides an interace for Qldb GetBlock responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const GetBlockRequest * GetBlockResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB GetBlock \a response.
+ * Parses a successful Qldb GetBlock \a response.
  */
 void GetBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void GetBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::GetBlockResponsePrivate
+ * \class QtAws::Qldb::GetBlockResponsePrivate
  * \brief The GetBlockResponsePrivate class provides private implementation for GetBlockResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ GetBlockResponsePrivate::GetBlockResponsePrivate(
 }
 
 /*!
- * Parses a QLDB GetBlock response element from \a xml.
+ * Parses a Qldb GetBlock response element from \a xml.
  */
 void GetBlockResponsePrivate::parseGetBlockResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetBlockResponsePrivate::parseGetBlockResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

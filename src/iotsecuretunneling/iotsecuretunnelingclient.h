@@ -40,6 +40,8 @@ class ListTunnelsRequest;
 class ListTunnelsResponse;
 class OpenTunnelRequest;
 class OpenTunnelResponse;
+class RotateTunnelAccessTokenRequest;
+class RotateTunnelAccessTokenResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -66,6 +68,7 @@ public slots:
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListTunnelsResponse * listTunnels(const ListTunnelsRequest &request);
     OpenTunnelResponse * openTunnel(const OpenTunnelRequest &request);
+    RotateTunnelAccessTokenResponse * rotateTunnelAccessToken(const RotateTunnelAccessTokenRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 

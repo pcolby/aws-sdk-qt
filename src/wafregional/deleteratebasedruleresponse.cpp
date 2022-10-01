@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteRateBasedRuleResponse
- * \brief The DeleteRateBasedRuleResponse class provides an interace for WAFRegional DeleteRateBasedRule responses.
+ * \class QtAws::WafRegional::DeleteRateBasedRuleResponse
+ * \brief The DeleteRateBasedRuleResponse class provides an interace for WafRegional DeleteRateBasedRule responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteRateBasedRule
+ * \sa WafRegionalClient::deleteRateBasedRule
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
         const DeleteRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteRateBasedRuleRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteRateBasedRule \a response.
+ * Parses a successful WafRegional DeleteRateBasedRule \a response.
  */
 void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteRateBasedRuleResponsePrivate
+ * \class QtAws::WafRegional::DeleteRateBasedRuleResponsePrivate
  * \brief The DeleteRateBasedRuleResponsePrivate class provides private implementation for DeleteRateBasedRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
-    DeleteRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteRateBasedRuleResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteRateBasedRule response element from \a xml.
+ * Parses a WafRegional DeleteRateBasedRule response element from \a xml.
  */
 void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

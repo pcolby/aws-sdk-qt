@@ -24,11 +24,11 @@
 #include "getrestapisrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetRestApisResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetRestApisResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetRestApisResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

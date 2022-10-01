@@ -24,28 +24,28 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
-class Sesv2Request;
+class SESv2Request;
 
-class Sesv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SESv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    Sesv2Request::Action action; ///< SESV2 action to be performed.
-    QString apiVersion;        ///< SESV2 API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SESV2 request (query string) parameters. @todo?
+    SESv2Request::Action action; ///< SESv2 action to be performed.
+    QString apiVersion;        ///< SESv2 API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SESv2 request (query string) parameters. @todo?
 
-    Sesv2RequestPrivate(const Sesv2Request::Action action, Sesv2Request * const q);
-    Sesv2RequestPrivate(const Sesv2RequestPrivate &other, Sesv2Request * const q);
+    SESv2RequestPrivate(const SESv2Request::Action action, SESv2Request * const q);
+    SESv2RequestPrivate(const SESv2RequestPrivate &other, SESv2Request * const q);
 
-    static QString toString(const Sesv2Request::Action &action);
+    static QString toString(const SESv2Request::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(Sesv2Request)
+    Q_DECLARE_PUBLIC(SESv2Request)
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

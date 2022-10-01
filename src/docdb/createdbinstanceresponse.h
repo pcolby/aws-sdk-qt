@@ -24,11 +24,11 @@
 #include "createdbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateDBInstanceResponsePrivate;
 
-class QTAWSDOCDB_EXPORT CreateDBInstanceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT CreateDBInstanceResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

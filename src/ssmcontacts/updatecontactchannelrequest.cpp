@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::UpdateContactChannelRequest
- * \brief The UpdateContactChannelRequest class provides an interface for SSMContacts UpdateContactChannel requests.
+ * \class QtAws::SsmContacts::UpdateContactChannelRequest
+ * \brief The UpdateContactChannelRequest class provides an interface for SsmContacts UpdateContactChannel requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::updateContactChannel
+ * \sa SsmContactsClient::updateContactChannel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateContactChannelRequest::UpdateContactChannelRequest(const UpdateContactChannelRequest &other)
-    : SSMContactsRequest(new UpdateContactChannelRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new UpdateContactChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ UpdateContactChannelRequest::UpdateContactChannelRequest(const UpdateContactChan
  * Constructs a UpdateContactChannelRequest object.
  */
 UpdateContactChannelRequest::UpdateContactChannelRequest()
-    : SSMContactsRequest(new UpdateContactChannelRequestPrivate(SSMContactsRequest::UpdateContactChannelAction, this))
+    : SsmContactsRequest(new UpdateContactChannelRequestPrivate(SsmContactsRequest::UpdateContactChannelAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * UpdateContactChannelRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SSMContacts::UpdateContactChannelRequestPrivate
+ * \class QtAws::SsmContacts::UpdateContactChannelRequestPrivate
  * \brief The UpdateContactChannelRequestPrivate class provides private implementation for UpdateContactChannelRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a UpdateContactChannelRequestPrivate object for SSMContacts \a action,
+ * Constructs a UpdateContactChannelRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 UpdateContactChannelRequestPrivate::UpdateContactChannelRequestPrivate(
-    const SSMContactsRequest::Action action, UpdateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, UpdateContactChannelRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ UpdateContactChannelRequestPrivate::UpdateContactChannelRequestPrivate(
  */
 UpdateContactChannelRequestPrivate::UpdateContactChannelRequestPrivate(
     const UpdateContactChannelRequestPrivate &other, UpdateContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

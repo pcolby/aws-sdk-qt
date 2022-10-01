@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddRoleToDBClusterResponse
- * \brief The AddRoleToDBClusterResponse class provides an interace for RDS AddRoleToDBCluster responses.
+ * \class QtAws::Rds::AddRoleToDBClusterResponse
+ * \brief The AddRoleToDBClusterResponse class provides an interace for Rds AddRoleToDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS AddRoleToDBCluster \a response.
+ * Parses a successful Rds AddRoleToDBCluster \a response.
  */
 void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::AddRoleToDBClusterResponsePrivate
+ * \class QtAws::Rds::AddRoleToDBClusterResponsePrivate
  * \brief The AddRoleToDBClusterResponsePrivate class provides private implementation for AddRoleToDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS AddRoleToDBCluster response element from \a xml.
+ * Parses a Rds AddRoleToDBCluster response element from \a xml.
  */
 void AddRoleToDBClusterResponsePrivate::parseAddRoleToDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void AddRoleToDBClusterResponsePrivate::parseAddRoleToDBClusterResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

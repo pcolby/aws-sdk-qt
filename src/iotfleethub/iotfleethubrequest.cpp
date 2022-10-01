@@ -251,7 +251,7 @@ QNetworkRequest IoTFleetHubRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTFleetHubRequestPrivate::IoTFleetHubRequestPrivate(const IoTFleetHubRequest::Action action, IoTFleetHubRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-11-03"))
 {
 
 }

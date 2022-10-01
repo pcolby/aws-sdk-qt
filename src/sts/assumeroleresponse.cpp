@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::AssumeRoleResponse
- * \brief The AssumeRoleResponse class provides an interace for STS AssumeRole responses.
+ * \class QtAws::Sts::AssumeRoleResponse
+ * \brief The AssumeRoleResponse class provides an interace for Sts AssumeRole responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::assumeRole
@@ -67,7 +67,7 @@ const AssumeRoleRequest * AssumeRoleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS AssumeRole \a response.
+ * Parses a successful Sts AssumeRole \a response.
  */
 void AssumeRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void AssumeRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::AssumeRoleResponsePrivate
+ * \class QtAws::Sts::AssumeRoleResponsePrivate
  * \brief The AssumeRoleResponsePrivate class provides private implementation for AssumeRoleResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ AssumeRoleResponsePrivate::AssumeRoleResponsePrivate(
 }
 
 /*!
- * Parses a STS AssumeRole response element from \a xml.
+ * Parses a Sts AssumeRole response element from \a xml.
  */
 void AssumeRoleResponsePrivate::parseAssumeRoleResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void AssumeRoleResponsePrivate::parseAssumeRoleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

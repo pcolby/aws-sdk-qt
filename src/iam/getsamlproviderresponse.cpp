@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetSAMLProviderResponse
- * \brief The GetSAMLProviderResponse class provides an interace for IAM GetSAMLProvider responses.
+ * \class QtAws::Iam::GetSAMLProviderResponse
+ * \brief The GetSAMLProviderResponse class provides an interace for Iam GetSAMLProvider responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getSAMLProvider
  */
@@ -68,7 +68,7 @@ const GetSAMLProviderRequest * GetSAMLProviderResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM GetSAMLProvider \a response.
+ * Parses a successful Iam GetSAMLProvider \a response.
  */
 void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetSAMLProviderResponsePrivate
+ * \class QtAws::Iam::GetSAMLProviderResponsePrivate
  * \brief The GetSAMLProviderResponsePrivate class provides private implementation for GetSAMLProviderResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetSAMLProviderResponsePrivate::GetSAMLProviderResponsePrivate(
 }
 
 /*!
- * Parses a IAM GetSAMLProvider response element from \a xml.
+ * Parses a Iam GetSAMLProvider response element from \a xml.
  */
 void GetSAMLProviderResponsePrivate::parseGetSAMLProviderResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetSAMLProviderResponsePrivate::parseGetSAMLProviderResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

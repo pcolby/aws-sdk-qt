@@ -24,14 +24,14 @@
 #include "listsuppresseddestinationsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListSuppressedDestinationsRequest;
 
-class ListSuppressedDestinationsRequestPrivate : public Sesv2RequestPrivate {
+class ListSuppressedDestinationsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListSuppressedDestinationsRequestPrivate(const Sesv2Request::Action action,
+    ListSuppressedDestinationsRequestPrivate(const SESv2Request::Action action,
                                    ListSuppressedDestinationsRequest * const q);
     ListSuppressedDestinationsRequestPrivate(const ListSuppressedDestinationsRequestPrivate &other,
                                    ListSuppressedDestinationsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

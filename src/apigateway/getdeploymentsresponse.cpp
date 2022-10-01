@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDeploymentsResponse
- * \brief The GetDeploymentsResponse class provides an interace for APIGateway GetDeployments responses.
+ * \class QtAws::ApiGateway::GetDeploymentsResponse
+ * \brief The GetDeploymentsResponse class provides an interace for ApiGateway GetDeployments responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDeployments
+ * \sa ApiGatewayClient::getDeployments
  */
 
 /*!
@@ -49,7 +49,7 @@ GetDeploymentsResponse::GetDeploymentsResponse(
         const GetDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetDeploymentsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetDeploymentsResponsePrivate(this), parent)
 {
     setRequest(new GetDeploymentsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetDeploymentsRequest * GetDeploymentsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetDeployments \a response.
+ * Parses a successful ApiGateway GetDeployments \a response.
  */
 void GetDeploymentsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetDeploymentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetDeploymentsResponsePrivate
+ * \class QtAws::ApiGateway::GetDeploymentsResponsePrivate
  * \brief The GetDeploymentsResponsePrivate class provides private implementation for GetDeploymentsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetDeploymentsResponsePrivate object with public implementation \a q.
  */
 GetDeploymentsResponsePrivate::GetDeploymentsResponsePrivate(
-    GetDeploymentsResponse * const q) : APIGatewayResponsePrivate(q)
+    GetDeploymentsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetDeployments response element from \a xml.
+ * Parses a ApiGateway GetDeployments response element from \a xml.
  */
 void GetDeploymentsResponsePrivate::parseGetDeploymentsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetDeploymentsResponsePrivate::parseGetDeploymentsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

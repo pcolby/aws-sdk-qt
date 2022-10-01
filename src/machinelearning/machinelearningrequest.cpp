@@ -271,7 +271,7 @@ QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearningRequest::Action action, MachineLearningRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-12-12"))
 {
 
 }

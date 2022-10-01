@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetAccountSendingEnabledResponse
- * \brief The GetAccountSendingEnabledResponse class provides an interace for SES GetAccountSendingEnabled responses.
+ * \class QtAws::Ses::GetAccountSendingEnabledResponse
+ * \brief The GetAccountSendingEnabledResponse class provides an interace for Ses GetAccountSendingEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SES GetAccountSendingEnabled \a response.
+ * Parses a successful Ses GetAccountSendingEnabled \a response.
  */
 void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::GetAccountSendingEnabledResponsePrivate
+ * \class QtAws::Ses::GetAccountSendingEnabledResponsePrivate
  * \brief The GetAccountSendingEnabledResponsePrivate class provides private implementation for GetAccountSendingEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponsePrivate
 }
 
 /*!
- * Parses a SES GetAccountSendingEnabled response element from \a xml.
+ * Parses a Ses GetAccountSendingEnabled response element from \a xml.
  */
 void GetAccountSendingEnabledResponsePrivate::parseGetAccountSendingEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetAccountSendingEnabledResponsePrivate::parseGetAccountSendingEnabledRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

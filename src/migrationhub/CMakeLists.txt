@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMIGRATIONHUB_LIBRARY)
 
 add_library(QtAwsMigrationHub
+  qtawsmigrationhubglobal.h
+  migrationhubclient.h
+  migrationhubclient_p.h
+  migrationhubrequest.h
+  migrationhubrequest_p.h
+  migrationhubresponse.h
+  migrationhubresponse_p.h
   associatecreatedartifactrequest.h
   associatecreatedartifactrequest_p.h
   associatecreatedartifactresponse.h
@@ -57,12 +64,6 @@ add_library(QtAwsMigrationHub
   listprogressupdatestreamsrequest_p.h
   listprogressupdatestreamsresponse.h
   listprogressupdatestreamsresponse_p.h
-  migrationhubclient.h
-  migrationhubclient_p.h
-  migrationhubrequest.h
-  migrationhubrequest_p.h
-  migrationhubresponse.h
-  migrationhubresponse_p.h
   notifyapplicationstaterequest.h
   notifyapplicationstaterequest_p.h
   notifyapplicationstateresponse.h
@@ -75,7 +76,9 @@ add_library(QtAwsMigrationHub
   putresourceattributesrequest_p.h
   putresourceattributesresponse.h
   putresourceattributesresponse_p.h
-  qtawsmigrationhubglobal.h
+  migrationhubclient.cpp
+  migrationhubrequest.cpp
+  migrationhubresponse.cpp
   associatecreatedartifactrequest.cpp
   associatecreatedartifactresponse.cpp
   associatediscoveredresourcerequest.cpp
@@ -104,9 +107,6 @@ add_library(QtAwsMigrationHub
   listmigrationtasksresponse.cpp
   listprogressupdatestreamsrequest.cpp
   listprogressupdatestreamsresponse.cpp
-  migrationhubclient.cpp
-  migrationhubrequest.cpp
-  migrationhubresponse.cpp
   notifyapplicationstaterequest.cpp
   notifyapplicationstateresponse.cpp
   notifymigrationtaskstaterequest.cpp

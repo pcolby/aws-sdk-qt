@@ -24,14 +24,14 @@
 #include "updatedistributionconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class UpdateDistributionConfigurationRequest;
 
-class UpdateDistributionConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class UpdateDistributionConfigurationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    UpdateDistributionConfigurationRequestPrivate(const imagebuilderRequest::Action action,
+    UpdateDistributionConfigurationRequestPrivate(const ImageBuilderRequest::Action action,
                                    UpdateDistributionConfigurationRequest * const q);
     UpdateDistributionConfigurationRequestPrivate(const UpdateDistributionConfigurationRequestPrivate &other,
                                    UpdateDistributionConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class CreateDataSourceRequestPrivate;
 
-class QTAWSKENDRA_EXPORT CreateDataSourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT CreateDataSourceRequest : public KendraRequest {
 
 public:
     CreateDataSourceRequest(const CreateDataSourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

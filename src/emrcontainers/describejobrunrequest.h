@@ -23,11 +23,11 @@
 #include "emrcontainersrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class DescribeJobRunRequestPrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT DescribeJobRunRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT DescribeJobRunRequest : public EmrcontainersRequest {
 
 public:
     DescribeJobRunRequest(const DescribeJobRunRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

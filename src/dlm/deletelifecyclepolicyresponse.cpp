@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::DeleteLifecyclePolicyResponse
- * \brief The DeleteLifecyclePolicyResponse class provides an interace for DLM DeleteLifecyclePolicy responses.
+ * \class QtAws::Dlm::DeleteLifecyclePolicyResponse
+ * \brief The DeleteLifecyclePolicyResponse class provides an interace for Dlm DeleteLifecyclePolicy responses.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -71,7 +71,7 @@ const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful DLM DeleteLifecyclePolicy \a response.
+ * Parses a successful Dlm DeleteLifecyclePolicy \a response.
  */
 void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DLM::DeleteLifecyclePolicyResponsePrivate
+ * \class QtAws::Dlm::DeleteLifecyclePolicyResponsePrivate
  * \brief The DeleteLifecyclePolicyResponsePrivate class provides private implementation for DeleteLifecyclePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -98,7 +98,7 @@ DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
 }
 
 /*!
- * Parses a DLM DeleteLifecyclePolicy response element from \a xml.
+ * Parses a Dlm DeleteLifecyclePolicy response element from \a xml.
  */
 void DeleteLifecyclePolicyResponsePrivate::parseDeleteLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteLifecyclePolicyResponsePrivate::parseDeleteLifecyclePolicyResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "deleteclientcertificaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteClientCertificateRequest;
 
-class DeleteClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteClientCertificateRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteClientCertificateRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteClientCertificateRequest * const q);
     DeleteClientCertificateRequestPrivate(const DeleteClientCertificateRequestPrivate &other,
                                    DeleteClientCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

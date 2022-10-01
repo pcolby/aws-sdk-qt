@@ -24,7 +24,7 @@
 #include "describeaddonrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DescribeAddonRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

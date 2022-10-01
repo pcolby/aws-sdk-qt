@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyCertificatesResponse
- * \brief The ModifyCertificatesResponse class provides an interace for RDS ModifyCertificates responses.
+ * \class QtAws::Rds::ModifyCertificatesResponse
+ * \brief The ModifyCertificatesResponse class provides an interace for Rds ModifyCertificates responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyCertificatesRequest * ModifyCertificatesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyCertificates \a response.
+ * Parses a successful Rds ModifyCertificates \a response.
  */
 void ModifyCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyCertificatesResponsePrivate
+ * \class QtAws::Rds::ModifyCertificatesResponsePrivate
  * \brief The ModifyCertificatesResponsePrivate class provides private implementation for ModifyCertificatesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyCertificatesResponsePrivate::ModifyCertificatesResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyCertificates response element from \a xml.
+ * Parses a Rds ModifyCertificates response element from \a xml.
  */
 void ModifyCertificatesResponsePrivate::parseModifyCertificatesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyCertificatesResponsePrivate::parseModifyCertificatesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

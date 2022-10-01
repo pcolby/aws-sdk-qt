@@ -24,14 +24,14 @@
 #include "getauthorizationtokenrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class GetAuthorizationTokenRequest;
 
-class GetAuthorizationTokenRequestPrivate : public ECRPublicRequestPrivate {
+class GetAuthorizationTokenRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    GetAuthorizationTokenRequestPrivate(const ECRPublicRequest::Action action,
+    GetAuthorizationTokenRequestPrivate(const EcrPublicRequest::Action action,
                                    GetAuthorizationTokenRequest * const q);
     GetAuthorizationTokenRequestPrivate(const GetAuthorizationTokenRequestPrivate &other,
                                    GetAuthorizationTokenRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

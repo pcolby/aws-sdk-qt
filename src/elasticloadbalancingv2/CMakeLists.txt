@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSELASTICLOADBALANCINGV2_LIBRARY)
 
 add_library(QtAwsElasticLoadBalancingv2
+  qtawselasticloadbalancingv2global.h
+  elasticloadbalancingv2client.h
+  elasticloadbalancingv2client_p.h
+  elasticloadbalancingv2request.h
+  elasticloadbalancingv2request_p.h
+  elasticloadbalancingv2response.h
+  elasticloadbalancingv2response_p.h
   addlistenercertificatesrequest.h
   addlistenercertificatesrequest_p.h
   addlistenercertificatesresponse.h
@@ -89,12 +96,6 @@ add_library(QtAwsElasticLoadBalancingv2
   describetargethealthrequest_p.h
   describetargethealthresponse.h
   describetargethealthresponse_p.h
-  elasticloadbalancingv2client.h
-  elasticloadbalancingv2client_p.h
-  elasticloadbalancingv2request.h
-  elasticloadbalancingv2request_p.h
-  elasticloadbalancingv2response.h
-  elasticloadbalancingv2response_p.h
   modifylistenerrequest.h
   modifylistenerrequest_p.h
   modifylistenerresponse.h
@@ -107,15 +108,14 @@ add_library(QtAwsElasticLoadBalancingv2
   modifyrulerequest_p.h
   modifyruleresponse.h
   modifyruleresponse_p.h
-  modifytargetgroupattributesrequest.h
-  modifytargetgroupattributesrequest_p.h
-  modifytargetgroupattributesresponse.h
-  modifytargetgroupattributesresponse_p.h
   modifytargetgrouprequest.h
   modifytargetgrouprequest_p.h
   modifytargetgroupresponse.h
   modifytargetgroupresponse_p.h
-  qtawselasticloadbalancingv2global.h
+  modifytargetgroupattributesrequest.h
+  modifytargetgroupattributesrequest_p.h
+  modifytargetgroupattributesresponse.h
+  modifytargetgroupattributesresponse_p.h
   registertargetsrequest.h
   registertargetsrequest_p.h
   registertargetsresponse.h
@@ -144,6 +144,9 @@ add_library(QtAwsElasticLoadBalancingv2
   setsubnetsrequest_p.h
   setsubnetsresponse.h
   setsubnetsresponse_p.h
+  elasticloadbalancingv2client.cpp
+  elasticloadbalancingv2request.cpp
+  elasticloadbalancingv2response.cpp
   addlistenercertificatesrequest.cpp
   addlistenercertificatesresponse.cpp
   addtagsrequest.cpp
@@ -188,19 +191,16 @@ add_library(QtAwsElasticLoadBalancingv2
   describetargetgroupsresponse.cpp
   describetargethealthrequest.cpp
   describetargethealthresponse.cpp
-  elasticloadbalancingv2client.cpp
-  elasticloadbalancingv2request.cpp
-  elasticloadbalancingv2response.cpp
   modifylistenerrequest.cpp
   modifylistenerresponse.cpp
   modifyloadbalancerattributesrequest.cpp
   modifyloadbalancerattributesresponse.cpp
   modifyrulerequest.cpp
   modifyruleresponse.cpp
-  modifytargetgroupattributesrequest.cpp
-  modifytargetgroupattributesresponse.cpp
   modifytargetgrouprequest.cpp
   modifytargetgroupresponse.cpp
+  modifytargetgroupattributesrequest.cpp
+  modifytargetgroupattributesresponse.cpp
   registertargetsrequest.cpp
   registertargetsresponse.cpp
   removelistenercertificatesrequest.cpp

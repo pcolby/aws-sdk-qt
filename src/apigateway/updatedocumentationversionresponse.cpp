@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationVersionResponse
- * \brief The UpdateDocumentationVersionResponse class provides an interace for APIGateway UpdateDocumentationVersion responses.
+ * \class QtAws::ApiGateway::UpdateDocumentationVersionResponse
+ * \brief The UpdateDocumentationVersionResponse class provides an interace for ApiGateway UpdateDocumentationVersion responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDocumentationVersion
+ * \sa ApiGatewayClient::updateDocumentationVersion
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateDocumentationVersionResponse::UpdateDocumentationVersionResponse(
         const UpdateDocumentationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateDocumentationVersionResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateDocumentationVersionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentationVersionRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateDocumentationVersionRequest * UpdateDocumentationVersionResponse::re
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateDocumentationVersion \a response.
+ * Parses a successful ApiGateway UpdateDocumentationVersion \a response.
  */
 void UpdateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationVersionResponsePrivate
+ * \class QtAws::ApiGateway::UpdateDocumentationVersionResponsePrivate
  * \brief The UpdateDocumentationVersionResponsePrivate class provides private implementation for UpdateDocumentationVersionResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateDocumentationVersionResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentationVersionResponsePrivate::UpdateDocumentationVersionResponsePrivate(
-    UpdateDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateDocumentationVersionResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateDocumentationVersion response element from \a xml.
+ * Parses a ApiGateway UpdateDocumentationVersion response element from \a xml.
  */
 void UpdateDocumentationVersionResponsePrivate::parseUpdateDocumentationVersionResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateDocumentationVersionResponsePrivate::parseUpdateDocumentationVersionR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

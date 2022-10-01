@@ -24,11 +24,11 @@
 #include "getchangetokenrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetChangeTokenResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetChangeTokenResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetChangeTokenResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

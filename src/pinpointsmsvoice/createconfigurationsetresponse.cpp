@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetResponse
- * \brief The CreateConfigurationSetResponse class provides an interace for PinpointSMSVoice CreateConfigurationSet responses.
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetResponse
+ * \brief The CreateConfigurationSetResponse class provides an interace for PinpointSmsVoice CreateConfigurationSet responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::createConfigurationSet
+ * \sa PinpointSmsVoiceClient::createConfigurationSet
  */
 
 /*!
@@ -44,7 +44,7 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
         const CreateConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new CreateConfigurationSetResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new CreateConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice CreateConfigurationSet \a response.
+ * Parses a successful PinpointSmsVoice CreateConfigurationSet \a response.
  */
 void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetResponsePrivate
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetResponsePrivate
  * \brief The CreateConfigurationSetResponsePrivate class provides private implementation for CreateConfigurationSetResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a CreateConfigurationSetResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
-    CreateConfigurationSetResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    CreateConfigurationSetResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice CreateConfigurationSet response element from \a xml.
+ * Parses a PinpointSmsVoice CreateConfigurationSet response element from \a xml.
  */
 void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

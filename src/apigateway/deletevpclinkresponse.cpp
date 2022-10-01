@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteVpcLinkResponse
- * \brief The DeleteVpcLinkResponse class provides an interace for APIGateway DeleteVpcLink responses.
+ * \class QtAws::ApiGateway::DeleteVpcLinkResponse
+ * \brief The DeleteVpcLinkResponse class provides an interace for ApiGateway DeleteVpcLink responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteVpcLink
+ * \sa ApiGatewayClient::deleteVpcLink
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteVpcLinkResponse::DeleteVpcLinkResponse(
         const DeleteVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteVpcLinkResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteVpcLinkResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcLinkRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteVpcLink \a response.
+ * Parses a successful ApiGateway DeleteVpcLink \a response.
  */
 void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteVpcLinkResponsePrivate
+ * \class QtAws::ApiGateway::DeleteVpcLinkResponsePrivate
  * \brief The DeleteVpcLinkResponsePrivate class provides private implementation for DeleteVpcLinkResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteVpcLinkResponsePrivate object with public implementation \a q.
  */
 DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponsePrivate(
-    DeleteVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteVpcLinkResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteVpcLink response element from \a xml.
+ * Parses a ApiGateway DeleteVpcLink response element from \a xml.
  */
 void DeleteVpcLinkResponsePrivate::parseDeleteVpcLinkResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteVpcLinkResponsePrivate::parseDeleteVpcLinkResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

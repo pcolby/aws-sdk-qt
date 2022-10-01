@@ -1,36 +1,69 @@
 add_compile_definitions(QTAWSCLOUDTRAIL_LIBRARY)
 
 add_library(QtAwsCloudTrail
-  addtagsrequest.h
-  addtagsrequest_p.h
-  addtagsresponse.h
-  addtagsresponse_p.h
+  qtawscloudtrailglobal.h
   cloudtrailclient.h
   cloudtrailclient_p.h
   cloudtrailrequest.h
   cloudtrailrequest_p.h
   cloudtrailresponse.h
   cloudtrailresponse_p.h
+  addtagsrequest.h
+  addtagsrequest_p.h
+  addtagsresponse.h
+  addtagsresponse_p.h
+  cancelqueryrequest.h
+  cancelqueryrequest_p.h
+  cancelqueryresponse.h
+  cancelqueryresponse_p.h
+  createeventdatastorerequest.h
+  createeventdatastorerequest_p.h
+  createeventdatastoreresponse.h
+  createeventdatastoreresponse_p.h
   createtrailrequest.h
   createtrailrequest_p.h
   createtrailresponse.h
   createtrailresponse_p.h
+  deleteeventdatastorerequest.h
+  deleteeventdatastorerequest_p.h
+  deleteeventdatastoreresponse.h
+  deleteeventdatastoreresponse_p.h
   deletetrailrequest.h
   deletetrailrequest_p.h
   deletetrailresponse.h
   deletetrailresponse_p.h
+  describequeryrequest.h
+  describequeryrequest_p.h
+  describequeryresponse.h
+  describequeryresponse_p.h
   describetrailsrequest.h
   describetrailsrequest_p.h
   describetrailsresponse.h
   describetrailsresponse_p.h
+  getchannelrequest.h
+  getchannelrequest_p.h
+  getchannelresponse.h
+  getchannelresponse_p.h
+  geteventdatastorerequest.h
+  geteventdatastorerequest_p.h
+  geteventdatastoreresponse.h
+  geteventdatastoreresponse_p.h
   geteventselectorsrequest.h
   geteventselectorsrequest_p.h
   geteventselectorsresponse.h
   geteventselectorsresponse_p.h
+  getimportrequest.h
+  getimportrequest_p.h
+  getimportresponse.h
+  getimportresponse_p.h
   getinsightselectorsrequest.h
   getinsightselectorsrequest_p.h
   getinsightselectorsresponse.h
   getinsightselectorsresponse_p.h
+  getqueryresultsrequest.h
+  getqueryresultsrequest_p.h
+  getqueryresultsresponse.h
+  getqueryresultsresponse_p.h
   gettrailrequest.h
   gettrailrequest_p.h
   gettrailresponse.h
@@ -39,10 +72,30 @@ add_library(QtAwsCloudTrail
   gettrailstatusrequest_p.h
   gettrailstatusresponse.h
   gettrailstatusresponse_p.h
+  listchannelsrequest.h
+  listchannelsrequest_p.h
+  listchannelsresponse.h
+  listchannelsresponse_p.h
+  listeventdatastoresrequest.h
+  listeventdatastoresrequest_p.h
+  listeventdatastoresresponse.h
+  listeventdatastoresresponse_p.h
+  listimportfailuresrequest.h
+  listimportfailuresrequest_p.h
+  listimportfailuresresponse.h
+  listimportfailuresresponse_p.h
+  listimportsrequest.h
+  listimportsrequest_p.h
+  listimportsresponse.h
+  listimportsresponse_p.h
   listpublickeysrequest.h
   listpublickeysrequest_p.h
   listpublickeysresponse.h
   listpublickeysresponse_p.h
+  listqueriesrequest.h
+  listqueriesrequest_p.h
+  listqueriesresponse.h
+  listqueriesresponse_p.h
   listtagsrequest.h
   listtagsrequest_p.h
   listtagsresponse.h
@@ -63,44 +116,89 @@ add_library(QtAwsCloudTrail
   putinsightselectorsrequest_p.h
   putinsightselectorsresponse.h
   putinsightselectorsresponse_p.h
-  qtawscloudtrailglobal.h
   removetagsrequest.h
   removetagsrequest_p.h
   removetagsresponse.h
   removetagsresponse_p.h
+  restoreeventdatastorerequest.h
+  restoreeventdatastorerequest_p.h
+  restoreeventdatastoreresponse.h
+  restoreeventdatastoreresponse_p.h
+  startimportrequest.h
+  startimportrequest_p.h
+  startimportresponse.h
+  startimportresponse_p.h
   startloggingrequest.h
   startloggingrequest_p.h
   startloggingresponse.h
   startloggingresponse_p.h
+  startqueryrequest.h
+  startqueryrequest_p.h
+  startqueryresponse.h
+  startqueryresponse_p.h
+  stopimportrequest.h
+  stopimportrequest_p.h
+  stopimportresponse.h
+  stopimportresponse_p.h
   stoploggingrequest.h
   stoploggingrequest_p.h
   stoploggingresponse.h
   stoploggingresponse_p.h
+  updateeventdatastorerequest.h
+  updateeventdatastorerequest_p.h
+  updateeventdatastoreresponse.h
+  updateeventdatastoreresponse_p.h
   updatetrailrequest.h
   updatetrailrequest_p.h
   updatetrailresponse.h
   updatetrailresponse_p.h
-  addtagsrequest.cpp
-  addtagsresponse.cpp
   cloudtrailclient.cpp
   cloudtrailrequest.cpp
   cloudtrailresponse.cpp
+  addtagsrequest.cpp
+  addtagsresponse.cpp
+  cancelqueryrequest.cpp
+  cancelqueryresponse.cpp
+  createeventdatastorerequest.cpp
+  createeventdatastoreresponse.cpp
   createtrailrequest.cpp
   createtrailresponse.cpp
+  deleteeventdatastorerequest.cpp
+  deleteeventdatastoreresponse.cpp
   deletetrailrequest.cpp
   deletetrailresponse.cpp
+  describequeryrequest.cpp
+  describequeryresponse.cpp
   describetrailsrequest.cpp
   describetrailsresponse.cpp
+  getchannelrequest.cpp
+  getchannelresponse.cpp
+  geteventdatastorerequest.cpp
+  geteventdatastoreresponse.cpp
   geteventselectorsrequest.cpp
   geteventselectorsresponse.cpp
+  getimportrequest.cpp
+  getimportresponse.cpp
   getinsightselectorsrequest.cpp
   getinsightselectorsresponse.cpp
+  getqueryresultsrequest.cpp
+  getqueryresultsresponse.cpp
   gettrailrequest.cpp
   gettrailresponse.cpp
   gettrailstatusrequest.cpp
   gettrailstatusresponse.cpp
+  listchannelsrequest.cpp
+  listchannelsresponse.cpp
+  listeventdatastoresrequest.cpp
+  listeventdatastoresresponse.cpp
+  listimportfailuresrequest.cpp
+  listimportfailuresresponse.cpp
+  listimportsrequest.cpp
+  listimportsresponse.cpp
   listpublickeysrequest.cpp
   listpublickeysresponse.cpp
+  listqueriesrequest.cpp
+  listqueriesresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
   listtrailsrequest.cpp
@@ -113,10 +211,20 @@ add_library(QtAwsCloudTrail
   putinsightselectorsresponse.cpp
   removetagsrequest.cpp
   removetagsresponse.cpp
+  restoreeventdatastorerequest.cpp
+  restoreeventdatastoreresponse.cpp
+  startimportrequest.cpp
+  startimportresponse.cpp
   startloggingrequest.cpp
   startloggingresponse.cpp
+  startqueryrequest.cpp
+  startqueryresponse.cpp
+  stopimportrequest.cpp
+  stopimportresponse.cpp
   stoploggingrequest.cpp
   stoploggingresponse.cpp
+  updateeventdatastorerequest.cpp
+  updateeventdatastoreresponse.cpp
   updatetrailrequest.cpp
   updatetrailresponse.cpp)
 

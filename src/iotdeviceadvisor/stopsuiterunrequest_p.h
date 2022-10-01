@@ -24,14 +24,14 @@
 #include "stopsuiterunrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class StopSuiteRunRequest;
 
-class StopSuiteRunRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class StopSuiteRunRequestPrivate : public IotDeviceAdvisorRequestPrivate {
 
 public:
-    StopSuiteRunRequestPrivate(const IoTDeviceAdvisorRequest::Action action,
+    StopSuiteRunRequestPrivate(const IotDeviceAdvisorRequest::Action action,
                                    StopSuiteRunRequest * const q);
     StopSuiteRunRequestPrivate(const StopSuiteRunRequestPrivate &other,
                                    StopSuiteRunRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

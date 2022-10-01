@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEngineDefaultClusterParametersRequest
- * \brief The DescribeEngineDefaultClusterParametersRequest class provides an interface for DocDB DescribeEngineDefaultClusterParameters requests.
+ * \class QtAws::DocDb::DescribeEngineDefaultClusterParametersRequest
+ * \brief The DescribeEngineDefaultClusterParametersRequest class provides an interface for DocDb DescribeEngineDefaultClusterParameters requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEngineDefaultClusterParameters
+ * \sa DocDbClient::describeEngineDefaultClusterParameters
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest(const DescribeEngineDefaultClusterParametersRequest &other)
-    : DocDBRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParam
  * Constructs a DescribeEngineDefaultClusterParametersRequest object.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest()
-    : DocDBRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(DocDBRequest::DescribeEngineDefaultClusterParametersAction, this))
+    : DocDbRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(DocDbRequest::DescribeEngineDefaultClusterParametersAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEngineDefaultClusterParametersRequestPrivate
+ * \class QtAws::DocDb::DescribeEngineDefaultClusterParametersRequestPrivate
  * \brief The DescribeEngineDefaultClusterParametersRequestPrivate class provides private implementation for DescribeEngineDefaultClusterParametersRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
-    const DocDBRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClust
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const DescribeEngineDefaultClusterParametersRequestPrivate &other, DescribeEngineDefaultClusterParametersRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

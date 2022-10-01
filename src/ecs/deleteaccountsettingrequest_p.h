@@ -24,7 +24,7 @@
 #include "deleteaccountsettingrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class DeleteAccountSettingRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

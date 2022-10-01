@@ -24,14 +24,14 @@
 #include "deleteresourcepolicyrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class DeleteResourcePolicyRequest;
 
-class DeleteResourcePolicyRequestPrivate : public SSMIncidentsRequestPrivate {
+class DeleteResourcePolicyRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    DeleteResourcePolicyRequestPrivate(const SSMIncidentsRequest::Action action,
+    DeleteResourcePolicyRequestPrivate(const SsmIncidentsRequest::Action action,
                                    DeleteResourcePolicyRequest * const q);
     DeleteResourcePolicyRequestPrivate(const DeleteResourcePolicyRequestPrivate &other,
                                    DeleteResourcePolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

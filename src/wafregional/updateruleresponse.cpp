@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRuleResponse
- * \brief The UpdateRuleResponse class provides an interace for WAFRegional UpdateRule responses.
+ * \class QtAws::WafRegional::UpdateRuleResponse
+ * \brief The UpdateRuleResponse class provides an interace for WafRegional UpdateRule responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRule
+ * \sa WafRegionalClient::updateRule
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateRuleResponse::UpdateRuleResponse(
         const UpdateRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRuleResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRuleRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateRuleRequest * UpdateRuleResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateRule \a response.
+ * Parses a successful WafRegional UpdateRule \a response.
  */
 void UpdateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRuleResponsePrivate
+ * \class QtAws::WafRegional::UpdateRuleResponsePrivate
  * \brief The UpdateRuleResponsePrivate class provides private implementation for UpdateRuleResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
-    UpdateRuleResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateRuleResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateRule response element from \a xml.
+ * Parses a WafRegional UpdateRule response element from \a xml.
  */
 void UpdateRuleResponsePrivate::parseUpdateRuleResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateRuleResponsePrivate::parseUpdateRuleResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

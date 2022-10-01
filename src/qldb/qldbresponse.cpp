@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::QldbResponse
- * \brief The QldbResponse class provides an interface for QLDB responses.
+ * \class QtAws::Qldb::QldbResponse
+ * \brief The QldbResponse class provides an interface for Qldb responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -76,11 +76,11 @@ void QldbResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::QldbResponsePrivate
+ * \class QtAws::Qldb::QldbResponsePrivate
  * \brief The QldbResponsePrivate class provides private implementation for QldbResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -92,5 +92,5 @@ QldbResponsePrivate::QldbResponsePrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

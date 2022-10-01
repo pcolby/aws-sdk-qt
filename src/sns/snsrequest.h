@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class SnsRequestPrivate;
 
 class QTAWSSNS_EXPORT SnsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SNS.
+    /// Actions supported by Sns.
     enum Action {
         AddPermissionAction,
         CheckIfPhoneNumberIsOptedOutAction,
@@ -50,6 +50,7 @@ public:
         DeletePlatformApplicationAction,
         DeleteSMSSandboxPhoneNumberAction,
         DeleteTopicAction,
+        GetDataProtectionPolicyAction,
         GetEndpointAttributesAction,
         GetPlatformApplicationAttributesAction,
         GetSMSAttributesAction,
@@ -67,6 +68,8 @@ public:
         ListTopicsAction,
         OptInPhoneNumberAction,
         PublishAction,
+        PublishBatchAction,
+        PutDataProtectionPolicyAction,
         RemovePermissionAction,
         SetEndpointAttributesAction,
         SetPlatformApplicationAttributesAction,
@@ -114,7 +117,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

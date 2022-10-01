@@ -24,11 +24,11 @@
 #include "deleteclientcertificaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteClientCertificateResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteClientCertificateResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteClientCertificateResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

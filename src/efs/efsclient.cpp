@@ -27,6 +27,8 @@
 #include "createfilesystemresponse.h"
 #include "createmounttargetrequest.h"
 #include "createmounttargetresponse.h"
+#include "createreplicationconfigurationrequest.h"
+#include "createreplicationconfigurationresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
 #include "deleteaccesspointrequest.h"
@@ -37,6 +39,8 @@
 #include "deletefilesystempolicyresponse.h"
 #include "deletemounttargetrequest.h"
 #include "deletemounttargetresponse.h"
+#include "deletereplicationconfigurationrequest.h"
+#include "deletereplicationconfigurationresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
 #include "describeaccesspointsrequest.h"
@@ -55,6 +59,8 @@
 #include "describemounttargetsecuritygroupsresponse.h"
 #include "describemounttargetsrequest.h"
 #include "describemounttargetsresponse.h"
+#include "describereplicationconfigurationsrequest.h"
+#include "describereplicationconfigurationsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -80,8 +86,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EFS
- * \brief Contains classess for accessing Amazon Elastic File System (EFS).
+ * \namespace QtAws::Efs
+ * \brief Contains classess for accessing Amazon Elastic File System.
  *
  * \inmodule QtAwsEfs
  *
@@ -89,22 +95,23 @@
  */
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::EfsClient
- * \brief The EfsClient class provides access to the Amazon Elastic File System (EFS) service.
+ * \class QtAws::Efs::EfsClient
+ * \brief The EfsClient class provides access to the Amazon Elastic File System service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  */
 
 /*!
@@ -169,8 +176,8 @@ EfsClient::EfsClient(
  * Creates an EFS access point. An access point is an application-specific view into an EFS file system that applies an
  * operating system user and group, and a file system path, to any file system request made through the access point. The
  * operating system user and group override any identity information provided by the NFS client. The file system path is
- * exposed as the access point's root directory. Applications using the access point can only access data in its own
- * directory and below. To learn more, see <a
+ * exposed as the access point's root directory. Applications using the access point can only access data in the
+ * application's own directory and any subdirectories. To learn more, see <a
  * href="https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html">Mounting a file system using EFS access
  *
  * points</a>>
@@ -190,7 +197,8 @@ CreateAccessPointResponse * EfsClient::createAccessPoint(const CreateAccessPoint
  *
  * Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure
  * idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently
- * exist that is owned by the caller's AWS account with the specified creation token, this operation does the
+ * exist that is owned by the caller's Amazon Web Services account with the specified creation token, this operation does
+ * the
  *
  * following> <ul> <li>
  *
@@ -423,15 +431,98 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
 
 /*!
  * Sends \a request to the EfsClient service, and returns a pointer to an
+ * CreateReplicationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a replication configuration that replicates an existing EFS file system to a new, read-only file system. For
+ * more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+ * replication</a> in the <i>Amazon EFS User Guide</i>. The replication configuration specifies the
+ *
+ * following> <ul> <li>
+ *
+ * <b>Source file system</b> - An existing EFS file system that you want replicated. The source file system cannot be a
+ * destination file system in an existing replication
+ *
+ * configuration> </li> <li>
+ *
+ * <b>Destination file system configuration</b> - The configuration of the destination file system to which the source file
+ * system will be replicated. There can only be one destination file system in a replication configuration. The destination
+ * file system configuration consists of the following
+ *
+ * properties> <ul> <li>
+ *
+ * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is created.
+ * Amazon EFS replication is available in all Amazon Web Services Regions that Amazon EFS is available in, except Africa
+ * (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Jakarta), Europe (Milan), and Middle East
+ *
+ * (Bahrain)> </li> <li>
+ *
+ * <b>Availability Zone</b> - If you want the destination file system to use EFS One Zone availability and durability, you
+ * must specify the Availability Zone to create the file system in. For more information about EFS storage classes, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage classes</a> in the <i>Amazon
+ * EFS User
+ *
+ * Guide</i>> </li> <li>
+ *
+ * <b>Encryption</b> - All destination file systems are created with encryption at rest enabled. You can specify the Key
+ * Management Service (KMS) key that is used to encrypt the destination file system. If you don't specify a KMS key, your
+ * service-managed KMS key for Amazon EFS is used.
+ *
+ * </p <note>
+ *
+ * After the file system is created, you cannot change the KMS
+ *
+ * key> </note> </li> </ul> </li> </ul>
+ *
+ * The following properties are set by
+ *
+ * default> <ul> <li>
+ *
+ * <b>Performance mode</b> - The destination file system's performance mode matches that of the source file system, unless
+ * the destination file system uses EFS One Zone storage. In that case, the General Purpose performance mode is used. The
+ * performance mode cannot be
+ *
+ * changed> </li> <li>
+ *
+ * <b>Throughput mode</b> - The destination file system uses the Bursting Throughput mode by default. After the file system
+ * is created, you can modify the throughput
+ *
+ * mode> </li> </ul>
+ *
+ * The following properties are turned off by
+ *
+ * default> <ul> <li>
+ *
+ * <b>Lifecycle management</b> - EFS lifecycle management and EFS Intelligent-Tiering are not enabled on the destination
+ * file system. After the destination file system is created, you can enable EFS lifecycle management and EFS
+ *
+ * Intelligent-Tiering> </li> <li>
+ *
+ * <b>Automatic backups</b> - Automatic daily backups not enabled on the destination file system. After the file system is
+ * created, you can change this
+ *
+ * setting> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/efs-replication.html">Amazon EFS
+ * replication</a> in the <i>Amazon EFS User
+ */
+CreateReplicationConfigurationResponse * EfsClient::createReplicationConfiguration(const CreateReplicationConfigurationRequest &request)
+{
+    return qobject_cast<CreateReplicationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
  * CreateTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * <note>
  *
- * DEPRECATED - CreateTags is deprecated and not maintained. Please use the API action to create tags for EFS
+ * DEPRECATED - <code>CreateTags</code> is deprecated and not maintained. To create tags for EFS resources, use the API
  *
- * resources> </note>
+ * action> </note>
  *
  * Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the
  * request already exists on the file system, this operation overwrites its value with the value provided in the request.
@@ -475,6 +566,16 @@ DeleteAccessPointResponse * EfsClient::deleteAccessPoint(const DeleteAccessPoint
  * you can't access any contents of the deleted file
  *
  * system>
+ *
+ * You need to manually delete mount targets attached to a file system before you can delete an EFS file system. This step
+ * is performed for you when you use the Amazon Web Services console to delete a file
+ *
+ * system> <note>
+ *
+ * You cannot delete a file system that is part of an EFS Replication configuration. You need to delete the replication
+ * configuration
+ *
+ * first> </note>
  *
  * You can't delete a file system that is in use. That is, if the file system has any mount targets, you must first delete
  * them. For more information, see <a>DescribeMountTargets</a> and <a>DeleteMountTarget</a>.
@@ -559,20 +660,36 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
 
 /*!
  * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteReplicationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing replication configuration. To delete a replication configuration, you must make the request from the
+ * Amazon Web Services Region in which the destination file system is located. Deleting a replication configuration ends
+ * the replication process. After a replication configuration is deleted, the destination file system is no longer
+ * read-only. You can write to the destination file system after its status becomes
+ */
+DeleteReplicationConfigurationResponse * EfsClient::deleteReplicationConfiguration(const DeleteReplicationConfigurationRequest &request)
+{
+    return qobject_cast<DeleteReplicationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
  * DeleteTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * <note>
  *
- * DEPRECATED - DeleteTags is deprecated and not maintained. Please use the API action to remove tags from EFS
+ * DEPRECATED - <code>DeleteTags</code> is deprecated and not maintained. To remove tags from EFS resources, use the API
  *
- * resources> </note>
+ * action> </note>
  *
  * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that doesn't
  * exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see
- * <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
- * <i>AWS Billing and Cost Management User
+ * <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag restrictions</a> in the
+ * <i>Billing and Cost Management User
  *
  * Guide</i>>
  *
@@ -608,6 +725,9 @@ DescribeAccessPointsResponse * EfsClient::describeAccessPoints(const DescribeAcc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the account preferences settings for the Amazon Web Services account associated with the user making the
+ * request, in the current Amazon Web Services Region. For more information, see <a
+ * href="efs/latest/ug/manage-efs-resource-ids.html">Managing Amazon EFS resource
  */
 DescribeAccountPreferencesResponse * EfsClient::describeAccountPreferences(const DescribeAccountPreferencesRequest &request)
 {
@@ -651,8 +771,8 @@ DescribeFileSystemPolicyResponse * EfsClient::describeFileSystemPolicy(const Des
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the description of a specific Amazon EFS file system if either the file system <code>CreationToken</code> or the
- * <code>FileSystemId</code> is provided. Otherwise, it returns descriptions of all file systems owned by the caller's AWS
- * account in the AWS Region of the endpoint that you're
+ * <code>FileSystemId</code> is provided. Otherwise, it returns descriptions of all file systems owned by the caller's
+ * Amazon Web Services account in the Amazon Web Services Region of the endpoint that you're
  *
  * calling>
  *
@@ -695,6 +815,10 @@ DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileS
  * empty array in the
  *
  * response>
+ *
+ * When EFS Intelligent-Tiering is enabled, <code>TransitionToPrimaryStorageClass</code> has a value of
+ *
+ * <code>AFTER_1_ACCESS</code>>
  *
  * This operation requires permissions for the <code>elasticfilesystem:DescribeLifecycleConfiguration</code>
  */
@@ -751,15 +875,30 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
 
 /*!
  * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeReplicationConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the replication configuration for a specific file system. If a file system is not specified, all of the
+ * replication configurations for the Amazon Web Services account in an Amazon Web Services Region are
+ */
+DescribeReplicationConfigurationsResponse * EfsClient::describeReplicationConfigurations(const DescribeReplicationConfigurationsRequest &request)
+{
+    return qobject_cast<DescribeReplicationConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
  * DescribeTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * <note>
  *
- * DEPRECATED - The DeleteTags action is deprecated and not maintained. Please use the API action to remove tags from EFS
+ * DEPRECATED - The <code>DescribeTags</code> action is deprecated and not maintained. To view tags associated with EFS
+ * resources, use the <code>ListTagsForResource</code> API
  *
- * resources> </note>
+ * action> </note>
  *
  * Returns the tags associated with a file system. The order of tags returned in the response of one
  * <code>DescribeTags</code> call and the order of tags returned across the responses of a multiple-call iteration (when
@@ -830,6 +969,17 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Use this operation to set the account preference in the current Amazon Web Services Region to use long 17 character (63
+ * bit) or short 8 character (32 bit) resource IDs for new EFS file system and mount target resources. All existing
+ * resource IDs are not affected by any changes you make. You can set the ID preference during the opt-in period as EFS
+ * transitions to long resource IDs. For more information, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/manage-efs-resource-ids.html">Managing Amazon EFS resource
+ *
+ * IDs</a>> <note>
+ *
+ * Starting in October, 2021, you will receive an error if you try to set the account preference to use the short 8
+ * character format resource ID. Contact Amazon Web Services support if you receive an error and must use short IDs for
+ * file system and mount target
  */
 PutAccountPreferencesResponse * EfsClient::putAccountPreferences(const PutAccountPreferencesRequest &request)
 {
@@ -863,11 +1013,11 @@ PutBackupPolicyResponse * EfsClient::putBackupPolicy(const PutBackupPolicyReques
  * href="https://docs.aws.amazon.com/efs/latest/ug/iam-access-control-nfs-efs.html#default-filesystempolicy">Default EFS
  * File System Policy</a>.
  *
- * </p
+ * </p <note>
  *
  * EFS file system policies have a 20,000 character
  *
- * limit>
+ * limit> </note>
  *
  * This operation requires permissions for the <code>elasticfilesystem:PutFileSystemPolicy</code>
  */
@@ -882,40 +1032,68 @@ PutFileSystemPolicyResponse * EfsClient::putFileSystemPolicy(const PutFileSystem
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables lifecycle management by creating a new <code>LifecycleConfiguration</code> object. A
- * <code>LifecycleConfiguration</code> object defines when files in an Amazon EFS file system are automatically
- * transitioned to the lower-cost EFS Infrequent Access (IA) storage class. A <code>LifecycleConfiguration</code> applies
- * to all files in a file
+ * Use this action to manage EFS lifecycle management and intelligent tiering. A <code>LifecycleConfiguration</code>
+ * consists of one or more <code>LifecyclePolicy</code> objects that define the
  *
- * system>
+ * following> <ul> <li>
+ *
+ * <b>EFS Lifecycle management</b> - When Amazon EFS automatically transitions files in a file system into the lower-cost
+ * Infrequent Access (IA) storage
+ *
+ * class>
+ *
+ * To enable EFS Lifecycle management, set the value of <code>TransitionToIA</code> to one of the available
+ *
+ * options> </li> <li>
+ *
+ * <b>EFS Intelligent tiering</b> - When Amazon EFS automatically transitions files from IA back into the file system's
+ * primary storage class (Standard or One Zone
+ *
+ * Standard>
+ *
+ * To enable EFS Intelligent Tiering, set the value of <code>TransitionToPrimaryStorageClass</code> to
+ *
+ * <code>AFTER_1_ACCESS</code>> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html">EFS
+ * Lifecycle
+ *
+ * Management</a>>
  *
  * Each Amazon EFS file system supports one lifecycle configuration, which applies to all files in the file system. If a
  * <code>LifecycleConfiguration</code> object already exists for the specified file system, a
  * <code>PutLifecycleConfiguration</code> call modifies the existing configuration. A
  * <code>PutLifecycleConfiguration</code> call with an empty <code>LifecyclePolicies</code> array in the request body
- * deletes any existing <code>LifecycleConfiguration</code> and disables lifecycle
+ * deletes any existing <code>LifecycleConfiguration</code> and turns off lifecycle management and intelligent tiering for
+ * the file
  *
- * management>
+ * system>
  *
  * In the request, specify the following:
  *
  * </p <ul> <li>
  *
- * The ID for the file system for which you are enabling, disabling, or modifying lifecycle
+ * The ID for the file system for which you are enabling, disabling, or modifying lifecycle management and intelligent
  *
- * management> </li> <li>
+ * tiering> </li> <li>
  *
- * A <code>LifecyclePolicies</code> array of <code>LifecyclePolicy</code> objects that define when files are moved to the
- * IA storage class. The array can contain only one <code>LifecyclePolicy</code>
+ * A <code>LifecyclePolicies</code> array of <code>LifecyclePolicy</code> objects that define when files are moved into IA
+ * storage, and when they are moved back to Standard
  *
- * item> </li> </ul>
+ * storage> <note>
+ *
+ * Amazon EFS requires that each <code>LifecyclePolicy</code> object have only have a single transition, so the
+ * <code>LifecyclePolicies</code> array needs to be structured with separate <code>LifecyclePolicy</code> objects. See the
+ * example requests in the following section for more
+ *
+ * information> </note> </li> </ul>
  *
  * This operation requires permissions for the <code>elasticfilesystem:PutLifecycleConfiguration</code>
  *
  * operation>
  *
- * To apply a <code>LifecycleConfiguration</code> object to an encrypted file system, you need the same AWS Key Management
- * Service (AWS KMS) permissions as when you created the encrypted file system.
+ * To apply a <code>LifecycleConfiguration</code> object to an encrypted file system, you need the same Key Management
+ * Service permissions as when you created the encrypted file
  */
 PutLifecycleConfigurationResponse * EfsClient::putLifecycleConfiguration(const PutLifecycleConfigurationRequest &request)
 {
@@ -970,12 +1148,12 @@ UpdateFileSystemResponse * EfsClient::updateFileSystem(const UpdateFileSystemReq
 }
 
 /*!
- * \class QtAws::EFS::EfsClientPrivate
+ * \class QtAws::Efs::EfsClientPrivate
  * \brief The EfsClientPrivate class provides private implementation for EfsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -987,5 +1165,5 @@ EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

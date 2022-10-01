@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteVerifiedEmailAddressResponse
- * \brief The DeleteVerifiedEmailAddressResponse class provides an interace for SES DeleteVerifiedEmailAddress responses.
+ * \class QtAws::Ses::DeleteVerifiedEmailAddressResponse
+ * \brief The DeleteVerifiedEmailAddressResponse class provides an interace for Ses DeleteVerifiedEmailAddress responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteVerifiedEmailAddressRequest * DeleteVerifiedEmailAddressResponse::re
 
 /*!
  * \reimp
- * Parses a successful SES DeleteVerifiedEmailAddress \a response.
+ * Parses a successful Ses DeleteVerifiedEmailAddress \a response.
  */
 void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::DeleteVerifiedEmailAddressResponsePrivate
+ * \class QtAws::Ses::DeleteVerifiedEmailAddressResponsePrivate
  * \brief The DeleteVerifiedEmailAddressResponsePrivate class provides private implementation for DeleteVerifiedEmailAddressResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePri
 }
 
 /*!
- * Parses a SES DeleteVerifiedEmailAddress response element from \a xml.
+ * Parses a Ses DeleteVerifiedEmailAddress response element from \a xml.
  */
 void DeleteVerifiedEmailAddressResponsePrivate::parseDeleteVerifiedEmailAddressResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteVerifiedEmailAddressResponsePrivate::parseDeleteVerifiedEmailAddressR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

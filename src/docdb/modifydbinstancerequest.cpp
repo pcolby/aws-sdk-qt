@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBInstanceRequest
- * \brief The ModifyDBInstanceRequest class provides an interface for DocDB ModifyDBInstance requests.
+ * \class QtAws::DocDb::ModifyDBInstanceRequest
+ * \brief The ModifyDBInstanceRequest class provides an interface for DocDb ModifyDBInstance requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBInstance
+ * \sa DocDbClient::modifyDBInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &other)
-    : DocDBRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &
  * Constructs a ModifyDBInstanceRequest object.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest()
-    : DocDBRequest(new ModifyDBInstanceRequestPrivate(DocDBRequest::ModifyDBInstanceAction, this))
+    : DocDbRequest(new ModifyDBInstanceRequestPrivate(DocDbRequest::ModifyDBInstanceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBInstanceRequestPrivate
+ * \class QtAws::DocDb::ModifyDBInstanceRequestPrivate
  * \brief The ModifyDBInstanceRequestPrivate class provides private implementation for ModifyDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ModifyDBInstanceRequestPrivate object for DocDB \a action,
+ * Constructs a ModifyDBInstanceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
-    const DocDBRequest::Action action, ModifyDBInstanceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ModifyDBInstanceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const ModifyDBInstanceRequestPrivate &other, ModifyDBInstanceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

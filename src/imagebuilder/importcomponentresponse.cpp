@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ImportComponentResponse
- * \brief The ImportComponentResponse class provides an interace for imagebuilder ImportComponent responses.
+ * \class QtAws::ImageBuilder::ImportComponentResponse
+ * \brief The ImportComponentResponse class provides an interace for ImageBuilder ImportComponent responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::importComponent
+ * \sa ImageBuilderClient::importComponent
  */
 
 /*!
@@ -47,7 +47,7 @@ ImportComponentResponse::ImportComponentResponse(
         const ImportComponentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ImportComponentResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ImportComponentResponsePrivate(this), parent)
 {
     setRequest(new ImportComponentRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ImportComponentRequest * ImportComponentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ImportComponent \a response.
+ * Parses a successful ImageBuilder ImportComponent \a response.
  */
 void ImportComponentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ImportComponentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ImportComponentResponsePrivate
+ * \class QtAws::ImageBuilder::ImportComponentResponsePrivate
  * \brief The ImportComponentResponsePrivate class provides private implementation for ImportComponentResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ImportComponentResponsePrivate object with public implementation \a q.
  */
 ImportComponentResponsePrivate::ImportComponentResponsePrivate(
-    ImportComponentResponse * const q) : imagebuilderResponsePrivate(q)
+    ImportComponentResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ImportComponent response element from \a xml.
+ * Parses a ImageBuilder ImportComponent response element from \a xml.
  */
 void ImportComponentResponsePrivate::parseImportComponentResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ImportComponentResponsePrivate::parseImportComponentResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

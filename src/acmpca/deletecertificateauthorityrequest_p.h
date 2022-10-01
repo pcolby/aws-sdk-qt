@@ -24,14 +24,14 @@
 #include "deletecertificateauthorityrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class DeleteCertificateAuthorityRequest;
 
-class DeleteCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
+class DeleteCertificateAuthorityRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    DeleteCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,
+    DeleteCertificateAuthorityRequestPrivate(const AcmPcaRequest::Action action,
                                    DeleteCertificateAuthorityRequest * const q);
     DeleteCertificateAuthorityRequestPrivate(const DeleteCertificateAuthorityRequestPrivate &other,
                                    DeleteCertificateAuthorityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

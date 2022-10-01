@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBProxyTargetsRequest
- * \brief The DescribeDBProxyTargetsRequest class provides an interface for RDS DescribeDBProxyTargets requests.
+ * \class QtAws::Rds::DescribeDBProxyTargetsRequest
+ * \brief The DescribeDBProxyTargetsRequest class provides an interface for Rds DescribeDBProxyTargets requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBProxyTargetsRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBProxyTargetsRequestPrivate
+ * \class QtAws::Rds::DescribeDBProxyTargetsRequestPrivate
  * \brief The DescribeDBProxyTargetsRequestPrivate class provides private implementation for DescribeDBProxyTargetsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBProxyTargetsRequestPrivate::DescribeDBProxyTargetsRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

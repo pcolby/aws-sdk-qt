@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteClientCertificateRequest
- * \brief The DeleteClientCertificateRequest class provides an interface for APIGateway DeleteClientCertificate requests.
+ * \class QtAws::ApiGateway::DeleteClientCertificateRequest
+ * \brief The DeleteClientCertificateRequest class provides an interface for ApiGateway DeleteClientCertificate requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteClientCertificate
+ * \sa ApiGatewayClient::deleteClientCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClientCertificateRequest &other)
-    : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteClientCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClien
  * Constructs a DeleteClientCertificateRequest object.
  */
 DeleteClientCertificateRequest::DeleteClientCertificateRequest()
-    : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(APIGatewayRequest::DeleteClientCertificateAction, this))
+    : ApiGatewayRequest(new DeleteClientCertificateRequestPrivate(ApiGatewayRequest::DeleteClientCertificateAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteClientCertificateRequestPrivate
+ * \class QtAws::ApiGateway::DeleteClientCertificateRequestPrivate
  * \brief The DeleteClientCertificateRequestPrivate class provides private implementation for DeleteClientCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteClientCertificateRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteClientCertificateRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteClientCertificateRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const DeleteClientCertificateRequestPrivate &other, DeleteClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

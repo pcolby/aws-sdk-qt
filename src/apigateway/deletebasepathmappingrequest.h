@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteBasePathMappingRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingRequest : public ApiGatewayRequest {
 
 public:
     DeleteBasePathMappingRequest(const DeleteBasePathMappingRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::AcmpcaResponse
- * \brief The AcmpcaResponse class provides an interface for ACMPCA responses.
+ * \class QtAws::AcmPca::AcmPcaResponse
+ * \brief The AcmPcaResponse class provides an interface for AcmPca responses.
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
- * Constructs a AcmpcaResponse object with parent \a parent.
+ * Constructs a AcmPcaResponse object with parent \a parent.
  */
-AcmpcaResponse::AcmpcaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AcmpcaResponsePrivate(this), parent)
+AcmPcaResponse::AcmPcaResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new AcmPcaResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a AcmpcaResponse object with private implementation \a d,
+ * Constructs a AcmPcaResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from AcmpcaResponsePrivate.
+ * implementation that inherits from AcmPcaResponsePrivate.
  */
-AcmpcaResponse::AcmpcaResponse(AcmpcaResponsePrivate * const d, QObject * const parent)
+AcmPcaResponse::AcmPcaResponse(AcmPcaResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ AcmpcaResponse::AcmpcaResponse(AcmpcaResponsePrivate * const d, QObject * const 
 /*!
  * \reimp
  */
-void AcmpcaResponse::parseFailure(QIODevice &response)
+void AcmPcaResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(AcmpcaResponse);
+    //Q_D(AcmPcaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void AcmpcaResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACMPCA::AcmpcaResponsePrivate
- * \brief The AcmpcaResponsePrivate class provides private implementation for AcmpcaResponse.
+ * \class QtAws::AcmPca::AcmPcaResponsePrivate
+ * \brief The AcmPcaResponsePrivate class provides private implementation for AcmPcaResponse.
  * \internal
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
- * Constructs a AcmpcaResponsePrivate object with public implementation \a q.
+ * Constructs a AcmPcaResponsePrivate object with public implementation \a q.
  */
-AcmpcaResponsePrivate::AcmpcaResponsePrivate(
-    AcmpcaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+AcmPcaResponsePrivate::AcmPcaResponsePrivate(
+    AcmPcaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

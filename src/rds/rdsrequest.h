@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class RdsRequestPrivate;
 
 class QTAWSRDS_EXPORT RdsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by RDS.
+    /// Actions supported by Rds.
     enum Action {
         AddRoleToDBClusterAction,
         AddRoleToDBInstanceAction,
@@ -52,7 +52,7 @@ public:
         CopyDBParameterGroupAction,
         CopyDBSnapshotAction,
         CopyOptionGroupAction,
-        CreateCustomAvailabilityZoneAction,
+        CreateCustomDBEngineVersionAction,
         CreateDBClusterAction,
         CreateDBClusterEndpointAction,
         CreateDBClusterParameterGroupAction,
@@ -68,7 +68,7 @@ public:
         CreateEventSubscriptionAction,
         CreateGlobalClusterAction,
         CreateOptionGroupAction,
-        DeleteCustomAvailabilityZoneAction,
+        DeleteCustomDBEngineVersionAction,
         DeleteDBClusterAction,
         DeleteDBClusterEndpointAction,
         DeleteDBClusterParameterGroupAction,
@@ -83,12 +83,10 @@ public:
         DeleteDBSubnetGroupAction,
         DeleteEventSubscriptionAction,
         DeleteGlobalClusterAction,
-        DeleteInstallationMediaAction,
         DeleteOptionGroupAction,
         DeregisterDBProxyTargetsAction,
         DescribeAccountAttributesAction,
         DescribeCertificatesAction,
-        DescribeCustomAvailabilityZonesAction,
         DescribeDBClusterBacktracksAction,
         DescribeDBClusterEndpointsAction,
         DescribeDBClusterParameterGroupsAction,
@@ -117,7 +115,6 @@ public:
         DescribeEventsAction,
         DescribeExportTasksAction,
         DescribeGlobalClustersAction,
-        DescribeInstallationMediaAction,
         DescribeOptionGroupOptionsAction,
         DescribeOptionGroupsAction,
         DescribeOrderableDBInstanceOptionsAction,
@@ -129,10 +126,11 @@ public:
         DownloadDBLogFilePortionAction,
         FailoverDBClusterAction,
         FailoverGlobalClusterAction,
-        ImportInstallationMediaAction,
         ListTagsForResourceAction,
+        ModifyActivityStreamAction,
         ModifyCertificatesAction,
         ModifyCurrentDBClusterCapacityAction,
+        ModifyCustomDBEngineVersionAction,
         ModifyDBClusterAction,
         ModifyDBClusterEndpointAction,
         ModifyDBClusterParameterGroupAction,
@@ -151,6 +149,7 @@ public:
         PromoteReadReplicaAction,
         PromoteReadReplicaDBClusterAction,
         PurchaseReservedDBInstancesOfferingAction,
+        RebootDBClusterAction,
         RebootDBInstanceAction,
         RegisterDBProxyTargetsAction,
         RemoveFromGlobalClusterAction,
@@ -176,6 +175,7 @@ public:
         StopDBClusterAction,
         StopDBInstanceAction,
         StopDBInstanceAutomatedBackupsReplicationAction,
+        SwitchoverReadReplicaAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
@@ -212,7 +212,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

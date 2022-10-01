@@ -24,14 +24,14 @@
 #include "getworkinglocationrequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class GetWorkingLocationRequest;
 
-class GetWorkingLocationRequestPrivate : public FinSpaceDataRequestPrivate {
+class GetWorkingLocationRequestPrivate : public FinspaceDataRequestPrivate {
 
 public:
-    GetWorkingLocationRequestPrivate(const FinSpaceDataRequest::Action action,
+    GetWorkingLocationRequestPrivate(const FinspaceDataRequest::Action action,
                                    GetWorkingLocationRequest * const q);
     GetWorkingLocationRequestPrivate(const GetWorkingLocationRequestPrivate &other,
                                    GetWorkingLocationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "listenvironmentsrequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class ListEnvironmentsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listdatasourcesrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListDataSourcesRequest;
 
-class ListDataSourcesRequestPrivate : public kendraRequestPrivate {
+class ListDataSourcesRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ListDataSourcesRequestPrivate(const kendraRequest::Action action,
+    ListDataSourcesRequestPrivate(const KendraRequest::Action action,
                                    ListDataSourcesRequest * const q);
     ListDataSourcesRequestPrivate(const ListDataSourcesRequestPrivate &other,
                                    ListDataSourcesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

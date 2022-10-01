@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateXssMatchSetRequest
- * \brief The CreateXssMatchSetRequest class provides an interface for WAFRegional CreateXssMatchSet requests.
+ * \class QtAws::WafRegional::CreateXssMatchSetRequest
+ * \brief The CreateXssMatchSetRequest class provides an interface for WafRegional CreateXssMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createXssMatchSet
+ * \sa WafRegionalClient::createXssMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateXssMatchSetRequest::CreateXssMatchSetRequest(const CreateXssMatchSetRequest &other)
-    : WAFRegionalRequest(new CreateXssMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateXssMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateXssMatchSetRequest::CreateXssMatchSetRequest(const CreateXssMatchSetReques
  * Constructs a CreateXssMatchSetRequest object.
  */
 CreateXssMatchSetRequest::CreateXssMatchSetRequest()
-    : WAFRegionalRequest(new CreateXssMatchSetRequestPrivate(WAFRegionalRequest::CreateXssMatchSetAction, this))
+    : WafRegionalRequest(new CreateXssMatchSetRequestPrivate(WafRegionalRequest::CreateXssMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateXssMatchSetRequestPrivate
+ * \class QtAws::WafRegional::CreateXssMatchSetRequestPrivate
  * \brief The CreateXssMatchSetRequestPrivate class provides private implementation for CreateXssMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateXssMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateXssMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateXssMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
  */
 CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
     const CreateXssMatchSetRequestPrivate &other, CreateXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

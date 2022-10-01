@@ -24,28 +24,28 @@
 #include "qldbsessionrequest.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionRequest;
+class QldbSessionRequest;
 
-class QLDBSessionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QldbSessionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    QLDBSessionRequest::Action action; ///< QLDBSession action to be performed.
-    QString apiVersion;        ///< QLDBSession API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< QLDBSession request (query string) parameters. @todo?
+    QldbSessionRequest::Action action; ///< QldbSession action to be performed.
+    QString apiVersion;        ///< QldbSession API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< QldbSession request (query string) parameters. @todo?
 
-    QLDBSessionRequestPrivate(const QLDBSessionRequest::Action action, QLDBSessionRequest * const q);
-    QLDBSessionRequestPrivate(const QLDBSessionRequestPrivate &other, QLDBSessionRequest * const q);
+    QldbSessionRequestPrivate(const QldbSessionRequest::Action action, QldbSessionRequest * const q);
+    QldbSessionRequestPrivate(const QldbSessionRequestPrivate &other, QldbSessionRequest * const q);
 
-    static QString toString(const QLDBSessionRequest::Action &action);
+    static QString toString(const QldbSessionRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(QLDBSessionRequest)
+    Q_DECLARE_PUBLIC(QldbSessionRequest)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

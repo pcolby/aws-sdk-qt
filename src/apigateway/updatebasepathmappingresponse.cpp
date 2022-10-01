@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateBasePathMappingResponse
- * \brief The UpdateBasePathMappingResponse class provides an interace for APIGateway UpdateBasePathMapping responses.
+ * \class QtAws::ApiGateway::UpdateBasePathMappingResponse
+ * \brief The UpdateBasePathMappingResponse class provides an interace for ApiGateway UpdateBasePathMapping responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateBasePathMapping
+ * \sa ApiGatewayClient::updateBasePathMapping
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
         const UpdateBasePathMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateBasePathMappingResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateBasePathMappingResponsePrivate(this), parent)
 {
     setRequest(new UpdateBasePathMappingRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateBasePathMapping \a response.
+ * Parses a successful ApiGateway UpdateBasePathMapping \a response.
  */
 void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateBasePathMappingResponsePrivate
+ * \class QtAws::ApiGateway::UpdateBasePathMappingResponsePrivate
  * \brief The UpdateBasePathMappingResponsePrivate class provides private implementation for UpdateBasePathMappingResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateBasePathMappingResponsePrivate object with public implementation \a q.
  */
 UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
-    UpdateBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateBasePathMappingResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateBasePathMapping response element from \a xml.
+ * Parses a ApiGateway UpdateBasePathMapping response element from \a xml.
  */
 void UpdateBasePathMappingResponsePrivate::parseUpdateBasePathMappingResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateBasePathMappingResponsePrivate::parseUpdateBasePathMappingResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

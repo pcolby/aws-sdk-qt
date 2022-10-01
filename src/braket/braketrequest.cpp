@@ -36,12 +36,16 @@ namespace Braket {
  * This enum describes the actions that can be performed as Braket
  * requests.
  *
+ * \value CancelJobAction Braket CancelJob action.
  * \value CancelQuantumTaskAction Braket CancelQuantumTask action.
+ * \value CreateJobAction Braket CreateJob action.
  * \value CreateQuantumTaskAction Braket CreateQuantumTask action.
  * \value GetDeviceAction Braket GetDevice action.
+ * \value GetJobAction Braket GetJob action.
  * \value GetQuantumTaskAction Braket GetQuantumTask action.
  * \value ListTagsForResourceAction Braket ListTagsForResource action.
  * \value SearchDevicesAction Braket SearchDevices action.
+ * \value SearchJobsAction Braket SearchJobs action.
  * \value SearchQuantumTasksAction Braket SearchQuantumTasks action.
  * \value TagResourceAction Braket TagResource action.
  * \value UntagResourceAction Braket UntagResource action.
@@ -252,7 +256,7 @@ QNetworkRequest BraketRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BraketRequestPrivate::BraketRequestPrivate(const BraketRequest::Action action, BraketRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-09-01"))
 {
 
 }
@@ -286,12 +290,16 @@ QString BraketRequestPrivate::toString(const BraketRequest::Action &action)
     #define ActionToString(action) \
         case BraketRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(CancelJob);
         ActionToString(CancelQuantumTask);
+        ActionToString(CreateJob);
         ActionToString(CreateQuantumTask);
         ActionToString(GetDevice);
+        ActionToString(GetJob);
         ActionToString(GetQuantumTask);
         ActionToString(ListTagsForResource);
         ActionToString(SearchDevices);
+        ActionToString(SearchJobs);
         ActionToString(SearchQuantumTasks);
         ActionToString(TagResource);
         ActionToString(UntagResource);

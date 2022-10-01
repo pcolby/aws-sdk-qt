@@ -24,14 +24,14 @@
 #include "testinvokemethodrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class TestInvokeMethodRequest;
 
-class TestInvokeMethodRequestPrivate : public APIGatewayRequestPrivate {
+class TestInvokeMethodRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    TestInvokeMethodRequestPrivate(const APIGatewayRequest::Action action,
+    TestInvokeMethodRequestPrivate(const ApiGatewayRequest::Action action,
                                    TestInvokeMethodRequest * const q);
     TestInvokeMethodRequestPrivate(const TestInvokeMethodRequestPrivate &other,
                                    TestInvokeMethodRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

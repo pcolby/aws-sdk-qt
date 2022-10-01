@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterFromS3Request
- * \brief The RestoreDBClusterFromS3Request class provides an interface for RDS RestoreDBClusterFromS3 requests.
+ * \class QtAws::Rds::RestoreDBClusterFromS3Request
+ * \brief The RestoreDBClusterFromS3Request class provides an interface for Rds RestoreDBClusterFromS3 requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromS3Request::response(QNetw
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBClusterFromS3RequestPrivate
+ * \class QtAws::Rds::RestoreDBClusterFromS3RequestPrivate
  * \brief The RestoreDBClusterFromS3RequestPrivate class provides private implementation for RestoreDBClusterFromS3Request.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RestoreDBClusterFromS3RequestPrivate::RestoreDBClusterFromS3RequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

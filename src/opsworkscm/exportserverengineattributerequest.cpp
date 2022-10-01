@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::ExportServerEngineAttributeRequest
- * \brief The ExportServerEngineAttributeRequest class provides an interface for OpsWorksCM ExportServerEngineAttribute requests.
+ * \class QtAws::OpsWorksCm::ExportServerEngineAttributeRequest
+ * \brief The ExportServerEngineAttributeRequest class provides an interface for OpsWorksCm ExportServerEngineAttribute requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::exportServerEngineAttribute
+ * \sa OpsWorksCmClient::exportServerEngineAttribute
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ExportServerEngineAttributeRequest::ExportServerEngineAttributeRequest(const ExportServerEngineAttributeRequest &other)
-    : OpsWorksCMRequest(new ExportServerEngineAttributeRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new ExportServerEngineAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ ExportServerEngineAttributeRequest::ExportServerEngineAttributeRequest(const Exp
  * Constructs a ExportServerEngineAttributeRequest object.
  */
 ExportServerEngineAttributeRequest::ExportServerEngineAttributeRequest()
-    : OpsWorksCMRequest(new ExportServerEngineAttributeRequestPrivate(OpsWorksCMRequest::ExportServerEngineAttributeAction, this))
+    : OpsWorksCmRequest(new ExportServerEngineAttributeRequestPrivate(OpsWorksCmRequest::ExportServerEngineAttributeAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * ExportServerEngineAttributeRequest::response(
 }
 
 /*!
- * \class QtAws::OpsWorksCM::ExportServerEngineAttributeRequestPrivate
+ * \class QtAws::OpsWorksCm::ExportServerEngineAttributeRequestPrivate
  * \brief The ExportServerEngineAttributeRequestPrivate class provides private implementation for ExportServerEngineAttributeRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a ExportServerEngineAttributeRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a ExportServerEngineAttributeRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 ExportServerEngineAttributeRequestPrivate::ExportServerEngineAttributeRequestPrivate(
-    const OpsWorksCMRequest::Action action, ExportServerEngineAttributeRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, ExportServerEngineAttributeRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ ExportServerEngineAttributeRequestPrivate::ExportServerEngineAttributeRequestPri
  */
 ExportServerEngineAttributeRequestPrivate::ExportServerEngineAttributeRequestPrivate(
     const ExportServerEngineAttributeRequestPrivate &other, ExportServerEngineAttributeRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

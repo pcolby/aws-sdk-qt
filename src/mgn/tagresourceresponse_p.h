@@ -23,11 +23,11 @@
 #include "mgnresponse_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class TagResourceResponse;
 
-class TagResourceResponsePrivate : public mgnResponsePrivate {
+class TagResourceResponsePrivate : public MgnResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

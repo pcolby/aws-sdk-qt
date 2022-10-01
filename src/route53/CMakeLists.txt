@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSROUTE53_LIBRARY)
 
 add_library(QtAwsRoute53
+  qtawsroute53global.h
+  route53client.h
+  route53client_p.h
+  route53request.h
+  route53request_p.h
+  route53response.h
+  route53response_p.h
   activatekeysigningkeyrequest.h
   activatekeysigningkeyrequest_p.h
   activatekeysigningkeyresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsRoute53
   associatevpcwithhostedzonerequest_p.h
   associatevpcwithhostedzoneresponse.h
   associatevpcwithhostedzoneresponse_p.h
+  changecidrcollectionrequest.h
+  changecidrcollectionrequest_p.h
+  changecidrcollectionresponse.h
+  changecidrcollectionresponse_p.h
   changeresourcerecordsetsrequest.h
   changeresourcerecordsetsrequest_p.h
   changeresourcerecordsetsresponse.h
@@ -17,6 +28,10 @@ add_library(QtAwsRoute53
   changetagsforresourcerequest_p.h
   changetagsforresourceresponse.h
   changetagsforresourceresponse_p.h
+  createcidrcollectionrequest.h
+  createcidrcollectionrequest_p.h
+  createcidrcollectionresponse.h
+  createcidrcollectionresponse_p.h
   createhealthcheckrequest.h
   createhealthcheckrequest_p.h
   createhealthcheckresponse.h
@@ -37,14 +52,14 @@ add_library(QtAwsRoute53
   createreusabledelegationsetrequest_p.h
   createreusabledelegationsetresponse.h
   createreusabledelegationsetresponse_p.h
-  createtrafficpolicyinstancerequest.h
-  createtrafficpolicyinstancerequest_p.h
-  createtrafficpolicyinstanceresponse.h
-  createtrafficpolicyinstanceresponse_p.h
   createtrafficpolicyrequest.h
   createtrafficpolicyrequest_p.h
   createtrafficpolicyresponse.h
   createtrafficpolicyresponse_p.h
+  createtrafficpolicyinstancerequest.h
+  createtrafficpolicyinstancerequest_p.h
+  createtrafficpolicyinstanceresponse.h
+  createtrafficpolicyinstanceresponse_p.h
   createtrafficpolicyversionrequest.h
   createtrafficpolicyversionrequest_p.h
   createtrafficpolicyversionresponse.h
@@ -57,6 +72,10 @@ add_library(QtAwsRoute53
   deactivatekeysigningkeyrequest_p.h
   deactivatekeysigningkeyresponse.h
   deactivatekeysigningkeyresponse_p.h
+  deletecidrcollectionrequest.h
+  deletecidrcollectionrequest_p.h
+  deletecidrcollectionresponse.h
+  deletecidrcollectionresponse_p.h
   deletehealthcheckrequest.h
   deletehealthcheckrequest_p.h
   deletehealthcheckresponse.h
@@ -77,14 +96,14 @@ add_library(QtAwsRoute53
   deletereusabledelegationsetrequest_p.h
   deletereusabledelegationsetresponse.h
   deletereusabledelegationsetresponse_p.h
-  deletetrafficpolicyinstancerequest.h
-  deletetrafficpolicyinstancerequest_p.h
-  deletetrafficpolicyinstanceresponse.h
-  deletetrafficpolicyinstanceresponse_p.h
   deletetrafficpolicyrequest.h
   deletetrafficpolicyrequest_p.h
   deletetrafficpolicyresponse.h
   deletetrafficpolicyresponse_p.h
+  deletetrafficpolicyinstancerequest.h
+  deletetrafficpolicyinstancerequest_p.h
+  deletetrafficpolicyinstanceresponse.h
+  deletetrafficpolicyinstanceresponse_p.h
   deletevpcassociationauthorizationrequest.h
   deletevpcassociationauthorizationrequest_p.h
   deletevpcassociationauthorizationresponse.h
@@ -121,6 +140,10 @@ add_library(QtAwsRoute53
   getgeolocationrequest_p.h
   getgeolocationresponse.h
   getgeolocationresponse_p.h
+  gethealthcheckrequest.h
+  gethealthcheckrequest_p.h
+  gethealthcheckresponse.h
+  gethealthcheckresponse_p.h
   gethealthcheckcountrequest.h
   gethealthcheckcountrequest_p.h
   gethealthcheckcountresponse.h
@@ -129,14 +152,14 @@ add_library(QtAwsRoute53
   gethealthchecklastfailurereasonrequest_p.h
   gethealthchecklastfailurereasonresponse.h
   gethealthchecklastfailurereasonresponse_p.h
-  gethealthcheckrequest.h
-  gethealthcheckrequest_p.h
-  gethealthcheckresponse.h
-  gethealthcheckresponse_p.h
   gethealthcheckstatusrequest.h
   gethealthcheckstatusrequest_p.h
   gethealthcheckstatusresponse.h
   gethealthcheckstatusresponse_p.h
+  gethostedzonerequest.h
+  gethostedzonerequest_p.h
+  gethostedzoneresponse.h
+  gethostedzoneresponse_p.h
   gethostedzonecountrequest.h
   gethostedzonecountrequest_p.h
   gethostedzonecountresponse.h
@@ -145,34 +168,42 @@ add_library(QtAwsRoute53
   gethostedzonelimitrequest_p.h
   gethostedzonelimitresponse.h
   gethostedzonelimitresponse_p.h
-  gethostedzonerequest.h
-  gethostedzonerequest_p.h
-  gethostedzoneresponse.h
-  gethostedzoneresponse_p.h
   getqueryloggingconfigrequest.h
   getqueryloggingconfigrequest_p.h
   getqueryloggingconfigresponse.h
   getqueryloggingconfigresponse_p.h
-  getreusabledelegationsetlimitrequest.h
-  getreusabledelegationsetlimitrequest_p.h
-  getreusabledelegationsetlimitresponse.h
-  getreusabledelegationsetlimitresponse_p.h
   getreusabledelegationsetrequest.h
   getreusabledelegationsetrequest_p.h
   getreusabledelegationsetresponse.h
   getreusabledelegationsetresponse_p.h
-  gettrafficpolicyinstancecountrequest.h
-  gettrafficpolicyinstancecountrequest_p.h
-  gettrafficpolicyinstancecountresponse.h
-  gettrafficpolicyinstancecountresponse_p.h
-  gettrafficpolicyinstancerequest.h
-  gettrafficpolicyinstancerequest_p.h
-  gettrafficpolicyinstanceresponse.h
-  gettrafficpolicyinstanceresponse_p.h
+  getreusabledelegationsetlimitrequest.h
+  getreusabledelegationsetlimitrequest_p.h
+  getreusabledelegationsetlimitresponse.h
+  getreusabledelegationsetlimitresponse_p.h
   gettrafficpolicyrequest.h
   gettrafficpolicyrequest_p.h
   gettrafficpolicyresponse.h
   gettrafficpolicyresponse_p.h
+  gettrafficpolicyinstancerequest.h
+  gettrafficpolicyinstancerequest_p.h
+  gettrafficpolicyinstanceresponse.h
+  gettrafficpolicyinstanceresponse_p.h
+  gettrafficpolicyinstancecountrequest.h
+  gettrafficpolicyinstancecountrequest_p.h
+  gettrafficpolicyinstancecountresponse.h
+  gettrafficpolicyinstancecountresponse_p.h
+  listcidrblocksrequest.h
+  listcidrblocksrequest_p.h
+  listcidrblocksresponse.h
+  listcidrblocksresponse_p.h
+  listcidrcollectionsrequest.h
+  listcidrcollectionsrequest_p.h
+  listcidrcollectionsresponse.h
+  listcidrcollectionsresponse_p.h
+  listcidrlocationsrequest.h
+  listcidrlocationsrequest_p.h
+  listcidrlocationsresponse.h
+  listcidrlocationsresponse_p.h
   listgeolocationsrequest.h
   listgeolocationsrequest_p.h
   listgeolocationsresponse.h
@@ -181,6 +212,10 @@ add_library(QtAwsRoute53
   listhealthchecksrequest_p.h
   listhealthchecksresponse.h
   listhealthchecksresponse_p.h
+  listhostedzonesrequest.h
+  listhostedzonesrequest_p.h
+  listhostedzonesresponse.h
+  listhostedzonesresponse_p.h
   listhostedzonesbynamerequest.h
   listhostedzonesbynamerequest_p.h
   listhostedzonesbynameresponse.h
@@ -189,10 +224,6 @@ add_library(QtAwsRoute53
   listhostedzonesbyvpcrequest_p.h
   listhostedzonesbyvpcresponse.h
   listhostedzonesbyvpcresponse_p.h
-  listhostedzonesrequest.h
-  listhostedzonesrequest_p.h
-  listhostedzonesresponse.h
-  listhostedzonesresponse_p.h
   listqueryloggingconfigsrequest.h
   listqueryloggingconfigsrequest_p.h
   listqueryloggingconfigsresponse.h
@@ -217,6 +248,10 @@ add_library(QtAwsRoute53
   listtrafficpoliciesrequest_p.h
   listtrafficpoliciesresponse.h
   listtrafficpoliciesresponse_p.h
+  listtrafficpolicyinstancesrequest.h
+  listtrafficpolicyinstancesrequest_p.h
+  listtrafficpolicyinstancesresponse.h
+  listtrafficpolicyinstancesresponse_p.h
   listtrafficpolicyinstancesbyhostedzonerequest.h
   listtrafficpolicyinstancesbyhostedzonerequest_p.h
   listtrafficpolicyinstancesbyhostedzoneresponse.h
@@ -225,10 +260,6 @@ add_library(QtAwsRoute53
   listtrafficpolicyinstancesbypolicyrequest_p.h
   listtrafficpolicyinstancesbypolicyresponse.h
   listtrafficpolicyinstancesbypolicyresponse_p.h
-  listtrafficpolicyinstancesrequest.h
-  listtrafficpolicyinstancesrequest_p.h
-  listtrafficpolicyinstancesresponse.h
-  listtrafficpolicyinstancesresponse_p.h
   listtrafficpolicyversionsrequest.h
   listtrafficpolicyversionsrequest_p.h
   listtrafficpolicyversionsresponse.h
@@ -237,13 +268,6 @@ add_library(QtAwsRoute53
   listvpcassociationauthorizationsrequest_p.h
   listvpcassociationauthorizationsresponse.h
   listvpcassociationauthorizationsresponse_p.h
-  qtawsroute53global.h
-  route53client.h
-  route53client_p.h
-  route53request.h
-  route53request_p.h
-  route53response.h
-  route53response_p.h
   testdnsanswerrequest.h
   testdnsanswerrequest_p.h
   testdnsanswerresponse.h
@@ -264,14 +288,21 @@ add_library(QtAwsRoute53
   updatetrafficpolicyinstancerequest_p.h
   updatetrafficpolicyinstanceresponse.h
   updatetrafficpolicyinstanceresponse_p.h
+  route53client.cpp
+  route53request.cpp
+  route53response.cpp
   activatekeysigningkeyrequest.cpp
   activatekeysigningkeyresponse.cpp
   associatevpcwithhostedzonerequest.cpp
   associatevpcwithhostedzoneresponse.cpp
+  changecidrcollectionrequest.cpp
+  changecidrcollectionresponse.cpp
   changeresourcerecordsetsrequest.cpp
   changeresourcerecordsetsresponse.cpp
   changetagsforresourcerequest.cpp
   changetagsforresourceresponse.cpp
+  createcidrcollectionrequest.cpp
+  createcidrcollectionresponse.cpp
   createhealthcheckrequest.cpp
   createhealthcheckresponse.cpp
   createhostedzonerequest.cpp
@@ -282,16 +313,18 @@ add_library(QtAwsRoute53
   createqueryloggingconfigresponse.cpp
   createreusabledelegationsetrequest.cpp
   createreusabledelegationsetresponse.cpp
-  createtrafficpolicyinstancerequest.cpp
-  createtrafficpolicyinstanceresponse.cpp
   createtrafficpolicyrequest.cpp
   createtrafficpolicyresponse.cpp
+  createtrafficpolicyinstancerequest.cpp
+  createtrafficpolicyinstanceresponse.cpp
   createtrafficpolicyversionrequest.cpp
   createtrafficpolicyversionresponse.cpp
   createvpcassociationauthorizationrequest.cpp
   createvpcassociationauthorizationresponse.cpp
   deactivatekeysigningkeyrequest.cpp
   deactivatekeysigningkeyresponse.cpp
+  deletecidrcollectionrequest.cpp
+  deletecidrcollectionresponse.cpp
   deletehealthcheckrequest.cpp
   deletehealthcheckresponse.cpp
   deletehostedzonerequest.cpp
@@ -302,10 +335,10 @@ add_library(QtAwsRoute53
   deletequeryloggingconfigresponse.cpp
   deletereusabledelegationsetrequest.cpp
   deletereusabledelegationsetresponse.cpp
-  deletetrafficpolicyinstancerequest.cpp
-  deletetrafficpolicyinstanceresponse.cpp
   deletetrafficpolicyrequest.cpp
   deletetrafficpolicyresponse.cpp
+  deletetrafficpolicyinstancerequest.cpp
+  deletetrafficpolicyinstanceresponse.cpp
   deletevpcassociationauthorizationrequest.cpp
   deletevpcassociationauthorizationresponse.cpp
   disablehostedzonednssecrequest.cpp
@@ -324,42 +357,48 @@ add_library(QtAwsRoute53
   getdnssecresponse.cpp
   getgeolocationrequest.cpp
   getgeolocationresponse.cpp
+  gethealthcheckrequest.cpp
+  gethealthcheckresponse.cpp
   gethealthcheckcountrequest.cpp
   gethealthcheckcountresponse.cpp
   gethealthchecklastfailurereasonrequest.cpp
   gethealthchecklastfailurereasonresponse.cpp
-  gethealthcheckrequest.cpp
-  gethealthcheckresponse.cpp
   gethealthcheckstatusrequest.cpp
   gethealthcheckstatusresponse.cpp
+  gethostedzonerequest.cpp
+  gethostedzoneresponse.cpp
   gethostedzonecountrequest.cpp
   gethostedzonecountresponse.cpp
   gethostedzonelimitrequest.cpp
   gethostedzonelimitresponse.cpp
-  gethostedzonerequest.cpp
-  gethostedzoneresponse.cpp
   getqueryloggingconfigrequest.cpp
   getqueryloggingconfigresponse.cpp
-  getreusabledelegationsetlimitrequest.cpp
-  getreusabledelegationsetlimitresponse.cpp
   getreusabledelegationsetrequest.cpp
   getreusabledelegationsetresponse.cpp
-  gettrafficpolicyinstancecountrequest.cpp
-  gettrafficpolicyinstancecountresponse.cpp
-  gettrafficpolicyinstancerequest.cpp
-  gettrafficpolicyinstanceresponse.cpp
+  getreusabledelegationsetlimitrequest.cpp
+  getreusabledelegationsetlimitresponse.cpp
   gettrafficpolicyrequest.cpp
   gettrafficpolicyresponse.cpp
+  gettrafficpolicyinstancerequest.cpp
+  gettrafficpolicyinstanceresponse.cpp
+  gettrafficpolicyinstancecountrequest.cpp
+  gettrafficpolicyinstancecountresponse.cpp
+  listcidrblocksrequest.cpp
+  listcidrblocksresponse.cpp
+  listcidrcollectionsrequest.cpp
+  listcidrcollectionsresponse.cpp
+  listcidrlocationsrequest.cpp
+  listcidrlocationsresponse.cpp
   listgeolocationsrequest.cpp
   listgeolocationsresponse.cpp
   listhealthchecksrequest.cpp
   listhealthchecksresponse.cpp
+  listhostedzonesrequest.cpp
+  listhostedzonesresponse.cpp
   listhostedzonesbynamerequest.cpp
   listhostedzonesbynameresponse.cpp
   listhostedzonesbyvpcrequest.cpp
   listhostedzonesbyvpcresponse.cpp
-  listhostedzonesrequest.cpp
-  listhostedzonesresponse.cpp
   listqueryloggingconfigsrequest.cpp
   listqueryloggingconfigsresponse.cpp
   listresourcerecordsetsrequest.cpp
@@ -372,19 +411,16 @@ add_library(QtAwsRoute53
   listtagsforresourcesresponse.cpp
   listtrafficpoliciesrequest.cpp
   listtrafficpoliciesresponse.cpp
+  listtrafficpolicyinstancesrequest.cpp
+  listtrafficpolicyinstancesresponse.cpp
   listtrafficpolicyinstancesbyhostedzonerequest.cpp
   listtrafficpolicyinstancesbyhostedzoneresponse.cpp
   listtrafficpolicyinstancesbypolicyrequest.cpp
   listtrafficpolicyinstancesbypolicyresponse.cpp
-  listtrafficpolicyinstancesrequest.cpp
-  listtrafficpolicyinstancesresponse.cpp
   listtrafficpolicyversionsrequest.cpp
   listtrafficpolicyversionsresponse.cpp
   listvpcassociationauthorizationsrequest.cpp
   listvpcassociationauthorizationsresponse.cpp
-  route53client.cpp
-  route53request.cpp
-  route53response.cpp
   testdnsanswerrequest.cpp
   testdnsanswerresponse.cpp
   updatehealthcheckrequest.cpp

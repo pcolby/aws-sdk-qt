@@ -24,7 +24,7 @@
 #include "disablekeyrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class DisableKeyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

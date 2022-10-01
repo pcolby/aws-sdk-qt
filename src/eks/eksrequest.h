@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class EksRequestPrivate;
 
 class QTAWSEKS_EXPORT EksRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EKS.
+    /// Actions supported by Eks.
     enum Action {
         AssociateEncryptionConfigAction,
         AssociateIdentityProviderConfigAction,
@@ -49,6 +49,7 @@ public:
         DeleteClusterAction,
         DeleteFargateProfileAction,
         DeleteNodegroupAction,
+        DeregisterClusterAction,
         DescribeAddonAction,
         DescribeAddonVersionsAction,
         DescribeClusterAction,
@@ -64,6 +65,7 @@ public:
         ListNodegroupsAction,
         ListTagsForResourceAction,
         ListUpdatesAction,
+        RegisterClusterAction,
         TagResourceAction,
         UntagResourceAction,
         UpdateAddonAction,
@@ -107,7 +109,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

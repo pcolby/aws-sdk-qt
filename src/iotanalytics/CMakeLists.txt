@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTANALYTICS_LIBRARY)
 
 add_library(QtAwsIoTAnalytics
+  qtawsiotanalyticsglobal.h
+  iotanalyticsclient.h
+  iotanalyticsclient_p.h
+  iotanalyticsrequest.h
+  iotanalyticsrequest_p.h
+  iotanalyticsresponse.h
+  iotanalyticsresponse_p.h
   batchputmessagerequest.h
   batchputmessagerequest_p.h
   batchputmessageresponse.h
@@ -13,14 +20,14 @@ add_library(QtAwsIoTAnalytics
   createchannelrequest_p.h
   createchannelresponse.h
   createchannelresponse_p.h
-  createdatasetcontentrequest.h
-  createdatasetcontentrequest_p.h
-  createdatasetcontentresponse.h
-  createdatasetcontentresponse_p.h
   createdatasetrequest.h
   createdatasetrequest_p.h
   createdatasetresponse.h
   createdatasetresponse_p.h
+  createdatasetcontentrequest.h
+  createdatasetcontentrequest_p.h
+  createdatasetcontentresponse.h
+  createdatasetcontentresponse_p.h
   createdatastorerequest.h
   createdatastorerequest_p.h
   createdatastoreresponse.h
@@ -33,14 +40,14 @@ add_library(QtAwsIoTAnalytics
   deletechannelrequest_p.h
   deletechannelresponse.h
   deletechannelresponse_p.h
-  deletedatasetcontentrequest.h
-  deletedatasetcontentrequest_p.h
-  deletedatasetcontentresponse.h
-  deletedatasetcontentresponse_p.h
   deletedatasetrequest.h
   deletedatasetrequest_p.h
   deletedatasetresponse.h
   deletedatasetresponse_p.h
+  deletedatasetcontentrequest.h
+  deletedatasetcontentrequest_p.h
+  deletedatasetcontentresponse.h
+  deletedatasetcontentresponse_p.h
   deletedatastorerequest.h
   deletedatastorerequest_p.h
   deletedatastoreresponse.h
@@ -73,12 +80,6 @@ add_library(QtAwsIoTAnalytics
   getdatasetcontentrequest_p.h
   getdatasetcontentresponse.h
   getdatasetcontentresponse_p.h
-  iotanalyticsclient.h
-  iotanalyticsclient_p.h
-  iotanalyticsrequest.h
-  iotanalyticsrequest_p.h
-  iotanalyticsresponse.h
-  iotanalyticsresponse_p.h
   listchannelsrequest.h
   listchannelsrequest_p.h
   listchannelsresponse.h
@@ -107,7 +108,6 @@ add_library(QtAwsIoTAnalytics
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
-  qtawsiotanalyticsglobal.h
   runpipelineactivityrequest.h
   runpipelineactivityrequest_p.h
   runpipelineactivityresponse.h
@@ -144,26 +144,29 @@ add_library(QtAwsIoTAnalytics
   updatepipelinerequest_p.h
   updatepipelineresponse.h
   updatepipelineresponse_p.h
+  iotanalyticsclient.cpp
+  iotanalyticsrequest.cpp
+  iotanalyticsresponse.cpp
   batchputmessagerequest.cpp
   batchputmessageresponse.cpp
   cancelpipelinereprocessingrequest.cpp
   cancelpipelinereprocessingresponse.cpp
   createchannelrequest.cpp
   createchannelresponse.cpp
-  createdatasetcontentrequest.cpp
-  createdatasetcontentresponse.cpp
   createdatasetrequest.cpp
   createdatasetresponse.cpp
+  createdatasetcontentrequest.cpp
+  createdatasetcontentresponse.cpp
   createdatastorerequest.cpp
   createdatastoreresponse.cpp
   createpipelinerequest.cpp
   createpipelineresponse.cpp
   deletechannelrequest.cpp
   deletechannelresponse.cpp
-  deletedatasetcontentrequest.cpp
-  deletedatasetcontentresponse.cpp
   deletedatasetrequest.cpp
   deletedatasetresponse.cpp
+  deletedatasetcontentrequest.cpp
+  deletedatasetcontentresponse.cpp
   deletedatastorerequest.cpp
   deletedatastoreresponse.cpp
   deletepipelinerequest.cpp
@@ -180,9 +183,6 @@ add_library(QtAwsIoTAnalytics
   describepipelineresponse.cpp
   getdatasetcontentrequest.cpp
   getdatasetcontentresponse.cpp
-  iotanalyticsclient.cpp
-  iotanalyticsrequest.cpp
-  iotanalyticsresponse.cpp
   listchannelsrequest.cpp
   listchannelsresponse.cpp
   listdatasetcontentsrequest.cpp

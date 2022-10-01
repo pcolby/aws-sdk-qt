@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
-class DynamoDBStreamsClient;
+class DynamoDbStreamsClient;
 
-class DynamoDBStreamsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DynamoDbStreamsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q);
+    explicit DynamoDbStreamsClientPrivate(DynamoDbStreamsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(DynamoDBStreamsClient)
-    Q_DISABLE_COPY(DynamoDBStreamsClientPrivate)
+    Q_DECLARE_PUBLIC(DynamoDbStreamsClient)
+    Q_DISABLE_COPY(DynamoDbStreamsClientPrivate)
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

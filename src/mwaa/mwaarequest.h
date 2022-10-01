@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class MwaaRequestPrivate;
 
 class QTAWSMWAA_EXPORT MwaaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by MWAA.
+    /// Actions supported by Mwaa.
     enum Action {
         CreateCliTokenAction,
         CreateEnvironmentAction,
@@ -86,7 +86,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

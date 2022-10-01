@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateWebACLResponse
- * \brief The CreateWebACLResponse class provides an interace for WAF CreateWebACL responses.
+ * \class QtAws::Waf::CreateWebACLResponse
+ * \brief The CreateWebACLResponse class provides an interace for Waf CreateWebACL responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateWebACLRequest * CreateWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF CreateWebACL \a response.
+ * Parses a successful Waf CreateWebACL \a response.
  */
 void CreateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateWebACLResponsePrivate
+ * \class QtAws::Waf::CreateWebACLResponsePrivate
  * \brief The CreateWebACLResponsePrivate class provides private implementation for CreateWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
 }
 
 /*!
- * Parses a WAF CreateWebACL response element from \a xml.
+ * Parses a Waf CreateWebACL response element from \a xml.
  */
 void CreateWebACLResponsePrivate::parseCreateWebACLResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateWebACLResponsePrivate::parseCreateWebACLResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,7 +23,7 @@
 #include "daxrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class TagResourceRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

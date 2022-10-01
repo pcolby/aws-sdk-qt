@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsRequest
- * \brief The ListSqlInjectionMatchSetsRequest class provides an interface for WAFRegional ListSqlInjectionMatchSets requests.
+ * \class QtAws::WafRegional::ListSqlInjectionMatchSetsRequest
+ * \brief The ListSqlInjectionMatchSetsRequest class provides an interface for WafRegional ListSqlInjectionMatchSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listSqlInjectionMatchSets
+ * \sa WafRegionalClient::listSqlInjectionMatchSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSqlInjectionMatchSetsRequest &other)
-    : WAFRegionalRequest(new ListSqlInjectionMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListSqlInjectionMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSql
  * Constructs a ListSqlInjectionMatchSetsRequest object.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
-    : WAFRegionalRequest(new ListSqlInjectionMatchSetsRequestPrivate(WAFRegionalRequest::ListSqlInjectionMatchSetsAction, this))
+    : WafRegionalRequest(new ListSqlInjectionMatchSetsRequestPrivate(WafRegionalRequest::ListSqlInjectionMatchSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
 }
 
 /*!
- * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsRequestPrivate
+ * \class QtAws::WafRegional::ListSqlInjectionMatchSetsRequestPrivate
  * \brief The ListSqlInjectionMatchSetsRequestPrivate class provides private implementation for ListSqlInjectionMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate
  */
 ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
     const ListSqlInjectionMatchSetsRequestPrivate &other, ListSqlInjectionMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

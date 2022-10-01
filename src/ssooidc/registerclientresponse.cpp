@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::RegisterClientResponse
- * \brief The RegisterClientResponse class provides an interace for SSOOIDC RegisterClient responses.
+ * \class QtAws::SsoOidc::RegisterClientResponse
+ * \brief The RegisterClientResponse class provides an interace for SsoOidc RegisterClient responses.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -56,7 +56,7 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::registerClient
+ * \sa SsoOidcClient::registerClient
  */
 
 /*!
@@ -66,7 +66,7 @@ RegisterClientResponse::RegisterClientResponse(
         const RegisterClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SsooidcResponse(new RegisterClientResponsePrivate(this), parent)
+    : SsoOidcResponse(new RegisterClientResponsePrivate(this), parent)
 {
     setRequest(new RegisterClientRequest(request));
     setReply(reply);
@@ -83,7 +83,7 @@ const RegisterClientRequest * RegisterClientResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSOOIDC RegisterClient \a response.
+ * Parses a successful SsoOidc RegisterClient \a response.
  */
 void RegisterClientResponse::parseSuccess(QIODevice &response)
 {
@@ -93,24 +93,24 @@ void RegisterClientResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSOOIDC::RegisterClientResponsePrivate
+ * \class QtAws::SsoOidc::RegisterClientResponsePrivate
  * \brief The RegisterClientResponsePrivate class provides private implementation for RegisterClientResponse.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
  * Constructs a RegisterClientResponsePrivate object with public implementation \a q.
  */
 RegisterClientResponsePrivate::RegisterClientResponsePrivate(
-    RegisterClientResponse * const q) : SsooidcResponsePrivate(q)
+    RegisterClientResponse * const q) : SsoOidcResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSOOIDC RegisterClient response element from \a xml.
+ * Parses a SsoOidc RegisterClient response element from \a xml.
  */
 void RegisterClientResponsePrivate::parseRegisterClientResponse(QXmlStreamReader &xml)
 {
@@ -118,5 +118,5 @@ void RegisterClientResponsePrivate::parseRegisterClientResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

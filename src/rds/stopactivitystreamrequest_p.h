@@ -24,7 +24,7 @@
 #include "stopactivitystreamrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class StopActivityStreamRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

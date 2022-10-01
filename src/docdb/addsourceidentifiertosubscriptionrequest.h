@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class AddSourceIdentifierToSubscriptionRequestPrivate;
 
-class QTAWSDOCDB_EXPORT AddSourceIdentifierToSubscriptionRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT AddSourceIdentifierToSubscriptionRequest : public DocDbRequest {
 
 public:
     AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

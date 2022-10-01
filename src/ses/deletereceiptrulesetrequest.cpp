@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteReceiptRuleSetRequest
- * \brief The DeleteReceiptRuleSetRequest class provides an interface for SES DeleteReceiptRuleSet requests.
+ * \class QtAws::Ses::DeleteReceiptRuleSetRequest
+ * \brief The DeleteReceiptRuleSetRequest class provides an interface for Ses DeleteReceiptRuleSet requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleSetRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SES::DeleteReceiptRuleSetRequestPrivate
+ * \class QtAws::Ses::DeleteReceiptRuleSetRequestPrivate
  * \brief The DeleteReceiptRuleSetRequestPrivate class provides private implementation for DeleteReceiptRuleSetRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

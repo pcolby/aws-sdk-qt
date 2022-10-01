@@ -24,14 +24,14 @@
 #include "applypendingmaintenanceactionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ApplyPendingMaintenanceActionRequest;
 
-class ApplyPendingMaintenanceActionRequestPrivate : public DocDBRequestPrivate {
+class ApplyPendingMaintenanceActionRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    ApplyPendingMaintenanceActionRequestPrivate(const DocDBRequest::Action action,
+    ApplyPendingMaintenanceActionRequestPrivate(const DocDbRequest::Action action,
                                    ApplyPendingMaintenanceActionRequest * const q);
     ApplyPendingMaintenanceActionRequestPrivate(const ApplyPendingMaintenanceActionRequestPrivate &other,
                                    ApplyPendingMaintenanceActionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

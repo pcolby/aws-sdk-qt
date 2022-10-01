@@ -24,14 +24,14 @@
 #include "listpermissionsetsrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class ListPermissionSetsRequest;
 
-class ListPermissionSetsRequestPrivate : public SSOAdminRequestPrivate {
+class ListPermissionSetsRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    ListPermissionSetsRequestPrivate(const SSOAdminRequest::Action action,
+    ListPermissionSetsRequestPrivate(const SsoAdminRequest::Action action,
                                    ListPermissionSetsRequest * const q);
     ListPermissionSetsRequestPrivate(const ListPermissionSetsRequestPrivate &other,
                                    ListPermissionSetsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

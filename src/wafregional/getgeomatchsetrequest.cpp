@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetGeoMatchSetRequest
- * \brief The GetGeoMatchSetRequest class provides an interface for WAFRegional GetGeoMatchSet requests.
+ * \class QtAws::WafRegional::GetGeoMatchSetRequest
+ * \brief The GetGeoMatchSetRequest class provides an interface for WafRegional GetGeoMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getGeoMatchSet
+ * \sa WafRegionalClient::getGeoMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetGeoMatchSetRequest::GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other)
-    : WAFRegionalRequest(new GetGeoMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetGeoMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetGeoMatchSetRequest::GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other)
  * Constructs a GetGeoMatchSetRequest object.
  */
 GetGeoMatchSetRequest::GetGeoMatchSetRequest()
-    : WAFRegionalRequest(new GetGeoMatchSetRequestPrivate(WAFRegionalRequest::GetGeoMatchSetAction, this))
+    : WafRegionalRequest(new GetGeoMatchSetRequestPrivate(WafRegionalRequest::GetGeoMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::WAFRegional::GetGeoMatchSetRequestPrivate
+ * \class QtAws::WafRegional::GetGeoMatchSetRequestPrivate
  * \brief The GetGeoMatchSetRequestPrivate class provides private implementation for GetGeoMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetGeoMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetGeoMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, GetGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetGeoMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
     const GetGeoMatchSetRequestPrivate &other, GetGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

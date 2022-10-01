@@ -24,11 +24,11 @@
 #include "listbackupsrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListBackupsResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT ListBackupsResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ListBackupsResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

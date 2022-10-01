@@ -24,14 +24,14 @@
 #include "updateresponseplanrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class UpdateResponsePlanRequest;
 
-class UpdateResponsePlanRequestPrivate : public SSMIncidentsRequestPrivate {
+class UpdateResponsePlanRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    UpdateResponsePlanRequestPrivate(const SSMIncidentsRequest::Action action,
+    UpdateResponsePlanRequestPrivate(const SsmIncidentsRequest::Action action,
                                    UpdateResponsePlanRequest * const q);
     UpdateResponsePlanRequestPrivate(const UpdateResponsePlanRequestPrivate &other,
                                    UpdateResponsePlanRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

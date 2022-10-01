@@ -24,14 +24,14 @@
 #include "listcertificateauthoritiesrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class ListCertificateAuthoritiesRequest;
 
-class ListCertificateAuthoritiesRequestPrivate : public AcmpcaRequestPrivate {
+class ListCertificateAuthoritiesRequestPrivate : public AcmPcaRequestPrivate {
 
 public:
-    ListCertificateAuthoritiesRequestPrivate(const AcmpcaRequest::Action action,
+    ListCertificateAuthoritiesRequestPrivate(const AcmPcaRequest::Action action,
                                    ListCertificateAuthoritiesRequest * const q);
     ListCertificateAuthoritiesRequestPrivate(const ListCertificateAuthoritiesRequestPrivate &other,
                                    ListCertificateAuthoritiesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

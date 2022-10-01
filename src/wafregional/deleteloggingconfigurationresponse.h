@@ -24,11 +24,11 @@
 #include "deleteloggingconfigurationrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteLoggingConfigurationResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteLoggingConfigurationResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT DeleteLoggingConfigurationResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

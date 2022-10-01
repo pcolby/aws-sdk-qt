@@ -23,7 +23,7 @@
 #include "kmsresponse_p.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class UpdateCustomKeyStoreResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

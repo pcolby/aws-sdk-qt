@@ -37,21 +37,29 @@ namespace WellArchitected {
  * requests.
  *
  * \value AssociateLensesAction WellArchitected AssociateLenses action.
+ * \value CreateLensShareAction WellArchitected CreateLensShare action.
+ * \value CreateLensVersionAction WellArchitected CreateLensVersion action.
  * \value CreateMilestoneAction WellArchitected CreateMilestone action.
  * \value CreateWorkloadAction WellArchitected CreateWorkload action.
  * \value CreateWorkloadShareAction WellArchitected CreateWorkloadShare action.
+ * \value DeleteLensAction WellArchitected DeleteLens action.
+ * \value DeleteLensShareAction WellArchitected DeleteLensShare action.
  * \value DeleteWorkloadAction WellArchitected DeleteWorkload action.
  * \value DeleteWorkloadShareAction WellArchitected DeleteWorkloadShare action.
  * \value DisassociateLensesAction WellArchitected DisassociateLenses action.
+ * \value ExportLensAction WellArchitected ExportLens action.
  * \value GetAnswerAction WellArchitected GetAnswer action.
+ * \value GetLensAction WellArchitected GetLens action.
  * \value GetLensReviewAction WellArchitected GetLensReview action.
  * \value GetLensReviewReportAction WellArchitected GetLensReviewReport action.
  * \value GetLensVersionDifferenceAction WellArchitected GetLensVersionDifference action.
  * \value GetMilestoneAction WellArchitected GetMilestone action.
  * \value GetWorkloadAction WellArchitected GetWorkload action.
+ * \value ImportLensAction WellArchitected ImportLens action.
  * \value ListAnswersAction WellArchitected ListAnswers action.
  * \value ListLensReviewImprovementsAction WellArchitected ListLensReviewImprovements action.
  * \value ListLensReviewsAction WellArchitected ListLensReviews action.
+ * \value ListLensSharesAction WellArchitected ListLensShares action.
  * \value ListLensesAction WellArchitected ListLenses action.
  * \value ListMilestonesAction WellArchitected ListMilestones action.
  * \value ListNotificationsAction WellArchitected ListNotifications action.
@@ -62,6 +70,7 @@ namespace WellArchitected {
  * \value TagResourceAction WellArchitected TagResource action.
  * \value UntagResourceAction WellArchitected UntagResource action.
  * \value UpdateAnswerAction WellArchitected UpdateAnswer action.
+ * \value UpdateGlobalSettingsAction WellArchitected UpdateGlobalSettings action.
  * \value UpdateLensReviewAction WellArchitected UpdateLensReview action.
  * \value UpdateShareInvitationAction WellArchitected UpdateShareInvitation action.
  * \value UpdateWorkloadAction WellArchitected UpdateWorkload action.
@@ -274,7 +283,7 @@ QNetworkRequest WellArchitectedRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 WellArchitectedRequestPrivate::WellArchitectedRequestPrivate(const WellArchitectedRequest::Action action, WellArchitectedRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-03-31"))
 {
 
 }
@@ -309,21 +318,29 @@ QString WellArchitectedRequestPrivate::toString(const WellArchitectedRequest::Ac
         case WellArchitectedRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AssociateLenses);
+        ActionToString(CreateLensShare);
+        ActionToString(CreateLensVersion);
         ActionToString(CreateMilestone);
         ActionToString(CreateWorkload);
         ActionToString(CreateWorkloadShare);
+        ActionToString(DeleteLens);
+        ActionToString(DeleteLensShare);
         ActionToString(DeleteWorkload);
         ActionToString(DeleteWorkloadShare);
         ActionToString(DisassociateLenses);
+        ActionToString(ExportLens);
         ActionToString(GetAnswer);
+        ActionToString(GetLens);
         ActionToString(GetLensReview);
         ActionToString(GetLensReviewReport);
         ActionToString(GetLensVersionDifference);
         ActionToString(GetMilestone);
         ActionToString(GetWorkload);
+        ActionToString(ImportLens);
         ActionToString(ListAnswers);
         ActionToString(ListLensReviewImprovements);
         ActionToString(ListLensReviews);
+        ActionToString(ListLensShares);
         ActionToString(ListLenses);
         ActionToString(ListMilestones);
         ActionToString(ListNotifications);
@@ -334,6 +351,7 @@ QString WellArchitectedRequestPrivate::toString(const WellArchitectedRequest::Ac
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAnswer);
+        ActionToString(UpdateGlobalSettings);
         ActionToString(UpdateLensReview);
         ActionToString(UpdateShareInvitation);
         ActionToString(UpdateWorkload);

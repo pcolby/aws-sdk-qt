@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateIPSetResponse
- * \brief The CreateIPSetResponse class provides an interace for WAFRegional CreateIPSet responses.
+ * \class QtAws::WafRegional::CreateIPSetResponse
+ * \brief The CreateIPSetResponse class provides an interace for WafRegional CreateIPSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createIPSet
+ * \sa WafRegionalClient::createIPSet
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateIPSetResponse::CreateIPSetResponse(
         const CreateIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateIPSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateIPSetResponsePrivate(this), parent)
 {
     setRequest(new CreateIPSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateIPSet \a response.
+ * Parses a successful WafRegional CreateIPSet \a response.
  */
 void CreateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateIPSetResponsePrivate
+ * \class QtAws::WafRegional::CreateIPSetResponsePrivate
  * \brief The CreateIPSetResponsePrivate class provides private implementation for CreateIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateIPSetResponsePrivate object with public implementation \a q.
  */
 CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
-    CreateIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateIPSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateIPSet response element from \a xml.
+ * Parses a WafRegional CreateIPSet response element from \a xml.
  */
 void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

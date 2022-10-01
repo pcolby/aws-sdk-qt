@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagPolicyResponse
- * \brief The TagPolicyResponse class provides an interace for IAM TagPolicy responses.
+ * \class QtAws::Iam::TagPolicyResponse
+ * \brief The TagPolicyResponse class provides an interace for Iam TagPolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagPolicy
  */
@@ -68,7 +68,7 @@ const TagPolicyRequest * TagPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM TagPolicy \a response.
+ * Parses a successful Iam TagPolicy \a response.
  */
 void TagPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void TagPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::TagPolicyResponsePrivate
+ * \class QtAws::Iam::TagPolicyResponsePrivate
  * \brief The TagPolicyResponsePrivate class provides private implementation for TagPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ TagPolicyResponsePrivate::TagPolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM TagPolicy response element from \a xml.
+ * Parses a Iam TagPolicy response element from \a xml.
  */
 void TagPolicyResponsePrivate::parseTagPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void TagPolicyResponsePrivate::parseTagPolicyResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

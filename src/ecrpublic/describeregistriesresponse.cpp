@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DescribeRegistriesResponse
- * \brief The DescribeRegistriesResponse class provides an interace for ECRPublic DescribeRegistries responses.
+ * \class QtAws::EcrPublic::DescribeRegistriesResponse
+ * \brief The DescribeRegistriesResponse class provides an interace for EcrPublic DescribeRegistries responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::describeRegistries
+ * \sa EcrPublicClient::describeRegistries
  */
 
 /*!
@@ -52,7 +52,7 @@ DescribeRegistriesResponse::DescribeRegistriesResponse(
         const DescribeRegistriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new DescribeRegistriesResponsePrivate(this), parent)
+    : EcrPublicResponse(new DescribeRegistriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRegistriesRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const DescribeRegistriesRequest * DescribeRegistriesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic DescribeRegistries \a response.
+ * Parses a successful EcrPublic DescribeRegistries \a response.
  */
 void DescribeRegistriesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void DescribeRegistriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::DescribeRegistriesResponsePrivate
+ * \class QtAws::EcrPublic::DescribeRegistriesResponsePrivate
  * \brief The DescribeRegistriesResponsePrivate class provides private implementation for DescribeRegistriesResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a DescribeRegistriesResponsePrivate object with public implementation \a q.
  */
 DescribeRegistriesResponsePrivate::DescribeRegistriesResponsePrivate(
-    DescribeRegistriesResponse * const q) : ECRPublicResponsePrivate(q)
+    DescribeRegistriesResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic DescribeRegistries response element from \a xml.
+ * Parses a EcrPublic DescribeRegistries response element from \a xml.
  */
 void DescribeRegistriesResponsePrivate::parseDescribeRegistriesResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void DescribeRegistriesResponsePrivate::parseDescribeRegistriesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

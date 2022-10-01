@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeEventSubscriptionsResponse
- * \brief The DescribeEventSubscriptionsResponse class provides an interace for RDS DescribeEventSubscriptions responses.
+ * \class QtAws::Rds::DescribeEventSubscriptionsResponse
+ * \brief The DescribeEventSubscriptionsResponse class provides an interace for Rds DescribeEventSubscriptions responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::re
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeEventSubscriptions \a response.
+ * Parses a successful Rds DescribeEventSubscriptions \a response.
  */
 void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeEventSubscriptionsResponsePrivate
+ * \class QtAws::Rds::DescribeEventSubscriptionsResponsePrivate
  * \brief The DescribeEventSubscriptionsResponsePrivate class provides private implementation for DescribeEventSubscriptionsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePri
 }
 
 /*!
- * Parses a RDS DescribeEventSubscriptions response element from \a xml.
+ * Parses a Rds DescribeEventSubscriptions response element from \a xml.
  */
 void DescribeEventSubscriptionsResponsePrivate::parseDescribeEventSubscriptionsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeEventSubscriptionsResponsePrivate::parseDescribeEventSubscriptionsR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

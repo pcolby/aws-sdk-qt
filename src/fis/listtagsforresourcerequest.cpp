@@ -23,17 +23,17 @@
 #include "fisrequest_p.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for FIS ListTagsForResource requests.
+ * \class QtAws::Fis::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Fis ListTagsForResource requests.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::listTagsForResource
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::FIS::ListTagsForResourceRequestPrivate
+ * \class QtAws::Fis::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -107,5 +107,5 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

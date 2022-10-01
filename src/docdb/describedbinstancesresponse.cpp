@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBInstancesResponse
- * \brief The DescribeDBInstancesResponse class provides an interace for DocDB DescribeDBInstances responses.
+ * \class QtAws::DocDb::DescribeDBInstancesResponse
+ * \brief The DescribeDBInstancesResponse class provides an interace for DocDb DescribeDBInstances responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBInstances
+ * \sa DocDbClient::describeDBInstances
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDBInstancesResponse::DescribeDBInstancesResponse(
         const DescribeDBInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeDBInstancesResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeDBInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBInstancesRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDBInstancesRequest * DescribeDBInstancesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeDBInstances \a response.
+ * Parses a successful DocDb DescribeDBInstances \a response.
  */
 void DescribeDBInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDBInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBInstancesResponsePrivate
+ * \class QtAws::DocDb::DescribeDBInstancesResponsePrivate
  * \brief The DescribeDBInstancesResponsePrivate class provides private implementation for DescribeDBInstancesResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeDBInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeDBInstancesResponsePrivate::DescribeDBInstancesResponsePrivate(
-    DescribeDBInstancesResponse * const q) : DocDBResponsePrivate(q)
+    DescribeDBInstancesResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeDBInstances response element from \a xml.
+ * Parses a DocDb DescribeDBInstances response element from \a xml.
  */
 void DescribeDBInstancesResponsePrivate::parseDescribeDBInstancesResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDBInstancesResponsePrivate::parseDescribeDBInstancesResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

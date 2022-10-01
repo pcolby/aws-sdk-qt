@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCLOUDWATCHLOGS_LIBRARY)
 
 add_library(QtAwsCloudWatchLogs
+  qtawscloudwatchlogsglobal.h
+  cloudwatchlogsclient.h
+  cloudwatchlogsclient_p.h
+  cloudwatchlogsrequest.h
+  cloudwatchlogsrequest_p.h
+  cloudwatchlogsresponse.h
+  cloudwatchlogsresponse_p.h
   associatekmskeyrequest.h
   associatekmskeyrequest_p.h
   associatekmskeyresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsCloudWatchLogs
   cancelexporttaskrequest_p.h
   cancelexporttaskresponse.h
   cancelexporttaskresponse_p.h
-  cloudwatchlogsclient.h
-  cloudwatchlogsclient_p.h
-  cloudwatchlogsrequest.h
-  cloudwatchlogsrequest_p.h
-  cloudwatchlogsresponse.h
-  cloudwatchlogsresponse_p.h
   createexporttaskrequest.h
   createexporttaskrequest_p.h
   createexporttaskresponse.h
@@ -123,14 +124,14 @@ add_library(QtAwsCloudWatchLogs
   listtagsloggrouprequest_p.h
   listtagsloggroupresponse.h
   listtagsloggroupresponse_p.h
-  putdestinationpolicyrequest.h
-  putdestinationpolicyrequest_p.h
-  putdestinationpolicyresponse.h
-  putdestinationpolicyresponse_p.h
   putdestinationrequest.h
   putdestinationrequest_p.h
   putdestinationresponse.h
   putdestinationresponse_p.h
+  putdestinationpolicyrequest.h
+  putdestinationpolicyrequest_p.h
+  putdestinationpolicyresponse.h
+  putdestinationpolicyresponse_p.h
   putlogeventsrequest.h
   putlogeventsrequest_p.h
   putlogeventsresponse.h
@@ -155,7 +156,6 @@ add_library(QtAwsCloudWatchLogs
   putsubscriptionfilterrequest_p.h
   putsubscriptionfilterresponse.h
   putsubscriptionfilterresponse_p.h
-  qtawscloudwatchlogsglobal.h
   startqueryrequest.h
   startqueryrequest_p.h
   startqueryresponse.h
@@ -176,13 +176,13 @@ add_library(QtAwsCloudWatchLogs
   untagloggrouprequest_p.h
   untagloggroupresponse.h
   untagloggroupresponse_p.h
+  cloudwatchlogsclient.cpp
+  cloudwatchlogsrequest.cpp
+  cloudwatchlogsresponse.cpp
   associatekmskeyrequest.cpp
   associatekmskeyresponse.cpp
   cancelexporttaskrequest.cpp
   cancelexporttaskresponse.cpp
-  cloudwatchlogsclient.cpp
-  cloudwatchlogsrequest.cpp
-  cloudwatchlogsresponse.cpp
   createexporttaskrequest.cpp
   createexporttaskresponse.cpp
   createloggrouprequest.cpp
@@ -237,10 +237,10 @@ add_library(QtAwsCloudWatchLogs
   getqueryresultsresponse.cpp
   listtagsloggrouprequest.cpp
   listtagsloggroupresponse.cpp
-  putdestinationpolicyrequest.cpp
-  putdestinationpolicyresponse.cpp
   putdestinationrequest.cpp
   putdestinationresponse.cpp
+  putdestinationpolicyrequest.cpp
+  putdestinationpolicyresponse.cpp
   putlogeventsrequest.cpp
   putlogeventsresponse.cpp
   putmetricfilterrequest.cpp

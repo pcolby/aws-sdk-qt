@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class SqsClientPrivate;
 class AddPermissionRequest;
@@ -114,7 +114,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

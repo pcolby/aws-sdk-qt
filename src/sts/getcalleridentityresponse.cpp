@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::GetCallerIdentityResponse
- * \brief The GetCallerIdentityResponse class provides an interace for STS GetCallerIdentity responses.
+ * \class QtAws::Sts::GetCallerIdentityResponse
+ * \brief The GetCallerIdentityResponse class provides an interace for Sts GetCallerIdentity responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::getCallerIdentity
@@ -67,7 +67,7 @@ const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS GetCallerIdentity \a response.
+ * Parses a successful Sts GetCallerIdentity \a response.
  */
 void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::GetCallerIdentityResponsePrivate
+ * \class QtAws::Sts::GetCallerIdentityResponsePrivate
  * \brief The GetCallerIdentityResponsePrivate class provides private implementation for GetCallerIdentityResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
 }
 
 /*!
- * Parses a STS GetCallerIdentity response element from \a xml.
+ * Parses a Sts GetCallerIdentity response element from \a xml.
  */
 void GetCallerIdentityResponsePrivate::parseGetCallerIdentityResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetCallerIdentityResponsePrivate::parseGetCallerIdentityResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

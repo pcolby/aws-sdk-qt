@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateDataSourceResponse
- * \brief The UpdateDataSourceResponse class provides an interace for kendra UpdateDataSource responses.
+ * \class QtAws::Kendra::UpdateDataSourceResponse
+ * \brief The UpdateDataSourceResponse class provides an interace for Kendra UpdateDataSource responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateDataSource
+ * \sa KendraClient::updateDataSource
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
         const UpdateDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new UpdateDataSourceResponsePrivate(this), parent)
+    : KendraResponse(new UpdateDataSourceResponsePrivate(this), parent)
 {
     setRequest(new UpdateDataSourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra UpdateDataSource \a response.
+ * Parses a successful Kendra UpdateDataSource \a response.
  */
 void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::UpdateDataSourceResponsePrivate
+ * \class QtAws::Kendra::UpdateDataSourceResponsePrivate
  * \brief The UpdateDataSourceResponsePrivate class provides private implementation for UpdateDataSourceResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a UpdateDataSourceResponsePrivate object with public implementation \a q.
  */
 UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
-    UpdateDataSourceResponse * const q) : kendraResponsePrivate(q)
+    UpdateDataSourceResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra UpdateDataSource response element from \a xml.
+ * Parses a Kendra UpdateDataSource response element from \a xml.
  */
 void UpdateDataSourceResponsePrivate::parseUpdateDataSourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateDataSourceResponsePrivate::parseUpdateDataSourceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBSnapshotResponse
- * \brief The DeleteDBSnapshotResponse class provides an interace for RDS DeleteDBSnapshot responses.
+ * \class QtAws::Rds::DeleteDBSnapshotResponse
+ * \brief The DeleteDBSnapshotResponse class provides an interace for Rds DeleteDBSnapshot responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteDBSnapshotRequest * DeleteDBSnapshotResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteDBSnapshot \a response.
+ * Parses a successful Rds DeleteDBSnapshot \a response.
  */
 void DeleteDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBSnapshotResponsePrivate
+ * \class QtAws::Rds::DeleteDBSnapshotResponsePrivate
  * \brief The DeleteDBSnapshotResponsePrivate class provides private implementation for DeleteDBSnapshotResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteDBSnapshot response element from \a xml.
+ * Parses a Rds DeleteDBSnapshot response element from \a xml.
  */
 void DeleteDBSnapshotResponsePrivate::parseDeleteDBSnapshotResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteDBSnapshotResponsePrivate::parseDeleteDBSnapshotResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateIndexResponse
- * \brief The UpdateIndexResponse class provides an interace for kendra UpdateIndex responses.
+ * \class QtAws::Kendra::UpdateIndexResponse
+ * \brief The UpdateIndexResponse class provides an interace for Kendra UpdateIndex responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateIndex
+ * \sa KendraClient::updateIndex
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateIndexResponse::UpdateIndexResponse(
         const UpdateIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new UpdateIndexResponsePrivate(this), parent)
+    : KendraResponse(new UpdateIndexResponsePrivate(this), parent)
 {
     setRequest(new UpdateIndexRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateIndexRequest * UpdateIndexResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra UpdateIndex \a response.
+ * Parses a successful Kendra UpdateIndex \a response.
  */
 void UpdateIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::UpdateIndexResponsePrivate
+ * \class QtAws::Kendra::UpdateIndexResponsePrivate
  * \brief The UpdateIndexResponsePrivate class provides private implementation for UpdateIndexResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a UpdateIndexResponsePrivate object with public implementation \a q.
  */
 UpdateIndexResponsePrivate::UpdateIndexResponsePrivate(
-    UpdateIndexResponse * const q) : kendraResponsePrivate(q)
+    UpdateIndexResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra UpdateIndex response element from \a xml.
+ * Parses a Kendra UpdateIndex response element from \a xml.
  */
 void UpdateIndexResponsePrivate::parseUpdateIndexResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateIndexResponsePrivate::parseUpdateIndexResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

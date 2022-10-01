@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeletePermissionPolicyResponse
- * \brief The DeletePermissionPolicyResponse class provides an interace for WAFRegional DeletePermissionPolicy responses.
+ * \class QtAws::WafRegional::DeletePermissionPolicyResponse
+ * \brief The DeletePermissionPolicyResponse class provides an interace for WafRegional DeletePermissionPolicy responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deletePermissionPolicy
+ * \sa WafRegionalClient::deletePermissionPolicy
  */
 
 /*!
@@ -67,7 +67,7 @@ DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
         const DeletePermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeletePermissionPolicyRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeletePermissionPolicy \a response.
+ * Parses a successful WafRegional DeletePermissionPolicy \a response.
  */
 void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeletePermissionPolicyResponsePrivate
+ * \class QtAws::WafRegional::DeletePermissionPolicyResponsePrivate
  * \brief The DeletePermissionPolicyResponsePrivate class provides private implementation for DeletePermissionPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeletePermissionPolicyResponsePrivate object with public implementation \a q.
  */
 DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
-    DeletePermissionPolicyResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeletePermissionPolicyResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeletePermissionPolicy response element from \a xml.
+ * Parses a WafRegional DeletePermissionPolicy response element from \a xml.
  */
 void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

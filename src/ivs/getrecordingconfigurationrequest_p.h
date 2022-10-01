@@ -24,7 +24,7 @@
 #include "getrecordingconfigurationrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class GetRecordingConfigurationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

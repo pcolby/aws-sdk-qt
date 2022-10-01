@@ -23,11 +23,11 @@
 #include "apigatewayrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateDocumentationVersionRequestPrivate;
 
-class QTAWSAPIGATEWAY_EXPORT UpdateDocumentationVersionRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT UpdateDocumentationVersionRequest : public ApiGatewayRequest {
 
 public:
     UpdateDocumentationVersionRequest(const UpdateDocumentationVersionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

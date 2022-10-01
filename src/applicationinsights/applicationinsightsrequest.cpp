@@ -270,7 +270,7 @@ QNetworkRequest ApplicationInsightsRequest::unsignedRequest(const QUrl &endpoint
  * with public implementation \a q.
  */
 ApplicationInsightsRequestPrivate::ApplicationInsightsRequestPrivate(const ApplicationInsightsRequest::Action action, ApplicationInsightsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-25"))
 {
 
 }

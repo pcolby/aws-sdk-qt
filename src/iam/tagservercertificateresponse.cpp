@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagServerCertificateResponse
- * \brief The TagServerCertificateResponse class provides an interace for IAM TagServerCertificate responses.
+ * \class QtAws::Iam::TagServerCertificateResponse
+ * \brief The TagServerCertificateResponse class provides an interace for Iam TagServerCertificate responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagServerCertificate
  */
@@ -68,7 +68,7 @@ const TagServerCertificateRequest * TagServerCertificateResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful IAM TagServerCertificate \a response.
+ * Parses a successful Iam TagServerCertificate \a response.
  */
 void TagServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void TagServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::TagServerCertificateResponsePrivate
+ * \class QtAws::Iam::TagServerCertificateResponsePrivate
  * \brief The TagServerCertificateResponsePrivate class provides private implementation for TagServerCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ TagServerCertificateResponsePrivate::TagServerCertificateResponsePrivate(
 }
 
 /*!
- * Parses a IAM TagServerCertificate response element from \a xml.
+ * Parses a Iam TagServerCertificate response element from \a xml.
  */
 void TagServerCertificateResponsePrivate::parseTagServerCertificateResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void TagServerCertificateResponsePrivate::parseTagServerCertificateResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

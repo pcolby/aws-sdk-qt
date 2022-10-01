@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetModelRequest
- * \brief The GetModelRequest class provides an interface for APIGateway GetModel requests.
+ * \class QtAws::ApiGateway::GetModelRequest
+ * \brief The GetModelRequest class provides an interface for ApiGateway GetModel requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getModel
+ * \sa ApiGatewayClient::getModel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetModelRequest::GetModelRequest(const GetModelRequest &other)
-    : APIGatewayRequest(new GetModelRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetModelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetModelRequest::GetModelRequest(const GetModelRequest &other)
  * Constructs a GetModelRequest object.
  */
 GetModelRequest::GetModelRequest()
-    : APIGatewayRequest(new GetModelRequestPrivate(APIGatewayRequest::GetModelAction, this))
+    : ApiGatewayRequest(new GetModelRequestPrivate(ApiGatewayRequest::GetModelAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetModelRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::APIGateway::GetModelRequestPrivate
+ * \class QtAws::ApiGateway::GetModelRequestPrivate
  * \brief The GetModelRequestPrivate class provides private implementation for GetModelRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetModelRequestPrivate object for APIGateway \a action,
+ * Constructs a GetModelRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetModelRequestPrivate::GetModelRequestPrivate(
-    const APIGatewayRequest::Action action, GetModelRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetModelRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetModelRequestPrivate::GetModelRequestPrivate(
  */
 GetModelRequestPrivate::GetModelRequestPrivate(
     const GetModelRequestPrivate &other, GetModelRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

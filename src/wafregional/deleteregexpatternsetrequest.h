@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteRegexPatternSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT DeleteRegexPatternSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteRegexPatternSetRequest : public WafRegionalRequest {
 
 public:
     DeleteRegexPatternSetRequest(const DeleteRegexPatternSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

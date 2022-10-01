@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPMESH_LIBRARY)
 
 add_library(QtAwsAppMesh
+  qtawsappmeshglobal.h
   appmeshclient.h
   appmeshclient_p.h
   appmeshrequest.h
@@ -123,7 +124,6 @@ add_library(QtAwsAppMesh
   listvirtualservicesrequest_p.h
   listvirtualservicesresponse.h
   listvirtualservicesresponse_p.h
-  qtawsappmeshglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

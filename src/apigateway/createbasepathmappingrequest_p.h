@@ -24,14 +24,14 @@
 #include "createbasepathmappingrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateBasePathMappingRequest;
 
-class CreateBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
+class CreateBasePathMappingRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateBasePathMappingRequestPrivate(const APIGatewayRequest::Action action,
+    CreateBasePathMappingRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateBasePathMappingRequest * const q);
     CreateBasePathMappingRequestPrivate(const CreateBasePathMappingRequestPrivate &other,
                                    CreateBasePathMappingRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

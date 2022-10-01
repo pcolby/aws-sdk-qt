@@ -23,11 +23,11 @@
 #include "ssmcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class StopEngagementRequestPrivate;
 
-class QTAWSSSMCONTACTS_EXPORT StopEngagementRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT StopEngagementRequest : public SsmContactsRequest {
 
 public:
     StopEngagementRequest(const StopEngagementRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

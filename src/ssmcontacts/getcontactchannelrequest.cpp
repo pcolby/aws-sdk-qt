@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::GetContactChannelRequest
- * \brief The GetContactChannelRequest class provides an interface for SSMContacts GetContactChannel requests.
+ * \class QtAws::SsmContacts::GetContactChannelRequest
+ * \brief The GetContactChannelRequest class provides an interface for SsmContacts GetContactChannel requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::getContactChannel
+ * \sa SsmContactsClient::getContactChannel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetContactChannelRequest::GetContactChannelRequest(const GetContactChannelRequest &other)
-    : SSMContactsRequest(new GetContactChannelRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new GetContactChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ GetContactChannelRequest::GetContactChannelRequest(const GetContactChannelReques
  * Constructs a GetContactChannelRequest object.
  */
 GetContactChannelRequest::GetContactChannelRequest()
-    : SSMContactsRequest(new GetContactChannelRequestPrivate(SSMContactsRequest::GetContactChannelAction, this))
+    : SsmContactsRequest(new GetContactChannelRequestPrivate(SsmContactsRequest::GetContactChannelAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetContactChannelRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SSMContacts::GetContactChannelRequestPrivate
+ * \class QtAws::SsmContacts::GetContactChannelRequestPrivate
  * \brief The GetContactChannelRequestPrivate class provides private implementation for GetContactChannelRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a GetContactChannelRequestPrivate object for SSMContacts \a action,
+ * Constructs a GetContactChannelRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 GetContactChannelRequestPrivate::GetContactChannelRequestPrivate(
-    const SSMContactsRequest::Action action, GetContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, GetContactChannelRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ GetContactChannelRequestPrivate::GetContactChannelRequestPrivate(
  */
 GetContactChannelRequestPrivate::GetContactChannelRequestPrivate(
     const GetContactChannelRequestPrivate &other, GetContactChannelRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

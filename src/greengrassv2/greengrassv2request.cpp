@@ -36,6 +36,7 @@ namespace GreengrassV2 {
  * This enum describes the actions that can be performed as GreengrassV2
  * requests.
  *
+ * \value AssociateServiceRoleToAccountAction GreengrassV2 AssociateServiceRoleToAccount action.
  * \value BatchAssociateClientDeviceWithCoreDeviceAction GreengrassV2 BatchAssociateClientDeviceWithCoreDevice action.
  * \value BatchDisassociateClientDeviceFromCoreDeviceAction GreengrassV2 BatchDisassociateClientDeviceFromCoreDevice action.
  * \value CancelDeploymentAction GreengrassV2 CancelDeployment action.
@@ -43,11 +44,15 @@ namespace GreengrassV2 {
  * \value CreateDeploymentAction GreengrassV2 CreateDeployment action.
  * \value DeleteComponentAction GreengrassV2 DeleteComponent action.
  * \value DeleteCoreDeviceAction GreengrassV2 DeleteCoreDevice action.
+ * \value DeleteDeploymentAction GreengrassV2 DeleteDeployment action.
  * \value DescribeComponentAction GreengrassV2 DescribeComponent action.
+ * \value DisassociateServiceRoleFromAccountAction GreengrassV2 DisassociateServiceRoleFromAccount action.
  * \value GetComponentAction GreengrassV2 GetComponent action.
  * \value GetComponentVersionArtifactAction GreengrassV2 GetComponentVersionArtifact action.
+ * \value GetConnectivityInfoAction GreengrassV2 GetConnectivityInfo action.
  * \value GetCoreDeviceAction GreengrassV2 GetCoreDevice action.
  * \value GetDeploymentAction GreengrassV2 GetDeployment action.
+ * \value GetServiceRoleForAccountAction GreengrassV2 GetServiceRoleForAccount action.
  * \value ListClientDevicesAssociatedWithCoreDeviceAction GreengrassV2 ListClientDevicesAssociatedWithCoreDevice action.
  * \value ListComponentVersionsAction GreengrassV2 ListComponentVersions action.
  * \value ListComponentsAction GreengrassV2 ListComponents action.
@@ -59,6 +64,7 @@ namespace GreengrassV2 {
  * \value ResolveComponentCandidatesAction GreengrassV2 ResolveComponentCandidates action.
  * \value TagResourceAction GreengrassV2 TagResource action.
  * \value UntagResourceAction GreengrassV2 UntagResource action.
+ * \value UpdateConnectivityInfoAction GreengrassV2 UpdateConnectivityInfo action.
  */
 
 /*!
@@ -266,7 +272,7 @@ QNetworkRequest GreengrassV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GreengrassV2RequestPrivate::GreengrassV2RequestPrivate(const GreengrassV2Request::Action action, GreengrassV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-11-30"))
 {
 
 }
@@ -300,6 +306,7 @@ QString GreengrassV2RequestPrivate::toString(const GreengrassV2Request::Action &
     #define ActionToString(action) \
         case GreengrassV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AssociateServiceRoleToAccount);
         ActionToString(BatchAssociateClientDeviceWithCoreDevice);
         ActionToString(BatchDisassociateClientDeviceFromCoreDevice);
         ActionToString(CancelDeployment);
@@ -307,11 +314,15 @@ QString GreengrassV2RequestPrivate::toString(const GreengrassV2Request::Action &
         ActionToString(CreateDeployment);
         ActionToString(DeleteComponent);
         ActionToString(DeleteCoreDevice);
+        ActionToString(DeleteDeployment);
         ActionToString(DescribeComponent);
+        ActionToString(DisassociateServiceRoleFromAccount);
         ActionToString(GetComponent);
         ActionToString(GetComponentVersionArtifact);
+        ActionToString(GetConnectivityInfo);
         ActionToString(GetCoreDevice);
         ActionToString(GetDeployment);
+        ActionToString(GetServiceRoleForAccount);
         ActionToString(ListClientDevicesAssociatedWithCoreDevice);
         ActionToString(ListComponentVersions);
         ActionToString(ListComponents);
@@ -323,6 +334,7 @@ QString GreengrassV2RequestPrivate::toString(const GreengrassV2Request::Action &
         ActionToString(ResolveComponentCandidates);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateConnectivityInfo);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

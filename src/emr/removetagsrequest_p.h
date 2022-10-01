@@ -24,7 +24,7 @@
 #include "removetagsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class RemoveTagsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

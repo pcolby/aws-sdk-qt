@@ -24,7 +24,7 @@
 #include "deletebrokerrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class DeleteBrokerResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

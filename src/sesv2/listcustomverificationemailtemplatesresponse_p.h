@@ -23,11 +23,11 @@
 #include "sesv2response_p.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListCustomVerificationEmailTemplatesResponse;
 
-class ListCustomVerificationEmailTemplatesResponsePrivate : public Sesv2ResponsePrivate {
+class ListCustomVerificationEmailTemplatesResponsePrivate : public SESv2ResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

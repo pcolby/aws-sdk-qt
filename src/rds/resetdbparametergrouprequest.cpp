@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ResetDBParameterGroupRequest
- * \brief The ResetDBParameterGroupRequest class provides an interface for RDS ResetDBParameterGroup requests.
+ * \class QtAws::Rds::ResetDBParameterGroupRequest
+ * \brief The ResetDBParameterGroupRequest class provides an interface for Rds ResetDBParameterGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::RDS::ResetDBParameterGroupRequestPrivate
+ * \class QtAws::Rds::ResetDBParameterGroupRequestPrivate
  * \brief The ResetDBParameterGroupRequestPrivate class provides private implementation for ResetDBParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

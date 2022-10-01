@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::GetRepositoryPolicyResponse
- * \brief The GetRepositoryPolicyResponse class provides an interace for ECR GetRepositoryPolicy responses.
+ * \class QtAws::Ecr::GetRepositoryPolicyResponse
+ * \brief The GetRepositoryPolicyResponse class provides an interace for Ecr GetRepositoryPolicy responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::getRepositoryPolicy
  */
@@ -68,7 +74,7 @@ const GetRepositoryPolicyRequest * GetRepositoryPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR GetRepositoryPolicy \a response.
+ * Parses a successful Ecr GetRepositoryPolicy \a response.
  */
 void GetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void GetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::GetRepositoryPolicyResponsePrivate
+ * \class QtAws::Ecr::GetRepositoryPolicyResponsePrivate
  * \brief The GetRepositoryPolicyResponsePrivate class provides private implementation for GetRepositoryPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ GetRepositoryPolicyResponsePrivate::GetRepositoryPolicyResponsePrivate(
 }
 
 /*!
- * Parses a ECR GetRepositoryPolicy response element from \a xml.
+ * Parses a Ecr GetRepositoryPolicy response element from \a xml.
  */
 void GetRepositoryPolicyResponsePrivate::parseGetRepositoryPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void GetRepositoryPolicyResponsePrivate::parseGetRepositoryPolicyResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

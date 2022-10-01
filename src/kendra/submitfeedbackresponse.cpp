@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::SubmitFeedbackResponse
- * \brief The SubmitFeedbackResponse class provides an interace for kendra SubmitFeedback responses.
+ * \class QtAws::Kendra::SubmitFeedbackResponse
+ * \brief The SubmitFeedbackResponse class provides an interace for Kendra SubmitFeedback responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::submitFeedback
+ * \sa KendraClient::submitFeedback
  */
 
 /*!
@@ -45,7 +45,7 @@ SubmitFeedbackResponse::SubmitFeedbackResponse(
         const SubmitFeedbackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new SubmitFeedbackResponsePrivate(this), parent)
+    : KendraResponse(new SubmitFeedbackResponsePrivate(this), parent)
 {
     setRequest(new SubmitFeedbackRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const SubmitFeedbackRequest * SubmitFeedbackResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra SubmitFeedback \a response.
+ * Parses a successful Kendra SubmitFeedback \a response.
  */
 void SubmitFeedbackResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void SubmitFeedbackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::SubmitFeedbackResponsePrivate
+ * \class QtAws::Kendra::SubmitFeedbackResponsePrivate
  * \brief The SubmitFeedbackResponsePrivate class provides private implementation for SubmitFeedbackResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a SubmitFeedbackResponsePrivate object with public implementation \a q.
  */
 SubmitFeedbackResponsePrivate::SubmitFeedbackResponsePrivate(
-    SubmitFeedbackResponse * const q) : kendraResponsePrivate(q)
+    SubmitFeedbackResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra SubmitFeedback response element from \a xml.
+ * Parses a Kendra SubmitFeedback response element from \a xml.
  */
 void SubmitFeedbackResponsePrivate::parseSubmitFeedbackResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void SubmitFeedbackResponsePrivate::parseSubmitFeedbackResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

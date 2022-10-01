@@ -246,7 +246,7 @@ QNetworkRequest CloudSearchDomainRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSearchDomainRequest::Action action, CloudSearchDomainRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-01-01"))
 {
 
 }

@@ -63,6 +63,8 @@ namespace LexModelBuildingService {
  * \value GetIntentAction LexModelBuildingService GetIntent action.
  * \value GetIntentVersionsAction LexModelBuildingService GetIntentVersions action.
  * \value GetIntentsAction LexModelBuildingService GetIntents action.
+ * \value GetMigrationAction LexModelBuildingService GetMigration action.
+ * \value GetMigrationsAction LexModelBuildingService GetMigrations action.
  * \value GetSlotTypeAction LexModelBuildingService GetSlotType action.
  * \value GetSlotTypeVersionsAction LexModelBuildingService GetSlotTypeVersions action.
  * \value GetSlotTypesAction LexModelBuildingService GetSlotTypes action.
@@ -73,6 +75,7 @@ namespace LexModelBuildingService {
  * \value PutIntentAction LexModelBuildingService PutIntent action.
  * \value PutSlotTypeAction LexModelBuildingService PutSlotType action.
  * \value StartImportAction LexModelBuildingService StartImport action.
+ * \value StartMigrationAction LexModelBuildingService StartMigration action.
  * \value TagResourceAction LexModelBuildingService TagResource action.
  * \value UntagResourceAction LexModelBuildingService UntagResource action.
  */
@@ -282,7 +285,7 @@ QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-04-19"))
 {
 
 }
@@ -343,6 +346,8 @@ QString LexModelBuildingServiceRequestPrivate::toString(const LexModelBuildingSe
         ActionToString(GetIntent);
         ActionToString(GetIntentVersions);
         ActionToString(GetIntents);
+        ActionToString(GetMigration);
+        ActionToString(GetMigrations);
         ActionToString(GetSlotType);
         ActionToString(GetSlotTypeVersions);
         ActionToString(GetSlotTypes);
@@ -353,6 +358,7 @@ QString LexModelBuildingServiceRequestPrivate::toString(const LexModelBuildingSe
         ActionToString(PutIntent);
         ActionToString(PutSlotType);
         ActionToString(StartImport);
+        ActionToString(StartMigration);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         default:

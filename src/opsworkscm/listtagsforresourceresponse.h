@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT ListTagsForResourceResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT ListTagsForResourceResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

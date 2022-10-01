@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteUserPermissionsBoundaryResponse
- * \brief The DeleteUserPermissionsBoundaryResponse class provides an interace for IAM DeleteUserPermissionsBoundary responses.
+ * \class QtAws::Iam::DeleteUserPermissionsBoundaryResponse
+ * \brief The DeleteUserPermissionsBoundaryResponse class provides an interace for Iam DeleteUserPermissionsBoundary responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteUserPermissionsBoundary
  */
@@ -68,7 +68,7 @@ const DeleteUserPermissionsBoundaryRequest * DeleteUserPermissionsBoundaryRespon
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteUserPermissionsBoundary \a response.
+ * Parses a successful Iam DeleteUserPermissionsBoundary \a response.
  */
 void DeleteUserPermissionsBoundaryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteUserPermissionsBoundaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteUserPermissionsBoundaryResponsePrivate
+ * \class QtAws::Iam::DeleteUserPermissionsBoundaryResponsePrivate
  * \brief The DeleteUserPermissionsBoundaryResponsePrivate class provides private implementation for DeleteUserPermissionsBoundaryResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteUserPermissionsBoundaryResponsePrivate::DeleteUserPermissionsBoundaryRespo
 }
 
 /*!
- * Parses a IAM DeleteUserPermissionsBoundary response element from \a xml.
+ * Parses a Iam DeleteUserPermissionsBoundary response element from \a xml.
  */
 void DeleteUserPermissionsBoundaryResponsePrivate::parseDeleteUserPermissionsBoundaryResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteUserPermissionsBoundaryResponsePrivate::parseDeleteUserPermissionsBou
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -44,6 +44,7 @@ public:
         CreateEmailTemplateAction,
         CreateExportJobAction,
         CreateImportJobAction,
+        CreateInAppTemplateAction,
         CreateJourneyAction,
         CreatePushTemplateAction,
         CreateRecommenderConfigurationAction,
@@ -63,6 +64,7 @@ public:
         DeleteEndpointAction,
         DeleteEventStreamAction,
         DeleteGcmChannelAction,
+        DeleteInAppTemplateAction,
         DeleteJourneyAction,
         DeletePushTemplateAction,
         DeleteRecommenderConfigurationAction,
@@ -98,6 +100,8 @@ public:
         GetGcmChannelAction,
         GetImportJobAction,
         GetImportJobsAction,
+        GetInAppMessagesAction,
+        GetInAppTemplateAction,
         GetJourneyAction,
         GetJourneyDateRangeKpiAction,
         GetJourneyExecutionActivityMetricsAction,
@@ -125,6 +129,7 @@ public:
         PutEventsAction,
         RemoveAttributesAction,
         SendMessagesAction,
+        SendOTPMessageAction,
         SendUsersMessagesAction,
         TagResourceAction,
         UntagResourceAction,
@@ -141,6 +146,7 @@ public:
         UpdateEndpointAction,
         UpdateEndpointsBatchAction,
         UpdateGcmChannelAction,
+        UpdateInAppTemplateAction,
         UpdateJourneyAction,
         UpdateJourneyStateAction,
         UpdatePushTemplateAction,
@@ -151,6 +157,7 @@ public:
         UpdateTemplateActiveVersionAction,
         UpdateVoiceChannelAction,
         UpdateVoiceTemplateAction,
+        VerifyOTPMessageAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

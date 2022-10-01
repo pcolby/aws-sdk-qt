@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBSubnetGroupsRequest
- * \brief The DescribeDBSubnetGroupsRequest class provides an interface for DocDB DescribeDBSubnetGroups requests.
+ * \class QtAws::DocDb::DescribeDBSubnetGroupsRequest
+ * \brief The DescribeDBSubnetGroupsRequest class provides an interface for DocDb DescribeDBSubnetGroups requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBSubnetGroups
+ * \sa DocDbClient::describeDBSubnetGroups
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest(const DescribeDBSubnetGroupsRequest &other)
-    : DocDBRequest(new DescribeDBSubnetGroupsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeDBSubnetGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest(const DescribeDBSub
  * Constructs a DescribeDBSubnetGroupsRequest object.
  */
 DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest()
-    : DocDBRequest(new DescribeDBSubnetGroupsRequestPrivate(DocDBRequest::DescribeDBSubnetGroupsAction, this))
+    : DocDbRequest(new DescribeDBSubnetGroupsRequestPrivate(DocDbRequest::DescribeDBSubnetGroupsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBSubnetGroupsRequestPrivate
+ * \class QtAws::DocDb::DescribeDBSubnetGroupsRequestPrivate
  * \brief The DescribeDBSubnetGroupsRequestPrivate class provides private implementation for DescribeDBSubnetGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeDBSubnetGroupsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeDBSubnetGroupsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
-    const DocDBRequest::Action action, DescribeDBSubnetGroupsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeDBSubnetGroupsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const DescribeDBSubnetGroupsRequestPrivate &other, DescribeDBSubnetGroupsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

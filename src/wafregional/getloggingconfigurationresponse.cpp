@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetLoggingConfigurationResponse
- * \brief The GetLoggingConfigurationResponse class provides an interace for WAFRegional GetLoggingConfiguration responses.
+ * \class QtAws::WafRegional::GetLoggingConfigurationResponse
+ * \brief The GetLoggingConfigurationResponse class provides an interace for WafRegional GetLoggingConfiguration responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getLoggingConfiguration
+ * \sa WafRegionalClient::getLoggingConfiguration
  */
 
 /*!
@@ -67,7 +67,7 @@ GetLoggingConfigurationResponse::GetLoggingConfigurationResponse(
         const GetLoggingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetLoggingConfigurationResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetLoggingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetLoggingConfigurationRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetLoggingConfigurationRequest * GetLoggingConfigurationResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetLoggingConfiguration \a response.
+ * Parses a successful WafRegional GetLoggingConfiguration \a response.
  */
 void GetLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetLoggingConfigurationResponsePrivate
+ * \class QtAws::WafRegional::GetLoggingConfigurationResponsePrivate
  * \brief The GetLoggingConfigurationResponsePrivate class provides private implementation for GetLoggingConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetLoggingConfigurationResponsePrivate object with public implementation \a q.
  */
 GetLoggingConfigurationResponsePrivate::GetLoggingConfigurationResponsePrivate(
-    GetLoggingConfigurationResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetLoggingConfigurationResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetLoggingConfiguration response element from \a xml.
+ * Parses a WafRegional GetLoggingConfiguration response element from \a xml.
  */
 void GetLoggingConfigurationResponsePrivate::parseGetLoggingConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetLoggingConfigurationResponsePrivate::parseGetLoggingConfigurationRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

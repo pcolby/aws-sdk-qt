@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DescribeJobRunRequest
- * \brief The DescribeJobRunRequest class provides an interface for EMRContainers DescribeJobRun requests.
+ * \class QtAws::Emrcontainers::DescribeJobRunRequest
+ * \brief The DescribeJobRunRequest class provides an interface for Emrcontainers DescribeJobRun requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::describeJobRun
+ * \sa EmrcontainersClient::describeJobRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeJobRunRequest::DescribeJobRunRequest(const DescribeJobRunRequest &other)
-    : EMRContainersRequest(new DescribeJobRunRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new DescribeJobRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ DescribeJobRunRequest::DescribeJobRunRequest(const DescribeJobRunRequest &other)
  * Constructs a DescribeJobRunRequest object.
  */
 DescribeJobRunRequest::DescribeJobRunRequest()
-    : EMRContainersRequest(new DescribeJobRunRequestPrivate(EMRContainersRequest::DescribeJobRunAction, this))
+    : EmrcontainersRequest(new DescribeJobRunRequestPrivate(EmrcontainersRequest::DescribeJobRunAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRunRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::EMRContainers::DescribeJobRunRequestPrivate
+ * \class QtAws::Emrcontainers::DescribeJobRunRequestPrivate
  * \brief The DescribeJobRunRequestPrivate class provides private implementation for DescribeJobRunRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a DescribeJobRunRequestPrivate object for EMRContainers \a action,
+ * Constructs a DescribeJobRunRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 DescribeJobRunRequestPrivate::DescribeJobRunRequestPrivate(
-    const EMRContainersRequest::Action action, DescribeJobRunRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, DescribeJobRunRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ DescribeJobRunRequestPrivate::DescribeJobRunRequestPrivate(
  */
 DescribeJobRunRequestPrivate::DescribeJobRunRequestPrivate(
     const DescribeJobRunRequestPrivate &other, DescribeJobRunRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

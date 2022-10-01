@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::SmsResponse
- * \brief The SmsResponse class provides an interface for SMS responses.
+ * \class QtAws::Sms::SmsResponse
+ * \brief The SmsResponse class provides an interface for Sms responses.
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -76,11 +76,11 @@ void SmsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SMS::SmsResponsePrivate
+ * \class QtAws::Sms::SmsResponsePrivate
  * \brief The SmsResponsePrivate class provides private implementation for SmsResponse.
  * \internal
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -92,5 +92,5 @@ SmsResponsePrivate::SmsResponsePrivate(
 
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

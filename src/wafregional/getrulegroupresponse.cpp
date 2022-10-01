@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRuleGroupResponse
- * \brief The GetRuleGroupResponse class provides an interace for WAFRegional GetRuleGroup responses.
+ * \class QtAws::WafRegional::GetRuleGroupResponse
+ * \brief The GetRuleGroupResponse class provides an interace for WafRegional GetRuleGroup responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRuleGroup
+ * \sa WafRegionalClient::getRuleGroup
  */
 
 /*!
@@ -67,7 +67,7 @@ GetRuleGroupResponse::GetRuleGroupResponse(
         const GetRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetRuleGroupResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new GetRuleGroupRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetRuleGroupRequest * GetRuleGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetRuleGroup \a response.
+ * Parses a successful WafRegional GetRuleGroup \a response.
  */
 void GetRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRuleGroupResponsePrivate
+ * \class QtAws::WafRegional::GetRuleGroupResponsePrivate
  * \brief The GetRuleGroupResponsePrivate class provides private implementation for GetRuleGroupResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetRuleGroupResponsePrivate object with public implementation \a q.
  */
 GetRuleGroupResponsePrivate::GetRuleGroupResponsePrivate(
-    GetRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetRuleGroupResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetRuleGroup response element from \a xml.
+ * Parses a WafRegional GetRuleGroup response element from \a xml.
  */
 void GetRuleGroupResponsePrivate::parseGetRuleGroupResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetRuleGroupResponsePrivate::parseGetRuleGroupResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

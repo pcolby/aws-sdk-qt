@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeQuerySuggestionsConfigResponse
- * \brief The DescribeQuerySuggestionsConfigResponse class provides an interace for kendra DescribeQuerySuggestionsConfig responses.
+ * \class QtAws::Kendra::DescribeQuerySuggestionsConfigResponse
+ * \brief The DescribeQuerySuggestionsConfigResponse class provides an interace for Kendra DescribeQuerySuggestionsConfig responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeQuerySuggestionsConfig
+ * \sa KendraClient::describeQuerySuggestionsConfig
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeQuerySuggestionsConfigResponse::DescribeQuerySuggestionsConfigResponse(
         const DescribeQuerySuggestionsConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DescribeQuerySuggestionsConfigResponsePrivate(this), parent)
+    : KendraResponse(new DescribeQuerySuggestionsConfigResponsePrivate(this), parent)
 {
     setRequest(new DescribeQuerySuggestionsConfigRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeQuerySuggestionsConfigRequest * DescribeQuerySuggestionsConfigResp
 
 /*!
  * \reimp
- * Parses a successful kendra DescribeQuerySuggestionsConfig \a response.
+ * Parses a successful Kendra DescribeQuerySuggestionsConfig \a response.
  */
 void DescribeQuerySuggestionsConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeQuerySuggestionsConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DescribeQuerySuggestionsConfigResponsePrivate
+ * \class QtAws::Kendra::DescribeQuerySuggestionsConfigResponsePrivate
  * \brief The DescribeQuerySuggestionsConfigResponsePrivate class provides private implementation for DescribeQuerySuggestionsConfigResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DescribeQuerySuggestionsConfigResponsePrivate object with public implementation \a q.
  */
 DescribeQuerySuggestionsConfigResponsePrivate::DescribeQuerySuggestionsConfigResponsePrivate(
-    DescribeQuerySuggestionsConfigResponse * const q) : kendraResponsePrivate(q)
+    DescribeQuerySuggestionsConfigResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DescribeQuerySuggestionsConfig response element from \a xml.
+ * Parses a Kendra DescribeQuerySuggestionsConfig response element from \a xml.
  */
 void DescribeQuerySuggestionsConfigResponsePrivate::parseDescribeQuerySuggestionsConfigResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeQuerySuggestionsConfigResponsePrivate::parseDescribeQuerySuggestion
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::PutAutoScalingPolicyRequest
- * \brief The PutAutoScalingPolicyRequest class provides an interface for EMR PutAutoScalingPolicy requests.
+ * \class QtAws::Emr::PutAutoScalingPolicyRequest
+ * \brief The PutAutoScalingPolicyRequest class provides an interface for Emr PutAutoScalingPolicy requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::putAutoScalingPolicy
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EMR::PutAutoScalingPolicyRequestPrivate
+ * \class QtAws::Emr::PutAutoScalingPolicyRequestPrivate
  * \brief The PutAutoScalingPolicyRequestPrivate class provides private implementation for PutAutoScalingPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

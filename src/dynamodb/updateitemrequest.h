@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UpdateItemRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT UpdateItemRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT UpdateItemRequest : public DynamoDbRequest {
 
 public:
     UpdateItemRequest(const UpdateItemRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "describepagerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class DescribePageResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT DescribePageResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT DescribePageResponse : public SsmContactsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

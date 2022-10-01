@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::StartNotebookExecutionRequest
- * \brief The StartNotebookExecutionRequest class provides an interface for EMR StartNotebookExecution requests.
+ * \class QtAws::Emr::StartNotebookExecutionRequest
+ * \brief The StartNotebookExecutionRequest class provides an interface for Emr StartNotebookExecution requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::startNotebookExecution
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * StartNotebookExecutionRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::EMR::StartNotebookExecutionRequestPrivate
+ * \class QtAws::Emr::StartNotebookExecutionRequestPrivate
  * \brief The StartNotebookExecutionRequestPrivate class provides private implementation for StartNotebookExecutionRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ StartNotebookExecutionRequestPrivate::StartNotebookExecutionRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

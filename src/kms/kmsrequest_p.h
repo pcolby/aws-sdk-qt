@@ -24,16 +24,16 @@
 #include "kmsrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class KmsRequest;
 
 class KmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    KmsRequest::Action action; ///< KMS action to be performed.
-    QString apiVersion;        ///< KMS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< KMS request (query string) parameters. @todo?
+    KmsRequest::Action action; ///< Kms action to be performed.
+    QString apiVersion;        ///< Kms API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Kms request (query string) parameters. @todo?
 
     KmsRequestPrivate(const KmsRequest::Action action, KmsRequest * const q);
     KmsRequestPrivate(const KmsRequestPrivate &other, KmsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

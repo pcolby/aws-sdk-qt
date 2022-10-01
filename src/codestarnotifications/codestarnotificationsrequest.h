@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsRequestPrivate;
+class CodestarNotificationsRequestPrivate;
 
-class QTAWSCODESTARNOTIFICATIONS_EXPORT CodeStarNotificationsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT CodestarNotificationsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by CodeStarNotifications.
+    /// Actions supported by CodestarNotifications.
     enum Action {
         CreateNotificationRuleAction,
         DeleteNotificationRuleAction,
@@ -55,9 +55,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    CodeStarNotificationsRequest(const Action action);
-    CodeStarNotificationsRequest(const CodeStarNotificationsRequest &other);
-    CodeStarNotificationsRequest &operator=(const CodeStarNotificationsRequest &other);
+    CodestarNotificationsRequest(const Action action);
+    CodestarNotificationsRequest(const CodestarNotificationsRequest &other);
+    CodestarNotificationsRequest &operator=(const CodestarNotificationsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -66,12 +66,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CodeStarNotificationsRequest &other) const;
+    virtual bool operator==(const CodestarNotificationsRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
+    explicit CodestarNotificationsRequest(CodestarNotificationsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -84,11 +84,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CodeStarNotificationsRequest)
+    Q_DECLARE_PRIVATE(CodestarNotificationsRequest)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

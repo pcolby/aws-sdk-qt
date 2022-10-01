@@ -24,14 +24,14 @@
 #include "sendvoicemessagerequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class SendVoiceMessageRequest;
 
-class SendVoiceMessageRequestPrivate : public PinpointSMSVoiceRequestPrivate {
+class SendVoiceMessageRequestPrivate : public PinpointSmsVoiceRequestPrivate {
 
 public:
-    SendVoiceMessageRequestPrivate(const PinpointSMSVoiceRequest::Action action,
+    SendVoiceMessageRequestPrivate(const PinpointSmsVoiceRequest::Action action,
                                    SendVoiceMessageRequest * const q);
     SendVoiceMessageRequestPrivate(const SendVoiceMessageRequestPrivate &other,
                                    SendVoiceMessageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

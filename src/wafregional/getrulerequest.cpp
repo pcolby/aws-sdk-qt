@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRuleRequest
- * \brief The GetRuleRequest class provides an interface for WAFRegional GetRule requests.
+ * \class QtAws::WafRegional::GetRuleRequest
+ * \brief The GetRuleRequest class provides an interface for WafRegional GetRule requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRule
+ * \sa WafRegionalClient::getRule
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
-    : WAFRegionalRequest(new GetRuleRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
  * Constructs a GetRuleRequest object.
  */
 GetRuleRequest::GetRuleRequest()
-    : WAFRegionalRequest(new GetRuleRequestPrivate(WAFRegionalRequest::GetRuleAction, this))
+    : WafRegionalRequest(new GetRuleRequestPrivate(WafRegionalRequest::GetRuleAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRuleRequestPrivate
+ * \class QtAws::WafRegional::GetRuleRequestPrivate
  * \brief The GetRuleRequestPrivate class provides private implementation for GetRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetRuleRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetRuleRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
-    const WAFRegionalRequest::Action action, GetRuleRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetRuleRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetRuleRequestPrivate::GetRuleRequestPrivate(
  */
 GetRuleRequestPrivate::GetRuleRequestPrivate(
     const GetRuleRequestPrivate &other, GetRuleRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

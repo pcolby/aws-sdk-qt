@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateDataSourceRequest
- * \brief The UpdateDataSourceRequest class provides an interface for kendra UpdateDataSource requests.
+ * \class QtAws::Kendra::UpdateDataSourceRequest
+ * \brief The UpdateDataSourceRequest class provides an interface for Kendra UpdateDataSource requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateDataSource
+ * \sa KendraClient::updateDataSource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &other)
-    : kendraRequest(new UpdateDataSourceRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UpdateDataSourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &
  * Constructs a UpdateDataSourceRequest object.
  */
 UpdateDataSourceRequest::UpdateDataSourceRequest()
-    : kendraRequest(new UpdateDataSourceRequestPrivate(kendraRequest::UpdateDataSourceAction, this))
+    : KendraRequest(new UpdateDataSourceRequestPrivate(KendraRequest::UpdateDataSourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::kendra::UpdateDataSourceRequestPrivate
+ * \class QtAws::Kendra::UpdateDataSourceRequestPrivate
  * \brief The UpdateDataSourceRequestPrivate class provides private implementation for UpdateDataSourceRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UpdateDataSourceRequestPrivate object for kendra \a action,
+ * Constructs a UpdateDataSourceRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
-    const kendraRequest::Action action, UpdateDataSourceRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UpdateDataSourceRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const UpdateDataSourceRequestPrivate &other, UpdateDataSourceRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

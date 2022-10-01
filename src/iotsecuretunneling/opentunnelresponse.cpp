@@ -33,14 +33,14 @@ namespace IoTSecureTunneling {
  *
  * \inmodule QtAwsIoTSecureTunneling
  *
- *  <fullname>AWS IoT Secure Tunneling</fullname>
+ *  <fullname>IoT Secure Tunneling</fullname>
  * 
- *  AWS IoT Secure Tunnling enables you to create remote connections to devices deployed in the
+ *  IoT Secure Tunneling creates remote connections to devices deployed in the
  * 
  *  field>
  * 
- *  For more information about how AWS IoT Secure Tunneling works, see <a
- *  href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">AWS IoT Secure
+ *  For more information about how IoT Secure Tunneling works, see <a
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">IoT Secure
  *
  * \sa IoTSecureTunnelingClient::openTunnel
  */

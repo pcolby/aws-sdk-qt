@@ -23,11 +23,11 @@
 #include "ssooidcrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class StartDeviceAuthorizationRequestPrivate;
 
-class QTAWSSSOOIDC_EXPORT StartDeviceAuthorizationRequest : public SsooidcRequest {
+class QTAWSSSOOIDC_EXPORT StartDeviceAuthorizationRequest : public SsoOidcRequest {
 
 public:
     StartDeviceAuthorizationRequest(const StartDeviceAuthorizationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

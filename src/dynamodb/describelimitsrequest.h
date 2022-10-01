@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeLimitsRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeLimitsRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeLimitsRequest : public DynamoDbRequest {
 
 public:
     DescribeLimitsRequest(const DescribeLimitsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

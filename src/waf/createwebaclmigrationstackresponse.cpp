@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateWebACLMigrationStackResponse
- * \brief The CreateWebACLMigrationStackResponse class provides an interace for WAF CreateWebACLMigrationStack responses.
+ * \class QtAws::Waf::CreateWebACLMigrationStackResponse
+ * \brief The CreateWebACLMigrationStackResponse class provides an interace for Waf CreateWebACLMigrationStack responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const CreateWebACLMigrationStackRequest * CreateWebACLMigrationStackResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAF CreateWebACLMigrationStack \a response.
+ * Parses a successful Waf CreateWebACLMigrationStack \a response.
  */
 void CreateWebACLMigrationStackResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void CreateWebACLMigrationStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::CreateWebACLMigrationStackResponsePrivate
+ * \class QtAws::Waf::CreateWebACLMigrationStackResponsePrivate
  * \brief The CreateWebACLMigrationStackResponsePrivate class provides private implementation for CreateWebACLMigrationStackResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ CreateWebACLMigrationStackResponsePrivate::CreateWebACLMigrationStackResponsePri
 }
 
 /*!
- * Parses a WAF CreateWebACLMigrationStack response element from \a xml.
+ * Parses a Waf CreateWebACLMigrationStack response element from \a xml.
  */
 void CreateWebACLMigrationStackResponsePrivate::parseCreateWebACLMigrationStackResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void CreateWebACLMigrationStackResponsePrivate::parseCreateWebACLMigrationStackR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

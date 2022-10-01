@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListReceiptFiltersResponse
- * \brief The ListReceiptFiltersResponse class provides an interace for SES ListReceiptFilters responses.
+ * \class QtAws::Ses::ListReceiptFiltersResponse
+ * \brief The ListReceiptFiltersResponse class provides an interace for Ses ListReceiptFilters responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES ListReceiptFilters \a response.
+ * Parses a successful Ses ListReceiptFilters \a response.
  */
 void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::ListReceiptFiltersResponsePrivate
+ * \class QtAws::Ses::ListReceiptFiltersResponsePrivate
  * \brief The ListReceiptFiltersResponsePrivate class provides private implementation for ListReceiptFiltersResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
 }
 
 /*!
- * Parses a SES ListReceiptFilters response element from \a xml.
+ * Parses a Ses ListReceiptFilters response element from \a xml.
  */
 void ListReceiptFiltersResponsePrivate::parseListReceiptFiltersResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ListReceiptFiltersResponsePrivate::parseListReceiptFiltersResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "canceljobrunrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class CancelJobRunRequest;
 
-class CancelJobRunRequestPrivate : public EMRContainersRequestPrivate {
+class CancelJobRunRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    CancelJobRunRequestPrivate(const EMRContainersRequest::Action action,
+    CancelJobRunRequestPrivate(const EmrcontainersRequest::Action action,
                                    CancelJobRunRequest * const q);
     CancelJobRunRequestPrivate(const CancelJobRunRequestPrivate &other,
                                    CancelJobRunRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

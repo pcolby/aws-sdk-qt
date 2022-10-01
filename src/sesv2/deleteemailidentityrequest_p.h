@@ -24,14 +24,14 @@
 #include "deleteemailidentityrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class DeleteEmailIdentityRequest;
 
-class DeleteEmailIdentityRequestPrivate : public Sesv2RequestPrivate {
+class DeleteEmailIdentityRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    DeleteEmailIdentityRequestPrivate(const Sesv2Request::Action action,
+    DeleteEmailIdentityRequestPrivate(const SESv2Request::Action action,
                                    DeleteEmailIdentityRequest * const q);
     DeleteEmailIdentityRequestPrivate(const DeleteEmailIdentityRequestPrivate &other,
                                    DeleteEmailIdentityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

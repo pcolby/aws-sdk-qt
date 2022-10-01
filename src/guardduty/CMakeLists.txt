@@ -1,6 +1,17 @@
 add_compile_definitions(QTAWSGUARDDUTY_LIBRARY)
 
 add_library(QtAwsGuardDuty
+  qtawsguarddutyglobal.h
+  guarddutyclient.h
+  guarddutyclient_p.h
+  guarddutyrequest.h
+  guarddutyrequest_p.h
+  guarddutyresponse.h
+  guarddutyresponse_p.h
+  acceptadministratorinvitationrequest.h
+  acceptadministratorinvitationrequest_p.h
+  acceptadministratorinvitationresponse.h
+  acceptadministratorinvitationresponse_p.h
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
   acceptinvitationresponse.h
@@ -49,14 +60,14 @@ add_library(QtAwsGuardDuty
   deletefilterrequest_p.h
   deletefilterresponse.h
   deletefilterresponse_p.h
-  deleteinvitationsrequest.h
-  deleteinvitationsrequest_p.h
-  deleteinvitationsresponse.h
-  deleteinvitationsresponse_p.h
   deleteipsetrequest.h
   deleteipsetrequest_p.h
   deleteipsetresponse.h
   deleteipsetresponse_p.h
+  deleteinvitationsrequest.h
+  deleteinvitationsrequest_p.h
+  deleteinvitationsresponse.h
+  deleteinvitationsresponse_p.h
   deletemembersrequest.h
   deletemembersrequest_p.h
   deletemembersresponse.h
@@ -69,6 +80,10 @@ add_library(QtAwsGuardDuty
   deletethreatintelsetrequest_p.h
   deletethreatintelsetresponse.h
   deletethreatintelsetresponse_p.h
+  describemalwarescansrequest.h
+  describemalwarescansrequest_p.h
+  describemalwarescansresponse.h
+  describemalwarescansresponse_p.h
   describeorganizationconfigurationrequest.h
   describeorganizationconfigurationrequest_p.h
   describeorganizationconfigurationresponse.h
@@ -81,6 +96,10 @@ add_library(QtAwsGuardDuty
   disableorganizationadminaccountrequest_p.h
   disableorganizationadminaccountresponse.h
   disableorganizationadminaccountresponse_p.h
+  disassociatefromadministratoraccountrequest.h
+  disassociatefromadministratoraccountrequest_p.h
+  disassociatefromadministratoraccountresponse.h
+  disassociatefromadministratoraccountresponse_p.h
   disassociatefrommasteraccountrequest.h
   disassociatefrommasteraccountrequest_p.h
   disassociatefrommasteraccountresponse.h
@@ -93,6 +112,10 @@ add_library(QtAwsGuardDuty
   enableorganizationadminaccountrequest_p.h
   enableorganizationadminaccountresponse.h
   enableorganizationadminaccountresponse_p.h
+  getadministratoraccountrequest.h
+  getadministratoraccountrequest_p.h
+  getadministratoraccountresponse.h
+  getadministratoraccountresponse_p.h
   getdetectorrequest.h
   getdetectorrequest_p.h
   getdetectorresponse.h
@@ -109,14 +132,18 @@ add_library(QtAwsGuardDuty
   getfindingsstatisticsrequest_p.h
   getfindingsstatisticsresponse.h
   getfindingsstatisticsresponse_p.h
-  getinvitationscountrequest.h
-  getinvitationscountrequest_p.h
-  getinvitationscountresponse.h
-  getinvitationscountresponse_p.h
   getipsetrequest.h
   getipsetrequest_p.h
   getipsetresponse.h
   getipsetresponse_p.h
+  getinvitationscountrequest.h
+  getinvitationscountrequest_p.h
+  getinvitationscountresponse.h
+  getinvitationscountresponse_p.h
+  getmalwarescansettingsrequest.h
+  getmalwarescansettingsrequest_p.h
+  getmalwarescansettingsresponse.h
+  getmalwarescansettingsresponse_p.h
   getmasteraccountrequest.h
   getmasteraccountrequest_p.h
   getmasteraccountresponse.h
@@ -129,6 +156,10 @@ add_library(QtAwsGuardDuty
   getmembersrequest_p.h
   getmembersresponse.h
   getmembersresponse_p.h
+  getremainingfreetrialdaysrequest.h
+  getremainingfreetrialdaysrequest_p.h
+  getremainingfreetrialdaysresponse.h
+  getremainingfreetrialdaysresponse_p.h
   getthreatintelsetrequest.h
   getthreatintelsetrequest_p.h
   getthreatintelsetresponse.h
@@ -137,12 +168,6 @@ add_library(QtAwsGuardDuty
   getusagestatisticsrequest_p.h
   getusagestatisticsresponse.h
   getusagestatisticsresponse_p.h
-  guarddutyclient.h
-  guarddutyclient_p.h
-  guarddutyrequest.h
-  guarddutyrequest_p.h
-  guarddutyresponse.h
-  guarddutyresponse_p.h
   invitemembersrequest.h
   invitemembersrequest_p.h
   invitemembersresponse.h
@@ -159,14 +184,14 @@ add_library(QtAwsGuardDuty
   listfindingsrequest_p.h
   listfindingsresponse.h
   listfindingsresponse_p.h
-  listinvitationsrequest.h
-  listinvitationsrequest_p.h
-  listinvitationsresponse.h
-  listinvitationsresponse_p.h
   listipsetsrequest.h
   listipsetsrequest_p.h
   listipsetsresponse.h
   listipsetsresponse_p.h
+  listinvitationsrequest.h
+  listinvitationsrequest_p.h
+  listinvitationsresponse.h
+  listinvitationsresponse_p.h
   listmembersrequest.h
   listmembersrequest_p.h
   listmembersresponse.h
@@ -187,7 +212,6 @@ add_library(QtAwsGuardDuty
   listthreatintelsetsrequest_p.h
   listthreatintelsetsresponse.h
   listthreatintelsetsresponse_p.h
-  qtawsguarddutyglobal.h
   startmonitoringmembersrequest.h
   startmonitoringmembersrequest_p.h
   startmonitoringmembersresponse.h
@@ -224,6 +248,10 @@ add_library(QtAwsGuardDuty
   updateipsetrequest_p.h
   updateipsetresponse.h
   updateipsetresponse_p.h
+  updatemalwarescansettingsrequest.h
+  updatemalwarescansettingsrequest_p.h
+  updatemalwarescansettingsresponse.h
+  updatemalwarescansettingsresponse_p.h
   updatememberdetectorsrequest.h
   updatememberdetectorsrequest_p.h
   updatememberdetectorsresponse.h
@@ -240,6 +268,11 @@ add_library(QtAwsGuardDuty
   updatethreatintelsetrequest_p.h
   updatethreatintelsetresponse.h
   updatethreatintelsetresponse_p.h
+  guarddutyclient.cpp
+  guarddutyrequest.cpp
+  guarddutyresponse.cpp
+  acceptadministratorinvitationrequest.cpp
+  acceptadministratorinvitationresponse.cpp
   acceptinvitationrequest.cpp
   acceptinvitationresponse.cpp
   archivefindingsrequest.cpp
@@ -264,28 +297,34 @@ add_library(QtAwsGuardDuty
   deletedetectorresponse.cpp
   deletefilterrequest.cpp
   deletefilterresponse.cpp
-  deleteinvitationsrequest.cpp
-  deleteinvitationsresponse.cpp
   deleteipsetrequest.cpp
   deleteipsetresponse.cpp
+  deleteinvitationsrequest.cpp
+  deleteinvitationsresponse.cpp
   deletemembersrequest.cpp
   deletemembersresponse.cpp
   deletepublishingdestinationrequest.cpp
   deletepublishingdestinationresponse.cpp
   deletethreatintelsetrequest.cpp
   deletethreatintelsetresponse.cpp
+  describemalwarescansrequest.cpp
+  describemalwarescansresponse.cpp
   describeorganizationconfigurationrequest.cpp
   describeorganizationconfigurationresponse.cpp
   describepublishingdestinationrequest.cpp
   describepublishingdestinationresponse.cpp
   disableorganizationadminaccountrequest.cpp
   disableorganizationadminaccountresponse.cpp
+  disassociatefromadministratoraccountrequest.cpp
+  disassociatefromadministratoraccountresponse.cpp
   disassociatefrommasteraccountrequest.cpp
   disassociatefrommasteraccountresponse.cpp
   disassociatemembersrequest.cpp
   disassociatemembersresponse.cpp
   enableorganizationadminaccountrequest.cpp
   enableorganizationadminaccountresponse.cpp
+  getadministratoraccountrequest.cpp
+  getadministratoraccountresponse.cpp
   getdetectorrequest.cpp
   getdetectorresponse.cpp
   getfilterrequest.cpp
@@ -294,23 +333,24 @@ add_library(QtAwsGuardDuty
   getfindingsresponse.cpp
   getfindingsstatisticsrequest.cpp
   getfindingsstatisticsresponse.cpp
-  getinvitationscountrequest.cpp
-  getinvitationscountresponse.cpp
   getipsetrequest.cpp
   getipsetresponse.cpp
+  getinvitationscountrequest.cpp
+  getinvitationscountresponse.cpp
+  getmalwarescansettingsrequest.cpp
+  getmalwarescansettingsresponse.cpp
   getmasteraccountrequest.cpp
   getmasteraccountresponse.cpp
   getmemberdetectorsrequest.cpp
   getmemberdetectorsresponse.cpp
   getmembersrequest.cpp
   getmembersresponse.cpp
+  getremainingfreetrialdaysrequest.cpp
+  getremainingfreetrialdaysresponse.cpp
   getthreatintelsetrequest.cpp
   getthreatintelsetresponse.cpp
   getusagestatisticsrequest.cpp
   getusagestatisticsresponse.cpp
-  guarddutyclient.cpp
-  guarddutyrequest.cpp
-  guarddutyresponse.cpp
   invitemembersrequest.cpp
   invitemembersresponse.cpp
   listdetectorsrequest.cpp
@@ -319,10 +359,10 @@ add_library(QtAwsGuardDuty
   listfiltersresponse.cpp
   listfindingsrequest.cpp
   listfindingsresponse.cpp
-  listinvitationsrequest.cpp
-  listinvitationsresponse.cpp
   listipsetsrequest.cpp
   listipsetsresponse.cpp
+  listinvitationsrequest.cpp
+  listinvitationsresponse.cpp
   listmembersrequest.cpp
   listmembersresponse.cpp
   listorganizationadminaccountsrequest.cpp
@@ -351,6 +391,8 @@ add_library(QtAwsGuardDuty
   updatefindingsfeedbackresponse.cpp
   updateipsetrequest.cpp
   updateipsetresponse.cpp
+  updatemalwarescansettingsrequest.cpp
+  updatemalwarescansettingsresponse.cpp
   updatememberdetectorsrequest.cpp
   updatememberdetectorsresponse.cpp
   updateorganizationconfigurationrequest.cpp

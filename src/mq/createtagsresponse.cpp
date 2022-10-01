@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::CreateTagsResponse
- * \brief The CreateTagsResponse class provides an interace for MQ CreateTags responses.
+ * \class QtAws::Mq::CreateTagsResponse
+ * \brief The CreateTagsResponse class provides an interace for Mq CreateTags responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::createTags
  */
@@ -63,7 +64,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ CreateTags \a response.
+ * Parses a successful Mq CreateTags \a response.
  */
 void CreateTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::CreateTagsResponsePrivate
+ * \class QtAws::Mq::CreateTagsResponsePrivate
  * \brief The CreateTagsResponsePrivate class provides private implementation for CreateTagsResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 }
 
 /*!
- * Parses a MQ CreateTags response element from \a xml.
+ * Parses a Mq CreateTags response element from \a xml.
  */
 void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

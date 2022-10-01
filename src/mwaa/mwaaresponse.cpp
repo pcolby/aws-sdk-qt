@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 /*!
- * \class QtAws::MWAA::MwaaResponse
- * \brief The MwaaResponse class provides an interface for MWAA responses.
+ * \class QtAws::Mwaa::MwaaResponse
+ * \brief The MwaaResponse class provides an interface for Mwaa responses.
  *
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  */
 
 /*!
@@ -76,11 +76,11 @@ void MwaaResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MWAA::MwaaResponsePrivate
+ * \class QtAws::Mwaa::MwaaResponsePrivate
  * \brief The MwaaResponsePrivate class provides private implementation for MwaaResponse.
  * \internal
  *
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  */
 
 /*!
@@ -92,5 +92,5 @@ MwaaResponsePrivate::MwaaResponsePrivate(
 
 }
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws

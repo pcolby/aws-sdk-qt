@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SetEndpointAttributesResponse
- * \brief The SetEndpointAttributesResponse class provides an interace for SNS SetEndpointAttributes responses.
+ * \class QtAws::Sns::SetEndpointAttributesResponse
+ * \brief The SetEndpointAttributesResponse class provides an interace for Sns SetEndpointAttributes responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful SNS SetEndpointAttributes \a response.
+ * Parses a successful Sns SetEndpointAttributes \a response.
  */
 void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::SetEndpointAttributesResponsePrivate
+ * \class QtAws::Sns::SetEndpointAttributesResponsePrivate
  * \brief The SetEndpointAttributesResponsePrivate class provides private implementation for SetEndpointAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
 }
 
 /*!
- * Parses a SNS SetEndpointAttributes response element from \a xml.
+ * Parses a Sns SetEndpointAttributes response element from \a xml.
  */
 void SetEndpointAttributesResponsePrivate::parseSetEndpointAttributesResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void SetEndpointAttributesResponsePrivate::parseSetEndpointAttributesResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

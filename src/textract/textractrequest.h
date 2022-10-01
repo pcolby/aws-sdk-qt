@@ -40,11 +40,15 @@ public:
     /// Actions supported by Textract.
     enum Action {
         AnalyzeDocumentAction,
+        AnalyzeExpenseAction,
+        AnalyzeIDAction,
         DetectDocumentTextAction,
         GetDocumentAnalysisAction,
         GetDocumentTextDetectionAction,
+        GetExpenseAnalysisAction,
         StartDocumentAnalysisAction,
         StartDocumentTextDetectionAction,
+        StartExpenseAnalysisAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

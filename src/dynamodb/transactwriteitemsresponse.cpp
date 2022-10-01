@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::TransactWriteItemsResponse
- * \brief The TransactWriteItemsResponse class provides an interace for DynamoDB TransactWriteItems responses.
+ * \class QtAws::DynamoDb::TransactWriteItemsResponse
+ * \brief The TransactWriteItemsResponse class provides an interace for DynamoDb TransactWriteItems responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::transactWriteItems
+ * \sa DynamoDbClient::transactWriteItems
  */
 
 /*!
@@ -63,7 +63,7 @@ TransactWriteItemsResponse::TransactWriteItemsResponse(
         const TransactWriteItemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new TransactWriteItemsResponsePrivate(this), parent)
+    : DynamoDbResponse(new TransactWriteItemsResponsePrivate(this), parent)
 {
     setRequest(new TransactWriteItemsRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const TransactWriteItemsRequest * TransactWriteItemsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB TransactWriteItems \a response.
+ * Parses a successful DynamoDb TransactWriteItems \a response.
  */
 void TransactWriteItemsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void TransactWriteItemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::TransactWriteItemsResponsePrivate
+ * \class QtAws::DynamoDb::TransactWriteItemsResponsePrivate
  * \brief The TransactWriteItemsResponsePrivate class provides private implementation for TransactWriteItemsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a TransactWriteItemsResponsePrivate object with public implementation \a q.
  */
 TransactWriteItemsResponsePrivate::TransactWriteItemsResponsePrivate(
-    TransactWriteItemsResponse * const q) : DynamoDBResponsePrivate(q)
+    TransactWriteItemsResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB TransactWriteItems response element from \a xml.
+ * Parses a DynamoDb TransactWriteItems response element from \a xml.
  */
 void TransactWriteItemsResponsePrivate::parseTransactWriteItemsResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void TransactWriteItemsResponsePrivate::parseTransactWriteItemsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

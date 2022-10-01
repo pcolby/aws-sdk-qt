@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::PutIntegrationRequest
- * \brief The PutIntegrationRequest class provides an interface for APIGateway PutIntegration requests.
+ * \class QtAws::ApiGateway::PutIntegrationRequest
+ * \brief The PutIntegrationRequest class provides an interface for ApiGateway PutIntegration requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::putIntegration
+ * \sa ApiGatewayClient::putIntegration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutIntegrationRequest::PutIntegrationRequest(const PutIntegrationRequest &other)
-    : APIGatewayRequest(new PutIntegrationRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new PutIntegrationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ PutIntegrationRequest::PutIntegrationRequest(const PutIntegrationRequest &other)
  * Constructs a PutIntegrationRequest object.
  */
 PutIntegrationRequest::PutIntegrationRequest()
-    : APIGatewayRequest(new PutIntegrationRequestPrivate(APIGatewayRequest::PutIntegrationAction, this))
+    : ApiGatewayRequest(new PutIntegrationRequestPrivate(ApiGatewayRequest::PutIntegrationAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * PutIntegrationRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::PutIntegrationRequestPrivate
+ * \class QtAws::ApiGateway::PutIntegrationRequestPrivate
  * \brief The PutIntegrationRequestPrivate class provides private implementation for PutIntegrationRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a PutIntegrationRequestPrivate object for APIGateway \a action,
+ * Constructs a PutIntegrationRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
-    const APIGatewayRequest::Action action, PutIntegrationRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, PutIntegrationRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
  */
 PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
     const PutIntegrationRequestPrivate &other, PutIntegrationRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::StartLifecyclePolicyPreviewResponse
- * \brief The StartLifecyclePolicyPreviewResponse class provides an interace for ECR StartLifecyclePolicyPreview responses.
+ * \class QtAws::Ecr::StartLifecyclePolicyPreviewResponse
+ * \brief The StartLifecyclePolicyPreviewResponse class provides an interace for Ecr StartLifecyclePolicyPreview responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::startLifecyclePolicyPreview
  */
@@ -68,7 +74,7 @@ const StartLifecyclePolicyPreviewRequest * StartLifecyclePolicyPreviewResponse::
 
 /*!
  * \reimp
- * Parses a successful ECR StartLifecyclePolicyPreview \a response.
+ * Parses a successful Ecr StartLifecyclePolicyPreview \a response.
  */
 void StartLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void StartLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::StartLifecyclePolicyPreviewResponsePrivate
+ * \class QtAws::Ecr::StartLifecyclePolicyPreviewResponsePrivate
  * \brief The StartLifecyclePolicyPreviewResponsePrivate class provides private implementation for StartLifecyclePolicyPreviewResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ StartLifecyclePolicyPreviewResponsePrivate::StartLifecyclePolicyPreviewResponseP
 }
 
 /*!
- * Parses a ECR StartLifecyclePolicyPreview response element from \a xml.
+ * Parses a Ecr StartLifecyclePolicyPreview response element from \a xml.
  */
 void StartLifecyclePolicyPreviewResponsePrivate::parseStartLifecyclePolicyPreviewResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void StartLifecyclePolicyPreviewResponsePrivate::parseStartLifecyclePolicyPrevie
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

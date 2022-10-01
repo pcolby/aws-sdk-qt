@@ -24,7 +24,7 @@
 #include "getreplicationjobsrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class GetReplicationJobsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

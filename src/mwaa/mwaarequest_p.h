@@ -24,16 +24,16 @@
 #include "mwaarequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class MwaaRequest;
 
 class MwaaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    MwaaRequest::Action action; ///< MWAA action to be performed.
-    QString apiVersion;        ///< MWAA API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< MWAA request (query string) parameters. @todo?
+    MwaaRequest::Action action; ///< Mwaa action to be performed.
+    QString apiVersion;        ///< Mwaa API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Mwaa request (query string) parameters. @todo?
 
     MwaaRequestPrivate(const MwaaRequest::Action action, MwaaRequest * const q);
     MwaaRequestPrivate(const MwaaRequestPrivate &other, MwaaRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

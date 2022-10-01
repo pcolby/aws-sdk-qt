@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationVersionRequest
- * \brief The CreateDocumentationVersionRequest class provides an interface for APIGateway CreateDocumentationVersion requests.
+ * \class QtAws::ApiGateway::CreateDocumentationVersionRequest
+ * \brief The CreateDocumentationVersionRequest class provides an interface for ApiGateway CreateDocumentationVersion requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDocumentationVersion
+ * \sa ApiGatewayClient::createDocumentationVersion
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDocumentationVersionRequest::CreateDocumentationVersionRequest(const CreateDocumentationVersionRequest &other)
-    : APIGatewayRequest(new CreateDocumentationVersionRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateDocumentationVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateDocumentationVersionRequest::CreateDocumentationVersionRequest(const Creat
  * Constructs a CreateDocumentationVersionRequest object.
  */
 CreateDocumentationVersionRequest::CreateDocumentationVersionRequest()
-    : APIGatewayRequest(new CreateDocumentationVersionRequestPrivate(APIGatewayRequest::CreateDocumentationVersionAction, this))
+    : ApiGatewayRequest(new CreateDocumentationVersionRequestPrivate(ApiGatewayRequest::CreateDocumentationVersionAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentationVersionRequest::response(Q
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDocumentationVersionRequestPrivate
+ * \class QtAws::ApiGateway::CreateDocumentationVersionRequestPrivate
  * \brief The CreateDocumentationVersionRequestPrivate class provides private implementation for CreateDocumentationVersionRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateDocumentationVersionRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateDocumentationVersionRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
-    const APIGatewayRequest::Action action, CreateDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateDocumentationVersionRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPriva
  */
 CreateDocumentationVersionRequestPrivate::CreateDocumentationVersionRequestPrivate(
     const CreateDocumentationVersionRequestPrivate &other, CreateDocumentationVersionRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

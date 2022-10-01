@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBInstanceAutomatedBackupRequest
- * \brief The DeleteDBInstanceAutomatedBackupRequest class provides an interface for RDS DeleteDBInstanceAutomatedBackup requests.
+ * \class QtAws::Rds::DeleteDBInstanceAutomatedBackupRequest
+ * \brief The DeleteDBInstanceAutomatedBackupRequest class provides an interface for Rds DeleteDBInstanceAutomatedBackup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceAutomatedBackupRequest::respo
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBInstanceAutomatedBackupRequestPrivate
+ * \class QtAws::Rds::DeleteDBInstanceAutomatedBackupRequestPrivate
  * \brief The DeleteDBInstanceAutomatedBackupRequestPrivate class provides private implementation for DeleteDBInstanceAutomatedBackupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeleteDBInstanceAutomatedBackupRequestPrivate::DeleteDBInstanceAutomatedBackupRe
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

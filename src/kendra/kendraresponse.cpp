@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::kendraResponse
- * \brief The kendraResponse class provides an interface for kendra responses.
+ * \class QtAws::Kendra::KendraResponse
+ * \brief The KendraResponse class provides an interface for Kendra responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a kendraResponse object with parent \a parent.
+ * Constructs a KendraResponse object with parent \a parent.
  */
-kendraResponse::kendraResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new kendraResponsePrivate(this), parent)
+KendraResponse::KendraResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new KendraResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a kendraResponse object with private implementation \a d,
+ * Constructs a KendraResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from kendraResponsePrivate.
+ * implementation that inherits from KendraResponsePrivate.
  */
-kendraResponse::kendraResponse(kendraResponsePrivate * const d, QObject * const parent)
+KendraResponse::KendraResponse(KendraResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ kendraResponse::kendraResponse(kendraResponsePrivate * const d, QObject * const 
 /*!
  * \reimp
  */
-void kendraResponse::parseFailure(QIODevice &response)
+void KendraResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(kendraResponse);
+    //Q_D(KendraResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void kendraResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::kendraResponsePrivate
- * \brief The kendraResponsePrivate class provides private implementation for kendraResponse.
+ * \class QtAws::Kendra::KendraResponsePrivate
+ * \brief The KendraResponsePrivate class provides private implementation for KendraResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a kendraResponsePrivate object with public implementation \a q.
+ * Constructs a KendraResponsePrivate object with public implementation \a q.
  */
-kendraResponsePrivate::kendraResponsePrivate(
-    kendraResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+KendraResponsePrivate::KendraResponsePrivate(
+    KendraResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

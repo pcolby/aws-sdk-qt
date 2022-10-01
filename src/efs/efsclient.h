@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class EfsClientPrivate;
 class CreateAccessPointRequest;
@@ -36,6 +36,8 @@ class CreateFileSystemRequest;
 class CreateFileSystemResponse;
 class CreateMountTargetRequest;
 class CreateMountTargetResponse;
+class CreateReplicationConfigurationRequest;
+class CreateReplicationConfigurationResponse;
 class CreateTagsRequest;
 class CreateTagsResponse;
 class DeleteAccessPointRequest;
@@ -46,6 +48,8 @@ class DeleteFileSystemPolicyRequest;
 class DeleteFileSystemPolicyResponse;
 class DeleteMountTargetRequest;
 class DeleteMountTargetResponse;
+class DeleteReplicationConfigurationRequest;
+class DeleteReplicationConfigurationResponse;
 class DeleteTagsRequest;
 class DeleteTagsResponse;
 class DescribeAccessPointsRequest;
@@ -64,6 +68,8 @@ class DescribeMountTargetSecurityGroupsRequest;
 class DescribeMountTargetSecurityGroupsResponse;
 class DescribeMountTargetsRequest;
 class DescribeMountTargetsResponse;
+class DescribeReplicationConfigurationsRequest;
+class DescribeReplicationConfigurationsResponse;
 class DescribeTagsRequest;
 class DescribeTagsResponse;
 class ListTagsForResourceRequest;
@@ -104,11 +110,13 @@ public slots:
     CreateAccessPointResponse * createAccessPoint(const CreateAccessPointRequest &request);
     CreateFileSystemResponse * createFileSystem(const CreateFileSystemRequest &request);
     CreateMountTargetResponse * createMountTarget(const CreateMountTargetRequest &request);
+    CreateReplicationConfigurationResponse * createReplicationConfiguration(const CreateReplicationConfigurationRequest &request);
     CreateTagsResponse * createTags(const CreateTagsRequest &request);
     DeleteAccessPointResponse * deleteAccessPoint(const DeleteAccessPointRequest &request);
     DeleteFileSystemResponse * deleteFileSystem(const DeleteFileSystemRequest &request);
     DeleteFileSystemPolicyResponse * deleteFileSystemPolicy(const DeleteFileSystemPolicyRequest &request);
     DeleteMountTargetResponse * deleteMountTarget(const DeleteMountTargetRequest &request);
+    DeleteReplicationConfigurationResponse * deleteReplicationConfiguration(const DeleteReplicationConfigurationRequest &request);
     DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
     DescribeAccessPointsResponse * describeAccessPoints(const DescribeAccessPointsRequest &request);
     DescribeAccountPreferencesResponse * describeAccountPreferences(const DescribeAccountPreferencesRequest &request);
@@ -118,6 +126,7 @@ public slots:
     DescribeLifecycleConfigurationResponse * describeLifecycleConfiguration(const DescribeLifecycleConfigurationRequest &request);
     DescribeMountTargetSecurityGroupsResponse * describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request);
     DescribeMountTargetsResponse * describeMountTargets(const DescribeMountTargetsRequest &request);
+    DescribeReplicationConfigurationsResponse * describeReplicationConfigurations(const DescribeReplicationConfigurationsRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request);
@@ -135,7 +144,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListRegexPatternSetsRequest
- * \brief The ListRegexPatternSetsRequest class provides an interface for WAFRegional ListRegexPatternSets requests.
+ * \class QtAws::WafRegional::ListRegexPatternSetsRequest
+ * \brief The ListRegexPatternSetsRequest class provides an interface for WafRegional ListRegexPatternSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listRegexPatternSets
+ * \sa WafRegionalClient::listRegexPatternSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListRegexPatternSetsRequest::ListRegexPatternSetsRequest(const ListRegexPatternSetsRequest &other)
-    : WAFRegionalRequest(new ListRegexPatternSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListRegexPatternSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListRegexPatternSetsRequest::ListRegexPatternSetsRequest(const ListRegexPatternS
  * Constructs a ListRegexPatternSetsRequest object.
  */
 ListRegexPatternSetsRequest::ListRegexPatternSetsRequest()
-    : WAFRegionalRequest(new ListRegexPatternSetsRequestPrivate(WAFRegionalRequest::ListRegexPatternSetsAction, this))
+    : WafRegionalRequest(new ListRegexPatternSetsRequestPrivate(WafRegionalRequest::ListRegexPatternSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListRegexPatternSetsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::WAFRegional::ListRegexPatternSetsRequestPrivate
+ * \class QtAws::WafRegional::ListRegexPatternSetsRequestPrivate
  * \brief The ListRegexPatternSetsRequestPrivate class provides private implementation for ListRegexPatternSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListRegexPatternSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListRegexPatternSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListRegexPatternSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListRegexPatternSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
  */
 ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
     const ListRegexPatternSetsRequestPrivate &other, ListRegexPatternSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

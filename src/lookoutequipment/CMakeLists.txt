@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLOOKOUTEQUIPMENT_LIBRARY)
 
 add_library(QtAwsLookoutEquipment
+  qtawslookoutequipmentglobal.h
+  lookoutequipmentclient.h
+  lookoutequipmentclient_p.h
+  lookoutequipmentrequest.h
+  lookoutequipmentrequest_p.h
+  lookoutequipmentresponse.h
+  lookoutequipmentresponse_p.h
   createdatasetrequest.h
   createdatasetrequest_p.h
   createdatasetresponse.h
@@ -9,6 +16,14 @@ add_library(QtAwsLookoutEquipment
   createinferenceschedulerrequest_p.h
   createinferenceschedulerresponse.h
   createinferenceschedulerresponse_p.h
+  createlabelrequest.h
+  createlabelrequest_p.h
+  createlabelresponse.h
+  createlabelresponse_p.h
+  createlabelgrouprequest.h
+  createlabelgrouprequest_p.h
+  createlabelgroupresponse.h
+  createlabelgroupresponse_p.h
   createmodelrequest.h
   createmodelrequest_p.h
   createmodelresponse.h
@@ -21,6 +36,14 @@ add_library(QtAwsLookoutEquipment
   deleteinferenceschedulerrequest_p.h
   deleteinferenceschedulerresponse.h
   deleteinferenceschedulerresponse_p.h
+  deletelabelrequest.h
+  deletelabelrequest_p.h
+  deletelabelresponse.h
+  deletelabelresponse_p.h
+  deletelabelgrouprequest.h
+  deletelabelgrouprequest_p.h
+  deletelabelgroupresponse.h
+  deletelabelgroupresponse_p.h
   deletemodelrequest.h
   deletemodelrequest_p.h
   deletemodelresponse.h
@@ -37,6 +60,14 @@ add_library(QtAwsLookoutEquipment
   describeinferenceschedulerrequest_p.h
   describeinferenceschedulerresponse.h
   describeinferenceschedulerresponse_p.h
+  describelabelrequest.h
+  describelabelrequest_p.h
+  describelabelresponse.h
+  describelabelresponse_p.h
+  describelabelgrouprequest.h
+  describelabelgrouprequest_p.h
+  describelabelgroupresponse.h
+  describelabelgroupresponse_p.h
   describemodelrequest.h
   describemodelrequest_p.h
   describemodelresponse.h
@@ -49,6 +80,10 @@ add_library(QtAwsLookoutEquipment
   listdatasetsrequest_p.h
   listdatasetsresponse.h
   listdatasetsresponse_p.h
+  listinferenceeventsrequest.h
+  listinferenceeventsrequest_p.h
+  listinferenceeventsresponse.h
+  listinferenceeventsresponse_p.h
   listinferenceexecutionsrequest.h
   listinferenceexecutionsrequest_p.h
   listinferenceexecutionsresponse.h
@@ -57,21 +92,26 @@ add_library(QtAwsLookoutEquipment
   listinferenceschedulersrequest_p.h
   listinferenceschedulersresponse.h
   listinferenceschedulersresponse_p.h
+  listlabelgroupsrequest.h
+  listlabelgroupsrequest_p.h
+  listlabelgroupsresponse.h
+  listlabelgroupsresponse_p.h
+  listlabelsrequest.h
+  listlabelsrequest_p.h
+  listlabelsresponse.h
+  listlabelsresponse_p.h
   listmodelsrequest.h
   listmodelsrequest_p.h
   listmodelsresponse.h
   listmodelsresponse_p.h
+  listsensorstatisticsrequest.h
+  listsensorstatisticsrequest_p.h
+  listsensorstatisticsresponse.h
+  listsensorstatisticsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  lookoutequipmentclient.h
-  lookoutequipmentclient_p.h
-  lookoutequipmentrequest.h
-  lookoutequipmentrequest_p.h
-  lookoutequipmentresponse.h
-  lookoutequipmentresponse_p.h
-  qtawslookoutequipmentglobal.h
   startdataingestionjobrequest.h
   startdataingestionjobrequest_p.h
   startdataingestionjobresponse.h
@@ -96,16 +136,31 @@ add_library(QtAwsLookoutEquipment
   updateinferenceschedulerrequest_p.h
   updateinferenceschedulerresponse.h
   updateinferenceschedulerresponse_p.h
+  updatelabelgrouprequest.h
+  updatelabelgrouprequest_p.h
+  updatelabelgroupresponse.h
+  updatelabelgroupresponse_p.h
+  lookoutequipmentclient.cpp
+  lookoutequipmentrequest.cpp
+  lookoutequipmentresponse.cpp
   createdatasetrequest.cpp
   createdatasetresponse.cpp
   createinferenceschedulerrequest.cpp
   createinferenceschedulerresponse.cpp
+  createlabelrequest.cpp
+  createlabelresponse.cpp
+  createlabelgrouprequest.cpp
+  createlabelgroupresponse.cpp
   createmodelrequest.cpp
   createmodelresponse.cpp
   deletedatasetrequest.cpp
   deletedatasetresponse.cpp
   deleteinferenceschedulerrequest.cpp
   deleteinferenceschedulerresponse.cpp
+  deletelabelrequest.cpp
+  deletelabelresponse.cpp
+  deletelabelgrouprequest.cpp
+  deletelabelgroupresponse.cpp
   deletemodelrequest.cpp
   deletemodelresponse.cpp
   describedataingestionjobrequest.cpp
@@ -114,23 +169,32 @@ add_library(QtAwsLookoutEquipment
   describedatasetresponse.cpp
   describeinferenceschedulerrequest.cpp
   describeinferenceschedulerresponse.cpp
+  describelabelrequest.cpp
+  describelabelresponse.cpp
+  describelabelgrouprequest.cpp
+  describelabelgroupresponse.cpp
   describemodelrequest.cpp
   describemodelresponse.cpp
   listdataingestionjobsrequest.cpp
   listdataingestionjobsresponse.cpp
   listdatasetsrequest.cpp
   listdatasetsresponse.cpp
+  listinferenceeventsrequest.cpp
+  listinferenceeventsresponse.cpp
   listinferenceexecutionsrequest.cpp
   listinferenceexecutionsresponse.cpp
   listinferenceschedulersrequest.cpp
   listinferenceschedulersresponse.cpp
+  listlabelgroupsrequest.cpp
+  listlabelgroupsresponse.cpp
+  listlabelsrequest.cpp
+  listlabelsresponse.cpp
   listmodelsrequest.cpp
   listmodelsresponse.cpp
+  listsensorstatisticsrequest.cpp
+  listsensorstatisticsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  lookoutequipmentclient.cpp
-  lookoutequipmentrequest.cpp
-  lookoutequipmentresponse.cpp
   startdataingestionjobrequest.cpp
   startdataingestionjobresponse.cpp
   startinferenceschedulerrequest.cpp
@@ -142,7 +206,9 @@ add_library(QtAwsLookoutEquipment
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateinferenceschedulerrequest.cpp
-  updateinferenceschedulerresponse.cpp)
+  updateinferenceschedulerresponse.cpp
+  updatelabelgrouprequest.cpp
+  updatelabelgroupresponse.cpp)
 
 target_link_libraries(QtAwsLookoutEquipment
   PRIVATE QtAwsCore

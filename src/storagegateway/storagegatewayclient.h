@@ -202,6 +202,8 @@ class UpdateSMBFileShareRequest;
 class UpdateSMBFileShareResponse;
 class UpdateSMBFileShareVisibilityRequest;
 class UpdateSMBFileShareVisibilityResponse;
+class UpdateSMBLocalGroupsRequest;
+class UpdateSMBLocalGroupsResponse;
 class UpdateSMBSecurityStrategyRequest;
 class UpdateSMBSecurityStrategyResponse;
 class UpdateSnapshotScheduleRequest;
@@ -311,6 +313,7 @@ public slots:
     UpdateNFSFileShareResponse * updateNFSFileShare(const UpdateNFSFileShareRequest &request);
     UpdateSMBFileShareResponse * updateSMBFileShare(const UpdateSMBFileShareRequest &request);
     UpdateSMBFileShareVisibilityResponse * updateSMBFileShareVisibility(const UpdateSMBFileShareVisibilityRequest &request);
+    UpdateSMBLocalGroupsResponse * updateSMBLocalGroups(const UpdateSMBLocalGroupsRequest &request);
     UpdateSMBSecurityStrategyResponse * updateSMBSecurityStrategy(const UpdateSMBSecurityStrategyRequest &request);
     UpdateSnapshotScheduleResponse * updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request);
     UpdateVTLDeviceTypeResponse * updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request);

@@ -23,25 +23,25 @@
 #include "cloudhsmv2request_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeClustersRequest
- * \brief The DescribeClustersRequest class provides an interface for CloudHSMV2 DescribeClusters requests.
+ * \class QtAws::CloudHsmV2::DescribeClustersRequest
+ * \brief The DescribeClustersRequest class provides an interface for CloudHsmV2 DescribeClusters requests.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::describeClusters
+ * \sa CloudHsmV2Client::describeClusters
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
-    : CloudHSMV2Request(new DescribeClustersRequestPrivate(*other.d_func(), this))
+    : CloudHsmV2Request(new DescribeClustersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
  * Constructs a DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
-    : CloudHSMV2Request(new DescribeClustersRequestPrivate(CloudHSMV2Request::DescribeClustersAction, this))
+    : CloudHsmV2Request(new DescribeClustersRequestPrivate(CloudHsmV2Request::DescribeClustersAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeClustersRequestPrivate
+ * \class QtAws::CloudHsmV2::DescribeClustersRequestPrivate
  * \brief The DescribeClustersRequestPrivate class provides private implementation for DescribeClustersRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a DescribeClustersRequestPrivate object for CloudHSMV2 \a action,
+ * Constructs a DescribeClustersRequestPrivate object for CloudHsmV2 \a action,
  * with public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
-    const CloudHSMV2Request::Action action, DescribeClustersRequest * const q)
-    : CloudHSMV2RequestPrivate(action, q)
+    const CloudHsmV2Request::Action action, DescribeClustersRequest * const q)
+    : CloudHsmV2RequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)
-    : CloudHSMV2RequestPrivate(other, q)
+    : CloudHsmV2RequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

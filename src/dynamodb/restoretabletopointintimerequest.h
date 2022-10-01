@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class RestoreTableToPointInTimeRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT RestoreTableToPointInTimeRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT RestoreTableToPointInTimeRequest : public DynamoDbRequest {
 
 public:
     RestoreTableToPointInTimeRequest(const RestoreTableToPointInTimeRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

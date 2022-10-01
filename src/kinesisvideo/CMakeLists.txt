@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSKINESISVIDEO_LIBRARY)
 
 add_library(QtAwsKinesisVideo
+  qtawskinesisvideoglobal.h
+  kinesisvideoclient.h
+  kinesisvideoclient_p.h
+  kinesisvideorequest.h
+  kinesisvideorequest_p.h
+  kinesisvideoresponse.h
+  kinesisvideoresponse_p.h
   createsignalingchannelrequest.h
   createsignalingchannelrequest_p.h
   createsignalingchannelresponse.h
@@ -17,6 +24,14 @@ add_library(QtAwsKinesisVideo
   deletestreamrequest_p.h
   deletestreamresponse.h
   deletestreamresponse_p.h
+  describeimagegenerationconfigurationrequest.h
+  describeimagegenerationconfigurationrequest_p.h
+  describeimagegenerationconfigurationresponse.h
+  describeimagegenerationconfigurationresponse_p.h
+  describenotificationconfigurationrequest.h
+  describenotificationconfigurationrequest_p.h
+  describenotificationconfigurationresponse.h
+  describenotificationconfigurationresponse_p.h
   describesignalingchannelrequest.h
   describesignalingchannelrequest_p.h
   describesignalingchannelresponse.h
@@ -33,12 +48,6 @@ add_library(QtAwsKinesisVideo
   getsignalingchannelendpointrequest_p.h
   getsignalingchannelendpointresponse.h
   getsignalingchannelendpointresponse_p.h
-  kinesisvideoclient.h
-  kinesisvideoclient_p.h
-  kinesisvideorequest.h
-  kinesisvideorequest_p.h
-  kinesisvideoresponse.h
-  kinesisvideoresponse_p.h
   listsignalingchannelsrequest.h
   listsignalingchannelsrequest_p.h
   listsignalingchannelsresponse.h
@@ -55,7 +64,6 @@ add_library(QtAwsKinesisVideo
   listtagsforstreamrequest_p.h
   listtagsforstreamresponse.h
   listtagsforstreamresponse_p.h
-  qtawskinesisvideoglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -76,6 +84,14 @@ add_library(QtAwsKinesisVideo
   updatedataretentionrequest_p.h
   updatedataretentionresponse.h
   updatedataretentionresponse_p.h
+  updateimagegenerationconfigurationrequest.h
+  updateimagegenerationconfigurationrequest_p.h
+  updateimagegenerationconfigurationresponse.h
+  updateimagegenerationconfigurationresponse_p.h
+  updatenotificationconfigurationrequest.h
+  updatenotificationconfigurationrequest_p.h
+  updatenotificationconfigurationresponse.h
+  updatenotificationconfigurationresponse_p.h
   updatesignalingchannelrequest.h
   updatesignalingchannelrequest_p.h
   updatesignalingchannelresponse.h
@@ -84,6 +100,9 @@ add_library(QtAwsKinesisVideo
   updatestreamrequest_p.h
   updatestreamresponse.h
   updatestreamresponse_p.h
+  kinesisvideoclient.cpp
+  kinesisvideorequest.cpp
+  kinesisvideoresponse.cpp
   createsignalingchannelrequest.cpp
   createsignalingchannelresponse.cpp
   createstreamrequest.cpp
@@ -92,6 +111,10 @@ add_library(QtAwsKinesisVideo
   deletesignalingchannelresponse.cpp
   deletestreamrequest.cpp
   deletestreamresponse.cpp
+  describeimagegenerationconfigurationrequest.cpp
+  describeimagegenerationconfigurationresponse.cpp
+  describenotificationconfigurationrequest.cpp
+  describenotificationconfigurationresponse.cpp
   describesignalingchannelrequest.cpp
   describesignalingchannelresponse.cpp
   describestreamrequest.cpp
@@ -100,9 +123,6 @@ add_library(QtAwsKinesisVideo
   getdataendpointresponse.cpp
   getsignalingchannelendpointrequest.cpp
   getsignalingchannelendpointresponse.cpp
-  kinesisvideoclient.cpp
-  kinesisvideorequest.cpp
-  kinesisvideoresponse.cpp
   listsignalingchannelsrequest.cpp
   listsignalingchannelsresponse.cpp
   liststreamsrequest.cpp
@@ -121,6 +141,10 @@ add_library(QtAwsKinesisVideo
   untagstreamresponse.cpp
   updatedataretentionrequest.cpp
   updatedataretentionresponse.cpp
+  updateimagegenerationconfigurationrequest.cpp
+  updateimagegenerationconfigurationresponse.cpp
+  updatenotificationconfigurationrequest.cpp
+  updatenotificationconfigurationresponse.cpp
   updatesignalingchannelrequest.cpp
   updatesignalingchannelresponse.cpp
   updatestreamrequest.cpp

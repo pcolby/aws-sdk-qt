@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateGeoMatchSetResponse
- * \brief The CreateGeoMatchSetResponse class provides an interace for WAFRegional CreateGeoMatchSet responses.
+ * \class QtAws::WafRegional::CreateGeoMatchSetResponse
+ * \brief The CreateGeoMatchSetResponse class provides an interace for WafRegional CreateGeoMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createGeoMatchSet
+ * \sa WafRegionalClient::createGeoMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
         const CreateGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateGeoMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateGeoMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateGeoMatchSet \a response.
+ * Parses a successful WafRegional CreateGeoMatchSet \a response.
  */
 void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateGeoMatchSetResponsePrivate
+ * \class QtAws::WafRegional::CreateGeoMatchSetResponsePrivate
  * \brief The CreateGeoMatchSetResponsePrivate class provides private implementation for CreateGeoMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
-    CreateGeoMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateGeoMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateGeoMatchSet response element from \a xml.
+ * Parses a WafRegional CreateGeoMatchSet response element from \a xml.
  */
 void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

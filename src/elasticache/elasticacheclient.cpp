@@ -256,9 +256,10 @@ ElastiCacheClient::ElastiCacheClient(
  *
  * permissions</a>>
  *
- * For example, you can use cost-allocation tags to your ElastiCache resources, AWS generates a cost allocation report as a
- * comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent
- * business categories (such as cost centers, application names, or owners) to organize your costs across multiple
+ * For example, you can use cost-allocation tags to your ElastiCache resources, Amazon generates a cost allocation report
+ * as a comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply tags that
+ * represent business categories (such as cost centers, application names, or owners) to organize your costs across
+ * multiple
  *
  * services>
  *
@@ -347,8 +348,7 @@ CompleteMigrationResponse * ElastiCacheClient::completeMigration(const CompleteM
  * buckets and copy snapshots to it. To control access to your snapshots, use an IAM policy to control who has the ability
  * to use the <code>CopySnapshot</code> operation. For more information about using IAM to control the use of ElastiCache
  * operations, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html">Exporting
- * Snapshots</a> and <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.html">Authentication &amp;
- * Access
+ * Snapshots</a> and <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.html">Authentication & Access
  *
  * Control</a>> </b>
  *
@@ -583,7 +583,7 @@ CreateGlobalReplicationGroupResponse * ElastiCacheClient::createGlobalReplicatio
  *
  * cluster>
  *
- * To request a limit increase, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
+ * To request a limit increase, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon
  * Service Limits</a> and choose the limit type <b>Nodes per cluster per instance type</b>.
  *
  * </p
@@ -626,7 +626,7 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For Redis engine version 6.x onwards: Creates a Redis user. For more information, see <a
+ * For Redis engine version 6.0 onwards: Creates a Redis user. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
  */
 CreateUserResponse * ElastiCacheClient::createUser(const CreateUserRequest &request)
@@ -640,7 +640,7 @@ CreateUserResponse * ElastiCacheClient::createUser(const CreateUserRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For Redis engine version 6.x onwards: Creates a Redis user group. For more information, see <a
+ * For Redis engine version 6.0 onwards: Creates a Redis user group. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
  * (RBAC)</a>
  */
@@ -853,7 +853,7 @@ DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For Redis engine version 6.x onwards: Deletes a user. The user will be removed from all user groups and in turn removed
+ * For Redis engine version 6.0 onwards: Deletes a user. The user will be removed from all user groups and in turn removed
  * from all replication groups. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
  * (RBAC)</a>.
@@ -869,7 +869,7 @@ DeleteUserResponse * ElastiCacheClient::deleteUser(const DeleteUserRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For Redis engine version 6.x onwards: Deletes a user group. The user group must first be disassociated from the
+ * For Redis engine version 6.0 onwards: Deletes a user group. The user group must first be disassociated from the
  * replication group before it can be deleted. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
  * (RBAC)</a>.
@@ -1155,7 +1155,7 @@ DescribeUsersResponse * ElastiCacheClient::describeUsers(const DescribeUsersRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Remove a secondary cluster from the Global datastore using the Global datastore name. The secondary cluster will no
- * longer receive updates from the primary cluster, but will remain as a standalone cluster in that AWS
+ * longer receive updates from the primary cluster, but will remain as a standalone cluster in that Amazon
  */
 DisassociateGlobalReplicationGroupResponse * ElastiCacheClient::disassociateGlobalReplicationGroup(const DisassociateGlobalReplicationGroupRequest &request)
 {
@@ -1426,7 +1426,7 @@ RebalanceSlotsInGlobalReplicationGroupResponse * ElastiCacheClient::rebalanceSlo
  * clusters>
  *
  * If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to be
- * applied, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a
+ * applied, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes.rebooting.html">Rebooting a
  * Cluster</a> for an alternate
  */
 RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootCacheClusterRequest &request)
@@ -1502,12 +1502,18 @@ StartMigrationResponse * ElastiCacheClient::startMigration(const StartMigrationR
  * Represents the input of a <code>TestFailover</code> operation which test automatic failover on a specified node group
  * (called shard in the console) in a replication group (called cluster in the
  *
- * console)> <p class="title"> <b>Note the following</b>
+ * console)>
+ *
+ * This API is designed for testing the behavior of your application in case of ElastiCache failover. It is not designed to
+ * be an operational tool for initiating a failover to overcome a problem you may have with the cluster. Moreover, in
+ * certain conditions such as large-scale operational events, Amazon may block this API.
+ *
+ * </p <p class="title"> <b>Note the following</b>
  *
  * </p <ul> <li>
  *
  * A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache
- * API and AWS CLI) in any rolling 24-hour
+ * API and Amazon CLI) in any rolling 24-hour
  *
  * period> </li> <li>
  *
@@ -1524,30 +1530,28 @@ StartMigrationResponse * ElastiCacheClient::startMigration(const StartMigrationR
  *
  * made> </li> <li>
  *
- * To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the AWS
- * CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of
+ * To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the
+ * Amazon CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of
  *
  * occurrance> <ol> <li>
  *
- * Replication group message: <code>Test Failover API called for node group &lt;node-group-id&gt;</code>
+ * Replication group message: <code>Test Failover API called for node group <node-group-id></code>
  *
  * </p </li> <li>
  *
- * Cache cluster message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
- * completed</code>
+ * Cache cluster message: <code>Failover from primary node <primary-node-id> to replica node <node-id> completed</code>
  *
  * </p </li> <li>
  *
- * Replication group message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
- * completed</code>
+ * Replication group message: <code>Failover from primary node <primary-node-id> to replica node <node-id> completed</code>
  *
  * </p </li> <li>
  *
- * Cache cluster message: <code>Recovering cache nodes &lt;node-id&gt;</code>
+ * Cache cluster message: <code>Recovering cache nodes <node-id></code>
  *
  * </p </li> <li>
  *
- * Cache cluster message: <code>Finished recovery for cache nodes &lt;node-id&gt;</code>
+ * Cache cluster message: <code>Finished recovery for cache nodes <node-id></code>
  *
  * </p </li> </ol>
  *

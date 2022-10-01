@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBInstanceResponse
- * \brief The ModifyDBInstanceResponse class provides an interace for DocDB ModifyDBInstance responses.
+ * \class QtAws::DocDb::ModifyDBInstanceResponse
+ * \brief The ModifyDBInstanceResponse class provides an interace for DocDb ModifyDBInstance responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBInstance
+ * \sa DocDbClient::modifyDBInstance
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyDBInstanceResponse::ModifyDBInstanceResponse(
         const ModifyDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyDBInstanceResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBInstanceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyDBInstance \a response.
+ * Parses a successful DocDb ModifyDBInstance \a response.
  */
 void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBInstanceResponsePrivate
+ * \class QtAws::DocDb::ModifyDBInstanceResponsePrivate
  * \brief The ModifyDBInstanceResponsePrivate class provides private implementation for ModifyDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyDBInstanceResponsePrivate object with public implementation \a q.
  */
 ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
-    ModifyDBInstanceResponse * const q) : DocDBResponsePrivate(q)
+    ModifyDBInstanceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyDBInstance response element from \a xml.
+ * Parses a DocDb ModifyDBInstance response element from \a xml.
  */
 void ModifyDBInstanceResponsePrivate::parseModifyDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyDBInstanceResponsePrivate::parseModifyDBInstanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

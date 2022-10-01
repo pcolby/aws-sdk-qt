@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::StopDataSourceSyncJobRequest
- * \brief The StopDataSourceSyncJobRequest class provides an interface for kendra StopDataSourceSyncJob requests.
+ * \class QtAws::Kendra::StopDataSourceSyncJobRequest
+ * \brief The StopDataSourceSyncJobRequest class provides an interface for Kendra StopDataSourceSyncJob requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::stopDataSourceSyncJob
+ * \sa KendraClient::stopDataSourceSyncJob
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StopDataSourceSyncJobRequest::StopDataSourceSyncJobRequest(const StopDataSourceSyncJobRequest &other)
-    : kendraRequest(new StopDataSourceSyncJobRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new StopDataSourceSyncJobRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ StopDataSourceSyncJobRequest::StopDataSourceSyncJobRequest(const StopDataSourceS
  * Constructs a StopDataSourceSyncJobRequest object.
  */
 StopDataSourceSyncJobRequest::StopDataSourceSyncJobRequest()
-    : kendraRequest(new StopDataSourceSyncJobRequestPrivate(kendraRequest::StopDataSourceSyncJobAction, this))
+    : KendraRequest(new StopDataSourceSyncJobRequestPrivate(KendraRequest::StopDataSourceSyncJobAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * StopDataSourceSyncJobRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::kendra::StopDataSourceSyncJobRequestPrivate
+ * \class QtAws::Kendra::StopDataSourceSyncJobRequestPrivate
  * \brief The StopDataSourceSyncJobRequestPrivate class provides private implementation for StopDataSourceSyncJobRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a StopDataSourceSyncJobRequestPrivate object for kendra \a action,
+ * Constructs a StopDataSourceSyncJobRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 StopDataSourceSyncJobRequestPrivate::StopDataSourceSyncJobRequestPrivate(
-    const kendraRequest::Action action, StopDataSourceSyncJobRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, StopDataSourceSyncJobRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ StopDataSourceSyncJobRequestPrivate::StopDataSourceSyncJobRequestPrivate(
  */
 StopDataSourceSyncJobRequestPrivate::StopDataSourceSyncJobRequestPrivate(
     const StopDataSourceSyncJobRequestPrivate &other, StopDataSourceSyncJobRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

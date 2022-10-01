@@ -24,7 +24,7 @@
 #include "listpoliciesrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class ListPoliciesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListLunaClientsRequest
- * \brief The ListLunaClientsRequest class provides an interface for CloudHSM ListLunaClients requests.
+ * \class QtAws::CloudHsm::ListLunaClientsRequest
+ * \brief The ListLunaClientsRequest class provides an interface for CloudHsm ListLunaClients requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listLunaClients
+ * \sa CloudHsmClient::listLunaClients
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListLunaClientsRequest::ListLunaClientsRequest(const ListLunaClientsRequest &other)
-    : CloudHSMRequest(new ListLunaClientsRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new ListLunaClientsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ ListLunaClientsRequest::ListLunaClientsRequest(const ListLunaClientsRequest &oth
  * Constructs a ListLunaClientsRequest object.
  */
 ListLunaClientsRequest::ListLunaClientsRequest()
-    : CloudHSMRequest(new ListLunaClientsRequestPrivate(CloudHSMRequest::ListLunaClientsAction, this))
+    : CloudHsmRequest(new ListLunaClientsRequestPrivate(CloudHsmRequest::ListLunaClientsAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * ListLunaClientsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::CloudHSM::ListLunaClientsRequestPrivate
+ * \class QtAws::CloudHsm::ListLunaClientsRequestPrivate
  * \brief The ListLunaClientsRequestPrivate class provides private implementation for ListLunaClientsRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a ListLunaClientsRequestPrivate object for CloudHSM \a action,
+ * Constructs a ListLunaClientsRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
-    const CloudHSMRequest::Action action, ListLunaClientsRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, ListLunaClientsRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
  */
 ListLunaClientsRequestPrivate::ListLunaClientsRequestPrivate(
     const ListLunaClientsRequestPrivate &other, ListLunaClientsRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "putrepositorycatalogdatarequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class PutRepositoryCatalogDataResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT PutRepositoryCatalogDataResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT PutRepositoryCatalogDataResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

@@ -1,14 +1,29 @@
 add_compile_definitions(QTAWSPERSONALIZE_LIBRARY)
 
 add_library(QtAwsPersonalize
+  qtawspersonalizeglobal.h
+  personalizeclient.h
+  personalizeclient_p.h
+  personalizerequest.h
+  personalizerequest_p.h
+  personalizeresponse.h
+  personalizeresponse_p.h
   createbatchinferencejobrequest.h
   createbatchinferencejobrequest_p.h
   createbatchinferencejobresponse.h
   createbatchinferencejobresponse_p.h
+  createbatchsegmentjobrequest.h
+  createbatchsegmentjobrequest_p.h
+  createbatchsegmentjobresponse.h
+  createbatchsegmentjobresponse_p.h
   createcampaignrequest.h
   createcampaignrequest_p.h
   createcampaignresponse.h
   createcampaignresponse_p.h
+  createdatasetrequest.h
+  createdatasetrequest_p.h
+  createdatasetresponse.h
+  createdatasetresponse_p.h
   createdatasetexportjobrequest.h
   createdatasetexportjobrequest_p.h
   createdatasetexportjobresponse.h
@@ -21,10 +36,6 @@ add_library(QtAwsPersonalize
   createdatasetimportjobrequest_p.h
   createdatasetimportjobresponse.h
   createdatasetimportjobresponse_p.h
-  createdatasetrequest.h
-  createdatasetrequest_p.h
-  createdatasetresponse.h
-  createdatasetresponse_p.h
   createeventtrackerrequest.h
   createeventtrackerrequest_p.h
   createeventtrackerresponse.h
@@ -33,6 +44,10 @@ add_library(QtAwsPersonalize
   createfilterrequest_p.h
   createfilterresponse.h
   createfilterresponse_p.h
+  createrecommenderrequest.h
+  createrecommenderrequest_p.h
+  createrecommenderresponse.h
+  createrecommenderresponse_p.h
   createschemarequest.h
   createschemarequest_p.h
   createschemaresponse.h
@@ -49,14 +64,14 @@ add_library(QtAwsPersonalize
   deletecampaignrequest_p.h
   deletecampaignresponse.h
   deletecampaignresponse_p.h
-  deletedatasetgrouprequest.h
-  deletedatasetgrouprequest_p.h
-  deletedatasetgroupresponse.h
-  deletedatasetgroupresponse_p.h
   deletedatasetrequest.h
   deletedatasetrequest_p.h
   deletedatasetresponse.h
   deletedatasetresponse_p.h
+  deletedatasetgrouprequest.h
+  deletedatasetgrouprequest_p.h
+  deletedatasetgroupresponse.h
+  deletedatasetgroupresponse_p.h
   deleteeventtrackerrequest.h
   deleteeventtrackerrequest_p.h
   deleteeventtrackerresponse.h
@@ -65,6 +80,10 @@ add_library(QtAwsPersonalize
   deletefilterrequest_p.h
   deletefilterresponse.h
   deletefilterresponse_p.h
+  deleterecommenderrequest.h
+  deleterecommenderrequest_p.h
+  deleterecommenderresponse.h
+  deleterecommenderresponse_p.h
   deleteschemarequest.h
   deleteschemarequest_p.h
   deleteschemaresponse.h
@@ -81,10 +100,18 @@ add_library(QtAwsPersonalize
   describebatchinferencejobrequest_p.h
   describebatchinferencejobresponse.h
   describebatchinferencejobresponse_p.h
+  describebatchsegmentjobrequest.h
+  describebatchsegmentjobrequest_p.h
+  describebatchsegmentjobresponse.h
+  describebatchsegmentjobresponse_p.h
   describecampaignrequest.h
   describecampaignrequest_p.h
   describecampaignresponse.h
   describecampaignresponse_p.h
+  describedatasetrequest.h
+  describedatasetrequest_p.h
+  describedatasetresponse.h
+  describedatasetresponse_p.h
   describedatasetexportjobrequest.h
   describedatasetexportjobrequest_p.h
   describedatasetexportjobresponse.h
@@ -97,10 +124,6 @@ add_library(QtAwsPersonalize
   describedatasetimportjobrequest_p.h
   describedatasetimportjobresponse.h
   describedatasetimportjobresponse_p.h
-  describedatasetrequest.h
-  describedatasetrequest_p.h
-  describedatasetresponse.h
-  describedatasetresponse_p.h
   describeeventtrackerrequest.h
   describeeventtrackerrequest_p.h
   describeeventtrackerresponse.h
@@ -117,6 +140,10 @@ add_library(QtAwsPersonalize
   describereciperequest_p.h
   describereciperesponse.h
   describereciperesponse_p.h
+  describerecommenderrequest.h
+  describerecommenderrequest_p.h
+  describerecommenderresponse.h
+  describerecommenderresponse_p.h
   describeschemarequest.h
   describeschemarequest_p.h
   describeschemaresponse.h
@@ -137,6 +164,10 @@ add_library(QtAwsPersonalize
   listbatchinferencejobsrequest_p.h
   listbatchinferencejobsresponse.h
   listbatchinferencejobsresponse_p.h
+  listbatchsegmentjobsrequest.h
+  listbatchsegmentjobsrequest_p.h
+  listbatchsegmentjobsresponse.h
+  listbatchsegmentjobsresponse_p.h
   listcampaignsrequest.h
   listcampaignsrequest_p.h
   listcampaignsresponse.h
@@ -169,49 +200,77 @@ add_library(QtAwsPersonalize
   listrecipesrequest_p.h
   listrecipesresponse.h
   listrecipesresponse_p.h
+  listrecommendersrequest.h
+  listrecommendersrequest_p.h
+  listrecommendersresponse.h
+  listrecommendersresponse_p.h
   listschemasrequest.h
   listschemasrequest_p.h
   listschemasresponse.h
   listschemasresponse_p.h
-  listsolutionsrequest.h
-  listsolutionsrequest_p.h
-  listsolutionsresponse.h
-  listsolutionsresponse_p.h
   listsolutionversionsrequest.h
   listsolutionversionsrequest_p.h
   listsolutionversionsresponse.h
   listsolutionversionsresponse_p.h
-  personalizeclient.h
-  personalizeclient_p.h
-  personalizerequest.h
-  personalizerequest_p.h
-  personalizeresponse.h
-  personalizeresponse_p.h
-  qtawspersonalizeglobal.h
+  listsolutionsrequest.h
+  listsolutionsrequest_p.h
+  listsolutionsresponse.h
+  listsolutionsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  startrecommenderrequest.h
+  startrecommenderrequest_p.h
+  startrecommenderresponse.h
+  startrecommenderresponse_p.h
+  stoprecommenderrequest.h
+  stoprecommenderrequest_p.h
+  stoprecommenderresponse.h
+  stoprecommenderresponse_p.h
   stopsolutionversioncreationrequest.h
   stopsolutionversioncreationrequest_p.h
   stopsolutionversioncreationresponse.h
   stopsolutionversioncreationresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatecampaignrequest.h
   updatecampaignrequest_p.h
   updatecampaignresponse.h
   updatecampaignresponse_p.h
+  updaterecommenderrequest.h
+  updaterecommenderrequest_p.h
+  updaterecommenderresponse.h
+  updaterecommenderresponse_p.h
+  personalizeclient.cpp
+  personalizerequest.cpp
+  personalizeresponse.cpp
   createbatchinferencejobrequest.cpp
   createbatchinferencejobresponse.cpp
+  createbatchsegmentjobrequest.cpp
+  createbatchsegmentjobresponse.cpp
   createcampaignrequest.cpp
   createcampaignresponse.cpp
+  createdatasetrequest.cpp
+  createdatasetresponse.cpp
   createdatasetexportjobrequest.cpp
   createdatasetexportjobresponse.cpp
   createdatasetgrouprequest.cpp
   createdatasetgroupresponse.cpp
   createdatasetimportjobrequest.cpp
   createdatasetimportjobresponse.cpp
-  createdatasetrequest.cpp
-  createdatasetresponse.cpp
   createeventtrackerrequest.cpp
   createeventtrackerresponse.cpp
   createfilterrequest.cpp
   createfilterresponse.cpp
+  createrecommenderrequest.cpp
+  createrecommenderresponse.cpp
   createschemarequest.cpp
   createschemaresponse.cpp
   createsolutionrequest.cpp
@@ -220,14 +279,16 @@ add_library(QtAwsPersonalize
   createsolutionversionresponse.cpp
   deletecampaignrequest.cpp
   deletecampaignresponse.cpp
-  deletedatasetgrouprequest.cpp
-  deletedatasetgroupresponse.cpp
   deletedatasetrequest.cpp
   deletedatasetresponse.cpp
+  deletedatasetgrouprequest.cpp
+  deletedatasetgroupresponse.cpp
   deleteeventtrackerrequest.cpp
   deleteeventtrackerresponse.cpp
   deletefilterrequest.cpp
   deletefilterresponse.cpp
+  deleterecommenderrequest.cpp
+  deleterecommenderresponse.cpp
   deleteschemarequest.cpp
   deleteschemaresponse.cpp
   deletesolutionrequest.cpp
@@ -236,16 +297,18 @@ add_library(QtAwsPersonalize
   describealgorithmresponse.cpp
   describebatchinferencejobrequest.cpp
   describebatchinferencejobresponse.cpp
+  describebatchsegmentjobrequest.cpp
+  describebatchsegmentjobresponse.cpp
   describecampaignrequest.cpp
   describecampaignresponse.cpp
+  describedatasetrequest.cpp
+  describedatasetresponse.cpp
   describedatasetexportjobrequest.cpp
   describedatasetexportjobresponse.cpp
   describedatasetgrouprequest.cpp
   describedatasetgroupresponse.cpp
   describedatasetimportjobrequest.cpp
   describedatasetimportjobresponse.cpp
-  describedatasetrequest.cpp
-  describedatasetresponse.cpp
   describeeventtrackerrequest.cpp
   describeeventtrackerresponse.cpp
   describefeaturetransformationrequest.cpp
@@ -254,6 +317,8 @@ add_library(QtAwsPersonalize
   describefilterresponse.cpp
   describereciperequest.cpp
   describereciperesponse.cpp
+  describerecommenderrequest.cpp
+  describerecommenderresponse.cpp
   describeschemarequest.cpp
   describeschemaresponse.cpp
   describesolutionrequest.cpp
@@ -264,6 +329,8 @@ add_library(QtAwsPersonalize
   getsolutionmetricsresponse.cpp
   listbatchinferencejobsrequest.cpp
   listbatchinferencejobsresponse.cpp
+  listbatchsegmentjobsrequest.cpp
+  listbatchsegmentjobsresponse.cpp
   listcampaignsrequest.cpp
   listcampaignsresponse.cpp
   listdatasetexportjobsrequest.cpp
@@ -280,19 +347,30 @@ add_library(QtAwsPersonalize
   listfiltersresponse.cpp
   listrecipesrequest.cpp
   listrecipesresponse.cpp
+  listrecommendersrequest.cpp
+  listrecommendersresponse.cpp
   listschemasrequest.cpp
   listschemasresponse.cpp
-  listsolutionsrequest.cpp
-  listsolutionsresponse.cpp
   listsolutionversionsrequest.cpp
   listsolutionversionsresponse.cpp
-  personalizeclient.cpp
-  personalizerequest.cpp
-  personalizeresponse.cpp
+  listsolutionsrequest.cpp
+  listsolutionsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  startrecommenderrequest.cpp
+  startrecommenderresponse.cpp
+  stoprecommenderrequest.cpp
+  stoprecommenderresponse.cpp
   stopsolutionversioncreationrequest.cpp
   stopsolutionversioncreationresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatecampaignrequest.cpp
-  updatecampaignresponse.cpp)
+  updatecampaignresponse.cpp
+  updaterecommenderrequest.cpp
+  updaterecommenderresponse.cpp)
 
 target_link_libraries(QtAwsPersonalize
   PRIVATE QtAwsCore

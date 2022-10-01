@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ModifyHapgResponse
- * \brief The ModifyHapgResponse class provides an interace for CloudHSM ModifyHapg responses.
+ * \class QtAws::CloudHsm::ModifyHapgResponse
+ * \brief The ModifyHapgResponse class provides an interace for CloudHsm ModifyHapg responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::modifyHapg
+ * \sa CloudHsmClient::modifyHapg
  */
 
 /*!
@@ -56,7 +56,7 @@ ModifyHapgResponse::ModifyHapgResponse(
         const ModifyHapgRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ModifyHapgResponsePrivate(this), parent)
+    : CloudHsmResponse(new ModifyHapgResponsePrivate(this), parent)
 {
     setRequest(new ModifyHapgRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const ModifyHapgRequest * ModifyHapgResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM ModifyHapg \a response.
+ * Parses a successful CloudHsm ModifyHapg \a response.
  */
 void ModifyHapgResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void ModifyHapgResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::ModifyHapgResponsePrivate
+ * \class QtAws::CloudHsm::ModifyHapgResponsePrivate
  * \brief The ModifyHapgResponsePrivate class provides private implementation for ModifyHapgResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a ModifyHapgResponsePrivate object with public implementation \a q.
  */
 ModifyHapgResponsePrivate::ModifyHapgResponsePrivate(
-    ModifyHapgResponse * const q) : CloudHSMResponsePrivate(q)
+    ModifyHapgResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM ModifyHapg response element from \a xml.
+ * Parses a CloudHsm ModifyHapg response element from \a xml.
  */
 void ModifyHapgResponsePrivate::parseModifyHapgResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void ModifyHapgResponsePrivate::parseModifyHapgResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

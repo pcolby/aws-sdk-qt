@@ -24,7 +24,7 @@
 #include "resetdbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class ResetDBClusterParameterGroupResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

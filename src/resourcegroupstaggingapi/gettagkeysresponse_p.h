@@ -23,11 +23,11 @@
 #include "resourcegroupstaggingapiresponse_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 class GetTagKeysResponse;
 
-class GetTagKeysResponsePrivate : public ResourceGroupsTaggingAPIResponsePrivate {
+class GetTagKeysResponsePrivate : public ResourceGroupsTaggingApiResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

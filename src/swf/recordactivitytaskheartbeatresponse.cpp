@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RecordActivityTaskHeartbeatResponse
- * \brief The RecordActivityTaskHeartbeatResponse class provides an interace for SWF RecordActivityTaskHeartbeat responses.
+ * \class QtAws::Swf::RecordActivityTaskHeartbeatResponse
+ * \brief The RecordActivityTaskHeartbeatResponse class provides an interace for Swf RecordActivityTaskHeartbeat responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RecordActivityTaskHeartbeatRequest * RecordActivityTaskHeartbeatResponse::
 
 /*!
  * \reimp
- * Parses a successful SWF RecordActivityTaskHeartbeat \a response.
+ * Parses a successful Swf RecordActivityTaskHeartbeat \a response.
  */
 void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RecordActivityTaskHeartbeatResponsePrivate
+ * \class QtAws::Swf::RecordActivityTaskHeartbeatResponsePrivate
  * \brief The RecordActivityTaskHeartbeatResponsePrivate class provides private implementation for RecordActivityTaskHeartbeatResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponseP
 }
 
 /*!
- * Parses a SWF RecordActivityTaskHeartbeat response element from \a xml.
+ * Parses a Swf RecordActivityTaskHeartbeat response element from \a xml.
  */
 void RecordActivityTaskHeartbeatResponsePrivate::parseRecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RecordActivityTaskHeartbeatResponsePrivate::parseRecordActivityTaskHeartbea
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

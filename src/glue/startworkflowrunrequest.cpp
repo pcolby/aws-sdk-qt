@@ -31,9 +31,9 @@ namespace Glue {
  *
  * \inmodule QtAwsGlue
  *
- *  <fullname>AWS Glue</fullname>
+ *  <fullname>Glue</fullname>
  * 
- *  Defines the public endpoint for the AWS Glue
+ *  Defines the public endpoint for the Glue
  *
  * \sa GlueClient::startWorkflowRun
  */

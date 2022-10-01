@@ -23,11 +23,11 @@
 #include "imagebuilderrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT UntagResourceRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT UntagResourceRequest : public ImageBuilderRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

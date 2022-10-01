@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMANAGEDBLOCKCHAIN_LIBRARY)
 
 add_library(QtAwsManagedBlockchain
+  qtawsmanagedblockchainglobal.h
+  managedblockchainclient.h
+  managedblockchainclient_p.h
+  managedblockchainrequest.h
+  managedblockchainrequest_p.h
+  managedblockchainresponse.h
+  managedblockchainresponse_p.h
   creatememberrequest.h
   creatememberrequest_p.h
   creatememberresponse.h
@@ -57,25 +64,18 @@ add_library(QtAwsManagedBlockchain
   listnodesrequest_p.h
   listnodesresponse.h
   listnodesresponse_p.h
-  listproposalsrequest.h
-  listproposalsrequest_p.h
-  listproposalsresponse.h
-  listproposalsresponse_p.h
   listproposalvotesrequest.h
   listproposalvotesrequest_p.h
   listproposalvotesresponse.h
   listproposalvotesresponse_p.h
+  listproposalsrequest.h
+  listproposalsrequest_p.h
+  listproposalsresponse.h
+  listproposalsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  managedblockchainclient.h
-  managedblockchainclient_p.h
-  managedblockchainrequest.h
-  managedblockchainrequest_p.h
-  managedblockchainresponse.h
-  managedblockchainresponse_p.h
-  qtawsmanagedblockchainglobal.h
   rejectinvitationrequest.h
   rejectinvitationrequest_p.h
   rejectinvitationresponse.h
@@ -100,6 +100,9 @@ add_library(QtAwsManagedBlockchain
   voteonproposalrequest_p.h
   voteonproposalresponse.h
   voteonproposalresponse_p.h
+  managedblockchainclient.cpp
+  managedblockchainrequest.cpp
+  managedblockchainresponse.cpp
   creatememberrequest.cpp
   creatememberresponse.cpp
   createnetworkrequest.cpp
@@ -128,15 +131,12 @@ add_library(QtAwsManagedBlockchain
   listnetworksresponse.cpp
   listnodesrequest.cpp
   listnodesresponse.cpp
-  listproposalsrequest.cpp
-  listproposalsresponse.cpp
   listproposalvotesrequest.cpp
   listproposalvotesresponse.cpp
+  listproposalsrequest.cpp
+  listproposalsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  managedblockchainclient.cpp
-  managedblockchainrequest.cpp
-  managedblockchainresponse.cpp
   rejectinvitationrequest.cpp
   rejectinvitationresponse.cpp
   tagresourcerequest.cpp

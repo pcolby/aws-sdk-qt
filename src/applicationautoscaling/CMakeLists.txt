@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPLICATIONAUTOSCALING_LIBRARY)
 
 add_library(QtAwsApplicationAutoScaling
+  qtawsapplicationautoscalingglobal.h
   applicationautoscalingclient.h
   applicationautoscalingclient_p.h
   applicationautoscalingrequest.h
@@ -43,7 +44,6 @@ add_library(QtAwsApplicationAutoScaling
   putscheduledactionrequest_p.h
   putscheduledactionresponse.h
   putscheduledactionresponse_p.h
-  qtawsapplicationautoscalingglobal.h
   registerscalabletargetrequest.h
   registerscalabletargetrequest_p.h
   registerscalabletargetresponse.h

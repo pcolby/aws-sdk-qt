@@ -23,19 +23,19 @@
 #include "stsrequest_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::AssumeRoleRequest
- * \brief The AssumeRoleRequest class provides an interface for STS AssumeRole requests.
+ * \class QtAws::Sts::AssumeRoleRequest
+ * \brief The AssumeRoleRequest class provides an interface for Sts AssumeRole requests.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::assumeRole
@@ -79,11 +79,11 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::STS::AssumeRoleRequestPrivate
+ * \class QtAws::Sts::AssumeRoleRequestPrivate
  * \brief The AssumeRoleRequestPrivate class provides private implementation for AssumeRoleRequest.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -110,5 +110,5 @@ AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
 
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

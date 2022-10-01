@@ -24,7 +24,7 @@
 #include "deleteaddonrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DeleteAddonResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

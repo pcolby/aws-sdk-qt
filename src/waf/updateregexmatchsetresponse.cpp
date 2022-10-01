@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRegexMatchSetResponse
- * \brief The UpdateRegexMatchSetResponse class provides an interace for WAF UpdateRegexMatchSet responses.
+ * \class QtAws::Waf::UpdateRegexMatchSetResponse
+ * \brief The UpdateRegexMatchSetResponse class provides an interace for Waf UpdateRegexMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateRegexMatchSet \a response.
+ * Parses a successful Waf UpdateRegexMatchSet \a response.
  */
 void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateRegexMatchSetResponsePrivate
+ * \class QtAws::Waf::UpdateRegexMatchSetResponsePrivate
  * \brief The UpdateRegexMatchSetResponsePrivate class provides private implementation for UpdateRegexMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateRegexMatchSet response element from \a xml.
+ * Parses a Waf UpdateRegexMatchSet response element from \a xml.
  */
 void UpdateRegexMatchSetResponsePrivate::parseUpdateRegexMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateRegexMatchSetResponsePrivate::parseUpdateRegexMatchSetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListBootstrapActionsResponse
- * \brief The ListBootstrapActionsResponse class provides an interace for EMR ListBootstrapActions responses.
+ * \class QtAws::Emr::ListBootstrapActionsResponse
+ * \brief The ListBootstrapActionsResponse class provides an interace for Emr ListBootstrapActions responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listBootstrapActions
  */
@@ -64,7 +64,7 @@ const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMR ListBootstrapActions \a response.
+ * Parses a successful Emr ListBootstrapActions \a response.
  */
 void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ListBootstrapActionsResponsePrivate
+ * \class QtAws::Emr::ListBootstrapActionsResponsePrivate
  * \brief The ListBootstrapActionsResponsePrivate class provides private implementation for ListBootstrapActionsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
 }
 
 /*!
- * Parses a EMR ListBootstrapActions response element from \a xml.
+ * Parses a Emr ListBootstrapActions response element from \a xml.
  */
 void ListBootstrapActionsResponsePrivate::parseListBootstrapActionsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListBootstrapActionsResponsePrivate::parseListBootstrapActionsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

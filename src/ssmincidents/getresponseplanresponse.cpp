@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetResponsePlanResponse
- * \brief The GetResponsePlanResponse class provides an interace for SSMIncidents GetResponsePlan responses.
+ * \class QtAws::SsmIncidents::GetResponsePlanResponse
+ * \brief The GetResponsePlanResponse class provides an interace for SsmIncidents GetResponsePlan responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getResponsePlan
+ * \sa SsmIncidentsClient::getResponsePlan
  */
 
 /*!
@@ -54,7 +54,7 @@ GetResponsePlanResponse::GetResponsePlanResponse(
         const GetResponsePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new GetResponsePlanResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new GetResponsePlanResponsePrivate(this), parent)
 {
     setRequest(new GetResponsePlanRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const GetResponsePlanRequest * GetResponsePlanResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents GetResponsePlan \a response.
+ * Parses a successful SsmIncidents GetResponsePlan \a response.
  */
 void GetResponsePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void GetResponsePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetResponsePlanResponsePrivate
+ * \class QtAws::SsmIncidents::GetResponsePlanResponsePrivate
  * \brief The GetResponsePlanResponsePrivate class provides private implementation for GetResponsePlanResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a GetResponsePlanResponsePrivate object with public implementation \a q.
  */
 GetResponsePlanResponsePrivate::GetResponsePlanResponsePrivate(
-    GetResponsePlanResponse * const q) : SSMIncidentsResponsePrivate(q)
+    GetResponsePlanResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents GetResponsePlan response element from \a xml.
+ * Parses a SsmIncidents GetResponsePlan response element from \a xml.
  */
 void GetResponsePlanResponsePrivate::parseGetResponsePlanResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void GetResponsePlanResponsePrivate::parseGetResponsePlanResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

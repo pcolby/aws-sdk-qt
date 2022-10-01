@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::RemoveManagedScalingPolicyResponse
- * \brief The RemoveManagedScalingPolicyResponse class provides an interace for EMR RemoveManagedScalingPolicy responses.
+ * \class QtAws::Emr::RemoveManagedScalingPolicyResponse
+ * \brief The RemoveManagedScalingPolicyResponse class provides an interace for Emr RemoveManagedScalingPolicy responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::removeManagedScalingPolicy
  */
@@ -64,7 +64,7 @@ const RemoveManagedScalingPolicyRequest * RemoveManagedScalingPolicyResponse::re
 
 /*!
  * \reimp
- * Parses a successful EMR RemoveManagedScalingPolicy \a response.
+ * Parses a successful Emr RemoveManagedScalingPolicy \a response.
  */
 void RemoveManagedScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void RemoveManagedScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::RemoveManagedScalingPolicyResponsePrivate
+ * \class QtAws::Emr::RemoveManagedScalingPolicyResponsePrivate
  * \brief The RemoveManagedScalingPolicyResponsePrivate class provides private implementation for RemoveManagedScalingPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ RemoveManagedScalingPolicyResponsePrivate::RemoveManagedScalingPolicyResponsePri
 }
 
 /*!
- * Parses a EMR RemoveManagedScalingPolicy response element from \a xml.
+ * Parses a Emr RemoveManagedScalingPolicy response element from \a xml.
  */
 void RemoveManagedScalingPolicyResponsePrivate::parseRemoveManagedScalingPolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void RemoveManagedScalingPolicyResponsePrivate::parseRemoveManagedScalingPolicyR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

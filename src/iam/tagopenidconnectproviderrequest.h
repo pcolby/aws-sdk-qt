@@ -23,7 +23,7 @@
 #include "iamrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class TagOpenIDConnectProviderRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteVerifiedEmailAddressRequest
- * \brief The DeleteVerifiedEmailAddressRequest class provides an interface for SES DeleteVerifiedEmailAddress requests.
+ * \class QtAws::Ses::DeleteVerifiedEmailAddressRequest
+ * \brief The DeleteVerifiedEmailAddressRequest class provides an interface for Ses DeleteVerifiedEmailAddress requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
 }
 
 /*!
- * \class QtAws::SES::DeleteVerifiedEmailAddressRequestPrivate
+ * \class QtAws::Ses::DeleteVerifiedEmailAddressRequestPrivate
  * \brief The DeleteVerifiedEmailAddressRequestPrivate class provides private implementation for DeleteVerifiedEmailAddressRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPriva
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

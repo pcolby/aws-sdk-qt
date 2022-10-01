@@ -24,7 +24,7 @@
 #include "setidentitynotificationtopicrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SetIdentityNotificationTopicResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

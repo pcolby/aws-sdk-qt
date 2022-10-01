@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
-class ResourceGroupsTaggingAPIClient;
+class ResourceGroupsTaggingApiClient;
 
-class ResourceGroupsTaggingAPIClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ResourceGroupsTaggingApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q);
+    explicit ResourceGroupsTaggingApiClientPrivate(ResourceGroupsTaggingApiClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIClient)
-    Q_DISABLE_COPY(ResourceGroupsTaggingAPIClientPrivate)
+    Q_DECLARE_PUBLIC(ResourceGroupsTaggingApiClient)
+    Q_DISABLE_COPY(ResourceGroupsTaggingApiClientPrivate)
 
 };
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws
 
 #endif

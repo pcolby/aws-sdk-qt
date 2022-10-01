@@ -27,10 +27,14 @@
 #include "createcomputeenvironmentresponse.h"
 #include "createjobqueuerequest.h"
 #include "createjobqueueresponse.h"
+#include "createschedulingpolicyrequest.h"
+#include "createschedulingpolicyresponse.h"
 #include "deletecomputeenvironmentrequest.h"
 #include "deletecomputeenvironmentresponse.h"
 #include "deletejobqueuerequest.h"
 #include "deletejobqueueresponse.h"
+#include "deleteschedulingpolicyrequest.h"
+#include "deleteschedulingpolicyresponse.h"
 #include "deregisterjobdefinitionrequest.h"
 #include "deregisterjobdefinitionresponse.h"
 #include "describecomputeenvironmentsrequest.h"
@@ -41,8 +45,12 @@
 #include "describejobqueuesresponse.h"
 #include "describejobsrequest.h"
 #include "describejobsresponse.h"
+#include "describeschedulingpoliciesrequest.h"
+#include "describeschedulingpoliciesresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listschedulingpoliciesrequest.h"
+#include "listschedulingpoliciesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "registerjobdefinitionrequest.h"
@@ -59,6 +67,8 @@
 #include "updatecomputeenvironmentresponse.h"
 #include "updatejobqueuerequest.h"
 #include "updatejobqueueresponse.h"
+#include "updateschedulingpolicyrequest.h"
+#include "updateschedulingpolicyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -82,19 +92,21 @@ namespace Batch {
  * \ingroup aws-clients
  * \inmodule QtAwsBatch
  *
- *  Using AWS Batch, you can run batch computing workloads on the AWS Cloud. Batch computing is a common means for
- *  developers, scientists, and engineers to access large amounts of compute resources. AWS Batch uses the advantages of
+ *  <fullname>Batch</fullname>
+ * 
+ *  Using Batch, you can run batch computing workloads on the Amazon Web Services Cloud. Batch computing is a common means
+ *  for developers, scientists, and engineers to access large amounts of compute resources. Batch uses the advantages of
  *  this computing workload to remove the undifferentiated heavy lifting of configuring and managing required
  *  infrastructure. At the same time, it also adopts a familiar batch computing software approach. Given these advantages,
- *  AWS Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively helping you to
+ *  Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively helping you to
  *  eliminate capacity constraints, reduce compute costs, and deliver your results more
  * 
  *  quickly>
  * 
- *  As a fully managed service, AWS Batch can run batch computing workloads of any scale. AWS Batch automatically provisions
- *  compute resources and optimizes workload distribution based on the quantity and scale of your specific workloads. With
- *  AWS Batch, there's no need to install or manage batch computing software. This means that you can focus your time and
- *  energy on analyzing results and solving your specific
+ *  As a fully managed service, Batch can run batch computing workloads of any scale. Batch automatically provisions compute
+ *  resources and optimizes workload distribution based on the quantity and scale of your specific workloads. With Batch,
+ *  there's no need to install or manage batch computing software. This means that you can focus your time and energy on
+ *  analyzing results and solving your specific
  */
 
 /*!
@@ -156,7 +168,7 @@ BatchClient::BatchClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
+ * Cancels a job in an Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
  * <code>RUNNABLE</code> state are canceled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>
  * aren't canceled, but the API operation still succeeds, even if no job is canceled. These jobs must be terminated with
  * the <a>TerminateJob</a>
@@ -172,13 +184,13 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Batch compute environment. You can create <code>MANAGED</code> or <code>UNMANAGED</code> compute
- * environments. <code>MANAGED</code> compute environments can use Amazon EC2 or AWS Fargate resources.
- * <code>UNMANAGED</code> compute environments can only use EC2
+ * Creates an Batch compute environment. You can create <code>MANAGED</code> or <code>UNMANAGED</code> compute
+ * environments. <code>MANAGED</code> compute environments can use Amazon EC2 or Fargate resources. <code>UNMANAGED</code>
+ * compute environments can only use EC2
  *
  * resources>
  *
- * In a managed compute environment, AWS Batch manages the capacity and instance types of the compute resources within the
+ * In a managed compute environment, Batch manages the capacity and instance types of the compute resources within the
  * environment. This is based on the compute resource specification that you define or the <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">launch template</a> that you
  * specify when you create the compute environment. Either, you can choose to use EC2 On-Demand Instances and EC2 Spot
@@ -204,10 +216,11 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  *
  * Guide</i>> <note>
  *
- * AWS Batch doesn't upgrade the AMIs in a compute environment after the environment is created. For example, it doesn't
- * update the AMIs when a newer version of the Amazon ECS optimized AMI is available. Therefore, you're responsible for
- * managing the guest operating system (including its updates and security patches) and any additional application software
- * or utilities that you install on the compute resources. To use a new AMI for your AWS Batch jobs, complete these
+ * Batch doesn't automatically upgrade the AMIs in a compute environment after it's created. For example, it also doesn't
+ * update the AMIs in your compute environment when a newer version of the Amazon ECS optimized AMI is available. You're
+ * responsible for the management of the guest operating system. This includes any updates and security patches. You're
+ * also responsible for any additional application software or utilities that you install on the compute resources. There
+ * are two ways to use a new AMI for your Batch jobs. The original method is to complete these
  *
  * steps> <ol> <li>
  *
@@ -224,6 +237,46 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  * queue> </li> <li>
  *
  * Delete the earlier compute
+ *
+ * environment> </li> </ol>
+ *
+ * In April 2022, Batch added enhanced support for updating compute environments. For more information, see <a
+ * href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating compute
+ * environments</a>. To use the enhanced updating of compute environments to update AMIs, follow these
+ *
+ * rules> <ul> <li>
+ *
+ * Either do not set the service role (<code>serviceRole</code>) parameter or set it to the <b>AWSBatchServiceRole</b>
+ * service-linked
+ *
+ * role> </li> <li>
+ *
+ * Set the allocation strategy (<code>allocationStrategy</code>) parameter to <code>BEST_FIT_PROGRESSIVE</code> or
+ *
+ * <code>SPOT_CAPACITY_OPTIMIZED</code>> </li> <li>
+ *
+ * Set the update to latest image version (<code>updateToLatestImageVersion</code>) parameter to
+ *
+ * <code>true</code>> </li> <li>
+ *
+ * Do not specify an AMI ID in <code>imageId</code>, <code>imageIdOverride</code> (in <a
+ * href="https://docs.aws.amazon.com/batch/latest/APIReference/API_Ec2Configuration.html"> <code>ec2Configuration</code>
+ * </a>), or in the launch template (<code>launchTemplate</code>). In that case Batch will select the latest Amazon ECS
+ * optimized AMI supported by Batch at the time the infrastructure update is initiated. Alternatively you can specify the
+ * AMI ID in the <code>imageId</code> or <code>imageIdOverride</code> parameters, or the launch template identified by the
+ * <code>LaunchTemplate</code> properties. Changing any of these properties will trigger an infrastructure update. If the
+ * AMI ID is specified in the launch template, it can not be replaced by specifying an AMI ID in either the
+ * <code>imageId</code> or <code>imageIdOverride</code> parameters. It can only be replaced by specifying a different
+ * launch template, or if the launch template version is set to <code>$Default</code> or <code>$Latest</code>, by setting
+ * either a new default version for the launch template (if <code>$Default</code>)or by adding a new version to the launch
+ * template (if
+ *
+ * <code>$Latest</code>)> </li> </ul>
+ *
+ * If these rules are followed, any update that triggers an infrastructure update will cause the AMI ID to be re-selected.
+ * If the <code>version</code> setting in the launch template (<code>launchTemplate</code>) is set to <code>$Latest</code>
+ * or <code>$Default</code>, the latest or default version of the launch template will be evaluated up at the time of the
+ * infrastructure update, even if the <code>launchTemplate</code> was not
  */
 CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const CreateComputeEnvironmentRequest &request)
 {
@@ -236,12 +289,12 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Batch job queue. When you create a job queue, you associate one or more compute environments to the queue
- * and assign an order of preference for the compute
+ * Creates an Batch job queue. When you create a job queue, you associate one or more compute environments to the queue and
+ * assign an order of preference for the compute
  *
  * environments>
  *
- * You also set a priority to the job queue that determines the order that the AWS Batch scheduler places jobs onto its
+ * You also set a priority to the job queue that determines the order that the Batch scheduler places jobs onto its
  * associated compute environments. For example, if a compute environment is associated with more than one job queue, the
  * job queue with a higher priority is given preference for scheduling jobs to that compute
  */
@@ -252,18 +305,31 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
 
 /*!
  * Sends \a request to the BatchClient service, and returns a pointer to an
+ * CreateSchedulingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Batch scheduling
+ */
+CreateSchedulingPolicyResponse * BatchClient::createSchedulingPolicy(const CreateSchedulingPolicyRequest &request)
+{
+    return qobject_cast<CreateSchedulingPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
  * DeleteComputeEnvironmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Batch compute
+ * Deletes an Batch compute
  *
  * environment>
  *
  * Before you can delete a compute environment, you must set its state to <code>DISABLED</code> with the
  * <a>UpdateComputeEnvironment</a> API operation and disassociate it from any job queues with the <a>UpdateJobQueue</a> API
- * operation. Compute environments that use AWS Fargate resources must terminate all active jobs on that compute
- * environment before deleting the compute environment. If this isn't done, the compute environment enters an invalid
+ * operation. Compute environments that use Fargate resources must terminate all active jobs on that compute environment
+ * before deleting the compute environment. If this isn't done, the compute environment enters an invalid
  */
 DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const DeleteComputeEnvironmentRequest &request)
 {
@@ -291,11 +357,28 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
 
 /*!
  * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DeleteSchedulingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified scheduling
+ *
+ * policy>
+ *
+ * You can't delete a scheduling policy that's used in any job
+ */
+DeleteSchedulingPolicyResponse * BatchClient::deleteSchedulingPolicy(const DeleteSchedulingPolicyRequest &request)
+{
+    return qobject_cast<DeleteSchedulingPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
  * DeregisterJobDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deregisters an AWS Batch job definition. Job definitions are permanently deleted after 180
+ * Deregisters an Batch job definition. Job definitions are permanently deleted after 180
  */
 DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const DeregisterJobDefinitionRequest &request)
 {
@@ -313,7 +396,7 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
  * environments>
  *
  * If you're using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code> operation to
- * determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
+ * determine the <code>ecsClusterArn</code> that you launch your Amazon ECS container instances
  */
 DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(const DescribeComputeEnvironmentsRequest &request)
 {
@@ -353,7 +436,7 @@ DescribeJobQueuesResponse * BatchClient::describeJobQueues(const DescribeJobQueu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes a list of AWS Batch
+ * Describes a list of Batch
  */
 DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &request)
 {
@@ -362,11 +445,24 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
 
 /*!
  * Sends \a request to the BatchClient service, and returns a pointer to an
+ * DescribeSchedulingPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more of your scheduling
+ */
+DescribeSchedulingPoliciesResponse * BatchClient::describeSchedulingPolicies(const DescribeSchedulingPoliciesRequest &request)
+{
+    return qobject_cast<DescribeSchedulingPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
  * ListJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of AWS Batch
+ * Returns a list of Batch
  *
  * jobs>
  *
@@ -396,12 +492,25 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 
 /*!
  * Sends \a request to the BatchClient service, and returns a pointer to an
+ * ListSchedulingPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of Batch scheduling
+ */
+ListSchedulingPoliciesResponse * BatchClient::listSchedulingPolicies(const ListSchedulingPoliciesRequest &request)
+{
+    return qobject_cast<ListSchedulingPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tags for an AWS Batch resource. AWS Batch resources that support tags are compute environments, jobs, job
- * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not
+ * Lists the tags for an Batch resource. Batch resources that support tags are compute environments, jobs, job definitions,
+ * job queues, and scheduling policies. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not
  */
 ListTagsForResourceResponse * BatchClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -414,7 +523,7 @@ ListTagsForResourceResponse * BatchClient::listTagsForResource(const ListTagsFor
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers an AWS Batch job
+ * Registers an Batch job
  */
 RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const RegisterJobDefinitionRequest &request)
 {
@@ -427,13 +536,17 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Submits an AWS Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override
- * parameters defined in the job definition. vCPU and memory requirements that are specified in the
- * <code>ResourceRequirements</code> objects in the job definition are the exception. They can't be overridden this way
- * using the <code>memory</code> and <code>vcpus</code> parameters. Rather, you must specify updates to job definition
- * parameters in a <code>ResourceRequirements</code> object that's included in the <code>containerOverrides</code>
+ * Submits an Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override parameters
+ * defined in the job definition. vCPU and memory requirements that are specified in the <code>resourceRequirements</code>
+ * objects in the job definition are the exception. They can't be overridden this way using the <code>memory</code> and
+ * <code>vcpus</code> parameters. Rather, you must specify updates to job definition parameters in a
+ * <code>resourceRequirements</code> object that's included in the <code>containerOverrides</code>
  *
- * parameter> <b>
+ * parameter> <note>
+ *
+ * Job queues with a scheduling policy are limited to 500 active fair share identifiers at a time.
+ *
+ * </p </note> <b>
  *
  * Jobs that run on Fargate resources can't be guaranteed to run for more than 14 days. This is because, after 14 days,
  * Fargate resources might become unavailable and job might be
@@ -450,9 +563,10 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
- * aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags associated with
- * that resource are deleted as well. AWS Batch resources that support tags are compute environments, jobs, job
- * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not
+ * aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags that are
+ * associated with that resource are deleted as well. Batch resources that support tags are compute environments, jobs, job
+ * definitions, job queues, and scheduling policies. ARNs for child jobs of array and multi-node parallel (MNP) jobs are
+ * not
  */
 TagResourceResponse * BatchClient::tagResource(const TagResourceRequest &request)
 {
@@ -480,7 +594,7 @@ TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes specified tags from an AWS Batch
+ * Deletes specified tags from an Batch
  */
 UntagResourceResponse * BatchClient::untagResource(const UntagResourceRequest &request)
 {
@@ -493,7 +607,7 @@ UntagResourceResponse * BatchClient::untagResource(const UntagResourceRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an AWS Batch compute
+ * Updates an Batch compute
  */
 UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const UpdateComputeEnvironmentRequest &request)
 {
@@ -511,6 +625,19 @@ UpdateComputeEnvironmentResponse * BatchClient::updateComputeEnvironment(const U
 UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest &request)
 {
     return qobject_cast<UpdateJobQueueResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * UpdateSchedulingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a scheduling
+ */
+UpdateSchedulingPolicyResponse * BatchClient::updateSchedulingPolicy(const UpdateSchedulingPolicyRequest &request)
+{
+    return qobject_cast<UpdateSchedulingPolicyResponse *>(send(request));
 }
 
 /*!

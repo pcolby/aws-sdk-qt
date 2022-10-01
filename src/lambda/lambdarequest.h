@@ -45,6 +45,7 @@ public:
         CreateCodeSigningConfigAction,
         CreateEventSourceMappingAction,
         CreateFunctionAction,
+        CreateFunctionUrlConfigAction,
         DeleteAliasAction,
         DeleteCodeSigningConfigAction,
         DeleteEventSourceMappingAction,
@@ -52,6 +53,7 @@ public:
         DeleteFunctionCodeSigningConfigAction,
         DeleteFunctionConcurrencyAction,
         DeleteFunctionEventInvokeConfigAction,
+        DeleteFunctionUrlConfigAction,
         DeleteLayerVersionAction,
         DeleteProvisionedConcurrencyConfigAction,
         GetAccountSettingsAction,
@@ -63,6 +65,7 @@ public:
         GetFunctionConcurrencyAction,
         GetFunctionConfigurationAction,
         GetFunctionEventInvokeConfigAction,
+        GetFunctionUrlConfigAction,
         GetLayerVersionAction,
         GetLayerVersionByArnAction,
         GetLayerVersionPolicyAction,
@@ -74,6 +77,7 @@ public:
         ListCodeSigningConfigsAction,
         ListEventSourceMappingsAction,
         ListFunctionEventInvokeConfigsAction,
+        ListFunctionUrlConfigsAction,
         ListFunctionsAction,
         ListFunctionsByCodeSigningConfigAction,
         ListLayerVersionsAction,
@@ -97,6 +101,7 @@ public:
         UpdateFunctionCodeAction,
         UpdateFunctionConfigurationAction,
         UpdateFunctionEventInvokeConfigAction,
+        UpdateFunctionUrlConfigAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

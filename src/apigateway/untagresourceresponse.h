@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT UntagResourceResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT UntagResourceResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

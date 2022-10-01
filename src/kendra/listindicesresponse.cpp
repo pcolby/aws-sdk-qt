@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListIndicesResponse
- * \brief The ListIndicesResponse class provides an interace for kendra ListIndices responses.
+ * \class QtAws::Kendra::ListIndicesResponse
+ * \brief The ListIndicesResponse class provides an interace for Kendra ListIndices responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listIndices
+ * \sa KendraClient::listIndices
  */
 
 /*!
@@ -45,7 +45,7 @@ ListIndicesResponse::ListIndicesResponse(
         const ListIndicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ListIndicesResponsePrivate(this), parent)
+    : KendraResponse(new ListIndicesResponsePrivate(this), parent)
 {
     setRequest(new ListIndicesRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListIndicesRequest * ListIndicesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra ListIndices \a response.
+ * Parses a successful Kendra ListIndices \a response.
  */
 void ListIndicesResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListIndicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ListIndicesResponsePrivate
+ * \class QtAws::Kendra::ListIndicesResponsePrivate
  * \brief The ListIndicesResponsePrivate class provides private implementation for ListIndicesResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ListIndicesResponsePrivate object with public implementation \a q.
  */
 ListIndicesResponsePrivate::ListIndicesResponsePrivate(
-    ListIndicesResponse * const q) : kendraResponsePrivate(q)
+    ListIndicesResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ListIndices response element from \a xml.
+ * Parses a Kendra ListIndices response element from \a xml.
  */
 void ListIndicesResponsePrivate::parseListIndicesResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListIndicesResponsePrivate::parseListIndicesResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

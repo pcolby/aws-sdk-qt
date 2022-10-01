@@ -23,7 +23,7 @@
 #include "sqsresponse_p.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class ReceiveMessageResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

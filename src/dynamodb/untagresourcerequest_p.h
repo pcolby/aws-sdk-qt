@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public DynamoDBRequestPrivate {
+class UntagResourceRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const DynamoDBRequest::Action action,
+    UntagResourceRequestPrivate(const DynamoDbRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

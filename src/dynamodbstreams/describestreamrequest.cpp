@@ -23,13 +23,13 @@
 #include "dynamodbstreamsrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::DescribeStreamRequest
- * \brief The DescribeStreamRequest class provides an interface for DynamoDBStreams DescribeStream requests.
+ * \class QtAws::DynamoDbStreams::DescribeStreamRequest
+ * \brief The DescribeStreamRequest class provides an interface for DynamoDbStreams DescribeStream requests.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -38,14 +38,14 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::describeStream
+ * \sa DynamoDbStreamsClient::describeStream
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
-    : DynamoDBStreamsRequest(new DescribeStreamRequestPrivate(*other.d_func(), this))
+    : DynamoDbStreamsRequest(new DescribeStreamRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DescribeStreamRequest::DescribeStreamRequest(const DescribeStreamRequest &other)
  * Constructs a DescribeStreamRequest object.
  */
 DescribeStreamRequest::DescribeStreamRequest()
-    : DynamoDBStreamsRequest(new DescribeStreamRequestPrivate(DynamoDBStreamsRequest::DescribeStreamAction, this))
+    : DynamoDbStreamsRequest(new DescribeStreamRequestPrivate(DynamoDbStreamsRequest::DescribeStreamAction, this))
 {
 
 }
@@ -79,20 +79,20 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::DescribeStreamRequestPrivate
+ * \class QtAws::DynamoDbStreams::DescribeStreamRequestPrivate
  * \brief The DescribeStreamRequestPrivate class provides private implementation for DescribeStreamRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a DescribeStreamRequestPrivate object for DynamoDBStreams \a action,
+ * Constructs a DescribeStreamRequestPrivate object for DynamoDbStreams \a action,
  * with public implementation \a q.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
-    const DynamoDBStreamsRequest::Action action, DescribeStreamRequest * const q)
-    : DynamoDBStreamsRequestPrivate(action, q)
+    const DynamoDbStreamsRequest::Action action, DescribeStreamRequest * const q)
+    : DynamoDbStreamsRequestPrivate(action, q)
 {
 
 }
@@ -105,10 +105,10 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const DescribeStreamRequestPrivate &other, DescribeStreamRequest * const q)
-    : DynamoDBStreamsRequestPrivate(other, q)
+    : DynamoDbStreamsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

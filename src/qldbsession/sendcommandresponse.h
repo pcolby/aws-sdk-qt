@@ -24,11 +24,11 @@
 #include "sendcommandrequest.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 class SendCommandResponsePrivate;
 
-class QTAWSQLDBSESSION_EXPORT SendCommandResponse : public QLDBSessionResponse {
+class QTAWSQLDBSESSION_EXPORT SendCommandResponse : public QldbSessionResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

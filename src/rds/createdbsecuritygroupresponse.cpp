@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBSecurityGroupResponse
- * \brief The CreateDBSecurityGroupResponse class provides an interace for RDS CreateDBSecurityGroup responses.
+ * \class QtAws::Rds::CreateDBSecurityGroupResponse
+ * \brief The CreateDBSecurityGroupResponse class provides an interace for Rds CreateDBSecurityGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBSecurityGroup \a response.
+ * Parses a successful Rds CreateDBSecurityGroup \a response.
  */
 void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBSecurityGroupResponsePrivate
+ * \class QtAws::Rds::CreateDBSecurityGroupResponsePrivate
  * \brief The CreateDBSecurityGroupResponsePrivate class provides private implementation for CreateDBSecurityGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBSecurityGroup response element from \a xml.
+ * Parses a Rds CreateDBSecurityGroup response element from \a xml.
  */
 void CreateDBSecurityGroupResponsePrivate::parseCreateDBSecurityGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBSecurityGroupResponsePrivate::parseCreateDBSecurityGroupResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

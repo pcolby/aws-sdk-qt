@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class IvsRequestPrivate;
 
 class QTAWSIVS_EXPORT IvsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by IVS.
+    /// Actions supported by Ivs.
     enum Action {
         BatchGetChannelAction,
         BatchGetStreamKeyAction,
@@ -53,11 +53,13 @@ public:
         GetRecordingConfigurationAction,
         GetStreamAction,
         GetStreamKeyAction,
+        GetStreamSessionAction,
         ImportPlaybackKeyPairAction,
         ListChannelsAction,
         ListPlaybackKeyPairsAction,
         ListRecordingConfigurationsAction,
         ListStreamKeysAction,
+        ListStreamSessionsAction,
         ListStreamsAction,
         ListTagsForResourceAction,
         PutMetadataAction,
@@ -101,7 +103,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

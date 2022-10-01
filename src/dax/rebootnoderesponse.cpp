@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::RebootNodeResponse
- * \brief The RebootNodeResponse class provides an interace for DAX RebootNode responses.
+ * \class QtAws::Dax::RebootNodeResponse
+ * \brief The RebootNodeResponse class provides an interace for Dax RebootNode responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const RebootNodeRequest * RebootNodeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX RebootNode \a response.
+ * Parses a successful Dax RebootNode \a response.
  */
 void RebootNodeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void RebootNodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::RebootNodeResponsePrivate
+ * \class QtAws::Dax::RebootNodeResponsePrivate
  * \brief The RebootNodeResponsePrivate class provides private implementation for RebootNodeResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ RebootNodeResponsePrivate::RebootNodeResponsePrivate(
 }
 
 /*!
- * Parses a DAX RebootNode response element from \a xml.
+ * Parses a Dax RebootNode response element from \a xml.
  */
 void RebootNodeResponsePrivate::parseRebootNodeResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void RebootNodeResponsePrivate::parseRebootNodeResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

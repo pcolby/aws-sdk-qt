@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSFIS_LIBRARY)
 
 add_library(QtAwsFis
+  qtawsfisglobal.h
+  fisclient.h
+  fisclient_p.h
+  fisrequest.h
+  fisrequest_p.h
+  fisresponse.h
+  fisresponse_p.h
   createexperimenttemplaterequest.h
   createexperimenttemplaterequest_p.h
   createexperimenttemplateresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsFis
   deleteexperimenttemplaterequest_p.h
   deleteexperimenttemplateresponse.h
   deleteexperimenttemplateresponse_p.h
-  fisclient.h
-  fisclient_p.h
-  fisrequest.h
-  fisrequest_p.h
-  fisresponse.h
-  fisresponse_p.h
   getactionrequest.h
   getactionrequest_p.h
   getactionresponse.h
@@ -27,23 +28,30 @@ add_library(QtAwsFis
   getexperimenttemplaterequest_p.h
   getexperimenttemplateresponse.h
   getexperimenttemplateresponse_p.h
+  gettargetresourcetyperequest.h
+  gettargetresourcetyperequest_p.h
+  gettargetresourcetyperesponse.h
+  gettargetresourcetyperesponse_p.h
   listactionsrequest.h
   listactionsrequest_p.h
   listactionsresponse.h
   listactionsresponse_p.h
-  listexperimentsrequest.h
-  listexperimentsrequest_p.h
-  listexperimentsresponse.h
-  listexperimentsresponse_p.h
   listexperimenttemplatesrequest.h
   listexperimenttemplatesrequest_p.h
   listexperimenttemplatesresponse.h
   listexperimenttemplatesresponse_p.h
+  listexperimentsrequest.h
+  listexperimentsrequest_p.h
+  listexperimentsresponse.h
+  listexperimentsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsfisglobal.h
+  listtargetresourcetypesrequest.h
+  listtargetresourcetypesrequest_p.h
+  listtargetresourcetypesresponse.h
+  listtargetresourcetypesresponse_p.h
   startexperimentrequest.h
   startexperimentrequest_p.h
   startexperimentresponse.h
@@ -64,27 +72,31 @@ add_library(QtAwsFis
   updateexperimenttemplaterequest_p.h
   updateexperimenttemplateresponse.h
   updateexperimenttemplateresponse_p.h
+  fisclient.cpp
+  fisrequest.cpp
+  fisresponse.cpp
   createexperimenttemplaterequest.cpp
   createexperimenttemplateresponse.cpp
   deleteexperimenttemplaterequest.cpp
   deleteexperimenttemplateresponse.cpp
-  fisclient.cpp
-  fisrequest.cpp
-  fisresponse.cpp
   getactionrequest.cpp
   getactionresponse.cpp
   getexperimentrequest.cpp
   getexperimentresponse.cpp
   getexperimenttemplaterequest.cpp
   getexperimenttemplateresponse.cpp
+  gettargetresourcetyperequest.cpp
+  gettargetresourcetyperesponse.cpp
   listactionsrequest.cpp
   listactionsresponse.cpp
-  listexperimentsrequest.cpp
-  listexperimentsresponse.cpp
   listexperimenttemplatesrequest.cpp
   listexperimenttemplatesresponse.cpp
+  listexperimentsrequest.cpp
+  listexperimentsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listtargetresourcetypesrequest.cpp
+  listtargetresourcetypesresponse.cpp
   startexperimentrequest.cpp
   startexperimentresponse.cpp
   stopexperimentrequest.cpp

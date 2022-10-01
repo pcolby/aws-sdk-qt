@@ -24,7 +24,7 @@
 #include "updateratebasedrulerequest.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class UpdateRateBasedRuleRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

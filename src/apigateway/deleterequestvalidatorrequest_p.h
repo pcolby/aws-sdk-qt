@@ -24,14 +24,14 @@
 #include "deleterequestvalidatorrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteRequestValidatorRequest;
 
-class DeleteRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteRequestValidatorRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteRequestValidatorRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteRequestValidatorRequest * const q);
     DeleteRequestValidatorRequestPrivate(const DeleteRequestValidatorRequestPrivate &other,
                                    DeleteRequestValidatorRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

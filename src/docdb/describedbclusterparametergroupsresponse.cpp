@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParameterGroupsResponse
- * \brief The DescribeDBClusterParameterGroupsResponse class provides an interace for DocDB DescribeDBClusterParameterGroups responses.
+ * \class QtAws::DocDb::DescribeDBClusterParameterGroupsResponse
+ * \brief The DescribeDBClusterParameterGroupsResponse class provides an interace for DocDb DescribeDBClusterParameterGroups responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBClusterParameterGroups
+ * \sa DocDbClient::describeDBClusterParameterGroups
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDBClusterParameterGroupsResponse::DescribeDBClusterParameterGroupsRespon
         const DescribeDBClusterParameterGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeDBClusterParameterGroupsResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeDBClusterParameterGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClusterParameterGroupsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDBClusterParameterGroupsRequest * DescribeDBClusterParameterGroups
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeDBClusterParameterGroups \a response.
+ * Parses a successful DocDb DescribeDBClusterParameterGroups \a response.
  */
 void DescribeDBClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDBClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBClusterParameterGroupsResponsePrivate
+ * \class QtAws::DocDb::DescribeDBClusterParameterGroupsResponsePrivate
  * \brief The DescribeDBClusterParameterGroupsResponsePrivate class provides private implementation for DescribeDBClusterParameterGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeDBClusterParameterGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeDBClusterParameterGroupsResponsePrivate::DescribeDBClusterParameterGroupsResponsePrivate(
-    DescribeDBClusterParameterGroupsResponse * const q) : DocDBResponsePrivate(q)
+    DescribeDBClusterParameterGroupsResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeDBClusterParameterGroups response element from \a xml.
+ * Parses a DocDb DescribeDBClusterParameterGroups response element from \a xml.
  */
 void DescribeDBClusterParameterGroupsResponsePrivate::parseDescribeDBClusterParameterGroupsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDBClusterParameterGroupsResponsePrivate::parseDescribeDBClusterPara
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListPageReceiptsResponse
- * \brief The ListPageReceiptsResponse class provides an interace for SSMContacts ListPageReceipts responses.
+ * \class QtAws::SsmContacts::ListPageReceiptsResponse
+ * \brief The ListPageReceiptsResponse class provides an interace for SsmContacts ListPageReceipts responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listPageReceipts
+ * \sa SsmContactsClient::listPageReceipts
  */
 
 /*!
@@ -44,7 +54,7 @@ ListPageReceiptsResponse::ListPageReceiptsResponse(
         const ListPageReceiptsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new ListPageReceiptsResponsePrivate(this), parent)
+    : SsmContactsResponse(new ListPageReceiptsResponsePrivate(this), parent)
 {
     setRequest(new ListPageReceiptsRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const ListPageReceiptsRequest * ListPageReceiptsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts ListPageReceipts \a response.
+ * Parses a successful SsmContacts ListPageReceipts \a response.
  */
 void ListPageReceiptsResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void ListPageReceiptsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::ListPageReceiptsResponsePrivate
+ * \class QtAws::SsmContacts::ListPageReceiptsResponsePrivate
  * \brief The ListPageReceiptsResponsePrivate class provides private implementation for ListPageReceiptsResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a ListPageReceiptsResponsePrivate object with public implementation \a q.
  */
 ListPageReceiptsResponsePrivate::ListPageReceiptsResponsePrivate(
-    ListPageReceiptsResponse * const q) : SSMContactsResponsePrivate(q)
+    ListPageReceiptsResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts ListPageReceipts response element from \a xml.
+ * Parses a SsmContacts ListPageReceipts response element from \a xml.
  */
 void ListPageReceiptsResponsePrivate::parseListPageReceiptsResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void ListPageReceiptsResponsePrivate::parseListPageReceiptsResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

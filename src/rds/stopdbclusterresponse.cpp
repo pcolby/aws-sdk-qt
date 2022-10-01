@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StopDBClusterResponse
- * \brief The StopDBClusterResponse class provides an interace for RDS StopDBCluster responses.
+ * \class QtAws::Rds::StopDBClusterResponse
+ * \brief The StopDBClusterResponse class provides an interace for Rds StopDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StopDBClusterRequest * StopDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS StopDBCluster \a response.
+ * Parses a successful Rds StopDBCluster \a response.
  */
 void StopDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StopDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::StopDBClusterResponsePrivate
+ * \class QtAws::Rds::StopDBClusterResponsePrivate
  * \brief The StopDBClusterResponsePrivate class provides private implementation for StopDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StopDBClusterResponsePrivate::StopDBClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS StopDBCluster response element from \a xml.
+ * Parses a Rds StopDBCluster response element from \a xml.
  */
 void StopDBClusterResponsePrivate::parseStopDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StopDBClusterResponsePrivate::parseStopDBClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "deleteinlinepolicyfrompermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DeleteInlinePolicyFromPermissionSetRequest;
 
-class DeleteInlinePolicyFromPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class DeleteInlinePolicyFromPermissionSetRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DeleteInlinePolicyFromPermissionSetRequestPrivate(const SSOAdminRequest::Action action,
+    DeleteInlinePolicyFromPermissionSetRequestPrivate(const SsoAdminRequest::Action action,
                                    DeleteInlinePolicyFromPermissionSetRequest * const q);
     DeleteInlinePolicyFromPermissionSetRequestPrivate(const DeleteInlinePolicyFromPermissionSetRequestPrivate &other,
                                    DeleteInlinePolicyFromPermissionSetRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

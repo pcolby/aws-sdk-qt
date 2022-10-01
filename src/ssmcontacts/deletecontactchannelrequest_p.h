@@ -24,14 +24,14 @@
 #include "deletecontactchannelrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class DeleteContactChannelRequest;
 
-class DeleteContactChannelRequestPrivate : public SSMContactsRequestPrivate {
+class DeleteContactChannelRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    DeleteContactChannelRequestPrivate(const SSMContactsRequest::Action action,
+    DeleteContactChannelRequestPrivate(const SsmContactsRequest::Action action,
                                    DeleteContactChannelRequest * const q);
     DeleteContactChannelRequestPrivate(const DeleteContactChannelRequestPrivate &other,
                                    DeleteContactChannelRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

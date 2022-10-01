@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class SsmClientPrivate;
 class AddTagsToResourceRequest;
@@ -459,7 +459,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

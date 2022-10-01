@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::FailoverDBClusterResponse
- * \brief The FailoverDBClusterResponse class provides an interace for RDS FailoverDBCluster responses.
+ * \class QtAws::Rds::FailoverDBClusterResponse
+ * \brief The FailoverDBClusterResponse class provides an interace for Rds FailoverDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS FailoverDBCluster \a response.
+ * Parses a successful Rds FailoverDBCluster \a response.
  */
 void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::FailoverDBClusterResponsePrivate
+ * \class QtAws::Rds::FailoverDBClusterResponsePrivate
  * \brief The FailoverDBClusterResponsePrivate class provides private implementation for FailoverDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS FailoverDBCluster response element from \a xml.
+ * Parses a Rds FailoverDBCluster response element from \a xml.
  */
 void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

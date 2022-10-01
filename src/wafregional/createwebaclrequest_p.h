@@ -24,14 +24,14 @@
 #include "createwebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateWebACLRequest;
 
-class CreateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateWebACLRequest * const q);
     CreateWebACLRequestPrivate(const CreateWebACLRequestPrivate &other,
                                    CreateWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "describevirtualclusterrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class DescribeVirtualClusterRequest;
 
-class DescribeVirtualClusterRequestPrivate : public EMRContainersRequestPrivate {
+class DescribeVirtualClusterRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    DescribeVirtualClusterRequestPrivate(const EMRContainersRequest::Action action,
+    DescribeVirtualClusterRequestPrivate(const EmrcontainersRequest::Action action,
                                    DescribeVirtualClusterRequest * const q);
     DescribeVirtualClusterRequestPrivate(const DescribeVirtualClusterRequestPrivate &other,
                                    DescribeVirtualClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

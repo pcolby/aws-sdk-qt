@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::VerifyDomainIdentityResponse
- * \brief The VerifyDomainIdentityResponse class provides an interace for SES VerifyDomainIdentity responses.
+ * \class QtAws::Ses::VerifyDomainIdentityResponse
+ * \brief The VerifyDomainIdentityResponse class provides an interace for Ses VerifyDomainIdentity responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SES VerifyDomainIdentity \a response.
+ * Parses a successful Ses VerifyDomainIdentity \a response.
  */
 void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::VerifyDomainIdentityResponsePrivate
+ * \class QtAws::Ses::VerifyDomainIdentityResponsePrivate
  * \brief The VerifyDomainIdentityResponsePrivate class provides private implementation for VerifyDomainIdentityResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
 }
 
 /*!
- * Parses a SES VerifyDomainIdentity response element from \a xml.
+ * Parses a Ses VerifyDomainIdentity response element from \a xml.
  */
 void VerifyDomainIdentityResponsePrivate::parseVerifyDomainIdentityResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void VerifyDomainIdentityResponsePrivate::parseVerifyDomainIdentityResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

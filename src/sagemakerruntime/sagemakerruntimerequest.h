@@ -40,6 +40,7 @@ public:
     /// Actions supported by SageMakerRuntime.
     enum Action {
         InvokeEndpointAction,
+        InvokeEndpointAsyncAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

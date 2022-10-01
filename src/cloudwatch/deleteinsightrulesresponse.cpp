@@ -33,8 +33,9 @@ namespace CloudWatch {
  *
  * \inmodule QtAwsCloudWatch
  *
- *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
- *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
+ *  Amazon CloudWatch monitors your Amazon Web Services (Amazon Web Services) resources and the applications you run on
+ *  Amazon Web Services in real time. You can use CloudWatch to collect and track metrics, which are the variables you want
+ *  to measure for your resources and
  * 
  *  applications>
  * 
@@ -45,8 +46,9 @@ namespace CloudWatch {
  * 
  *  money>
  * 
- *  In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With
- *  CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational
+ *  In addition to monitoring the built-in metrics that come with Amazon Web Services, you can monitor your own custom
+ *  metrics. With CloudWatch, you gain system-wide visibility into resource utilization, application performance, and
+ *  operational
  *
  * \sa CloudWatchClient::deleteInsightRules
  */

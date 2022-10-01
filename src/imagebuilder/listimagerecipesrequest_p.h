@@ -24,14 +24,14 @@
 #include "listimagerecipesrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ListImageRecipesRequest;
 
-class ListImageRecipesRequestPrivate : public imagebuilderRequestPrivate {
+class ListImageRecipesRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    ListImageRecipesRequestPrivate(const imagebuilderRequest::Action action,
+    ListImageRecipesRequestPrivate(const ImageBuilderRequest::Action action,
                                    ListImageRecipesRequest * const q);
     ListImageRecipesRequestPrivate(const ListImageRecipesRequestPrivate &other,
                                    ListImageRecipesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

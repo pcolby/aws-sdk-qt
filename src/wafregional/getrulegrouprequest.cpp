@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRuleGroupRequest
- * \brief The GetRuleGroupRequest class provides an interface for WAFRegional GetRuleGroup requests.
+ * \class QtAws::WafRegional::GetRuleGroupRequest
+ * \brief The GetRuleGroupRequest class provides an interface for WafRegional GetRuleGroup requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRuleGroup
+ * \sa WafRegionalClient::getRuleGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRuleGroupRequest::GetRuleGroupRequest(const GetRuleGroupRequest &other)
-    : WAFRegionalRequest(new GetRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetRuleGroupRequest::GetRuleGroupRequest(const GetRuleGroupRequest &other)
  * Constructs a GetRuleGroupRequest object.
  */
 GetRuleGroupRequest::GetRuleGroupRequest()
-    : WAFRegionalRequest(new GetRuleGroupRequestPrivate(WAFRegionalRequest::GetRuleGroupAction, this))
+    : WafRegionalRequest(new GetRuleGroupRequestPrivate(WafRegionalRequest::GetRuleGroupAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetRuleGroupRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRuleGroupRequestPrivate
+ * \class QtAws::WafRegional::GetRuleGroupRequestPrivate
  * \brief The GetRuleGroupRequestPrivate class provides private implementation for GetRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetRuleGroupRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetRuleGroupRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
-    const WAFRegionalRequest::Action action, GetRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetRuleGroupRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
  */
 GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
     const GetRuleGroupRequestPrivate &other, GetRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

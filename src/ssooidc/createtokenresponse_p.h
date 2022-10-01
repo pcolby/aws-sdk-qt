@@ -23,11 +23,11 @@
 #include "ssooidcresponse_p.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 class CreateTokenResponse;
 
-class CreateTokenResponsePrivate : public SsooidcResponsePrivate {
+class CreateTokenResponsePrivate : public SsoOidcResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::TagMFADeviceResponse
- * \brief The TagMFADeviceResponse class provides an interace for IAM TagMFADevice responses.
+ * \class QtAws::Iam::TagMFADeviceResponse
+ * \brief The TagMFADeviceResponse class provides an interace for Iam TagMFADevice responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::tagMFADevice
  */
@@ -68,7 +68,7 @@ const TagMFADeviceRequest * TagMFADeviceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM TagMFADevice \a response.
+ * Parses a successful Iam TagMFADevice \a response.
  */
 void TagMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void TagMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::TagMFADeviceResponsePrivate
+ * \class QtAws::Iam::TagMFADeviceResponsePrivate
  * \brief The TagMFADeviceResponsePrivate class provides private implementation for TagMFADeviceResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ TagMFADeviceResponsePrivate::TagMFADeviceResponsePrivate(
 }
 
 /*!
- * Parses a IAM TagMFADevice response element from \a xml.
+ * Parses a Iam TagMFADevice response element from \a xml.
  */
 void TagMFADeviceResponsePrivate::parseTagMFADeviceResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void TagMFADeviceResponsePrivate::parseTagMFADeviceResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

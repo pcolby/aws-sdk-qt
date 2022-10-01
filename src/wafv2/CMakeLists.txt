@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWAFV2_LIBRARY)
 
 add_library(QtAwsWafv2
+  qtawswafv2global.h
+  wafv2client.h
+  wafv2client_p.h
+  wafv2request.h
+  wafv2request_p.h
+  wafv2response.h
+  wafv2response_p.h
   associatewebaclrequest.h
   associatewebaclrequest_p.h
   associatewebaclresponse.h
@@ -61,6 +68,10 @@ add_library(QtAwsWafv2
   disassociatewebaclrequest_p.h
   disassociatewebaclresponse.h
   disassociatewebaclresponse_p.h
+  generatemobilesdkreleaseurlrequest.h
+  generatemobilesdkreleaseurlrequest_p.h
+  generatemobilesdkreleaseurlresponse.h
+  generatemobilesdkreleaseurlresponse_p.h
   getipsetrequest.h
   getipsetrequest_p.h
   getipsetresponse.h
@@ -69,6 +80,14 @@ add_library(QtAwsWafv2
   getloggingconfigurationrequest_p.h
   getloggingconfigurationresponse.h
   getloggingconfigurationresponse_p.h
+  getmanagedrulesetrequest.h
+  getmanagedrulesetrequest_p.h
+  getmanagedrulesetresponse.h
+  getmanagedrulesetresponse_p.h
+  getmobilesdkreleaserequest.h
+  getmobilesdkreleaserequest_p.h
+  getmobilesdkreleaseresponse.h
+  getmobilesdkreleaseresponse_p.h
   getpermissionpolicyrequest.h
   getpermissionpolicyrequest_p.h
   getpermissionpolicyresponse.h
@@ -89,14 +108,18 @@ add_library(QtAwsWafv2
   getsampledrequestsrequest_p.h
   getsampledrequestsresponse.h
   getsampledrequestsresponse_p.h
-  getwebaclforresourcerequest.h
-  getwebaclforresourcerequest_p.h
-  getwebaclforresourceresponse.h
-  getwebaclforresourceresponse_p.h
   getwebaclrequest.h
   getwebaclrequest_p.h
   getwebaclresponse.h
   getwebaclresponse_p.h
+  getwebaclforresourcerequest.h
+  getwebaclforresourcerequest_p.h
+  getwebaclforresourceresponse.h
+  getwebaclforresourceresponse_p.h
+  listavailablemanagedrulegroupversionsrequest.h
+  listavailablemanagedrulegroupversionsrequest_p.h
+  listavailablemanagedrulegroupversionsresponse.h
+  listavailablemanagedrulegroupversionsresponse_p.h
   listavailablemanagedrulegroupsrequest.h
   listavailablemanagedrulegroupsrequest_p.h
   listavailablemanagedrulegroupsresponse.h
@@ -109,6 +132,14 @@ add_library(QtAwsWafv2
   listloggingconfigurationsrequest_p.h
   listloggingconfigurationsresponse.h
   listloggingconfigurationsresponse_p.h
+  listmanagedrulesetsrequest.h
+  listmanagedrulesetsrequest_p.h
+  listmanagedrulesetsresponse.h
+  listmanagedrulesetsresponse_p.h
+  listmobilesdkreleasesrequest.h
+  listmobilesdkreleasesrequest_p.h
+  listmobilesdkreleasesresponse.h
+  listmobilesdkreleasesresponse_p.h
   listregexpatternsetsrequest.h
   listregexpatternsetsrequest_p.h
   listregexpatternsetsresponse.h
@@ -133,11 +164,14 @@ add_library(QtAwsWafv2
   putloggingconfigurationrequest_p.h
   putloggingconfigurationresponse.h
   putloggingconfigurationresponse_p.h
+  putmanagedrulesetversionsrequest.h
+  putmanagedrulesetversionsrequest_p.h
+  putmanagedrulesetversionsresponse.h
+  putmanagedrulesetversionsresponse_p.h
   putpermissionpolicyrequest.h
   putpermissionpolicyrequest_p.h
   putpermissionpolicyresponse.h
   putpermissionpolicyresponse_p.h
-  qtawswafv2global.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -150,6 +184,10 @@ add_library(QtAwsWafv2
   updateipsetrequest_p.h
   updateipsetresponse.h
   updateipsetresponse_p.h
+  updatemanagedrulesetversionexpirydaterequest.h
+  updatemanagedrulesetversionexpirydaterequest_p.h
+  updatemanagedrulesetversionexpirydateresponse.h
+  updatemanagedrulesetversionexpirydateresponse_p.h
   updateregexpatternsetrequest.h
   updateregexpatternsetrequest_p.h
   updateregexpatternsetresponse.h
@@ -162,12 +200,9 @@ add_library(QtAwsWafv2
   updatewebaclrequest_p.h
   updatewebaclresponse.h
   updatewebaclresponse_p.h
-  wafv2client.h
-  wafv2client_p.h
-  wafv2request.h
-  wafv2request_p.h
-  wafv2response.h
-  wafv2response_p.h
+  wafv2client.cpp
+  wafv2request.cpp
+  wafv2response.cpp
   associatewebaclrequest.cpp
   associatewebaclresponse.cpp
   checkcapacityrequest.cpp
@@ -198,10 +233,16 @@ add_library(QtAwsWafv2
   describemanagedrulegroupresponse.cpp
   disassociatewebaclrequest.cpp
   disassociatewebaclresponse.cpp
+  generatemobilesdkreleaseurlrequest.cpp
+  generatemobilesdkreleaseurlresponse.cpp
   getipsetrequest.cpp
   getipsetresponse.cpp
   getloggingconfigurationrequest.cpp
   getloggingconfigurationresponse.cpp
+  getmanagedrulesetrequest.cpp
+  getmanagedrulesetresponse.cpp
+  getmobilesdkreleaserequest.cpp
+  getmobilesdkreleaseresponse.cpp
   getpermissionpolicyrequest.cpp
   getpermissionpolicyresponse.cpp
   getratebasedstatementmanagedkeysrequest.cpp
@@ -212,16 +253,22 @@ add_library(QtAwsWafv2
   getrulegroupresponse.cpp
   getsampledrequestsrequest.cpp
   getsampledrequestsresponse.cpp
-  getwebaclforresourcerequest.cpp
-  getwebaclforresourceresponse.cpp
   getwebaclrequest.cpp
   getwebaclresponse.cpp
+  getwebaclforresourcerequest.cpp
+  getwebaclforresourceresponse.cpp
+  listavailablemanagedrulegroupversionsrequest.cpp
+  listavailablemanagedrulegroupversionsresponse.cpp
   listavailablemanagedrulegroupsrequest.cpp
   listavailablemanagedrulegroupsresponse.cpp
   listipsetsrequest.cpp
   listipsetsresponse.cpp
   listloggingconfigurationsrequest.cpp
   listloggingconfigurationsresponse.cpp
+  listmanagedrulesetsrequest.cpp
+  listmanagedrulesetsresponse.cpp
+  listmobilesdkreleasesrequest.cpp
+  listmobilesdkreleasesresponse.cpp
   listregexpatternsetsrequest.cpp
   listregexpatternsetsresponse.cpp
   listresourcesforwebaclrequest.cpp
@@ -234,6 +281,8 @@ add_library(QtAwsWafv2
   listwebaclsresponse.cpp
   putloggingconfigurationrequest.cpp
   putloggingconfigurationresponse.cpp
+  putmanagedrulesetversionsrequest.cpp
+  putmanagedrulesetversionsresponse.cpp
   putpermissionpolicyrequest.cpp
   putpermissionpolicyresponse.cpp
   tagresourcerequest.cpp
@@ -242,15 +291,14 @@ add_library(QtAwsWafv2
   untagresourceresponse.cpp
   updateipsetrequest.cpp
   updateipsetresponse.cpp
+  updatemanagedrulesetversionexpirydaterequest.cpp
+  updatemanagedrulesetversionexpirydateresponse.cpp
   updateregexpatternsetrequest.cpp
   updateregexpatternsetresponse.cpp
   updaterulegrouprequest.cpp
   updaterulegroupresponse.cpp
   updatewebaclrequest.cpp
-  updatewebaclresponse.cpp
-  wafv2client.cpp
-  wafv2request.cpp
-  wafv2response.cpp)
+  updatewebaclresponse.cpp)
 
 target_link_libraries(QtAwsWafv2
   PRIVATE QtAwsCore

@@ -94,12 +94,13 @@ namespace ApplicationDiscoveryService {
  * \ingroup aws-clients
  * \inmodule QtAwsApplicationDiscoveryService
  *
- *  <fullname>AWS Application Discovery Service</fullname>
+ *  <fullname>Amazon Web Services Application Discovery Service</fullname>
  * 
- *  AWS Application Discovery Service helps you plan application migration projects. It automatically identifies servers,
- *  virtual machines (VMs), and network dependencies in your on-premises data centers. For more information, see the <a
- *  href="http://aws.amazon.com/application-discovery/faqs/">AWS Application Discovery Service FAQ</a>. Application
- *  Discovery Service offers three ways of performing discovery and collecting data about your on-premises
+ *  Amazon Web Services Application Discovery Service helps you plan application migration projects. It automatically
+ *  identifies servers, virtual machines (VMs), and network dependencies in your on-premises data centers. For more
+ *  information, see the <a href="http://aws.amazon.com/application-discovery/faqs/">Amazon Web Services Application
+ *  Discovery Service FAQ</a>. Application Discovery Service offers three ways of performing discovery and collecting data
+ *  about your on-premises
  * 
  *  servers> <ul> <li>
  * 
@@ -117,8 +118,8 @@ namespace ApplicationDiscoveryService {
  * 
  *  information> </li> </ul> </li> </ul> <ul> <li>
  * 
- *  <b>Agent-based discovery</b> collects a richer set of data than agentless discovery by using the AWS Application
- *  Discovery Agent, which you install on one or more hosts in your data
+ *  <b>Agent-based discovery</b> collects a richer set of data than agentless discovery by using the Amazon Web Services
+ *  Application Discovery Agent, which you install on one or more hosts in your data
  * 
  *  center> <ul> <li>
  * 
@@ -132,13 +133,14 @@ namespace ApplicationDiscoveryService {
  * 
  *  </p </li> </ul> </li> </ul> <ul> <li>
  * 
- *  <b>AWS Partner Network (APN) solutions</b> integrate with Application Discovery Service, enabling you to import details
- *  of your on-premises environment directly into Migration Hub without using the discovery connector or discovery
+ *  <b>Amazon Web Services Partner Network (APN) solutions</b> integrate with Application Discovery Service, enabling you to
+ *  import details of your on-premises environment directly into Migration Hub without using the discovery connector or
+ *  discovery
  * 
  *  agent> <ul> <li>
  * 
- *  Third-party application discovery tools can query AWS Application Discovery Service, and they can write to the
- *  Application Discovery Service database using the public
+ *  Third-party application discovery tools can query Amazon Web Services Application Discovery Service, and they can write
+ *  to the Application Discovery Service database using the public
  * 
  *  API> </li> <li>
  * 
@@ -164,8 +166,9 @@ namespace ApplicationDiscoveryService {
  * 
  *  This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
  *  Application Discovery Service. The topic for each action shows the API request parameters and the response.
- *  Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
- *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ *  Alternatively, you can use one of the Amazon Web Services SDKs to access an API that is tailored to the programming
+ *  language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon Web
+ *  Services
  * 
  *  SDKs</a>> <note> <ul> <li>
  * 
@@ -191,13 +194,14 @@ namespace ApplicationDiscoveryService {
  * 
  *  region> </li> </ul> </note>
  * 
- *  This guide is intended for use with the <a href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">AWS
- *  Application Discovery Service User
+ *  This guide is intended for use with the <a
+ *  href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">Amazon Web Services Application Discovery
+ *  Service User
  * 
  *  Guide</a>> <b>
  * 
- *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">AWS Privacy Policy</a>. You can operate
- *  Application Discovery Service offline to inspect collected data before it is shared with the
+ *  All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
+ *  You can operate Application Discovery Service offline to inspect collected data before it is shared with the
  */
 
 /*!
@@ -277,10 +281,10 @@ AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceCl
  *
  * </p
  *
- * AWS Application Discovery Service has built-in matching logic that will identify when discovered servers match existing
- * entries that you've previously discovered, the information for the already-existing discovered server is updated. When
- * you delete an import task that contains records that were used to match, the information in those matched records that
- * comes from the deleted records will also be
+ * Amazon Web Services Application Discovery Service has built-in matching logic that will identify when discovered servers
+ * match existing entries that you've previously discovered, the information for the already-existing discovered server is
+ * updated. When you delete an import task that contains records that were used to match, the information in those matched
+ * records that comes from the deleted records will also be
  */
 BatchDeleteImportDataResponse * ApplicationDiscoveryServiceClient::batchDeleteImportData(const BatchDeleteImportDataRequest &request)
 {
@@ -308,6 +312,10 @@ CreateApplicationResponse * ApplicationDiscoveryServiceClient::createApplication
  *
  * Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts
  * a list of multiple configuration
+ *
+ * items> <b>
+ *
+ * Do not store sensitive information (like personal data) in
  */
 CreateTagsResponse * ApplicationDiscoveryServiceClient::createTags(const CreateTagsRequest &request)
 {
@@ -384,7 +392,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  *
  * For a complete list of outputs for each asset type, see <a
  * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/discovery-api-queries.html#DescribeConfigurations">Using
- * the DescribeConfigurations Action</a> in the <i>AWS Application Discovery Service User
+ * the DescribeConfigurations Action</a> in the <i>Amazon Web Services Application Discovery Service User
  */
 DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConfigurations(const DescribeConfigurationsRequest &request)
 {
@@ -412,7 +420,7 @@ DescribeContinuousExportsResponse * ApplicationDiscoveryServiceClient::describeC
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * <code>DescribeExportConfigurations</code> is deprecated. Use <a
- * href="https://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">DescribeImportTasks</a>,
+ * href="https://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">DescribeExportTasks</a>,
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
@@ -509,26 +517,6 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
 }
 
 /*!
- * Sends a ExportConfigurations request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
- * ExportConfigurationsResponse object to track the result.
- *
- * \note The caller is to take responsbility for the resulting pointer.
- *
- * Deprecated. Use <code>StartExportTask</code>
- *
- * instead>
- *
- * Exports all discovered configuration data to an Amazon S3 bucket or an application that enables you to view and evaluate
- * the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API
- * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
- * two configuration exports in six
- */
-ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
-{
-    return exportConfigurations(ExportConfigurationsRequest());
-}
-
-/*!
  * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
  * GetDiscoverySummaryResponse object to track the result.
  *
@@ -615,9 +603,9 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
  *
  * </p
  *
- * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both AWS Agentless
- * Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports
- * per day.
+ * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both Amazon Web Services
+ * Agentless Discovery Connector data and summary data from Amazon Web Services Discovery Agents. Export of summary data is
+ * limited to two exports per day.
  */
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
@@ -630,10 +618,10 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an import task, which allows you to import details of your on-premises environment directly into AWS Migration
- * Hub without having to use the Application Discovery Service (ADS) tools such as the Discovery Connector or Discovery
- * Agent. This gives you the option to perform migration assessment and planning directly from your imported data,
- * including the ability to group your devices as applications and track their migration
+ * Starts an import task, which allows you to import details of your on-premises environment directly into Amazon Web
+ * Services Migration Hub without having to use the Application Discovery Service (ADS) tools such as the Discovery
+ * Connector or Discovery Agent. This gives you the option to perform migration assessment and planning directly from your
+ * imported data, including the ability to group your devices as applications and track their migration
  *
  * status>
  *
@@ -643,7 +631,7 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  *
  * Download the specially formatted comma separated value (CSV) import template, which you can find here: <a
  *
- * href="https://s3-us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv">https://s3-us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv</a>>
+ * href="https://s3.us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv">https://s3.us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv</a>>
  * </li> <li>
  *
  * Fill out the template with your server and application
@@ -654,20 +642,21 @@ StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(con
  *
  * format> </li> <li>
  *
- * Use the console or the <code>StartImportTask</code> command with the AWS CLI or one of the AWS SDKs to import the
- * records from your
+ * Use the console or the <code>StartImportTask</code> command with the Amazon Web Services CLI or one of the Amazon Web
+ * Services SDKs to import the records from your
  *
  * file> </li> </ol>
  *
  * For more information, including step-by-step procedures, see <a
  * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/discovery-import.html">Migration Hub Import</a>
- * in the <i>AWS Application Discovery Service User
+ * in the <i>Amazon Web Services Application Discovery Service User
  *
  * Guide</i>> <note>
  *
- * There are limits to the number of import tasks you can create (and delete) in an AWS account. For more information, see
- * <a href="https://docs.aws.amazon.com/application-discovery/latest/userguide/ads_service_limits.html">AWS Application
- * Discovery Service Limits</a> in the <i>AWS Application Discovery Service User
+ * There are limits to the number of import tasks you can create (and delete) in an Amazon Web Services account. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/ads_service_limits.html">Amazon Web Services
+ * Application Discovery Service Limits</a> in the <i>Amazon Web Services Application Discovery Service User
  */
 StartImportTaskResponse * ApplicationDiscoveryServiceClient::startImportTask(const StartImportTaskRequest &request)
 {

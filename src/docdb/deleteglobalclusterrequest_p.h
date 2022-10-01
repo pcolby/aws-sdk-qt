@@ -24,14 +24,14 @@
 #include "deleteglobalclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteGlobalClusterRequest;
 
-class DeleteGlobalClusterRequestPrivate : public DocDBRequestPrivate {
+class DeleteGlobalClusterRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteGlobalClusterRequestPrivate(const DocDBRequest::Action action,
+    DeleteGlobalClusterRequestPrivate(const DocDbRequest::Action action,
                                    DeleteGlobalClusterRequest * const q);
     DeleteGlobalClusterRequestPrivate(const DeleteGlobalClusterRequestPrivate &other,
                                    DeleteGlobalClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

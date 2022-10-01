@@ -23,11 +23,11 @@
 #include "cloudhsmv2request.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class TagResourceRequestPrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT TagResourceRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT TagResourceRequest : public CloudHsmV2Request {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteClusterResponse
- * \brief The DeleteClusterResponse class provides an interace for CloudHSMV2 DeleteCluster responses.
+ * \class QtAws::CloudHsmV2::DeleteClusterResponse
+ * \brief The DeleteClusterResponse class provides an interace for CloudHsmV2 DeleteCluster responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::deleteCluster
+ * \sa CloudHsmV2Client::deleteCluster
  */
 
 /*!
@@ -46,7 +46,7 @@ DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new DeleteClusterResponsePrivate(this), parent)
+    : CloudHsmV2Response(new DeleteClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 DeleteCluster \a response.
+ * Parses a successful CloudHsmV2 DeleteCluster \a response.
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DeleteClusterResponsePrivate
+ * \class QtAws::CloudHsmV2::DeleteClusterResponsePrivate
  * \brief The DeleteClusterResponsePrivate class provides private implementation for DeleteClusterResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a DeleteClusterResponsePrivate object with public implementation \a q.
  */
 DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
-    DeleteClusterResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    DeleteClusterResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 DeleteCluster response element from \a xml.
+ * Parses a CloudHsmV2 DeleteCluster response element from \a xml.
  */
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

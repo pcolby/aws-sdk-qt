@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSERVICECATALOG_LIBRARY)
 
 add_library(QtAwsServiceCatalog
+  qtawsservicecatalogglobal.h
+  servicecatalogclient.h
+  servicecatalogclient_p.h
+  servicecatalogrequest.h
+  servicecatalogrequest_p.h
+  servicecatalogresponse.h
+  servicecatalogresponse_p.h
   acceptportfoliosharerequest.h
   acceptportfoliosharerequest_p.h
   acceptportfolioshareresponse.h
@@ -113,34 +120,34 @@ add_library(QtAwsServiceCatalog
   describeportfoliorequest_p.h
   describeportfolioresponse.h
   describeportfolioresponse_p.h
-  describeportfoliosharesrequest.h
-  describeportfoliosharesrequest_p.h
-  describeportfoliosharesresponse.h
-  describeportfoliosharesresponse_p.h
   describeportfoliosharestatusrequest.h
   describeportfoliosharestatusrequest_p.h
   describeportfoliosharestatusresponse.h
   describeportfoliosharestatusresponse_p.h
-  describeproductasadminrequest.h
-  describeproductasadminrequest_p.h
-  describeproductasadminresponse.h
-  describeproductasadminresponse_p.h
+  describeportfoliosharesrequest.h
+  describeportfoliosharesrequest_p.h
+  describeportfoliosharesresponse.h
+  describeportfoliosharesresponse_p.h
   describeproductrequest.h
   describeproductrequest_p.h
   describeproductresponse.h
   describeproductresponse_p.h
+  describeproductasadminrequest.h
+  describeproductasadminrequest_p.h
+  describeproductasadminresponse.h
+  describeproductasadminresponse_p.h
   describeproductviewrequest.h
   describeproductviewrequest_p.h
   describeproductviewresponse.h
   describeproductviewresponse_p.h
-  describeprovisionedproductplanrequest.h
-  describeprovisionedproductplanrequest_p.h
-  describeprovisionedproductplanresponse.h
-  describeprovisionedproductplanresponse_p.h
   describeprovisionedproductrequest.h
   describeprovisionedproductrequest_p.h
   describeprovisionedproductresponse.h
   describeprovisionedproductresponse_p.h
+  describeprovisionedproductplanrequest.h
+  describeprovisionedproductplanrequest_p.h
+  describeprovisionedproductplanresponse.h
+  describeprovisionedproductplanresponse_p.h
   describeprovisioningartifactrequest.h
   describeprovisioningartifactrequest_p.h
   describeprovisioningartifactresponse.h
@@ -153,14 +160,14 @@ add_library(QtAwsServiceCatalog
   describerecordrequest_p.h
   describerecordresponse.h
   describerecordresponse_p.h
-  describeserviceactionexecutionparametersrequest.h
-  describeserviceactionexecutionparametersrequest_p.h
-  describeserviceactionexecutionparametersresponse.h
-  describeserviceactionexecutionparametersresponse_p.h
   describeserviceactionrequest.h
   describeserviceactionrequest_p.h
   describeserviceactionresponse.h
   describeserviceactionresponse_p.h
+  describeserviceactionexecutionparametersrequest.h
+  describeserviceactionexecutionparametersrequest_p.h
+  describeserviceactionexecutionparametersresponse.h
+  describeserviceactionexecutionparametersresponse_p.h
   describetagoptionrequest.h
   describetagoptionrequest_p.h
   describetagoptionresponse.h
@@ -237,14 +244,14 @@ add_library(QtAwsServiceCatalog
   listportfolioaccessrequest_p.h
   listportfolioaccessresponse.h
   listportfolioaccessresponse_p.h
-  listportfoliosforproductrequest.h
-  listportfoliosforproductrequest_p.h
-  listportfoliosforproductresponse.h
-  listportfoliosforproductresponse_p.h
   listportfoliosrequest.h
   listportfoliosrequest_p.h
   listportfoliosresponse.h
   listportfoliosresponse_p.h
+  listportfoliosforproductrequest.h
+  listportfoliosforproductrequest_p.h
+  listportfoliosforproductresponse.h
+  listportfoliosforproductresponse_p.h
   listprincipalsforportfoliorequest.h
   listprincipalsforportfoliorequest_p.h
   listprincipalsforportfolioresponse.h
@@ -253,14 +260,14 @@ add_library(QtAwsServiceCatalog
   listprovisionedproductplansrequest_p.h
   listprovisionedproductplansresponse.h
   listprovisionedproductplansresponse_p.h
-  listprovisioningartifactsforserviceactionrequest.h
-  listprovisioningartifactsforserviceactionrequest_p.h
-  listprovisioningartifactsforserviceactionresponse.h
-  listprovisioningartifactsforserviceactionresponse_p.h
   listprovisioningartifactsrequest.h
   listprovisioningartifactsrequest_p.h
   listprovisioningartifactsresponse.h
   listprovisioningartifactsresponse_p.h
+  listprovisioningartifactsforserviceactionrequest.h
+  listprovisioningartifactsforserviceactionrequest_p.h
+  listprovisioningartifactsforserviceactionresponse.h
+  listprovisioningartifactsforserviceactionresponse_p.h
   listrecordhistoryrequest.h
   listrecordhistoryrequest_p.h
   listrecordhistoryresponse.h
@@ -269,14 +276,14 @@ add_library(QtAwsServiceCatalog
   listresourcesfortagoptionrequest_p.h
   listresourcesfortagoptionresponse.h
   listresourcesfortagoptionresponse_p.h
-  listserviceactionsforprovisioningartifactrequest.h
-  listserviceactionsforprovisioningartifactrequest_p.h
-  listserviceactionsforprovisioningartifactresponse.h
-  listserviceactionsforprovisioningartifactresponse_p.h
   listserviceactionsrequest.h
   listserviceactionsrequest_p.h
   listserviceactionsresponse.h
   listserviceactionsresponse_p.h
+  listserviceactionsforprovisioningartifactrequest.h
+  listserviceactionsforprovisioningartifactrequest_p.h
+  listserviceactionsforprovisioningartifactresponse.h
+  listserviceactionsforprovisioningartifactresponse_p.h
   liststackinstancesforprovisionedproductrequest.h
   liststackinstancesforprovisionedproductrequest_p.h
   liststackinstancesforprovisionedproductresponse.h
@@ -289,7 +296,6 @@ add_library(QtAwsServiceCatalog
   provisionproductrequest_p.h
   provisionproductresponse.h
   provisionproductresponse_p.h
-  qtawsservicecatalogglobal.h
   rejectportfoliosharerequest.h
   rejectportfoliosharerequest_p.h
   rejectportfolioshareresponse.h
@@ -298,24 +304,18 @@ add_library(QtAwsServiceCatalog
   scanprovisionedproductsrequest_p.h
   scanprovisionedproductsresponse.h
   scanprovisionedproductsresponse_p.h
-  searchproductsasadminrequest.h
-  searchproductsasadminrequest_p.h
-  searchproductsasadminresponse.h
-  searchproductsasadminresponse_p.h
   searchproductsrequest.h
   searchproductsrequest_p.h
   searchproductsresponse.h
   searchproductsresponse_p.h
+  searchproductsasadminrequest.h
+  searchproductsasadminrequest_p.h
+  searchproductsasadminresponse.h
+  searchproductsasadminresponse_p.h
   searchprovisionedproductsrequest.h
   searchprovisionedproductsrequest_p.h
   searchprovisionedproductsresponse.h
   searchprovisionedproductsresponse_p.h
-  servicecatalogclient.h
-  servicecatalogclient_p.h
-  servicecatalogrequest.h
-  servicecatalogrequest_p.h
-  servicecatalogresponse.h
-  servicecatalogresponse_p.h
   terminateprovisionedproductrequest.h
   terminateprovisionedproductrequest_p.h
   terminateprovisionedproductresponse.h
@@ -336,14 +336,14 @@ add_library(QtAwsServiceCatalog
   updateproductrequest_p.h
   updateproductresponse.h
   updateproductresponse_p.h
-  updateprovisionedproductpropertiesrequest.h
-  updateprovisionedproductpropertiesrequest_p.h
-  updateprovisionedproductpropertiesresponse.h
-  updateprovisionedproductpropertiesresponse_p.h
   updateprovisionedproductrequest.h
   updateprovisionedproductrequest_p.h
   updateprovisionedproductresponse.h
   updateprovisionedproductresponse_p.h
+  updateprovisionedproductpropertiesrequest.h
+  updateprovisionedproductpropertiesrequest_p.h
+  updateprovisionedproductpropertiesresponse.h
+  updateprovisionedproductpropertiesresponse_p.h
   updateprovisioningartifactrequest.h
   updateprovisioningartifactrequest_p.h
   updateprovisioningartifactresponse.h
@@ -356,6 +356,9 @@ add_library(QtAwsServiceCatalog
   updatetagoptionrequest_p.h
   updatetagoptionresponse.h
   updatetagoptionresponse_p.h
+  servicecatalogclient.cpp
+  servicecatalogrequest.cpp
+  servicecatalogresponse.cpp
   acceptportfoliosharerequest.cpp
   acceptportfolioshareresponse.cpp
   associatebudgetwithresourcerequest.cpp
@@ -412,30 +415,30 @@ add_library(QtAwsServiceCatalog
   describecopyproductstatusresponse.cpp
   describeportfoliorequest.cpp
   describeportfolioresponse.cpp
-  describeportfoliosharesrequest.cpp
-  describeportfoliosharesresponse.cpp
   describeportfoliosharestatusrequest.cpp
   describeportfoliosharestatusresponse.cpp
-  describeproductasadminrequest.cpp
-  describeproductasadminresponse.cpp
+  describeportfoliosharesrequest.cpp
+  describeportfoliosharesresponse.cpp
   describeproductrequest.cpp
   describeproductresponse.cpp
+  describeproductasadminrequest.cpp
+  describeproductasadminresponse.cpp
   describeproductviewrequest.cpp
   describeproductviewresponse.cpp
-  describeprovisionedproductplanrequest.cpp
-  describeprovisionedproductplanresponse.cpp
   describeprovisionedproductrequest.cpp
   describeprovisionedproductresponse.cpp
+  describeprovisionedproductplanrequest.cpp
+  describeprovisionedproductplanresponse.cpp
   describeprovisioningartifactrequest.cpp
   describeprovisioningartifactresponse.cpp
   describeprovisioningparametersrequest.cpp
   describeprovisioningparametersresponse.cpp
   describerecordrequest.cpp
   describerecordresponse.cpp
-  describeserviceactionexecutionparametersrequest.cpp
-  describeserviceactionexecutionparametersresponse.cpp
   describeserviceactionrequest.cpp
   describeserviceactionresponse.cpp
+  describeserviceactionexecutionparametersrequest.cpp
+  describeserviceactionexecutionparametersresponse.cpp
   describetagoptionrequest.cpp
   describetagoptionresponse.cpp
   disableawsorganizationsaccessrequest.cpp
@@ -474,26 +477,26 @@ add_library(QtAwsServiceCatalog
   listorganizationportfolioaccessresponse.cpp
   listportfolioaccessrequest.cpp
   listportfolioaccessresponse.cpp
-  listportfoliosforproductrequest.cpp
-  listportfoliosforproductresponse.cpp
   listportfoliosrequest.cpp
   listportfoliosresponse.cpp
+  listportfoliosforproductrequest.cpp
+  listportfoliosforproductresponse.cpp
   listprincipalsforportfoliorequest.cpp
   listprincipalsforportfolioresponse.cpp
   listprovisionedproductplansrequest.cpp
   listprovisionedproductplansresponse.cpp
-  listprovisioningartifactsforserviceactionrequest.cpp
-  listprovisioningartifactsforserviceactionresponse.cpp
   listprovisioningartifactsrequest.cpp
   listprovisioningartifactsresponse.cpp
+  listprovisioningartifactsforserviceactionrequest.cpp
+  listprovisioningartifactsforserviceactionresponse.cpp
   listrecordhistoryrequest.cpp
   listrecordhistoryresponse.cpp
   listresourcesfortagoptionrequest.cpp
   listresourcesfortagoptionresponse.cpp
-  listserviceactionsforprovisioningartifactrequest.cpp
-  listserviceactionsforprovisioningartifactresponse.cpp
   listserviceactionsrequest.cpp
   listserviceactionsresponse.cpp
+  listserviceactionsforprovisioningartifactrequest.cpp
+  listserviceactionsforprovisioningartifactresponse.cpp
   liststackinstancesforprovisionedproductrequest.cpp
   liststackinstancesforprovisionedproductresponse.cpp
   listtagoptionsrequest.cpp
@@ -504,15 +507,12 @@ add_library(QtAwsServiceCatalog
   rejectportfolioshareresponse.cpp
   scanprovisionedproductsrequest.cpp
   scanprovisionedproductsresponse.cpp
-  searchproductsasadminrequest.cpp
-  searchproductsasadminresponse.cpp
   searchproductsrequest.cpp
   searchproductsresponse.cpp
+  searchproductsasadminrequest.cpp
+  searchproductsasadminresponse.cpp
   searchprovisionedproductsrequest.cpp
   searchprovisionedproductsresponse.cpp
-  servicecatalogclient.cpp
-  servicecatalogrequest.cpp
-  servicecatalogresponse.cpp
   terminateprovisionedproductrequest.cpp
   terminateprovisionedproductresponse.cpp
   updateconstraintrequest.cpp
@@ -523,10 +523,10 @@ add_library(QtAwsServiceCatalog
   updateportfolioshareresponse.cpp
   updateproductrequest.cpp
   updateproductresponse.cpp
-  updateprovisionedproductpropertiesrequest.cpp
-  updateprovisionedproductpropertiesresponse.cpp
   updateprovisionedproductrequest.cpp
   updateprovisionedproductresponse.cpp
+  updateprovisionedproductpropertiesrequest.cpp
+  updateprovisionedproductpropertiesresponse.cpp
   updateprovisioningartifactrequest.cpp
   updateprovisioningartifactresponse.cpp
   updateserviceactionrequest.cpp

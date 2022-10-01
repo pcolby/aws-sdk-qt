@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteIPSetResponse
- * \brief The DeleteIPSetResponse class provides an interace for WAFRegional DeleteIPSet responses.
+ * \class QtAws::WafRegional::DeleteIPSetResponse
+ * \brief The DeleteIPSetResponse class provides an interace for WafRegional DeleteIPSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteIPSet
+ * \sa WafRegionalClient::deleteIPSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteIPSetResponse::DeleteIPSetResponse(
         const DeleteIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteIPSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteIPSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteIPSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteIPSet \a response.
+ * Parses a successful WafRegional DeleteIPSet \a response.
  */
 void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteIPSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteIPSetResponsePrivate
  * \brief The DeleteIPSetResponsePrivate class provides private implementation for DeleteIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteIPSetResponsePrivate object with public implementation \a q.
  */
 DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
-    DeleteIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteIPSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteIPSet response element from \a xml.
+ * Parses a WafRegional DeleteIPSet response element from \a xml.
  */
 void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

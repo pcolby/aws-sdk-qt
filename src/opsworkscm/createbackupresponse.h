@@ -24,11 +24,11 @@
 #include "createbackuprequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class CreateBackupResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT CreateBackupResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT CreateBackupResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

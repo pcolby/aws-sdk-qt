@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetIPSetResponse
- * \brief The GetIPSetResponse class provides an interace for WAFRegional GetIPSet responses.
+ * \class QtAws::WafRegional::GetIPSetResponse
+ * \brief The GetIPSetResponse class provides an interace for WafRegional GetIPSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getIPSet
+ * \sa WafRegionalClient::getIPSet
  */
 
 /*!
@@ -67,7 +67,7 @@ GetIPSetResponse::GetIPSetResponse(
         const GetIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetIPSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetIPSetResponsePrivate(this), parent)
 {
     setRequest(new GetIPSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetIPSetRequest * GetIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetIPSet \a response.
+ * Parses a successful WafRegional GetIPSet \a response.
  */
 void GetIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetIPSetResponsePrivate
+ * \class QtAws::WafRegional::GetIPSetResponsePrivate
  * \brief The GetIPSetResponsePrivate class provides private implementation for GetIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetIPSetResponsePrivate object with public implementation \a q.
  */
 GetIPSetResponsePrivate::GetIPSetResponsePrivate(
-    GetIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetIPSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetIPSet response element from \a xml.
+ * Parses a WafRegional GetIPSet response element from \a xml.
  */
 void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -24,28 +24,28 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
-class DynamoDBRequest;
+class DynamoDbRequest;
 
-class DynamoDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DynamoDbRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DynamoDBRequest::Action action; ///< DynamoDB action to be performed.
-    QString apiVersion;        ///< DynamoDB API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< DynamoDB request (query string) parameters. @todo?
+    DynamoDbRequest::Action action; ///< DynamoDb action to be performed.
+    QString apiVersion;        ///< DynamoDb API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DynamoDb request (query string) parameters. @todo?
 
-    DynamoDBRequestPrivate(const DynamoDBRequest::Action action, DynamoDBRequest * const q);
-    DynamoDBRequestPrivate(const DynamoDBRequestPrivate &other, DynamoDBRequest * const q);
+    DynamoDbRequestPrivate(const DynamoDbRequest::Action action, DynamoDbRequest * const q);
+    DynamoDbRequestPrivate(const DynamoDbRequestPrivate &other, DynamoDbRequest * const q);
 
-    static QString toString(const DynamoDBRequest::Action &action);
+    static QString toString(const DynamoDbRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(DynamoDBRequest)
+    Q_DECLARE_PUBLIC(DynamoDbRequest)
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

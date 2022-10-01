@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class UpdateSizeConstraintSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT UpdateSizeConstraintSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT UpdateSizeConstraintSetRequest : public WafRegionalRequest {
 
 public:
     UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

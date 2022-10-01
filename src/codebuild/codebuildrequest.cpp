@@ -78,6 +78,7 @@ namespace CodeBuild {
  * \value StopBuildAction CodeBuild StopBuild action.
  * \value StopBuildBatchAction CodeBuild StopBuildBatch action.
  * \value UpdateProjectAction CodeBuild UpdateProject action.
+ * \value UpdateProjectVisibilityAction CodeBuild UpdateProjectVisibility action.
  * \value UpdateReportGroupAction CodeBuild UpdateReportGroup action.
  * \value UpdateWebhookAction CodeBuild UpdateWebhook action.
  */
@@ -287,7 +288,7 @@ QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action action, CodeBuildRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-10-06"))
 {
 
 }
@@ -363,6 +364,7 @@ QString CodeBuildRequestPrivate::toString(const CodeBuildRequest::Action &action
         ActionToString(StopBuild);
         ActionToString(StopBuildBatch);
         ActionToString(UpdateProject);
+        ActionToString(UpdateProjectVisibility);
         ActionToString(UpdateReportGroup);
         ActionToString(UpdateWebhook);
         default:

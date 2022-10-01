@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeThesaurusResponse
- * \brief The DescribeThesaurusResponse class provides an interace for kendra DescribeThesaurus responses.
+ * \class QtAws::Kendra::DescribeThesaurusResponse
+ * \brief The DescribeThesaurusResponse class provides an interace for Kendra DescribeThesaurus responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeThesaurus
+ * \sa KendraClient::describeThesaurus
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeThesaurusResponse::DescribeThesaurusResponse(
         const DescribeThesaurusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DescribeThesaurusResponsePrivate(this), parent)
+    : KendraResponse(new DescribeThesaurusResponsePrivate(this), parent)
 {
     setRequest(new DescribeThesaurusRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeThesaurusRequest * DescribeThesaurusResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DescribeThesaurus \a response.
+ * Parses a successful Kendra DescribeThesaurus \a response.
  */
 void DescribeThesaurusResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeThesaurusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DescribeThesaurusResponsePrivate
+ * \class QtAws::Kendra::DescribeThesaurusResponsePrivate
  * \brief The DescribeThesaurusResponsePrivate class provides private implementation for DescribeThesaurusResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DescribeThesaurusResponsePrivate object with public implementation \a q.
  */
 DescribeThesaurusResponsePrivate::DescribeThesaurusResponsePrivate(
-    DescribeThesaurusResponse * const q) : kendraResponsePrivate(q)
+    DescribeThesaurusResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DescribeThesaurus response element from \a xml.
+ * Parses a Kendra DescribeThesaurus response element from \a xml.
  */
 void DescribeThesaurusResponsePrivate::parseDescribeThesaurusResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeThesaurusResponsePrivate::parseDescribeThesaurusResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

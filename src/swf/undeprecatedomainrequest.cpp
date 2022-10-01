@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::UndeprecateDomainRequest
- * \brief The UndeprecateDomainRequest class provides an interface for SWF UndeprecateDomain requests.
+ * \class QtAws::Swf::UndeprecateDomainRequest
+ * \brief The UndeprecateDomainRequest class provides an interface for Swf UndeprecateDomain requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * UndeprecateDomainRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SWF::UndeprecateDomainRequestPrivate
+ * \class QtAws::Swf::UndeprecateDomainRequestPrivate
  * \brief The UndeprecateDomainRequestPrivate class provides private implementation for UndeprecateDomainRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ UndeprecateDomainRequestPrivate::UndeprecateDomainRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

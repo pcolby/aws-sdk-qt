@@ -24,14 +24,14 @@
 #include "sendemailrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class SendEmailRequest;
 
-class SendEmailRequestPrivate : public Sesv2RequestPrivate {
+class SendEmailRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    SendEmailRequestPrivate(const Sesv2Request::Action action,
+    SendEmailRequestPrivate(const SESv2Request::Action action,
                                    SendEmailRequest * const q);
     SendEmailRequestPrivate(const SendEmailRequestPrivate &other,
                                    SendEmailRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

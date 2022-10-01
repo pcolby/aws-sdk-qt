@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCODESTARNOTIFICATIONS_LIBRARY)
 
-add_library(QtAwsCodeStarNotifications
+add_library(QtAwsCodestarNotifications
+  qtawscodestarnotificationsglobal.h
   codestarnotificationsclient.h
   codestarnotificationsclient_p.h
   codestarnotificationsrequest.h
@@ -39,7 +40,6 @@ add_library(QtAwsCodeStarNotifications
   listtargetsrequest_p.h
   listtargetsresponse.h
   listtargetsresponse_p.h
-  qtawscodestarnotificationsglobal.h
   subscriberequest.h
   subscriberequest_p.h
   subscriberesponse.h
@@ -90,7 +90,7 @@ add_library(QtAwsCodeStarNotifications
   updatenotificationrulerequest.cpp
   updatenotificationruleresponse.cpp)
 
-target_link_libraries(QtAwsCodeStarNotifications
+target_link_libraries(QtAwsCodestarNotifications
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

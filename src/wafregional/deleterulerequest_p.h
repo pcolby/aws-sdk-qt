@@ -24,14 +24,14 @@
 #include "deleterulerequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class DeleteRuleRequest;
 
-class DeleteRuleRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteRuleRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    DeleteRuleRequestPrivate(const WAFRegionalRequest::Action action,
+    DeleteRuleRequestPrivate(const WafRegionalRequest::Action action,
                                    DeleteRuleRequest * const q);
     DeleteRuleRequestPrivate(const DeleteRuleRequestPrivate &other,
                                    DeleteRuleRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

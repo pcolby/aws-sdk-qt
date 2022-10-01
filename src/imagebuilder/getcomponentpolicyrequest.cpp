@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetComponentPolicyRequest
- * \brief The GetComponentPolicyRequest class provides an interface for imagebuilder GetComponentPolicy requests.
+ * \class QtAws::ImageBuilder::GetComponentPolicyRequest
+ * \brief The GetComponentPolicyRequest class provides an interface for ImageBuilder GetComponentPolicy requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getComponentPolicy
+ * \sa ImageBuilderClient::getComponentPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetComponentPolicyRequest::GetComponentPolicyRequest(const GetComponentPolicyRequest &other)
-    : imagebuilderRequest(new GetComponentPolicyRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetComponentPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetComponentPolicyRequest::GetComponentPolicyRequest(const GetComponentPolicyReq
  * Constructs a GetComponentPolicyRequest object.
  */
 GetComponentPolicyRequest::GetComponentPolicyRequest()
-    : imagebuilderRequest(new GetComponentPolicyRequestPrivate(imagebuilderRequest::GetComponentPolicyAction, this))
+    : ImageBuilderRequest(new GetComponentPolicyRequestPrivate(ImageBuilderRequest::GetComponentPolicyAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetComponentPolicyRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::imagebuilder::GetComponentPolicyRequestPrivate
+ * \class QtAws::ImageBuilder::GetComponentPolicyRequestPrivate
  * \brief The GetComponentPolicyRequestPrivate class provides private implementation for GetComponentPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetComponentPolicyRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetComponentPolicyRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetComponentPolicyRequestPrivate::GetComponentPolicyRequestPrivate(
-    const imagebuilderRequest::Action action, GetComponentPolicyRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetComponentPolicyRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetComponentPolicyRequestPrivate::GetComponentPolicyRequestPrivate(
  */
 GetComponentPolicyRequestPrivate::GetComponentPolicyRequestPrivate(
     const GetComponentPolicyRequestPrivate &other, GetComponentPolicyRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

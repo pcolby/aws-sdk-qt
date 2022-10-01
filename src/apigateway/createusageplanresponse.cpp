@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateUsagePlanResponse
- * \brief The CreateUsagePlanResponse class provides an interace for APIGateway CreateUsagePlan responses.
+ * \class QtAws::ApiGateway::CreateUsagePlanResponse
+ * \brief The CreateUsagePlanResponse class provides an interace for ApiGateway CreateUsagePlan responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createUsagePlan
+ * \sa ApiGatewayClient::createUsagePlan
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateUsagePlanResponse::CreateUsagePlanResponse(
         const CreateUsagePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateUsagePlanResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateUsagePlanResponsePrivate(this), parent)
 {
     setRequest(new CreateUsagePlanRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateUsagePlanRequest * CreateUsagePlanResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateUsagePlan \a response.
+ * Parses a successful ApiGateway CreateUsagePlan \a response.
  */
 void CreateUsagePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateUsagePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateUsagePlanResponsePrivate
+ * \class QtAws::ApiGateway::CreateUsagePlanResponsePrivate
  * \brief The CreateUsagePlanResponsePrivate class provides private implementation for CreateUsagePlanResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateUsagePlanResponsePrivate object with public implementation \a q.
  */
 CreateUsagePlanResponsePrivate::CreateUsagePlanResponsePrivate(
-    CreateUsagePlanResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateUsagePlanResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateUsagePlan response element from \a xml.
+ * Parses a ApiGateway CreateUsagePlan response element from \a xml.
  */
 void CreateUsagePlanResponsePrivate::parseCreateUsagePlanResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateUsagePlanResponsePrivate::parseCreateUsagePlanResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

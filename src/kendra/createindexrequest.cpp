@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateIndexRequest
- * \brief The CreateIndexRequest class provides an interface for kendra CreateIndex requests.
+ * \class QtAws::Kendra::CreateIndexRequest
+ * \brief The CreateIndexRequest class provides an interface for Kendra CreateIndex requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createIndex
+ * \sa KendraClient::createIndex
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
-    : kendraRequest(new CreateIndexRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new CreateIndexRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
  * Constructs a CreateIndexRequest object.
  */
 CreateIndexRequest::CreateIndexRequest()
-    : kendraRequest(new CreateIndexRequestPrivate(kendraRequest::CreateIndexAction, this))
+    : KendraRequest(new CreateIndexRequestPrivate(KendraRequest::CreateIndexAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::kendra::CreateIndexRequestPrivate
+ * \class QtAws::Kendra::CreateIndexRequestPrivate
  * \brief The CreateIndexRequestPrivate class provides private implementation for CreateIndexRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a CreateIndexRequestPrivate object for kendra \a action,
+ * Constructs a CreateIndexRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 CreateIndexRequestPrivate::CreateIndexRequestPrivate(
-    const kendraRequest::Action action, CreateIndexRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, CreateIndexRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateIndexRequestPrivate::CreateIndexRequestPrivate(
  */
 CreateIndexRequestPrivate::CreateIndexRequestPrivate(
     const CreateIndexRequestPrivate &other, CreateIndexRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

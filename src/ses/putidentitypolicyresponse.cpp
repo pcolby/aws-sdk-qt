@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::PutIdentityPolicyResponse
- * \brief The PutIdentityPolicyResponse class provides an interace for SES PutIdentityPolicy responses.
+ * \class QtAws::Ses::PutIdentityPolicyResponse
+ * \brief The PutIdentityPolicyResponse class provides an interace for Ses PutIdentityPolicy responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES PutIdentityPolicy \a response.
+ * Parses a successful Ses PutIdentityPolicy \a response.
  */
 void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::PutIdentityPolicyResponsePrivate
+ * \class QtAws::Ses::PutIdentityPolicyResponsePrivate
  * \brief The PutIdentityPolicyResponsePrivate class provides private implementation for PutIdentityPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
 }
 
 /*!
- * Parses a SES PutIdentityPolicy response element from \a xml.
+ * Parses a Ses PutIdentityPolicy response element from \a xml.
  */
 void PutIdentityPolicyResponsePrivate::parsePutIdentityPolicyResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void PutIdentityPolicyResponsePrivate::parsePutIdentityPolicyResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

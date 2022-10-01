@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DescribeImageTagsRequest
- * \brief The DescribeImageTagsRequest class provides an interface for ECRPublic DescribeImageTags requests.
+ * \class QtAws::EcrPublic::DescribeImageTagsRequest
+ * \brief The DescribeImageTagsRequest class provides an interface for EcrPublic DescribeImageTags requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::describeImageTags
+ * \sa EcrPublicClient::describeImageTags
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeImageTagsRequest::DescribeImageTagsRequest(const DescribeImageTagsRequest &other)
-    : ECRPublicRequest(new DescribeImageTagsRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new DescribeImageTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ DescribeImageTagsRequest::DescribeImageTagsRequest(const DescribeImageTagsReques
  * Constructs a DescribeImageTagsRequest object.
  */
 DescribeImageTagsRequest::DescribeImageTagsRequest()
-    : ECRPublicRequest(new DescribeImageTagsRequestPrivate(ECRPublicRequest::DescribeImageTagsAction, this))
+    : EcrPublicRequest(new DescribeImageTagsRequestPrivate(EcrPublicRequest::DescribeImageTagsAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * DescribeImageTagsRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::ECRPublic::DescribeImageTagsRequestPrivate
+ * \class QtAws::EcrPublic::DescribeImageTagsRequestPrivate
  * \brief The DescribeImageTagsRequestPrivate class provides private implementation for DescribeImageTagsRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a DescribeImageTagsRequestPrivate object for ECRPublic \a action,
+ * Constructs a DescribeImageTagsRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 DescribeImageTagsRequestPrivate::DescribeImageTagsRequestPrivate(
-    const ECRPublicRequest::Action action, DescribeImageTagsRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, DescribeImageTagsRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ DescribeImageTagsRequestPrivate::DescribeImageTagsRequestPrivate(
  */
 DescribeImageTagsRequestPrivate::DescribeImageTagsRequestPrivate(
     const DescribeImageTagsRequestPrivate &other, DescribeImageTagsRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

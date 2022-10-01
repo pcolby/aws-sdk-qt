@@ -70,7 +70,7 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::MQ
+ * \namespace QtAws::Mq
  * \brief Contains classess for accessing AmazonMQ.
  *
  * \inmodule QtAwsMq
@@ -79,17 +79,18 @@
  */
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::MqClient
+ * \class QtAws::Mq::MqClient
  * \brief The MqClient class provides access to the AmazonMQ service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  */
 
 /*!
@@ -151,6 +152,34 @@ MqClient::MqClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a broker. Note: This API is
+ *
+ * asynchronous>
+ *
+ * To create a broker, you must either use the AmazonMQFullAccess IAM policy or include the following EC2 permissions in
+ * your IAM
+ *
+ * policy>
+ *
+ * <ul><li><p>ec2:CreateNetworkInterfac>
+ *
+ * This permission is required to allow Amazon MQ to create an elastic network interface (ENI) on behalf of your
+ * account.</p></li>
+ *
+ * <li><p>ec2:CreateNetworkInterfacePermissio>
+ *
+ * This permission is required to attach the ENI to the broker instance.</p></li>
+ * <li><p>ec2:DeleteNetworkInterface</p></li> <li><p>ec2:DeleteNetworkInterfacePermission</p></li>
+ * <li><p>ec2:DetachNetworkInterface</p></li> <li><p>ec2:DescribeInternetGateways</p></li>
+ * <li><p>ec2:DescribeNetworkInterfaces</p></li> <li><p>ec2:DescribeNetworkInterfacePermissions</p></li>
+ * <li><p>ec2:DescribeRouteTables</p></li> <li><p>ec2:DescribeSecurityGroups</p></li> <li><p>ec2:DescribeSubnets</p></li>
+ * <li><p>ec2:DescribeVpcs</p></li></ul>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/amazon-mq-setting-up.html#create-iam-user">Create an
+ * IAM User and Get Your AWS Credentials</a> and <a
+ * href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/connecting-to-amazon-mq.html#never-modify-delete-elastic-network-interface">Never
+ * Modify or Delete the Amazon MQ Elastic Network Interface</a> in the <i>Amazon MQ Developer
  */
 CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request)
 {
@@ -164,6 +193,7 @@ CreateBrokerResponse * MqClient::createBroker(const CreateBrokerRequest &request
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine
+ * type and
  */
 CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigurationRequest &request)
 {
@@ -176,6 +206,7 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Add a tag to a
  */
 CreateTagsResponse * MqClient::createTags(const CreateTagsRequest &request)
 {
@@ -188,6 +219,7 @@ CreateTagsResponse * MqClient::createTags(const CreateTagsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates an ActiveMQ
  */
 CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 {
@@ -200,6 +232,7 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes a broker. Note: This API is
  */
 DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
 {
@@ -212,6 +245,7 @@ DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Removes a tag from a
  */
 DeleteTagsResponse * MqClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -224,6 +258,7 @@ DeleteTagsResponse * MqClient::deleteTags(const DeleteTagsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes an ActiveMQ
  */
 DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -236,6 +271,7 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns information about the specified
  */
 DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
 {
@@ -248,6 +284,7 @@ DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Describe available engine types and
  */
 DescribeBrokerEngineTypesResponse * MqClient::describeBrokerEngineTypes(const DescribeBrokerEngineTypesRequest &request)
 {
@@ -260,6 +297,7 @@ DescribeBrokerEngineTypesResponse * MqClient::describeBrokerEngineTypes(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Describe available broker instance
  */
 DescribeBrokerInstanceOptionsResponse * MqClient::describeBrokerInstanceOptions(const DescribeBrokerInstanceOptionsRequest &request)
 {
@@ -272,6 +310,7 @@ DescribeBrokerInstanceOptionsResponse * MqClient::describeBrokerInstanceOptions(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns information about the specified
  */
 DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeConfigurationRequest &request)
 {
@@ -284,6 +323,7 @@ DescribeConfigurationResponse * MqClient::describeConfiguration(const DescribeCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the specified configuration revision for the specified
  */
 DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(const DescribeConfigurationRevisionRequest &request)
 {
@@ -296,6 +336,7 @@ DescribeConfigurationRevisionResponse * MqClient::describeConfigurationRevision(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns information about an ActiveMQ
  */
 DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request)
 {
@@ -308,6 +349,7 @@ DescribeUserResponse * MqClient::describeUser(const DescribeUserRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of all
  */
 ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
 {
@@ -320,6 +362,7 @@ ListBrokersResponse * MqClient::listBrokers(const ListBrokersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of all revisions for the specified
  */
 ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const ListConfigurationRevisionsRequest &request)
 {
@@ -332,6 +375,7 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of all
  */
 ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -344,6 +388,7 @@ ListConfigurationsResponse * MqClient::listConfigurations(const ListConfiguratio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists tags for a
  */
 ListTagsResponse * MqClient::listTags(const ListTagsRequest &request)
 {
@@ -356,6 +401,7 @@ ListTagsResponse * MqClient::listTags(const ListTagsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of all ActiveMQ
  */
 ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
 {
@@ -368,6 +414,7 @@ ListUsersResponse * MqClient::listUsers(const ListUsersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Reboots a broker. Note: This API is
  */
 RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request)
 {
@@ -380,6 +427,7 @@ RebootBrokerResponse * MqClient::rebootBroker(const RebootBrokerRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Adds a pending configuration change to a
  */
 UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request)
 {
@@ -392,6 +440,7 @@ UpdateBrokerResponse * MqClient::updateBroker(const UpdateBrokerRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the specified
  */
 UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigurationRequest &request)
 {
@@ -404,6 +453,7 @@ UpdateConfigurationResponse * MqClient::updateConfiguration(const UpdateConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the information for an ActiveMQ
  */
 UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 {
@@ -411,12 +461,12 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 }
 
 /*!
- * \class QtAws::MQ::MqClientPrivate
+ * \class QtAws::Mq::MqClientPrivate
  * \brief The MqClientPrivate class provides private implementation for MqClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -428,5 +478,5 @@ MqClientPrivate::MqClientPrivate(MqClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

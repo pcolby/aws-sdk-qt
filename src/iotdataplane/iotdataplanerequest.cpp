@@ -37,8 +37,10 @@ namespace IoTDataPlane {
  * requests.
  *
  * \value DeleteThingShadowAction IoTDataPlane DeleteThingShadow action.
+ * \value GetRetainedMessageAction IoTDataPlane GetRetainedMessage action.
  * \value GetThingShadowAction IoTDataPlane GetThingShadow action.
  * \value ListNamedShadowsForThingAction IoTDataPlane ListNamedShadowsForThing action.
+ * \value ListRetainedMessagesAction IoTDataPlane ListRetainedMessages action.
  * \value PublishAction IoTDataPlane Publish action.
  * \value UpdateThingShadowAction IoTDataPlane UpdateThingShadow action.
  */
@@ -248,7 +250,7 @@ QNetworkRequest IoTDataPlaneRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTDataPlaneRequestPrivate::IoTDataPlaneRequestPrivate(const IoTDataPlaneRequest::Action action, IoTDataPlaneRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-05-28"))
 {
 
 }
@@ -283,8 +285,10 @@ QString IoTDataPlaneRequestPrivate::toString(const IoTDataPlaneRequest::Action &
         case IoTDataPlaneRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(DeleteThingShadow);
+        ActionToString(GetRetainedMessage);
         ActionToString(GetThingShadow);
         ActionToString(ListNamedShadowsForThing);
+        ActionToString(ListRetainedMessages);
         ActionToString(Publish);
         ActionToString(UpdateThingShadow);
         default:

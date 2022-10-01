@@ -24,14 +24,14 @@
 #include "modifydbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ModifyDBInstanceRequest;
 
-class ModifyDBInstanceRequestPrivate : public DocDBRequestPrivate {
+class ModifyDBInstanceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    ModifyDBInstanceRequestPrivate(const DocDBRequest::Action action,
+    ModifyDBInstanceRequestPrivate(const DocDbRequest::Action action,
                                    ModifyDBInstanceRequest * const q);
     ModifyDBInstanceRequestPrivate(const ModifyDBInstanceRequestPrivate &other,
                                    ModifyDBInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -23,10 +23,18 @@
 #include "core/awssignaturev4.h"
 #include "associateassetsrequest.h"
 #include "associateassetsresponse.h"
+#include "associatetimeseriestoassetpropertyrequest.h"
+#include "associatetimeseriestoassetpropertyresponse.h"
 #include "batchassociateprojectassetsrequest.h"
 #include "batchassociateprojectassetsresponse.h"
 #include "batchdisassociateprojectassetsrequest.h"
 #include "batchdisassociateprojectassetsresponse.h"
+#include "batchgetassetpropertyaggregatesrequest.h"
+#include "batchgetassetpropertyaggregatesresponse.h"
+#include "batchgetassetpropertyvaluerequest.h"
+#include "batchgetassetpropertyvalueresponse.h"
+#include "batchgetassetpropertyvaluehistoryrequest.h"
+#include "batchgetassetpropertyvaluehistoryresponse.h"
 #include "batchputassetpropertyvaluerequest.h"
 #include "batchputassetpropertyvalueresponse.h"
 #include "createaccesspolicyrequest.h"
@@ -35,6 +43,8 @@
 #include "createassetresponse.h"
 #include "createassetmodelrequest.h"
 #include "createassetmodelresponse.h"
+#include "createbulkimportjobrequest.h"
+#include "createbulkimportjobresponse.h"
 #include "createdashboardrequest.h"
 #include "createdashboardresponse.h"
 #include "creategatewayrequest.h"
@@ -57,6 +67,8 @@
 #include "deleteportalresponse.h"
 #include "deleteprojectrequest.h"
 #include "deleteprojectresponse.h"
+#include "deletetimeseriesrequest.h"
+#include "deletetimeseriesresponse.h"
 #include "describeaccesspolicyrequest.h"
 #include "describeaccesspolicyresponse.h"
 #include "describeassetrequest.h"
@@ -65,6 +77,8 @@
 #include "describeassetmodelresponse.h"
 #include "describeassetpropertyrequest.h"
 #include "describeassetpropertyresponse.h"
+#include "describebulkimportjobrequest.h"
+#include "describebulkimportjobresponse.h"
 #include "describedashboardrequest.h"
 #include "describedashboardresponse.h"
 #include "describedefaultencryptionconfigurationrequest.h"
@@ -79,8 +93,14 @@
 #include "describeportalresponse.h"
 #include "describeprojectrequest.h"
 #include "describeprojectresponse.h"
+#include "describestorageconfigurationrequest.h"
+#include "describestorageconfigurationresponse.h"
+#include "describetimeseriesrequest.h"
+#include "describetimeseriesresponse.h"
 #include "disassociateassetsrequest.h"
 #include "disassociateassetsresponse.h"
+#include "disassociatetimeseriesfromassetpropertyrequest.h"
+#include "disassociatetimeseriesfromassetpropertyresponse.h"
 #include "getassetpropertyaggregatesrequest.h"
 #include "getassetpropertyaggregatesresponse.h"
 #include "getassetpropertyvaluerequest.h"
@@ -99,6 +119,8 @@
 #include "listassetsresponse.h"
 #include "listassociatedassetsrequest.h"
 #include "listassociatedassetsresponse.h"
+#include "listbulkimportjobsrequest.h"
+#include "listbulkimportjobsresponse.h"
 #include "listdashboardsrequest.h"
 #include "listdashboardsresponse.h"
 #include "listgatewaysrequest.h"
@@ -111,10 +133,14 @@
 #include "listprojectsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtimeseriesrequest.h"
+#include "listtimeseriesresponse.h"
 #include "putdefaultencryptionconfigurationrequest.h"
 #include "putdefaultencryptionconfigurationresponse.h"
 #include "putloggingoptionsrequest.h"
 #include "putloggingoptionsresponse.h"
+#include "putstorageconfigurationrequest.h"
+#include "putstorageconfigurationresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -160,12 +186,12 @@ namespace IoTSiteWise {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTSiteWise
  *
- *  Welcome to the AWS IoT SiteWise API Reference. AWS IoT SiteWise is an AWS service that connects <a
+ *  Welcome to the IoT SiteWise API Reference. IoT SiteWise is an Amazon Web Services service that connects <a
  *  href="https://en.wikipedia.org/wiki/Internet_of_things#Industrial_applications">Industrial Internet of Things (IIoT)</a>
- *  devices to the power of the AWS Cloud. For more information, see the <a
- *  href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/">AWS IoT SiteWise User Guide</a>. For information about
- *  AWS IoT SiteWise quotas, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a>
- *  in the <i>AWS IoT SiteWise User
+ *  devices to the power of the Amazon Web Services Cloud. For more information, see the <a
+ *  href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/">IoT SiteWise User Guide</a>. For information about IoT
+ *  SiteWise quotas, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the
+ *  <i>IoT SiteWise User
  */
 
 /*!
@@ -230,7 +256,7 @@ IoTSiteWiseClient::IoTSiteWiseClient(
  * Associates a child asset with the given parent asset through a hierarchy defined in the parent asset's model. For more
  * information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/add-associated-assets.html">Associating assets</a> in
- * the <i>AWS IoT SiteWise User
+ * the <i>IoT SiteWise User
  */
 AssociateAssetsResponse * IoTSiteWiseClient::associateAssets(const AssociateAssetsRequest &request)
 {
@@ -239,11 +265,24 @@ AssociateAssetsResponse * IoTSiteWiseClient::associateAssets(const AssociateAsse
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * AssociateTimeSeriesToAssetPropertyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a time series (data stream) with an asset
+ */
+AssociateTimeSeriesToAssetPropertyResponse * IoTSiteWiseClient::associateTimeSeriesToAssetProperty(const AssociateTimeSeriesToAssetPropertyRequest &request)
+{
+    return qobject_cast<AssociateTimeSeriesToAssetPropertyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * BatchAssociateProjectAssetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a group (batch) of assets with an AWS IoT SiteWise Monitor
+ * Associates a group (batch) of assets with an IoT SiteWise Monitor
  */
 BatchAssociateProjectAssetsResponse * IoTSiteWiseClient::batchAssociateProjectAssets(const BatchAssociateProjectAssetsRequest &request)
 {
@@ -256,7 +295,7 @@ BatchAssociateProjectAssetsResponse * IoTSiteWiseClient::batchAssociateProjectAs
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates a group (batch) of assets from an AWS IoT SiteWise Monitor
+ * Disassociates a group (batch) of assets from an IoT SiteWise Monitor
  */
 BatchDisassociateProjectAssetsResponse * IoTSiteWiseClient::batchDisassociateProjectAssets(const BatchDisassociateProjectAssetsRequest &request)
 {
@@ -265,13 +304,59 @@ BatchDisassociateProjectAssetsResponse * IoTSiteWiseClient::batchDisassociatePro
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * BatchGetAssetPropertyAggregatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
+ * aggregates</a> in the <i>IoT SiteWise User
+ */
+BatchGetAssetPropertyAggregatesResponse * IoTSiteWiseClient::batchGetAssetPropertyAggregates(const BatchGetAssetPropertyAggregatesRequest &request)
+{
+    return qobject_cast<BatchGetAssetPropertyAggregatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * BatchGetAssetPropertyValueResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the current value for one or more asset properties. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values">Querying
+ * current values</a> in the <i>IoT SiteWise User
+ */
+BatchGetAssetPropertyValueResponse * IoTSiteWiseClient::batchGetAssetPropertyValue(const BatchGetAssetPropertyValueRequest &request)
+{
+    return qobject_cast<BatchGetAssetPropertyValueResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * BatchGetAssetPropertyValueHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the historical values for one or more asset properties. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values">Querying
+ * historical values</a> in the <i>IoT SiteWise User
+ */
+BatchGetAssetPropertyValueHistoryResponse * IoTSiteWiseClient::batchGetAssetPropertyValueHistory(const BatchGetAssetPropertyValueHistoryRequest &request)
+{
+    return qobject_cast<BatchGetAssetPropertyValueHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * BatchPutAssetPropertyValueResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends a list of asset property values to AWS IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point. For
+ * Sends a list of asset property values to IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point. For
  * more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting data
- * using the API</a> in the <i>AWS IoT SiteWise User
+ * using the API</a> in the <i>IoT SiteWise User
  *
  * Guide</i>>
  *
@@ -289,22 +374,22 @@ BatchDisassociateProjectAssetsResponse * IoTSiteWiseClient::batchDisassociatePro
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetProperty.html">UpdateAssetProperty</a>>
  * </li> </ul> <b>
  *
- * With respect to Unix epoch time, AWS IoT SiteWise accepts only TQVs that have a timestamp of no more than 7 days in the
- * past and no more than 10 minutes in the future. AWS IoT SiteWise rejects timestamps outside of the inclusive range of
- * [-7 days, +10 minutes] and returns a <code>TimestampOutOfRangeException</code>
+ * With respect to Unix epoch time, IoT SiteWise accepts only TQVs that have a timestamp of no more than 7 days in the past
+ * and no more than 10 minutes in the future. IoT SiteWise rejects timestamps outside of the inclusive range of [-7 days,
+ * +10 minutes] and returns a <code>TimestampOutOfRangeException</code>
  *
  * error>
  *
- * For each asset property, AWS IoT SiteWise overwrites TQVs with duplicate timestamps unless the newer TQV has a different
+ * For each asset property, IoT SiteWise overwrites TQVs with duplicate timestamps unless the newer TQV has a different
  * quality. For example, if you store a TQV <code>{T1, GOOD, V1}</code>, then storing <code>{T1, GOOD, V2}</code> replaces
  * the existing
  *
  * TQV> </b>
  *
- * AWS IoT SiteWise authorizes access to each <code>BatchPutAssetPropertyValue</code> entry individually. For more
- * information, see <a
+ * IoT SiteWise authorizes access to each <code>BatchPutAssetPropertyValue</code> entry individually. For more information,
+ * see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-batchputassetpropertyvalue-action">BatchPutAssetPropertyValue
- * authorization</a> in the <i>AWS IoT SiteWise User
+ * authorization</a> in the <i>IoT SiteWise User
  */
 BatchPutAssetPropertyValueResponse * IoTSiteWiseClient::batchPutAssetPropertyValue(const BatchPutAssetPropertyValueRequest &request)
 {
@@ -317,8 +402,8 @@ BatchPutAssetPropertyValueResponse * IoTSiteWiseClient::batchPutAssetPropertyVal
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an access policy that grants the specified identity (AWS SSO user, AWS SSO group, or IAM user) access to the
- * specified AWS IoT SiteWise Monitor portal or project
+ * Creates an access policy that grants the specified identity (Amazon Web Services SSO user, Amazon Web Services SSO
+ * group, or IAM user) access to the specified IoT SiteWise Monitor portal or project
  */
 CreateAccessPolicyResponse * IoTSiteWiseClient::createAccessPolicy(const CreateAccessPolicyRequest &request)
 {
@@ -332,8 +417,8 @@ CreateAccessPolicyResponse * IoTSiteWiseClient::createAccessPolicy(const CreateA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an asset from an existing asset model. For more information, see <a
- * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-assets.html">Creating assets</a> in the <i>AWS
- * IoT SiteWise User
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-assets.html">Creating assets</a> in the <i>IoT
+ * SiteWise User
  */
 CreateAssetResponse * IoTSiteWiseClient::createAsset(const CreateAssetRequest &request)
 {
@@ -350,7 +435,7 @@ CreateAssetResponse * IoTSiteWiseClient::createAsset(const CreateAssetRequest &r
  * asset models, you can easily create assets of the same type that have standardized definitions. Each asset created from
  * a model inherits the asset model's property and hierarchy definitions. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/define-models.html">Defining asset models</a> in the
- * <i>AWS IoT SiteWise User
+ * <i>IoT SiteWise User
  */
 CreateAssetModelResponse * IoTSiteWiseClient::createAssetModel(const CreateAssetModelRequest &request)
 {
@@ -359,11 +444,33 @@ CreateAssetModelResponse * IoTSiteWiseClient::createAssetModel(const CreateAsset
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * CreateBulkImportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Defines a job to ingest data to IoT SiteWise from Amazon S3. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/CreateBulkImportJob.html">Create a bulk import job
+ * (CLI)</a> in the <i>Amazon Simple Storage Service User
+ *
+ * Guide</i>> <b>
+ *
+ * You must enable IoT SiteWise to export data to Amazon S3 before you create a bulk import job. For more information about
+ * how to configure storage settings, see <a
+ *
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_PutStorageConfiguration.html">PutStorageConfiguration</a>>
+ */
+CreateBulkImportJobResponse * IoTSiteWiseClient::createBulkImportJob(const CreateBulkImportJobRequest &request)
+{
+    return qobject_cast<CreateBulkImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * CreateDashboardResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a dashboard in an AWS IoT SiteWise Monitor
+ * Creates a dashboard in an IoT SiteWise Monitor
  */
 CreateDashboardResponse * IoTSiteWiseClient::createDashboard(const CreateDashboardRequest &request)
 {
@@ -376,10 +483,10 @@ CreateDashboardResponse * IoTSiteWiseClient::createDashboard(const CreateDashboa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a gateway, which is a virtual or edge device that delivers industrial data streams from local servers to AWS IoT
+ * Creates a gateway, which is a virtual or edge device that delivers industrial data streams from local servers to IoT
  * SiteWise. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html">Ingesting data using a
- * gateway</a> in the <i>AWS IoT SiteWise User
+ * gateway</a> in the <i>IoT SiteWise User
  */
 CreateGatewayResponse * IoTSiteWiseClient::createGateway(const CreateGatewayRequest &request)
 {
@@ -392,14 +499,14 @@ CreateGatewayResponse * IoTSiteWiseClient::createGateway(const CreateGatewayRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a portal, which can contain projects and dashboards. AWS IoT SiteWise Monitor uses AWS SSO or IAM to
+ * Creates a portal, which can contain projects and dashboards. IoT SiteWise Monitor uses Amazon Web Services SSO or IAM to
  * authenticate portal users and manage user
  *
  * permissions> <note>
  *
  * Before you can sign in to a new portal, you must add at least one identity to that portal. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins">Adding or
- * removing portal administrators</a> in the <i>AWS IoT SiteWise User
+ * removing portal administrators</a> in the <i>IoT SiteWise User
  */
 CreatePortalResponse * IoTSiteWiseClient::createPortal(const CreatePortalRequest &request)
 {
@@ -413,6 +520,10 @@ CreatePortalResponse * IoTSiteWiseClient::createPortal(const CreatePortalRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a project in the specified
+ *
+ * portal> <note>
+ *
+ * Make sure that the project name and description don't contain confidential
  */
 CreateProjectResponse * IoTSiteWiseClient::createProject(const CreateProjectRequest &request)
 {
@@ -425,8 +536,8 @@ CreateProjectResponse * IoTSiteWiseClient::createProject(const CreateProjectRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an access policy that grants the specified identity access to the specified AWS IoT SiteWise Monitor resource.
- * You can use this operation to revoke access to an AWS IoT SiteWise Monitor
+ * Deletes an access policy that grants the specified identity access to the specified IoT SiteWise Monitor resource. You
+ * can use this operation to revoke access to an IoT SiteWise Monitor
  */
 DeleteAccessPolicyResponse * IoTSiteWiseClient::deleteAccessPolicy(const DeleteAccessPolicyRequest &request)
 {
@@ -441,7 +552,7 @@ DeleteAccessPolicyResponse * IoTSiteWiseClient::deleteAccessPolicy(const DeleteA
  *
  * Deletes an asset. This action can't be undone. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting assets and
- * models</a> in the <i>AWS IoT SiteWise User Guide</i>.
+ * models</a> in the <i>IoT SiteWise User Guide</i>.
  *
  * </p <note>
  *
@@ -464,7 +575,7 @@ DeleteAssetResponse * IoTSiteWiseClient::deleteAsset(const DeleteAssetRequest &r
  * can delete the model. Also, you can't delete an asset model if a parent asset model exists that contains a property
  * formula expression that depends on the asset model that you want to delete. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting assets and
- * models</a> in the <i>AWS IoT SiteWise User
+ * models</a> in the <i>IoT SiteWise User
  */
 DeleteAssetModelResponse * IoTSiteWiseClient::deleteAssetModel(const DeleteAssetModelRequest &request)
 {
@@ -477,7 +588,7 @@ DeleteAssetModelResponse * IoTSiteWiseClient::deleteAssetModel(const DeleteAsset
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a dashboard from AWS IoT SiteWise
+ * Deletes a dashboard from IoT SiteWise
  */
 DeleteDashboardResponse * IoTSiteWiseClient::deleteDashboard(const DeleteDashboardRequest &request)
 {
@@ -490,7 +601,7 @@ DeleteDashboardResponse * IoTSiteWiseClient::deleteDashboard(const DeleteDashboa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a gateway from AWS IoT SiteWise. When you delete a gateway, some of the gateway's files remain in your gateway's
+ * Deletes a gateway from IoT SiteWise. When you delete a gateway, some of the gateway's files remain in your gateway's
  * file
  */
 DeleteGatewayResponse * IoTSiteWiseClient::deleteGateway(const DeleteGatewayRequest &request)
@@ -504,7 +615,7 @@ DeleteGatewayResponse * IoTSiteWiseClient::deleteGateway(const DeleteGatewayRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a portal from AWS IoT SiteWise
+ * Deletes a portal from IoT SiteWise
  */
 DeletePortalResponse * IoTSiteWiseClient::deletePortal(const DeletePortalRequest &request)
 {
@@ -517,7 +628,7 @@ DeletePortalResponse * IoTSiteWiseClient::deletePortal(const DeletePortalRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a project from AWS IoT SiteWise
+ * Deletes a project from IoT SiteWise
  */
 DeleteProjectResponse * IoTSiteWiseClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -526,11 +637,45 @@ DeleteProjectResponse * IoTSiteWiseClient::deleteProject(const DeleteProjectRequ
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * DeleteTimeSeriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a time series (data stream). If you delete a time series that's associated with an asset property, the asset
+ * property still exists, but the time series will no longer be associated with this asset
+ *
+ * property>
+ *
+ * To identify a time series, do one of the
+ *
+ * following> <ul> <li>
+ *
+ * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time
+ *
+ * series> </li> <li>
+ *
+ * If the time series is associated with an asset property, specify one of the following:
+ *
+ * </p <ul> <li>
+ *
+ * The <code>alias</code> of the time
+ *
+ * series> </li> <li>
+ *
+ * The <code>assetId</code> and <code>propertyId</code> that identifies the asset
+ */
+DeleteTimeSeriesResponse * IoTSiteWiseClient::deleteTimeSeries(const DeleteTimeSeriesRequest &request)
+{
+    return qobject_cast<DeleteTimeSeriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * DescribeAccessPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes an access policy, which specifies an identity's access to an AWS IoT SiteWise Monitor portal or
+ * Describes an access policy, which specifies an identity's access to an IoT SiteWise Monitor portal or
  */
 DescribeAccessPolicyResponse * IoTSiteWiseClient::describeAccessPolicy(const DescribeAccessPolicyRequest &request)
 {
@@ -588,6 +733,21 @@ DescribeAssetPropertyResponse * IoTSiteWiseClient::describeAssetProperty(const D
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * DescribeBulkImportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about a bulk import job request. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk import job
+ * (CLI)</a> in the <i>Amazon Simple Storage Service User
+ */
+DescribeBulkImportJobResponse * IoTSiteWiseClient::describeBulkImportJob(const DescribeBulkImportJobRequest &request)
+{
+    return qobject_cast<DescribeBulkImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * DescribeDashboardResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -605,9 +765,10 @@ DescribeDashboardResponse * IoTSiteWiseClient::describeDashboard(const DescribeD
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the default encryption configuration for the AWS account in the default or specified region.
- * For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/key-management.html">Key
- * management</a> in the <i>AWS IoT SiteWise User
+ * Retrieves information about the default encryption configuration for the Amazon Web Services account in the default or
+ * specified Region. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/key-management.html">Key management</a> in the <i>IoT
+ * SiteWise User
  */
 DescribeDefaultEncryptionConfigurationResponse * IoTSiteWiseClient::describeDefaultEncryptionConfiguration(const DescribeDefaultEncryptionConfigurationRequest &request)
 {
@@ -635,8 +796,8 @@ DescribeGatewayResponse * IoTSiteWiseClient::describeGateway(const DescribeGatew
  *
  * Retrieves information about a gateway capability configuration. Each gateway capability defines data sources for a
  * gateway. A capability configuration can contain multiple data source configurations. If you define OPC-UA sources for a
- * gateway in the AWS IoT SiteWise console, all of your OPC-UA sources are stored in one capability configuration. To list
- * all capability configurations for a gateway, use <a
+ * gateway in the IoT SiteWise console, all of your OPC-UA sources are stored in one capability configuration. To list all
+ * capability configurations for a gateway, use <a
  */
 DescribeGatewayCapabilityConfigurationResponse * IoTSiteWiseClient::describeGatewayCapabilityConfiguration(const DescribeGatewayCapabilityConfigurationRequest &request)
 {
@@ -649,7 +810,7 @@ DescribeGatewayCapabilityConfigurationResponse * IoTSiteWiseClient::describeGate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the current AWS IoT SiteWise logging
+ * Retrieves the current IoT SiteWise logging
  */
 DescribeLoggingOptionsResponse * IoTSiteWiseClient::describeLoggingOptions(const DescribeLoggingOptionsRequest &request)
 {
@@ -684,6 +845,52 @@ DescribeProjectResponse * IoTSiteWiseClient::describeProject(const DescribeProje
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * DescribeStorageConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the storage configuration for IoT
+ */
+DescribeStorageConfigurationResponse * IoTSiteWiseClient::describeStorageConfiguration(const DescribeStorageConfigurationRequest &request)
+{
+    return qobject_cast<DescribeStorageConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * DescribeTimeSeriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about a time series (data
+ *
+ * stream)>
+ *
+ * To identify a time series, do one of the
+ *
+ * following> <ul> <li>
+ *
+ * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time
+ *
+ * series> </li> <li>
+ *
+ * If the time series is associated with an asset property, specify one of the following:
+ *
+ * </p <ul> <li>
+ *
+ * The <code>alias</code> of the time
+ *
+ * series> </li> <li>
+ *
+ * The <code>assetId</code> and <code>propertyId</code> that identifies the asset
+ */
+DescribeTimeSeriesResponse * IoTSiteWiseClient::describeTimeSeries(const DescribeTimeSeriesRequest &request)
+{
+    return qobject_cast<DescribeTimeSeriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * DisassociateAssetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -697,13 +904,26 @@ DisassociateAssetsResponse * IoTSiteWiseClient::disassociateAssets(const Disasso
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * DisassociateTimeSeriesFromAssetPropertyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a time series (data stream) from an asset
+ */
+DisassociateTimeSeriesFromAssetPropertyResponse * IoTSiteWiseClient::disassociateTimeSeriesFromAssetProperty(const DisassociateTimeSeriesFromAssetPropertyRequest &request)
+{
+    return qobject_cast<DisassociateTimeSeriesFromAssetPropertyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * GetAssetPropertyAggregatesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets aggregated values for an asset property. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying
- * aggregates</a> in the <i>AWS IoT SiteWise User
+ * aggregates</a> in the <i>IoT SiteWise User
  *
  * Guide</i>>
  *
@@ -733,7 +953,7 @@ GetAssetPropertyAggregatesResponse * IoTSiteWiseClient::getAssetPropertyAggregat
  *
  * Gets an asset property's current value. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values">Querying
- * current values</a> in the <i>AWS IoT SiteWise User
+ * current values</a> in the <i>IoT SiteWise User
  *
  * Guide</i>>
  *
@@ -763,7 +983,7 @@ GetAssetPropertyValueResponse * IoTSiteWiseClient::getAssetPropertyValue(const G
  *
  * Gets the history of an asset property's values. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values">Querying
- * historical values</a> in the <i>AWS IoT SiteWise User
+ * historical values</a> in the <i>IoT SiteWise User
  *
  * Guide</i>>
  *
@@ -791,15 +1011,15 @@ GetAssetPropertyValueHistoryResponse * IoTSiteWiseClient::getAssetPropertyValueH
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get interpolated values for an asset property for a specified time interval, during a period of time. For example, you
- * can use the this operation to return the interpolated temperature values for a wind turbine every 24 hours over a
- * duration of 7
+ * Get interpolated values for an asset property for a specified time interval, during a period of time. If your time
+ * series is missing data points during the specified time interval, you can use interpolation to estimate the missing
  *
- * days> <note>
+ * data>
  *
- * This API isn't available in China
+ * For example, you can use this operation to return the interpolated temperature values for a wind turbine every 24 hours
+ * over a duration of 7
  *
- * (Beijing)> </note>
+ * days>
  *
  * To identify an asset property, you must specify one of the
  *
@@ -825,8 +1045,8 @@ GetInterpolatedAssetPropertyValuesResponse * IoTSiteWiseClient::getInterpolatedA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a paginated list of access policies for an identity (an AWS SSO user, an AWS SSO group, or an IAM user) or an
- * AWS IoT SiteWise Monitor resource (a portal or
+ * Retrieves a paginated list of access policies for an identity (an Amazon Web Services SSO user, an Amazon Web Services
+ * SSO group, or an IAM user) or an IoT SiteWise Monitor resource (a portal or
  */
 ListAccessPoliciesResponse * IoTSiteWiseClient::listAccessPolicies(const ListAccessPoliciesRequest &request)
 {
@@ -918,11 +1138,26 @@ ListAssociatedAssetsResponse * IoTSiteWiseClient::listAssociatedAssets(const Lis
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * ListBulkImportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a paginated list of bulk import job requests. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ListBulkImportJobs.html">List bulk import jobs (CLI)</a>
+ * in the <i>IoT SiteWise User
+ */
+ListBulkImportJobsResponse * IoTSiteWiseClient::listBulkImportJobs(const ListBulkImportJobsRequest &request)
+{
+    return qobject_cast<ListBulkImportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * ListDashboardsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a paginated list of dashboards for an AWS IoT SiteWise Monitor
+ * Retrieves a paginated list of dashboards for an IoT SiteWise Monitor
  */
 ListDashboardsResponse * IoTSiteWiseClient::listDashboards(const ListDashboardsRequest &request)
 {
@@ -948,7 +1183,7 @@ ListGatewaysResponse * IoTSiteWiseClient::listGateways(const ListGatewaysRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a paginated list of AWS IoT SiteWise Monitor
+ * Retrieves a paginated list of IoT SiteWise Monitor
  */
 ListPortalsResponse * IoTSiteWiseClient::listPortals(const ListPortalsRequest &request)
 {
@@ -961,7 +1196,7 @@ ListPortalsResponse * IoTSiteWiseClient::listPortals(const ListPortalsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a paginated list of assets associated with an AWS IoT SiteWise Monitor
+ * Retrieves a paginated list of assets associated with an IoT SiteWise Monitor
  */
 ListProjectAssetsResponse * IoTSiteWiseClient::listProjectAssets(const ListProjectAssetsRequest &request)
 {
@@ -974,7 +1209,7 @@ ListProjectAssetsResponse * IoTSiteWiseClient::listProjectAssets(const ListProje
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a paginated list of projects for an AWS IoT SiteWise Monitor
+ * Retrieves a paginated list of projects for an IoT SiteWise Monitor
  */
 ListProjectsResponse * IoTSiteWiseClient::listProjects(const ListProjectsRequest &request)
 {
@@ -987,7 +1222,7 @@ ListProjectsResponse * IoTSiteWiseClient::listProjects(const ListProjectsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the list of tags for an AWS IoT SiteWise
+ * Retrieves the list of tags for an IoT SiteWise
  */
 ListTagsForResourceResponse * IoTSiteWiseClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -996,13 +1231,26 @@ ListTagsForResourceResponse * IoTSiteWiseClient::listTagsForResource(const ListT
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * ListTimeSeriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a paginated list of time series (data
+ */
+ListTimeSeriesResponse * IoTSiteWiseClient::listTimeSeries(const ListTimeSeriesRequest &request)
+{
+    return qobject_cast<ListTimeSeriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * PutDefaultEncryptionConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the default encryption configuration for the AWS account. For more information, see <a
- * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/key-management.html">Key management</a> in the <i>AWS
- * IoT SiteWise User
+ * Sets the default encryption configuration for the Amazon Web Services account. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/key-management.html">Key management</a> in the <i>IoT
+ * SiteWise User
  */
 PutDefaultEncryptionConfigurationResponse * IoTSiteWiseClient::putDefaultEncryptionConfiguration(const PutDefaultEncryptionConfigurationRequest &request)
 {
@@ -1015,7 +1263,7 @@ PutDefaultEncryptionConfigurationResponse * IoTSiteWiseClient::putDefaultEncrypt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets logging options for AWS IoT
+ * Sets logging options for IoT
  */
 PutLoggingOptionsResponse * IoTSiteWiseClient::putLoggingOptions(const PutLoggingOptionsRequest &request)
 {
@@ -1024,11 +1272,24 @@ PutLoggingOptionsResponse * IoTSiteWiseClient::putLoggingOptions(const PutLoggin
 
 /*!
  * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
+ * PutStorageConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Configures storage settings for IoT
+ */
+PutStorageConfigurationResponse * IoTSiteWiseClient::putStorageConfiguration(const PutStorageConfigurationRequest &request)
+{
+    return qobject_cast<PutStorageConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSiteWiseClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds tags to an AWS IoT SiteWise resource. If a tag already exists for the resource, this operation updates the tag's
+ * Adds tags to an IoT SiteWise resource. If a tag already exists for the resource, this operation updates the tag's
  */
 TagResourceResponse * IoTSiteWiseClient::tagResource(const TagResourceRequest &request)
 {
@@ -1041,7 +1302,7 @@ TagResourceResponse * IoTSiteWiseClient::tagResource(const TagResourceRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a tag from an AWS IoT SiteWise
+ * Removes a tag from an IoT SiteWise
  */
 UntagResourceResponse * IoTSiteWiseClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1054,7 +1315,7 @@ UntagResourceResponse * IoTSiteWiseClient::untagResource(const UntagResourceRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing access policy that specifies an identity's access to an AWS IoT SiteWise Monitor portal or project
+ * Updates an existing access policy that specifies an identity's access to an IoT SiteWise Monitor portal or project
  */
 UpdateAccessPolicyResponse * IoTSiteWiseClient::updateAccessPolicy(const UpdateAccessPolicyRequest &request)
 {
@@ -1069,7 +1330,7 @@ UpdateAccessPolicyResponse * IoTSiteWiseClient::updateAccessPolicy(const UpdateA
  *
  * Updates an asset's name. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating assets and
- * models</a> in the <i>AWS IoT SiteWise User
+ * models</a> in the <i>IoT SiteWise User
  */
 UpdateAssetResponse * IoTSiteWiseClient::updateAsset(const UpdateAssetRequest &request)
 {
@@ -1085,7 +1346,7 @@ UpdateAssetResponse * IoTSiteWiseClient::updateAsset(const UpdateAssetRequest &r
  * Updates an asset model and all of the assets that were created from the model. Each asset created from the model
  * inherits the updated asset model's property and hierarchy definitions. For more information, see <a
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating assets and
- * models</a> in the <i>AWS IoT SiteWise User
+ * models</a> in the <i>IoT SiteWise User
  *
  * Guide</i>> <b>
  *
@@ -1094,9 +1355,9 @@ UpdateAssetResponse * IoTSiteWiseClient::updateAsset(const UpdateAssetRequest &r
  *
  * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html">DescribeAssetModel</a>>
  *
- * If you remove a property from an asset model, AWS IoT SiteWise deletes all previous data for that property. If you
- * remove a hierarchy definition from an asset model, AWS IoT SiteWise disassociates every asset associated with that
- * hierarchy. You can't change the type or data type of an existing
+ * If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you remove a
+ * hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that hierarchy. You
+ * can't change the type or data type of an existing
  */
 UpdateAssetModelResponse * IoTSiteWiseClient::updateAssetModel(const UpdateAssetModelRequest &request)
 {
@@ -1130,7 +1391,7 @@ UpdateAssetPropertyResponse * IoTSiteWiseClient::updateAssetProperty(const Updat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an AWS IoT SiteWise Monitor
+ * Updates an IoT SiteWise Monitor
  */
 UpdateDashboardResponse * IoTSiteWiseClient::updateDashboard(const UpdateDashboardRequest &request)
 {
@@ -1158,7 +1419,7 @@ UpdateGatewayResponse * IoTSiteWiseClient::updateGateway(const UpdateGatewayRequ
  *
  * Updates a gateway capability configuration or defines a new capability configuration. Each gateway capability defines
  * data sources for a gateway. A capability configuration can contain multiple data source configurations. If you define
- * OPC-UA sources for a gateway in the AWS IoT SiteWise console, all of your OPC-UA sources are stored in one capability
+ * OPC-UA sources for a gateway in the IoT SiteWise console, all of your OPC-UA sources are stored in one capability
  * configuration. To list all capability configurations for a gateway, use <a
  */
 UpdateGatewayCapabilityConfigurationResponse * IoTSiteWiseClient::updateGatewayCapabilityConfiguration(const UpdateGatewayCapabilityConfigurationRequest &request)
@@ -1172,7 +1433,7 @@ UpdateGatewayCapabilityConfigurationResponse * IoTSiteWiseClient::updateGatewayC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an AWS IoT SiteWise Monitor
+ * Updates an IoT SiteWise Monitor
  */
 UpdatePortalResponse * IoTSiteWiseClient::updatePortal(const UpdatePortalRequest &request)
 {
@@ -1185,7 +1446,7 @@ UpdatePortalResponse * IoTSiteWiseClient::updatePortal(const UpdatePortalRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an AWS IoT SiteWise Monitor
+ * Updates an IoT SiteWise Monitor
  */
 UpdateProjectResponse * IoTSiteWiseClient::updateProject(const UpdateProjectRequest &request)
 {

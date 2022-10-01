@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::StartDataSourceSyncJobResponse
- * \brief The StartDataSourceSyncJobResponse class provides an interace for kendra StartDataSourceSyncJob responses.
+ * \class QtAws::Kendra::StartDataSourceSyncJobResponse
+ * \brief The StartDataSourceSyncJobResponse class provides an interace for Kendra StartDataSourceSyncJob responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::startDataSourceSyncJob
+ * \sa KendraClient::startDataSourceSyncJob
  */
 
 /*!
@@ -45,7 +45,7 @@ StartDataSourceSyncJobResponse::StartDataSourceSyncJobResponse(
         const StartDataSourceSyncJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new StartDataSourceSyncJobResponsePrivate(this), parent)
+    : KendraResponse(new StartDataSourceSyncJobResponsePrivate(this), parent)
 {
     setRequest(new StartDataSourceSyncJobRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const StartDataSourceSyncJobRequest * StartDataSourceSyncJobResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful kendra StartDataSourceSyncJob \a response.
+ * Parses a successful Kendra StartDataSourceSyncJob \a response.
  */
 void StartDataSourceSyncJobResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void StartDataSourceSyncJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::StartDataSourceSyncJobResponsePrivate
+ * \class QtAws::Kendra::StartDataSourceSyncJobResponsePrivate
  * \brief The StartDataSourceSyncJobResponsePrivate class provides private implementation for StartDataSourceSyncJobResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a StartDataSourceSyncJobResponsePrivate object with public implementation \a q.
  */
 StartDataSourceSyncJobResponsePrivate::StartDataSourceSyncJobResponsePrivate(
-    StartDataSourceSyncJobResponse * const q) : kendraResponsePrivate(q)
+    StartDataSourceSyncJobResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra StartDataSourceSyncJob response element from \a xml.
+ * Parses a Kendra StartDataSourceSyncJob response element from \a xml.
  */
 void StartDataSourceSyncJobResponsePrivate::parseStartDataSourceSyncJobResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void StartDataSourceSyncJobResponsePrivate::parseStartDataSourceSyncJobResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

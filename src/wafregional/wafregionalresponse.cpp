@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::WAFRegionalResponse
- * \brief The WAFRegionalResponse class provides an interface for WAFRegional responses.
+ * \class QtAws::WafRegional::WafRegionalResponse
+ * \brief The WafRegionalResponse class provides an interface for WafRegional responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a WAFRegionalResponse object with parent \a parent.
+ * Constructs a WafRegionalResponse object with parent \a parent.
  */
-WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new WAFRegionalResponsePrivate(this), parent)
+WafRegionalResponse::WafRegionalResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new WafRegionalResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a WAFRegionalResponse object with private implementation \a d,
+ * Constructs a WafRegionalResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from WAFRegionalResponsePrivate.
+ * implementation that inherits from WafRegionalResponsePrivate.
  */
-WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent)
+WafRegionalResponse::WafRegionalResponse(WafRegionalResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, Q
 /*!
  * \reimp
  */
-void WAFRegionalResponse::parseFailure(QIODevice &response)
+void WafRegionalResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(WAFRegionalResponse);
+    //Q_D(WafRegionalResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::WAFRegionalResponsePrivate
- * \brief The WAFRegionalResponsePrivate class provides private implementation for WAFRegionalResponse.
+ * \class QtAws::WafRegional::WafRegionalResponsePrivate
+ * \brief The WafRegionalResponsePrivate class provides private implementation for WafRegionalResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a WAFRegionalResponsePrivate object with public implementation \a q.
+ * Constructs a WafRegionalResponsePrivate object with public implementation \a q.
  */
-WAFRegionalResponsePrivate::WAFRegionalResponsePrivate(
-    WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+WafRegionalResponsePrivate::WafRegionalResponsePrivate(
+    WafRegionalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

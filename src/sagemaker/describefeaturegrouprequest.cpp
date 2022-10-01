@@ -31,7 +31,7 @@ namespace SageMaker {
  *
  * \inmodule QtAwsSageMaker
  *
- *  Provides APIs for creating and managing Amazon SageMaker resources.
+ *  Provides APIs for creating and managing SageMaker resources.
  * 
  *  </p
  * 
@@ -39,8 +39,7 @@ namespace SageMaker {
  * 
  *  Resources> <ul> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">Amazon SageMaker Developer
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer Guide</a>
  * 
  *  </p </li> <li>
  * 

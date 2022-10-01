@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsRequestPrivate;
+class SsmContactsRequestPrivate;
 
-class QTAWSSSMCONTACTS_EXPORT SSMContactsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSMCONTACTS_EXPORT SsmContactsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SSMContacts.
+    /// Actions supported by SsmContacts.
     enum Action {
         AcceptPageAction,
         ActivateContactChannelAction,
@@ -69,9 +69,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SSMContactsRequest(const Action action);
-    SSMContactsRequest(const SSMContactsRequest &other);
-    SSMContactsRequest &operator=(const SSMContactsRequest &other);
+    SsmContactsRequest(const Action action);
+    SsmContactsRequest(const SsmContactsRequest &other);
+    SsmContactsRequest &operator=(const SsmContactsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -80,12 +80,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SSMContactsRequest &other) const;
+    virtual bool operator==(const SsmContactsRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit SSMContactsRequest(SSMContactsRequestPrivate * const d);
+    explicit SsmContactsRequest(SsmContactsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -98,11 +98,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SSMContactsRequest)
+    Q_DECLARE_PRIVATE(SsmContactsRequest)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

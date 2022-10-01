@@ -23,7 +23,7 @@
 #include "acmresponse_p.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class RenewCertificateResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

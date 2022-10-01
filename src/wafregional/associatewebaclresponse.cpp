@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::AssociateWebACLResponse
- * \brief The AssociateWebACLResponse class provides an interace for WAFRegional AssociateWebACL responses.
+ * \class QtAws::WafRegional::AssociateWebACLResponse
+ * \brief The AssociateWebACLResponse class provides an interace for WafRegional AssociateWebACL responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::associateWebACL
+ * \sa WafRegionalClient::associateWebACL
  */
 
 /*!
@@ -67,7 +67,7 @@ AssociateWebACLResponse::AssociateWebACLResponse(
         const AssociateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new AssociateWebACLResponsePrivate(this), parent)
+    : WafRegionalResponse(new AssociateWebACLResponsePrivate(this), parent)
 {
     setRequest(new AssociateWebACLRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const AssociateWebACLRequest * AssociateWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional AssociateWebACL \a response.
+ * Parses a successful WafRegional AssociateWebACL \a response.
  */
 void AssociateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void AssociateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::AssociateWebACLResponsePrivate
+ * \class QtAws::WafRegional::AssociateWebACLResponsePrivate
  * \brief The AssociateWebACLResponsePrivate class provides private implementation for AssociateWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a AssociateWebACLResponsePrivate object with public implementation \a q.
  */
 AssociateWebACLResponsePrivate::AssociateWebACLResponsePrivate(
-    AssociateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
+    AssociateWebACLResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional AssociateWebACL response element from \a xml.
+ * Parses a WafRegional AssociateWebACL response element from \a xml.
  */
 void AssociateWebACLResponsePrivate::parseAssociateWebACLResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void AssociateWebACLResponsePrivate::parseAssociateWebACLResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

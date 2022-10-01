@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMWAA_LIBRARY)
 
 add_library(QtAwsMwaa
+  qtawsmwaaglobal.h
+  mwaaclient.h
+  mwaaclient_p.h
+  mwaarequest.h
+  mwaarequest_p.h
+  mwaaresponse.h
+  mwaaresponse_p.h
   createclitokenrequest.h
   createclitokenrequest_p.h
   createclitokenresponse.h
@@ -29,17 +36,10 @@ add_library(QtAwsMwaa
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mwaaclient.h
-  mwaaclient_p.h
-  mwaarequest.h
-  mwaarequest_p.h
-  mwaaresponse.h
-  mwaaresponse_p.h
   publishmetricsrequest.h
   publishmetricsrequest_p.h
   publishmetricsresponse.h
   publishmetricsresponse_p.h
-  qtawsmwaaglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -52,6 +52,9 @@ add_library(QtAwsMwaa
   updateenvironmentrequest_p.h
   updateenvironmentresponse.h
   updateenvironmentresponse_p.h
+  mwaaclient.cpp
+  mwaarequest.cpp
+  mwaaresponse.cpp
   createclitokenrequest.cpp
   createclitokenresponse.cpp
   createenvironmentrequest.cpp
@@ -66,9 +69,6 @@ add_library(QtAwsMwaa
   listenvironmentsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mwaaclient.cpp
-  mwaarequest.cpp
-  mwaaresponse.cpp
   publishmetricsrequest.cpp
   publishmetricsresponse.cpp
   tagresourcerequest.cpp

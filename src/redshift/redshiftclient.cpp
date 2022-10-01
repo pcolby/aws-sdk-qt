@@ -25,8 +25,12 @@
 #include "acceptreservednodeexchangeresponse.h"
 #include "addpartnerrequest.h"
 #include "addpartnerresponse.h"
+#include "associatedatashareconsumerrequest.h"
+#include "associatedatashareconsumerresponse.h"
 #include "authorizeclustersecuritygroupingressrequest.h"
 #include "authorizeclustersecuritygroupingressresponse.h"
+#include "authorizedatasharerequest.h"
+#include "authorizedatashareresponse.h"
 #include "authorizeendpointaccessrequest.h"
 #include "authorizeendpointaccessresponse.h"
 #include "authorizesnapshotaccessrequest.h"
@@ -39,6 +43,8 @@
 #include "cancelresizeresponse.h"
 #include "copyclustersnapshotrequest.h"
 #include "copyclustersnapshotresponse.h"
+#include "createauthenticationprofilerequest.h"
+#include "createauthenticationprofileresponse.h"
 #include "createclusterrequest.h"
 #include "createclusterresponse.h"
 #include "createclusterparametergrouprequest.h"
@@ -67,6 +73,10 @@
 #include "createtagsresponse.h"
 #include "createusagelimitrequest.h"
 #include "createusagelimitresponse.h"
+#include "deauthorizedatasharerequest.h"
+#include "deauthorizedatashareresponse.h"
+#include "deleteauthenticationprofilerequest.h"
+#include "deleteauthenticationprofileresponse.h"
 #include "deleteclusterrequest.h"
 #include "deleteclusterresponse.h"
 #include "deleteclusterparametergrouprequest.h"
@@ -99,6 +109,8 @@
 #include "deleteusagelimitresponse.h"
 #include "describeaccountattributesrequest.h"
 #include "describeaccountattributesresponse.h"
+#include "describeauthenticationprofilesrequest.h"
+#include "describeauthenticationprofilesresponse.h"
 #include "describeclusterdbrevisionsrequest.h"
 #include "describeclusterdbrevisionsresponse.h"
 #include "describeclusterparametergroupsrequest.h"
@@ -117,6 +129,12 @@
 #include "describeclusterversionsresponse.h"
 #include "describeclustersrequest.h"
 #include "describeclustersresponse.h"
+#include "describedatasharesrequest.h"
+#include "describedatasharesresponse.h"
+#include "describedatasharesforconsumerrequest.h"
+#include "describedatasharesforconsumerresponse.h"
+#include "describedatasharesforproducerrequest.h"
+#include "describedatasharesforproducerresponse.h"
 #include "describedefaultclusterparametersrequest.h"
 #include "describedefaultclusterparametersresponse.h"
 #include "describeendpointaccessrequest.h"
@@ -141,6 +159,8 @@
 #include "describeorderableclusteroptionsresponse.h"
 #include "describepartnersrequest.h"
 #include "describepartnersresponse.h"
+#include "describereservednodeexchangestatusrequest.h"
+#include "describereservednodeexchangestatusresponse.h"
 #include "describereservednodeofferingsrequest.h"
 #include "describereservednodeofferingsresponse.h"
 #include "describereservednodesrequest.h"
@@ -165,16 +185,24 @@
 #include "disableloggingresponse.h"
 #include "disablesnapshotcopyrequest.h"
 #include "disablesnapshotcopyresponse.h"
+#include "disassociatedatashareconsumerrequest.h"
+#include "disassociatedatashareconsumerresponse.h"
 #include "enableloggingrequest.h"
 #include "enableloggingresponse.h"
 #include "enablesnapshotcopyrequest.h"
 #include "enablesnapshotcopyresponse.h"
 #include "getclustercredentialsrequest.h"
 #include "getclustercredentialsresponse.h"
+#include "getclustercredentialswithiamrequest.h"
+#include "getclustercredentialswithiamresponse.h"
+#include "getreservednodeexchangeconfigurationoptionsrequest.h"
+#include "getreservednodeexchangeconfigurationoptionsresponse.h"
 #include "getreservednodeexchangeofferingsrequest.h"
 #include "getreservednodeexchangeofferingsresponse.h"
 #include "modifyaquaconfigurationrequest.h"
 #include "modifyaquaconfigurationresponse.h"
+#include "modifyauthenticationprofilerequest.h"
+#include "modifyauthenticationprofileresponse.h"
 #include "modifyclusterrequest.h"
 #include "modifyclusterresponse.h"
 #include "modifyclusterdbrevisionrequest.h"
@@ -209,6 +237,8 @@
 #include "purchasereservednodeofferingresponse.h"
 #include "rebootclusterrequest.h"
 #include "rebootclusterresponse.h"
+#include "rejectdatasharerequest.h"
+#include "rejectdatashareresponse.h"
 #include "resetclusterparametergrouprequest.h"
 #include "resetclusterparametergroupresponse.h"
 #include "resizeclusterrequest.h"
@@ -367,6 +397,20 @@ AddPartnerResponse * RedshiftClient::addPartner(const AddPartnerRequest &request
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * AssociateDataShareConsumerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * From a datashare consumer account, associates a datashare with the account (AssociateEntireAccount) or the specified
+ * namespace (ConsumerArn). If you make this association, the consumer can consume the
+ */
+AssociateDataShareConsumerResponse * RedshiftClient::associateDataShareConsumer(const AssociateDataShareConsumerRequest &request)
+{
+    return qobject_cast<AssociateDataShareConsumerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * AuthorizeClusterSecurityGroupIngressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -379,8 +423,8 @@ AddPartnerResponse * RedshiftClient::addPartner(const AddPartnerRequest &request
  * group>
  *
  * If you authorize access to an Amazon EC2 security group, specify <i>EC2SecurityGroupName</i> and
- * <i>EC2SecurityGroupOwnerId</i>. The Amazon EC2 security group and Amazon Redshift cluster must be in the same AWS
- * Region.
+ * <i>EC2SecurityGroupOwnerId</i>. The Amazon EC2 security group and Amazon Redshift cluster must be in the same Amazon Web
+ * Services Region.
  *
  * </p
  *
@@ -402,6 +446,20 @@ AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterS
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * AuthorizeDataShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts or managing
+ * entities. To authorize a datashare for a data consumer, the producer account must have the correct access
+ */
+AuthorizeDataShareResponse * RedshiftClient::authorizeDataShare(const AuthorizeDataShareRequest &request)
+{
+    return qobject_cast<AuthorizeDataShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * AuthorizeEndpointAccessResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -419,7 +477,7 @@ AuthorizeEndpointAccessResponse * RedshiftClient::authorizeEndpointAccess(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Authorizes the specified AWS customer account to restore the specified
+ * Authorizes the specified Amazon Web Services account to restore the specified
  *
  * snapshot>
  *
@@ -495,6 +553,19 @@ CancelResizeResponse * RedshiftClient::cancelResize(const CancelResizeRequest &r
 CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClusterSnapshotRequest &request)
 {
     return qobject_cast<CopyClusterSnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * CreateAuthenticationProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an authentication profile with the specified
+ */
+CreateAuthenticationProfileResponse * RedshiftClient::createAuthenticationProfile(const CreateAuthenticationProfileRequest &request)
+{
+    return qobject_cast<CreateAuthenticationProfileResponse *>(send(request));
 }
 
 /*!
@@ -637,9 +708,10 @@ CreateEndpointAccessResponse * RedshiftClient::createEndpointAccess(const Create
  *
  * If you specify both the source type and source IDs, such as source type = cluster and source identifier = my-cluster-1,
  * notifications will be sent for all the cluster events for my-cluster-1. If you specify a source type but do not specify
- * a source identifier, you will receive notice of the events for the objects of that type in your AWS account. If you do
- * not specify either the SourceType nor the SourceIdentifier, you will be notified of events generated from all Amazon
- * Redshift sources belonging to your AWS account. You must specify a source type if you specify a source
+ * a source identifier, you will receive notice of the events for the objects of that type in your Amazon Web Services
+ * account. If you do not specify either the SourceType nor the SourceIdentifier, you will be notified of events generated
+ * from all Amazon Redshift sources belonging to your Amazon Web Services account. You must specify a source type if you
+ * specify a source
  */
 CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -709,8 +781,8 @@ CreateScheduledActionResponse * RedshiftClient::createScheduledAction(const Crea
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a snapshot copy grant that permits Amazon Redshift to use a customer master key (CMK) from AWS Key Management
- * Service (AWS KMS) to encrypt copied snapshots in a destination
+ * Creates a snapshot copy grant that permits Amazon Redshift to use an encrypted symmetric key from Key Management Service
+ * (KMS) to encrypt copied snapshots in a destination
  *
  * region>
  *
@@ -770,6 +842,32 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
 CreateUsageLimitResponse * RedshiftClient::createUsageLimit(const CreateUsageLimitRequest &request)
 {
     return qobject_cast<CreateUsageLimitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeauthorizeDataShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * From a datashare producer account, removes authorization from the specified datashare.
+ */
+DeauthorizeDataShareResponse * RedshiftClient::deauthorizeDataShare(const DeauthorizeDataShareRequest &request)
+{
+    return qobject_cast<DeauthorizeDataShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeleteAuthenticationProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an authentication
+ */
+DeleteAuthenticationProfileResponse * RedshiftClient::deleteAuthenticationProfile(const DeleteAuthenticationProfileRequest &request)
+{
+    return qobject_cast<DeleteAuthenticationProfileResponse *>(send(request));
 }
 
 /*!
@@ -1021,6 +1119,19 @@ DescribeAccountAttributesResponse * RedshiftClient::describeAccountAttributes(co
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeAuthenticationProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an authentication
+ */
+DescribeAuthenticationProfilesResponse * RedshiftClient::describeAuthenticationProfiles(const DescribeAuthenticationProfilesRequest &request)
+{
+    return qobject_cast<DescribeAuthenticationProfilesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DescribeClusterDbRevisionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1131,8 +1242,8 @@ DescribeClusterSecurityGroupsResponse * RedshiftClient::describeClusterSecurityG
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns one or more snapshot objects, which contain metadata about your cluster snapshots. By default, this operation
- * returns information about all snapshots of all clusters that are owned by you AWS customer account. No information is
- * returned for snapshots owned by inactive AWS customer
+ * returns information about all snapshots of all clusters that are owned by your Amazon Web Services account. No
+ * information is returned for snapshots owned by inactive Amazon Web Services
  *
  * accounts>
  *
@@ -1159,7 +1270,7 @@ DescribeClusterSnapshotsResponse * RedshiftClient::describeClusterSnapshots(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups. By default,
- * this operation returns information about all cluster subnet groups that are defined in you AWS
+ * this operation returns information about all cluster subnet groups that are defined in your Amazon Web Services
  *
  * account>
  *
@@ -1234,6 +1345,45 @@ DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const 
 DescribeClustersResponse * RedshiftClient::describeClusters(const DescribeClustersRequest &request)
 {
     return qobject_cast<DescribeClustersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeDataSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Shows the status of any inbound or outbound datashares available in the specified
+ */
+DescribeDataSharesResponse * RedshiftClient::describeDataShares(const DescribeDataSharesRequest &request)
+{
+    return qobject_cast<DescribeDataSharesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeDataSharesForConsumerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of datashares where the account identifier being called is a consumer account
+ */
+DescribeDataSharesForConsumerResponse * RedshiftClient::describeDataSharesForConsumer(const DescribeDataSharesForConsumerRequest &request)
+{
+    return qobject_cast<DescribeDataSharesForConsumerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeDataSharesForProducerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of datashares when the account identifier being called is a producer account
+ */
+DescribeDataSharesForProducerResponse * RedshiftClient::describeDataSharesForProducer(const DescribeDataSharesForProducerRequest &request)
+{
+    return qobject_cast<DescribeDataSharesForProducerResponse *>(send(request));
 }
 
 /*!
@@ -1344,7 +1494,7 @@ DescribeEventsResponse * RedshiftClient::describeEvents(const DescribeEventsRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the specified HSM client certificate. If no certificate ID is specified, returns information
- * about all the HSM certificates owned by your AWS customer
+ * about all the HSM certificates owned by your Amazon Web Services
  *
  * account>
  *
@@ -1370,7 +1520,7 @@ DescribeHsmClientCertificatesResponse * RedshiftClient::describeHsmClientCertifi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the specified Amazon Redshift HSM configuration. If no configuration ID is specified, returns
- * information about all the HSM configurations owned by your AWS customer
+ * information about all the HSM configurations owned by your Amazon Web Services
  *
  * account>
  *
@@ -1424,10 +1574,10 @@ DescribeNodeConfigurationOptionsResponse * RedshiftClient::describeNodeConfigura
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of orderable cluster options. Before you create a new cluster you can use this operation to find what
- * options are available, such as the EC2 Availability Zones (AZ) in the specific AWS Region that you can specify, and the
- * node types you can request. The node types differ by available storage, memory, CPU and price. With the cost involved
- * you might want to obtain a list of cluster options in the specific region and specify values when creating a cluster.
- * For more information about managing clusters, go to <a
+ * options are available, such as the EC2 Availability Zones (AZ) in the specific Amazon Web Services Region that you can
+ * specify, and the node types you can request. The node types differ by available storage, memory, CPU and price. With the
+ * cost involved you might want to obtain a list of cluster options in the specific region and specify values when creating
+ * a cluster. For more information about managing clusters, go to <a
  * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  */
@@ -1447,6 +1597,20 @@ DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClust
 DescribePartnersResponse * RedshiftClient::describePartners(const DescribePartnersRequest &request)
 {
     return qobject_cast<DescribePartnersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeReservedNodeExchangeStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such values as in
+ * progress and
+ */
+DescribeReservedNodeExchangeStatusResponse * RedshiftClient::describeReservedNodeExchangeStatus(const DescribeReservedNodeExchangeStatusRequest &request)
+{
+    return qobject_cast<DescribeReservedNodeExchangeStatusResponse *>(send(request));
 }
 
 /*!
@@ -1523,7 +1687,7 @@ DescribeScheduledActionsResponse * RedshiftClient::describeScheduledActions(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of snapshot copy grants owned by the AWS account in the destination
+ * Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination
  *
  * region>
  *
@@ -1560,19 +1724,6 @@ DescribeSnapshotSchedulesResponse * RedshiftClient::describeSnapshotSchedules(co
 DescribeStorageResponse * RedshiftClient::describeStorage(const DescribeStorageRequest &request)
 {
     return qobject_cast<DescribeStorageResponse *>(send(request));
-}
-
-/*!
- * Sends a DescribeStorage request to the RedshiftClient service, and returns a pointer to an
- * DescribeStorageResponse object to track the result.
- *
- * \note The caller is to take responsbility for the resulting pointer.
- *
- * Returns account level backups storage size and provisional
- */
-DescribeStorageResponse * RedshiftClient::describeStorage()
-{
-    return describeStorage(DescribeStorageRequest());
 }
 
 /*!
@@ -1689,13 +1840,26 @@ DisableLoggingResponse * RedshiftClient::disableLogging(const DisableLoggingRequ
  *
  * cluster>
  *
- * If your cluster and its snapshots are encrypted using a customer master key (CMK) from AWS KMS, use
- * <a>DeleteSnapshotCopyGrant</a> to delete the grant that grants Amazon Redshift permission to the CMK in the destination
+ * If your cluster and its snapshots are encrypted using an encrypted symmetric key from Key Management Service, use
+ * <a>DeleteSnapshotCopyGrant</a> to delete the grant that grants Amazon Redshift permission to the key in the destination
  * region.
  */
 DisableSnapshotCopyResponse * RedshiftClient::disableSnapshotCopy(const DisableSnapshotCopyRequest &request)
 {
     return qobject_cast<DisableSnapshotCopyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DisassociateDataShareConsumerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * From a datashare consumer account, remove association for the specified datashare.
+ */
+DisassociateDataShareConsumerResponse * RedshiftClient::disassociateDataShareConsumer(const DisassociateDataShareConsumerRequest &request)
+{
+    return qobject_cast<DisassociateDataShareConsumerResponse *>(send(request));
 }
 
 /*!
@@ -1740,8 +1904,8 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
  *
  * Guide>
  *
- * The AWS Identity and Access Management (IAM)user or role that executes GetClusterCredentials must have an IAM policy
- * attached that allows access to all necessary actions and resources. For more information about permissions, see <a
+ * The Identity and Access Management (IAM) user or role that runs GetClusterCredentials must have an IAM policy attached
+ * that allows access to all necessary actions and resources. For more information about permissions, see <a
  * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources">Resource
  * Policies for GetClusterCredentials</a> in the Amazon Redshift Cluster Management
  *
@@ -1755,7 +1919,7 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
  * In addition, if the <code>AutoCreate</code> parameter is set to <code>True</code>, then the policy must include the
  * <code>redshift:CreateClusterUser</code>
  *
- * privilege>
+ * permission>
  *
  * If the <code>DbName</code> parameter is specified, the IAM policy must allow access to the resource <code>dbname</code>
  * for the specified database name.
@@ -1763,6 +1927,44 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
 GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetClusterCredentialsRequest &request)
 {
     return qobject_cast<GetClusterCredentialsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * GetClusterCredentialsWithIAMResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a database user name and temporary password with temporary authorization to log in to an Amazon Redshift
+ * database. The database user is mapped 1:1 to the source Identity and Access Management (IAM) identity. For more
+ * information about IAM identities, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html">IAM Identities
+ * (users, user groups, and roles)</a> in the Amazon Web Services Identity and Access Management User
+ *
+ * Guide>
+ *
+ * The Identity and Access Management (IAM) identity that runs this operation must have an IAM policy attached that allows
+ * access to all necessary actions and resources. For more information about permissions, see <a
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
+ * identity-based policies (IAM policies)</a> in the Amazon Redshift Cluster Management Guide.
+ */
+GetClusterCredentialsWithIAMResponse * RedshiftClient::getClusterCredentialsWithIAM(const GetClusterCredentialsWithIAMRequest &request)
+{
+    return qobject_cast<GetClusterCredentialsWithIAMResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * GetReservedNodeExchangeConfigurationOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the configuration options for the reserved-node exchange. These options include information about the source
+ * reserved node and target reserved node offering. Details include the node type, the price, the node count, and the
+ * offering
+ */
+GetReservedNodeExchangeConfigurationOptionsResponse * RedshiftClient::getReservedNodeExchangeConfigurationOptions(const GetReservedNodeExchangeConfigurationOptionsRequest &request)
+{
+    return qobject_cast<GetReservedNodeExchangeConfigurationOptionsResponse *>(send(request));
 }
 
 /*!
@@ -1785,11 +1987,25 @@ GetReservedNodeExchangeOfferingsResponse * RedshiftClient::getReservedNodeExchan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies whether a cluster can use AQUA (Advanced Query Accelerator).
+ * This operation is retired. Calling this operation does not change AQUA configuration. Amazon Redshift automatically
+ * determines whether to use AQUA (Advanced Query Accelerator).
  */
 ModifyAquaConfigurationResponse * RedshiftClient::modifyAquaConfiguration(const ModifyAquaConfigurationRequest &request)
 {
     return qobject_cast<ModifyAquaConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyAuthenticationProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies an authentication
+ */
+ModifyAuthenticationProfileResponse * RedshiftClient::modifyAuthenticationProfile(const ModifyAuthenticationProfileRequest &request)
+{
+    return qobject_cast<ModifyAuthenticationProfileResponse *>(send(request));
 }
 
 /*!
@@ -1807,7 +2023,7 @@ ModifyAquaConfigurationResponse * RedshiftClient::modifyAquaConfiguration(const 
  *
  * change>
  *
- * You can add another security or parameter group, or change the master user password. Resetting a cluster password or
+ * You can add another security or parameter group, or change the admin user password. Resetting a cluster password or
  * modifying the security groups associated with a cluster do not need a reboot. However, modifying a parameter group
  * requires a reboot for parameters to take effect. For more information about managing clusters, go to <a
  * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
@@ -1837,11 +2053,14 @@ ModifyClusterDbRevisionResponse * RedshiftClient::modifyClusterDbRevision(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS
+ * Modifies the list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon
+ * Web Services
  *
  * services>
  *
- * A cluster can have up to 10 IAM roles associated at any
+ * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+ * <i>Amazon Redshift Cluster Management
  */
 ModifyClusterIamRolesResponse * RedshiftClient::modifyClusterIamRoles(const ModifyClusterIamRolesRequest &request)
 {
@@ -1867,9 +2086,9 @@ ModifyClusterMaintenanceResponse * RedshiftClient::modifyClusterMaintenance(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the parameters of a parameter
+ * Modifies the parameters of a parameter group. For the parameters parameter, it can't contain ASCII
  *
- * group>
+ * characters>
  *
  * For more information about parameters and parameter groups, go to <a
  * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
@@ -1969,11 +2188,11 @@ ModifyScheduledActionResponse * RedshiftClient::modifyScheduledAction(const Modi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the number of days to retain snapshots in the destination AWS Region after they are copied from the source AWS
- * Region. By default, this operation only changes the retention period of copied automated snapshots. The retention
- * periods for both new and existing copied automated snapshots are updated with the new retention period. You can set the
- * manual option to change only the retention periods of copied manual snapshots. If you set this option, only newly copied
- * manual snapshots have the new retention period.
+ * Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are copied from
+ * the source Amazon Web Services Region. By default, this operation only changes the retention period of copied automated
+ * snapshots. The retention periods for both new and existing copied automated snapshots are updated with the new retention
+ * period. You can set the manual option to change only the retention periods of copied manual snapshots. If you set this
+ * option, only newly copied manual snapshots have the new retention period.
  */
 ModifySnapshotCopyRetentionPeriodResponse * RedshiftClient::modifySnapshotCopyRetentionPeriod(const ModifySnapshotCopyRetentionPeriodRequest &request)
 {
@@ -2056,6 +2275,19 @@ PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffer
 RebootClusterResponse * RedshiftClient::rebootCluster(const RebootClusterRequest &request)
 {
     return qobject_cast<RebootClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * RejectDataShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * From a datashare consumer account, rejects the specified
+ */
+RejectDataShareResponse * RedshiftClient::rejectDataShare(const RejectDataShareRequest &request)
+{
+    return qobject_cast<RejectDataShareResponse *>(send(request));
 }
 
 /*!
@@ -2221,8 +2453,8 @@ RevokeEndpointAccessResponse * RedshiftClient::revokeEndpointAccess(const Revoke
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the ability of the specified AWS customer account to restore the specified snapshot. If the account is currently
- * restoring the snapshot, the restore will run to
+ * Removes the ability of the specified Amazon Web Services account to restore the specified snapshot. If the account is
+ * currently restoring the snapshot, the restore will run to
  *
  * completion>
  *

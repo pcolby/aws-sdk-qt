@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::QueryResponse
- * \brief The QueryResponse class provides an interace for DynamoDB Query responses.
+ * \class QtAws::DynamoDb::QueryResponse
+ * \brief The QueryResponse class provides an interace for DynamoDb Query responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::query
+ * \sa DynamoDbClient::query
  */
 
 /*!
@@ -63,7 +63,7 @@ QueryResponse::QueryResponse(
         const QueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new QueryResponsePrivate(this), parent)
+    : DynamoDbResponse(new QueryResponsePrivate(this), parent)
 {
     setRequest(new QueryRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const QueryRequest * QueryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB Query \a response.
+ * Parses a successful DynamoDb Query \a response.
  */
 void QueryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void QueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::QueryResponsePrivate
+ * \class QtAws::DynamoDb::QueryResponsePrivate
  * \brief The QueryResponsePrivate class provides private implementation for QueryResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a QueryResponsePrivate object with public implementation \a q.
  */
 QueryResponsePrivate::QueryResponsePrivate(
-    QueryResponse * const q) : DynamoDBResponsePrivate(q)
+    QueryResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB Query response element from \a xml.
+ * Parses a DynamoDb Query response element from \a xml.
  */
 void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

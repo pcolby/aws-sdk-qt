@@ -24,14 +24,14 @@
 #include "deletelunaclientrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class DeleteLunaClientRequest;
 
-class DeleteLunaClientRequestPrivate : public CloudHSMRequestPrivate {
+class DeleteLunaClientRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    DeleteLunaClientRequestPrivate(const CloudHSMRequest::Action action,
+    DeleteLunaClientRequestPrivate(const CloudHsmRequest::Action action,
                                    DeleteLunaClientRequest * const q);
     DeleteLunaClientRequestPrivate(const DeleteLunaClientRequestPrivate &other,
                                    DeleteLunaClientRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

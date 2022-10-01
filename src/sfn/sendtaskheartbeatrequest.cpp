@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SendTaskHeartbeatRequest
- * \brief The SendTaskHeartbeatRequest class provides an interface for SFN SendTaskHeartbeat requests.
+ * \class QtAws::Sfn::SendTaskHeartbeatRequest
+ * \brief The SendTaskHeartbeatRequest class provides an interface for Sfn SendTaskHeartbeat requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SFN::SendTaskHeartbeatRequestPrivate
+ * \class QtAws::Sfn::SendTaskHeartbeatRequestPrivate
  * \brief The SendTaskHeartbeatRequestPrivate class provides private implementation for SendTaskHeartbeatRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

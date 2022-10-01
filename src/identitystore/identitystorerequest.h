@@ -39,10 +39,25 @@ class QTAWSIDENTITYSTORE_EXPORT IdentityStoreRequest : public QtAws::Core::AwsAb
 public:
     /// Actions supported by IdentityStore.
     enum Action {
+        CreateGroupAction,
+        CreateGroupMembershipAction,
+        CreateUserAction,
+        DeleteGroupAction,
+        DeleteGroupMembershipAction,
+        DeleteUserAction,
         DescribeGroupAction,
+        DescribeGroupMembershipAction,
         DescribeUserAction,
+        GetGroupIdAction,
+        GetGroupMembershipIdAction,
+        GetUserIdAction,
+        IsMemberInGroupsAction,
+        ListGroupMembershipsAction,
+        ListGroupMembershipsForMemberAction,
         ListGroupsAction,
         ListUsersAction,
+        UpdateGroupAction,
+        UpdateUserAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

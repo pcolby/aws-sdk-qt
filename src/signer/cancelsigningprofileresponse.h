@@ -24,11 +24,11 @@
 #include "cancelsigningprofilerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class CancelSigningProfileResponsePrivate;
 
-class QTAWSSIGNER_EXPORT CancelSigningProfileResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT CancelSigningProfileResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

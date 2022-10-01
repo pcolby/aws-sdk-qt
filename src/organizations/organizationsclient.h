@@ -36,6 +36,8 @@ class AttachPolicyRequest;
 class AttachPolicyResponse;
 class CancelHandshakeRequest;
 class CancelHandshakeResponse;
+class CloseAccountRequest;
+class CloseAccountResponse;
 class CreateAccountRequest;
 class CreateAccountResponse;
 class CreateGovCloudAccountRequest;
@@ -152,6 +154,7 @@ public slots:
     AcceptHandshakeResponse * acceptHandshake(const AcceptHandshakeRequest &request);
     AttachPolicyResponse * attachPolicy(const AttachPolicyRequest &request);
     CancelHandshakeResponse * cancelHandshake(const CancelHandshakeRequest &request);
+    CloseAccountResponse * closeAccount(const CloseAccountRequest &request);
     CreateAccountResponse * createAccount(const CreateAccountRequest &request);
     CreateGovCloudAccountResponse * createGovCloudAccount(const CreateGovCloudAccountRequest &request);
     CreateOrganizationResponse * createOrganization(const CreateOrganizationRequest &request);
@@ -159,7 +162,6 @@ public slots:
     CreatePolicyResponse * createPolicy(const CreatePolicyRequest &request);
     DeclineHandshakeResponse * declineHandshake(const DeclineHandshakeRequest &request);
     DeleteOrganizationResponse * deleteOrganization(const DeleteOrganizationRequest &request);
-    DeleteOrganizationResponse * deleteOrganization();
     DeleteOrganizationalUnitResponse * deleteOrganizationalUnit(const DeleteOrganizationalUnitRequest &request);
     DeletePolicyResponse * deletePolicy(const DeletePolicyRequest &request);
     DeregisterDelegatedAdministratorResponse * deregisterDelegatedAdministrator(const DeregisterDelegatedAdministratorRequest &request);
@@ -168,7 +170,6 @@ public slots:
     DescribeEffectivePolicyResponse * describeEffectivePolicy(const DescribeEffectivePolicyRequest &request);
     DescribeHandshakeResponse * describeHandshake(const DescribeHandshakeRequest &request);
     DescribeOrganizationResponse * describeOrganization(const DescribeOrganizationRequest &request);
-    DescribeOrganizationResponse * describeOrganization();
     DescribeOrganizationalUnitResponse * describeOrganizationalUnit(const DescribeOrganizationalUnitRequest &request);
     DescribePolicyResponse * describePolicy(const DescribePolicyRequest &request);
     DetachPolicyResponse * detachPolicy(const DetachPolicyRequest &request);
@@ -179,7 +180,6 @@ public slots:
     EnablePolicyTypeResponse * enablePolicyType(const EnablePolicyTypeRequest &request);
     InviteAccountToOrganizationResponse * inviteAccountToOrganization(const InviteAccountToOrganizationRequest &request);
     LeaveOrganizationResponse * leaveOrganization(const LeaveOrganizationRequest &request);
-    LeaveOrganizationResponse * leaveOrganization();
     ListAWSServiceAccessForOrganizationResponse * listAWSServiceAccessForOrganization(const ListAWSServiceAccessForOrganizationRequest &request);
     ListAccountsResponse * listAccounts(const ListAccountsRequest &request);
     ListAccountsForParentResponse * listAccountsForParent(const ListAccountsForParentRequest &request);

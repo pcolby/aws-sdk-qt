@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::ListStreamsResponse
- * \brief The ListStreamsResponse class provides an interace for DynamoDBStreams ListStreams responses.
+ * \class QtAws::DynamoDbStreams::ListStreamsResponse
+ * \brief The ListStreamsResponse class provides an interace for DynamoDbStreams ListStreams responses.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -40,7 +40,7 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::listStreams
+ * \sa DynamoDbStreamsClient::listStreams
  */
 
 /*!
@@ -50,7 +50,7 @@ ListStreamsResponse::ListStreamsResponse(
         const ListStreamsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBStreamsResponse(new ListStreamsResponsePrivate(this), parent)
+    : DynamoDbStreamsResponse(new ListStreamsResponsePrivate(this), parent)
 {
     setRequest(new ListStreamsRequest(request));
     setReply(reply);
@@ -67,7 +67,7 @@ const ListStreamsRequest * ListStreamsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDBStreams ListStreams \a response.
+ * Parses a successful DynamoDbStreams ListStreams \a response.
  */
 void ListStreamsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,24 +77,24 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::ListStreamsResponsePrivate
+ * \class QtAws::DynamoDbStreams::ListStreamsResponsePrivate
  * \brief The ListStreamsResponsePrivate class provides private implementation for ListStreamsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
  * Constructs a ListStreamsResponsePrivate object with public implementation \a q.
  */
 ListStreamsResponsePrivate::ListStreamsResponsePrivate(
-    ListStreamsResponse * const q) : DynamoDBStreamsResponsePrivate(q)
+    ListStreamsResponse * const q) : DynamoDbStreamsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDBStreams ListStreams response element from \a xml.
+ * Parses a DynamoDbStreams ListStreams response element from \a xml.
  */
 void ListStreamsResponsePrivate::parseListStreamsResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void ListStreamsResponsePrivate::parseListStreamsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

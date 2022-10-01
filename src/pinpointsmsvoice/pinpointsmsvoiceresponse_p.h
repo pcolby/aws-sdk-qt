@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceResponse;
+class PinpointSmsVoiceResponse;
 
-class PinpointSMSVoiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PinpointSmsVoiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit PinpointSMSVoiceResponsePrivate(PinpointSMSVoiceResponse * const q);
+    explicit PinpointSmsVoiceResponsePrivate(PinpointSmsVoiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(PinpointSMSVoiceResponse)
-    Q_DISABLE_COPY(PinpointSMSVoiceResponsePrivate)
+    Q_DECLARE_PUBLIC(PinpointSmsVoiceResponse)
+    Q_DISABLE_COPY(PinpointSmsVoiceResponsePrivate)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

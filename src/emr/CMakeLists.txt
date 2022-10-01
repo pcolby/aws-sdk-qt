@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSEMR_LIBRARY)
 
 add_library(QtAwsEmr
+  qtawsemrglobal.h
+  emrclient.h
+  emrclient_p.h
+  emrrequest.h
+  emrrequest_p.h
+  emrresponse.h
+  emrresponse_p.h
   addinstancefleetrequest.h
   addinstancefleetrequest_p.h
   addinstancefleetresponse.h
@@ -57,6 +64,10 @@ add_library(QtAwsEmr
   describenotebookexecutionrequest_p.h
   describenotebookexecutionresponse.h
   describenotebookexecutionresponse_p.h
+  describereleaselabelrequest.h
+  describereleaselabelrequest_p.h
+  describereleaselabelresponse.h
+  describereleaselabelresponse_p.h
   describesecurityconfigurationrequest.h
   describesecurityconfigurationrequest_p.h
   describesecurityconfigurationresponse.h
@@ -69,12 +80,10 @@ add_library(QtAwsEmr
   describestudiorequest_p.h
   describestudioresponse.h
   describestudioresponse_p.h
-  emrclient.h
-  emrclient_p.h
-  emrrequest.h
-  emrrequest_p.h
-  emrresponse.h
-  emrresponse_p.h
+  getautoterminationpolicyrequest.h
+  getautoterminationpolicyrequest_p.h
+  getautoterminationpolicyresponse.h
+  getautoterminationpolicyresponse_p.h
   getblockpublicaccessconfigurationrequest.h
   getblockpublicaccessconfigurationrequest_p.h
   getblockpublicaccessconfigurationresponse.h
@@ -111,6 +120,10 @@ add_library(QtAwsEmr
   listnotebookexecutionsrequest_p.h
   listnotebookexecutionsresponse.h
   listnotebookexecutionsresponse_p.h
+  listreleaselabelsrequest.h
+  listreleaselabelsrequest_p.h
+  listreleaselabelsresponse.h
+  listreleaselabelsresponse_p.h
   listsecurityconfigurationsrequest.h
   listsecurityconfigurationsrequest_p.h
   listsecurityconfigurationsresponse.h
@@ -143,6 +156,10 @@ add_library(QtAwsEmr
   putautoscalingpolicyrequest_p.h
   putautoscalingpolicyresponse.h
   putautoscalingpolicyresponse_p.h
+  putautoterminationpolicyrequest.h
+  putautoterminationpolicyrequest_p.h
+  putautoterminationpolicyresponse.h
+  putautoterminationpolicyresponse_p.h
   putblockpublicaccessconfigurationrequest.h
   putblockpublicaccessconfigurationrequest_p.h
   putblockpublicaccessconfigurationresponse.h
@@ -151,11 +168,14 @@ add_library(QtAwsEmr
   putmanagedscalingpolicyrequest_p.h
   putmanagedscalingpolicyresponse.h
   putmanagedscalingpolicyresponse_p.h
-  qtawsemrglobal.h
   removeautoscalingpolicyrequest.h
   removeautoscalingpolicyrequest_p.h
   removeautoscalingpolicyresponse.h
   removeautoscalingpolicyresponse_p.h
+  removeautoterminationpolicyrequest.h
+  removeautoterminationpolicyrequest_p.h
+  removeautoterminationpolicyresponse.h
+  removeautoterminationpolicyresponse_p.h
   removemanagedscalingpolicyrequest.h
   removemanagedscalingpolicyrequest_p.h
   removemanagedscalingpolicyresponse.h
@@ -196,6 +216,9 @@ add_library(QtAwsEmr
   updatestudiosessionmappingrequest_p.h
   updatestudiosessionmappingresponse.h
   updatestudiosessionmappingresponse_p.h
+  emrclient.cpp
+  emrrequest.cpp
+  emrresponse.cpp
   addinstancefleetrequest.cpp
   addinstancefleetresponse.cpp
   addinstancegroupsrequest.cpp
@@ -224,15 +247,16 @@ add_library(QtAwsEmr
   describejobflowsresponse.cpp
   describenotebookexecutionrequest.cpp
   describenotebookexecutionresponse.cpp
+  describereleaselabelrequest.cpp
+  describereleaselabelresponse.cpp
   describesecurityconfigurationrequest.cpp
   describesecurityconfigurationresponse.cpp
   describesteprequest.cpp
   describestepresponse.cpp
   describestudiorequest.cpp
   describestudioresponse.cpp
-  emrclient.cpp
-  emrrequest.cpp
-  emrresponse.cpp
+  getautoterminationpolicyrequest.cpp
+  getautoterminationpolicyresponse.cpp
   getblockpublicaccessconfigurationrequest.cpp
   getblockpublicaccessconfigurationresponse.cpp
   getmanagedscalingpolicyrequest.cpp
@@ -251,6 +275,8 @@ add_library(QtAwsEmr
   listinstancesresponse.cpp
   listnotebookexecutionsrequest.cpp
   listnotebookexecutionsresponse.cpp
+  listreleaselabelsrequest.cpp
+  listreleaselabelsresponse.cpp
   listsecurityconfigurationsrequest.cpp
   listsecurityconfigurationsresponse.cpp
   liststepsrequest.cpp
@@ -267,12 +293,16 @@ add_library(QtAwsEmr
   modifyinstancegroupsresponse.cpp
   putautoscalingpolicyrequest.cpp
   putautoscalingpolicyresponse.cpp
+  putautoterminationpolicyrequest.cpp
+  putautoterminationpolicyresponse.cpp
   putblockpublicaccessconfigurationrequest.cpp
   putblockpublicaccessconfigurationresponse.cpp
   putmanagedscalingpolicyrequest.cpp
   putmanagedscalingpolicyresponse.cpp
   removeautoscalingpolicyrequest.cpp
   removeautoscalingpolicyresponse.cpp
+  removeautoterminationpolicyrequest.cpp
+  removeautoterminationpolicyresponse.cpp
   removemanagedscalingpolicyrequest.cpp
   removemanagedscalingpolicyresponse.cpp
   removetagsrequest.cpp

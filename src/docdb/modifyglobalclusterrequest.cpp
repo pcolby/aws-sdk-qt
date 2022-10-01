@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyGlobalClusterRequest
- * \brief The ModifyGlobalClusterRequest class provides an interface for DocDB ModifyGlobalCluster requests.
+ * \class QtAws::DocDb::ModifyGlobalClusterRequest
+ * \brief The ModifyGlobalClusterRequest class provides an interface for DocDb ModifyGlobalCluster requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyGlobalCluster
+ * \sa DocDbClient::modifyGlobalCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyGlobalClusterRequest::ModifyGlobalClusterRequest(const ModifyGlobalClusterRequest &other)
-    : DocDBRequest(new ModifyGlobalClusterRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ModifyGlobalClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ModifyGlobalClusterRequest::ModifyGlobalClusterRequest(const ModifyGlobalCluster
  * Constructs a ModifyGlobalClusterRequest object.
  */
 ModifyGlobalClusterRequest::ModifyGlobalClusterRequest()
-    : DocDBRequest(new ModifyGlobalClusterRequestPrivate(DocDBRequest::ModifyGlobalClusterAction, this))
+    : DocDbRequest(new ModifyGlobalClusterRequestPrivate(DocDbRequest::ModifyGlobalClusterAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ModifyGlobalClusterRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::ModifyGlobalClusterRequestPrivate
+ * \class QtAws::DocDb::ModifyGlobalClusterRequestPrivate
  * \brief The ModifyGlobalClusterRequestPrivate class provides private implementation for ModifyGlobalClusterRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ModifyGlobalClusterRequestPrivate object for DocDB \a action,
+ * Constructs a ModifyGlobalClusterRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ModifyGlobalClusterRequestPrivate::ModifyGlobalClusterRequestPrivate(
-    const DocDBRequest::Action action, ModifyGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ModifyGlobalClusterRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ModifyGlobalClusterRequestPrivate::ModifyGlobalClusterRequestPrivate(
  */
 ModifyGlobalClusterRequestPrivate::ModifyGlobalClusterRequestPrivate(
     const ModifyGlobalClusterRequestPrivate &other, ModifyGlobalClusterRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

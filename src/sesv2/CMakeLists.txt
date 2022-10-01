@@ -1,22 +1,29 @@
 add_compile_definitions(QTAWSSESV2_LIBRARY)
 
-add_library(QtAwsSesv2
-  createconfigurationseteventdestinationrequest.h
-  createconfigurationseteventdestinationrequest_p.h
-  createconfigurationseteventdestinationresponse.h
-  createconfigurationseteventdestinationresponse_p.h
+add_library(QtAwsSESv2
+  qtawssesv2global.h
+  sesv2client.h
+  sesv2client_p.h
+  sesv2request.h
+  sesv2request_p.h
+  sesv2response.h
+  sesv2response_p.h
   createconfigurationsetrequest.h
   createconfigurationsetrequest_p.h
   createconfigurationsetresponse.h
   createconfigurationsetresponse_p.h
-  createcontactlistrequest.h
-  createcontactlistrequest_p.h
-  createcontactlistresponse.h
-  createcontactlistresponse_p.h
+  createconfigurationseteventdestinationrequest.h
+  createconfigurationseteventdestinationrequest_p.h
+  createconfigurationseteventdestinationresponse.h
+  createconfigurationseteventdestinationresponse_p.h
   createcontactrequest.h
   createcontactrequest_p.h
   createcontactresponse.h
   createcontactresponse_p.h
+  createcontactlistrequest.h
+  createcontactlistrequest_p.h
+  createcontactlistresponse.h
+  createcontactlistresponse_p.h
   createcustomverificationemailtemplaterequest.h
   createcustomverificationemailtemplaterequest_p.h
   createcustomverificationemailtemplateresponse.h
@@ -29,14 +36,14 @@ add_library(QtAwsSesv2
   createdeliverabilitytestreportrequest_p.h
   createdeliverabilitytestreportresponse.h
   createdeliverabilitytestreportresponse_p.h
-  createemailidentitypolicyrequest.h
-  createemailidentitypolicyrequest_p.h
-  createemailidentitypolicyresponse.h
-  createemailidentitypolicyresponse_p.h
   createemailidentityrequest.h
   createemailidentityrequest_p.h
   createemailidentityresponse.h
   createemailidentityresponse_p.h
+  createemailidentitypolicyrequest.h
+  createemailidentitypolicyrequest_p.h
+  createemailidentitypolicyresponse.h
+  createemailidentitypolicyresponse_p.h
   createemailtemplaterequest.h
   createemailtemplaterequest_p.h
   createemailtemplateresponse.h
@@ -45,22 +52,22 @@ add_library(QtAwsSesv2
   createimportjobrequest_p.h
   createimportjobresponse.h
   createimportjobresponse_p.h
-  deleteconfigurationseteventdestinationrequest.h
-  deleteconfigurationseteventdestinationrequest_p.h
-  deleteconfigurationseteventdestinationresponse.h
-  deleteconfigurationseteventdestinationresponse_p.h
   deleteconfigurationsetrequest.h
   deleteconfigurationsetrequest_p.h
   deleteconfigurationsetresponse.h
   deleteconfigurationsetresponse_p.h
-  deletecontactlistrequest.h
-  deletecontactlistrequest_p.h
-  deletecontactlistresponse.h
-  deletecontactlistresponse_p.h
+  deleteconfigurationseteventdestinationrequest.h
+  deleteconfigurationseteventdestinationrequest_p.h
+  deleteconfigurationseteventdestinationresponse.h
+  deleteconfigurationseteventdestinationresponse_p.h
   deletecontactrequest.h
   deletecontactrequest_p.h
   deletecontactresponse.h
   deletecontactresponse_p.h
+  deletecontactlistrequest.h
+  deletecontactlistrequest_p.h
+  deletecontactlistresponse.h
+  deletecontactlistresponse_p.h
   deletecustomverificationemailtemplaterequest.h
   deletecustomverificationemailtemplaterequest_p.h
   deletecustomverificationemailtemplateresponse.h
@@ -69,14 +76,14 @@ add_library(QtAwsSesv2
   deletededicatedippoolrequest_p.h
   deletededicatedippoolresponse.h
   deletededicatedippoolresponse_p.h
-  deleteemailidentitypolicyrequest.h
-  deleteemailidentitypolicyrequest_p.h
-  deleteemailidentitypolicyresponse.h
-  deleteemailidentitypolicyresponse_p.h
   deleteemailidentityrequest.h
   deleteemailidentityrequest_p.h
   deleteemailidentityresponse.h
   deleteemailidentityresponse_p.h
+  deleteemailidentitypolicyrequest.h
+  deleteemailidentitypolicyrequest_p.h
+  deleteemailidentitypolicyresponse.h
+  deleteemailidentitypolicyresponse_p.h
   deleteemailtemplaterequest.h
   deleteemailtemplaterequest_p.h
   deleteemailtemplateresponse.h
@@ -93,22 +100,22 @@ add_library(QtAwsSesv2
   getblacklistreportsrequest_p.h
   getblacklistreportsresponse.h
   getblacklistreportsresponse_p.h
-  getconfigurationseteventdestinationsrequest.h
-  getconfigurationseteventdestinationsrequest_p.h
-  getconfigurationseteventdestinationsresponse.h
-  getconfigurationseteventdestinationsresponse_p.h
   getconfigurationsetrequest.h
   getconfigurationsetrequest_p.h
   getconfigurationsetresponse.h
   getconfigurationsetresponse_p.h
-  getcontactlistrequest.h
-  getcontactlistrequest_p.h
-  getcontactlistresponse.h
-  getcontactlistresponse_p.h
+  getconfigurationseteventdestinationsrequest.h
+  getconfigurationseteventdestinationsrequest_p.h
+  getconfigurationseteventdestinationsresponse.h
+  getconfigurationseteventdestinationsresponse_p.h
   getcontactrequest.h
   getcontactrequest_p.h
   getcontactresponse.h
   getcontactresponse_p.h
+  getcontactlistrequest.h
+  getcontactlistrequest_p.h
+  getcontactlistresponse.h
+  getcontactlistresponse_p.h
   getcustomverificationemailtemplaterequest.h
   getcustomverificationemailtemplaterequest_p.h
   getcustomverificationemailtemplateresponse.h
@@ -137,14 +144,14 @@ add_library(QtAwsSesv2
   getdomainstatisticsreportrequest_p.h
   getdomainstatisticsreportresponse.h
   getdomainstatisticsreportresponse_p.h
-  getemailidentitypoliciesrequest.h
-  getemailidentitypoliciesrequest_p.h
-  getemailidentitypoliciesresponse.h
-  getemailidentitypoliciesresponse_p.h
   getemailidentityrequest.h
   getemailidentityrequest_p.h
   getemailidentityresponse.h
   getemailidentityresponse_p.h
+  getemailidentitypoliciesrequest.h
+  getemailidentitypoliciesrequest_p.h
+  getemailidentitypoliciesresponse.h
+  getemailidentitypoliciesresponse_p.h
   getemailtemplaterequest.h
   getemailtemplaterequest_p.h
   getemailtemplateresponse.h
@@ -277,7 +284,6 @@ add_library(QtAwsSesv2
   putsuppresseddestinationrequest_p.h
   putsuppresseddestinationresponse.h
   putsuppresseddestinationresponse_p.h
-  qtawssesv2global.h
   sendbulkemailrequest.h
   sendbulkemailrequest_p.h
   sendbulkemailresponse.h
@@ -290,12 +296,6 @@ add_library(QtAwsSesv2
   sendemailrequest_p.h
   sendemailresponse.h
   sendemailresponse_p.h
-  sesv2client.h
-  sesv2client_p.h
-  sesv2request.h
-  sesv2request_p.h
-  sesv2response.h
-  sesv2response_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -312,14 +312,14 @@ add_library(QtAwsSesv2
   updateconfigurationseteventdestinationrequest_p.h
   updateconfigurationseteventdestinationresponse.h
   updateconfigurationseteventdestinationresponse_p.h
-  updatecontactlistrequest.h
-  updatecontactlistrequest_p.h
-  updatecontactlistresponse.h
-  updatecontactlistresponse_p.h
   updatecontactrequest.h
   updatecontactrequest_p.h
   updatecontactresponse.h
   updatecontactresponse_p.h
+  updatecontactlistrequest.h
+  updatecontactlistrequest_p.h
+  updatecontactlistresponse.h
+  updatecontactlistresponse_p.h
   updatecustomverificationemailtemplaterequest.h
   updatecustomverificationemailtemplaterequest_p.h
   updatecustomverificationemailtemplateresponse.h
@@ -332,44 +332,47 @@ add_library(QtAwsSesv2
   updateemailtemplaterequest_p.h
   updateemailtemplateresponse.h
   updateemailtemplateresponse_p.h
-  createconfigurationseteventdestinationrequest.cpp
-  createconfigurationseteventdestinationresponse.cpp
+  sesv2client.cpp
+  sesv2request.cpp
+  sesv2response.cpp
   createconfigurationsetrequest.cpp
   createconfigurationsetresponse.cpp
-  createcontactlistrequest.cpp
-  createcontactlistresponse.cpp
+  createconfigurationseteventdestinationrequest.cpp
+  createconfigurationseteventdestinationresponse.cpp
   createcontactrequest.cpp
   createcontactresponse.cpp
+  createcontactlistrequest.cpp
+  createcontactlistresponse.cpp
   createcustomverificationemailtemplaterequest.cpp
   createcustomverificationemailtemplateresponse.cpp
   creatededicatedippoolrequest.cpp
   creatededicatedippoolresponse.cpp
   createdeliverabilitytestreportrequest.cpp
   createdeliverabilitytestreportresponse.cpp
-  createemailidentitypolicyrequest.cpp
-  createemailidentitypolicyresponse.cpp
   createemailidentityrequest.cpp
   createemailidentityresponse.cpp
+  createemailidentitypolicyrequest.cpp
+  createemailidentitypolicyresponse.cpp
   createemailtemplaterequest.cpp
   createemailtemplateresponse.cpp
   createimportjobrequest.cpp
   createimportjobresponse.cpp
-  deleteconfigurationseteventdestinationrequest.cpp
-  deleteconfigurationseteventdestinationresponse.cpp
   deleteconfigurationsetrequest.cpp
   deleteconfigurationsetresponse.cpp
-  deletecontactlistrequest.cpp
-  deletecontactlistresponse.cpp
+  deleteconfigurationseteventdestinationrequest.cpp
+  deleteconfigurationseteventdestinationresponse.cpp
   deletecontactrequest.cpp
   deletecontactresponse.cpp
+  deletecontactlistrequest.cpp
+  deletecontactlistresponse.cpp
   deletecustomverificationemailtemplaterequest.cpp
   deletecustomverificationemailtemplateresponse.cpp
   deletededicatedippoolrequest.cpp
   deletededicatedippoolresponse.cpp
-  deleteemailidentitypolicyrequest.cpp
-  deleteemailidentitypolicyresponse.cpp
   deleteemailidentityrequest.cpp
   deleteemailidentityresponse.cpp
+  deleteemailidentitypolicyrequest.cpp
+  deleteemailidentitypolicyresponse.cpp
   deleteemailtemplaterequest.cpp
   deleteemailtemplateresponse.cpp
   deletesuppresseddestinationrequest.cpp
@@ -378,14 +381,14 @@ add_library(QtAwsSesv2
   getaccountresponse.cpp
   getblacklistreportsrequest.cpp
   getblacklistreportsresponse.cpp
-  getconfigurationseteventdestinationsrequest.cpp
-  getconfigurationseteventdestinationsresponse.cpp
   getconfigurationsetrequest.cpp
   getconfigurationsetresponse.cpp
-  getcontactlistrequest.cpp
-  getcontactlistresponse.cpp
+  getconfigurationseteventdestinationsrequest.cpp
+  getconfigurationseteventdestinationsresponse.cpp
   getcontactrequest.cpp
   getcontactresponse.cpp
+  getcontactlistrequest.cpp
+  getcontactlistresponse.cpp
   getcustomverificationemailtemplaterequest.cpp
   getcustomverificationemailtemplateresponse.cpp
   getdedicatediprequest.cpp
@@ -400,10 +403,10 @@ add_library(QtAwsSesv2
   getdomaindeliverabilitycampaignresponse.cpp
   getdomainstatisticsreportrequest.cpp
   getdomainstatisticsreportresponse.cpp
-  getemailidentitypoliciesrequest.cpp
-  getemailidentitypoliciesresponse.cpp
   getemailidentityrequest.cpp
   getemailidentityresponse.cpp
+  getemailidentitypoliciesrequest.cpp
+  getemailidentitypoliciesresponse.cpp
   getemailtemplaterequest.cpp
   getemailtemplateresponse.cpp
   getimportjobrequest.cpp
@@ -476,9 +479,6 @@ add_library(QtAwsSesv2
   sendcustomverificationemailresponse.cpp
   sendemailrequest.cpp
   sendemailresponse.cpp
-  sesv2client.cpp
-  sesv2request.cpp
-  sesv2response.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   testrenderemailtemplaterequest.cpp
@@ -487,10 +487,10 @@ add_library(QtAwsSesv2
   untagresourceresponse.cpp
   updateconfigurationseteventdestinationrequest.cpp
   updateconfigurationseteventdestinationresponse.cpp
-  updatecontactlistrequest.cpp
-  updatecontactlistresponse.cpp
   updatecontactrequest.cpp
   updatecontactresponse.cpp
+  updatecontactlistrequest.cpp
+  updatecontactlistresponse.cpp
   updatecustomverificationemailtemplaterequest.cpp
   updatecustomverificationemailtemplateresponse.cpp
   updateemailidentitypolicyrequest.cpp
@@ -498,7 +498,7 @@ add_library(QtAwsSesv2
   updateemailtemplaterequest.cpp
   updateemailtemplateresponse.cpp)
 
-target_link_libraries(QtAwsSesv2
+target_link_libraries(QtAwsSESv2
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

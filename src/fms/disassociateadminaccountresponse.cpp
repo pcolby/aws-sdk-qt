@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::DisassociateAdminAccountResponse
- * \brief The DisassociateAdminAccountResponse class provides an interace for FMS DisassociateAdminAccount responses.
+ * \class QtAws::Fms::DisassociateAdminAccountResponse
+ * \brief The DisassociateAdminAccountResponse class provides an interace for Fms DisassociateAdminAccount responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::reques
 
 /*!
  * \reimp
- * Parses a successful FMS DisassociateAdminAccount \a response.
+ * Parses a successful Fms DisassociateAdminAccount \a response.
  */
 void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::DisassociateAdminAccountResponsePrivate
+ * \class QtAws::Fms::DisassociateAdminAccountResponsePrivate
  * \brief The DisassociateAdminAccountResponsePrivate class provides private implementation for DisassociateAdminAccountResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate
 }
 
 /*!
- * Parses a FMS DisassociateAdminAccount response element from \a xml.
+ * Parses a Fms DisassociateAdminAccount response element from \a xml.
  */
 void DisassociateAdminAccountResponsePrivate::parseDisassociateAdminAccountResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void DisassociateAdminAccountResponsePrivate::parseDisassociateAdminAccountRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

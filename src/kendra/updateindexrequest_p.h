@@ -24,14 +24,14 @@
 #include "updateindexrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class UpdateIndexRequest;
 
-class UpdateIndexRequestPrivate : public kendraRequestPrivate {
+class UpdateIndexRequestPrivate : public KendraRequestPrivate {
 
 public:
-    UpdateIndexRequestPrivate(const kendraRequest::Action action,
+    UpdateIndexRequestPrivate(const KendraRequest::Action action,
                                    UpdateIndexRequest * const q);
     UpdateIndexRequestPrivate(const UpdateIndexRequestPrivate &other,
                                    UpdateIndexRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

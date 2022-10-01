@@ -266,7 +266,7 @@ QNetworkRequest ManagedBlockchainRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 ManagedBlockchainRequestPrivate::ManagedBlockchainRequestPrivate(const ManagedBlockchainRequest::Action action, ManagedBlockchainRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-24"))
 {
 
 }

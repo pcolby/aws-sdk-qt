@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::CreateBackupResponse
- * \brief The CreateBackupResponse class provides an interace for OpsWorksCM CreateBackup responses.
+ * \class QtAws::OpsWorksCm::CreateBackupResponse
+ * \brief The CreateBackupResponse class provides an interace for OpsWorksCm CreateBackup responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::createBackup
+ * \sa OpsWorksCmClient::createBackup
  */
 
 /*!
@@ -123,7 +123,7 @@ CreateBackupResponse::CreateBackupResponse(
         const CreateBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new CreateBackupResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new CreateBackupResponsePrivate(this), parent)
 {
     setRequest(new CreateBackupRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const CreateBackupRequest * CreateBackupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM CreateBackup \a response.
+ * Parses a successful OpsWorksCm CreateBackup \a response.
  */
 void CreateBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void CreateBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::CreateBackupResponsePrivate
+ * \class QtAws::OpsWorksCm::CreateBackupResponsePrivate
  * \brief The CreateBackupResponsePrivate class provides private implementation for CreateBackupResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a CreateBackupResponsePrivate object with public implementation \a q.
  */
 CreateBackupResponsePrivate::CreateBackupResponsePrivate(
-    CreateBackupResponse * const q) : OpsWorksCMResponsePrivate(q)
+    CreateBackupResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM CreateBackup response element from \a xml.
+ * Parses a OpsWorksCm CreateBackup response element from \a xml.
  */
 void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

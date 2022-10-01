@@ -31,6 +31,8 @@
 #include "listtunnelsresponse.h"
 #include "opentunnelrequest.h"
 #include "opentunnelresponse.h"
+#include "rotatetunnelaccesstokenrequest.h"
+#include "rotatetunnelaccesstokenresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -58,14 +60,14 @@ namespace IoTSecureTunneling {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTSecureTunneling
  *
- *  <fullname>AWS IoT Secure Tunneling</fullname>
+ *  <fullname>IoT Secure Tunneling</fullname>
  * 
- *  AWS IoT Secure Tunnling enables you to create remote connections to devices deployed in the
+ *  IoT Secure Tunneling creates remote connections to devices deployed in the
  * 
  *  field>
  * 
- *  For more information about how AWS IoT Secure Tunneling works, see <a
- *  href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">AWS IoT Secure
+ *  For more information about how IoT Secure Tunneling works, see <a
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">IoT Secure
  */
 
 /*!
@@ -90,7 +92,7 @@ IoTSecureTunnelingClient::IoTSecureTunnelingClient(
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AWS IoT Secure Tunneling");
-    d->serviceName = QStringLiteral("IoTSecuredTunneling");
+    d->serviceName = QStringLiteral("iotsecuredtunneling");
 }
 
 /*!
@@ -118,7 +120,7 @@ IoTSecureTunnelingClient::IoTSecureTunnelingClient(
     d->endpointPrefix = QStringLiteral("api.tunneling.iot");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS IoT Secure Tunneling");
-    d->serviceName = QStringLiteral("IoTSecuredTunneling");
+    d->serviceName = QStringLiteral("iotsecuredtunneling");
 }
 
 /*!
@@ -129,6 +131,11 @@ IoTSecureTunnelingClient::IoTSecureTunnelingClient(
  *
  * Closes a tunnel identified by the unique tunnel id. When a <code>CloseTunnel</code> request is received, we close the
  * WebSocket connections between the client and proxy server so no data can be
+ *
+ * transmitted>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CloseTunnel</a>
  */
 CloseTunnelResponse * IoTSecureTunnelingClient::closeTunnel(const CloseTunnelRequest &request)
 {
@@ -142,6 +149,11 @@ CloseTunnelResponse * IoTSecureTunnelingClient::closeTunnel(const CloseTunnelReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a tunnel identified by the unique tunnel
+ *
+ * id>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DescribeTunnel</a>
  */
 DescribeTunnelResponse * IoTSecureTunnelingClient::describeTunnel(const DescribeTunnelRequest &request)
 {
@@ -167,8 +179,13 @@ ListTagsForResourceResponse * IoTSecureTunnelingClient::listTagsForResource(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List all tunnels for an AWS account. Tunnels are listed by creation time in descending order, newer tunnels will be
- * listed before older
+ * List all tunnels for an Amazon Web Services account. Tunnels are listed by creation time in descending order, newer
+ * tunnels will be listed before older
+ *
+ * tunnels>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTunnels</a>
  */
 ListTunnelsResponse * IoTSecureTunnelingClient::listTunnels(const ListTunnelsRequest &request)
 {
@@ -181,12 +198,42 @@ ListTunnelsResponse * IoTSecureTunnelingClient::listTunnels(const ListTunnelsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the AWS IoT Secure Tunneling
+ * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the IoT Secure Tunneling
  * proxy
+ *
+ * server>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">OpenTunnel</a>
  */
 OpenTunnelResponse * IoTSecureTunnelingClient::openTunnel(const OpenTunnelRequest &request)
 {
     return qobject_cast<OpenTunnelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTSecureTunnelingClient service, and returns a pointer to an
+ * RotateTunnelAccessTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Revokes the current client access token (CAT) and returns new CAT for clients to use when reconnecting to secure
+ * tunneling to access the same
+ *
+ * tunnel>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RotateTunnelAccessToken</a>
+ *
+ * action> <note>
+ *
+ * Rotating the CAT doesn't extend the tunnel duration. For example, say the tunnel duration is 12 hours and the tunnel has
+ * already been open for 4 hours. When you rotate the access tokens, the new tokens that are generated can only be used for
+ * the remaining 8
+ */
+RotateTunnelAccessTokenResponse * IoTSecureTunnelingClient::rotateTunnelAccessToken(const RotateTunnelAccessTokenRequest &request)
+{
+    return qobject_cast<RotateTunnelAccessTokenResponse *>(send(request));
 }
 
 /*!

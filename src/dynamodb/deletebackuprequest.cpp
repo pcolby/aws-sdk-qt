@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DeleteBackupRequest
- * \brief The DeleteBackupRequest class provides an interface for DynamoDB DeleteBackup requests.
+ * \class QtAws::DynamoDb::DeleteBackupRequest
+ * \brief The DeleteBackupRequest class provides an interface for DynamoDb DeleteBackup requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::deleteBackup
+ * \sa DynamoDbClient::deleteBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
-    : DynamoDBRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
  * Constructs a DeleteBackupRequest object.
  */
 DeleteBackupRequest::DeleteBackupRequest()
-    : DynamoDBRequest(new DeleteBackupRequestPrivate(DynamoDBRequest::DeleteBackupAction, this))
+    : DynamoDbRequest(new DeleteBackupRequestPrivate(DynamoDbRequest::DeleteBackupAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::DynamoDB::DeleteBackupRequestPrivate
+ * \class QtAws::DynamoDb::DeleteBackupRequestPrivate
  * \brief The DeleteBackupRequestPrivate class provides private implementation for DeleteBackupRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DeleteBackupRequestPrivate object for DynamoDB \a action,
+ * Constructs a DeleteBackupRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
-    const DynamoDBRequest::Action action, DeleteBackupRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DeleteBackupRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DeleteBackupRequestPrivate &other, DeleteBackupRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

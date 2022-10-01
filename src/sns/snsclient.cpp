@@ -43,6 +43,8 @@
 #include "deletesmssandboxphonenumberresponse.h"
 #include "deletetopicrequest.h"
 #include "deletetopicresponse.h"
+#include "getdataprotectionpolicyrequest.h"
+#include "getdataprotectionpolicyresponse.h"
 #include "getendpointattributesrequest.h"
 #include "getendpointattributesresponse.h"
 #include "getplatformapplicationattributesrequest.h"
@@ -77,6 +79,10 @@
 #include "optinphonenumberresponse.h"
 #include "publishrequest.h"
 #include "publishresponse.h"
+#include "publishbatchrequest.h"
+#include "publishbatchresponse.h"
+#include "putdataprotectionpolicyrequest.h"
+#include "putdataprotectionpolicyresponse.h"
 #include "removepermissionrequest.h"
 #include "removepermissionresponse.h"
 #include "setendpointattributesrequest.h"
@@ -104,8 +110,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::SNS
- * \brief Contains classess for accessing Amazon Simple Notification Service ( SNS).
+ * \namespace QtAws::Sns
+ * \brief Contains classess for accessing Amazon Simple Notification Service.
  *
  * \inmodule QtAwsSns
  *
@@ -113,14 +119,14 @@
  */
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::SnsClient
- * \brief The SnsClient class provides access to the Amazon Simple Notification Service ( SNS) service.
+ * \class QtAws::Sns::SnsClient
+ * \brief The SnsClient class provides access to the Amazon Simple Notification Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -203,7 +209,8 @@ SnsClient::SnsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified
+ * Adds a statement to a topic's access control policy, granting access for the specified Amazon Web Services accounts to
+ * the specified
  */
 AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &request)
 {
@@ -216,8 +223,8 @@ AddPermissionResponse * SnsClient::addPermission(const AddPermissionRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your account.
- * You cannot send SMS messages to a number that is opted
+ * Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your Amazon
+ * Web Services account. You cannot send SMS messages to a number that is opted
  *
  * out>
  *
@@ -271,8 +278,13 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  *
  * key</code>> </li> <li>
  *
- * For <code>APNS</code> and <code>APNS_SANDBOX</code>, <code>PlatformPrincipal</code> is <code>SSL certificate</code> and
- * <code>PlatformCredential</code> is <code>private
+ * For <code>APNS</code> and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code> is
+ * <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private
+ *
+ * key</code>> </li> <li>
+ *
+ * For <code>APNS</code> and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
+ * <code>signing key ID</code> and <code>PlatformCredential</code> is <code>signing
  *
  * key</code>> </li> <li>
  *
@@ -331,16 +343,17 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a destination phone number to an AWS account in the SMS sandbox and sends a one-time password (OTP) to that phone
+ * Adds a destination phone number to an Amazon Web Services account in the SMS sandbox and sends a one-time password (OTP)
+ * to that phone
  *
  * number>
  *
- * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
- * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
- * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
- * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
- * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
- * sandbox</a> in the <i>Amazon SNS Developer
+ * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The
+ * SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS
+ * sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the features of Amazon SNS.
+ * However, you can send SMS messages only to verified destination phone numbers. For more information, including how to
+ * move out of the sandbox to send messages without restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS Developer
  */
 CreateSMSSandboxPhoneNumberResponse * SnsClient::createSMSSandboxPhoneNumber(const CreateSMSSandboxPhoneNumberRequest &request)
 {
@@ -354,9 +367,10 @@ CreateSMSSandboxPhoneNumberResponse * SnsClient::createSMSSandboxPhoneNumber(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a topic to which notifications can be published. Users can create at most 100,000 standard topics (at most 1,000
- * FIFO topics). For more information, see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This action
- * is idempotent, so if the requester already owns a topic with the specified name, that topic's ARN is returned without
- * creating a new
+ * FIFO topics). For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html">Creating an Amazon SNS topic</a> in the <i>Amazon
+ * SNS Developer Guide</i>. This action is idempotent, so if the requester already owns a topic with the specified name,
+ * that topic's ARN is returned without creating a new
  */
 CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
 {
@@ -402,16 +416,16 @@ DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS account's verified or pending phone number from the SMS
+ * Deletes an Amazon Web Services account's verified or pending phone number from the SMS
  *
  * sandbox>
  *
- * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
- * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
- * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
- * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
- * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
- * sandbox</a> in the <i>Amazon SNS Developer
+ * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The
+ * SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS
+ * sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the features of Amazon SNS.
+ * However, you can send SMS messages only to verified destination phone numbers. For more information, including how to
+ * move out of the sandbox to send messages without restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS Developer
  */
 DeleteSMSSandboxPhoneNumberResponse * SnsClient::deleteSMSSandboxPhoneNumber(const DeleteSMSSandboxPhoneNumberRequest &request)
 {
@@ -431,6 +445,20 @@ DeleteSMSSandboxPhoneNumberResponse * SnsClient::deleteSMSSandboxPhoneNumber(con
 DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
 {
     return qobject_cast<DeleteTopicResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * GetDataProtectionPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the specified inline <code>DataProtectionPolicy</code> document that is stored in the specified Amazon SNS
+ * topic.
+ */
+GetDataProtectionPolicyResponse * SnsClient::getDataProtectionPolicy(const GetDataProtectionPolicyRequest &request)
+{
+    return qobject_cast<GetDataProtectionPolicyResponse *>(send(request));
 }
 
 /*!
@@ -469,7 +497,7 @@ GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the settings for sending SMS messages from your
+ * Returns the settings for sending SMS messages from your Amazon Web Services
  *
  * account>
  *
@@ -486,16 +514,16 @@ GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the SMS sandbox status for the calling AWS account in the target AWS
+ * Retrieves the SMS sandbox status for the calling Amazon Web Services account in the target Amazon Web Services
  *
  * Region>
  *
- * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
- * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
- * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
- * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
- * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
- * sandbox</a> in the <i>Amazon SNS Developer
+ * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The
+ * SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS
+ * sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the features of Amazon SNS.
+ * However, you can send SMS messages only to verified destination phone numbers. For more information, including how to
+ * move out of the sandbox to send messages without restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS Developer
  */
 GetSMSSandboxAccountStatusResponse * SnsClient::getSMSSandboxAccountStatus(const GetSMSSandboxAccountStatusRequest &request)
 {
@@ -557,8 +585,8 @@ ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the calling AWS account's dedicated origination numbers and their metadata. For more information about origination
- * numbers, see <a
+ * Lists the calling Amazon Web Services account's dedicated origination numbers and their metadata. For more information
+ * about origination numbers, see <a
  * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html">Origination
  * numbers</a> in the <i>Amazon SNS Developer
  */
@@ -617,16 +645,16 @@ ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the calling AWS account's current verified and pending destination phone numbers in the SMS
+ * Lists the calling Amazon Web Services account's current verified and pending destination phone numbers in the SMS
  *
  * sandbox>
  *
- * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
- * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
- * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
- * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
- * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
- * sandbox</a> in the <i>Amazon SNS Developer
+ * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The
+ * SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS
+ * sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the features of Amazon SNS.
+ * However, you can send SMS messages only to verified destination phone numbers. For more information, including how to
+ * move out of the sandbox to send messages without restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS Developer
  */
 ListSMSSandboxPhoneNumbersResponse * SnsClient::listSMSSandboxPhoneNumbers(const ListSMSSandboxPhoneNumbersRequest &request)
 {
@@ -738,12 +766,12 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  *
  * endpoint>
  *
- * When a <code>messageId</code> is returned, the message has been saved and Amazon SNS will attempt to deliver it
+ * When a <code>messageId</code> is returned, the message is saved and Amazon SNS immediately delivers it to
  *
- * shortly>
+ * subscribers>
  *
- * To use the <code>Publish</code> action for sending a message to a mobile endpoint, such as an app on a Kindle device or
- * mobile phone, you must specify the EndpointArn for the TargetArn parameter. The EndpointArn is returned when making a
+ * To use the <code>Publish</code> action for publishing a message to a mobile endpoint, such as an app on a Kindle device
+ * or mobile phone, you must specify the EndpointArn for the TargetArn parameter. The EndpointArn is returned when making a
  * call with the <code>CreatePlatformEndpoint</code> action.
  *
  * </p
@@ -754,11 +782,68 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  *
  * </p <b>
  *
- * You can publish messages only to topics and endpoints in the same AWS
+ * You can publish messages only to topics and endpoints in the same Amazon Web Services
  */
 PublishResponse * SnsClient::publish(const PublishRequest &request)
 {
     return qobject_cast<PublishResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * PublishBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Publishes up to ten messages to the specified topic. This is a batch version of <code>Publish</code>. For FIFO topics,
+ * multiple messages within a single batch are published in the order they are sent, and messages are deduplicated within
+ * the batch and across batches for 5
+ *
+ * minutes>
+ *
+ * The result of publishing each message is reported individually in the response. Because the batch request can result in
+ * a combination of successful and unsuccessful actions, you should check for batch errors even when the call returns an
+ * HTTP status code of
+ *
+ * <code>200</code>>
+ *
+ * The maximum allowed individual message size and the maximum total payload size (the sum of the individual lengths of all
+ * of the batched messages) are both 256 KB (262,144 bytes).
+ *
+ * </p
+ *
+ * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values of
+ * <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
+ *
+ * </p
+ *
+ * &AttributeName.1=firs>
+ *
+ * &AttributeName.2=secon>
+ *
+ * If you send a batch message to a topic, Amazon SNS publishes the batch message to each endpoint that is subscribed to
+ * the topic. The format of the batch message depends on the notification protocol for each subscribed
+ *
+ * endpoint>
+ *
+ * When a <code>messageId</code> is returned, the batch message is saved and Amazon SNS immediately delivers the message to
+ */
+PublishBatchResponse * SnsClient::publishBatch(const PublishBatchRequest &request)
+{
+    return qobject_cast<PublishBatchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * PutDataProtectionPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates an inline policy document that is stored in the specified Amazon SNS
+ */
+PutDataProtectionPolicyResponse * SnsClient::putDataProtectionPolicy(const PutDataProtectionPolicyRequest &request)
+{
+    return qobject_cast<PutDataProtectionPolicyResponse *>(send(request));
 }
 
 /*!
@@ -865,7 +950,8 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic
- * are not in the same AWS account, the endpoint owner must run the <code>ConfirmSubscription</code> action to confirm the
+ * are not in the same Amazon Web Services account, the endpoint owner must run the <code>ConfirmSubscription</code> action
+ * to confirm the
  *
  * subscription>
  *
@@ -912,8 +998,9 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
  *
  * tag> </li> <li>
  *
- * Tagging actions are limited to 10 TPS per AWS account, per AWS region. If your application requires a higher throughput,
- * file a <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
+ * Tagging actions are limited to 10 TPS per Amazon Web Services account, per Amazon Web Services Region. If your
+ * application requires a higher throughput, file a <a
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
  */
 TagResourceResponse * SnsClient::tagResource(const TagResourceRequest &request)
 {
@@ -927,9 +1014,10 @@ TagResourceResponse * SnsClient::tagResource(const TagResourceRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a subscription. If the subscription requires authentication for deletion, only the owner of the subscription or
- * the topic's owner can unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code> call does not
- * require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the
- * endpoint, so that the endpoint owner can easily resubscribe to the topic if the <code>Unsubscribe</code> request was
+ * the topic's owner can unsubscribe, and an Amazon Web Services signature is required. If the <code>Unsubscribe</code>
+ * call does not require authentication and the requester is not the subscription owner, a final cancellation message is
+ * delivered to the endpoint, so that the endpoint owner can easily resubscribe to the topic if the
+ * <code>Unsubscribe</code> request was
  *
  * unintended>
  *
@@ -960,16 +1048,16 @@ UntagResourceResponse * SnsClient::untagResource(const UntagResourceRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Verifies a destination phone number with a one-time password (OTP) for the calling AWS
+ * Verifies a destination phone number with a one-time password (OTP) for the calling Amazon Web Services
  *
  * account>
  *
- * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
- * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
- * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
- * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
- * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
- * sandbox</a> in the <i>Amazon SNS Developer
+ * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS sandbox</i>. The
+ * SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS
+ * sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the features of Amazon SNS.
+ * However, you can send SMS messages only to verified destination phone numbers. For more information, including how to
+ * move out of the sandbox to send messages without restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS Developer
  */
 VerifySMSSandboxPhoneNumberResponse * SnsClient::verifySMSSandboxPhoneNumber(const VerifySMSSandboxPhoneNumberRequest &request)
 {
@@ -977,12 +1065,12 @@ VerifySMSSandboxPhoneNumberResponse * SnsClient::verifySMSSandboxPhoneNumber(con
 }
 
 /*!
- * \class QtAws::SNS::SnsClientPrivate
+ * \class QtAws::Sns::SnsClientPrivate
  * \brief The SnsClientPrivate class provides private implementation for SnsClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -994,5 +1082,5 @@ SnsClientPrivate::SnsClientPrivate(SnsClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

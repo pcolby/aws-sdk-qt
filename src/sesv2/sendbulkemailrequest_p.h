@@ -24,14 +24,14 @@
 #include "sendbulkemailrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class SendBulkEmailRequest;
 
-class SendBulkEmailRequestPrivate : public Sesv2RequestPrivate {
+class SendBulkEmailRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    SendBulkEmailRequestPrivate(const Sesv2Request::Action action,
+    SendBulkEmailRequestPrivate(const SESv2Request::Action action,
                                    SendBulkEmailRequest * const q);
     SendBulkEmailRequestPrivate(const SendBulkEmailRequestPrivate &other,
                                    SendBulkEmailRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

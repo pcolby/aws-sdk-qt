@@ -1,10 +1,25 @@
 add_compile_definitions(QTAWSWELLARCHITECTED_LIBRARY)
 
 add_library(QtAwsWellArchitected
+  qtawswellarchitectedglobal.h
+  wellarchitectedclient.h
+  wellarchitectedclient_p.h
+  wellarchitectedrequest.h
+  wellarchitectedrequest_p.h
+  wellarchitectedresponse.h
+  wellarchitectedresponse_p.h
   associatelensesrequest.h
   associatelensesrequest_p.h
   associatelensesresponse.h
   associatelensesresponse_p.h
+  createlenssharerequest.h
+  createlenssharerequest_p.h
+  createlensshareresponse.h
+  createlensshareresponse_p.h
+  createlensversionrequest.h
+  createlensversionrequest_p.h
+  createlensversionresponse.h
+  createlensversionresponse_p.h
   createmilestonerequest.h
   createmilestonerequest_p.h
   createmilestoneresponse.h
@@ -17,6 +32,14 @@ add_library(QtAwsWellArchitected
   createworkloadsharerequest_p.h
   createworkloadshareresponse.h
   createworkloadshareresponse_p.h
+  deletelensrequest.h
+  deletelensrequest_p.h
+  deletelensresponse.h
+  deletelensresponse_p.h
+  deletelenssharerequest.h
+  deletelenssharerequest_p.h
+  deletelensshareresponse.h
+  deletelensshareresponse_p.h
   deleteworkloadrequest.h
   deleteworkloadrequest_p.h
   deleteworkloadresponse.h
@@ -29,18 +52,26 @@ add_library(QtAwsWellArchitected
   disassociatelensesrequest_p.h
   disassociatelensesresponse.h
   disassociatelensesresponse_p.h
+  exportlensrequest.h
+  exportlensrequest_p.h
+  exportlensresponse.h
+  exportlensresponse_p.h
   getanswerrequest.h
   getanswerrequest_p.h
   getanswerresponse.h
   getanswerresponse_p.h
-  getlensreviewreportrequest.h
-  getlensreviewreportrequest_p.h
-  getlensreviewreportresponse.h
-  getlensreviewreportresponse_p.h
+  getlensrequest.h
+  getlensrequest_p.h
+  getlensresponse.h
+  getlensresponse_p.h
   getlensreviewrequest.h
   getlensreviewrequest_p.h
   getlensreviewresponse.h
   getlensreviewresponse_p.h
+  getlensreviewreportrequest.h
+  getlensreviewreportrequest_p.h
+  getlensreviewreportresponse.h
+  getlensreviewreportresponse_p.h
   getlensversiondifferencerequest.h
   getlensversiondifferencerequest_p.h
   getlensversiondifferenceresponse.h
@@ -53,14 +84,14 @@ add_library(QtAwsWellArchitected
   getworkloadrequest_p.h
   getworkloadresponse.h
   getworkloadresponse_p.h
+  importlensrequest.h
+  importlensrequest_p.h
+  importlensresponse.h
+  importlensresponse_p.h
   listanswersrequest.h
   listanswersrequest_p.h
   listanswersresponse.h
   listanswersresponse_p.h
-  listlensesrequest.h
-  listlensesrequest_p.h
-  listlensesresponse.h
-  listlensesresponse_p.h
   listlensreviewimprovementsrequest.h
   listlensreviewimprovementsrequest_p.h
   listlensreviewimprovementsresponse.h
@@ -69,6 +100,14 @@ add_library(QtAwsWellArchitected
   listlensreviewsrequest_p.h
   listlensreviewsresponse.h
   listlensreviewsresponse_p.h
+  listlenssharesrequest.h
+  listlenssharesrequest_p.h
+  listlenssharesresponse.h
+  listlenssharesresponse_p.h
+  listlensesrequest.h
+  listlensesrequest_p.h
+  listlensesresponse.h
+  listlensesresponse_p.h
   listmilestonesrequest.h
   listmilestonesrequest_p.h
   listmilestonesresponse.h
@@ -93,7 +132,6 @@ add_library(QtAwsWellArchitected
   listworkloadsrequest_p.h
   listworkloadsresponse.h
   listworkloadsresponse_p.h
-  qtawswellarchitectedglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -106,6 +144,10 @@ add_library(QtAwsWellArchitected
   updateanswerrequest_p.h
   updateanswerresponse.h
   updateanswerresponse_p.h
+  updateglobalsettingsrequest.h
+  updateglobalsettingsrequest_p.h
+  updateglobalsettingsresponse.h
+  updateglobalsettingsresponse_p.h
   updatelensreviewrequest.h
   updatelensreviewrequest_p.h
   updatelensreviewresponse.h
@@ -126,46 +168,59 @@ add_library(QtAwsWellArchitected
   upgradelensreviewrequest_p.h
   upgradelensreviewresponse.h
   upgradelensreviewresponse_p.h
-  wellarchitectedclient.h
-  wellarchitectedclient_p.h
-  wellarchitectedrequest.h
-  wellarchitectedrequest_p.h
-  wellarchitectedresponse.h
-  wellarchitectedresponse_p.h
+  wellarchitectedclient.cpp
+  wellarchitectedrequest.cpp
+  wellarchitectedresponse.cpp
   associatelensesrequest.cpp
   associatelensesresponse.cpp
+  createlenssharerequest.cpp
+  createlensshareresponse.cpp
+  createlensversionrequest.cpp
+  createlensversionresponse.cpp
   createmilestonerequest.cpp
   createmilestoneresponse.cpp
   createworkloadrequest.cpp
   createworkloadresponse.cpp
   createworkloadsharerequest.cpp
   createworkloadshareresponse.cpp
+  deletelensrequest.cpp
+  deletelensresponse.cpp
+  deletelenssharerequest.cpp
+  deletelensshareresponse.cpp
   deleteworkloadrequest.cpp
   deleteworkloadresponse.cpp
   deleteworkloadsharerequest.cpp
   deleteworkloadshareresponse.cpp
   disassociatelensesrequest.cpp
   disassociatelensesresponse.cpp
+  exportlensrequest.cpp
+  exportlensresponse.cpp
   getanswerrequest.cpp
   getanswerresponse.cpp
-  getlensreviewreportrequest.cpp
-  getlensreviewreportresponse.cpp
+  getlensrequest.cpp
+  getlensresponse.cpp
   getlensreviewrequest.cpp
   getlensreviewresponse.cpp
+  getlensreviewreportrequest.cpp
+  getlensreviewreportresponse.cpp
   getlensversiondifferencerequest.cpp
   getlensversiondifferenceresponse.cpp
   getmilestonerequest.cpp
   getmilestoneresponse.cpp
   getworkloadrequest.cpp
   getworkloadresponse.cpp
+  importlensrequest.cpp
+  importlensresponse.cpp
   listanswersrequest.cpp
   listanswersresponse.cpp
-  listlensesrequest.cpp
-  listlensesresponse.cpp
   listlensreviewimprovementsrequest.cpp
   listlensreviewimprovementsresponse.cpp
   listlensreviewsrequest.cpp
   listlensreviewsresponse.cpp
+  listlenssharesrequest.cpp
+  listlenssharesresponse.cpp
+  listlensesrequest.cpp
+  listlensesresponse.cpp
   listmilestonesrequest.cpp
   listmilestonesresponse.cpp
   listnotificationsrequest.cpp
@@ -184,6 +239,8 @@ add_library(QtAwsWellArchitected
   untagresourceresponse.cpp
   updateanswerrequest.cpp
   updateanswerresponse.cpp
+  updateglobalsettingsrequest.cpp
+  updateglobalsettingsresponse.cpp
   updatelensreviewrequest.cpp
   updatelensreviewresponse.cpp
   updateshareinvitationrequest.cpp
@@ -193,10 +250,7 @@ add_library(QtAwsWellArchitected
   updateworkloadsharerequest.cpp
   updateworkloadshareresponse.cpp
   upgradelensreviewrequest.cpp
-  upgradelensreviewresponse.cpp
-  wellarchitectedclient.cpp
-  wellarchitectedrequest.cpp
-  wellarchitectedresponse.cpp)
+  upgradelensreviewresponse.cpp)
 
 target_link_libraries(QtAwsWellArchitected
   PRIVATE QtAwsCore

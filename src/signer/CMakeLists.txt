@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSIGNER_LIBRARY)
 
-add_library(QtAwssigner
+add_library(QtAwsSigner
+  qtawssignerglobal.h
+  signerclient.h
+  signerclient_p.h
+  signerrequest.h
+  signerrequest_p.h
+  signerresponse.h
+  signerresponse_p.h
   addprofilepermissionrequest.h
   addprofilepermissionrequest_p.h
   addprofilepermissionresponse.h
@@ -45,7 +52,6 @@ add_library(QtAwssigner
   putsigningprofilerequest_p.h
   putsigningprofileresponse.h
   putsigningprofileresponse_p.h
-  qtawssignerglobal.h
   removeprofilepermissionrequest.h
   removeprofilepermissionrequest_p.h
   removeprofilepermissionresponse.h
@@ -58,12 +64,6 @@ add_library(QtAwssigner
   revokesigningprofilerequest_p.h
   revokesigningprofileresponse.h
   revokesigningprofileresponse_p.h
-  signerclient.h
-  signerclient_p.h
-  signerrequest.h
-  signerrequest_p.h
-  signerresponse.h
-  signerresponse_p.h
   startsigningjobrequest.h
   startsigningjobrequest_p.h
   startsigningjobresponse.h
@@ -76,6 +76,9 @@ add_library(QtAwssigner
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  signerclient.cpp
+  signerrequest.cpp
+  signerresponse.cpp
   addprofilepermissionrequest.cpp
   addprofilepermissionresponse.cpp
   cancelsigningprofilerequest.cpp
@@ -104,9 +107,6 @@ add_library(QtAwssigner
   revokesignatureresponse.cpp
   revokesigningprofilerequest.cpp
   revokesigningprofileresponse.cpp
-  signerclient.cpp
-  signerrequest.cpp
-  signerresponse.cpp
   startsigningjobrequest.cpp
   startsigningjobresponse.cpp
   tagresourcerequest.cpp
@@ -114,7 +114,7 @@ add_library(QtAwssigner
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-target_link_libraries(QtAwssigner
+target_link_libraries(QtAwsSigner
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

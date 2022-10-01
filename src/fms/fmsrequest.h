@@ -30,21 +30,23 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class FmsRequestPrivate;
 
 class QTAWSFMS_EXPORT FmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by FMS.
+    /// Actions supported by Fms.
     enum Action {
         AssociateAdminAccountAction,
+        AssociateThirdPartyFirewallAction,
         DeleteAppsListAction,
         DeleteNotificationChannelAction,
         DeletePolicyAction,
         DeleteProtocolsListAction,
         DisassociateAdminAccountAction,
+        DisassociateThirdPartyFirewallAction,
         GetAdminAccountAction,
         GetAppsListAction,
         GetComplianceDetailAction,
@@ -52,6 +54,7 @@ public:
         GetPolicyAction,
         GetProtectionStatusAction,
         GetProtocolsListAction,
+        GetThirdPartyFirewallAssociationStatusAction,
         GetViolationDetailsAction,
         ListAppsListsAction,
         ListComplianceStatusAction,
@@ -59,6 +62,7 @@ public:
         ListPoliciesAction,
         ListProtocolsListsAction,
         ListTagsForResourceAction,
+        ListThirdPartyFirewallFirewallPoliciesAction,
         PutAppsListAction,
         PutNotificationChannelAction,
         PutPolicyAction,
@@ -101,7 +105,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

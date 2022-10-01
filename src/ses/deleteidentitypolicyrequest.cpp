@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteIdentityPolicyRequest
- * \brief The DeleteIdentityPolicyRequest class provides an interface for SES DeleteIdentityPolicy requests.
+ * \class QtAws::Ses::DeleteIdentityPolicyRequest
+ * \brief The DeleteIdentityPolicyRequest class provides an interface for Ses DeleteIdentityPolicy requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SES::DeleteIdentityPolicyRequestPrivate
+ * \class QtAws::Ses::DeleteIdentityPolicyRequestPrivate
  * \brief The DeleteIdentityPolicyRequestPrivate class provides private implementation for DeleteIdentityPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

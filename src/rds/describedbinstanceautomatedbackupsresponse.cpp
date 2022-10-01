@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBInstanceAutomatedBackupsResponse
- * \brief The DescribeDBInstanceAutomatedBackupsResponse class provides an interace for RDS DescribeDBInstanceAutomatedBackups responses.
+ * \class QtAws::Rds::DescribeDBInstanceAutomatedBackupsResponse
+ * \brief The DescribeDBInstanceAutomatedBackupsResponse class provides an interace for Rds DescribeDBInstanceAutomatedBackups responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBInstanceAutomatedBackupsRequest * DescribeDBInstanceAutomatedBac
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBInstanceAutomatedBackups \a response.
+ * Parses a successful Rds DescribeDBInstanceAutomatedBackups \a response.
  */
 void DescribeDBInstanceAutomatedBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBInstanceAutomatedBackupsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBInstanceAutomatedBackupsResponsePrivate
+ * \class QtAws::Rds::DescribeDBInstanceAutomatedBackupsResponsePrivate
  * \brief The DescribeDBInstanceAutomatedBackupsResponsePrivate class provides private implementation for DescribeDBInstanceAutomatedBackupsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBInstanceAutomatedBackupsResponsePrivate::DescribeDBInstanceAutomatedBa
 }
 
 /*!
- * Parses a RDS DescribeDBInstanceAutomatedBackups response element from \a xml.
+ * Parses a Rds DescribeDBInstanceAutomatedBackups response element from \a xml.
  */
 void DescribeDBInstanceAutomatedBackupsResponsePrivate::parseDescribeDBInstanceAutomatedBackupsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBInstanceAutomatedBackupsResponsePrivate::parseDescribeDBInstanceA
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

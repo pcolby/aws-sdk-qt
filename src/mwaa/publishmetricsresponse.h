@@ -24,7 +24,7 @@
 #include "publishmetricsrequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class PublishMetricsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

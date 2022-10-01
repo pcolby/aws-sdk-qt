@@ -23,7 +23,7 @@
 #include "swfrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class UntagResourceRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

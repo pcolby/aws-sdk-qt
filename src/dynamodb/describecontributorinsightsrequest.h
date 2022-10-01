@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeContributorInsightsRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeContributorInsightsRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeContributorInsightsRequest : public DynamoDbRequest {
 
 public:
     DescribeContributorInsightsRequest(const DescribeContributorInsightsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

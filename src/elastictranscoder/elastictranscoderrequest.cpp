@@ -260,7 +260,7 @@ QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 ElasticTranscoderRequestPrivate::ElasticTranscoderRequestPrivate(const ElasticTranscoderRequest::Action action, ElasticTranscoderRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-09-25"))
 {
 
 }

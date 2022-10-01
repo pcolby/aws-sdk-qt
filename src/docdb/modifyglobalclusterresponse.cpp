@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyGlobalClusterResponse
- * \brief The ModifyGlobalClusterResponse class provides an interace for DocDB ModifyGlobalCluster responses.
+ * \class QtAws::DocDb::ModifyGlobalClusterResponse
+ * \brief The ModifyGlobalClusterResponse class provides an interace for DocDb ModifyGlobalCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyGlobalCluster
+ * \sa DocDbClient::modifyGlobalCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ ModifyGlobalClusterResponse::ModifyGlobalClusterResponse(
         const ModifyGlobalClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new ModifyGlobalClusterResponsePrivate(this), parent)
+    : DocDbResponse(new ModifyGlobalClusterResponsePrivate(this), parent)
 {
     setRequest(new ModifyGlobalClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ModifyGlobalClusterRequest * ModifyGlobalClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB ModifyGlobalCluster \a response.
+ * Parses a successful DocDb ModifyGlobalCluster \a response.
  */
 void ModifyGlobalClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ModifyGlobalClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::ModifyGlobalClusterResponsePrivate
+ * \class QtAws::DocDb::ModifyGlobalClusterResponsePrivate
  * \brief The ModifyGlobalClusterResponsePrivate class provides private implementation for ModifyGlobalClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a ModifyGlobalClusterResponsePrivate object with public implementation \a q.
  */
 ModifyGlobalClusterResponsePrivate::ModifyGlobalClusterResponsePrivate(
-    ModifyGlobalClusterResponse * const q) : DocDBResponsePrivate(q)
+    ModifyGlobalClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB ModifyGlobalCluster response element from \a xml.
+ * Parses a DocDb ModifyGlobalCluster response element from \a xml.
  */
 void ModifyGlobalClusterResponsePrivate::parseModifyGlobalClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ModifyGlobalClusterResponsePrivate::parseModifyGlobalClusterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

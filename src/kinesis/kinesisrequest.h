@@ -67,6 +67,7 @@ public:
         StopStreamEncryptionAction,
         SubscribeToShardAction,
         UpdateShardCountAction,
+        UpdateStreamModeAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

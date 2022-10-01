@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateGeoMatchSetResponse
- * \brief The UpdateGeoMatchSetResponse class provides an interace for WAF UpdateGeoMatchSet responses.
+ * \class QtAws::Waf::UpdateGeoMatchSetResponse
+ * \brief The UpdateGeoMatchSetResponse class provides an interace for Waf UpdateGeoMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const UpdateGeoMatchSetRequest * UpdateGeoMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF UpdateGeoMatchSet \a response.
+ * Parses a successful Waf UpdateGeoMatchSet \a response.
  */
 void UpdateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void UpdateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::UpdateGeoMatchSetResponsePrivate
+ * \class QtAws::Waf::UpdateGeoMatchSetResponsePrivate
  * \brief The UpdateGeoMatchSetResponsePrivate class provides private implementation for UpdateGeoMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF UpdateGeoMatchSet response element from \a xml.
+ * Parses a Waf UpdateGeoMatchSet response element from \a xml.
  */
 void UpdateGeoMatchSetResponsePrivate::parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void UpdateGeoMatchSetResponsePrivate::parseUpdateGeoMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

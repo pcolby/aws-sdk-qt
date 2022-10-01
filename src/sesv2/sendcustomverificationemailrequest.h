@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class SendCustomVerificationEmailRequestPrivate;
 
-class QTAWSSESV2_EXPORT SendCustomVerificationEmailRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT SendCustomVerificationEmailRequest : public SESv2Request {
 
 public:
     SendCustomVerificationEmailRequest(const SendCustomVerificationEmailRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

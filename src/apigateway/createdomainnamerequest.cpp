@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateDomainNameRequest
- * \brief The CreateDomainNameRequest class provides an interface for APIGateway CreateDomainName requests.
+ * \class QtAws::ApiGateway::CreateDomainNameRequest
+ * \brief The CreateDomainNameRequest class provides an interface for ApiGateway CreateDomainName requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createDomainName
+ * \sa ApiGatewayClient::createDomainName
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDomainNameRequest::CreateDomainNameRequest(const CreateDomainNameRequest &other)
-    : APIGatewayRequest(new CreateDomainNameRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateDomainNameRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateDomainNameRequest::CreateDomainNameRequest(const CreateDomainNameRequest &
  * Constructs a CreateDomainNameRequest object.
  */
 CreateDomainNameRequest::CreateDomainNameRequest()
-    : APIGatewayRequest(new CreateDomainNameRequestPrivate(APIGatewayRequest::CreateDomainNameAction, this))
+    : ApiGatewayRequest(new CreateDomainNameRequestPrivate(ApiGatewayRequest::CreateDomainNameAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::CreateDomainNameRequestPrivate
+ * \class QtAws::ApiGateway::CreateDomainNameRequestPrivate
  * \brief The CreateDomainNameRequestPrivate class provides private implementation for CreateDomainNameRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateDomainNameRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateDomainNameRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
-    const APIGatewayRequest::Action action, CreateDomainNameRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateDomainNameRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
  */
 CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
     const CreateDomainNameRequestPrivate &other, CreateDomainNameRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

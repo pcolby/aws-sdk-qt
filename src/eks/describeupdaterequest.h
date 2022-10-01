@@ -23,7 +23,7 @@
 #include "eksrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DescribeUpdateRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

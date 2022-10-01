@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteBackupRequest
- * \brief The DeleteBackupRequest class provides an interface for OpsWorksCM DeleteBackup requests.
+ * \class QtAws::OpsWorksCm::DeleteBackupRequest
+ * \brief The DeleteBackupRequest class provides an interface for OpsWorksCm DeleteBackup requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::deleteBackup
+ * \sa OpsWorksCmClient::deleteBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
-    : OpsWorksCMRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DeleteBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DeleteBackupRequest::DeleteBackupRequest(const DeleteBackupRequest &other)
  * Constructs a DeleteBackupRequest object.
  */
 DeleteBackupRequest::DeleteBackupRequest()
-    : OpsWorksCMRequest(new DeleteBackupRequestPrivate(OpsWorksCMRequest::DeleteBackupAction, this))
+    : OpsWorksCmRequest(new DeleteBackupRequestPrivate(OpsWorksCmRequest::DeleteBackupAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteBackupRequestPrivate
+ * \class QtAws::OpsWorksCm::DeleteBackupRequestPrivate
  * \brief The DeleteBackupRequestPrivate class provides private implementation for DeleteBackupRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DeleteBackupRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DeleteBackupRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
-    const OpsWorksCMRequest::Action action, DeleteBackupRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DeleteBackupRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DeleteBackupRequestPrivate &other, DeleteBackupRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

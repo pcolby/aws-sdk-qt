@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalRequestPrivate;
+class WafRegionalRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT WAFRegionalRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWAFREGIONAL_EXPORT WafRegionalRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by WAFRegional.
+    /// Actions supported by WafRegional.
     enum Action {
         AssociateWebACLAction,
         CreateByteMatchSetAction,
@@ -123,9 +123,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    WAFRegionalRequest(const Action action);
-    WAFRegionalRequest(const WAFRegionalRequest &other);
-    WAFRegionalRequest &operator=(const WAFRegionalRequest &other);
+    WafRegionalRequest(const Action action);
+    WafRegionalRequest(const WafRegionalRequest &other);
+    WafRegionalRequest &operator=(const WafRegionalRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -134,12 +134,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const WAFRegionalRequest &other) const;
+    virtual bool operator==(const WafRegionalRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
+    explicit WafRegionalRequest(WafRegionalRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -152,11 +152,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(WAFRegionalRequest)
+    Q_DECLARE_PRIVATE(WafRegionalRequest)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

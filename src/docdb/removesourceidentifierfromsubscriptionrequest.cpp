@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RemoveSourceIdentifierFromSubscriptionRequest
- * \brief The RemoveSourceIdentifierFromSubscriptionRequest class provides an interface for DocDB RemoveSourceIdentifierFromSubscription requests.
+ * \class QtAws::DocDb::RemoveSourceIdentifierFromSubscriptionRequest
+ * \brief The RemoveSourceIdentifierFromSubscriptionRequest class provides an interface for DocDb RemoveSourceIdentifierFromSubscription requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::removeSourceIdentifierFromSubscription
+ * \sa DocDbClient::removeSourceIdentifierFromSubscription
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest(const RemoveSourceIdentifierFromSubscriptionRequest &other)
-    : DocDBRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscri
  * Constructs a RemoveSourceIdentifierFromSubscriptionRequest object.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest()
-    : DocDBRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(DocDBRequest::RemoveSourceIdentifierFromSubscriptionAction, this))
+    : DocDbRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(DocDbRequest::RemoveSourceIdentifierFromSubscriptionAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest
 }
 
 /*!
- * \class QtAws::DocDB::RemoveSourceIdentifierFromSubscriptionRequestPrivate
+ * \class QtAws::DocDb::RemoveSourceIdentifierFromSubscriptionRequestPrivate
  * \brief The RemoveSourceIdentifierFromSubscriptionRequestPrivate class provides private implementation for RemoveSourceIdentifierFromSubscriptionRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for DocDB \a action,
+ * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
-    const DocDBRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFrom
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RemoveSourceIdentifierFromSubscriptionRequestPrivate &other, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

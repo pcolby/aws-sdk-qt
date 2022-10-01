@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListSigningPlatformsRequest
- * \brief The ListSigningPlatformsRequest class provides an interface for signer ListSigningPlatforms requests.
+ * \class QtAws::Signer::ListSigningPlatformsRequest
+ * \brief The ListSigningPlatformsRequest class provides an interface for Signer ListSigningPlatforms requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listSigningPlatforms
+ * \sa SignerClient::listSigningPlatforms
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListSigningPlatformsRequest::ListSigningPlatformsRequest(const ListSigningPlatformsRequest &other)
-    : signerRequest(new ListSigningPlatformsRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new ListSigningPlatformsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ ListSigningPlatformsRequest::ListSigningPlatformsRequest(const ListSigningPlatfo
  * Constructs a ListSigningPlatformsRequest object.
  */
 ListSigningPlatformsRequest::ListSigningPlatformsRequest()
-    : signerRequest(new ListSigningPlatformsRequestPrivate(signerRequest::ListSigningPlatformsAction, this))
+    : SignerRequest(new ListSigningPlatformsRequestPrivate(SignerRequest::ListSigningPlatformsAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * ListSigningPlatformsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::signer::ListSigningPlatformsRequestPrivate
+ * \class QtAws::Signer::ListSigningPlatformsRequestPrivate
  * \brief The ListSigningPlatformsRequestPrivate class provides private implementation for ListSigningPlatformsRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a ListSigningPlatformsRequestPrivate object for signer \a action,
+ * Constructs a ListSigningPlatformsRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 ListSigningPlatformsRequestPrivate::ListSigningPlatformsRequestPrivate(
-    const signerRequest::Action action, ListSigningPlatformsRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, ListSigningPlatformsRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ ListSigningPlatformsRequestPrivate::ListSigningPlatformsRequestPrivate(
  */
 ListSigningPlatformsRequestPrivate::ListSigningPlatformsRequestPrivate(
     const ListSigningPlatformsRequestPrivate &other, ListSigningPlatformsRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

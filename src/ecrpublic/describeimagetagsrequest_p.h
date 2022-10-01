@@ -24,14 +24,14 @@
 #include "describeimagetagsrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class DescribeImageTagsRequest;
 
-class DescribeImageTagsRequestPrivate : public ECRPublicRequestPrivate {
+class DescribeImageTagsRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    DescribeImageTagsRequestPrivate(const ECRPublicRequest::Action action,
+    DescribeImageTagsRequestPrivate(const EcrPublicRequest::Action action,
                                    DescribeImageTagsRequest * const q);
     DescribeImageTagsRequestPrivate(const DescribeImageTagsRequestPrivate &other,
                                    DescribeImageTagsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

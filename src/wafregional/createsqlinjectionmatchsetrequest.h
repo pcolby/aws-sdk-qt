@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateSqlInjectionMatchSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT CreateSqlInjectionMatchSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT CreateSqlInjectionMatchSetRequest : public WafRegionalRequest {
 
 public:
     CreateSqlInjectionMatchSetRequest(const CreateSqlInjectionMatchSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

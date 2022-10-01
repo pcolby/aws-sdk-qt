@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeOrderableDBInstanceOptionsResponse
- * \brief The DescribeOrderableDBInstanceOptionsResponse class provides an interace for DocDB DescribeOrderableDBInstanceOptions responses.
+ * \class QtAws::DocDb::DescribeOrderableDBInstanceOptionsResponse
+ * \brief The DescribeOrderableDBInstanceOptionsResponse class provides an interace for DocDb DescribeOrderableDBInstanceOptions responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeOrderableDBInstanceOptions
+ * \sa DocDbClient::describeOrderableDBInstanceOptions
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsRe
         const DescribeOrderableDBInstanceOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrderableDBInstanceOptionsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOpt
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeOrderableDBInstanceOptions \a response.
+ * Parses a successful DocDb DescribeOrderableDBInstanceOptions \a response.
  */
 void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::DocDB::DescribeOrderableDBInstanceOptionsResponsePrivate
+ * \class QtAws::DocDb::DescribeOrderableDBInstanceOptionsResponsePrivate
  * \brief The DescribeOrderableDBInstanceOptionsResponsePrivate class provides private implementation for DescribeOrderableDBInstanceOptionsResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeOrderableDBInstanceOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponsePrivate(
-    DescribeOrderableDBInstanceOptionsResponse * const q) : DocDBResponsePrivate(q)
+    DescribeOrderableDBInstanceOptionsResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeOrderableDBInstanceOptions response element from \a xml.
+ * Parses a DocDb DescribeOrderableDBInstanceOptions response element from \a xml.
  */
 void DescribeOrderableDBInstanceOptionsResponsePrivate::parseDescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeOrderableDBInstanceOptionsResponsePrivate::parseDescribeOrderableDB
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

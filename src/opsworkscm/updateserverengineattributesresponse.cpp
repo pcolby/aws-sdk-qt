@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesResponse
- * \brief The UpdateServerEngineAttributesResponse class provides an interace for OpsWorksCM UpdateServerEngineAttributes responses.
+ * \class QtAws::OpsWorksCm::UpdateServerEngineAttributesResponse
+ * \brief The UpdateServerEngineAttributesResponse class provides an interace for OpsWorksCm UpdateServerEngineAttributes responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::updateServerEngineAttributes
+ * \sa OpsWorksCmClient::updateServerEngineAttributes
  */
 
 /*!
@@ -123,7 +123,7 @@ UpdateServerEngineAttributesResponse::UpdateServerEngineAttributesResponse(
         const UpdateServerEngineAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new UpdateServerEngineAttributesResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new UpdateServerEngineAttributesResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerEngineAttributesRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const UpdateServerEngineAttributesRequest * UpdateServerEngineAttributesResponse
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM UpdateServerEngineAttributes \a response.
+ * Parses a successful OpsWorksCm UpdateServerEngineAttributes \a response.
  */
 void UpdateServerEngineAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void UpdateServerEngineAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesResponsePrivate
+ * \class QtAws::OpsWorksCm::UpdateServerEngineAttributesResponsePrivate
  * \brief The UpdateServerEngineAttributesResponsePrivate class provides private implementation for UpdateServerEngineAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a UpdateServerEngineAttributesResponsePrivate object with public implementation \a q.
  */
 UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesResponsePrivate(
-    UpdateServerEngineAttributesResponse * const q) : OpsWorksCMResponsePrivate(q)
+    UpdateServerEngineAttributesResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM UpdateServerEngineAttributes response element from \a xml.
+ * Parses a OpsWorksCm UpdateServerEngineAttributes response element from \a xml.
  */
 void UpdateServerEngineAttributesResponsePrivate::parseUpdateServerEngineAttributesResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void UpdateServerEngineAttributesResponsePrivate::parseUpdateServerEngineAttribu
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

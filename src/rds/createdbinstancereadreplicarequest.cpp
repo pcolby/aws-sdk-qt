@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBInstanceReadReplicaRequest
- * \brief The CreateDBInstanceReadReplicaRequest class provides an interface for RDS CreateDBInstanceReadReplica requests.
+ * \class QtAws::Rds::CreateDBInstanceReadReplicaRequest
+ * \brief The CreateDBInstanceReadReplicaRequest class provides an interface for Rds CreateDBInstanceReadReplica requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(
 }
 
 /*!
- * \class QtAws::RDS::CreateDBInstanceReadReplicaRequestPrivate
+ * \class QtAws::Rds::CreateDBInstanceReadReplicaRequestPrivate
  * \brief The CreateDBInstanceReadReplicaRequestPrivate class provides private implementation for CreateDBInstanceReadReplicaRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPri
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

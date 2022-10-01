@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderClientPrivate;
+class ImageBuilderClientPrivate;
 class CancelImageCreationRequest;
 class CancelImageCreationResponse;
 class CreateComponentRequest;
@@ -84,6 +84,8 @@ class GetInfrastructureConfigurationRequest;
 class GetInfrastructureConfigurationResponse;
 class ImportComponentRequest;
 class ImportComponentResponse;
+class ImportVmImageRequest;
+class ImportVmImageResponse;
 class ListComponentBuildVersionsRequest;
 class ListComponentBuildVersionsResponse;
 class ListComponentsRequest;
@@ -129,17 +131,17 @@ class UpdateImagePipelineResponse;
 class UpdateInfrastructureConfigurationRequest;
 class UpdateInfrastructureConfigurationResponse;
 
-class QTAWSIMAGEBUILDER_EXPORT imagebuilderClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIMAGEBUILDER_EXPORT ImageBuilderClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    imagebuilderClient(
+    ImageBuilderClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit imagebuilderClient(
+    explicit ImageBuilderClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -172,6 +174,7 @@ public slots:
     GetImageRecipePolicyResponse * getImageRecipePolicy(const GetImageRecipePolicyRequest &request);
     GetInfrastructureConfigurationResponse * getInfrastructureConfiguration(const GetInfrastructureConfigurationRequest &request);
     ImportComponentResponse * importComponent(const ImportComponentRequest &request);
+    ImportVmImageResponse * importVmImage(const ImportVmImageRequest &request);
     ListComponentBuildVersionsResponse * listComponentBuildVersions(const ListComponentBuildVersionsRequest &request);
     ListComponentsResponse * listComponents(const ListComponentsRequest &request);
     ListContainerRecipesResponse * listContainerRecipes(const ListContainerRecipesRequest &request);
@@ -196,12 +199,12 @@ public slots:
     UpdateInfrastructureConfigurationResponse * updateInfrastructureConfiguration(const UpdateInfrastructureConfigurationRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(imagebuilderClient)
-    Q_DISABLE_COPY(imagebuilderClient)
+    Q_DECLARE_PRIVATE(ImageBuilderClient)
+    Q_DISABLE_COPY(ImageBuilderClient)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

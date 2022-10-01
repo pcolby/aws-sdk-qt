@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::FlushStageAuthorizersCacheResponse
- * \brief The FlushStageAuthorizersCacheResponse class provides an interace for APIGateway FlushStageAuthorizersCache responses.
+ * \class QtAws::ApiGateway::FlushStageAuthorizersCacheResponse
+ * \brief The FlushStageAuthorizersCacheResponse class provides an interace for ApiGateway FlushStageAuthorizersCache responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::flushStageAuthorizersCache
+ * \sa ApiGatewayClient::flushStageAuthorizersCache
  */
 
 /*!
@@ -49,7 +49,7 @@ FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
         const FlushStageAuthorizersCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)
+    : ApiGatewayResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)
 {
     setRequest(new FlushStageAuthorizersCacheRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::re
 
 /*!
  * \reimp
- * Parses a successful APIGateway FlushStageAuthorizersCache \a response.
+ * Parses a successful ApiGateway FlushStageAuthorizersCache \a response.
  */
 void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::FlushStageAuthorizersCacheResponsePrivate
+ * \class QtAws::ApiGateway::FlushStageAuthorizersCacheResponsePrivate
  * \brief The FlushStageAuthorizersCacheResponsePrivate class provides private implementation for FlushStageAuthorizersCacheResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a FlushStageAuthorizersCacheResponsePrivate object with public implementation \a q.
  */
 FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePrivate(
-    FlushStageAuthorizersCacheResponse * const q) : APIGatewayResponsePrivate(q)
+    FlushStageAuthorizersCacheResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway FlushStageAuthorizersCache response element from \a xml.
+ * Parses a ApiGateway FlushStageAuthorizersCache response element from \a xml.
  */
 void FlushStageAuthorizersCacheResponsePrivate::parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void FlushStageAuthorizersCacheResponsePrivate::parseFlushStageAuthorizersCacheR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

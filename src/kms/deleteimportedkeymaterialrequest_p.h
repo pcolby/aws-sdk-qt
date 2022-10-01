@@ -24,7 +24,7 @@
 #include "deleteimportedkeymaterialrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class DeleteImportedKeyMaterialRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

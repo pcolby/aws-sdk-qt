@@ -24,11 +24,11 @@
 #include "associatenoderequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class AssociateNodeResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT AssociateNodeResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT AssociateNodeResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

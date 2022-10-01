@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class WafRequestPrivate;
 
 class QTAWSWAF_EXPORT WafRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by WAF.
+    /// Actions supported by Waf.
     enum Action {
         CreateByteMatchSetAction,
         CreateGeoMatchSetAction,
@@ -152,7 +152,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public EMRContainersRequestPrivate {
+class UntagResourceRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const EMRContainersRequest::Action action,
+    UntagResourceRequestPrivate(const EmrcontainersRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

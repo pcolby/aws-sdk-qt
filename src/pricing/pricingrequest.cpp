@@ -246,7 +246,7 @@ QNetworkRequest PricingRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 PricingRequestPrivate::PricingRequestPrivate(const PricingRequest::Action action, PricingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-15"))
 {
 
 }

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRegexPatternSetResponse
- * \brief The GetRegexPatternSetResponse class provides an interace for WAFRegional GetRegexPatternSet responses.
+ * \class QtAws::WafRegional::GetRegexPatternSetResponse
+ * \brief The GetRegexPatternSetResponse class provides an interace for WafRegional GetRegexPatternSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRegexPatternSet
+ * \sa WafRegionalClient::getRegexPatternSet
  */
 
 /*!
@@ -67,7 +67,7 @@ GetRegexPatternSetResponse::GetRegexPatternSetResponse(
         const GetRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetRegexPatternSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new GetRegexPatternSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetRegexPatternSet \a response.
+ * Parses a successful WafRegional GetRegexPatternSet \a response.
  */
 void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRegexPatternSetResponsePrivate
+ * \class QtAws::WafRegional::GetRegexPatternSetResponsePrivate
  * \brief The GetRegexPatternSetResponsePrivate class provides private implementation for GetRegexPatternSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
-    GetRegexPatternSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetRegexPatternSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetRegexPatternSet response element from \a xml.
+ * Parses a WafRegional GetRegexPatternSet response element from \a xml.
  */
 void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

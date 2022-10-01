@@ -23,17 +23,17 @@
 #include "eksrequest_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::ListAddonsRequest
- * \brief The ListAddonsRequest class provides an interface for EKS ListAddons requests.
+ * \class QtAws::Eks::ListAddonsRequest
+ * \brief The ListAddonsRequest class provides an interface for Eks ListAddons requests.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * ListAddonsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::EKS::ListAddonsRequestPrivate
+ * \class QtAws::Eks::ListAddonsRequestPrivate
  * \brief The ListAddonsRequestPrivate class provides private implementation for ListAddonsRequest.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -114,5 +114,5 @@ ListAddonsRequestPrivate::ListAddonsRequestPrivate(
 
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

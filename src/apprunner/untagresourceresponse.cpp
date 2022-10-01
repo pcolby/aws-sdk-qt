@@ -33,11 +33,12 @@ namespace AppRunner {
  *
  * \inmodule QtAwsAppRunner
  *
- *  <fullname>AWS App Runner</fullname>
+ *  <fullname>App Runner</fullname>
  * 
- *  AWS App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
- *  existing container image or source code to a running service in the AWS cloud in seconds. You don't need to learn new
- *  technologies, decide which compute service to use, or understand how to provision and configure AWS
+ *  App Runner is an application service that provides a fast, simple, and cost-effective way to go directly from an
+ *  existing container image or source code to a running service in the Amazon Web Services Cloud in seconds. You don't need
+ *  to learn new technologies, decide which compute service to use, or understand how to provision and configure Amazon Web
+ *  Services
  * 
  *  resources>
  * 
@@ -46,9 +47,9 @@ namespace AppRunner {
  * 
  *  security>
  * 
- *  For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">AWS App Runner
+ *  For more information about App Runner, see the <a href="https://docs.aws.amazon.com/apprunner/latest/dg/">App Runner
  *  Developer Guide</a>. For release information, see the <a
- *  href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">AWS App Runner Release
+ *  href="https://docs.aws.amazon.com/apprunner/latest/relnotes/">App Runner Release
  * 
  *  Notes</a>>
  * 
@@ -62,8 +63,8 @@ namespace AppRunner {
  *  </p
  * 
  *  For a list of Region-specific endpoints that App Runner supports, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">AWS App Runner endpoints and quotas</a> in the
- *  <i>AWS General
+ *  href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a> in the <i>Amazon
+ *  Web Services General
  *
  * \sa AppRunnerClient::untagResource
  */

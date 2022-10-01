@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBResponse;
+class DocDbResponse;
 
-class DocDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DocDbResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit DocDBResponsePrivate(DocDBResponse * const q);
+    explicit DocDbResponsePrivate(DocDbResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(DocDBResponse)
-    Q_DISABLE_COPY(DocDBResponsePrivate)
+    Q_DECLARE_PUBLIC(DocDbResponse)
+    Q_DISABLE_COPY(DocDbResponsePrivate)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

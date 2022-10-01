@@ -24,14 +24,14 @@
 #include "deleteimagerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class DeleteImageRequest;
 
-class DeleteImageRequestPrivate : public imagebuilderRequestPrivate {
+class DeleteImageRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    DeleteImageRequestPrivate(const imagebuilderRequest::Action action,
+    DeleteImageRequestPrivate(const ImageBuilderRequest::Action action,
                                    DeleteImageRequest * const q);
     DeleteImageRequestPrivate(const DeleteImageRequestPrivate &other,
                                    DeleteImageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

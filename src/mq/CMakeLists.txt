@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMQ_LIBRARY)
 
 add_library(QtAwsMq
+  qtawsmqglobal.h
+  mqclient.h
+  mqclient_p.h
+  mqrequest.h
+  mqrequest_p.h
+  mqresponse.h
+  mqresponse_p.h
   createbrokerrequest.h
   createbrokerrequest_p.h
   createbrokerresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsMq
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  describebrokerrequest.h
+  describebrokerrequest_p.h
+  describebrokerresponse.h
+  describebrokerresponse_p.h
   describebrokerenginetypesrequest.h
   describebrokerenginetypesrequest_p.h
   describebrokerenginetypesresponse.h
@@ -37,10 +48,6 @@ add_library(QtAwsMq
   describebrokerinstanceoptionsrequest_p.h
   describebrokerinstanceoptionsresponse.h
   describebrokerinstanceoptionsresponse_p.h
-  describebrokerrequest.h
-  describebrokerrequest_p.h
-  describebrokerresponse.h
-  describebrokerresponse_p.h
   describeconfigurationrequest.h
   describeconfigurationrequest_p.h
   describeconfigurationresponse.h
@@ -73,13 +80,6 @@ add_library(QtAwsMq
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
-  mqclient.h
-  mqclient_p.h
-  mqrequest.h
-  mqrequest_p.h
-  mqresponse.h
-  mqresponse_p.h
-  qtawsmqglobal.h
   rebootbrokerrequest.h
   rebootbrokerrequest_p.h
   rebootbrokerresponse.h
@@ -96,6 +96,9 @@ add_library(QtAwsMq
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
+  mqclient.cpp
+  mqrequest.cpp
+  mqresponse.cpp
   createbrokerrequest.cpp
   createbrokerresponse.cpp
   createconfigurationrequest.cpp
@@ -110,12 +113,12 @@ add_library(QtAwsMq
   deletetagsresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  describebrokerrequest.cpp
+  describebrokerresponse.cpp
   describebrokerenginetypesrequest.cpp
   describebrokerenginetypesresponse.cpp
   describebrokerinstanceoptionsrequest.cpp
   describebrokerinstanceoptionsresponse.cpp
-  describebrokerrequest.cpp
-  describebrokerresponse.cpp
   describeconfigurationrequest.cpp
   describeconfigurationresponse.cpp
   describeconfigurationrevisionrequest.cpp
@@ -132,9 +135,6 @@ add_library(QtAwsMq
   listtagsresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
-  mqclient.cpp
-  mqrequest.cpp
-  mqresponse.cpp
   rebootbrokerrequest.cpp
   rebootbrokerresponse.cpp
   updatebrokerrequest.cpp

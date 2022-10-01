@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::StartMaintenanceRequest
- * \brief The StartMaintenanceRequest class provides an interface for OpsWorksCM StartMaintenance requests.
+ * \class QtAws::OpsWorksCm::StartMaintenanceRequest
+ * \brief The StartMaintenanceRequest class provides an interface for OpsWorksCm StartMaintenance requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::startMaintenance
+ * \sa OpsWorksCmClient::startMaintenance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartMaintenanceRequest::StartMaintenanceRequest(const StartMaintenanceRequest &other)
-    : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new StartMaintenanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ StartMaintenanceRequest::StartMaintenanceRequest(const StartMaintenanceRequest &
  * Constructs a StartMaintenanceRequest object.
  */
 StartMaintenanceRequest::StartMaintenanceRequest()
-    : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(OpsWorksCMRequest::StartMaintenanceAction, this))
+    : OpsWorksCmRequest(new StartMaintenanceRequestPrivate(OpsWorksCmRequest::StartMaintenanceAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::OpsWorksCM::StartMaintenanceRequestPrivate
+ * \class QtAws::OpsWorksCm::StartMaintenanceRequestPrivate
  * \brief The StartMaintenanceRequestPrivate class provides private implementation for StartMaintenanceRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a StartMaintenanceRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a StartMaintenanceRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
-    const OpsWorksCMRequest::Action action, StartMaintenanceRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, StartMaintenanceRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const StartMaintenanceRequestPrivate &other, StartMaintenanceRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

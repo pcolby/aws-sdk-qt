@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateEmailIdentityRequestPrivate;
 
-class QTAWSSESV2_EXPORT CreateEmailIdentityRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT CreateEmailIdentityRequest : public SESv2Request {
 
 public:
     CreateEmailIdentityRequest(const CreateEmailIdentityRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

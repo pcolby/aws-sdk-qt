@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationPartResponse
- * \brief The UpdateDocumentationPartResponse class provides an interace for APIGateway UpdateDocumentationPart responses.
+ * \class QtAws::ApiGateway::UpdateDocumentationPartResponse
+ * \brief The UpdateDocumentationPartResponse class provides an interace for ApiGateway UpdateDocumentationPart responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDocumentationPart
+ * \sa ApiGatewayClient::updateDocumentationPart
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateDocumentationPartResponse::UpdateDocumentationPartResponse(
         const UpdateDocumentationPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateDocumentationPartResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateDocumentationPartResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentationPartRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateDocumentationPartRequest * UpdateDocumentationPartResponse::request(
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateDocumentationPart \a response.
+ * Parses a successful ApiGateway UpdateDocumentationPart \a response.
  */
 void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDocumentationPartResponsePrivate
+ * \class QtAws::ApiGateway::UpdateDocumentationPartResponsePrivate
  * \brief The UpdateDocumentationPartResponsePrivate class provides private implementation for UpdateDocumentationPartResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateDocumentationPartResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
-    UpdateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateDocumentationPartResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateDocumentationPart response element from \a xml.
+ * Parses a ApiGateway UpdateDocumentationPart response element from \a xml.
  */
 void UpdateDocumentationPartResponsePrivate::parseUpdateDocumentationPartResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateDocumentationPartResponsePrivate::parseUpdateDocumentationPartRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

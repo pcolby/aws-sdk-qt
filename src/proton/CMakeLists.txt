@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSPROTON_LIBRARY)
 
 add_library(QtAwsProton
+  qtawsprotonglobal.h
+  protonclient.h
+  protonclient_p.h
+  protonrequest.h
+  protonrequest_p.h
+  protonresponse.h
+  protonresponse_p.h
   acceptenvironmentaccountconnectionrequest.h
   acceptenvironmentaccountconnectionrequest_p.h
   acceptenvironmentaccountconnectionresponse.h
   acceptenvironmentaccountconnectionresponse_p.h
+  cancelcomponentdeploymentrequest.h
+  cancelcomponentdeploymentrequest_p.h
+  cancelcomponentdeploymentresponse.h
+  cancelcomponentdeploymentresponse_p.h
   cancelenvironmentdeploymentrequest.h
   cancelenvironmentdeploymentrequest_p.h
   cancelenvironmentdeploymentresponse.h
@@ -17,14 +28,18 @@ add_library(QtAwsProton
   cancelservicepipelinedeploymentrequest_p.h
   cancelservicepipelinedeploymentresponse.h
   cancelservicepipelinedeploymentresponse_p.h
-  createenvironmentaccountconnectionrequest.h
-  createenvironmentaccountconnectionrequest_p.h
-  createenvironmentaccountconnectionresponse.h
-  createenvironmentaccountconnectionresponse_p.h
+  createcomponentrequest.h
+  createcomponentrequest_p.h
+  createcomponentresponse.h
+  createcomponentresponse_p.h
   createenvironmentrequest.h
   createenvironmentrequest_p.h
   createenvironmentresponse.h
   createenvironmentresponse_p.h
+  createenvironmentaccountconnectionrequest.h
+  createenvironmentaccountconnectionrequest_p.h
+  createenvironmentaccountconnectionresponse.h
+  createenvironmentaccountconnectionresponse_p.h
   createenvironmenttemplaterequest.h
   createenvironmenttemplaterequest_p.h
   createenvironmenttemplateresponse.h
@@ -33,6 +48,10 @@ add_library(QtAwsProton
   createenvironmenttemplateversionrequest_p.h
   createenvironmenttemplateversionresponse.h
   createenvironmenttemplateversionresponse_p.h
+  createrepositoryrequest.h
+  createrepositoryrequest_p.h
+  createrepositoryresponse.h
+  createrepositoryresponse_p.h
   createservicerequest.h
   createservicerequest_p.h
   createserviceresponse.h
@@ -45,14 +64,22 @@ add_library(QtAwsProton
   createservicetemplateversionrequest_p.h
   createservicetemplateversionresponse.h
   createservicetemplateversionresponse_p.h
-  deleteenvironmentaccountconnectionrequest.h
-  deleteenvironmentaccountconnectionrequest_p.h
-  deleteenvironmentaccountconnectionresponse.h
-  deleteenvironmentaccountconnectionresponse_p.h
+  createtemplatesyncconfigrequest.h
+  createtemplatesyncconfigrequest_p.h
+  createtemplatesyncconfigresponse.h
+  createtemplatesyncconfigresponse_p.h
+  deletecomponentrequest.h
+  deletecomponentrequest_p.h
+  deletecomponentresponse.h
+  deletecomponentresponse_p.h
   deleteenvironmentrequest.h
   deleteenvironmentrequest_p.h
   deleteenvironmentresponse.h
   deleteenvironmentresponse_p.h
+  deleteenvironmentaccountconnectionrequest.h
+  deleteenvironmentaccountconnectionrequest_p.h
+  deleteenvironmentaccountconnectionresponse.h
+  deleteenvironmentaccountconnectionresponse_p.h
   deleteenvironmenttemplaterequest.h
   deleteenvironmenttemplaterequest_p.h
   deleteenvironmenttemplateresponse.h
@@ -61,6 +88,10 @@ add_library(QtAwsProton
   deleteenvironmenttemplateversionrequest_p.h
   deleteenvironmenttemplateversionresponse.h
   deleteenvironmenttemplateversionresponse_p.h
+  deleterepositoryrequest.h
+  deleterepositoryrequest_p.h
+  deleterepositoryresponse.h
+  deleterepositoryresponse_p.h
   deleteservicerequest.h
   deleteservicerequest_p.h
   deleteserviceresponse.h
@@ -73,18 +104,26 @@ add_library(QtAwsProton
   deleteservicetemplateversionrequest_p.h
   deleteservicetemplateversionresponse.h
   deleteservicetemplateversionresponse_p.h
+  deletetemplatesyncconfigrequest.h
+  deletetemplatesyncconfigrequest_p.h
+  deletetemplatesyncconfigresponse.h
+  deletetemplatesyncconfigresponse_p.h
   getaccountsettingsrequest.h
   getaccountsettingsrequest_p.h
   getaccountsettingsresponse.h
   getaccountsettingsresponse_p.h
-  getenvironmentaccountconnectionrequest.h
-  getenvironmentaccountconnectionrequest_p.h
-  getenvironmentaccountconnectionresponse.h
-  getenvironmentaccountconnectionresponse_p.h
+  getcomponentrequest.h
+  getcomponentrequest_p.h
+  getcomponentresponse.h
+  getcomponentresponse_p.h
   getenvironmentrequest.h
   getenvironmentrequest_p.h
   getenvironmentresponse.h
   getenvironmentresponse_p.h
+  getenvironmentaccountconnectionrequest.h
+  getenvironmentaccountconnectionrequest_p.h
+  getenvironmentaccountconnectionresponse.h
+  getenvironmentaccountconnectionresponse_p.h
   getenvironmenttemplaterequest.h
   getenvironmenttemplaterequest_p.h
   getenvironmenttemplateresponse.h
@@ -93,14 +132,22 @@ add_library(QtAwsProton
   getenvironmenttemplateversionrequest_p.h
   getenvironmenttemplateversionresponse.h
   getenvironmenttemplateversionresponse_p.h
-  getserviceinstancerequest.h
-  getserviceinstancerequest_p.h
-  getserviceinstanceresponse.h
-  getserviceinstanceresponse_p.h
+  getrepositoryrequest.h
+  getrepositoryrequest_p.h
+  getrepositoryresponse.h
+  getrepositoryresponse_p.h
+  getrepositorysyncstatusrequest.h
+  getrepositorysyncstatusrequest_p.h
+  getrepositorysyncstatusresponse.h
+  getrepositorysyncstatusresponse_p.h
   getservicerequest.h
   getservicerequest_p.h
   getserviceresponse.h
   getserviceresponse_p.h
+  getserviceinstancerequest.h
+  getserviceinstancerequest_p.h
+  getserviceinstanceresponse.h
+  getserviceinstanceresponse_p.h
   getservicetemplaterequest.h
   getservicetemplaterequest_p.h
   getservicetemplateresponse.h
@@ -109,49 +156,98 @@ add_library(QtAwsProton
   getservicetemplateversionrequest_p.h
   getservicetemplateversionresponse.h
   getservicetemplateversionresponse_p.h
+  gettemplatesyncconfigrequest.h
+  gettemplatesyncconfigrequest_p.h
+  gettemplatesyncconfigresponse.h
+  gettemplatesyncconfigresponse_p.h
+  gettemplatesyncstatusrequest.h
+  gettemplatesyncstatusrequest_p.h
+  gettemplatesyncstatusresponse.h
+  gettemplatesyncstatusresponse_p.h
+  listcomponentoutputsrequest.h
+  listcomponentoutputsrequest_p.h
+  listcomponentoutputsresponse.h
+  listcomponentoutputsresponse_p.h
+  listcomponentprovisionedresourcesrequest.h
+  listcomponentprovisionedresourcesrequest_p.h
+  listcomponentprovisionedresourcesresponse.h
+  listcomponentprovisionedresourcesresponse_p.h
+  listcomponentsrequest.h
+  listcomponentsrequest_p.h
+  listcomponentsresponse.h
+  listcomponentsresponse_p.h
   listenvironmentaccountconnectionsrequest.h
   listenvironmentaccountconnectionsrequest_p.h
   listenvironmentaccountconnectionsresponse.h
   listenvironmentaccountconnectionsresponse_p.h
-  listenvironmentsrequest.h
-  listenvironmentsrequest_p.h
-  listenvironmentsresponse.h
-  listenvironmentsresponse_p.h
-  listenvironmenttemplatesrequest.h
-  listenvironmenttemplatesrequest_p.h
-  listenvironmenttemplatesresponse.h
-  listenvironmenttemplatesresponse_p.h
+  listenvironmentoutputsrequest.h
+  listenvironmentoutputsrequest_p.h
+  listenvironmentoutputsresponse.h
+  listenvironmentoutputsresponse_p.h
+  listenvironmentprovisionedresourcesrequest.h
+  listenvironmentprovisionedresourcesrequest_p.h
+  listenvironmentprovisionedresourcesresponse.h
+  listenvironmentprovisionedresourcesresponse_p.h
   listenvironmenttemplateversionsrequest.h
   listenvironmenttemplateversionsrequest_p.h
   listenvironmenttemplateversionsresponse.h
   listenvironmenttemplateversionsresponse_p.h
+  listenvironmenttemplatesrequest.h
+  listenvironmenttemplatesrequest_p.h
+  listenvironmenttemplatesresponse.h
+  listenvironmenttemplatesresponse_p.h
+  listenvironmentsrequest.h
+  listenvironmentsrequest_p.h
+  listenvironmentsresponse.h
+  listenvironmentsresponse_p.h
+  listrepositoriesrequest.h
+  listrepositoriesrequest_p.h
+  listrepositoriesresponse.h
+  listrepositoriesresponse_p.h
+  listrepositorysyncdefinitionsrequest.h
+  listrepositorysyncdefinitionsrequest_p.h
+  listrepositorysyncdefinitionsresponse.h
+  listrepositorysyncdefinitionsresponse_p.h
+  listserviceinstanceoutputsrequest.h
+  listserviceinstanceoutputsrequest_p.h
+  listserviceinstanceoutputsresponse.h
+  listserviceinstanceoutputsresponse_p.h
+  listserviceinstanceprovisionedresourcesrequest.h
+  listserviceinstanceprovisionedresourcesrequest_p.h
+  listserviceinstanceprovisionedresourcesresponse.h
+  listserviceinstanceprovisionedresourcesresponse_p.h
   listserviceinstancesrequest.h
   listserviceinstancesrequest_p.h
   listserviceinstancesresponse.h
   listserviceinstancesresponse_p.h
-  listservicesrequest.h
-  listservicesrequest_p.h
-  listservicesresponse.h
-  listservicesresponse_p.h
-  listservicetemplatesrequest.h
-  listservicetemplatesrequest_p.h
-  listservicetemplatesresponse.h
-  listservicetemplatesresponse_p.h
+  listservicepipelineoutputsrequest.h
+  listservicepipelineoutputsrequest_p.h
+  listservicepipelineoutputsresponse.h
+  listservicepipelineoutputsresponse_p.h
+  listservicepipelineprovisionedresourcesrequest.h
+  listservicepipelineprovisionedresourcesrequest_p.h
+  listservicepipelineprovisionedresourcesresponse.h
+  listservicepipelineprovisionedresourcesresponse_p.h
   listservicetemplateversionsrequest.h
   listservicetemplateversionsrequest_p.h
   listservicetemplateversionsresponse.h
   listservicetemplateversionsresponse_p.h
+  listservicetemplatesrequest.h
+  listservicetemplatesrequest_p.h
+  listservicetemplatesresponse.h
+  listservicetemplatesresponse_p.h
+  listservicesrequest.h
+  listservicesrequest_p.h
+  listservicesresponse.h
+  listservicesresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  protonclient.h
-  protonclient_p.h
-  protonrequest.h
-  protonrequest_p.h
-  protonresponse.h
-  protonresponse_p.h
-  qtawsprotonglobal.h
+  notifyresourcedeploymentstatuschangerequest.h
+  notifyresourcedeploymentstatuschangerequest_p.h
+  notifyresourcedeploymentstatuschangeresponse.h
+  notifyresourcedeploymentstatuschangeresponse_p.h
   rejectenvironmentaccountconnectionrequest.h
   rejectenvironmentaccountconnectionrequest_p.h
   rejectenvironmentaccountconnectionresponse.h
@@ -168,14 +264,18 @@ add_library(QtAwsProton
   updateaccountsettingsrequest_p.h
   updateaccountsettingsresponse.h
   updateaccountsettingsresponse_p.h
-  updateenvironmentaccountconnectionrequest.h
-  updateenvironmentaccountconnectionrequest_p.h
-  updateenvironmentaccountconnectionresponse.h
-  updateenvironmentaccountconnectionresponse_p.h
+  updatecomponentrequest.h
+  updatecomponentrequest_p.h
+  updatecomponentresponse.h
+  updatecomponentresponse_p.h
   updateenvironmentrequest.h
   updateenvironmentrequest_p.h
   updateenvironmentresponse.h
   updateenvironmentresponse_p.h
+  updateenvironmentaccountconnectionrequest.h
+  updateenvironmentaccountconnectionrequest_p.h
+  updateenvironmentaccountconnectionresponse.h
+  updateenvironmentaccountconnectionresponse_p.h
   updateenvironmenttemplaterequest.h
   updateenvironmenttemplaterequest_p.h
   updateenvironmenttemplateresponse.h
@@ -184,6 +284,10 @@ add_library(QtAwsProton
   updateenvironmenttemplateversionrequest_p.h
   updateenvironmenttemplateversionresponse.h
   updateenvironmenttemplateversionresponse_p.h
+  updateservicerequest.h
+  updateservicerequest_p.h
+  updateserviceresponse.h
+  updateserviceresponse_p.h
   updateserviceinstancerequest.h
   updateserviceinstancerequest_p.h
   updateserviceinstanceresponse.h
@@ -192,10 +296,6 @@ add_library(QtAwsProton
   updateservicepipelinerequest_p.h
   updateservicepipelineresponse.h
   updateservicepipelineresponse_p.h
-  updateservicerequest.h
-  updateservicerequest_p.h
-  updateserviceresponse.h
-  updateserviceresponse_p.h
   updateservicetemplaterequest.h
   updateservicetemplaterequest_p.h
   updateservicetemplateresponse.h
@@ -204,81 +304,133 @@ add_library(QtAwsProton
   updateservicetemplateversionrequest_p.h
   updateservicetemplateversionresponse.h
   updateservicetemplateversionresponse_p.h
+  updatetemplatesyncconfigrequest.h
+  updatetemplatesyncconfigrequest_p.h
+  updatetemplatesyncconfigresponse.h
+  updatetemplatesyncconfigresponse_p.h
+  protonclient.cpp
+  protonrequest.cpp
+  protonresponse.cpp
   acceptenvironmentaccountconnectionrequest.cpp
   acceptenvironmentaccountconnectionresponse.cpp
+  cancelcomponentdeploymentrequest.cpp
+  cancelcomponentdeploymentresponse.cpp
   cancelenvironmentdeploymentrequest.cpp
   cancelenvironmentdeploymentresponse.cpp
   cancelserviceinstancedeploymentrequest.cpp
   cancelserviceinstancedeploymentresponse.cpp
   cancelservicepipelinedeploymentrequest.cpp
   cancelservicepipelinedeploymentresponse.cpp
-  createenvironmentaccountconnectionrequest.cpp
-  createenvironmentaccountconnectionresponse.cpp
+  createcomponentrequest.cpp
+  createcomponentresponse.cpp
   createenvironmentrequest.cpp
   createenvironmentresponse.cpp
+  createenvironmentaccountconnectionrequest.cpp
+  createenvironmentaccountconnectionresponse.cpp
   createenvironmenttemplaterequest.cpp
   createenvironmenttemplateresponse.cpp
   createenvironmenttemplateversionrequest.cpp
   createenvironmenttemplateversionresponse.cpp
+  createrepositoryrequest.cpp
+  createrepositoryresponse.cpp
   createservicerequest.cpp
   createserviceresponse.cpp
   createservicetemplaterequest.cpp
   createservicetemplateresponse.cpp
   createservicetemplateversionrequest.cpp
   createservicetemplateversionresponse.cpp
-  deleteenvironmentaccountconnectionrequest.cpp
-  deleteenvironmentaccountconnectionresponse.cpp
+  createtemplatesyncconfigrequest.cpp
+  createtemplatesyncconfigresponse.cpp
+  deletecomponentrequest.cpp
+  deletecomponentresponse.cpp
   deleteenvironmentrequest.cpp
   deleteenvironmentresponse.cpp
+  deleteenvironmentaccountconnectionrequest.cpp
+  deleteenvironmentaccountconnectionresponse.cpp
   deleteenvironmenttemplaterequest.cpp
   deleteenvironmenttemplateresponse.cpp
   deleteenvironmenttemplateversionrequest.cpp
   deleteenvironmenttemplateversionresponse.cpp
+  deleterepositoryrequest.cpp
+  deleterepositoryresponse.cpp
   deleteservicerequest.cpp
   deleteserviceresponse.cpp
   deleteservicetemplaterequest.cpp
   deleteservicetemplateresponse.cpp
   deleteservicetemplateversionrequest.cpp
   deleteservicetemplateversionresponse.cpp
+  deletetemplatesyncconfigrequest.cpp
+  deletetemplatesyncconfigresponse.cpp
   getaccountsettingsrequest.cpp
   getaccountsettingsresponse.cpp
-  getenvironmentaccountconnectionrequest.cpp
-  getenvironmentaccountconnectionresponse.cpp
+  getcomponentrequest.cpp
+  getcomponentresponse.cpp
   getenvironmentrequest.cpp
   getenvironmentresponse.cpp
+  getenvironmentaccountconnectionrequest.cpp
+  getenvironmentaccountconnectionresponse.cpp
   getenvironmenttemplaterequest.cpp
   getenvironmenttemplateresponse.cpp
   getenvironmenttemplateversionrequest.cpp
   getenvironmenttemplateversionresponse.cpp
-  getserviceinstancerequest.cpp
-  getserviceinstanceresponse.cpp
+  getrepositoryrequest.cpp
+  getrepositoryresponse.cpp
+  getrepositorysyncstatusrequest.cpp
+  getrepositorysyncstatusresponse.cpp
   getservicerequest.cpp
   getserviceresponse.cpp
+  getserviceinstancerequest.cpp
+  getserviceinstanceresponse.cpp
   getservicetemplaterequest.cpp
   getservicetemplateresponse.cpp
   getservicetemplateversionrequest.cpp
   getservicetemplateversionresponse.cpp
+  gettemplatesyncconfigrequest.cpp
+  gettemplatesyncconfigresponse.cpp
+  gettemplatesyncstatusrequest.cpp
+  gettemplatesyncstatusresponse.cpp
+  listcomponentoutputsrequest.cpp
+  listcomponentoutputsresponse.cpp
+  listcomponentprovisionedresourcesrequest.cpp
+  listcomponentprovisionedresourcesresponse.cpp
+  listcomponentsrequest.cpp
+  listcomponentsresponse.cpp
   listenvironmentaccountconnectionsrequest.cpp
   listenvironmentaccountconnectionsresponse.cpp
-  listenvironmentsrequest.cpp
-  listenvironmentsresponse.cpp
-  listenvironmenttemplatesrequest.cpp
-  listenvironmenttemplatesresponse.cpp
+  listenvironmentoutputsrequest.cpp
+  listenvironmentoutputsresponse.cpp
+  listenvironmentprovisionedresourcesrequest.cpp
+  listenvironmentprovisionedresourcesresponse.cpp
   listenvironmenttemplateversionsrequest.cpp
   listenvironmenttemplateversionsresponse.cpp
+  listenvironmenttemplatesrequest.cpp
+  listenvironmenttemplatesresponse.cpp
+  listenvironmentsrequest.cpp
+  listenvironmentsresponse.cpp
+  listrepositoriesrequest.cpp
+  listrepositoriesresponse.cpp
+  listrepositorysyncdefinitionsrequest.cpp
+  listrepositorysyncdefinitionsresponse.cpp
+  listserviceinstanceoutputsrequest.cpp
+  listserviceinstanceoutputsresponse.cpp
+  listserviceinstanceprovisionedresourcesrequest.cpp
+  listserviceinstanceprovisionedresourcesresponse.cpp
   listserviceinstancesrequest.cpp
   listserviceinstancesresponse.cpp
-  listservicesrequest.cpp
-  listservicesresponse.cpp
-  listservicetemplatesrequest.cpp
-  listservicetemplatesresponse.cpp
+  listservicepipelineoutputsrequest.cpp
+  listservicepipelineoutputsresponse.cpp
+  listservicepipelineprovisionedresourcesrequest.cpp
+  listservicepipelineprovisionedresourcesresponse.cpp
   listservicetemplateversionsrequest.cpp
   listservicetemplateversionsresponse.cpp
+  listservicetemplatesrequest.cpp
+  listservicetemplatesresponse.cpp
+  listservicesrequest.cpp
+  listservicesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  protonclient.cpp
-  protonrequest.cpp
-  protonresponse.cpp
+  notifyresourcedeploymentstatuschangerequest.cpp
+  notifyresourcedeploymentstatuschangeresponse.cpp
   rejectenvironmentaccountconnectionrequest.cpp
   rejectenvironmentaccountconnectionresponse.cpp
   tagresourcerequest.cpp
@@ -287,24 +439,28 @@ add_library(QtAwsProton
   untagresourceresponse.cpp
   updateaccountsettingsrequest.cpp
   updateaccountsettingsresponse.cpp
-  updateenvironmentaccountconnectionrequest.cpp
-  updateenvironmentaccountconnectionresponse.cpp
+  updatecomponentrequest.cpp
+  updatecomponentresponse.cpp
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp
+  updateenvironmentaccountconnectionrequest.cpp
+  updateenvironmentaccountconnectionresponse.cpp
   updateenvironmenttemplaterequest.cpp
   updateenvironmenttemplateresponse.cpp
   updateenvironmenttemplateversionrequest.cpp
   updateenvironmenttemplateversionresponse.cpp
+  updateservicerequest.cpp
+  updateserviceresponse.cpp
   updateserviceinstancerequest.cpp
   updateserviceinstanceresponse.cpp
   updateservicepipelinerequest.cpp
   updateservicepipelineresponse.cpp
-  updateservicerequest.cpp
-  updateserviceresponse.cpp
   updateservicetemplaterequest.cpp
   updateservicetemplateresponse.cpp
   updateservicetemplateversionrequest.cpp
-  updateservicetemplateversionresponse.cpp)
+  updateservicetemplateversionresponse.cpp
+  updatetemplatesyncconfigrequest.cpp
+  updatetemplatesyncconfigresponse.cpp)
 
 target_link_libraries(QtAwsProton
   PRIVATE QtAwsCore

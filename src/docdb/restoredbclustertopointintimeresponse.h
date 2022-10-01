@@ -24,11 +24,11 @@
 #include "restoredbclustertopointintimerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RestoreDBClusterToPointInTimeResponsePrivate;
 
-class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

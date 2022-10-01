@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeGlobalClustersResponse
- * \brief The DescribeGlobalClustersResponse class provides an interace for RDS DescribeGlobalClusters responses.
+ * \class QtAws::Rds::DescribeGlobalClustersResponse
+ * \brief The DescribeGlobalClustersResponse class provides an interace for Rds DescribeGlobalClusters responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeGlobalClustersRequest * DescribeGlobalClustersResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeGlobalClusters \a response.
+ * Parses a successful Rds DescribeGlobalClusters \a response.
  */
 void DescribeGlobalClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeGlobalClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeGlobalClustersResponsePrivate
+ * \class QtAws::Rds::DescribeGlobalClustersResponsePrivate
  * \brief The DescribeGlobalClustersResponsePrivate class provides private implementation for DescribeGlobalClustersResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeGlobalClustersResponsePrivate::DescribeGlobalClustersResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeGlobalClusters response element from \a xml.
+ * Parses a Rds DescribeGlobalClusters response element from \a xml.
  */
 void DescribeGlobalClustersResponsePrivate::parseDescribeGlobalClustersResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeGlobalClustersResponsePrivate::parseDescribeGlobalClustersResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

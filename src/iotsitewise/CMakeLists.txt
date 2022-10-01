@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSIOTSITEWISE_LIBRARY)
 
 add_library(QtAwsIoTSiteWise
+  qtawsiotsitewiseglobal.h
+  iotsitewiseclient.h
+  iotsitewiseclient_p.h
+  iotsitewiserequest.h
+  iotsitewiserequest_p.h
+  iotsitewiseresponse.h
+  iotsitewiseresponse_p.h
   associateassetsrequest.h
   associateassetsrequest_p.h
   associateassetsresponse.h
   associateassetsresponse_p.h
+  associatetimeseriestoassetpropertyrequest.h
+  associatetimeseriestoassetpropertyrequest_p.h
+  associatetimeseriestoassetpropertyresponse.h
+  associatetimeseriestoassetpropertyresponse_p.h
   batchassociateprojectassetsrequest.h
   batchassociateprojectassetsrequest_p.h
   batchassociateprojectassetsresponse.h
@@ -13,6 +24,18 @@ add_library(QtAwsIoTSiteWise
   batchdisassociateprojectassetsrequest_p.h
   batchdisassociateprojectassetsresponse.h
   batchdisassociateprojectassetsresponse_p.h
+  batchgetassetpropertyaggregatesrequest.h
+  batchgetassetpropertyaggregatesrequest_p.h
+  batchgetassetpropertyaggregatesresponse.h
+  batchgetassetpropertyaggregatesresponse_p.h
+  batchgetassetpropertyvaluerequest.h
+  batchgetassetpropertyvaluerequest_p.h
+  batchgetassetpropertyvalueresponse.h
+  batchgetassetpropertyvalueresponse_p.h
+  batchgetassetpropertyvaluehistoryrequest.h
+  batchgetassetpropertyvaluehistoryrequest_p.h
+  batchgetassetpropertyvaluehistoryresponse.h
+  batchgetassetpropertyvaluehistoryresponse_p.h
   batchputassetpropertyvaluerequest.h
   batchputassetpropertyvaluerequest_p.h
   batchputassetpropertyvalueresponse.h
@@ -21,14 +44,18 @@ add_library(QtAwsIoTSiteWise
   createaccesspolicyrequest_p.h
   createaccesspolicyresponse.h
   createaccesspolicyresponse_p.h
-  createassetmodelrequest.h
-  createassetmodelrequest_p.h
-  createassetmodelresponse.h
-  createassetmodelresponse_p.h
   createassetrequest.h
   createassetrequest_p.h
   createassetresponse.h
   createassetresponse_p.h
+  createassetmodelrequest.h
+  createassetmodelrequest_p.h
+  createassetmodelresponse.h
+  createassetmodelresponse_p.h
+  createbulkimportjobrequest.h
+  createbulkimportjobrequest_p.h
+  createbulkimportjobresponse.h
+  createbulkimportjobresponse_p.h
   createdashboardrequest.h
   createdashboardrequest_p.h
   createdashboardresponse.h
@@ -49,14 +76,14 @@ add_library(QtAwsIoTSiteWise
   deleteaccesspolicyrequest_p.h
   deleteaccesspolicyresponse.h
   deleteaccesspolicyresponse_p.h
-  deleteassetmodelrequest.h
-  deleteassetmodelrequest_p.h
-  deleteassetmodelresponse.h
-  deleteassetmodelresponse_p.h
   deleteassetrequest.h
   deleteassetrequest_p.h
   deleteassetresponse.h
   deleteassetresponse_p.h
+  deleteassetmodelrequest.h
+  deleteassetmodelrequest_p.h
+  deleteassetmodelresponse.h
+  deleteassetmodelresponse_p.h
   deletedashboardrequest.h
   deletedashboardrequest_p.h
   deletedashboardresponse.h
@@ -73,10 +100,18 @@ add_library(QtAwsIoTSiteWise
   deleteprojectrequest_p.h
   deleteprojectresponse.h
   deleteprojectresponse_p.h
+  deletetimeseriesrequest.h
+  deletetimeseriesrequest_p.h
+  deletetimeseriesresponse.h
+  deletetimeseriesresponse_p.h
   describeaccesspolicyrequest.h
   describeaccesspolicyrequest_p.h
   describeaccesspolicyresponse.h
   describeaccesspolicyresponse_p.h
+  describeassetrequest.h
+  describeassetrequest_p.h
+  describeassetresponse.h
+  describeassetresponse_p.h
   describeassetmodelrequest.h
   describeassetmodelrequest_p.h
   describeassetmodelresponse.h
@@ -85,10 +120,10 @@ add_library(QtAwsIoTSiteWise
   describeassetpropertyrequest_p.h
   describeassetpropertyresponse.h
   describeassetpropertyresponse_p.h
-  describeassetrequest.h
-  describeassetrequest_p.h
-  describeassetresponse.h
-  describeassetresponse_p.h
+  describebulkimportjobrequest.h
+  describebulkimportjobrequest_p.h
+  describebulkimportjobresponse.h
+  describebulkimportjobresponse_p.h
   describedashboardrequest.h
   describedashboardrequest_p.h
   describedashboardresponse.h
@@ -97,14 +132,14 @@ add_library(QtAwsIoTSiteWise
   describedefaultencryptionconfigurationrequest_p.h
   describedefaultencryptionconfigurationresponse.h
   describedefaultencryptionconfigurationresponse_p.h
-  describegatewaycapabilityconfigurationrequest.h
-  describegatewaycapabilityconfigurationrequest_p.h
-  describegatewaycapabilityconfigurationresponse.h
-  describegatewaycapabilityconfigurationresponse_p.h
   describegatewayrequest.h
   describegatewayrequest_p.h
   describegatewayresponse.h
   describegatewayresponse_p.h
+  describegatewaycapabilityconfigurationrequest.h
+  describegatewaycapabilityconfigurationrequest_p.h
+  describegatewaycapabilityconfigurationresponse.h
+  describegatewaycapabilityconfigurationresponse_p.h
   describeloggingoptionsrequest.h
   describeloggingoptionsrequest_p.h
   describeloggingoptionsresponse.h
@@ -117,32 +152,38 @@ add_library(QtAwsIoTSiteWise
   describeprojectrequest_p.h
   describeprojectresponse.h
   describeprojectresponse_p.h
+  describestorageconfigurationrequest.h
+  describestorageconfigurationrequest_p.h
+  describestorageconfigurationresponse.h
+  describestorageconfigurationresponse_p.h
+  describetimeseriesrequest.h
+  describetimeseriesrequest_p.h
+  describetimeseriesresponse.h
+  describetimeseriesresponse_p.h
   disassociateassetsrequest.h
   disassociateassetsrequest_p.h
   disassociateassetsresponse.h
   disassociateassetsresponse_p.h
+  disassociatetimeseriesfromassetpropertyrequest.h
+  disassociatetimeseriesfromassetpropertyrequest_p.h
+  disassociatetimeseriesfromassetpropertyresponse.h
+  disassociatetimeseriesfromassetpropertyresponse_p.h
   getassetpropertyaggregatesrequest.h
   getassetpropertyaggregatesrequest_p.h
   getassetpropertyaggregatesresponse.h
   getassetpropertyaggregatesresponse_p.h
-  getassetpropertyvaluehistoryrequest.h
-  getassetpropertyvaluehistoryrequest_p.h
-  getassetpropertyvaluehistoryresponse.h
-  getassetpropertyvaluehistoryresponse_p.h
   getassetpropertyvaluerequest.h
   getassetpropertyvaluerequest_p.h
   getassetpropertyvalueresponse.h
   getassetpropertyvalueresponse_p.h
+  getassetpropertyvaluehistoryrequest.h
+  getassetpropertyvaluehistoryrequest_p.h
+  getassetpropertyvaluehistoryresponse.h
+  getassetpropertyvaluehistoryresponse_p.h
   getinterpolatedassetpropertyvaluesrequest.h
   getinterpolatedassetpropertyvaluesrequest_p.h
   getinterpolatedassetpropertyvaluesresponse.h
   getinterpolatedassetpropertyvaluesresponse_p.h
-  iotsitewiseclient.h
-  iotsitewiseclient_p.h
-  iotsitewiserequest.h
-  iotsitewiserequest_p.h
-  iotsitewiseresponse.h
-  iotsitewiseresponse_p.h
   listaccesspoliciesrequest.h
   listaccesspoliciesrequest_p.h
   listaccesspoliciesresponse.h
@@ -163,6 +204,10 @@ add_library(QtAwsIoTSiteWise
   listassociatedassetsrequest_p.h
   listassociatedassetsresponse.h
   listassociatedassetsresponse_p.h
+  listbulkimportjobsrequest.h
+  listbulkimportjobsrequest_p.h
+  listbulkimportjobsresponse.h
+  listbulkimportjobsresponse_p.h
   listdashboardsrequest.h
   listdashboardsrequest_p.h
   listdashboardsresponse.h
@@ -187,6 +232,10 @@ add_library(QtAwsIoTSiteWise
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listtimeseriesrequest.h
+  listtimeseriesrequest_p.h
+  listtimeseriesresponse.h
+  listtimeseriesresponse_p.h
   putdefaultencryptionconfigurationrequest.h
   putdefaultencryptionconfigurationrequest_p.h
   putdefaultencryptionconfigurationresponse.h
@@ -195,7 +244,10 @@ add_library(QtAwsIoTSiteWise
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
-  qtawsiotsitewiseglobal.h
+  putstorageconfigurationrequest.h
+  putstorageconfigurationrequest_p.h
+  putstorageconfigurationresponse.h
+  putstorageconfigurationresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -208,6 +260,10 @@ add_library(QtAwsIoTSiteWise
   updateaccesspolicyrequest_p.h
   updateaccesspolicyresponse.h
   updateaccesspolicyresponse_p.h
+  updateassetrequest.h
+  updateassetrequest_p.h
+  updateassetresponse.h
+  updateassetresponse_p.h
   updateassetmodelrequest.h
   updateassetmodelrequest_p.h
   updateassetmodelresponse.h
@@ -216,22 +272,18 @@ add_library(QtAwsIoTSiteWise
   updateassetpropertyrequest_p.h
   updateassetpropertyresponse.h
   updateassetpropertyresponse_p.h
-  updateassetrequest.h
-  updateassetrequest_p.h
-  updateassetresponse.h
-  updateassetresponse_p.h
   updatedashboardrequest.h
   updatedashboardrequest_p.h
   updatedashboardresponse.h
   updatedashboardresponse_p.h
-  updategatewaycapabilityconfigurationrequest.h
-  updategatewaycapabilityconfigurationrequest_p.h
-  updategatewaycapabilityconfigurationresponse.h
-  updategatewaycapabilityconfigurationresponse_p.h
   updategatewayrequest.h
   updategatewayrequest_p.h
   updategatewayresponse.h
   updategatewayresponse_p.h
+  updategatewaycapabilityconfigurationrequest.h
+  updategatewaycapabilityconfigurationrequest_p.h
+  updategatewaycapabilityconfigurationresponse.h
+  updategatewaycapabilityconfigurationresponse_p.h
   updateportalrequest.h
   updateportalrequest_p.h
   updateportalresponse.h
@@ -240,20 +292,33 @@ add_library(QtAwsIoTSiteWise
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  iotsitewiseclient.cpp
+  iotsitewiserequest.cpp
+  iotsitewiseresponse.cpp
   associateassetsrequest.cpp
   associateassetsresponse.cpp
+  associatetimeseriestoassetpropertyrequest.cpp
+  associatetimeseriestoassetpropertyresponse.cpp
   batchassociateprojectassetsrequest.cpp
   batchassociateprojectassetsresponse.cpp
   batchdisassociateprojectassetsrequest.cpp
   batchdisassociateprojectassetsresponse.cpp
+  batchgetassetpropertyaggregatesrequest.cpp
+  batchgetassetpropertyaggregatesresponse.cpp
+  batchgetassetpropertyvaluerequest.cpp
+  batchgetassetpropertyvalueresponse.cpp
+  batchgetassetpropertyvaluehistoryrequest.cpp
+  batchgetassetpropertyvaluehistoryresponse.cpp
   batchputassetpropertyvaluerequest.cpp
   batchputassetpropertyvalueresponse.cpp
   createaccesspolicyrequest.cpp
   createaccesspolicyresponse.cpp
-  createassetmodelrequest.cpp
-  createassetmodelresponse.cpp
   createassetrequest.cpp
   createassetresponse.cpp
+  createassetmodelrequest.cpp
+  createassetmodelresponse.cpp
+  createbulkimportjobrequest.cpp
+  createbulkimportjobresponse.cpp
   createdashboardrequest.cpp
   createdashboardresponse.cpp
   creategatewayrequest.cpp
@@ -264,10 +329,10 @@ add_library(QtAwsIoTSiteWise
   createprojectresponse.cpp
   deleteaccesspolicyrequest.cpp
   deleteaccesspolicyresponse.cpp
-  deleteassetmodelrequest.cpp
-  deleteassetmodelresponse.cpp
   deleteassetrequest.cpp
   deleteassetresponse.cpp
+  deleteassetmodelrequest.cpp
+  deleteassetmodelresponse.cpp
   deletedashboardrequest.cpp
   deletedashboardresponse.cpp
   deletegatewayrequest.cpp
@@ -276,41 +341,48 @@ add_library(QtAwsIoTSiteWise
   deleteportalresponse.cpp
   deleteprojectrequest.cpp
   deleteprojectresponse.cpp
+  deletetimeseriesrequest.cpp
+  deletetimeseriesresponse.cpp
   describeaccesspolicyrequest.cpp
   describeaccesspolicyresponse.cpp
+  describeassetrequest.cpp
+  describeassetresponse.cpp
   describeassetmodelrequest.cpp
   describeassetmodelresponse.cpp
   describeassetpropertyrequest.cpp
   describeassetpropertyresponse.cpp
-  describeassetrequest.cpp
-  describeassetresponse.cpp
+  describebulkimportjobrequest.cpp
+  describebulkimportjobresponse.cpp
   describedashboardrequest.cpp
   describedashboardresponse.cpp
   describedefaultencryptionconfigurationrequest.cpp
   describedefaultencryptionconfigurationresponse.cpp
-  describegatewaycapabilityconfigurationrequest.cpp
-  describegatewaycapabilityconfigurationresponse.cpp
   describegatewayrequest.cpp
   describegatewayresponse.cpp
+  describegatewaycapabilityconfigurationrequest.cpp
+  describegatewaycapabilityconfigurationresponse.cpp
   describeloggingoptionsrequest.cpp
   describeloggingoptionsresponse.cpp
   describeportalrequest.cpp
   describeportalresponse.cpp
   describeprojectrequest.cpp
   describeprojectresponse.cpp
+  describestorageconfigurationrequest.cpp
+  describestorageconfigurationresponse.cpp
+  describetimeseriesrequest.cpp
+  describetimeseriesresponse.cpp
   disassociateassetsrequest.cpp
   disassociateassetsresponse.cpp
+  disassociatetimeseriesfromassetpropertyrequest.cpp
+  disassociatetimeseriesfromassetpropertyresponse.cpp
   getassetpropertyaggregatesrequest.cpp
   getassetpropertyaggregatesresponse.cpp
-  getassetpropertyvaluehistoryrequest.cpp
-  getassetpropertyvaluehistoryresponse.cpp
   getassetpropertyvaluerequest.cpp
   getassetpropertyvalueresponse.cpp
+  getassetpropertyvaluehistoryrequest.cpp
+  getassetpropertyvaluehistoryresponse.cpp
   getinterpolatedassetpropertyvaluesrequest.cpp
   getinterpolatedassetpropertyvaluesresponse.cpp
-  iotsitewiseclient.cpp
-  iotsitewiserequest.cpp
-  iotsitewiseresponse.cpp
   listaccesspoliciesrequest.cpp
   listaccesspoliciesresponse.cpp
   listassetmodelsrequest.cpp
@@ -321,6 +393,8 @@ add_library(QtAwsIoTSiteWise
   listassetsresponse.cpp
   listassociatedassetsrequest.cpp
   listassociatedassetsresponse.cpp
+  listbulkimportjobsrequest.cpp
+  listbulkimportjobsresponse.cpp
   listdashboardsrequest.cpp
   listdashboardsresponse.cpp
   listgatewaysrequest.cpp
@@ -333,28 +407,32 @@ add_library(QtAwsIoTSiteWise
   listprojectsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listtimeseriesrequest.cpp
+  listtimeseriesresponse.cpp
   putdefaultencryptionconfigurationrequest.cpp
   putdefaultencryptionconfigurationresponse.cpp
   putloggingoptionsrequest.cpp
   putloggingoptionsresponse.cpp
+  putstorageconfigurationrequest.cpp
+  putstorageconfigurationresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateaccesspolicyrequest.cpp
   updateaccesspolicyresponse.cpp
+  updateassetrequest.cpp
+  updateassetresponse.cpp
   updateassetmodelrequest.cpp
   updateassetmodelresponse.cpp
   updateassetpropertyrequest.cpp
   updateassetpropertyresponse.cpp
-  updateassetrequest.cpp
-  updateassetresponse.cpp
   updatedashboardrequest.cpp
   updatedashboardresponse.cpp
-  updategatewaycapabilityconfigurationrequest.cpp
-  updategatewaycapabilityconfigurationresponse.cpp
   updategatewayrequest.cpp
   updategatewayresponse.cpp
+  updategatewaycapabilityconfigurationrequest.cpp
+  updategatewaycapabilityconfigurationresponse.cpp
   updateportalrequest.cpp
   updateportalresponse.cpp
   updateprojectrequest.cpp

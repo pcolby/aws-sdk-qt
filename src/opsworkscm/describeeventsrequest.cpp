@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeEventsRequest
- * \brief The DescribeEventsRequest class provides an interface for OpsWorksCM DescribeEvents requests.
+ * \class QtAws::OpsWorksCm::DescribeEventsRequest
+ * \brief The DescribeEventsRequest class provides an interface for OpsWorksCm DescribeEvents requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeEvents
+ * \sa OpsWorksCmClient::describeEvents
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
-    : OpsWorksCMRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
  * Constructs a DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
-    : OpsWorksCMRequest(new DescribeEventsRequestPrivate(OpsWorksCMRequest::DescribeEventsAction, this))
+    : OpsWorksCmRequest(new DescribeEventsRequestPrivate(OpsWorksCmRequest::DescribeEventsAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeEventsRequestPrivate
+ * \class QtAws::OpsWorksCm::DescribeEventsRequestPrivate
  * \brief The DescribeEventsRequestPrivate class provides private implementation for DescribeEventsRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DescribeEventsRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DescribeEventsRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
-    const OpsWorksCMRequest::Action action, DescribeEventsRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DescribeEventsRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

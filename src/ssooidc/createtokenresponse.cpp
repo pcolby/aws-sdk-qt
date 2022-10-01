@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::CreateTokenResponse
- * \brief The CreateTokenResponse class provides an interace for SSOOIDC CreateToken responses.
+ * \class QtAws::SsoOidc::CreateTokenResponse
+ * \brief The CreateTokenResponse class provides an interace for SsoOidc CreateToken responses.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -56,7 +56,7 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::createToken
+ * \sa SsoOidcClient::createToken
  */
 
 /*!
@@ -66,7 +66,7 @@ CreateTokenResponse::CreateTokenResponse(
         const CreateTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SsooidcResponse(new CreateTokenResponsePrivate(this), parent)
+    : SsoOidcResponse(new CreateTokenResponsePrivate(this), parent)
 {
     setRequest(new CreateTokenRequest(request));
     setReply(reply);
@@ -83,7 +83,7 @@ const CreateTokenRequest * CreateTokenResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSOOIDC CreateToken \a response.
+ * Parses a successful SsoOidc CreateToken \a response.
  */
 void CreateTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -93,24 +93,24 @@ void CreateTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSOOIDC::CreateTokenResponsePrivate
+ * \class QtAws::SsoOidc::CreateTokenResponsePrivate
  * \brief The CreateTokenResponsePrivate class provides private implementation for CreateTokenResponse.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
  * Constructs a CreateTokenResponsePrivate object with public implementation \a q.
  */
 CreateTokenResponsePrivate::CreateTokenResponsePrivate(
-    CreateTokenResponse * const q) : SsooidcResponsePrivate(q)
+    CreateTokenResponse * const q) : SsoOidcResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSOOIDC CreateToken response element from \a xml.
+ * Parses a SsoOidc CreateToken response element from \a xml.
  */
 void CreateTokenResponsePrivate::parseCreateTokenResponse(QXmlStreamReader &xml)
 {
@@ -118,5 +118,5 @@ void CreateTokenResponsePrivate::parseCreateTokenResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

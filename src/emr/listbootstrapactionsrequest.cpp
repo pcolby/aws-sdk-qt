@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ListBootstrapActionsRequest
- * \brief The ListBootstrapActionsRequest class provides an interface for EMR ListBootstrapActions requests.
+ * \class QtAws::Emr::ListBootstrapActionsRequest
+ * \brief The ListBootstrapActionsRequest class provides an interface for Emr ListBootstrapActions requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listBootstrapActions
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EMR::ListBootstrapActionsRequestPrivate
+ * \class QtAws::Emr::ListBootstrapActionsRequestPrivate
  * \brief The ListBootstrapActionsRequestPrivate class provides private implementation for ListBootstrapActionsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

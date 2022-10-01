@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeAddonVersionsResponse
- * \brief The DescribeAddonVersionsResponse class provides an interace for EKS DescribeAddonVersions responses.
+ * \class QtAws::Eks::DescribeAddonVersionsResponse
+ * \brief The DescribeAddonVersionsResponse class provides an interace for Eks DescribeAddonVersions responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeAddonVersionsRequest * DescribeAddonVersionsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeAddonVersions \a response.
+ * Parses a successful Eks DescribeAddonVersions \a response.
  */
 void DescribeAddonVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeAddonVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeAddonVersionsResponsePrivate
+ * \class QtAws::Eks::DescribeAddonVersionsResponsePrivate
  * \brief The DescribeAddonVersionsResponsePrivate class provides private implementation for DescribeAddonVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeAddonVersionsResponsePrivate::DescribeAddonVersionsResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeAddonVersions response element from \a xml.
+ * Parses a Eks DescribeAddonVersions response element from \a xml.
  */
 void DescribeAddonVersionsResponsePrivate::parseDescribeAddonVersionsResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeAddonVersionsResponsePrivate::parseDescribeAddonVersionsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ExecuteStatementResponse
- * \brief The ExecuteStatementResponse class provides an interace for DynamoDB ExecuteStatement responses.
+ * \class QtAws::DynamoDb::ExecuteStatementResponse
+ * \brief The ExecuteStatementResponse class provides an interace for DynamoDb ExecuteStatement responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::executeStatement
+ * \sa DynamoDbClient::executeStatement
  */
 
 /*!
@@ -63,7 +63,7 @@ ExecuteStatementResponse::ExecuteStatementResponse(
         const ExecuteStatementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ExecuteStatementResponsePrivate(this), parent)
+    : DynamoDbResponse(new ExecuteStatementResponsePrivate(this), parent)
 {
     setRequest(new ExecuteStatementRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const ExecuteStatementRequest * ExecuteStatementResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB ExecuteStatement \a response.
+ * Parses a successful DynamoDb ExecuteStatement \a response.
  */
 void ExecuteStatementResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void ExecuteStatementResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::ExecuteStatementResponsePrivate
+ * \class QtAws::DynamoDb::ExecuteStatementResponsePrivate
  * \brief The ExecuteStatementResponsePrivate class provides private implementation for ExecuteStatementResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a ExecuteStatementResponsePrivate object with public implementation \a q.
  */
 ExecuteStatementResponsePrivate::ExecuteStatementResponsePrivate(
-    ExecuteStatementResponse * const q) : DynamoDBResponsePrivate(q)
+    ExecuteStatementResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB ExecuteStatement response element from \a xml.
+ * Parses a DynamoDb ExecuteStatement response element from \a xml.
  */
 void ExecuteStatementResponsePrivate::parseExecuteStatementResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ExecuteStatementResponsePrivate::parseExecuteStatementResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

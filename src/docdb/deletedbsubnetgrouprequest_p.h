@@ -24,14 +24,14 @@
 #include "deletedbsubnetgrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteDBSubnetGroupRequest;
 
-class DeleteDBSubnetGroupRequestPrivate : public DocDBRequestPrivate {
+class DeleteDBSubnetGroupRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteDBSubnetGroupRequestPrivate(const DocDBRequest::Action action,
+    DeleteDBSubnetGroupRequestPrivate(const DocDbRequest::Action action,
                                    DeleteDBSubnetGroupRequest * const q);
     DeleteDBSubnetGroupRequestPrivate(const DeleteDBSubnetGroupRequestPrivate &other,
                                    DeleteDBSubnetGroupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::GetBlockPublicAccessConfigurationRequest
- * \brief The GetBlockPublicAccessConfigurationRequest class provides an interface for EMR GetBlockPublicAccessConfiguration requests.
+ * \class QtAws::Emr::GetBlockPublicAccessConfigurationRequest
+ * \brief The GetBlockPublicAccessConfigurationRequest class provides an interface for Emr GetBlockPublicAccessConfiguration requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::getBlockPublicAccessConfiguration
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * GetBlockPublicAccessConfigurationRequest::res
 }
 
 /*!
- * \class QtAws::EMR::GetBlockPublicAccessConfigurationRequestPrivate
+ * \class QtAws::Emr::GetBlockPublicAccessConfigurationRequestPrivate
  * \brief The GetBlockPublicAccessConfigurationRequestPrivate class provides private implementation for GetBlockPublicAccessConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ GetBlockPublicAccessConfigurationRequestPrivate::GetBlockPublicAccessConfigurati
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

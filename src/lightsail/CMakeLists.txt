@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLIGHTSAIL_LIBRARY)
 
 add_library(QtAwsLightsail
+  qtawslightsailglobal.h
+  lightsailclient.h
+  lightsailclient_p.h
+  lightsailrequest.h
+  lightsailrequest_p.h
+  lightsailresponse.h
+  lightsailresponse_p.h
   allocatestaticiprequest.h
   allocatestaticiprequest_p.h
   allocatestaticipresponse.h
@@ -33,6 +40,14 @@ add_library(QtAwsLightsail
   copysnapshotrequest_p.h
   copysnapshotresponse.h
   copysnapshotresponse_p.h
+  createbucketrequest.h
+  createbucketrequest_p.h
+  createbucketresponse.h
+  createbucketresponse_p.h
+  createbucketaccesskeyrequest.h
+  createbucketaccesskeyrequest_p.h
+  createbucketaccesskeyresponse.h
+  createbucketaccesskeyresponse_p.h
   createcertificaterequest.h
   createcertificaterequest_p.h
   createcertificateresponse.h
@@ -45,6 +60,10 @@ add_library(QtAwsLightsail
   createcontactmethodrequest_p.h
   createcontactmethodresponse.h
   createcontactmethodresponse_p.h
+  createcontainerservicerequest.h
+  createcontainerservicerequest_p.h
+  createcontainerserviceresponse.h
+  createcontainerserviceresponse_p.h
   createcontainerservicedeploymentrequest.h
   createcontainerservicedeploymentrequest_p.h
   createcontainerservicedeploymentresponse.h
@@ -53,18 +72,14 @@ add_library(QtAwsLightsail
   createcontainerserviceregistryloginrequest_p.h
   createcontainerserviceregistryloginresponse.h
   createcontainerserviceregistryloginresponse_p.h
-  createcontainerservicerequest.h
-  createcontainerservicerequest_p.h
-  createcontainerserviceresponse.h
-  createcontainerserviceresponse_p.h
-  creatediskfromsnapshotrequest.h
-  creatediskfromsnapshotrequest_p.h
-  creatediskfromsnapshotresponse.h
-  creatediskfromsnapshotresponse_p.h
   creatediskrequest.h
   creatediskrequest_p.h
   creatediskresponse.h
   creatediskresponse_p.h
+  creatediskfromsnapshotrequest.h
+  creatediskfromsnapshotrequest_p.h
+  creatediskfromsnapshotresponse.h
+  creatediskfromsnapshotresponse_p.h
   createdisksnapshotrequest.h
   createdisksnapshotrequest_p.h
   createdisksnapshotresponse.h
@@ -73,18 +88,14 @@ add_library(QtAwsLightsail
   createdistributionrequest_p.h
   createdistributionresponse.h
   createdistributionresponse_p.h
-  createdomainentryrequest.h
-  createdomainentryrequest_p.h
-  createdomainentryresponse.h
-  createdomainentryresponse_p.h
   createdomainrequest.h
   createdomainrequest_p.h
   createdomainresponse.h
   createdomainresponse_p.h
-  createinstancesfromsnapshotrequest.h
-  createinstancesfromsnapshotrequest_p.h
-  createinstancesfromsnapshotresponse.h
-  createinstancesfromsnapshotresponse_p.h
+  createdomainentryrequest.h
+  createdomainentryrequest_p.h
+  createdomainentryresponse.h
+  createdomainentryresponse_p.h
   createinstancesnapshotrequest.h
   createinstancesnapshotrequest_p.h
   createinstancesnapshotresponse.h
@@ -93,6 +104,10 @@ add_library(QtAwsLightsail
   createinstancesrequest_p.h
   createinstancesresponse.h
   createinstancesresponse_p.h
+  createinstancesfromsnapshotrequest.h
+  createinstancesfromsnapshotrequest_p.h
+  createinstancesfromsnapshotresponse.h
+  createinstancesfromsnapshotresponse_p.h
   createkeypairrequest.h
   createkeypairrequest_p.h
   createkeypairresponse.h
@@ -105,14 +120,14 @@ add_library(QtAwsLightsail
   createloadbalancertlscertificaterequest_p.h
   createloadbalancertlscertificateresponse.h
   createloadbalancertlscertificateresponse_p.h
-  createrelationaldatabasefromsnapshotrequest.h
-  createrelationaldatabasefromsnapshotrequest_p.h
-  createrelationaldatabasefromsnapshotresponse.h
-  createrelationaldatabasefromsnapshotresponse_p.h
   createrelationaldatabaserequest.h
   createrelationaldatabaserequest_p.h
   createrelationaldatabaseresponse.h
   createrelationaldatabaseresponse_p.h
+  createrelationaldatabasefromsnapshotrequest.h
+  createrelationaldatabasefromsnapshotrequest_p.h
+  createrelationaldatabasefromsnapshotresponse.h
+  createrelationaldatabasefromsnapshotresponse_p.h
   createrelationaldatabasesnapshotrequest.h
   createrelationaldatabasesnapshotrequest_p.h
   createrelationaldatabasesnapshotresponse.h
@@ -125,6 +140,14 @@ add_library(QtAwsLightsail
   deleteautosnapshotrequest_p.h
   deleteautosnapshotresponse.h
   deleteautosnapshotresponse_p.h
+  deletebucketrequest.h
+  deletebucketrequest_p.h
+  deletebucketresponse.h
+  deletebucketresponse_p.h
+  deletebucketaccesskeyrequest.h
+  deletebucketaccesskeyrequest_p.h
+  deletebucketaccesskeyresponse.h
+  deletebucketaccesskeyresponse_p.h
   deletecertificaterequest.h
   deletecertificaterequest_p.h
   deletecertificateresponse.h
@@ -153,14 +176,14 @@ add_library(QtAwsLightsail
   deletedistributionrequest_p.h
   deletedistributionresponse.h
   deletedistributionresponse_p.h
-  deletedomainentryrequest.h
-  deletedomainentryrequest_p.h
-  deletedomainentryresponse.h
-  deletedomainentryresponse_p.h
   deletedomainrequest.h
   deletedomainrequest_p.h
   deletedomainresponse.h
   deletedomainresponse_p.h
+  deletedomainentryrequest.h
+  deletedomainentryrequest_p.h
+  deletedomainentryresponse.h
+  deletedomainentryresponse_p.h
   deleteinstancerequest.h
   deleteinstancerequest_p.h
   deleteinstanceresponse.h
@@ -241,6 +264,22 @@ add_library(QtAwsLightsail
   getblueprintsrequest_p.h
   getblueprintsresponse.h
   getblueprintsresponse_p.h
+  getbucketaccesskeysrequest.h
+  getbucketaccesskeysrequest_p.h
+  getbucketaccesskeysresponse.h
+  getbucketaccesskeysresponse_p.h
+  getbucketbundlesrequest.h
+  getbucketbundlesrequest_p.h
+  getbucketbundlesresponse.h
+  getbucketbundlesresponse_p.h
+  getbucketmetricdatarequest.h
+  getbucketmetricdatarequest_p.h
+  getbucketmetricdataresponse.h
+  getbucketmetricdataresponse_p.h
+  getbucketsrequest.h
+  getbucketsrequest_p.h
+  getbucketsresponse.h
+  getbucketsresponse_p.h
   getbundlesrequest.h
   getbundlesrequest_p.h
   getbundlesresponse.h
@@ -329,6 +368,10 @@ add_library(QtAwsLightsail
   getexportsnapshotrecordsrequest_p.h
   getexportsnapshotrecordsresponse.h
   getexportsnapshotrecordsresponse_p.h
+  getinstancerequest.h
+  getinstancerequest_p.h
+  getinstanceresponse.h
+  getinstanceresponse_p.h
   getinstanceaccessdetailsrequest.h
   getinstanceaccessdetailsrequest_p.h
   getinstanceaccessdetailsresponse.h
@@ -341,10 +384,6 @@ add_library(QtAwsLightsail
   getinstanceportstatesrequest_p.h
   getinstanceportstatesresponse.h
   getinstanceportstatesresponse_p.h
-  getinstancerequest.h
-  getinstancerequest_p.h
-  getinstanceresponse.h
-  getinstanceresponse_p.h
   getinstancesnapshotrequest.h
   getinstancesnapshotrequest_p.h
   getinstancesnapshotresponse.h
@@ -353,14 +392,14 @@ add_library(QtAwsLightsail
   getinstancesnapshotsrequest_p.h
   getinstancesnapshotsresponse.h
   getinstancesnapshotsresponse_p.h
-  getinstancesrequest.h
-  getinstancesrequest_p.h
-  getinstancesresponse.h
-  getinstancesresponse_p.h
   getinstancestaterequest.h
   getinstancestaterequest_p.h
   getinstancestateresponse.h
   getinstancestateresponse_p.h
+  getinstancesrequest.h
+  getinstancesrequest_p.h
+  getinstancesresponse.h
+  getinstancesresponse_p.h
   getkeypairrequest.h
   getkeypairrequest_p.h
   getkeypairresponse.h
@@ -369,38 +408,46 @@ add_library(QtAwsLightsail
   getkeypairsrequest_p.h
   getkeypairsresponse.h
   getkeypairsresponse_p.h
-  getloadbalancermetricdatarequest.h
-  getloadbalancermetricdatarequest_p.h
-  getloadbalancermetricdataresponse.h
-  getloadbalancermetricdataresponse_p.h
   getloadbalancerrequest.h
   getloadbalancerrequest_p.h
   getloadbalancerresponse.h
   getloadbalancerresponse_p.h
-  getloadbalancersrequest.h
-  getloadbalancersrequest_p.h
-  getloadbalancersresponse.h
-  getloadbalancersresponse_p.h
+  getloadbalancermetricdatarequest.h
+  getloadbalancermetricdatarequest_p.h
+  getloadbalancermetricdataresponse.h
+  getloadbalancermetricdataresponse_p.h
   getloadbalancertlscertificatesrequest.h
   getloadbalancertlscertificatesrequest_p.h
   getloadbalancertlscertificatesresponse.h
   getloadbalancertlscertificatesresponse_p.h
+  getloadbalancertlspoliciesrequest.h
+  getloadbalancertlspoliciesrequest_p.h
+  getloadbalancertlspoliciesresponse.h
+  getloadbalancertlspoliciesresponse_p.h
+  getloadbalancersrequest.h
+  getloadbalancersrequest_p.h
+  getloadbalancersresponse.h
+  getloadbalancersresponse_p.h
   getoperationrequest.h
   getoperationrequest_p.h
   getoperationresponse.h
   getoperationresponse_p.h
-  getoperationsforresourcerequest.h
-  getoperationsforresourcerequest_p.h
-  getoperationsforresourceresponse.h
-  getoperationsforresourceresponse_p.h
   getoperationsrequest.h
   getoperationsrequest_p.h
   getoperationsresponse.h
   getoperationsresponse_p.h
+  getoperationsforresourcerequest.h
+  getoperationsforresourcerequest_p.h
+  getoperationsforresourceresponse.h
+  getoperationsforresourceresponse_p.h
   getregionsrequest.h
   getregionsrequest_p.h
   getregionsresponse.h
   getregionsresponse_p.h
+  getrelationaldatabaserequest.h
+  getrelationaldatabaserequest_p.h
+  getrelationaldatabaseresponse.h
+  getrelationaldatabaseresponse_p.h
   getrelationaldatabaseblueprintsrequest.h
   getrelationaldatabaseblueprintsrequest_p.h
   getrelationaldatabaseblueprintsresponse.h
@@ -433,10 +480,6 @@ add_library(QtAwsLightsail
   getrelationaldatabaseparametersrequest_p.h
   getrelationaldatabaseparametersresponse.h
   getrelationaldatabaseparametersresponse_p.h
-  getrelationaldatabaserequest.h
-  getrelationaldatabaserequest_p.h
-  getrelationaldatabaseresponse.h
-  getrelationaldatabaseresponse_p.h
   getrelationaldatabasesnapshotrequest.h
   getrelationaldatabasesnapshotrequest_p.h
   getrelationaldatabasesnapshotresponse.h
@@ -465,12 +508,6 @@ add_library(QtAwsLightsail
   isvpcpeeredrequest_p.h
   isvpcpeeredresponse.h
   isvpcpeeredresponse_p.h
-  lightsailclient.h
-  lightsailclient_p.h
-  lightsailrequest.h
-  lightsailrequest_p.h
-  lightsailresponse.h
-  lightsailresponse_p.h
   openinstancepublicportsrequest.h
   openinstancepublicportsrequest_p.h
   openinstancepublicportsresponse.h
@@ -487,7 +524,6 @@ add_library(QtAwsLightsail
   putinstancepublicportsrequest_p.h
   putinstancepublicportsresponse.h
   putinstancepublicportsresponse_p.h
-  qtawslightsailglobal.h
   rebootinstancerequest.h
   rebootinstancerequest_p.h
   rebootinstanceresponse.h
@@ -516,6 +552,10 @@ add_library(QtAwsLightsail
   setipaddresstyperequest_p.h
   setipaddresstyperesponse.h
   setipaddresstyperesponse_p.h
+  setresourceaccessforbucketrequest.h
+  setresourceaccessforbucketrequest_p.h
+  setresourceaccessforbucketresponse.h
+  setresourceaccessforbucketresponse_p.h
   startinstancerequest.h
   startinstancerequest_p.h
   startinstanceresponse.h
@@ -548,18 +588,26 @@ add_library(QtAwsLightsail
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatebucketrequest.h
+  updatebucketrequest_p.h
+  updatebucketresponse.h
+  updatebucketresponse_p.h
+  updatebucketbundlerequest.h
+  updatebucketbundlerequest_p.h
+  updatebucketbundleresponse.h
+  updatebucketbundleresponse_p.h
   updatecontainerservicerequest.h
   updatecontainerservicerequest_p.h
   updatecontainerserviceresponse.h
   updatecontainerserviceresponse_p.h
-  updatedistributionbundlerequest.h
-  updatedistributionbundlerequest_p.h
-  updatedistributionbundleresponse.h
-  updatedistributionbundleresponse_p.h
   updatedistributionrequest.h
   updatedistributionrequest_p.h
   updatedistributionresponse.h
   updatedistributionresponse_p.h
+  updatedistributionbundlerequest.h
+  updatedistributionbundlerequest_p.h
+  updatedistributionbundleresponse.h
+  updatedistributionbundleresponse_p.h
   updatedomainentryrequest.h
   updatedomainentryrequest_p.h
   updatedomainentryresponse.h
@@ -568,14 +616,17 @@ add_library(QtAwsLightsail
   updateloadbalancerattributerequest_p.h
   updateloadbalancerattributeresponse.h
   updateloadbalancerattributeresponse_p.h
-  updaterelationaldatabaseparametersrequest.h
-  updaterelationaldatabaseparametersrequest_p.h
-  updaterelationaldatabaseparametersresponse.h
-  updaterelationaldatabaseparametersresponse_p.h
   updaterelationaldatabaserequest.h
   updaterelationaldatabaserequest_p.h
   updaterelationaldatabaseresponse.h
   updaterelationaldatabaseresponse_p.h
+  updaterelationaldatabaseparametersrequest.h
+  updaterelationaldatabaseparametersrequest_p.h
+  updaterelationaldatabaseparametersresponse.h
+  updaterelationaldatabaseparametersresponse_p.h
+  lightsailclient.cpp
+  lightsailrequest.cpp
+  lightsailresponse.cpp
   allocatestaticiprequest.cpp
   allocatestaticipresponse.cpp
   attachcertificatetodistributionrequest.cpp
@@ -592,52 +643,60 @@ add_library(QtAwsLightsail
   closeinstancepublicportsresponse.cpp
   copysnapshotrequest.cpp
   copysnapshotresponse.cpp
+  createbucketrequest.cpp
+  createbucketresponse.cpp
+  createbucketaccesskeyrequest.cpp
+  createbucketaccesskeyresponse.cpp
   createcertificaterequest.cpp
   createcertificateresponse.cpp
   createcloudformationstackrequest.cpp
   createcloudformationstackresponse.cpp
   createcontactmethodrequest.cpp
   createcontactmethodresponse.cpp
+  createcontainerservicerequest.cpp
+  createcontainerserviceresponse.cpp
   createcontainerservicedeploymentrequest.cpp
   createcontainerservicedeploymentresponse.cpp
   createcontainerserviceregistryloginrequest.cpp
   createcontainerserviceregistryloginresponse.cpp
-  createcontainerservicerequest.cpp
-  createcontainerserviceresponse.cpp
-  creatediskfromsnapshotrequest.cpp
-  creatediskfromsnapshotresponse.cpp
   creatediskrequest.cpp
   creatediskresponse.cpp
+  creatediskfromsnapshotrequest.cpp
+  creatediskfromsnapshotresponse.cpp
   createdisksnapshotrequest.cpp
   createdisksnapshotresponse.cpp
   createdistributionrequest.cpp
   createdistributionresponse.cpp
-  createdomainentryrequest.cpp
-  createdomainentryresponse.cpp
   createdomainrequest.cpp
   createdomainresponse.cpp
-  createinstancesfromsnapshotrequest.cpp
-  createinstancesfromsnapshotresponse.cpp
+  createdomainentryrequest.cpp
+  createdomainentryresponse.cpp
   createinstancesnapshotrequest.cpp
   createinstancesnapshotresponse.cpp
   createinstancesrequest.cpp
   createinstancesresponse.cpp
+  createinstancesfromsnapshotrequest.cpp
+  createinstancesfromsnapshotresponse.cpp
   createkeypairrequest.cpp
   createkeypairresponse.cpp
   createloadbalancerrequest.cpp
   createloadbalancerresponse.cpp
   createloadbalancertlscertificaterequest.cpp
   createloadbalancertlscertificateresponse.cpp
-  createrelationaldatabasefromsnapshotrequest.cpp
-  createrelationaldatabasefromsnapshotresponse.cpp
   createrelationaldatabaserequest.cpp
   createrelationaldatabaseresponse.cpp
+  createrelationaldatabasefromsnapshotrequest.cpp
+  createrelationaldatabasefromsnapshotresponse.cpp
   createrelationaldatabasesnapshotrequest.cpp
   createrelationaldatabasesnapshotresponse.cpp
   deletealarmrequest.cpp
   deletealarmresponse.cpp
   deleteautosnapshotrequest.cpp
   deleteautosnapshotresponse.cpp
+  deletebucketrequest.cpp
+  deletebucketresponse.cpp
+  deletebucketaccesskeyrequest.cpp
+  deletebucketaccesskeyresponse.cpp
   deletecertificaterequest.cpp
   deletecertificateresponse.cpp
   deletecontactmethodrequest.cpp
@@ -652,10 +711,10 @@ add_library(QtAwsLightsail
   deletedisksnapshotresponse.cpp
   deletedistributionrequest.cpp
   deletedistributionresponse.cpp
-  deletedomainentryrequest.cpp
-  deletedomainentryresponse.cpp
   deletedomainrequest.cpp
   deletedomainresponse.cpp
+  deletedomainentryrequest.cpp
+  deletedomainentryresponse.cpp
   deleteinstancerequest.cpp
   deleteinstanceresponse.cpp
   deleteinstancesnapshotrequest.cpp
@@ -696,6 +755,14 @@ add_library(QtAwsLightsail
   getautosnapshotsresponse.cpp
   getblueprintsrequest.cpp
   getblueprintsresponse.cpp
+  getbucketaccesskeysrequest.cpp
+  getbucketaccesskeysresponse.cpp
+  getbucketbundlesrequest.cpp
+  getbucketbundlesresponse.cpp
+  getbucketmetricdatarequest.cpp
+  getbucketmetricdataresponse.cpp
+  getbucketsrequest.cpp
+  getbucketsresponse.cpp
   getbundlesrequest.cpp
   getbundlesresponse.cpp
   getcertificatesrequest.cpp
@@ -740,42 +807,46 @@ add_library(QtAwsLightsail
   getdomainsresponse.cpp
   getexportsnapshotrecordsrequest.cpp
   getexportsnapshotrecordsresponse.cpp
+  getinstancerequest.cpp
+  getinstanceresponse.cpp
   getinstanceaccessdetailsrequest.cpp
   getinstanceaccessdetailsresponse.cpp
   getinstancemetricdatarequest.cpp
   getinstancemetricdataresponse.cpp
   getinstanceportstatesrequest.cpp
   getinstanceportstatesresponse.cpp
-  getinstancerequest.cpp
-  getinstanceresponse.cpp
   getinstancesnapshotrequest.cpp
   getinstancesnapshotresponse.cpp
   getinstancesnapshotsrequest.cpp
   getinstancesnapshotsresponse.cpp
-  getinstancesrequest.cpp
-  getinstancesresponse.cpp
   getinstancestaterequest.cpp
   getinstancestateresponse.cpp
+  getinstancesrequest.cpp
+  getinstancesresponse.cpp
   getkeypairrequest.cpp
   getkeypairresponse.cpp
   getkeypairsrequest.cpp
   getkeypairsresponse.cpp
-  getloadbalancermetricdatarequest.cpp
-  getloadbalancermetricdataresponse.cpp
   getloadbalancerrequest.cpp
   getloadbalancerresponse.cpp
-  getloadbalancersrequest.cpp
-  getloadbalancersresponse.cpp
+  getloadbalancermetricdatarequest.cpp
+  getloadbalancermetricdataresponse.cpp
   getloadbalancertlscertificatesrequest.cpp
   getloadbalancertlscertificatesresponse.cpp
+  getloadbalancertlspoliciesrequest.cpp
+  getloadbalancertlspoliciesresponse.cpp
+  getloadbalancersrequest.cpp
+  getloadbalancersresponse.cpp
   getoperationrequest.cpp
   getoperationresponse.cpp
-  getoperationsforresourcerequest.cpp
-  getoperationsforresourceresponse.cpp
   getoperationsrequest.cpp
   getoperationsresponse.cpp
+  getoperationsforresourcerequest.cpp
+  getoperationsforresourceresponse.cpp
   getregionsrequest.cpp
   getregionsresponse.cpp
+  getrelationaldatabaserequest.cpp
+  getrelationaldatabaseresponse.cpp
   getrelationaldatabaseblueprintsrequest.cpp
   getrelationaldatabaseblueprintsresponse.cpp
   getrelationaldatabasebundlesrequest.cpp
@@ -792,8 +863,6 @@ add_library(QtAwsLightsail
   getrelationaldatabasemetricdataresponse.cpp
   getrelationaldatabaseparametersrequest.cpp
   getrelationaldatabaseparametersresponse.cpp
-  getrelationaldatabaserequest.cpp
-  getrelationaldatabaseresponse.cpp
   getrelationaldatabasesnapshotrequest.cpp
   getrelationaldatabasesnapshotresponse.cpp
   getrelationaldatabasesnapshotsrequest.cpp
@@ -808,9 +877,6 @@ add_library(QtAwsLightsail
   importkeypairresponse.cpp
   isvpcpeeredrequest.cpp
   isvpcpeeredresponse.cpp
-  lightsailclient.cpp
-  lightsailrequest.cpp
-  lightsailresponse.cpp
   openinstancepublicportsrequest.cpp
   openinstancepublicportsresponse.cpp
   peervpcrequest.cpp
@@ -833,6 +899,8 @@ add_library(QtAwsLightsail
   sendcontactmethodverificationresponse.cpp
   setipaddresstyperequest.cpp
   setipaddresstyperesponse.cpp
+  setresourceaccessforbucketrequest.cpp
+  setresourceaccessforbucketresponse.cpp
   startinstancerequest.cpp
   startinstanceresponse.cpp
   startrelationaldatabaserequest.cpp
@@ -849,20 +917,24 @@ add_library(QtAwsLightsail
   unpeervpcresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatebucketrequest.cpp
+  updatebucketresponse.cpp
+  updatebucketbundlerequest.cpp
+  updatebucketbundleresponse.cpp
   updatecontainerservicerequest.cpp
   updatecontainerserviceresponse.cpp
-  updatedistributionbundlerequest.cpp
-  updatedistributionbundleresponse.cpp
   updatedistributionrequest.cpp
   updatedistributionresponse.cpp
+  updatedistributionbundlerequest.cpp
+  updatedistributionbundleresponse.cpp
   updatedomainentryrequest.cpp
   updatedomainentryresponse.cpp
   updateloadbalancerattributerequest.cpp
   updateloadbalancerattributeresponse.cpp
-  updaterelationaldatabaseparametersrequest.cpp
-  updaterelationaldatabaseparametersresponse.cpp
   updaterelationaldatabaserequest.cpp
-  updaterelationaldatabaseresponse.cpp)
+  updaterelationaldatabaseresponse.cpp
+  updaterelationaldatabaseparametersrequest.cpp
+  updaterelationaldatabaseparametersresponse.cpp)
 
 target_link_libraries(QtAwsLightsail
   PRIVATE QtAwsCore

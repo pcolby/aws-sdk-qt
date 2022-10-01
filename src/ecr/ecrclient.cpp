@@ -27,22 +27,32 @@
 #include "batchdeleteimageresponse.h"
 #include "batchgetimagerequest.h"
 #include "batchgetimageresponse.h"
+#include "batchgetrepositoryscanningconfigurationrequest.h"
+#include "batchgetrepositoryscanningconfigurationresponse.h"
 #include "completelayeruploadrequest.h"
 #include "completelayeruploadresponse.h"
+#include "createpullthroughcacherulerequest.h"
+#include "createpullthroughcacheruleresponse.h"
 #include "createrepositoryrequest.h"
 #include "createrepositoryresponse.h"
 #include "deletelifecyclepolicyrequest.h"
 #include "deletelifecyclepolicyresponse.h"
+#include "deletepullthroughcacherulerequest.h"
+#include "deletepullthroughcacheruleresponse.h"
 #include "deleteregistrypolicyrequest.h"
 #include "deleteregistrypolicyresponse.h"
 #include "deleterepositoryrequest.h"
 #include "deleterepositoryresponse.h"
 #include "deleterepositorypolicyrequest.h"
 #include "deleterepositorypolicyresponse.h"
+#include "describeimagereplicationstatusrequest.h"
+#include "describeimagereplicationstatusresponse.h"
 #include "describeimagescanfindingsrequest.h"
 #include "describeimagescanfindingsresponse.h"
 #include "describeimagesrequest.h"
 #include "describeimagesresponse.h"
+#include "describepullthroughcacherulesrequest.h"
+#include "describepullthroughcacherulesresponse.h"
 #include "describeregistryrequest.h"
 #include "describeregistryresponse.h"
 #include "describerepositoriesrequest.h"
@@ -57,6 +67,8 @@
 #include "getlifecyclepolicypreviewresponse.h"
 #include "getregistrypolicyrequest.h"
 #include "getregistrypolicyresponse.h"
+#include "getregistryscanningconfigurationrequest.h"
+#include "getregistryscanningconfigurationresponse.h"
 #include "getrepositorypolicyrequest.h"
 #include "getrepositorypolicyresponse.h"
 #include "initiatelayeruploadrequest.h"
@@ -75,6 +87,8 @@
 #include "putlifecyclepolicyresponse.h"
 #include "putregistrypolicyrequest.h"
 #include "putregistrypolicyresponse.h"
+#include "putregistryscanningconfigurationrequest.h"
+#include "putregistryscanningconfigurationresponse.h"
 #include "putreplicationconfigurationrequest.h"
 #include "putreplicationconfigurationresponse.h"
 #include "setrepositorypolicyrequest.h"
@@ -94,8 +108,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ECR
- * \brief Contains classess for accessing Amazon EC2 Container Registry ( ECR).
+ * \namespace QtAws::Ecr
+ * \brief Contains classess for accessing Amazon EC2 Container Registry.
  *
  * \inmodule QtAwsEcr
  *
@@ -103,14 +117,14 @@
  */
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::EcrClient
- * \brief The EcrClient class provides access to the Amazon EC2 Container Registry ( ECR) service.
+ * \class QtAws::Ecr::EcrClient
+ * \brief The EcrClient class provides access to the Amazon EC2 Container Registry service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -119,6 +133,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  */
 
 /*!
@@ -238,6 +258,19 @@ BatchGetImageResponse * EcrClient::batchGetImage(const BatchGetImageRequest &req
 
 /*!
  * Sends \a request to the EcrClient service, and returns a pointer to an
+ * BatchGetRepositoryScanningConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the scanning configuration for one or more
+ */
+BatchGetRepositoryScanningConfigurationResponse * EcrClient::batchGetRepositoryScanningConfiguration(const BatchGetRepositoryScanningConfigurationRequest &request)
+{
+    return qobject_cast<BatchGetRepositoryScanningConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
  * CompleteLayerUploadResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -262,12 +295,26 @@ CompleteLayerUploadResponse * EcrClient::completeLayerUpload(const CompleteLayer
 
 /*!
  * Sends \a request to the EcrClient service, and returns a pointer to an
+ * CreatePullThroughCacheRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a pull through cache rule. A pull through cache rule provides a way to cache images from an external public
+ * registry in your Amazon ECR private
+ */
+CreatePullThroughCacheRuleResponse * EcrClient::createPullThroughCacheRule(const CreatePullThroughCacheRuleRequest &request)
+{
+    return qobject_cast<CreatePullThroughCacheRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
  * CreateRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a repository. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR Repositories</a> in the
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR repositories</a> in the
  * <i>Amazon Elastic Container Registry User
  */
 CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryRequest &request)
@@ -286,6 +333,19 @@ CreateRepositoryResponse * EcrClient::createRepository(const CreateRepositoryReq
 DeleteLifecyclePolicyResponse * EcrClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
 {
     return qobject_cast<DeleteLifecyclePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DeletePullThroughCacheRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a pull through cache
+ */
+DeletePullThroughCacheRuleResponse * EcrClient::deletePullThroughCacheRule(const DeletePullThroughCacheRuleRequest &request)
+{
+    return qobject_cast<DeletePullThroughCacheRuleResponse *>(send(request));
 }
 
 /*!
@@ -330,6 +390,19 @@ DeleteRepositoryPolicyResponse * EcrClient::deleteRepositoryPolicy(const DeleteR
 
 /*!
  * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DescribeImageReplicationStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the replication status for a specified
+ */
+DescribeImageReplicationStatusResponse * EcrClient::describeImageReplicationStatus(const DescribeImageReplicationStatusRequest &request)
+{
+    return qobject_cast<DescribeImageReplicationStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
  * DescribeImageScanFindingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -358,6 +431,19 @@ DescribeImageScanFindingsResponse * EcrClient::describeImageScanFindings(const D
 DescribeImagesResponse * EcrClient::describeImages(const DescribeImagesRequest &request)
 {
     return qobject_cast<DescribeImagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * DescribePullThroughCacheRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the pull through cache rules for a
+ */
+DescribePullThroughCacheRulesResponse * EcrClient::describePullThroughCacheRules(const DescribePullThroughCacheRulesRequest &request)
+{
+    return qobject_cast<DescribePullThroughCacheRulesResponse *>(send(request));
 }
 
 /*!
@@ -399,9 +485,9 @@ DescribeRepositoriesResponse * EcrClient::describeRepositories(const DescribeRep
  * hours>
  *
  * The <code>authorizationToken</code> returned is a base64 encoded string that can be decoded and used in a <code>docker
- * login</code> command to authenticate to a registry. The AWS CLI offers an <code>get-login-password</code> command that
+ * login</code> command to authenticate to a registry. The CLI offers an <code>get-login-password</code> command that
  * simplifies the login process. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth">Registry Authentication</a>
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth">Registry authentication</a>
  * in the <i>Amazon Elastic Container Registry User
  */
 GetAuthorizationTokenResponse * EcrClient::getAuthorizationToken(const GetAuthorizationTokenRequest &request)
@@ -469,6 +555,19 @@ GetLifecyclePolicyPreviewResponse * EcrClient::getLifecyclePolicyPreview(const G
 GetRegistryPolicyResponse * EcrClient::getRegistryPolicy(const GetRegistryPolicyRequest &request)
 {
     return qobject_cast<GetRegistryPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * GetRegistryScanningConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the scanning configuration for a
+ */
+GetRegistryScanningConfigurationResponse * EcrClient::getRegistryScanningConfiguration(const GetRegistryScanningConfigurationRequest &request)
+{
+    return qobject_cast<GetRegistryScanningConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -569,6 +668,13 @@ PutImageResponse * EcrClient::putImage(const PutImageRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <b>
+ *
+ * The <code>PutImageScanningConfiguration</code> API is being deprecated, in favor of specifying the image scanning
+ * configuration at the registry level. For more information, see
+ *
+ * <a>PutRegistryScanningConfiguration</a>> </b>
+ *
  * Updates the image scanning configuration for the specified
  */
 PutImageScanningConfigurationResponse * EcrClient::putImageScanningConfiguration(const PutImageScanningConfigurationRequest &request)
@@ -583,7 +689,7 @@ PutImageScanningConfigurationResponse * EcrClient::putImageScanningConfiguration
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the image tag mutability settings for the specified repository. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image Tag Mutability</a> in the
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image tag mutability</a> in the
  * <i>Amazon Elastic Container Registry User
  */
 PutImageTagMutabilityResponse * EcrClient::putImageTagMutability(const PutImageTagMutabilityRequest &request)
@@ -598,7 +704,7 @@ PutImageTagMutabilityResponse * EcrClient::putImageTagMutability(const PutImageT
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates or updates the lifecycle policy for the specified repository. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle policy
  */
 PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
 {
@@ -615,14 +721,27 @@ PutLifecyclePolicyResponse * EcrClient::putLifecyclePolicy(const PutLifecyclePol
  *
  * registry>
  *
- * A registry policy is used to specify permissions for another AWS account and is used when configuring cross-account
- * replication. For more information, see <a
+ * A registry policy is used to specify permissions for another Amazon Web Services account and is used when configuring
+ * cross-account replication. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html">Registry permissions</a> in the
  * <i>Amazon Elastic Container Registry User
  */
 PutRegistryPolicyResponse * EcrClient::putRegistryPolicy(const PutRegistryPolicyRequest &request)
 {
     return qobject_cast<PutRegistryPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * PutRegistryScanningConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates the scanning configuration for your private
+ */
+PutRegistryScanningConfigurationResponse * EcrClient::putRegistryScanningConfiguration(const PutRegistryScanningConfigurationRequest &request)
+{
+    return qobject_cast<PutRegistryScanningConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -634,7 +753,7 @@ PutRegistryPolicyResponse * EcrClient::putRegistryPolicy(const PutRegistryPolicy
  * Creates or updates the replication configuration for a registry. The existing replication configuration for a repository
  * can be retrieved with the <a>DescribeRegistry</a> API action. The first time the PutReplicationConfiguration API is
  * called, a service-linked IAM role is created in your account for the replication process. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using Service-Linked Roles
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using service-linked roles
  * for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User
  *
  * Guide</i>> <note>
@@ -655,7 +774,7 @@ PutReplicationConfigurationResponse * EcrClient::putReplicationConfiguration(con
  *
  * Applies a repository policy to the specified repository to control access permissions. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html">Amazon ECR Repository
- * Policies</a> in the <i>Amazon Elastic Container Registry User
+ * policies</a> in the <i>Amazon Elastic Container Registry User
  */
 SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepositoryPolicyRequest &request)
 {
@@ -668,9 +787,9 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an image vulnerability scan. An image scan can only be started once per day on an individual image. This limit
- * includes if an image was scanned on initial push. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image Scanning</a> in the <i>Amazon
+ * Starts an image vulnerability scan. An image scan can only be started once per 24 hours on an individual image. This
+ * limit includes if an image was scanned on initial push. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image scanning</a> in the <i>Amazon
  * Elastic Container Registry User
  */
 StartImageScanResponse * EcrClient::startImageScan(const StartImageScanRequest &request)
@@ -743,12 +862,12 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
 }
 
 /*!
- * \class QtAws::ECR::EcrClientPrivate
+ * \class QtAws::Ecr::EcrClientPrivate
  * \brief The EcrClientPrivate class provides private implementation for EcrClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -760,5 +879,5 @@ EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

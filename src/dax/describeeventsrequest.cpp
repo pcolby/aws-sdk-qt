@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::DescribeEventsRequest
- * \brief The DescribeEventsRequest class provides an interface for DAX DescribeEvents requests.
+ * \class QtAws::Dax::DescribeEventsRequest
+ * \brief The DescribeEventsRequest class provides an interface for Dax DescribeEvents requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DAX::DescribeEventsRequestPrivate
+ * \class QtAws::Dax::DescribeEventsRequestPrivate
  * \brief The DescribeEventsRequestPrivate class provides private implementation for DescribeEventsRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

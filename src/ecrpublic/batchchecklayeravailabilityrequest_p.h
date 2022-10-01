@@ -24,14 +24,14 @@
 #include "batchchecklayeravailabilityrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class BatchCheckLayerAvailabilityRequest;
 
-class BatchCheckLayerAvailabilityRequestPrivate : public ECRPublicRequestPrivate {
+class BatchCheckLayerAvailabilityRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    BatchCheckLayerAvailabilityRequestPrivate(const ECRPublicRequest::Action action,
+    BatchCheckLayerAvailabilityRequestPrivate(const EcrPublicRequest::Action action,
                                    BatchCheckLayerAvailabilityRequest * const q);
     BatchCheckLayerAvailabilityRequestPrivate(const BatchCheckLayerAvailabilityRequestPrivate &other,
                                    BatchCheckLayerAvailabilityRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

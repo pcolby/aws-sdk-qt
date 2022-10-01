@@ -24,7 +24,7 @@
 #include "getcommandinvocationrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class GetCommandInvocationRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

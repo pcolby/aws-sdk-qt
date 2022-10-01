@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateGeoMatchSetRequest
- * \brief The UpdateGeoMatchSetRequest class provides an interface for WAFRegional UpdateGeoMatchSet requests.
+ * \class QtAws::WafRegional::UpdateGeoMatchSetRequest
+ * \brief The UpdateGeoMatchSetRequest class provides an interface for WafRegional UpdateGeoMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateGeoMatchSet
+ * \sa WafRegionalClient::updateGeoMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest(const UpdateGeoMatchSetRequest &other)
-    : WAFRegionalRequest(new UpdateGeoMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateGeoMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest(const UpdateGeoMatchSetReques
  * Constructs a UpdateGeoMatchSetRequest object.
  */
 UpdateGeoMatchSetRequest::UpdateGeoMatchSetRequest()
-    : WAFRegionalRequest(new UpdateGeoMatchSetRequestPrivate(WAFRegionalRequest::UpdateGeoMatchSetAction, this))
+    : WafRegionalRequest(new UpdateGeoMatchSetRequestPrivate(WafRegionalRequest::UpdateGeoMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateGeoMatchSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateGeoMatchSetRequestPrivate
  * \brief The UpdateGeoMatchSetRequestPrivate class provides private implementation for UpdateGeoMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateGeoMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateGeoMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateGeoMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
  */
 UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
     const UpdateGeoMatchSetRequestPrivate &other, UpdateGeoMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

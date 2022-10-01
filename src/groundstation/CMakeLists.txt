@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSGROUNDSTATION_LIBRARY)
 
 add_library(QtAwsGroundStation
+  qtawsgroundstationglobal.h
+  groundstationclient.h
+  groundstationclient_p.h
+  groundstationrequest.h
+  groundstationrequest_p.h
+  groundstationresponse.h
+  groundstationresponse_p.h
   cancelcontactrequest.h
   cancelcontactrequest_p.h
   cancelcontactresponse.h
@@ -53,12 +60,6 @@ add_library(QtAwsGroundStation
   getsatelliterequest_p.h
   getsatelliteresponse.h
   getsatelliteresponse_p.h
-  groundstationclient.h
-  groundstationclient_p.h
-  groundstationrequest.h
-  groundstationrequest_p.h
-  groundstationresponse.h
-  groundstationresponse_p.h
   listconfigsrequest.h
   listconfigsrequest_p.h
   listconfigsresponse.h
@@ -87,7 +88,6 @@ add_library(QtAwsGroundStation
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsgroundstationglobal.h
   reservecontactrequest.h
   reservecontactrequest_p.h
   reservecontactresponse.h
@@ -108,6 +108,9 @@ add_library(QtAwsGroundStation
   updatemissionprofilerequest_p.h
   updatemissionprofileresponse.h
   updatemissionprofileresponse_p.h
+  groundstationclient.cpp
+  groundstationrequest.cpp
+  groundstationresponse.cpp
   cancelcontactrequest.cpp
   cancelcontactresponse.cpp
   createconfigrequest.cpp
@@ -134,9 +137,6 @@ add_library(QtAwsGroundStation
   getmissionprofileresponse.cpp
   getsatelliterequest.cpp
   getsatelliteresponse.cpp
-  groundstationclient.cpp
-  groundstationrequest.cpp
-  groundstationresponse.cpp
   listconfigsrequest.cpp
   listconfigsresponse.cpp
   listcontactsrequest.cpp

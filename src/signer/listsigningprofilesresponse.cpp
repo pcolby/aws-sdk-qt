@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListSigningProfilesResponse
- * \brief The ListSigningProfilesResponse class provides an interace for signer ListSigningProfiles responses.
+ * \class QtAws::Signer::ListSigningProfilesResponse
+ * \brief The ListSigningProfilesResponse class provides an interace for Signer ListSigningProfiles responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listSigningProfiles
+ * \sa SignerClient::listSigningProfiles
  */
 
 /*!
@@ -69,7 +71,7 @@ ListSigningProfilesResponse::ListSigningProfilesResponse(
         const ListSigningProfilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new ListSigningProfilesResponsePrivate(this), parent)
+    : SignerResponse(new ListSigningProfilesResponsePrivate(this), parent)
 {
     setRequest(new ListSigningProfilesRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const ListSigningProfilesRequest * ListSigningProfilesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer ListSigningProfiles \a response.
+ * Parses a successful Signer ListSigningProfiles \a response.
  */
 void ListSigningProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void ListSigningProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::ListSigningProfilesResponsePrivate
+ * \class QtAws::Signer::ListSigningProfilesResponsePrivate
  * \brief The ListSigningProfilesResponsePrivate class provides private implementation for ListSigningProfilesResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a ListSigningProfilesResponsePrivate object with public implementation \a q.
  */
 ListSigningProfilesResponsePrivate::ListSigningProfilesResponsePrivate(
-    ListSigningProfilesResponse * const q) : signerResponsePrivate(q)
+    ListSigningProfilesResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer ListSigningProfiles response element from \a xml.
+ * Parses a Signer ListSigningProfiles response element from \a xml.
  */
 void ListSigningProfilesResponsePrivate::parseListSigningProfilesResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void ListSigningProfilesResponsePrivate::parseListSigningProfilesResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

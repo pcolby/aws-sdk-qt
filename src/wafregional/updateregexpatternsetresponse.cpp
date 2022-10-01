@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexPatternSetResponse
- * \brief The UpdateRegexPatternSetResponse class provides an interace for WAFRegional UpdateRegexPatternSet responses.
+ * \class QtAws::WafRegional::UpdateRegexPatternSetResponse
+ * \brief The UpdateRegexPatternSetResponse class provides an interace for WafRegional UpdateRegexPatternSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRegexPatternSet
+ * \sa WafRegionalClient::updateRegexPatternSet
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
         const UpdateRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRegexPatternSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateRegexPatternSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateRegexPatternSet \a response.
+ * Parses a successful WafRegional UpdateRegexPatternSet \a response.
  */
 void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexPatternSetResponsePrivate
+ * \class QtAws::WafRegional::UpdateRegexPatternSetResponsePrivate
  * \brief The UpdateRegexPatternSetResponsePrivate class provides private implementation for UpdateRegexPatternSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 UpdateRegexPatternSetResponsePrivate::UpdateRegexPatternSetResponsePrivate(
-    UpdateRegexPatternSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateRegexPatternSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateRegexPatternSet response element from \a xml.
+ * Parses a WafRegional UpdateRegexPatternSet response element from \a xml.
  */
 void UpdateRegexPatternSetResponsePrivate::parseUpdateRegexPatternSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateRegexPatternSetResponsePrivate::parseUpdateRegexPatternSetResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

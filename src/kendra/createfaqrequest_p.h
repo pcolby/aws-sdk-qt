@@ -24,14 +24,14 @@
 #include "createfaqrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class CreateFaqRequest;
 
-class CreateFaqRequestPrivate : public kendraRequestPrivate {
+class CreateFaqRequestPrivate : public KendraRequestPrivate {
 
 public:
-    CreateFaqRequestPrivate(const kendraRequest::Action action,
+    CreateFaqRequestPrivate(const KendraRequest::Action action,
                                    CreateFaqRequest * const q);
     CreateFaqRequestPrivate(const CreateFaqRequestPrivate &other,
                                    CreateFaqRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

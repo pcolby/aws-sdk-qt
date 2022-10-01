@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBSubnetGroupResponse
- * \brief The CreateDBSubnetGroupResponse class provides an interace for RDS CreateDBSubnetGroup responses.
+ * \class QtAws::Rds::CreateDBSubnetGroupResponse
+ * \brief The CreateDBSubnetGroupResponse class provides an interace for Rds CreateDBSubnetGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBSubnetGroup \a response.
+ * Parses a successful Rds CreateDBSubnetGroup \a response.
  */
 void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBSubnetGroupResponsePrivate
+ * \class QtAws::Rds::CreateDBSubnetGroupResponsePrivate
  * \brief The CreateDBSubnetGroupResponsePrivate class provides private implementation for CreateDBSubnetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBSubnetGroup response element from \a xml.
+ * Parses a Rds CreateDBSubnetGroup response element from \a xml.
  */
 void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

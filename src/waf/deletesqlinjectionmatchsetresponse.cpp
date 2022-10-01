@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteSqlInjectionMatchSetResponse
- * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for WAF DeleteSqlInjectionMatchSet responses.
+ * \class QtAws::Waf::DeleteSqlInjectionMatchSetResponse
+ * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for Waf DeleteSqlInjectionMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteSqlInjectionMatchSet \a response.
+ * Parses a successful Waf DeleteSqlInjectionMatchSet \a response.
  */
 void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteSqlInjectionMatchSetResponsePrivate
+ * \class QtAws::Waf::DeleteSqlInjectionMatchSetResponsePrivate
  * \brief The DeleteSqlInjectionMatchSetResponsePrivate class provides private implementation for DeleteSqlInjectionMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * Parses a WAF DeleteSqlInjectionMatchSet response element from \a xml.
+ * Parses a Waf DeleteSqlInjectionMatchSet response element from \a xml.
  */
 void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

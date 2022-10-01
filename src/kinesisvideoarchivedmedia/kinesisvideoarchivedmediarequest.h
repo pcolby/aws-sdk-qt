@@ -42,6 +42,7 @@ public:
         GetClipAction,
         GetDASHStreamingSessionURLAction,
         GetHLSStreamingSessionURLAction,
+        GetImagesAction,
         GetMediaForFragmentListAction,
         ListFragmentsAction,
     };

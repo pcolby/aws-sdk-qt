@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListSqlInjectionMatchSetsRequest
- * \brief The ListSqlInjectionMatchSetsRequest class provides an interface for WAF ListSqlInjectionMatchSets requests.
+ * \class QtAws::Waf::ListSqlInjectionMatchSetsRequest
+ * \brief The ListSqlInjectionMatchSetsRequest class provides an interface for Waf ListSqlInjectionMatchSets requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
 }
 
 /*!
- * \class QtAws::WAF::ListSqlInjectionMatchSetsRequestPrivate
+ * \class QtAws::Waf::ListSqlInjectionMatchSetsRequestPrivate
  * \brief The ListSqlInjectionMatchSetsRequestPrivate class provides private implementation for ListSqlInjectionMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

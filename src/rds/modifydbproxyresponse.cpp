@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyResponse
- * \brief The ModifyDBProxyResponse class provides an interace for RDS ModifyDBProxy responses.
+ * \class QtAws::Rds::ModifyDBProxyResponse
+ * \brief The ModifyDBProxyResponse class provides an interace for Rds ModifyDBProxy responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBProxyRequest * ModifyDBProxyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBProxy \a response.
+ * Parses a successful Rds ModifyDBProxy \a response.
  */
 void ModifyDBProxyResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBProxyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyResponsePrivate
+ * \class QtAws::Rds::ModifyDBProxyResponsePrivate
  * \brief The ModifyDBProxyResponsePrivate class provides private implementation for ModifyDBProxyResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBProxyResponsePrivate::ModifyDBProxyResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyDBProxy response element from \a xml.
+ * Parses a Rds ModifyDBProxy response element from \a xml.
  */
 void ModifyDBProxyResponsePrivate::parseModifyDBProxyResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBProxyResponsePrivate::parseModifyDBProxyResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

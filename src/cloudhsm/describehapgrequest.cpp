@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DescribeHapgRequest
- * \brief The DescribeHapgRequest class provides an interface for CloudHSM DescribeHapg requests.
+ * \class QtAws::CloudHsm::DescribeHapgRequest
+ * \brief The DescribeHapgRequest class provides an interface for CloudHsm DescribeHapg requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::describeHapg
+ * \sa CloudHsmClient::describeHapg
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
-    : CloudHSMRequest(new DescribeHapgRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new DescribeHapgRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
  * Constructs a DescribeHapgRequest object.
  */
 DescribeHapgRequest::DescribeHapgRequest()
-    : CloudHSMRequest(new DescribeHapgRequestPrivate(CloudHSMRequest::DescribeHapgAction, this))
+    : CloudHsmRequest(new DescribeHapgRequestPrivate(CloudHsmRequest::DescribeHapgAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::CloudHSM::DescribeHapgRequestPrivate
+ * \class QtAws::CloudHsm::DescribeHapgRequestPrivate
  * \brief The DescribeHapgRequestPrivate class provides private implementation for DescribeHapgRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a DescribeHapgRequestPrivate object for CloudHSM \a action,
+ * Constructs a DescribeHapgRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
-    const CloudHSMRequest::Action action, DescribeHapgRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, DescribeHapgRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const DescribeHapgRequestPrivate &other, DescribeHapgRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

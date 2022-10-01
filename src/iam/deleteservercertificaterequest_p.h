@@ -24,7 +24,7 @@
 #include "deleteservercertificaterequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class DeleteServerCertificateRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

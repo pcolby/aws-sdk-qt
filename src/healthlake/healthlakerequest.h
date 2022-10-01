@@ -45,8 +45,13 @@ public:
         DescribeFHIRExportJobAction,
         DescribeFHIRImportJobAction,
         ListFHIRDatastoresAction,
+        ListFHIRExportJobsAction,
+        ListFHIRImportJobsAction,
+        ListTagsForResourceAction,
         StartFHIRExportJobAction,
         StartFHIRImportJobAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

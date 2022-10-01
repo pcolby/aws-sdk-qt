@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::CreateStudioRequest
- * \brief The CreateStudioRequest class provides an interface for EMR CreateStudio requests.
+ * \class QtAws::Emr::CreateStudioRequest
+ * \brief The CreateStudioRequest class provides an interface for Emr CreateStudio requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::createStudio
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * CreateStudioRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::EMR::CreateStudioRequestPrivate
+ * \class QtAws::Emr::CreateStudioRequestPrivate
  * \brief The CreateStudioRequestPrivate class provides private implementation for CreateStudioRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ CreateStudioRequestPrivate::CreateStudioRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::StartIncidentResponse
- * \brief The StartIncidentResponse class provides an interace for SSMIncidents StartIncident responses.
+ * \class QtAws::SsmIncidents::StartIncidentResponse
+ * \brief The StartIncidentResponse class provides an interace for SsmIncidents StartIncident responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::startIncident
+ * \sa SsmIncidentsClient::startIncident
  */
 
 /*!
@@ -54,7 +54,7 @@ StartIncidentResponse::StartIncidentResponse(
         const StartIncidentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new StartIncidentResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new StartIncidentResponsePrivate(this), parent)
 {
     setRequest(new StartIncidentRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const StartIncidentRequest * StartIncidentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents StartIncident \a response.
+ * Parses a successful SsmIncidents StartIncident \a response.
  */
 void StartIncidentResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void StartIncidentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::StartIncidentResponsePrivate
+ * \class QtAws::SsmIncidents::StartIncidentResponsePrivate
  * \brief The StartIncidentResponsePrivate class provides private implementation for StartIncidentResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a StartIncidentResponsePrivate object with public implementation \a q.
  */
 StartIncidentResponsePrivate::StartIncidentResponsePrivate(
-    StartIncidentResponse * const q) : SSMIncidentsResponsePrivate(q)
+    StartIncidentResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents StartIncident response element from \a xml.
+ * Parses a SsmIncidents StartIncident response element from \a xml.
  */
 void StartIncidentResponsePrivate::parseStartIncidentResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void StartIncidentResponsePrivate::parseStartIncidentResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

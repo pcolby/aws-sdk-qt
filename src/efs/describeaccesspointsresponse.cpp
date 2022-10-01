@@ -25,21 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::DescribeAccessPointsResponse
- * \brief The DescribeAccessPointsResponse class provides an interace for EFS DescribeAccessPoints responses.
+ * \class QtAws::Efs::DescribeAccessPointsResponse
+ * \brief The DescribeAccessPointsResponse class provides an interace for Efs DescribeAccessPoints responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  *
  * \sa EfsClient::describeAccessPoints
  */
@@ -68,7 +69,7 @@ const DescribeAccessPointsRequest * DescribeAccessPointsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EFS DescribeAccessPoints \a response.
+ * Parses a successful Efs DescribeAccessPoints \a response.
  */
 void DescribeAccessPointsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +79,11 @@ void DescribeAccessPointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::DescribeAccessPointsResponsePrivate
+ * \class QtAws::Efs::DescribeAccessPointsResponsePrivate
  * \brief The DescribeAccessPointsResponsePrivate class provides private implementation for DescribeAccessPointsResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -95,7 +96,7 @@ DescribeAccessPointsResponsePrivate::DescribeAccessPointsResponsePrivate(
 }
 
 /*!
- * Parses a EFS DescribeAccessPoints response element from \a xml.
+ * Parses a Efs DescribeAccessPoints response element from \a xml.
  */
 void DescribeAccessPointsResponsePrivate::parseDescribeAccessPointsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +104,5 @@ void DescribeAccessPointsResponsePrivate::parseDescribeAccessPointsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupVersionResponse
- * \brief The UpdateNodegroupVersionResponse class provides an interace for EKS UpdateNodegroupVersion responses.
+ * \class QtAws::Eks::UpdateNodegroupVersionResponse
+ * \brief The UpdateNodegroupVersionResponse class provides an interace for Eks UpdateNodegroupVersion responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const UpdateNodegroupVersionRequest * UpdateNodegroupVersionResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful EKS UpdateNodegroupVersion \a response.
+ * Parses a successful Eks UpdateNodegroupVersion \a response.
  */
 void UpdateNodegroupVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void UpdateNodegroupVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupVersionResponsePrivate
+ * \class QtAws::Eks::UpdateNodegroupVersionResponsePrivate
  * \brief The UpdateNodegroupVersionResponsePrivate class provides private implementation for UpdateNodegroupVersionResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ UpdateNodegroupVersionResponsePrivate::UpdateNodegroupVersionResponsePrivate(
 }
 
 /*!
- * Parses a EKS UpdateNodegroupVersion response element from \a xml.
+ * Parses a Eks UpdateNodegroupVersion response element from \a xml.
  */
 void UpdateNodegroupVersionResponsePrivate::parseUpdateNodegroupVersionResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateNodegroupVersionResponsePrivate::parseUpdateNodegroupVersionResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

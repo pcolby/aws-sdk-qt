@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListContactChannelsRequest
- * \brief The ListContactChannelsRequest class provides an interface for SSMContacts ListContactChannels requests.
+ * \class QtAws::SsmContacts::ListContactChannelsRequest
+ * \brief The ListContactChannelsRequest class provides an interface for SsmContacts ListContactChannels requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listContactChannels
+ * \sa SsmContactsClient::listContactChannels
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListContactChannelsRequest::ListContactChannelsRequest(const ListContactChannelsRequest &other)
-    : SSMContactsRequest(new ListContactChannelsRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new ListContactChannelsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ ListContactChannelsRequest::ListContactChannelsRequest(const ListContactChannels
  * Constructs a ListContactChannelsRequest object.
  */
 ListContactChannelsRequest::ListContactChannelsRequest()
-    : SSMContactsRequest(new ListContactChannelsRequestPrivate(SSMContactsRequest::ListContactChannelsAction, this))
+    : SsmContactsRequest(new ListContactChannelsRequestPrivate(SsmContactsRequest::ListContactChannelsAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListContactChannelsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMContacts::ListContactChannelsRequestPrivate
+ * \class QtAws::SsmContacts::ListContactChannelsRequestPrivate
  * \brief The ListContactChannelsRequestPrivate class provides private implementation for ListContactChannelsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a ListContactChannelsRequestPrivate object for SSMContacts \a action,
+ * Constructs a ListContactChannelsRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 ListContactChannelsRequestPrivate::ListContactChannelsRequestPrivate(
-    const SSMContactsRequest::Action action, ListContactChannelsRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, ListContactChannelsRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ ListContactChannelsRequestPrivate::ListContactChannelsRequestPrivate(
  */
 ListContactChannelsRequestPrivate::ListContactChannelsRequestPrivate(
     const ListContactChannelsRequestPrivate &other, ListContactChannelsRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

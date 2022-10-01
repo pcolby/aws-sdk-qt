@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateOptionGroupRequest
- * \brief The CreateOptionGroupRequest class provides an interface for RDS CreateOptionGroup requests.
+ * \class QtAws::Rds::CreateOptionGroupRequest
+ * \brief The CreateOptionGroupRequest class provides an interface for Rds CreateOptionGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::RDS::CreateOptionGroupRequestPrivate
+ * \class QtAws::Rds::CreateOptionGroupRequestPrivate
  * \brief The CreateOptionGroupRequestPrivate class provides private implementation for CreateOptionGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

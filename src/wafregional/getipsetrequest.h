@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetIPSetRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetIPSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetIPSetRequest : public WafRegionalRequest {
 
 public:
     GetIPSetRequest(const GetIPSetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

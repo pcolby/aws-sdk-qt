@@ -39,6 +39,7 @@ class QTAWSGREENGRASSV2_EXPORT GreengrassV2Request : public QtAws::Core::AwsAbst
 public:
     /// Actions supported by GreengrassV2.
     enum Action {
+        AssociateServiceRoleToAccountAction,
         BatchAssociateClientDeviceWithCoreDeviceAction,
         BatchDisassociateClientDeviceFromCoreDeviceAction,
         CancelDeploymentAction,
@@ -46,11 +47,15 @@ public:
         CreateDeploymentAction,
         DeleteComponentAction,
         DeleteCoreDeviceAction,
+        DeleteDeploymentAction,
         DescribeComponentAction,
+        DisassociateServiceRoleFromAccountAction,
         GetComponentAction,
         GetComponentVersionArtifactAction,
+        GetConnectivityInfoAction,
         GetCoreDeviceAction,
         GetDeploymentAction,
+        GetServiceRoleForAccountAction,
         ListClientDevicesAssociatedWithCoreDeviceAction,
         ListComponentVersionsAction,
         ListComponentsAction,
@@ -62,6 +67,7 @@ public:
         ResolveComponentCandidatesAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateConnectivityInfoAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

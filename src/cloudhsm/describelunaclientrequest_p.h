@@ -24,14 +24,14 @@
 #include "describelunaclientrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class DescribeLunaClientRequest;
 
-class DescribeLunaClientRequestPrivate : public CloudHSMRequestPrivate {
+class DescribeLunaClientRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    DescribeLunaClientRequestPrivate(const CloudHSMRequest::Action action,
+    DescribeLunaClientRequestPrivate(const CloudHsmRequest::Action action,
                                    DescribeLunaClientRequest * const q);
     DescribeLunaClientRequestPrivate(const DescribeLunaClientRequestPrivate &other,
                                    DescribeLunaClientRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

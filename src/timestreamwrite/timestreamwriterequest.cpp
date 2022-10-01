@@ -258,7 +258,7 @@ QNetworkRequest TimestreamWriteRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 TimestreamWriteRequestPrivate::TimestreamWriteRequestPrivate(const TimestreamWriteRequest::Action action, TimestreamWriteRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-01"))
 {
 
 }

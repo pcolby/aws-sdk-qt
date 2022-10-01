@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeEventsResponse
- * \brief The DescribeEventsResponse class provides an interace for OpsWorksCM DescribeEvents responses.
+ * \class QtAws::OpsWorksCm::DescribeEventsResponse
+ * \brief The DescribeEventsResponse class provides an interace for OpsWorksCm DescribeEvents responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeEvents
+ * \sa OpsWorksCmClient::describeEvents
  */
 
 /*!
@@ -123,7 +123,7 @@ DescribeEventsResponse::DescribeEventsResponse(
         const DescribeEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DescribeEventsResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DescribeEventsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventsRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DescribeEvents \a response.
+ * Parses a successful OpsWorksCm DescribeEvents \a response.
  */
 void DescribeEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeEventsResponsePrivate
+ * \class QtAws::OpsWorksCm::DescribeEventsResponsePrivate
  * \brief The DescribeEventsResponsePrivate class provides private implementation for DescribeEventsResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DescribeEventsResponsePrivate object with public implementation \a q.
  */
 DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
-    DescribeEventsResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DescribeEventsResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DescribeEvents response element from \a xml.
+ * Parses a OpsWorksCm DescribeEvents response element from \a xml.
  */
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -30,44 +30,44 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EC2InstanceConnect
+ * \namespace QtAws::Ec2InstanceConnect
  * \brief Contains classess for accessing AWS EC2 Instance Connect.
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 /*!
- * \class QtAws::EC2InstanceConnect::EC2InstanceConnectClient
- * \brief The EC2InstanceConnectClient class provides access to the AWS EC2 Instance Connect service.
+ * \class QtAws::Ec2InstanceConnect::Ec2InstanceConnectClient
+ * \brief The Ec2InstanceConnectClient class provides access to the AWS EC2 Instance Connect service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  *
  *  Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing
  *  users a simple and secure way to connect to their
  */
 
 /*!
- * \brief Constructs a EC2InstanceConnectClient object.
+ * \brief Constructs a Ec2InstanceConnectClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-EC2InstanceConnectClient::EC2InstanceConnectClient(
+Ec2InstanceConnectClient::Ec2InstanceConnectClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EC2InstanceConnectClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Ec2InstanceConnectClientPrivate(this), parent)
 {
-    Q_D(EC2InstanceConnectClient);
+    Q_D(Ec2InstanceConnectClient);
     d->apiVersion = QStringLiteral("2018-04-02");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("ec2-instance-connect");
@@ -78,7 +78,7 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
 }
 
 /*!
- * \overload EC2InstanceConnectClient()
+ * \overload Ec2InstanceConnectClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -88,14 +88,14 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-EC2InstanceConnectClient::EC2InstanceConnectClient(
+Ec2InstanceConnectClient::Ec2InstanceConnectClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EC2InstanceConnectClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new Ec2InstanceConnectClientPrivate(this), parent)
 {
-    Q_D(EC2InstanceConnectClient);
+    Q_D(Ec2InstanceConnectClient);
     d->apiVersion = QStringLiteral("2018-04-02");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -106,7 +106,7 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
 }
 
 /*!
- * Sends \a request to the EC2InstanceConnectClient service, and returns a pointer to an
+ * Sends \a request to the Ec2InstanceConnectClient service, and returns a pointer to an
  * SendSSHPublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -116,13 +116,13 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux
  * instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User
  */
-SendSSHPublicKeyResponse * EC2InstanceConnectClient::sendSSHPublicKey(const SendSSHPublicKeyRequest &request)
+SendSSHPublicKeyResponse * Ec2InstanceConnectClient::sendSSHPublicKey(const SendSSHPublicKeyRequest &request)
 {
     return qobject_cast<SendSSHPublicKeyResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EC2InstanceConnectClient service, and returns a pointer to an
+ * Sends \a request to the Ec2InstanceConnectClient service, and returns a pointer to an
  * SendSerialConsoleSSHPublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -132,28 +132,28 @@ SendSSHPublicKeyResponse * EC2InstanceConnectClient::sendSSHPublicKey(const Send
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the
  * <i>Amazon EC2 User
  */
-SendSerialConsoleSSHPublicKeyResponse * EC2InstanceConnectClient::sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request)
+SendSerialConsoleSSHPublicKeyResponse * Ec2InstanceConnectClient::sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request)
 {
     return qobject_cast<SendSerialConsoleSSHPublicKeyResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::EC2InstanceConnect::EC2InstanceConnectClientPrivate
- * \brief The EC2InstanceConnectClientPrivate class provides private implementation for EC2InstanceConnectClient.
+ * \class QtAws::Ec2InstanceConnect::Ec2InstanceConnectClientPrivate
+ * \brief The Ec2InstanceConnectClientPrivate class provides private implementation for Ec2InstanceConnectClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  */
 
 /*!
- * Constructs a EC2InstanceConnectClientPrivate object with public implementation \a q.
+ * Constructs a Ec2InstanceConnectClientPrivate object with public implementation \a q.
  */
-EC2InstanceConnectClientPrivate::EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q)
+Ec2InstanceConnectClientPrivate::Ec2InstanceConnectClientPrivate(Ec2InstanceConnectClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws

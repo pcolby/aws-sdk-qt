@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::GetProgrammaticAccessCredentialsResponse
- * \brief The GetProgrammaticAccessCredentialsResponse class provides an interace for FinSpaceData GetProgrammaticAccessCredentials responses.
+ * \class QtAws::FinspaceData::GetProgrammaticAccessCredentialsResponse
+ * \brief The GetProgrammaticAccessCredentialsResponse class provides an interace for FinspaceData GetProgrammaticAccessCredentials responses.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::getProgrammaticAccessCredentials
+ * \sa FinspaceDataClient::getProgrammaticAccessCredentials
  */
 
 /*!
@@ -45,7 +45,7 @@ GetProgrammaticAccessCredentialsResponse::GetProgrammaticAccessCredentialsRespon
         const GetProgrammaticAccessCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FinSpaceDataResponse(new GetProgrammaticAccessCredentialsResponsePrivate(this), parent)
+    : FinspaceDataResponse(new GetProgrammaticAccessCredentialsResponsePrivate(this), parent)
 {
     setRequest(new GetProgrammaticAccessCredentialsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const GetProgrammaticAccessCredentialsRequest * GetProgrammaticAccessCredentials
 
 /*!
  * \reimp
- * Parses a successful FinSpaceData GetProgrammaticAccessCredentials \a response.
+ * Parses a successful FinspaceData GetProgrammaticAccessCredentials \a response.
  */
 void GetProgrammaticAccessCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void GetProgrammaticAccessCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FinSpaceData::GetProgrammaticAccessCredentialsResponsePrivate
+ * \class QtAws::FinspaceData::GetProgrammaticAccessCredentialsResponsePrivate
  * \brief The GetProgrammaticAccessCredentialsResponsePrivate class provides private implementation for GetProgrammaticAccessCredentialsResponse.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
  * Constructs a GetProgrammaticAccessCredentialsResponsePrivate object with public implementation \a q.
  */
 GetProgrammaticAccessCredentialsResponsePrivate::GetProgrammaticAccessCredentialsResponsePrivate(
-    GetProgrammaticAccessCredentialsResponse * const q) : FinSpaceDataResponsePrivate(q)
+    GetProgrammaticAccessCredentialsResponse * const q) : FinspaceDataResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a FinSpaceData GetProgrammaticAccessCredentials response element from \a xml.
+ * Parses a FinspaceData GetProgrammaticAccessCredentials response element from \a xml.
  */
 void GetProgrammaticAccessCredentialsResponsePrivate::parseGetProgrammaticAccessCredentialsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetProgrammaticAccessCredentialsResponsePrivate::parseGetProgrammaticAccess
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

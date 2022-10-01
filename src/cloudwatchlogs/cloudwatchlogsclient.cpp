@@ -128,9 +128,9 @@ namespace CloudWatchLogs {
  * \ingroup aws-clients
  * \inmodule QtAwsCloudWatchLogs
  *
- *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from EC2 instances, AWS CloudTrail, and
+ *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from EC2 instances, CloudTrail, and
  *  other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch console,
- *  CloudWatch Logs commands in the AWS CLI, CloudWatch Logs API, or CloudWatch Logs
+ *  CloudWatch Logs commands in the Amazon Web Services CLI, CloudWatch Logs API, or CloudWatch Logs
  * 
  *  SDK>
  * 
@@ -148,8 +148,8 @@ namespace CloudWatchLogs {
  * 
  *  specify> </li> <li>
  * 
- *  <b>Monitor AWS CloudTrail logged events</b>: You can create alarms in CloudWatch and receive notifications of particular
- *  API activity as captured by CloudTrail. You can use the notification to perform
+ *  <b>Monitor CloudTrail logged events</b>: You can create alarms in CloudWatch and receive notifications of particular API
+ *  activity as captured by CloudTrail. You can use the notification to perform
  * 
  *  troubleshooting> </li> <li>
  * 
@@ -218,14 +218,14 @@ CloudWatchLogsClient::CloudWatchLogsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates the specified AWS Key Management Service (AWS KMS) customer master key (CMK) with the specified log
+ * Associates the specified Key Management Service customer master key (CMK) with the specified log
  *
  * group>
  *
- * Associating an AWS KMS CMK with a log group overrides any existing associations between the log group and a CMK. After a
- * CMK is associated with a log group, all newly ingested data for the log group is encrypted using the CMK. This
- * association is stored as long as the data encrypted with the CMK is still within Amazon CloudWatch Logs. This enables
- * Amazon CloudWatch Logs to decrypt this data whenever it is
+ * Associating an KMS CMK with a log group overrides any existing associations between the log group and a CMK. After a CMK
+ * is associated with a log group, all newly ingested data for the log group is encrypted using the CMK. This association
+ * is stored as long as the data encrypted with the CMK is still within CloudWatch Logs. This enables CloudWatch Logs to
+ * decrypt this data whenever it is
  *
  * requested> <b>
  *
@@ -274,7 +274,16 @@ CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelEx
  * perform a <code>CreateExportTask</code> operation, you must use credentials that have permission to write to the S3
  * bucket that you specify as the
  *
- * destination>
+ * destination> <b>
+ *
+ * Exporting log data to Amazon S3 buckets that are encrypted by KMS is not supported. Exporting log data to Amazon S3
+ * buckets that have S3 Object Lock enabled with a retention period is not
+ *
+ * supported>
+ *
+ * Exporting to S3 buckets that are encrypted with AES-256 is supported.
+ *
+ * </p </b>
  *
  * This is an asynchronous call. If all the required information is provided, this operation initiates an export task and
  * responds with the ID of the task. After the task has started, you can use <a
@@ -287,10 +296,10 @@ CancelExportTaskResponse * CloudWatchLogsClient::cancelExportTask(const CancelEx
  * You can export logs from multiple log groups or multiple time ranges to the same S3 bucket. To separate out log data for
  * each export task, you can specify a prefix to be used as the Amazon S3 key prefix for all exported
  *
- * objects>
+ * objects> <note>
  *
- * Exporting to S3 buckets that are encrypted with AES-256 is supported. Exporting to S3 buckets encrypted with SSE-KMS is
- * not supported.
+ * Time-based sorting on chunks of log data inside an exported file is not guaranteed. You can sort the exported log fild
+ * data by using Linux
  */
 CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateExportTaskRequest &request)
 {
@@ -311,7 +320,7 @@ CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateEx
  *
  * group> <ul> <li>
  *
- * Log group names must be unique within a region for an AWS
+ * Log group names must be unique within a region for an Amazon Web Services
  *
  * account> </li> <li>
  *
@@ -329,9 +338,9 @@ CreateExportTaskResponse * CloudWatchLogsClient::createExportTask(const CreateEx
  *
  * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutRetentionPolicy.html">PutRetentionPolicy</a>>
  *
- * If you associate a AWS Key Management Service (AWS KMS) customer master key (CMK) with the log group, ingested data is
- * encrypted using the CMK. This association is stored as long as the data encrypted with the CMK is still within Amazon
- * CloudWatch Logs. This enables Amazon CloudWatch Logs to decrypt this data whenever it is
+ * If you associate a Key Management Service customer master key (CMK) with the log group, ingested data is encrypted using
+ * the CMK. This association is stored as long as the data encrypted with the CMK is still within CloudWatch Logs. This
+ * enables CloudWatch Logs to decrypt this data whenever it is
  *
  * requested>
  *
@@ -537,6 +546,14 @@ DescribeExportTasksResponse * CloudWatchLogsClient::describeExportTasks(const De
  *
  * Lists the specified log groups. You can list all your log groups or filter the results by prefix. The results are
  * ASCII-sorted by log group
+ *
+ * name>
+ *
+ * CloudWatch Logs doesn’t support IAM policies that control access to the <code>DescribeLogGroups</code> action by using
+ * the <code>aws:ResourceTag/<i>key-name</i> </code> condition key. Other CloudWatch Logs actions do support the use of the
+ * <code>aws:ResourceTag/<i>key-name</i> </code> condition key to control access. For more information about using tags to
+ * control access, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html">Controlling access to
+ * Amazon Web Services resources using
  */
 DescribeLogGroupsResponse * CloudWatchLogsClient::describeLogGroups(const DescribeLogGroupsRequest &request)
 {
@@ -640,13 +657,13 @@ DescribeSubscriptionFiltersResponse * CloudWatchLogsClient::describeSubscription
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the associated AWS Key Management Service (AWS KMS) customer master key (CMK) from the specified log
+ * Disassociates the associated Key Management Service customer master key (CMK) from the specified log
  *
  * group>
  *
- * After the AWS KMS CMK is disassociated from the log group, AWS CloudWatch Logs stops encrypting newly ingested data for
- * the log group. All previously ingested data remains encrypted, and AWS CloudWatch Logs requires permissions for the CMK
- * whenever the encrypted data is
+ * After the KMS CMK is disassociated from the log group, CloudWatch Logs stops encrypting newly ingested data for the log
+ * group. All previously ingested data remains encrypted, and CloudWatch Logs requires permissions for the CMK whenever the
+ * encrypted data is
  *
  * requested>
  *
@@ -832,8 +849,8 @@ PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinati
  *
  * destination>
  *
- * If multiple AWS accounts are sending logs to this destination, each sender account must be listed separately in the
- * policy. The policy does not support specifying <code>*</code> as the Principal or the use of the
+ * If multiple Amazon Web Services accounts are sending logs to this destination, each sender account must be listed
+ * separately in the policy. The policy does not support specifying <code>*</code> as the Principal or the use of the
  * <code>aws:PrincipalOrgId</code> global
  */
 PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const PutDestinationPolicyRequest &request)
@@ -876,8 +893,9 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
  * group> </li> <li>
  *
  * The log events in the batch must be in chronological order by their timestamp. The timestamp is the time the event
- * occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. (In AWS Tools for PowerShell and the
- * AWS SDK for .NET, the timestamp is specified in .NET format: yyyy-mm-ddThh:mm:ss. For example, 2017-09-15T13:45:30.)
+ * occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. (In Amazon Web Services Tools for
+ * PowerShell and the Amazon Web Services SDK for .NET, the timestamp is specified in .NET format: yyyy-mm-ddThh:mm:ss. For
+ * example, 2017-09-15T13:45:30.)
  *
  * </p </li> <li>
  *
@@ -893,8 +911,8 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
  *
  * changed> </li> </ul>
  *
- * If a call to <code>PutLogEvents</code> returns "UnrecognizedClientException" the most likely cause is an invalid AWS
- * access key ID or secret key.
+ * If a call to <code>PutLogEvents</code> returns "UnrecognizedClientException" the most likely cause is an invalid Amazon
+ * Web Services access key ID or secret key.
  */
 PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequest &request)
 {
@@ -933,7 +951,7 @@ PutLogEventsResponse * CloudWatchLogsClient::putLogEvents(const PutLogEventsRequ
  *
  * You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html">
- * Creating a Billing Alarm to Monitor Your Estimated AWS Charges</a>.
+ * Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges</a>.
  */
 PutMetricFilterResponse * CloudWatchLogsClient::putMetricFilter(const PutMetricFilterRequest &request)
 {
@@ -973,8 +991,8 @@ PutQueryDefinitionResponse * CloudWatchLogsClient::putQueryDefinition(const PutQ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a resource policy allowing other AWS services to put log events to this account, such as Amazon Route
- * 53. An account can have up to 10 resource policies per AWS
+ * Creates or updates a resource policy allowing other Amazon Web Services services to put log events to this account, such
+ * as Amazon Route 53. An account can have up to 10 resource policies per Amazon Web Services
  */
 PutResourcePolicyResponse * CloudWatchLogsClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
@@ -1025,7 +1043,7 @@ PutRetentionPolicyResponse * CloudWatchLogsClient::putRetentionPolicy(const PutR
  *
  * delivery> </li> <li>
  *
- * An AWS Lambda function that belongs to the same account as the subscription filter, for same-account
+ * An Lambda function that belongs to the same account as the subscription filter, for same-account
  *
  * delivery> </li> </ul>
  *
@@ -1098,6 +1116,13 @@ StopQueryResponse * CloudWatchLogsClient::stopQuery(const StopQueryRequest &requ
  * For more information about tags, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html#log-group-tagging">Tag
  * Log Groups in Amazon CloudWatch Logs</a> in the <i>Amazon CloudWatch Logs User
+ *
+ * Guide</i>>
+ *
+ * CloudWatch Logs doesn’t support IAM policies that prevent users from assigning specified tags to log groups using the
+ * <code>aws:Resource/<i>key-name</i> </code> or <code>aws:TagKeys</code> condition keys. For more information about using
+ * tags to control access, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html">Controlling
+ * access to Amazon Web Services resources using
  */
 TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest &request)
 {
@@ -1131,6 +1156,11 @@ TestMetricFilterResponse * CloudWatchLogsClient::testMetricFilter(const TestMetr
  * To list the tags for a log group, use <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_ListTagsLogGroup.html">ListTagsLogGroup</a>.
  * To add tags, use <a
+ *
+ * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_TagLogGroup.html">TagLogGroup</a>>
+ *
+ * CloudWatch Logs doesn’t support IAM policies that prevent users from assigning specified tags to log groups using the
+ * <code>aws:Resource/<i>key-name</i> </code> or <code>aws:TagKeys</code> condition keys.
  */
 UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupRequest &request)
 {

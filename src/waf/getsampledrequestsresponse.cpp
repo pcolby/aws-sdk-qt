@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetSampledRequestsResponse
- * \brief The GetSampledRequestsResponse class provides an interace for WAF GetSampledRequests responses.
+ * \class QtAws::Waf::GetSampledRequestsResponse
+ * \brief The GetSampledRequestsResponse class provides an interace for Waf GetSampledRequests responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetSampledRequests \a response.
+ * Parses a successful Waf GetSampledRequests \a response.
  */
 void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetSampledRequestsResponsePrivate
+ * \class QtAws::Waf::GetSampledRequestsResponsePrivate
  * \brief The GetSampledRequestsResponsePrivate class provides private implementation for GetSampledRequestsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetSampledRequests response element from \a xml.
+ * Parses a Waf GetSampledRequests response element from \a xml.
  */
 void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceClientPrivate;
+class PinpointSmsVoiceClientPrivate;
 class CreateConfigurationSetRequest;
 class CreateConfigurationSetResponse;
 class CreateConfigurationSetEventDestinationRequest;
@@ -47,17 +47,17 @@ class SendVoiceMessageResponse;
 class UpdateConfigurationSetEventDestinationRequest;
 class UpdateConfigurationSetEventDestinationResponse;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSmsVoiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    PinpointSMSVoiceClient(
+    PinpointSmsVoiceClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit PinpointSMSVoiceClient(
+    explicit PinpointSmsVoiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -73,12 +73,12 @@ public slots:
     UpdateConfigurationSetEventDestinationResponse * updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(PinpointSMSVoiceClient)
-    Q_DISABLE_COPY(PinpointSMSVoiceClient)
+    Q_DECLARE_PRIVATE(PinpointSmsVoiceClient)
+    Q_DISABLE_COPY(PinpointSmsVoiceClient)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

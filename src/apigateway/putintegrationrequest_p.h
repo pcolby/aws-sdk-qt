@@ -24,14 +24,14 @@
 #include "putintegrationrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class PutIntegrationRequest;
 
-class PutIntegrationRequestPrivate : public APIGatewayRequestPrivate {
+class PutIntegrationRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    PutIntegrationRequestPrivate(const APIGatewayRequest::Action action,
+    PutIntegrationRequestPrivate(const ApiGatewayRequest::Action action,
                                    PutIntegrationRequest * const q);
     PutIntegrationRequestPrivate(const PutIntegrationRequestPrivate &other,
                                    PutIntegrationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

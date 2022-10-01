@@ -23,11 +23,11 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetLoggingConfigurationRequestPrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetLoggingConfigurationRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetLoggingConfigurationRequest : public WafRegionalRequest {
 
 public:
     GetLoggingConfigurationRequest(const GetLoggingConfigurationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListRateBasedRulesResponse
- * \brief The ListRateBasedRulesResponse class provides an interace for WAF ListRateBasedRules responses.
+ * \class QtAws::Waf::ListRateBasedRulesResponse
+ * \brief The ListRateBasedRulesResponse class provides an interace for Waf ListRateBasedRules responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListRateBasedRules \a response.
+ * Parses a successful Waf ListRateBasedRules \a response.
  */
 void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListRateBasedRulesResponsePrivate
+ * \class QtAws::Waf::ListRateBasedRulesResponsePrivate
  * \brief The ListRateBasedRulesResponsePrivate class provides private implementation for ListRateBasedRulesResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListRateBasedRules response element from \a xml.
+ * Parses a Waf ListRateBasedRules response element from \a xml.
  */
 void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

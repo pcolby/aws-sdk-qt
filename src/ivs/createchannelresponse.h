@@ -24,7 +24,7 @@
 #include "createchannelrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class CreateChannelResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

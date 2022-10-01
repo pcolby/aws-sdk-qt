@@ -251,7 +251,7 @@ QNetworkRequest ConnectParticipantRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 ConnectParticipantRequestPrivate::ConnectParticipantRequestPrivate(const ConnectParticipantRequest::Action action, ConnectParticipantRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-07"))
 {
 
 }

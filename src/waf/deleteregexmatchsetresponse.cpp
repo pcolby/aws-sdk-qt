@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteRegexMatchSetResponse
- * \brief The DeleteRegexMatchSetResponse class provides an interace for WAF DeleteRegexMatchSet responses.
+ * \class QtAws::Waf::DeleteRegexMatchSetResponse
+ * \brief The DeleteRegexMatchSetResponse class provides an interace for Waf DeleteRegexMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteRegexMatchSet \a response.
+ * Parses a successful Waf DeleteRegexMatchSet \a response.
  */
 void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteRegexMatchSetResponsePrivate
+ * \class QtAws::Waf::DeleteRegexMatchSetResponsePrivate
  * \brief The DeleteRegexMatchSetResponsePrivate class provides private implementation for DeleteRegexMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteRegexMatchSet response element from \a xml.
+ * Parses a Waf DeleteRegexMatchSet response element from \a xml.
  */
 void DeleteRegexMatchSetResponsePrivate::parseDeleteRegexMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteRegexMatchSetResponsePrivate::parseDeleteRegexMatchSetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

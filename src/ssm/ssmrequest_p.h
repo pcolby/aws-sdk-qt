@@ -24,16 +24,16 @@
 #include "ssmrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class SsmRequest;
 
 class SsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SsmRequest::Action action; ///< SSM action to be performed.
-    QString apiVersion;        ///< SSM API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSM request (query string) parameters. @todo?
+    SsmRequest::Action action; ///< Ssm action to be performed.
+    QString apiVersion;        ///< Ssm API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Ssm request (query string) parameters. @todo?
 
     SsmRequestPrivate(const SsmRequest::Action action, SsmRequest * const q);
     SsmRequestPrivate(const SsmRequestPrivate &other, SsmRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

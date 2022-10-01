@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CreateGlobalClusterResponse
- * \brief The CreateGlobalClusterResponse class provides an interace for DocDB CreateGlobalCluster responses.
+ * \class QtAws::DocDb::CreateGlobalClusterResponse
+ * \brief The CreateGlobalClusterResponse class provides an interace for DocDb CreateGlobalCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::createGlobalCluster
+ * \sa DocDbClient::createGlobalCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateGlobalClusterResponse::CreateGlobalClusterResponse(
         const CreateGlobalClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new CreateGlobalClusterResponsePrivate(this), parent)
+    : DocDbResponse(new CreateGlobalClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateGlobalClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateGlobalClusterRequest * CreateGlobalClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB CreateGlobalCluster \a response.
+ * Parses a successful DocDb CreateGlobalCluster \a response.
  */
 void CreateGlobalClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateGlobalClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::CreateGlobalClusterResponsePrivate
+ * \class QtAws::DocDb::CreateGlobalClusterResponsePrivate
  * \brief The CreateGlobalClusterResponsePrivate class provides private implementation for CreateGlobalClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a CreateGlobalClusterResponsePrivate object with public implementation \a q.
  */
 CreateGlobalClusterResponsePrivate::CreateGlobalClusterResponsePrivate(
-    CreateGlobalClusterResponse * const q) : DocDBResponsePrivate(q)
+    CreateGlobalClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB CreateGlobalCluster response element from \a xml.
+ * Parses a DocDb CreateGlobalCluster response element from \a xml.
  */
 void CreateGlobalClusterResponsePrivate::parseCreateGlobalClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateGlobalClusterResponsePrivate::parseCreateGlobalClusterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

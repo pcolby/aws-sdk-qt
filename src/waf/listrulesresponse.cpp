@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListRulesResponse
- * \brief The ListRulesResponse class provides an interace for WAF ListRules responses.
+ * \class QtAws::Waf::ListRulesResponse
+ * \brief The ListRulesResponse class provides an interace for Waf ListRules responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListRulesRequest * ListRulesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListRules \a response.
+ * Parses a successful Waf ListRules \a response.
  */
 void ListRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListRulesResponsePrivate
+ * \class QtAws::Waf::ListRulesResponsePrivate
  * \brief The ListRulesResponsePrivate class provides private implementation for ListRulesResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListRulesResponsePrivate::ListRulesResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListRules response element from \a xml.
+ * Parses a Waf ListRules response element from \a xml.
  */
 void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

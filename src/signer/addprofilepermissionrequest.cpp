@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::AddProfilePermissionRequest
- * \brief The AddProfilePermissionRequest class provides an interface for signer AddProfilePermission requests.
+ * \class QtAws::Signer::AddProfilePermissionRequest
+ * \brief The AddProfilePermissionRequest class provides an interface for Signer AddProfilePermission requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::addProfilePermission
+ * \sa SignerClient::addProfilePermission
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 AddProfilePermissionRequest::AddProfilePermissionRequest(const AddProfilePermissionRequest &other)
-    : signerRequest(new AddProfilePermissionRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new AddProfilePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ AddProfilePermissionRequest::AddProfilePermissionRequest(const AddProfilePermiss
  * Constructs a AddProfilePermissionRequest object.
  */
 AddProfilePermissionRequest::AddProfilePermissionRequest()
-    : signerRequest(new AddProfilePermissionRequestPrivate(signerRequest::AddProfilePermissionAction, this))
+    : SignerRequest(new AddProfilePermissionRequestPrivate(SignerRequest::AddProfilePermissionAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * AddProfilePermissionRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::signer::AddProfilePermissionRequestPrivate
+ * \class QtAws::Signer::AddProfilePermissionRequestPrivate
  * \brief The AddProfilePermissionRequestPrivate class provides private implementation for AddProfilePermissionRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a AddProfilePermissionRequestPrivate object for signer \a action,
+ * Constructs a AddProfilePermissionRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 AddProfilePermissionRequestPrivate::AddProfilePermissionRequestPrivate(
-    const signerRequest::Action action, AddProfilePermissionRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, AddProfilePermissionRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ AddProfilePermissionRequestPrivate::AddProfilePermissionRequestPrivate(
  */
 AddProfilePermissionRequestPrivate::AddProfilePermissionRequestPrivate(
     const AddProfilePermissionRequestPrivate &other, AddProfilePermissionRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

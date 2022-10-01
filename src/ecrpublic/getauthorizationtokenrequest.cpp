@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetAuthorizationTokenRequest
- * \brief The GetAuthorizationTokenRequest class provides an interface for ECRPublic GetAuthorizationToken requests.
+ * \class QtAws::EcrPublic::GetAuthorizationTokenRequest
+ * \brief The GetAuthorizationTokenRequest class provides an interface for EcrPublic GetAuthorizationToken requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getAuthorizationToken
+ * \sa EcrPublicClient::getAuthorizationToken
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other)
-    : ECRPublicRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizatio
  * Constructs a GetAuthorizationTokenRequest object.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
-    : ECRPublicRequest(new GetAuthorizationTokenRequestPrivate(ECRPublicRequest::GetAuthorizationTokenAction, this))
+    : EcrPublicRequest(new GetAuthorizationTokenRequestPrivate(EcrPublicRequest::GetAuthorizationTokenAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::ECRPublic::GetAuthorizationTokenRequestPrivate
+ * \class QtAws::EcrPublic::GetAuthorizationTokenRequestPrivate
  * \brief The GetAuthorizationTokenRequestPrivate class provides private implementation for GetAuthorizationTokenRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a GetAuthorizationTokenRequestPrivate object for ECRPublic \a action,
+ * Constructs a GetAuthorizationTokenRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
-    const ECRPublicRequest::Action action, GetAuthorizationTokenRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, GetAuthorizationTokenRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const GetAuthorizationTokenRequestPrivate &other, GetAuthorizationTokenRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

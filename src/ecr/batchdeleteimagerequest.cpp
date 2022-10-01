@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::BatchDeleteImageRequest
- * \brief The BatchDeleteImageRequest class provides an interface for ECR BatchDeleteImage requests.
+ * \class QtAws::Ecr::BatchDeleteImageRequest
+ * \brief The BatchDeleteImageRequest class provides an interface for Ecr BatchDeleteImage requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::batchDeleteImage
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ECR::BatchDeleteImageRequestPrivate
+ * \class QtAws::Ecr::BatchDeleteImageRequestPrivate
  * \brief The BatchDeleteImageRequestPrivate class provides private implementation for BatchDeleteImageRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

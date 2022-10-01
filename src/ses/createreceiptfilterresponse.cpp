@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::CreateReceiptFilterResponse
- * \brief The CreateReceiptFilterResponse class provides an interace for SES CreateReceiptFilter responses.
+ * \class QtAws::Ses::CreateReceiptFilterResponse
+ * \brief The CreateReceiptFilterResponse class provides an interace for Ses CreateReceiptFilter responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const CreateReceiptFilterRequest * CreateReceiptFilterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES CreateReceiptFilter \a response.
+ * Parses a successful Ses CreateReceiptFilter \a response.
  */
 void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::CreateReceiptFilterResponsePrivate
+ * \class QtAws::Ses::CreateReceiptFilterResponsePrivate
  * \brief The CreateReceiptFilterResponsePrivate class provides private implementation for CreateReceiptFilterResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
 }
 
 /*!
- * Parses a SES CreateReceiptFilter response element from \a xml.
+ * Parses a Ses CreateReceiptFilter response element from \a xml.
  */
 void CreateReceiptFilterResponsePrivate::parseCreateReceiptFilterResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void CreateReceiptFilterResponsePrivate::parseCreateReceiptFilterResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

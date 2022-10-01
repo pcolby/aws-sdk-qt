@@ -21,96 +21,96 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SesRequest
- * \brief The SesRequest class provides an interface for SES requests.
+ * \class QtAws::Ses::SesRequest
+ * \brief The SesRequest class provides an interface for Ses requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
  * \enum SesRequest::Action
  *
- * This enum describes the actions that can be performed as SES
+ * This enum describes the actions that can be performed as Ses
  * requests.
  *
- * \value CloneReceiptRuleSetAction SES CloneReceiptRuleSet action.
- * \value CreateConfigurationSetAction SES CreateConfigurationSet action.
- * \value CreateConfigurationSetEventDestinationAction SES CreateConfigurationSetEventDestination action.
- * \value CreateConfigurationSetTrackingOptionsAction SES CreateConfigurationSetTrackingOptions action.
- * \value CreateCustomVerificationEmailTemplateAction SES CreateCustomVerificationEmailTemplate action.
- * \value CreateReceiptFilterAction SES CreateReceiptFilter action.
- * \value CreateReceiptRuleAction SES CreateReceiptRule action.
- * \value CreateReceiptRuleSetAction SES CreateReceiptRuleSet action.
- * \value CreateTemplateAction SES CreateTemplate action.
- * \value DeleteConfigurationSetAction SES DeleteConfigurationSet action.
- * \value DeleteConfigurationSetEventDestinationAction SES DeleteConfigurationSetEventDestination action.
- * \value DeleteConfigurationSetTrackingOptionsAction SES DeleteConfigurationSetTrackingOptions action.
- * \value DeleteCustomVerificationEmailTemplateAction SES DeleteCustomVerificationEmailTemplate action.
- * \value DeleteIdentityAction SES DeleteIdentity action.
- * \value DeleteIdentityPolicyAction SES DeleteIdentityPolicy action.
- * \value DeleteReceiptFilterAction SES DeleteReceiptFilter action.
- * \value DeleteReceiptRuleAction SES DeleteReceiptRule action.
- * \value DeleteReceiptRuleSetAction SES DeleteReceiptRuleSet action.
- * \value DeleteTemplateAction SES DeleteTemplate action.
- * \value DeleteVerifiedEmailAddressAction SES DeleteVerifiedEmailAddress action.
- * \value DescribeActiveReceiptRuleSetAction SES DescribeActiveReceiptRuleSet action.
- * \value DescribeConfigurationSetAction SES DescribeConfigurationSet action.
- * \value DescribeReceiptRuleAction SES DescribeReceiptRule action.
- * \value DescribeReceiptRuleSetAction SES DescribeReceiptRuleSet action.
- * \value GetAccountSendingEnabledAction SES GetAccountSendingEnabled action.
- * \value GetCustomVerificationEmailTemplateAction SES GetCustomVerificationEmailTemplate action.
- * \value GetIdentityDkimAttributesAction SES GetIdentityDkimAttributes action.
- * \value GetIdentityMailFromDomainAttributesAction SES GetIdentityMailFromDomainAttributes action.
- * \value GetIdentityNotificationAttributesAction SES GetIdentityNotificationAttributes action.
- * \value GetIdentityPoliciesAction SES GetIdentityPolicies action.
- * \value GetIdentityVerificationAttributesAction SES GetIdentityVerificationAttributes action.
- * \value GetSendQuotaAction SES GetSendQuota action.
- * \value GetSendStatisticsAction SES GetSendStatistics action.
- * \value GetTemplateAction SES GetTemplate action.
- * \value ListConfigurationSetsAction SES ListConfigurationSets action.
- * \value ListCustomVerificationEmailTemplatesAction SES ListCustomVerificationEmailTemplates action.
- * \value ListIdentitiesAction SES ListIdentities action.
- * \value ListIdentityPoliciesAction SES ListIdentityPolicies action.
- * \value ListReceiptFiltersAction SES ListReceiptFilters action.
- * \value ListReceiptRuleSetsAction SES ListReceiptRuleSets action.
- * \value ListTemplatesAction SES ListTemplates action.
- * \value ListVerifiedEmailAddressesAction SES ListVerifiedEmailAddresses action.
- * \value PutConfigurationSetDeliveryOptionsAction SES PutConfigurationSetDeliveryOptions action.
- * \value PutIdentityPolicyAction SES PutIdentityPolicy action.
- * \value ReorderReceiptRuleSetAction SES ReorderReceiptRuleSet action.
- * \value SendBounceAction SES SendBounce action.
- * \value SendBulkTemplatedEmailAction SES SendBulkTemplatedEmail action.
- * \value SendCustomVerificationEmailAction SES SendCustomVerificationEmail action.
- * \value SendEmailAction SES SendEmail action.
- * \value SendRawEmailAction SES SendRawEmail action.
- * \value SendTemplatedEmailAction SES SendTemplatedEmail action.
- * \value SetActiveReceiptRuleSetAction SES SetActiveReceiptRuleSet action.
- * \value SetIdentityDkimEnabledAction SES SetIdentityDkimEnabled action.
- * \value SetIdentityFeedbackForwardingEnabledAction SES SetIdentityFeedbackForwardingEnabled action.
- * \value SetIdentityHeadersInNotificationsEnabledAction SES SetIdentityHeadersInNotificationsEnabled action.
- * \value SetIdentityMailFromDomainAction SES SetIdentityMailFromDomain action.
- * \value SetIdentityNotificationTopicAction SES SetIdentityNotificationTopic action.
- * \value SetReceiptRulePositionAction SES SetReceiptRulePosition action.
- * \value TestRenderTemplateAction SES TestRenderTemplate action.
- * \value UpdateAccountSendingEnabledAction SES UpdateAccountSendingEnabled action.
- * \value UpdateConfigurationSetEventDestinationAction SES UpdateConfigurationSetEventDestination action.
- * \value UpdateConfigurationSetReputationMetricsEnabledAction SES UpdateConfigurationSetReputationMetricsEnabled action.
- * \value UpdateConfigurationSetSendingEnabledAction SES UpdateConfigurationSetSendingEnabled action.
- * \value UpdateConfigurationSetTrackingOptionsAction SES UpdateConfigurationSetTrackingOptions action.
- * \value UpdateCustomVerificationEmailTemplateAction SES UpdateCustomVerificationEmailTemplate action.
- * \value UpdateReceiptRuleAction SES UpdateReceiptRule action.
- * \value UpdateTemplateAction SES UpdateTemplate action.
- * \value VerifyDomainDkimAction SES VerifyDomainDkim action.
- * \value VerifyDomainIdentityAction SES VerifyDomainIdentity action.
- * \value VerifyEmailAddressAction SES VerifyEmailAddress action.
- * \value VerifyEmailIdentityAction SES VerifyEmailIdentity action.
+ * \value CloneReceiptRuleSetAction Ses CloneReceiptRuleSet action.
+ * \value CreateConfigurationSetAction Ses CreateConfigurationSet action.
+ * \value CreateConfigurationSetEventDestinationAction Ses CreateConfigurationSetEventDestination action.
+ * \value CreateConfigurationSetTrackingOptionsAction Ses CreateConfigurationSetTrackingOptions action.
+ * \value CreateCustomVerificationEmailTemplateAction Ses CreateCustomVerificationEmailTemplate action.
+ * \value CreateReceiptFilterAction Ses CreateReceiptFilter action.
+ * \value CreateReceiptRuleAction Ses CreateReceiptRule action.
+ * \value CreateReceiptRuleSetAction Ses CreateReceiptRuleSet action.
+ * \value CreateTemplateAction Ses CreateTemplate action.
+ * \value DeleteConfigurationSetAction Ses DeleteConfigurationSet action.
+ * \value DeleteConfigurationSetEventDestinationAction Ses DeleteConfigurationSetEventDestination action.
+ * \value DeleteConfigurationSetTrackingOptionsAction Ses DeleteConfigurationSetTrackingOptions action.
+ * \value DeleteCustomVerificationEmailTemplateAction Ses DeleteCustomVerificationEmailTemplate action.
+ * \value DeleteIdentityAction Ses DeleteIdentity action.
+ * \value DeleteIdentityPolicyAction Ses DeleteIdentityPolicy action.
+ * \value DeleteReceiptFilterAction Ses DeleteReceiptFilter action.
+ * \value DeleteReceiptRuleAction Ses DeleteReceiptRule action.
+ * \value DeleteReceiptRuleSetAction Ses DeleteReceiptRuleSet action.
+ * \value DeleteTemplateAction Ses DeleteTemplate action.
+ * \value DeleteVerifiedEmailAddressAction Ses DeleteVerifiedEmailAddress action.
+ * \value DescribeActiveReceiptRuleSetAction Ses DescribeActiveReceiptRuleSet action.
+ * \value DescribeConfigurationSetAction Ses DescribeConfigurationSet action.
+ * \value DescribeReceiptRuleAction Ses DescribeReceiptRule action.
+ * \value DescribeReceiptRuleSetAction Ses DescribeReceiptRuleSet action.
+ * \value GetAccountSendingEnabledAction Ses GetAccountSendingEnabled action.
+ * \value GetCustomVerificationEmailTemplateAction Ses GetCustomVerificationEmailTemplate action.
+ * \value GetIdentityDkimAttributesAction Ses GetIdentityDkimAttributes action.
+ * \value GetIdentityMailFromDomainAttributesAction Ses GetIdentityMailFromDomainAttributes action.
+ * \value GetIdentityNotificationAttributesAction Ses GetIdentityNotificationAttributes action.
+ * \value GetIdentityPoliciesAction Ses GetIdentityPolicies action.
+ * \value GetIdentityVerificationAttributesAction Ses GetIdentityVerificationAttributes action.
+ * \value GetSendQuotaAction Ses GetSendQuota action.
+ * \value GetSendStatisticsAction Ses GetSendStatistics action.
+ * \value GetTemplateAction Ses GetTemplate action.
+ * \value ListConfigurationSetsAction Ses ListConfigurationSets action.
+ * \value ListCustomVerificationEmailTemplatesAction Ses ListCustomVerificationEmailTemplates action.
+ * \value ListIdentitiesAction Ses ListIdentities action.
+ * \value ListIdentityPoliciesAction Ses ListIdentityPolicies action.
+ * \value ListReceiptFiltersAction Ses ListReceiptFilters action.
+ * \value ListReceiptRuleSetsAction Ses ListReceiptRuleSets action.
+ * \value ListTemplatesAction Ses ListTemplates action.
+ * \value ListVerifiedEmailAddressesAction Ses ListVerifiedEmailAddresses action.
+ * \value PutConfigurationSetDeliveryOptionsAction Ses PutConfigurationSetDeliveryOptions action.
+ * \value PutIdentityPolicyAction Ses PutIdentityPolicy action.
+ * \value ReorderReceiptRuleSetAction Ses ReorderReceiptRuleSet action.
+ * \value SendBounceAction Ses SendBounce action.
+ * \value SendBulkTemplatedEmailAction Ses SendBulkTemplatedEmail action.
+ * \value SendCustomVerificationEmailAction Ses SendCustomVerificationEmail action.
+ * \value SendEmailAction Ses SendEmail action.
+ * \value SendRawEmailAction Ses SendRawEmail action.
+ * \value SendTemplatedEmailAction Ses SendTemplatedEmail action.
+ * \value SetActiveReceiptRuleSetAction Ses SetActiveReceiptRuleSet action.
+ * \value SetIdentityDkimEnabledAction Ses SetIdentityDkimEnabled action.
+ * \value SetIdentityFeedbackForwardingEnabledAction Ses SetIdentityFeedbackForwardingEnabled action.
+ * \value SetIdentityHeadersInNotificationsEnabledAction Ses SetIdentityHeadersInNotificationsEnabled action.
+ * \value SetIdentityMailFromDomainAction Ses SetIdentityMailFromDomain action.
+ * \value SetIdentityNotificationTopicAction Ses SetIdentityNotificationTopic action.
+ * \value SetReceiptRulePositionAction Ses SetReceiptRulePosition action.
+ * \value TestRenderTemplateAction Ses TestRenderTemplate action.
+ * \value UpdateAccountSendingEnabledAction Ses UpdateAccountSendingEnabled action.
+ * \value UpdateConfigurationSetEventDestinationAction Ses UpdateConfigurationSetEventDestination action.
+ * \value UpdateConfigurationSetReputationMetricsEnabledAction Ses UpdateConfigurationSetReputationMetricsEnabled action.
+ * \value UpdateConfigurationSetSendingEnabledAction Ses UpdateConfigurationSetSendingEnabled action.
+ * \value UpdateConfigurationSetTrackingOptionsAction Ses UpdateConfigurationSetTrackingOptions action.
+ * \value UpdateCustomVerificationEmailTemplateAction Ses UpdateCustomVerificationEmailTemplate action.
+ * \value UpdateReceiptRuleAction Ses UpdateReceiptRule action.
+ * \value UpdateTemplateAction Ses UpdateTemplate action.
+ * \value VerifyDomainDkimAction Ses VerifyDomainDkim action.
+ * \value VerifyDomainIdentityAction Ses VerifyDomainIdentity action.
+ * \value VerifyEmailAddressAction Ses VerifyEmailAddress action.
+ * \value VerifyEmailIdentityAction Ses VerifyEmailIdentity action.
  */
 
 /*!
- * Constructs a SesRequest object for SES \a action.
+ * Constructs a SesRequest object for Ses \a action.
  */
 SesRequest::SesRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SesRequestPrivate(action, this))
@@ -151,7 +151,7 @@ SesRequest::SesRequest(SesRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SES action to be performed by this request.
+ * Returns the Ses action to be performed by this request.
  */
 SesRequest::Action SesRequest::action() const
 {
@@ -160,7 +160,7 @@ SesRequest::Action SesRequest::action() const
 }
 
 /*!
- * Returns the name of the SES action to be performed by this request.
+ * Returns the name of the Ses action to be performed by this request.
  */
 QString SesRequest::actionString() const
 {
@@ -168,7 +168,7 @@ QString SesRequest::actionString() const
 }
 
 /*!
- * Returns the SES API version implemented by this request.
+ * Returns the Ses API version implemented by this request.
  */
 QString SesRequest::apiVersion() const
 {
@@ -177,7 +177,7 @@ QString SesRequest::apiVersion() const
 }
 
 /*!
- * Sets the SES action to be performed by this request to \a action.
+ * Sets the Ses action to be performed by this request to \a action.
  */
 void SesRequest::setAction(const Action action)
 {
@@ -186,7 +186,7 @@ void SesRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SES API version to include in this request to \a version.
+ * Sets the Ses API version to include in this request to \a version.
  */
 void SesRequest::setApiVersion(const QString &version)
 {
@@ -211,15 +211,15 @@ bool SesRequest::operator==(const SesRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SES queue name.
+ * Returns \c tue if \a queueName is a valid Ses queue name.
  *
- * @par From SES FAQs:
+ * @par From Ses FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SES queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ses queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -286,10 +286,10 @@ void SesRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SES request using the given
+ * Returns a network request for the Ses request using the given
  * \a endpoint.
  *
- * This SES implementation builds request URLs by combining the
+ * This Ses implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -302,19 +302,19 @@ QNetworkRequest SesRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SES::SesRequestPrivate
+ * \class QtAws::Ses::SesRequestPrivate
  * \brief The SesRequestPrivate class provides private implementation for SesRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
- * Constructs a SesRequestPrivate object for SES \a action,
+ * Constructs a SesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SesRequestPrivate::SesRequestPrivate(const SesRequest::Action action, SesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-12-01"))
 {
 
 }
@@ -340,7 +340,7 @@ SesRequestPrivate::SesRequestPrivate(const SesRequestPrivate &other,
  * invalid.
  *
  * This function converts SesRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SES service's Action
+ * string representations, appropriate for use with the Ses service's Action
  * query parameters.
  */
 QString SesRequestPrivate::toString(const SesRequest::Action &action)
@@ -426,5 +426,5 @@ QString SesRequestPrivate::toString(const SesRequest::Action &action)
     return QString();
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

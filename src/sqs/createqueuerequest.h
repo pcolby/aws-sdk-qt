@@ -23,7 +23,7 @@
 #include "sqsrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class CreateQueueRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::DeleteTargetRequest
- * \brief The DeleteTargetRequest class provides an interface for CodeStarNotifications DeleteTarget requests.
+ * \class QtAws::CodestarNotifications::DeleteTargetRequest
+ * \brief The DeleteTargetRequest class provides an interface for CodestarNotifications DeleteTarget requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::deleteTarget
+ * \sa CodestarNotificationsClient::deleteTarget
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteTargetRequest::DeleteTargetRequest(const DeleteTargetRequest &other)
-    : CodeStarNotificationsRequest(new DeleteTargetRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new DeleteTargetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ DeleteTargetRequest::DeleteTargetRequest(const DeleteTargetRequest &other)
  * Constructs a DeleteTargetRequest object.
  */
 DeleteTargetRequest::DeleteTargetRequest()
-    : CodeStarNotificationsRequest(new DeleteTargetRequestPrivate(CodeStarNotificationsRequest::DeleteTargetAction, this))
+    : CodestarNotificationsRequest(new DeleteTargetRequestPrivate(CodestarNotificationsRequest::DeleteTargetAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * DeleteTargetRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::DeleteTargetRequestPrivate
+ * \class QtAws::CodestarNotifications::DeleteTargetRequestPrivate
  * \brief The DeleteTargetRequestPrivate class provides private implementation for DeleteTargetRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a DeleteTargetRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a DeleteTargetRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 DeleteTargetRequestPrivate::DeleteTargetRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, DeleteTargetRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, DeleteTargetRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ DeleteTargetRequestPrivate::DeleteTargetRequestPrivate(
  */
 DeleteTargetRequestPrivate::DeleteTargetRequestPrivate(
     const DeleteTargetRequestPrivate &other, DeleteTargetRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

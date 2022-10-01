@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMClientPrivate;
+class OpsWorksCmClientPrivate;
 class AssociateNodeRequest;
 class AssociateNodeResponse;
 class CreateBackupRequest;
@@ -69,17 +69,17 @@ class UpdateServerResponse;
 class UpdateServerEngineAttributesRequest;
 class UpdateServerEngineAttributesResponse;
 
-class QTAWSOPSWORKSCM_EXPORT OpsWorksCMClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    OpsWorksCMClient(
+    OpsWorksCmClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit OpsWorksCMClient(
+    explicit OpsWorksCmClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -106,12 +106,12 @@ public slots:
     UpdateServerEngineAttributesResponse * updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(OpsWorksCMClient)
-    Q_DISABLE_COPY(OpsWorksCMClient)
+    Q_DECLARE_PRIVATE(OpsWorksCmClient)
+    Q_DISABLE_COPY(OpsWorksCmClient)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

@@ -48,7 +48,7 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::MWAA
+ * \namespace QtAws::Mwaa
  * \brief Contains classess for accessing AmazonMWAA.
  *
  * \inmodule QtAwsMwaa
@@ -57,19 +57,90 @@
  */
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 /*!
- * \class QtAws::MWAA::MwaaClient
+ * \class QtAws::Mwaa::MwaaClient
  * \brief The MwaaClient class provides access to the AmazonMWAA service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  *
  *  <fullname>Amazon Managed Workflows for Apache Airflow</fullname>
  * 
  *  This section contains the Amazon Managed Workflows for Apache Airflow (MWAA) API reference documentation. For more
  *  information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html">What Is Amazon
+ * 
+ *  MWAA?</a>>
+ * 
+ *  <b>Endpoints</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <code>api.airflow.{region}.amazonaws.com</code> - This endpoint is used for environment
+ * 
+ *  management> <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_CreateEnvironment.html">CreateEnvironment</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_DeleteEnvironment.html">DeleteEnvironment</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_GetEnvironment.html">GetEnvironment</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_ListEnvironments.html">ListEnvironments</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_ListTagsForResource.html">ListTagsForResource</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_TagResource.html">TagResource</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_UntagResource.html">UntagResource</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_UpdateEnvironment.html">UpdateEnvironment</a>
+ * 
+ *  </p </li> </ul> </li> <li>
+ * 
+ *  <code>env.airflow.{region}.amazonaws.com</code> - This endpoint is used to operate the Airflow
+ * 
+ *  environment> <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_CreateCliToken.html ">CreateCliToken</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_CreateWebLoginToken.html">CreateWebLoginToken</a>
+ * 
+ *  </p </li> </ul> </li> <li>
+ * 
+ *  <code>ops.airflow.{region}.amazonaws.com</code> - This endpoint is used to push environment metrics that track
+ *  environment
+ * 
+ *  health> <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/mwaa/latest/API/API_PublishMetrics.html ">PublishMetrics</a>
+ * 
+ *  </p </li> </ul> </li> </ul>
+ * 
+ *  <b>Regions</b>
+ * 
+ *  </p
+ * 
+ *  For a list of regions that Amazon MWAA supports, see <a
+ *  href="https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html#regions-mwaa">Region availability</a> in the
+ *  <i>Amazon MWAA User
  */
 
 /*!
@@ -90,7 +161,7 @@ MwaaClient::MwaaClient(
     Q_D(MwaaClient);
     d->apiVersion = QStringLiteral("2020-07-01");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("airflow");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AmazonMWAA");
@@ -119,7 +190,7 @@ MwaaClient::MwaaClient(
     d->apiVersion = QStringLiteral("2020-07-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("airflow");
+    d->endpointPrefix = QStringLiteral("");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AmazonMWAA");
     d->serviceName = QStringLiteral("airflow");
@@ -131,7 +202,8 @@ MwaaClient::MwaaClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a CLI token to use Airflow
+ * Creates a CLI token for the Airflow CLI. To learn more, see <a
+ * href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-cli.html">Creating an Apache Airflow CLI
  */
 CreateCliTokenResponse * MwaaClient::createCliToken(const CreateCliTokenRequest &request)
 {
@@ -157,7 +229,8 @@ CreateEnvironmentResponse * MwaaClient::createEnvironment(const CreateEnvironmen
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a JWT token to be used to login to Airflow Web UI with claims based
+ * Creates a web login token for the Airflow Web UI. To learn more, see <a
+ * href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-web.html">Creating an Apache Airflow web login
  */
 CreateWebLoginTokenResponse * MwaaClient::createWebLoginToken(const CreateWebLoginTokenRequest &request)
 {
@@ -183,7 +256,7 @@ DeleteEnvironmentResponse * MwaaClient::deleteEnvironment(const DeleteEnvironmen
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details of an Amazon Managed Workflows for Apache Airflow (MWAA)
+ * Describes an Amazon Managed Workflows for Apache Airflow (MWAA)
  */
 GetEnvironmentResponse * MwaaClient::getEnvironment(const GetEnvironmentRequest &request)
 {
@@ -223,7 +296,7 @@ ListTagsForResourceResponse * MwaaClient::listTagsForResource(const ListTagsForR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * An operation for publishing metrics from the customers to the Ops
+ * <b>Internal only</b>. Publishes environment health metrics to Amazon
  */
 PublishMetricsResponse * MwaaClient::publishMetrics(const PublishMetricsRequest &request)
 {
@@ -271,12 +344,12 @@ UpdateEnvironmentResponse * MwaaClient::updateEnvironment(const UpdateEnvironmen
 }
 
 /*!
- * \class QtAws::MWAA::MwaaClientPrivate
+ * \class QtAws::Mwaa::MwaaClientPrivate
  * \brief The MwaaClientPrivate class provides private implementation for MwaaClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  */
 
 /*!
@@ -288,5 +361,5 @@ MwaaClientPrivate::MwaaClientPrivate(MwaaClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::GetSigningPlatformRequest
- * \brief The GetSigningPlatformRequest class provides an interface for signer GetSigningPlatform requests.
+ * \class QtAws::Signer::GetSigningPlatformRequest
+ * \brief The GetSigningPlatformRequest class provides an interface for Signer GetSigningPlatform requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::getSigningPlatform
+ * \sa SignerClient::getSigningPlatform
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetSigningPlatformRequest::GetSigningPlatformRequest(const GetSigningPlatformRequest &other)
-    : signerRequest(new GetSigningPlatformRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new GetSigningPlatformRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ GetSigningPlatformRequest::GetSigningPlatformRequest(const GetSigningPlatformReq
  * Constructs a GetSigningPlatformRequest object.
  */
 GetSigningPlatformRequest::GetSigningPlatformRequest()
-    : signerRequest(new GetSigningPlatformRequestPrivate(signerRequest::GetSigningPlatformAction, this))
+    : SignerRequest(new GetSigningPlatformRequestPrivate(SignerRequest::GetSigningPlatformAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * GetSigningPlatformRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::signer::GetSigningPlatformRequestPrivate
+ * \class QtAws::Signer::GetSigningPlatformRequestPrivate
  * \brief The GetSigningPlatformRequestPrivate class provides private implementation for GetSigningPlatformRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a GetSigningPlatformRequestPrivate object for signer \a action,
+ * Constructs a GetSigningPlatformRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 GetSigningPlatformRequestPrivate::GetSigningPlatformRequestPrivate(
-    const signerRequest::Action action, GetSigningPlatformRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, GetSigningPlatformRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ GetSigningPlatformRequestPrivate::GetSigningPlatformRequestPrivate(
  */
 GetSigningPlatformRequestPrivate::GetSigningPlatformRequestPrivate(
     const GetSigningPlatformRequestPrivate &other, GetSigningPlatformRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

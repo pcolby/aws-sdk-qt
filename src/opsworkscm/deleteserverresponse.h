@@ -24,11 +24,11 @@
 #include "deleteserverrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DeleteServerResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DeleteServerResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DeleteServerResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

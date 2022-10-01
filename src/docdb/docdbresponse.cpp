@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DocDBResponse
- * \brief The DocDBResponse class provides an interface for DocDB responses.
+ * \class QtAws::DocDb::DocDbResponse
+ * \brief The DocDbResponse class provides an interface for DocDb responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DocDBResponse object with parent \a parent.
+ * Constructs a DocDbResponse object with parent \a parent.
  */
-DocDBResponse::DocDBResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DocDBResponsePrivate(this), parent)
+DocDbResponse::DocDbResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new DocDbResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a DocDBResponse object with private implementation \a d,
+ * Constructs a DocDbResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DocDBResponsePrivate.
+ * implementation that inherits from DocDbResponsePrivate.
  */
-DocDBResponse::DocDBResponse(DocDBResponsePrivate * const d, QObject * const parent)
+DocDbResponse::DocDbResponse(DocDbResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ DocDBResponse::DocDBResponse(DocDBResponsePrivate * const d, QObject * const par
 /*!
  * \reimp
  */
-void DocDBResponse::parseFailure(QIODevice &response)
+void DocDbResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(DocDBResponse);
+    //Q_D(DocDbResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void DocDBResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DocDBResponsePrivate
- * \brief The DocDBResponsePrivate class provides private implementation for DocDBResponse.
+ * \class QtAws::DocDb::DocDbResponsePrivate
+ * \brief The DocDbResponsePrivate class provides private implementation for DocDbResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DocDBResponsePrivate object with public implementation \a q.
+ * Constructs a DocDbResponsePrivate object with public implementation \a q.
  */
-DocDBResponsePrivate::DocDBResponsePrivate(
-    DocDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+DocDbResponsePrivate::DocDbResponsePrivate(
+    DocDbResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

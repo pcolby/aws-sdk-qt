@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CancelExportTaskRequest
- * \brief The CancelExportTaskRequest class provides an interface for RDS CancelExportTask requests.
+ * \class QtAws::Rds::CancelExportTaskRequest
+ * \brief The CancelExportTaskRequest class provides an interface for Rds CancelExportTask requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::RDS::CancelExportTaskRequestPrivate
+ * \class QtAws::Rds::CancelExportTaskRequestPrivate
  * \brief The CancelExportTaskRequestPrivate class provides private implementation for CancelExportTaskRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

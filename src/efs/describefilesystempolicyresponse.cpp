@@ -25,21 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::DescribeFileSystemPolicyResponse
- * \brief The DescribeFileSystemPolicyResponse class provides an interace for EFS DescribeFileSystemPolicy responses.
+ * \class QtAws::Efs::DescribeFileSystemPolicyResponse
+ * \brief The DescribeFileSystemPolicyResponse class provides an interace for Efs DescribeFileSystemPolicy responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  *
  * \sa EfsClient::describeFileSystemPolicy
  */
@@ -68,7 +69,7 @@ const DescribeFileSystemPolicyRequest * DescribeFileSystemPolicyResponse::reques
 
 /*!
  * \reimp
- * Parses a successful EFS DescribeFileSystemPolicy \a response.
+ * Parses a successful Efs DescribeFileSystemPolicy \a response.
  */
 void DescribeFileSystemPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +79,11 @@ void DescribeFileSystemPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::DescribeFileSystemPolicyResponsePrivate
+ * \class QtAws::Efs::DescribeFileSystemPolicyResponsePrivate
  * \brief The DescribeFileSystemPolicyResponsePrivate class provides private implementation for DescribeFileSystemPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -95,7 +96,7 @@ DescribeFileSystemPolicyResponsePrivate::DescribeFileSystemPolicyResponsePrivate
 }
 
 /*!
- * Parses a EFS DescribeFileSystemPolicy response element from \a xml.
+ * Parses a Efs DescribeFileSystemPolicy response element from \a xml.
  */
 void DescribeFileSystemPolicyResponsePrivate::parseDescribeFileSystemPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +104,5 @@ void DescribeFileSystemPolicyResponsePrivate::parseDescribeFileSystemPolicyRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

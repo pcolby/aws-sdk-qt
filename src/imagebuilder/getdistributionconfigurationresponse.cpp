@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetDistributionConfigurationResponse
- * \brief The GetDistributionConfigurationResponse class provides an interace for imagebuilder GetDistributionConfiguration responses.
+ * \class QtAws::ImageBuilder::GetDistributionConfigurationResponse
+ * \brief The GetDistributionConfigurationResponse class provides an interace for ImageBuilder GetDistributionConfiguration responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getDistributionConfiguration
+ * \sa ImageBuilderClient::getDistributionConfiguration
  */
 
 /*!
@@ -47,7 +47,7 @@ GetDistributionConfigurationResponse::GetDistributionConfigurationResponse(
         const GetDistributionConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new GetDistributionConfigurationResponsePrivate(this), parent)
+    : ImageBuilderResponse(new GetDistributionConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetDistributionConfigurationRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const GetDistributionConfigurationRequest * GetDistributionConfigurationResponse
 
 /*!
  * \reimp
- * Parses a successful imagebuilder GetDistributionConfiguration \a response.
+ * Parses a successful ImageBuilder GetDistributionConfiguration \a response.
  */
 void GetDistributionConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void GetDistributionConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::GetDistributionConfigurationResponsePrivate
+ * \class QtAws::ImageBuilder::GetDistributionConfigurationResponsePrivate
  * \brief The GetDistributionConfigurationResponsePrivate class provides private implementation for GetDistributionConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a GetDistributionConfigurationResponsePrivate object with public implementation \a q.
  */
 GetDistributionConfigurationResponsePrivate::GetDistributionConfigurationResponsePrivate(
-    GetDistributionConfigurationResponse * const q) : imagebuilderResponsePrivate(q)
+    GetDistributionConfigurationResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder GetDistributionConfiguration response element from \a xml.
+ * Parses a ImageBuilder GetDistributionConfiguration response element from \a xml.
  */
 void GetDistributionConfigurationResponsePrivate::parseGetDistributionConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void GetDistributionConfigurationResponsePrivate::parseGetDistributionConfigurat
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

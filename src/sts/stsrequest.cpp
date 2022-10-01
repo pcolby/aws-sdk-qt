@@ -21,33 +21,33 @@
 #include "stsrequest_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::StsRequest
- * \brief The StsRequest class provides an interface for STS requests.
+ * \class QtAws::Sts::StsRequest
+ * \brief The StsRequest class provides an interface for Sts requests.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
  * \enum StsRequest::Action
  *
- * This enum describes the actions that can be performed as STS
+ * This enum describes the actions that can be performed as Sts
  * requests.
  *
- * \value AssumeRoleAction STS AssumeRole action.
- * \value AssumeRoleWithSAMLAction STS AssumeRoleWithSAML action.
- * \value AssumeRoleWithWebIdentityAction STS AssumeRoleWithWebIdentity action.
- * \value DecodeAuthorizationMessageAction STS DecodeAuthorizationMessage action.
- * \value GetAccessKeyInfoAction STS GetAccessKeyInfo action.
- * \value GetCallerIdentityAction STS GetCallerIdentity action.
- * \value GetFederationTokenAction STS GetFederationToken action.
- * \value GetSessionTokenAction STS GetSessionToken action.
+ * \value AssumeRoleAction Sts AssumeRole action.
+ * \value AssumeRoleWithSAMLAction Sts AssumeRoleWithSAML action.
+ * \value AssumeRoleWithWebIdentityAction Sts AssumeRoleWithWebIdentity action.
+ * \value DecodeAuthorizationMessageAction Sts DecodeAuthorizationMessage action.
+ * \value GetAccessKeyInfoAction Sts GetAccessKeyInfo action.
+ * \value GetCallerIdentityAction Sts GetCallerIdentity action.
+ * \value GetFederationTokenAction Sts GetFederationToken action.
+ * \value GetSessionTokenAction Sts GetSessionToken action.
  */
 
 /*!
- * Constructs a StsRequest object for STS \a action.
+ * Constructs a StsRequest object for Sts \a action.
  */
 StsRequest::StsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new StsRequestPrivate(action, this))
@@ -88,7 +88,7 @@ StsRequest::StsRequest(StsRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the STS action to be performed by this request.
+ * Returns the Sts action to be performed by this request.
  */
 StsRequest::Action StsRequest::action() const
 {
@@ -97,7 +97,7 @@ StsRequest::Action StsRequest::action() const
 }
 
 /*!
- * Returns the name of the STS action to be performed by this request.
+ * Returns the name of the Sts action to be performed by this request.
  */
 QString StsRequest::actionString() const
 {
@@ -105,7 +105,7 @@ QString StsRequest::actionString() const
 }
 
 /*!
- * Returns the STS API version implemented by this request.
+ * Returns the Sts API version implemented by this request.
  */
 QString StsRequest::apiVersion() const
 {
@@ -114,7 +114,7 @@ QString StsRequest::apiVersion() const
 }
 
 /*!
- * Sets the STS action to be performed by this request to \a action.
+ * Sets the Sts action to be performed by this request to \a action.
  */
 void StsRequest::setAction(const Action action)
 {
@@ -123,7 +123,7 @@ void StsRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the STS API version to include in this request to \a version.
+ * Sets the Sts API version to include in this request to \a version.
  */
 void StsRequest::setApiVersion(const QString &version)
 {
@@ -148,15 +148,15 @@ bool StsRequest::operator==(const StsRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid STS queue name.
+ * Returns \c tue if \a queueName is a valid Sts queue name.
  *
- * @par From STS FAQs:
+ * @par From Sts FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid STS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Sts queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -223,10 +223,10 @@ void StsRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the STS request using the given
+ * Returns a network request for the Sts request using the given
  * \a endpoint.
  *
- * This STS implementation builds request URLs by combining the
+ * This Sts implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -239,19 +239,19 @@ QNetworkRequest StsRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::STS::StsRequestPrivate
+ * \class QtAws::Sts::StsRequestPrivate
  * \brief The StsRequestPrivate class provides private implementation for StsRequest.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
- * Constructs a StsRequestPrivate object for STS \a action,
+ * Constructs a StsRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 StsRequestPrivate::StsRequestPrivate(const StsRequest::Action action, StsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2011-06-15"))
 {
 
 }
@@ -277,7 +277,7 @@ StsRequestPrivate::StsRequestPrivate(const StsRequestPrivate &other,
  * invalid.
  *
  * This function converts StsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the STS service's Action
+ * string representations, appropriate for use with the Sts service's Action
  * query parameters.
  */
 QString StsRequestPrivate::toString(const StsRequest::Action &action)
@@ -300,5 +300,5 @@ QString StsRequestPrivate::toString(const StsRequest::Action &action)
     return QString();
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

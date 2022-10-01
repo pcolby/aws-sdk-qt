@@ -24,28 +24,28 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBRequest;
+class DocDbRequest;
 
-class DocDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DocDbRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DocDBRequest::Action action; ///< DocDB action to be performed.
-    QString apiVersion;        ///< DocDB API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< DocDB request (query string) parameters. @todo?
+    DocDbRequest::Action action; ///< DocDb action to be performed.
+    QString apiVersion;        ///< DocDb API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< DocDb request (query string) parameters. @todo?
 
-    DocDBRequestPrivate(const DocDBRequest::Action action, DocDBRequest * const q);
-    DocDBRequestPrivate(const DocDBRequestPrivate &other, DocDBRequest * const q);
+    DocDbRequestPrivate(const DocDbRequest::Action action, DocDbRequest * const q);
+    DocDbRequestPrivate(const DocDbRequestPrivate &other, DocDbRequest * const q);
 
-    static QString toString(const DocDBRequest::Action &action);
+    static QString toString(const DocDbRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(DocDBRequest)
+    Q_DECLARE_PUBLIC(DocDbRequest)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

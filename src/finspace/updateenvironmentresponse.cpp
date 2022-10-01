@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::UpdateEnvironmentResponse
- * \brief The UpdateEnvironmentResponse class provides an interace for finspace UpdateEnvironment responses.
+ * \class QtAws::Finspace::UpdateEnvironmentResponse
+ * \brief The UpdateEnvironmentResponse class provides an interace for Finspace UpdateEnvironment responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::updateEnvironment
+ * \sa FinspaceClient::updateEnvironment
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
         const UpdateEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new UpdateEnvironmentResponsePrivate(this), parent)
+    : FinspaceResponse(new UpdateEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new UpdateEnvironmentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace UpdateEnvironment \a response.
+ * Parses a successful Finspace UpdateEnvironment \a response.
  */
 void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::UpdateEnvironmentResponsePrivate
+ * \class QtAws::Finspace::UpdateEnvironmentResponsePrivate
  * \brief The UpdateEnvironmentResponsePrivate class provides private implementation for UpdateEnvironmentResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a UpdateEnvironmentResponsePrivate object with public implementation \a q.
  */
 UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
-    UpdateEnvironmentResponse * const q) : finspaceResponsePrivate(q)
+    UpdateEnvironmentResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace UpdateEnvironment response element from \a xml.
+ * Parses a Finspace UpdateEnvironment response element from \a xml.
  */
 void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

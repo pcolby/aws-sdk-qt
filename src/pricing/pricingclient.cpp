@@ -33,7 +33,7 @@
 
 /*!
  * \namespace QtAws::Pricing
- * \brief Contains classess for accessing AWS Price List Service ( Pricing).
+ * \brief Contains classess for accessing AWS Price List Service.
  *
  * \inmodule QtAwsPricing
  *
@@ -45,22 +45,22 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::PricingClient
- * \brief The PricingClient class provides access to the AWS Price List Service ( Pricing) service.
+ * \brief The PricingClient class provides access to the AWS Price List Service service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsPricing
  *
- *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
- *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
- *  attributes such as <code>Location</code>, <code>Storage Class</code>, and <code>Operating System</code>, and provides
- *  prices at the SKU level. You can use the AWS Price List Service to build cost control and scenario planning tools,
- *  reconcile billing data, forecast future spend for budgeting purposes, and provide cost benefit analysis that compare
- *  your internal workloads with
+ *  Amazon Web Services Price List API is a centralized and convenient way to programmatically query Amazon Web Services for
+ *  services, products, and pricing information. The Amazon Web Services Price List uses standardized product attributes
+ *  such as <code>Location</code>, <code>Storage Class</code>, and <code>Operating System</code>, and provides prices at the
+ *  SKU level. You can use the Amazon Web Services Price List to build cost control and scenario planning tools, reconcile
+ *  billing data, forecast future spend for budgeting purposes, and provide cost benefit analysis that compare your internal
+ *  workloads with Amazon Web
  * 
- *  AWS>
+ *  Services>
  * 
  *  Use <code>GetServices</code> without a service code to retrieve the service codes for all AWS services, then
- *  <code>GetServices</code> with a service code to retreive the attribute names for that service. After you have the
+ *  <code>GetServices</code> with a service code to retrieve the attribute names for that service. After you have the
  *  service code and attribute names, you can use <code>GetAttributeValues</code> to see what values are available for an
  *  attribute. With the service code and an attribute name and value, you can use <code>GetProducts</code> to find specific
  *  products that you're interested in, such as an <code>AmazonEC2</code> instance, with a <code>Provisioned IOPS</code>
@@ -71,7 +71,7 @@ namespace Pricing {
  * 
  *  Endpoin>
  * 
- *  AWS Price List Service API provides the following two
+ *  Amazon Web Services Price List service API provides the following two
  * 
  *  endpoints> <ul> <li>
  * 
@@ -154,11 +154,12 @@ DescribeServicesResponse * PricingClient::describeServices(const DescribeService
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of attribute values. Attibutes are similar to the details in a Price List API offer file. For a list of
+ * Returns a list of attribute values. Attributes are similar to the details in a Price List API offer file. For a list of
  * available attributes, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File
- * Definitions</a> in the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS
- * Billing and Cost Management User
+ * Definitions</a> in the <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">Billing and Cost Management
+ * User
  */
 GetAttributeValuesResponse * PricingClient::getAttributeValues(const GetAttributeValuesRequest &request)
 {

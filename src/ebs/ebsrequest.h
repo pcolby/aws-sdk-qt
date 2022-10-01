@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class EbsRequestPrivate;
 
 class QTAWSEBS_EXPORT EbsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by EBS.
+    /// Actions supported by Ebs.
     enum Action {
         CompleteSnapshotAction,
         GetSnapshotBlockAction,
@@ -81,7 +81,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

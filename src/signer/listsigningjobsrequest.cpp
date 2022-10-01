@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListSigningJobsRequest
- * \brief The ListSigningJobsRequest class provides an interface for signer ListSigningJobs requests.
+ * \class QtAws::Signer::ListSigningJobsRequest
+ * \brief The ListSigningJobsRequest class provides an interface for Signer ListSigningJobs requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listSigningJobs
+ * \sa SignerClient::listSigningJobs
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListSigningJobsRequest::ListSigningJobsRequest(const ListSigningJobsRequest &other)
-    : signerRequest(new ListSigningJobsRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new ListSigningJobsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ ListSigningJobsRequest::ListSigningJobsRequest(const ListSigningJobsRequest &oth
  * Constructs a ListSigningJobsRequest object.
  */
 ListSigningJobsRequest::ListSigningJobsRequest()
-    : signerRequest(new ListSigningJobsRequestPrivate(signerRequest::ListSigningJobsAction, this))
+    : SignerRequest(new ListSigningJobsRequestPrivate(SignerRequest::ListSigningJobsAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * ListSigningJobsRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::signer::ListSigningJobsRequestPrivate
+ * \class QtAws::Signer::ListSigningJobsRequestPrivate
  * \brief The ListSigningJobsRequestPrivate class provides private implementation for ListSigningJobsRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a ListSigningJobsRequestPrivate object for signer \a action,
+ * Constructs a ListSigningJobsRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 ListSigningJobsRequestPrivate::ListSigningJobsRequestPrivate(
-    const signerRequest::Action action, ListSigningJobsRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, ListSigningJobsRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ ListSigningJobsRequestPrivate::ListSigningJobsRequestPrivate(
  */
 ListSigningJobsRequestPrivate::ListSigningJobsRequestPrivate(
     const ListSigningJobsRequestPrivate &other, ListSigningJobsRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

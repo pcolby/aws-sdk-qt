@@ -24,11 +24,11 @@
 #include "listtablesrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ListTablesResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT ListTablesResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ListTablesResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

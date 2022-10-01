@@ -23,7 +23,7 @@
 #include "mqresponse_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class ListTagsResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

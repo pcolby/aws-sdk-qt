@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::PutImageResponse
- * \brief The PutImageResponse class provides an interace for ECRPublic PutImage responses.
+ * \class QtAws::EcrPublic::PutImageResponse
+ * \brief The PutImageResponse class provides an interace for EcrPublic PutImage responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::putImage
+ * \sa EcrPublicClient::putImage
  */
 
 /*!
@@ -52,7 +52,7 @@ PutImageResponse::PutImageResponse(
         const PutImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new PutImageResponsePrivate(this), parent)
+    : EcrPublicResponse(new PutImageResponsePrivate(this), parent)
 {
     setRequest(new PutImageRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const PutImageRequest * PutImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic PutImage \a response.
+ * Parses a successful EcrPublic PutImage \a response.
  */
 void PutImageResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void PutImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::PutImageResponsePrivate
+ * \class QtAws::EcrPublic::PutImageResponsePrivate
  * \brief The PutImageResponsePrivate class provides private implementation for PutImageResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a PutImageResponsePrivate object with public implementation \a q.
  */
 PutImageResponsePrivate::PutImageResponsePrivate(
-    PutImageResponse * const q) : ECRPublicResponsePrivate(q)
+    PutImageResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic PutImage response element from \a xml.
+ * Parses a EcrPublic PutImage response element from \a xml.
  */
 void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

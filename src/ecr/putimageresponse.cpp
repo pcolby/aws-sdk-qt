@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::PutImageResponse
- * \brief The PutImageResponse class provides an interace for ECR PutImage responses.
+ * \class QtAws::Ecr::PutImageResponse
+ * \brief The PutImageResponse class provides an interace for Ecr PutImage responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::putImage
  */
@@ -68,7 +74,7 @@ const PutImageRequest * PutImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR PutImage \a response.
+ * Parses a successful Ecr PutImage \a response.
  */
 void PutImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void PutImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::PutImageResponsePrivate
+ * \class QtAws::Ecr::PutImageResponsePrivate
  * \brief The PutImageResponsePrivate class provides private implementation for PutImageResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ PutImageResponsePrivate::PutImageResponsePrivate(
 }
 
 /*!
- * Parses a ECR PutImage response element from \a xml.
+ * Parses a Ecr PutImage response element from \a xml.
  */
 void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

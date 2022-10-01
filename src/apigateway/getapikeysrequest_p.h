@@ -24,14 +24,14 @@
 #include "getapikeysrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetApiKeysRequest;
 
-class GetApiKeysRequestPrivate : public APIGatewayRequestPrivate {
+class GetApiKeysRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetApiKeysRequestPrivate(const APIGatewayRequest::Action action,
+    GetApiKeysRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetApiKeysRequest * const q);
     GetApiKeysRequestPrivate(const GetApiKeysRequestPrivate &other,
                                    GetApiKeysRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

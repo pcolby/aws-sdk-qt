@@ -24,11 +24,11 @@
 #include "createemailidentityrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateEmailIdentityResponsePrivate;
 
-class QTAWSSESV2_EXPORT CreateEmailIdentityResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT CreateEmailIdentityResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

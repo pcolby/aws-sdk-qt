@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateFaqResponse
- * \brief The CreateFaqResponse class provides an interace for kendra CreateFaq responses.
+ * \class QtAws::Kendra::CreateFaqResponse
+ * \brief The CreateFaqResponse class provides an interace for Kendra CreateFaq responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createFaq
+ * \sa KendraClient::createFaq
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateFaqResponse::CreateFaqResponse(
         const CreateFaqRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new CreateFaqResponsePrivate(this), parent)
+    : KendraResponse(new CreateFaqResponsePrivate(this), parent)
 {
     setRequest(new CreateFaqRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateFaqRequest * CreateFaqResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra CreateFaq \a response.
+ * Parses a successful Kendra CreateFaq \a response.
  */
 void CreateFaqResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateFaqResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::CreateFaqResponsePrivate
+ * \class QtAws::Kendra::CreateFaqResponsePrivate
  * \brief The CreateFaqResponsePrivate class provides private implementation for CreateFaqResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a CreateFaqResponsePrivate object with public implementation \a q.
  */
 CreateFaqResponsePrivate::CreateFaqResponsePrivate(
-    CreateFaqResponse * const q) : kendraResponsePrivate(q)
+    CreateFaqResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra CreateFaq response element from \a xml.
+ * Parses a Kendra CreateFaq response element from \a xml.
  */
 void CreateFaqResponsePrivate::parseCreateFaqResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateFaqResponsePrivate::parseCreateFaqResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

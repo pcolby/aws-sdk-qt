@@ -244,7 +244,7 @@ QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl
  * with public implementation \a q.
  */
 MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action, MarketplaceEntitlementServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-11"))
 {
 
 }

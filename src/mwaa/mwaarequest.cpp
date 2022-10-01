@@ -21,36 +21,36 @@
 #include "mwaarequest_p.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 /*!
- * \class QtAws::MWAA::MwaaRequest
- * \brief The MwaaRequest class provides an interface for MWAA requests.
+ * \class QtAws::Mwaa::MwaaRequest
+ * \brief The MwaaRequest class provides an interface for Mwaa requests.
  *
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  */
 
 /*!
  * \enum MwaaRequest::Action
  *
- * This enum describes the actions that can be performed as MWAA
+ * This enum describes the actions that can be performed as Mwaa
  * requests.
  *
- * \value CreateCliTokenAction MWAA CreateCliToken action.
- * \value CreateEnvironmentAction MWAA CreateEnvironment action.
- * \value CreateWebLoginTokenAction MWAA CreateWebLoginToken action.
- * \value DeleteEnvironmentAction MWAA DeleteEnvironment action.
- * \value GetEnvironmentAction MWAA GetEnvironment action.
- * \value ListEnvironmentsAction MWAA ListEnvironments action.
- * \value ListTagsForResourceAction MWAA ListTagsForResource action.
- * \value PublishMetricsAction MWAA PublishMetrics action.
- * \value TagResourceAction MWAA TagResource action.
- * \value UntagResourceAction MWAA UntagResource action.
- * \value UpdateEnvironmentAction MWAA UpdateEnvironment action.
+ * \value CreateCliTokenAction Mwaa CreateCliToken action.
+ * \value CreateEnvironmentAction Mwaa CreateEnvironment action.
+ * \value CreateWebLoginTokenAction Mwaa CreateWebLoginToken action.
+ * \value DeleteEnvironmentAction Mwaa DeleteEnvironment action.
+ * \value GetEnvironmentAction Mwaa GetEnvironment action.
+ * \value ListEnvironmentsAction Mwaa ListEnvironments action.
+ * \value ListTagsForResourceAction Mwaa ListTagsForResource action.
+ * \value PublishMetricsAction Mwaa PublishMetrics action.
+ * \value TagResourceAction Mwaa TagResource action.
+ * \value UntagResourceAction Mwaa UntagResource action.
+ * \value UpdateEnvironmentAction Mwaa UpdateEnvironment action.
  */
 
 /*!
- * Constructs a MwaaRequest object for MWAA \a action.
+ * Constructs a MwaaRequest object for Mwaa \a action.
  */
 MwaaRequest::MwaaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MwaaRequestPrivate(action, this))
@@ -91,7 +91,7 @@ MwaaRequest::MwaaRequest(MwaaRequestPrivate * const d) : QtAws::Core::AwsAbstrac
 }
 
 /*!
- * Returns the MWAA action to be performed by this request.
+ * Returns the Mwaa action to be performed by this request.
  */
 MwaaRequest::Action MwaaRequest::action() const
 {
@@ -100,7 +100,7 @@ MwaaRequest::Action MwaaRequest::action() const
 }
 
 /*!
- * Returns the name of the MWAA action to be performed by this request.
+ * Returns the name of the Mwaa action to be performed by this request.
  */
 QString MwaaRequest::actionString() const
 {
@@ -108,7 +108,7 @@ QString MwaaRequest::actionString() const
 }
 
 /*!
- * Returns the MWAA API version implemented by this request.
+ * Returns the Mwaa API version implemented by this request.
  */
 QString MwaaRequest::apiVersion() const
 {
@@ -117,7 +117,7 @@ QString MwaaRequest::apiVersion() const
 }
 
 /*!
- * Sets the MWAA action to be performed by this request to \a action.
+ * Sets the Mwaa action to be performed by this request to \a action.
  */
 void MwaaRequest::setAction(const Action action)
 {
@@ -126,7 +126,7 @@ void MwaaRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the MWAA API version to include in this request to \a version.
+ * Sets the Mwaa API version to include in this request to \a version.
  */
 void MwaaRequest::setApiVersion(const QString &version)
 {
@@ -151,15 +151,15 @@ bool MwaaRequest::operator==(const MwaaRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid MWAA queue name.
+ * Returns \c tue if \a queueName is a valid Mwaa queue name.
  *
- * @par From MWAA FAQs:
+ * @par From Mwaa FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid MWAA queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Mwaa queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -226,10 +226,10 @@ void MwaaRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the MWAA request using the given
+ * Returns a network request for the Mwaa request using the given
  * \a endpoint.
  *
- * This MWAA implementation builds request URLs by combining the
+ * This Mwaa implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -242,19 +242,19 @@ QNetworkRequest MwaaRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::MWAA::MwaaRequestPrivate
+ * \class QtAws::Mwaa::MwaaRequestPrivate
  * \brief The MwaaRequestPrivate class provides private implementation for MwaaRequest.
  * \internal
  *
- * \inmodule QtAwsMWAA
+ * \inmodule QtAwsMwaa
  */
 
 /*!
- * Constructs a MwaaRequestPrivate object for MWAA \a action,
+ * Constructs a MwaaRequestPrivate object for Mwaa \a action,
  * with public implementation \a q.
  */
 MwaaRequestPrivate::MwaaRequestPrivate(const MwaaRequest::Action action, MwaaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-07-01"))
 {
 
 }
@@ -280,7 +280,7 @@ MwaaRequestPrivate::MwaaRequestPrivate(const MwaaRequestPrivate &other,
  * invalid.
  *
  * This function converts MwaaRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the MWAA service's Action
+ * string representations, appropriate for use with the Mwaa service's Action
  * query parameters.
  */
 QString MwaaRequestPrivate::toString(const MwaaRequest::Action &action)
@@ -306,5 +306,5 @@ QString MwaaRequestPrivate::toString(const MwaaRequest::Action &action)
     return QString();
 }
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws

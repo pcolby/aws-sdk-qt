@@ -24,7 +24,7 @@
 #include "tagmfadevicerequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class TagMFADeviceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

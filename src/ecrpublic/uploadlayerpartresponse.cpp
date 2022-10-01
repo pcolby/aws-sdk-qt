@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::UploadLayerPartResponse
- * \brief The UploadLayerPartResponse class provides an interace for ECRPublic UploadLayerPart responses.
+ * \class QtAws::EcrPublic::UploadLayerPartResponse
+ * \brief The UploadLayerPartResponse class provides an interace for EcrPublic UploadLayerPart responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::uploadLayerPart
+ * \sa EcrPublicClient::uploadLayerPart
  */
 
 /*!
@@ -52,7 +52,7 @@ UploadLayerPartResponse::UploadLayerPartResponse(
         const UploadLayerPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new UploadLayerPartResponsePrivate(this), parent)
+    : EcrPublicResponse(new UploadLayerPartResponsePrivate(this), parent)
 {
     setRequest(new UploadLayerPartRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const UploadLayerPartRequest * UploadLayerPartResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic UploadLayerPart \a response.
+ * Parses a successful EcrPublic UploadLayerPart \a response.
  */
 void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::UploadLayerPartResponsePrivate
+ * \class QtAws::EcrPublic::UploadLayerPartResponsePrivate
  * \brief The UploadLayerPartResponsePrivate class provides private implementation for UploadLayerPartResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a UploadLayerPartResponsePrivate object with public implementation \a q.
  */
 UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
-    UploadLayerPartResponse * const q) : ECRPublicResponsePrivate(q)
+    UploadLayerPartResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic UploadLayerPart response element from \a xml.
+ * Parses a EcrPublic UploadLayerPart response element from \a xml.
  */
 void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

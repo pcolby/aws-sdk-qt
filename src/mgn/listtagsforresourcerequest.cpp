@@ -23,24 +23,24 @@
 #include "mgnrequest_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for mgn ListTagsForResource requests.
+ * \class QtAws::Mgn::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Mgn ListTagsForResource requests.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::listTagsForResource
+ * \sa MgnClient::listTagsForResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
-    : mgnRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+    : MgnRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResource
  * Constructs a ListTagsForResourceRequest object.
  */
 ListTagsForResourceRequest::ListTagsForResourceRequest()
-    : mgnRequest(new ListTagsForResourceRequestPrivate(mgnRequest::ListTagsForResourceAction, this))
+    : MgnRequest(new ListTagsForResourceRequestPrivate(MgnRequest::ListTagsForResourceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::mgn::ListTagsForResourceRequestPrivate
+ * \class QtAws::Mgn::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
- * Constructs a ListTagsForResourceRequestPrivate object for mgn \a action,
+ * Constructs a ListTagsForResourceRequestPrivate object for Mgn \a action,
  * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
-    const mgnRequest::Action action, ListTagsForResourceRequest * const q)
-    : mgnRequestPrivate(action, q)
+    const MgnRequest::Action action, ListTagsForResourceRequest * const q)
+    : MgnRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
-    : mgnRequestPrivate(other, q)
+    : MgnRequestPrivate(other, q)
 {
 
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

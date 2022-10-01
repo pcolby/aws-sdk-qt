@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::GetEnvironmentRequest
- * \brief The GetEnvironmentRequest class provides an interface for finspace GetEnvironment requests.
+ * \class QtAws::Finspace::GetEnvironmentRequest
+ * \brief The GetEnvironmentRequest class provides an interface for Finspace GetEnvironment requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::getEnvironment
+ * \sa FinspaceClient::getEnvironment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetEnvironmentRequest::GetEnvironmentRequest(const GetEnvironmentRequest &other)
-    : finspaceRequest(new GetEnvironmentRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new GetEnvironmentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ GetEnvironmentRequest::GetEnvironmentRequest(const GetEnvironmentRequest &other)
  * Constructs a GetEnvironmentRequest object.
  */
 GetEnvironmentRequest::GetEnvironmentRequest()
-    : finspaceRequest(new GetEnvironmentRequestPrivate(finspaceRequest::GetEnvironmentAction, this))
+    : FinspaceRequest(new GetEnvironmentRequestPrivate(FinspaceRequest::GetEnvironmentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * GetEnvironmentRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::finspace::GetEnvironmentRequestPrivate
+ * \class QtAws::Finspace::GetEnvironmentRequestPrivate
  * \brief The GetEnvironmentRequestPrivate class provides private implementation for GetEnvironmentRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a GetEnvironmentRequestPrivate object for finspace \a action,
+ * Constructs a GetEnvironmentRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 GetEnvironmentRequestPrivate::GetEnvironmentRequestPrivate(
-    const finspaceRequest::Action action, GetEnvironmentRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, GetEnvironmentRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ GetEnvironmentRequestPrivate::GetEnvironmentRequestPrivate(
  */
 GetEnvironmentRequestPrivate::GetEnvironmentRequestPrivate(
     const GetEnvironmentRequestPrivate &other, GetEnvironmentRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetDeliveryOptionsRequestPrivate;
 
-class QTAWSSESV2_EXPORT PutConfigurationSetDeliveryOptionsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutConfigurationSetDeliveryOptionsRequest : public SESv2Request {
 
 public:
     PutConfigurationSetDeliveryOptionsRequest(const PutConfigurationSetDeliveryOptionsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

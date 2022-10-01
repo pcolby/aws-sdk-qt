@@ -31,8 +31,12 @@
 #include "batchdeletetableresponse.h"
 #include "batchdeletetableversionrequest.h"
 #include "batchdeletetableversionresponse.h"
+#include "batchgetblueprintsrequest.h"
+#include "batchgetblueprintsresponse.h"
 #include "batchgetcrawlersrequest.h"
 #include "batchgetcrawlersresponse.h"
+#include "batchgetcustomentitytypesrequest.h"
+#include "batchgetcustomentitytypesresponse.h"
 #include "batchgetdevendpointsrequest.h"
 #include "batchgetdevendpointsresponse.h"
 #include "batchgetjobsrequest.h"
@@ -49,14 +53,20 @@
 #include "batchupdatepartitionresponse.h"
 #include "cancelmltaskrunrequest.h"
 #include "cancelmltaskrunresponse.h"
+#include "cancelstatementrequest.h"
+#include "cancelstatementresponse.h"
 #include "checkschemaversionvalidityrequest.h"
 #include "checkschemaversionvalidityresponse.h"
+#include "createblueprintrequest.h"
+#include "createblueprintresponse.h"
 #include "createclassifierrequest.h"
 #include "createclassifierresponse.h"
 #include "createconnectionrequest.h"
 #include "createconnectionresponse.h"
 #include "createcrawlerrequest.h"
 #include "createcrawlerresponse.h"
+#include "createcustomentitytyperequest.h"
+#include "createcustomentitytyperesponse.h"
 #include "createdatabaserequest.h"
 #include "createdatabaseresponse.h"
 #include "createdevendpointrequest.h"
@@ -77,6 +87,8 @@
 #include "createscriptresponse.h"
 #include "createsecurityconfigurationrequest.h"
 #include "createsecurityconfigurationresponse.h"
+#include "createsessionrequest.h"
+#include "createsessionresponse.h"
 #include "createtablerequest.h"
 #include "createtableresponse.h"
 #include "createtriggerrequest.h"
@@ -85,6 +97,8 @@
 #include "createuserdefinedfunctionresponse.h"
 #include "createworkflowrequest.h"
 #include "createworkflowresponse.h"
+#include "deleteblueprintrequest.h"
+#include "deleteblueprintresponse.h"
 #include "deleteclassifierrequest.h"
 #include "deleteclassifierresponse.h"
 #include "deletecolumnstatisticsforpartitionrequest.h"
@@ -95,6 +109,8 @@
 #include "deleteconnectionresponse.h"
 #include "deletecrawlerrequest.h"
 #include "deletecrawlerresponse.h"
+#include "deletecustomentitytyperequest.h"
+#include "deletecustomentitytyperesponse.h"
 #include "deletedatabaserequest.h"
 #include "deletedatabaseresponse.h"
 #include "deletedevendpointrequest.h"
@@ -117,6 +133,8 @@
 #include "deleteschemaversionsresponse.h"
 #include "deletesecurityconfigurationrequest.h"
 #include "deletesecurityconfigurationresponse.h"
+#include "deletesessionrequest.h"
+#include "deletesessionresponse.h"
 #include "deletetablerequest.h"
 #include "deletetableresponse.h"
 #include "deletetableversionrequest.h"
@@ -127,6 +145,12 @@
 #include "deleteuserdefinedfunctionresponse.h"
 #include "deleteworkflowrequest.h"
 #include "deleteworkflowresponse.h"
+#include "getblueprintrequest.h"
+#include "getblueprintresponse.h"
+#include "getblueprintrunrequest.h"
+#include "getblueprintrunresponse.h"
+#include "getblueprintrunsrequest.h"
+#include "getblueprintrunsresponse.h"
 #include "getcatalogimportstatusrequest.h"
 #include "getcatalogimportstatusresponse.h"
 #include "getclassifierrequest.h"
@@ -147,6 +171,8 @@
 #include "getcrawlermetricsresponse.h"
 #include "getcrawlersrequest.h"
 #include "getcrawlersresponse.h"
+#include "getcustomentitytyperequest.h"
+#include "getcustomentitytyperesponse.h"
 #include "getdatacatalogencryptionsettingsrequest.h"
 #include "getdatacatalogencryptionsettingsresponse.h"
 #include "getdatabaserequest.h"
@@ -205,6 +231,10 @@
 #include "getsecurityconfigurationresponse.h"
 #include "getsecurityconfigurationsrequest.h"
 #include "getsecurityconfigurationsresponse.h"
+#include "getsessionrequest.h"
+#include "getsessionresponse.h"
+#include "getstatementrequest.h"
+#include "getstatementresponse.h"
 #include "gettablerequest.h"
 #include "gettableresponse.h"
 #include "gettableversionrequest.h"
@@ -219,6 +249,12 @@
 #include "gettriggerresponse.h"
 #include "gettriggersrequest.h"
 #include "gettriggersresponse.h"
+#include "getunfilteredpartitionmetadatarequest.h"
+#include "getunfilteredpartitionmetadataresponse.h"
+#include "getunfilteredpartitionsmetadatarequest.h"
+#include "getunfilteredpartitionsmetadataresponse.h"
+#include "getunfilteredtablemetadatarequest.h"
+#include "getunfilteredtablemetadataresponse.h"
 #include "getuserdefinedfunctionrequest.h"
 #include "getuserdefinedfunctionresponse.h"
 #include "getuserdefinedfunctionsrequest.h"
@@ -233,8 +269,14 @@
 #include "getworkflowrunsresponse.h"
 #include "importcatalogtogluerequest.h"
 #include "importcatalogtoglueresponse.h"
+#include "listblueprintsrequest.h"
+#include "listblueprintsresponse.h"
 #include "listcrawlersrequest.h"
 #include "listcrawlersresponse.h"
+#include "listcrawlsrequest.h"
+#include "listcrawlsresponse.h"
+#include "listcustomentitytypesrequest.h"
+#include "listcustomentitytypesresponse.h"
 #include "listdevendpointsrequest.h"
 #include "listdevendpointsresponse.h"
 #include "listjobsrequest.h"
@@ -247,6 +289,10 @@
 #include "listschemaversionsresponse.h"
 #include "listschemasrequest.h"
 #include "listschemasresponse.h"
+#include "listsessionsrequest.h"
+#include "listsessionsresponse.h"
+#include "liststatementsrequest.h"
+#include "liststatementsresponse.h"
 #include "listtriggersrequest.h"
 #include "listtriggersresponse.h"
 #include "listworkflowsrequest.h"
@@ -269,8 +315,12 @@
 #include "resetjobbookmarkresponse.h"
 #include "resumeworkflowrunrequest.h"
 #include "resumeworkflowrunresponse.h"
+#include "runstatementrequest.h"
+#include "runstatementresponse.h"
 #include "searchtablesrequest.h"
 #include "searchtablesresponse.h"
+#include "startblueprintrunrequest.h"
+#include "startblueprintrunresponse.h"
 #include "startcrawlerrequest.h"
 #include "startcrawlerresponse.h"
 #include "startcrawlerschedulerequest.h"
@@ -293,6 +343,8 @@
 #include "stopcrawlerresponse.h"
 #include "stopcrawlerschedulerequest.h"
 #include "stopcrawlerscheduleresponse.h"
+#include "stopsessionrequest.h"
+#include "stopsessionresponse.h"
 #include "stoptriggerrequest.h"
 #include "stoptriggerresponse.h"
 #include "stopworkflowrunrequest.h"
@@ -301,6 +353,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateblueprintrequest.h"
+#include "updateblueprintresponse.h"
 #include "updateclassifierrequest.h"
 #include "updateclassifierresponse.h"
 #include "updatecolumnstatisticsforpartitionrequest.h"
@@ -358,9 +412,9 @@ namespace Glue {
  * \ingroup aws-clients
  * \inmodule QtAwsGlue
  *
- *  <fullname>AWS Glue</fullname>
+ *  <fullname>Glue</fullname>
  * 
- *  Defines the public endpoint for the AWS Glue
+ *  Defines the public endpoint for the Glue
  */
 
 /*!
@@ -466,7 +520,7 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
  * once> <note>
  *
  * After completing this operation, you no longer have access to the table versions and partitions that belong to the
- * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ * deleted table. Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
  *
@@ -494,6 +548,19 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetBlueprintsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about a list of
+ */
+BatchGetBlueprintsResponse * GlueClient::batchGetBlueprints(const BatchGetBlueprintsRequest &request)
+{
+    return qobject_cast<BatchGetBlueprintsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * BatchGetCrawlersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -505,6 +572,19 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 BatchGetCrawlersResponse * GlueClient::batchGetCrawlers(const BatchGetCrawlersRequest &request)
 {
     return qobject_cast<BatchGetCrawlersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetCustomEntityTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details for the custom patterns specified by a list of
+ */
+BatchGetCustomEntityTypesResponse * GlueClient::batchGetCustomEntityTypes(const BatchGetCustomEntityTypesRequest &request)
+{
+    return qobject_cast<BatchGetCustomEntityTypesResponse *>(send(request));
 }
 
 /*!
@@ -612,14 +692,27 @@ BatchUpdatePartitionResponse * GlueClient::batchUpdatePartition(const BatchUpdat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels (stops) a task run. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part
- * of various machine learning workflows. You can cancel a machine learning task run at any time by calling
+ * Cancels (stops) a task run. Machine learning task runs are asynchronous tasks that Glue runs on your behalf as part of
+ * various machine learning workflows. You can cancel a machine learning task run at any time by calling
  * <code>CancelMLTaskRun</code> with a task run's parent transform's <code>TransformID</code> and the task run's
  * <code>TaskRunId</code>.
  */
 CancelMLTaskRunResponse * GlueClient::cancelMLTaskRun(const CancelMLTaskRunRequest &request)
 {
     return qobject_cast<CancelMLTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CancelStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the
+ */
+CancelStatementResponse * GlueClient::cancelStatement(const CancelStatementRequest &request)
+{
+    return qobject_cast<CancelStatementResponse *>(send(request));
 }
 
 /*!
@@ -634,6 +727,19 @@ CancelMLTaskRunResponse * GlueClient::cancelMLTaskRun(const CancelMLTaskRunReque
 CheckSchemaVersionValidityResponse * GlueClient::checkSchemaVersionValidity(const CheckSchemaVersionValidityRequest &request)
 {
     return qobject_cast<CheckSchemaVersionValidityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateBlueprintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers a blueprint with
+ */
+CreateBlueprintResponse * GlueClient::createBlueprint(const CreateBlueprintRequest &request)
+{
+    return qobject_cast<CreateBlueprintResponse *>(send(request));
 }
 
 /*!
@@ -676,6 +782,24 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
     return qobject_cast<CreateCrawlerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateCustomEntityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured
+ *
+ * data>
+ *
+ * Each custom pattern you create specifies a regular expression and an optional list of context words. If no context words
+ * are passed only a regular expression is
+ */
+CreateCustomEntityTypeResponse * GlueClient::createCustomEntityType(const CreateCustomEntityTypeRequest &request)
+{
+    return qobject_cast<CreateCustomEntityTypeResponse *>(send(request));
 }
 
 /*!
@@ -723,7 +847,7 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Glue machine learning transform. This operation creates the transform and all the necessary parameters to
+ * Creates an Glue machine learning transform. This operation creates the transform and all the necessary parameters to
  * train
  *
  * it>
@@ -734,8 +858,8 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
  *
  * algorithm>
  *
- * You must also specify certain parameters for the tasks that AWS Glue runs on your behalf as part of learning from your
- * data and creating a high-quality machine learning transform. These parameters include <code>Role</code>, and optionally,
+ * You must also specify certain parameters for the tasks that Glue runs on your behalf as part of learning from your data
+ * and creating a high-quality machine learning transform. These parameters include <code>Role</code>, and optionally,
  * <code>AllocatedCapacity</code>, <code>Timeout</code>, and <code>MaxRetries</code>. For more information, see <a
  */
 CreateMLTransformResponse * GlueClient::createMLTransform(const CreateMLTransformRequest &request)
@@ -827,14 +951,27 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new security configuration. A security configuration is a set of security properties that can be used by AWS
- * Glue. You can use a security configuration to encrypt data at rest. For information about using security configurations
- * in AWS Glue, see <a href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting
- * Data Written by Crawlers, Jobs, and Development
+ * Creates a new security configuration. A security configuration is a set of security properties that can be used by Glue.
+ * You can use a security configuration to encrypt data at rest. For information about using security configurations in
+ * Glue, see <a href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting Data
+ * Written by Crawlers, Jobs, and Development
  */
 CreateSecurityConfigurationResponse * GlueClient::createSecurityConfiguration(const CreateSecurityConfigurationRequest &request)
 {
     return qobject_cast<CreateSecurityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new
+ */
+CreateSessionResponse * GlueClient::createSession(const CreateSessionRequest &request)
+{
+    return qobject_cast<CreateSessionResponse *>(send(request));
 }
 
 /*!
@@ -887,6 +1024,19 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
 CreateWorkflowResponse * GlueClient::createWorkflow(const CreateWorkflowRequest &request)
 {
     return qobject_cast<CreateWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteBlueprintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing
+ */
+DeleteBlueprintResponse * GlueClient::deleteBlueprint(const DeleteBlueprintRequest &request)
+{
+    return qobject_cast<DeleteBlueprintResponse *>(send(request));
 }
 
 /*!
@@ -955,11 +1105,24 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a specified crawler from the AWS Glue Data Catalog, unless the crawler state is
+ * Removes a specified crawler from the Glue Data Catalog, unless the crawler state is
  */
 DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &request)
 {
     return qobject_cast<DeleteCrawlerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteCustomEntityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom pattern by specifying its
+ */
+DeleteCustomEntityTypeResponse * GlueClient::deleteCustomEntityType(const DeleteCustomEntityTypeRequest &request)
+{
+    return qobject_cast<DeleteCustomEntityTypeResponse *>(send(request));
 }
 
 /*!
@@ -973,7 +1136,7 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
  * Catalog> <note>
  *
  * After completing this operation, you no longer have access to the tables (and all table versions and partitions that
- * might belong to the tables) and the user-defined functions in the deleted database. AWS Glue deletes these "orphaned"
+ * might belong to the tables) and the user-defined functions in the deleted database. Glue deletes these "orphaned"
  * resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
@@ -1020,11 +1183,10 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Glue machine learning transform. Machine learning transforms are a special type of transform that use
- * machine learning to learn the details of the transformation to be performed by learning from examples provided by
- * humans. These transformations are then saved by AWS Glue. If you no longer need a transform, you can delete it by
- * calling <code>DeleteMLTransforms</code>. However, any AWS Glue jobs that still reference the deleted transform will no
- * longer
+ * Deletes an Glue machine learning transform. Machine learning transforms are a special type of transform that use machine
+ * learning to learn the details of the transformation to be performed by learning from examples provided by humans. These
+ * transformations are then saved by Glue. If you no longer need a transform, you can delete it by calling
+ * <code>DeleteMLTransforms</code>. However, any Glue jobs that still reference the deleted transform will no longer
  */
 DeleteMLTransformResponse * GlueClient::deleteMLTransform(const DeleteMLTransformRequest &request)
 {
@@ -1064,7 +1226,7 @@ DeletePartitionIndexResponse * GlueClient::deletePartitionIndex(const DeletePart
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Delete the entire registry including schema and all of its versions. To get the status of the delete operation, you can
- * call the <code>GetRegistry</code> API after the asynchronous call. Deleting a registry will disable all online
+ * call the <code>GetRegistry</code> API after the asynchronous call. Deleting a registry will deactivate all online
  * operations for the registry such as the <code>UpdateRegistry</code>, <code>CreateSchema</code>,
  * <code>UpdateSchema</code>, and <code>RegisterSchemaVersion</code> APIs.
  */
@@ -1093,7 +1255,7 @@ DeleteResourcePolicyResponse * GlueClient::deleteResourcePolicy(const DeleteReso
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the entire schema set, including the schema set and all of its versions. To get the status of the delete
- * operation, you can call <code>GetSchema</code> API after the asynchronous call. Deleting a registry will disable all
+ * operation, you can call <code>GetSchema</code> API after the asynchronous call. Deleting a registry will deactivate all
  * online operations for the schema, such as the <code>GetSchemaByDefinition</code>, and <code>RegisterSchemaVersion</code>
  */
 DeleteSchemaResponse * GlueClient::deleteSchema(const DeleteSchemaRequest &request)
@@ -1147,6 +1309,19 @@ DeleteSecurityConfigurationResponse * GlueClient::deleteSecurityConfiguration(co
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the
+ */
+DeleteSessionResponse * GlueClient::deleteSession(const DeleteSessionRequest &request)
+{
+    return qobject_cast<DeleteSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeleteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1156,7 +1331,7 @@ DeleteSecurityConfigurationResponse * GlueClient::deleteSecurityConfiguration(co
  * Catalog> <note>
  *
  * After completing this operation, you no longer have access to the table versions and partitions that belong to the
- * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ * deleted table. Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
  *
@@ -1219,6 +1394,45 @@ DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const 
 DeleteWorkflowResponse * GlueClient::deleteWorkflow(const DeleteWorkflowRequest &request)
 {
     return qobject_cast<DeleteWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetBlueprintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of a
+ */
+GetBlueprintResponse * GlueClient::getBlueprint(const GetBlueprintRequest &request)
+{
+    return qobject_cast<GetBlueprintResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetBlueprintRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of a blueprint
+ */
+GetBlueprintRunResponse * GlueClient::getBlueprintRun(const GetBlueprintRunRequest &request)
+{
+    return qobject_cast<GetBlueprintRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetBlueprintRunsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of blueprint runs for a specified
+ */
+GetBlueprintRunsResponse * GlueClient::getBlueprintRuns(const GetBlueprintRunsRequest &request)
+{
+    return qobject_cast<GetBlueprintRunsResponse *>(send(request));
 }
 
 /*!
@@ -1361,6 +1575,19 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetCustomEntityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of a custom pattern by specifying its
+ */
+GetCustomEntityTypeResponse * GlueClient::getCustomEntityType(const GetCustomEntityTypeRequest &request)
+{
+    return qobject_cast<GetCustomEntityTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetDataCatalogEncryptionSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1421,9 +1648,8 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
  *
  * endpoint> <note>
  *
- * When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address, and
- * the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a
- * public IP
+ * When you create a development endpoint in a virtual private cloud (VPC), Glue returns only a private IP address, and the
+ * public IP address field is not populated. When you create a non-VPC development endpoint, Glue returns only a public IP
  */
 GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest &request)
 {
@@ -1440,9 +1666,8 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
  *
  * account> <note>
  *
- * When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address and
- * the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a
- * public IP
+ * When you create a development endpoint in a virtual private cloud (VPC), Glue returns only a private IP address and the
+ * public IP address field is not populated. When you create a non-VPC development endpoint, Glue returns only a public IP
  */
 GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsRequest &request)
 {
@@ -1521,8 +1746,8 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets details for a specific task run on a machine learning transform. Machine learning task runs are asynchronous tasks
- * that AWS Glue runs on your behalf as part of various machine learning workflows. You can check the stats of any task run
- * by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its parent transform's
+ * that Glue runs on your behalf as part of various machine learning workflows. You can check the stats of any task run by
+ * calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its parent transform's
  */
 GetMLTaskRunResponse * GlueClient::getMLTaskRun(const GetMLTaskRunRequest &request)
 {
@@ -1535,8 +1760,8 @@ GetMLTaskRunResponse * GlueClient::getMLTaskRun(const GetMLTaskRunRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of runs for a machine learning transform. Machine learning task runs are asynchronous tasks that AWS Glue
- * runs on your behalf as part of various machine learning workflows. You can get a sortable, filterable list of machine
+ * Gets a list of runs for a machine learning transform. Machine learning task runs are asynchronous tasks that Glue runs
+ * on your behalf as part of various machine learning workflows. You can get a sortable, filterable list of machine
  * learning task runs by calling <code>GetMLTaskRuns</code> with their parent transform's <code>TransformID</code> and
  * other optional parameters as documented in this
  *
@@ -1555,10 +1780,10 @@ GetMLTaskRunsResponse * GlueClient::getMLTaskRuns(const GetMLTaskRunsRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets an AWS Glue machine learning transform artifact and all its corresponding metadata. Machine learning transforms are
- * a special type of transform that use machine learning to learn the details of the transformation to be performed by
- * learning from examples provided by humans. These transformations are then saved by AWS Glue. You can retrieve their
- * metadata by calling
+ * Gets an Glue machine learning transform artifact and all its corresponding metadata. Machine learning transforms are a
+ * special type of transform that use machine learning to learn the details of the transformation to be performed by
+ * learning from examples provided by humans. These transformations are then saved by Glue. You can retrieve their metadata
+ * by calling
  */
 GetMLTransformResponse * GlueClient::getMLTransform(const GetMLTransformRequest &request)
 {
@@ -1571,10 +1796,10 @@ GetMLTransformResponse * GlueClient::getMLTransform(const GetMLTransformRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a sortable, filterable list of existing AWS Glue machine learning transforms. Machine learning transforms are a
- * special type of transform that use machine learning to learn the details of the transformation to be performed by
- * learning from examples provided by humans. These transformations are then saved by AWS Glue, and you can retrieve their
- * metadata by calling
+ * Gets a sortable, filterable list of existing Glue machine learning transforms. Machine learning transforms are a special
+ * type of transform that use machine learning to learn the details of the transformation to be performed by learning from
+ * examples provided by humans. These transformations are then saved by Glue, and you can retrieve their metadata by
+ * calling
  */
 GetMLTransformsResponse * GlueClient::getMLTransforms(const GetMLTransformsRequest &request)
 {
@@ -1665,12 +1890,12 @@ GetRegistryResponse * GlueClient::getRegistry(const GetRegistryRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the resource policies set on individual resources by AWS Resource Access Manager during cross-account
- * permission grants. Also retrieves the Data Catalog resource
+ * Retrieves the resource policies set on individual resources by Resource Access Manager during cross-account permission
+ * grants. Also retrieves the Data Catalog resource
  *
  * policy>
  *
- * If you enabled metadata encryption in Data Catalog settings, and you do not have permission on the AWS KMS key, the
+ * If you enabled metadata encryption in Data Catalog settings, and you do not have permission on the KMS key, the
  * operation can't return the Data Catalog resource
  */
 GetResourcePoliciesResponse * GlueClient::getResourcePolicies(const GetResourcePoliciesRequest &request)
@@ -1779,6 +2004,32 @@ GetSecurityConfigurationsResponse * GlueClient::getSecurityConfigurations(const 
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the
+ */
+GetSessionResponse * GlueClient::getSession(const GetSessionRequest &request)
+{
+    return qobject_cast<GetSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the
+ */
+GetStatementResponse * GlueClient::getStatement(const GetStatementRequest &request)
+{
+    return qobject_cast<GetStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1870,6 +2121,42 @@ GetTriggersResponse * GlueClient::getTriggers(const GetTriggersRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetUnfilteredPartitionMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetUnfilteredPartitionMetadataResponse * GlueClient::getUnfilteredPartitionMetadata(const GetUnfilteredPartitionMetadataRequest &request)
+{
+    return qobject_cast<GetUnfilteredPartitionMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetUnfilteredPartitionsMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetUnfilteredPartitionsMetadataResponse * GlueClient::getUnfilteredPartitionsMetadata(const GetUnfilteredPartitionsMetadataRequest &request)
+{
+    return qobject_cast<GetUnfilteredPartitionsMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetUnfilteredTableMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetUnfilteredTableMetadataResponse * GlueClient::getUnfilteredTableMetadata(const GetUnfilteredTableMetadataRequest &request)
+{
+    return qobject_cast<GetUnfilteredTableMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetUserDefinedFunctionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1952,7 +2239,7 @@ GetWorkflowRunsResponse * GlueClient::getWorkflowRuns(const GetWorkflowRunsReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports an existing Amazon Athena Data Catalog to AWS
+ * Imports an existing Amazon Athena Data Catalog to
  */
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
@@ -1961,12 +2248,25 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListBlueprintsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the blueprint names in an
+ */
+ListBlueprintsResponse * GlueClient::listBlueprints(const ListBlueprintsRequest &request)
+{
+    return qobject_cast<ListBlueprintsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ListCrawlersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the names of all crawler resources in this AWS account, or the resources with the specified tag. This
- * operation allows you to see which resources are available in your account, and their
+ * Retrieves the names of all crawler resources in this Amazon Web Services account, or the resources with the specified
+ * tag. This operation allows you to see which resources are available in your account, and their
  *
  * names>
  *
@@ -1980,12 +2280,59 @@ ListCrawlersResponse * GlueClient::listCrawlers(const ListCrawlersRequest &reque
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListCrawlsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns all the crawls of a specified crawler. Returns only the crawls that have occurred since the launch date of the
+ * crawler history feature, and only retains up to 12 months of crawls. Older crawls will not be
+ *
+ * returned>
+ *
+ * You may use this API
+ *
+ * to> <ul> <li>
+ *
+ * Retrive all the crawls of a specified
+ *
+ * crawler> </li> <li>
+ *
+ * Retrieve all the crawls of a specified crawler within a limited
+ *
+ * count> </li> <li>
+ *
+ * Retrieve all the crawls of a specified crawler in a specific time
+ *
+ * range> </li> <li>
+ *
+ * Retrieve all the crawls of a specified crawler with a particular state, crawl ID, or DPU hour
+ */
+ListCrawlsResponse * GlueClient::listCrawls(const ListCrawlsRequest &request)
+{
+    return qobject_cast<ListCrawlsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListCustomEntityTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the custom patterns that have been
+ */
+ListCustomEntityTypesResponse * GlueClient::listCustomEntityTypes(const ListCustomEntityTypesRequest &request)
+{
+    return qobject_cast<ListCustomEntityTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ListDevEndpointsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the names of all <code>DevEndpoint</code> resources in this AWS account, or the resources with the specified
- * tag. This operation allows you to see which resources are available in your account, and their
+ * Retrieves the names of all <code>DevEndpoint</code> resources in this Amazon Web Services account, or the resources with
+ * the specified tag. This operation allows you to see which resources are available in your account, and their
  *
  * names>
  *
@@ -2003,8 +2350,8 @@ ListDevEndpointsResponse * GlueClient::listDevEndpoints(const ListDevEndpointsRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the names of all job resources in this AWS account, or the resources with the specified tag. This operation
- * allows you to see which resources are available in your account, and their
+ * Retrieves the names of all job resources in this Amazon Web Services account, or the resources with the specified tag.
+ * This operation allows you to see which resources are available in your account, and their
  *
  * names>
  *
@@ -2022,9 +2369,9 @@ ListJobsResponse * GlueClient::listJobs(const ListJobsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a sortable, filterable list of existing AWS Glue machine learning transforms in this AWS account, or the
- * resources with the specified tag. This operation takes the optional <code>Tags</code> field, which you can use as a
- * filter of the responses so that tagged resources can be retrieved as a group. If you choose to use tag filtering, only
+ * Retrieves a sortable, filterable list of existing Glue machine learning transforms in this Amazon Web Services account,
+ * or the resources with the specified tag. This operation takes the optional <code>Tags</code> field, which you can use as
+ * a filter of the responses so that tagged resources can be retrieved as a group. If you choose to use tag filtering, only
  * resources with the tags are retrieved.
  */
 ListMLTransformsResponse * GlueClient::listMLTransforms(const ListMLTransformsRequest &request)
@@ -2081,12 +2428,38 @@ ListSchemasResponse * GlueClient::listSchemas(const ListSchemasRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve a list of
+ */
+ListSessionsResponse * GlueClient::listSessions(const ListSessionsRequest &request)
+{
+    return qobject_cast<ListSessionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListStatementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists statements for the
+ */
+ListStatementsResponse * GlueClient::listStatements(const ListStatementsRequest &request)
+{
+    return qobject_cast<ListStatementsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ListTriggersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the names of all trigger resources in this AWS account, or the resources with the specified tag. This
- * operation allows you to see which resources are available in your account, and their
+ * Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the specified
+ * tag. This operation allows you to see which resources are available in your account, and their
  *
  * names>
  *
@@ -2247,6 +2620,19 @@ ResumeWorkflowRunResponse * GlueClient::resumeWorkflowRun(const ResumeWorkflowRu
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * RunStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Executes the
+ */
+RunStatementResponse * GlueClient::runStatement(const RunStatementRequest &request)
+{
+    return qobject_cast<RunStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * SearchTablesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2265,6 +2651,19 @@ ResumeWorkflowRunResponse * GlueClient::resumeWorkflowRun(const ResumeWorkflowRu
 SearchTablesResponse * GlueClient::searchTables(const SearchTablesRequest &request)
 {
     return qobject_cast<SearchTablesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartBlueprintRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a new run of the specified
+ */
+StartBlueprintRunResponse * GlueClient::startBlueprintRun(const StartBlueprintRunRequest &request)
+{
+    return qobject_cast<StartBlueprintRunResponse *>(send(request));
 }
 
 /*!
@@ -2327,8 +2726,8 @@ StartExportLabelsTaskRunResponse * GlueClient::startExportLabelsTaskRun(const St
  *
  * </p
  *
- * After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue machine learning will have generated a
- * series of questions for humans to answer. (Answering these questions is often called 'labeling' in the machine learning
+ * After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue machine learning will have generated a series
+ * of questions for humans to answer. (Answering these questions is often called 'labeling' in the machine learning
  * workflows). In the case of the <code>FindMatches</code> transform, these questions are of the form, “What is the correct
  * way to group these rows together into groups composed entirely of matching records?” After the labeling process is
  * finished, users upload their answers/labels with a call to <code>StartImportLabelsTaskRun</code>. After
@@ -2375,8 +2774,8 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
  *
  * </p
  *
- * When you provide label sets as examples of truth, AWS Glue machine learning uses some of those examples to learn from
- * them. The rest of the labels are used as a test to estimate
+ * When you provide label sets as examples of truth, Glue machine learning uses some of those examples to learn from them.
+ * The rest of the labels are used as a test to estimate
  *
  * quality>
  *
@@ -2399,8 +2798,8 @@ StartMLEvaluationTaskRunResponse * GlueClient::startMLEvaluationTaskRun(const St
  *
  * labels>
  *
- * When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue will have generated a "labeling set" or a
- * set of questions for humans to
+ * When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, Glue will have generated a "labeling set" or a set
+ * of questions for humans to
  *
  * answer>
  *
@@ -2474,6 +2873,19 @@ StopCrawlerScheduleResponse * GlueClient::stopCrawlerSchedule(const StopCrawlerS
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StopSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the
+ */
+StopSessionResponse * GlueClient::stopSession(const StopSessionRequest &request)
+{
+    return qobject_cast<StopSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * StopTriggerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2504,9 +2916,9 @@ StopWorkflowRunResponse * GlueClient::stopWorkflowRun(const StopWorkflowRunReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds tags to a resource. A tag is a label you can assign to an AWS resource. In AWS Glue, you can tag only certain
- * resources. For information about what resources you can tag, see <a
- * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in AWS
+ * Adds tags to a resource. A tag is a label you can assign to an Amazon Web Services resource. In Glue, you can tag only
+ * certain resources. For information about what resources you can tag, see <a
+ * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">Amazon Web Services Tags in
  */
 TagResourceResponse * GlueClient::tagResource(const TagResourceRequest &request)
 {
@@ -2524,6 +2936,19 @@ TagResourceResponse * GlueClient::tagResource(const TagResourceRequest &request)
 UntagResourceResponse * GlueClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateBlueprintResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a registered
+ */
+UpdateBlueprintResponse * GlueClient::updateBlueprint(const UpdateBlueprintRequest &request)
+{
+    return qobject_cast<UpdateBlueprintResponse *>(send(request));
 }
 
 /*!
@@ -2645,7 +3070,7 @@ UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpoin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing job
+ * Updates an existing job definition. The previous job definition is completely overwritten by this
  */
 UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 {

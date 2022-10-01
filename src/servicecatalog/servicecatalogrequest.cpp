@@ -330,7 +330,7 @@ QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogRequest::Action action, ServiceCatalogRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-12-10"))
 {
 
 }

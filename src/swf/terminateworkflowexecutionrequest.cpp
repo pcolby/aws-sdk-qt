@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::TerminateWorkflowExecutionRequest
- * \brief The TerminateWorkflowExecutionRequest class provides an interface for SWF TerminateWorkflowExecution requests.
+ * \class QtAws::Swf::TerminateWorkflowExecutionRequest
+ * \brief The TerminateWorkflowExecutionRequest class provides an interface for Swf TerminateWorkflowExecution requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
 }
 
 /*!
- * \class QtAws::SWF::TerminateWorkflowExecutionRequestPrivate
+ * \class QtAws::Swf::TerminateWorkflowExecutionRequestPrivate
  * \brief The TerminateWorkflowExecutionRequestPrivate class provides private implementation for TerminateWorkflowExecutionRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

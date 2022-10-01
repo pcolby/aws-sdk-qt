@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterFromSnapshotRequest
- * \brief The RestoreDBClusterFromSnapshotRequest class provides an interface for DocDB RestoreDBClusterFromSnapshot requests.
+ * \class QtAws::DocDb::RestoreDBClusterFromSnapshotRequest
+ * \brief The RestoreDBClusterFromSnapshotRequest class provides an interface for DocDb RestoreDBClusterFromSnapshot requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::restoreDBClusterFromSnapshot
+ * \sa DocDbClient::restoreDBClusterFromSnapshot
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest(const RestoreDBClusterFromSnapshotRequest &other)
-    : DocDBRequest(new RestoreDBClusterFromSnapshotRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RestoreDBClusterFromSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest(const R
  * Constructs a RestoreDBClusterFromSnapshotRequest object.
  */
 RestoreDBClusterFromSnapshotRequest::RestoreDBClusterFromSnapshotRequest()
-    : DocDBRequest(new RestoreDBClusterFromSnapshotRequestPrivate(DocDBRequest::RestoreDBClusterFromSnapshotAction, this))
+    : DocDbRequest(new RestoreDBClusterFromSnapshotRequestPrivate(DocDbRequest::RestoreDBClusterFromSnapshotAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromSnapshotRequest::response
 }
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterFromSnapshotRequestPrivate
+ * \class QtAws::DocDb::RestoreDBClusterFromSnapshotRequestPrivate
  * \brief The RestoreDBClusterFromSnapshotRequestPrivate class provides private implementation for RestoreDBClusterFromSnapshotRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RestoreDBClusterFromSnapshotRequestPrivate object for DocDB \a action,
+ * Constructs a RestoreDBClusterFromSnapshotRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
-    const DocDBRequest::Action action, RestoreDBClusterFromSnapshotRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RestoreDBClusterFromSnapshotRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestP
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RestoreDBClusterFromSnapshotRequestPrivate &other, RestoreDBClusterFromSnapshotRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

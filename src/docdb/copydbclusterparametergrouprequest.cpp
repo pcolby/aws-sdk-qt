@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterParameterGroupRequest
- * \brief The CopyDBClusterParameterGroupRequest class provides an interface for DocDB CopyDBClusterParameterGroup requests.
+ * \class QtAws::DocDb::CopyDBClusterParameterGroupRequest
+ * \brief The CopyDBClusterParameterGroupRequest class provides an interface for DocDb CopyDBClusterParameterGroup requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::copyDBClusterParameterGroup
+ * \sa DocDbClient::copyDBClusterParameterGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest(const CopyDBClusterParameterGroupRequest &other)
-    : DocDBRequest(new CopyDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new CopyDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest(const Cop
  * Constructs a CopyDBClusterParameterGroupRequest object.
  */
 CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest()
-    : DocDBRequest(new CopyDBClusterParameterGroupRequestPrivate(DocDBRequest::CopyDBClusterParameterGroupAction, this))
+    : DocDbRequest(new CopyDBClusterParameterGroupRequestPrivate(DocDbRequest::CopyDBClusterParameterGroupAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(
 }
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterParameterGroupRequestPrivate
+ * \class QtAws::DocDb::CopyDBClusterParameterGroupRequestPrivate
  * \brief The CopyDBClusterParameterGroupRequestPrivate class provides private implementation for CopyDBClusterParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a CopyDBClusterParameterGroupRequestPrivate object for DocDB \a action,
+ * Constructs a CopyDBClusterParameterGroupRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
-    const DocDBRequest::Action action, CopyDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, CopyDBClusterParameterGroupRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPri
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const CopyDBClusterParameterGroupRequestPrivate &other, CopyDBClusterParameterGroupRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

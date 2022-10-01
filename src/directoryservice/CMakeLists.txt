@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDIRECTORYSERVICE_LIBRARY)
 
 add_library(QtAwsDirectoryService
+  qtawsdirectoryserviceglobal.h
+  directoryserviceclient.h
+  directoryserviceclient_p.h
+  directoryservicerequest.h
+  directoryservicerequest_p.h
+  directoryserviceresponse.h
+  directoryserviceresponse_p.h
   acceptshareddirectoryrequest.h
   acceptshareddirectoryrequest_p.h
   acceptshareddirectoryresponse.h
@@ -89,6 +96,10 @@ add_library(QtAwsDirectoryService
   describecertificaterequest_p.h
   describecertificateresponse.h
   describecertificateresponse_p.h
+  describeclientauthenticationsettingsrequest.h
+  describeclientauthenticationsettingsrequest_p.h
+  describeclientauthenticationsettingsresponse.h
+  describeclientauthenticationsettingsresponse_p.h
   describeconditionalforwardersrequest.h
   describeconditionalforwardersrequest_p.h
   describeconditionalforwardersresponse.h
@@ -113,6 +124,10 @@ add_library(QtAwsDirectoryService
   describeregionsrequest_p.h
   describeregionsresponse.h
   describeregionsresponse_p.h
+  describesettingsrequest.h
+  describesettingsrequest_p.h
+  describesettingsresponse.h
+  describesettingsresponse_p.h
   describeshareddirectoriesrequest.h
   describeshareddirectoriesrequest_p.h
   describeshareddirectoriesresponse.h
@@ -125,12 +140,6 @@ add_library(QtAwsDirectoryService
   describetrustsrequest_p.h
   describetrustsresponse.h
   describetrustsresponse_p.h
-  directoryserviceclient.h
-  directoryserviceclient_p.h
-  directoryservicerequest.h
-  directoryservicerequest_p.h
-  directoryserviceresponse.h
-  directoryserviceresponse_p.h
   disableclientauthenticationrequest.h
   disableclientauthenticationrequest_p.h
   disableclientauthenticationresponse.h
@@ -191,7 +200,6 @@ add_library(QtAwsDirectoryService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsdirectoryserviceglobal.h
   registercertificaterequest.h
   registercertificaterequest_p.h
   registercertificateresponse.h
@@ -248,6 +256,10 @@ add_library(QtAwsDirectoryService
   updateradiusrequest_p.h
   updateradiusresponse.h
   updateradiusresponse_p.h
+  updatesettingsrequest.h
+  updatesettingsrequest_p.h
+  updatesettingsresponse.h
+  updatesettingsresponse_p.h
   updatetrustrequest.h
   updatetrustrequest_p.h
   updatetrustresponse.h
@@ -256,6 +268,9 @@ add_library(QtAwsDirectoryService
   verifytrustrequest_p.h
   verifytrustresponse.h
   verifytrustresponse_p.h
+  directoryserviceclient.cpp
+  directoryservicerequest.cpp
+  directoryserviceresponse.cpp
   acceptshareddirectoryrequest.cpp
   acceptshareddirectoryresponse.cpp
   addiproutesrequest.cpp
@@ -300,6 +315,8 @@ add_library(QtAwsDirectoryService
   deregistereventtopicresponse.cpp
   describecertificaterequest.cpp
   describecertificateresponse.cpp
+  describeclientauthenticationsettingsrequest.cpp
+  describeclientauthenticationsettingsresponse.cpp
   describeconditionalforwardersrequest.cpp
   describeconditionalforwardersresponse.cpp
   describedirectoriesrequest.cpp
@@ -312,15 +329,14 @@ add_library(QtAwsDirectoryService
   describeldapssettingsresponse.cpp
   describeregionsrequest.cpp
   describeregionsresponse.cpp
+  describesettingsrequest.cpp
+  describesettingsresponse.cpp
   describeshareddirectoriesrequest.cpp
   describeshareddirectoriesresponse.cpp
   describesnapshotsrequest.cpp
   describesnapshotsresponse.cpp
   describetrustsrequest.cpp
   describetrustsresponse.cpp
-  directoryserviceclient.cpp
-  directoryservicerequest.cpp
-  directoryserviceresponse.cpp
   disableclientauthenticationrequest.cpp
   disableclientauthenticationresponse.cpp
   disableldapsrequest.cpp
@@ -379,6 +395,8 @@ add_library(QtAwsDirectoryService
   updatenumberofdomaincontrollersresponse.cpp
   updateradiusrequest.cpp
   updateradiusresponse.cpp
+  updatesettingsrequest.cpp
+  updatesettingsresponse.cpp
   updatetrustrequest.cpp
   updatetrustresponse.cpp
   verifytrustrequest.cpp

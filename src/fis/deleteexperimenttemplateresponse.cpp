@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::DeleteExperimentTemplateResponse
- * \brief The DeleteExperimentTemplateResponse class provides an interace for FIS DeleteExperimentTemplate responses.
+ * \class QtAws::Fis::DeleteExperimentTemplateResponse
+ * \brief The DeleteExperimentTemplateResponse class provides an interace for Fis DeleteExperimentTemplate responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::deleteExperimentTemplate
  */
@@ -64,7 +64,7 @@ const DeleteExperimentTemplateRequest * DeleteExperimentTemplateResponse::reques
 
 /*!
  * \reimp
- * Parses a successful FIS DeleteExperimentTemplate \a response.
+ * Parses a successful Fis DeleteExperimentTemplate \a response.
  */
 void DeleteExperimentTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DeleteExperimentTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::DeleteExperimentTemplateResponsePrivate
+ * \class QtAws::Fis::DeleteExperimentTemplateResponsePrivate
  * \brief The DeleteExperimentTemplateResponsePrivate class provides private implementation for DeleteExperimentTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ DeleteExperimentTemplateResponsePrivate::DeleteExperimentTemplateResponsePrivate
 }
 
 /*!
- * Parses a FIS DeleteExperimentTemplate response element from \a xml.
+ * Parses a Fis DeleteExperimentTemplate response element from \a xml.
  */
 void DeleteExperimentTemplateResponsePrivate::parseDeleteExperimentTemplateResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteExperimentTemplateResponsePrivate::parseDeleteExperimentTemplateRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

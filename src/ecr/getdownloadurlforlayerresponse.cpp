@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::GetDownloadUrlForLayerResponse
- * \brief The GetDownloadUrlForLayerResponse class provides an interace for ECR GetDownloadUrlForLayer responses.
+ * \class QtAws::Ecr::GetDownloadUrlForLayerResponse
+ * \brief The GetDownloadUrlForLayerResponse class provides an interace for Ecr GetDownloadUrlForLayer responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::getDownloadUrlForLayer
  */
@@ -68,7 +74,7 @@ const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful ECR GetDownloadUrlForLayer \a response.
+ * Parses a successful Ecr GetDownloadUrlForLayer \a response.
  */
 void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::GetDownloadUrlForLayerResponsePrivate
+ * \class QtAws::Ecr::GetDownloadUrlForLayerResponsePrivate
  * \brief The GetDownloadUrlForLayerResponsePrivate class provides private implementation for GetDownloadUrlForLayerResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
 }
 
 /*!
- * Parses a ECR GetDownloadUrlForLayer response element from \a xml.
+ * Parses a Ecr GetDownloadUrlForLayer response element from \a xml.
  */
 void GetDownloadUrlForLayerResponsePrivate::parseGetDownloadUrlForLayerResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void GetDownloadUrlForLayerResponsePrivate::parseGetDownloadUrlForLayerResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

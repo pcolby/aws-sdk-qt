@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBParameterGroupResponse
- * \brief The ModifyDBParameterGroupResponse class provides an interace for RDS ModifyDBParameterGroup responses.
+ * \class QtAws::Rds::ModifyDBParameterGroupResponse
+ * \brief The ModifyDBParameterGroupResponse class provides an interace for Rds ModifyDBParameterGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBParameterGroup \a response.
+ * Parses a successful Rds ModifyDBParameterGroup \a response.
  */
 void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBParameterGroupResponsePrivate
+ * \class QtAws::Rds::ModifyDBParameterGroupResponsePrivate
  * \brief The ModifyDBParameterGroupResponsePrivate class provides private implementation for ModifyDBParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyDBParameterGroup response element from \a xml.
+ * Parses a Rds ModifyDBParameterGroup response element from \a xml.
  */
 void ModifyDBParameterGroupResponsePrivate::parseModifyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBParameterGroupResponsePrivate::parseModifyDBParameterGroupResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

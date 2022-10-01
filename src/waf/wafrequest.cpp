@@ -21,102 +21,102 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::WafRequest
- * \brief The WafRequest class provides an interface for WAF requests.
+ * \class QtAws::Waf::WafRequest
+ * \brief The WafRequest class provides an interface for Waf requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
  * \enum WafRequest::Action
  *
- * This enum describes the actions that can be performed as WAF
+ * This enum describes the actions that can be performed as Waf
  * requests.
  *
- * \value CreateByteMatchSetAction WAF CreateByteMatchSet action.
- * \value CreateGeoMatchSetAction WAF CreateGeoMatchSet action.
- * \value CreateIPSetAction WAF CreateIPSet action.
- * \value CreateRateBasedRuleAction WAF CreateRateBasedRule action.
- * \value CreateRegexMatchSetAction WAF CreateRegexMatchSet action.
- * \value CreateRegexPatternSetAction WAF CreateRegexPatternSet action.
- * \value CreateRuleAction WAF CreateRule action.
- * \value CreateRuleGroupAction WAF CreateRuleGroup action.
- * \value CreateSizeConstraintSetAction WAF CreateSizeConstraintSet action.
- * \value CreateSqlInjectionMatchSetAction WAF CreateSqlInjectionMatchSet action.
- * \value CreateWebACLAction WAF CreateWebACL action.
- * \value CreateWebACLMigrationStackAction WAF CreateWebACLMigrationStack action.
- * \value CreateXssMatchSetAction WAF CreateXssMatchSet action.
- * \value DeleteByteMatchSetAction WAF DeleteByteMatchSet action.
- * \value DeleteGeoMatchSetAction WAF DeleteGeoMatchSet action.
- * \value DeleteIPSetAction WAF DeleteIPSet action.
- * \value DeleteLoggingConfigurationAction WAF DeleteLoggingConfiguration action.
- * \value DeletePermissionPolicyAction WAF DeletePermissionPolicy action.
- * \value DeleteRateBasedRuleAction WAF DeleteRateBasedRule action.
- * \value DeleteRegexMatchSetAction WAF DeleteRegexMatchSet action.
- * \value DeleteRegexPatternSetAction WAF DeleteRegexPatternSet action.
- * \value DeleteRuleAction WAF DeleteRule action.
- * \value DeleteRuleGroupAction WAF DeleteRuleGroup action.
- * \value DeleteSizeConstraintSetAction WAF DeleteSizeConstraintSet action.
- * \value DeleteSqlInjectionMatchSetAction WAF DeleteSqlInjectionMatchSet action.
- * \value DeleteWebACLAction WAF DeleteWebACL action.
- * \value DeleteXssMatchSetAction WAF DeleteXssMatchSet action.
- * \value GetByteMatchSetAction WAF GetByteMatchSet action.
- * \value GetChangeTokenAction WAF GetChangeToken action.
- * \value GetChangeTokenStatusAction WAF GetChangeTokenStatus action.
- * \value GetGeoMatchSetAction WAF GetGeoMatchSet action.
- * \value GetIPSetAction WAF GetIPSet action.
- * \value GetLoggingConfigurationAction WAF GetLoggingConfiguration action.
- * \value GetPermissionPolicyAction WAF GetPermissionPolicy action.
- * \value GetRateBasedRuleAction WAF GetRateBasedRule action.
- * \value GetRateBasedRuleManagedKeysAction WAF GetRateBasedRuleManagedKeys action.
- * \value GetRegexMatchSetAction WAF GetRegexMatchSet action.
- * \value GetRegexPatternSetAction WAF GetRegexPatternSet action.
- * \value GetRuleAction WAF GetRule action.
- * \value GetRuleGroupAction WAF GetRuleGroup action.
- * \value GetSampledRequestsAction WAF GetSampledRequests action.
- * \value GetSizeConstraintSetAction WAF GetSizeConstraintSet action.
- * \value GetSqlInjectionMatchSetAction WAF GetSqlInjectionMatchSet action.
- * \value GetWebACLAction WAF GetWebACL action.
- * \value GetXssMatchSetAction WAF GetXssMatchSet action.
- * \value ListActivatedRulesInRuleGroupAction WAF ListActivatedRulesInRuleGroup action.
- * \value ListByteMatchSetsAction WAF ListByteMatchSets action.
- * \value ListGeoMatchSetsAction WAF ListGeoMatchSets action.
- * \value ListIPSetsAction WAF ListIPSets action.
- * \value ListLoggingConfigurationsAction WAF ListLoggingConfigurations action.
- * \value ListRateBasedRulesAction WAF ListRateBasedRules action.
- * \value ListRegexMatchSetsAction WAF ListRegexMatchSets action.
- * \value ListRegexPatternSetsAction WAF ListRegexPatternSets action.
- * \value ListRuleGroupsAction WAF ListRuleGroups action.
- * \value ListRulesAction WAF ListRules action.
- * \value ListSizeConstraintSetsAction WAF ListSizeConstraintSets action.
- * \value ListSqlInjectionMatchSetsAction WAF ListSqlInjectionMatchSets action.
- * \value ListSubscribedRuleGroupsAction WAF ListSubscribedRuleGroups action.
- * \value ListTagsForResourceAction WAF ListTagsForResource action.
- * \value ListWebACLsAction WAF ListWebACLs action.
- * \value ListXssMatchSetsAction WAF ListXssMatchSets action.
- * \value PutLoggingConfigurationAction WAF PutLoggingConfiguration action.
- * \value PutPermissionPolicyAction WAF PutPermissionPolicy action.
- * \value TagResourceAction WAF TagResource action.
- * \value UntagResourceAction WAF UntagResource action.
- * \value UpdateByteMatchSetAction WAF UpdateByteMatchSet action.
- * \value UpdateGeoMatchSetAction WAF UpdateGeoMatchSet action.
- * \value UpdateIPSetAction WAF UpdateIPSet action.
- * \value UpdateRateBasedRuleAction WAF UpdateRateBasedRule action.
- * \value UpdateRegexMatchSetAction WAF UpdateRegexMatchSet action.
- * \value UpdateRegexPatternSetAction WAF UpdateRegexPatternSet action.
- * \value UpdateRuleAction WAF UpdateRule action.
- * \value UpdateRuleGroupAction WAF UpdateRuleGroup action.
- * \value UpdateSizeConstraintSetAction WAF UpdateSizeConstraintSet action.
- * \value UpdateSqlInjectionMatchSetAction WAF UpdateSqlInjectionMatchSet action.
- * \value UpdateWebACLAction WAF UpdateWebACL action.
- * \value UpdateXssMatchSetAction WAF UpdateXssMatchSet action.
+ * \value CreateByteMatchSetAction Waf CreateByteMatchSet action.
+ * \value CreateGeoMatchSetAction Waf CreateGeoMatchSet action.
+ * \value CreateIPSetAction Waf CreateIPSet action.
+ * \value CreateRateBasedRuleAction Waf CreateRateBasedRule action.
+ * \value CreateRegexMatchSetAction Waf CreateRegexMatchSet action.
+ * \value CreateRegexPatternSetAction Waf CreateRegexPatternSet action.
+ * \value CreateRuleAction Waf CreateRule action.
+ * \value CreateRuleGroupAction Waf CreateRuleGroup action.
+ * \value CreateSizeConstraintSetAction Waf CreateSizeConstraintSet action.
+ * \value CreateSqlInjectionMatchSetAction Waf CreateSqlInjectionMatchSet action.
+ * \value CreateWebACLAction Waf CreateWebACL action.
+ * \value CreateWebACLMigrationStackAction Waf CreateWebACLMigrationStack action.
+ * \value CreateXssMatchSetAction Waf CreateXssMatchSet action.
+ * \value DeleteByteMatchSetAction Waf DeleteByteMatchSet action.
+ * \value DeleteGeoMatchSetAction Waf DeleteGeoMatchSet action.
+ * \value DeleteIPSetAction Waf DeleteIPSet action.
+ * \value DeleteLoggingConfigurationAction Waf DeleteLoggingConfiguration action.
+ * \value DeletePermissionPolicyAction Waf DeletePermissionPolicy action.
+ * \value DeleteRateBasedRuleAction Waf DeleteRateBasedRule action.
+ * \value DeleteRegexMatchSetAction Waf DeleteRegexMatchSet action.
+ * \value DeleteRegexPatternSetAction Waf DeleteRegexPatternSet action.
+ * \value DeleteRuleAction Waf DeleteRule action.
+ * \value DeleteRuleGroupAction Waf DeleteRuleGroup action.
+ * \value DeleteSizeConstraintSetAction Waf DeleteSizeConstraintSet action.
+ * \value DeleteSqlInjectionMatchSetAction Waf DeleteSqlInjectionMatchSet action.
+ * \value DeleteWebACLAction Waf DeleteWebACL action.
+ * \value DeleteXssMatchSetAction Waf DeleteXssMatchSet action.
+ * \value GetByteMatchSetAction Waf GetByteMatchSet action.
+ * \value GetChangeTokenAction Waf GetChangeToken action.
+ * \value GetChangeTokenStatusAction Waf GetChangeTokenStatus action.
+ * \value GetGeoMatchSetAction Waf GetGeoMatchSet action.
+ * \value GetIPSetAction Waf GetIPSet action.
+ * \value GetLoggingConfigurationAction Waf GetLoggingConfiguration action.
+ * \value GetPermissionPolicyAction Waf GetPermissionPolicy action.
+ * \value GetRateBasedRuleAction Waf GetRateBasedRule action.
+ * \value GetRateBasedRuleManagedKeysAction Waf GetRateBasedRuleManagedKeys action.
+ * \value GetRegexMatchSetAction Waf GetRegexMatchSet action.
+ * \value GetRegexPatternSetAction Waf GetRegexPatternSet action.
+ * \value GetRuleAction Waf GetRule action.
+ * \value GetRuleGroupAction Waf GetRuleGroup action.
+ * \value GetSampledRequestsAction Waf GetSampledRequests action.
+ * \value GetSizeConstraintSetAction Waf GetSizeConstraintSet action.
+ * \value GetSqlInjectionMatchSetAction Waf GetSqlInjectionMatchSet action.
+ * \value GetWebACLAction Waf GetWebACL action.
+ * \value GetXssMatchSetAction Waf GetXssMatchSet action.
+ * \value ListActivatedRulesInRuleGroupAction Waf ListActivatedRulesInRuleGroup action.
+ * \value ListByteMatchSetsAction Waf ListByteMatchSets action.
+ * \value ListGeoMatchSetsAction Waf ListGeoMatchSets action.
+ * \value ListIPSetsAction Waf ListIPSets action.
+ * \value ListLoggingConfigurationsAction Waf ListLoggingConfigurations action.
+ * \value ListRateBasedRulesAction Waf ListRateBasedRules action.
+ * \value ListRegexMatchSetsAction Waf ListRegexMatchSets action.
+ * \value ListRegexPatternSetsAction Waf ListRegexPatternSets action.
+ * \value ListRuleGroupsAction Waf ListRuleGroups action.
+ * \value ListRulesAction Waf ListRules action.
+ * \value ListSizeConstraintSetsAction Waf ListSizeConstraintSets action.
+ * \value ListSqlInjectionMatchSetsAction Waf ListSqlInjectionMatchSets action.
+ * \value ListSubscribedRuleGroupsAction Waf ListSubscribedRuleGroups action.
+ * \value ListTagsForResourceAction Waf ListTagsForResource action.
+ * \value ListWebACLsAction Waf ListWebACLs action.
+ * \value ListXssMatchSetsAction Waf ListXssMatchSets action.
+ * \value PutLoggingConfigurationAction Waf PutLoggingConfiguration action.
+ * \value PutPermissionPolicyAction Waf PutPermissionPolicy action.
+ * \value TagResourceAction Waf TagResource action.
+ * \value UntagResourceAction Waf UntagResource action.
+ * \value UpdateByteMatchSetAction Waf UpdateByteMatchSet action.
+ * \value UpdateGeoMatchSetAction Waf UpdateGeoMatchSet action.
+ * \value UpdateIPSetAction Waf UpdateIPSet action.
+ * \value UpdateRateBasedRuleAction Waf UpdateRateBasedRule action.
+ * \value UpdateRegexMatchSetAction Waf UpdateRegexMatchSet action.
+ * \value UpdateRegexPatternSetAction Waf UpdateRegexPatternSet action.
+ * \value UpdateRuleAction Waf UpdateRule action.
+ * \value UpdateRuleGroupAction Waf UpdateRuleGroup action.
+ * \value UpdateSizeConstraintSetAction Waf UpdateSizeConstraintSet action.
+ * \value UpdateSqlInjectionMatchSetAction Waf UpdateSqlInjectionMatchSet action.
+ * \value UpdateWebACLAction Waf UpdateWebACL action.
+ * \value UpdateXssMatchSetAction Waf UpdateXssMatchSet action.
  */
 
 /*!
- * Constructs a WafRequest object for WAF \a action.
+ * Constructs a WafRequest object for Waf \a action.
  */
 WafRequest::WafRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WafRequestPrivate(action, this))
@@ -157,7 +157,7 @@ WafRequest::WafRequest(WafRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the WAF action to be performed by this request.
+ * Returns the Waf action to be performed by this request.
  */
 WafRequest::Action WafRequest::action() const
 {
@@ -166,7 +166,7 @@ WafRequest::Action WafRequest::action() const
 }
 
 /*!
- * Returns the name of the WAF action to be performed by this request.
+ * Returns the name of the Waf action to be performed by this request.
  */
 QString WafRequest::actionString() const
 {
@@ -174,7 +174,7 @@ QString WafRequest::actionString() const
 }
 
 /*!
- * Returns the WAF API version implemented by this request.
+ * Returns the Waf API version implemented by this request.
  */
 QString WafRequest::apiVersion() const
 {
@@ -183,7 +183,7 @@ QString WafRequest::apiVersion() const
 }
 
 /*!
- * Sets the WAF action to be performed by this request to \a action.
+ * Sets the Waf action to be performed by this request to \a action.
  */
 void WafRequest::setAction(const Action action)
 {
@@ -192,7 +192,7 @@ void WafRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the WAF API version to include in this request to \a version.
+ * Sets the Waf API version to include in this request to \a version.
  */
 void WafRequest::setApiVersion(const QString &version)
 {
@@ -217,15 +217,15 @@ bool WafRequest::operator==(const WafRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid WAF queue name.
+ * Returns \c tue if \a queueName is a valid Waf queue name.
  *
- * @par From WAF FAQs:
+ * @par From Waf FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid WAF queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Waf queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -292,10 +292,10 @@ void WafRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the WAF request using the given
+ * Returns a network request for the Waf request using the given
  * \a endpoint.
  *
- * This WAF implementation builds request URLs by combining the
+ * This Waf implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -308,19 +308,19 @@ QNetworkRequest WafRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::WAF::WafRequestPrivate
+ * \class QtAws::Waf::WafRequestPrivate
  * \brief The WafRequestPrivate class provides private implementation for WafRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
- * Constructs a WafRequestPrivate object for WAF \a action,
+ * Constructs a WafRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 WafRequestPrivate::WafRequestPrivate(const WafRequest::Action action, WafRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-08-24"))
 {
 
 }
@@ -346,7 +346,7 @@ WafRequestPrivate::WafRequestPrivate(const WafRequestPrivate &other,
  * invalid.
  *
  * This function converts WafRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the WAF service's Action
+ * string representations, appropriate for use with the Waf service's Action
  * query parameters.
  */
 QString WafRequestPrivate::toString(const WafRequest::Action &action)
@@ -438,5 +438,5 @@ QString WafRequestPrivate::toString(const WafRequest::Action &action)
     return QString();
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

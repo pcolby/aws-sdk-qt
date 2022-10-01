@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListImageBuildVersionsResponse
- * \brief The ListImageBuildVersionsResponse class provides an interace for imagebuilder ListImageBuildVersions responses.
+ * \class QtAws::ImageBuilder::ListImageBuildVersionsResponse
+ * \brief The ListImageBuildVersionsResponse class provides an interace for ImageBuilder ListImageBuildVersions responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listImageBuildVersions
+ * \sa ImageBuilderClient::listImageBuildVersions
  */
 
 /*!
@@ -47,7 +47,7 @@ ListImageBuildVersionsResponse::ListImageBuildVersionsResponse(
         const ListImageBuildVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new ListImageBuildVersionsResponsePrivate(this), parent)
+    : ImageBuilderResponse(new ListImageBuildVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListImageBuildVersionsRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const ListImageBuildVersionsRequest * ListImageBuildVersionsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful imagebuilder ListImageBuildVersions \a response.
+ * Parses a successful ImageBuilder ListImageBuildVersions \a response.
  */
 void ListImageBuildVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void ListImageBuildVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::ListImageBuildVersionsResponsePrivate
+ * \class QtAws::ImageBuilder::ListImageBuildVersionsResponsePrivate
  * \brief The ListImageBuildVersionsResponsePrivate class provides private implementation for ListImageBuildVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a ListImageBuildVersionsResponsePrivate object with public implementation \a q.
  */
 ListImageBuildVersionsResponsePrivate::ListImageBuildVersionsResponsePrivate(
-    ListImageBuildVersionsResponse * const q) : imagebuilderResponsePrivate(q)
+    ListImageBuildVersionsResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder ListImageBuildVersions response element from \a xml.
+ * Parses a ImageBuilder ListImageBuildVersions response element from \a xml.
  */
 void ListImageBuildVersionsResponsePrivate::parseListImageBuildVersionsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListImageBuildVersionsResponsePrivate::parseListImageBuildVersionsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

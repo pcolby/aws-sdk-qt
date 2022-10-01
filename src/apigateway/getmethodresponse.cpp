@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetMethodResponse
- * \brief The GetMethodResponse class provides an interace for APIGateway GetMethod responses.
+ * \class QtAws::ApiGateway::GetMethodResponse
+ * \brief The GetMethodResponse class provides an interace for ApiGateway GetMethod responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getMethod
+ * \sa ApiGatewayClient::getMethod
  */
 
 /*!
@@ -49,7 +49,7 @@ GetMethodResponse::GetMethodResponse(
         const GetMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetMethodResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetMethodResponsePrivate(this), parent)
 {
     setRequest(new GetMethodRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetMethodRequest * GetMethodResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetMethod \a response.
+ * Parses a successful ApiGateway GetMethod \a response.
  */
 void GetMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetMethodResponsePrivate
+ * \class QtAws::ApiGateway::GetMethodResponsePrivate
  * \brief The GetMethodResponsePrivate class provides private implementation for GetMethodResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetMethodResponsePrivate object with public implementation \a q.
  */
 GetMethodResponsePrivate::GetMethodResponsePrivate(
-    GetMethodResponse * const q) : APIGatewayResponsePrivate(q)
+    GetMethodResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetMethod response element from \a xml.
+ * Parses a ApiGateway GetMethod response element from \a xml.
  */
 void GetMethodResponsePrivate::parseGetMethodResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetMethodResponsePrivate::parseGetMethodResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

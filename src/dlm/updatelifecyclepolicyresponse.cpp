@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::UpdateLifecyclePolicyResponse
- * \brief The UpdateLifecyclePolicyResponse class provides an interace for DLM UpdateLifecyclePolicy responses.
+ * \class QtAws::Dlm::UpdateLifecyclePolicyResponse
+ * \brief The UpdateLifecyclePolicyResponse class provides an interace for Dlm UpdateLifecyclePolicy responses.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -71,7 +71,7 @@ const UpdateLifecyclePolicyRequest * UpdateLifecyclePolicyResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful DLM UpdateLifecyclePolicy \a response.
+ * Parses a successful Dlm UpdateLifecyclePolicy \a response.
  */
 void UpdateLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void UpdateLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DLM::UpdateLifecyclePolicyResponsePrivate
+ * \class QtAws::Dlm::UpdateLifecyclePolicyResponsePrivate
  * \brief The UpdateLifecyclePolicyResponsePrivate class provides private implementation for UpdateLifecyclePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -98,7 +98,7 @@ UpdateLifecyclePolicyResponsePrivate::UpdateLifecyclePolicyResponsePrivate(
 }
 
 /*!
- * Parses a DLM UpdateLifecyclePolicy response element from \a xml.
+ * Parses a Dlm UpdateLifecyclePolicy response element from \a xml.
  */
 void UpdateLifecyclePolicyResponsePrivate::parseUpdateLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateLifecyclePolicyResponsePrivate::parseUpdateLifecyclePolicyResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

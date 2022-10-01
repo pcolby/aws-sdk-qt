@@ -30,26 +30,31 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class EcrRequestPrivate;
 
 class QTAWSECR_EXPORT EcrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by ECR.
+    /// Actions supported by Ecr.
     enum Action {
         BatchCheckLayerAvailabilityAction,
         BatchDeleteImageAction,
         BatchGetImageAction,
+        BatchGetRepositoryScanningConfigurationAction,
         CompleteLayerUploadAction,
+        CreatePullThroughCacheRuleAction,
         CreateRepositoryAction,
         DeleteLifecyclePolicyAction,
+        DeletePullThroughCacheRuleAction,
         DeleteRegistryPolicyAction,
         DeleteRepositoryAction,
         DeleteRepositoryPolicyAction,
+        DescribeImageReplicationStatusAction,
         DescribeImageScanFindingsAction,
         DescribeImagesAction,
+        DescribePullThroughCacheRulesAction,
         DescribeRegistryAction,
         DescribeRepositoriesAction,
         GetAuthorizationTokenAction,
@@ -57,6 +62,7 @@ public:
         GetLifecyclePolicyAction,
         GetLifecyclePolicyPreviewAction,
         GetRegistryPolicyAction,
+        GetRegistryScanningConfigurationAction,
         GetRepositoryPolicyAction,
         InitiateLayerUploadAction,
         ListImagesAction,
@@ -66,6 +72,7 @@ public:
         PutImageTagMutabilityAction,
         PutLifecyclePolicyAction,
         PutRegistryPolicyAction,
+        PutRegistryScanningConfigurationAction,
         PutReplicationConfigurationAction,
         SetRepositoryPolicyAction,
         StartImageScanAction,
@@ -109,7 +116,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

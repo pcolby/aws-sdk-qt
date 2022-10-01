@@ -25,27 +25,37 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 /*!
- * \class QtAws::SMS::LaunchAppResponse
- * \brief The LaunchAppResponse class provides an interace for SMS LaunchApp responses.
+ * \class QtAws::Sms::LaunchAppResponse
+ * \brief The LaunchAppResponse class provides an interace for Sms LaunchApp responses.
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  *
- *  <fullname>AWS Server Migration Service</fullname>
+ *  <b>
  * 
- *  AWS Server Migration Service (AWS SMS) makes it easier and faster for you to migrate your on-premises workloads to AWS.
- *  To learn more about AWS SMS, see the following
+ *  <b>Product update</b>
+ * 
+ *  </p
+ * 
+ *  We recommend <a href="http://aws.amazon.com/application-migration-service">Amazon Web Services Application Migration
+ *  Service</a> (Amazon Web Services MGN) as the primary migration service for lift-and-shift migrations. If Amazon Web
+ *  Services MGN is unavailable in a specific Amazon Web Services Region, you can use the Server Migration Service APIs
+ *  through March
+ * 
+ *  2023> </b>
+ * 
+ *  Server Migration Service (Server Migration Service) makes it easier and faster for you to migrate your on-premises
+ *  workloads to Amazon Web Services. To learn more about Server Migration Service, see the following
  * 
  *  resources> <ul> <li>
  * 
- *  <a href="http://aws.amazon.com/server-migration-service/">AWS Server Migration Service product page</a>
+ *  <a href="http://aws.amazon.com/server-migration-service/">Server Migration Service product page</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">AWS Server Migration Service User
- *  Guide</a>
+ *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/">Server Migration Service User Guide</a>
  *
  * \sa SmsClient::launchApp
  */
@@ -74,7 +84,7 @@ const LaunchAppRequest * LaunchAppResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SMS LaunchApp \a response.
+ * Parses a successful Sms LaunchApp \a response.
  */
 void LaunchAppResponse::parseSuccess(QIODevice &response)
 {
@@ -84,11 +94,11 @@ void LaunchAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SMS::LaunchAppResponsePrivate
+ * \class QtAws::Sms::LaunchAppResponsePrivate
  * \brief The LaunchAppResponsePrivate class provides private implementation for LaunchAppResponse.
  * \internal
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  */
 
 /*!
@@ -101,7 +111,7 @@ LaunchAppResponsePrivate::LaunchAppResponsePrivate(
 }
 
 /*!
- * Parses a SMS LaunchApp response element from \a xml.
+ * Parses a Sms LaunchApp response element from \a xml.
  */
 void LaunchAppResponsePrivate::parseLaunchAppResponse(QXmlStreamReader &xml)
 {
@@ -109,5 +119,5 @@ void LaunchAppResponsePrivate::parseLaunchAppResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws

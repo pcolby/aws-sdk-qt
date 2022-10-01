@@ -24,14 +24,14 @@
 #include "describedbclusterparametergroupsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeDBClusterParameterGroupsRequest;
 
-class DescribeDBClusterParameterGroupsRequestPrivate : public DocDBRequestPrivate {
+class DescribeDBClusterParameterGroupsRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeDBClusterParameterGroupsRequestPrivate(const DocDBRequest::Action action,
+    DescribeDBClusterParameterGroupsRequestPrivate(const DocDbRequest::Action action,
                                    DescribeDBClusterParameterGroupsRequest * const q);
     DescribeDBClusterParameterGroupsRequestPrivate(const DescribeDBClusterParameterGroupsRequestPrivate &other,
                                    DescribeDBClusterParameterGroupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

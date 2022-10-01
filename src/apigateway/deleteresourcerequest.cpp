@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteResourceRequest
- * \brief The DeleteResourceRequest class provides an interface for APIGateway DeleteResource requests.
+ * \class QtAws::ApiGateway::DeleteResourceRequest
+ * \brief The DeleteResourceRequest class provides an interface for ApiGateway DeleteResource requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteResource
+ * \sa ApiGatewayClient::deleteResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
-    : APIGatewayRequest(new DeleteResourceRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
  * Constructs a DeleteResourceRequest object.
  */
 DeleteResourceRequest::DeleteResourceRequest()
-    : APIGatewayRequest(new DeleteResourceRequestPrivate(APIGatewayRequest::DeleteResourceAction, this))
+    : ApiGatewayRequest(new DeleteResourceRequestPrivate(ApiGatewayRequest::DeleteResourceAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteResourceRequestPrivate
+ * \class QtAws::ApiGateway::DeleteResourceRequestPrivate
  * \brief The DeleteResourceRequestPrivate class provides private implementation for DeleteResourceRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteResourceRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteResourceRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteResourceRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteResourceRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const DeleteResourceRequestPrivate &other, DeleteResourceRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAUTOSCALINGPLANS_LIBRARY)
 
 add_library(QtAwsAutoScalingPlans
+  qtawsautoscalingplansglobal.h
   autoscalingplansclient.h
   autoscalingplansclient_p.h
   autoscalingplansrequest.h
@@ -27,7 +28,6 @@ add_library(QtAwsAutoScalingPlans
   getscalingplanresourceforecastdatarequest_p.h
   getscalingplanresourceforecastdataresponse.h
   getscalingplanresourceforecastdataresponse_p.h
-  qtawsautoscalingplansglobal.h
   updatescalingplanrequest.h
   updatescalingplanrequest_p.h
   updatescalingplanresponse.h

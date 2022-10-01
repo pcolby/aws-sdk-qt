@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLMigrationStackRequest
- * \brief The CreateWebACLMigrationStackRequest class provides an interface for WAFRegional CreateWebACLMigrationStack requests.
+ * \class QtAws::WafRegional::CreateWebACLMigrationStackRequest
+ * \brief The CreateWebACLMigrationStackRequest class provides an interface for WafRegional CreateWebACLMigrationStack requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createWebACLMigrationStack
+ * \sa WafRegionalClient::createWebACLMigrationStack
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateWebACLMigrationStackRequest::CreateWebACLMigrationStackRequest(const CreateWebACLMigrationStackRequest &other)
-    : WAFRegionalRequest(new CreateWebACLMigrationStackRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateWebACLMigrationStackRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateWebACLMigrationStackRequest::CreateWebACLMigrationStackRequest(const Creat
  * Constructs a CreateWebACLMigrationStackRequest object.
  */
 CreateWebACLMigrationStackRequest::CreateWebACLMigrationStackRequest()
-    : WAFRegionalRequest(new CreateWebACLMigrationStackRequestPrivate(WAFRegionalRequest::CreateWebACLMigrationStackAction, this))
+    : WafRegionalRequest(new CreateWebACLMigrationStackRequestPrivate(WafRegionalRequest::CreateWebACLMigrationStackAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLMigrationStackRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLMigrationStackRequestPrivate
+ * \class QtAws::WafRegional::CreateWebACLMigrationStackRequestPrivate
  * \brief The CreateWebACLMigrationStackRequestPrivate class provides private implementation for CreateWebACLMigrationStackRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateWebACLMigrationStackRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateWebACLMigrationStackRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateWebACLMigrationStackRequestPrivate::CreateWebACLMigrationStackRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateWebACLMigrationStackRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateWebACLMigrationStackRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateWebACLMigrationStackRequestPrivate::CreateWebACLMigrationStackRequestPriva
  */
 CreateWebACLMigrationStackRequestPrivate::CreateWebACLMigrationStackRequestPrivate(
     const CreateWebACLMigrationStackRequestPrivate &other, CreateWebACLMigrationStackRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

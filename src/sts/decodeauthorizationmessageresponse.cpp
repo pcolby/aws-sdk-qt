@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::DecodeAuthorizationMessageResponse
- * \brief The DecodeAuthorizationMessageResponse class provides an interace for STS DecodeAuthorizationMessage responses.
+ * \class QtAws::Sts::DecodeAuthorizationMessageResponse
+ * \brief The DecodeAuthorizationMessageResponse class provides an interace for Sts DecodeAuthorizationMessage responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::decodeAuthorizationMessage
@@ -67,7 +67,7 @@ const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::re
 
 /*!
  * \reimp
- * Parses a successful STS DecodeAuthorizationMessage \a response.
+ * Parses a successful Sts DecodeAuthorizationMessage \a response.
  */
 void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::DecodeAuthorizationMessageResponsePrivate
+ * \class QtAws::Sts::DecodeAuthorizationMessageResponsePrivate
  * \brief The DecodeAuthorizationMessageResponsePrivate class provides private implementation for DecodeAuthorizationMessageResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePri
 }
 
 /*!
- * Parses a STS DecodeAuthorizationMessage response element from \a xml.
+ * Parses a Sts DecodeAuthorizationMessage response element from \a xml.
  */
 void DecodeAuthorizationMessageResponsePrivate::parseDecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void DecodeAuthorizationMessageResponsePrivate::parseDecodeAuthorizationMessageR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

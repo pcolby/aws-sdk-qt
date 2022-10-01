@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListXssMatchSetsResponse
- * \brief The ListXssMatchSetsResponse class provides an interace for WAF ListXssMatchSets responses.
+ * \class QtAws::Waf::ListXssMatchSetsResponse
+ * \brief The ListXssMatchSetsResponse class provides an interace for Waf ListXssMatchSets responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListXssMatchSets \a response.
+ * Parses a successful Waf ListXssMatchSets \a response.
  */
 void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListXssMatchSetsResponsePrivate
+ * \class QtAws::Waf::ListXssMatchSetsResponsePrivate
  * \brief The ListXssMatchSetsResponsePrivate class provides private implementation for ListXssMatchSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListXssMatchSets response element from \a xml.
+ * Parses a Waf ListXssMatchSets response element from \a xml.
  */
 void ListXssMatchSetsResponsePrivate::parseListXssMatchSetsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListXssMatchSetsResponsePrivate::parseListXssMatchSetsResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationPartRequest
- * \brief The DeleteDocumentationPartRequest class provides an interface for APIGateway DeleteDocumentationPart requests.
+ * \class QtAws::ApiGateway::DeleteDocumentationPartRequest
+ * \brief The DeleteDocumentationPartRequest class provides an interface for ApiGateway DeleteDocumentationPart requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDocumentationPart
+ * \sa ApiGatewayClient::deleteDocumentationPart
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocumentationPartRequest &other)
-    : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteDocumentationPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocum
  * Constructs a DeleteDocumentationPartRequest object.
  */
 DeleteDocumentationPartRequest::DeleteDocumentationPartRequest()
-    : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(APIGatewayRequest::DeleteDocumentationPartAction, this))
+    : ApiGatewayRequest(new DeleteDocumentationPartRequestPrivate(ApiGatewayRequest::DeleteDocumentationPartAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationPartRequestPrivate
+ * \class QtAws::ApiGateway::DeleteDocumentationPartRequestPrivate
  * \brief The DeleteDocumentationPartRequestPrivate class provides private implementation for DeleteDocumentationPartRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteDocumentationPartRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteDocumentationPartRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const DeleteDocumentationPartRequestPrivate &other, DeleteDocumentationPartRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

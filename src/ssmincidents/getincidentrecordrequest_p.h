@@ -24,14 +24,14 @@
 #include "getincidentrecordrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class GetIncidentRecordRequest;
 
-class GetIncidentRecordRequestPrivate : public SSMIncidentsRequestPrivate {
+class GetIncidentRecordRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    GetIncidentRecordRequestPrivate(const SSMIncidentsRequest::Action action,
+    GetIncidentRecordRequestPrivate(const SsmIncidentsRequest::Action action,
                                    GetIncidentRecordRequest * const q);
     GetIncidentRecordRequestPrivate(const GetIncidentRecordRequestPrivate &other,
                                    GetIncidentRecordRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

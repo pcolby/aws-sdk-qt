@@ -40,6 +40,8 @@ class CreateEndpointRequest;
 class CreateEndpointResponse;
 class CreateEventSubscriptionRequest;
 class CreateEventSubscriptionResponse;
+class CreateFleetAdvisorCollectorRequest;
+class CreateFleetAdvisorCollectorResponse;
 class CreateReplicationInstanceRequest;
 class CreateReplicationInstanceResponse;
 class CreateReplicationSubnetGroupRequest;
@@ -54,6 +56,10 @@ class DeleteEndpointRequest;
 class DeleteEndpointResponse;
 class DeleteEventSubscriptionRequest;
 class DeleteEventSubscriptionResponse;
+class DeleteFleetAdvisorCollectorRequest;
+class DeleteFleetAdvisorCollectorResponse;
+class DeleteFleetAdvisorDatabasesRequest;
+class DeleteFleetAdvisorDatabasesResponse;
 class DeleteReplicationInstanceRequest;
 class DeleteReplicationInstanceResponse;
 class DeleteReplicationSubnetGroupRequest;
@@ -82,6 +88,16 @@ class DescribeEventSubscriptionsRequest;
 class DescribeEventSubscriptionsResponse;
 class DescribeEventsRequest;
 class DescribeEventsResponse;
+class DescribeFleetAdvisorCollectorsRequest;
+class DescribeFleetAdvisorCollectorsResponse;
+class DescribeFleetAdvisorDatabasesRequest;
+class DescribeFleetAdvisorDatabasesResponse;
+class DescribeFleetAdvisorLsaAnalysisRequest;
+class DescribeFleetAdvisorLsaAnalysisResponse;
+class DescribeFleetAdvisorSchemaObjectSummaryRequest;
+class DescribeFleetAdvisorSchemaObjectSummaryResponse;
+class DescribeFleetAdvisorSchemasRequest;
+class DescribeFleetAdvisorSchemasResponse;
 class DescribeOrderableReplicationInstancesRequest;
 class DescribeOrderableReplicationInstancesResponse;
 class DescribePendingMaintenanceActionsRequest;
@@ -130,6 +146,8 @@ class ReloadTablesRequest;
 class ReloadTablesResponse;
 class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
+class RunFleetAdvisorLsaAnalysisRequest;
+class RunFleetAdvisorLsaAnalysisResponse;
 class StartReplicationTaskRequest;
 class StartReplicationTaskResponse;
 class StartReplicationTaskAssessmentRequest;
@@ -140,6 +158,8 @@ class StopReplicationTaskRequest;
 class StopReplicationTaskResponse;
 class TestConnectionRequest;
 class TestConnectionResponse;
+class UpdateSubscriptionsToEventBridgeRequest;
+class UpdateSubscriptionsToEventBridgeResponse;
 
 class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -162,6 +182,7 @@ public slots:
     CancelReplicationTaskAssessmentRunResponse * cancelReplicationTaskAssessmentRun(const CancelReplicationTaskAssessmentRunRequest &request);
     CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
     CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
+    CreateFleetAdvisorCollectorResponse * createFleetAdvisorCollector(const CreateFleetAdvisorCollectorRequest &request);
     CreateReplicationInstanceResponse * createReplicationInstance(const CreateReplicationInstanceRequest &request);
     CreateReplicationSubnetGroupResponse * createReplicationSubnetGroup(const CreateReplicationSubnetGroupRequest &request);
     CreateReplicationTaskResponse * createReplicationTask(const CreateReplicationTaskRequest &request);
@@ -169,6 +190,8 @@ public slots:
     DeleteConnectionResponse * deleteConnection(const DeleteConnectionRequest &request);
     DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
     DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
+    DeleteFleetAdvisorCollectorResponse * deleteFleetAdvisorCollector(const DeleteFleetAdvisorCollectorRequest &request);
+    DeleteFleetAdvisorDatabasesResponse * deleteFleetAdvisorDatabases(const DeleteFleetAdvisorDatabasesRequest &request);
     DeleteReplicationInstanceResponse * deleteReplicationInstance(const DeleteReplicationInstanceRequest &request);
     DeleteReplicationSubnetGroupResponse * deleteReplicationSubnetGroup(const DeleteReplicationSubnetGroupRequest &request);
     DeleteReplicationTaskResponse * deleteReplicationTask(const DeleteReplicationTaskRequest &request);
@@ -183,6 +206,11 @@ public slots:
     DescribeEventCategoriesResponse * describeEventCategories(const DescribeEventCategoriesRequest &request);
     DescribeEventSubscriptionsResponse * describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request);
     DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
+    DescribeFleetAdvisorCollectorsResponse * describeFleetAdvisorCollectors(const DescribeFleetAdvisorCollectorsRequest &request);
+    DescribeFleetAdvisorDatabasesResponse * describeFleetAdvisorDatabases(const DescribeFleetAdvisorDatabasesRequest &request);
+    DescribeFleetAdvisorLsaAnalysisResponse * describeFleetAdvisorLsaAnalysis(const DescribeFleetAdvisorLsaAnalysisRequest &request);
+    DescribeFleetAdvisorSchemaObjectSummaryResponse * describeFleetAdvisorSchemaObjectSummary(const DescribeFleetAdvisorSchemaObjectSummaryRequest &request);
+    DescribeFleetAdvisorSchemasResponse * describeFleetAdvisorSchemas(const DescribeFleetAdvisorSchemasRequest &request);
     DescribeOrderableReplicationInstancesResponse * describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request);
     DescribePendingMaintenanceActionsResponse * describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request);
     DescribeRefreshSchemasStatusResponse * describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request);
@@ -207,11 +235,13 @@ public slots:
     RefreshSchemasResponse * refreshSchemas(const RefreshSchemasRequest &request);
     ReloadTablesResponse * reloadTables(const ReloadTablesRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    RunFleetAdvisorLsaAnalysisResponse * runFleetAdvisorLsaAnalysis(const RunFleetAdvisorLsaAnalysisRequest &request);
     StartReplicationTaskResponse * startReplicationTask(const StartReplicationTaskRequest &request);
     StartReplicationTaskAssessmentResponse * startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request);
     StartReplicationTaskAssessmentRunResponse * startReplicationTaskAssessmentRun(const StartReplicationTaskAssessmentRunRequest &request);
     StopReplicationTaskResponse * stopReplicationTask(const StopReplicationTaskRequest &request);
     TestConnectionResponse * testConnection(const TestConnectionRequest &request);
+    UpdateSubscriptionsToEventBridgeResponse * updateSubscriptionsToEventBridge(const UpdateSubscriptionsToEventBridgeRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DatabaseMigrationServiceClient)

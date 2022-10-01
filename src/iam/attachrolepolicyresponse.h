@@ -24,7 +24,7 @@
 #include "attachrolepolicyrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class AttachRolePolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

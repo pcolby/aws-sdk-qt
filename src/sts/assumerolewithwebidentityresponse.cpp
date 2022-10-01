@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::AssumeRoleWithWebIdentityResponse
- * \brief The AssumeRoleWithWebIdentityResponse class provides an interace for STS AssumeRoleWithWebIdentity responses.
+ * \class QtAws::Sts::AssumeRoleWithWebIdentityResponse
+ * \brief The AssumeRoleWithWebIdentityResponse class provides an interace for Sts AssumeRoleWithWebIdentity responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::assumeRoleWithWebIdentity
@@ -67,7 +67,7 @@ const AssumeRoleWithWebIdentityRequest * AssumeRoleWithWebIdentityResponse::requ
 
 /*!
  * \reimp
- * Parses a successful STS AssumeRoleWithWebIdentity \a response.
+ * Parses a successful Sts AssumeRoleWithWebIdentity \a response.
  */
 void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::AssumeRoleWithWebIdentityResponsePrivate
+ * \class QtAws::Sts::AssumeRoleWithWebIdentityResponsePrivate
  * \brief The AssumeRoleWithWebIdentityResponsePrivate class provides private implementation for AssumeRoleWithWebIdentityResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePriva
 }
 
 /*!
- * Parses a STS AssumeRoleWithWebIdentity response element from \a xml.
+ * Parses a Sts AssumeRoleWithWebIdentity response element from \a xml.
  */
 void AssumeRoleWithWebIdentityResponsePrivate::parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void AssumeRoleWithWebIdentityResponsePrivate::parseAssumeRoleWithWebIdentityRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

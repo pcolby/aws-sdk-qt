@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public kendraRequestPrivate {
+class ListTagsForResourceRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const kendraRequest::Action action,
+    ListTagsForResourceRequestPrivate(const KendraRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

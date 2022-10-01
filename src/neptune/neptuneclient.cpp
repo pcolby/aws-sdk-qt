@@ -51,6 +51,8 @@
 #include "createdbsubnetgroupresponse.h"
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionresponse.h"
+#include "createglobalclusterrequest.h"
+#include "createglobalclusterresponse.h"
 #include "deletedbclusterrequest.h"
 #include "deletedbclusterresponse.h"
 #include "deletedbclusterendpointrequest.h"
@@ -67,6 +69,8 @@
 #include "deletedbsubnetgroupresponse.h"
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionresponse.h"
+#include "deleteglobalclusterrequest.h"
+#include "deleteglobalclusterresponse.h"
 #include "describedbclusterendpointsrequest.h"
 #include "describedbclusterendpointsresponse.h"
 #include "describedbclusterparametergroupsrequest.h"
@@ -99,6 +103,8 @@
 #include "describeeventsubscriptionsresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describeglobalclustersrequest.h"
+#include "describeglobalclustersresponse.h"
 #include "describeorderabledbinstanceoptionsrequest.h"
 #include "describeorderabledbinstanceoptionsresponse.h"
 #include "describependingmaintenanceactionsrequest.h"
@@ -107,6 +113,8 @@
 #include "describevaliddbinstancemodificationsresponse.h"
 #include "failoverdbclusterrequest.h"
 #include "failoverdbclusterresponse.h"
+#include "failoverglobalclusterrequest.h"
+#include "failoverglobalclusterresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "modifydbclusterrequest.h"
@@ -125,10 +133,14 @@
 #include "modifydbsubnetgroupresponse.h"
 #include "modifyeventsubscriptionrequest.h"
 #include "modifyeventsubscriptionresponse.h"
+#include "modifyglobalclusterrequest.h"
+#include "modifyglobalclusterresponse.h"
 #include "promotereadreplicadbclusterrequest.h"
 #include "promotereadreplicadbclusterresponse.h"
 #include "rebootdbinstancerequest.h"
 #include "rebootdbinstanceresponse.h"
+#include "removefromglobalclusterrequest.h"
+#include "removefromglobalclusterresponse.h"
 #include "removerolefromdbclusterrequest.h"
 #include "removerolefromdbclusterresponse.h"
 #include "removesourceidentifierfromsubscriptionrequest.h"
@@ -248,7 +260,7 @@ NeptuneClient::NeptuneClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates an Identity and Access Management (IAM) role from an Neptune DB
+ * Associates an Identity and Access Management (IAM) role with an Neptune DB
  */
 AddRoleToDBClusterResponse * NeptuneClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
@@ -514,6 +526,26 @@ CreateEventSubscriptionResponse * NeptuneClient::createEventSubscription(const C
 
 /*!
  * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * CreateGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Neptune global database spread across multiple Amazon Regions. The global database contains a single primary
+ * cluster with read-write capability, and read-only secondary clusters that receive data from the primary cluster through
+ * high-speed replication performed by the Neptune storage
+ *
+ * subsystem>
+ *
+ * You can create a global database that is initially empty, and then add a primary cluster and secondary clusters to it,
+ * or you can specify an existing Neptune cluster during the create operation to become the primary cluster of the global
+ */
+CreateGlobalClusterResponse * NeptuneClient::createGlobalCluster(const CreateGlobalClusterRequest &request)
+{
+    return qobject_cast<CreateGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
  * DeleteDBClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -648,6 +680,19 @@ DeleteDBSubnetGroupResponse * NeptuneClient::deleteDBSubnetGroup(const DeleteDBS
 DeleteEventSubscriptionResponse * NeptuneClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * DeleteGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a global database. The primary and all secondary clusters must already be detached or deleted
+ */
+DeleteGlobalClusterResponse * NeptuneClient::deleteGlobalCluster(const DeleteGlobalClusterRequest &request)
+{
+    return qobject_cast<DeleteGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -899,6 +944,19 @@ DescribeEventsResponse * NeptuneClient::describeEvents(const DescribeEventsReque
 
 /*!
  * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * DescribeGlobalClustersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about Neptune global database clusters. This API supports
+ */
+DescribeGlobalClustersResponse * NeptuneClient::describeGlobalClusters(const DescribeGlobalClustersRequest &request)
+{
+    return qobject_cast<DescribeGlobalClustersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
  * DescribeOrderableDBInstanceOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -960,6 +1018,32 @@ DescribeValidDBInstanceModificationsResponse * NeptuneClient::describeValidDBIns
 FailoverDBClusterResponse * NeptuneClient::failoverDBCluster(const FailoverDBClusterRequest &request)
 {
     return qobject_cast<FailoverDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * FailoverGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates the failover process for a Neptune global
+ *
+ * database>
+ *
+ * A failover for a Neptune global database promotes one of secondary read-only DB clusters to be the primary DB cluster
+ * and demotes the primary DB cluster to being a secondary (read-only) DB cluster. In other words, the role of the current
+ * primary DB cluster and the selected target secondary DB cluster are switched. The selected secondary DB cluster assumes
+ * full read/write capabilities for the Neptune global
+ *
+ * database> <note>
+ *
+ * This action applies <b>only</b> to Neptune global databases. This action is only intended for use on healthy Neptune
+ * global databases with healthy Neptune DB clusters and no region-wide outages, to test disaster recovery scenarios or to
+ * reconfigure the global database
+ */
+FailoverGlobalClusterResponse * NeptuneClient::failoverGlobalCluster(const FailoverGlobalClusterRequest &request)
+{
+    return qobject_cast<FailoverGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -1141,6 +1225,20 @@ ModifyEventSubscriptionResponse * NeptuneClient::modifyEventSubscription(const M
 
 /*!
  * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * ModifyGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify a setting for an Amazon Neptune global cluster. You can change one or more database configuration parameters by
+ * specifying these parameters and their new values in the
+ */
+ModifyGlobalClusterResponse * NeptuneClient::modifyGlobalCluster(const ModifyGlobalClusterRequest &request)
+{
+    return qobject_cast<ModifyGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
  * PromoteReadReplicaDBClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1170,6 +1268,20 @@ PromoteReadReplicaDBClusterResponse * NeptuneClient::promoteReadReplicaDBCluster
 RebootDBInstanceResponse * NeptuneClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
     return qobject_cast<RebootDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * RemoveFromGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detaches a Neptune DB cluster from a Neptune global database. A secondary cluster becomes a normal standalone cluster
+ * with read-write capability instead of being read-only, and no longer receives data from a the primary
+ */
+RemoveFromGlobalClusterResponse * NeptuneClient::removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request)
+{
+    return qobject_cast<RemoveFromGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -1303,8 +1415,8 @@ RestoreDBClusterToPointInTimeResponse * NeptuneClient::restoreDBClusterToPointIn
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an Amazon Neptune DB cluster that was stopped using the AWS console, the Amazon CLI stop-db-cluster command, or
- * the StopDBCluster
+ * Starts an Amazon Neptune DB cluster that was stopped using the Amazon console, the Amazon CLI stop-db-cluster command,
+ * or the StopDBCluster
  */
 StartDBClusterResponse * NeptuneClient::startDBCluster(const StartDBClusterRequest &request)
 {

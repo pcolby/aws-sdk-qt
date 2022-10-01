@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RebootDBInstanceResponse
- * \brief The RebootDBInstanceResponse class provides an interace for DocDB RebootDBInstance responses.
+ * \class QtAws::DocDb::RebootDBInstanceResponse
+ * \brief The RebootDBInstanceResponse class provides an interace for DocDb RebootDBInstance responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::rebootDBInstance
+ * \sa DocDbClient::rebootDBInstance
  */
 
 /*!
@@ -45,7 +45,7 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
         const RebootDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new RebootDBInstanceResponsePrivate(this), parent)
+    : DocDbResponse(new RebootDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootDBInstanceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB RebootDBInstance \a response.
+ * Parses a successful DocDb RebootDBInstance \a response.
  */
 void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::RebootDBInstanceResponsePrivate
+ * \class QtAws::DocDb::RebootDBInstanceResponsePrivate
  * \brief The RebootDBInstanceResponsePrivate class provides private implementation for RebootDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a RebootDBInstanceResponsePrivate object with public implementation \a q.
  */
 RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
-    RebootDBInstanceResponse * const q) : DocDBResponsePrivate(q)
+    RebootDBInstanceResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB RebootDBInstance response element from \a xml.
+ * Parses a DocDb RebootDBInstance response element from \a xml.
  */
 void RebootDBInstanceResponsePrivate::parseRebootDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void RebootDBInstanceResponsePrivate::parseRebootDBInstanceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

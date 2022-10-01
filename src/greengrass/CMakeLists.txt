@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSGREENGRASS_LIBRARY)
 
 add_library(QtAwsGreengrass
+  qtawsgreengrassglobal.h
+  greengrassclient.h
+  greengrassclient_p.h
+  greengrassrequest.h
+  greengrassrequest_p.h
+  greengrassresponse.h
+  greengrassresponse_p.h
   associateroletogrouprequest.h
   associateroletogrouprequest_p.h
   associateroletogroupresponse.h
@@ -45,14 +52,14 @@ add_library(QtAwsGreengrass
   createfunctiondefinitionversionrequest_p.h
   createfunctiondefinitionversionresponse.h
   createfunctiondefinitionversionresponse_p.h
-  creategroupcertificateauthorityrequest.h
-  creategroupcertificateauthorityrequest_p.h
-  creategroupcertificateauthorityresponse.h
-  creategroupcertificateauthorityresponse_p.h
   creategrouprequest.h
   creategrouprequest_p.h
   creategroupresponse.h
   creategroupresponse_p.h
+  creategroupcertificateauthorityrequest.h
+  creategroupcertificateauthorityrequest_p.h
+  creategroupcertificateauthorityresponse.h
+  creategroupcertificateauthorityresponse_p.h
   creategroupversionrequest.h
   creategroupversionrequest_p.h
   creategroupversionresponse.h
@@ -173,6 +180,10 @@ add_library(QtAwsGreengrass
   getfunctiondefinitionversionrequest_p.h
   getfunctiondefinitionversionresponse.h
   getfunctiondefinitionversionresponse_p.h
+  getgrouprequest.h
+  getgrouprequest_p.h
+  getgroupresponse.h
+  getgroupresponse_p.h
   getgroupcertificateauthorityrequest.h
   getgroupcertificateauthorityrequest_p.h
   getgroupcertificateauthorityresponse.h
@@ -181,10 +192,6 @@ add_library(QtAwsGreengrass
   getgroupcertificateconfigurationrequest_p.h
   getgroupcertificateconfigurationresponse.h
   getgroupcertificateconfigurationresponse_p.h
-  getgrouprequest.h
-  getgrouprequest_p.h
-  getgroupresponse.h
-  getgroupresponse_p.h
   getgroupversionrequest.h
   getgroupversionrequest_p.h
   getgroupversionresponse.h
@@ -221,12 +228,6 @@ add_library(QtAwsGreengrass
   getthingruntimeconfigurationrequest_p.h
   getthingruntimeconfigurationresponse.h
   getthingruntimeconfigurationresponse_p.h
-  greengrassclient.h
-  greengrassclient_p.h
-  greengrassrequest.h
-  greengrassrequest_p.h
-  greengrassresponse.h
-  greengrassresponse_p.h
   listbulkdeploymentdetailedreportsrequest.h
   listbulkdeploymentdetailedreportsrequest_p.h
   listbulkdeploymentdetailedreportsresponse.h
@@ -235,83 +236,82 @@ add_library(QtAwsGreengrass
   listbulkdeploymentsrequest_p.h
   listbulkdeploymentsresponse.h
   listbulkdeploymentsresponse_p.h
-  listconnectordefinitionsrequest.h
-  listconnectordefinitionsrequest_p.h
-  listconnectordefinitionsresponse.h
-  listconnectordefinitionsresponse_p.h
   listconnectordefinitionversionsrequest.h
   listconnectordefinitionversionsrequest_p.h
   listconnectordefinitionversionsresponse.h
   listconnectordefinitionversionsresponse_p.h
-  listcoredefinitionsrequest.h
-  listcoredefinitionsrequest_p.h
-  listcoredefinitionsresponse.h
-  listcoredefinitionsresponse_p.h
+  listconnectordefinitionsrequest.h
+  listconnectordefinitionsrequest_p.h
+  listconnectordefinitionsresponse.h
+  listconnectordefinitionsresponse_p.h
   listcoredefinitionversionsrequest.h
   listcoredefinitionversionsrequest_p.h
   listcoredefinitionversionsresponse.h
   listcoredefinitionversionsresponse_p.h
+  listcoredefinitionsrequest.h
+  listcoredefinitionsrequest_p.h
+  listcoredefinitionsresponse.h
+  listcoredefinitionsresponse_p.h
   listdeploymentsrequest.h
   listdeploymentsrequest_p.h
   listdeploymentsresponse.h
   listdeploymentsresponse_p.h
-  listdevicedefinitionsrequest.h
-  listdevicedefinitionsrequest_p.h
-  listdevicedefinitionsresponse.h
-  listdevicedefinitionsresponse_p.h
   listdevicedefinitionversionsrequest.h
   listdevicedefinitionversionsrequest_p.h
   listdevicedefinitionversionsresponse.h
   listdevicedefinitionversionsresponse_p.h
-  listfunctiondefinitionsrequest.h
-  listfunctiondefinitionsrequest_p.h
-  listfunctiondefinitionsresponse.h
-  listfunctiondefinitionsresponse_p.h
+  listdevicedefinitionsrequest.h
+  listdevicedefinitionsrequest_p.h
+  listdevicedefinitionsresponse.h
+  listdevicedefinitionsresponse_p.h
   listfunctiondefinitionversionsrequest.h
   listfunctiondefinitionversionsrequest_p.h
   listfunctiondefinitionversionsresponse.h
   listfunctiondefinitionversionsresponse_p.h
+  listfunctiondefinitionsrequest.h
+  listfunctiondefinitionsrequest_p.h
+  listfunctiondefinitionsresponse.h
+  listfunctiondefinitionsresponse_p.h
   listgroupcertificateauthoritiesrequest.h
   listgroupcertificateauthoritiesrequest_p.h
   listgroupcertificateauthoritiesresponse.h
   listgroupcertificateauthoritiesresponse_p.h
-  listgroupsrequest.h
-  listgroupsrequest_p.h
-  listgroupsresponse.h
-  listgroupsresponse_p.h
   listgroupversionsrequest.h
   listgroupversionsrequest_p.h
   listgroupversionsresponse.h
   listgroupversionsresponse_p.h
-  listloggerdefinitionsrequest.h
-  listloggerdefinitionsrequest_p.h
-  listloggerdefinitionsresponse.h
-  listloggerdefinitionsresponse_p.h
+  listgroupsrequest.h
+  listgroupsrequest_p.h
+  listgroupsresponse.h
+  listgroupsresponse_p.h
   listloggerdefinitionversionsrequest.h
   listloggerdefinitionversionsrequest_p.h
   listloggerdefinitionversionsresponse.h
   listloggerdefinitionversionsresponse_p.h
-  listresourcedefinitionsrequest.h
-  listresourcedefinitionsrequest_p.h
-  listresourcedefinitionsresponse.h
-  listresourcedefinitionsresponse_p.h
+  listloggerdefinitionsrequest.h
+  listloggerdefinitionsrequest_p.h
+  listloggerdefinitionsresponse.h
+  listloggerdefinitionsresponse_p.h
   listresourcedefinitionversionsrequest.h
   listresourcedefinitionversionsrequest_p.h
   listresourcedefinitionversionsresponse.h
   listresourcedefinitionversionsresponse_p.h
-  listsubscriptiondefinitionsrequest.h
-  listsubscriptiondefinitionsrequest_p.h
-  listsubscriptiondefinitionsresponse.h
-  listsubscriptiondefinitionsresponse_p.h
+  listresourcedefinitionsrequest.h
+  listresourcedefinitionsrequest_p.h
+  listresourcedefinitionsresponse.h
+  listresourcedefinitionsresponse_p.h
   listsubscriptiondefinitionversionsrequest.h
   listsubscriptiondefinitionversionsrequest_p.h
   listsubscriptiondefinitionversionsresponse.h
   listsubscriptiondefinitionversionsresponse_p.h
+  listsubscriptiondefinitionsrequest.h
+  listsubscriptiondefinitionsrequest_p.h
+  listsubscriptiondefinitionsresponse.h
+  listsubscriptiondefinitionsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsgreengrassglobal.h
   resetdeploymentsrequest.h
   resetdeploymentsrequest_p.h
   resetdeploymentsresponse.h
@@ -352,14 +352,14 @@ add_library(QtAwsGreengrass
   updatefunctiondefinitionrequest_p.h
   updatefunctiondefinitionresponse.h
   updatefunctiondefinitionresponse_p.h
-  updategroupcertificateconfigurationrequest.h
-  updategroupcertificateconfigurationrequest_p.h
-  updategroupcertificateconfigurationresponse.h
-  updategroupcertificateconfigurationresponse_p.h
   updategrouprequest.h
   updategrouprequest_p.h
   updategroupresponse.h
   updategroupresponse_p.h
+  updategroupcertificateconfigurationrequest.h
+  updategroupcertificateconfigurationrequest_p.h
+  updategroupcertificateconfigurationresponse.h
+  updategroupcertificateconfigurationresponse_p.h
   updateloggerdefinitionrequest.h
   updateloggerdefinitionrequest_p.h
   updateloggerdefinitionresponse.h
@@ -376,6 +376,9 @@ add_library(QtAwsGreengrass
   updatethingruntimeconfigurationrequest_p.h
   updatethingruntimeconfigurationresponse.h
   updatethingruntimeconfigurationresponse_p.h
+  greengrassclient.cpp
+  greengrassrequest.cpp
+  greengrassresponse.cpp
   associateroletogrouprequest.cpp
   associateroletogroupresponse.cpp
   associateserviceroletoaccountrequest.cpp
@@ -398,10 +401,10 @@ add_library(QtAwsGreengrass
   createfunctiondefinitionresponse.cpp
   createfunctiondefinitionversionrequest.cpp
   createfunctiondefinitionversionresponse.cpp
-  creategroupcertificateauthorityrequest.cpp
-  creategroupcertificateauthorityresponse.cpp
   creategrouprequest.cpp
   creategroupresponse.cpp
+  creategroupcertificateauthorityrequest.cpp
+  creategroupcertificateauthorityresponse.cpp
   creategroupversionrequest.cpp
   creategroupversionresponse.cpp
   createloggerdefinitionrequest.cpp
@@ -462,12 +465,12 @@ add_library(QtAwsGreengrass
   getfunctiondefinitionresponse.cpp
   getfunctiondefinitionversionrequest.cpp
   getfunctiondefinitionversionresponse.cpp
+  getgrouprequest.cpp
+  getgroupresponse.cpp
   getgroupcertificateauthorityrequest.cpp
   getgroupcertificateauthorityresponse.cpp
   getgroupcertificateconfigurationrequest.cpp
   getgroupcertificateconfigurationresponse.cpp
-  getgrouprequest.cpp
-  getgroupresponse.cpp
   getgroupversionrequest.cpp
   getgroupversionresponse.cpp
   getloggerdefinitionrequest.cpp
@@ -486,49 +489,46 @@ add_library(QtAwsGreengrass
   getsubscriptiondefinitionversionresponse.cpp
   getthingruntimeconfigurationrequest.cpp
   getthingruntimeconfigurationresponse.cpp
-  greengrassclient.cpp
-  greengrassrequest.cpp
-  greengrassresponse.cpp
   listbulkdeploymentdetailedreportsrequest.cpp
   listbulkdeploymentdetailedreportsresponse.cpp
   listbulkdeploymentsrequest.cpp
   listbulkdeploymentsresponse.cpp
-  listconnectordefinitionsrequest.cpp
-  listconnectordefinitionsresponse.cpp
   listconnectordefinitionversionsrequest.cpp
   listconnectordefinitionversionsresponse.cpp
-  listcoredefinitionsrequest.cpp
-  listcoredefinitionsresponse.cpp
+  listconnectordefinitionsrequest.cpp
+  listconnectordefinitionsresponse.cpp
   listcoredefinitionversionsrequest.cpp
   listcoredefinitionversionsresponse.cpp
+  listcoredefinitionsrequest.cpp
+  listcoredefinitionsresponse.cpp
   listdeploymentsrequest.cpp
   listdeploymentsresponse.cpp
-  listdevicedefinitionsrequest.cpp
-  listdevicedefinitionsresponse.cpp
   listdevicedefinitionversionsrequest.cpp
   listdevicedefinitionversionsresponse.cpp
-  listfunctiondefinitionsrequest.cpp
-  listfunctiondefinitionsresponse.cpp
+  listdevicedefinitionsrequest.cpp
+  listdevicedefinitionsresponse.cpp
   listfunctiondefinitionversionsrequest.cpp
   listfunctiondefinitionversionsresponse.cpp
+  listfunctiondefinitionsrequest.cpp
+  listfunctiondefinitionsresponse.cpp
   listgroupcertificateauthoritiesrequest.cpp
   listgroupcertificateauthoritiesresponse.cpp
-  listgroupsrequest.cpp
-  listgroupsresponse.cpp
   listgroupversionsrequest.cpp
   listgroupversionsresponse.cpp
-  listloggerdefinitionsrequest.cpp
-  listloggerdefinitionsresponse.cpp
+  listgroupsrequest.cpp
+  listgroupsresponse.cpp
   listloggerdefinitionversionsrequest.cpp
   listloggerdefinitionversionsresponse.cpp
-  listresourcedefinitionsrequest.cpp
-  listresourcedefinitionsresponse.cpp
+  listloggerdefinitionsrequest.cpp
+  listloggerdefinitionsresponse.cpp
   listresourcedefinitionversionsrequest.cpp
   listresourcedefinitionversionsresponse.cpp
-  listsubscriptiondefinitionsrequest.cpp
-  listsubscriptiondefinitionsresponse.cpp
+  listresourcedefinitionsrequest.cpp
+  listresourcedefinitionsresponse.cpp
   listsubscriptiondefinitionversionsrequest.cpp
   listsubscriptiondefinitionversionsresponse.cpp
+  listsubscriptiondefinitionsrequest.cpp
+  listsubscriptiondefinitionsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   resetdeploymentsrequest.cpp
@@ -551,10 +551,10 @@ add_library(QtAwsGreengrass
   updatedevicedefinitionresponse.cpp
   updatefunctiondefinitionrequest.cpp
   updatefunctiondefinitionresponse.cpp
-  updategroupcertificateconfigurationrequest.cpp
-  updategroupcertificateconfigurationresponse.cpp
   updategrouprequest.cpp
   updategroupresponse.cpp
+  updategroupcertificateconfigurationrequest.cpp
+  updategroupcertificateconfigurationresponse.cpp
   updateloggerdefinitionrequest.cpp
   updateloggerdefinitionresponse.cpp
   updateresourcedefinitionrequest.cpp

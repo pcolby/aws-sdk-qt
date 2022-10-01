@@ -24,7 +24,7 @@
 #include "verifyemailidentityrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class VerifyEmailIdentityResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

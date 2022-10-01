@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
-class SSMIncidentsResponse;
+class SsmIncidentsResponse;
 
-class SSMIncidentsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SsmIncidentsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit SSMIncidentsResponsePrivate(SSMIncidentsResponse * const q);
+    explicit SsmIncidentsResponsePrivate(SsmIncidentsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SSMIncidentsResponse)
-    Q_DISABLE_COPY(SSMIncidentsResponsePrivate)
+    Q_DECLARE_PUBLIC(SsmIncidentsResponse)
+    Q_DISABLE_COPY(SsmIncidentsResponsePrivate)
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

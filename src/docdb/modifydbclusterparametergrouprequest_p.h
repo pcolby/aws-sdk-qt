@@ -24,14 +24,14 @@
 #include "modifydbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ModifyDBClusterParameterGroupRequest;
 
-class ModifyDBClusterParameterGroupRequestPrivate : public DocDBRequestPrivate {
+class ModifyDBClusterParameterGroupRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    ModifyDBClusterParameterGroupRequestPrivate(const DocDBRequest::Action action,
+    ModifyDBClusterParameterGroupRequestPrivate(const DocDbRequest::Action action,
                                    ModifyDBClusterParameterGroupRequest * const q);
     ModifyDBClusterParameterGroupRequestPrivate(const ModifyDBClusterParameterGroupRequestPrivate &other,
                                    ModifyDBClusterParameterGroupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

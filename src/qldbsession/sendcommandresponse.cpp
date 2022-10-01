@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 /*!
- * \class QtAws::QLDBSession::SendCommandResponse
- * \brief The SendCommandResponse class provides an interace for QLDBSession SendCommand responses.
+ * \class QtAws::QldbSession::SendCommandResponse
+ * \brief The SendCommandResponse class provides an interace for QldbSession SendCommand responses.
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  *
  *  The transactional data APIs for Amazon
  * 
@@ -54,7 +54,7 @@ namespace QLDBSession {
  *  interface that uses the QLDB driver to interact with a ledger. For information, see <a
  *  href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB
  *
- * \sa QLDBSessionClient::sendCommand
+ * \sa QldbSessionClient::sendCommand
  */
 
 /*!
@@ -64,7 +64,7 @@ SendCommandResponse::SendCommandResponse(
         const SendCommandRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : QLDBSessionResponse(new SendCommandResponsePrivate(this), parent)
+    : QldbSessionResponse(new SendCommandResponsePrivate(this), parent)
 {
     setRequest(new SendCommandRequest(request));
     setReply(reply);
@@ -81,7 +81,7 @@ const SendCommandRequest * SendCommandResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDBSession SendCommand \a response.
+ * Parses a successful QldbSession SendCommand \a response.
  */
 void SendCommandResponse::parseSuccess(QIODevice &response)
 {
@@ -91,24 +91,24 @@ void SendCommandResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDBSession::SendCommandResponsePrivate
+ * \class QtAws::QldbSession::SendCommandResponsePrivate
  * \brief The SendCommandResponsePrivate class provides private implementation for SendCommandResponse.
  * \internal
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  */
 
 /*!
  * Constructs a SendCommandResponsePrivate object with public implementation \a q.
  */
 SendCommandResponsePrivate::SendCommandResponsePrivate(
-    SendCommandResponse * const q) : QLDBSessionResponsePrivate(q)
+    SendCommandResponse * const q) : QldbSessionResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a QLDBSession SendCommand response element from \a xml.
+ * Parses a QldbSession SendCommand response element from \a xml.
  */
 void SendCommandResponsePrivate::parseSendCommandResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void SendCommandResponsePrivate::parseSendCommandResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws

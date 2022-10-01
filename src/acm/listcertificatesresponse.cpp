@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::ListCertificatesResponse
- * \brief The ListCertificatesResponse class provides an interace for ACM ListCertificates responses.
+ * \class QtAws::Acm::ListCertificatesResponse
+ * \brief The ListCertificatesResponse class provides an interace for Acm ListCertificates responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::listCertificates
  */
@@ -66,7 +66,7 @@ const ListCertificatesRequest * ListCertificatesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ACM ListCertificates \a response.
+ * Parses a successful Acm ListCertificates \a response.
  */
 void ListCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void ListCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::ListCertificatesResponsePrivate
+ * \class QtAws::Acm::ListCertificatesResponsePrivate
  * \brief The ListCertificatesResponsePrivate class provides private implementation for ListCertificatesResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ ListCertificatesResponsePrivate::ListCertificatesResponsePrivate(
 }
 
 /*!
- * Parses a ACM ListCertificates response element from \a xml.
+ * Parses a Acm ListCertificates response element from \a xml.
  */
 void ListCertificatesResponsePrivate::parseListCertificatesResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void ListCertificatesResponsePrivate::parseListCertificatesResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

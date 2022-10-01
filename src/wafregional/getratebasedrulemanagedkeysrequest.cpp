@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysRequest
- * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for WAFRegional GetRateBasedRuleManagedKeys requests.
+ * \class QtAws::WafRegional::GetRateBasedRuleManagedKeysRequest
+ * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for WafRegional GetRateBasedRuleManagedKeys requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRateBasedRuleManagedKeys
+ * \sa WafRegionalClient::getRateBasedRuleManagedKeys
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const GetRateBasedRuleManagedKeysRequest &other)
-    : WAFRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const Get
  * Constructs a GetRateBasedRuleManagedKeysRequest object.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest()
-    : WAFRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(WAFRegionalRequest::GetRateBasedRuleManagedKeysAction, this))
+    : WafRegionalRequest(new GetRateBasedRuleManagedKeysRequestPrivate(WafRegionalRequest::GetRateBasedRuleManagedKeysAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysRequestPrivate
+ * \class QtAws::WafRegional::GetRateBasedRuleManagedKeysRequestPrivate
  * \brief The GetRateBasedRuleManagedKeysRequestPrivate class provides private implementation for GetRateBasedRuleManagedKeysRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
-    const WAFRegionalRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const GetRateBasedRuleManagedKeysRequestPrivate &other, GetRateBasedRuleManagedKeysRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "finspacedataresponse_p.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class CreateChangesetResponse;
 
-class CreateChangesetResponsePrivate : public FinSpaceDataResponsePrivate {
+class CreateChangesetResponsePrivate : public FinspaceDataResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

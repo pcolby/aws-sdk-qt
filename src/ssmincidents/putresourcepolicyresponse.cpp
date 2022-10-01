@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::PutResourcePolicyResponse
- * \brief The PutResourcePolicyResponse class provides an interace for SSMIncidents PutResourcePolicy responses.
+ * \class QtAws::SsmIncidents::PutResourcePolicyResponse
+ * \brief The PutResourcePolicyResponse class provides an interace for SsmIncidents PutResourcePolicy responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::putResourcePolicy
+ * \sa SsmIncidentsClient::putResourcePolicy
  */
 
 /*!
@@ -54,7 +54,7 @@ PutResourcePolicyResponse::PutResourcePolicyResponse(
         const PutResourcePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new PutResourcePolicyResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new PutResourcePolicyResponsePrivate(this), parent)
 {
     setRequest(new PutResourcePolicyRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents PutResourcePolicy \a response.
+ * Parses a successful SsmIncidents PutResourcePolicy \a response.
  */
 void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::PutResourcePolicyResponsePrivate
+ * \class QtAws::SsmIncidents::PutResourcePolicyResponsePrivate
  * \brief The PutResourcePolicyResponsePrivate class provides private implementation for PutResourcePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a PutResourcePolicyResponsePrivate object with public implementation \a q.
  */
 PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
-    PutResourcePolicyResponse * const q) : SSMIncidentsResponsePrivate(q)
+    PutResourcePolicyResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents PutResourcePolicy response element from \a xml.
+ * Parses a SsmIncidents PutResourcePolicy response element from \a xml.
  */
 void PutResourcePolicyResponsePrivate::parsePutResourcePolicyResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void PutResourcePolicyResponsePrivate::parsePutResourcePolicyResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

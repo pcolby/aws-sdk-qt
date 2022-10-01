@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 /*!
- * \class QtAws::IVS::IvsResponse
- * \brief The IvsResponse class provides an interface for IVS responses.
+ * \class QtAws::Ivs::IvsResponse
+ * \brief The IvsResponse class provides an interface for Ivs responses.
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  */
 
 /*!
@@ -76,11 +76,11 @@ void IvsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IVS::IvsResponsePrivate
+ * \class QtAws::Ivs::IvsResponsePrivate
  * \brief The IvsResponsePrivate class provides private implementation for IvsResponse.
  * \internal
  *
- * \inmodule QtAwsIVS
+ * \inmodule QtAwsIvs
  */
 
 /*!
@@ -92,5 +92,5 @@ IvsResponsePrivate::IvsResponsePrivate(
 
 }
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws

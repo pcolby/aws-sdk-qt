@@ -24,14 +24,14 @@
 #include "listpagesbycontactrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ListPagesByContactRequest;
 
-class ListPagesByContactRequestPrivate : public SSMContactsRequestPrivate {
+class ListPagesByContactRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    ListPagesByContactRequestPrivate(const SSMContactsRequest::Action action,
+    ListPagesByContactRequestPrivate(const SsmContactsRequest::Action action,
                                    ListPagesByContactRequest * const q);
     ListPagesByContactRequestPrivate(const ListPagesByContactRequestPrivate &other,
                                    ListPagesByContactRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

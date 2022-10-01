@@ -24,7 +24,7 @@
 #include "createactivityrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class CreateActivityRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

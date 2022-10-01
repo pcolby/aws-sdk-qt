@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateIPSetRequest
- * \brief The CreateIPSetRequest class provides an interface for WAFRegional CreateIPSet requests.
+ * \class QtAws::WafRegional::CreateIPSetRequest
+ * \brief The CreateIPSetRequest class provides an interface for WafRegional CreateIPSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createIPSet
+ * \sa WafRegionalClient::createIPSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
-    : WAFRegionalRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
  * Constructs a CreateIPSetRequest object.
  */
 CreateIPSetRequest::CreateIPSetRequest()
-    : WAFRegionalRequest(new CreateIPSetRequestPrivate(WAFRegionalRequest::CreateIPSetAction, this))
+    : WafRegionalRequest(new CreateIPSetRequestPrivate(WafRegionalRequest::CreateIPSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateIPSetRequestPrivate
+ * \class QtAws::WafRegional::CreateIPSetRequestPrivate
  * \brief The CreateIPSetRequestPrivate class provides private implementation for CreateIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateIPSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateIPSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateIPSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const CreateIPSetRequestPrivate &other, CreateIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

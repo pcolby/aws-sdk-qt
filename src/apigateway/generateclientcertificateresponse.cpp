@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GenerateClientCertificateResponse
- * \brief The GenerateClientCertificateResponse class provides an interace for APIGateway GenerateClientCertificate responses.
+ * \class QtAws::ApiGateway::GenerateClientCertificateResponse
+ * \brief The GenerateClientCertificateResponse class provides an interace for ApiGateway GenerateClientCertificate responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::generateClientCertificate
+ * \sa ApiGatewayClient::generateClientCertificate
  */
 
 /*!
@@ -49,7 +49,7 @@ GenerateClientCertificateResponse::GenerateClientCertificateResponse(
         const GenerateClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GenerateClientCertificateResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GenerateClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new GenerateClientCertificateRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GenerateClientCertificateRequest * GenerateClientCertificateResponse::requ
 
 /*!
  * \reimp
- * Parses a successful APIGateway GenerateClientCertificate \a response.
+ * Parses a successful ApiGateway GenerateClientCertificate \a response.
  */
 void GenerateClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GenerateClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GenerateClientCertificateResponsePrivate
+ * \class QtAws::ApiGateway::GenerateClientCertificateResponsePrivate
  * \brief The GenerateClientCertificateResponsePrivate class provides private implementation for GenerateClientCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GenerateClientCertificateResponsePrivate object with public implementation \a q.
  */
 GenerateClientCertificateResponsePrivate::GenerateClientCertificateResponsePrivate(
-    GenerateClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
+    GenerateClientCertificateResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GenerateClientCertificate response element from \a xml.
+ * Parses a ApiGateway GenerateClientCertificate response element from \a xml.
  */
 void GenerateClientCertificateResponsePrivate::parseGenerateClientCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GenerateClientCertificateResponsePrivate::parseGenerateClientCertificateRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

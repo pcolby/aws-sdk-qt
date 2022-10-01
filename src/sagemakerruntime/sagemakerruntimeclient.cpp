@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "invokeendpointrequest.h"
 #include "invokeendpointresponse.h"
+#include "invokeendpointasyncrequest.h"
+#include "invokeendpointasyncresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -123,9 +125,10 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  *
  * </p
  *
- * Calls to <code>InvokeEndpoint</code> are authenticated by using AWS Signature Version 4. For information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating Requests (AWS
- * Signature Version 4)</a> in the <i>Amazon S3 API
+ * Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services Signature Version 4. For
+ * information, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating Requests
+ * (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API
  *
  * Reference</i>>
  *
@@ -141,6 +144,38 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
 InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndpointRequest &request)
 {
     return qobject_cast<InvokeEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerRuntimeClient service, and returns a pointer to an
+ * InvokeEndpointAsyncResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API
+ * to get inferences from the model hosted at the specified endpoint in an asynchronous
+ *
+ * manner>
+ *
+ * Inference requests sent to this API are enqueued for asynchronous processing. The processing of the inference request
+ * may or may not complete before the you receive a response from this API. The response from this API will not contain the
+ * result of the inference request but contain information about where you can locate
+ *
+ * it>
+ *
+ * Amazon SageMaker strips all <code>POST</code> headers except those supported by the API. Amazon SageMaker might add
+ * additional headers. You should not rely on the behavior of headers outside those enumerated in the request
+ *
+ * syntax>
+ *
+ * Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services Signature Version 4. For
+ * information, see <a
+ * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+ * Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API
+ */
+InvokeEndpointAsyncResponse * SageMakerRuntimeClient::invokeEndpointAsync(const InvokeEndpointAsyncRequest &request)
+{
+    return qobject_cast<InvokeEndpointAsyncResponse *>(send(request));
 }
 
 /*!

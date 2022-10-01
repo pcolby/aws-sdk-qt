@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDATAEXCHANGE_LIBRARY)
 
 add_library(QtAwsDataExchange
+  qtawsdataexchangeglobal.h
+  dataexchangeclient.h
+  dataexchangeclient_p.h
+  dataexchangerequest.h
+  dataexchangerequest_p.h
+  dataexchangeresponse.h
+  dataexchangeresponse_p.h
   canceljobrequest.h
   canceljobrequest_p.h
   canceljobresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsDataExchange
   createdatasetrequest_p.h
   createdatasetresponse.h
   createdatasetresponse_p.h
+  createeventactionrequest.h
+  createeventactionrequest_p.h
+  createeventactionresponse.h
+  createeventactionresponse_p.h
   createjobrequest.h
   createjobrequest_p.h
   createjobresponse.h
@@ -17,12 +28,6 @@ add_library(QtAwsDataExchange
   createrevisionrequest_p.h
   createrevisionresponse.h
   createrevisionresponse_p.h
-  dataexchangeclient.h
-  dataexchangeclient_p.h
-  dataexchangerequest.h
-  dataexchangerequest_p.h
-  dataexchangeresponse.h
-  dataexchangeresponse_p.h
   deleteassetrequest.h
   deleteassetrequest_p.h
   deleteassetresponse.h
@@ -31,6 +36,10 @@ add_library(QtAwsDataExchange
   deletedatasetrequest_p.h
   deletedatasetresponse.h
   deletedatasetresponse_p.h
+  deleteeventactionrequest.h
+  deleteeventactionrequest_p.h
+  deleteeventactionresponse.h
+  deleteeventactionresponse_p.h
   deleterevisionrequest.h
   deleterevisionrequest_p.h
   deleterevisionresponse.h
@@ -43,6 +52,10 @@ add_library(QtAwsDataExchange
   getdatasetrequest_p.h
   getdatasetresponse.h
   getdatasetresponse_p.h
+  geteventactionrequest.h
+  geteventactionrequest_p.h
+  geteventactionresponse.h
+  geteventactionresponse_p.h
   getjobrequest.h
   getjobrequest_p.h
   getjobresponse.h
@@ -59,6 +72,10 @@ add_library(QtAwsDataExchange
   listdatasetsrequest_p.h
   listdatasetsresponse.h
   listdatasetsresponse_p.h
+  listeventactionsrequest.h
+  listeventactionsrequest_p.h
+  listeventactionsresponse.h
+  listeventactionsresponse_p.h
   listjobsrequest.h
   listjobsrequest_p.h
   listjobsresponse.h
@@ -71,7 +88,14 @@ add_library(QtAwsDataExchange
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsdataexchangeglobal.h
+  revokerevisionrequest.h
+  revokerevisionrequest_p.h
+  revokerevisionresponse.h
+  revokerevisionresponse_p.h
+  sendapiassetrequest.h
+  sendapiassetrequest_p.h
+  sendapiassetresponse.h
+  sendapiassetresponse_p.h
   startjobrequest.h
   startjobrequest_p.h
   startjobresponse.h
@@ -92,31 +116,41 @@ add_library(QtAwsDataExchange
   updatedatasetrequest_p.h
   updatedatasetresponse.h
   updatedatasetresponse_p.h
+  updateeventactionrequest.h
+  updateeventactionrequest_p.h
+  updateeventactionresponse.h
+  updateeventactionresponse_p.h
   updaterevisionrequest.h
   updaterevisionrequest_p.h
   updaterevisionresponse.h
   updaterevisionresponse_p.h
+  dataexchangeclient.cpp
+  dataexchangerequest.cpp
+  dataexchangeresponse.cpp
   canceljobrequest.cpp
   canceljobresponse.cpp
   createdatasetrequest.cpp
   createdatasetresponse.cpp
+  createeventactionrequest.cpp
+  createeventactionresponse.cpp
   createjobrequest.cpp
   createjobresponse.cpp
   createrevisionrequest.cpp
   createrevisionresponse.cpp
-  dataexchangeclient.cpp
-  dataexchangerequest.cpp
-  dataexchangeresponse.cpp
   deleteassetrequest.cpp
   deleteassetresponse.cpp
   deletedatasetrequest.cpp
   deletedatasetresponse.cpp
+  deleteeventactionrequest.cpp
+  deleteeventactionresponse.cpp
   deleterevisionrequest.cpp
   deleterevisionresponse.cpp
   getassetrequest.cpp
   getassetresponse.cpp
   getdatasetrequest.cpp
   getdatasetresponse.cpp
+  geteventactionrequest.cpp
+  geteventactionresponse.cpp
   getjobrequest.cpp
   getjobresponse.cpp
   getrevisionrequest.cpp
@@ -125,12 +159,18 @@ add_library(QtAwsDataExchange
   listdatasetrevisionsresponse.cpp
   listdatasetsrequest.cpp
   listdatasetsresponse.cpp
+  listeventactionsrequest.cpp
+  listeventactionsresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
   listrevisionassetsrequest.cpp
   listrevisionassetsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  revokerevisionrequest.cpp
+  revokerevisionresponse.cpp
+  sendapiassetrequest.cpp
+  sendapiassetresponse.cpp
   startjobrequest.cpp
   startjobresponse.cpp
   tagresourcerequest.cpp
@@ -141,6 +181,8 @@ add_library(QtAwsDataExchange
   updateassetresponse.cpp
   updatedatasetrequest.cpp
   updatedatasetresponse.cpp
+  updateeventactionrequest.cpp
+  updateeventactionresponse.cpp
   updaterevisionrequest.cpp
   updaterevisionresponse.cpp)
 

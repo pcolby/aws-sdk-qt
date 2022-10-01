@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSIMAGEBUILDER_EXPORT ListTagsForResourceResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT ListTagsForResourceResponse : public ImageBuilderResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

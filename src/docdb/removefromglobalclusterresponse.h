@@ -24,11 +24,11 @@
 #include "removefromglobalclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RemoveFromGlobalClusterResponsePrivate;
 
-class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

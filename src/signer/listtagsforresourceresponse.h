@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSSIGNER_EXPORT ListTagsForResourceResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT ListTagsForResourceResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

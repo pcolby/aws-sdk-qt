@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeEngineDefaultClusterParametersResponse
- * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for RDS DescribeEngineDefaultClusterParameters responses.
+ * \class QtAws::Rds::DescribeEngineDefaultClusterParametersResponse
+ * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for Rds DescribeEngineDefaultClusterParameters responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClust
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeEngineDefaultClusterParameters \a response.
+ * Parses a successful Rds DescribeEngineDefaultClusterParameters \a response.
  */
 void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::RDS::DescribeEngineDefaultClusterParametersResponsePrivate
+ * \class QtAws::Rds::DescribeEngineDefaultClusterParametersResponsePrivate
  * \brief The DescribeEngineDefaultClusterParametersResponsePrivate class provides private implementation for DescribeEngineDefaultClusterParametersResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClus
 }
 
 /*!
- * Parses a RDS DescribeEngineDefaultClusterParameters response element from \a xml.
+ * Parses a Rds DescribeEngineDefaultClusterParameters response element from \a xml.
  */
 void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineD
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

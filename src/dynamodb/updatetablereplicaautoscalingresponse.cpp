@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateTableReplicaAutoScalingResponse
- * \brief The UpdateTableReplicaAutoScalingResponse class provides an interace for DynamoDB UpdateTableReplicaAutoScaling responses.
+ * \class QtAws::DynamoDb::UpdateTableReplicaAutoScalingResponse
+ * \brief The UpdateTableReplicaAutoScalingResponse class provides an interace for DynamoDb UpdateTableReplicaAutoScaling responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateTableReplicaAutoScaling
+ * \sa DynamoDbClient::updateTableReplicaAutoScaling
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateTableReplicaAutoScalingResponse::UpdateTableReplicaAutoScalingResponse(
         const UpdateTableReplicaAutoScalingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateTableReplicaAutoScalingResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateTableReplicaAutoScalingResponsePrivate(this), parent)
 {
     setRequest(new UpdateTableReplicaAutoScalingRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateTableReplicaAutoScalingRequest * UpdateTableReplicaAutoScalingRespon
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateTableReplicaAutoScaling \a response.
+ * Parses a successful DynamoDb UpdateTableReplicaAutoScaling \a response.
  */
 void UpdateTableReplicaAutoScalingResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateTableReplicaAutoScalingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateTableReplicaAutoScalingResponsePrivate
+ * \class QtAws::DynamoDb::UpdateTableReplicaAutoScalingResponsePrivate
  * \brief The UpdateTableReplicaAutoScalingResponsePrivate class provides private implementation for UpdateTableReplicaAutoScalingResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateTableReplicaAutoScalingResponsePrivate object with public implementation \a q.
  */
 UpdateTableReplicaAutoScalingResponsePrivate::UpdateTableReplicaAutoScalingResponsePrivate(
-    UpdateTableReplicaAutoScalingResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateTableReplicaAutoScalingResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateTableReplicaAutoScaling response element from \a xml.
+ * Parses a DynamoDb UpdateTableReplicaAutoScaling response element from \a xml.
  */
 void UpdateTableReplicaAutoScalingResponsePrivate::parseUpdateTableReplicaAutoScalingResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateTableReplicaAutoScalingResponsePrivate::parseUpdateTableReplicaAutoSc
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

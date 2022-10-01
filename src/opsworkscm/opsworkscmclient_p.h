@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMClient;
+class OpsWorksCmClient;
 
-class OpsWorksCMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class OpsWorksCmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit OpsWorksCMClientPrivate(OpsWorksCMClient * const q);
+    explicit OpsWorksCmClientPrivate(OpsWorksCmClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(OpsWorksCMClient)
-    Q_DISABLE_COPY(OpsWorksCMClientPrivate)
+    Q_DECLARE_PUBLIC(OpsWorksCmClient)
+    Q_DISABLE_COPY(OpsWorksCmClientPrivate)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

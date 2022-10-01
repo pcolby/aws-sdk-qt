@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class EbsClientPrivate;
 class CompleteSnapshotRequest;
@@ -72,7 +72,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

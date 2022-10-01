@@ -24,14 +24,14 @@
 #include "exporttabletopointintimerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ExportTableToPointInTimeRequest;
 
-class ExportTableToPointInTimeRequestPrivate : public DynamoDBRequestPrivate {
+class ExportTableToPointInTimeRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ExportTableToPointInTimeRequestPrivate(const DynamoDBRequest::Action action,
+    ExportTableToPointInTimeRequestPrivate(const DynamoDbRequest::Action action,
                                    ExportTableToPointInTimeRequest * const q);
     ExportTableToPointInTimeRequestPrivate(const ExportTableToPointInTimeRequestPrivate &other,
                                    ExportTableToPointInTimeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "deletehsmrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class DeleteHsmResponsePrivate;
 
-class QTAWSCLOUDHSM_EXPORT DeleteHsmResponse : public CloudHSMResponse {
+class QTAWSCLOUDHSM_EXPORT DeleteHsmResponse : public CloudHsmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

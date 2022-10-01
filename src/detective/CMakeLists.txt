@@ -1,10 +1,25 @@
 add_compile_definitions(QTAWSDETECTIVE_LIBRARY)
 
 add_library(QtAwsDetective
+  qtawsdetectiveglobal.h
+  detectiveclient.h
+  detectiveclient_p.h
+  detectiverequest.h
+  detectiverequest_p.h
+  detectiveresponse.h
+  detectiveresponse_p.h
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
   acceptinvitationresponse.h
   acceptinvitationresponse_p.h
+  batchgetgraphmemberdatasourcesrequest.h
+  batchgetgraphmemberdatasourcesrequest_p.h
+  batchgetgraphmemberdatasourcesresponse.h
+  batchgetgraphmemberdatasourcesresponse_p.h
+  batchgetmembershipdatasourcesrequest.h
+  batchgetmembershipdatasourcesrequest_p.h
+  batchgetmembershipdatasourcesresponse.h
+  batchgetmembershipdatasourcesresponse_p.h
   creategraphrequest.h
   creategraphrequest_p.h
   creategraphresponse.h
@@ -21,20 +36,30 @@ add_library(QtAwsDetective
   deletemembersrequest_p.h
   deletemembersresponse.h
   deletemembersresponse_p.h
-  detectiveclient.h
-  detectiveclient_p.h
-  detectiverequest.h
-  detectiverequest_p.h
-  detectiveresponse.h
-  detectiveresponse_p.h
+  describeorganizationconfigurationrequest.h
+  describeorganizationconfigurationrequest_p.h
+  describeorganizationconfigurationresponse.h
+  describeorganizationconfigurationresponse_p.h
+  disableorganizationadminaccountrequest.h
+  disableorganizationadminaccountrequest_p.h
+  disableorganizationadminaccountresponse.h
+  disableorganizationadminaccountresponse_p.h
   disassociatemembershiprequest.h
   disassociatemembershiprequest_p.h
   disassociatemembershipresponse.h
   disassociatemembershipresponse_p.h
+  enableorganizationadminaccountrequest.h
+  enableorganizationadminaccountrequest_p.h
+  enableorganizationadminaccountresponse.h
+  enableorganizationadminaccountresponse_p.h
   getmembersrequest.h
   getmembersrequest_p.h
   getmembersresponse.h
   getmembersresponse_p.h
+  listdatasourcepackagesrequest.h
+  listdatasourcepackagesrequest_p.h
+  listdatasourcepackagesresponse.h
+  listdatasourcepackagesresponse_p.h
   listgraphsrequest.h
   listgraphsrequest_p.h
   listgraphsresponse.h
@@ -47,11 +72,14 @@ add_library(QtAwsDetective
   listmembersrequest_p.h
   listmembersresponse.h
   listmembersresponse_p.h
+  listorganizationadminaccountsrequest.h
+  listorganizationadminaccountsrequest_p.h
+  listorganizationadminaccountsresponse.h
+  listorganizationadminaccountsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsdetectiveglobal.h
   rejectinvitationrequest.h
   rejectinvitationrequest_p.h
   rejectinvitationresponse.h
@@ -68,8 +96,23 @@ add_library(QtAwsDetective
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatedatasourcepackagesrequest.h
+  updatedatasourcepackagesrequest_p.h
+  updatedatasourcepackagesresponse.h
+  updatedatasourcepackagesresponse_p.h
+  updateorganizationconfigurationrequest.h
+  updateorganizationconfigurationrequest_p.h
+  updateorganizationconfigurationresponse.h
+  updateorganizationconfigurationresponse_p.h
+  detectiveclient.cpp
+  detectiverequest.cpp
+  detectiveresponse.cpp
   acceptinvitationrequest.cpp
   acceptinvitationresponse.cpp
+  batchgetgraphmemberdatasourcesrequest.cpp
+  batchgetgraphmemberdatasourcesresponse.cpp
+  batchgetmembershipdatasourcesrequest.cpp
+  batchgetmembershipdatasourcesresponse.cpp
   creategraphrequest.cpp
   creategraphresponse.cpp
   createmembersrequest.cpp
@@ -78,19 +121,26 @@ add_library(QtAwsDetective
   deletegraphresponse.cpp
   deletemembersrequest.cpp
   deletemembersresponse.cpp
-  detectiveclient.cpp
-  detectiverequest.cpp
-  detectiveresponse.cpp
+  describeorganizationconfigurationrequest.cpp
+  describeorganizationconfigurationresponse.cpp
+  disableorganizationadminaccountrequest.cpp
+  disableorganizationadminaccountresponse.cpp
   disassociatemembershiprequest.cpp
   disassociatemembershipresponse.cpp
+  enableorganizationadminaccountrequest.cpp
+  enableorganizationadminaccountresponse.cpp
   getmembersrequest.cpp
   getmembersresponse.cpp
+  listdatasourcepackagesrequest.cpp
+  listdatasourcepackagesresponse.cpp
   listgraphsrequest.cpp
   listgraphsresponse.cpp
   listinvitationsrequest.cpp
   listinvitationsresponse.cpp
   listmembersrequest.cpp
   listmembersresponse.cpp
+  listorganizationadminaccountsrequest.cpp
+  listorganizationadminaccountsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   rejectinvitationrequest.cpp
@@ -100,7 +150,11 @@ add_library(QtAwsDetective
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updatedatasourcepackagesrequest.cpp
+  updatedatasourcepackagesresponse.cpp
+  updateorganizationconfigurationrequest.cpp
+  updateorganizationconfigurationresponse.cpp)
 
 target_link_libraries(QtAwsDetective
   PRIVATE QtAwsCore

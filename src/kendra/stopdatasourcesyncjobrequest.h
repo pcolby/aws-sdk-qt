@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class StopDataSourceSyncJobRequestPrivate;
 
-class QTAWSKENDRA_EXPORT StopDataSourceSyncJobRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT StopDataSourceSyncJobRequest : public KendraRequest {
 
 public:
     StopDataSourceSyncJobRequest(const StopDataSourceSyncJobRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

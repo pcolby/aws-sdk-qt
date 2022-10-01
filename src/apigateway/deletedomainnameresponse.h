@@ -24,11 +24,11 @@
 #include "deletedomainnamerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteDomainNameResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT DeleteDomainNameResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteDomainNameResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

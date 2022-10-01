@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateVpcLinkRequest
- * \brief The UpdateVpcLinkRequest class provides an interface for APIGateway UpdateVpcLink requests.
+ * \class QtAws::ApiGateway::UpdateVpcLinkRequest
+ * \brief The UpdateVpcLinkRequest class provides an interface for ApiGateway UpdateVpcLink requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateVpcLink
+ * \sa ApiGatewayClient::updateVpcLink
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
-    : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateVpcLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
  * Constructs a UpdateVpcLinkRequest object.
  */
 UpdateVpcLinkRequest::UpdateVpcLinkRequest()
-    : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(APIGatewayRequest::UpdateVpcLinkAction, this))
+    : ApiGatewayRequest(new UpdateVpcLinkRequestPrivate(ApiGatewayRequest::UpdateVpcLinkAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateVpcLinkRequestPrivate
+ * \class QtAws::ApiGateway::UpdateVpcLinkRequestPrivate
  * \brief The UpdateVpcLinkRequestPrivate class provides private implementation for UpdateVpcLinkRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateVpcLinkRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateVpcLinkRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateVpcLinkRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const UpdateVpcLinkRequestPrivate &other, UpdateVpcLinkRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

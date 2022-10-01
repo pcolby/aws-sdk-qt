@@ -1,6 +1,21 @@
 add_compile_definitions(QTAWSKENDRA_LIBRARY)
 
-add_library(QtAwskendra
+add_library(QtAwsKendra
+  qtawskendraglobal.h
+  kendraclient.h
+  kendraclient_p.h
+  kendrarequest.h
+  kendrarequest_p.h
+  kendraresponse.h
+  kendraresponse_p.h
+  associateentitiestoexperiencerequest.h
+  associateentitiestoexperiencerequest_p.h
+  associateentitiestoexperienceresponse.h
+  associateentitiestoexperienceresponse_p.h
+  associatepersonastoentitiesrequest.h
+  associatepersonastoentitiesrequest_p.h
+  associatepersonastoentitiesresponse.h
+  associatepersonastoentitiesresponse_p.h
   batchdeletedocumentrequest.h
   batchdeletedocumentrequest_p.h
   batchdeletedocumentresponse.h
@@ -17,10 +32,18 @@ add_library(QtAwskendra
   clearquerysuggestionsrequest_p.h
   clearquerysuggestionsresponse.h
   clearquerysuggestionsresponse_p.h
+  createaccesscontrolconfigurationrequest.h
+  createaccesscontrolconfigurationrequest_p.h
+  createaccesscontrolconfigurationresponse.h
+  createaccesscontrolconfigurationresponse_p.h
   createdatasourcerequest.h
   createdatasourcerequest_p.h
   createdatasourceresponse.h
   createdatasourceresponse_p.h
+  createexperiencerequest.h
+  createexperiencerequest_p.h
+  createexperienceresponse.h
+  createexperienceresponse_p.h
   createfaqrequest.h
   createfaqrequest_p.h
   createfaqresponse.h
@@ -37,10 +60,18 @@ add_library(QtAwskendra
   createthesaurusrequest_p.h
   createthesaurusresponse.h
   createthesaurusresponse_p.h
+  deleteaccesscontrolconfigurationrequest.h
+  deleteaccesscontrolconfigurationrequest_p.h
+  deleteaccesscontrolconfigurationresponse.h
+  deleteaccesscontrolconfigurationresponse_p.h
   deletedatasourcerequest.h
   deletedatasourcerequest_p.h
   deletedatasourceresponse.h
   deletedatasourceresponse_p.h
+  deleteexperiencerequest.h
+  deleteexperiencerequest_p.h
+  deleteexperienceresponse.h
+  deleteexperienceresponse_p.h
   deletefaqrequest.h
   deletefaqrequest_p.h
   deletefaqresponse.h
@@ -49,6 +80,10 @@ add_library(QtAwskendra
   deleteindexrequest_p.h
   deleteindexresponse.h
   deleteindexresponse_p.h
+  deleteprincipalmappingrequest.h
+  deleteprincipalmappingrequest_p.h
+  deleteprincipalmappingresponse.h
+  deleteprincipalmappingresponse_p.h
   deletequerysuggestionsblocklistrequest.h
   deletequerysuggestionsblocklistrequest_p.h
   deletequerysuggestionsblocklistresponse.h
@@ -57,10 +92,18 @@ add_library(QtAwskendra
   deletethesaurusrequest_p.h
   deletethesaurusresponse.h
   deletethesaurusresponse_p.h
+  describeaccesscontrolconfigurationrequest.h
+  describeaccesscontrolconfigurationrequest_p.h
+  describeaccesscontrolconfigurationresponse.h
+  describeaccesscontrolconfigurationresponse_p.h
   describedatasourcerequest.h
   describedatasourcerequest_p.h
   describedatasourceresponse.h
   describedatasourceresponse_p.h
+  describeexperiencerequest.h
+  describeexperiencerequest_p.h
+  describeexperienceresponse.h
+  describeexperienceresponse_p.h
   describefaqrequest.h
   describefaqrequest_p.h
   describefaqresponse.h
@@ -69,6 +112,10 @@ add_library(QtAwskendra
   describeindexrequest_p.h
   describeindexresponse.h
   describeindexresponse_p.h
+  describeprincipalmappingrequest.h
+  describeprincipalmappingrequest_p.h
+  describeprincipalmappingresponse.h
+  describeprincipalmappingresponse_p.h
   describequerysuggestionsblocklistrequest.h
   describequerysuggestionsblocklistrequest_p.h
   describequerysuggestionsblocklistresponse.h
@@ -81,28 +128,54 @@ add_library(QtAwskendra
   describethesaurusrequest_p.h
   describethesaurusresponse.h
   describethesaurusresponse_p.h
+  disassociateentitiesfromexperiencerequest.h
+  disassociateentitiesfromexperiencerequest_p.h
+  disassociateentitiesfromexperienceresponse.h
+  disassociateentitiesfromexperienceresponse_p.h
+  disassociatepersonasfromentitiesrequest.h
+  disassociatepersonasfromentitiesrequest_p.h
+  disassociatepersonasfromentitiesresponse.h
+  disassociatepersonasfromentitiesresponse_p.h
   getquerysuggestionsrequest.h
   getquerysuggestionsrequest_p.h
   getquerysuggestionsresponse.h
   getquerysuggestionsresponse_p.h
-  kendraclient.h
-  kendraclient_p.h
-  kendrarequest.h
-  kendrarequest_p.h
-  kendraresponse.h
-  kendraresponse_p.h
-  listdatasourcesrequest.h
-  listdatasourcesrequest_p.h
-  listdatasourcesresponse.h
-  listdatasourcesresponse_p.h
+  getsnapshotsrequest.h
+  getsnapshotsrequest_p.h
+  getsnapshotsresponse.h
+  getsnapshotsresponse_p.h
+  listaccesscontrolconfigurationsrequest.h
+  listaccesscontrolconfigurationsrequest_p.h
+  listaccesscontrolconfigurationsresponse.h
+  listaccesscontrolconfigurationsresponse_p.h
   listdatasourcesyncjobsrequest.h
   listdatasourcesyncjobsrequest_p.h
   listdatasourcesyncjobsresponse.h
   listdatasourcesyncjobsresponse_p.h
+  listdatasourcesrequest.h
+  listdatasourcesrequest_p.h
+  listdatasourcesresponse.h
+  listdatasourcesresponse_p.h
+  listentitypersonasrequest.h
+  listentitypersonasrequest_p.h
+  listentitypersonasresponse.h
+  listentitypersonasresponse_p.h
+  listexperienceentitiesrequest.h
+  listexperienceentitiesrequest_p.h
+  listexperienceentitiesresponse.h
+  listexperienceentitiesresponse_p.h
+  listexperiencesrequest.h
+  listexperiencesrequest_p.h
+  listexperiencesresponse.h
+  listexperiencesresponse_p.h
   listfaqsrequest.h
   listfaqsrequest_p.h
   listfaqsresponse.h
   listfaqsresponse_p.h
+  listgroupsolderthanorderingidrequest.h
+  listgroupsolderthanorderingidrequest_p.h
+  listgroupsolderthanorderingidresponse.h
+  listgroupsolderthanorderingidresponse_p.h
   listindicesrequest.h
   listindicesrequest_p.h
   listindicesresponse.h
@@ -119,7 +192,10 @@ add_library(QtAwskendra
   listthesaurirequest_p.h
   listthesauriresponse.h
   listthesauriresponse_p.h
-  qtawskendraglobal.h
+  putprincipalmappingrequest.h
+  putprincipalmappingrequest_p.h
+  putprincipalmappingresponse.h
+  putprincipalmappingresponse_p.h
   queryrequest.h
   queryrequest_p.h
   queryresponse.h
@@ -144,10 +220,18 @@ add_library(QtAwskendra
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateaccesscontrolconfigurationrequest.h
+  updateaccesscontrolconfigurationrequest_p.h
+  updateaccesscontrolconfigurationresponse.h
+  updateaccesscontrolconfigurationresponse_p.h
   updatedatasourcerequest.h
   updatedatasourcerequest_p.h
   updatedatasourceresponse.h
   updatedatasourceresponse_p.h
+  updateexperiencerequest.h
+  updateexperiencerequest_p.h
+  updateexperienceresponse.h
+  updateexperienceresponse_p.h
   updateindexrequest.h
   updateindexrequest_p.h
   updateindexresponse.h
@@ -164,6 +248,13 @@ add_library(QtAwskendra
   updatethesaurusrequest_p.h
   updatethesaurusresponse.h
   updatethesaurusresponse_p.h
+  kendraclient.cpp
+  kendrarequest.cpp
+  kendraresponse.cpp
+  associateentitiestoexperiencerequest.cpp
+  associateentitiestoexperienceresponse.cpp
+  associatepersonastoentitiesrequest.cpp
+  associatepersonastoentitiesresponse.cpp
   batchdeletedocumentrequest.cpp
   batchdeletedocumentresponse.cpp
   batchgetdocumentstatusrequest.cpp
@@ -172,8 +263,12 @@ add_library(QtAwskendra
   batchputdocumentresponse.cpp
   clearquerysuggestionsrequest.cpp
   clearquerysuggestionsresponse.cpp
+  createaccesscontrolconfigurationrequest.cpp
+  createaccesscontrolconfigurationresponse.cpp
   createdatasourcerequest.cpp
   createdatasourceresponse.cpp
+  createexperiencerequest.cpp
+  createexperienceresponse.cpp
   createfaqrequest.cpp
   createfaqresponse.cpp
   createindexrequest.cpp
@@ -182,39 +277,64 @@ add_library(QtAwskendra
   createquerysuggestionsblocklistresponse.cpp
   createthesaurusrequest.cpp
   createthesaurusresponse.cpp
+  deleteaccesscontrolconfigurationrequest.cpp
+  deleteaccesscontrolconfigurationresponse.cpp
   deletedatasourcerequest.cpp
   deletedatasourceresponse.cpp
+  deleteexperiencerequest.cpp
+  deleteexperienceresponse.cpp
   deletefaqrequest.cpp
   deletefaqresponse.cpp
   deleteindexrequest.cpp
   deleteindexresponse.cpp
+  deleteprincipalmappingrequest.cpp
+  deleteprincipalmappingresponse.cpp
   deletequerysuggestionsblocklistrequest.cpp
   deletequerysuggestionsblocklistresponse.cpp
   deletethesaurusrequest.cpp
   deletethesaurusresponse.cpp
+  describeaccesscontrolconfigurationrequest.cpp
+  describeaccesscontrolconfigurationresponse.cpp
   describedatasourcerequest.cpp
   describedatasourceresponse.cpp
+  describeexperiencerequest.cpp
+  describeexperienceresponse.cpp
   describefaqrequest.cpp
   describefaqresponse.cpp
   describeindexrequest.cpp
   describeindexresponse.cpp
+  describeprincipalmappingrequest.cpp
+  describeprincipalmappingresponse.cpp
   describequerysuggestionsblocklistrequest.cpp
   describequerysuggestionsblocklistresponse.cpp
   describequerysuggestionsconfigrequest.cpp
   describequerysuggestionsconfigresponse.cpp
   describethesaurusrequest.cpp
   describethesaurusresponse.cpp
+  disassociateentitiesfromexperiencerequest.cpp
+  disassociateentitiesfromexperienceresponse.cpp
+  disassociatepersonasfromentitiesrequest.cpp
+  disassociatepersonasfromentitiesresponse.cpp
   getquerysuggestionsrequest.cpp
   getquerysuggestionsresponse.cpp
-  kendraclient.cpp
-  kendrarequest.cpp
-  kendraresponse.cpp
-  listdatasourcesrequest.cpp
-  listdatasourcesresponse.cpp
+  getsnapshotsrequest.cpp
+  getsnapshotsresponse.cpp
+  listaccesscontrolconfigurationsrequest.cpp
+  listaccesscontrolconfigurationsresponse.cpp
   listdatasourcesyncjobsrequest.cpp
   listdatasourcesyncjobsresponse.cpp
+  listdatasourcesrequest.cpp
+  listdatasourcesresponse.cpp
+  listentitypersonasrequest.cpp
+  listentitypersonasresponse.cpp
+  listexperienceentitiesrequest.cpp
+  listexperienceentitiesresponse.cpp
+  listexperiencesrequest.cpp
+  listexperiencesresponse.cpp
   listfaqsrequest.cpp
   listfaqsresponse.cpp
+  listgroupsolderthanorderingidrequest.cpp
+  listgroupsolderthanorderingidresponse.cpp
   listindicesrequest.cpp
   listindicesresponse.cpp
   listquerysuggestionsblocklistsrequest.cpp
@@ -223,6 +343,8 @@ add_library(QtAwskendra
   listtagsforresourceresponse.cpp
   listthesaurirequest.cpp
   listthesauriresponse.cpp
+  putprincipalmappingrequest.cpp
+  putprincipalmappingresponse.cpp
   queryrequest.cpp
   queryresponse.cpp
   startdatasourcesyncjobrequest.cpp
@@ -235,8 +357,12 @@ add_library(QtAwskendra
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateaccesscontrolconfigurationrequest.cpp
+  updateaccesscontrolconfigurationresponse.cpp
   updatedatasourcerequest.cpp
   updatedatasourceresponse.cpp
+  updateexperiencerequest.cpp
+  updateexperienceresponse.cpp
   updateindexrequest.cpp
   updateindexresponse.cpp
   updatequerysuggestionsblocklistrequest.cpp
@@ -246,7 +372,7 @@ add_library(QtAwskendra
   updatethesaurusrequest.cpp
   updatethesaurusresponse.cpp)
 
-target_link_libraries(QtAwskendra
+target_link_libraries(QtAwsKendra
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

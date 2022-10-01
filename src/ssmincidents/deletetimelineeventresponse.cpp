@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteTimelineEventResponse
- * \brief The DeleteTimelineEventResponse class provides an interace for SSMIncidents DeleteTimelineEvent responses.
+ * \class QtAws::SsmIncidents::DeleteTimelineEventResponse
+ * \brief The DeleteTimelineEventResponse class provides an interace for SsmIncidents DeleteTimelineEvent responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteTimelineEvent
+ * \sa SsmIncidentsClient::deleteTimelineEvent
  */
 
 /*!
@@ -54,7 +54,7 @@ DeleteTimelineEventResponse::DeleteTimelineEventResponse(
         const DeleteTimelineEventRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new DeleteTimelineEventResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new DeleteTimelineEventResponsePrivate(this), parent)
 {
     setRequest(new DeleteTimelineEventRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const DeleteTimelineEventRequest * DeleteTimelineEventResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents DeleteTimelineEvent \a response.
+ * Parses a successful SsmIncidents DeleteTimelineEvent \a response.
  */
 void DeleteTimelineEventResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void DeleteTimelineEventResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteTimelineEventResponsePrivate
+ * \class QtAws::SsmIncidents::DeleteTimelineEventResponsePrivate
  * \brief The DeleteTimelineEventResponsePrivate class provides private implementation for DeleteTimelineEventResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a DeleteTimelineEventResponsePrivate object with public implementation \a q.
  */
 DeleteTimelineEventResponsePrivate::DeleteTimelineEventResponsePrivate(
-    DeleteTimelineEventResponse * const q) : SSMIncidentsResponsePrivate(q)
+    DeleteTimelineEventResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents DeleteTimelineEvent response element from \a xml.
+ * Parses a SsmIncidents DeleteTimelineEvent response element from \a xml.
  */
 void DeleteTimelineEventResponsePrivate::parseDeleteTimelineEventResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteTimelineEventResponsePrivate::parseDeleteTimelineEventResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

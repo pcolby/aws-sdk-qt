@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSS3_LIBRARY)
 
 add_library(QtAwsS3
+  qtawss3global.h
+  s3client.h
+  s3client_p.h
+  s3request.h
+  s3request_p.h
+  s3response.h
+  s3response_p.h
   abortmultipartuploadrequest.h
   abortmultipartuploadrequest_p.h
   abortmultipartuploadresponse.h
@@ -21,6 +28,10 @@ add_library(QtAwsS3
   createmultipartuploadrequest_p.h
   createmultipartuploadresponse.h
   createmultipartuploadresponse_p.h
+  deletebucketrequest.h
+  deletebucketrequest_p.h
+  deletebucketresponse.h
+  deletebucketresponse_p.h
   deletebucketanalyticsconfigurationrequest.h
   deletebucketanalyticsconfigurationrequest_p.h
   deletebucketanalyticsconfigurationresponse.h
@@ -61,10 +72,6 @@ add_library(QtAwsS3
   deletebucketreplicationrequest_p.h
   deletebucketreplicationresponse.h
   deletebucketreplicationresponse_p.h
-  deletebucketrequest.h
-  deletebucketrequest_p.h
-  deletebucketresponse.h
-  deletebucketresponse_p.h
   deletebuckettaggingrequest.h
   deletebuckettaggingrequest_p.h
   deletebuckettaggingresponse.h
@@ -77,14 +84,14 @@ add_library(QtAwsS3
   deleteobjectrequest_p.h
   deleteobjectresponse.h
   deleteobjectresponse_p.h
-  deleteobjectsrequest.h
-  deleteobjectsrequest_p.h
-  deleteobjectsresponse.h
-  deleteobjectsresponse_p.h
   deleteobjecttaggingrequest.h
   deleteobjecttaggingrequest_p.h
   deleteobjecttaggingresponse.h
   deleteobjecttaggingresponse_p.h
+  deleteobjectsrequest.h
+  deleteobjectsrequest_p.h
+  deleteobjectsresponse.h
+  deleteobjectsresponse_p.h
   deletepublicaccessblockrequest.h
   deletepublicaccessblockrequest_p.h
   deletepublicaccessblockresponse.h
@@ -121,10 +128,6 @@ add_library(QtAwsS3
   getbucketlifecycleconfigurationrequest_p.h
   getbucketlifecycleconfigurationresponse.h
   getbucketlifecycleconfigurationresponse_p.h
-  getbucketlifecyclerequest.h
-  getbucketlifecyclerequest_p.h
-  getbucketlifecycleresponse.h
-  getbucketlifecycleresponse_p.h
   getbucketlocationrequest.h
   getbucketlocationrequest_p.h
   getbucketlocationresponse.h
@@ -141,10 +144,6 @@ add_library(QtAwsS3
   getbucketnotificationconfigurationrequest_p.h
   getbucketnotificationconfigurationresponse.h
   getbucketnotificationconfigurationresponse_p.h
-  getbucketnotificationrequest.h
-  getbucketnotificationrequest_p.h
-  getbucketnotificationresponse.h
-  getbucketnotificationresponse_p.h
   getbucketownershipcontrolsrequest.h
   getbucketownershipcontrolsrequest_p.h
   getbucketownershipcontrolsresponse.h
@@ -177,10 +176,18 @@ add_library(QtAwsS3
   getbucketwebsiterequest_p.h
   getbucketwebsiteresponse.h
   getbucketwebsiteresponse_p.h
+  getobjectrequest.h
+  getobjectrequest_p.h
+  getobjectresponse.h
+  getobjectresponse_p.h
   getobjectaclrequest.h
   getobjectaclrequest_p.h
   getobjectaclresponse.h
   getobjectaclresponse_p.h
+  getobjectattributesrequest.h
+  getobjectattributesrequest_p.h
+  getobjectattributesresponse.h
+  getobjectattributesresponse_p.h
   getobjectlegalholdrequest.h
   getobjectlegalholdrequest_p.h
   getobjectlegalholdresponse.h
@@ -189,10 +196,6 @@ add_library(QtAwsS3
   getobjectlockconfigurationrequest_p.h
   getobjectlockconfigurationresponse.h
   getobjectlockconfigurationresponse_p.h
-  getobjectrequest.h
-  getobjectrequest_p.h
-  getobjectresponse.h
-  getobjectresponse_p.h
   getobjectretentionrequest.h
   getobjectretentionrequest_p.h
   getobjectretentionresponse.h
@@ -241,6 +244,10 @@ add_library(QtAwsS3
   listmultipartuploadsrequest_p.h
   listmultipartuploadsresponse.h
   listmultipartuploadsresponse_p.h
+  listobjectversionsrequest.h
+  listobjectversionsrequest_p.h
+  listobjectversionsresponse.h
+  listobjectversionsresponse_p.h
   listobjectsrequest.h
   listobjectsrequest_p.h
   listobjectsresponse.h
@@ -249,10 +256,6 @@ add_library(QtAwsS3
   listobjectsv2request_p.h
   listobjectsv2response.h
   listobjectsv2response_p.h
-  listobjectversionsrequest.h
-  listobjectversionsrequest_p.h
-  listobjectversionsresponse.h
-  listobjectversionsresponse_p.h
   listpartsrequest.h
   listpartsrequest_p.h
   listpartsresponse.h
@@ -289,10 +292,6 @@ add_library(QtAwsS3
   putbucketlifecycleconfigurationrequest_p.h
   putbucketlifecycleconfigurationresponse.h
   putbucketlifecycleconfigurationresponse_p.h
-  putbucketlifecyclerequest.h
-  putbucketlifecyclerequest_p.h
-  putbucketlifecycleresponse.h
-  putbucketlifecycleresponse_p.h
   putbucketloggingrequest.h
   putbucketloggingrequest_p.h
   putbucketloggingresponse.h
@@ -305,10 +304,6 @@ add_library(QtAwsS3
   putbucketnotificationconfigurationrequest_p.h
   putbucketnotificationconfigurationresponse.h
   putbucketnotificationconfigurationresponse_p.h
-  putbucketnotificationrequest.h
-  putbucketnotificationrequest_p.h
-  putbucketnotificationresponse.h
-  putbucketnotificationresponse_p.h
   putbucketownershipcontrolsrequest.h
   putbucketownershipcontrolsrequest_p.h
   putbucketownershipcontrolsresponse.h
@@ -337,6 +332,10 @@ add_library(QtAwsS3
   putbucketwebsiterequest_p.h
   putbucketwebsiteresponse.h
   putbucketwebsiteresponse_p.h
+  putobjectrequest.h
+  putobjectrequest_p.h
+  putobjectresponse.h
+  putobjectresponse_p.h
   putobjectaclrequest.h
   putobjectaclrequest_p.h
   putobjectaclresponse.h
@@ -349,10 +348,6 @@ add_library(QtAwsS3
   putobjectlockconfigurationrequest_p.h
   putobjectlockconfigurationresponse.h
   putobjectlockconfigurationresponse_p.h
-  putobjectrequest.h
-  putobjectrequest_p.h
-  putobjectresponse.h
-  putobjectresponse_p.h
   putobjectretentionrequest.h
   putobjectretentionrequest_p.h
   putobjectretentionresponse.h
@@ -365,33 +360,29 @@ add_library(QtAwsS3
   putpublicaccessblockrequest_p.h
   putpublicaccessblockresponse.h
   putpublicaccessblockresponse_p.h
-  qtawss3global.h
   restoreobjectrequest.h
   restoreobjectrequest_p.h
   restoreobjectresponse.h
   restoreobjectresponse_p.h
-  s3client.h
-  s3client_p.h
-  s3request.h
-  s3request_p.h
-  s3response.h
-  s3response_p.h
   selectobjectcontentrequest.h
   selectobjectcontentrequest_p.h
   selectobjectcontentresponse.h
   selectobjectcontentresponse_p.h
-  uploadpartcopyrequest.h
-  uploadpartcopyrequest_p.h
-  uploadpartcopyresponse.h
-  uploadpartcopyresponse_p.h
   uploadpartrequest.h
   uploadpartrequest_p.h
   uploadpartresponse.h
   uploadpartresponse_p.h
+  uploadpartcopyrequest.h
+  uploadpartcopyrequest_p.h
+  uploadpartcopyresponse.h
+  uploadpartcopyresponse_p.h
   writegetobjectresponserequest.h
   writegetobjectresponserequest_p.h
   writegetobjectresponseresponse.h
   writegetobjectresponseresponse_p.h
+  s3client.cpp
+  s3request.cpp
+  s3response.cpp
   abortmultipartuploadrequest.cpp
   abortmultipartuploadresponse.cpp
   completemultipartuploadrequest.cpp
@@ -402,6 +393,8 @@ add_library(QtAwsS3
   createbucketresponse.cpp
   createmultipartuploadrequest.cpp
   createmultipartuploadresponse.cpp
+  deletebucketrequest.cpp
+  deletebucketresponse.cpp
   deletebucketanalyticsconfigurationrequest.cpp
   deletebucketanalyticsconfigurationresponse.cpp
   deletebucketcorsrequest.cpp
@@ -422,18 +415,16 @@ add_library(QtAwsS3
   deletebucketpolicyresponse.cpp
   deletebucketreplicationrequest.cpp
   deletebucketreplicationresponse.cpp
-  deletebucketrequest.cpp
-  deletebucketresponse.cpp
   deletebuckettaggingrequest.cpp
   deletebuckettaggingresponse.cpp
   deletebucketwebsiterequest.cpp
   deletebucketwebsiteresponse.cpp
   deleteobjectrequest.cpp
   deleteobjectresponse.cpp
-  deleteobjectsrequest.cpp
-  deleteobjectsresponse.cpp
   deleteobjecttaggingrequest.cpp
   deleteobjecttaggingresponse.cpp
+  deleteobjectsrequest.cpp
+  deleteobjectsresponse.cpp
   deletepublicaccessblockrequest.cpp
   deletepublicaccessblockresponse.cpp
   getbucketaccelerateconfigurationrequest.cpp
@@ -452,8 +443,6 @@ add_library(QtAwsS3
   getbucketinventoryconfigurationresponse.cpp
   getbucketlifecycleconfigurationrequest.cpp
   getbucketlifecycleconfigurationresponse.cpp
-  getbucketlifecyclerequest.cpp
-  getbucketlifecycleresponse.cpp
   getbucketlocationrequest.cpp
   getbucketlocationresponse.cpp
   getbucketloggingrequest.cpp
@@ -462,8 +451,6 @@ add_library(QtAwsS3
   getbucketmetricsconfigurationresponse.cpp
   getbucketnotificationconfigurationrequest.cpp
   getbucketnotificationconfigurationresponse.cpp
-  getbucketnotificationrequest.cpp
-  getbucketnotificationresponse.cpp
   getbucketownershipcontrolsrequest.cpp
   getbucketownershipcontrolsresponse.cpp
   getbucketpolicyrequest.cpp
@@ -480,14 +467,16 @@ add_library(QtAwsS3
   getbucketversioningresponse.cpp
   getbucketwebsiterequest.cpp
   getbucketwebsiteresponse.cpp
+  getobjectrequest.cpp
+  getobjectresponse.cpp
   getobjectaclrequest.cpp
   getobjectaclresponse.cpp
+  getobjectattributesrequest.cpp
+  getobjectattributesresponse.cpp
   getobjectlegalholdrequest.cpp
   getobjectlegalholdresponse.cpp
   getobjectlockconfigurationrequest.cpp
   getobjectlockconfigurationresponse.cpp
-  getobjectrequest.cpp
-  getobjectresponse.cpp
   getobjectretentionrequest.cpp
   getobjectretentionresponse.cpp
   getobjecttaggingrequest.cpp
@@ -512,12 +501,12 @@ add_library(QtAwsS3
   listbucketsresponse.cpp
   listmultipartuploadsrequest.cpp
   listmultipartuploadsresponse.cpp
+  listobjectversionsrequest.cpp
+  listobjectversionsresponse.cpp
   listobjectsrequest.cpp
   listobjectsresponse.cpp
   listobjectsv2request.cpp
   listobjectsv2response.cpp
-  listobjectversionsrequest.cpp
-  listobjectversionsresponse.cpp
   listpartsrequest.cpp
   listpartsresponse.cpp
   putbucketaccelerateconfigurationrequest.cpp
@@ -536,16 +525,12 @@ add_library(QtAwsS3
   putbucketinventoryconfigurationresponse.cpp
   putbucketlifecycleconfigurationrequest.cpp
   putbucketlifecycleconfigurationresponse.cpp
-  putbucketlifecyclerequest.cpp
-  putbucketlifecycleresponse.cpp
   putbucketloggingrequest.cpp
   putbucketloggingresponse.cpp
   putbucketmetricsconfigurationrequest.cpp
   putbucketmetricsconfigurationresponse.cpp
   putbucketnotificationconfigurationrequest.cpp
   putbucketnotificationconfigurationresponse.cpp
-  putbucketnotificationrequest.cpp
-  putbucketnotificationresponse.cpp
   putbucketownershipcontrolsrequest.cpp
   putbucketownershipcontrolsresponse.cpp
   putbucketpolicyrequest.cpp
@@ -560,14 +545,14 @@ add_library(QtAwsS3
   putbucketversioningresponse.cpp
   putbucketwebsiterequest.cpp
   putbucketwebsiteresponse.cpp
+  putobjectrequest.cpp
+  putobjectresponse.cpp
   putobjectaclrequest.cpp
   putobjectaclresponse.cpp
   putobjectlegalholdrequest.cpp
   putobjectlegalholdresponse.cpp
   putobjectlockconfigurationrequest.cpp
   putobjectlockconfigurationresponse.cpp
-  putobjectrequest.cpp
-  putobjectresponse.cpp
   putobjectretentionrequest.cpp
   putobjectretentionresponse.cpp
   putobjecttaggingrequest.cpp
@@ -576,15 +561,12 @@ add_library(QtAwsS3
   putpublicaccessblockresponse.cpp
   restoreobjectrequest.cpp
   restoreobjectresponse.cpp
-  s3client.cpp
-  s3request.cpp
-  s3response.cpp
   selectobjectcontentrequest.cpp
   selectobjectcontentresponse.cpp
-  uploadpartcopyrequest.cpp
-  uploadpartcopyresponse.cpp
   uploadpartrequest.cpp
   uploadpartresponse.cpp
+  uploadpartcopyrequest.cpp
+  uploadpartcopyresponse.cpp
   writegetobjectresponserequest.cpp
   writegetobjectresponseresponse.cpp)
 

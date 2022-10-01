@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateStageResponse
- * \brief The UpdateStageResponse class provides an interace for APIGateway UpdateStage responses.
+ * \class QtAws::ApiGateway::UpdateStageResponse
+ * \brief The UpdateStageResponse class provides an interace for ApiGateway UpdateStage responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateStage
+ * \sa ApiGatewayClient::updateStage
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateStageResponse::UpdateStageResponse(
         const UpdateStageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateStageResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateStageResponsePrivate(this), parent)
 {
     setRequest(new UpdateStageRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateStageRequest * UpdateStageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateStage \a response.
+ * Parses a successful ApiGateway UpdateStage \a response.
  */
 void UpdateStageResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateStageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateStageResponsePrivate
+ * \class QtAws::ApiGateway::UpdateStageResponsePrivate
  * \brief The UpdateStageResponsePrivate class provides private implementation for UpdateStageResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateStageResponsePrivate object with public implementation \a q.
  */
 UpdateStageResponsePrivate::UpdateStageResponsePrivate(
-    UpdateStageResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateStageResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateStage response element from \a xml.
+ * Parses a ApiGateway UpdateStage response element from \a xml.
  */
 void UpdateStageResponsePrivate::parseUpdateStageResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateStageResponsePrivate::parseUpdateStageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

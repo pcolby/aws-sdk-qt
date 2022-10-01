@@ -24,7 +24,7 @@
 #include "restoredbinstancefromdbsnapshotrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class RestoreDBInstanceFromDBSnapshotResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

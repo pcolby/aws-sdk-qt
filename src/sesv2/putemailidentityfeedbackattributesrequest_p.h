@@ -24,14 +24,14 @@
 #include "putemailidentityfeedbackattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutEmailIdentityFeedbackAttributesRequest;
 
-class PutEmailIdentityFeedbackAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutEmailIdentityFeedbackAttributesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutEmailIdentityFeedbackAttributesRequestPrivate(const Sesv2Request::Action action,
+    PutEmailIdentityFeedbackAttributesRequestPrivate(const SESv2Request::Action action,
                                    PutEmailIdentityFeedbackAttributesRequest * const q);
     PutEmailIdentityFeedbackAttributesRequestPrivate(const PutEmailIdentityFeedbackAttributesRequestPrivate &other,
                                    PutEmailIdentityFeedbackAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

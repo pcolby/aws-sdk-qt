@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::ListJobRunsResponse
- * \brief The ListJobRunsResponse class provides an interace for EMRContainers ListJobRuns responses.
+ * \class QtAws::Emrcontainers::ListJobRunsResponse
+ * \brief The ListJobRunsResponse class provides an interace for Emrcontainers ListJobRuns responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::listJobRuns
+ * \sa EmrcontainersClient::listJobRuns
  */
 
 /*!
@@ -72,7 +72,7 @@ ListJobRunsResponse::ListJobRunsResponse(
         const ListJobRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new ListJobRunsResponsePrivate(this), parent)
+    : EmrcontainersResponse(new ListJobRunsResponsePrivate(this), parent)
 {
     setRequest(new ListJobRunsRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const ListJobRunsRequest * ListJobRunsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers ListJobRuns \a response.
+ * Parses a successful Emrcontainers ListJobRuns \a response.
  */
 void ListJobRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void ListJobRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::ListJobRunsResponsePrivate
+ * \class QtAws::Emrcontainers::ListJobRunsResponsePrivate
  * \brief The ListJobRunsResponsePrivate class provides private implementation for ListJobRunsResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a ListJobRunsResponsePrivate object with public implementation \a q.
  */
 ListJobRunsResponsePrivate::ListJobRunsResponsePrivate(
-    ListJobRunsResponse * const q) : EMRContainersResponsePrivate(q)
+    ListJobRunsResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers ListJobRuns response element from \a xml.
+ * Parses a Emrcontainers ListJobRuns response element from \a xml.
  */
 void ListJobRunsResponsePrivate::parseListJobRunsResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void ListJobRunsResponsePrivate::parseListJobRunsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteQuerySuggestionsBlockListResponse
- * \brief The DeleteQuerySuggestionsBlockListResponse class provides an interace for kendra DeleteQuerySuggestionsBlockList responses.
+ * \class QtAws::Kendra::DeleteQuerySuggestionsBlockListResponse
+ * \brief The DeleteQuerySuggestionsBlockListResponse class provides an interace for Kendra DeleteQuerySuggestionsBlockList responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteQuerySuggestionsBlockList
+ * \sa KendraClient::deleteQuerySuggestionsBlockList
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteQuerySuggestionsBlockListResponse::DeleteQuerySuggestionsBlockListResponse
         const DeleteQuerySuggestionsBlockListRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DeleteQuerySuggestionsBlockListResponsePrivate(this), parent)
+    : KendraResponse(new DeleteQuerySuggestionsBlockListResponsePrivate(this), parent)
 {
     setRequest(new DeleteQuerySuggestionsBlockListRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteQuerySuggestionsBlockListRequest * DeleteQuerySuggestionsBlockListRe
 
 /*!
  * \reimp
- * Parses a successful kendra DeleteQuerySuggestionsBlockList \a response.
+ * Parses a successful Kendra DeleteQuerySuggestionsBlockList \a response.
  */
 void DeleteQuerySuggestionsBlockListResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteQuerySuggestionsBlockListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DeleteQuerySuggestionsBlockListResponsePrivate
+ * \class QtAws::Kendra::DeleteQuerySuggestionsBlockListResponsePrivate
  * \brief The DeleteQuerySuggestionsBlockListResponsePrivate class provides private implementation for DeleteQuerySuggestionsBlockListResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DeleteQuerySuggestionsBlockListResponsePrivate object with public implementation \a q.
  */
 DeleteQuerySuggestionsBlockListResponsePrivate::DeleteQuerySuggestionsBlockListResponsePrivate(
-    DeleteQuerySuggestionsBlockListResponse * const q) : kendraResponsePrivate(q)
+    DeleteQuerySuggestionsBlockListResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DeleteQuerySuggestionsBlockList response element from \a xml.
+ * Parses a Kendra DeleteQuerySuggestionsBlockList response element from \a xml.
  */
 void DeleteQuerySuggestionsBlockListResponsePrivate::parseDeleteQuerySuggestionsBlockListResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteQuerySuggestionsBlockListResponsePrivate::parseDeleteQuerySuggestions
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

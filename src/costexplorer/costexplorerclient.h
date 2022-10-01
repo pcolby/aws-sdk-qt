@@ -80,14 +80,24 @@ class GetTagsRequest;
 class GetTagsResponse;
 class GetUsageForecastRequest;
 class GetUsageForecastResponse;
+class ListCostAllocationTagsRequest;
+class ListCostAllocationTagsResponse;
 class ListCostCategoryDefinitionsRequest;
 class ListCostCategoryDefinitionsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ProvideAnomalyFeedbackRequest;
 class ProvideAnomalyFeedbackResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateAnomalyMonitorRequest;
 class UpdateAnomalyMonitorResponse;
 class UpdateAnomalySubscriptionRequest;
 class UpdateAnomalySubscriptionResponse;
+class UpdateCostAllocationTagsStatusRequest;
+class UpdateCostAllocationTagsStatusResponse;
 class UpdateCostCategoryDefinitionRequest;
 class UpdateCostCategoryDefinitionResponse;
 
@@ -132,10 +142,15 @@ public slots:
     GetSavingsPlansUtilizationDetailsResponse * getSavingsPlansUtilizationDetails(const GetSavingsPlansUtilizationDetailsRequest &request);
     GetTagsResponse * getTags(const GetTagsRequest &request);
     GetUsageForecastResponse * getUsageForecast(const GetUsageForecastRequest &request);
+    ListCostAllocationTagsResponse * listCostAllocationTags(const ListCostAllocationTagsRequest &request);
     ListCostCategoryDefinitionsResponse * listCostCategoryDefinitions(const ListCostCategoryDefinitionsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ProvideAnomalyFeedbackResponse * provideAnomalyFeedback(const ProvideAnomalyFeedbackRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAnomalyMonitorResponse * updateAnomalyMonitor(const UpdateAnomalyMonitorRequest &request);
     UpdateAnomalySubscriptionResponse * updateAnomalySubscription(const UpdateAnomalySubscriptionRequest &request);
+    UpdateCostAllocationTagsStatusResponse * updateCostAllocationTagsStatus(const UpdateCostAllocationTagsStatusRequest &request);
     UpdateCostCategoryDefinitionResponse * updateCostCategoryDefinition(const UpdateCostCategoryDefinitionRequest &request);
 
 private:

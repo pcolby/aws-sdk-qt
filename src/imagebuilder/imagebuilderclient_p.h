@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderClient;
+class ImageBuilderClient;
 
-class imagebuilderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ImageBuilderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit imagebuilderClientPrivate(imagebuilderClient * const q);
+    explicit ImageBuilderClientPrivate(ImageBuilderClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(imagebuilderClient)
-    Q_DISABLE_COPY(imagebuilderClientPrivate)
+    Q_DECLARE_PUBLIC(ImageBuilderClient)
+    Q_DISABLE_COPY(ImageBuilderClientPrivate)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

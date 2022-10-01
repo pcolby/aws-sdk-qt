@@ -23,11 +23,11 @@
 #include "finspacedatarequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class GetWorkingLocationRequestPrivate;
 
-class QTAWSFINSPACEDATA_EXPORT GetWorkingLocationRequest : public FinSpaceDataRequest {
+class QTAWSFINSPACEDATA_EXPORT GetWorkingLocationRequest : public FinspaceDataRequest {
 
 public:
     GetWorkingLocationRequest(const GetWorkingLocationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

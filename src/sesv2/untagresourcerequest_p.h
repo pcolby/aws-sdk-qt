@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public Sesv2RequestPrivate {
+class UntagResourceRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const Sesv2Request::Action action,
+    UntagResourceRequestPrivate(const SESv2Request::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

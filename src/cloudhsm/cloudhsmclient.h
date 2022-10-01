@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
-class CloudHSMClientPrivate;
+class CloudHsmClientPrivate;
 class AddTagsToResourceRequest;
 class AddTagsToResourceResponse;
 class CreateHapgRequest;
@@ -71,17 +71,17 @@ class ModifyLunaClientResponse;
 class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
 
-class QTAWSCLOUDHSM_EXPORT CloudHSMClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDHSM_EXPORT CloudHsmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    CloudHSMClient(
+    CloudHsmClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit CloudHSMClient(
+    explicit CloudHsmClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -109,12 +109,12 @@ public slots:
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(CloudHSMClient)
-    Q_DISABLE_COPY(CloudHSMClient)
+    Q_DECLARE_PRIVATE(CloudHsmClient)
+    Q_DISABLE_COPY(CloudHsmClient)
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

@@ -42,8 +42,13 @@ namespace HealthLake {
  * \value DescribeFHIRExportJobAction HealthLake DescribeFHIRExportJob action.
  * \value DescribeFHIRImportJobAction HealthLake DescribeFHIRImportJob action.
  * \value ListFHIRDatastoresAction HealthLake ListFHIRDatastores action.
+ * \value ListFHIRExportJobsAction HealthLake ListFHIRExportJobs action.
+ * \value ListFHIRImportJobsAction HealthLake ListFHIRImportJobs action.
+ * \value ListTagsForResourceAction HealthLake ListTagsForResource action.
  * \value StartFHIRExportJobAction HealthLake StartFHIRExportJob action.
  * \value StartFHIRImportJobAction HealthLake StartFHIRImportJob action.
+ * \value TagResourceAction HealthLake TagResource action.
+ * \value UntagResourceAction HealthLake UntagResource action.
  */
 
 /*!
@@ -251,7 +256,7 @@ QNetworkRequest HealthLakeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 HealthLakeRequestPrivate::HealthLakeRequestPrivate(const HealthLakeRequest::Action action, HealthLakeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-01"))
 {
 
 }
@@ -291,8 +296,13 @@ QString HealthLakeRequestPrivate::toString(const HealthLakeRequest::Action &acti
         ActionToString(DescribeFHIRExportJob);
         ActionToString(DescribeFHIRImportJob);
         ActionToString(ListFHIRDatastores);
+        ActionToString(ListFHIRExportJobs);
+        ActionToString(ListFHIRImportJobs);
+        ActionToString(ListTagsForResource);
         ActionToString(StartFHIRExportJob);
         ActionToString(StartFHIRImportJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

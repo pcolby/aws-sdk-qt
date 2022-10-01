@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSFMS_LIBRARY)
 
 add_library(QtAwsFms
+  qtawsfmsglobal.h
+  fmsclient.h
+  fmsclient_p.h
+  fmsrequest.h
+  fmsrequest_p.h
+  fmsresponse.h
+  fmsresponse_p.h
   associateadminaccountrequest.h
   associateadminaccountrequest_p.h
   associateadminaccountresponse.h
   associateadminaccountresponse_p.h
+  associatethirdpartyfirewallrequest.h
+  associatethirdpartyfirewallrequest_p.h
+  associatethirdpartyfirewallresponse.h
+  associatethirdpartyfirewallresponse_p.h
   deleteappslistrequest.h
   deleteappslistrequest_p.h
   deleteappslistresponse.h
@@ -25,12 +36,10 @@ add_library(QtAwsFms
   disassociateadminaccountrequest_p.h
   disassociateadminaccountresponse.h
   disassociateadminaccountresponse_p.h
-  fmsclient.h
-  fmsclient_p.h
-  fmsrequest.h
-  fmsrequest_p.h
-  fmsresponse.h
-  fmsresponse_p.h
+  disassociatethirdpartyfirewallrequest.h
+  disassociatethirdpartyfirewallrequest_p.h
+  disassociatethirdpartyfirewallresponse.h
+  disassociatethirdpartyfirewallresponse_p.h
   getadminaccountrequest.h
   getadminaccountrequest_p.h
   getadminaccountresponse.h
@@ -59,6 +68,10 @@ add_library(QtAwsFms
   getprotocolslistrequest_p.h
   getprotocolslistresponse.h
   getprotocolslistresponse_p.h
+  getthirdpartyfirewallassociationstatusrequest.h
+  getthirdpartyfirewallassociationstatusrequest_p.h
+  getthirdpartyfirewallassociationstatusresponse.h
+  getthirdpartyfirewallassociationstatusresponse_p.h
   getviolationdetailsrequest.h
   getviolationdetailsrequest_p.h
   getviolationdetailsresponse.h
@@ -87,6 +100,10 @@ add_library(QtAwsFms
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listthirdpartyfirewallfirewallpoliciesrequest.h
+  listthirdpartyfirewallfirewallpoliciesrequest_p.h
+  listthirdpartyfirewallfirewallpoliciesresponse.h
+  listthirdpartyfirewallfirewallpoliciesresponse_p.h
   putappslistrequest.h
   putappslistrequest_p.h
   putappslistresponse.h
@@ -103,7 +120,6 @@ add_library(QtAwsFms
   putprotocolslistrequest_p.h
   putprotocolslistresponse.h
   putprotocolslistresponse_p.h
-  qtawsfmsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -112,8 +128,13 @@ add_library(QtAwsFms
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  fmsclient.cpp
+  fmsrequest.cpp
+  fmsresponse.cpp
   associateadminaccountrequest.cpp
   associateadminaccountresponse.cpp
+  associatethirdpartyfirewallrequest.cpp
+  associatethirdpartyfirewallresponse.cpp
   deleteappslistrequest.cpp
   deleteappslistresponse.cpp
   deletenotificationchannelrequest.cpp
@@ -124,9 +145,8 @@ add_library(QtAwsFms
   deleteprotocolslistresponse.cpp
   disassociateadminaccountrequest.cpp
   disassociateadminaccountresponse.cpp
-  fmsclient.cpp
-  fmsrequest.cpp
-  fmsresponse.cpp
+  disassociatethirdpartyfirewallrequest.cpp
+  disassociatethirdpartyfirewallresponse.cpp
   getadminaccountrequest.cpp
   getadminaccountresponse.cpp
   getappslistrequest.cpp
@@ -141,6 +161,8 @@ add_library(QtAwsFms
   getprotectionstatusresponse.cpp
   getprotocolslistrequest.cpp
   getprotocolslistresponse.cpp
+  getthirdpartyfirewallassociationstatusrequest.cpp
+  getthirdpartyfirewallassociationstatusresponse.cpp
   getviolationdetailsrequest.cpp
   getviolationdetailsresponse.cpp
   listappslistsrequest.cpp
@@ -155,6 +177,8 @@ add_library(QtAwsFms
   listprotocolslistsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listthirdpartyfirewallfirewallpoliciesrequest.cpp
+  listthirdpartyfirewallfirewallpoliciesresponse.cpp
   putappslistrequest.cpp
   putappslistresponse.cpp
   putnotificationchannelrequest.cpp

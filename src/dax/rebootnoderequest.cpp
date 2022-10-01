@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::RebootNodeRequest
- * \brief The RebootNodeRequest class provides an interface for DAX RebootNode requests.
+ * \class QtAws::Dax::RebootNodeRequest
+ * \brief The RebootNodeRequest class provides an interface for Dax RebootNode requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::DAX::RebootNodeRequestPrivate
+ * \class QtAws::Dax::RebootNodeRequestPrivate
  * \brief The RebootNodeRequestPrivate class provides private implementation for RebootNodeRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

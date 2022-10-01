@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListWebACLsRequest
- * \brief The ListWebACLsRequest class provides an interface for WAFRegional ListWebACLs requests.
+ * \class QtAws::WafRegional::ListWebACLsRequest
+ * \brief The ListWebACLsRequest class provides an interface for WafRegional ListWebACLs requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listWebACLs
+ * \sa WafRegionalClient::listWebACLs
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
-    : WAFRegionalRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
  * Constructs a ListWebACLsRequest object.
  */
 ListWebACLsRequest::ListWebACLsRequest()
-    : WAFRegionalRequest(new ListWebACLsRequestPrivate(WAFRegionalRequest::ListWebACLsAction, this))
+    : WafRegionalRequest(new ListWebACLsRequestPrivate(WafRegionalRequest::ListWebACLsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAFRegional::ListWebACLsRequestPrivate
+ * \class QtAws::WafRegional::ListWebACLsRequestPrivate
  * \brief The ListWebACLsRequestPrivate class provides private implementation for ListWebACLsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListWebACLsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListWebACLsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListWebACLsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListWebACLsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const ListWebACLsRequestPrivate &other, ListWebACLsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

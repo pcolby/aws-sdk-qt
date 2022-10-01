@@ -24,7 +24,7 @@
 #include "disconnectcustomkeystorerequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class DisconnectCustomKeyStoreResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

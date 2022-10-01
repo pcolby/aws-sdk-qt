@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CloudHSMV2Response
- * \brief The CloudHSMV2Response class provides an interface for CloudHSMV2 responses.
+ * \class QtAws::CloudHsmV2::CloudHsmV2Response
+ * \brief The CloudHsmV2Response class provides an interface for CloudHsmV2 responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a CloudHSMV2Response object with parent \a parent.
+ * Constructs a CloudHsmV2Response object with parent \a parent.
  */
-CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudHSMV2ResponsePrivate(this), parent)
+CloudHsmV2Response::CloudHsmV2Response(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new CloudHsmV2ResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a CloudHSMV2Response object with private implementation \a d,
+ * Constructs a CloudHsmV2Response object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CloudHSMV2ResponsePrivate.
+ * implementation that inherits from CloudHsmV2ResponsePrivate.
  */
-CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObject * const parent)
+CloudHsmV2Response::CloudHsmV2Response(CloudHsmV2ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObj
 /*!
  * \reimp
  */
-void CloudHSMV2Response::parseFailure(QIODevice &response)
+void CloudHsmV2Response::parseFailure(QIODevice &response)
 {
-    //Q_D(CloudHSMV2Response);
+    //Q_D(CloudHsmV2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CloudHSMV2ResponsePrivate
- * \brief The CloudHSMV2ResponsePrivate class provides private implementation for CloudHSMV2Response.
+ * \class QtAws::CloudHsmV2::CloudHsmV2ResponsePrivate
+ * \brief The CloudHsmV2ResponsePrivate class provides private implementation for CloudHsmV2Response.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
- * Constructs a CloudHSMV2ResponsePrivate object with public implementation \a q.
+ * Constructs a CloudHsmV2ResponsePrivate object with public implementation \a q.
  */
-CloudHSMV2ResponsePrivate::CloudHSMV2ResponsePrivate(
-    CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+CloudHsmV2ResponsePrivate::CloudHsmV2ResponsePrivate(
+    CloudHsmV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

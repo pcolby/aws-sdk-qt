@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::TestRenderTemplateResponse
- * \brief The TestRenderTemplateResponse class provides an interace for SES TestRenderTemplate responses.
+ * \class QtAws::Ses::TestRenderTemplateResponse
+ * \brief The TestRenderTemplateResponse class provides an interace for Ses TestRenderTemplate responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES TestRenderTemplate \a response.
+ * Parses a successful Ses TestRenderTemplate \a response.
  */
 void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::TestRenderTemplateResponsePrivate
+ * \class QtAws::Ses::TestRenderTemplateResponsePrivate
  * \brief The TestRenderTemplateResponsePrivate class provides private implementation for TestRenderTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
 }
 
 /*!
- * Parses a SES TestRenderTemplate response element from \a xml.
+ * Parses a Ses TestRenderTemplate response element from \a xml.
  */
 void TestRenderTemplateResponsePrivate::parseTestRenderTemplateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void TestRenderTemplateResponsePrivate::parseTestRenderTemplateResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

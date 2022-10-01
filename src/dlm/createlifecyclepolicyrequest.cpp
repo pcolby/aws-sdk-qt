@@ -23,18 +23,18 @@
 #include "dlmrequest_p.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::CreateLifecyclePolicyRequest
- * \brief The CreateLifecyclePolicyRequest class provides an interface for DLM CreateLifecyclePolicy requests.
+ * \class QtAws::Dlm::CreateLifecyclePolicyRequest
+ * \brief The CreateLifecyclePolicyRequest class provides an interface for Dlm CreateLifecyclePolicy requests.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * CreateLifecyclePolicyRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::DLM::CreateLifecyclePolicyRequestPrivate
+ * \class QtAws::Dlm::CreateLifecyclePolicyRequestPrivate
  * \brief The CreateLifecyclePolicyRequestPrivate class provides private implementation for CreateLifecyclePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -114,5 +114,5 @@ CreateLifecyclePolicyRequestPrivate::CreateLifecyclePolicyRequestPrivate(
 
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

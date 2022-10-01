@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RemoveSourceIdentifierFromSubscriptionResponse
- * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for DocDB RemoveSourceIdentifierFromSubscription responses.
+ * \class QtAws::DocDb::RemoveSourceIdentifierFromSubscriptionResponse
+ * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for DocDb RemoveSourceIdentifierFromSubscription responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::removeSourceIdentifierFromSubscription
+ * \sa DocDbClient::removeSourceIdentifierFromSubscription
  */
 
 /*!
@@ -45,7 +45,7 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
         const RemoveSourceIdentifierFromSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
+    : DocDbResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new RemoveSourceIdentifierFromSubscriptionRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFrom
 
 /*!
  * \reimp
- * Parses a successful DocDB RemoveSourceIdentifierFromSubscription \a response.
+ * Parses a successful DocDb RemoveSourceIdentifierFromSubscription \a response.
  */
 void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::DocDB::RemoveSourceIdentifierFromSubscriptionResponsePrivate
+ * \class QtAws::DocDb::RemoveSourceIdentifierFromSubscriptionResponsePrivate
  * \brief The RemoveSourceIdentifierFromSubscriptionResponsePrivate class provides private implementation for RemoveSourceIdentifierFromSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a RemoveSourceIdentifierFromSubscriptionResponsePrivate object with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponsePrivate(
-    RemoveSourceIdentifierFromSubscriptionResponse * const q) : DocDBResponsePrivate(q)
+    RemoveSourceIdentifierFromSubscriptionResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB RemoveSourceIdentifierFromSubscription response element from \a xml.
+ * Parses a DocDb RemoveSourceIdentifierFromSubscription response element from \a xml.
  */
 void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIde
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListWebACLsRequest
- * \brief The ListWebACLsRequest class provides an interface for WAF ListWebACLs requests.
+ * \class QtAws::Waf::ListWebACLsRequest
+ * \brief The ListWebACLsRequest class provides an interface for Waf ListWebACLs requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAF::ListWebACLsRequestPrivate
+ * \class QtAws::Waf::ListWebACLsRequestPrivate
  * \brief The ListWebACLsRequestPrivate class provides private implementation for ListWebACLsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

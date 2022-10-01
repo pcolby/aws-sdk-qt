@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetSampledRequestsResponse
- * \brief The GetSampledRequestsResponse class provides an interace for WAFRegional GetSampledRequests responses.
+ * \class QtAws::WafRegional::GetSampledRequestsResponse
+ * \brief The GetSampledRequestsResponse class provides an interace for WafRegional GetSampledRequests responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getSampledRequests
+ * \sa WafRegionalClient::getSampledRequests
  */
 
 /*!
@@ -67,7 +67,7 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
         const GetSampledRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetSampledRequestsResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetSampledRequestsResponsePrivate(this), parent)
 {
     setRequest(new GetSampledRequestsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetSampledRequests \a response.
+ * Parses a successful WafRegional GetSampledRequests \a response.
  */
 void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetSampledRequestsResponsePrivate
+ * \class QtAws::WafRegional::GetSampledRequestsResponsePrivate
  * \brief The GetSampledRequestsResponsePrivate class provides private implementation for GetSampledRequestsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetSampledRequestsResponsePrivate object with public implementation \a q.
  */
 GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
-    GetSampledRequestsResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetSampledRequestsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetSampledRequests response element from \a xml.
+ * Parses a WafRegional GetSampledRequests response element from \a xml.
  */
 void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DescribeLedgerResponse
- * \brief The DescribeLedgerResponse class provides an interace for QLDB DescribeLedger responses.
+ * \class QtAws::Qldb::DescribeLedgerResponse
+ * \brief The DescribeLedgerResponse class provides an interace for Qldb DescribeLedger responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const DescribeLedgerRequest * DescribeLedgerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB DescribeLedger \a response.
+ * Parses a successful Qldb DescribeLedger \a response.
  */
 void DescribeLedgerResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void DescribeLedgerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::DescribeLedgerResponsePrivate
+ * \class QtAws::Qldb::DescribeLedgerResponsePrivate
  * \brief The DescribeLedgerResponsePrivate class provides private implementation for DescribeLedgerResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ DescribeLedgerResponsePrivate::DescribeLedgerResponsePrivate(
 }
 
 /*!
- * Parses a QLDB DescribeLedger response element from \a xml.
+ * Parses a Qldb DescribeLedger response element from \a xml.
  */
 void DescribeLedgerResponsePrivate::parseDescribeLedgerResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeLedgerResponsePrivate::parseDescribeLedgerResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

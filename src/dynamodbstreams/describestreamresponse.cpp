@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::DescribeStreamResponse
- * \brief The DescribeStreamResponse class provides an interace for DynamoDBStreams DescribeStream responses.
+ * \class QtAws::DynamoDbStreams::DescribeStreamResponse
+ * \brief The DescribeStreamResponse class provides an interace for DynamoDbStreams DescribeStream responses.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -40,7 +40,7 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::describeStream
+ * \sa DynamoDbStreamsClient::describeStream
  */
 
 /*!
@@ -50,7 +50,7 @@ DescribeStreamResponse::DescribeStreamResponse(
         const DescribeStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBStreamsResponse(new DescribeStreamResponsePrivate(this), parent)
+    : DynamoDbStreamsResponse(new DescribeStreamResponsePrivate(this), parent)
 {
     setRequest(new DescribeStreamRequest(request));
     setReply(reply);
@@ -67,7 +67,7 @@ const DescribeStreamRequest * DescribeStreamResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDBStreams DescribeStream \a response.
+ * Parses a successful DynamoDbStreams DescribeStream \a response.
  */
 void DescribeStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,24 +77,24 @@ void DescribeStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::DescribeStreamResponsePrivate
+ * \class QtAws::DynamoDbStreams::DescribeStreamResponsePrivate
  * \brief The DescribeStreamResponsePrivate class provides private implementation for DescribeStreamResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
  * Constructs a DescribeStreamResponsePrivate object with public implementation \a q.
  */
 DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
-    DescribeStreamResponse * const q) : DynamoDBStreamsResponsePrivate(q)
+    DescribeStreamResponse * const q) : DynamoDbStreamsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDBStreams DescribeStream response element from \a xml.
+ * Parses a DynamoDbStreams DescribeStream response element from \a xml.
  */
 void DescribeStreamResponsePrivate::parseDescribeStreamResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void DescribeStreamResponsePrivate::parseDescribeStreamResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

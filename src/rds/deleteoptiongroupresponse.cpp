@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteOptionGroupResponse
- * \brief The DeleteOptionGroupResponse class provides an interace for RDS DeleteOptionGroup responses.
+ * \class QtAws::Rds::DeleteOptionGroupResponse
+ * \brief The DeleteOptionGroupResponse class provides an interace for Rds DeleteOptionGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteOptionGroupRequest * DeleteOptionGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteOptionGroup \a response.
+ * Parses a successful Rds DeleteOptionGroup \a response.
  */
 void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteOptionGroupResponsePrivate
+ * \class QtAws::Rds::DeleteOptionGroupResponsePrivate
  * \brief The DeleteOptionGroupResponsePrivate class provides private implementation for DeleteOptionGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS DeleteOptionGroup response element from \a xml.
+ * Parses a Rds DeleteOptionGroup response element from \a xml.
  */
 void DeleteOptionGroupResponsePrivate::parseDeleteOptionGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteOptionGroupResponsePrivate::parseDeleteOptionGroupResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

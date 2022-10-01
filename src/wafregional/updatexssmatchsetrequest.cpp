@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateXssMatchSetRequest
- * \brief The UpdateXssMatchSetRequest class provides an interface for WAFRegional UpdateXssMatchSet requests.
+ * \class QtAws::WafRegional::UpdateXssMatchSetRequest
+ * \brief The UpdateXssMatchSetRequest class provides an interface for WafRegional UpdateXssMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateXssMatchSet
+ * \sa WafRegionalClient::updateXssMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other)
-    : WAFRegionalRequest(new UpdateXssMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateXssMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetReques
  * Constructs a UpdateXssMatchSetRequest object.
  */
 UpdateXssMatchSetRequest::UpdateXssMatchSetRequest()
-    : WAFRegionalRequest(new UpdateXssMatchSetRequestPrivate(WAFRegionalRequest::UpdateXssMatchSetAction, this))
+    : WafRegionalRequest(new UpdateXssMatchSetRequestPrivate(WafRegionalRequest::UpdateXssMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateXssMatchSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateXssMatchSetRequestPrivate
  * \brief The UpdateXssMatchSetRequestPrivate class provides private implementation for UpdateXssMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateXssMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateXssMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateXssMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
  */
 UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
     const UpdateXssMatchSetRequestPrivate &other, UpdateXssMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

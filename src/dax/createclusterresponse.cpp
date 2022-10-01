@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::CreateClusterResponse
- * \brief The CreateClusterResponse class provides an interace for DAX CreateCluster responses.
+ * \class QtAws::Dax::CreateClusterResponse
+ * \brief The CreateClusterResponse class provides an interace for Dax CreateCluster responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DAX CreateCluster \a response.
+ * Parses a successful Dax CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::CreateClusterResponsePrivate
+ * \class QtAws::Dax::CreateClusterResponsePrivate
  * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * Parses a DAX CreateCluster response element from \a xml.
+ * Parses a Dax CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

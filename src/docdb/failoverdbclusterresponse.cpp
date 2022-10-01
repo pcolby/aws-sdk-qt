@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::FailoverDBClusterResponse
- * \brief The FailoverDBClusterResponse class provides an interace for DocDB FailoverDBCluster responses.
+ * \class QtAws::DocDb::FailoverDBClusterResponse
+ * \brief The FailoverDBClusterResponse class provides an interace for DocDb FailoverDBCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::failoverDBCluster
+ * \sa DocDbClient::failoverDBCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ FailoverDBClusterResponse::FailoverDBClusterResponse(
         const FailoverDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new FailoverDBClusterResponsePrivate(this), parent)
+    : DocDbResponse(new FailoverDBClusterResponsePrivate(this), parent)
 {
     setRequest(new FailoverDBClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB FailoverDBCluster \a response.
+ * Parses a successful DocDb FailoverDBCluster \a response.
  */
 void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::FailoverDBClusterResponsePrivate
+ * \class QtAws::DocDb::FailoverDBClusterResponsePrivate
  * \brief The FailoverDBClusterResponsePrivate class provides private implementation for FailoverDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a FailoverDBClusterResponsePrivate object with public implementation \a q.
  */
 FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
-    FailoverDBClusterResponse * const q) : DocDBResponsePrivate(q)
+    FailoverDBClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB FailoverDBCluster response element from \a xml.
+ * Parses a DocDb FailoverDBCluster response element from \a xml.
  */
 void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

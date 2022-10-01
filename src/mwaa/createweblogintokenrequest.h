@@ -23,7 +23,7 @@
 #include "mwaarequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class CreateWebLoginTokenRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

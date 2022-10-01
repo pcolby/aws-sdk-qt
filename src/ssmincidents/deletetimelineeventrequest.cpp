@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteTimelineEventRequest
- * \brief The DeleteTimelineEventRequest class provides an interface for SSMIncidents DeleteTimelineEvent requests.
+ * \class QtAws::SsmIncidents::DeleteTimelineEventRequest
+ * \brief The DeleteTimelineEventRequest class provides an interface for SsmIncidents DeleteTimelineEvent requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteTimelineEvent
+ * \sa SsmIncidentsClient::deleteTimelineEvent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteTimelineEventRequest::DeleteTimelineEventRequest(const DeleteTimelineEventRequest &other)
-    : SSMIncidentsRequest(new DeleteTimelineEventRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new DeleteTimelineEventRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ DeleteTimelineEventRequest::DeleteTimelineEventRequest(const DeleteTimelineEvent
  * Constructs a DeleteTimelineEventRequest object.
  */
 DeleteTimelineEventRequest::DeleteTimelineEventRequest()
-    : SSMIncidentsRequest(new DeleteTimelineEventRequestPrivate(SSMIncidentsRequest::DeleteTimelineEventAction, this))
+    : SsmIncidentsRequest(new DeleteTimelineEventRequestPrivate(SsmIncidentsRequest::DeleteTimelineEventAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DeleteTimelineEventRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteTimelineEventRequestPrivate
+ * \class QtAws::SsmIncidents::DeleteTimelineEventRequestPrivate
  * \brief The DeleteTimelineEventRequestPrivate class provides private implementation for DeleteTimelineEventRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a DeleteTimelineEventRequestPrivate object for SSMIncidents \a action,
+ * Constructs a DeleteTimelineEventRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 DeleteTimelineEventRequestPrivate::DeleteTimelineEventRequestPrivate(
-    const SSMIncidentsRequest::Action action, DeleteTimelineEventRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, DeleteTimelineEventRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ DeleteTimelineEventRequestPrivate::DeleteTimelineEventRequestPrivate(
  */
 DeleteTimelineEventRequestPrivate::DeleteTimelineEventRequestPrivate(
     const DeleteTimelineEventRequestPrivate &other, DeleteTimelineEventRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

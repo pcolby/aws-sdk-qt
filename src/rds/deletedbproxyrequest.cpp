@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBProxyRequest
- * \brief The DeleteDBProxyRequest class provides an interface for RDS DeleteDBProxy requests.
+ * \class QtAws::Rds::DeleteDBProxyRequest
+ * \brief The DeleteDBProxyRequest class provides an interface for Rds DeleteDBProxy requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeleteDBProxyRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBProxyRequestPrivate
+ * \class QtAws::Rds::DeleteDBProxyRequestPrivate
  * \brief The DeleteDBProxyRequestPrivate class provides private implementation for DeleteDBProxyRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeleteDBProxyRequestPrivate::DeleteDBProxyRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

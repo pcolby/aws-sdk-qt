@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeExportResponse
- * \brief The DescribeExportResponse class provides an interace for DynamoDB DescribeExport responses.
+ * \class QtAws::DynamoDb::DescribeExportResponse
+ * \brief The DescribeExportResponse class provides an interace for DynamoDb DescribeExport responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeExport
+ * \sa DynamoDbClient::describeExport
  */
 
 /*!
@@ -63,7 +63,7 @@ DescribeExportResponse::DescribeExportResponse(
         const DescribeExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeExportResponsePrivate(this), parent)
+    : DynamoDbResponse(new DescribeExportResponsePrivate(this), parent)
 {
     setRequest(new DescribeExportRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DescribeExportRequest * DescribeExportResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DescribeExport \a response.
+ * Parses a successful DynamoDb DescribeExport \a response.
  */
 void DescribeExportResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DescribeExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeExportResponsePrivate
+ * \class QtAws::DynamoDb::DescribeExportResponsePrivate
  * \brief The DescribeExportResponsePrivate class provides private implementation for DescribeExportResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DescribeExportResponsePrivate object with public implementation \a q.
  */
 DescribeExportResponsePrivate::DescribeExportResponsePrivate(
-    DescribeExportResponse * const q) : DynamoDBResponsePrivate(q)
+    DescribeExportResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DescribeExport response element from \a xml.
+ * Parses a DynamoDb DescribeExport response element from \a xml.
  */
 void DescribeExportResponsePrivate::parseDescribeExportResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeExportResponsePrivate::parseDescribeExportResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateIPSetRequest
- * \brief The UpdateIPSetRequest class provides an interface for WAF UpdateIPSet requests.
+ * \class QtAws::Waf::UpdateIPSetRequest
+ * \brief The UpdateIPSetRequest class provides an interface for Waf UpdateIPSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAF::UpdateIPSetRequestPrivate
+ * \class QtAws::Waf::UpdateIPSetRequestPrivate
  * \brief The UpdateIPSetRequestPrivate class provides private implementation for UpdateIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

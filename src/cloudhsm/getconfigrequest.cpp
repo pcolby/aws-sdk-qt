@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::GetConfigRequest
- * \brief The GetConfigRequest class provides an interface for CloudHSM GetConfig requests.
+ * \class QtAws::CloudHsm::GetConfigRequest
+ * \brief The GetConfigRequest class provides an interface for CloudHsm GetConfig requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::getConfig
+ * \sa CloudHsmClient::getConfig
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
-    : CloudHSMRequest(new GetConfigRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new GetConfigRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
  * Constructs a GetConfigRequest object.
  */
 GetConfigRequest::GetConfigRequest()
-    : CloudHSMRequest(new GetConfigRequestPrivate(CloudHSMRequest::GetConfigAction, this))
+    : CloudHsmRequest(new GetConfigRequestPrivate(CloudHsmRequest::GetConfigAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::CloudHSM::GetConfigRequestPrivate
+ * \class QtAws::CloudHsm::GetConfigRequestPrivate
  * \brief The GetConfigRequestPrivate class provides private implementation for GetConfigRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a GetConfigRequestPrivate object for CloudHSM \a action,
+ * Constructs a GetConfigRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
-    const CloudHSMRequest::Action action, GetConfigRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, GetConfigRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ GetConfigRequestPrivate::GetConfigRequestPrivate(
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const GetConfigRequestPrivate &other, GetConfigRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

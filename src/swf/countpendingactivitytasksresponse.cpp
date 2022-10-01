@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::CountPendingActivityTasksResponse
- * \brief The CountPendingActivityTasksResponse class provides an interace for SWF CountPendingActivityTasks responses.
+ * \class QtAws::Swf::CountPendingActivityTasksResponse
+ * \brief The CountPendingActivityTasksResponse class provides an interace for Swf CountPendingActivityTasks responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SWF CountPendingActivityTasks \a response.
+ * Parses a successful Swf CountPendingActivityTasks \a response.
  */
 void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::CountPendingActivityTasksResponsePrivate
+ * \class QtAws::Swf::CountPendingActivityTasksResponsePrivate
  * \brief The CountPendingActivityTasksResponsePrivate class provides private implementation for CountPendingActivityTasksResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePriva
 }
 
 /*!
- * Parses a SWF CountPendingActivityTasks response element from \a xml.
+ * Parses a Swf CountPendingActivityTasks response element from \a xml.
  */
 void CountPendingActivityTasksResponsePrivate::parseCountPendingActivityTasksResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void CountPendingActivityTasksResponsePrivate::parseCountPendingActivityTasksRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

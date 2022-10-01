@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateUsagePlanRequest
- * \brief The UpdateUsagePlanRequest class provides an interface for APIGateway UpdateUsagePlan requests.
+ * \class QtAws::ApiGateway::UpdateUsagePlanRequest
+ * \brief The UpdateUsagePlanRequest class provides an interface for ApiGateway UpdateUsagePlan requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateUsagePlan
+ * \sa ApiGatewayClient::updateUsagePlan
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &other)
-    : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateUsagePlanRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &oth
  * Constructs a UpdateUsagePlanRequest object.
  */
 UpdateUsagePlanRequest::UpdateUsagePlanRequest()
-    : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(APIGatewayRequest::UpdateUsagePlanAction, this))
+    : ApiGatewayRequest(new UpdateUsagePlanRequestPrivate(ApiGatewayRequest::UpdateUsagePlanAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateUsagePlanRequestPrivate
+ * \class QtAws::ApiGateway::UpdateUsagePlanRequestPrivate
  * \brief The UpdateUsagePlanRequestPrivate class provides private implementation for UpdateUsagePlanRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateUsagePlanRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateUsagePlanRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateUsagePlanRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateUsagePlanRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const UpdateUsagePlanRequestPrivate &other, UpdateUsagePlanRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

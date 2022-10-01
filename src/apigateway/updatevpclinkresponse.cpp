@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateVpcLinkResponse
- * \brief The UpdateVpcLinkResponse class provides an interace for APIGateway UpdateVpcLink responses.
+ * \class QtAws::ApiGateway::UpdateVpcLinkResponse
+ * \brief The UpdateVpcLinkResponse class provides an interace for ApiGateway UpdateVpcLink responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateVpcLink
+ * \sa ApiGatewayClient::updateVpcLink
  */
 
 /*!
@@ -49,7 +49,7 @@ UpdateVpcLinkResponse::UpdateVpcLinkResponse(
         const UpdateVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateVpcLinkResponsePrivate(this), parent)
+    : ApiGatewayResponse(new UpdateVpcLinkResponsePrivate(this), parent)
 {
     setRequest(new UpdateVpcLinkRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway UpdateVpcLink \a response.
+ * Parses a successful ApiGateway UpdateVpcLink \a response.
  */
 void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateVpcLinkResponsePrivate
+ * \class QtAws::ApiGateway::UpdateVpcLinkResponsePrivate
  * \brief The UpdateVpcLinkResponsePrivate class provides private implementation for UpdateVpcLinkResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a UpdateVpcLinkResponsePrivate object with public implementation \a q.
  */
 UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
-    UpdateVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
+    UpdateVpcLinkResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway UpdateVpcLink response element from \a xml.
+ * Parses a ApiGateway UpdateVpcLink response element from \a xml.
  */
 void UpdateVpcLinkResponsePrivate::parseUpdateVpcLinkResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void UpdateVpcLinkResponsePrivate::parseUpdateVpcLinkResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

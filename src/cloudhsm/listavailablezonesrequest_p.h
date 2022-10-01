@@ -24,14 +24,14 @@
 #include "listavailablezonesrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class ListAvailableZonesRequest;
 
-class ListAvailableZonesRequestPrivate : public CloudHSMRequestPrivate {
+class ListAvailableZonesRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    ListAvailableZonesRequestPrivate(const CloudHSMRequest::Action action,
+    ListAvailableZonesRequestPrivate(const CloudHsmRequest::Action action,
                                    ListAvailableZonesRequest * const q);
     ListAvailableZonesRequestPrivate(const ListAvailableZonesRequestPrivate &other,
                                    ListAvailableZonesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

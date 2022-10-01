@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBSubnetGroupRequest
- * \brief The CreateDBSubnetGroupRequest class provides an interface for RDS CreateDBSubnetGroup requests.
+ * \class QtAws::Rds::CreateDBSubnetGroupRequest
+ * \brief The CreateDBSubnetGroupRequest class provides an interface for Rds CreateDBSubnetGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CreateDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::RDS::CreateDBSubnetGroupRequestPrivate
+ * \class QtAws::Rds::CreateDBSubnetGroupRequestPrivate
  * \brief The CreateDBSubnetGroupRequestPrivate class provides private implementation for CreateDBSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

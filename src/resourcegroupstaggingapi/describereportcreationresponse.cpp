@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::DescribeReportCreationResponse
- * \brief The DescribeReportCreationResponse class provides an interace for ResourceGroupsTaggingAPI DescribeReportCreation responses.
+ * \class QtAws::ResourceGroupsTaggingApi::DescribeReportCreationResponse
+ * \brief The DescribeReportCreationResponse class provides an interace for ResourceGroupsTaggingApi DescribeReportCreation responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  *
- * \sa ResourceGroupsTaggingAPIClient::describeReportCreation
+ * \sa ResourceGroupsTaggingApiClient::describeReportCreation
  */
 
 /*!
@@ -44,7 +44,7 @@ DescribeReportCreationResponse::DescribeReportCreationResponse(
         const DescribeReportCreationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingAPIResponse(new DescribeReportCreationResponsePrivate(this), parent)
+    : ResourceGroupsTaggingApiResponse(new DescribeReportCreationResponsePrivate(this), parent)
 {
     setRequest(new DescribeReportCreationRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const DescribeReportCreationRequest * DescribeReportCreationResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful ResourceGroupsTaggingAPI DescribeReportCreation \a response.
+ * Parses a successful ResourceGroupsTaggingApi DescribeReportCreation \a response.
  */
 void DescribeReportCreationResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void DescribeReportCreationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::DescribeReportCreationResponsePrivate
+ * \class QtAws::ResourceGroupsTaggingApi::DescribeReportCreationResponsePrivate
  * \brief The DescribeReportCreationResponsePrivate class provides private implementation for DescribeReportCreationResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
  * Constructs a DescribeReportCreationResponsePrivate object with public implementation \a q.
  */
 DescribeReportCreationResponsePrivate::DescribeReportCreationResponsePrivate(
-    DescribeReportCreationResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
+    DescribeReportCreationResponse * const q) : ResourceGroupsTaggingApiResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ResourceGroupsTaggingAPI DescribeReportCreation response element from \a xml.
+ * Parses a ResourceGroupsTaggingApi DescribeReportCreation response element from \a xml.
  */
 void DescribeReportCreationResponsePrivate::parseDescribeReportCreationResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void DescribeReportCreationResponsePrivate::parseDescribeReportCreationResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

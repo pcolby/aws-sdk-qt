@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
-class SsooidcClientPrivate;
+class SsoOidcClientPrivate;
 class CreateTokenRequest;
 class CreateTokenResponse;
 class RegisterClientRequest;
@@ -37,17 +37,17 @@ class RegisterClientResponse;
 class StartDeviceAuthorizationRequest;
 class StartDeviceAuthorizationResponse;
 
-class QTAWSSSOOIDC_EXPORT SsooidcClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSOOIDC_EXPORT SsoOidcClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    SsooidcClient(
+    SsoOidcClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit SsooidcClient(
+    explicit SsoOidcClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -58,12 +58,12 @@ public slots:
     StartDeviceAuthorizationResponse * startDeviceAuthorization(const StartDeviceAuthorizationRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(SsooidcClient)
-    Q_DISABLE_COPY(SsooidcClient)
+    Q_DECLARE_PRIVATE(SsoOidcClient)
+    Q_DISABLE_COPY(SsoOidcClient)
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

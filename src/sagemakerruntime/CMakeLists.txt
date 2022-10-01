@@ -1,10 +1,6 @@
 add_compile_definitions(QTAWSSAGEMAKERRUNTIME_LIBRARY)
 
 add_library(QtAwsSageMakerRuntime
-  invokeendpointrequest.h
-  invokeendpointrequest_p.h
-  invokeendpointresponse.h
-  invokeendpointresponse_p.h
   qtawssagemakerruntimeglobal.h
   sagemakerruntimeclient.h
   sagemakerruntimeclient_p.h
@@ -12,11 +8,21 @@ add_library(QtAwsSageMakerRuntime
   sagemakerruntimerequest_p.h
   sagemakerruntimeresponse.h
   sagemakerruntimeresponse_p.h
-  invokeendpointrequest.cpp
-  invokeendpointresponse.cpp
+  invokeendpointrequest.h
+  invokeendpointrequest_p.h
+  invokeendpointresponse.h
+  invokeendpointresponse_p.h
+  invokeendpointasyncrequest.h
+  invokeendpointasyncrequest_p.h
+  invokeendpointasyncresponse.h
+  invokeendpointasyncresponse_p.h
   sagemakerruntimeclient.cpp
   sagemakerruntimerequest.cpp
-  sagemakerruntimeresponse.cpp)
+  sagemakerruntimeresponse.cpp
+  invokeendpointrequest.cpp
+  invokeendpointresponse.cpp
+  invokeendpointasyncrequest.cpp
+  invokeendpointasyncresponse.cpp)
 
 target_link_libraries(QtAwsSageMakerRuntime
   PRIVATE QtAwsCore

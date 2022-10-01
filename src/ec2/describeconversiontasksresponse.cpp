@@ -25,22 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::DescribeConversionTasksResponse
- * \brief The DescribeConversionTasksResponse class provides an interace for EC2 DescribeConversionTasks responses.
+ * \class QtAws::Ec2::DescribeConversionTasksResponse
+ * \brief The DescribeConversionTasksResponse class provides an interace for Ec2 DescribeConversionTasks responses.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -63,8 +63,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  *
  * \sa Ec2Client::describeConversionTasks
  */
@@ -93,7 +93,7 @@ const DescribeConversionTasksRequest * DescribeConversionTasksResponse::request(
 
 /*!
  * \reimp
- * Parses a successful EC2 DescribeConversionTasks \a response.
+ * Parses a successful Ec2 DescribeConversionTasks \a response.
  */
 void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -103,11 +103,11 @@ void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::DescribeConversionTasksResponsePrivate
+ * \class QtAws::Ec2::DescribeConversionTasksResponsePrivate
  * \brief The DescribeConversionTasksResponsePrivate class provides private implementation for DescribeConversionTasksResponse.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -120,7 +120,7 @@ DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponsePrivate(
 }
 
 /*!
- * Parses a EC2 DescribeConversionTasks response element from \a xml.
+ * Parses a Ec2 DescribeConversionTasks response element from \a xml.
  */
 void DescribeConversionTasksResponsePrivate::parseDescribeConversionTasksResponse(QXmlStreamReader &xml)
 {
@@ -128,5 +128,5 @@ void DescribeConversionTasksResponsePrivate::parseDescribeConversionTasksRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

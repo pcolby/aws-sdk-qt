@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StartActivityStreamResponse
- * \brief The StartActivityStreamResponse class provides an interace for RDS StartActivityStream responses.
+ * \class QtAws::Rds::StartActivityStreamResponse
+ * \brief The StartActivityStreamResponse class provides an interace for Rds StartActivityStream responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StartActivityStreamRequest * StartActivityStreamResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS StartActivityStream \a response.
+ * Parses a successful Rds StartActivityStream \a response.
  */
 void StartActivityStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StartActivityStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::StartActivityStreamResponsePrivate
+ * \class QtAws::Rds::StartActivityStreamResponsePrivate
  * \brief The StartActivityStreamResponsePrivate class provides private implementation for StartActivityStreamResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StartActivityStreamResponsePrivate::StartActivityStreamResponsePrivate(
 }
 
 /*!
- * Parses a RDS StartActivityStream response element from \a xml.
+ * Parses a Rds StartActivityStream response element from \a xml.
  */
 void StartActivityStreamResponsePrivate::parseStartActivityStreamResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StartActivityStreamResponsePrivate::parseStartActivityStreamResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

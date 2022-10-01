@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBEngineVersionsResponse
- * \brief The DescribeDBEngineVersionsResponse class provides an interace for RDS DescribeDBEngineVersions responses.
+ * \class QtAws::Rds::DescribeDBEngineVersionsResponse
+ * \brief The DescribeDBEngineVersionsResponse class provides an interace for Rds DescribeDBEngineVersions responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeDBEngineVersions \a response.
+ * Parses a successful Rds DescribeDBEngineVersions \a response.
  */
 void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBEngineVersionsResponsePrivate
+ * \class QtAws::Rds::DescribeDBEngineVersionsResponsePrivate
  * \brief The DescribeDBEngineVersionsResponsePrivate class provides private implementation for DescribeDBEngineVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate
 }
 
 /*!
- * Parses a RDS DescribeDBEngineVersions response element from \a xml.
+ * Parses a Rds DescribeDBEngineVersions response element from \a xml.
  */
 void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

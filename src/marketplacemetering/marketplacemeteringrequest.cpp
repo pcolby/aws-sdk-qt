@@ -247,7 +247,7 @@ QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint
  * with public implementation \a q.
  */
 MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequest::Action action, MarketplaceMeteringRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-01-14"))
 {
 
 }

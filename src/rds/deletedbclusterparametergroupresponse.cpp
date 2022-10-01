@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteDBClusterParameterGroupResponse
- * \brief The DeleteDBClusterParameterGroupResponse class provides an interace for RDS DeleteDBClusterParameterGroup responses.
+ * \class QtAws::Rds::DeleteDBClusterParameterGroupResponse
+ * \brief The DeleteDBClusterParameterGroupResponse class provides an interace for Rds DeleteDBClusterParameterGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupRespon
 
 /*!
  * \reimp
- * Parses a successful RDS DeleteDBClusterParameterGroup \a response.
+ * Parses a successful Rds DeleteDBClusterParameterGroup \a response.
  */
 void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DeleteDBClusterParameterGroupResponsePrivate
+ * \class QtAws::Rds::DeleteDBClusterParameterGroupResponsePrivate
  * \brief The DeleteDBClusterParameterGroupResponsePrivate class provides private implementation for DeleteDBClusterParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupRespo
 }
 
 /*!
- * Parses a RDS DeleteDBClusterParameterGroup response element from \a xml.
+ * Parses a Rds DeleteDBClusterParameterGroup response element from \a xml.
  */
 void DeleteDBClusterParameterGroupResponsePrivate::parseDeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DeleteDBClusterParameterGroupResponsePrivate::parseDeleteDBClusterParameter
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

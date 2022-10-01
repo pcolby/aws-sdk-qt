@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::ListExperimentTemplatesResponse
- * \brief The ListExperimentTemplatesResponse class provides an interace for FIS ListExperimentTemplates responses.
+ * \class QtAws::Fis::ListExperimentTemplatesResponse
+ * \brief The ListExperimentTemplatesResponse class provides an interace for Fis ListExperimentTemplates responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::listExperimentTemplates
  */
@@ -64,7 +64,7 @@ const ListExperimentTemplatesRequest * ListExperimentTemplatesResponse::request(
 
 /*!
  * \reimp
- * Parses a successful FIS ListExperimentTemplates \a response.
+ * Parses a successful Fis ListExperimentTemplates \a response.
  */
 void ListExperimentTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ListExperimentTemplatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::ListExperimentTemplatesResponsePrivate
+ * \class QtAws::Fis::ListExperimentTemplatesResponsePrivate
  * \brief The ListExperimentTemplatesResponsePrivate class provides private implementation for ListExperimentTemplatesResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ ListExperimentTemplatesResponsePrivate::ListExperimentTemplatesResponsePrivate(
 }
 
 /*!
- * Parses a FIS ListExperimentTemplates response element from \a xml.
+ * Parses a Fis ListExperimentTemplates response element from \a xml.
  */
 void ListExperimentTemplatesResponsePrivate::parseListExperimentTemplatesResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ListExperimentTemplatesResponsePrivate::parseListExperimentTemplatesRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

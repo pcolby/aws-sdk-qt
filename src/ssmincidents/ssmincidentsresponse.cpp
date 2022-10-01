@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsResponse
- * \brief The SSMIncidentsResponse class provides an interface for SSMIncidents responses.
+ * \class QtAws::SsmIncidents::SsmIncidentsResponse
+ * \brief The SsmIncidentsResponse class provides an interface for SsmIncidents responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a SSMIncidentsResponse object with parent \a parent.
+ * Constructs a SsmIncidentsResponse object with parent \a parent.
  */
-SSMIncidentsResponse::SSMIncidentsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SSMIncidentsResponsePrivate(this), parent)
+SsmIncidentsResponse::SsmIncidentsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SsmIncidentsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SSMIncidentsResponse object with private implementation \a d,
+ * Constructs a SsmIncidentsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMIncidentsResponsePrivate.
+ * implementation that inherits from SsmIncidentsResponsePrivate.
  */
-SSMIncidentsResponse::SSMIncidentsResponse(SSMIncidentsResponsePrivate * const d, QObject * const parent)
+SsmIncidentsResponse::SsmIncidentsResponse(SsmIncidentsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SSMIncidentsResponse::SSMIncidentsResponse(SSMIncidentsResponsePrivate * const d
 /*!
  * \reimp
  */
-void SSMIncidentsResponse::parseFailure(QIODevice &response)
+void SsmIncidentsResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(SSMIncidentsResponse);
+    //Q_D(SsmIncidentsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void SSMIncidentsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::SSMIncidentsResponsePrivate
- * \brief The SSMIncidentsResponsePrivate class provides private implementation for SSMIncidentsResponse.
+ * \class QtAws::SsmIncidents::SsmIncidentsResponsePrivate
+ * \brief The SsmIncidentsResponsePrivate class provides private implementation for SsmIncidentsResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a SSMIncidentsResponsePrivate object with public implementation \a q.
+ * Constructs a SsmIncidentsResponsePrivate object with public implementation \a q.
  */
-SSMIncidentsResponsePrivate::SSMIncidentsResponsePrivate(
-    SSMIncidentsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SsmIncidentsResponsePrivate::SsmIncidentsResponsePrivate(
+    SsmIncidentsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

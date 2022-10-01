@@ -24,14 +24,14 @@
 #include "sendcommandrequest.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 class SendCommandRequest;
 
-class SendCommandRequestPrivate : public QLDBSessionRequestPrivate {
+class SendCommandRequestPrivate : public QldbSessionRequestPrivate {
 
 public:
-    SendCommandRequestPrivate(const QLDBSessionRequest::Action action,
+    SendCommandRequestPrivate(const QldbSessionRequest::Action action,
                                    SendCommandRequest * const q);
     SendCommandRequestPrivate(const SendCommandRequestPrivate &other,
                                    SendCommandRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

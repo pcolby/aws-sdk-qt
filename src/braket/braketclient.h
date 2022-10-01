@@ -30,18 +30,26 @@ namespace QtAws {
 namespace Braket {
 
 class BraketClientPrivate;
+class CancelJobRequest;
+class CancelJobResponse;
 class CancelQuantumTaskRequest;
 class CancelQuantumTaskResponse;
+class CreateJobRequest;
+class CreateJobResponse;
 class CreateQuantumTaskRequest;
 class CreateQuantumTaskResponse;
 class GetDeviceRequest;
 class GetDeviceResponse;
+class GetJobRequest;
+class GetJobResponse;
 class GetQuantumTaskRequest;
 class GetQuantumTaskResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class SearchDevicesRequest;
 class SearchDevicesResponse;
+class SearchJobsRequest;
+class SearchJobsResponse;
 class SearchQuantumTasksRequest;
 class SearchQuantumTasksResponse;
 class TagResourceRequest;
@@ -65,12 +73,16 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CancelJobResponse * cancelJob(const CancelJobRequest &request);
     CancelQuantumTaskResponse * cancelQuantumTask(const CancelQuantumTaskRequest &request);
+    CreateJobResponse * createJob(const CreateJobRequest &request);
     CreateQuantumTaskResponse * createQuantumTask(const CreateQuantumTaskRequest &request);
     GetDeviceResponse * getDevice(const GetDeviceRequest &request);
+    GetJobResponse * getJob(const GetJobRequest &request);
     GetQuantumTaskResponse * getQuantumTask(const GetQuantumTaskRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     SearchDevicesResponse * searchDevices(const SearchDevicesRequest &request);
+    SearchJobsResponse * searchJobs(const SearchJobsRequest &request);
     SearchQuantumTasksResponse * searchQuantumTasks(const SearchQuantumTasksRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);

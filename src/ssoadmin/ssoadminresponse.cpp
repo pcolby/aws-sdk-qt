@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 /*!
- * \class QtAws::SSOAdmin::SSOAdminResponse
- * \brief The SSOAdminResponse class provides an interface for SSOAdmin responses.
+ * \class QtAws::SsoAdmin::SsoAdminResponse
+ * \brief The SsoAdminResponse class provides an interface for SsoAdmin responses.
  *
- * \inmodule QtAwsSSOAdmin
+ * \inmodule QtAwsSsoAdmin
  */
 
 /*!
- * Constructs a SSOAdminResponse object with parent \a parent.
+ * Constructs a SsoAdminResponse object with parent \a parent.
  */
-SSOAdminResponse::SSOAdminResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SSOAdminResponsePrivate(this), parent)
+SsoAdminResponse::SsoAdminResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SsoAdminResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SSOAdminResponse object with private implementation \a d,
+ * Constructs a SsoAdminResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSOAdminResponsePrivate.
+ * implementation that inherits from SsoAdminResponsePrivate.
  */
-SSOAdminResponse::SSOAdminResponse(SSOAdminResponsePrivate * const d, QObject * const parent)
+SsoAdminResponse::SsoAdminResponse(SsoAdminResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SSOAdminResponse::SSOAdminResponse(SSOAdminResponsePrivate * const d, QObject * 
 /*!
  * \reimp
  */
-void SSOAdminResponse::parseFailure(QIODevice &response)
+void SsoAdminResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(SSOAdminResponse);
+    //Q_D(SsoAdminResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void SSOAdminResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSOAdmin::SSOAdminResponsePrivate
- * \brief The SSOAdminResponsePrivate class provides private implementation for SSOAdminResponse.
+ * \class QtAws::SsoAdmin::SsoAdminResponsePrivate
+ * \brief The SsoAdminResponsePrivate class provides private implementation for SsoAdminResponse.
  * \internal
  *
- * \inmodule QtAwsSSOAdmin
+ * \inmodule QtAwsSsoAdmin
  */
 
 /*!
- * Constructs a SSOAdminResponsePrivate object with public implementation \a q.
+ * Constructs a SsoAdminResponsePrivate object with public implementation \a q.
  */
-SSOAdminResponsePrivate::SSOAdminResponsePrivate(
-    SSOAdminResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SsoAdminResponsePrivate::SsoAdminResponsePrivate(
+    SsoAdminResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws

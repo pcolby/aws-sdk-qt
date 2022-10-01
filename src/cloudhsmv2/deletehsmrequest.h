@@ -23,11 +23,11 @@
 #include "cloudhsmv2request.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DeleteHsmRequestPrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT DeleteHsmRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT DeleteHsmRequest : public CloudHsmV2Request {
 
 public:
     DeleteHsmRequest(const DeleteHsmRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

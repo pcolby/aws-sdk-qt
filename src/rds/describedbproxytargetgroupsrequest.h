@@ -23,7 +23,7 @@
 #include "rdsrequest.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class DescribeDBProxyTargetGroupsRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

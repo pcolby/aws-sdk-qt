@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DetachGroupPolicyResponse
- * \brief The DetachGroupPolicyResponse class provides an interace for IAM DetachGroupPolicy responses.
+ * \class QtAws::Iam::DetachGroupPolicyResponse
+ * \brief The DetachGroupPolicyResponse class provides an interace for Iam DetachGroupPolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::detachGroupPolicy
  */
@@ -68,7 +68,7 @@ const DetachGroupPolicyRequest * DetachGroupPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DetachGroupPolicy \a response.
+ * Parses a successful Iam DetachGroupPolicy \a response.
  */
 void DetachGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DetachGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DetachGroupPolicyResponsePrivate
+ * \class QtAws::Iam::DetachGroupPolicyResponsePrivate
  * \brief The DetachGroupPolicyResponsePrivate class provides private implementation for DetachGroupPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM DetachGroupPolicy response element from \a xml.
+ * Parses a Iam DetachGroupPolicy response element from \a xml.
  */
 void DetachGroupPolicyResponsePrivate::parseDetachGroupPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DetachGroupPolicyResponsePrivate::parseDetachGroupPolicyResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

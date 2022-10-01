@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCLOUDWATCH_LIBRARY)
 
 add_library(QtAwsCloudWatch
+  qtawscloudwatchglobal.h
   cloudwatchclient.h
   cloudwatchclient_p.h
   cloudwatchrequest.h
@@ -31,14 +32,14 @@ add_library(QtAwsCloudWatch
   describealarmhistoryrequest_p.h
   describealarmhistoryresponse.h
   describealarmhistoryresponse_p.h
-  describealarmsformetricrequest.h
-  describealarmsformetricrequest_p.h
-  describealarmsformetricresponse.h
-  describealarmsformetricresponse_p.h
   describealarmsrequest.h
   describealarmsrequest_p.h
   describealarmsresponse.h
   describealarmsresponse_p.h
+  describealarmsformetricrequest.h
+  describealarmsformetricrequest_p.h
+  describealarmsformetricresponse.h
+  describealarmsformetricresponse_p.h
   describeanomalydetectorsrequest.h
   describeanomalydetectorsrequest_p.h
   describeanomalydetectorsresponse.h
@@ -91,14 +92,18 @@ add_library(QtAwsCloudWatch
   listdashboardsrequest_p.h
   listdashboardsresponse.h
   listdashboardsresponse_p.h
-  listmetricsrequest.h
-  listmetricsrequest_p.h
-  listmetricsresponse.h
-  listmetricsresponse_p.h
+  listmanagedinsightrulesrequest.h
+  listmanagedinsightrulesrequest_p.h
+  listmanagedinsightrulesresponse.h
+  listmanagedinsightrulesresponse_p.h
   listmetricstreamsrequest.h
   listmetricstreamsrequest_p.h
   listmetricstreamsresponse.h
   listmetricstreamsresponse_p.h
+  listmetricsrequest.h
+  listmetricsrequest_p.h
+  listmetricsresponse.h
+  listmetricsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -119,6 +124,10 @@ add_library(QtAwsCloudWatch
   putinsightrulerequest_p.h
   putinsightruleresponse.h
   putinsightruleresponse_p.h
+  putmanagedinsightrulesrequest.h
+  putmanagedinsightrulesrequest_p.h
+  putmanagedinsightrulesresponse.h
+  putmanagedinsightrulesresponse_p.h
   putmetricalarmrequest.h
   putmetricalarmrequest_p.h
   putmetricalarmresponse.h
@@ -131,7 +140,6 @@ add_library(QtAwsCloudWatch
   putmetricstreamrequest_p.h
   putmetricstreamresponse.h
   putmetricstreamresponse_p.h
-  qtawscloudwatchglobal.h
   setalarmstaterequest.h
   setalarmstaterequest_p.h
   setalarmstateresponse.h
@@ -167,10 +175,10 @@ add_library(QtAwsCloudWatch
   deletemetricstreamresponse.cpp
   describealarmhistoryrequest.cpp
   describealarmhistoryresponse.cpp
-  describealarmsformetricrequest.cpp
-  describealarmsformetricresponse.cpp
   describealarmsrequest.cpp
   describealarmsresponse.cpp
+  describealarmsformetricrequest.cpp
+  describealarmsformetricresponse.cpp
   describeanomalydetectorsrequest.cpp
   describeanomalydetectorsresponse.cpp
   describeinsightrulesrequest.cpp
@@ -197,10 +205,12 @@ add_library(QtAwsCloudWatch
   getmetricwidgetimageresponse.cpp
   listdashboardsrequest.cpp
   listdashboardsresponse.cpp
-  listmetricsrequest.cpp
-  listmetricsresponse.cpp
+  listmanagedinsightrulesrequest.cpp
+  listmanagedinsightrulesresponse.cpp
   listmetricstreamsrequest.cpp
   listmetricstreamsresponse.cpp
+  listmetricsrequest.cpp
+  listmetricsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putanomalydetectorrequest.cpp
@@ -211,6 +221,8 @@ add_library(QtAwsCloudWatch
   putdashboardresponse.cpp
   putinsightrulerequest.cpp
   putinsightruleresponse.cpp
+  putmanagedinsightrulesrequest.cpp
+  putmanagedinsightrulesresponse.cpp
   putmetricalarmrequest.cpp
   putmetricalarmresponse.cpp
   putmetricdatarequest.cpp

@@ -304,7 +304,7 @@ QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::Action action, AutoScalingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2011-01-01"))
 {
 
 }

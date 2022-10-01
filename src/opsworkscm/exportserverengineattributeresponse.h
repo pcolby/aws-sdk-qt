@@ -24,11 +24,11 @@
 #include "exportserverengineattributerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class ExportServerEngineAttributeResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT ExportServerEngineAttributeResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT ExportServerEngineAttributeResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

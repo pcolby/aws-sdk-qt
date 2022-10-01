@@ -24,7 +24,7 @@
 #include "importkeymaterialrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class ImportKeyMaterialResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

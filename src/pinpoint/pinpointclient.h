@@ -40,6 +40,8 @@ class CreateExportJobRequest;
 class CreateExportJobResponse;
 class CreateImportJobRequest;
 class CreateImportJobResponse;
+class CreateInAppTemplateRequest;
+class CreateInAppTemplateResponse;
 class CreateJourneyRequest;
 class CreateJourneyResponse;
 class CreatePushTemplateRequest;
@@ -78,6 +80,8 @@ class DeleteEventStreamRequest;
 class DeleteEventStreamResponse;
 class DeleteGcmChannelRequest;
 class DeleteGcmChannelResponse;
+class DeleteInAppTemplateRequest;
+class DeleteInAppTemplateResponse;
 class DeleteJourneyRequest;
 class DeleteJourneyResponse;
 class DeletePushTemplateRequest;
@@ -148,6 +152,10 @@ class GetImportJobRequest;
 class GetImportJobResponse;
 class GetImportJobsRequest;
 class GetImportJobsResponse;
+class GetInAppMessagesRequest;
+class GetInAppMessagesResponse;
+class GetInAppTemplateRequest;
+class GetInAppTemplateResponse;
 class GetJourneyRequest;
 class GetJourneyResponse;
 class GetJourneyDateRangeKpiRequest;
@@ -202,6 +210,8 @@ class RemoveAttributesRequest;
 class RemoveAttributesResponse;
 class SendMessagesRequest;
 class SendMessagesResponse;
+class SendOTPMessageRequest;
+class SendOTPMessageResponse;
 class SendUsersMessagesRequest;
 class SendUsersMessagesResponse;
 class TagResourceRequest;
@@ -234,6 +244,8 @@ class UpdateEndpointsBatchRequest;
 class UpdateEndpointsBatchResponse;
 class UpdateGcmChannelRequest;
 class UpdateGcmChannelResponse;
+class UpdateInAppTemplateRequest;
+class UpdateInAppTemplateResponse;
 class UpdateJourneyRequest;
 class UpdateJourneyResponse;
 class UpdateJourneyStateRequest;
@@ -254,6 +266,8 @@ class UpdateVoiceChannelRequest;
 class UpdateVoiceChannelResponse;
 class UpdateVoiceTemplateRequest;
 class UpdateVoiceTemplateResponse;
+class VerifyOTPMessageRequest;
+class VerifyOTPMessageResponse;
 
 class QTAWSPINPOINT_EXPORT PinpointClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -276,6 +290,7 @@ public slots:
     CreateEmailTemplateResponse * createEmailTemplate(const CreateEmailTemplateRequest &request);
     CreateExportJobResponse * createExportJob(const CreateExportJobRequest &request);
     CreateImportJobResponse * createImportJob(const CreateImportJobRequest &request);
+    CreateInAppTemplateResponse * createInAppTemplate(const CreateInAppTemplateRequest &request);
     CreateJourneyResponse * createJourney(const CreateJourneyRequest &request);
     CreatePushTemplateResponse * createPushTemplate(const CreatePushTemplateRequest &request);
     CreateRecommenderConfigurationResponse * createRecommenderConfiguration(const CreateRecommenderConfigurationRequest &request);
@@ -295,6 +310,7 @@ public slots:
     DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
     DeleteEventStreamResponse * deleteEventStream(const DeleteEventStreamRequest &request);
     DeleteGcmChannelResponse * deleteGcmChannel(const DeleteGcmChannelRequest &request);
+    DeleteInAppTemplateResponse * deleteInAppTemplate(const DeleteInAppTemplateRequest &request);
     DeleteJourneyResponse * deleteJourney(const DeleteJourneyRequest &request);
     DeletePushTemplateResponse * deletePushTemplate(const DeletePushTemplateRequest &request);
     DeleteRecommenderConfigurationResponse * deleteRecommenderConfiguration(const DeleteRecommenderConfigurationRequest &request);
@@ -330,6 +346,8 @@ public slots:
     GetGcmChannelResponse * getGcmChannel(const GetGcmChannelRequest &request);
     GetImportJobResponse * getImportJob(const GetImportJobRequest &request);
     GetImportJobsResponse * getImportJobs(const GetImportJobsRequest &request);
+    GetInAppMessagesResponse * getInAppMessages(const GetInAppMessagesRequest &request);
+    GetInAppTemplateResponse * getInAppTemplate(const GetInAppTemplateRequest &request);
     GetJourneyResponse * getJourney(const GetJourneyRequest &request);
     GetJourneyDateRangeKpiResponse * getJourneyDateRangeKpi(const GetJourneyDateRangeKpiRequest &request);
     GetJourneyExecutionActivityMetricsResponse * getJourneyExecutionActivityMetrics(const GetJourneyExecutionActivityMetricsRequest &request);
@@ -357,6 +375,7 @@ public slots:
     PutEventsResponse * putEvents(const PutEventsRequest &request);
     RemoveAttributesResponse * removeAttributes(const RemoveAttributesRequest &request);
     SendMessagesResponse * sendMessages(const SendMessagesRequest &request);
+    SendOTPMessageResponse * sendOTPMessage(const SendOTPMessageRequest &request);
     SendUsersMessagesResponse * sendUsersMessages(const SendUsersMessagesRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
@@ -373,6 +392,7 @@ public slots:
     UpdateEndpointResponse * updateEndpoint(const UpdateEndpointRequest &request);
     UpdateEndpointsBatchResponse * updateEndpointsBatch(const UpdateEndpointsBatchRequest &request);
     UpdateGcmChannelResponse * updateGcmChannel(const UpdateGcmChannelRequest &request);
+    UpdateInAppTemplateResponse * updateInAppTemplate(const UpdateInAppTemplateRequest &request);
     UpdateJourneyResponse * updateJourney(const UpdateJourneyRequest &request);
     UpdateJourneyStateResponse * updateJourneyState(const UpdateJourneyStateRequest &request);
     UpdatePushTemplateResponse * updatePushTemplate(const UpdatePushTemplateRequest &request);
@@ -383,6 +403,7 @@ public slots:
     UpdateTemplateActiveVersionResponse * updateTemplateActiveVersion(const UpdateTemplateActiveVersionRequest &request);
     UpdateVoiceChannelResponse * updateVoiceChannel(const UpdateVoiceChannelRequest &request);
     UpdateVoiceTemplateResponse * updateVoiceTemplate(const UpdateVoiceTemplateRequest &request);
+    VerifyOTPMessageResponse * verifyOTPMessage(const VerifyOTPMessageRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(PinpointClient)

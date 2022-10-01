@@ -25,49 +25,27 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 /*!
- * \class QtAws::SESV2::CreateConfigurationSetResponse
- * \brief The CreateConfigurationSetResponse class provides an interace for SESV2 CreateConfigurationSet responses.
+ * \class QtAws::SESv2::CreateConfigurationSetResponse
+ * \brief The CreateConfigurationSetResponse class provides an interace for SESv2 CreateConfigurationSet responses.
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  *
  *  <fullname>Amazon SES API v2</fullname>
  * 
- *  Welcome to the Amazon SES API v2 Reference. This guide provides information about the Amazon SES API v2, including
- *  supported operations, data types, parameters, and
- * 
- *  schemas>
- * 
- *  <a href="https://aws.amazon.com/pinpoint">Amazon SES</a> is an AWS service that you can use to send email messages to
- *  your
+ *  <a href="http://aws.amazon.com/ses">Amazon SES</a> is an Amazon Web Services service that you can use to send email
+ *  messages to your
  * 
  *  customers>
  * 
- *  If you're new to Amazon SES API v2, you might find it helpful to also review the <a
+ *  If you're new to Amazon SES API v2, you might find it helpful to review the <a
  *  href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/">Amazon Simple Email Service Developer Guide</a>. The
  *  <i>Amazon SES Developer Guide</i> provides information and code samples that demonstrate how to use Amazon SES API v2
  *  features
- * 
- *  programmatically>
- * 
- *  The Amazon SES API v2 is available in several AWS Regions and it provides an endpoint for each of these Regions. For a
- *  list of all the Regions and endpoints where the API is currently available, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region">AWS Service Endpoints</a> in the <i>Amazon
- *  Web Services General Reference</i>. To learn more about AWS Regions, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing AWS Regions</a> in the <i>Amazon Web
- *  Services General
- * 
- *  Reference</i>>
- * 
- *  In each Region, AWS maintains multiple Availability Zones. These Availability Zones are physically isolated from each
- *  other, but are united by private, low-latency, high-throughput, and highly redundant network connections. These
- *  Availability Zones enable us to provide very high levels of availability and redundancy, while also minimizing latency.
- *  To learn more about the number of Availability Zones that are available in each Region, see <a
- *  href="http://aws.amazon.com/about-aws/global-infrastructure/">AWS Global
  *
- * \sa Sesv2Client::createConfigurationSet
+ * \sa SESv2Client::createConfigurationSet
  */
 
 /*!
@@ -77,7 +55,7 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
         const CreateConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Sesv2Response(new CreateConfigurationSetResponsePrivate(this), parent)
+    : SESv2Response(new CreateConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetRequest(request));
     setReply(reply);
@@ -94,7 +72,7 @@ const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SESV2 CreateConfigurationSet \a response.
+ * Parses a successful SESv2 CreateConfigurationSet \a response.
  */
 void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -104,24 +82,24 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SESV2::CreateConfigurationSetResponsePrivate
+ * \class QtAws::SESv2::CreateConfigurationSetResponsePrivate
  * \brief The CreateConfigurationSetResponsePrivate class provides private implementation for CreateConfigurationSetResponse.
  * \internal
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  */
 
 /*!
  * Constructs a CreateConfigurationSetResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
-    CreateConfigurationSetResponse * const q) : Sesv2ResponsePrivate(q)
+    CreateConfigurationSetResponse * const q) : SESv2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SESV2 CreateConfigurationSet response element from \a xml.
+ * Parses a SESv2 CreateConfigurationSet response element from \a xml.
  */
 void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {
@@ -129,5 +107,5 @@ void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws

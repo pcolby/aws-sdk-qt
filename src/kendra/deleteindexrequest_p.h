@@ -24,14 +24,14 @@
 #include "deleteindexrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteIndexRequest;
 
-class DeleteIndexRequestPrivate : public kendraRequestPrivate {
+class DeleteIndexRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DeleteIndexRequestPrivate(const kendraRequest::Action action,
+    DeleteIndexRequestPrivate(const KendraRequest::Action action,
                                    DeleteIndexRequest * const q);
     DeleteIndexRequestPrivate(const DeleteIndexRequestPrivate &other,
                                    DeleteIndexRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

@@ -260,7 +260,7 @@ QNetworkRequest MediaPackageVodRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 MediaPackageVodRequestPrivate::MediaPackageVodRequestPrivate(const MediaPackageVodRequest::Action action, MediaPackageVodRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-07"))
 {
 
 }

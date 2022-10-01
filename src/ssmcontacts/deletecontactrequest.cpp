@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DeleteContactRequest
- * \brief The DeleteContactRequest class provides an interface for SSMContacts DeleteContact requests.
+ * \class QtAws::SsmContacts::DeleteContactRequest
+ * \brief The DeleteContactRequest class provides an interface for SsmContacts DeleteContact requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::deleteContact
+ * \sa SsmContactsClient::deleteContact
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteContactRequest::DeleteContactRequest(const DeleteContactRequest &other)
-    : SSMContactsRequest(new DeleteContactRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new DeleteContactRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ DeleteContactRequest::DeleteContactRequest(const DeleteContactRequest &other)
  * Constructs a DeleteContactRequest object.
  */
 DeleteContactRequest::DeleteContactRequest()
-    : SSMContactsRequest(new DeleteContactRequestPrivate(SSMContactsRequest::DeleteContactAction, this))
+    : SsmContactsRequest(new DeleteContactRequestPrivate(SsmContactsRequest::DeleteContactAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DeleteContactRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::SSMContacts::DeleteContactRequestPrivate
+ * \class QtAws::SsmContacts::DeleteContactRequestPrivate
  * \brief The DeleteContactRequestPrivate class provides private implementation for DeleteContactRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a DeleteContactRequestPrivate object for SSMContacts \a action,
+ * Constructs a DeleteContactRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 DeleteContactRequestPrivate::DeleteContactRequestPrivate(
-    const SSMContactsRequest::Action action, DeleteContactRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, DeleteContactRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ DeleteContactRequestPrivate::DeleteContactRequestPrivate(
  */
 DeleteContactRequestPrivate::DeleteContactRequestPrivate(
     const DeleteContactRequestPrivate &other, DeleteContactRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

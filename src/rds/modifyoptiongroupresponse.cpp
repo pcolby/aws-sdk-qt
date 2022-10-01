@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyOptionGroupResponse
- * \brief The ModifyOptionGroupResponse class provides an interace for RDS ModifyOptionGroup responses.
+ * \class QtAws::Rds::ModifyOptionGroupResponse
+ * \brief The ModifyOptionGroupResponse class provides an interace for Rds ModifyOptionGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyOptionGroup \a response.
+ * Parses a successful Rds ModifyOptionGroup \a response.
  */
 void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyOptionGroupResponsePrivate
+ * \class QtAws::Rds::ModifyOptionGroupResponsePrivate
  * \brief The ModifyOptionGroupResponsePrivate class provides private implementation for ModifyOptionGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyOptionGroup response element from \a xml.
+ * Parses a Rds ModifyOptionGroup response element from \a xml.
  */
 void ModifyOptionGroupResponsePrivate::parseModifyOptionGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyOptionGroupResponsePrivate::parseModifyOptionGroupResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

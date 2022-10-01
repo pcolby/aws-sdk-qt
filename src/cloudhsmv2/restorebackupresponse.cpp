@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::RestoreBackupResponse
- * \brief The RestoreBackupResponse class provides an interace for CloudHSMV2 RestoreBackup responses.
+ * \class QtAws::CloudHsmV2::RestoreBackupResponse
+ * \brief The RestoreBackupResponse class provides an interace for CloudHsmV2 RestoreBackup responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::restoreBackup
+ * \sa CloudHsmV2Client::restoreBackup
  */
 
 /*!
@@ -46,7 +46,7 @@ RestoreBackupResponse::RestoreBackupResponse(
         const RestoreBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new RestoreBackupResponsePrivate(this), parent)
+    : CloudHsmV2Response(new RestoreBackupResponsePrivate(this), parent)
 {
     setRequest(new RestoreBackupRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const RestoreBackupRequest * RestoreBackupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 RestoreBackup \a response.
+ * Parses a successful CloudHsmV2 RestoreBackup \a response.
  */
 void RestoreBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void RestoreBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::RestoreBackupResponsePrivate
+ * \class QtAws::CloudHsmV2::RestoreBackupResponsePrivate
  * \brief The RestoreBackupResponsePrivate class provides private implementation for RestoreBackupResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a RestoreBackupResponsePrivate object with public implementation \a q.
  */
 RestoreBackupResponsePrivate::RestoreBackupResponsePrivate(
-    RestoreBackupResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    RestoreBackupResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 RestoreBackup response element from \a xml.
+ * Parses a CloudHsmV2 RestoreBackup response element from \a xml.
  */
 void RestoreBackupResponsePrivate::parseRestoreBackupResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void RestoreBackupResponsePrivate::parseRestoreBackupResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

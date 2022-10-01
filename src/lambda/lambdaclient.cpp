@@ -33,6 +33,8 @@
 #include "createeventsourcemappingresponse.h"
 #include "createfunctionrequest.h"
 #include "createfunctionresponse.h"
+#include "createfunctionurlconfigrequest.h"
+#include "createfunctionurlconfigresponse.h"
 #include "deletealiasrequest.h"
 #include "deletealiasresponse.h"
 #include "deletecodesigningconfigrequest.h"
@@ -47,6 +49,8 @@
 #include "deletefunctionconcurrencyresponse.h"
 #include "deletefunctioneventinvokeconfigrequest.h"
 #include "deletefunctioneventinvokeconfigresponse.h"
+#include "deletefunctionurlconfigrequest.h"
+#include "deletefunctionurlconfigresponse.h"
 #include "deletelayerversionrequest.h"
 #include "deletelayerversionresponse.h"
 #include "deleteprovisionedconcurrencyconfigrequest.h"
@@ -69,6 +73,8 @@
 #include "getfunctionconfigurationresponse.h"
 #include "getfunctioneventinvokeconfigrequest.h"
 #include "getfunctioneventinvokeconfigresponse.h"
+#include "getfunctionurlconfigrequest.h"
+#include "getfunctionurlconfigresponse.h"
 #include "getlayerversionrequest.h"
 #include "getlayerversionresponse.h"
 #include "getlayerversionbyarnrequest.h"
@@ -91,6 +97,8 @@
 #include "listeventsourcemappingsresponse.h"
 #include "listfunctioneventinvokeconfigsrequest.h"
 #include "listfunctioneventinvokeconfigsresponse.h"
+#include "listfunctionurlconfigsrequest.h"
+#include "listfunctionurlconfigsresponse.h"
 #include "listfunctionsrequest.h"
 #include "listfunctionsresponse.h"
 #include "listfunctionsbycodesigningconfigrequest.h"
@@ -137,6 +145,8 @@
 #include "updatefunctionconfigurationresponse.h"
 #include "updatefunctioneventinvokeconfigrequest.h"
 #include "updatefunctioneventinvokeconfigresponse.h"
+#include "updatefunctionurlconfigrequest.h"
+#include "updatefunctionurlconfigresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -160,17 +170,100 @@ namespace Lambda {
  * \ingroup aws-clients
  * \inmodule QtAwsLambda
  *
- *  <fullname>AWS Lambda</fullname>
+ *  <fullname>Lambda</fullname>
  * 
  *  <b>Overview</b>
  * 
  *  </p
  * 
- *  This is the <i>AWS Lambda API Reference</i>. The AWS Lambda Developer Guide provides additional information. For the
- *  service overview, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and
- *  for information about how the service works, see <a
- *  href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS Lambda: How it Works</a> in the <b>AWS
- *  Lambda Developer
+ *  Lambda is a compute service that lets you run code without provisioning or managing servers. Lambda runs your code on a
+ *  high-availability compute infrastructure and performs all of the administration of the compute resources, including
+ *  server and operating system maintenance, capacity provisioning and automatic scaling, code monitoring and logging. With
+ *  Lambda, you can run code for virtually any type of application or backend service. For more information about the Lambda
+ *  service, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is Lambda</a> in the <b>Lambda
+ *  Developer
+ * 
+ *  Guide</b>>
+ * 
+ *  The <i>Lambda API Reference</i> provides information about each of the API methods, including details about the
+ *  parameters in each API request and response.
+ * 
+ *  </p
+ * 
+ *  </p
+ * 
+ *  You can use Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools
+ *  to access the API. For installation instructions, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  Services</a>.
+ * 
+ *  </p
+ * 
+ *  For a list of Region-specific endpoints that Lambda supports, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/lambda-service.html/">Lambda endpoints and quotas </a> in the
+ *  <i>Amazon Web Services General Reference.</i>.
+ * 
+ *  </p
+ * 
+ *  When making the API calls, you will need to authenticate your request by providing a signature. Lambda supports
+ *  signature version 4. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 signing process</a> in
+ *  the <i>Amazon Web Services General Reference.</i>.
+ * 
+ *  </p
+ * 
+ *  <b>CA certificates</b>
+ * 
+ *  </p
+ * 
+ *  Because Amazon Web Services SDKs use the CA certificates from your computer, changes to the certificates on the Amazon
+ *  Web Services servers can cause connection failures when you attempt to use an SDK. You can prevent these failures by
+ *  keeping your computer's CA certificates and operating system up-to-date. If you encounter this issue in a corporate
+ *  environment and do not manage your own computer, you might need to ask an administrator to assist with the update
+ *  process. The following list shows minimum operating system and Java
+ * 
+ *  versions> <ul> <li>
+ * 
+ *  Microsoft Windows versions that have updates from January 2005 or later installed contain at least one of the required
+ *  CAs in their trust list.
+ * 
+ *  </p </li> <li>
+ * 
+ *  Mac OS X 10.4 with Java for Mac OS X 10.4 Release 5 (February 2007), Mac OS X 10.5 (October 2007), and later versions
+ *  contain at least one of the required CAs in their trust list.
+ * 
+ *  </p </li> <li>
+ * 
+ *  Red Hat Enterprise Linux 5 (March 2007), 6, and 7 and CentOS 5, 6, and 7 all contain at least one of the required CAs in
+ *  their default trusted CA list.
+ * 
+ *  </p </li> <li>
+ * 
+ *  Java 1.4.2_12 (May 2006), 5 Update 2 (March 2005), and all later versions, including Java 6 (December 2006), 7, and 8,
+ *  contain at least one of the required CAs in their default trusted CA list.
+ * 
+ *  </p </li> </ul>
+ * 
+ *  When accessing the Lambda management console or Lambda API endpoints, whether through browsers or programmatically, you
+ *  will need to ensure your client machines support any of the following CAs:
+ * 
+ *  </p <ul> <li>
+ * 
+ *  Amazon Root CA
+ * 
+ *  > </li> <li>
+ * 
+ *  Starfield Services Root Certificate Authority -
+ * 
+ *  G> </li> <li>
+ * 
+ *  Starfield Class 2 Certification
+ * 
+ *  Authorit> </li> </ul>
+ * 
+ *  Root certificates from the first two authorities are available from <a
+ *  href="https://www.amazontrust.com/repository/">Amazon trust services</a>, but keeping your computer up-to-date is the
+ *  more straightforward solution. To learn more about ACM-provided certificates, see <a
+ *  href="http://aws.amazon.com/certificate-manager/faqs/#certificates">Amazon Web Services Certificate Manager FAQs.</a>
  */
 
 /*!
@@ -233,11 +326,11 @@ LambdaClient::LambdaClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds permissions to the resource-based policy of a version of an <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a>. Use this action to
- * grant layer usage permission to other accounts. You can grant permission to a single account, all AWS accounts, or all
- * accounts in an
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. Use this action to grant
+ * layer usage permission to other accounts. You can grant permission to a single account, all accounts in an organization,
+ * or all Amazon Web Services accounts.
  *
- * organization>
+ * </p
  *
  * To revoke permission, call <a>RemoveLayerVersionPermission</a> with the statement ID that you specified when you added
  */
@@ -252,17 +345,19 @@ AddLayerVersionPermissionResponse * LambdaClient::addLayerVersionPermission(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Grants an AWS service or another account permission to use a function. You can apply the policy at the function level,
- * or specify a qualifier to restrict access to a single version or alias. If you use a qualifier, the invoker must use the
- * full Amazon Resource Name (ARN) of that version or alias to invoke the
+ * Grants an Amazon Web Services service, account, or organization permission to use a function. You can apply the policy
+ * at the function level, or specify a qualifier to restrict access to a single version or alias. If you use a qualifier,
+ * the invoker must use the full Amazon Resource Name (ARN) of that version or alias to invoke the function. Note: Lambda
+ * does not support adding policies to version
  *
- * function>
+ * $LATEST>
  *
- * To grant permission to another account, specify the account ID as the <code>Principal</code>. For AWS services, the
- * principal is a domain-style identifier defined by the service, like <code>s3.amazonaws.com</code> or
- * <code>sns.amazonaws.com</code>. For AWS services, you can also specify the ARN of the associated resource as the
- * <code>SourceArn</code>. If you grant permission to a service principal without specifying the source, other accounts
- * could potentially configure resources in their account to invoke your Lambda
+ * To grant permission to another account, specify the account ID as the <code>Principal</code>. To grant permission to an
+ * organization defined in Organizations, specify the organization ID as the <code>PrincipalOrgID</code>. For Amazon Web
+ * Services services, the principal is a domain-style identifier defined by the service, like <code>s3.amazonaws.com</code>
+ * or <code>sns.amazonaws.com</code>. For Amazon Web Services services, you can also specify the ARN of the associated
+ * resource as the <code>SourceArn</code>. If you grant permission to a service principal without specifying the source,
+ * other accounts could potentially configure resources in their account to invoke your Lambda
  *
  * function>
  *
@@ -316,41 +411,43 @@ CreateCodeSigningConfigResponse * LambdaClient::createCodeSigningConfig(const Cr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a mapping between an event source and an AWS Lambda function. Lambda reads items from the event source and
- * triggers the
+ * Creates a mapping between an event source and an Lambda function. Lambda reads items from the event source and invokes
+ * the
  *
  * function>
  *
- * For details about each event source type, see the following
+ * For details about how to configure different event sources, see the following topics.
  *
- * topics> <ul> <li>
+ * </p <ul> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html">Using AWS Lambda with Amazon DynamoDB</a>
- *
- * </p </li> <li>
- *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html">Using AWS Lambda with Amazon Kinesis</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping"> Amazon
+ * DynamoDB Streams</a>
  *
  * </p </li> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html">Using AWS Lambda with Amazon SQS</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-eventsourcemapping"> Amazon
+ * Kinesis</a>
  *
  * </p </li> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html">Using AWS Lambda with Amazon MQ</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-eventsource"> Amazon SQS</a>
  *
  * </p </li> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html">Using AWS Lambda with Amazon MSK</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-eventsourcemapping"> Amazon MQ and
+ * RabbitMQ</a>
  *
  * </p </li> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html">Using AWS Lambda with Self-Managed Apache
- * Kafka</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html"> Amazon MSK</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html"> Apache Kafka</a>
  *
  * </p </li> </ul>
  *
- * The following error handling options are only available for stream sources (DynamoDB and
+ * The following error handling options are available only for stream sources (DynamoDB and
  *
  * Kinesis)> <ul> <li>
  *
@@ -373,6 +470,34 @@ CreateCodeSigningConfigResponse * LambdaClient::createCodeSigningConfig(const Cr
  * expires> </li> <li>
  *
  * <code>ParallelizationFactor</code> - Process multiple batches from each shard
+ *
+ * concurrently> </li> </ul>
+ *
+ * For information about which configuration parameters apply to each event source, see the following
+ *
+ * topics> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-params"> Amazon DynamoDB Streams</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-params"> Amazon Kinesis</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#services-sqs-params"> Amazon SQS</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-params"> Amazon MQ and RabbitMQ</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-parms"> Amazon MSK</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-kafka-parms"> Apache Kafka</a>
  */
 CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const CreateEventSourceMappingRequest &request)
 {
@@ -389,10 +514,26 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html">deployment package</a> and an <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role">execution
  * role</a>. The deployment package is a .zip file archive or container image that contains your function code. The
- * execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and
- * AWS X-Ray for request
+ * execution role grants the function permission to use Amazon Web Services services, such as Amazon CloudWatch Logs for
+ * log streaming and X-Ray for request
  *
  * tracing>
+ *
+ * You set the package type to <code>Image</code> if the deployment package is a <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">container image</a>. For a container image, the
+ * code property must include the URI of a container image in the Amazon ECR registry. You do not need to specify the
+ * handler and runtime properties.
+ *
+ * </p
+ *
+ * You set the package type to <code>Zip</code> if the deployment package is a <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip">.zip file
+ * archive</a>. For a .zip file archive, the code property specifies the location of the .zip file. You must also specify
+ * the handler and runtime properties. The code in the deployment package must be compatible with the target instruction
+ * set architecture of the function (<code>x86-64</code> or <code>arm64</code>). If you do not specify the architecture,
+ * the default value is
+ *
+ * <code>x86-64</code>>
  *
  * When you create a function, Lambda provisions an instance of the function and its supporting resources. If your function
  * connects to a VPC, this process can take a minute or so. During this time, you can't invoke or modify the function. The
@@ -423,19 +564,33 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  *
  * function>
  *
- * If another account or an AWS service invokes your function, use <a>AddPermission</a> to grant permission by creating a
- * resource-based IAM policy. You can grant permissions at the function level, on a version, or on an
+ * If another account or an Amazon Web Services service invokes your function, use <a>AddPermission</a> to grant permission
+ * by creating a resource-based IAM policy. You can grant permissions at the function level, on a version, or on an
  *
  * alias>
  *
- * To invoke your function directly, use <a>Invoke</a>. To invoke your function in response to events in other AWS
- * services, create an event source mapping (<a>CreateEventSourceMapping</a>), or configure a function trigger in the other
- * service. For more information, see <a
+ * To invoke your function directly, use <a>Invoke</a>. To invoke your function in response to events in other Amazon Web
+ * Services services, create an event source mapping (<a>CreateEventSourceMapping</a>), or configure a function trigger in
+ * the other service. For more information, see <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking
  */
 CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionRequest &request)
 {
     return qobject_cast<CreateFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * CreateFunctionUrlConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Lambda function URL with the specified configuration parameters. A function URL is a dedicated HTTP(S)
+ * endpoint that you can use to invoke your
+ */
+CreateFunctionUrlConfigResponse * LambdaClient::createFunctionUrlConfig(const CreateFunctionUrlConfigRequest &request)
+{
+    return qobject_cast<CreateFunctionUrlConfigResponse *>(send(request));
 }
 
 /*!
@@ -494,8 +649,9 @@ DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const 
  *
  * deleted>
  *
- * To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For AWS services and
- * resources that invoke your function directly, delete the trigger in the service where you originally configured
+ * To delete Lambda event source mappings that invoke a function, use <a>DeleteEventSourceMapping</a>. For Amazon Web
+ * Services services and resources that invoke your function directly, delete the trigger in the service where you
+ * originally configured
  */
 DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionRequest &request)
 {
@@ -547,11 +703,25 @@ DeleteFunctionEventInvokeConfigResponse * LambdaClient::deleteFunctionEventInvok
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteFunctionUrlConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a Lambda function URL. When you delete a function URL, you can't recover it. Creating a new function URL results
+ * in a different URL
+ */
+DeleteFunctionUrlConfigResponse * LambdaClient::deleteFunctionUrlConfig(const DeleteFunctionUrlConfigRequest &request)
+{
+    return qobject_cast<DeleteFunctionUrlConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * DeleteLayerVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda
+ * Deletes a version of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda
  * layer</a>. Deleted versions can no longer be viewed or added to functions. To avoid breaking functions, a copy of the
  * version remains in Lambda until no functions refer to
  */
@@ -580,7 +750,7 @@ DeleteProvisionedConcurrencyConfigResponse * LambdaClient::deleteProvisionedConc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves details about your account's <a href="https://docs.aws.amazon.com/lambda/latest/dg/limits.html">limits</a> and
- * usage in an AWS
+ * usage in an Amazon Web Services
  */
 GetAccountSettingsResponse * LambdaClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -704,13 +874,26 @@ GetFunctionEventInvokeConfigResponse * LambdaClient::getFunctionEventInvokeConfi
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionUrlConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details about a Lambda function
+ */
+GetFunctionUrlConfigResponse * LambdaClient::getFunctionUrlConfig(const GetFunctionUrlConfigRequest &request)
+{
+    return qobject_cast<GetFunctionUrlConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * GetLayerVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about a version of an <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a>, with a link to
- * download the layer archive that's valid for 10
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>, with a link to download
+ * the layer archive that's valid for 10
  */
 GetLayerVersionResponse * LambdaClient::getLayerVersion(const GetLayerVersionRequest &request)
 {
@@ -724,8 +907,8 @@ GetLayerVersionResponse * LambdaClient::getLayerVersion(const GetLayerVersionReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about a version of an <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a>, with a link to
- * download the layer archive that's valid for 10
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>, with a link to download
+ * the layer archive that's valid for 10
  */
 GetLayerVersionByArnResponse * LambdaClient::getLayerVersionByArn(const GetLayerVersionByArnRequest &request)
 {
@@ -739,8 +922,8 @@ GetLayerVersionByArnResponse * LambdaClient::getLayerVersionByArn(const GetLayer
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the permission policy for a version of an <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a>. For more
- * information, see
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. For more information,
+ * see
  */
 GetLayerVersionPolicyResponse * LambdaClient::getLayerVersionPolicy(const GetLayerVersionPolicyRequest &request)
 {
@@ -823,7 +1006,10 @@ GetProvisionedConcurrencyConfigResponse * LambdaClient::getProvisionedConcurrenc
  * settings>
  *
  * This operation requires permission for the <a
- * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awslambda.html">lambda:InvokeFunction</a>
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awslambda.html">lambda:InvokeFunction</a> action. For
+ * details on how to set up permissions for cross-account invocations, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#permissions-resource-xaccountinvoke">Granting
+ * function access to other
  */
 InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 {
@@ -884,7 +1070,7 @@ ListCodeSigningConfigsResponse * LambdaClient::listCodeSigningConfigs(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists event source mappings. Specify an <code>EventSourceArn</code> to only show event source mappings for a single
+ * Lists event source mappings. Specify an <code>EventSourceArn</code> to show only event source mappings for a single
  * event
  */
 ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const ListEventSourceMappingsRequest &request)
@@ -907,6 +1093,19 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
 ListFunctionEventInvokeConfigsResponse * LambdaClient::listFunctionEventInvokeConfigs(const ListFunctionEventInvokeConfigsRequest &request)
 {
     return qobject_cast<ListFunctionEventInvokeConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListFunctionUrlConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of Lambda function URLs for the specified
+ */
+ListFunctionUrlConfigsResponse * LambdaClient::listFunctionUrlConfigs(const ListFunctionUrlConfigsRequest &request)
+{
+    return qobject_cast<ListFunctionUrlConfigsResponse *>(send(request));
 }
 
 /*!
@@ -954,10 +1153,11 @@ ListFunctionsByCodeSigningConfigResponse * LambdaClient::listFunctionsByCodeSign
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the versions of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda
+ * Lists the versions of an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda
  * layer</a>. Versions that have been deleted aren't listed. Specify a <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime identifier</a> to list only versions
- * that indicate that they're compatible with that
+ * that indicate that they're compatible with that runtime. Specify a compatible architecture to include only layer
+ * versions that are compatible with that
  */
 ListLayerVersionsResponse * LambdaClient::listLayerVersions(const ListLayerVersionsRequest &request)
 {
@@ -970,10 +1170,11 @@ ListLayerVersionsResponse * LambdaClient::listLayerVersions(const ListLayerVersi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layers</a> and shows
+ * Lists <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-layers.html">Lambda layers</a> and shows
  * information about the latest version of each. Specify a <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime identifier</a> to list only layers that
- * indicate that they're compatible with that
+ * indicate that they're compatible with that runtime. Specify a compatible architecture to include only layers that are
+ * compatible with that <a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html">instruction set
  */
 ListLayersResponse * LambdaClient::listLayers(const ListLayersRequest &request)
 {
@@ -1027,8 +1228,8 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a> from a
- * ZIP archive. Each time you call <code>PublishLayerVersion</code> with the same layer name, a new version is
+ * Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a> from a ZIP
+ * archive. Each time you call <code>PublishLayerVersion</code> with the same layer name, a new version is
  *
  * created>
  *
@@ -1051,8 +1252,8 @@ PublishLayerVersionResponse * LambdaClient::publishLayerVersion(const PublishLay
  *
  * change>
  *
- * AWS Lambda doesn't publish a version if the function's configuration and code haven't changed since the last version.
- * Use <a>UpdateFunctionCode</a> or <a>UpdateFunctionConfiguration</a> to update the function before publishing a
+ * Lambda doesn't publish a version if the function's configuration and code haven't changed since the last version. Use
+ * <a>UpdateFunctionCode</a> or <a>UpdateFunctionConfiguration</a> to update the function before publishing a
  *
  * version>
  *
@@ -1152,8 +1353,8 @@ PutProvisionedConcurrencyConfigResponse * LambdaClient::putProvisionedConcurrenc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes a statement from the permissions policy for a version of an <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a>. For more
- * information, see
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. For more information,
+ * see
  */
 RemoveLayerVersionPermissionResponse * LambdaClient::removeLayerVersionPermission(const RemoveLayerVersionPermissionRequest &request)
 {
@@ -1166,8 +1367,8 @@ RemoveLayerVersionPermissionResponse * LambdaClient::removeLayerVersionPermissio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Revokes function-use permission from an AWS service or another account. You can get the ID of the statement from the
- * output of
+ * Revokes function-use permission from an Amazon Web Services service or another account. You can get the ID of the
+ * statement from the output of
  */
 RemovePermissionResponse * LambdaClient::removePermission(const RemovePermissionRequest &request)
 {
@@ -1233,12 +1434,43 @@ UpdateCodeSigningConfigResponse * LambdaClient::updateCodeSigningConfig(const Up
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume
- * later from the same
+ * Updates an event source mapping. You can change the function that Lambda invokes, or pause invocation and resume later
+ * from the same
  *
  * location>
  *
- * The following error handling options are only available for stream sources (DynamoDB and
+ * For details about how to configure different event sources, see the following topics.
+ *
+ * </p <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-dynamodb-eventsourcemapping"> Amazon
+ * DynamoDB Streams</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-eventsourcemapping"> Amazon
+ * Kinesis</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-eventsource"> Amazon SQS</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-eventsourcemapping"> Amazon MQ and
+ * RabbitMQ</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html"> Amazon MSK</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html"> Apache Kafka</a>
+ *
+ * </p </li> </ul>
+ *
+ * The following error handling options are available only for stream sources (DynamoDB and
  *
  * Kinesis)> <ul> <li>
  *
@@ -1261,6 +1493,34 @@ UpdateCodeSigningConfigResponse * LambdaClient::updateCodeSigningConfig(const Up
  * expires> </li> <li>
  *
  * <code>ParallelizationFactor</code> - Process multiple batches from each shard
+ *
+ * concurrently> </li> </ul>
+ *
+ * For information about which configuration parameters apply to each event source, see the following
+ *
+ * topics> <ul> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-params"> Amazon DynamoDB Streams</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-params"> Amazon Kinesis</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#services-sqs-params"> Amazon SQS</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-params"> Amazon MQ and RabbitMQ</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-parms"> Amazon MSK</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-kafka-parms"> Apache Kafka</a>
  */
 UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const UpdateEventSourceMappingRequest &request)
 {
@@ -1278,6 +1538,24 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
  * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html">Configuring code
  *
  * signing</a>>
+ *
+ * If the function's package type is <code>Image</code>, you must specify the code package in <code>ImageUri</code> as the
+ * URI of a <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html">container image</a> in the Amazon ECR
+ * registry.
+ *
+ * </p
+ *
+ * If the function's package type is <code>Zip</code>, you must specify the deployment package as a <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip">.zip file
+ * archive</a>. Enter the Amazon S3 bucket and key of the code .zip file location. You can also provide the function code
+ * inline using the <code>ZipFile</code> field.
+ *
+ * </p
+ *
+ * The code in the deployment package must be compatible with the target instruction set architecture of the function
+ * (<code>x86-64</code> or <code>arm64</code>).
+ *
+ * </p
  *
  * The function's code is locked when you publish a version. You can't modify the code of a published version, only the
  * unpublished
@@ -1316,8 +1594,8 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
  *
  * version>
  *
- * To configure function concurrency, use <a>PutFunctionConcurrency</a>. To grant invoke permissions to an account or AWS
- * service, use
+ * To configure function concurrency, use <a>PutFunctionConcurrency</a>. To grant invoke permissions to an account or
+ * Amazon Web Services service, use
  */
 UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
 {
@@ -1339,6 +1617,19 @@ UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(
 UpdateFunctionEventInvokeConfigResponse * LambdaClient::updateFunctionEventInvokeConfig(const UpdateFunctionEventInvokeConfigRequest &request)
 {
     return qobject_cast<UpdateFunctionEventInvokeConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateFunctionUrlConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configuration for a Lambda function
+ */
+UpdateFunctionUrlConfigResponse * LambdaClient::updateFunctionUrlConfig(const UpdateFunctionUrlConfigRequest &request)
+{
+    return qobject_cast<UpdateFunctionUrlConfigResponse *>(send(request));
 }
 
 /*!

@@ -23,11 +23,11 @@
 #include "ssoadminresponse_p.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class AttachManagedPolicyToPermissionSetResponse;
 
-class AttachManagedPolicyToPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
+class AttachManagedPolicyToPermissionSetResponsePrivate : public SsoAdminResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

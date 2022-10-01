@@ -1,26 +1,49 @@
 add_compile_definitions(QTAWSSYNTHETICS_LIBRARY)
 
 add_library(QtAwsSynthetics
+  qtawssyntheticsglobal.h
+  syntheticsclient.h
+  syntheticsclient_p.h
+  syntheticsrequest.h
+  syntheticsrequest_p.h
+  syntheticsresponse.h
+  syntheticsresponse_p.h
+  associateresourcerequest.h
+  associateresourcerequest_p.h
+  associateresourceresponse.h
+  associateresourceresponse_p.h
   createcanaryrequest.h
   createcanaryrequest_p.h
   createcanaryresponse.h
   createcanaryresponse_p.h
+  creategrouprequest.h
+  creategrouprequest_p.h
+  creategroupresponse.h
+  creategroupresponse_p.h
   deletecanaryrequest.h
   deletecanaryrequest_p.h
   deletecanaryresponse.h
   deletecanaryresponse_p.h
-  describecanarieslastrunrequest.h
-  describecanarieslastrunrequest_p.h
-  describecanarieslastrunresponse.h
-  describecanarieslastrunresponse_p.h
+  deletegrouprequest.h
+  deletegrouprequest_p.h
+  deletegroupresponse.h
+  deletegroupresponse_p.h
   describecanariesrequest.h
   describecanariesrequest_p.h
   describecanariesresponse.h
   describecanariesresponse_p.h
+  describecanarieslastrunrequest.h
+  describecanarieslastrunrequest_p.h
+  describecanarieslastrunresponse.h
+  describecanarieslastrunresponse_p.h
   describeruntimeversionsrequest.h
   describeruntimeversionsrequest_p.h
   describeruntimeversionsresponse.h
   describeruntimeversionsresponse_p.h
+  disassociateresourcerequest.h
+  disassociateresourcerequest_p.h
+  disassociateresourceresponse.h
+  disassociateresourceresponse_p.h
   getcanaryrequest.h
   getcanaryrequest_p.h
   getcanaryresponse.h
@@ -29,11 +52,26 @@ add_library(QtAwsSynthetics
   getcanaryrunsrequest_p.h
   getcanaryrunsresponse.h
   getcanaryrunsresponse_p.h
+  getgrouprequest.h
+  getgrouprequest_p.h
+  getgroupresponse.h
+  getgroupresponse_p.h
+  listassociatedgroupsrequest.h
+  listassociatedgroupsrequest_p.h
+  listassociatedgroupsresponse.h
+  listassociatedgroupsresponse_p.h
+  listgroupresourcesrequest.h
+  listgroupresourcesrequest_p.h
+  listgroupresourcesresponse.h
+  listgroupresourcesresponse_p.h
+  listgroupsrequest.h
+  listgroupsrequest_p.h
+  listgroupsresponse.h
+  listgroupsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawssyntheticsglobal.h
   startcanaryrequest.h
   startcanaryrequest_p.h
   startcanaryresponse.h
@@ -42,12 +80,6 @@ add_library(QtAwsSynthetics
   stopcanaryrequest_p.h
   stopcanaryresponse.h
   stopcanaryresponse_p.h
-  syntheticsclient.h
-  syntheticsclient_p.h
-  syntheticsrequest.h
-  syntheticsrequest_p.h
-  syntheticsresponse.h
-  syntheticsresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -60,29 +92,45 @@ add_library(QtAwsSynthetics
   updatecanaryrequest_p.h
   updatecanaryresponse.h
   updatecanaryresponse_p.h
+  syntheticsclient.cpp
+  syntheticsrequest.cpp
+  syntheticsresponse.cpp
+  associateresourcerequest.cpp
+  associateresourceresponse.cpp
   createcanaryrequest.cpp
   createcanaryresponse.cpp
+  creategrouprequest.cpp
+  creategroupresponse.cpp
   deletecanaryrequest.cpp
   deletecanaryresponse.cpp
-  describecanarieslastrunrequest.cpp
-  describecanarieslastrunresponse.cpp
+  deletegrouprequest.cpp
+  deletegroupresponse.cpp
   describecanariesrequest.cpp
   describecanariesresponse.cpp
+  describecanarieslastrunrequest.cpp
+  describecanarieslastrunresponse.cpp
   describeruntimeversionsrequest.cpp
   describeruntimeversionsresponse.cpp
+  disassociateresourcerequest.cpp
+  disassociateresourceresponse.cpp
   getcanaryrequest.cpp
   getcanaryresponse.cpp
   getcanaryrunsrequest.cpp
   getcanaryrunsresponse.cpp
+  getgrouprequest.cpp
+  getgroupresponse.cpp
+  listassociatedgroupsrequest.cpp
+  listassociatedgroupsresponse.cpp
+  listgroupresourcesrequest.cpp
+  listgroupresourcesresponse.cpp
+  listgroupsrequest.cpp
+  listgroupsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   startcanaryrequest.cpp
   startcanaryresponse.cpp
   stopcanaryrequest.cpp
   stopcanaryresponse.cpp
-  syntheticsclient.cpp
-  syntheticsrequest.cpp
-  syntheticsresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

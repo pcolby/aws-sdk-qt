@@ -24,7 +24,7 @@
 #include "encryptrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class EncryptResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

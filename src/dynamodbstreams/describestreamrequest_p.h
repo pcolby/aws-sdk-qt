@@ -24,14 +24,14 @@
 #include "describestreamrequest.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class DescribeStreamRequest;
 
-class DescribeStreamRequestPrivate : public DynamoDBStreamsRequestPrivate {
+class DescribeStreamRequestPrivate : public DynamoDbStreamsRequestPrivate {
 
 public:
-    DescribeStreamRequestPrivate(const DynamoDBStreamsRequest::Action action,
+    DescribeStreamRequestPrivate(const DynamoDbStreamsRequest::Action action,
                                    DescribeStreamRequest * const q);
     DescribeStreamRequestPrivate(const DescribeStreamRequestPrivate &other,
                                    DescribeStreamRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

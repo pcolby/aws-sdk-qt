@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTDEVICEADVISOR_LIBRARY)
 
-add_library(QtAwsIoTDeviceAdvisor
+add_library(QtAwsIotDeviceAdvisor
+  qtawsiotdeviceadvisorglobal.h
+  iotdeviceadvisorclient.h
+  iotdeviceadvisorclient_p.h
+  iotdeviceadvisorrequest.h
+  iotdeviceadvisorrequest_p.h
+  iotdeviceadvisorresponse.h
+  iotdeviceadvisorresponse_p.h
   createsuitedefinitionrequest.h
   createsuitedefinitionrequest_p.h
   createsuitedefinitionresponse.h
@@ -9,24 +16,22 @@ add_library(QtAwsIoTDeviceAdvisor
   deletesuitedefinitionrequest_p.h
   deletesuitedefinitionresponse.h
   deletesuitedefinitionresponse_p.h
+  getendpointrequest.h
+  getendpointrequest_p.h
+  getendpointresponse.h
+  getendpointresponse_p.h
   getsuitedefinitionrequest.h
   getsuitedefinitionrequest_p.h
   getsuitedefinitionresponse.h
   getsuitedefinitionresponse_p.h
-  getsuiterunreportrequest.h
-  getsuiterunreportrequest_p.h
-  getsuiterunreportresponse.h
-  getsuiterunreportresponse_p.h
   getsuiterunrequest.h
   getsuiterunrequest_p.h
   getsuiterunresponse.h
   getsuiterunresponse_p.h
-  iotdeviceadvisorclient.h
-  iotdeviceadvisorclient_p.h
-  iotdeviceadvisorrequest.h
-  iotdeviceadvisorrequest_p.h
-  iotdeviceadvisorresponse.h
-  iotdeviceadvisorresponse_p.h
+  getsuiterunreportrequest.h
+  getsuiterunreportrequest_p.h
+  getsuiterunreportresponse.h
+  getsuiterunreportresponse_p.h
   listsuitedefinitionsrequest.h
   listsuitedefinitionsrequest_p.h
   listsuitedefinitionsresponse.h
@@ -39,7 +44,6 @@ add_library(QtAwsIoTDeviceAdvisor
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsiotdeviceadvisorglobal.h
   startsuiterunrequest.h
   startsuiterunrequest_p.h
   startsuiterunresponse.h
@@ -60,19 +64,21 @@ add_library(QtAwsIoTDeviceAdvisor
   updatesuitedefinitionrequest_p.h
   updatesuitedefinitionresponse.h
   updatesuitedefinitionresponse_p.h
+  iotdeviceadvisorclient.cpp
+  iotdeviceadvisorrequest.cpp
+  iotdeviceadvisorresponse.cpp
   createsuitedefinitionrequest.cpp
   createsuitedefinitionresponse.cpp
   deletesuitedefinitionrequest.cpp
   deletesuitedefinitionresponse.cpp
+  getendpointrequest.cpp
+  getendpointresponse.cpp
   getsuitedefinitionrequest.cpp
   getsuitedefinitionresponse.cpp
-  getsuiterunreportrequest.cpp
-  getsuiterunreportresponse.cpp
   getsuiterunrequest.cpp
   getsuiterunresponse.cpp
-  iotdeviceadvisorclient.cpp
-  iotdeviceadvisorrequest.cpp
-  iotdeviceadvisorresponse.cpp
+  getsuiterunreportrequest.cpp
+  getsuiterunreportresponse.cpp
   listsuitedefinitionsrequest.cpp
   listsuitedefinitionsresponse.cpp
   listsuiterunsrequest.cpp
@@ -90,7 +96,7 @@ add_library(QtAwsIoTDeviceAdvisor
   updatesuitedefinitionrequest.cpp
   updatesuitedefinitionresponse.cpp)
 
-target_link_libraries(QtAwsIoTDeviceAdvisor
+target_link_libraries(QtAwsIotDeviceAdvisor
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

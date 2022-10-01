@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeSourceRegionsRequest
- * \brief The DescribeSourceRegionsRequest class provides an interface for RDS DescribeSourceRegions requests.
+ * \class QtAws::Rds::DescribeSourceRegionsRequest
+ * \brief The DescribeSourceRegionsRequest class provides an interface for Rds DescribeSourceRegions requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::RDS::DescribeSourceRegionsRequestPrivate
+ * \class QtAws::Rds::DescribeSourceRegionsRequestPrivate
  * \brief The DescribeSourceRegionsRequestPrivate class provides private implementation for DescribeSourceRegionsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

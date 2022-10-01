@@ -249,7 +249,7 @@ QNetworkRequest MarketplaceCatalogRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 MarketplaceCatalogRequestPrivate::MarketplaceCatalogRequestPrivate(const MarketplaceCatalogRequest::Action action, MarketplaceCatalogRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-17"))
 {
 
 }

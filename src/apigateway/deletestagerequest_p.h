@@ -24,14 +24,14 @@
 #include "deletestagerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteStageRequest;
 
-class DeleteStageRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteStageRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteStageRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteStageRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteStageRequest * const q);
     DeleteStageRequestPrivate(const DeleteStageRequestPrivate &other,
                                    DeleteStageRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

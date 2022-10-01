@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlanKeysRequest
- * \brief The GetUsagePlanKeysRequest class provides an interface for APIGateway GetUsagePlanKeys requests.
+ * \class QtAws::ApiGateway::GetUsagePlanKeysRequest
+ * \brief The GetUsagePlanKeysRequest class provides an interface for ApiGateway GetUsagePlanKeys requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getUsagePlanKeys
+ * \sa ApiGatewayClient::getUsagePlanKeys
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetUsagePlanKeysRequest::GetUsagePlanKeysRequest(const GetUsagePlanKeysRequest &other)
-    : APIGatewayRequest(new GetUsagePlanKeysRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetUsagePlanKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetUsagePlanKeysRequest::GetUsagePlanKeysRequest(const GetUsagePlanKeysRequest &
  * Constructs a GetUsagePlanKeysRequest object.
  */
 GetUsagePlanKeysRequest::GetUsagePlanKeysRequest()
-    : APIGatewayRequest(new GetUsagePlanKeysRequestPrivate(APIGatewayRequest::GetUsagePlanKeysAction, this))
+    : ApiGatewayRequest(new GetUsagePlanKeysRequestPrivate(ApiGatewayRequest::GetUsagePlanKeysAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetUsagePlanKeysRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlanKeysRequestPrivate
+ * \class QtAws::ApiGateway::GetUsagePlanKeysRequestPrivate
  * \brief The GetUsagePlanKeysRequestPrivate class provides private implementation for GetUsagePlanKeysRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetUsagePlanKeysRequestPrivate object for APIGateway \a action,
+ * Constructs a GetUsagePlanKeysRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetUsagePlanKeysRequestPrivate::GetUsagePlanKeysRequestPrivate(
-    const APIGatewayRequest::Action action, GetUsagePlanKeysRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetUsagePlanKeysRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetUsagePlanKeysRequestPrivate::GetUsagePlanKeysRequestPrivate(
  */
 GetUsagePlanKeysRequestPrivate::GetUsagePlanKeysRequestPrivate(
     const GetUsagePlanKeysRequestPrivate &other, GetUsagePlanKeysRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

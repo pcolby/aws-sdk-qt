@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::CreateHapgResponse
- * \brief The CreateHapgResponse class provides an interace for CloudHSM CreateHapg responses.
+ * \class QtAws::CloudHsm::CreateHapgResponse
+ * \brief The CreateHapgResponse class provides an interace for CloudHsm CreateHapg responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::createHapg
+ * \sa CloudHsmClient::createHapg
  */
 
 /*!
@@ -56,7 +56,7 @@ CreateHapgResponse::CreateHapgResponse(
         const CreateHapgRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new CreateHapgResponsePrivate(this), parent)
+    : CloudHsmResponse(new CreateHapgResponsePrivate(this), parent)
 {
     setRequest(new CreateHapgRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const CreateHapgRequest * CreateHapgResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM CreateHapg \a response.
+ * Parses a successful CloudHsm CreateHapg \a response.
  */
 void CreateHapgResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void CreateHapgResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::CreateHapgResponsePrivate
+ * \class QtAws::CloudHsm::CreateHapgResponsePrivate
  * \brief The CreateHapgResponsePrivate class provides private implementation for CreateHapgResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a CreateHapgResponsePrivate object with public implementation \a q.
  */
 CreateHapgResponsePrivate::CreateHapgResponsePrivate(
-    CreateHapgResponse * const q) : CloudHSMResponsePrivate(q)
+    CreateHapgResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM CreateHapg response element from \a xml.
+ * Parses a CloudHsm CreateHapg response element from \a xml.
  */
 void CreateHapgResponsePrivate::parseCreateHapgResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void CreateHapgResponsePrivate::parseCreateHapgResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

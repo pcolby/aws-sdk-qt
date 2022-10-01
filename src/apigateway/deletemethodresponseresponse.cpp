@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteMethodResponseResponse
- * \brief The DeleteMethodResponseResponse class provides an interace for APIGateway DeleteMethodResponse responses.
+ * \class QtAws::ApiGateway::DeleteMethodResponseResponse
+ * \brief The DeleteMethodResponseResponse class provides an interace for ApiGateway DeleteMethodResponse responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteMethodResponse
+ * \sa ApiGatewayClient::deleteMethodResponse
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteMethodResponseResponse::DeleteMethodResponseResponse(
         const DeleteMethodResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteMethodResponseResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteMethodResponseResponsePrivate(this), parent)
 {
     setRequest(new DeleteMethodResponseRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteMethodResponseRequest * DeleteMethodResponseResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteMethodResponse \a response.
+ * Parses a successful ApiGateway DeleteMethodResponse \a response.
  */
 void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteMethodResponseResponsePrivate
+ * \class QtAws::ApiGateway::DeleteMethodResponseResponsePrivate
  * \brief The DeleteMethodResponseResponsePrivate class provides private implementation for DeleteMethodResponseResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteMethodResponseResponsePrivate object with public implementation \a q.
  */
 DeleteMethodResponseResponsePrivate::DeleteMethodResponseResponsePrivate(
-    DeleteMethodResponseResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteMethodResponseResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteMethodResponse response element from \a xml.
+ * Parses a ApiGateway DeleteMethodResponse response element from \a xml.
  */
 void DeleteMethodResponseResponsePrivate::parseDeleteMethodResponseResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteMethodResponseResponsePrivate::parseDeleteMethodResponseResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

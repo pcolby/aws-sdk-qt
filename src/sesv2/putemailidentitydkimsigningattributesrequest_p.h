@@ -24,14 +24,14 @@
 #include "putemailidentitydkimsigningattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutEmailIdentityDkimSigningAttributesRequest;
 
-class PutEmailIdentityDkimSigningAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutEmailIdentityDkimSigningAttributesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutEmailIdentityDkimSigningAttributesRequestPrivate(const Sesv2Request::Action action,
+    PutEmailIdentityDkimSigningAttributesRequestPrivate(const SESv2Request::Action action,
                                    PutEmailIdentityDkimSigningAttributesRequest * const q);
     PutEmailIdentityDkimSigningAttributesRequestPrivate(const PutEmailIdentityDkimSigningAttributesRequestPrivate &other,
                                    PutEmailIdentityDkimSigningAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "uploadlayerpartrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class UploadLayerPartRequest;
 
-class UploadLayerPartRequestPrivate : public ECRPublicRequestPrivate {
+class UploadLayerPartRequestPrivate : public EcrPublicRequestPrivate {
 
 public:
-    UploadLayerPartRequestPrivate(const ECRPublicRequest::Action action,
+    UploadLayerPartRequestPrivate(const EcrPublicRequest::Action action,
                                    UploadLayerPartRequest * const q);
     UploadLayerPartRequestPrivate(const UploadLayerPartRequestPrivate &other,
                                    UploadLayerPartRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

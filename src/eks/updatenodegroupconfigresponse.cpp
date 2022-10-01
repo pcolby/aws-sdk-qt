@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupConfigResponse
- * \brief The UpdateNodegroupConfigResponse class provides an interace for EKS UpdateNodegroupConfig responses.
+ * \class QtAws::Eks::UpdateNodegroupConfigResponse
+ * \brief The UpdateNodegroupConfigResponse class provides an interace for Eks UpdateNodegroupConfig responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const UpdateNodegroupConfigRequest * UpdateNodegroupConfigResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful EKS UpdateNodegroupConfig \a response.
+ * Parses a successful Eks UpdateNodegroupConfig \a response.
  */
 void UpdateNodegroupConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void UpdateNodegroupConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::UpdateNodegroupConfigResponsePrivate
+ * \class QtAws::Eks::UpdateNodegroupConfigResponsePrivate
  * \brief The UpdateNodegroupConfigResponsePrivate class provides private implementation for UpdateNodegroupConfigResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ UpdateNodegroupConfigResponsePrivate::UpdateNodegroupConfigResponsePrivate(
 }
 
 /*!
- * Parses a EKS UpdateNodegroupConfig response element from \a xml.
+ * Parses a Eks UpdateNodegroupConfig response element from \a xml.
  */
 void UpdateNodegroupConfigResponsePrivate::parseUpdateNodegroupConfigResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateNodegroupConfigResponsePrivate::parseUpdateNodegroupConfigResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::QueryRequest
- * \brief The QueryRequest class provides an interface for DynamoDB Query requests.
+ * \class QtAws::DynamoDb::QueryRequest
+ * \brief The QueryRequest class provides an interface for DynamoDb Query requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::query
+ * \sa DynamoDbClient::query
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 QueryRequest::QueryRequest(const QueryRequest &other)
-    : DynamoDBRequest(new QueryRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new QueryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ QueryRequest::QueryRequest(const QueryRequest &other)
  * Constructs a QueryRequest object.
  */
 QueryRequest::QueryRequest()
-    : DynamoDBRequest(new QueryRequestPrivate(DynamoDBRequest::QueryAction, this))
+    : DynamoDbRequest(new QueryRequestPrivate(DynamoDbRequest::QueryAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
 }
 
 /*!
- * \class QtAws::DynamoDB::QueryRequestPrivate
+ * \class QtAws::DynamoDb::QueryRequestPrivate
  * \brief The QueryRequestPrivate class provides private implementation for QueryRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a QueryRequestPrivate object for DynamoDB \a action,
+ * Constructs a QueryRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 QueryRequestPrivate::QueryRequestPrivate(
-    const DynamoDBRequest::Action action, QueryRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, QueryRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ QueryRequestPrivate::QueryRequestPrivate(
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const QueryRequestPrivate &other, QueryRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

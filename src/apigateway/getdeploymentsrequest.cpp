@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDeploymentsRequest
- * \brief The GetDeploymentsRequest class provides an interface for APIGateway GetDeployments requests.
+ * \class QtAws::ApiGateway::GetDeploymentsRequest
+ * \brief The GetDeploymentsRequest class provides an interface for ApiGateway GetDeployments requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDeployments
+ * \sa ApiGatewayClient::getDeployments
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDeploymentsRequest::GetDeploymentsRequest(const GetDeploymentsRequest &other)
-    : APIGatewayRequest(new GetDeploymentsRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetDeploymentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetDeploymentsRequest::GetDeploymentsRequest(const GetDeploymentsRequest &other)
  * Constructs a GetDeploymentsRequest object.
  */
 GetDeploymentsRequest::GetDeploymentsRequest()
-    : APIGatewayRequest(new GetDeploymentsRequestPrivate(APIGatewayRequest::GetDeploymentsAction, this))
+    : ApiGatewayRequest(new GetDeploymentsRequestPrivate(ApiGatewayRequest::GetDeploymentsAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentsRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::GetDeploymentsRequestPrivate
+ * \class QtAws::ApiGateway::GetDeploymentsRequestPrivate
  * \brief The GetDeploymentsRequestPrivate class provides private implementation for GetDeploymentsRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetDeploymentsRequestPrivate object for APIGateway \a action,
+ * Constructs a GetDeploymentsRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetDeploymentsRequestPrivate::GetDeploymentsRequestPrivate(
-    const APIGatewayRequest::Action action, GetDeploymentsRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetDeploymentsRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetDeploymentsRequestPrivate::GetDeploymentsRequestPrivate(
  */
 GetDeploymentsRequestPrivate::GetDeploymentsRequestPrivate(
     const GetDeploymentsRequestPrivate &other, GetDeploymentsRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

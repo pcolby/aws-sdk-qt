@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeContributorInsightsRequest
- * \brief The DescribeContributorInsightsRequest class provides an interface for DynamoDB DescribeContributorInsights requests.
+ * \class QtAws::DynamoDb::DescribeContributorInsightsRequest
+ * \brief The DescribeContributorInsightsRequest class provides an interface for DynamoDb DescribeContributorInsights requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeContributorInsights
+ * \sa DynamoDbClient::describeContributorInsights
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeContributorInsightsRequest::DescribeContributorInsightsRequest(const DescribeContributorInsightsRequest &other)
-    : DynamoDBRequest(new DescribeContributorInsightsRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeContributorInsightsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeContributorInsightsRequest::DescribeContributorInsightsRequest(const Des
  * Constructs a DescribeContributorInsightsRequest object.
  */
 DescribeContributorInsightsRequest::DescribeContributorInsightsRequest()
-    : DynamoDBRequest(new DescribeContributorInsightsRequestPrivate(DynamoDBRequest::DescribeContributorInsightsAction, this))
+    : DynamoDbRequest(new DescribeContributorInsightsRequestPrivate(DynamoDbRequest::DescribeContributorInsightsAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeContributorInsightsRequest::response(
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeContributorInsightsRequestPrivate
+ * \class QtAws::DynamoDb::DescribeContributorInsightsRequestPrivate
  * \brief The DescribeContributorInsightsRequestPrivate class provides private implementation for DescribeContributorInsightsRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeContributorInsightsRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeContributorInsightsRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeContributorInsightsRequestPrivate::DescribeContributorInsightsRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeContributorInsightsRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeContributorInsightsRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeContributorInsightsRequestPrivate::DescribeContributorInsightsRequestPri
  */
 DescribeContributorInsightsRequestPrivate::DescribeContributorInsightsRequestPrivate(
     const DescribeContributorInsightsRequestPrivate &other, DescribeContributorInsightsRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

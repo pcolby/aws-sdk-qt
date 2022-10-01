@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateResourceRequest
- * \brief The CreateResourceRequest class provides an interface for APIGateway CreateResource requests.
+ * \class QtAws::ApiGateway::CreateResourceRequest
+ * \brief The CreateResourceRequest class provides an interface for ApiGateway CreateResource requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createResource
+ * \sa ApiGatewayClient::createResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
-    : APIGatewayRequest(new CreateResourceRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new CreateResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateResourceRequest::CreateResourceRequest(const CreateResourceRequest &other)
  * Constructs a CreateResourceRequest object.
  */
 CreateResourceRequest::CreateResourceRequest()
-    : APIGatewayRequest(new CreateResourceRequestPrivate(APIGatewayRequest::CreateResourceAction, this))
+    : ApiGatewayRequest(new CreateResourceRequestPrivate(ApiGatewayRequest::CreateResourceAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * CreateResourceRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::CreateResourceRequestPrivate
+ * \class QtAws::ApiGateway::CreateResourceRequestPrivate
  * \brief The CreateResourceRequestPrivate class provides private implementation for CreateResourceRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a CreateResourceRequestPrivate object for APIGateway \a action,
+ * Constructs a CreateResourceRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
-    const APIGatewayRequest::Action action, CreateResourceRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, CreateResourceRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ CreateResourceRequestPrivate::CreateResourceRequestPrivate(
  */
 CreateResourceRequestPrivate::CreateResourceRequestPrivate(
     const CreateResourceRequestPrivate &other, CreateResourceRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

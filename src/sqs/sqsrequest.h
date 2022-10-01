@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class SqsRequestPrivate;
 
 class QTAWSSQS_EXPORT SqsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SQS.
+    /// Actions supported by Sqs.
     enum Action {
         AddPermissionAction,
         ChangeMessageVisibilityAction,
@@ -95,7 +95,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

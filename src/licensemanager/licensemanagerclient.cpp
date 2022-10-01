@@ -37,6 +37,8 @@
 #include "createlicenseresponse.h"
 #include "createlicenseconfigurationrequest.h"
 #include "createlicenseconfigurationresponse.h"
+#include "createlicenseconversiontaskforresourcerequest.h"
+#include "createlicenseconversiontaskforresourceresponse.h"
 #include "createlicensemanagerreportgeneratorrequest.h"
 #include "createlicensemanagerreportgeneratorresponse.h"
 #include "createlicenseversionrequest.h"
@@ -63,6 +65,8 @@
 #include "getlicenseresponse.h"
 #include "getlicenseconfigurationrequest.h"
 #include "getlicenseconfigurationresponse.h"
+#include "getlicenseconversiontaskrequest.h"
+#include "getlicenseconversiontaskresponse.h"
 #include "getlicensemanagerreportgeneratorrequest.h"
 #include "getlicensemanagerreportgeneratorresponse.h"
 #include "getlicenseusagerequest.h"
@@ -77,6 +81,8 @@
 #include "listfailuresforlicenseconfigurationoperationsresponse.h"
 #include "listlicenseconfigurationsrequest.h"
 #include "listlicenseconfigurationsresponse.h"
+#include "listlicenseconversiontasksrequest.h"
+#include "listlicenseconversiontasksresponse.h"
 #include "listlicensemanagerreportgeneratorsrequest.h"
 #include "listlicensemanagerreportgeneratorsresponse.h"
 #include "listlicensespecificationsforresourcerequest.h"
@@ -134,10 +140,8 @@ namespace LicenseManager {
  * \ingroup aws-clients
  * \inmodule QtAwsLicenseManager
  *
- *  <fullname> AWS License Manager </fullname>
- * 
- *  AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- *  on-premises
+ *  License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ *  and on-premises
  */
 
 /*!
@@ -251,7 +255,8 @@ CheckoutLicenseResponse * LicenseManagerClient::checkoutLicense(const CheckoutLi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a grant for the specified license. A grant shares the use of license entitlements with specific AWS
+ * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web
+ * Services
  */
 CreateGrantResponse * LicenseManagerClient::createGrant(const CreateGrantRequest &request)
 {
@@ -306,11 +311,24 @@ CreateLicenseConfigurationResponse * LicenseManagerClient::createLicenseConfigur
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateLicenseConversionTaskForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new license conversion
+ */
+CreateLicenseConversionTaskForResourceResponse * LicenseManagerClient::createLicenseConversionTaskForResource(const CreateLicenseConversionTaskForResourceRequest &request)
+{
+    return qobject_cast<CreateLicenseConversionTaskForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * CreateLicenseManagerReportGeneratorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new report
+ * Creates a report
  */
 CreateLicenseManagerReportGeneratorResponse * LicenseManagerClient::createLicenseManagerReportGenerator(const CreateLicenseManagerReportGeneratorRequest &request)
 {
@@ -397,12 +415,12 @@ DeleteLicenseConfigurationResponse * LicenseManagerClient::deleteLicenseConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete an existing report
+ * Deletes the specified report
  *
  * generator>
  *
- * This action deletes the report generator, which stops it from generating future reports and cannot be reversed. However,
- * the previous reports from this generator will remain in your S3
+ * This action deletes the report generator, which stops it from generating future reports. The action cannot be reversed.
+ * It has no effect on the previous reports from this
  */
 DeleteLicenseManagerReportGeneratorResponse * LicenseManagerClient::deleteLicenseManagerReportGenerator(const DeleteLicenseManagerReportGeneratorRequest &request)
 {
@@ -489,11 +507,24 @@ GetLicenseConfigurationResponse * LicenseManagerClient::getLicenseConfiguration(
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetLicenseConversionTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the specified license type conversion
+ */
+GetLicenseConversionTaskResponse * LicenseManagerClient::getLicenseConversionTask(const GetLicenseConversionTaskRequest &request)
+{
+    return qobject_cast<GetLicenseConversionTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * GetLicenseManagerReportGeneratorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information on the specified report
+ * Gets information about the specified report
  */
 GetLicenseManagerReportGeneratorResponse * LicenseManagerClient::getLicenseManagerReportGenerator(const GetLicenseManagerReportGeneratorRequest &request)
 {
@@ -581,6 +612,19 @@ ListFailuresForLicenseConfigurationOperationsResponse * LicenseManagerClient::li
 ListLicenseConfigurationsResponse * LicenseManagerClient::listLicenseConfigurations(const ListLicenseConfigurationsRequest &request)
 {
     return qobject_cast<ListLicenseConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListLicenseConversionTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the license type conversion tasks for your
+ */
+ListLicenseConversionTasksResponse * LicenseManagerClient::listLicenseConversionTasks(const ListLicenseConversionTasksRequest &request)
+{
+    return qobject_cast<ListLicenseConversionTasksResponse *>(send(request));
 }
 
 /*!
@@ -776,7 +820,7 @@ UpdateLicenseConfigurationResponse * LicenseManagerClient::updateLicenseConfigur
  *
  * generator>
  *
- * After you make changes to a report generator, it will start generating new reports within 60 minutes of being
+ * After you make changes to a report generator, it starts generating new reports within 60 minutes of being
  */
 UpdateLicenseManagerReportGeneratorResponse * LicenseManagerClient::updateLicenseManagerReportGenerator(const UpdateLicenseManagerReportGeneratorRequest &request)
 {
@@ -789,13 +833,12 @@ UpdateLicenseManagerReportGeneratorResponse * LicenseManagerClient::updateLicens
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or removes the specified license configurations for the specified AWS
+ * Adds or removes the specified license configurations for the specified Amazon Web Services
  *
  * resource>
  *
  * You can update the license specifications of AMIs, instances, and hosts. You cannot update the license specifications
- * for launch templates and AWS CloudFormation templates, as they send license configurations to the operation that creates
- * the
+ * for launch templates and CloudFormation templates, as they send license configurations to the operation that creates the
  */
 UpdateLicenseSpecificationsForResourceResponse * LicenseManagerClient::updateLicenseSpecificationsForResource(const UpdateLicenseSpecificationsForResourceRequest &request)
 {

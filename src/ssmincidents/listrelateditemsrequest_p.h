@@ -24,14 +24,14 @@
 #include "listrelateditemsrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class ListRelatedItemsRequest;
 
-class ListRelatedItemsRequestPrivate : public SSMIncidentsRequestPrivate {
+class ListRelatedItemsRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    ListRelatedItemsRequestPrivate(const SSMIncidentsRequest::Action action,
+    ListRelatedItemsRequestPrivate(const SsmIncidentsRequest::Action action,
                                    ListRelatedItemsRequest * const q);
     ListRelatedItemsRequestPrivate(const ListRelatedItemsRequestPrivate &other,
                                    ListRelatedItemsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

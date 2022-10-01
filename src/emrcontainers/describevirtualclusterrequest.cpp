@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DescribeVirtualClusterRequest
- * \brief The DescribeVirtualClusterRequest class provides an interface for EMRContainers DescribeVirtualCluster requests.
+ * \class QtAws::Emrcontainers::DescribeVirtualClusterRequest
+ * \brief The DescribeVirtualClusterRequest class provides an interface for Emrcontainers DescribeVirtualCluster requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::describeVirtualCluster
+ * \sa EmrcontainersClient::describeVirtualCluster
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeVirtualClusterRequest::DescribeVirtualClusterRequest(const DescribeVirtualClusterRequest &other)
-    : EMRContainersRequest(new DescribeVirtualClusterRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new DescribeVirtualClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ DescribeVirtualClusterRequest::DescribeVirtualClusterRequest(const DescribeVirtu
  * Constructs a DescribeVirtualClusterRequest object.
  */
 DescribeVirtualClusterRequest::DescribeVirtualClusterRequest()
-    : EMRContainersRequest(new DescribeVirtualClusterRequestPrivate(EMRContainersRequest::DescribeVirtualClusterAction, this))
+    : EmrcontainersRequest(new DescribeVirtualClusterRequestPrivate(EmrcontainersRequest::DescribeVirtualClusterAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * DescribeVirtualClusterRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::EMRContainers::DescribeVirtualClusterRequestPrivate
+ * \class QtAws::Emrcontainers::DescribeVirtualClusterRequestPrivate
  * \brief The DescribeVirtualClusterRequestPrivate class provides private implementation for DescribeVirtualClusterRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a DescribeVirtualClusterRequestPrivate object for EMRContainers \a action,
+ * Constructs a DescribeVirtualClusterRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 DescribeVirtualClusterRequestPrivate::DescribeVirtualClusterRequestPrivate(
-    const EMRContainersRequest::Action action, DescribeVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, DescribeVirtualClusterRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ DescribeVirtualClusterRequestPrivate::DescribeVirtualClusterRequestPrivate(
  */
 DescribeVirtualClusterRequestPrivate::DescribeVirtualClusterRequestPrivate(
     const DescribeVirtualClusterRequestPrivate &other, DescribeVirtualClusterRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

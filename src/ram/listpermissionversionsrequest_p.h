@@ -1,0 +1,47 @@
+/*
+    Copyright 2013-2021 Paul Colby
+
+    This file is part of QtAws.
+
+    QtAws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QtAws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#ifndef QTAWS_LISTPERMISSIONVERSIONSREQUEST_P_H
+#define QTAWS_LISTPERMISSIONVERSIONSREQUEST_P_H
+
+#include "ramrequest_p.h"
+#include "listpermissionversionsrequest.h"
+
+namespace QtAws {
+namespace Ram {
+
+class ListPermissionVersionsRequest;
+
+class ListPermissionVersionsRequestPrivate : public RamRequestPrivate {
+
+public:
+    ListPermissionVersionsRequestPrivate(const RamRequest::Action action,
+                                   ListPermissionVersionsRequest * const q);
+    ListPermissionVersionsRequestPrivate(const ListPermissionVersionsRequestPrivate &other,
+                                   ListPermissionVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPermissionVersionsRequest)
+
+};
+
+} // namespace Ram
+} // namespace QtAws
+
+#endif

@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
-class signerResponsePrivate;
+class SignerResponsePrivate;
 
-class QTAWSSIGNER_EXPORT signerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSIGNER_EXPORT SignerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    signerResponse(QObject * const parent = 0);
+    SignerResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    signerResponse(signerResponsePrivate * const d, QObject * const parent);
+    SignerResponse(SignerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(signerResponse)
-    Q_DISABLE_COPY(signerResponse)
+    Q_DECLARE_PRIVATE(SignerResponse)
+    Q_DISABLE_COPY(SignerResponse)
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

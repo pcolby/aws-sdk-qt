@@ -24,11 +24,11 @@
 #include "deletefaqrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteFaqResponsePrivate;
 
-class QTAWSKENDRA_EXPORT DeleteFaqResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DeleteFaqResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

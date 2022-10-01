@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateWebACLRequest
- * \brief The UpdateWebACLRequest class provides an interface for WAFRegional UpdateWebACL requests.
+ * \class QtAws::WafRegional::UpdateWebACLRequest
+ * \brief The UpdateWebACLRequest class provides an interface for WafRegional UpdateWebACL requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateWebACL
+ * \sa WafRegionalClient::updateWebACL
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
-    : WAFRegionalRequest(new UpdateWebACLRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
  * Constructs a UpdateWebACLRequest object.
  */
 UpdateWebACLRequest::UpdateWebACLRequest()
-    : WAFRegionalRequest(new UpdateWebACLRequestPrivate(WAFRegionalRequest::UpdateWebACLAction, this))
+    : WafRegionalRequest(new UpdateWebACLRequestPrivate(WafRegionalRequest::UpdateWebACLAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateWebACLRequestPrivate
+ * \class QtAws::WafRegional::UpdateWebACLRequestPrivate
  * \brief The UpdateWebACLRequestPrivate class provides private implementation for UpdateWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateWebACLRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateWebACLRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateWebACLRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const UpdateWebACLRequestPrivate &other, UpdateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

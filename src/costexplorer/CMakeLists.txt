@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSCOSTEXPLORER_LIBRARY)
 
 add_library(QtAwsCostExplorer
+  qtawscostexplorerglobal.h
   costexplorerclient.h
   costexplorerclient_p.h
   costexplorerrequest.h
@@ -91,14 +92,14 @@ add_library(QtAwsCostExplorer
   getsavingsplanspurchaserecommendationrequest_p.h
   getsavingsplanspurchaserecommendationresponse.h
   getsavingsplanspurchaserecommendationresponse_p.h
-  getsavingsplansutilizationdetailsrequest.h
-  getsavingsplansutilizationdetailsrequest_p.h
-  getsavingsplansutilizationdetailsresponse.h
-  getsavingsplansutilizationdetailsresponse_p.h
   getsavingsplansutilizationrequest.h
   getsavingsplansutilizationrequest_p.h
   getsavingsplansutilizationresponse.h
   getsavingsplansutilizationresponse_p.h
+  getsavingsplansutilizationdetailsrequest.h
+  getsavingsplansutilizationdetailsrequest_p.h
+  getsavingsplansutilizationdetailsresponse.h
+  getsavingsplansutilizationdetailsresponse_p.h
   gettagsrequest.h
   gettagsrequest_p.h
   gettagsresponse.h
@@ -107,15 +108,30 @@ add_library(QtAwsCostExplorer
   getusageforecastrequest_p.h
   getusageforecastresponse.h
   getusageforecastresponse_p.h
+  listcostallocationtagsrequest.h
+  listcostallocationtagsrequest_p.h
+  listcostallocationtagsresponse.h
+  listcostallocationtagsresponse_p.h
   listcostcategorydefinitionsrequest.h
   listcostcategorydefinitionsrequest_p.h
   listcostcategorydefinitionsresponse.h
   listcostcategorydefinitionsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   provideanomalyfeedbackrequest.h
   provideanomalyfeedbackrequest_p.h
   provideanomalyfeedbackresponse.h
   provideanomalyfeedbackresponse_p.h
-  qtawscostexplorerglobal.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateanomalymonitorrequest.h
   updateanomalymonitorrequest_p.h
   updateanomalymonitorresponse.h
@@ -124,6 +140,10 @@ add_library(QtAwsCostExplorer
   updateanomalysubscriptionrequest_p.h
   updateanomalysubscriptionresponse.h
   updateanomalysubscriptionresponse_p.h
+  updatecostallocationtagsstatusrequest.h
+  updatecostallocationtagsstatusrequest_p.h
+  updatecostallocationtagsstatusresponse.h
+  updatecostallocationtagsstatusresponse_p.h
   updatecostcategorydefinitionrequest.h
   updatecostcategorydefinitionrequest_p.h
   updatecostcategorydefinitionresponse.h
@@ -173,22 +193,32 @@ add_library(QtAwsCostExplorer
   getsavingsplanscoverageresponse.cpp
   getsavingsplanspurchaserecommendationrequest.cpp
   getsavingsplanspurchaserecommendationresponse.cpp
-  getsavingsplansutilizationdetailsrequest.cpp
-  getsavingsplansutilizationdetailsresponse.cpp
   getsavingsplansutilizationrequest.cpp
   getsavingsplansutilizationresponse.cpp
+  getsavingsplansutilizationdetailsrequest.cpp
+  getsavingsplansutilizationdetailsresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
   getusageforecastrequest.cpp
   getusageforecastresponse.cpp
+  listcostallocationtagsrequest.cpp
+  listcostallocationtagsresponse.cpp
   listcostcategorydefinitionsrequest.cpp
   listcostcategorydefinitionsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   provideanomalyfeedbackrequest.cpp
   provideanomalyfeedbackresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateanomalymonitorrequest.cpp
   updateanomalymonitorresponse.cpp
   updateanomalysubscriptionrequest.cpp
   updateanomalysubscriptionresponse.cpp
+  updatecostallocationtagsstatusrequest.cpp
+  updatecostallocationtagsstatusresponse.cpp
   updatecostcategorydefinitionrequest.cpp
   updatecostcategorydefinitionresponse.cpp)
 

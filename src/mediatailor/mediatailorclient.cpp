@@ -21,8 +21,14 @@
 #include "mediatailorclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "configurelogsforplaybackconfigurationrequest.h"
+#include "configurelogsforplaybackconfigurationresponse.h"
 #include "createchannelrequest.h"
 #include "createchannelresponse.h"
+#include "createlivesourcerequest.h"
+#include "createlivesourceresponse.h"
+#include "createprefetchschedulerequest.h"
+#include "createprefetchscheduleresponse.h"
 #include "createprogramrequest.h"
 #include "createprogramresponse.h"
 #include "createsourcelocationrequest.h"
@@ -33,8 +39,12 @@
 #include "deletechannelresponse.h"
 #include "deletechannelpolicyrequest.h"
 #include "deletechannelpolicyresponse.h"
+#include "deletelivesourcerequest.h"
+#include "deletelivesourceresponse.h"
 #include "deleteplaybackconfigurationrequest.h"
 #include "deleteplaybackconfigurationresponse.h"
+#include "deleteprefetchschedulerequest.h"
+#include "deleteprefetchscheduleresponse.h"
 #include "deleteprogramrequest.h"
 #include "deleteprogramresponse.h"
 #include "deletesourcelocationrequest.h"
@@ -43,6 +53,8 @@
 #include "deletevodsourceresponse.h"
 #include "describechannelrequest.h"
 #include "describechannelresponse.h"
+#include "describelivesourcerequest.h"
+#include "describelivesourceresponse.h"
 #include "describeprogramrequest.h"
 #include "describeprogramresponse.h"
 #include "describesourcelocationrequest.h"
@@ -55,10 +67,18 @@
 #include "getchannelscheduleresponse.h"
 #include "getplaybackconfigurationrequest.h"
 #include "getplaybackconfigurationresponse.h"
+#include "getprefetchschedulerequest.h"
+#include "getprefetchscheduleresponse.h"
+#include "listalertsrequest.h"
+#include "listalertsresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
+#include "listlivesourcesrequest.h"
+#include "listlivesourcesresponse.h"
 #include "listplaybackconfigurationsrequest.h"
 #include "listplaybackconfigurationsresponse.h"
+#include "listprefetchschedulesrequest.h"
+#include "listprefetchschedulesresponse.h"
 #include "listsourcelocationsrequest.h"
 #include "listsourcelocationsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -79,6 +99,8 @@
 #include "untagresourceresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
+#include "updatelivesourcerequest.h"
+#include "updatelivesourceresponse.h"
 #include "updatesourcelocationrequest.h"
 #include "updatesourcelocationresponse.h"
 #include "updatevodsourcerequest.h"
@@ -174,6 +196,19 @@ MediaTailorClient::MediaTailorClient(
 
 /*!
  * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * ConfigureLogsForPlaybackConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Configures Amazon CloudWatch log settings for a playback
+ */
+ConfigureLogsForPlaybackConfigurationResponse * MediaTailorClient::configureLogsForPlaybackConfiguration(const ConfigureLogsForPlaybackConfigurationRequest &request)
+{
+    return qobject_cast<ConfigureLogsForPlaybackConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
  * CreateChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -183,6 +218,32 @@ MediaTailorClient::MediaTailorClient(
 CreateChannelResponse * MediaTailorClient::createChannel(const CreateChannelRequest &request)
 {
     return qobject_cast<CreateChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * CreateLiveSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates name for a specific live source in a source
+ */
+CreateLiveSourceResponse * MediaTailorClient::createLiveSource(const CreateLiveSourceRequest &request)
+{
+    return qobject_cast<CreateLiveSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * CreatePrefetchScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new prefetch schedule for the specified playback
+ */
+CreatePrefetchScheduleResponse * MediaTailorClient::createPrefetchSchedule(const CreatePrefetchScheduleRequest &request)
+{
+    return qobject_cast<CreatePrefetchScheduleResponse *>(send(request));
 }
 
 /*!
@@ -252,6 +313,19 @@ DeleteChannelPolicyResponse * MediaTailorClient::deleteChannelPolicy(const Delet
 
 /*!
  * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * DeleteLiveSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specific live source in a specific source
+ */
+DeleteLiveSourceResponse * MediaTailorClient::deleteLiveSource(const DeleteLiveSourceRequest &request)
+{
+    return qobject_cast<DeleteLiveSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
  * DeletePlaybackConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -261,6 +335,20 @@ DeleteChannelPolicyResponse * MediaTailorClient::deleteChannelPolicy(const Delet
 DeletePlaybackConfigurationResponse * MediaTailorClient::deletePlaybackConfiguration(const DeletePlaybackConfigurationRequest &request)
 {
     return qobject_cast<DeletePlaybackConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * DeletePrefetchScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a prefetch schedule for a specific playback configuration. If you call DeletePrefetchSchedule on an expired
+ * prefetch schedule, MediaTailor returns an HTTP 404 status
+ */
+DeletePrefetchScheduleResponse * MediaTailorClient::deletePrefetchSchedule(const DeletePrefetchScheduleRequest &request)
+{
+    return qobject_cast<DeletePrefetchScheduleResponse *>(send(request));
 }
 
 /*!
@@ -313,6 +401,19 @@ DeleteVodSourceResponse * MediaTailorClient::deleteVodSource(const DeleteVodSour
 DescribeChannelResponse * MediaTailorClient::describeChannel(const DescribeChannelRequest &request)
 {
     return qobject_cast<DescribeChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * DescribeLiveSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides details about a specific live source in a specific source
+ */
+DescribeLiveSourceResponse * MediaTailorClient::describeLiveSource(const DescribeLiveSourceRequest &request)
+{
+    return qobject_cast<DescribeLiveSourceResponse *>(send(request));
 }
 
 /*!
@@ -395,6 +496,33 @@ GetPlaybackConfigurationResponse * MediaTailorClient::getPlaybackConfiguration(c
 
 /*!
  * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * GetPrefetchScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the prefetch schedule for a specific playback configuration. If you call GetPrefetchSchedule
+ * on an expired prefetch schedule, MediaTailor returns an HTTP 404 status
+ */
+GetPrefetchScheduleResponse * MediaTailorClient::getPrefetchSchedule(const GetPrefetchScheduleRequest &request)
+{
+    return qobject_cast<GetPrefetchScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * ListAlertsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of alerts for the given
+ */
+ListAlertsResponse * MediaTailorClient::listAlerts(const ListAlertsRequest &request)
+{
+    return qobject_cast<ListAlertsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
  * ListChannelsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -404,6 +532,19 @@ GetPlaybackConfigurationResponse * MediaTailorClient::getPlaybackConfiguration(c
 ListChannelsResponse * MediaTailorClient::listChannels(const ListChannelsRequest &request)
 {
     return qobject_cast<ListChannelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * ListLiveSourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * lists all the live sources in a source
+ */
+ListLiveSourcesResponse * MediaTailorClient::listLiveSources(const ListLiveSourcesRequest &request)
+{
+    return qobject_cast<ListLiveSourcesResponse *>(send(request));
 }
 
 /*!
@@ -419,6 +560,19 @@ ListChannelsResponse * MediaTailorClient::listChannels(const ListChannelsRequest
 ListPlaybackConfigurationsResponse * MediaTailorClient::listPlaybackConfigurations(const ListPlaybackConfigurationsRequest &request)
 {
     return qobject_cast<ListPlaybackConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * ListPrefetchSchedulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new prefetch
+ */
+ListPrefetchSchedulesResponse * MediaTailorClient::listPrefetchSchedules(const ListPrefetchSchedulesRequest &request)
+{
+    return qobject_cast<ListPrefetchSchedulesResponse *>(send(request));
 }
 
 /*!
@@ -549,6 +703,19 @@ UntagResourceResponse * MediaTailorClient::untagResource(const UntagResourceRequ
 UpdateChannelResponse * MediaTailorClient::updateChannel(const UpdateChannelRequest &request)
 {
     return qobject_cast<UpdateChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * UpdateLiveSourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a specific live source in a specific source
+ */
+UpdateLiveSourceResponse * MediaTailorClient::updateLiveSource(const UpdateLiveSourceRequest &request)
+{
+    return qobject_cast<UpdateLiveSourceResponse *>(send(request));
 }
 
 /*!

@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListXssMatchSetsRequest
- * \brief The ListXssMatchSetsRequest class provides an interface for WAFRegional ListXssMatchSets requests.
+ * \class QtAws::WafRegional::ListXssMatchSetsRequest
+ * \brief The ListXssMatchSetsRequest class provides an interface for WafRegional ListXssMatchSets requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listXssMatchSets
+ * \sa WafRegionalClient::listXssMatchSets
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListXssMatchSetsRequest::ListXssMatchSetsRequest(const ListXssMatchSetsRequest &other)
-    : WAFRegionalRequest(new ListXssMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListXssMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListXssMatchSetsRequest::ListXssMatchSetsRequest(const ListXssMatchSetsRequest &
  * Constructs a ListXssMatchSetsRequest object.
  */
 ListXssMatchSetsRequest::ListXssMatchSetsRequest()
-    : WAFRegionalRequest(new ListXssMatchSetsRequestPrivate(WAFRegionalRequest::ListXssMatchSetsAction, this))
+    : WafRegionalRequest(new ListXssMatchSetsRequestPrivate(WafRegionalRequest::ListXssMatchSetsAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListXssMatchSetsRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::WAFRegional::ListXssMatchSetsRequestPrivate
+ * \class QtAws::WafRegional::ListXssMatchSetsRequestPrivate
  * \brief The ListXssMatchSetsRequestPrivate class provides private implementation for ListXssMatchSetsRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListXssMatchSetsRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListXssMatchSetsRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
-    const WAFRegionalRequest::Action action, ListXssMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListXssMatchSetsRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
  */
 ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
     const ListXssMatchSetsRequestPrivate &other, ListXssMatchSetsRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

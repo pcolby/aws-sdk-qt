@@ -24,7 +24,7 @@
 #include "deletecertificaterequest.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class DeleteCertificateRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

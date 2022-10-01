@@ -23,7 +23,7 @@
 #include "snsrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class UnsubscribeRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteWebACLRequest
- * \brief The DeleteWebACLRequest class provides an interface for WAF DeleteWebACL requests.
+ * \class QtAws::Waf::DeleteWebACLRequest
+ * \brief The DeleteWebACLRequest class provides an interface for Waf DeleteWebACL requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAF::DeleteWebACLRequestPrivate
+ * \class QtAws::Waf::DeleteWebACLRequestPrivate
  * \brief The DeleteWebACLRequestPrivate class provides private implementation for DeleteWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

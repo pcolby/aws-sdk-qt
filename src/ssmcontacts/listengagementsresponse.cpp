@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::ListEngagementsResponse
- * \brief The ListEngagementsResponse class provides an interace for SSMContacts ListEngagements responses.
+ * \class QtAws::SsmContacts::ListEngagementsResponse
+ * \brief The ListEngagementsResponse class provides an interace for SsmContacts ListEngagements responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::listEngagements
+ * \sa SsmContactsClient::listEngagements
  */
 
 /*!
@@ -44,7 +54,7 @@ ListEngagementsResponse::ListEngagementsResponse(
         const ListEngagementsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new ListEngagementsResponsePrivate(this), parent)
+    : SsmContactsResponse(new ListEngagementsResponsePrivate(this), parent)
 {
     setRequest(new ListEngagementsRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const ListEngagementsRequest * ListEngagementsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts ListEngagements \a response.
+ * Parses a successful SsmContacts ListEngagements \a response.
  */
 void ListEngagementsResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void ListEngagementsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::ListEngagementsResponsePrivate
+ * \class QtAws::SsmContacts::ListEngagementsResponsePrivate
  * \brief The ListEngagementsResponsePrivate class provides private implementation for ListEngagementsResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a ListEngagementsResponsePrivate object with public implementation \a q.
  */
 ListEngagementsResponsePrivate::ListEngagementsResponsePrivate(
-    ListEngagementsResponse * const q) : SSMContactsResponsePrivate(q)
+    ListEngagementsResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts ListEngagements response element from \a xml.
+ * Parses a SsmContacts ListEngagements response element from \a xml.
  */
 void ListEngagementsResponsePrivate::parseListEngagementsResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void ListEngagementsResponsePrivate::parseListEngagementsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

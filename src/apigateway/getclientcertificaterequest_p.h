@@ -24,14 +24,14 @@
 #include "getclientcertificaterequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetClientCertificateRequest;
 
-class GetClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
+class GetClientCertificateRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetClientCertificateRequestPrivate(const APIGatewayRequest::Action action,
+    GetClientCertificateRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetClientCertificateRequest * const q);
     GetClientCertificateRequestPrivate(const GetClientCertificateRequestPrivate &other,
                                    GetClientCertificateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

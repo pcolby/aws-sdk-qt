@@ -24,11 +24,11 @@
 #include "deleteresourcepolicyrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class DeleteResourcePolicyResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT DeleteResourcePolicyResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT DeleteResourcePolicyResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::CreateEnvironmentResponse
- * \brief The CreateEnvironmentResponse class provides an interace for finspace CreateEnvironment responses.
+ * \class QtAws::Finspace::CreateEnvironmentResponse
+ * \brief The CreateEnvironmentResponse class provides an interace for Finspace CreateEnvironment responses.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::createEnvironment
+ * \sa FinspaceClient::createEnvironment
  */
 
 /*!
@@ -45,7 +45,7 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
         const CreateEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : finspaceResponse(new CreateEnvironmentResponsePrivate(this), parent)
+    : FinspaceResponse(new CreateEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new CreateEnvironmentRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful finspace CreateEnvironment \a response.
+ * Parses a successful Finspace CreateEnvironment \a response.
  */
 void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::finspace::CreateEnvironmentResponsePrivate
+ * \class QtAws::Finspace::CreateEnvironmentResponsePrivate
  * \brief The CreateEnvironmentResponsePrivate class provides private implementation for CreateEnvironmentResponse.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
  * Constructs a CreateEnvironmentResponsePrivate object with public implementation \a q.
  */
 CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
-    CreateEnvironmentResponse * const q) : finspaceResponsePrivate(q)
+    CreateEnvironmentResponse * const q) : FinspaceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a finspace CreateEnvironment response element from \a xml.
+ * Parses a Finspace CreateEnvironment response element from \a xml.
  */
 void CreateEnvironmentResponsePrivate::parseCreateEnvironmentResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateEnvironmentResponsePrivate::parseCreateEnvironmentResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

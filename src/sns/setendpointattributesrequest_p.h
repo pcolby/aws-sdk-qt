@@ -24,7 +24,7 @@
 #include "setendpointattributesrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class SetEndpointAttributesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listdomaindeliverabilitycampaignsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class ListDomainDeliverabilityCampaignsRequest;
 
-class ListDomainDeliverabilityCampaignsRequestPrivate : public Sesv2RequestPrivate {
+class ListDomainDeliverabilityCampaignsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    ListDomainDeliverabilityCampaignsRequestPrivate(const Sesv2Request::Action action,
+    ListDomainDeliverabilityCampaignsRequestPrivate(const SESv2Request::Action action,
                                    ListDomainDeliverabilityCampaignsRequest * const q);
     ListDomainDeliverabilityCampaignsRequestPrivate(const ListDomainDeliverabilityCampaignsRequestPrivate &other,
                                    ListDomainDeliverabilityCampaignsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

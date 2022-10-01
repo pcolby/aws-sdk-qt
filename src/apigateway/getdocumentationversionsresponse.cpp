@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationVersionsResponse
- * \brief The GetDocumentationVersionsResponse class provides an interace for APIGateway GetDocumentationVersions responses.
+ * \class QtAws::ApiGateway::GetDocumentationVersionsResponse
+ * \brief The GetDocumentationVersionsResponse class provides an interace for ApiGateway GetDocumentationVersions responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDocumentationVersions
+ * \sa ApiGatewayClient::getDocumentationVersions
  */
 
 /*!
@@ -49,7 +49,7 @@ GetDocumentationVersionsResponse::GetDocumentationVersionsResponse(
         const GetDocumentationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetDocumentationVersionsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetDocumentationVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentationVersionsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetDocumentationVersionsRequest * GetDocumentationVersionsResponse::reques
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetDocumentationVersions \a response.
+ * Parses a successful ApiGateway GetDocumentationVersions \a response.
  */
 void GetDocumentationVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetDocumentationVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationVersionsResponsePrivate
+ * \class QtAws::ApiGateway::GetDocumentationVersionsResponsePrivate
  * \brief The GetDocumentationVersionsResponsePrivate class provides private implementation for GetDocumentationVersionsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetDocumentationVersionsResponsePrivate object with public implementation \a q.
  */
 GetDocumentationVersionsResponsePrivate::GetDocumentationVersionsResponsePrivate(
-    GetDocumentationVersionsResponse * const q) : APIGatewayResponsePrivate(q)
+    GetDocumentationVersionsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetDocumentationVersions response element from \a xml.
+ * Parses a ApiGateway GetDocumentationVersions response element from \a xml.
  */
 void GetDocumentationVersionsResponsePrivate::parseGetDocumentationVersionsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetDocumentationVersionsResponsePrivate::parseGetDocumentationVersionsRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

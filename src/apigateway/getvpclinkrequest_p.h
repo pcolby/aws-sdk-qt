@@ -24,14 +24,14 @@
 #include "getvpclinkrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetVpcLinkRequest;
 
-class GetVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
+class GetVpcLinkRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
+    GetVpcLinkRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetVpcLinkRequest * const q);
     GetVpcLinkRequestPrivate(const GetVpcLinkRequestPrivate &other,
                                    GetVpcLinkRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

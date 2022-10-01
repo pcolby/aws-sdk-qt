@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::PutImageRequest
- * \brief The PutImageRequest class provides an interface for ECRPublic PutImage requests.
+ * \class QtAws::EcrPublic::PutImageRequest
+ * \brief The PutImageRequest class provides an interface for EcrPublic PutImage requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::putImage
+ * \sa EcrPublicClient::putImage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 PutImageRequest::PutImageRequest(const PutImageRequest &other)
-    : ECRPublicRequest(new PutImageRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new PutImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ PutImageRequest::PutImageRequest(const PutImageRequest &other)
  * Constructs a PutImageRequest object.
  */
 PutImageRequest::PutImageRequest()
-    : ECRPublicRequest(new PutImageRequestPrivate(ECRPublicRequest::PutImageAction, this))
+    : EcrPublicRequest(new PutImageRequestPrivate(EcrPublicRequest::PutImageAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::ECRPublic::PutImageRequestPrivate
+ * \class QtAws::EcrPublic::PutImageRequestPrivate
  * \brief The PutImageRequestPrivate class provides private implementation for PutImageRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a PutImageRequestPrivate object for ECRPublic \a action,
+ * Constructs a PutImageRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
-    const ECRPublicRequest::Action action, PutImageRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, PutImageRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ PutImageRequestPrivate::PutImageRequestPrivate(
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
     const PutImageRequestPrivate &other, PutImageRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

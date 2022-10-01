@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DeleteLedgerResponse
- * \brief The DeleteLedgerResponse class provides an interace for QLDB DeleteLedger responses.
+ * \class QtAws::Qldb::DeleteLedgerResponse
+ * \brief The DeleteLedgerResponse class provides an interace for Qldb DeleteLedger responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const DeleteLedgerRequest * DeleteLedgerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB DeleteLedger \a response.
+ * Parses a successful Qldb DeleteLedger \a response.
  */
 void DeleteLedgerResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void DeleteLedgerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::DeleteLedgerResponsePrivate
+ * \class QtAws::Qldb::DeleteLedgerResponsePrivate
  * \brief The DeleteLedgerResponsePrivate class provides private implementation for DeleteLedgerResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ DeleteLedgerResponsePrivate::DeleteLedgerResponsePrivate(
 }
 
 /*!
- * Parses a QLDB DeleteLedger response element from \a xml.
+ * Parses a Qldb DeleteLedger response element from \a xml.
  */
 void DeleteLedgerResponsePrivate::parseDeleteLedgerResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteLedgerResponsePrivate::parseDeleteLedgerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

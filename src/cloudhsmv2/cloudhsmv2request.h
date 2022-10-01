@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
-class CloudHSMV2RequestPrivate;
+class CloudHsmV2RequestPrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDHSMV2_EXPORT CloudHsmV2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by CloudHSMV2.
+    /// Actions supported by CloudHsmV2.
     enum Action {
         CopyBackupToRegionAction,
         CreateClusterAction,
@@ -57,9 +57,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    CloudHSMV2Request(const Action action);
-    CloudHSMV2Request(const CloudHSMV2Request &other);
-    CloudHSMV2Request &operator=(const CloudHSMV2Request &other);
+    CloudHsmV2Request(const Action action);
+    CloudHsmV2Request(const CloudHsmV2Request &other);
+    CloudHsmV2Request &operator=(const CloudHsmV2Request &other);
 
     Action action() const;
     QString actionString() const;
@@ -68,12 +68,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CloudHSMV2Request &other) const;
+    virtual bool operator==(const CloudHsmV2Request &other) const;
 
 
 protected:
     /// @cond internal
-    explicit CloudHSMV2Request(CloudHSMV2RequestPrivate * const d);
+    explicit CloudHsmV2Request(CloudHsmV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -86,11 +86,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CloudHSMV2Request)
+    Q_DECLARE_PRIVATE(CloudHsmV2Request)
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteLoggingConfigurationResponse
- * \brief The DeleteLoggingConfigurationResponse class provides an interace for WAF DeleteLoggingConfiguration responses.
+ * \class QtAws::Waf::DeleteLoggingConfigurationResponse
+ * \brief The DeleteLoggingConfigurationResponse class provides an interace for Waf DeleteLoggingConfiguration responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteLoggingConfigurationRequest * DeleteLoggingConfigurationResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteLoggingConfiguration \a response.
+ * Parses a successful Waf DeleteLoggingConfiguration \a response.
  */
 void DeleteLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteLoggingConfigurationResponsePrivate
+ * \class QtAws::Waf::DeleteLoggingConfigurationResponsePrivate
  * \brief The DeleteLoggingConfigurationResponsePrivate class provides private implementation for DeleteLoggingConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteLoggingConfigurationResponsePrivate::DeleteLoggingConfigurationResponsePri
 }
 
 /*!
- * Parses a WAF DeleteLoggingConfiguration response element from \a xml.
+ * Parses a Waf DeleteLoggingConfiguration response element from \a xml.
  */
 void DeleteLoggingConfigurationResponsePrivate::parseDeleteLoggingConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteLoggingConfigurationResponsePrivate::parseDeleteLoggingConfigurationR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

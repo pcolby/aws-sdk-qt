@@ -24,14 +24,14 @@
 #include "deleteserverrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DeleteServerRequest;
 
-class DeleteServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class DeleteServerRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DeleteServerRequestPrivate(const OpsWorksCMRequest::Action action,
+    DeleteServerRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DeleteServerRequest * const q);
     DeleteServerRequestPrivate(const DeleteServerRequestPrivate &other,
                                    DeleteServerRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

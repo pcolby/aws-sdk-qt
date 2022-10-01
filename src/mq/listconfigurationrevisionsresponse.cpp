@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::ListConfigurationRevisionsResponse
- * \brief The ListConfigurationRevisionsResponse class provides an interace for MQ ListConfigurationRevisions responses.
+ * \class QtAws::Mq::ListConfigurationRevisionsResponse
+ * \brief The ListConfigurationRevisionsResponse class provides an interace for Mq ListConfigurationRevisions responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::listConfigurationRevisions
  */
@@ -63,7 +64,7 @@ const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::re
 
 /*!
  * \reimp
- * Parses a successful MQ ListConfigurationRevisions \a response.
+ * Parses a successful Mq ListConfigurationRevisions \a response.
  */
 void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::ListConfigurationRevisionsResponsePrivate
+ * \class QtAws::Mq::ListConfigurationRevisionsResponsePrivate
  * \brief The ListConfigurationRevisionsResponsePrivate class provides private implementation for ListConfigurationRevisionsResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePri
 }
 
 /*!
- * Parses a MQ ListConfigurationRevisions response element from \a xml.
+ * Parses a Mq ListConfigurationRevisions response element from \a xml.
  */
 void ListConfigurationRevisionsResponsePrivate::parseListConfigurationRevisionsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void ListConfigurationRevisionsResponsePrivate::parseListConfigurationRevisionsR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

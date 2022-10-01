@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSMS_LIBRARY)
 
 add_library(QtAwsSms
+  qtawssmsglobal.h
+  smsclient.h
+  smsclient_p.h
+  smsrequest.h
+  smsrequest_p.h
+  smsresponse.h
+  smsresponse_p.h
   createapprequest.h
   createapprequest_p.h
   createappresponse.h
@@ -9,6 +16,10 @@ add_library(QtAwsSms
   createreplicationjobrequest_p.h
   createreplicationjobresponse.h
   createreplicationjobresponse_p.h
+  deleteapprequest.h
+  deleteapprequest_p.h
+  deleteappresponse.h
+  deleteappresponse_p.h
   deleteapplaunchconfigurationrequest.h
   deleteapplaunchconfigurationrequest_p.h
   deleteapplaunchconfigurationresponse.h
@@ -17,10 +28,6 @@ add_library(QtAwsSms
   deleteappreplicationconfigurationrequest_p.h
   deleteappreplicationconfigurationresponse.h
   deleteappreplicationconfigurationresponse_p.h
-  deleteapprequest.h
-  deleteapprequest_p.h
-  deleteappresponse.h
-  deleteappresponse_p.h
   deleteappvalidationconfigurationrequest.h
   deleteappvalidationconfigurationrequest_p.h
   deleteappvalidationconfigurationresponse.h
@@ -45,6 +52,10 @@ add_library(QtAwsSms
   generatetemplaterequest_p.h
   generatetemplateresponse.h
   generatetemplateresponse_p.h
+  getapprequest.h
+  getapprequest_p.h
+  getappresponse.h
+  getappresponse_p.h
   getapplaunchconfigurationrequest.h
   getapplaunchconfigurationrequest_p.h
   getapplaunchconfigurationresponse.h
@@ -53,10 +64,6 @@ add_library(QtAwsSms
   getappreplicationconfigurationrequest_p.h
   getappreplicationconfigurationresponse.h
   getappreplicationconfigurationresponse_p.h
-  getapprequest.h
-  getapprequest_p.h
-  getappresponse.h
-  getappresponse_p.h
   getappvalidationconfigurationrequest.h
   getappvalidationconfigurationrequest_p.h
   getappvalidationconfigurationresponse.h
@@ -113,13 +120,6 @@ add_library(QtAwsSms
   putappvalidationconfigurationrequest_p.h
   putappvalidationconfigurationresponse.h
   putappvalidationconfigurationresponse_p.h
-  qtawssmsglobal.h
-  smsclient.h
-  smsclient_p.h
-  smsrequest.h
-  smsrequest_p.h
-  smsresponse.h
-  smsresponse_p.h
   startappreplicationrequest.h
   startappreplicationrequest_p.h
   startappreplicationresponse.h
@@ -148,16 +148,19 @@ add_library(QtAwsSms
   updatereplicationjobrequest_p.h
   updatereplicationjobresponse.h
   updatereplicationjobresponse_p.h
+  smsclient.cpp
+  smsrequest.cpp
+  smsresponse.cpp
   createapprequest.cpp
   createappresponse.cpp
   createreplicationjobrequest.cpp
   createreplicationjobresponse.cpp
+  deleteapprequest.cpp
+  deleteappresponse.cpp
   deleteapplaunchconfigurationrequest.cpp
   deleteapplaunchconfigurationresponse.cpp
   deleteappreplicationconfigurationrequest.cpp
   deleteappreplicationconfigurationresponse.cpp
-  deleteapprequest.cpp
-  deleteappresponse.cpp
   deleteappvalidationconfigurationrequest.cpp
   deleteappvalidationconfigurationresponse.cpp
   deletereplicationjobrequest.cpp
@@ -170,12 +173,12 @@ add_library(QtAwsSms
   generatechangesetresponse.cpp
   generatetemplaterequest.cpp
   generatetemplateresponse.cpp
+  getapprequest.cpp
+  getappresponse.cpp
   getapplaunchconfigurationrequest.cpp
   getapplaunchconfigurationresponse.cpp
   getappreplicationconfigurationrequest.cpp
   getappreplicationconfigurationresponse.cpp
-  getapprequest.cpp
-  getappresponse.cpp
   getappvalidationconfigurationrequest.cpp
   getappvalidationconfigurationresponse.cpp
   getappvalidationoutputrequest.cpp
@@ -204,9 +207,6 @@ add_library(QtAwsSms
   putappreplicationconfigurationresponse.cpp
   putappvalidationconfigurationrequest.cpp
   putappvalidationconfigurationresponse.cpp
-  smsclient.cpp
-  smsrequest.cpp
-  smsresponse.cpp
   startappreplicationrequest.cpp
   startappreplicationresponse.cpp
   startondemandappreplicationrequest.cpp

@@ -52,6 +52,7 @@ public:
         DescribeBudgetActionHistoriesAction,
         DescribeBudgetActionsForAccountAction,
         DescribeBudgetActionsForBudgetAction,
+        DescribeBudgetNotificationsForAccountAction,
         DescribeBudgetPerformanceHistoryAction,
         DescribeBudgetsAction,
         DescribeNotificationsForBudgetAction,

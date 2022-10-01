@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenStatusResponse
- * \brief The GetChangeTokenStatusResponse class provides an interace for WAFRegional GetChangeTokenStatus responses.
+ * \class QtAws::WafRegional::GetChangeTokenStatusResponse
+ * \brief The GetChangeTokenStatusResponse class provides an interace for WafRegional GetChangeTokenStatus responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getChangeTokenStatus
+ * \sa WafRegionalClient::getChangeTokenStatus
  */
 
 /*!
@@ -67,7 +67,7 @@ GetChangeTokenStatusResponse::GetChangeTokenStatusResponse(
         const GetChangeTokenStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetChangeTokenStatusResponsePrivate(this), parent)
+    : WafRegionalResponse(new GetChangeTokenStatusResponsePrivate(this), parent)
 {
     setRequest(new GetChangeTokenStatusRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful WAFRegional GetChangeTokenStatus \a response.
+ * Parses a successful WafRegional GetChangeTokenStatus \a response.
  */
 void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenStatusResponsePrivate
+ * \class QtAws::WafRegional::GetChangeTokenStatusResponsePrivate
  * \brief The GetChangeTokenStatusResponsePrivate class provides private implementation for GetChangeTokenStatusResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a GetChangeTokenStatusResponsePrivate object with public implementation \a q.
  */
 GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
-    GetChangeTokenStatusResponse * const q) : WAFRegionalResponsePrivate(q)
+    GetChangeTokenStatusResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional GetChangeTokenStatus response element from \a xml.
+ * Parses a WafRegional GetChangeTokenStatus response element from \a xml.
  */
 void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

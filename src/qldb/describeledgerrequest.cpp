@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DescribeLedgerRequest
- * \brief The DescribeLedgerRequest class provides an interface for QLDB DescribeLedger requests.
+ * \class QtAws::Qldb::DescribeLedgerRequest
+ * \brief The DescribeLedgerRequest class provides an interface for Qldb DescribeLedger requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * DescribeLedgerRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::QLDB::DescribeLedgerRequestPrivate
+ * \class QtAws::Qldb::DescribeLedgerRequestPrivate
  * \brief The DescribeLedgerRequestPrivate class provides private implementation for DescribeLedgerRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ DescribeLedgerRequestPrivate::DescribeLedgerRequestPrivate(
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

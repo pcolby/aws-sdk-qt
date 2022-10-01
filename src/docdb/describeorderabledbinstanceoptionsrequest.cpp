@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeOrderableDBInstanceOptionsRequest
- * \brief The DescribeOrderableDBInstanceOptionsRequest class provides an interface for DocDB DescribeOrderableDBInstanceOptions requests.
+ * \class QtAws::DocDb::DescribeOrderableDBInstanceOptionsRequest
+ * \brief The DescribeOrderableDBInstanceOptionsRequest class provides an interface for DocDb DescribeOrderableDBInstanceOptions requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeOrderableDBInstanceOptions
+ * \sa DocDbClient::describeOrderableDBInstanceOptions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other)
-    : DocDBRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsReq
  * Constructs a DescribeOrderableDBInstanceOptionsRequest object.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest()
-    : DocDBRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(DocDBRequest::DescribeOrderableDBInstanceOptionsAction, this))
+    : DocDbRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(DocDbRequest::DescribeOrderableDBInstanceOptionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::re
 }
 
 /*!
- * \class QtAws::DocDB::DescribeOrderableDBInstanceOptionsRequestPrivate
+ * \class QtAws::DocDb::DescribeOrderableDBInstanceOptionsRequestPrivate
  * \brief The DescribeOrderableDBInstanceOptionsRequestPrivate class provides private implementation for DescribeOrderableDBInstanceOptionsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
-    const DocDBRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOpt
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
     const DescribeOrderableDBInstanceOptionsRequestPrivate &other, DescribeOrderableDBInstanceOptionsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

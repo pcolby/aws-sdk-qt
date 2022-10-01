@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
-class DynamoDBRequestPrivate;
+class DynamoDbRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT DynamoDBRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDYNAMODB_EXPORT DynamoDbRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by DynamoDB.
+    /// Actions supported by DynamoDb.
     enum Action {
         BatchExecuteStatementAction,
         BatchGetItemAction,
@@ -55,6 +55,7 @@ public:
         DescribeExportAction,
         DescribeGlobalTableAction,
         DescribeGlobalTableSettingsAction,
+        DescribeImportAction,
         DescribeKinesisStreamingDestinationAction,
         DescribeLimitsAction,
         DescribeTableAction,
@@ -66,10 +67,12 @@ public:
         ExecuteTransactionAction,
         ExportTableToPointInTimeAction,
         GetItemAction,
+        ImportTableAction,
         ListBackupsAction,
         ListContributorInsightsAction,
         ListExportsAction,
         ListGlobalTablesAction,
+        ListImportsAction,
         ListTablesAction,
         ListTagsOfResourceAction,
         PutItemAction,
@@ -92,9 +95,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    DynamoDBRequest(const Action action);
-    DynamoDBRequest(const DynamoDBRequest &other);
-    DynamoDBRequest &operator=(const DynamoDBRequest &other);
+    DynamoDbRequest(const Action action);
+    DynamoDbRequest(const DynamoDbRequest &other);
+    DynamoDbRequest &operator=(const DynamoDbRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -103,12 +106,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DynamoDBRequest &other) const;
+    virtual bool operator==(const DynamoDbRequest &other) const;
 
 
 protected:
     /// @cond internal
-    explicit DynamoDBRequest(DynamoDBRequestPrivate * const d);
+    explicit DynamoDbRequest(DynamoDbRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -121,11 +124,11 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DynamoDBRequest)
+    Q_DECLARE_PRIVATE(DynamoDbRequest)
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListLoggingConfigurationsRequest
- * \brief The ListLoggingConfigurationsRequest class provides an interface for WAF ListLoggingConfigurations requests.
+ * \class QtAws::Waf::ListLoggingConfigurationsRequest
+ * \brief The ListLoggingConfigurationsRequest class provides an interface for Waf ListLoggingConfigurations requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListLoggingConfigurationsRequest::response(QN
 }
 
 /*!
- * \class QtAws::WAF::ListLoggingConfigurationsRequestPrivate
+ * \class QtAws::Waf::ListLoggingConfigurationsRequestPrivate
  * \brief The ListLoggingConfigurationsRequestPrivate class provides private implementation for ListLoggingConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListLoggingConfigurationsRequestPrivate::ListLoggingConfigurationsRequestPrivate
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

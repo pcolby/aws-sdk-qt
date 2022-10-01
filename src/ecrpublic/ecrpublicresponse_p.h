@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
-class ECRPublicResponse;
+class EcrPublicResponse;
 
-class ECRPublicResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EcrPublicResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit ECRPublicResponsePrivate(ECRPublicResponse * const q);
+    explicit EcrPublicResponsePrivate(EcrPublicResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ECRPublicResponse)
-    Q_DISABLE_COPY(ECRPublicResponsePrivate)
+    Q_DECLARE_PUBLIC(EcrPublicResponse)
+    Q_DISABLE_COPY(EcrPublicResponsePrivate)
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

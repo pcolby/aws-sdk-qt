@@ -24,14 +24,14 @@
 #include "associatenoderequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class AssociateNodeRequest;
 
-class AssociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
+class AssociateNodeRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    AssociateNodeRequestPrivate(const OpsWorksCMRequest::Action action,
+    AssociateNodeRequestPrivate(const OpsWorksCmRequest::Action action,
                                    AssociateNodeRequest * const q);
     AssociateNodeRequestPrivate(const AssociateNodeRequestPrivate &other,
                                    AssociateNodeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

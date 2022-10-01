@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
-class SSMContactsResponsePrivate;
+class SsmContactsResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT SSMContactsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSMCONTACTS_EXPORT SsmContactsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SSMContactsResponse(QObject * const parent = 0);
+    SsmContactsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SSMContactsResponse(SSMContactsResponsePrivate * const d, QObject * const parent);
+    SsmContactsResponse(SsmContactsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SSMContactsResponse)
-    Q_DISABLE_COPY(SSMContactsResponse)
+    Q_DECLARE_PRIVATE(SsmContactsResponse)
+    Q_DISABLE_COPY(SsmContactsResponse)
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

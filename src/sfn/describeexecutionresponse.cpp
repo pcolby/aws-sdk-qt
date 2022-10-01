@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DescribeExecutionResponse
- * \brief The DescribeExecutionResponse class provides an interace for SFN DescribeExecution responses.
+ * \class QtAws::Sfn::DescribeExecutionResponse
+ * \brief The DescribeExecutionResponse class provides an interace for Sfn DescribeExecution responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const DescribeExecutionRequest * DescribeExecutionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN DescribeExecution \a response.
+ * Parses a successful Sfn DescribeExecution \a response.
  */
 void DescribeExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void DescribeExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::DescribeExecutionResponsePrivate
+ * \class QtAws::Sfn::DescribeExecutionResponsePrivate
  * \brief The DescribeExecutionResponsePrivate class provides private implementation for DescribeExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ DescribeExecutionResponsePrivate::DescribeExecutionResponsePrivate(
 }
 
 /*!
- * Parses a SFN DescribeExecution response element from \a xml.
+ * Parses a Sfn DescribeExecution response element from \a xml.
  */
 void DescribeExecutionResponsePrivate::parseDescribeExecutionResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeExecutionResponsePrivate::parseDescribeExecutionResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

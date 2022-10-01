@@ -47,6 +47,7 @@ namespace DirectConnect {
  * \value AssociateMacSecKeyAction DirectConnect AssociateMacSecKey action.
  * \value AssociateVirtualInterfaceAction DirectConnect AssociateVirtualInterface action.
  * \value ConfirmConnectionAction DirectConnect ConfirmConnection action.
+ * \value ConfirmCustomerAgreementAction DirectConnect ConfirmCustomerAgreement action.
  * \value ConfirmPrivateVirtualInterfaceAction DirectConnect ConfirmPrivateVirtualInterface action.
  * \value ConfirmPublicVirtualInterfaceAction DirectConnect ConfirmPublicVirtualInterface action.
  * \value ConfirmTransitVirtualInterfaceAction DirectConnect ConfirmTransitVirtualInterface action.
@@ -71,6 +72,7 @@ namespace DirectConnect {
  * \value DescribeConnectionLoaAction DirectConnect DescribeConnectionLoa action.
  * \value DescribeConnectionsAction DirectConnect DescribeConnections action.
  * \value DescribeConnectionsOnInterconnectAction DirectConnect DescribeConnectionsOnInterconnect action.
+ * \value DescribeCustomerMetadataAction DirectConnect DescribeCustomerMetadata action.
  * \value DescribeDirectConnectGatewayAssociationProposalsAction DirectConnect DescribeDirectConnectGatewayAssociationProposals action.
  * \value DescribeDirectConnectGatewayAssociationsAction DirectConnect DescribeDirectConnectGatewayAssociations action.
  * \value DescribeDirectConnectGatewayAttachmentsAction DirectConnect DescribeDirectConnectGatewayAttachments action.
@@ -81,6 +83,7 @@ namespace DirectConnect {
  * \value DescribeLagsAction DirectConnect DescribeLags action.
  * \value DescribeLoaAction DirectConnect DescribeLoa action.
  * \value DescribeLocationsAction DirectConnect DescribeLocations action.
+ * \value DescribeRouterConfigurationAction DirectConnect DescribeRouterConfiguration action.
  * \value DescribeTagsAction DirectConnect DescribeTags action.
  * \value DescribeVirtualGatewaysAction DirectConnect DescribeVirtualGateways action.
  * \value DescribeVirtualInterfacesAction DirectConnect DescribeVirtualInterfaces action.
@@ -92,6 +95,7 @@ namespace DirectConnect {
  * \value TagResourceAction DirectConnect TagResource action.
  * \value UntagResourceAction DirectConnect UntagResource action.
  * \value UpdateConnectionAction DirectConnect UpdateConnection action.
+ * \value UpdateDirectConnectGatewayAction DirectConnect UpdateDirectConnectGateway action.
  * \value UpdateDirectConnectGatewayAssociationAction DirectConnect UpdateDirectConnectGatewayAssociation action.
  * \value UpdateLagAction DirectConnect UpdateLag action.
  * \value UpdateVirtualInterfaceAttributesAction DirectConnect UpdateVirtualInterfaceAttributes action.
@@ -302,7 +306,7 @@ QNetworkRequest DirectConnectRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 DirectConnectRequestPrivate::DirectConnectRequestPrivate(const DirectConnectRequest::Action action, DirectConnectRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-10-25"))
 {
 
 }
@@ -347,6 +351,7 @@ QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action
         ActionToString(AssociateMacSecKey);
         ActionToString(AssociateVirtualInterface);
         ActionToString(ConfirmConnection);
+        ActionToString(ConfirmCustomerAgreement);
         ActionToString(ConfirmPrivateVirtualInterface);
         ActionToString(ConfirmPublicVirtualInterface);
         ActionToString(ConfirmTransitVirtualInterface);
@@ -371,6 +376,7 @@ QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action
         ActionToString(DescribeConnectionLoa);
         ActionToString(DescribeConnections);
         ActionToString(DescribeConnectionsOnInterconnect);
+        ActionToString(DescribeCustomerMetadata);
         ActionToString(DescribeDirectConnectGatewayAssociationProposals);
         ActionToString(DescribeDirectConnectGatewayAssociations);
         ActionToString(DescribeDirectConnectGatewayAttachments);
@@ -381,6 +387,7 @@ QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action
         ActionToString(DescribeLags);
         ActionToString(DescribeLoa);
         ActionToString(DescribeLocations);
+        ActionToString(DescribeRouterConfiguration);
         ActionToString(DescribeTags);
         ActionToString(DescribeVirtualGateways);
         ActionToString(DescribeVirtualInterfaces);
@@ -392,6 +399,7 @@ QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateConnection);
+        ActionToString(UpdateDirectConnectGateway);
         ActionToString(UpdateDirectConnectGatewayAssociation);
         ActionToString(UpdateLag);
         ActionToString(UpdateVirtualInterfaceAttributes);

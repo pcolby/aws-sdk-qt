@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::MediaPackageVod
- * \brief Contains classess for accessing AWS Elemental MediaPackage VOD (MediaPackage Vod).
+ * \brief Contains classess for accessing AWS Elemental MediaPackage VOD.
  *
  * \inmodule QtAwsMediaPackageVod
  *
@@ -73,7 +73,7 @@ namespace MediaPackageVod {
 
 /*!
  * \class QtAws::MediaPackageVod::MediaPackageVodClient
- * \brief The MediaPackageVodClient class provides access to the AWS Elemental MediaPackage VOD (MediaPackage Vod) service.
+ * \brief The MediaPackageVodClient class provides access to the AWS Elemental MediaPackage VOD service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsMediaPackageVod

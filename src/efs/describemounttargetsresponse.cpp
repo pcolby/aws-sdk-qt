@@ -25,21 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 /*!
- * \class QtAws::EFS::DescribeMountTargetsResponse
- * \brief The DescribeMountTargetsResponse class provides an interace for EFS DescribeMountTargets responses.
+ * \class QtAws::Efs::DescribeMountTargetsResponse
+ * \brief The DescribeMountTargetsResponse class provides an interace for Efs DescribeMountTargets responses.
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
- *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
- *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
- *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
- *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
+ *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 Linux and Mac
+ *  instances in the Amazon Web Services Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking
+ *  automatically as you add and remove files, so that your applications have the storage they need, when they need it. For
+ *  more information, see the <a href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File
+ *  System API Reference</a> and the <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File
+ *  System User
  *
  * \sa EfsClient::describeMountTargets
  */
@@ -68,7 +69,7 @@ const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EFS DescribeMountTargets \a response.
+ * Parses a successful Efs DescribeMountTargets \a response.
  */
 void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +79,11 @@ void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::DescribeMountTargetsResponsePrivate
+ * \class QtAws::Efs::DescribeMountTargetsResponsePrivate
  * \brief The DescribeMountTargetsResponsePrivate class provides private implementation for DescribeMountTargetsResponse.
  * \internal
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  */
 
 /*!
@@ -95,7 +96,7 @@ DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
 }
 
 /*!
- * Parses a EFS DescribeMountTargets response element from \a xml.
+ * Parses a Efs DescribeMountTargets response element from \a xml.
  */
 void DescribeMountTargetsResponsePrivate::parseDescribeMountTargetsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +104,5 @@ void DescribeMountTargetsResponsePrivate::parseDescribeMountTargetsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws

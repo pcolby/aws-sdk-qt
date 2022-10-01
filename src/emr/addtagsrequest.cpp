@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::AddTagsRequest
- * \brief The AddTagsRequest class provides an interface for EMR AddTags requests.
+ * \class QtAws::Emr::AddTagsRequest
+ * \brief The AddTagsRequest class provides an interface for Emr AddTags requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::addTags
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::EMR::AddTagsRequestPrivate
+ * \class QtAws::Emr::AddTagsRequestPrivate
  * \brief The AddTagsRequestPrivate class provides private implementation for AddTagsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBEngineVersionsRequest
- * \brief The DescribeDBEngineVersionsRequest class provides an interface for DocDB DescribeDBEngineVersions requests.
+ * \class QtAws::DocDb::DescribeDBEngineVersionsRequest
+ * \brief The DescribeDBEngineVersionsRequest class provides an interface for DocDb DescribeDBEngineVersions requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBEngineVersions
+ * \sa DocDbClient::describeDBEngineVersions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other)
-    : DocDBRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeD
  * Constructs a DescribeDBEngineVersionsRequest object.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest()
-    : DocDBRequest(new DescribeDBEngineVersionsRequestPrivate(DocDBRequest::DescribeDBEngineVersionsAction, this))
+    : DocDbRequest(new DescribeDBEngineVersionsRequestPrivate(DocDbRequest::DescribeDBEngineVersionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBEngineVersionsRequestPrivate
+ * \class QtAws::DocDb::DescribeDBEngineVersionsRequestPrivate
  * \brief The DescribeDBEngineVersionsRequestPrivate class provides private implementation for DescribeDBEngineVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeDBEngineVersionsRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeDBEngineVersionsRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
-    const DocDBRequest::Action action, DescribeDBEngineVersionsRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeDBEngineVersionsRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const DescribeDBEngineVersionsRequestPrivate &other, DescribeDBEngineVersionsRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

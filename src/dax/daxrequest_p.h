@@ -24,16 +24,16 @@
 #include "daxrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DaxRequest;
 
 class DaxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DaxRequest::Action action; ///< DAX action to be performed.
-    QString apiVersion;        ///< DAX API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< DAX request (query string) parameters. @todo?
+    DaxRequest::Action action; ///< Dax action to be performed.
+    QString apiVersion;        ///< Dax API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Dax request (query string) parameters. @todo?
 
     DaxRequestPrivate(const DaxRequest::Action action, DaxRequest * const q);
     DaxRequestPrivate(const DaxRequestPrivate &other, DaxRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

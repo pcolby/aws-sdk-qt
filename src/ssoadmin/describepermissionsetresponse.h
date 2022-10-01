@@ -24,11 +24,11 @@
 #include "describepermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DescribePermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT DescribePermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DescribePermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "listsigningprofilesrequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class ListSigningProfilesRequest;
 
-class ListSigningProfilesRequestPrivate : public signerRequestPrivate {
+class ListSigningProfilesRequestPrivate : public SignerRequestPrivate {
 
 public:
-    ListSigningProfilesRequestPrivate(const signerRequest::Action action,
+    ListSigningProfilesRequestPrivate(const SignerRequest::Action action,
                                    ListSigningProfilesRequest * const q);
     ListSigningProfilesRequestPrivate(const ListSigningProfilesRequestPrivate &other,
                                    ListSigningProfilesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

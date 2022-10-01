@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAMPLIFY_LIBRARY)
 
 add_library(QtAwsAmplify
+  qtawsamplifyglobal.h
   amplifyclient.h
   amplifyclient_p.h
   amplifyrequest.h
@@ -119,7 +120,6 @@ add_library(QtAwsAmplify
   listwebhooksrequest_p.h
   listwebhooksresponse.h
   listwebhooksresponse_p.h
-  qtawsamplifyglobal.h
   startdeploymentrequest.h
   startdeploymentrequest_p.h
   startdeploymentresponse.h

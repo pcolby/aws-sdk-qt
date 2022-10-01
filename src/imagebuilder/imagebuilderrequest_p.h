@@ -24,28 +24,28 @@
 #include "imagebuilderrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
-class imagebuilderRequest;
+class ImageBuilderRequest;
 
-class imagebuilderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ImageBuilderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    imagebuilderRequest::Action action; ///< imagebuilder action to be performed.
-    QString apiVersion;        ///< imagebuilder API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< imagebuilder request (query string) parameters. @todo?
+    ImageBuilderRequest::Action action; ///< ImageBuilder action to be performed.
+    QString apiVersion;        ///< ImageBuilder API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< ImageBuilder request (query string) parameters. @todo?
 
-    imagebuilderRequestPrivate(const imagebuilderRequest::Action action, imagebuilderRequest * const q);
-    imagebuilderRequestPrivate(const imagebuilderRequestPrivate &other, imagebuilderRequest * const q);
+    ImageBuilderRequestPrivate(const ImageBuilderRequest::Action action, ImageBuilderRequest * const q);
+    ImageBuilderRequestPrivate(const ImageBuilderRequestPrivate &other, ImageBuilderRequest * const q);
 
-    static QString toString(const imagebuilderRequest::Action &action);
+    static QString toString(const ImageBuilderRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(imagebuilderRequest)
+    Q_DECLARE_PUBLIC(ImageBuilderRequest)
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

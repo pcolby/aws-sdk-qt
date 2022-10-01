@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::CreateServerRequest
- * \brief The CreateServerRequest class provides an interface for OpsWorksCM CreateServer requests.
+ * \class QtAws::OpsWorksCm::CreateServerRequest
+ * \brief The CreateServerRequest class provides an interface for OpsWorksCm CreateServer requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::createServer
+ * \sa OpsWorksCmClient::createServer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateServerRequest::CreateServerRequest(const CreateServerRequest &other)
-    : OpsWorksCMRequest(new CreateServerRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new CreateServerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ CreateServerRequest::CreateServerRequest(const CreateServerRequest &other)
  * Constructs a CreateServerRequest object.
  */
 CreateServerRequest::CreateServerRequest()
-    : OpsWorksCMRequest(new CreateServerRequestPrivate(OpsWorksCMRequest::CreateServerAction, this))
+    : OpsWorksCmRequest(new CreateServerRequestPrivate(OpsWorksCmRequest::CreateServerAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * CreateServerRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::OpsWorksCM::CreateServerRequestPrivate
+ * \class QtAws::OpsWorksCm::CreateServerRequestPrivate
  * \brief The CreateServerRequestPrivate class provides private implementation for CreateServerRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a CreateServerRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a CreateServerRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
-    const OpsWorksCMRequest::Action action, CreateServerRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, CreateServerRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ CreateServerRequestPrivate::CreateServerRequestPrivate(
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const CreateServerRequestPrivate &other, CreateServerRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

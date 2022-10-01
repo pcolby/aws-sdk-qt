@@ -24,14 +24,14 @@
 #include "getintegrationrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetIntegrationRequest;
 
-class GetIntegrationRequestPrivate : public APIGatewayRequestPrivate {
+class GetIntegrationRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    GetIntegrationRequestPrivate(const APIGatewayRequest::Action action,
+    GetIntegrationRequestPrivate(const ApiGatewayRequest::Action action,
                                    GetIntegrationRequest * const q);
     GetIntegrationRequestPrivate(const GetIntegrationRequestPrivate &other,
                                    GetIntegrationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

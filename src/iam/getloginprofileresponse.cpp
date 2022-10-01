@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetLoginProfileResponse
- * \brief The GetLoginProfileResponse class provides an interace for IAM GetLoginProfile responses.
+ * \class QtAws::Iam::GetLoginProfileResponse
+ * \brief The GetLoginProfileResponse class provides an interace for Iam GetLoginProfile responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getLoginProfile
  */
@@ -68,7 +68,7 @@ const GetLoginProfileRequest * GetLoginProfileResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM GetLoginProfile \a response.
+ * Parses a successful Iam GetLoginProfile \a response.
  */
 void GetLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetLoginProfileResponsePrivate
+ * \class QtAws::Iam::GetLoginProfileResponsePrivate
  * \brief The GetLoginProfileResponsePrivate class provides private implementation for GetLoginProfileResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
 }
 
 /*!
- * Parses a IAM GetLoginProfile response element from \a xml.
+ * Parses a Iam GetLoginProfile response element from \a xml.
  */
 void GetLoginProfileResponsePrivate::parseGetLoginProfileResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetLoginProfileResponsePrivate::parseGetLoginProfileResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

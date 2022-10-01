@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchDeleteDocumentRequest
- * \brief The BatchDeleteDocumentRequest class provides an interface for kendra BatchDeleteDocument requests.
+ * \class QtAws::Kendra::BatchDeleteDocumentRequest
+ * \brief The BatchDeleteDocumentRequest class provides an interface for Kendra BatchDeleteDocument requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchDeleteDocument
+ * \sa KendraClient::batchDeleteDocument
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchDeleteDocumentRequest::BatchDeleteDocumentRequest(const BatchDeleteDocumentRequest &other)
-    : kendraRequest(new BatchDeleteDocumentRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new BatchDeleteDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ BatchDeleteDocumentRequest::BatchDeleteDocumentRequest(const BatchDeleteDocument
  * Constructs a BatchDeleteDocumentRequest object.
  */
 BatchDeleteDocumentRequest::BatchDeleteDocumentRequest()
-    : kendraRequest(new BatchDeleteDocumentRequestPrivate(kendraRequest::BatchDeleteDocumentAction, this))
+    : KendraRequest(new BatchDeleteDocumentRequestPrivate(KendraRequest::BatchDeleteDocumentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteDocumentRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::kendra::BatchDeleteDocumentRequestPrivate
+ * \class QtAws::Kendra::BatchDeleteDocumentRequestPrivate
  * \brief The BatchDeleteDocumentRequestPrivate class provides private implementation for BatchDeleteDocumentRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a BatchDeleteDocumentRequestPrivate object for kendra \a action,
+ * Constructs a BatchDeleteDocumentRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 BatchDeleteDocumentRequestPrivate::BatchDeleteDocumentRequestPrivate(
-    const kendraRequest::Action action, BatchDeleteDocumentRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, BatchDeleteDocumentRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ BatchDeleteDocumentRequestPrivate::BatchDeleteDocumentRequestPrivate(
  */
 BatchDeleteDocumentRequestPrivate::BatchDeleteDocumentRequestPrivate(
     const BatchDeleteDocumentRequestPrivate &other, BatchDeleteDocumentRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

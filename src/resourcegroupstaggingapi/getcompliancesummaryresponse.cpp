@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetComplianceSummaryResponse
- * \brief The GetComplianceSummaryResponse class provides an interace for ResourceGroupsTaggingAPI GetComplianceSummary responses.
+ * \class QtAws::ResourceGroupsTaggingApi::GetComplianceSummaryResponse
+ * \brief The GetComplianceSummaryResponse class provides an interace for ResourceGroupsTaggingApi GetComplianceSummary responses.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  *
- * \sa ResourceGroupsTaggingAPIClient::getComplianceSummary
+ * \sa ResourceGroupsTaggingApiClient::getComplianceSummary
  */
 
 /*!
@@ -44,7 +44,7 @@ GetComplianceSummaryResponse::GetComplianceSummaryResponse(
         const GetComplianceSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingAPIResponse(new GetComplianceSummaryResponsePrivate(this), parent)
+    : ResourceGroupsTaggingApiResponse(new GetComplianceSummaryResponsePrivate(this), parent)
 {
     setRequest(new GetComplianceSummaryRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const GetComplianceSummaryRequest * GetComplianceSummaryResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful ResourceGroupsTaggingAPI GetComplianceSummary \a response.
+ * Parses a successful ResourceGroupsTaggingApi GetComplianceSummary \a response.
  */
 void GetComplianceSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void GetComplianceSummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::GetComplianceSummaryResponsePrivate
+ * \class QtAws::ResourceGroupsTaggingApi::GetComplianceSummaryResponsePrivate
  * \brief The GetComplianceSummaryResponsePrivate class provides private implementation for GetComplianceSummaryResponse.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
  * Constructs a GetComplianceSummaryResponsePrivate object with public implementation \a q.
  */
 GetComplianceSummaryResponsePrivate::GetComplianceSummaryResponsePrivate(
-    GetComplianceSummaryResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
+    GetComplianceSummaryResponse * const q) : ResourceGroupsTaggingApiResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ResourceGroupsTaggingAPI GetComplianceSummary response element from \a xml.
+ * Parses a ResourceGroupsTaggingApi GetComplianceSummary response element from \a xml.
  */
 void GetComplianceSummaryResponsePrivate::parseGetComplianceSummaryResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void GetComplianceSummaryResponsePrivate::parseGetComplianceSummaryResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

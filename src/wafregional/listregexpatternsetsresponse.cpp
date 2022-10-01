@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListRegexPatternSetsResponse
- * \brief The ListRegexPatternSetsResponse class provides an interace for WAFRegional ListRegexPatternSets responses.
+ * \class QtAws::WafRegional::ListRegexPatternSetsResponse
+ * \brief The ListRegexPatternSetsResponse class provides an interace for WafRegional ListRegexPatternSets responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listRegexPatternSets
+ * \sa WafRegionalClient::listRegexPatternSets
  */
 
 /*!
@@ -67,7 +67,7 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
         const ListRegexPatternSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
 {
     setRequest(new ListRegexPatternSetsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListRegexPatternSets \a response.
+ * Parses a successful WafRegional ListRegexPatternSets \a response.
  */
 void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListRegexPatternSetsResponsePrivate
+ * \class QtAws::WafRegional::ListRegexPatternSetsResponsePrivate
  * \brief The ListRegexPatternSetsResponsePrivate class provides private implementation for ListRegexPatternSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListRegexPatternSetsResponsePrivate object with public implementation \a q.
  */
 ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
-    ListRegexPatternSetsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListRegexPatternSetsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListRegexPatternSets response element from \a xml.
+ * Parses a WafRegional ListRegexPatternSets response element from \a xml.
  */
 void ListRegexPatternSetsResponsePrivate::parseListRegexPatternSetsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListRegexPatternSetsResponsePrivate::parseListRegexPatternSetsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

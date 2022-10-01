@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteFaqResponse
- * \brief The DeleteFaqResponse class provides an interace for kendra DeleteFaq responses.
+ * \class QtAws::Kendra::DeleteFaqResponse
+ * \brief The DeleteFaqResponse class provides an interace for Kendra DeleteFaq responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteFaq
+ * \sa KendraClient::deleteFaq
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteFaqResponse::DeleteFaqResponse(
         const DeleteFaqRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DeleteFaqResponsePrivate(this), parent)
+    : KendraResponse(new DeleteFaqResponsePrivate(this), parent)
 {
     setRequest(new DeleteFaqRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteFaqRequest * DeleteFaqResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DeleteFaq \a response.
+ * Parses a successful Kendra DeleteFaq \a response.
  */
 void DeleteFaqResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteFaqResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DeleteFaqResponsePrivate
+ * \class QtAws::Kendra::DeleteFaqResponsePrivate
  * \brief The DeleteFaqResponsePrivate class provides private implementation for DeleteFaqResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DeleteFaqResponsePrivate object with public implementation \a q.
  */
 DeleteFaqResponsePrivate::DeleteFaqResponsePrivate(
-    DeleteFaqResponse * const q) : kendraResponsePrivate(q)
+    DeleteFaqResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DeleteFaq response element from \a xml.
+ * Parses a Kendra DeleteFaq response element from \a xml.
  */
 void DeleteFaqResponsePrivate::parseDeleteFaqResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteFaqResponsePrivate::parseDeleteFaqResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

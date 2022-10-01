@@ -30,24 +30,26 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 class FisRequestPrivate;
 
 class QTAWSFIS_EXPORT FisRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by FIS.
+    /// Actions supported by Fis.
     enum Action {
         CreateExperimentTemplateAction,
         DeleteExperimentTemplateAction,
         GetActionAction,
         GetExperimentAction,
         GetExperimentTemplateAction,
+        GetTargetResourceTypeAction,
         ListActionsAction,
         ListExperimentTemplatesAction,
         ListExperimentsAction,
         ListTagsForResourceAction,
+        ListTargetResourceTypesAction,
         StartExperimentAction,
         StopExperimentAction,
         TagResourceAction,
@@ -89,7 +91,7 @@ private:
 
 };
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws
 
 #endif

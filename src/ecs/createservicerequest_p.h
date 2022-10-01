@@ -24,7 +24,7 @@
 #include "createservicerequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class CreateServiceRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

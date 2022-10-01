@@ -21,72 +21,77 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::EmrRequest
- * \brief The EmrRequest class provides an interface for EMR requests.
+ * \class QtAws::Emr::EmrRequest
+ * \brief The EmrRequest class provides an interface for Emr requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
  * \enum EmrRequest::Action
  *
- * This enum describes the actions that can be performed as EMR
+ * This enum describes the actions that can be performed as Emr
  * requests.
  *
- * \value AddInstanceFleetAction EMR AddInstanceFleet action.
- * \value AddInstanceGroupsAction EMR AddInstanceGroups action.
- * \value AddJobFlowStepsAction EMR AddJobFlowSteps action.
- * \value AddTagsAction EMR AddTags action.
- * \value CancelStepsAction EMR CancelSteps action.
- * \value CreateSecurityConfigurationAction EMR CreateSecurityConfiguration action.
- * \value CreateStudioAction EMR CreateStudio action.
- * \value CreateStudioSessionMappingAction EMR CreateStudioSessionMapping action.
- * \value DeleteSecurityConfigurationAction EMR DeleteSecurityConfiguration action.
- * \value DeleteStudioAction EMR DeleteStudio action.
- * \value DeleteStudioSessionMappingAction EMR DeleteStudioSessionMapping action.
- * \value DescribeClusterAction EMR DescribeCluster action.
- * \value DescribeJobFlowsAction EMR DescribeJobFlows action.
- * \value DescribeNotebookExecutionAction EMR DescribeNotebookExecution action.
- * \value DescribeSecurityConfigurationAction EMR DescribeSecurityConfiguration action.
- * \value DescribeStepAction EMR DescribeStep action.
- * \value DescribeStudioAction EMR DescribeStudio action.
- * \value GetBlockPublicAccessConfigurationAction EMR GetBlockPublicAccessConfiguration action.
- * \value GetManagedScalingPolicyAction EMR GetManagedScalingPolicy action.
- * \value GetStudioSessionMappingAction EMR GetStudioSessionMapping action.
- * \value ListBootstrapActionsAction EMR ListBootstrapActions action.
- * \value ListClustersAction EMR ListClusters action.
- * \value ListInstanceFleetsAction EMR ListInstanceFleets action.
- * \value ListInstanceGroupsAction EMR ListInstanceGroups action.
- * \value ListInstancesAction EMR ListInstances action.
- * \value ListNotebookExecutionsAction EMR ListNotebookExecutions action.
- * \value ListSecurityConfigurationsAction EMR ListSecurityConfigurations action.
- * \value ListStepsAction EMR ListSteps action.
- * \value ListStudioSessionMappingsAction EMR ListStudioSessionMappings action.
- * \value ListStudiosAction EMR ListStudios action.
- * \value ModifyClusterAction EMR ModifyCluster action.
- * \value ModifyInstanceFleetAction EMR ModifyInstanceFleet action.
- * \value ModifyInstanceGroupsAction EMR ModifyInstanceGroups action.
- * \value PutAutoScalingPolicyAction EMR PutAutoScalingPolicy action.
- * \value PutBlockPublicAccessConfigurationAction EMR PutBlockPublicAccessConfiguration action.
- * \value PutManagedScalingPolicyAction EMR PutManagedScalingPolicy action.
- * \value RemoveAutoScalingPolicyAction EMR RemoveAutoScalingPolicy action.
- * \value RemoveManagedScalingPolicyAction EMR RemoveManagedScalingPolicy action.
- * \value RemoveTagsAction EMR RemoveTags action.
- * \value RunJobFlowAction EMR RunJobFlow action.
- * \value SetTerminationProtectionAction EMR SetTerminationProtection action.
- * \value SetVisibleToAllUsersAction EMR SetVisibleToAllUsers action.
- * \value StartNotebookExecutionAction EMR StartNotebookExecution action.
- * \value StopNotebookExecutionAction EMR StopNotebookExecution action.
- * \value TerminateJobFlowsAction EMR TerminateJobFlows action.
- * \value UpdateStudioAction EMR UpdateStudio action.
- * \value UpdateStudioSessionMappingAction EMR UpdateStudioSessionMapping action.
+ * \value AddInstanceFleetAction Emr AddInstanceFleet action.
+ * \value AddInstanceGroupsAction Emr AddInstanceGroups action.
+ * \value AddJobFlowStepsAction Emr AddJobFlowSteps action.
+ * \value AddTagsAction Emr AddTags action.
+ * \value CancelStepsAction Emr CancelSteps action.
+ * \value CreateSecurityConfigurationAction Emr CreateSecurityConfiguration action.
+ * \value CreateStudioAction Emr CreateStudio action.
+ * \value CreateStudioSessionMappingAction Emr CreateStudioSessionMapping action.
+ * \value DeleteSecurityConfigurationAction Emr DeleteSecurityConfiguration action.
+ * \value DeleteStudioAction Emr DeleteStudio action.
+ * \value DeleteStudioSessionMappingAction Emr DeleteStudioSessionMapping action.
+ * \value DescribeClusterAction Emr DescribeCluster action.
+ * \value DescribeJobFlowsAction Emr DescribeJobFlows action.
+ * \value DescribeNotebookExecutionAction Emr DescribeNotebookExecution action.
+ * \value DescribeReleaseLabelAction Emr DescribeReleaseLabel action.
+ * \value DescribeSecurityConfigurationAction Emr DescribeSecurityConfiguration action.
+ * \value DescribeStepAction Emr DescribeStep action.
+ * \value DescribeStudioAction Emr DescribeStudio action.
+ * \value GetAutoTerminationPolicyAction Emr GetAutoTerminationPolicy action.
+ * \value GetBlockPublicAccessConfigurationAction Emr GetBlockPublicAccessConfiguration action.
+ * \value GetManagedScalingPolicyAction Emr GetManagedScalingPolicy action.
+ * \value GetStudioSessionMappingAction Emr GetStudioSessionMapping action.
+ * \value ListBootstrapActionsAction Emr ListBootstrapActions action.
+ * \value ListClustersAction Emr ListClusters action.
+ * \value ListInstanceFleetsAction Emr ListInstanceFleets action.
+ * \value ListInstanceGroupsAction Emr ListInstanceGroups action.
+ * \value ListInstancesAction Emr ListInstances action.
+ * \value ListNotebookExecutionsAction Emr ListNotebookExecutions action.
+ * \value ListReleaseLabelsAction Emr ListReleaseLabels action.
+ * \value ListSecurityConfigurationsAction Emr ListSecurityConfigurations action.
+ * \value ListStepsAction Emr ListSteps action.
+ * \value ListStudioSessionMappingsAction Emr ListStudioSessionMappings action.
+ * \value ListStudiosAction Emr ListStudios action.
+ * \value ModifyClusterAction Emr ModifyCluster action.
+ * \value ModifyInstanceFleetAction Emr ModifyInstanceFleet action.
+ * \value ModifyInstanceGroupsAction Emr ModifyInstanceGroups action.
+ * \value PutAutoScalingPolicyAction Emr PutAutoScalingPolicy action.
+ * \value PutAutoTerminationPolicyAction Emr PutAutoTerminationPolicy action.
+ * \value PutBlockPublicAccessConfigurationAction Emr PutBlockPublicAccessConfiguration action.
+ * \value PutManagedScalingPolicyAction Emr PutManagedScalingPolicy action.
+ * \value RemoveAutoScalingPolicyAction Emr RemoveAutoScalingPolicy action.
+ * \value RemoveAutoTerminationPolicyAction Emr RemoveAutoTerminationPolicy action.
+ * \value RemoveManagedScalingPolicyAction Emr RemoveManagedScalingPolicy action.
+ * \value RemoveTagsAction Emr RemoveTags action.
+ * \value RunJobFlowAction Emr RunJobFlow action.
+ * \value SetTerminationProtectionAction Emr SetTerminationProtection action.
+ * \value SetVisibleToAllUsersAction Emr SetVisibleToAllUsers action.
+ * \value StartNotebookExecutionAction Emr StartNotebookExecution action.
+ * \value StopNotebookExecutionAction Emr StopNotebookExecution action.
+ * \value TerminateJobFlowsAction Emr TerminateJobFlows action.
+ * \value UpdateStudioAction Emr UpdateStudio action.
+ * \value UpdateStudioSessionMappingAction Emr UpdateStudioSessionMapping action.
  */
 
 /*!
- * Constructs a EmrRequest object for EMR \a action.
+ * Constructs a EmrRequest object for Emr \a action.
  */
 EmrRequest::EmrRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EmrRequestPrivate(action, this))
@@ -127,7 +132,7 @@ EmrRequest::EmrRequest(EmrRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the EMR action to be performed by this request.
+ * Returns the Emr action to be performed by this request.
  */
 EmrRequest::Action EmrRequest::action() const
 {
@@ -136,7 +141,7 @@ EmrRequest::Action EmrRequest::action() const
 }
 
 /*!
- * Returns the name of the EMR action to be performed by this request.
+ * Returns the name of the Emr action to be performed by this request.
  */
 QString EmrRequest::actionString() const
 {
@@ -144,7 +149,7 @@ QString EmrRequest::actionString() const
 }
 
 /*!
- * Returns the EMR API version implemented by this request.
+ * Returns the Emr API version implemented by this request.
  */
 QString EmrRequest::apiVersion() const
 {
@@ -153,7 +158,7 @@ QString EmrRequest::apiVersion() const
 }
 
 /*!
- * Sets the EMR action to be performed by this request to \a action.
+ * Sets the Emr action to be performed by this request to \a action.
  */
 void EmrRequest::setAction(const Action action)
 {
@@ -162,7 +167,7 @@ void EmrRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the EMR API version to include in this request to \a version.
+ * Sets the Emr API version to include in this request to \a version.
  */
 void EmrRequest::setApiVersion(const QString &version)
 {
@@ -187,15 +192,15 @@ bool EmrRequest::operator==(const EmrRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid EMR queue name.
+ * Returns \c tue if \a queueName is a valid Emr queue name.
  *
- * @par From EMR FAQs:
+ * @par From Emr FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid EMR queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Emr queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -262,10 +267,10 @@ void EmrRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the EMR request using the given
+ * Returns a network request for the Emr request using the given
  * \a endpoint.
  *
- * This EMR implementation builds request URLs by combining the
+ * This Emr implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -278,19 +283,19 @@ QNetworkRequest EmrRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::EMR::EmrRequestPrivate
+ * \class QtAws::Emr::EmrRequestPrivate
  * \brief The EmrRequestPrivate class provides private implementation for EmrRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
- * Constructs a EmrRequestPrivate object for EMR \a action,
+ * Constructs a EmrRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 EmrRequestPrivate::EmrRequestPrivate(const EmrRequest::Action action, EmrRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2009-03-31"))
 {
 
 }
@@ -316,7 +321,7 @@ EmrRequestPrivate::EmrRequestPrivate(const EmrRequestPrivate &other,
  * invalid.
  *
  * This function converts EmrRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the EMR service's Action
+ * string representations, appropriate for use with the Emr service's Action
  * query parameters.
  */
 QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
@@ -338,9 +343,11 @@ QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
         ActionToString(DescribeCluster);
         ActionToString(DescribeJobFlows);
         ActionToString(DescribeNotebookExecution);
+        ActionToString(DescribeReleaseLabel);
         ActionToString(DescribeSecurityConfiguration);
         ActionToString(DescribeStep);
         ActionToString(DescribeStudio);
+        ActionToString(GetAutoTerminationPolicy);
         ActionToString(GetBlockPublicAccessConfiguration);
         ActionToString(GetManagedScalingPolicy);
         ActionToString(GetStudioSessionMapping);
@@ -350,6 +357,7 @@ QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
         ActionToString(ListInstanceGroups);
         ActionToString(ListInstances);
         ActionToString(ListNotebookExecutions);
+        ActionToString(ListReleaseLabels);
         ActionToString(ListSecurityConfigurations);
         ActionToString(ListSteps);
         ActionToString(ListStudioSessionMappings);
@@ -358,9 +366,11 @@ QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
         ActionToString(ModifyInstanceFleet);
         ActionToString(ModifyInstanceGroups);
         ActionToString(PutAutoScalingPolicy);
+        ActionToString(PutAutoTerminationPolicy);
         ActionToString(PutBlockPublicAccessConfiguration);
         ActionToString(PutManagedScalingPolicy);
         ActionToString(RemoveAutoScalingPolicy);
+        ActionToString(RemoveAutoTerminationPolicy);
         ActionToString(RemoveManagedScalingPolicy);
         ActionToString(RemoveTags);
         ActionToString(RunJobFlow);
@@ -378,5 +388,5 @@ QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
     return QString();
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

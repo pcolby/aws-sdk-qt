@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteBackupResponse
- * \brief The DeleteBackupResponse class provides an interace for OpsWorksCM DeleteBackup responses.
+ * \class QtAws::OpsWorksCm::DeleteBackupResponse
+ * \brief The DeleteBackupResponse class provides an interace for OpsWorksCm DeleteBackup responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::deleteBackup
+ * \sa OpsWorksCmClient::deleteBackup
  */
 
 /*!
@@ -123,7 +123,7 @@ DeleteBackupResponse::DeleteBackupResponse(
         const DeleteBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DeleteBackupResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DeleteBackupResponsePrivate(this), parent)
 {
     setRequest(new DeleteBackupRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DeleteBackupRequest * DeleteBackupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DeleteBackup \a response.
+ * Parses a successful OpsWorksCm DeleteBackup \a response.
  */
 void DeleteBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DeleteBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DeleteBackupResponsePrivate
+ * \class QtAws::OpsWorksCm::DeleteBackupResponsePrivate
  * \brief The DeleteBackupResponsePrivate class provides private implementation for DeleteBackupResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DeleteBackupResponsePrivate object with public implementation \a q.
  */
 DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
-    DeleteBackupResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DeleteBackupResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DeleteBackup response element from \a xml.
+ * Parses a OpsWorksCm DeleteBackup response element from \a xml.
  */
 void DeleteBackupResponsePrivate::parseDeleteBackupResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DeleteBackupResponsePrivate::parseDeleteBackupResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::GetSMSSandboxAccountStatusResponse
- * \brief The GetSMSSandboxAccountStatusResponse class provides an interace for SNS GetSMSSandboxAccountStatus responses.
+ * \class QtAws::Sns::GetSMSSandboxAccountStatusResponse
+ * \brief The GetSMSSandboxAccountStatusResponse class provides an interace for Sns GetSMSSandboxAccountStatus responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const GetSMSSandboxAccountStatusRequest * GetSMSSandboxAccountStatusResponse::re
 
 /*!
  * \reimp
- * Parses a successful SNS GetSMSSandboxAccountStatus \a response.
+ * Parses a successful Sns GetSMSSandboxAccountStatus \a response.
  */
 void GetSMSSandboxAccountStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void GetSMSSandboxAccountStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::GetSMSSandboxAccountStatusResponsePrivate
+ * \class QtAws::Sns::GetSMSSandboxAccountStatusResponsePrivate
  * \brief The GetSMSSandboxAccountStatusResponsePrivate class provides private implementation for GetSMSSandboxAccountStatusResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ GetSMSSandboxAccountStatusResponsePrivate::GetSMSSandboxAccountStatusResponsePri
 }
 
 /*!
- * Parses a SNS GetSMSSandboxAccountStatus response element from \a xml.
+ * Parses a Sns GetSMSSandboxAccountStatus response element from \a xml.
  */
 void GetSMSSandboxAccountStatusResponsePrivate::parseGetSMSSandboxAccountStatusResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void GetSMSSandboxAccountStatusResponsePrivate::parseGetSMSSandboxAccountStatusR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

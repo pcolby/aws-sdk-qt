@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSLEXMODELSV2_LIBRARY)
 
 add_library(QtAwsLexModelsV2
+  qtawslexmodelsv2global.h
+  lexmodelsv2client.h
+  lexmodelsv2client_p.h
+  lexmodelsv2request.h
+  lexmodelsv2request_p.h
+  lexmodelsv2response.h
+  lexmodelsv2response_p.h
   buildbotlocalerequest.h
   buildbotlocalerequest_p.h
   buildbotlocaleresponse.h
   buildbotlocaleresponse_p.h
+  createbotrequest.h
+  createbotrequest_p.h
+  createbotresponse.h
+  createbotresponse_p.h
   createbotaliasrequest.h
   createbotaliasrequest_p.h
   createbotaliasresponse.h
@@ -13,10 +24,6 @@ add_library(QtAwsLexModelsV2
   createbotlocalerequest_p.h
   createbotlocaleresponse.h
   createbotlocaleresponse_p.h
-  createbotrequest.h
-  createbotrequest_p.h
-  createbotresponse.h
-  createbotresponse_p.h
   createbotversionrequest.h
   createbotversionrequest_p.h
   createbotversionresponse.h
@@ -49,6 +56,10 @@ add_library(QtAwsLexModelsV2
   createuploadurlrequest_p.h
   createuploadurlresponse.h
   createuploadurlresponse_p.h
+  deletebotrequest.h
+  deletebotrequest_p.h
+  deletebotresponse.h
+  deletebotresponse_p.h
   deletebotaliasrequest.h
   deletebotaliasrequest_p.h
   deletebotaliasresponse.h
@@ -57,14 +68,14 @@ add_library(QtAwsLexModelsV2
   deletebotlocalerequest_p.h
   deletebotlocaleresponse.h
   deletebotlocaleresponse_p.h
-  deletebotrequest.h
-  deletebotrequest_p.h
-  deletebotresponse.h
-  deletebotresponse_p.h
   deletebotversionrequest.h
   deletebotversionrequest_p.h
   deletebotversionresponse.h
   deletebotversionresponse_p.h
+  deletecustomvocabularyrequest.h
+  deletecustomvocabularyrequest_p.h
+  deletecustomvocabularyresponse.h
+  deletecustomvocabularyresponse_p.h
   deleteexportrequest.h
   deleteexportrequest_p.h
   deleteexportresponse.h
@@ -93,6 +104,14 @@ add_library(QtAwsLexModelsV2
   deleteslottyperequest_p.h
   deleteslottyperesponse.h
   deleteslottyperesponse_p.h
+  deleteutterancesrequest.h
+  deleteutterancesrequest_p.h
+  deleteutterancesresponse.h
+  deleteutterancesresponse_p.h
+  describebotrequest.h
+  describebotrequest_p.h
+  describebotresponse.h
+  describebotresponse_p.h
   describebotaliasrequest.h
   describebotaliasrequest_p.h
   describebotaliasresponse.h
@@ -101,14 +120,18 @@ add_library(QtAwsLexModelsV2
   describebotlocalerequest_p.h
   describebotlocaleresponse.h
   describebotlocaleresponse_p.h
-  describebotrequest.h
-  describebotrequest_p.h
-  describebotresponse.h
-  describebotresponse_p.h
+  describebotrecommendationrequest.h
+  describebotrecommendationrequest_p.h
+  describebotrecommendationresponse.h
+  describebotrecommendationresponse_p.h
   describebotversionrequest.h
   describebotversionrequest_p.h
   describebotversionresponse.h
   describebotversionresponse_p.h
+  describecustomvocabularymetadatarequest.h
+  describecustomvocabularymetadatarequest_p.h
+  describecustomvocabularymetadataresponse.h
+  describecustomvocabularymetadataresponse_p.h
   describeexportrequest.h
   describeexportrequest_p.h
   describeexportresponse.h
@@ -133,12 +156,10 @@ add_library(QtAwsLexModelsV2
   describeslottyperequest_p.h
   describeslottyperesponse.h
   describeslottyperesponse_p.h
-  lexmodelsv2client.h
-  lexmodelsv2client_p.h
-  lexmodelsv2request.h
-  lexmodelsv2request_p.h
-  lexmodelsv2response.h
-  lexmodelsv2response_p.h
+  listaggregatedutterancesrequest.h
+  listaggregatedutterancesrequest_p.h
+  listaggregatedutterancesresponse.h
+  listaggregatedutterancesresponse_p.h
   listbotaliasesrequest.h
   listbotaliasesrequest_p.h
   listbotaliasesresponse.h
@@ -147,14 +168,18 @@ add_library(QtAwsLexModelsV2
   listbotlocalesrequest_p.h
   listbotlocalesresponse.h
   listbotlocalesresponse_p.h
-  listbotsrequest.h
-  listbotsrequest_p.h
-  listbotsresponse.h
-  listbotsresponse_p.h
+  listbotrecommendationsrequest.h
+  listbotrecommendationsrequest_p.h
+  listbotrecommendationsresponse.h
+  listbotrecommendationsresponse_p.h
   listbotversionsrequest.h
   listbotversionsrequest_p.h
   listbotversionsresponse.h
   listbotversionsresponse_p.h
+  listbotsrequest.h
+  listbotsrequest_p.h
+  listbotsresponse.h
+  listbotsresponse_p.h
   listbuiltinintentsrequest.h
   listbuiltinintentsrequest_p.h
   listbuiltinintentsresponse.h
@@ -175,23 +200,38 @@ add_library(QtAwsLexModelsV2
   listintentsrequest_p.h
   listintentsresponse.h
   listintentsresponse_p.h
-  listslotsrequest.h
-  listslotsrequest_p.h
-  listslotsresponse.h
-  listslotsresponse_p.h
+  listrecommendedintentsrequest.h
+  listrecommendedintentsrequest_p.h
+  listrecommendedintentsresponse.h
+  listrecommendedintentsresponse_p.h
   listslottypesrequest.h
   listslottypesrequest_p.h
   listslottypesresponse.h
   listslottypesresponse_p.h
+  listslotsrequest.h
+  listslotsrequest_p.h
+  listslotsresponse.h
+  listslotsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawslexmodelsv2global.h
+  searchassociatedtranscriptsrequest.h
+  searchassociatedtranscriptsrequest_p.h
+  searchassociatedtranscriptsresponse.h
+  searchassociatedtranscriptsresponse_p.h
+  startbotrecommendationrequest.h
+  startbotrecommendationrequest_p.h
+  startbotrecommendationresponse.h
+  startbotrecommendationresponse_p.h
   startimportrequest.h
   startimportrequest_p.h
   startimportresponse.h
   startimportresponse_p.h
+  stopbotrecommendationrequest.h
+  stopbotrecommendationrequest_p.h
+  stopbotrecommendationresponse.h
+  stopbotrecommendationresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -200,6 +240,10 @@ add_library(QtAwsLexModelsV2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatebotrequest.h
+  updatebotrequest_p.h
+  updatebotresponse.h
+  updatebotresponse_p.h
   updatebotaliasrequest.h
   updatebotaliasrequest_p.h
   updatebotaliasresponse.h
@@ -208,10 +252,10 @@ add_library(QtAwsLexModelsV2
   updatebotlocalerequest_p.h
   updatebotlocaleresponse.h
   updatebotlocaleresponse_p.h
-  updatebotrequest.h
-  updatebotrequest_p.h
-  updatebotresponse.h
-  updatebotresponse_p.h
+  updatebotrecommendationrequest.h
+  updatebotrecommendationrequest_p.h
+  updatebotrecommendationresponse.h
+  updatebotrecommendationresponse_p.h
   updateexportrequest.h
   updateexportrequest_p.h
   updateexportresponse.h
@@ -232,14 +276,17 @@ add_library(QtAwsLexModelsV2
   updateslottyperequest_p.h
   updateslottyperesponse.h
   updateslottyperesponse_p.h
+  lexmodelsv2client.cpp
+  lexmodelsv2request.cpp
+  lexmodelsv2response.cpp
   buildbotlocalerequest.cpp
   buildbotlocaleresponse.cpp
+  createbotrequest.cpp
+  createbotresponse.cpp
   createbotaliasrequest.cpp
   createbotaliasresponse.cpp
   createbotlocalerequest.cpp
   createbotlocaleresponse.cpp
-  createbotrequest.cpp
-  createbotresponse.cpp
   createbotversionrequest.cpp
   createbotversionresponse.cpp
   createexportrequest.cpp
@@ -256,14 +303,16 @@ add_library(QtAwsLexModelsV2
   createslottyperesponse.cpp
   createuploadurlrequest.cpp
   createuploadurlresponse.cpp
+  deletebotrequest.cpp
+  deletebotresponse.cpp
   deletebotaliasrequest.cpp
   deletebotaliasresponse.cpp
   deletebotlocalerequest.cpp
   deletebotlocaleresponse.cpp
-  deletebotrequest.cpp
-  deletebotresponse.cpp
   deletebotversionrequest.cpp
   deletebotversionresponse.cpp
+  deletecustomvocabularyrequest.cpp
+  deletecustomvocabularyresponse.cpp
   deleteexportrequest.cpp
   deleteexportresponse.cpp
   deleteimportrequest.cpp
@@ -278,14 +327,20 @@ add_library(QtAwsLexModelsV2
   deleteslotresponse.cpp
   deleteslottyperequest.cpp
   deleteslottyperesponse.cpp
+  deleteutterancesrequest.cpp
+  deleteutterancesresponse.cpp
+  describebotrequest.cpp
+  describebotresponse.cpp
   describebotaliasrequest.cpp
   describebotaliasresponse.cpp
   describebotlocalerequest.cpp
   describebotlocaleresponse.cpp
-  describebotrequest.cpp
-  describebotresponse.cpp
+  describebotrecommendationrequest.cpp
+  describebotrecommendationresponse.cpp
   describebotversionrequest.cpp
   describebotversionresponse.cpp
+  describecustomvocabularymetadatarequest.cpp
+  describecustomvocabularymetadataresponse.cpp
   describeexportrequest.cpp
   describeexportresponse.cpp
   describeimportrequest.cpp
@@ -298,17 +353,18 @@ add_library(QtAwsLexModelsV2
   describeslotresponse.cpp
   describeslottyperequest.cpp
   describeslottyperesponse.cpp
-  lexmodelsv2client.cpp
-  lexmodelsv2request.cpp
-  lexmodelsv2response.cpp
+  listaggregatedutterancesrequest.cpp
+  listaggregatedutterancesresponse.cpp
   listbotaliasesrequest.cpp
   listbotaliasesresponse.cpp
   listbotlocalesrequest.cpp
   listbotlocalesresponse.cpp
-  listbotsrequest.cpp
-  listbotsresponse.cpp
+  listbotrecommendationsrequest.cpp
+  listbotrecommendationsresponse.cpp
   listbotversionsrequest.cpp
   listbotversionsresponse.cpp
+  listbotsrequest.cpp
+  listbotsresponse.cpp
   listbuiltinintentsrequest.cpp
   listbuiltinintentsresponse.cpp
   listbuiltinslottypesrequest.cpp
@@ -319,24 +375,34 @@ add_library(QtAwsLexModelsV2
   listimportsresponse.cpp
   listintentsrequest.cpp
   listintentsresponse.cpp
-  listslotsrequest.cpp
-  listslotsresponse.cpp
+  listrecommendedintentsrequest.cpp
+  listrecommendedintentsresponse.cpp
   listslottypesrequest.cpp
   listslottypesresponse.cpp
+  listslotsrequest.cpp
+  listslotsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  searchassociatedtranscriptsrequest.cpp
+  searchassociatedtranscriptsresponse.cpp
+  startbotrecommendationrequest.cpp
+  startbotrecommendationresponse.cpp
   startimportrequest.cpp
   startimportresponse.cpp
+  stopbotrecommendationrequest.cpp
+  stopbotrecommendationresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatebotrequest.cpp
+  updatebotresponse.cpp
   updatebotaliasrequest.cpp
   updatebotaliasresponse.cpp
   updatebotlocalerequest.cpp
   updatebotlocaleresponse.cpp
-  updatebotrequest.cpp
-  updatebotresponse.cpp
+  updatebotrecommendationrequest.cpp
+  updatebotrecommendationresponse.cpp
   updateexportrequest.cpp
   updateexportresponse.cpp
   updateintentrequest.cpp

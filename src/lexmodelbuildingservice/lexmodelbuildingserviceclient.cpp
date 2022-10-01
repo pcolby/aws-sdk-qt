@@ -75,6 +75,10 @@
 #include "getintentversionsresponse.h"
 #include "getintentsrequest.h"
 #include "getintentsresponse.h"
+#include "getmigrationrequest.h"
+#include "getmigrationresponse.h"
+#include "getmigrationsrequest.h"
+#include "getmigrationsresponse.h"
 #include "getslottyperequest.h"
 #include "getslottyperesponse.h"
 #include "getslottypeversionsrequest.h"
@@ -95,6 +99,8 @@
 #include "putslottyperesponse.h"
 #include "startimportrequest.h"
 #include "startimportresponse.h"
+#include "startmigrationrequest.h"
+#include "startmigrationresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -777,6 +783,33 @@ GetIntentsResponse * LexModelBuildingServiceClient::getIntents(const GetIntentsR
 
 /*!
  * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetMigrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides details about an ongoing or complete migration from an Amazon Lex V1 bot to an Amazon Lex V2 bot. Use this
+ * operation to view the migration alerts and warnings related to the
+ */
+GetMigrationResponse * LexModelBuildingServiceClient::getMigration(const GetMigrationRequest &request)
+{
+    return qobject_cast<GetMigrationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * GetMigrationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of migrations between Amazon Lex V1 and Amazon Lex
+ */
+GetMigrationsResponse * LexModelBuildingServiceClient::getMigrations(const GetMigrationsRequest &request)
+{
+    return qobject_cast<GetMigrationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
  * GetSlotTypeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -877,8 +910,8 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  *
  * version>
  *
- * If you set <code>childDirected</code> field to true when you created your bot, or if you opted out of participating in
- * improving Amazon Lex, utterances are not
+ * If you set <code>childDirected</code> field to true when you created your bot, if you are using slot obfuscation with
+ * one or more slots, or if you opted out of participating in improving Amazon Lex, utterances are not
  *
  * available>
  *
@@ -912,8 +945,8 @@ ListTagsForResourceResponse * LexModelBuildingServiceClient::listTagsForResource
  * Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only
  * required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to
  * add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the
- * bot is created or updated but Amazon Lex returns the <code/> response <code>FAILED</code>. You can build the bot after
- * you add one or more intents. For more information about Amazon Lex bots, see <a>how-it-works</a>.
+ * bot is created or updated but Amazon Lex returns the <code></code> response <code>FAILED</code>. You can build the bot
+ * after you add one or more intents. For more information about Amazon Lex bots, see <a>how-it-works</a>.
  *
  * </p
  *
@@ -1065,6 +1098,25 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
 StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
 {
     return qobject_cast<StartImportResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * StartMigrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts migrating a bot from Amazon Lex V1 to Amazon Lex V2. Migrate your bot when you want to take advantage of the new
+ * features of Amazon Lex
+ *
+ * V2>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/migrate.html">Migrating a bot</a> in the
+ * <i>Amazon Lex developer
+ */
+StartMigrationResponse * LexModelBuildingServiceClient::startMigration(const StartMigrationRequest &request)
+{
+    return qobject_cast<StartMigrationResponse *>(send(request));
 }
 
 /*!

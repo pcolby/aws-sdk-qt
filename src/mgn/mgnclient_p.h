@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnClient;
+class MgnClient;
 
-class mgnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MgnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit mgnClientPrivate(mgnClient * const q);
+    explicit MgnClientPrivate(MgnClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(mgnClient)
-    Q_DISABLE_COPY(mgnClientPrivate)
+    Q_DECLARE_PUBLIC(MgnClient)
+    Q_DISABLE_COPY(MgnClientPrivate)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

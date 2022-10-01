@@ -282,7 +282,7 @@ QNetworkRequest CodePipelineRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodePipelineRequestPrivate::CodePipelineRequestPrivate(const CodePipelineRequest::Action action, CodePipelineRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-07-09"))
 {
 
 }

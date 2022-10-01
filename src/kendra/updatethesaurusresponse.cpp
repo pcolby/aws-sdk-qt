@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateThesaurusResponse
- * \brief The UpdateThesaurusResponse class provides an interace for kendra UpdateThesaurus responses.
+ * \class QtAws::Kendra::UpdateThesaurusResponse
+ * \brief The UpdateThesaurusResponse class provides an interace for Kendra UpdateThesaurus responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateThesaurus
+ * \sa KendraClient::updateThesaurus
  */
 
 /*!
@@ -45,7 +45,7 @@ UpdateThesaurusResponse::UpdateThesaurusResponse(
         const UpdateThesaurusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new UpdateThesaurusResponsePrivate(this), parent)
+    : KendraResponse(new UpdateThesaurusResponsePrivate(this), parent)
 {
     setRequest(new UpdateThesaurusRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const UpdateThesaurusRequest * UpdateThesaurusResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra UpdateThesaurus \a response.
+ * Parses a successful Kendra UpdateThesaurus \a response.
  */
 void UpdateThesaurusResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void UpdateThesaurusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::UpdateThesaurusResponsePrivate
+ * \class QtAws::Kendra::UpdateThesaurusResponsePrivate
  * \brief The UpdateThesaurusResponsePrivate class provides private implementation for UpdateThesaurusResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a UpdateThesaurusResponsePrivate object with public implementation \a q.
  */
 UpdateThesaurusResponsePrivate::UpdateThesaurusResponsePrivate(
-    UpdateThesaurusResponse * const q) : kendraResponsePrivate(q)
+    UpdateThesaurusResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra UpdateThesaurus response element from \a xml.
+ * Parses a Kendra UpdateThesaurus response element from \a xml.
  */
 void UpdateThesaurusResponsePrivate::parseUpdateThesaurusResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void UpdateThesaurusResponsePrivate::parseUpdateThesaurusResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

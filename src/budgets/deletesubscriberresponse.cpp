@@ -33,9 +33,9 @@ namespace Budgets {
  *
  * \inmodule QtAwsBudgets
  *
- *  The AWS Budgets API enables you to use AWS Budgets to plan your service usage, service costs, and instance reservations.
- *  The API reference provides descriptions, syntax, and usage examples for each of the actions and data types for AWS
- *  Budgets.
+ *  Use the Amazon Web Services Budgets API to plan your service usage, service costs, and instance reservations. This API
+ *  reference provides descriptions, syntax, and usage examples for each of the actions and data types for the Amazon Web
+ *  Services Budgets feature.
  * 
  *  </p
  * 
@@ -51,7 +51,8 @@ namespace Budgets {
  * 
  *  (RIs> </li> <li>
  * 
- *  Your current estimated charges from AWS, and how much your predicted usage will accrue in charges by the end of the
+ *  Your current estimated charges from Amazon Web Services, and how much your predicted usage will accrue in charges by the
+ *  end of the
  * 
  *  mont> </li> <li>
  * 
@@ -59,8 +60,8 @@ namespace Budgets {
  * 
  *  use> </li> </ul>
  * 
- *  AWS updates your budget status several times a day. Budgets track your unblended costs, subscriptions, refunds, and RIs.
- *  You can create the following types of
+ *  Amazon Web Services updates your budget status several times a day. Budgets track your unblended costs, subscriptions,
+ *  refunds, and RIs. You can create the following types of
  * 
  *  budgets> <ul> <li>
  * 
@@ -86,14 +87,14 @@ namespace Budgets {
  * 
  *  Endpoin>
  * 
- *  The AWS Budgets API provides the following
+ *  The Amazon Web Services Budgets API provides the following
  * 
  *  endpoint> <ul> <li>
  * 
  *  https://budgets.amazonaws.co> </li> </ul>
  * 
- *  For information about costs that are associated with the AWS Budgets API, see <a
- *  href="https://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
+ *  For information about costs that are associated with the Amazon Web Services Budgets API, see <a
+ *  href="https://aws.amazon.com/aws-cost-management/pricing/">Amazon Web Services Cost Management
  *
  * \sa BudgetsClient::deleteSubscriber
  */

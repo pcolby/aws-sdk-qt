@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class SesRequestPrivate;
 
 class QTAWSSES_EXPORT SesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SES.
+    /// Actions supported by Ses.
     enum Action {
         CloneReceiptRuleSetAction,
         CreateConfigurationSetAction,
@@ -146,7 +146,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

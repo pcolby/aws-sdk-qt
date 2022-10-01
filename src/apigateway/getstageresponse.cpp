@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetStageResponse
- * \brief The GetStageResponse class provides an interace for APIGateway GetStage responses.
+ * \class QtAws::ApiGateway::GetStageResponse
+ * \brief The GetStageResponse class provides an interace for ApiGateway GetStage responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getStage
+ * \sa ApiGatewayClient::getStage
  */
 
 /*!
@@ -49,7 +49,7 @@ GetStageResponse::GetStageResponse(
         const GetStageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetStageResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetStageResponsePrivate(this), parent)
 {
     setRequest(new GetStageRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetStageRequest * GetStageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetStage \a response.
+ * Parses a successful ApiGateway GetStage \a response.
  */
 void GetStageResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetStageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetStageResponsePrivate
+ * \class QtAws::ApiGateway::GetStageResponsePrivate
  * \brief The GetStageResponsePrivate class provides private implementation for GetStageResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetStageResponsePrivate object with public implementation \a q.
  */
 GetStageResponsePrivate::GetStageResponsePrivate(
-    GetStageResponse * const q) : APIGatewayResponsePrivate(q)
+    GetStageResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetStage response element from \a xml.
+ * Parses a ApiGateway GetStage response element from \a xml.
  */
 void GetStageResponsePrivate::parseGetStageResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetStageResponsePrivate::parseGetStageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

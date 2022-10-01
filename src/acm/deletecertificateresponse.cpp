@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::DeleteCertificateResponse
- * \brief The DeleteCertificateResponse class provides an interace for ACM DeleteCertificate responses.
+ * \class QtAws::Acm::DeleteCertificateResponse
+ * \brief The DeleteCertificateResponse class provides an interace for Acm DeleteCertificate responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::deleteCertificate
  */
@@ -66,7 +66,7 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ACM DeleteCertificate \a response.
+ * Parses a successful Acm DeleteCertificate \a response.
  */
 void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::DeleteCertificateResponsePrivate
+ * \class QtAws::Acm::DeleteCertificateResponsePrivate
  * \brief The DeleteCertificateResponsePrivate class provides private implementation for DeleteCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 }
 
 /*!
- * Parses a ACM DeleteCertificate response element from \a xml.
+ * Parses a Acm DeleteCertificate response element from \a xml.
  */
 void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

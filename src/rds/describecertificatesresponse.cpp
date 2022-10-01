@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeCertificatesResponse
- * \brief The DescribeCertificatesResponse class provides an interace for RDS DescribeCertificates responses.
+ * \class QtAws::Rds::DescribeCertificatesResponse
+ * \brief The DescribeCertificatesResponse class provides an interace for Rds DescribeCertificates responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeCertificates \a response.
+ * Parses a successful Rds DescribeCertificates \a response.
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeCertificatesResponsePrivate
+ * \class QtAws::Rds::DescribeCertificatesResponsePrivate
  * \brief The DescribeCertificatesResponsePrivate class provides private implementation for DescribeCertificatesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
 }
 
 /*!
- * Parses a RDS DescribeCertificates response element from \a xml.
+ * Parses a Rds DescribeCertificates response element from \a xml.
  */
 void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

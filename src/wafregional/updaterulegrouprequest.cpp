@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRuleGroupRequest
- * \brief The UpdateRuleGroupRequest class provides an interface for WAFRegional UpdateRuleGroup requests.
+ * \class QtAws::WafRegional::UpdateRuleGroupRequest
+ * \brief The UpdateRuleGroupRequest class provides an interface for WafRegional UpdateRuleGroup requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRuleGroup
+ * \sa WafRegionalClient::updateRuleGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &other)
-    : WAFRegionalRequest(new UpdateRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &oth
  * Constructs a UpdateRuleGroupRequest object.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest()
-    : WAFRegionalRequest(new UpdateRuleGroupRequestPrivate(WAFRegionalRequest::UpdateRuleGroupAction, this))
+    : WafRegionalRequest(new UpdateRuleGroupRequestPrivate(WafRegionalRequest::UpdateRuleGroupAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRuleGroupRequestPrivate
+ * \class QtAws::WafRegional::UpdateRuleGroupRequestPrivate
  * \brief The UpdateRuleGroupRequestPrivate class provides private implementation for UpdateRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateRuleGroupRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateRuleGroupRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateRuleGroupRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const UpdateRuleGroupRequestPrivate &other, UpdateRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

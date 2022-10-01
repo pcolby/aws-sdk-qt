@@ -268,7 +268,7 @@ QNetworkRequest ApplicationDiscoveryServiceRequest::unsignedRequest(const QUrl &
  * with public implementation \a q.
  */
 ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action, ApplicationDiscoveryServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-11-01"))
 {
 
 }

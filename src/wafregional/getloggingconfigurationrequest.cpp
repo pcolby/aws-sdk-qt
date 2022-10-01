@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetLoggingConfigurationRequest
- * \brief The GetLoggingConfigurationRequest class provides an interface for WAFRegional GetLoggingConfiguration requests.
+ * \class QtAws::WafRegional::GetLoggingConfigurationRequest
+ * \brief The GetLoggingConfigurationRequest class provides an interface for WafRegional GetLoggingConfiguration requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getLoggingConfiguration
+ * \sa WafRegionalClient::getLoggingConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetLoggingConfigurationRequest::GetLoggingConfigurationRequest(const GetLoggingConfigurationRequest &other)
-    : WAFRegionalRequest(new GetLoggingConfigurationRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetLoggingConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetLoggingConfigurationRequest::GetLoggingConfigurationRequest(const GetLoggingC
  * Constructs a GetLoggingConfigurationRequest object.
  */
 GetLoggingConfigurationRequest::GetLoggingConfigurationRequest()
-    : WAFRegionalRequest(new GetLoggingConfigurationRequestPrivate(WAFRegionalRequest::GetLoggingConfigurationAction, this))
+    : WafRegionalRequest(new GetLoggingConfigurationRequestPrivate(WafRegionalRequest::GetLoggingConfigurationAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetLoggingConfigurationRequest::response(QNet
 }
 
 /*!
- * \class QtAws::WAFRegional::GetLoggingConfigurationRequestPrivate
+ * \class QtAws::WafRegional::GetLoggingConfigurationRequestPrivate
  * \brief The GetLoggingConfigurationRequestPrivate class provides private implementation for GetLoggingConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetLoggingConfigurationRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetLoggingConfigurationRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetLoggingConfigurationRequestPrivate::GetLoggingConfigurationRequestPrivate(
-    const WAFRegionalRequest::Action action, GetLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetLoggingConfigurationRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetLoggingConfigurationRequestPrivate::GetLoggingConfigurationRequestPrivate(
  */
 GetLoggingConfigurationRequestPrivate::GetLoggingConfigurationRequestPrivate(
     const GetLoggingConfigurationRequestPrivate &other, GetLoggingConfigurationRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -23,23 +23,23 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetRequest
- * \brief The CreateConfigurationSetRequest class provides an interface for PinpointSMSVoice CreateConfigurationSet requests.
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetRequest
+ * \brief The CreateConfigurationSetRequest class provides an interface for PinpointSmsVoice CreateConfigurationSet requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::createConfigurationSet
+ * \sa PinpointSmsVoiceClient::createConfigurationSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigurationSetRequest &other)
-    : PinpointSMSVoiceRequest(new CreateConfigurationSetRequestPrivate(*other.d_func(), this))
+    : PinpointSmsVoiceRequest(new CreateConfigurationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigu
  * Constructs a CreateConfigurationSetRequest object.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest()
-    : PinpointSMSVoiceRequest(new CreateConfigurationSetRequestPrivate(PinpointSMSVoiceRequest::CreateConfigurationSetAction, this))
+    : PinpointSmsVoiceRequest(new CreateConfigurationSetRequestPrivate(PinpointSmsVoiceRequest::CreateConfigurationSetAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::CreateConfigurationSetRequestPrivate
+ * \class QtAws::PinpointSmsVoice::CreateConfigurationSetRequestPrivate
  * \brief The CreateConfigurationSetRequestPrivate class provides private implementation for CreateConfigurationSetRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a CreateConfigurationSetRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a CreateConfigurationSetRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
-    const PinpointSMSVoiceRequest::Action action, CreateConfigurationSetRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(action, q)
+    const PinpointSmsVoiceRequest::Action action, CreateConfigurationSetRequest * const q)
+    : PinpointSmsVoiceRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const CreateConfigurationSetRequestPrivate &other, CreateConfigurationSetRequest * const q)
-    : PinpointSMSVoiceRequestPrivate(other, q)
+    : PinpointSmsVoiceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

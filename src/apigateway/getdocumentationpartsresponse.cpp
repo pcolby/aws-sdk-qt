@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationPartsResponse
- * \brief The GetDocumentationPartsResponse class provides an interace for APIGateway GetDocumentationParts responses.
+ * \class QtAws::ApiGateway::GetDocumentationPartsResponse
+ * \brief The GetDocumentationPartsResponse class provides an interace for ApiGateway GetDocumentationParts responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDocumentationParts
+ * \sa ApiGatewayClient::getDocumentationParts
  */
 
 /*!
@@ -49,7 +49,7 @@ GetDocumentationPartsResponse::GetDocumentationPartsResponse(
         const GetDocumentationPartsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetDocumentationPartsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetDocumentationPartsResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentationPartsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetDocumentationPartsRequest * GetDocumentationPartsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetDocumentationParts \a response.
+ * Parses a successful ApiGateway GetDocumentationParts \a response.
  */
 void GetDocumentationPartsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetDocumentationPartsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetDocumentationPartsResponsePrivate
+ * \class QtAws::ApiGateway::GetDocumentationPartsResponsePrivate
  * \brief The GetDocumentationPartsResponsePrivate class provides private implementation for GetDocumentationPartsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetDocumentationPartsResponsePrivate object with public implementation \a q.
  */
 GetDocumentationPartsResponsePrivate::GetDocumentationPartsResponsePrivate(
-    GetDocumentationPartsResponse * const q) : APIGatewayResponsePrivate(q)
+    GetDocumentationPartsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetDocumentationParts response element from \a xml.
+ * Parses a ApiGateway GetDocumentationParts response element from \a xml.
  */
 void GetDocumentationPartsResponsePrivate::parseGetDocumentationPartsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetDocumentationPartsResponsePrivate::parseGetDocumentationPartsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class SwfClientPrivate;
 class CountClosedWorkflowExecutionsRequest;
@@ -165,7 +165,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

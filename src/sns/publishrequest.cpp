@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::PublishRequest
- * \brief The PublishRequest class provides an interface for SNS Publish requests.
+ * \class QtAws::Sns::PublishRequest
+ * \brief The PublishRequest class provides an interface for Sns Publish requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
 }
 
 /*!
- * \class QtAws::SNS::PublishRequestPrivate
+ * \class QtAws::Sns::PublishRequestPrivate
  * \brief The PublishRequestPrivate class provides private implementation for PublishRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ PublishRequestPrivate::PublishRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

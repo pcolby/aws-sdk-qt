@@ -56,23 +56,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EMRContainers
+ * \namespace QtAws::Emrcontainers
  * \brief Contains classess for accessing Amazon EMR Containers.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersClient
- * \brief The EMRContainersClient class provides access to the Amazon EMR Containers service.
+ * \class QtAws::Emrcontainers::EmrcontainersClient
+ * \brief The EmrcontainersClient class provides access to the Amazon EMR Containers service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -105,21 +105,21 @@ namespace EMRContainers {
  */
 
 /*!
- * \brief Constructs a EMRContainersClient object.
+ * \brief Constructs a EmrcontainersClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-EMRContainersClient::EMRContainersClient(
+EmrcontainersClient::EmrcontainersClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EMRContainersClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EmrcontainersClientPrivate(this), parent)
 {
-    Q_D(EMRContainersClient);
+    Q_D(EmrcontainersClient);
     d->apiVersion = QStringLiteral("2020-10-01");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("emr-containers");
@@ -130,7 +130,7 @@ EMRContainersClient::EMRContainersClient(
 }
 
 /*!
- * \overload EMRContainersClient()
+ * \overload EmrcontainersClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -140,14 +140,14 @@ EMRContainersClient::EMRContainersClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-EMRContainersClient::EMRContainersClient(
+EmrcontainersClient::EmrcontainersClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EMRContainersClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new EmrcontainersClientPrivate(this), parent)
 {
-    Q_D(EMRContainersClient);
+    Q_D(EmrcontainersClient);
     d->apiVersion = QStringLiteral("2020-10-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -158,7 +158,7 @@ EMRContainersClient::EMRContainersClient(
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * CancelJobRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -166,13 +166,13 @@ EMRContainersClient::EMRContainersClient(
  * Cancels a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit
  * to Amazon EMR on
  */
-CancelJobRunResponse * EMRContainersClient::cancelJobRun(const CancelJobRunRequest &request)
+CancelJobRunResponse * EmrcontainersClient::cancelJobRun(const CancelJobRunRequest &request)
 {
     return qobject_cast<CancelJobRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * CreateManagedEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -180,13 +180,13 @@ CancelJobRunResponse * EMRContainersClient::cancelJobRun(const CancelJobRunReque
  * Creates a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR
  * Studio can communicate with your virtual
  */
-CreateManagedEndpointResponse * EMRContainersClient::createManagedEndpoint(const CreateManagedEndpointRequest &request)
+CreateManagedEndpointResponse * EmrcontainersClient::createManagedEndpoint(const CreateManagedEndpointRequest &request)
 {
     return qobject_cast<CreateManagedEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * CreateVirtualClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -196,13 +196,13 @@ CreateManagedEndpointResponse * EMRContainersClient::createManagedEndpoint(const
  * single Kubernetes namespace. Given this relationship, you can model virtual clusters the same way you model Kubernetes
  * namespaces to meet your
  */
-CreateVirtualClusterResponse * EMRContainersClient::createVirtualCluster(const CreateVirtualClusterRequest &request)
+CreateVirtualClusterResponse * EmrcontainersClient::createVirtualCluster(const CreateVirtualClusterRequest &request)
 {
     return qobject_cast<CreateVirtualClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * DeleteManagedEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -210,13 +210,13 @@ CreateVirtualClusterResponse * EMRContainersClient::createVirtualCluster(const C
  * Deletes a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to Amazon EMR on EKS so that EMR
  * Studio can communicate with your virtual
  */
-DeleteManagedEndpointResponse * EMRContainersClient::deleteManagedEndpoint(const DeleteManagedEndpointRequest &request)
+DeleteManagedEndpointResponse * EmrcontainersClient::deleteManagedEndpoint(const DeleteManagedEndpointRequest &request)
 {
     return qobject_cast<DeleteManagedEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * DeleteVirtualClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -226,13 +226,13 @@ DeleteManagedEndpointResponse * EMRContainersClient::deleteManagedEndpoint(const
  * single Kubernetes namespace. Given this relationship, you can model virtual clusters the same way you model Kubernetes
  * namespaces to meet your
  */
-DeleteVirtualClusterResponse * EMRContainersClient::deleteVirtualCluster(const DeleteVirtualClusterRequest &request)
+DeleteVirtualClusterResponse * EmrcontainersClient::deleteVirtualCluster(const DeleteVirtualClusterRequest &request)
 {
     return qobject_cast<DeleteVirtualClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * DescribeJobRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -240,13 +240,13 @@ DeleteVirtualClusterResponse * EMRContainersClient::deleteVirtualCluster(const D
  * Displays detailed information about a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or
  * SparkSQL query, that you submit to Amazon EMR on
  */
-DescribeJobRunResponse * EMRContainersClient::describeJobRun(const DescribeJobRunRequest &request)
+DescribeJobRunResponse * EmrcontainersClient::describeJobRun(const DescribeJobRunRequest &request)
 {
     return qobject_cast<DescribeJobRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * DescribeManagedEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -254,13 +254,13 @@ DescribeJobRunResponse * EMRContainersClient::describeJobRun(const DescribeJobRu
  * Displays detailed information about a managed endpoint. A managed endpoint is a gateway that connects EMR Studio to
  * Amazon EMR on EKS so that EMR Studio can communicate with your virtual
  */
-DescribeManagedEndpointResponse * EMRContainersClient::describeManagedEndpoint(const DescribeManagedEndpointRequest &request)
+DescribeManagedEndpointResponse * EmrcontainersClient::describeManagedEndpoint(const DescribeManagedEndpointRequest &request)
 {
     return qobject_cast<DescribeManagedEndpointResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * DescribeVirtualClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -270,13 +270,13 @@ DescribeManagedEndpointResponse * EMRContainersClient::describeManagedEndpoint(c
  * system. A single virtual cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual
  * clusters the same way you model Kubernetes namespaces to meet your
  */
-DescribeVirtualClusterResponse * EMRContainersClient::describeVirtualCluster(const DescribeVirtualClusterRequest &request)
+DescribeVirtualClusterResponse * EmrcontainersClient::describeVirtualCluster(const DescribeVirtualClusterRequest &request)
 {
     return qobject_cast<DescribeVirtualClusterResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * ListJobRunsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -284,13 +284,13 @@ DescribeVirtualClusterResponse * EMRContainersClient::describeVirtualCluster(con
  * Lists job runs based on a set of parameters. A job run is a unit of work, such as a Spark jar, PySpark script, or
  * SparkSQL query, that you submit to Amazon EMR on
  */
-ListJobRunsResponse * EMRContainersClient::listJobRuns(const ListJobRunsRequest &request)
+ListJobRunsResponse * EmrcontainersClient::listJobRuns(const ListJobRunsRequest &request)
 {
     return qobject_cast<ListJobRunsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * ListManagedEndpointsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -298,26 +298,26 @@ ListJobRunsResponse * EMRContainersClient::listJobRuns(const ListJobRunsRequest 
  * Lists managed endpoints based on a set of parameters. A managed endpoint is a gateway that connects EMR Studio to Amazon
  * EMR on EKS so that EMR Studio can communicate with your virtual
  */
-ListManagedEndpointsResponse * EMRContainersClient::listManagedEndpoints(const ListManagedEndpointsRequest &request)
+ListManagedEndpointsResponse * EmrcontainersClient::listManagedEndpoints(const ListManagedEndpointsRequest &request)
 {
     return qobject_cast<ListManagedEndpointsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the tags assigned to the
  */
-ListTagsForResourceResponse * EMRContainersClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * EmrcontainersClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * ListVirtualClustersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -327,13 +327,13 @@ ListTagsForResourceResponse * EMRContainersClient::listTagsForResource(const Lis
  * virtual cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual clusters the same
  * way you model Kubernetes namespaces to meet your
  */
-ListVirtualClustersResponse * EMRContainersClient::listVirtualClusters(const ListVirtualClustersRequest &request)
+ListVirtualClustersResponse * EmrcontainersClient::listVirtualClusters(const ListVirtualClustersRequest &request)
 {
     return qobject_cast<ListVirtualClustersResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * StartJobRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -341,13 +341,13 @@ ListVirtualClustersResponse * EMRContainersClient::listVirtualClusters(const Lis
  * Starts a job run. A job run is a unit of work, such as a Spark jar, PySpark script, or SparkSQL query, that you submit
  * to Amazon EMR on
  */
-StartJobRunResponse * EMRContainersClient::startJobRun(const StartJobRunRequest &request)
+StartJobRunResponse * EmrcontainersClient::startJobRun(const StartJobRunRequest &request)
 {
     return qobject_cast<StartJobRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -359,41 +359,41 @@ StartJobRunResponse * EMRContainersClient::startJobRun(const StartJobRunRequest 
  * clusters to help you track each cluster's owner and stack level. We recommend that you devise a consistent set of tag
  * keys for each resource type. You can then search and filter the resources based on the tags that you
  */
-TagResourceResponse * EMRContainersClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * EmrcontainersClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the EMRContainersClient service, and returns a pointer to an
+ * Sends \a request to the EmrcontainersClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes tags from
  */
-UntagResourceResponse * EMRContainersClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * EmrcontainersClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::EMRContainers::EMRContainersClientPrivate
- * \brief The EMRContainersClientPrivate class provides private implementation for EMRContainersClient.
+ * \class QtAws::Emrcontainers::EmrcontainersClientPrivate
+ * \brief The EmrcontainersClientPrivate class provides private implementation for EmrcontainersClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a EMRContainersClientPrivate object with public implementation \a q.
+ * Constructs a EmrcontainersClientPrivate object with public implementation \a q.
  */
-EMRContainersClientPrivate::EMRContainersClientPrivate(EMRContainersClient * const q)
+EmrcontainersClientPrivate::EmrcontainersClientPrivate(EmrcontainersClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

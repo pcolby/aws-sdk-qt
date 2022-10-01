@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalResponsePrivate;
+class WafRegionalResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT WAFRegionalResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWAFREGIONAL_EXPORT WafRegionalResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    WAFRegionalResponse(QObject * const parent = 0);
+    WafRegionalResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent);
+    WafRegionalResponse(WafRegionalResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(WAFRegionalResponse)
-    Q_DISABLE_COPY(WAFRegionalResponse)
+    Q_DECLARE_PRIVATE(WafRegionalResponse)
+    Q_DISABLE_COPY(WafRegionalResponse)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

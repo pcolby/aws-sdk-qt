@@ -1,10 +1,21 @@
 add_compile_definitions(QTAWSDEVOPSGURU_LIBRARY)
 
 add_library(QtAwsDevOpsGuru
+  qtawsdevopsguruglobal.h
+  devopsguruclient.h
+  devopsguruclient_p.h
+  devopsgururequest.h
+  devopsgururequest_p.h
+  devopsgururesponse.h
+  devopsgururesponse_p.h
   addnotificationchannelrequest.h
   addnotificationchannelrequest_p.h
   addnotificationchannelresponse.h
   addnotificationchannelresponse_p.h
+  deleteinsightrequest.h
+  deleteinsightrequest_p.h
+  deleteinsightresponse.h
+  deleteinsightresponse_p.h
   describeaccounthealthrequest.h
   describeaccounthealthrequest_p.h
   describeaccounthealthresponse.h
@@ -17,6 +28,10 @@ add_library(QtAwsDevOpsGuru
   describeanomalyrequest_p.h
   describeanomalyresponse.h
   describeanomalyresponse_p.h
+  describeeventsourcesconfigrequest.h
+  describeeventsourcesconfigrequest_p.h
+  describeeventsourcesconfigresponse.h
+  describeeventsourcesconfigresponse_p.h
   describefeedbackrequest.h
   describefeedbackrequest_p.h
   describefeedbackresponse.h
@@ -25,6 +40,18 @@ add_library(QtAwsDevOpsGuru
   describeinsightrequest_p.h
   describeinsightresponse.h
   describeinsightresponse_p.h
+  describeorganizationhealthrequest.h
+  describeorganizationhealthrequest_p.h
+  describeorganizationhealthresponse.h
+  describeorganizationhealthresponse_p.h
+  describeorganizationoverviewrequest.h
+  describeorganizationoverviewrequest_p.h
+  describeorganizationoverviewresponse.h
+  describeorganizationoverviewresponse_p.h
+  describeorganizationresourcecollectionhealthrequest.h
+  describeorganizationresourcecollectionhealthrequest_p.h
+  describeorganizationresourcecollectionhealthresponse.h
+  describeorganizationresourcecollectionhealthresponse_p.h
   describeresourcecollectionhealthrequest.h
   describeresourcecollectionhealthrequest_p.h
   describeresourcecollectionhealthresponse.h
@@ -33,12 +60,6 @@ add_library(QtAwsDevOpsGuru
   describeserviceintegrationrequest_p.h
   describeserviceintegrationresponse.h
   describeserviceintegrationresponse_p.h
-  devopsguruclient.h
-  devopsguruclient_p.h
-  devopsgururequest.h
-  devopsgururequest_p.h
-  devopsgururesponse.h
-  devopsgururesponse_p.h
   getcostestimationrequest.h
   getcostestimationrequest_p.h
   getcostestimationresponse.h
@@ -51,6 +72,10 @@ add_library(QtAwsDevOpsGuru
   listanomaliesforinsightrequest_p.h
   listanomaliesforinsightresponse.h
   listanomaliesforinsightresponse_p.h
+  listanomalousloggroupsrequest.h
+  listanomalousloggroupsrequest_p.h
+  listanomalousloggroupsresponse.h
+  listanomalousloggroupsresponse_p.h
   listeventsrequest.h
   listeventsrequest_p.h
   listeventsresponse.h
@@ -59,10 +84,18 @@ add_library(QtAwsDevOpsGuru
   listinsightsrequest_p.h
   listinsightsresponse.h
   listinsightsresponse_p.h
+  listmonitoredresourcesrequest.h
+  listmonitoredresourcesrequest_p.h
+  listmonitoredresourcesresponse.h
+  listmonitoredresourcesresponse_p.h
   listnotificationchannelsrequest.h
   listnotificationchannelsrequest_p.h
   listnotificationchannelsresponse.h
   listnotificationchannelsresponse_p.h
+  listorganizationinsightsrequest.h
+  listorganizationinsightsrequest_p.h
+  listorganizationinsightsresponse.h
+  listorganizationinsightsresponse_p.h
   listrecommendationsrequest.h
   listrecommendationsrequest_p.h
   listrecommendationsresponse.h
@@ -71,7 +104,6 @@ add_library(QtAwsDevOpsGuru
   putfeedbackrequest_p.h
   putfeedbackresponse.h
   putfeedbackresponse_p.h
-  qtawsdevopsguruglobal.h
   removenotificationchannelrequest.h
   removenotificationchannelrequest_p.h
   removenotificationchannelresponse.h
@@ -80,10 +112,18 @@ add_library(QtAwsDevOpsGuru
   searchinsightsrequest_p.h
   searchinsightsresponse.h
   searchinsightsresponse_p.h
+  searchorganizationinsightsrequest.h
+  searchorganizationinsightsrequest_p.h
+  searchorganizationinsightsresponse.h
+  searchorganizationinsightsresponse_p.h
   startcostestimationrequest.h
   startcostestimationrequest_p.h
   startcostestimationresponse.h
   startcostestimationresponse_p.h
+  updateeventsourcesconfigrequest.h
+  updateeventsourcesconfigrequest_p.h
+  updateeventsourcesconfigresponse.h
+  updateeventsourcesconfigresponse_p.h
   updateresourcecollectionrequest.h
   updateresourcecollectionrequest_p.h
   updateresourcecollectionresponse.h
@@ -92,37 +132,53 @@ add_library(QtAwsDevOpsGuru
   updateserviceintegrationrequest_p.h
   updateserviceintegrationresponse.h
   updateserviceintegrationresponse_p.h
+  devopsguruclient.cpp
+  devopsgururequest.cpp
+  devopsgururesponse.cpp
   addnotificationchannelrequest.cpp
   addnotificationchannelresponse.cpp
+  deleteinsightrequest.cpp
+  deleteinsightresponse.cpp
   describeaccounthealthrequest.cpp
   describeaccounthealthresponse.cpp
   describeaccountoverviewrequest.cpp
   describeaccountoverviewresponse.cpp
   describeanomalyrequest.cpp
   describeanomalyresponse.cpp
+  describeeventsourcesconfigrequest.cpp
+  describeeventsourcesconfigresponse.cpp
   describefeedbackrequest.cpp
   describefeedbackresponse.cpp
   describeinsightrequest.cpp
   describeinsightresponse.cpp
+  describeorganizationhealthrequest.cpp
+  describeorganizationhealthresponse.cpp
+  describeorganizationoverviewrequest.cpp
+  describeorganizationoverviewresponse.cpp
+  describeorganizationresourcecollectionhealthrequest.cpp
+  describeorganizationresourcecollectionhealthresponse.cpp
   describeresourcecollectionhealthrequest.cpp
   describeresourcecollectionhealthresponse.cpp
   describeserviceintegrationrequest.cpp
   describeserviceintegrationresponse.cpp
-  devopsguruclient.cpp
-  devopsgururequest.cpp
-  devopsgururesponse.cpp
   getcostestimationrequest.cpp
   getcostestimationresponse.cpp
   getresourcecollectionrequest.cpp
   getresourcecollectionresponse.cpp
   listanomaliesforinsightrequest.cpp
   listanomaliesforinsightresponse.cpp
+  listanomalousloggroupsrequest.cpp
+  listanomalousloggroupsresponse.cpp
   listeventsrequest.cpp
   listeventsresponse.cpp
   listinsightsrequest.cpp
   listinsightsresponse.cpp
+  listmonitoredresourcesrequest.cpp
+  listmonitoredresourcesresponse.cpp
   listnotificationchannelsrequest.cpp
   listnotificationchannelsresponse.cpp
+  listorganizationinsightsrequest.cpp
+  listorganizationinsightsresponse.cpp
   listrecommendationsrequest.cpp
   listrecommendationsresponse.cpp
   putfeedbackrequest.cpp
@@ -131,8 +187,12 @@ add_library(QtAwsDevOpsGuru
   removenotificationchannelresponse.cpp
   searchinsightsrequest.cpp
   searchinsightsresponse.cpp
+  searchorganizationinsightsrequest.cpp
+  searchorganizationinsightsresponse.cpp
   startcostestimationrequest.cpp
   startcostestimationresponse.cpp
+  updateeventsourcesconfigrequest.cpp
+  updateeventsourcesconfigresponse.cpp
   updateresourcecollectionrequest.cpp
   updateresourcecollectionresponse.cpp
   updateserviceintegrationrequest.cpp

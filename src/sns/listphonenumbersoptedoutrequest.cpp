@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListPhoneNumbersOptedOutRequest
- * \brief The ListPhoneNumbersOptedOutRequest class provides an interface for SNS ListPhoneNumbersOptedOut requests.
+ * \class QtAws::Sns::ListPhoneNumbersOptedOutRequest
+ * \brief The ListPhoneNumbersOptedOutRequest class provides an interface for Sns ListPhoneNumbersOptedOut requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SNS::ListPhoneNumbersOptedOutRequestPrivate
+ * \class QtAws::Sns::ListPhoneNumbersOptedOutRequestPrivate
  * \brief The ListPhoneNumbersOptedOutRequestPrivate class provides private implementation for ListPhoneNumbersOptedOutRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

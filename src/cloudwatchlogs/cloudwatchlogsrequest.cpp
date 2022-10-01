@@ -285,7 +285,7 @@ QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 CloudWatchLogsRequestPrivate::CloudWatchLogsRequestPrivate(const CloudWatchLogsRequest::Action action, CloudWatchLogsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-03-28"))
 {
 
 }

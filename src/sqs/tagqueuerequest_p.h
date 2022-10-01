@@ -24,7 +24,7 @@
 #include "tagqueuerequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class TagQueueRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

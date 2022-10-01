@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class TestRenderEmailTemplateRequestPrivate;
 
-class QTAWSSESV2_EXPORT TestRenderEmailTemplateRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT TestRenderEmailTemplateRequest : public SESv2Request {
 
 public:
     TestRenderEmailTemplateRequest(const TestRenderEmailTemplateRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

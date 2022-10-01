@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeletePermissionPolicyResponse
- * \brief The DeletePermissionPolicyResponse class provides an interace for WAF DeletePermissionPolicy responses.
+ * \class QtAws::Waf::DeletePermissionPolicyResponse
+ * \brief The DeletePermissionPolicyResponse class provides an interace for Waf DeletePermissionPolicy responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful WAF DeletePermissionPolicy \a response.
+ * Parses a successful Waf DeletePermissionPolicy \a response.
  */
 void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeletePermissionPolicyResponsePrivate
+ * \class QtAws::Waf::DeletePermissionPolicyResponsePrivate
  * \brief The DeletePermissionPolicyResponsePrivate class provides private implementation for DeletePermissionPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeletePermissionPolicy response element from \a xml.
+ * Parses a Waf DeletePermissionPolicy response element from \a xml.
  */
 void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

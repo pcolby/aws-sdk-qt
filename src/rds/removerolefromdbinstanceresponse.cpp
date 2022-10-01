@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBInstanceResponse
- * \brief The RemoveRoleFromDBInstanceResponse class provides an interace for RDS RemoveRoleFromDBInstance responses.
+ * \class QtAws::Rds::RemoveRoleFromDBInstanceResponse
+ * \brief The RemoveRoleFromDBInstanceResponse class provides an interace for Rds RemoveRoleFromDBInstance responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RemoveRoleFromDBInstanceRequest * RemoveRoleFromDBInstanceResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS RemoveRoleFromDBInstance \a response.
+ * Parses a successful Rds RemoveRoleFromDBInstance \a response.
  */
 void RemoveRoleFromDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RemoveRoleFromDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RemoveRoleFromDBInstanceResponsePrivate
+ * \class QtAws::Rds::RemoveRoleFromDBInstanceResponsePrivate
  * \brief The RemoveRoleFromDBInstanceResponsePrivate class provides private implementation for RemoveRoleFromDBInstanceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RemoveRoleFromDBInstanceResponsePrivate::RemoveRoleFromDBInstanceResponsePrivate
 }
 
 /*!
- * Parses a RDS RemoveRoleFromDBInstance response element from \a xml.
+ * Parses a Rds RemoveRoleFromDBInstance response element from \a xml.
  */
 void RemoveRoleFromDBInstanceResponsePrivate::parseRemoveRoleFromDBInstanceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RemoveRoleFromDBInstanceResponsePrivate::parseRemoveRoleFromDBInstanceRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

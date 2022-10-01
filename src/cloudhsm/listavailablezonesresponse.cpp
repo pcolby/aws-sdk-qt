@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::ListAvailableZonesResponse
- * \brief The ListAvailableZonesResponse class provides an interace for CloudHSM ListAvailableZones responses.
+ * \class QtAws::CloudHsm::ListAvailableZonesResponse
+ * \brief The ListAvailableZonesResponse class provides an interace for CloudHsm ListAvailableZones responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::listAvailableZones
+ * \sa CloudHsmClient::listAvailableZones
  */
 
 /*!
@@ -56,7 +56,7 @@ ListAvailableZonesResponse::ListAvailableZonesResponse(
         const ListAvailableZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ListAvailableZonesResponsePrivate(this), parent)
+    : CloudHsmResponse(new ListAvailableZonesResponsePrivate(this), parent)
 {
     setRequest(new ListAvailableZonesRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM ListAvailableZones \a response.
+ * Parses a successful CloudHsm ListAvailableZones \a response.
  */
 void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::ListAvailableZonesResponsePrivate
+ * \class QtAws::CloudHsm::ListAvailableZonesResponsePrivate
  * \brief The ListAvailableZonesResponsePrivate class provides private implementation for ListAvailableZonesResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a ListAvailableZonesResponsePrivate object with public implementation \a q.
  */
 ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
-    ListAvailableZonesResponse * const q) : CloudHSMResponsePrivate(q)
+    ListAvailableZonesResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM ListAvailableZones response element from \a xml.
+ * Parses a CloudHsm ListAvailableZones response element from \a xml.
  */
 void ListAvailableZonesResponsePrivate::parseListAvailableZonesResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void ListAvailableZonesResponsePrivate::parseListAvailableZonesResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

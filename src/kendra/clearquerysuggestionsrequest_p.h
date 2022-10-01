@@ -24,14 +24,14 @@
 #include "clearquerysuggestionsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ClearQuerySuggestionsRequest;
 
-class ClearQuerySuggestionsRequestPrivate : public kendraRequestPrivate {
+class ClearQuerySuggestionsRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ClearQuerySuggestionsRequestPrivate(const kendraRequest::Action action,
+    ClearQuerySuggestionsRequestPrivate(const KendraRequest::Action action,
                                    ClearQuerySuggestionsRequest * const q);
     ClearQuerySuggestionsRequestPrivate(const ClearQuerySuggestionsRequestPrivate &other,
                                    ClearQuerySuggestionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

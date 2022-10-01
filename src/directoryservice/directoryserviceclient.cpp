@@ -65,6 +65,8 @@
 #include "deregistereventtopicresponse.h"
 #include "describecertificaterequest.h"
 #include "describecertificateresponse.h"
+#include "describeclientauthenticationsettingsrequest.h"
+#include "describeclientauthenticationsettingsresponse.h"
 #include "describeconditionalforwardersrequest.h"
 #include "describeconditionalforwardersresponse.h"
 #include "describedirectoriesrequest.h"
@@ -77,6 +79,8 @@
 #include "describeldapssettingsresponse.h"
 #include "describeregionsrequest.h"
 #include "describeregionsresponse.h"
+#include "describesettingsrequest.h"
+#include "describesettingsresponse.h"
 #include "describeshareddirectoriesrequest.h"
 #include "describeshareddirectoriesresponse.h"
 #include "describesnapshotsrequest.h"
@@ -141,6 +145,8 @@
 #include "updatenumberofdomaincontrollersresponse.h"
 #include "updateradiusrequest.h"
 #include "updateradiusresponse.h"
+#include "updatesettingsrequest.h"
+#include "updatesettingsresponse.h"
 #include "updatetrustrequest.h"
 #include "updatetrustresponse.h"
 #include "verifytrustrequest.h"
@@ -168,20 +174,21 @@ namespace DirectoryService {
  * \ingroup aws-clients
  * \inmodule QtAwsDirectoryService
  *
- *  <fullname>AWS Directory Service</fullname>
+ *  <fullname>Directory Service</fullname>
  * 
- *  AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
- *  connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
- *  information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
- *  Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
- *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *  Directory Service is a web service that makes it easy for you to setup and run directories in the Amazon Web Services
+ *  cloud, or connect your Amazon Web Services resources with an existing self-managed Microsoft Active Directory. This
+ *  guide provides detailed information about Directory Service operations, data types, parameters, and errors. For
+ *  information about Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">Directory
+ *  Service</a> and the <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">Directory
+ *  Service Administration
  * 
  *  Guide</a>> <note>
  * 
- *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory Service and
- *  other AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
- *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  Amazon Web Services provides SDKs that consist of libraries and sample code for various programming languages and
+ *  platforms (Java, Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to
+ *  Directory Service and other Amazon Web Services services. For more information about the Amazon Web Services SDKs,
+ *  including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  */
 
 /*!
@@ -256,17 +263,17 @@ AcceptSharedDirectoryResponse * DirectoryServiceClient::acceptSharedDirectory(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block
+ * If the DNS server for your self-managed domain uses a publicly addressable IP address, you must add a CIDR address block
  * to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i> adds this address
  * block. You can also use <i>AddIpRoutes</i> to facilitate routing traffic that uses public IP ranges from your Microsoft
- * AD on AWS to a peer VPC.
+ * AD on Amazon Web Services to a peer VPC.
  *
  * </p
  *
  * Before you call <i>AddIpRoutes</i>, ensure that all of the required permissions have been explicitly granted through a
  * policy. For details about what permissions are required to run the <i>AddIpRoutes</i> operation, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
- * Directory Service API Permissions: Actions, Resources, and Conditions
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory
+ * Service API Permissions: Actions, Resources, and Conditions
  */
 AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesRequest &request)
 {
@@ -321,15 +328,15 @@ CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AD Connector to connect to an on-premises
+ * Creates an AD Connector to connect to a self-managed
  *
  * directory>
  *
  * Before you call <code>ConnectDirectory</code>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <code>ConnectDirectory</code> operation,
  * see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
- * Directory Service API Permissions: Actions, Resources, and Conditions
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory
+ * Service API Permissions: Actions, Resources, and Conditions
  */
 ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const ConnectDirectoryRequest &request)
 {
@@ -345,7 +352,7 @@ ConnectDirectoryResponse * DirectoryServiceClient::connectDirectory(const Connec
  * Creates an alias for a directory and assigns the alias to the directory. The alias is used to construct the access URL
  * for the directory, such as
  *
- * <code>http://&lt;alias&gt;.awsapps.com</code>> <b>
+ * <code>http://<alias>.awsapps.com</code>> <b>
  *
  * After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely
  */
@@ -373,8 +380,8 @@ CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order to set
- * up a trust relationship with another domain. The conditional forwarder points to the trusted
+ * Creates a conditional forwarder associated with your Amazon Web Services directory. Conditional forwarders are required
+ * in order to set up a trust relationship with another domain. The conditional forwarder points to the trusted
  */
 CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalForwarder(const CreateConditionalForwarderRequest &request)
 {
@@ -389,14 +396,15 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
  *
  * Creates a Simple AD directory. For more information, see <a
  * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html">Simple Active
- * Directory</a> in the <i>AWS Directory Service Admin
+ * Directory</a> in the <i>Directory Service Admin
  *
  * Guide</i>>
  *
  * Before you call <code>CreateDirectory</code>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <code>CreateDirectory</code> operation, see
- * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
- * Directory Service API Permissions: Actions, Resources, and Conditions
+ * <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory
+ * Service API Permissions: Actions, Resources, and Conditions
  */
 CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDirectoryRequest &request)
 {
@@ -410,7 +418,7 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a subscription to forward real-time Directory Service domain controller security logs to the specified Amazon
- * CloudWatch log group in your AWS
+ * CloudWatch log group in your Amazon Web Services
  */
 CreateLogSubscriptionResponse * DirectoryServiceClient::createLogSubscription(const CreateLogSubscriptionRequest &request)
 {
@@ -423,16 +431,16 @@ CreateLogSubscriptionResponse * DirectoryServiceClient::createLogSubscription(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Microsoft AD directory in the AWS Cloud. For more information, see <a
- * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Managed Microsoft
- * AD</a> in the <i>AWS Directory Service Admin
+ * Creates a Microsoft AD directory in the Amazon Web Services Cloud. For more information, see <a
+ * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Managed Microsoft
+ * AD</a> in the <i>Directory Service Admin
  *
  * Guide</i>>
  *
  * Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
- * Directory Service API Permissions: Actions, Resources, and Conditions
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory
+ * Service API Permissions: Actions, Resources, and Conditions
  */
 CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const CreateMicrosoftADRequest &request)
 {
@@ -445,7 +453,7 @@ CreateMicrosoftADResponse * DirectoryServiceClient::createMicrosoftAD(const Crea
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a snapshot of a Simple AD or Microsoft AD directory in the AWS
+ * Creates a snapshot of a Simple AD or Microsoft AD directory in the Amazon Web Services
  *
  * cloud> <note>
  *
@@ -462,14 +470,14 @@ CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnap
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can
- * establish a trust between your AWS Managed Microsoft AD directory, and your existing on-premises Microsoft Active
+ * Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can
+ * establish a trust between your Managed Microsoft AD directory, and your existing self-managed Microsoft Active
  * Directory. This would allow you to provide users and groups access to resources in either domain, with a single set of
  *
  * credentials>
  *
- * This action initiates the creation of the AWS side of a trust relationship between an AWS Managed Microsoft AD directory
- * and an external domain. You can create either a forest trust or an external
+ * This action initiates the creation of the Amazon Web Services side of a trust relationship between an Managed Microsoft
+ * AD directory and an external domain. You can create either a forest trust or an external
  */
 CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustRequest &request)
 {
@@ -482,7 +490,7 @@ CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a conditional forwarder that has been set up for your AWS
+ * Deletes a conditional forwarder that has been set up for your Amazon Web Services
  */
 DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request)
 {
@@ -495,14 +503,15 @@ DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalFo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Directory Service
+ * Deletes an Directory Service
  *
  * directory>
  *
  * Before you call <code>DeleteDirectory</code>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <code>DeleteDirectory</code> operation, see
- * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
- * Directory Service API Permissions: Actions, Resources, and Conditions
+ * <a
+ * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory
+ * Service API Permissions: Actions, Resources, and Conditions
  */
 DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
@@ -541,7 +550,7 @@ DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnap
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an existing trust relationship between your AWS Managed Microsoft AD directory and an external
+ * Deletes an existing trust relationship between your Managed Microsoft AD directory and an external
  */
 DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustRequest &request)
 {
@@ -567,7 +576,7 @@ DeregisterCertificateResponse * DirectoryServiceClient::deregisterCertificate(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified directory as a publisher to the specified SNS
+ * Removes the specified directory as a publisher to the specified Amazon SNS
  */
 DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(const DeregisterEventTopicRequest &request)
 {
@@ -585,6 +594,21 @@ DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(cons
 DescribeCertificateResponse * DirectoryServiceClient::describeCertificate(const DescribeCertificateRequest &request)
 {
     return qobject_cast<DescribeCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeClientAuthenticationSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the type of client authentication for the specified directory, if the type is specified. If
+ * no type is specified, information about all client authentication types that are supported for the specified directory
+ * is retrieved. Currently, only <code>SmartCard</code> is supported.
+ */
+DescribeClientAuthenticationSettingsResponse * DirectoryServiceClient::describeClientAuthenticationSettings(const DescribeClientAuthenticationSettingsRequest &request)
+{
+    return qobject_cast<DescribeClientAuthenticationSettingsResponse *>(send(request));
 }
 
 /*!
@@ -652,7 +676,7 @@ DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainContro
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Obtains information about which SNS topics receive status messages from the specified
+ * Obtains information about which Amazon SNS topics receive status messages from the specified
  *
  * directory>
  *
@@ -688,6 +712,19 @@ DescribeLDAPSSettingsResponse * DirectoryServiceClient::describeLDAPSSettings(co
 DescribeRegionsResponse * DirectoryServiceClient::describeRegions(const DescribeRegionsRequest &request)
 {
     return qobject_cast<DescribeRegionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the configurable settings for the specified
+ */
+DescribeSettingsResponse * DirectoryServiceClient::describeSettings(const DescribeSettingsRequest &request)
+{
+    return qobject_cast<DescribeSettingsResponse *>(send(request));
 }
 
 /*!
@@ -843,8 +880,8 @@ EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain AWS services
- * from a computer joined to the directory without having to enter their credentials
+ * Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain Amazon Web
+ * Services services from a computer joined to the directory without having to enter their credentials
  */
 EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &request)
 {
@@ -909,7 +946,7 @@ ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the active log subscriptions for the AWS
+ * Lists the active log subscriptions for the Amazon Web Services
  */
 ListLogSubscriptionsResponse * DirectoryServiceClient::listLogSubscriptions(const ListLogSubscriptionsRequest &request)
 {
@@ -961,10 +998,10 @@ RegisterCertificateResponse * DirectoryServiceClient::registerCertificate(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a directory with an SNS topic. This establishes the directory as a publisher to the specified SNS topic. You
- * can then receive email or text (SMS) messages when the status of your directory changes. You get notified if your
- * directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when the
- * directory returns to an Active
+ * Associates a directory with an Amazon SNS topic. This establishes the directory as a publisher to the specified Amazon
+ * SNS topic. You can then receive email or text (SMS) messages when the status of your directory changes. You get notified
+ * if your directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when
+ * the directory returns to an Active
  */
 RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const RegisterEventTopicRequest &request)
 {
@@ -1030,7 +1067,7 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resets the password for any user in your AWS Managed Microsoft AD or Simple AD
+ * Resets the password for any user in your Managed Microsoft AD or Simple AD
  *
  * directory>
  *
@@ -1043,11 +1080,11 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
  *
  * user> </li> <li>
  *
- * For AWS Managed Microsoft AD, you can only reset the password for a user that is in an OU based off of the NetBIOS name
- * that you typed when you created your directory. For example, you cannot reset the password for a user in the <b>AWS
- * Reserved</b> OU. For more information about the OU structure for an AWS Managed Microsoft AD directory, see <a
+ * For Managed Microsoft AD, you can only reset the password for a user that is in an OU based off of the NetBIOS name that
+ * you typed when you created your directory. For example, you cannot reset the password for a user in the <b>Amazon Web
+ * Services Reserved</b> OU. For more information about the OU structure for an Managed Microsoft AD directory, see <a
  * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_what_gets_created.html">What
- * Gets Created</a> in the <i>AWS Directory Service Administration
+ * Gets Created</a> in the <i>Directory Service Administration
  */
 ResetUserPasswordResponse * DirectoryServiceClient::resetUserPassword(const ResetUserPasswordRequest &request)
 {
@@ -1083,21 +1120,22 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Shares a specified directory (<code>DirectoryId</code>) in your AWS account (directory owner) with another AWS account
- * (directory consumer). With this operation you can use your directory from any AWS account and from any Amazon VPC within
- * an AWS
+ * Shares a specified directory (<code>DirectoryId</code>) in your Amazon Web Services account (directory owner) with
+ * another Amazon Web Services account (directory consumer). With this operation you can use your directory from any Amazon
+ * Web Services account and from any Amazon VPC within an Amazon Web Services
  *
  * Region>
  *
- * When you share your AWS Managed Microsoft AD directory, AWS Directory Service creates a shared directory in the
- * directory consumer account. This shared directory contains the metadata to provide access to the directory within the
- * directory owner account. The shared directory is visible in all VPCs in the directory consumer
+ * When you share your Managed Microsoft AD directory, Directory Service creates a shared directory in the directory
+ * consumer account. This shared directory contains the metadata to provide access to the directory within the directory
+ * owner account. The shared directory is visible in all VPCs in the directory consumer
  *
  * account>
  *
- * The <code>ShareMethod</code> parameter determines whether the specified directory can be shared between AWS accounts
- * inside the same AWS organization (<code>ORGANIZATIONS</code>). It also determines whether you can share the directory
- * with any other AWS account either inside or outside of the organization
+ * The <code>ShareMethod</code> parameter determines whether the specified directory can be shared between Amazon Web
+ * Services accounts inside the same Amazon Web Services organization (<code>ORGANIZATIONS</code>). It also determines
+ * whether you can share the directory with any other Amazon Web Services account either inside or outside of the
+ * organization
  *
  * (<code>HANDSHAKE</code>)>
  *
@@ -1141,7 +1179,7 @@ UnshareDirectoryResponse * DirectoryServiceClient::unshareDirectory(const Unshar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a conditional forwarder that has been set up for your AWS
+ * Updates a conditional forwarder that has been set up for your Amazon Web Services
  */
 UpdateConditionalForwarderResponse * DirectoryServiceClient::updateConditionalForwarder(const UpdateConditionalForwarderRequest &request)
 {
@@ -1179,11 +1217,24 @@ UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRe
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * UpdateSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configurable settings for the specified
+ */
+UpdateSettingsResponse * DirectoryServiceClient::updateSettings(const UpdateSettingsRequest &request)
+{
+    return qobject_cast<UpdateSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * UpdateTrustResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the trust that has been set up between your AWS Managed Microsoft AD directory and an on-premises Active
+ * Updates the trust that has been set up between your Managed Microsoft AD directory and an self-managed Active
  */
 UpdateTrustResponse * DirectoryServiceClient::updateTrust(const UpdateTrustRequest &request)
 {
@@ -1196,11 +1247,11 @@ UpdateTrustResponse * DirectoryServiceClient::updateTrust(const UpdateTrustReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust
+ * Directory Service for Microsoft Active Directory allows you to configure and verify trust
  *
  * relationships>
  *
- * This action verifies a trust relationship between your AWS Managed Microsoft AD directory and an external
+ * This action verifies a trust relationship between your Managed Microsoft AD directory and an external
  */
 VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustRequest &request)
 {

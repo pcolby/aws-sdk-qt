@@ -285,7 +285,7 @@ QNetworkRequest PinpointEmailRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 PinpointEmailRequestPrivate::PinpointEmailRequestPrivate(const PinpointEmailRequest::Action action, PinpointEmailRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-07-26"))
 {
 
 }

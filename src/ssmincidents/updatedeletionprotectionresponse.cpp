@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::UpdateDeletionProtectionResponse
- * \brief The UpdateDeletionProtectionResponse class provides an interace for SSMIncidents UpdateDeletionProtection responses.
+ * \class QtAws::SsmIncidents::UpdateDeletionProtectionResponse
+ * \brief The UpdateDeletionProtectionResponse class provides an interace for SsmIncidents UpdateDeletionProtection responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::updateDeletionProtection
+ * \sa SsmIncidentsClient::updateDeletionProtection
  */
 
 /*!
@@ -54,7 +54,7 @@ UpdateDeletionProtectionResponse::UpdateDeletionProtectionResponse(
         const UpdateDeletionProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new UpdateDeletionProtectionResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new UpdateDeletionProtectionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeletionProtectionRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const UpdateDeletionProtectionRequest * UpdateDeletionProtectionResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents UpdateDeletionProtection \a response.
+ * Parses a successful SsmIncidents UpdateDeletionProtection \a response.
  */
 void UpdateDeletionProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void UpdateDeletionProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::UpdateDeletionProtectionResponsePrivate
+ * \class QtAws::SsmIncidents::UpdateDeletionProtectionResponsePrivate
  * \brief The UpdateDeletionProtectionResponsePrivate class provides private implementation for UpdateDeletionProtectionResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a UpdateDeletionProtectionResponsePrivate object with public implementation \a q.
  */
 UpdateDeletionProtectionResponsePrivate::UpdateDeletionProtectionResponsePrivate(
-    UpdateDeletionProtectionResponse * const q) : SSMIncidentsResponsePrivate(q)
+    UpdateDeletionProtectionResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents UpdateDeletionProtection response element from \a xml.
+ * Parses a SsmIncidents UpdateDeletionProtection response element from \a xml.
  */
 void UpdateDeletionProtectionResponsePrivate::parseUpdateDeletionProtectionResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void UpdateDeletionProtectionResponsePrivate::parseUpdateDeletionProtectionRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

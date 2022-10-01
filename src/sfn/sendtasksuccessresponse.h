@@ -24,7 +24,7 @@
 #include "sendtasksuccessrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class SendTaskSuccessResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeBackupResponse
- * \brief The DescribeBackupResponse class provides an interace for DynamoDB DescribeBackup responses.
+ * \class QtAws::DynamoDb::DescribeBackupResponse
+ * \brief The DescribeBackupResponse class provides an interace for DynamoDb DescribeBackup responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeBackup
+ * \sa DynamoDbClient::describeBackup
  */
 
 /*!
@@ -63,7 +63,7 @@ DescribeBackupResponse::DescribeBackupResponse(
         const DescribeBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeBackupResponsePrivate(this), parent)
+    : DynamoDbResponse(new DescribeBackupResponsePrivate(this), parent)
 {
     setRequest(new DescribeBackupRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const DescribeBackupRequest * DescribeBackupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB DescribeBackup \a response.
+ * Parses a successful DynamoDb DescribeBackup \a response.
  */
 void DescribeBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void DescribeBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeBackupResponsePrivate
+ * \class QtAws::DynamoDb::DescribeBackupResponsePrivate
  * \brief The DescribeBackupResponsePrivate class provides private implementation for DescribeBackupResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a DescribeBackupResponsePrivate object with public implementation \a q.
  */
 DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
-    DescribeBackupResponse * const q) : DynamoDBResponsePrivate(q)
+    DescribeBackupResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB DescribeBackup response element from \a xml.
+ * Parses a DynamoDb DescribeBackup response element from \a xml.
  */
 void DescribeBackupResponsePrivate::parseDescribeBackupResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DescribeBackupResponsePrivate::parseDescribeBackupResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

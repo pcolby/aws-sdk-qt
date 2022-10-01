@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBClient;
+class DocDbClient;
 
-class DocDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DocDbClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit DocDBClientPrivate(DocDBClient * const q);
+    explicit DocDbClientPrivate(DocDbClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(DocDBClient)
-    Q_DISABLE_COPY(DocDBClientPrivate)
+    Q_DECLARE_PUBLIC(DocDbClient)
+    Q_DISABLE_COPY(DocDbClientPrivate)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

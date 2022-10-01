@@ -55,7 +55,7 @@
 
 /*!
  * \namespace QtAws::CodeGuruReviewer
- * \brief Contains classess for accessing Amazon CodeGuru Reviewer (CodeGuruReviewer).
+ * \brief Contains classess for accessing Amazon CodeGuru Reviewer.
  *
  * \inmodule QtAwsCodeGuruReviewer
  *
@@ -67,14 +67,14 @@ namespace CodeGuruReviewer {
 
 /*!
  * \class QtAws::CodeGuruReviewer::CodeGuruReviewerClient
- * \brief The CodeGuruReviewerClient class provides access to the Amazon CodeGuru Reviewer (CodeGuruReviewer) service.
+ * \brief The CodeGuruReviewerClient class provides access to the Amazon CodeGuru Reviewer service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsCodeGuruReviewer
  *
  *  This section provides documentation for the Amazon CodeGuru Reviewer API operations. CodeGuru Reviewer is a service that
  *  uses program analysis and machine learning to detect potential defects that are difficult for developers to find and
- *  recommendations to address them in your Java and Python
+ *  recommends fixes in your Java and Python
  * 
  *  code>
  * 
@@ -88,7 +88,7 @@ namespace CodeGuruReviewer {
  *  To improve the security of your CodeGuru Reviewer API calls, you can establish a private connection between your VPC and
  *  CodeGuru Reviewer by creating an <i>interface VPC endpoint</i>. For more information, see <a
  *  href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/vpc-interface-endpoints.html">CodeGuru Reviewer and
- *  interface VPC endpoints (AWS PrivateLink)</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>.
+ *  interface VPC endpoints (Amazon Web Services PrivateLink)</a> in the <i>Amazon CodeGuru Reviewer User
  */
 
 /*!
@@ -150,29 +150,29 @@ CodeGuruReviewerClient::CodeGuruReviewerClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use to associate an AWS CodeCommit repository or a repostory managed by AWS CodeStar Connections with Amazon CodeGuru
- * Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code changes in the repository's pull
- * requests and provides automatic recommendations. You can view recommendations using the CodeGuru Reviewer console. For
- * more information, see <a
+ * Use to associate an Amazon Web Services CodeCommit repository or a repository managed by Amazon Web Services CodeStar
+ * Connections with Amazon CodeGuru Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code
+ * changes in the repository's pull requests and provides automatic recommendations. You can view recommendations using the
+ * CodeGuru Reviewer console. For more information, see <a
  * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/recommendations.html">Recommendations in Amazon CodeGuru
  * Reviewer</a> in the <i>Amazon CodeGuru Reviewer User Guide.</i>
  *
  * </p
  *
- * If you associate a CodeCommit repository, it must be in the same AWS Region and AWS account where its CodeGuru Reviewer
- * code reviews are
+ * If you associate a CodeCommit or S3 repository, it must be in the same Amazon Web Services Region and Amazon Web
+ * Services account where its CodeGuru Reviewer code reviews are
  *
  * configured>
  *
- * Bitbucket and GitHub Enterprise Server repositories are managed by AWS CodeStar Connections to connect to CodeGuru
- * Reviewer. For more information, see <a
+ * Bitbucket and GitHub Enterprise Server repositories are managed by Amazon Web Services CodeStar Connections to connect
+ * to CodeGuru Reviewer. For more information, see <a
  * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-associate-repository.html">Associate a
  * repository</a> in the <i>Amazon CodeGuru Reviewer User Guide.</i>
  *
  * </p <note>
  *
- * You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a GitHub repository with Amazon CodeGuru Reviewer.
- * To associate a GitHub repository, use the console. For more information, see <a
+ * You cannot use the CodeGuru Reviewer SDK or the Amazon Web Services CLI to associate a GitHub repository with Amazon
+ * CodeGuru Reviewer. To associate a GitHub repository, use the console. For more information, see <a
  * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/getting-started-with-guru.html">Getting started with
  * CodeGuru Reviewer</a> in the <i>CodeGuru Reviewer User Guide.</i>
  */
@@ -188,10 +188,9 @@ AssociateRepositoryResponse * CodeGuruReviewerClient::associateRepository(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Use to create a code review with a <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReviewType.html"> <code>CodeReviewType</code>
- * </a> of <code>RepositoryAnalysis</code>. This type of code review analyzes all code under a specified branch in an
- * associated repository. <code>PullRequest</code> code reviews are automatically triggered by a pull request so cannot be
- * created using this method.
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReviewType.html">CodeReviewType</a> of
+ * <code>RepositoryAnalysis</code>. This type of code review analyzes all code under a specified branch in an associated
+ * repository. <code>PullRequest</code> code reviews are automatically triggered by a pull
  */
 CreateCodeReviewResponse * CodeGuruReviewerClient::createCodeReview(const CreateCodeReviewRequest &request)
 {
@@ -217,7 +216,7 @@ DescribeCodeReviewResponse * CodeGuruReviewerClient::describeCodeReview(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the customer feedback for a CodeGuru Reviewer recommendation.
+ * Describes the customer feedback for a CodeGuru Reviewer
  */
 DescribeRecommendationFeedbackResponse * CodeGuruReviewerClient::describeRecommendationFeedback(const DescribeRecommendationFeedbackRequest &request)
 {
@@ -230,8 +229,9 @@ DescribeRecommendationFeedbackResponse * CodeGuruReviewerClient::describeRecomme
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html">
- * <code>RepositoryAssociation</code> </a> object that contains information about the requested repository association.
+ * Returns a <a
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html">RepositoryAssociation</a>
+ * object that contains information about the requested repository
  */
 DescribeRepositoryAssociationResponse * CodeGuruReviewerClient::describeRepositoryAssociation(const DescribeRepositoryAssociationRequest &request)
 {
@@ -257,7 +257,7 @@ DisassociateRepositoryResponse * CodeGuruReviewerClient::disassociateRepository(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the code reviews that the customer has created in the past 90 days.
+ * Lists all the code reviews that the customer has created in the past 90
  */
 ListCodeReviewsResponse * CodeGuruReviewerClient::listCodeReviews(const ListCodeReviewsRequest &request)
 {
@@ -271,9 +271,8 @@ ListCodeReviewsResponse * CodeGuruReviewerClient::listCodeReviews(const ListCode
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RecommendationFeedbackSummary.html">
- * <code>RecommendationFeedbackSummary</code> </a> objects that contain customer recommendation feedback for all CodeGuru
- * Reviewer users.
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RecommendationFeedbackSummary.html">RecommendationFeedbackSummary</a>
+ * objects that contain customer recommendation feedback for all CodeGuru Reviewer
  */
 ListRecommendationFeedbackResponse * CodeGuruReviewerClient::listRecommendationFeedback(const ListRecommendationFeedbackRequest &request)
 {
@@ -286,7 +285,7 @@ ListRecommendationFeedbackResponse * CodeGuruReviewerClient::listRecommendationF
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the list of all recommendations for a completed code review.
+ * Returns the list of all recommendations for a completed code
  */
 ListRecommendationsResponse * CodeGuruReviewerClient::listRecommendations(const ListRecommendationsRequest &request)
 {
@@ -300,17 +299,14 @@ ListRecommendationsResponse * CodeGuruReviewerClient::listRecommendations(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html">
- * <code>RepositoryAssociationSummary</code> </a> objects that contain summary information about a repository association.
- * You can filter the returned list by <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-ProviderType">
- * <code>ProviderType</code> </a>, <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-Name">
- * <code>Name</code> </a>, <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-State">
- * <code>State</code> </a>, and <a
- * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-Owner">
- * <code>Owner</code> </a>.
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html">RepositoryAssociationSummary</a>
+ * objects that contain summary information about a repository association. You can filter the returned list by <a
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-ProviderType">ProviderType</a>,
+ * <a
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-Name">Name</a>,
+ * <a
+ * href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociationSummary.html#reviewer-Type-RepositoryAssociationSummary-State">State</a>,
+ * and <a
  */
 ListRepositoryAssociationsResponse * CodeGuruReviewerClient::listRepositoryAssociations(const ListRepositoryAssociationsRequest &request)
 {
@@ -337,7 +333,7 @@ ListTagsForResourceResponse * CodeGuruReviewerClient::listTagsForResource(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stores customer feedback for a CodeGuru Reviewer recommendation. When this API is called again with different reactions
- * the previous feedback is overwritten.
+ * the previous feedback is
  */
 PutRecommendationFeedbackResponse * CodeGuruReviewerClient::putRecommendationFeedback(const PutRecommendationFeedbackRequest &request)
 {

@@ -23,11 +23,11 @@
 #include "ssmcontactsrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class GetContactRequestPrivate;
 
-class QTAWSSSMCONTACTS_EXPORT GetContactRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT GetContactRequest : public SsmContactsRequest {
 
 public:
     GetContactRequest(const GetContactRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

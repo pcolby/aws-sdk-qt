@@ -21,20 +21,36 @@
 #include "syntheticsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associateresourcerequest.h"
+#include "associateresourceresponse.h"
 #include "createcanaryrequest.h"
 #include "createcanaryresponse.h"
+#include "creategrouprequest.h"
+#include "creategroupresponse.h"
 #include "deletecanaryrequest.h"
 #include "deletecanaryresponse.h"
+#include "deletegrouprequest.h"
+#include "deletegroupresponse.h"
 #include "describecanariesrequest.h"
 #include "describecanariesresponse.h"
 #include "describecanarieslastrunrequest.h"
 #include "describecanarieslastrunresponse.h"
 #include "describeruntimeversionsrequest.h"
 #include "describeruntimeversionsresponse.h"
+#include "disassociateresourcerequest.h"
+#include "disassociateresourceresponse.h"
 #include "getcanaryrequest.h"
 #include "getcanaryresponse.h"
 #include "getcanaryrunsrequest.h"
 #include "getcanaryrunsresponse.h"
+#include "getgrouprequest.h"
+#include "getgroupresponse.h"
+#include "listassociatedgroupsrequest.h"
+#include "listassociatedgroupsresponse.h"
+#include "listgroupresourcesrequest.h"
+#include "listgroupresourcesresponse.h"
+#include "listgroupsrequest.h"
+#include "listgroupsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "startcanaryrequest.h"
@@ -143,6 +159,24 @@ SyntheticsClient::SyntheticsClient(
 
 /*!
  * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * AssociateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a canary with a group. Using groups can help you with managing and automating your canaries, and you can also
+ * view aggregated run results and statistics for all canaries in a group.
+ *
+ * </p
+ *
+ * You must run this operation in the Region where the canary
+ */
+AssociateResourceResponse * SyntheticsClient::associateResource(const AssociateResourceRequest &request)
+{
+    return qobject_cast<AssociateResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
  * CreateCanaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -159,7 +193,7 @@ SyntheticsClient::SyntheticsClient(
  * instead>
  *
  * To create canaries, you must have the <code>CloudWatchSyntheticsFullAccess</code> policy. If you are creating a new IAM
- * role for the canary, you also need the the <code>iam:CreateRole</code>, <code>iam:CreatePolicy</code> and
+ * role for the canary, you also need the <code>iam:CreateRole</code>, <code>iam:CreatePolicy</code> and
  * <code>iam:AttachRolePolicy</code> permissions. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Roles">Necessary
  * Roles and
@@ -178,6 +212,38 @@ CreateCanaryResponse * SyntheticsClient::createCanary(const CreateCanaryRequest 
 
 /*!
  * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * CreateGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a group which you can use to associate canaries with each other, including cross-Region canaries. Using groups
+ * can help you with managing and automating your canaries, and you can also view aggregated run results and statistics for
+ * all canaries in a group.
+ *
+ * </p
+ *
+ * Groups are global resources. When you create a group, it is replicated across Amazon Web Services Regions, and you can
+ * view it and add canaries to it from any Region. Although the group ARN format reflects the Region name where it was
+ * created, a group is not constrained to any Region. This means that you can put canaries from multiple Regions into the
+ * same group, and then use that group to view and manage all of those canaries in a single
+ *
+ * view>
+ *
+ * Groups are supported in all Regions except the Regions that are disabled by default. For more information about these
+ * Regions, see <a href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable">Enabling a
+ *
+ * Region</a>>
+ *
+ * Each group can contain as many as 10 canaries. You can have as many as 20 groups in your account. Any single canary can
+ * be a member of up to 10
+ */
+CreateGroupResponse * SyntheticsClient::createGroup(const CreateGroupRequest &request)
+{
+    return qobject_cast<CreateGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
  * DeleteCanaryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -186,14 +252,15 @@ CreateCanaryResponse * SyntheticsClient::createCanary(const CreateCanaryRequest 
  *
  * canary>
  *
- * When you delete a canary, resources used and created by the canary are not automatically deleted. After you delete a
- * canary that you do not intend to use again, you should also delete the
+ * If you specify <code>DeleteLambda</code> to <code>true</code>, CloudWatch Synthetics also deletes the Lambda functions
+ * and layers that are used by the
+ *
+ * canary>
+ *
+ * Other resources used and created by the canary are not automatically deleted. After you delete a canary that you do not
+ * intend to use again, you should also delete the
  *
  * following> <ul> <li>
- *
- * The Lambda functions and layers used by this canary. These have the prefix <code>cwsyn-<i>MyCanaryName</i>
- *
- * </code>> </li> <li>
  *
  * The CloudWatch alarms created for this canary. These alarms have a name of
  * <code>Synthetics-SharpDrop-Alarm-<i>MyCanaryName</i>
@@ -224,6 +291,25 @@ DeleteCanaryResponse * SyntheticsClient::deleteCanary(const DeleteCanaryRequest 
 
 /*!
  * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * DeleteGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a group. The group doesn't need to be empty to be deleted. If there are canaries in the group, they are not
+ * deleted when you delete the group.
+ *
+ * </p
+ *
+ * Groups are a global resource that appear in all Regions, but the request to delete a group must be made from its home
+ * Region. You can find the home Region of a group within its
+ */
+DeleteGroupResponse * SyntheticsClient::deleteGroup(const DeleteGroupRequest &request)
+{
+    return qobject_cast<DeleteGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
  * DescribeCanariesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -232,9 +318,17 @@ DeleteCanaryResponse * SyntheticsClient::deleteCanary(const DeleteCanaryRequest 
  *
  * canary>
  *
- * This operation does not have resource-level authorization, so if a user is able to use <code>DescribeCanaries</code>,
- * the user can see all of the canaries in the account. A deny policy can only be used to restrict access to all canaries.
- * It cannot be used on specific resources.
+ * This operation supports resource-level authorization using an IAM policy and the <code>Names</code> parameter. If you
+ * specify the <code>Names</code> parameter, the operation is successful only if you have authorization to view all the
+ * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request fails
+ * with a 403
+ *
+ * response>
+ *
+ * You are required to use the <code>Names</code> parameter if you are logged on to a user or role that has an IAM policy
+ * that restricts which canaries that you are allowed to view. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+ * Limiting a user to viewing specific
  */
 DescribeCanariesResponse * SyntheticsClient::describeCanaries(const DescribeCanariesRequest &request)
 {
@@ -248,6 +342,20 @@ DescribeCanariesResponse * SyntheticsClient::describeCanaries(const DescribeCana
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Use this operation to see information from the most recent run of each canary that you have
+ *
+ * created>
+ *
+ * This operation supports resource-level authorization using an IAM policy and the <code>Names</code> parameter. If you
+ * specify the <code>Names</code> parameter, the operation is successful only if you have authorization to view all the
+ * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request fails
+ * with a 403
+ *
+ * response>
+ *
+ * You are required to use the <code>Names</code> parameter if you are logged on to a user or role that has an IAM policy
+ * that restricts which canaries that you are allowed to view. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+ * Limiting a user to viewing specific
  */
 DescribeCanariesLastRunResponse * SyntheticsClient::describeCanariesLastRun(const DescribeCanariesLastRunRequest &request)
 {
@@ -267,6 +375,19 @@ DescribeCanariesLastRunResponse * SyntheticsClient::describeCanariesLastRun(cons
 DescribeRuntimeVersionsResponse * SyntheticsClient::describeRuntimeVersions(const DescribeRuntimeVersionsRequest &request)
 {
     return qobject_cast<DescribeRuntimeVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * DisassociateResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a canary from a group. You must run this operation in the Region where the canary
+ */
+DisassociateResourceResponse * SyntheticsClient::disassociateResource(const DisassociateResourceRequest &request)
+{
+    return qobject_cast<DisassociateResourceResponse *>(send(request));
 }
 
 /*!
@@ -298,11 +419,65 @@ GetCanaryRunsResponse * SyntheticsClient::getCanaryRuns(const GetCanaryRunsReque
 
 /*!
  * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * GetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about one group. Groups are a global resource, so you can use this operation from any
+ */
+GetGroupResponse * SyntheticsClient::getGroup(const GetGroupRequest &request)
+{
+    return qobject_cast<GetGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * ListAssociatedGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the groups that the specified canary is associated with. The canary that you specify must be in the
+ * current
+ */
+ListAssociatedGroupsResponse * SyntheticsClient::listAssociatedGroups(const ListAssociatedGroupsRequest &request)
+{
+    return qobject_cast<ListAssociatedGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * ListGroupResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation returns a list of the ARNs of the canaries that are associated with the specified
+ */
+ListGroupResourcesResponse * SyntheticsClient::listGroupResources(const ListGroupResourcesRequest &request)
+{
+    return qobject_cast<ListGroupResourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
+ * ListGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all groups in the account, displaying their names, unique IDs, and ARNs. The groups from all Regions
+ * are
+ */
+ListGroupsResponse * SyntheticsClient::listGroups(const ListGroupsRequest &request)
+{
+    return qobject_cast<ListGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SyntheticsClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Displays the tags associated with a
+ * Displays the tags associated with a canary or
  */
 ListTagsForResourceResponse * SyntheticsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -329,9 +504,8 @@ StartCanaryResponse * SyntheticsClient::startCanary(const StartCanaryRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops the canary to prevent all future runs. If the canary is currently running, Synthetics stops waiting for the
- * current run of the specified canary to complete. The run that is in progress completes on its own, publishes metrics,
- * and uploads artifacts, but it is not recorded in Synthetics as a completed
+ * Stops the canary to prevent all future runs. If the canary is currently running,the run that is in progress completes on
+ * its own, publishes metrics, and uploads artifacts, but it is not recorded in Synthetics as a completed
  *
  * run>
  *
@@ -349,7 +523,7 @@ StopCanaryResponse * SyntheticsClient::stopCanary(const StopCanaryRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Assigns one or more tags (key-value pairs) to the specified canary.
+ * Assigns one or more tags (key-value pairs) to the specified canary or group.
  *
  * </p
  *
@@ -358,17 +532,17 @@ StopCanaryResponse * SyntheticsClient::stopCanary(const StopCanaryRequest &reque
  *
  * values>
  *
- * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+ * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
  *
  * characters>
  *
- * You can use the <code>TagResource</code> action with a canary that already has tags. If you specify a new tag key for
- * the alarm, this tag is appended to the list of tags associated with the alarm. If you specify a tag key that is already
- * associated with the alarm, the new tag value that you specify replaces the previous value for that
+ * You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag key for
+ * the resource, this tag is appended to the list of tags associated with the resource. If you specify a tag key that is
+ * already associated with the resource, the new tag value that you specify replaces the previous value for that
  *
  * tag>
  *
- * You can associate as many as 50 tags with a
+ * You can associate as many as 50 tags with a canary or
  */
 TagResourceResponse * SyntheticsClient::tagResource(const TagResourceRequest &request)
 {
@@ -394,7 +568,7 @@ UntagResourceResponse * SyntheticsClient::untagResource(const UntagResourceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this operation to change the settings of a canary that has already been
+ * Updates the configuration of a canary that has already been
  *
  * created>
  *

@@ -24,14 +24,14 @@
 #include "listresourcesforwebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListResourcesForWebACLRequest;
 
-class ListResourcesForWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class ListResourcesForWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListResourcesForWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    ListResourcesForWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    ListResourcesForWebACLRequest * const q);
     ListResourcesForWebACLRequestPrivate(const ListResourcesForWebACLRequestPrivate &other,
                                    ListResourcesForWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

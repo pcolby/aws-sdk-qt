@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::CreateAddonResponse
- * \brief The CreateAddonResponse class provides an interace for EKS CreateAddon responses.
+ * \class QtAws::Eks::CreateAddonResponse
+ * \brief The CreateAddonResponse class provides an interace for Eks CreateAddon responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const CreateAddonRequest * CreateAddonResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS CreateAddon \a response.
+ * Parses a successful Eks CreateAddon \a response.
  */
 void CreateAddonResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void CreateAddonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::CreateAddonResponsePrivate
+ * \class QtAws::Eks::CreateAddonResponsePrivate
  * \brief The CreateAddonResponsePrivate class provides private implementation for CreateAddonResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ CreateAddonResponsePrivate::CreateAddonResponsePrivate(
 }
 
 /*!
- * Parses a EKS CreateAddon response element from \a xml.
+ * Parses a Eks CreateAddon response element from \a xml.
  */
 void CreateAddonResponsePrivate::parseCreateAddonResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateAddonResponsePrivate::parseCreateAddonResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

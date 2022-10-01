@@ -40,6 +40,7 @@ namespace Route53Domains {
  * \value CancelDomainTransferToAnotherAwsAccountAction Route53Domains CancelDomainTransferToAnotherAwsAccount action.
  * \value CheckDomainAvailabilityAction Route53Domains CheckDomainAvailability action.
  * \value CheckDomainTransferabilityAction Route53Domains CheckDomainTransferability action.
+ * \value DeleteDomainAction Route53Domains DeleteDomain action.
  * \value DeleteTagsForDomainAction Route53Domains DeleteTagsForDomain action.
  * \value DisableDomainAutoRenewAction Route53Domains DisableDomainAutoRenew action.
  * \value DisableDomainTransferLockAction Route53Domains DisableDomainTransferLock action.
@@ -51,6 +52,7 @@ namespace Route53Domains {
  * \value GetOperationDetailAction Route53Domains GetOperationDetail action.
  * \value ListDomainsAction Route53Domains ListDomains action.
  * \value ListOperationsAction Route53Domains ListOperations action.
+ * \value ListPricesAction Route53Domains ListPrices action.
  * \value ListTagsForDomainAction Route53Domains ListTagsForDomain action.
  * \value RegisterDomainAction Route53Domains RegisterDomain action.
  * \value RejectDomainTransferFromAnotherAwsAccountAction Route53Domains RejectDomainTransferFromAnotherAwsAccount action.
@@ -271,7 +273,7 @@ QNetworkRequest Route53DomainsRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 Route53DomainsRequestPrivate::Route53DomainsRequestPrivate(const Route53DomainsRequest::Action action, Route53DomainsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-05-15"))
 {
 
 }
@@ -309,6 +311,7 @@ QString Route53DomainsRequestPrivate::toString(const Route53DomainsRequest::Acti
         ActionToString(CancelDomainTransferToAnotherAwsAccount);
         ActionToString(CheckDomainAvailability);
         ActionToString(CheckDomainTransferability);
+        ActionToString(DeleteDomain);
         ActionToString(DeleteTagsForDomain);
         ActionToString(DisableDomainAutoRenew);
         ActionToString(DisableDomainTransferLock);
@@ -320,6 +323,7 @@ QString Route53DomainsRequestPrivate::toString(const Route53DomainsRequest::Acti
         ActionToString(GetOperationDetail);
         ActionToString(ListDomains);
         ActionToString(ListOperations);
+        ActionToString(ListPrices);
         ActionToString(ListTagsForDomain);
         ActionToString(RegisterDomain);
         ActionToString(RejectDomainTransferFromAnotherAwsAccount);

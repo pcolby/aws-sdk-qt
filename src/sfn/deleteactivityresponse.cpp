@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DeleteActivityResponse
- * \brief The DeleteActivityResponse class provides an interace for SFN DeleteActivity responses.
+ * \class QtAws::Sfn::DeleteActivityResponse
+ * \brief The DeleteActivityResponse class provides an interace for Sfn DeleteActivity responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const DeleteActivityRequest * DeleteActivityResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN DeleteActivity \a response.
+ * Parses a successful Sfn DeleteActivity \a response.
  */
 void DeleteActivityResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void DeleteActivityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::DeleteActivityResponsePrivate
+ * \class QtAws::Sfn::DeleteActivityResponsePrivate
  * \brief The DeleteActivityResponsePrivate class provides private implementation for DeleteActivityResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
 }
 
 /*!
- * Parses a SFN DeleteActivity response element from \a xml.
+ * Parses a Sfn DeleteActivity response element from \a xml.
  */
 void DeleteActivityResponsePrivate::parseDeleteActivityResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void DeleteActivityResponsePrivate::parseDeleteActivityResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

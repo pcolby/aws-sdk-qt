@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteIdentityResponse
- * \brief The DeleteIdentityResponse class provides an interace for SES DeleteIdentity responses.
+ * \class QtAws::Ses::DeleteIdentityResponse
+ * \brief The DeleteIdentityResponse class provides an interace for Ses DeleteIdentity responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteIdentityRequest * DeleteIdentityResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES DeleteIdentity \a response.
+ * Parses a successful Ses DeleteIdentity \a response.
  */
 void DeleteIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::DeleteIdentityResponsePrivate
+ * \class QtAws::Ses::DeleteIdentityResponsePrivate
  * \brief The DeleteIdentityResponsePrivate class provides private implementation for DeleteIdentityResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteIdentityResponsePrivate::DeleteIdentityResponsePrivate(
 }
 
 /*!
- * Parses a SES DeleteIdentity response element from \a xml.
+ * Parses a Ses DeleteIdentity response element from \a xml.
  */
 void DeleteIdentityResponsePrivate::parseDeleteIdentityResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteIdentityResponsePrivate::parseDeleteIdentityResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

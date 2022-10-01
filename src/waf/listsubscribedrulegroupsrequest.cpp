@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListSubscribedRuleGroupsRequest
- * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WAF ListSubscribedRuleGroups requests.
+ * \class QtAws::Waf::ListSubscribedRuleGroupsRequest
+ * \brief The ListSubscribedRuleGroupsRequest class provides an interface for Waf ListSubscribedRuleGroups requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::WAF::ListSubscribedRuleGroupsRequestPrivate
+ * \class QtAws::Waf::ListSubscribedRuleGroupsRequestPrivate
  * \brief The ListSubscribedRuleGroupsRequestPrivate class provides private implementation for ListSubscribedRuleGroupsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResponsePlanResponse
- * \brief The DeleteResponsePlanResponse class provides an interace for SSMIncidents DeleteResponsePlan responses.
+ * \class QtAws::SsmIncidents::DeleteResponsePlanResponse
+ * \brief The DeleteResponsePlanResponse class provides an interace for SsmIncidents DeleteResponsePlan responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteResponsePlan
+ * \sa SsmIncidentsClient::deleteResponsePlan
  */
 
 /*!
@@ -54,7 +54,7 @@ DeleteResponsePlanResponse::DeleteResponsePlanResponse(
         const DeleteResponsePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new DeleteResponsePlanResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new DeleteResponsePlanResponsePrivate(this), parent)
 {
     setRequest(new DeleteResponsePlanRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const DeleteResponsePlanRequest * DeleteResponsePlanResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents DeleteResponsePlan \a response.
+ * Parses a successful SsmIncidents DeleteResponsePlan \a response.
  */
 void DeleteResponsePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void DeleteResponsePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteResponsePlanResponsePrivate
+ * \class QtAws::SsmIncidents::DeleteResponsePlanResponsePrivate
  * \brief The DeleteResponsePlanResponsePrivate class provides private implementation for DeleteResponsePlanResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a DeleteResponsePlanResponsePrivate object with public implementation \a q.
  */
 DeleteResponsePlanResponsePrivate::DeleteResponsePlanResponsePrivate(
-    DeleteResponsePlanResponse * const q) : SSMIncidentsResponsePrivate(q)
+    DeleteResponsePlanResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents DeleteResponsePlan response element from \a xml.
+ * Parses a SsmIncidents DeleteResponsePlan response element from \a xml.
  */
 void DeleteResponsePlanResponsePrivate::parseDeleteResponsePlanResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteResponsePlanResponsePrivate::parseDeleteResponsePlanResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

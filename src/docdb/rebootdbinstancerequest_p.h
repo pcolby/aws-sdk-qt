@@ -24,14 +24,14 @@
 #include "rebootdbinstancerequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class RebootDBInstanceRequest;
 
-class RebootDBInstanceRequestPrivate : public DocDBRequestPrivate {
+class RebootDBInstanceRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    RebootDBInstanceRequestPrivate(const DocDBRequest::Action action,
+    RebootDBInstanceRequestPrivate(const DocDbRequest::Action action,
                                    RebootDBInstanceRequest * const q);
     RebootDBInstanceRequestPrivate(const RebootDBInstanceRequestPrivate &other,
                                    RebootDBInstanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

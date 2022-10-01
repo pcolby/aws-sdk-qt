@@ -24,14 +24,14 @@
 #include "getemailtemplaterequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetEmailTemplateRequest;
 
-class GetEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class GetEmailTemplateRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetEmailTemplateRequestPrivate(const Sesv2Request::Action action,
+    GetEmailTemplateRequestPrivate(const SESv2Request::Action action,
                                    GetEmailTemplateRequest * const q);
     GetEmailTemplateRequestPrivate(const GetEmailTemplateRequestPrivate &other,
                                    GetEmailTemplateRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

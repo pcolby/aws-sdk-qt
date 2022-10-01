@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ModifyDBClusterSnapshotAttributeRequestPrivate;
 
-class QTAWSDOCDB_EXPORT ModifyDBClusterSnapshotAttributeRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ModifyDBClusterSnapshotAttributeRequest : public DocDbRequest {
 
 public:
     ModifyDBClusterSnapshotAttributeRequest(const ModifyDBClusterSnapshotAttributeRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

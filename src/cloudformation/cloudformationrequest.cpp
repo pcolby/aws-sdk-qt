@@ -36,12 +36,15 @@ namespace CloudFormation {
  * This enum describes the actions that can be performed as CloudFormation
  * requests.
  *
+ * \value ActivateTypeAction CloudFormation ActivateType action.
+ * \value BatchDescribeTypeConfigurationsAction CloudFormation BatchDescribeTypeConfigurations action.
  * \value CancelUpdateStackAction CloudFormation CancelUpdateStack action.
  * \value ContinueUpdateRollbackAction CloudFormation ContinueUpdateRollback action.
  * \value CreateChangeSetAction CloudFormation CreateChangeSet action.
  * \value CreateStackAction CloudFormation CreateStack action.
  * \value CreateStackInstancesAction CloudFormation CreateStackInstances action.
  * \value CreateStackSetAction CloudFormation CreateStackSet action.
+ * \value DeactivateTypeAction CloudFormation DeactivateType action.
  * \value DeleteChangeSetAction CloudFormation DeleteChangeSet action.
  * \value DeleteStackAction CloudFormation DeleteStack action.
  * \value DeleteStackInstancesAction CloudFormation DeleteStackInstances action.
@@ -49,6 +52,8 @@ namespace CloudFormation {
  * \value DeregisterTypeAction CloudFormation DeregisterType action.
  * \value DescribeAccountLimitsAction CloudFormation DescribeAccountLimits action.
  * \value DescribeChangeSetAction CloudFormation DescribeChangeSet action.
+ * \value DescribeChangeSetHooksAction CloudFormation DescribeChangeSetHooks action.
+ * \value DescribePublisherAction CloudFormation DescribePublisher action.
  * \value DescribeStackDriftDetectionStatusAction CloudFormation DescribeStackDriftDetectionStatus action.
  * \value DescribeStackEventsAction CloudFormation DescribeStackEvents action.
  * \value DescribeStackInstanceAction CloudFormation DescribeStackInstance action.
@@ -68,6 +73,7 @@ namespace CloudFormation {
  * \value GetStackPolicyAction CloudFormation GetStackPolicy action.
  * \value GetTemplateAction CloudFormation GetTemplate action.
  * \value GetTemplateSummaryAction CloudFormation GetTemplateSummary action.
+ * \value ImportStacksToStackSetAction CloudFormation ImportStacksToStackSet action.
  * \value ListChangeSetsAction CloudFormation ListChangeSets action.
  * \value ListExportsAction CloudFormation ListExports action.
  * \value ListImportsAction CloudFormation ListImports action.
@@ -80,12 +86,17 @@ namespace CloudFormation {
  * \value ListTypeRegistrationsAction CloudFormation ListTypeRegistrations action.
  * \value ListTypeVersionsAction CloudFormation ListTypeVersions action.
  * \value ListTypesAction CloudFormation ListTypes action.
+ * \value PublishTypeAction CloudFormation PublishType action.
  * \value RecordHandlerProgressAction CloudFormation RecordHandlerProgress action.
+ * \value RegisterPublisherAction CloudFormation RegisterPublisher action.
  * \value RegisterTypeAction CloudFormation RegisterType action.
+ * \value RollbackStackAction CloudFormation RollbackStack action.
  * \value SetStackPolicyAction CloudFormation SetStackPolicy action.
+ * \value SetTypeConfigurationAction CloudFormation SetTypeConfiguration action.
  * \value SetTypeDefaultVersionAction CloudFormation SetTypeDefaultVersion action.
  * \value SignalResourceAction CloudFormation SignalResource action.
  * \value StopStackSetOperationAction CloudFormation StopStackSetOperation action.
+ * \value TestTypeAction CloudFormation TestType action.
  * \value UpdateStackAction CloudFormation UpdateStack action.
  * \value UpdateStackInstancesAction CloudFormation UpdateStackInstances action.
  * \value UpdateStackSetAction CloudFormation UpdateStackSet action.
@@ -298,7 +309,7 @@ QNetworkRequest CloudFormationRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 CloudFormationRequestPrivate::CloudFormationRequestPrivate(const CloudFormationRequest::Action action, CloudFormationRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-05-15"))
 {
 
 }
@@ -332,12 +343,15 @@ QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Acti
     #define ActionToString(action) \
         case CloudFormationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(ActivateType);
+        ActionToString(BatchDescribeTypeConfigurations);
         ActionToString(CancelUpdateStack);
         ActionToString(ContinueUpdateRollback);
         ActionToString(CreateChangeSet);
         ActionToString(CreateStack);
         ActionToString(CreateStackInstances);
         ActionToString(CreateStackSet);
+        ActionToString(DeactivateType);
         ActionToString(DeleteChangeSet);
         ActionToString(DeleteStack);
         ActionToString(DeleteStackInstances);
@@ -345,6 +359,8 @@ QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Acti
         ActionToString(DeregisterType);
         ActionToString(DescribeAccountLimits);
         ActionToString(DescribeChangeSet);
+        ActionToString(DescribeChangeSetHooks);
+        ActionToString(DescribePublisher);
         ActionToString(DescribeStackDriftDetectionStatus);
         ActionToString(DescribeStackEvents);
         ActionToString(DescribeStackInstance);
@@ -364,6 +380,7 @@ QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Acti
         ActionToString(GetStackPolicy);
         ActionToString(GetTemplate);
         ActionToString(GetTemplateSummary);
+        ActionToString(ImportStacksToStackSet);
         ActionToString(ListChangeSets);
         ActionToString(ListExports);
         ActionToString(ListImports);
@@ -376,12 +393,17 @@ QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Acti
         ActionToString(ListTypeRegistrations);
         ActionToString(ListTypeVersions);
         ActionToString(ListTypes);
+        ActionToString(PublishType);
         ActionToString(RecordHandlerProgress);
+        ActionToString(RegisterPublisher);
         ActionToString(RegisterType);
+        ActionToString(RollbackStack);
         ActionToString(SetStackPolicy);
+        ActionToString(SetTypeConfiguration);
         ActionToString(SetTypeDefaultVersion);
         ActionToString(SignalResource);
         ActionToString(StopStackSetOperation);
+        ActionToString(TestType);
         ActionToString(UpdateStack);
         ActionToString(UpdateStackInstances);
         ActionToString(UpdateStackSet);

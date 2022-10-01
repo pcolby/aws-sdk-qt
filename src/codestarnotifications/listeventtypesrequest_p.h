@@ -24,14 +24,14 @@
 #include "listeventtypesrequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class ListEventTypesRequest;
 
-class ListEventTypesRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class ListEventTypesRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    ListEventTypesRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    ListEventTypesRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    ListEventTypesRequest * const q);
     ListEventTypesRequestPrivate(const ListEventTypesRequestPrivate &other,
                                    ListEventTypesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

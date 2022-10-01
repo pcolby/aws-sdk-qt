@@ -40,6 +40,8 @@ namespace KinesisVideo {
  * \value CreateStreamAction KinesisVideo CreateStream action.
  * \value DeleteSignalingChannelAction KinesisVideo DeleteSignalingChannel action.
  * \value DeleteStreamAction KinesisVideo DeleteStream action.
+ * \value DescribeImageGenerationConfigurationAction KinesisVideo DescribeImageGenerationConfiguration action.
+ * \value DescribeNotificationConfigurationAction KinesisVideo DescribeNotificationConfiguration action.
  * \value DescribeSignalingChannelAction KinesisVideo DescribeSignalingChannel action.
  * \value DescribeStreamAction KinesisVideo DescribeStream action.
  * \value GetDataEndpointAction KinesisVideo GetDataEndpoint action.
@@ -53,6 +55,8 @@ namespace KinesisVideo {
  * \value UntagResourceAction KinesisVideo UntagResource action.
  * \value UntagStreamAction KinesisVideo UntagStream action.
  * \value UpdateDataRetentionAction KinesisVideo UpdateDataRetention action.
+ * \value UpdateImageGenerationConfigurationAction KinesisVideo UpdateImageGenerationConfiguration action.
+ * \value UpdateNotificationConfigurationAction KinesisVideo UpdateNotificationConfiguration action.
  * \value UpdateSignalingChannelAction KinesisVideo UpdateSignalingChannel action.
  * \value UpdateStreamAction KinesisVideo UpdateStream action.
  */
@@ -262,7 +266,7 @@ QNetworkRequest KinesisVideoRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KinesisVideoRequestPrivate::KinesisVideoRequestPrivate(const KinesisVideoRequest::Action action, KinesisVideoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-30"))
 {
 
 }
@@ -300,6 +304,8 @@ QString KinesisVideoRequestPrivate::toString(const KinesisVideoRequest::Action &
         ActionToString(CreateStream);
         ActionToString(DeleteSignalingChannel);
         ActionToString(DeleteStream);
+        ActionToString(DescribeImageGenerationConfiguration);
+        ActionToString(DescribeNotificationConfiguration);
         ActionToString(DescribeSignalingChannel);
         ActionToString(DescribeStream);
         ActionToString(GetDataEndpoint);
@@ -313,6 +319,8 @@ QString KinesisVideoRequestPrivate::toString(const KinesisVideoRequest::Action &
         ActionToString(UntagResource);
         ActionToString(UntagStream);
         ActionToString(UpdateDataRetention);
+        ActionToString(UpdateImageGenerationConfiguration);
+        ActionToString(UpdateNotificationConfiguration);
         ActionToString(UpdateSignalingChannel);
         ActionToString(UpdateStream);
         default:

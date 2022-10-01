@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalResponse;
+class WafRegionalResponse;
 
-class WAFRegionalResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WafRegionalResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit WAFRegionalResponsePrivate(WAFRegionalResponse * const q);
+    explicit WafRegionalResponsePrivate(WafRegionalResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(WAFRegionalResponse)
-    Q_DISABLE_COPY(WAFRegionalResponsePrivate)
+    Q_DECLARE_PUBLIC(WafRegionalResponse)
+    Q_DISABLE_COPY(WafRegionalResponsePrivate)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

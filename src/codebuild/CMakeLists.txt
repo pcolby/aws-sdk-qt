@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCODEBUILD_LIBRARY)
 
 add_library(QtAwsCodeBuild
+  qtawscodebuildglobal.h
+  codebuildclient.h
+  codebuildclient_p.h
+  codebuildrequest.h
+  codebuildrequest_p.h
+  codebuildresponse.h
+  codebuildresponse_p.h
   batchdeletebuildsrequest.h
   batchdeletebuildsrequest_p.h
   batchdeletebuildsresponse.h
@@ -25,12 +32,6 @@ add_library(QtAwsCodeBuild
   batchgetreportsrequest_p.h
   batchgetreportsresponse.h
   batchgetreportsresponse_p.h
-  codebuildclient.h
-  codebuildclient_p.h
-  codebuildrequest.h
-  codebuildrequest_p.h
-  codebuildresponse.h
-  codebuildresponse_p.h
   createprojectrequest.h
   createprojectrequest_p.h
   createprojectresponse.h
@@ -51,14 +52,14 @@ add_library(QtAwsCodeBuild
   deleteprojectrequest_p.h
   deleteprojectresponse.h
   deleteprojectresponse_p.h
-  deletereportgrouprequest.h
-  deletereportgrouprequest_p.h
-  deletereportgroupresponse.h
-  deletereportgroupresponse_p.h
   deletereportrequest.h
   deletereportrequest_p.h
   deletereportresponse.h
   deletereportresponse_p.h
+  deletereportgrouprequest.h
+  deletereportgrouprequest_p.h
+  deletereportgroupresponse.h
+  deletereportgroupresponse_p.h
   deleteresourcepolicyrequest.h
   deleteresourcepolicyrequest_p.h
   deleteresourcepolicyresponse.h
@@ -95,22 +96,22 @@ add_library(QtAwsCodeBuild
   invalidateprojectcacherequest_p.h
   invalidateprojectcacheresponse.h
   invalidateprojectcacheresponse_p.h
-  listbuildbatchesforprojectrequest.h
-  listbuildbatchesforprojectrequest_p.h
-  listbuildbatchesforprojectresponse.h
-  listbuildbatchesforprojectresponse_p.h
   listbuildbatchesrequest.h
   listbuildbatchesrequest_p.h
   listbuildbatchesresponse.h
   listbuildbatchesresponse_p.h
-  listbuildsforprojectrequest.h
-  listbuildsforprojectrequest_p.h
-  listbuildsforprojectresponse.h
-  listbuildsforprojectresponse_p.h
+  listbuildbatchesforprojectrequest.h
+  listbuildbatchesforprojectrequest_p.h
+  listbuildbatchesforprojectresponse.h
+  listbuildbatchesforprojectresponse_p.h
   listbuildsrequest.h
   listbuildsrequest_p.h
   listbuildsresponse.h
   listbuildsresponse_p.h
+  listbuildsforprojectrequest.h
+  listbuildsforprojectrequest_p.h
+  listbuildsforprojectresponse.h
+  listbuildsforprojectresponse_p.h
   listcuratedenvironmentimagesrequest.h
   listcuratedenvironmentimagesrequest_p.h
   listcuratedenvironmentimagesresponse.h
@@ -123,14 +124,14 @@ add_library(QtAwsCodeBuild
   listreportgroupsrequest_p.h
   listreportgroupsresponse.h
   listreportgroupsresponse_p.h
-  listreportsforreportgrouprequest.h
-  listreportsforreportgrouprequest_p.h
-  listreportsforreportgroupresponse.h
-  listreportsforreportgroupresponse_p.h
   listreportsrequest.h
   listreportsrequest_p.h
   listreportsresponse.h
   listreportsresponse_p.h
+  listreportsforreportgrouprequest.h
+  listreportsforreportgrouprequest_p.h
+  listreportsforreportgroupresponse.h
+  listreportsforreportgroupresponse_p.h
   listsharedprojectsrequest.h
   listsharedprojectsrequest_p.h
   listsharedprojectsresponse.h
@@ -147,35 +148,38 @@ add_library(QtAwsCodeBuild
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
-  qtawscodebuildglobal.h
-  retrybuildbatchrequest.h
-  retrybuildbatchrequest_p.h
-  retrybuildbatchresponse.h
-  retrybuildbatchresponse_p.h
   retrybuildrequest.h
   retrybuildrequest_p.h
   retrybuildresponse.h
   retrybuildresponse_p.h
-  startbuildbatchrequest.h
-  startbuildbatchrequest_p.h
-  startbuildbatchresponse.h
-  startbuildbatchresponse_p.h
+  retrybuildbatchrequest.h
+  retrybuildbatchrequest_p.h
+  retrybuildbatchresponse.h
+  retrybuildbatchresponse_p.h
   startbuildrequest.h
   startbuildrequest_p.h
   startbuildresponse.h
   startbuildresponse_p.h
-  stopbuildbatchrequest.h
-  stopbuildbatchrequest_p.h
-  stopbuildbatchresponse.h
-  stopbuildbatchresponse_p.h
+  startbuildbatchrequest.h
+  startbuildbatchrequest_p.h
+  startbuildbatchresponse.h
+  startbuildbatchresponse_p.h
   stopbuildrequest.h
   stopbuildrequest_p.h
   stopbuildresponse.h
   stopbuildresponse_p.h
+  stopbuildbatchrequest.h
+  stopbuildbatchrequest_p.h
+  stopbuildbatchresponse.h
+  stopbuildbatchresponse_p.h
   updateprojectrequest.h
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  updateprojectvisibilityrequest.h
+  updateprojectvisibilityrequest_p.h
+  updateprojectvisibilityresponse.h
+  updateprojectvisibilityresponse_p.h
   updatereportgrouprequest.h
   updatereportgrouprequest_p.h
   updatereportgroupresponse.h
@@ -184,6 +188,9 @@ add_library(QtAwsCodeBuild
   updatewebhookrequest_p.h
   updatewebhookresponse.h
   updatewebhookresponse_p.h
+  codebuildclient.cpp
+  codebuildrequest.cpp
+  codebuildresponse.cpp
   batchdeletebuildsrequest.cpp
   batchdeletebuildsresponse.cpp
   batchgetbuildbatchesrequest.cpp
@@ -196,9 +203,6 @@ add_library(QtAwsCodeBuild
   batchgetreportgroupsresponse.cpp
   batchgetreportsrequest.cpp
   batchgetreportsresponse.cpp
-  codebuildclient.cpp
-  codebuildrequest.cpp
-  codebuildresponse.cpp
   createprojectrequest.cpp
   createprojectresponse.cpp
   createreportgrouprequest.cpp
@@ -209,10 +213,10 @@ add_library(QtAwsCodeBuild
   deletebuildbatchresponse.cpp
   deleteprojectrequest.cpp
   deleteprojectresponse.cpp
-  deletereportgrouprequest.cpp
-  deletereportgroupresponse.cpp
   deletereportrequest.cpp
   deletereportresponse.cpp
+  deletereportgrouprequest.cpp
+  deletereportgroupresponse.cpp
   deleteresourcepolicyrequest.cpp
   deleteresourcepolicyresponse.cpp
   deletesourcecredentialsrequest.cpp
@@ -231,24 +235,24 @@ add_library(QtAwsCodeBuild
   importsourcecredentialsresponse.cpp
   invalidateprojectcacherequest.cpp
   invalidateprojectcacheresponse.cpp
-  listbuildbatchesforprojectrequest.cpp
-  listbuildbatchesforprojectresponse.cpp
   listbuildbatchesrequest.cpp
   listbuildbatchesresponse.cpp
-  listbuildsforprojectrequest.cpp
-  listbuildsforprojectresponse.cpp
+  listbuildbatchesforprojectrequest.cpp
+  listbuildbatchesforprojectresponse.cpp
   listbuildsrequest.cpp
   listbuildsresponse.cpp
+  listbuildsforprojectrequest.cpp
+  listbuildsforprojectresponse.cpp
   listcuratedenvironmentimagesrequest.cpp
   listcuratedenvironmentimagesresponse.cpp
   listprojectsrequest.cpp
   listprojectsresponse.cpp
   listreportgroupsrequest.cpp
   listreportgroupsresponse.cpp
-  listreportsforreportgrouprequest.cpp
-  listreportsforreportgroupresponse.cpp
   listreportsrequest.cpp
   listreportsresponse.cpp
+  listreportsforreportgrouprequest.cpp
+  listreportsforreportgroupresponse.cpp
   listsharedprojectsrequest.cpp
   listsharedprojectsresponse.cpp
   listsharedreportgroupsrequest.cpp
@@ -257,20 +261,22 @@ add_library(QtAwsCodeBuild
   listsourcecredentialsresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
-  retrybuildbatchrequest.cpp
-  retrybuildbatchresponse.cpp
   retrybuildrequest.cpp
   retrybuildresponse.cpp
-  startbuildbatchrequest.cpp
-  startbuildbatchresponse.cpp
+  retrybuildbatchrequest.cpp
+  retrybuildbatchresponse.cpp
   startbuildrequest.cpp
   startbuildresponse.cpp
-  stopbuildbatchrequest.cpp
-  stopbuildbatchresponse.cpp
+  startbuildbatchrequest.cpp
+  startbuildbatchresponse.cpp
   stopbuildrequest.cpp
   stopbuildresponse.cpp
+  stopbuildbatchrequest.cpp
+  stopbuildbatchresponse.cpp
   updateprojectrequest.cpp
   updateprojectresponse.cpp
+  updateprojectvisibilityrequest.cpp
+  updateprojectvisibilityresponse.cpp
   updatereportgrouprequest.cpp
   updatereportgroupresponse.cpp
   updatewebhookrequest.cpp

@@ -60,23 +60,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::signer
- * \brief Contains classess for accessing AWS Signer (signer).
+ * \namespace QtAws::Signer
+ * \brief Contains classess for accessing AWS Signer.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::signerClient
- * \brief The signerClient class provides access to the AWS Signer (signer) service.
+ * \class QtAws::Signer::SignerClient
+ * \brief The SignerClient class provides access to the AWS Signer service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -103,24 +103,26 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  */
 
 /*!
- * \brief Constructs a signerClient object.
+ * \brief Constructs a SignerClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-signerClient::signerClient(
+SignerClient::SignerClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new signerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SignerClientPrivate(this), parent)
 {
-    Q_D(signerClient);
+    Q_D(SignerClient);
     d->apiVersion = QStringLiteral("2017-08-25");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("signer");
@@ -131,7 +133,7 @@ signerClient::signerClient(
 }
 
 /*!
- * \overload signerClient()
+ * \overload SignerClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -141,14 +143,14 @@ signerClient::signerClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-signerClient::signerClient(
+SignerClient::SignerClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new signerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new SignerClientPrivate(this), parent)
 {
-    Q_D(signerClient);
+    Q_D(SignerClient);
     d->apiVersion = QStringLiteral("2017-08-25");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -159,20 +161,20 @@ signerClient::signerClient(
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * AddProfilePermissionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds cross-account permissions to a signing
  */
-AddProfilePermissionResponse * signerClient::addProfilePermission(const AddProfilePermissionRequest &request)
+AddProfilePermissionResponse * SignerClient::addProfilePermission(const AddProfilePermissionRequest &request)
 {
     return qobject_cast<AddProfilePermissionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * CancelSigningProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -181,13 +183,13 @@ AddProfilePermissionResponse * signerClient::addProfilePermission(const AddProfi
  * viewable with the <code>ListSigningProfiles</code> operation, but it cannot perform new signing jobs, and is deleted two
  * years after
  */
-CancelSigningProfileResponse * signerClient::cancelSigningProfile(const CancelSigningProfileRequest &request)
+CancelSigningProfileResponse * SignerClient::cancelSigningProfile(const CancelSigningProfileRequest &request)
 {
     return qobject_cast<CancelSigningProfileResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * DescribeSigningJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -195,52 +197,52 @@ CancelSigningProfileResponse * signerClient::cancelSigningProfile(const CancelSi
  * Returns information about a specific code signing job. You specify the job by using the <code>jobId</code> value that is
  * returned by the <a>StartSigningJob</a> operation.
  */
-DescribeSigningJobResponse * signerClient::describeSigningJob(const DescribeSigningJobRequest &request)
+DescribeSigningJobResponse * SignerClient::describeSigningJob(const DescribeSigningJobRequest &request)
 {
     return qobject_cast<DescribeSigningJobResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * GetSigningPlatformResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information on a specific signing
  */
-GetSigningPlatformResponse * signerClient::getSigningPlatform(const GetSigningPlatformRequest &request)
+GetSigningPlatformResponse * SignerClient::getSigningPlatform(const GetSigningPlatformRequest &request)
 {
     return qobject_cast<GetSigningPlatformResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * GetSigningProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information on a specific signing
  */
-GetSigningProfileResponse * signerClient::getSigningProfile(const GetSigningProfileRequest &request)
+GetSigningProfileResponse * SignerClient::getSigningProfile(const GetSigningProfileRequest &request)
 {
     return qobject_cast<GetSigningProfileResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * ListProfilePermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the cross-account permissions associated with a signing
  */
-ListProfilePermissionsResponse * signerClient::listProfilePermissions(const ListProfilePermissionsRequest &request)
+ListProfilePermissionsResponse * SignerClient::listProfilePermissions(const ListProfilePermissionsRequest &request)
 {
     return qobject_cast<ListProfilePermissionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * ListSigningJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -251,13 +253,13 @@ ListProfilePermissionsResponse * signerClient::listProfilePermissions(const List
  * continue calling <code>ListSigningJobs</code> with your <code>maxResults</code> parameter and with new values that code
  * signing returns in the <code>nextToken</code> parameter until all of your signing jobs have been returned.
  */
-ListSigningJobsResponse * signerClient::listSigningJobs(const ListSigningJobsRequest &request)
+ListSigningJobsResponse * SignerClient::listSigningJobs(const ListSigningJobsRequest &request)
 {
     return qobject_cast<ListSigningJobsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * ListSigningPlatformsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -268,13 +270,13 @@ ListSigningJobsResponse * signerClient::listSigningJobs(const ListSigningJobsReq
  * your <code>maxResults</code> parameter and with new values that code signing returns in the <code>nextToken</code>
  * parameter until all of your signing jobs have been
  */
-ListSigningPlatformsResponse * signerClient::listSigningPlatforms(const ListSigningPlatformsRequest &request)
+ListSigningPlatformsResponse * SignerClient::listSigningPlatforms(const ListSigningPlatformsRequest &request)
 {
     return qobject_cast<ListSigningPlatformsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * ListSigningProfilesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -286,26 +288,26 @@ ListSigningPlatformsResponse * signerClient::listSigningPlatforms(const ListSign
  * your <code>maxResults</code> parameter and with new values that code signing returns in the <code>nextToken</code>
  * parameter until all of your signing jobs have been
  */
-ListSigningProfilesResponse * signerClient::listSigningProfiles(const ListSigningProfilesRequest &request)
+ListSigningProfilesResponse * SignerClient::listSigningProfiles(const ListSigningProfilesRequest &request)
 {
     return qobject_cast<ListSigningProfilesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of the tags associated with a signing profile
  */
-ListTagsForResourceResponse * signerClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * SignerClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * PutSigningProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -314,39 +316,39 @@ ListTagsForResourceResponse * signerClient::listTagsForResource(const ListTagsFo
  * signing job. For more information, see <a
  * href="http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html">http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html</a>
  */
-PutSigningProfileResponse * signerClient::putSigningProfile(const PutSigningProfileRequest &request)
+PutSigningProfileResponse * SignerClient::putSigningProfile(const PutSigningProfileRequest &request)
 {
     return qobject_cast<PutSigningProfileResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * RemoveProfilePermissionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes cross-account permissions from a signing
  */
-RemoveProfilePermissionResponse * signerClient::removeProfilePermission(const RemoveProfilePermissionRequest &request)
+RemoveProfilePermissionResponse * SignerClient::removeProfilePermission(const RemoveProfilePermissionRequest &request)
 {
     return qobject_cast<RemoveProfilePermissionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * RevokeSignatureResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Changes the state of a signing job to REVOKED. This indicates that the signature is no longer
  */
-RevokeSignatureResponse * signerClient::revokeSignature(const RevokeSignatureRequest &request)
+RevokeSignatureResponse * SignerClient::revokeSignature(const RevokeSignatureRequest &request)
 {
     return qobject_cast<RevokeSignatureResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * RevokeSigningProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -354,13 +356,13 @@ RevokeSignatureResponse * signerClient::revokeSignature(const RevokeSignatureReq
  * Changes the state of a signing profile to REVOKED. This indicates that signatures generated using the signing profile
  * after an effective start date are no longer
  */
-RevokeSigningProfileResponse * signerClient::revokeSigningProfile(const RevokeSigningProfileRequest &request)
+RevokeSigningProfileResponse * SignerClient::revokeSigningProfile(const RevokeSigningProfileRequest &request)
 {
     return qobject_cast<RevokeSigningProfileResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * StartSigningJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -399,13 +401,13 @@ RevokeSigningProfileResponse * signerClient::revokeSigningProfile(const RevokeSi
  * For a Java example that shows how to use this action, see <a
  * href="http://docs.aws.amazon.com/acm/latest/userguide/">http://docs.aws.amazon.com/acm/latest/userguide/</a>
  */
-StartSigningJobResponse * signerClient::startSigningJob(const StartSigningJobRequest &request)
+StartSigningJobResponse * SignerClient::startSigningJob(const StartSigningJobRequest &request)
 {
     return qobject_cast<StartSigningJobResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -414,41 +416,41 @@ StartSigningJobResponse * signerClient::startSigningJob(const StartSigningJobReq
  * resources. Each tag consists of a key and an optional value. To specify the signing profile, use its Amazon Resource
  * Name (ARN). To specify the tag, use a key-value
  */
-TagResourceResponse * signerClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * SignerClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the signerClient service, and returns a pointer to an
+ * Sends \a request to the SignerClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes one or more tags from a signing profile. To remove the tags, specify a list of tag
  */
-UntagResourceResponse * signerClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * SignerClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::signer::signerClientPrivate
- * \brief The signerClientPrivate class provides private implementation for signerClient.
+ * \class QtAws::Signer::SignerClientPrivate
+ * \brief The SignerClientPrivate class provides private implementation for SignerClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a signerClientPrivate object with public implementation \a q.
+ * Constructs a SignerClientPrivate object with public implementation \a q.
  */
-signerClientPrivate::signerClientPrivate(signerClient * const q)
+SignerClientPrivate::SignerClientPrivate(SignerClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

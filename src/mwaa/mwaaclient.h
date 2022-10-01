@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class MwaaClientPrivate;
 class CreateCliTokenRequest;
@@ -87,7 +87,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

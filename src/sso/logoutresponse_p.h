@@ -23,7 +23,7 @@
 #include "ssoresponse_p.h"
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class LogoutResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

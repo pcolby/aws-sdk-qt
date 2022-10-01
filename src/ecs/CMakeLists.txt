@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSECS_LIBRARY)
 
 add_library(QtAwsEcs
+  qtawsecsglobal.h
+  ecsclient.h
+  ecsclient_p.h
+  ecsrequest.h
+  ecsrequest_p.h
+  ecsresponse.h
+  ecsresponse_p.h
   createcapacityproviderrequest.h
   createcapacityproviderrequest_p.h
   createcapacityproviderresponse.h
@@ -81,12 +88,6 @@ add_library(QtAwsEcs
   discoverpollendpointrequest_p.h
   discoverpollendpointresponse.h
   discoverpollendpointresponse_p.h
-  ecsclient.h
-  ecsclient_p.h
-  ecsrequest.h
-  ecsrequest_p.h
-  ecsresponse.h
-  ecsresponse_p.h
   executecommandrequest.h
   executecommandrequest_p.h
   executecommandresponse.h
@@ -127,14 +128,14 @@ add_library(QtAwsEcs
   listtasksrequest_p.h
   listtasksresponse.h
   listtasksresponse_p.h
-  putaccountsettingdefaultrequest.h
-  putaccountsettingdefaultrequest_p.h
-  putaccountsettingdefaultresponse.h
-  putaccountsettingdefaultresponse_p.h
   putaccountsettingrequest.h
   putaccountsettingrequest_p.h
   putaccountsettingresponse.h
   putaccountsettingresponse_p.h
+  putaccountsettingdefaultrequest.h
+  putaccountsettingdefaultrequest_p.h
+  putaccountsettingdefaultresponse.h
+  putaccountsettingdefaultresponse_p.h
   putattributesrequest.h
   putattributesrequest_p.h
   putattributesresponse.h
@@ -143,7 +144,6 @@ add_library(QtAwsEcs
   putclustercapacityprovidersrequest_p.h
   putclustercapacityprovidersresponse.h
   putclustercapacityprovidersresponse_p.h
-  qtawsecsglobal.h
   registercontainerinstancerequest.h
   registercontainerinstancerequest_p.h
   registercontainerinstanceresponse.h
@@ -204,18 +204,21 @@ add_library(QtAwsEcs
   updatecontainerinstancesstaterequest_p.h
   updatecontainerinstancesstateresponse.h
   updatecontainerinstancesstateresponse_p.h
-  updateserviceprimarytasksetrequest.h
-  updateserviceprimarytasksetrequest_p.h
-  updateserviceprimarytasksetresponse.h
-  updateserviceprimarytasksetresponse_p.h
   updateservicerequest.h
   updateservicerequest_p.h
   updateserviceresponse.h
   updateserviceresponse_p.h
+  updateserviceprimarytasksetrequest.h
+  updateserviceprimarytasksetrequest_p.h
+  updateserviceprimarytasksetresponse.h
+  updateserviceprimarytasksetresponse_p.h
   updatetasksetrequest.h
   updatetasksetrequest_p.h
   updatetasksetresponse.h
   updatetasksetresponse_p.h
+  ecsclient.cpp
+  ecsrequest.cpp
+  ecsresponse.cpp
   createcapacityproviderrequest.cpp
   createcapacityproviderresponse.cpp
   createclusterrequest.cpp
@@ -256,9 +259,6 @@ add_library(QtAwsEcs
   describetasksresponse.cpp
   discoverpollendpointrequest.cpp
   discoverpollendpointresponse.cpp
-  ecsclient.cpp
-  ecsrequest.cpp
-  ecsresponse.cpp
   executecommandrequest.cpp
   executecommandresponse.cpp
   listaccountsettingsrequest.cpp
@@ -279,10 +279,10 @@ add_library(QtAwsEcs
   listtaskdefinitionsresponse.cpp
   listtasksrequest.cpp
   listtasksresponse.cpp
-  putaccountsettingdefaultrequest.cpp
-  putaccountsettingdefaultresponse.cpp
   putaccountsettingrequest.cpp
   putaccountsettingresponse.cpp
+  putaccountsettingdefaultrequest.cpp
+  putaccountsettingdefaultresponse.cpp
   putattributesrequest.cpp
   putattributesresponse.cpp
   putclustercapacityprovidersrequest.cpp
@@ -317,10 +317,10 @@ add_library(QtAwsEcs
   updatecontaineragentresponse.cpp
   updatecontainerinstancesstaterequest.cpp
   updatecontainerinstancesstateresponse.cpp
-  updateserviceprimarytasksetrequest.cpp
-  updateserviceprimarytasksetresponse.cpp
   updateservicerequest.cpp
   updateserviceresponse.cpp
+  updateserviceprimarytasksetrequest.cpp
+  updateserviceprimarytasksetresponse.cpp
   updatetasksetrequest.cpp
   updatetasksetresponse.cpp)
 

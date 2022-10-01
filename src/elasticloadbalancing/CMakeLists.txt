@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSELASTICLOADBALANCING_LIBRARY)
 
 add_library(QtAwsElasticLoadBalancing
+  qtawselasticloadbalancingglobal.h
+  elasticloadbalancingclient.h
+  elasticloadbalancingclient_p.h
+  elasticloadbalancingrequest.h
+  elasticloadbalancingrequest_p.h
+  elasticloadbalancingresponse.h
+  elasticloadbalancingresponse_p.h
   addtagsrequest.h
   addtagsrequest_p.h
   addtagsresponse.h
@@ -25,6 +32,10 @@ add_library(QtAwsElasticLoadBalancing
   createlbcookiestickinesspolicyrequest_p.h
   createlbcookiestickinesspolicyresponse.h
   createlbcookiestickinesspolicyresponse_p.h
+  createloadbalancerrequest.h
+  createloadbalancerrequest_p.h
+  createloadbalancerresponse.h
+  createloadbalancerresponse_p.h
   createloadbalancerlistenersrequest.h
   createloadbalancerlistenersrequest_p.h
   createloadbalancerlistenersresponse.h
@@ -33,10 +44,10 @@ add_library(QtAwsElasticLoadBalancing
   createloadbalancerpolicyrequest_p.h
   createloadbalancerpolicyresponse.h
   createloadbalancerpolicyresponse_p.h
-  createloadbalancerrequest.h
-  createloadbalancerrequest_p.h
-  createloadbalancerresponse.h
-  createloadbalancerresponse_p.h
+  deleteloadbalancerrequest.h
+  deleteloadbalancerrequest_p.h
+  deleteloadbalancerresponse.h
+  deleteloadbalancerresponse_p.h
   deleteloadbalancerlistenersrequest.h
   deleteloadbalancerlistenersrequest_p.h
   deleteloadbalancerlistenersresponse.h
@@ -45,10 +56,6 @@ add_library(QtAwsElasticLoadBalancing
   deleteloadbalancerpolicyrequest_p.h
   deleteloadbalancerpolicyresponse.h
   deleteloadbalancerpolicyresponse_p.h
-  deleteloadbalancerrequest.h
-  deleteloadbalancerrequest_p.h
-  deleteloadbalancerresponse.h
-  deleteloadbalancerresponse_p.h
   deregisterinstancesfromloadbalancerrequest.h
   deregisterinstancesfromloadbalancerrequest_p.h
   deregisterinstancesfromloadbalancerresponse.h
@@ -89,12 +96,6 @@ add_library(QtAwsElasticLoadBalancing
   disableavailabilityzonesforloadbalancerrequest_p.h
   disableavailabilityzonesforloadbalancerresponse.h
   disableavailabilityzonesforloadbalancerresponse_p.h
-  elasticloadbalancingclient.h
-  elasticloadbalancingclient_p.h
-  elasticloadbalancingrequest.h
-  elasticloadbalancingrequest_p.h
-  elasticloadbalancingresponse.h
-  elasticloadbalancingresponse_p.h
   enableavailabilityzonesforloadbalancerrequest.h
   enableavailabilityzonesforloadbalancerrequest_p.h
   enableavailabilityzonesforloadbalancerresponse.h
@@ -103,7 +104,6 @@ add_library(QtAwsElasticLoadBalancing
   modifyloadbalancerattributesrequest_p.h
   modifyloadbalancerattributesresponse.h
   modifyloadbalancerattributesresponse_p.h
-  qtawselasticloadbalancingglobal.h
   registerinstanceswithloadbalancerrequest.h
   registerinstanceswithloadbalancerrequest_p.h
   registerinstanceswithloadbalancerresponse.h
@@ -124,6 +124,9 @@ add_library(QtAwsElasticLoadBalancing
   setloadbalancerpoliciesoflistenerrequest_p.h
   setloadbalancerpoliciesoflistenerresponse.h
   setloadbalancerpoliciesoflistenerresponse_p.h
+  elasticloadbalancingclient.cpp
+  elasticloadbalancingrequest.cpp
+  elasticloadbalancingresponse.cpp
   addtagsrequest.cpp
   addtagsresponse.cpp
   applysecuritygroupstoloadbalancerrequest.cpp
@@ -136,18 +139,18 @@ add_library(QtAwsElasticLoadBalancing
   createappcookiestickinesspolicyresponse.cpp
   createlbcookiestickinesspolicyrequest.cpp
   createlbcookiestickinesspolicyresponse.cpp
+  createloadbalancerrequest.cpp
+  createloadbalancerresponse.cpp
   createloadbalancerlistenersrequest.cpp
   createloadbalancerlistenersresponse.cpp
   createloadbalancerpolicyrequest.cpp
   createloadbalancerpolicyresponse.cpp
-  createloadbalancerrequest.cpp
-  createloadbalancerresponse.cpp
+  deleteloadbalancerrequest.cpp
+  deleteloadbalancerresponse.cpp
   deleteloadbalancerlistenersrequest.cpp
   deleteloadbalancerlistenersresponse.cpp
   deleteloadbalancerpolicyrequest.cpp
   deleteloadbalancerpolicyresponse.cpp
-  deleteloadbalancerrequest.cpp
-  deleteloadbalancerresponse.cpp
   deregisterinstancesfromloadbalancerrequest.cpp
   deregisterinstancesfromloadbalancerresponse.cpp
   describeaccountlimitsrequest.cpp
@@ -168,9 +171,6 @@ add_library(QtAwsElasticLoadBalancing
   detachloadbalancerfromsubnetsresponse.cpp
   disableavailabilityzonesforloadbalancerrequest.cpp
   disableavailabilityzonesforloadbalancerresponse.cpp
-  elasticloadbalancingclient.cpp
-  elasticloadbalancingrequest.cpp
-  elasticloadbalancingresponse.cpp
   enableavailabilityzonesforloadbalancerrequest.cpp
   enableavailabilityzonesforloadbalancerresponse.cpp
   modifyloadbalancerattributesrequest.cpp

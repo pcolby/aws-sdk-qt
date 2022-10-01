@@ -24,14 +24,14 @@
 #include "listmanagedendpointsrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class ListManagedEndpointsRequest;
 
-class ListManagedEndpointsRequestPrivate : public EMRContainersRequestPrivate {
+class ListManagedEndpointsRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    ListManagedEndpointsRequestPrivate(const EMRContainersRequest::Action action,
+    ListManagedEndpointsRequestPrivate(const EmrcontainersRequest::Action action,
                                    ListManagedEndpointsRequest * const q);
     ListManagedEndpointsRequestPrivate(const ListManagedEndpointsRequestPrivate &other,
                                    ListManagedEndpointsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

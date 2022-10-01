@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::CreateLedgerResponse
- * \brief The CreateLedgerResponse class provides an interace for QLDB CreateLedger responses.
+ * \class QtAws::Qldb::CreateLedgerResponse
+ * \brief The CreateLedgerResponse class provides an interace for Qldb CreateLedger responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const CreateLedgerRequest * CreateLedgerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB CreateLedger \a response.
+ * Parses a successful Qldb CreateLedger \a response.
  */
 void CreateLedgerResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void CreateLedgerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::CreateLedgerResponsePrivate
+ * \class QtAws::Qldb::CreateLedgerResponsePrivate
  * \brief The CreateLedgerResponsePrivate class provides private implementation for CreateLedgerResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ CreateLedgerResponsePrivate::CreateLedgerResponsePrivate(
 }
 
 /*!
- * Parses a QLDB CreateLedger response element from \a xml.
+ * Parses a Qldb CreateLedger response element from \a xml.
  */
 void CreateLedgerResponsePrivate::parseCreateLedgerResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void CreateLedgerResponsePrivate::parseCreateLedgerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

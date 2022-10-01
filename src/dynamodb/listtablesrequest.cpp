@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ListTablesRequest
- * \brief The ListTablesRequest class provides an interface for DynamoDB ListTables requests.
+ * \class QtAws::DynamoDb::ListTablesRequest
+ * \brief The ListTablesRequest class provides an interface for DynamoDb ListTables requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::listTables
+ * \sa DynamoDbClient::listTables
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListTablesRequest::ListTablesRequest(const ListTablesRequest &other)
-    : DynamoDBRequest(new ListTablesRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new ListTablesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ ListTablesRequest::ListTablesRequest(const ListTablesRequest &other)
  * Constructs a ListTablesRequest object.
  */
 ListTablesRequest::ListTablesRequest()
-    : DynamoDBRequest(new ListTablesRequestPrivate(DynamoDBRequest::ListTablesAction, this))
+    : DynamoDbRequest(new ListTablesRequestPrivate(DynamoDbRequest::ListTablesAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * ListTablesRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::DynamoDB::ListTablesRequestPrivate
+ * \class QtAws::DynamoDb::ListTablesRequestPrivate
  * \brief The ListTablesRequestPrivate class provides private implementation for ListTablesRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a ListTablesRequestPrivate object for DynamoDB \a action,
+ * Constructs a ListTablesRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 ListTablesRequestPrivate::ListTablesRequestPrivate(
-    const DynamoDBRequest::Action action, ListTablesRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, ListTablesRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ ListTablesRequestPrivate::ListTablesRequestPrivate(
  */
 ListTablesRequestPrivate::ListTablesRequestPrivate(
     const ListTablesRequestPrivate &other, ListTablesRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

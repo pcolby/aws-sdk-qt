@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
-class SSMIncidentsClient;
+class SsmIncidentsClient;
 
-class SSMIncidentsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsmIncidentsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit SSMIncidentsClientPrivate(SSMIncidentsClient * const q);
+    explicit SsmIncidentsClientPrivate(SsmIncidentsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SSMIncidentsClient)
-    Q_DISABLE_COPY(SSMIncidentsClientPrivate)
+    Q_DECLARE_PUBLIC(SsmIncidentsClient)
+    Q_DISABLE_COPY(SsmIncidentsClientPrivate)
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

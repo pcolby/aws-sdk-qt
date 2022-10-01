@@ -24,14 +24,14 @@
 #include "describequerysuggestionsblocklistrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DescribeQuerySuggestionsBlockListRequest;
 
-class DescribeQuerySuggestionsBlockListRequestPrivate : public kendraRequestPrivate {
+class DescribeQuerySuggestionsBlockListRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DescribeQuerySuggestionsBlockListRequestPrivate(const kendraRequest::Action action,
+    DescribeQuerySuggestionsBlockListRequestPrivate(const KendraRequest::Action action,
                                    DescribeQuerySuggestionsBlockListRequest * const q);
     DescribeQuerySuggestionsBlockListRequestPrivate(const DescribeQuerySuggestionsBlockListRequestPrivate &other,
                                    DescribeQuerySuggestionsBlockListRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "deletesuitedefinitionrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class DeleteSuiteDefinitionRequest;
 
-class DeleteSuiteDefinitionRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class DeleteSuiteDefinitionRequestPrivate : public IotDeviceAdvisorRequestPrivate {
 
 public:
-    DeleteSuiteDefinitionRequestPrivate(const IoTDeviceAdvisorRequest::Action action,
+    DeleteSuiteDefinitionRequestPrivate(const IotDeviceAdvisorRequest::Action action,
                                    DeleteSuiteDefinitionRequest * const q);
     DeleteSuiteDefinitionRequestPrivate(const DeleteSuiteDefinitionRequestPrivate &other,
                                    DeleteSuiteDefinitionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

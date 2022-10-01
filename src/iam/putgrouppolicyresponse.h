@@ -24,7 +24,7 @@
 #include "putgrouppolicyrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class PutGroupPolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

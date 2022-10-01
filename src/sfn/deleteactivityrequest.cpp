@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DeleteActivityRequest
- * \brief The DeleteActivityRequest class provides an interface for SFN DeleteActivity requests.
+ * \class QtAws::Sfn::DeleteActivityRequest
+ * \brief The DeleteActivityRequest class provides an interface for Sfn DeleteActivity requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SFN::DeleteActivityRequestPrivate
+ * \class QtAws::Sfn::DeleteActivityRequestPrivate
  * \brief The DeleteActivityRequestPrivate class provides private implementation for DeleteActivityRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteModelRequest
- * \brief The DeleteModelRequest class provides an interface for APIGateway DeleteModel requests.
+ * \class QtAws::ApiGateway::DeleteModelRequest
+ * \brief The DeleteModelRequest class provides an interface for ApiGateway DeleteModel requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteModel
+ * \sa ApiGatewayClient::deleteModel
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteModelRequest::DeleteModelRequest(const DeleteModelRequest &other)
-    : APIGatewayRequest(new DeleteModelRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteModelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteModelRequest::DeleteModelRequest(const DeleteModelRequest &other)
  * Constructs a DeleteModelRequest object.
  */
 DeleteModelRequest::DeleteModelRequest()
-    : APIGatewayRequest(new DeleteModelRequestPrivate(APIGatewayRequest::DeleteModelAction, this))
+    : ApiGatewayRequest(new DeleteModelRequestPrivate(ApiGatewayRequest::DeleteModelAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteModelRequestPrivate
+ * \class QtAws::ApiGateway::DeleteModelRequestPrivate
  * \brief The DeleteModelRequestPrivate class provides private implementation for DeleteModelRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteModelRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteModelRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteModelRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteModelRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const DeleteModelRequestPrivate &other, DeleteModelRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

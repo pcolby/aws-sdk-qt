@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::GetLifecyclePolicyResponse
- * \brief The GetLifecyclePolicyResponse class provides an interace for ECR GetLifecyclePolicy responses.
+ * \class QtAws::Ecr::GetLifecyclePolicyResponse
+ * \brief The GetLifecyclePolicyResponse class provides an interace for Ecr GetLifecyclePolicy responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::getLifecyclePolicy
  */
@@ -68,7 +74,7 @@ const GetLifecyclePolicyRequest * GetLifecyclePolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR GetLifecyclePolicy \a response.
+ * Parses a successful Ecr GetLifecyclePolicy \a response.
  */
 void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::GetLifecyclePolicyResponsePrivate
+ * \class QtAws::Ecr::GetLifecyclePolicyResponsePrivate
  * \brief The GetLifecyclePolicyResponsePrivate class provides private implementation for GetLifecyclePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
 }
 
 /*!
- * Parses a ECR GetLifecyclePolicy response element from \a xml.
+ * Parses a Ecr GetLifecyclePolicy response element from \a xml.
  */
 void GetLifecyclePolicyResponsePrivate::parseGetLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void GetLifecyclePolicyResponsePrivate::parseGetLifecyclePolicyResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

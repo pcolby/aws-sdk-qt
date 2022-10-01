@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::AddJobFlowStepsResponse
- * \brief The AddJobFlowStepsResponse class provides an interace for EMR AddJobFlowSteps responses.
+ * \class QtAws::Emr::AddJobFlowStepsResponse
+ * \brief The AddJobFlowStepsResponse class provides an interace for Emr AddJobFlowSteps responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::addJobFlowSteps
  */
@@ -64,7 +64,7 @@ const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR AddJobFlowSteps \a response.
+ * Parses a successful Emr AddJobFlowSteps \a response.
  */
 void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::AddJobFlowStepsResponsePrivate
+ * \class QtAws::Emr::AddJobFlowStepsResponsePrivate
  * \brief The AddJobFlowStepsResponsePrivate class provides private implementation for AddJobFlowStepsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
 }
 
 /*!
- * Parses a EMR AddJobFlowSteps response element from \a xml.
+ * Parses a Emr AddJobFlowSteps response element from \a xml.
  */
 void AddJobFlowStepsResponsePrivate::parseAddJobFlowStepsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void AddJobFlowStepsResponsePrivate::parseAddJobFlowStepsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

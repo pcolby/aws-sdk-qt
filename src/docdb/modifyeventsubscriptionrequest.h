@@ -23,11 +23,11 @@
 #include "docdbrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ModifyEventSubscriptionRequestPrivate;
 
-class QTAWSDOCDB_EXPORT ModifyEventSubscriptionRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ModifyEventSubscriptionRequest : public DocDbRequest {
 
 public:
     ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

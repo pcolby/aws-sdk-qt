@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeReservedDBInstancesOfferingsResponse
- * \brief The DescribeReservedDBInstancesOfferingsResponse class provides an interace for RDS DescribeReservedDBInstancesOfferings responses.
+ * \class QtAws::Rds::DescribeReservedDBInstancesOfferingsResponse
+ * \brief The DescribeReservedDBInstancesOfferingsResponse class provides an interace for Rds DescribeReservedDBInstancesOfferings responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeReservedDBInstancesOfferingsRequest * DescribeReservedDBInstancesO
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeReservedDBInstancesOfferings \a response.
+ * Parses a successful Rds DescribeReservedDBInstancesOfferings \a response.
  */
 void DescribeReservedDBInstancesOfferingsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeReservedDBInstancesOfferingsResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
- * \class QtAws::RDS::DescribeReservedDBInstancesOfferingsResponsePrivate
+ * \class QtAws::Rds::DescribeReservedDBInstancesOfferingsResponsePrivate
  * \brief The DescribeReservedDBInstancesOfferingsResponsePrivate class provides private implementation for DescribeReservedDBInstancesOfferingsResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeReservedDBInstancesOfferingsResponsePrivate::DescribeReservedDBInstances
 }
 
 /*!
- * Parses a RDS DescribeReservedDBInstancesOfferings response element from \a xml.
+ * Parses a Rds DescribeReservedDBInstancesOfferings response element from \a xml.
  */
 void DescribeReservedDBInstancesOfferingsResponsePrivate::parseDescribeReservedDBInstancesOfferingsResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeReservedDBInstancesOfferingsResponsePrivate::parseDescribeReservedD
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

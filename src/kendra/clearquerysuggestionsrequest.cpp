@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ClearQuerySuggestionsRequest
- * \brief The ClearQuerySuggestionsRequest class provides an interface for kendra ClearQuerySuggestions requests.
+ * \class QtAws::Kendra::ClearQuerySuggestionsRequest
+ * \brief The ClearQuerySuggestionsRequest class provides an interface for Kendra ClearQuerySuggestions requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::clearQuerySuggestions
+ * \sa KendraClient::clearQuerySuggestions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ClearQuerySuggestionsRequest::ClearQuerySuggestionsRequest(const ClearQuerySuggestionsRequest &other)
-    : kendraRequest(new ClearQuerySuggestionsRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new ClearQuerySuggestionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ClearQuerySuggestionsRequest::ClearQuerySuggestionsRequest(const ClearQuerySugge
  * Constructs a ClearQuerySuggestionsRequest object.
  */
 ClearQuerySuggestionsRequest::ClearQuerySuggestionsRequest()
-    : kendraRequest(new ClearQuerySuggestionsRequestPrivate(kendraRequest::ClearQuerySuggestionsAction, this))
+    : KendraRequest(new ClearQuerySuggestionsRequestPrivate(KendraRequest::ClearQuerySuggestionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ClearQuerySuggestionsRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::kendra::ClearQuerySuggestionsRequestPrivate
+ * \class QtAws::Kendra::ClearQuerySuggestionsRequestPrivate
  * \brief The ClearQuerySuggestionsRequestPrivate class provides private implementation for ClearQuerySuggestionsRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a ClearQuerySuggestionsRequestPrivate object for kendra \a action,
+ * Constructs a ClearQuerySuggestionsRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 ClearQuerySuggestionsRequestPrivate::ClearQuerySuggestionsRequestPrivate(
-    const kendraRequest::Action action, ClearQuerySuggestionsRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, ClearQuerySuggestionsRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ClearQuerySuggestionsRequestPrivate::ClearQuerySuggestionsRequestPrivate(
  */
 ClearQuerySuggestionsRequestPrivate::ClearQuerySuggestionsRequestPrivate(
     const ClearQuerySuggestionsRequestPrivate &other, ClearQuerySuggestionsRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

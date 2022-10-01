@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetSendingEnabledRequest
- * \brief The UpdateConfigurationSetSendingEnabledRequest class provides an interface for SES UpdateConfigurationSetSendingEnabled requests.
+ * \class QtAws::Ses::UpdateConfigurationSetSendingEnabledRequest
+ * \brief The UpdateConfigurationSetSendingEnabledRequest class provides an interface for Ses UpdateConfigurationSetSendingEnabled requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
 }
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetSendingEnabledRequestPrivate
+ * \class QtAws::Ses::UpdateConfigurationSetSendingEnabledRequestPrivate
  * \brief The UpdateConfigurationSetSendingEnabledRequestPrivate class provides private implementation for UpdateConfigurationSetSendingEnabledRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

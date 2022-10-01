@@ -37,8 +37,18 @@ namespace TimestreamQuery {
  * requests.
  *
  * \value CancelQueryAction TimestreamQuery CancelQuery action.
+ * \value CreateScheduledQueryAction TimestreamQuery CreateScheduledQuery action.
+ * \value DeleteScheduledQueryAction TimestreamQuery DeleteScheduledQuery action.
  * \value DescribeEndpointsAction TimestreamQuery DescribeEndpoints action.
+ * \value DescribeScheduledQueryAction TimestreamQuery DescribeScheduledQuery action.
+ * \value ExecuteScheduledQueryAction TimestreamQuery ExecuteScheduledQuery action.
+ * \value ListScheduledQueriesAction TimestreamQuery ListScheduledQueries action.
+ * \value ListTagsForResourceAction TimestreamQuery ListTagsForResource action.
+ * \value PrepareQueryAction TimestreamQuery PrepareQuery action.
  * \value QueryAction TimestreamQuery Query action.
+ * \value TagResourceAction TimestreamQuery TagResource action.
+ * \value UntagResourceAction TimestreamQuery UntagResource action.
+ * \value UpdateScheduledQueryAction TimestreamQuery UpdateScheduledQuery action.
  */
 
 /*!
@@ -246,7 +256,7 @@ QNetworkRequest TimestreamQueryRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 TimestreamQueryRequestPrivate::TimestreamQueryRequestPrivate(const TimestreamQueryRequest::Action action, TimestreamQueryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-01"))
 {
 
 }
@@ -281,8 +291,18 @@ QString TimestreamQueryRequestPrivate::toString(const TimestreamQueryRequest::Ac
         case TimestreamQueryRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CancelQuery);
+        ActionToString(CreateScheduledQuery);
+        ActionToString(DeleteScheduledQuery);
         ActionToString(DescribeEndpoints);
+        ActionToString(DescribeScheduledQuery);
+        ActionToString(ExecuteScheduledQuery);
+        ActionToString(ListScheduledQueries);
+        ActionToString(ListTagsForResource);
+        ActionToString(PrepareQuery);
         ActionToString(Query);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateScheduledQuery);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

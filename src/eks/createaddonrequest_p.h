@@ -24,7 +24,7 @@
 #include "createaddonrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class CreateAddonRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

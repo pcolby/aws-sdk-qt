@@ -29,6 +29,8 @@
 #include "deleteconnectorprofileresponse.h"
 #include "deleteflowrequest.h"
 #include "deleteflowresponse.h"
+#include "describeconnectorrequest.h"
+#include "describeconnectorresponse.h"
 #include "describeconnectorentityrequest.h"
 #include "describeconnectorentityresponse.h"
 #include "describeconnectorprofilesrequest.h"
@@ -41,16 +43,22 @@
 #include "describeflowexecutionrecordsresponse.h"
 #include "listconnectorentitiesrequest.h"
 #include "listconnectorentitiesresponse.h"
+#include "listconnectorsrequest.h"
+#include "listconnectorsresponse.h"
 #include "listflowsrequest.h"
 #include "listflowsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "registerconnectorrequest.h"
+#include "registerconnectorresponse.h"
 #include "startflowrequest.h"
 #include "startflowresponse.h"
 #include "stopflowrequest.h"
 #include "stopflowresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
+#include "unregisterconnectorrequest.h"
+#include "unregisterconnectorresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
 #include "updateconnectorprofilerequest.h"
@@ -86,8 +94,8 @@ namespace Appflow {
  *  </p
  * 
  *  Amazon AppFlow is a fully managed integration service that enables you to securely transfer data between software as a
- *  service (SaaS) applications like Salesforce, Marketo, Slack, and ServiceNow, and AWS services like Amazon S3 and Amazon
- *  Redshift.
+ *  service (SaaS) applications like Salesforce, Marketo, Slack, and ServiceNow, and Amazon Web Services like Amazon S3 and
+ *  Amazon Redshift.
  * 
  *  </p
  * 
@@ -186,9 +194,10 @@ AppflowClient::AppflowClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new connector profile associated with your AWS account. There is a soft quota of 100 connector profiles per
- * AWS account. If you need more connector profiles than this quota allows, you can submit a request to the Amazon AppFlow
- * team through the Amazon AppFlow support channel.
+ * Creates a new connector profile associated with your Amazon Web Services account. There is a soft quota of 100 connector
+ * profiles per Amazon Web Services account. If you need more connector profiles than this quota allows, you can submit a
+ * request to the Amazon AppFlow team through the Amazon AppFlow support channel. In each connector profile that you
+ * create, you can provide the credentials and properties for only one
  */
 CreateConnectorProfileResponse * AppflowClient::createConnectorProfile(const CreateConnectorProfileRequest &request)
 {
@@ -240,11 +249,26 @@ DeleteFlowResponse * AppflowClient::deleteFlow(const DeleteFlowRequest &request)
 
 /*!
  * Sends \a request to the AppflowClient service, and returns a pointer to an
+ * DescribeConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the given custom connector registered in your Amazon Web Services account. This API can be used for custom
+ * connectors that are registered in your account and also for Amazon authored
+ */
+DescribeConnectorResponse * AppflowClient::describeConnector(const DescribeConnectorRequest &request)
+{
+    return qobject_cast<DescribeConnectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppflowClient service, and returns a pointer to an
  * DescribeConnectorEntityResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides details regarding the entity used with the connector, with a description of the data model for each entity.
+ * Provides details regarding the entity used with the connector, with a description of the data model for each field in
+ * that entity.
  */
 DescribeConnectorEntityResponse * AppflowClient::describeConnectorEntity(const DescribeConnectorEntityRequest &request)
 {
@@ -328,6 +352,20 @@ ListConnectorEntitiesResponse * AppflowClient::listConnectorEntities(const ListC
 
 /*!
  * Sends \a request to the AppflowClient service, and returns a pointer to an
+ * ListConnectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the list of all registered custom connectors in your Amazon Web Services account. This API lists only custom
+ * connectors registered in this account, not the Amazon Web Services authored connectors.
+ */
+ListConnectorsResponse * AppflowClient::listConnectors(const ListConnectorsRequest &request)
+{
+    return qobject_cast<ListConnectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppflowClient service, and returns a pointer to an
  * ListFlowsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -350,6 +388,20 @@ ListFlowsResponse * AppflowClient::listFlows(const ListFlowsRequest &request)
 ListTagsForResourceResponse * AppflowClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppflowClient service, and returns a pointer to an
+ * RegisterConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers a new connector with your Amazon Web Services account. Before you can register the connector, you must deploy
+ * lambda in your
+ */
+RegisterConnectorResponse * AppflowClient::registerConnector(const RegisterConnectorRequest &request)
+{
+    return qobject_cast<RegisterConnectorResponse *>(send(request));
 }
 
 /*!
@@ -391,6 +443,19 @@ StopFlowResponse * AppflowClient::stopFlow(const StopFlowRequest &request)
 TagResourceResponse * AppflowClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppflowClient service, and returns a pointer to an
+ * UnregisterConnectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Unregisters the custom connector registered in your account that matches the connectorLabel provided in the
+ */
+UnregisterConnectorResponse * AppflowClient::unregisterConnector(const UnregisterConnectorRequest &request)
+{
+    return qobject_cast<UnregisterConnectorResponse *>(send(request));
 }
 
 /*!

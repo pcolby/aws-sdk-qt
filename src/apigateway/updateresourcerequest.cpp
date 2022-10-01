@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateResourceRequest
- * \brief The UpdateResourceRequest class provides an interface for APIGateway UpdateResource requests.
+ * \class QtAws::ApiGateway::UpdateResourceRequest
+ * \brief The UpdateResourceRequest class provides an interface for ApiGateway UpdateResource requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateResource
+ * \sa ApiGatewayClient::updateResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
-    : APIGatewayRequest(new UpdateResourceRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
  * Constructs a UpdateResourceRequest object.
  */
 UpdateResourceRequest::UpdateResourceRequest()
-    : APIGatewayRequest(new UpdateResourceRequestPrivate(APIGatewayRequest::UpdateResourceAction, this))
+    : ApiGatewayRequest(new UpdateResourceRequestPrivate(ApiGatewayRequest::UpdateResourceAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateResourceRequestPrivate
+ * \class QtAws::ApiGateway::UpdateResourceRequestPrivate
  * \brief The UpdateResourceRequestPrivate class provides private implementation for UpdateResourceRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateResourceRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateResourceRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateResourceRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateResourceRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
     const UpdateResourceRequestPrivate &other, UpdateResourceRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

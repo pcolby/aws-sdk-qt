@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class KmsClientPrivate;
 class CancelKeyDeletionRequest;
@@ -74,6 +74,8 @@ class GenerateDataKeyPairWithoutPlaintextRequest;
 class GenerateDataKeyPairWithoutPlaintextResponse;
 class GenerateDataKeyWithoutPlaintextRequest;
 class GenerateDataKeyWithoutPlaintextResponse;
+class GenerateMacRequest;
+class GenerateMacResponse;
 class GenerateRandomRequest;
 class GenerateRandomResponse;
 class GetKeyPolicyRequest;
@@ -102,6 +104,8 @@ class PutKeyPolicyRequest;
 class PutKeyPolicyResponse;
 class ReEncryptRequest;
 class ReEncryptResponse;
+class ReplicateKeyRequest;
+class ReplicateKeyResponse;
 class RetireGrantRequest;
 class RetireGrantResponse;
 class RevokeGrantRequest;
@@ -120,8 +124,12 @@ class UpdateCustomKeyStoreRequest;
 class UpdateCustomKeyStoreResponse;
 class UpdateKeyDescriptionRequest;
 class UpdateKeyDescriptionResponse;
+class UpdatePrimaryRegionRequest;
+class UpdatePrimaryRegionResponse;
 class VerifyRequest;
 class VerifyResponse;
+class VerifyMacRequest;
+class VerifyMacResponse;
 
 class QTAWSKMS_EXPORT KmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -161,6 +169,7 @@ public slots:
     GenerateDataKeyPairResponse * generateDataKeyPair(const GenerateDataKeyPairRequest &request);
     GenerateDataKeyPairWithoutPlaintextResponse * generateDataKeyPairWithoutPlaintext(const GenerateDataKeyPairWithoutPlaintextRequest &request);
     GenerateDataKeyWithoutPlaintextResponse * generateDataKeyWithoutPlaintext(const GenerateDataKeyWithoutPlaintextRequest &request);
+    GenerateMacResponse * generateMac(const GenerateMacRequest &request);
     GenerateRandomResponse * generateRandom(const GenerateRandomRequest &request);
     GetKeyPolicyResponse * getKeyPolicy(const GetKeyPolicyRequest &request);
     GetKeyRotationStatusResponse * getKeyRotationStatus(const GetKeyRotationStatusRequest &request);
@@ -175,6 +184,7 @@ public slots:
     ListRetirableGrantsResponse * listRetirableGrants(const ListRetirableGrantsRequest &request);
     PutKeyPolicyResponse * putKeyPolicy(const PutKeyPolicyRequest &request);
     ReEncryptResponse * reEncrypt(const ReEncryptRequest &request);
+    ReplicateKeyResponse * replicateKey(const ReplicateKeyRequest &request);
     RetireGrantResponse * retireGrant(const RetireGrantRequest &request);
     RevokeGrantResponse * revokeGrant(const RevokeGrantRequest &request);
     ScheduleKeyDeletionResponse * scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request);
@@ -184,7 +194,9 @@ public slots:
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
     UpdateCustomKeyStoreResponse * updateCustomKeyStore(const UpdateCustomKeyStoreRequest &request);
     UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
+    UpdatePrimaryRegionResponse * updatePrimaryRegion(const UpdatePrimaryRegionRequest &request);
     VerifyResponse * verify(const VerifyRequest &request);
+    VerifyMacResponse * verifyMac(const VerifyMacRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KmsClient)
@@ -192,7 +204,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

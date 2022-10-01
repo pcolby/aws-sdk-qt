@@ -44,6 +44,7 @@ public:
         CreateApiDestinationAction,
         CreateArchiveAction,
         CreateConnectionAction,
+        CreateEndpointAction,
         CreateEventBusAction,
         CreatePartnerEventSourceAction,
         DeactivateEventSourceAction,
@@ -51,12 +52,14 @@ public:
         DeleteApiDestinationAction,
         DeleteArchiveAction,
         DeleteConnectionAction,
+        DeleteEndpointAction,
         DeleteEventBusAction,
         DeletePartnerEventSourceAction,
         DeleteRuleAction,
         DescribeApiDestinationAction,
         DescribeArchiveAction,
         DescribeConnectionAction,
+        DescribeEndpointAction,
         DescribeEventBusAction,
         DescribeEventSourceAction,
         DescribePartnerEventSourceAction,
@@ -67,6 +70,7 @@ public:
         ListApiDestinationsAction,
         ListArchivesAction,
         ListConnectionsAction,
+        ListEndpointsAction,
         ListEventBusesAction,
         ListEventSourcesAction,
         ListPartnerEventSourceAccountsAction,
@@ -90,6 +94,7 @@ public:
         UpdateApiDestinationAction,
         UpdateArchiveAction,
         UpdateConnectionAction,
+        UpdateEndpointAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

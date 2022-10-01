@@ -25,16 +25,16 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::SendVoiceMessageResponse
- * \brief The SendVoiceMessageResponse class provides an interace for PinpointSMSVoice SendVoiceMessage responses.
+ * \class QtAws::PinpointSmsVoice::SendVoiceMessageResponse
+ * \brief The SendVoiceMessageResponse class provides an interace for PinpointSmsVoice SendVoiceMessage responses.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  *
  *
- * \sa PinpointSMSVoiceClient::sendVoiceMessage
+ * \sa PinpointSmsVoiceClient::sendVoiceMessage
  */
 
 /*!
@@ -44,7 +44,7 @@ SendVoiceMessageResponse::SendVoiceMessageResponse(
         const SendVoiceMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointSMSVoiceResponse(new SendVoiceMessageResponsePrivate(this), parent)
+    : PinpointSmsVoiceResponse(new SendVoiceMessageResponsePrivate(this), parent)
 {
     setRequest(new SendVoiceMessageRequest(request));
     setReply(reply);
@@ -61,7 +61,7 @@ const SendVoiceMessageRequest * SendVoiceMessageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful PinpointSMSVoice SendVoiceMessage \a response.
+ * Parses a successful PinpointSmsVoice SendVoiceMessage \a response.
  */
 void SendVoiceMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +71,24 @@ void SendVoiceMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::SendVoiceMessageResponsePrivate
+ * \class QtAws::PinpointSmsVoice::SendVoiceMessageResponsePrivate
  * \brief The SendVoiceMessageResponsePrivate class provides private implementation for SendVoiceMessageResponse.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
  * Constructs a SendVoiceMessageResponsePrivate object with public implementation \a q.
  */
 SendVoiceMessageResponsePrivate::SendVoiceMessageResponsePrivate(
-    SendVoiceMessageResponse * const q) : PinpointSMSVoiceResponsePrivate(q)
+    SendVoiceMessageResponse * const q) : PinpointSmsVoiceResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a PinpointSMSVoice SendVoiceMessage response element from \a xml.
+ * Parses a PinpointSmsVoice SendVoiceMessage response element from \a xml.
  */
 void SendVoiceMessageResponsePrivate::parseSendVoiceMessageResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +96,5 @@ void SendVoiceMessageResponsePrivate::parseSendVoiceMessageResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

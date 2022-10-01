@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetIdentityMailFromDomainResponse
- * \brief The SetIdentityMailFromDomainResponse class provides an interace for SES SetIdentityMailFromDomain responses.
+ * \class QtAws::Ses::SetIdentityMailFromDomainResponse
+ * \brief The SetIdentityMailFromDomainResponse class provides an interace for Ses SetIdentityMailFromDomain responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SES SetIdentityMailFromDomain \a response.
+ * Parses a successful Ses SetIdentityMailFromDomain \a response.
  */
 void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SetIdentityMailFromDomainResponsePrivate
+ * \class QtAws::Ses::SetIdentityMailFromDomainResponsePrivate
  * \brief The SetIdentityMailFromDomainResponsePrivate class provides private implementation for SetIdentityMailFromDomainResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePriva
 }
 
 /*!
- * Parses a SES SetIdentityMailFromDomain response element from \a xml.
+ * Parses a Ses SetIdentityMailFromDomain response element from \a xml.
  */
 void SetIdentityMailFromDomainResponsePrivate::parseSetIdentityMailFromDomainResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetIdentityMailFromDomainResponsePrivate::parseSetIdentityMailFromDomainRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

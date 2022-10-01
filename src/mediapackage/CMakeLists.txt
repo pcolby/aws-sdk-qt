@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMEDIAPACKAGE_LIBRARY)
 
 add_library(QtAwsMediaPackage
+  qtawsmediapackageglobal.h
+  mediapackageclient.h
+  mediapackageclient_p.h
+  mediapackagerequest.h
+  mediapackagerequest_p.h
+  mediapackageresponse.h
+  mediapackageresponse_p.h
   configurelogsrequest.h
   configurelogsrequest_p.h
   configurelogsresponse.h
@@ -53,13 +60,6 @@ add_library(QtAwsMediaPackage
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  mediapackageclient.h
-  mediapackageclient_p.h
-  mediapackagerequest.h
-  mediapackagerequest_p.h
-  mediapackageresponse.h
-  mediapackageresponse_p.h
-  qtawsmediapackageglobal.h
   rotatechannelcredentialsrequest.h
   rotatechannelcredentialsrequest_p.h
   rotatechannelcredentialsresponse.h
@@ -84,6 +84,9 @@ add_library(QtAwsMediaPackage
   updateoriginendpointrequest_p.h
   updateoriginendpointresponse.h
   updateoriginendpointresponse_p.h
+  mediapackageclient.cpp
+  mediapackagerequest.cpp
+  mediapackageresponse.cpp
   configurelogsrequest.cpp
   configurelogsresponse.cpp
   createchannelrequest.cpp
@@ -110,9 +113,6 @@ add_library(QtAwsMediaPackage
   listoriginendpointsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  mediapackageclient.cpp
-  mediapackagerequest.cpp
-  mediapackageresponse.cpp
   rotatechannelcredentialsrequest.cpp
   rotatechannelcredentialsresponse.cpp
   rotateingestendpointcredentialsrequest.cpp

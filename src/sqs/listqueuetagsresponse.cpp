@@ -25,32 +25,31 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 /*!
- * \class QtAws::SQS::ListQueueTagsResponse
- * \brief The ListQueueTagsResponse class provides an interace for SQS ListQueueTags responses.
+ * \class QtAws::Sqs::ListQueueTagsResponse
+ * \brief The ListQueueTagsResponse class provides an interace for Sqs ListQueueTags responses.
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  *
- *  Welcome to the <i>Amazon Simple Queue Service API
+ *  Welcome to the <i>Amazon SQS API
  * 
  *  Reference</i>>
  * 
- *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
- *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
- *  decouple these
+ *  Amazon SQS is a reliable, highly-scalable hosted queue for storing messages as they travel between applications or
+ *  microservices. Amazon SQS moves data between distributed application components and helps you decouple these
  * 
  *  components>
  * 
  *  For information on the permissions you need to use this API, see <a
  *  href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-authentication-and-access-control.html">Identity
- *  and access management</a> in the <i>Amazon Simple Queue Service Developer Guide.</i>
+ *  and access management</a> in the <i>Amazon SQS Developer Guide.</i>
  * 
  *  </p
  * 
- *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
- *  language. The SDKs perform tasks such as the following
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">Amazon Web Services SDKs</a> to access Amazon SQS using your
+ *  favorite programming language. The SDKs perform tasks such as the following
  * 
  *  automatically> <ul> <li>
  * 
@@ -74,7 +73,7 @@ namespace SQS {
  * 
  *  </p </li> <li>
  * 
- *  <i>Amazon Simple Queue Service Developer Guide</i>
+ *  <i>Amazon SQS Developer Guide</i>
  * 
  *  </p <ul> <li>
  * 
@@ -94,8 +93,8 @@ namespace SQS {
  * 
  *  </p </li> </ul> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>AWS CLI Command
- *  Reference</i> </a>
+ *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>Command Line Interface</i>
+ *  </a>
  * 
  *  </p </li> <li>
  * 
@@ -132,7 +131,7 @@ const ListQueueTagsRequest * ListQueueTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SQS ListQueueTags \a response.
+ * Parses a successful Sqs ListQueueTags \a response.
  */
 void ListQueueTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,11 +141,11 @@ void ListQueueTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SQS::ListQueueTagsResponsePrivate
+ * \class QtAws::Sqs::ListQueueTagsResponsePrivate
  * \brief The ListQueueTagsResponsePrivate class provides private implementation for ListQueueTagsResponse.
  * \internal
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  */
 
 /*!
@@ -159,7 +158,7 @@ ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
 }
 
 /*!
- * Parses a SQS ListQueueTags response element from \a xml.
+ * Parses a Sqs ListQueueTags response element from \a xml.
  */
 void ListQueueTagsResponsePrivate::parseListQueueTagsResponse(QXmlStreamReader &xml)
 {
@@ -167,5 +166,5 @@ void ListQueueTagsResponsePrivate::parseListQueueTagsResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws

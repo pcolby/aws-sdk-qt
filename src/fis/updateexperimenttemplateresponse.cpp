@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::UpdateExperimentTemplateResponse
- * \brief The UpdateExperimentTemplateResponse class provides an interace for FIS UpdateExperimentTemplate responses.
+ * \class QtAws::Fis::UpdateExperimentTemplateResponse
+ * \brief The UpdateExperimentTemplateResponse class provides an interace for Fis UpdateExperimentTemplate responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  *
- *  AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your AWS
- *  workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
- *  Simulator User
+ *  Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ *  Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault
+ *  Injection Simulator User
  *
  * \sa FisClient::updateExperimentTemplate
  */
@@ -64,7 +64,7 @@ const UpdateExperimentTemplateRequest * UpdateExperimentTemplateResponse::reques
 
 /*!
  * \reimp
- * Parses a successful FIS UpdateExperimentTemplate \a response.
+ * Parses a successful Fis UpdateExperimentTemplate \a response.
  */
 void UpdateExperimentTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void UpdateExperimentTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::UpdateExperimentTemplateResponsePrivate
+ * \class QtAws::Fis::UpdateExperimentTemplateResponsePrivate
  * \brief The UpdateExperimentTemplateResponsePrivate class provides private implementation for UpdateExperimentTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -91,7 +91,7 @@ UpdateExperimentTemplateResponsePrivate::UpdateExperimentTemplateResponsePrivate
 }
 
 /*!
- * Parses a FIS UpdateExperimentTemplate response element from \a xml.
+ * Parses a Fis UpdateExperimentTemplate response element from \a xml.
  */
 void UpdateExperimentTemplateResponsePrivate::parseUpdateExperimentTemplateResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void UpdateExperimentTemplateResponsePrivate::parseUpdateExperimentTemplateRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

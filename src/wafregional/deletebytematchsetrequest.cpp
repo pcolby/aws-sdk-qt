@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteByteMatchSetRequest
- * \brief The DeleteByteMatchSetRequest class provides an interface for WAFRegional DeleteByteMatchSet requests.
+ * \class QtAws::WafRegional::DeleteByteMatchSetRequest
+ * \brief The DeleteByteMatchSetRequest class provides an interface for WafRegional DeleteByteMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteByteMatchSet
+ * \sa WafRegionalClient::deleteByteMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetRequest &other)
-    : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetReq
  * Constructs a DeleteByteMatchSetRequest object.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest()
-    : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(WAFRegionalRequest::DeleteByteMatchSetAction, this))
+    : WafRegionalRequest(new DeleteByteMatchSetRequestPrivate(WafRegionalRequest::DeleteByteMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteByteMatchSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteByteMatchSetRequestPrivate
  * \brief The DeleteByteMatchSetRequestPrivate class provides private implementation for DeleteByteMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteByteMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteByteMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteByteMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteByteMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const DeleteByteMatchSetRequestPrivate &other, DeleteByteMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

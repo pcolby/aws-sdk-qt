@@ -24,14 +24,14 @@
 #include "deletenotificationrulerequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class DeleteNotificationRuleRequest;
 
-class DeleteNotificationRuleRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class DeleteNotificationRuleRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    DeleteNotificationRuleRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    DeleteNotificationRuleRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    DeleteNotificationRuleRequest * const q);
     DeleteNotificationRuleRequestPrivate(const DeleteNotificationRuleRequestPrivate &other,
                                    DeleteNotificationRuleRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

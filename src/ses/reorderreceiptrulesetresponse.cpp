@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ReorderReceiptRuleSetResponse
- * \brief The ReorderReceiptRuleSetResponse class provides an interace for SES ReorderReceiptRuleSet responses.
+ * \class QtAws::Ses::ReorderReceiptRuleSetResponse
+ * \brief The ReorderReceiptRuleSetResponse class provides an interace for Ses ReorderReceiptRuleSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful SES ReorderReceiptRuleSet \a response.
+ * Parses a successful Ses ReorderReceiptRuleSet \a response.
  */
 void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::ReorderReceiptRuleSetResponsePrivate
+ * \class QtAws::Ses::ReorderReceiptRuleSetResponsePrivate
  * \brief The ReorderReceiptRuleSetResponsePrivate class provides private implementation for ReorderReceiptRuleSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
 }
 
 /*!
- * Parses a SES ReorderReceiptRuleSet response element from \a xml.
+ * Parses a Ses ReorderReceiptRuleSet response element from \a xml.
  */
 void ReorderReceiptRuleSetResponsePrivate::parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ReorderReceiptRuleSetResponsePrivate::parseReorderReceiptRuleSetResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

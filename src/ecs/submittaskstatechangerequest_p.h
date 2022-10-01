@@ -24,7 +24,7 @@
 #include "submittaskstatechangerequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class SubmitTaskStateChangeRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::ListConfigurationSetsResponse
- * \brief The ListConfigurationSetsResponse class provides an interace for SES ListConfigurationSets responses.
+ * \class QtAws::Ses::ListConfigurationSetsResponse
+ * \brief The ListConfigurationSetsResponse class provides an interace for Ses ListConfigurationSets responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful SES ListConfigurationSets \a response.
+ * Parses a successful Ses ListConfigurationSets \a response.
  */
 void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::ListConfigurationSetsResponsePrivate
+ * \class QtAws::Ses::ListConfigurationSetsResponsePrivate
  * \brief The ListConfigurationSetsResponsePrivate class provides private implementation for ListConfigurationSetsResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
 }
 
 /*!
- * Parses a SES ListConfigurationSets response element from \a xml.
+ * Parses a Ses ListConfigurationSets response element from \a xml.
  */
 void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

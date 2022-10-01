@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateDeploymentRequest
- * \brief The UpdateDeploymentRequest class provides an interface for APIGateway UpdateDeployment requests.
+ * \class QtAws::ApiGateway::UpdateDeploymentRequest
+ * \brief The UpdateDeploymentRequest class provides an interface for ApiGateway UpdateDeployment requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateDeployment
+ * \sa ApiGatewayClient::updateDeployment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &other)
-    : APIGatewayRequest(new UpdateDeploymentRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateDeploymentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &
  * Constructs a UpdateDeploymentRequest object.
  */
 UpdateDeploymentRequest::UpdateDeploymentRequest()
-    : APIGatewayRequest(new UpdateDeploymentRequestPrivate(APIGatewayRequest::UpdateDeploymentAction, this))
+    : ApiGatewayRequest(new UpdateDeploymentRequestPrivate(ApiGatewayRequest::UpdateDeploymentAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateDeploymentRequestPrivate
+ * \class QtAws::ApiGateway::UpdateDeploymentRequestPrivate
  * \brief The UpdateDeploymentRequestPrivate class provides private implementation for UpdateDeploymentRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateDeploymentRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateDeploymentRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateDeploymentRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateDeploymentRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const UpdateDeploymentRequestPrivate &other, UpdateDeploymentRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

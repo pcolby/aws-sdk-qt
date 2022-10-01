@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeClusterResponse
- * \brief The DescribeClusterResponse class provides an interace for EMR DescribeCluster responses.
+ * \class QtAws::Emr::DescribeClusterResponse
+ * \brief The DescribeClusterResponse class provides an interace for Emr DescribeCluster responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeCluster
  */
@@ -64,7 +64,7 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeCluster \a response.
+ * Parses a successful Emr DescribeCluster \a response.
  */
 void DescribeClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeClusterResponsePrivate
+ * \class QtAws::Emr::DescribeClusterResponsePrivate
  * \brief The DescribeClusterResponsePrivate class provides private implementation for DescribeClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 }
 
 /*!
- * Parses a EMR DescribeCluster response element from \a xml.
+ * Parses a Emr DescribeCluster response element from \a xml.
  */
 void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

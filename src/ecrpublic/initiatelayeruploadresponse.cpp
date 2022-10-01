@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::InitiateLayerUploadResponse
- * \brief The InitiateLayerUploadResponse class provides an interace for ECRPublic InitiateLayerUpload responses.
+ * \class QtAws::EcrPublic::InitiateLayerUploadResponse
+ * \brief The InitiateLayerUploadResponse class provides an interace for EcrPublic InitiateLayerUpload responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::initiateLayerUpload
+ * \sa EcrPublicClient::initiateLayerUpload
  */
 
 /*!
@@ -52,7 +52,7 @@ InitiateLayerUploadResponse::InitiateLayerUploadResponse(
         const InitiateLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new InitiateLayerUploadResponsePrivate(this), parent)
+    : EcrPublicResponse(new InitiateLayerUploadResponsePrivate(this), parent)
 {
     setRequest(new InitiateLayerUploadRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic InitiateLayerUpload \a response.
+ * Parses a successful EcrPublic InitiateLayerUpload \a response.
  */
 void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::InitiateLayerUploadResponsePrivate
+ * \class QtAws::EcrPublic::InitiateLayerUploadResponsePrivate
  * \brief The InitiateLayerUploadResponsePrivate class provides private implementation for InitiateLayerUploadResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a InitiateLayerUploadResponsePrivate object with public implementation \a q.
  */
 InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
-    InitiateLayerUploadResponse * const q) : ECRPublicResponsePrivate(q)
+    InitiateLayerUploadResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic InitiateLayerUpload response element from \a xml.
+ * Parses a EcrPublic InitiateLayerUpload response element from \a xml.
  */
 void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

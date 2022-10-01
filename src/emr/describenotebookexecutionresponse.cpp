@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeNotebookExecutionResponse
- * \brief The DescribeNotebookExecutionResponse class provides an interace for EMR DescribeNotebookExecution responses.
+ * \class QtAws::Emr::DescribeNotebookExecutionResponse
+ * \brief The DescribeNotebookExecutionResponse class provides an interace for Emr DescribeNotebookExecution responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeNotebookExecution
  */
@@ -64,7 +64,7 @@ const DescribeNotebookExecutionRequest * DescribeNotebookExecutionResponse::requ
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeNotebookExecution \a response.
+ * Parses a successful Emr DescribeNotebookExecution \a response.
  */
 void DescribeNotebookExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeNotebookExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeNotebookExecutionResponsePrivate
+ * \class QtAws::Emr::DescribeNotebookExecutionResponsePrivate
  * \brief The DescribeNotebookExecutionResponsePrivate class provides private implementation for DescribeNotebookExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeNotebookExecutionResponsePrivate::DescribeNotebookExecutionResponsePriva
 }
 
 /*!
- * Parses a EMR DescribeNotebookExecution response element from \a xml.
+ * Parses a Emr DescribeNotebookExecution response element from \a xml.
  */
 void DescribeNotebookExecutionResponsePrivate::parseDescribeNotebookExecutionResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeNotebookExecutionResponsePrivate::parseDescribeNotebookExecutionRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetClientCertificateResponse
- * \brief The GetClientCertificateResponse class provides an interace for APIGateway GetClientCertificate responses.
+ * \class QtAws::ApiGateway::GetClientCertificateResponse
+ * \brief The GetClientCertificateResponse class provides an interace for ApiGateway GetClientCertificate responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getClientCertificate
+ * \sa ApiGatewayClient::getClientCertificate
  */
 
 /*!
@@ -49,7 +49,7 @@ GetClientCertificateResponse::GetClientCertificateResponse(
         const GetClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetClientCertificateResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetClientCertificateRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetClientCertificateRequest * GetClientCertificateResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetClientCertificate \a response.
+ * Parses a successful ApiGateway GetClientCertificate \a response.
  */
 void GetClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetClientCertificateResponsePrivate
+ * \class QtAws::ApiGateway::GetClientCertificateResponsePrivate
  * \brief The GetClientCertificateResponsePrivate class provides private implementation for GetClientCertificateResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetClientCertificateResponsePrivate object with public implementation \a q.
  */
 GetClientCertificateResponsePrivate::GetClientCertificateResponsePrivate(
-    GetClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
+    GetClientCertificateResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetClientCertificate response element from \a xml.
+ * Parses a ApiGateway GetClientCertificate response element from \a xml.
  */
 void GetClientCertificateResponsePrivate::parseGetClientCertificateResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetClientCertificateResponsePrivate::parseGetClientCertificateResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

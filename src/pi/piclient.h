@@ -27,15 +27,21 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 class PiClientPrivate;
 class DescribeDimensionKeysRequest;
 class DescribeDimensionKeysResponse;
 class GetDimensionKeyDetailsRequest;
 class GetDimensionKeyDetailsResponse;
+class GetResourceMetadataRequest;
+class GetResourceMetadataResponse;
 class GetResourceMetricsRequest;
 class GetResourceMetricsResponse;
+class ListAvailableResourceDimensionsRequest;
+class ListAvailableResourceDimensionsResponse;
+class ListAvailableResourceMetricsRequest;
+class ListAvailableResourceMetricsResponse;
 
 class QTAWSPI_EXPORT PiClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -55,7 +61,10 @@ public:
 public slots:
     DescribeDimensionKeysResponse * describeDimensionKeys(const DescribeDimensionKeysRequest &request);
     GetDimensionKeyDetailsResponse * getDimensionKeyDetails(const GetDimensionKeyDetailsRequest &request);
+    GetResourceMetadataResponse * getResourceMetadata(const GetResourceMetadataRequest &request);
     GetResourceMetricsResponse * getResourceMetrics(const GetResourceMetricsRequest &request);
+    ListAvailableResourceDimensionsResponse * listAvailableResourceDimensions(const ListAvailableResourceDimensionsRequest &request);
+    ListAvailableResourceMetricsResponse * listAvailableResourceMetrics(const ListAvailableResourceMetricsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(PiClient)
@@ -63,7 +72,7 @@ private:
 
 };
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws
 
 #endif

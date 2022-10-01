@@ -25,6 +25,8 @@
 #include "createsuitedefinitionresponse.h"
 #include "deletesuitedefinitionrequest.h"
 #include "deletesuitedefinitionresponse.h"
+#include "getendpointrequest.h"
+#include "getendpointresponse.h"
 #include "getsuitedefinitionrequest.h"
 #include "getsuitedefinitionresponse.h"
 #include "getsuiterunrequest.h"
@@ -52,49 +54,49 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::IoTDeviceAdvisor
- * \brief Contains classess for accessing AWS IoT Core Device Advisor (IoTDeviceAdvisor).
+ * \namespace QtAws::IotDeviceAdvisor
+ * \brief Contains classess for accessing AWS IoT Core Device Advisor.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorClient
- * \brief The IoTDeviceAdvisorClient class provides access to the AWS IoT Core Device Advisor (IoTDeviceAdvisor) service.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorClient
+ * \brief The IotDeviceAdvisorClient class provides access to the AWS IoT Core Device Advisor service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  */
 
 /*!
- * \brief Constructs a IoTDeviceAdvisorClient object.
+ * \brief Constructs a IotDeviceAdvisorClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
+IotDeviceAdvisorClient::IotDeviceAdvisorClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDeviceAdvisorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IotDeviceAdvisorClientPrivate(this), parent)
 {
-    Q_D(IoTDeviceAdvisorClient);
+    Q_D(IotDeviceAdvisorClient);
     d->apiVersion = QStringLiteral("2020-09-18");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("api.iotdeviceadvisor");
@@ -105,7 +107,7 @@ IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
 }
 
 /*!
- * \overload IoTDeviceAdvisorClient()
+ * \overload IotDeviceAdvisorClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -115,14 +117,14 @@ IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
+IotDeviceAdvisorClient::IotDeviceAdvisorClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDeviceAdvisorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new IotDeviceAdvisorClientPrivate(this), parent)
 {
-    Q_D(IoTDeviceAdvisorClient);
+    Q_D(IotDeviceAdvisorClient);
     d->apiVersion = QStringLiteral("2020-09-18");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -133,192 +135,270 @@ IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * CreateSuiteDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a Device Advisor test
+ *
+ * suite>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">CreateSuiteDefinition</a>
  */
-CreateSuiteDefinitionResponse * IoTDeviceAdvisorClient::createSuiteDefinition(const CreateSuiteDefinitionRequest &request)
+CreateSuiteDefinitionResponse * IotDeviceAdvisorClient::createSuiteDefinition(const CreateSuiteDefinitionRequest &request)
 {
     return qobject_cast<CreateSuiteDefinitionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * DeleteSuiteDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a Device Advisor test
+ *
+ * suite>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteSuiteDefinition</a>
  */
-DeleteSuiteDefinitionResponse * IoTDeviceAdvisorClient::deleteSuiteDefinition(const DeleteSuiteDefinitionRequest &request)
+DeleteSuiteDefinitionResponse * IotDeviceAdvisorClient::deleteSuiteDefinition(const DeleteSuiteDefinitionRequest &request)
 {
     return qobject_cast<DeleteSuiteDefinitionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
+ * GetEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about an Device Advisor
+ */
+GetEndpointResponse * IotDeviceAdvisorClient::getEndpoint(const GetEndpointRequest &request)
+{
+    return qobject_cast<GetEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * GetSuiteDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Advisor test
+ *
+ * suite>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteDefinition</a>
  */
-GetSuiteDefinitionResponse * IoTDeviceAdvisorClient::getSuiteDefinition(const GetSuiteDefinitionRequest &request)
+GetSuiteDefinitionResponse * IotDeviceAdvisorClient::getSuiteDefinition(const GetSuiteDefinitionRequest &request)
 {
     return qobject_cast<GetSuiteDefinitionResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * GetSuiteRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a Device Advisor test suite
+ *
+ * run>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRun</a>
  */
-GetSuiteRunResponse * IoTDeviceAdvisorClient::getSuiteRun(const GetSuiteRunRequest &request)
+GetSuiteRunResponse * IotDeviceAdvisorClient::getSuiteRun(const GetSuiteRunRequest &request)
 {
     return qobject_cast<GetSuiteRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * GetSuiteRunReportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a report download link for a successful Device Advisor qualifying test suite
+ *
+ * run>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRunReport</a>
  */
-GetSuiteRunReportResponse * IoTDeviceAdvisorClient::getSuiteRunReport(const GetSuiteRunReportRequest &request)
+GetSuiteRunReportResponse * IotDeviceAdvisorClient::getSuiteRunReport(const GetSuiteRunReportRequest &request)
 {
     return qobject_cast<GetSuiteRunReportResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * ListSuiteDefinitionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the Device Advisor test suites you have
+ *
+ * created>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSuiteDefinitions</a>
  */
-ListSuiteDefinitionsResponse * IoTDeviceAdvisorClient::listSuiteDefinitions(const ListSuiteDefinitionsRequest &request)
+ListSuiteDefinitionsResponse * IotDeviceAdvisorClient::listSuiteDefinitions(const ListSuiteDefinitionsRequest &request)
 {
     return qobject_cast<ListSuiteDefinitionsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * ListSuiteRunsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a
+ * Lists runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs of a
  * specific version of the test
+ *
+ * suite>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListSuiteRuns</a>
  */
-ListSuiteRunsResponse * IoTDeviceAdvisorClient::listSuiteRuns(const ListSuiteRunsRequest &request)
+ListSuiteRunsResponse * IotDeviceAdvisorClient::listSuiteRuns(const ListSuiteRunsRequest &request)
 {
     return qobject_cast<ListSuiteRunsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the tags attached to an IoT Device Advisor
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTagsForResource</a>
  */
-ListTagsForResourceResponse * IoTDeviceAdvisorClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * IotDeviceAdvisorClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * StartSuiteRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts a Device Advisor test suite
+ *
+ * run>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartSuiteRun</a>
  */
-StartSuiteRunResponse * IoTDeviceAdvisorClient::startSuiteRun(const StartSuiteRunRequest &request)
+StartSuiteRunResponse * IotDeviceAdvisorClient::startSuiteRun(const StartSuiteRunRequest &request)
 {
     return qobject_cast<StartSuiteRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * StopSuiteRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops a Device Advisor test suite run that is currently
+ *
+ * running>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopSuiteRun</a>
  */
-StopSuiteRunResponse * IoTDeviceAdvisorClient::stopSuiteRun(const StopSuiteRunRequest &request)
+StopSuiteRunResponse * IotDeviceAdvisorClient::stopSuiteRun(const StopSuiteRunRequest &request)
 {
     return qobject_cast<StopSuiteRunResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds to and modifies existing tags of an IoT Device Advisor
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TagResource</a>
  */
-TagResourceResponse * IoTDeviceAdvisorClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * IotDeviceAdvisorClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes tags from an IoT Device Advisor
+ *
+ * resource>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UntagResource</a>
  */
-UntagResourceResponse * IoTDeviceAdvisorClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * IotDeviceAdvisorClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the IoTDeviceAdvisorClient service, and returns a pointer to an
+ * Sends \a request to the IotDeviceAdvisorClient service, and returns a pointer to an
  * UpdateSuiteDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a Device Advisor test
+ *
+ * suite>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateSuiteDefinition</a>
  */
-UpdateSuiteDefinitionResponse * IoTDeviceAdvisorClient::updateSuiteDefinition(const UpdateSuiteDefinitionRequest &request)
+UpdateSuiteDefinitionResponse * IotDeviceAdvisorClient::updateSuiteDefinition(const UpdateSuiteDefinitionRequest &request)
 {
     return qobject_cast<UpdateSuiteDefinitionResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::IoTDeviceAdvisorClientPrivate
- * \brief The IoTDeviceAdvisorClientPrivate class provides private implementation for IoTDeviceAdvisorClient.
+ * \class QtAws::IotDeviceAdvisor::IotDeviceAdvisorClientPrivate
+ * \brief The IotDeviceAdvisorClientPrivate class provides private implementation for IotDeviceAdvisorClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a IoTDeviceAdvisorClientPrivate object with public implementation \a q.
+ * Constructs a IotDeviceAdvisorClientPrivate object with public implementation \a q.
  */
-IoTDeviceAdvisorClientPrivate::IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q)
+IotDeviceAdvisorClientPrivate::IotDeviceAdvisorClientPrivate(IotDeviceAdvisorClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

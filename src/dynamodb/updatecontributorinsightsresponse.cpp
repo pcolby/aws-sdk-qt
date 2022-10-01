@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateContributorInsightsResponse
- * \brief The UpdateContributorInsightsResponse class provides an interace for DynamoDB UpdateContributorInsights responses.
+ * \class QtAws::DynamoDb::UpdateContributorInsightsResponse
+ * \brief The UpdateContributorInsightsResponse class provides an interace for DynamoDb UpdateContributorInsights responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateContributorInsights
+ * \sa DynamoDbClient::updateContributorInsights
  */
 
 /*!
@@ -63,7 +63,7 @@ UpdateContributorInsightsResponse::UpdateContributorInsightsResponse(
         const UpdateContributorInsightsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new UpdateContributorInsightsResponsePrivate(this), parent)
+    : DynamoDbResponse(new UpdateContributorInsightsResponsePrivate(this), parent)
 {
     setRequest(new UpdateContributorInsightsRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const UpdateContributorInsightsRequest * UpdateContributorInsightsResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DynamoDB UpdateContributorInsights \a response.
+ * Parses a successful DynamoDb UpdateContributorInsights \a response.
  */
 void UpdateContributorInsightsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void UpdateContributorInsightsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateContributorInsightsResponsePrivate
+ * \class QtAws::DynamoDb::UpdateContributorInsightsResponsePrivate
  * \brief The UpdateContributorInsightsResponsePrivate class provides private implementation for UpdateContributorInsightsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a UpdateContributorInsightsResponsePrivate object with public implementation \a q.
  */
 UpdateContributorInsightsResponsePrivate::UpdateContributorInsightsResponsePrivate(
-    UpdateContributorInsightsResponse * const q) : DynamoDBResponsePrivate(q)
+    UpdateContributorInsightsResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB UpdateContributorInsights response element from \a xml.
+ * Parses a DynamoDb UpdateContributorInsights response element from \a xml.
  */
 void UpdateContributorInsightsResponsePrivate::parseUpdateContributorInsightsResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void UpdateContributorInsightsResponsePrivate::parseUpdateContributorInsightsRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

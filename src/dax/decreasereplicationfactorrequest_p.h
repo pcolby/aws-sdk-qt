@@ -24,7 +24,7 @@
 #include "decreasereplicationfactorrequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DecreaseReplicationFactorRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

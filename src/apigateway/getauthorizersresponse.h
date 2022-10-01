@@ -24,11 +24,11 @@
 #include "getauthorizersrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetAuthorizersResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetAuthorizersResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetAuthorizersResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

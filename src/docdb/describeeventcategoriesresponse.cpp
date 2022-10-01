@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEventCategoriesResponse
- * \brief The DescribeEventCategoriesResponse class provides an interace for DocDB DescribeEventCategories responses.
+ * \class QtAws::DocDb::DescribeEventCategoriesResponse
+ * \brief The DescribeEventCategoriesResponse class provides an interace for DocDb DescribeEventCategories responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEventCategories
+ * \sa DocDbClient::describeEventCategories
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
         const DescribeEventCategoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventCategoriesRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request(
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeEventCategories \a response.
+ * Parses a successful DocDb DescribeEventCategories \a response.
  */
 void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEventCategoriesResponsePrivate
+ * \class QtAws::DocDb::DescribeEventCategoriesResponsePrivate
  * \brief The DescribeEventCategoriesResponsePrivate class provides private implementation for DescribeEventCategoriesResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeEventCategoriesResponsePrivate object with public implementation \a q.
  */
 DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
-    DescribeEventCategoriesResponse * const q) : DocDBResponsePrivate(q)
+    DescribeEventCategoriesResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeEventCategories response element from \a xml.
+ * Parses a DocDb DescribeEventCategories response element from \a xml.
  */
 void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

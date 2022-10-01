@@ -24,7 +24,7 @@
 #include "createclitokenrequest.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class CreateCliTokenRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

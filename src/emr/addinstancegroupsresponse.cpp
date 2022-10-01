@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::AddInstanceGroupsResponse
- * \brief The AddInstanceGroupsResponse class provides an interace for EMR AddInstanceGroups responses.
+ * \class QtAws::Emr::AddInstanceGroupsResponse
+ * \brief The AddInstanceGroupsResponse class provides an interace for Emr AddInstanceGroups responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::addInstanceGroups
  */
@@ -64,7 +64,7 @@ const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR AddInstanceGroups \a response.
+ * Parses a successful Emr AddInstanceGroups \a response.
  */
 void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::AddInstanceGroupsResponsePrivate
+ * \class QtAws::Emr::AddInstanceGroupsResponsePrivate
  * \brief The AddInstanceGroupsResponsePrivate class provides private implementation for AddInstanceGroupsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
 }
 
 /*!
- * Parses a EMR AddInstanceGroups response element from \a xml.
+ * Parses a Emr AddInstanceGroups response element from \a xml.
  */
 void AddInstanceGroupsResponsePrivate::parseAddInstanceGroupsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void AddInstanceGroupsResponsePrivate::parseAddInstanceGroupsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

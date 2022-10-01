@@ -39,17 +39,20 @@ namespace Kafka {
  * \value BatchAssociateScramSecretAction Kafka BatchAssociateScramSecret action.
  * \value BatchDisassociateScramSecretAction Kafka BatchDisassociateScramSecret action.
  * \value CreateClusterAction Kafka CreateCluster action.
+ * \value CreateClusterV2Action Kafka CreateClusterV2 action.
  * \value CreateConfigurationAction Kafka CreateConfiguration action.
  * \value DeleteClusterAction Kafka DeleteCluster action.
  * \value DeleteConfigurationAction Kafka DeleteConfiguration action.
  * \value DescribeClusterAction Kafka DescribeCluster action.
  * \value DescribeClusterOperationAction Kafka DescribeClusterOperation action.
+ * \value DescribeClusterV2Action Kafka DescribeClusterV2 action.
  * \value DescribeConfigurationAction Kafka DescribeConfiguration action.
  * \value DescribeConfigurationRevisionAction Kafka DescribeConfigurationRevision action.
  * \value GetBootstrapBrokersAction Kafka GetBootstrapBrokers action.
  * \value GetCompatibleKafkaVersionsAction Kafka GetCompatibleKafkaVersions action.
  * \value ListClusterOperationsAction Kafka ListClusterOperations action.
  * \value ListClustersAction Kafka ListClusters action.
+ * \value ListClustersV2Action Kafka ListClustersV2 action.
  * \value ListConfigurationRevisionsAction Kafka ListConfigurationRevisions action.
  * \value ListConfigurationsAction Kafka ListConfigurations action.
  * \value ListKafkaVersionsAction Kafka ListKafkaVersions action.
@@ -65,7 +68,9 @@ namespace Kafka {
  * \value UpdateClusterConfigurationAction Kafka UpdateClusterConfiguration action.
  * \value UpdateClusterKafkaVersionAction Kafka UpdateClusterKafkaVersion action.
  * \value UpdateConfigurationAction Kafka UpdateConfiguration action.
+ * \value UpdateConnectivityAction Kafka UpdateConnectivity action.
  * \value UpdateMonitoringAction Kafka UpdateMonitoring action.
+ * \value UpdateSecurityAction Kafka UpdateSecurity action.
  */
 
 /*!
@@ -273,7 +278,7 @@ QNetworkRequest KafkaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KafkaRequestPrivate::KafkaRequestPrivate(const KafkaRequest::Action action, KafkaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-11-14"))
 {
 
 }
@@ -310,17 +315,20 @@ QString KafkaRequestPrivate::toString(const KafkaRequest::Action &action)
         ActionToString(BatchAssociateScramSecret);
         ActionToString(BatchDisassociateScramSecret);
         ActionToString(CreateCluster);
+        ActionToString(CreateClusterV2);
         ActionToString(CreateConfiguration);
         ActionToString(DeleteCluster);
         ActionToString(DeleteConfiguration);
         ActionToString(DescribeCluster);
         ActionToString(DescribeClusterOperation);
+        ActionToString(DescribeClusterV2);
         ActionToString(DescribeConfiguration);
         ActionToString(DescribeConfigurationRevision);
         ActionToString(GetBootstrapBrokers);
         ActionToString(GetCompatibleKafkaVersions);
         ActionToString(ListClusterOperations);
         ActionToString(ListClusters);
+        ActionToString(ListClustersV2);
         ActionToString(ListConfigurationRevisions);
         ActionToString(ListConfigurations);
         ActionToString(ListKafkaVersions);
@@ -336,7 +344,9 @@ QString KafkaRequestPrivate::toString(const KafkaRequest::Action &action)
         ActionToString(UpdateClusterConfiguration);
         ActionToString(UpdateClusterKafkaVersion);
         ActionToString(UpdateConfiguration);
+        ActionToString(UpdateConnectivity);
         ActionToString(UpdateMonitoring);
+        ActionToString(UpdateSecurity);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

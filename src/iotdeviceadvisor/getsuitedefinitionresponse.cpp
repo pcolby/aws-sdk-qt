@@ -25,23 +25,23 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::GetSuiteDefinitionResponse
- * \brief The GetSuiteDefinitionResponse class provides an interace for IoTDeviceAdvisor GetSuiteDefinition responses.
+ * \class QtAws::IotDeviceAdvisor::GetSuiteDefinitionResponse
+ * \brief The GetSuiteDefinitionResponse class provides an interace for IotDeviceAdvisor GetSuiteDefinition responses.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::getSuiteDefinition
+ * \sa IotDeviceAdvisorClient::getSuiteDefinition
  */
 
 /*!
@@ -51,7 +51,7 @@ GetSuiteDefinitionResponse::GetSuiteDefinitionResponse(
         const GetSuiteDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTDeviceAdvisorResponse(new GetSuiteDefinitionResponsePrivate(this), parent)
+    : IotDeviceAdvisorResponse(new GetSuiteDefinitionResponsePrivate(this), parent)
 {
     setRequest(new GetSuiteDefinitionRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const GetSuiteDefinitionRequest * GetSuiteDefinitionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IoTDeviceAdvisor GetSuiteDefinition \a response.
+ * Parses a successful IotDeviceAdvisor GetSuiteDefinition \a response.
  */
 void GetSuiteDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void GetSuiteDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::GetSuiteDefinitionResponsePrivate
+ * \class QtAws::IotDeviceAdvisor::GetSuiteDefinitionResponsePrivate
  * \brief The GetSuiteDefinitionResponsePrivate class provides private implementation for GetSuiteDefinitionResponse.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
  * Constructs a GetSuiteDefinitionResponsePrivate object with public implementation \a q.
  */
 GetSuiteDefinitionResponsePrivate::GetSuiteDefinitionResponsePrivate(
-    GetSuiteDefinitionResponse * const q) : IoTDeviceAdvisorResponsePrivate(q)
+    GetSuiteDefinitionResponse * const q) : IotDeviceAdvisorResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoTDeviceAdvisor GetSuiteDefinition response element from \a xml.
+ * Parses a IotDeviceAdvisor GetSuiteDefinition response element from \a xml.
  */
 void GetSuiteDefinitionResponsePrivate::parseGetSuiteDefinitionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetSuiteDefinitionResponsePrivate::parseGetSuiteDefinitionResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

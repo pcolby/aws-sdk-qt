@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeletePlatformApplicationRequest
- * \brief The DeletePlatformApplicationRequest class provides an interface for SNS DeletePlatformApplication requests.
+ * \class QtAws::Sns::DeletePlatformApplicationRequest
+ * \brief The DeletePlatformApplicationRequest class provides an interface for Sns DeletePlatformApplication requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QN
 }
 
 /*!
- * \class QtAws::SNS::DeletePlatformApplicationRequestPrivate
+ * \class QtAws::Sns::DeletePlatformApplicationRequestPrivate
  * \brief The DeletePlatformApplicationRequestPrivate class provides private implementation for DeletePlatformApplicationRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

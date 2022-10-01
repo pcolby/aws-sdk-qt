@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateTemplateResponse
- * \brief The UpdateTemplateResponse class provides an interace for SES UpdateTemplate responses.
+ * \class QtAws::Ses::UpdateTemplateResponse
+ * \brief The UpdateTemplateResponse class provides an interace for Ses UpdateTemplate responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const UpdateTemplateRequest * UpdateTemplateResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES UpdateTemplate \a response.
+ * Parses a successful Ses UpdateTemplate \a response.
  */
 void UpdateTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void UpdateTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::UpdateTemplateResponsePrivate
+ * \class QtAws::Ses::UpdateTemplateResponsePrivate
  * \brief The UpdateTemplateResponsePrivate class provides private implementation for UpdateTemplateResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
 }
 
 /*!
- * Parses a SES UpdateTemplate response element from \a xml.
+ * Parses a Ses UpdateTemplate response element from \a xml.
  */
 void UpdateTemplateResponsePrivate::parseUpdateTemplateResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateTemplateResponsePrivate::parseUpdateTemplateResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

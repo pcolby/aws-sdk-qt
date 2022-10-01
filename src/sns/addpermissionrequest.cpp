@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::AddPermissionRequest
- * \brief The AddPermissionRequest class provides an interface for SNS AddPermission requests.
+ * \class QtAws::Sns::AddPermissionRequest
+ * \brief The AddPermissionRequest class provides an interface for Sns AddPermission requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::SNS::AddPermissionRequestPrivate
+ * \class QtAws::Sns::AddPermissionRequestPrivate
  * \brief The AddPermissionRequestPrivate class provides private implementation for AddPermissionRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

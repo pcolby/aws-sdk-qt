@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSEFS_LIBRARY)
 
 add_library(QtAwsEfs
+  qtawsefsglobal.h
+  efsclient.h
+  efsclient_p.h
+  efsrequest.h
+  efsrequest_p.h
+  efsresponse.h
+  efsresponse_p.h
   createaccesspointrequest.h
   createaccesspointrequest_p.h
   createaccesspointresponse.h
@@ -13,6 +20,10 @@ add_library(QtAwsEfs
   createmounttargetrequest_p.h
   createmounttargetresponse.h
   createmounttargetresponse_p.h
+  createreplicationconfigurationrequest.h
+  createreplicationconfigurationrequest_p.h
+  createreplicationconfigurationresponse.h
+  createreplicationconfigurationresponse_p.h
   createtagsrequest.h
   createtagsrequest_p.h
   createtagsresponse.h
@@ -21,18 +32,22 @@ add_library(QtAwsEfs
   deleteaccesspointrequest_p.h
   deleteaccesspointresponse.h
   deleteaccesspointresponse_p.h
-  deletefilesystempolicyrequest.h
-  deletefilesystempolicyrequest_p.h
-  deletefilesystempolicyresponse.h
-  deletefilesystempolicyresponse_p.h
   deletefilesystemrequest.h
   deletefilesystemrequest_p.h
   deletefilesystemresponse.h
   deletefilesystemresponse_p.h
+  deletefilesystempolicyrequest.h
+  deletefilesystempolicyrequest_p.h
+  deletefilesystempolicyresponse.h
+  deletefilesystempolicyresponse_p.h
   deletemounttargetrequest.h
   deletemounttargetrequest_p.h
   deletemounttargetresponse.h
   deletemounttargetresponse_p.h
+  deletereplicationconfigurationrequest.h
+  deletereplicationconfigurationrequest_p.h
+  deletereplicationconfigurationresponse.h
+  deletereplicationconfigurationresponse_p.h
   deletetagsrequest.h
   deletetagsrequest_p.h
   deletetagsresponse.h
@@ -69,16 +84,14 @@ add_library(QtAwsEfs
   describemounttargetsrequest_p.h
   describemounttargetsresponse.h
   describemounttargetsresponse_p.h
+  describereplicationconfigurationsrequest.h
+  describereplicationconfigurationsrequest_p.h
+  describereplicationconfigurationsresponse.h
+  describereplicationconfigurationsresponse_p.h
   describetagsrequest.h
   describetagsrequest_p.h
   describetagsresponse.h
   describetagsresponse_p.h
-  efsclient.h
-  efsclient_p.h
-  efsrequest.h
-  efsrequest_p.h
-  efsresponse.h
-  efsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -103,7 +116,6 @@ add_library(QtAwsEfs
   putlifecycleconfigurationrequest_p.h
   putlifecycleconfigurationresponse.h
   putlifecycleconfigurationresponse_p.h
-  qtawsefsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -116,22 +128,29 @@ add_library(QtAwsEfs
   updatefilesystemrequest_p.h
   updatefilesystemresponse.h
   updatefilesystemresponse_p.h
+  efsclient.cpp
+  efsrequest.cpp
+  efsresponse.cpp
   createaccesspointrequest.cpp
   createaccesspointresponse.cpp
   createfilesystemrequest.cpp
   createfilesystemresponse.cpp
   createmounttargetrequest.cpp
   createmounttargetresponse.cpp
+  createreplicationconfigurationrequest.cpp
+  createreplicationconfigurationresponse.cpp
   createtagsrequest.cpp
   createtagsresponse.cpp
   deleteaccesspointrequest.cpp
   deleteaccesspointresponse.cpp
-  deletefilesystempolicyrequest.cpp
-  deletefilesystempolicyresponse.cpp
   deletefilesystemrequest.cpp
   deletefilesystemresponse.cpp
+  deletefilesystempolicyrequest.cpp
+  deletefilesystempolicyresponse.cpp
   deletemounttargetrequest.cpp
   deletemounttargetresponse.cpp
+  deletereplicationconfigurationrequest.cpp
+  deletereplicationconfigurationresponse.cpp
   deletetagsrequest.cpp
   deletetagsresponse.cpp
   describeaccesspointsrequest.cpp
@@ -150,11 +169,10 @@ add_library(QtAwsEfs
   describemounttargetsecuritygroupsresponse.cpp
   describemounttargetsrequest.cpp
   describemounttargetsresponse.cpp
+  describereplicationconfigurationsrequest.cpp
+  describereplicationconfigurationsresponse.cpp
   describetagsrequest.cpp
   describetagsresponse.cpp
-  efsclient.cpp
-  efsrequest.cpp
-  efsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   modifymounttargetsecuritygroupsrequest.cpp

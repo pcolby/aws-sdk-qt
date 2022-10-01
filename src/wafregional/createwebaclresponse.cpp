@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLResponse
- * \brief The CreateWebACLResponse class provides an interace for WAFRegional CreateWebACL responses.
+ * \class QtAws::WafRegional::CreateWebACLResponse
+ * \brief The CreateWebACLResponse class provides an interace for WafRegional CreateWebACL responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createWebACL
+ * \sa WafRegionalClient::createWebACL
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateWebACLResponse::CreateWebACLResponse(
         const CreateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateWebACLResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateWebACLResponsePrivate(this), parent)
 {
     setRequest(new CreateWebACLRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateWebACLRequest * CreateWebACLResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateWebACL \a response.
+ * Parses a successful WafRegional CreateWebACL \a response.
  */
 void CreateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLResponsePrivate
+ * \class QtAws::WafRegional::CreateWebACLResponsePrivate
  * \brief The CreateWebACLResponsePrivate class provides private implementation for CreateWebACLResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateWebACLResponsePrivate object with public implementation \a q.
  */
 CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
-    CreateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateWebACLResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateWebACL response element from \a xml.
+ * Parses a WafRegional CreateWebACL response element from \a xml.
  */
 void CreateWebACLResponsePrivate::parseCreateWebACLResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateWebACLResponsePrivate::parseCreateWebACLResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

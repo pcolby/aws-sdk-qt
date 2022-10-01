@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBClusterResponse
- * \brief The ModifyDBClusterResponse class provides an interace for RDS ModifyDBCluster responses.
+ * \class QtAws::Rds::ModifyDBClusterResponse
+ * \brief The ModifyDBClusterResponse class provides an interace for Rds ModifyDBCluster responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBCluster \a response.
+ * Parses a successful Rds ModifyDBCluster \a response.
  */
 void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBClusterResponsePrivate
+ * \class QtAws::Rds::ModifyDBClusterResponsePrivate
  * \brief The ModifyDBClusterResponsePrivate class provides private implementation for ModifyDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyDBCluster response element from \a xml.
+ * Parses a Rds ModifyDBCluster response element from \a xml.
  */
 void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

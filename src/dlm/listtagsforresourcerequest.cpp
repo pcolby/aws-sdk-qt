@@ -23,18 +23,18 @@
 #include "dlmrequest_p.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::ListTagsForResourceRequest
- * \brief The ListTagsForResourceRequest class provides an interface for DLM ListTagsForResource requests.
+ * \class QtAws::Dlm::ListTagsForResourceRequest
+ * \brief The ListTagsForResourceRequest class provides an interface for Dlm ListTagsForResource requests.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DLM::ListTagsForResourceRequestPrivate
+ * \class QtAws::Dlm::ListTagsForResourceRequestPrivate
  * \brief The ListTagsForResourceRequestPrivate class provides private implementation for ListTagsForResourceRequest.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -114,5 +114,5 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

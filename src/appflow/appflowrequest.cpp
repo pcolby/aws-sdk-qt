@@ -40,17 +40,21 @@ namespace Appflow {
  * \value CreateFlowAction Appflow CreateFlow action.
  * \value DeleteConnectorProfileAction Appflow DeleteConnectorProfile action.
  * \value DeleteFlowAction Appflow DeleteFlow action.
+ * \value DescribeConnectorAction Appflow DescribeConnector action.
  * \value DescribeConnectorEntityAction Appflow DescribeConnectorEntity action.
  * \value DescribeConnectorProfilesAction Appflow DescribeConnectorProfiles action.
  * \value DescribeConnectorsAction Appflow DescribeConnectors action.
  * \value DescribeFlowAction Appflow DescribeFlow action.
  * \value DescribeFlowExecutionRecordsAction Appflow DescribeFlowExecutionRecords action.
  * \value ListConnectorEntitiesAction Appflow ListConnectorEntities action.
+ * \value ListConnectorsAction Appflow ListConnectors action.
  * \value ListFlowsAction Appflow ListFlows action.
  * \value ListTagsForResourceAction Appflow ListTagsForResource action.
+ * \value RegisterConnectorAction Appflow RegisterConnector action.
  * \value StartFlowAction Appflow StartFlow action.
  * \value StopFlowAction Appflow StopFlow action.
  * \value TagResourceAction Appflow TagResource action.
+ * \value UnregisterConnectorAction Appflow UnregisterConnector action.
  * \value UntagResourceAction Appflow UntagResource action.
  * \value UpdateConnectorProfileAction Appflow UpdateConnectorProfile action.
  * \value UpdateFlowAction Appflow UpdateFlow action.
@@ -261,7 +265,7 @@ QNetworkRequest AppflowRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppflowRequestPrivate::AppflowRequestPrivate(const AppflowRequest::Action action, AppflowRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-08-23"))
 {
 
 }
@@ -299,17 +303,21 @@ QString AppflowRequestPrivate::toString(const AppflowRequest::Action &action)
         ActionToString(CreateFlow);
         ActionToString(DeleteConnectorProfile);
         ActionToString(DeleteFlow);
+        ActionToString(DescribeConnector);
         ActionToString(DescribeConnectorEntity);
         ActionToString(DescribeConnectorProfiles);
         ActionToString(DescribeConnectors);
         ActionToString(DescribeFlow);
         ActionToString(DescribeFlowExecutionRecords);
         ActionToString(ListConnectorEntities);
+        ActionToString(ListConnectors);
         ActionToString(ListFlows);
         ActionToString(ListTagsForResource);
+        ActionToString(RegisterConnector);
         ActionToString(StartFlow);
         ActionToString(StopFlow);
         ActionToString(TagResource);
+        ActionToString(UnregisterConnector);
         ActionToString(UntagResource);
         ActionToString(UpdateConnectorProfile);
         ActionToString(UpdateFlow);

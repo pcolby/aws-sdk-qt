@@ -23,11 +23,11 @@
 #include "ec2instanceconnectresponse_p.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 class SendSerialConsoleSSHPublicKeyResponse;
 
-class SendSerialConsoleSSHPublicKeyResponsePrivate : public EC2InstanceConnectResponsePrivate {
+class SendSerialConsoleSSHPublicKeyResponsePrivate : public Ec2InstanceConnectResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws
 
 #endif

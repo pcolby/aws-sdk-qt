@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetComponentRequest
- * \brief The GetComponentRequest class provides an interface for imagebuilder GetComponent requests.
+ * \class QtAws::ImageBuilder::GetComponentRequest
+ * \brief The GetComponentRequest class provides an interface for ImageBuilder GetComponent requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getComponent
+ * \sa ImageBuilderClient::getComponent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetComponentRequest::GetComponentRequest(const GetComponentRequest &other)
-    : imagebuilderRequest(new GetComponentRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetComponentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetComponentRequest::GetComponentRequest(const GetComponentRequest &other)
  * Constructs a GetComponentRequest object.
  */
 GetComponentRequest::GetComponentRequest()
-    : imagebuilderRequest(new GetComponentRequestPrivate(imagebuilderRequest::GetComponentAction, this))
+    : ImageBuilderRequest(new GetComponentRequestPrivate(ImageBuilderRequest::GetComponentAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetComponentRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::imagebuilder::GetComponentRequestPrivate
+ * \class QtAws::ImageBuilder::GetComponentRequestPrivate
  * \brief The GetComponentRequestPrivate class provides private implementation for GetComponentRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetComponentRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetComponentRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetComponentRequestPrivate::GetComponentRequestPrivate(
-    const imagebuilderRequest::Action action, GetComponentRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetComponentRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetComponentRequestPrivate::GetComponentRequestPrivate(
  */
 GetComponentRequestPrivate::GetComponentRequestPrivate(
     const GetComponentRequestPrivate &other, GetComponentRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

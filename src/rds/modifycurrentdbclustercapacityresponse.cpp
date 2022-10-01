@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyCurrentDBClusterCapacityResponse
- * \brief The ModifyCurrentDBClusterCapacityResponse class provides an interace for RDS ModifyCurrentDBClusterCapacity responses.
+ * \class QtAws::Rds::ModifyCurrentDBClusterCapacityResponse
+ * \brief The ModifyCurrentDBClusterCapacityResponse class provides an interace for Rds ModifyCurrentDBClusterCapacity responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyCurrentDBClusterCapacityRequest * ModifyCurrentDBClusterCapacityResp
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyCurrentDBClusterCapacity \a response.
+ * Parses a successful Rds ModifyCurrentDBClusterCapacity \a response.
  */
 void ModifyCurrentDBClusterCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyCurrentDBClusterCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyCurrentDBClusterCapacityResponsePrivate
+ * \class QtAws::Rds::ModifyCurrentDBClusterCapacityResponsePrivate
  * \brief The ModifyCurrentDBClusterCapacityResponsePrivate class provides private implementation for ModifyCurrentDBClusterCapacityResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyCurrentDBClusterCapacityResponsePrivate::ModifyCurrentDBClusterCapacityRes
 }
 
 /*!
- * Parses a RDS ModifyCurrentDBClusterCapacity response element from \a xml.
+ * Parses a Rds ModifyCurrentDBClusterCapacity response element from \a xml.
  */
 void ModifyCurrentDBClusterCapacityResponsePrivate::parseModifyCurrentDBClusterCapacityResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyCurrentDBClusterCapacityResponsePrivate::parseModifyCurrentDBClusterC
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

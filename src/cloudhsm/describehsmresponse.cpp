@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DescribeHsmResponse
- * \brief The DescribeHsmResponse class provides an interace for CloudHSM DescribeHsm responses.
+ * \class QtAws::CloudHsm::DescribeHsmResponse
+ * \brief The DescribeHsmResponse class provides an interace for CloudHsm DescribeHsm responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::describeHsm
+ * \sa CloudHsmClient::describeHsm
  */
 
 /*!
@@ -56,7 +56,7 @@ DescribeHsmResponse::DescribeHsmResponse(
         const DescribeHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new DescribeHsmResponsePrivate(this), parent)
+    : CloudHsmResponse(new DescribeHsmResponsePrivate(this), parent)
 {
     setRequest(new DescribeHsmRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const DescribeHsmRequest * DescribeHsmResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM DescribeHsm \a response.
+ * Parses a successful CloudHsm DescribeHsm \a response.
  */
 void DescribeHsmResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void DescribeHsmResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::DescribeHsmResponsePrivate
+ * \class QtAws::CloudHsm::DescribeHsmResponsePrivate
  * \brief The DescribeHsmResponsePrivate class provides private implementation for DescribeHsmResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a DescribeHsmResponsePrivate object with public implementation \a q.
  */
 DescribeHsmResponsePrivate::DescribeHsmResponsePrivate(
-    DescribeHsmResponse * const q) : CloudHSMResponsePrivate(q)
+    DescribeHsmResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM DescribeHsm response element from \a xml.
+ * Parses a CloudHsm DescribeHsm response element from \a xml.
  */
 void DescribeHsmResponsePrivate::parseDescribeHsmResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void DescribeHsmResponsePrivate::parseDescribeHsmResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

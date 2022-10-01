@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSSMINCIDENTS_LIBRARY)
 
-add_library(QtAwsSSMIncidents
+add_library(QtAwsSsmIncidents
+  qtawsssmincidentsglobal.h
+  ssmincidentsclient.h
+  ssmincidentsclient_p.h
+  ssmincidentsrequest.h
+  ssmincidentsrequest_p.h
+  ssmincidentsresponse.h
+  ssmincidentsresponse_p.h
   createreplicationsetrequest.h
   createreplicationsetrequest_p.h
   createreplicationsetresponse.h
@@ -81,13 +88,6 @@ add_library(QtAwsSSMIncidents
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
-  qtawsssmincidentsglobal.h
-  ssmincidentsclient.h
-  ssmincidentsclient_p.h
-  ssmincidentsrequest.h
-  ssmincidentsrequest_p.h
-  ssmincidentsresponse.h
-  ssmincidentsresponse_p.h
   startincidentrequest.h
   startincidentrequest_p.h
   startincidentresponse.h
@@ -124,6 +124,9 @@ add_library(QtAwsSSMIncidents
   updatetimelineeventrequest_p.h
   updatetimelineeventresponse.h
   updatetimelineeventresponse_p.h
+  ssmincidentsclient.cpp
+  ssmincidentsrequest.cpp
+  ssmincidentsresponse.cpp
   createreplicationsetrequest.cpp
   createreplicationsetresponse.cpp
   createresponseplanrequest.cpp
@@ -164,9 +167,6 @@ add_library(QtAwsSSMIncidents
   listtimelineeventsresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
-  ssmincidentsclient.cpp
-  ssmincidentsrequest.cpp
-  ssmincidentsresponse.cpp
   startincidentrequest.cpp
   startincidentresponse.cpp
   tagresourcerequest.cpp
@@ -186,7 +186,7 @@ add_library(QtAwsSSMIncidents
   updatetimelineeventrequest.cpp
   updatetimelineeventresponse.cpp)
 
-target_link_libraries(QtAwsSSMIncidents
+target_link_libraries(QtAwsSsmIncidents
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteServiceSpecificCredentialResponse
- * \brief The DeleteServiceSpecificCredentialResponse class provides an interace for IAM DeleteServiceSpecificCredential responses.
+ * \class QtAws::Iam::DeleteServiceSpecificCredentialResponse
+ * \brief The DeleteServiceSpecificCredentialResponse class provides an interace for Iam DeleteServiceSpecificCredential responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteServiceSpecificCredential
  */
@@ -68,7 +68,7 @@ const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialRe
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteServiceSpecificCredential \a response.
+ * Parses a successful Iam DeleteServiceSpecificCredential \a response.
  */
 void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteServiceSpecificCredentialResponsePrivate
+ * \class QtAws::Iam::DeleteServiceSpecificCredentialResponsePrivate
  * \brief The DeleteServiceSpecificCredentialResponsePrivate class provides private implementation for DeleteServiceSpecificCredentialResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialR
 }
 
 /*!
- * Parses a IAM DeleteServiceSpecificCredential response element from \a xml.
+ * Parses a Iam DeleteServiceSpecificCredential response element from \a xml.
  */
 void DeleteServiceSpecificCredentialResponsePrivate::parseDeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteServiceSpecificCredentialResponsePrivate::parseDeleteServiceSpecificC
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::CreateBackupRequest
- * \brief The CreateBackupRequest class provides an interface for OpsWorksCM CreateBackup requests.
+ * \class QtAws::OpsWorksCm::CreateBackupRequest
+ * \brief The CreateBackupRequest class provides an interface for OpsWorksCm CreateBackup requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::createBackup
+ * \sa OpsWorksCmClient::createBackup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateBackupRequest::CreateBackupRequest(const CreateBackupRequest &other)
-    : OpsWorksCMRequest(new CreateBackupRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new CreateBackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ CreateBackupRequest::CreateBackupRequest(const CreateBackupRequest &other)
  * Constructs a CreateBackupRequest object.
  */
 CreateBackupRequest::CreateBackupRequest()
-    : OpsWorksCMRequest(new CreateBackupRequestPrivate(OpsWorksCMRequest::CreateBackupAction, this))
+    : OpsWorksCmRequest(new CreateBackupRequestPrivate(OpsWorksCmRequest::CreateBackupAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::OpsWorksCM::CreateBackupRequestPrivate
+ * \class QtAws::OpsWorksCm::CreateBackupRequestPrivate
  * \brief The CreateBackupRequestPrivate class provides private implementation for CreateBackupRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a CreateBackupRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a CreateBackupRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
-    const OpsWorksCMRequest::Action action, CreateBackupRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, CreateBackupRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ CreateBackupRequestPrivate::CreateBackupRequestPrivate(
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const CreateBackupRequestPrivate &other, CreateBackupRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

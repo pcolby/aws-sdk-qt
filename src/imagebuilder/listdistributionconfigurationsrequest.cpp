@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::ListDistributionConfigurationsRequest
- * \brief The ListDistributionConfigurationsRequest class provides an interface for imagebuilder ListDistributionConfigurations requests.
+ * \class QtAws::ImageBuilder::ListDistributionConfigurationsRequest
+ * \brief The ListDistributionConfigurationsRequest class provides an interface for ImageBuilder ListDistributionConfigurations requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::listDistributionConfigurations
+ * \sa ImageBuilderClient::listDistributionConfigurations
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListDistributionConfigurationsRequest::ListDistributionConfigurationsRequest(const ListDistributionConfigurationsRequest &other)
-    : imagebuilderRequest(new ListDistributionConfigurationsRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new ListDistributionConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListDistributionConfigurationsRequest::ListDistributionConfigurationsRequest(con
  * Constructs a ListDistributionConfigurationsRequest object.
  */
 ListDistributionConfigurationsRequest::ListDistributionConfigurationsRequest()
-    : imagebuilderRequest(new ListDistributionConfigurationsRequestPrivate(imagebuilderRequest::ListDistributionConfigurationsAction, this))
+    : ImageBuilderRequest(new ListDistributionConfigurationsRequestPrivate(ImageBuilderRequest::ListDistributionConfigurationsAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * ListDistributionConfigurationsRequest::respon
 }
 
 /*!
- * \class QtAws::imagebuilder::ListDistributionConfigurationsRequestPrivate
+ * \class QtAws::ImageBuilder::ListDistributionConfigurationsRequestPrivate
  * \brief The ListDistributionConfigurationsRequestPrivate class provides private implementation for ListDistributionConfigurationsRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a ListDistributionConfigurationsRequestPrivate object for imagebuilder \a action,
+ * Constructs a ListDistributionConfigurationsRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 ListDistributionConfigurationsRequestPrivate::ListDistributionConfigurationsRequestPrivate(
-    const imagebuilderRequest::Action action, ListDistributionConfigurationsRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, ListDistributionConfigurationsRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ ListDistributionConfigurationsRequestPrivate::ListDistributionConfigurationsRequ
  */
 ListDistributionConfigurationsRequestPrivate::ListDistributionConfigurationsRequestPrivate(
     const ListDistributionConfigurationsRequestPrivate &other, ListDistributionConfigurationsRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

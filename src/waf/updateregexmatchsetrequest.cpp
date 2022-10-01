@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRegexMatchSetRequest
- * \brief The UpdateRegexMatchSetRequest class provides an interface for WAF UpdateRegexMatchSet requests.
+ * \class QtAws::Waf::UpdateRegexMatchSetRequest
+ * \brief The UpdateRegexMatchSetRequest class provides an interface for Waf UpdateRegexMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexMatchSetRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::UpdateRegexMatchSetRequestPrivate
+ * \class QtAws::Waf::UpdateRegexMatchSetRequestPrivate
  * \brief The UpdateRegexMatchSetRequestPrivate class provides private implementation for UpdateRegexMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

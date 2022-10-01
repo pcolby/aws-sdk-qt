@@ -23,11 +23,11 @@
 #include "finspacedatarequest.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 class CreateChangesetRequestPrivate;
 
-class QTAWSFINSPACEDATA_EXPORT CreateChangesetRequest : public FinSpaceDataRequest {
+class QTAWSFINSPACEDATA_EXPORT CreateChangesetRequest : public FinspaceDataRequest {
 
 public:
     CreateChangesetRequest(const CreateChangesetRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

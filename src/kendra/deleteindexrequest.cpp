@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteIndexRequest
- * \brief The DeleteIndexRequest class provides an interface for kendra DeleteIndex requests.
+ * \class QtAws::Kendra::DeleteIndexRequest
+ * \brief The DeleteIndexRequest class provides an interface for Kendra DeleteIndex requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteIndex
+ * \sa KendraClient::deleteIndex
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteIndexRequest::DeleteIndexRequest(const DeleteIndexRequest &other)
-    : kendraRequest(new DeleteIndexRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DeleteIndexRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteIndexRequest::DeleteIndexRequest(const DeleteIndexRequest &other)
  * Constructs a DeleteIndexRequest object.
  */
 DeleteIndexRequest::DeleteIndexRequest()
-    : kendraRequest(new DeleteIndexRequestPrivate(kendraRequest::DeleteIndexAction, this))
+    : KendraRequest(new DeleteIndexRequestPrivate(KendraRequest::DeleteIndexAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteIndexRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::kendra::DeleteIndexRequestPrivate
+ * \class QtAws::Kendra::DeleteIndexRequestPrivate
  * \brief The DeleteIndexRequestPrivate class provides private implementation for DeleteIndexRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DeleteIndexRequestPrivate object for kendra \a action,
+ * Constructs a DeleteIndexRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DeleteIndexRequestPrivate::DeleteIndexRequestPrivate(
-    const kendraRequest::Action action, DeleteIndexRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DeleteIndexRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteIndexRequestPrivate::DeleteIndexRequestPrivate(
  */
 DeleteIndexRequestPrivate::DeleteIndexRequestPrivate(
     const DeleteIndexRequestPrivate &other, DeleteIndexRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

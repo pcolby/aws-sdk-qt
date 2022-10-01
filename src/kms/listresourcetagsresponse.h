@@ -24,7 +24,7 @@
 #include "listresourcetagsrequest.h"
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class ListResourceTagsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

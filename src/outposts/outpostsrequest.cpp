@@ -36,16 +36,32 @@ namespace Outposts {
  * This enum describes the actions that can be performed as Outposts
  * requests.
  *
+ * \value CancelOrderAction Outposts CancelOrder action.
+ * \value CreateOrderAction Outposts CreateOrder action.
  * \value CreateOutpostAction Outposts CreateOutpost action.
+ * \value CreateSiteAction Outposts CreateSite action.
  * \value DeleteOutpostAction Outposts DeleteOutpost action.
  * \value DeleteSiteAction Outposts DeleteSite action.
+ * \value GetCatalogItemAction Outposts GetCatalogItem action.
+ * \value GetConnectionAction Outposts GetConnection action.
+ * \value GetOrderAction Outposts GetOrder action.
  * \value GetOutpostAction Outposts GetOutpost action.
  * \value GetOutpostInstanceTypesAction Outposts GetOutpostInstanceTypes action.
+ * \value GetSiteAction Outposts GetSite action.
+ * \value GetSiteAddressAction Outposts GetSiteAddress action.
+ * \value ListAssetsAction Outposts ListAssets action.
+ * \value ListCatalogItemsAction Outposts ListCatalogItems action.
+ * \value ListOrdersAction Outposts ListOrders action.
  * \value ListOutpostsAction Outposts ListOutposts action.
  * \value ListSitesAction Outposts ListSites action.
  * \value ListTagsForResourceAction Outposts ListTagsForResource action.
+ * \value StartConnectionAction Outposts StartConnection action.
  * \value TagResourceAction Outposts TagResource action.
  * \value UntagResourceAction Outposts UntagResource action.
+ * \value UpdateOutpostAction Outposts UpdateOutpost action.
+ * \value UpdateSiteAction Outposts UpdateSite action.
+ * \value UpdateSiteAddressAction Outposts UpdateSiteAddress action.
+ * \value UpdateSiteRackPhysicalPropertiesAction Outposts UpdateSiteRackPhysicalProperties action.
  */
 
 /*!
@@ -253,7 +269,7 @@ QNetworkRequest OutpostsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 OutpostsRequestPrivate::OutpostsRequestPrivate(const OutpostsRequest::Action action, OutpostsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-12-03"))
 {
 
 }
@@ -287,16 +303,32 @@ QString OutpostsRequestPrivate::toString(const OutpostsRequest::Action &action)
     #define ActionToString(action) \
         case OutpostsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(CancelOrder);
+        ActionToString(CreateOrder);
         ActionToString(CreateOutpost);
+        ActionToString(CreateSite);
         ActionToString(DeleteOutpost);
         ActionToString(DeleteSite);
+        ActionToString(GetCatalogItem);
+        ActionToString(GetConnection);
+        ActionToString(GetOrder);
         ActionToString(GetOutpost);
         ActionToString(GetOutpostInstanceTypes);
+        ActionToString(GetSite);
+        ActionToString(GetSiteAddress);
+        ActionToString(ListAssets);
+        ActionToString(ListCatalogItems);
+        ActionToString(ListOrders);
         ActionToString(ListOutposts);
         ActionToString(ListSites);
         ActionToString(ListTagsForResource);
+        ActionToString(StartConnection);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateOutpost);
+        ActionToString(UpdateSite);
+        ActionToString(UpdateSiteAddress);
+        ActionToString(UpdateSiteRackPhysicalProperties);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

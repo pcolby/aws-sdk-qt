@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::AddSourceIdentifierToSubscriptionResponse
- * \brief The AddSourceIdentifierToSubscriptionResponse class provides an interace for RDS AddSourceIdentifierToSubscription responses.
+ * \class QtAws::Rds::AddSourceIdentifierToSubscriptionResponse
+ * \brief The AddSourceIdentifierToSubscriptionResponse class provides an interace for Rds AddSourceIdentifierToSubscription responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscripti
 
 /*!
  * \reimp
- * Parses a successful RDS AddSourceIdentifierToSubscription \a response.
+ * Parses a successful Rds AddSourceIdentifierToSubscription \a response.
  */
 void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::RDS::AddSourceIdentifierToSubscriptionResponsePrivate
+ * \class QtAws::Rds::AddSourceIdentifierToSubscriptionResponsePrivate
  * \brief The AddSourceIdentifierToSubscriptionResponsePrivate class provides private implementation for AddSourceIdentifierToSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscript
 }
 
 /*!
- * Parses a RDS AddSourceIdentifierToSubscription response element from \a xml.
+ * Parses a Rds AddSourceIdentifierToSubscription response element from \a xml.
  */
 void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierT
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

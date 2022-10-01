@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::TestInvokeMethodResponse
- * \brief The TestInvokeMethodResponse class provides an interace for APIGateway TestInvokeMethod responses.
+ * \class QtAws::ApiGateway::TestInvokeMethodResponse
+ * \brief The TestInvokeMethodResponse class provides an interace for ApiGateway TestInvokeMethod responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::testInvokeMethod
+ * \sa ApiGatewayClient::testInvokeMethod
  */
 
 /*!
@@ -49,7 +49,7 @@ TestInvokeMethodResponse::TestInvokeMethodResponse(
         const TestInvokeMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new TestInvokeMethodResponsePrivate(this), parent)
+    : ApiGatewayResponse(new TestInvokeMethodResponsePrivate(this), parent)
 {
     setRequest(new TestInvokeMethodRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway TestInvokeMethod \a response.
+ * Parses a successful ApiGateway TestInvokeMethod \a response.
  */
 void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::TestInvokeMethodResponsePrivate
+ * \class QtAws::ApiGateway::TestInvokeMethodResponsePrivate
  * \brief The TestInvokeMethodResponsePrivate class provides private implementation for TestInvokeMethodResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a TestInvokeMethodResponsePrivate object with public implementation \a q.
  */
 TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
-    TestInvokeMethodResponse * const q) : APIGatewayResponsePrivate(q)
+    TestInvokeMethodResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway TestInvokeMethod response element from \a xml.
+ * Parses a ApiGateway TestInvokeMethod response element from \a xml.
  */
 void TestInvokeMethodResponsePrivate::parseTestInvokeMethodResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void TestInvokeMethodResponsePrivate::parseTestInvokeMethodResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

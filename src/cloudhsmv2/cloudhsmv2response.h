@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
-class CloudHSMV2ResponsePrivate;
+class CloudHsmV2ResponsePrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDHSMV2_EXPORT CloudHsmV2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    CloudHSMV2Response(QObject * const parent = 0);
+    CloudHsmV2Response(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObject * const parent);
+    CloudHsmV2Response(CloudHsmV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(CloudHSMV2Response)
-    Q_DISABLE_COPY(CloudHSMV2Response)
+    Q_DECLARE_PRIVATE(CloudHsmV2Response)
+    Q_DISABLE_COPY(CloudHsmV2Response)
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

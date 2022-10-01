@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateIPSetResponse
- * \brief The UpdateIPSetResponse class provides an interace for WAFRegional UpdateIPSet responses.
+ * \class QtAws::WafRegional::UpdateIPSetResponse
+ * \brief The UpdateIPSetResponse class provides an interace for WafRegional UpdateIPSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateIPSet
+ * \sa WafRegionalClient::updateIPSet
  */
 
 /*!
@@ -67,7 +67,7 @@ UpdateIPSetResponse::UpdateIPSetResponse(
         const UpdateIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateIPSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new UpdateIPSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateIPSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional UpdateIPSet \a response.
+ * Parses a successful WafRegional UpdateIPSet \a response.
  */
 void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateIPSetResponsePrivate
+ * \class QtAws::WafRegional::UpdateIPSetResponsePrivate
  * \brief The UpdateIPSetResponsePrivate class provides private implementation for UpdateIPSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a UpdateIPSetResponsePrivate object with public implementation \a q.
  */
 UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
-    UpdateIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    UpdateIPSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional UpdateIPSet response element from \a xml.
+ * Parses a WafRegional UpdateIPSet response element from \a xml.
  */
 void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

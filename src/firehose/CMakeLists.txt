@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSFIREHOSE_LIBRARY)
 
 add_library(QtAwsFirehose
+  qtawsfirehoseglobal.h
+  firehoseclient.h
+  firehoseclient_p.h
+  firehoserequest.h
+  firehoserequest_p.h
+  firehoseresponse.h
+  firehoseresponse_p.h
   createdeliverystreamrequest.h
   createdeliverystreamrequest_p.h
   createdeliverystreamresponse.h
@@ -13,12 +20,6 @@ add_library(QtAwsFirehose
   describedeliverystreamrequest_p.h
   describedeliverystreamresponse.h
   describedeliverystreamresponse_p.h
-  firehoseclient.h
-  firehoseclient_p.h
-  firehoserequest.h
-  firehoserequest_p.h
-  firehoseresponse.h
-  firehoseresponse_p.h
   listdeliverystreamsrequest.h
   listdeliverystreamsrequest_p.h
   listdeliverystreamsresponse.h
@@ -27,15 +28,14 @@ add_library(QtAwsFirehose
   listtagsfordeliverystreamrequest_p.h
   listtagsfordeliverystreamresponse.h
   listtagsfordeliverystreamresponse_p.h
-  putrecordbatchrequest.h
-  putrecordbatchrequest_p.h
-  putrecordbatchresponse.h
-  putrecordbatchresponse_p.h
   putrecordrequest.h
   putrecordrequest_p.h
   putrecordresponse.h
   putrecordresponse_p.h
-  qtawsfirehoseglobal.h
+  putrecordbatchrequest.h
+  putrecordbatchrequest_p.h
+  putrecordbatchresponse.h
+  putrecordbatchresponse_p.h
   startdeliverystreamencryptionrequest.h
   startdeliverystreamencryptionrequest_p.h
   startdeliverystreamencryptionresponse.h
@@ -56,23 +56,23 @@ add_library(QtAwsFirehose
   updatedestinationrequest_p.h
   updatedestinationresponse.h
   updatedestinationresponse_p.h
+  firehoseclient.cpp
+  firehoserequest.cpp
+  firehoseresponse.cpp
   createdeliverystreamrequest.cpp
   createdeliverystreamresponse.cpp
   deletedeliverystreamrequest.cpp
   deletedeliverystreamresponse.cpp
   describedeliverystreamrequest.cpp
   describedeliverystreamresponse.cpp
-  firehoseclient.cpp
-  firehoserequest.cpp
-  firehoseresponse.cpp
   listdeliverystreamsrequest.cpp
   listdeliverystreamsresponse.cpp
   listtagsfordeliverystreamrequest.cpp
   listtagsfordeliverystreamresponse.cpp
-  putrecordbatchrequest.cpp
-  putrecordbatchresponse.cpp
   putrecordrequest.cpp
   putrecordresponse.cpp
+  putrecordbatchrequest.cpp
+  putrecordbatchresponse.cpp
   startdeliverystreamencryptionrequest.cpp
   startdeliverystreamencryptionresponse.cpp
   stopdeliverystreamencryptionrequest.cpp

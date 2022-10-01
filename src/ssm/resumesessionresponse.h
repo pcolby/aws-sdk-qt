@@ -24,7 +24,7 @@
 #include "resumesessionrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class ResumeSessionResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

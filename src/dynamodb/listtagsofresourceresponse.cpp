@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ListTagsOfResourceResponse
- * \brief The ListTagsOfResourceResponse class provides an interace for DynamoDB ListTagsOfResource responses.
+ * \class QtAws::DynamoDb::ListTagsOfResourceResponse
+ * \brief The ListTagsOfResourceResponse class provides an interace for DynamoDb ListTagsOfResource responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::listTagsOfResource
+ * \sa DynamoDbClient::listTagsOfResource
  */
 
 /*!
@@ -63,7 +63,7 @@ ListTagsOfResourceResponse::ListTagsOfResourceResponse(
         const ListTagsOfResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ListTagsOfResourceResponsePrivate(this), parent)
+    : DynamoDbResponse(new ListTagsOfResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsOfResourceRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const ListTagsOfResourceRequest * ListTagsOfResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB ListTagsOfResource \a response.
+ * Parses a successful DynamoDb ListTagsOfResource \a response.
  */
 void ListTagsOfResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void ListTagsOfResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::ListTagsOfResourceResponsePrivate
+ * \class QtAws::DynamoDb::ListTagsOfResourceResponsePrivate
  * \brief The ListTagsOfResourceResponsePrivate class provides private implementation for ListTagsOfResourceResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a ListTagsOfResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsOfResourceResponsePrivate::ListTagsOfResourceResponsePrivate(
-    ListTagsOfResourceResponse * const q) : DynamoDBResponsePrivate(q)
+    ListTagsOfResourceResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB ListTagsOfResource response element from \a xml.
+ * Parses a DynamoDb ListTagsOfResource response element from \a xml.
  */
 void ListTagsOfResourceResponsePrivate::parseListTagsOfResourceResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ListTagsOfResourceResponsePrivate::parseListTagsOfResourceResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

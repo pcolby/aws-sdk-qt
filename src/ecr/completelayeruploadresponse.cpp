@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::CompleteLayerUploadResponse
- * \brief The CompleteLayerUploadResponse class provides an interace for ECR CompleteLayerUpload responses.
+ * \class QtAws::Ecr::CompleteLayerUploadResponse
+ * \brief The CompleteLayerUploadResponse class provides an interace for Ecr CompleteLayerUpload responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::completeLayerUpload
  */
@@ -68,7 +74,7 @@ const CompleteLayerUploadRequest * CompleteLayerUploadResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR CompleteLayerUpload \a response.
+ * Parses a successful Ecr CompleteLayerUpload \a response.
  */
 void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::CompleteLayerUploadResponsePrivate
+ * \class QtAws::Ecr::CompleteLayerUploadResponsePrivate
  * \brief The CompleteLayerUploadResponsePrivate class provides private implementation for CompleteLayerUploadResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
 }
 
 /*!
- * Parses a ECR CompleteLayerUpload response element from \a xml.
+ * Parses a Ecr CompleteLayerUpload response element from \a xml.
  */
 void CompleteLayerUploadResponsePrivate::parseCompleteLayerUploadResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void CompleteLayerUploadResponsePrivate::parseCompleteLayerUploadResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

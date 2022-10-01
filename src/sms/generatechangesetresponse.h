@@ -24,7 +24,7 @@
 #include "generatechangesetrequest.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class GenerateChangeSetResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

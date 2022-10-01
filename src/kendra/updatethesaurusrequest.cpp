@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::UpdateThesaurusRequest
- * \brief The UpdateThesaurusRequest class provides an interface for kendra UpdateThesaurus requests.
+ * \class QtAws::Kendra::UpdateThesaurusRequest
+ * \brief The UpdateThesaurusRequest class provides an interface for Kendra UpdateThesaurus requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::updateThesaurus
+ * \sa KendraClient::updateThesaurus
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateThesaurusRequest::UpdateThesaurusRequest(const UpdateThesaurusRequest &other)
-    : kendraRequest(new UpdateThesaurusRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new UpdateThesaurusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ UpdateThesaurusRequest::UpdateThesaurusRequest(const UpdateThesaurusRequest &oth
  * Constructs a UpdateThesaurusRequest object.
  */
 UpdateThesaurusRequest::UpdateThesaurusRequest()
-    : kendraRequest(new UpdateThesaurusRequestPrivate(kendraRequest::UpdateThesaurusAction, this))
+    : KendraRequest(new UpdateThesaurusRequestPrivate(KendraRequest::UpdateThesaurusAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * UpdateThesaurusRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::kendra::UpdateThesaurusRequestPrivate
+ * \class QtAws::Kendra::UpdateThesaurusRequestPrivate
  * \brief The UpdateThesaurusRequestPrivate class provides private implementation for UpdateThesaurusRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a UpdateThesaurusRequestPrivate object for kendra \a action,
+ * Constructs a UpdateThesaurusRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 UpdateThesaurusRequestPrivate::UpdateThesaurusRequestPrivate(
-    const kendraRequest::Action action, UpdateThesaurusRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, UpdateThesaurusRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ UpdateThesaurusRequestPrivate::UpdateThesaurusRequestPrivate(
  */
 UpdateThesaurusRequestPrivate::UpdateThesaurusRequestPrivate(
     const UpdateThesaurusRequestPrivate &other, UpdateThesaurusRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

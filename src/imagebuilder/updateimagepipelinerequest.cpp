@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::UpdateImagePipelineRequest
- * \brief The UpdateImagePipelineRequest class provides an interface for imagebuilder UpdateImagePipeline requests.
+ * \class QtAws::ImageBuilder::UpdateImagePipelineRequest
+ * \brief The UpdateImagePipelineRequest class provides an interface for ImageBuilder UpdateImagePipeline requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::updateImagePipeline
+ * \sa ImageBuilderClient::updateImagePipeline
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateImagePipelineRequest::UpdateImagePipelineRequest(const UpdateImagePipelineRequest &other)
-    : imagebuilderRequest(new UpdateImagePipelineRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new UpdateImagePipelineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ UpdateImagePipelineRequest::UpdateImagePipelineRequest(const UpdateImagePipeline
  * Constructs a UpdateImagePipelineRequest object.
  */
 UpdateImagePipelineRequest::UpdateImagePipelineRequest()
-    : imagebuilderRequest(new UpdateImagePipelineRequestPrivate(imagebuilderRequest::UpdateImagePipelineAction, this))
+    : ImageBuilderRequest(new UpdateImagePipelineRequestPrivate(ImageBuilderRequest::UpdateImagePipelineAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * UpdateImagePipelineRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::imagebuilder::UpdateImagePipelineRequestPrivate
+ * \class QtAws::ImageBuilder::UpdateImagePipelineRequestPrivate
  * \brief The UpdateImagePipelineRequestPrivate class provides private implementation for UpdateImagePipelineRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a UpdateImagePipelineRequestPrivate object for imagebuilder \a action,
+ * Constructs a UpdateImagePipelineRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 UpdateImagePipelineRequestPrivate::UpdateImagePipelineRequestPrivate(
-    const imagebuilderRequest::Action action, UpdateImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, UpdateImagePipelineRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ UpdateImagePipelineRequestPrivate::UpdateImagePipelineRequestPrivate(
  */
 UpdateImagePipelineRequestPrivate::UpdateImagePipelineRequestPrivate(
     const UpdateImagePipelineRequestPrivate &other, UpdateImagePipelineRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListByteMatchSetsResponse
- * \brief The ListByteMatchSetsResponse class provides an interace for WAFRegional ListByteMatchSets responses.
+ * \class QtAws::WafRegional::ListByteMatchSetsResponse
+ * \brief The ListByteMatchSetsResponse class provides an interace for WafRegional ListByteMatchSets responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listByteMatchSets
+ * \sa WafRegionalClient::listByteMatchSets
  */
 
 /*!
@@ -67,7 +67,7 @@ ListByteMatchSetsResponse::ListByteMatchSetsResponse(
         const ListByteMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListByteMatchSetsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListByteMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListByteMatchSetsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListByteMatchSets \a response.
+ * Parses a successful WafRegional ListByteMatchSets \a response.
  */
 void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListByteMatchSetsResponsePrivate
+ * \class QtAws::WafRegional::ListByteMatchSetsResponsePrivate
  * \brief The ListByteMatchSetsResponsePrivate class provides private implementation for ListByteMatchSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListByteMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
-    ListByteMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListByteMatchSetsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListByteMatchSets response element from \a xml.
+ * Parses a WafRegional ListByteMatchSets response element from \a xml.
  */
 void ListByteMatchSetsResponsePrivate::parseListByteMatchSetsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListByteMatchSetsResponsePrivate::parseListByteMatchSetsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

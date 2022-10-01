@@ -24,11 +24,11 @@
 #include "createdbsubnetgrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateDBSubnetGroupResponsePrivate;
 
-class QTAWSDOCDB_EXPORT CreateDBSubnetGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT CreateDBSubnetGroupResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "getcontainerreciperequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class GetContainerRecipeRequest;
 
-class GetContainerRecipeRequestPrivate : public imagebuilderRequestPrivate {
+class GetContainerRecipeRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    GetContainerRecipeRequestPrivate(const imagebuilderRequest::Action action,
+    GetContainerRecipeRequestPrivate(const ImageBuilderRequest::Action action,
                                    GetContainerRecipeRequest * const q);
     GetContainerRecipeRequestPrivate(const GetContainerRecipeRequestPrivate &other,
                                    GetContainerRecipeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

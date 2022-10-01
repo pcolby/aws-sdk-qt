@@ -23,13 +23,13 @@
 #include "qldbsessionrequest_p.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
 /*!
- * \class QtAws::QLDBSession::SendCommandRequest
- * \brief The SendCommandRequest class provides an interface for QLDBSession SendCommand requests.
+ * \class QtAws::QldbSession::SendCommandRequest
+ * \brief The SendCommandRequest class provides an interface for QldbSession SendCommand requests.
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  *
  *  The transactional data APIs for Amazon
  * 
@@ -52,14 +52,14 @@ namespace QLDBSession {
  *  interface that uses the QLDB driver to interact with a ledger. For information, see <a
  *  href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB
  *
- * \sa QLDBSessionClient::sendCommand
+ * \sa QldbSessionClient::sendCommand
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
-    : QLDBSessionRequest(new SendCommandRequestPrivate(*other.d_func(), this))
+    : QldbSessionRequest(new SendCommandRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -68,7 +68,7 @@ SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
  * Constructs a SendCommandRequest object.
  */
 SendCommandRequest::SendCommandRequest()
-    : QLDBSessionRequest(new SendCommandRequestPrivate(QLDBSessionRequest::SendCommandAction, this))
+    : QldbSessionRequest(new SendCommandRequestPrivate(QldbSessionRequest::SendCommandAction, this))
 {
 
 }
@@ -93,20 +93,20 @@ QtAws::Core::AwsAbstractResponse * SendCommandRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::QLDBSession::SendCommandRequestPrivate
+ * \class QtAws::QldbSession::SendCommandRequestPrivate
  * \brief The SendCommandRequestPrivate class provides private implementation for SendCommandRequest.
  * \internal
  *
- * \inmodule QtAwsQLDBSession
+ * \inmodule QtAwsQldbSession
  */
 
 /*!
- * Constructs a SendCommandRequestPrivate object for QLDBSession \a action,
+ * Constructs a SendCommandRequestPrivate object for QldbSession \a action,
  * with public implementation \a q.
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
-    const QLDBSessionRequest::Action action, SendCommandRequest * const q)
-    : QLDBSessionRequestPrivate(action, q)
+    const QldbSessionRequest::Action action, SendCommandRequest * const q)
+    : QldbSessionRequestPrivate(action, q)
 {
 
 }
@@ -119,10 +119,10 @@ SendCommandRequestPrivate::SendCommandRequestPrivate(
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SendCommandRequestPrivate &other, SendCommandRequest * const q)
-    : QLDBSessionRequestPrivate(other, q)
+    : QldbSessionRequestPrivate(other, q)
 {
 
 }
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws

@@ -23,16 +23,26 @@
 #include "core/awssignaturev4.h"
 #include "addnotificationchannelrequest.h"
 #include "addnotificationchannelresponse.h"
+#include "deleteinsightrequest.h"
+#include "deleteinsightresponse.h"
 #include "describeaccounthealthrequest.h"
 #include "describeaccounthealthresponse.h"
 #include "describeaccountoverviewrequest.h"
 #include "describeaccountoverviewresponse.h"
 #include "describeanomalyrequest.h"
 #include "describeanomalyresponse.h"
+#include "describeeventsourcesconfigrequest.h"
+#include "describeeventsourcesconfigresponse.h"
 #include "describefeedbackrequest.h"
 #include "describefeedbackresponse.h"
 #include "describeinsightrequest.h"
 #include "describeinsightresponse.h"
+#include "describeorganizationhealthrequest.h"
+#include "describeorganizationhealthresponse.h"
+#include "describeorganizationoverviewrequest.h"
+#include "describeorganizationoverviewresponse.h"
+#include "describeorganizationresourcecollectionhealthrequest.h"
+#include "describeorganizationresourcecollectionhealthresponse.h"
 #include "describeresourcecollectionhealthrequest.h"
 #include "describeresourcecollectionhealthresponse.h"
 #include "describeserviceintegrationrequest.h"
@@ -43,12 +53,18 @@
 #include "getresourcecollectionresponse.h"
 #include "listanomaliesforinsightrequest.h"
 #include "listanomaliesforinsightresponse.h"
+#include "listanomalousloggroupsrequest.h"
+#include "listanomalousloggroupsresponse.h"
 #include "listeventsrequest.h"
 #include "listeventsresponse.h"
 #include "listinsightsrequest.h"
 #include "listinsightsresponse.h"
+#include "listmonitoredresourcesrequest.h"
+#include "listmonitoredresourcesresponse.h"
 #include "listnotificationchannelsrequest.h"
 #include "listnotificationchannelsresponse.h"
+#include "listorganizationinsightsrequest.h"
+#include "listorganizationinsightsresponse.h"
 #include "listrecommendationsrequest.h"
 #include "listrecommendationsresponse.h"
 #include "putfeedbackrequest.h"
@@ -57,8 +73,12 @@
 #include "removenotificationchannelresponse.h"
 #include "searchinsightsrequest.h"
 #include "searchinsightsresponse.h"
+#include "searchorganizationinsightsrequest.h"
+#include "searchorganizationinsightsresponse.h"
 #include "startcostestimationrequest.h"
 #include "startcostestimationresponse.h"
+#include "updateeventsourcesconfigrequest.h"
+#include "updateeventsourcesconfigresponse.h"
 #include "updateresourcecollectionrequest.h"
 #include "updateresourcecollectionresponse.h"
 #include "updateserviceintegrationrequest.h"
@@ -87,17 +107,17 @@ namespace DevOpsGuru {
  * \inmodule QtAwsDevOpsGuru
  *
  *  Amazon DevOps Guru is a fully managed service that helps you identify anomalous behavior in business critical
- *  operational applications. You specify the AWS resources that you want DevOps Guru to cover, then the Amazon CloudWatch
- *  metrics and AWS CloudTrail events related to those resources are analyzed. When anomalous behavior is detected, DevOps
- *  Guru creates an <i>insight</i> that includes recommendations, related events, and related metrics that can help you
- *  improve your operational applications. For more information, see <a
+ *  operational applications. You specify the Amazon Web Services resources that you want DevOps Guru to cover, then the
+ *  Amazon CloudWatch metrics and Amazon Web Services CloudTrail events related to those resources are analyzed. When
+ *  anomalous behavior is detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events, and
+ *  related metrics that can help you improve your operational applications. For more information, see <a
  *  href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html">What is Amazon DevOps Guru</a>.
  * 
  *  </p
  * 
  *  You can specify 1 or 2 Amazon Simple Notification Service topics so you are notified every time a new insight is
- *  created. You can also enable DevOps Guru to generate an OpsItem in AWS Systems Manager for each insight to help you
- *  manage and track your work addressing insights.
+ *  created. You can also enable DevOps Guru to generate an OpsItem in Amazon Web Services Systems Manager for each insight
+ *  to help you manage and track your work addressing insights.
  * 
  *  </p
  * 
@@ -173,20 +193,39 @@ DevOpsGuruClient::DevOpsGuruClient(
  *
  * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru permission to
  * it notifications. DevOps Guru adds the required policy on your behalf to send notifications using Amazon SNS in your
- * account. For more information, see <a
+ * account. DevOps Guru only supports standard SNS topics. For more information, see <a
  * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for cross
  * account Amazon SNS
  *
  * topics</a>>
  *
- * If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK), then you
- * must add permissions to the CMK. For more information, see <a
- * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS
- * KMS–encrypted Amazon SNS
+ * If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru permission to
+ * it notifications. DevOps Guru adds the required policy on your behalf to send notifications using Amazon SNS in your
+ * account. For more information, see Permissions for cross account Amazon SNS
+ *
+ * topics>
+ *
+ * If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service customer-managed key
+ * (CMK), then you must add permissions to the CMK. For more information, see <a
+ * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon Web
+ * Services KMS–encrypted Amazon SNS
  */
 AddNotificationChannelResponse * DevOpsGuruClient::addNotificationChannel(const AddNotificationChannelRequest &request)
 {
     return qobject_cast<AddNotificationChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * DeleteInsightResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the insight along with the associated anomalies, events and
+ */
+DeleteInsightResponse * DevOpsGuruClient::deleteInsight(const DeleteInsightRequest &request)
+{
+    return qobject_cast<DeleteInsightResponse *>(send(request));
 }
 
 /*!
@@ -196,7 +235,8 @@ AddNotificationChannelResponse * DevOpsGuruClient::addNotificationChannel(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics analyzed
- * in your AWS account. Use these numbers to gauge the health of operations in your AWS account.
+ * in your Amazon Web Services account. Use these numbers to gauge the health of operations in your Amazon Web Services
+ * account.
  */
 DescribeAccountHealthResponse * DevOpsGuruClient::describeAccountHealth(const DescribeAccountHealthRequest &request)
 {
@@ -232,11 +272,26 @@ DescribeAnomalyResponse * DevOpsGuruClient::describeAnomaly(const DescribeAnomal
 
 /*!
  * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * DescribeEventSourcesConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge. The one
+ * service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations
+ * which can be stored and viewed in DevOps
+ */
+DescribeEventSourcesConfigResponse * DevOpsGuruClient::describeEventSourcesConfig(const DescribeEventSourcesConfigRequest &request)
+{
+    return qobject_cast<DescribeEventSourcesConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
  * DescribeFeedbackResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the most recent feedback submitted in the current AWS account and Region.
+ * Returns the most recent feedback submitted in the current Amazon Web Services account and Region.
  */
 DescribeFeedbackResponse * DevOpsGuruClient::describeFeedback(const DescribeFeedbackRequest &request)
 {
@@ -258,14 +313,57 @@ DescribeInsightResponse * DevOpsGuruClient::describeInsight(const DescribeInsigh
 
 /*!
  * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * DescribeOrganizationHealthResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns active insights, predictive insights, and resource hours analyzed in last
+ */
+DescribeOrganizationHealthResponse * DevOpsGuruClient::describeOrganizationHealth(const DescribeOrganizationHealthRequest &request)
+{
+    return qobject_cast<DescribeOrganizationHealthResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * DescribeOrganizationOverviewResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an overview of your organization's history based on the specified time range. The overview includes the total
+ * reactive and proactive
+ */
+DescribeOrganizationOverviewResponse * DevOpsGuruClient::describeOrganizationOverview(const DescribeOrganizationOverviewRequest &request)
+{
+    return qobject_cast<DescribeOrganizationOverviewResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * DescribeOrganizationResourceCollectionHealthResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides an overview of your system's health. If additional member accounts are part of your organization, you can
+ * filter those accounts using the <code>AccountIds</code>
+ */
+DescribeOrganizationResourceCollectionHealthResponse * DevOpsGuruClient::describeOrganizationResourceCollectionHealth(const DescribeOrganizationResourceCollectionHealthRequest &request)
+{
+    return qobject_cast<DescribeOrganizationResourceCollectionHealthResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
  * DescribeResourceCollectionHealthResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all
- * closed insights in resource collections in your account. You specify the type of AWS resources collection. The one type
- * of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS
- * resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation stacks.
+ * closed insights in resource collections in your account. You specify the type of Amazon Web Services resources
+ * collection. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation
+ * stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to
+ * analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag
+ * <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
  */
 DescribeResourceCollectionHealthResponse * DevOpsGuruClient::describeResourceCollectionHealth(const DescribeResourceCollectionHealthRequest &request)
 {
@@ -279,7 +377,8 @@ DescribeResourceCollectionHealthResponse * DevOpsGuruClient::describeResourceCol
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the integration status of services that are integrated with DevOps Guru. The one service that can be integrated
- * with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated insight.
+ * with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for each generated
+ * insight.
  */
 DescribeServiceIntegrationResponse * DevOpsGuruClient::describeServiceIntegration(const DescribeServiceIntegrationRequest &request)
 {
@@ -292,9 +391,9 @@ DescribeServiceIntegrationResponse * DevOpsGuruClient::describeServiceIntegratio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an estimate of the monthly cost for DevOps Guru to analyze your AWS resources. For more information, see <a
- * href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps Guru
- * costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
+ * Returns an estimate of the monthly cost for DevOps Guru to analyze your Amazon Web Services resources. For more
+ * information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your
+ * Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru
  */
 GetCostEstimationResponse * DevOpsGuruClient::getCostEstimation(const GetCostEstimationRequest &request)
 {
@@ -307,9 +406,11 @@ GetCostEstimationResponse * DevOpsGuruClient::getCostEstimation(const GetCostEst
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns lists AWS resources that are of the specified resource collection type. The one type of AWS resource collection
- * supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined
- * in the stacks. You can specify up to 500 AWS CloudFormation stacks.
+ * Returns lists Amazon Web Services resources that are of the specified resource collection type. The two types of Amazon
+ * Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services
+ * resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web
+ * Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up
+ * to 500 Amazon Web Services CloudFormation stacks.
  */
 GetResourceCollectionResponse * DevOpsGuruClient::getResourceCollection(const GetResourceCollectionRequest &request)
 {
@@ -327,6 +428,19 @@ GetResourceCollectionResponse * DevOpsGuruClient::getResourceCollection(const Ge
 ListAnomaliesForInsightResponse * DevOpsGuruClient::listAnomaliesForInsight(const ListAnomaliesForInsightRequest &request)
 {
     return qobject_cast<ListAnomaliesForInsightResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * ListAnomalousLogGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the list of log groups that contain log anomalies.
+ */
+ListAnomalousLogGroupsResponse * DevOpsGuruClient::listAnomalousLogGroups(const ListAnomalousLogGroupsRequest &request)
+{
+    return qobject_cast<ListAnomalousLogGroupsResponse *>(send(request));
 }
 
 /*!
@@ -349,12 +463,25 @@ ListEventsResponse * DevOpsGuruClient::listEvents(const ListEventsRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of insights in your AWS account. You can specify which insights are returned by their start time and
- * status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>).
+ * Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by their
+ * start time and status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>).
  */
 ListInsightsResponse * DevOpsGuruClient::listInsights(const ListInsightsRequest &request)
 {
     return qobject_cast<ListInsightsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * ListMonitoredResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the list of all log groups that are being monitored and tagged by DevOps Guru.
+ */
+ListMonitoredResourcesResponse * DevOpsGuruClient::listMonitoredResources(const ListMonitoredResourcesRequest &request)
+{
+    return qobject_cast<ListMonitoredResourcesResponse *>(send(request));
 }
 
 /*!
@@ -370,6 +497,19 @@ ListInsightsResponse * DevOpsGuruClient::listInsights(const ListInsightsRequest 
 ListNotificationChannelsResponse * DevOpsGuruClient::listNotificationChannels(const ListNotificationChannelsRequest &request)
 {
     return qobject_cast<ListNotificationChannelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * ListOrganizationInsightsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of insights associated with the account or OU
+ */
+ListOrganizationInsightsResponse * DevOpsGuruClient::listOrganizationInsights(const ListOrganizationInsightsRequest &request)
+{
+    return qobject_cast<ListOrganizationInsightsResponse *>(send(request));
 }
 
 /*!
@@ -419,9 +559,9 @@ RemoveNotificationChannelResponse * DevOpsGuruClient::removeNotificationChannel(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of insights in your AWS account. You can specify which insights are returned by their start time, one or
- * more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities
- * (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
+ * Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by their
+ * start time, one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more
+ * severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
  * <code>PROACTIVE</code>).
  *
  * </p
@@ -436,11 +576,32 @@ SearchInsightsResponse * DevOpsGuruClient::searchInsights(const SearchInsightsRe
 
 /*!
  * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * SearchOrganizationInsightsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of insights in your organization. You can specify which insights are returned by their start time, one or
+ * more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities
+ * (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
+ * <code>PROACTIVE</code>).
+ *
+ * </p
+ *
+ * Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the <code>Type</code>
+ * parameter to specify <code>REACTIVE</code> or <code>PROACTIVE</code> in your search.
+ */
+SearchOrganizationInsightsResponse * DevOpsGuruClient::searchOrganizationInsights(const SearchOrganizationInsightsRequest &request)
+{
+    return qobject_cast<SearchOrganizationInsightsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
  * StartCostEstimationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts the creation of an estimate of the monthly cost to analyze your AWS
+ * Starts the creation of an estimate of the monthly cost to analyze your Amazon Web Services
  */
 StartCostEstimationResponse * DevOpsGuruClient::startCostEstimation(const StartCostEstimationRequest &request)
 {
@@ -449,14 +610,30 @@ StartCostEstimationResponse * DevOpsGuruClient::startCostEstimation(const StartC
 
 /*!
  * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
+ * UpdateEventSourcesConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can be
+ * integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can be stored
+ * and viewed in DevOps
+ */
+UpdateEventSourcesConfigResponse * DevOpsGuruClient::updateEventSourcesConfig(const UpdateEventSourcesConfigRequest &request)
+{
+    return qobject_cast<UpdateEventSourcesConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DevOpsGuruClient service, and returns a pointer to an
  * UpdateResourceCollectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the collection of resources that DevOps Guru analyzes. The one type of AWS resource collection supported is AWS
- * CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined in the stacks.
- * You can specify up to 500 AWS CloudFormation stacks. This method also creates the IAM role required for you to use
- * DevOps Guru.
+ * Updates the collection of resources that DevOps Guru analyzes. The two types of Amazon Web Services resource collections
+ * supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon
+ * Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the
+ * stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation
+ * stacks. This method also creates the IAM role required for you to use DevOps Guru.
  */
 UpdateResourceCollectionResponse * DevOpsGuruClient::updateResourceCollection(const UpdateResourceCollectionRequest &request)
 {
@@ -470,7 +647,8 @@ UpdateResourceCollectionResponse * DevOpsGuruClient::updateResourceCollection(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can be
- * integrated with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated insight.
+ * integrated with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for each
+ * generated insight.
  */
 UpdateServiceIntegrationResponse * DevOpsGuruClient::updateServiceIntegration(const UpdateServiceIntegrationRequest &request)
 {

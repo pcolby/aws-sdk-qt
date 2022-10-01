@@ -1,0 +1,30 @@
+add_compile_definitions(QTAWSKINESISVIDEOSIGNALING_LIBRARY)
+
+add_library(QtAwsKinesisVideoSignaling
+  qtawskinesisvideosignalingglobal.h
+  kinesisvideosignalingclient.h
+  kinesisvideosignalingclient_p.h
+  kinesisvideosignalingrequest.h
+  kinesisvideosignalingrequest_p.h
+  kinesisvideosignalingresponse.h
+  kinesisvideosignalingresponse_p.h
+  geticeserverconfigrequest.h
+  geticeserverconfigrequest_p.h
+  geticeserverconfigresponse.h
+  geticeserverconfigresponse_p.h
+  sendalexaoffertomasterrequest.h
+  sendalexaoffertomasterrequest_p.h
+  sendalexaoffertomasterresponse.h
+  sendalexaoffertomasterresponse_p.h
+  kinesisvideosignalingclient.cpp
+  kinesisvideosignalingrequest.cpp
+  kinesisvideosignalingresponse.cpp
+  geticeserverconfigrequest.cpp
+  geticeserverconfigresponse.cpp
+  sendalexaoffertomasterrequest.cpp
+  sendalexaoffertomasterresponse.cpp)
+
+target_link_libraries(QtAwsKinesisVideoSignaling
+  PRIVATE QtAwsCore
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

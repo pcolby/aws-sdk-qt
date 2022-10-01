@@ -24,14 +24,14 @@
 #include "createtimelineeventrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class CreateTimelineEventRequest;
 
-class CreateTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
+class CreateTimelineEventRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    CreateTimelineEventRequestPrivate(const SSMIncidentsRequest::Action action,
+    CreateTimelineEventRequestPrivate(const SsmIncidentsRequest::Action action,
                                    CreateTimelineEventRequest * const q);
     CreateTimelineEventRequestPrivate(const CreateTimelineEventRequestPrivate &other,
                                    CreateTimelineEventRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

@@ -24,11 +24,11 @@
 #include "getsdkrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetSdkResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetSdkResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetSdkResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

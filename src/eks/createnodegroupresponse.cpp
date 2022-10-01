@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::CreateNodegroupResponse
- * \brief The CreateNodegroupResponse class provides an interace for EKS CreateNodegroup responses.
+ * \class QtAws::Eks::CreateNodegroupResponse
+ * \brief The CreateNodegroupResponse class provides an interace for Eks CreateNodegroup responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const CreateNodegroupRequest * CreateNodegroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS CreateNodegroup \a response.
+ * Parses a successful Eks CreateNodegroup \a response.
  */
 void CreateNodegroupResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void CreateNodegroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::CreateNodegroupResponsePrivate
+ * \class QtAws::Eks::CreateNodegroupResponsePrivate
  * \brief The CreateNodegroupResponsePrivate class provides private implementation for CreateNodegroupResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ CreateNodegroupResponsePrivate::CreateNodegroupResponsePrivate(
 }
 
 /*!
- * Parses a EKS CreateNodegroup response element from \a xml.
+ * Parses a Eks CreateNodegroup response element from \a xml.
  */
 void CreateNodegroupResponsePrivate::parseCreateNodegroupResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void CreateNodegroupResponsePrivate::parseCreateNodegroupResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "deletepermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DeletePermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT DeletePermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DeletePermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

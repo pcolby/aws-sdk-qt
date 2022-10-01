@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class RamRequestPrivate;
 
 class QTAWSRAM_EXPORT RamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by RAM.
+    /// Actions supported by Ram.
     enum Action {
         AcceptResourceShareInvitationAction,
         AssociateResourceShareAction,
@@ -53,6 +53,7 @@ public:
         GetResourceShareInvitationsAction,
         GetResourceSharesAction,
         ListPendingInvitationResourcesAction,
+        ListPermissionVersionsAction,
         ListPermissionsAction,
         ListPrincipalsAction,
         ListResourceSharePermissionsAction,
@@ -99,7 +100,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

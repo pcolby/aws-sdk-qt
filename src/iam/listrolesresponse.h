@@ -24,7 +24,7 @@
 #include "listrolesrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class ListRolesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

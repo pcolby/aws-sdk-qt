@@ -23,8 +23,12 @@
 #include "core/awssignaturev4.h"
 #include "comparefacesrequest.h"
 #include "comparefacesresponse.h"
+#include "copyprojectversionrequest.h"
+#include "copyprojectversionresponse.h"
 #include "createcollectionrequest.h"
 #include "createcollectionresponse.h"
+#include "createdatasetrequest.h"
+#include "createdatasetresponse.h"
 #include "createprojectrequest.h"
 #include "createprojectresponse.h"
 #include "createprojectversionrequest.h"
@@ -33,16 +37,22 @@
 #include "createstreamprocessorresponse.h"
 #include "deletecollectionrequest.h"
 #include "deletecollectionresponse.h"
+#include "deletedatasetrequest.h"
+#include "deletedatasetresponse.h"
 #include "deletefacesrequest.h"
 #include "deletefacesresponse.h"
 #include "deleteprojectrequest.h"
 #include "deleteprojectresponse.h"
+#include "deleteprojectpolicyrequest.h"
+#include "deleteprojectpolicyresponse.h"
 #include "deleteprojectversionrequest.h"
 #include "deleteprojectversionresponse.h"
 #include "deletestreamprocessorrequest.h"
 #include "deletestreamprocessorresponse.h"
 #include "describecollectionrequest.h"
 #include "describecollectionresponse.h"
+#include "describedatasetrequest.h"
+#include "describedatasetresponse.h"
 #include "describeprojectversionsrequest.h"
 #include "describeprojectversionsresponse.h"
 #include "describeprojectsrequest.h"
@@ -61,6 +71,8 @@
 #include "detectprotectiveequipmentresponse.h"
 #include "detecttextrequest.h"
 #include "detecttextresponse.h"
+#include "distributedatasetentriesrequest.h"
+#include "distributedatasetentriesresponse.h"
 #include "getcelebrityinforequest.h"
 #include "getcelebrityinforesponse.h"
 #include "getcelebrityrecognitionrequest.h"
@@ -83,12 +95,20 @@
 #include "indexfacesresponse.h"
 #include "listcollectionsrequest.h"
 #include "listcollectionsresponse.h"
+#include "listdatasetentriesrequest.h"
+#include "listdatasetentriesresponse.h"
+#include "listdatasetlabelsrequest.h"
+#include "listdatasetlabelsresponse.h"
 #include "listfacesrequest.h"
 #include "listfacesresponse.h"
+#include "listprojectpoliciesrequest.h"
+#include "listprojectpoliciesresponse.h"
 #include "liststreamprocessorsrequest.h"
 #include "liststreamprocessorsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "putprojectpolicyrequest.h"
+#include "putprojectpolicyresponse.h"
 #include "recognizecelebritiesrequest.h"
 #include "recognizecelebritiesresponse.h"
 #include "searchfacesrequest.h"
@@ -123,6 +143,10 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatedatasetentriesrequest.h"
+#include "updatedatasetentriesresponse.h"
+#include "updatestreamprocessorrequest.h"
+#include "updatestreamprocessorresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -146,7 +170,293 @@ namespace Rekognition {
  * \ingroup aws-clients
  * \inmodule QtAwsRekognition
  *
- *  This is the Amazon Rekognition API
+ *  This is the API Reference for <a href="https://docs.aws.amazon.com/rekognition/latest/dg/images.html">Amazon Rekognition
+ *  Image</a>, <a href="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/what-is.html">Amazon Rekognition
+ *  Custom Labels</a>, <a href="https://docs.aws.amazon.com/rekognition/latest/dg/video.html">Amazon Rekognition Stored
+ *  Video</a>, <a href="https://docs.aws.amazon.com/rekognition/latest/dg/streaming-video.html">Amazon Rekognition Streaming
+ *  Video</a>. It provides descriptions of actions, data types, common parameters, and common
+ * 
+ *  errors>
+ * 
+ *  <b>Amazon Rekognition Image</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CompareFaces.html">CompareFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateCollection.html">CreateCollection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteCollection.html">DeleteCollection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteFaces.html">DeleteFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DescribeCollection.html">DescribeCollection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectFaces.html">DetectFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectLabels.html">DetectLabels</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectModerationLabels.html">DetectModerationLabels</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectProtectiveEquipment.html">DetectProtectiveEquipment</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectText.html">DetectText</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetCelebrityInfo.html">GetCelebrityInfo</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_IndexFaces.html">IndexFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListCollections.html">ListCollections</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListFaces.html">ListFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_RecognizeCelebrities.html">RecognizeCelebrities</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchFaces.html">SearchFaces</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_SearchFacesByImage.html">SearchFacesByImage</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  <b>Amazon Rekognition Custom Labels</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CopyProjectVersion.html">CopyProjectVersion</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateDataset.html">CreateDataset</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateProject.html">CreateProject</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateProjectVersion.html">CreateProjectVersion</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteDataset.html">DeleteDataset</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProject.html">DeleteProject</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProjectPolicy.html">DeleteProjectPolicy</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProjectVersion.html">DeleteProjectVersion</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DescribeDataset.html">DescribeDataset</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DescribeProjects.html">DescribeProjects</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DescribeProjectVersions.html">DescribeProjectVersions</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DetectCustomLabels.html">DetectCustomLabels</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DistributeDatasetEntries.html">DistributeDatasetEntries</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListDatasetEntries.html">ListDatasetEntries</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListDatasetLabels.html">ListDatasetLabels</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListProjectPolicies.html">ListProjectPolicies</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_PutProjectPolicy.html">PutProjectPolicy</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartProjectVersion.html">StartProjectVersion</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StopProjectVersion.html">StopProjectVersion</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_UpdateDatasetEntries.html">UpdateDatasetEntries</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  <b>Amazon Rekognition Video Stored Video</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetCelebrityRecognition.html">GetCelebrityRecognition</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetContentModeration.html">GetContentModeration</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetFaceDetection.html">GetFaceDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetFaceSearch.html">GetFaceSearch</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetLabelDetection.html">GetLabelDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetPersonTracking.html">GetPersonTracking</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetSegmentDetection.html">GetSegmentDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_GetTextDetection.html">GetTextDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartCelebrityRecognition.html">StartCelebrityRecognition</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartContentModeration.html">StartContentModeration</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartFaceDetection.html">StartFaceDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartFaceSearch.html">StartFaceSearch</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartLabelDetection.html">StartLabelDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartPersonTracking.html">StartPersonTracking</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartSegmentDetection.html">StartSegmentDetection</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartTextDetection.html">StartTextDetection</a>
+ * 
+ *  </p </li> </ul>
+ * 
+ *  <b>Amazon Rekognition Video Streaming Video</b>
+ * 
+ *  </p <ul> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateStreamProcessor.html">CreateStreamProcessor</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteStreamProcessor.html">DeleteStreamProcessor</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DescribeStreamProcessor.html">DescribeStreamProcessor</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListStreamProcessors.html">ListStreamProcessors</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartStreamProcessor.html">StartStreamProcessor</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StopStreamProcessor.html">StopStreamProcessor</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a
+ *  href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_UpdateStreamProcessor.html">UpdateStreamProcessor</a>
  */
 
 /*!
@@ -233,7 +543,7 @@ RekognitionClient::RekognitionClient(
  * </p
  *
  * In response, the operation returns an array of face matches ordered by similarity score in descending order. For each
- * face match, the response provides a bounding box of the face, facial landmarks, pose details (pitch, role, and yaw),
+ * face match, the response provides a bounding box of the face, facial landmarks, pose details (pitch, roll, and yaw),
  * quality (brightness and sharpness), and confidence value (indicating the level of confidence that the bounding box
  * contains a face). The response also provides a similarity score, which indicates how closely the faces match.
  *
@@ -284,6 +594,46 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * CopyProjectVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Copies a version of an Amazon Rekognition Custom Labels model from a source project to a destination project. The source
+ * and destination projects can be in different AWS accounts but must be in the same AWS Region. You can't copy a model to
+ * another AWS service.
+ *
+ * </p
+ *
+ * To copy a model version to a different AWS account, you need to create a resource-based policy known as a <i>project
+ * policy</i>. You attach the project policy to the source project by calling <a>PutProjectPolicy</a>. The project policy
+ * gives permission to copy the model version from a trusting AWS account to a trusted
+ *
+ * account>
+ *
+ * For more information creating and attaching a project policy, see Attaching a project policy (SDK) in the <i>Amazon
+ * Rekognition Custom Labels Developer Guide</i>.
+ *
+ * </p
+ *
+ * If you are copying a model version to a project in the same AWS account, you don't need to create a project
+ *
+ * policy> <note>
+ *
+ * To copy a model, the destination project, source project, and source model version must already
+ *
+ * exist> </note>
+ *
+ * Copying a model version takes a while to complete. To get the current status, call <a>DescribeProjectVersions</a> and
+ * check the value of <code>Status</code> in the <a>ProjectVersionDescription</a> object. The copy operation has finished
+ * when the value of <code>Status</code> is
+ */
+CopyProjectVersionResponse * RekognitionClient::copyProjectVersion(const CopyProjectVersionRequest &request)
+{
+    return qobject_cast<CopyProjectVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * CreateCollectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -316,12 +666,56 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * CreateDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Amazon Rekognition Custom Labels dataset. You can create a dataset by using an Amazon Sagemaker format
+ * manifest file or by copying an existing Amazon Rekognition Custom Labels
+ *
+ * dataset>
+ *
+ * To create a training dataset for a project, specify <code>train</code> for the value of <code>DatasetType</code>. To
+ * create the test dataset for a project, specify <code>test</code> for the value of <code>DatasetType</code>.
+ *
+ * </p
+ *
+ * The response from <code>CreateDataset</code> is the Amazon Resource Name (ARN) for the dataset. Creating a dataset takes
+ * a while to complete. Use <a>DescribeDataset</a> to check the current status. The dataset created successfully if the
+ * value of <code>Status</code> is <code>CREATE_COMPLETE</code>.
+ *
+ * </p
+ *
+ * To check if any non-terminal errors occurred, call <a>ListDatasetEntries</a> and check for the presence of
+ * <code>errors</code> lists in the JSON
+ *
+ * Lines>
+ *
+ * Dataset creation fails if a terminal error occurs (<code>Status</code> = <code>CREATE_FAILED</code>). Currently, you
+ * can't access the terminal error information.
+ *
+ * </p
+ *
+ * For more information, see Creating dataset in the <i>Amazon Rekognition Custom Labels Developer
+ *
+ * Guide</i>>
+ *
+ * This operation requires permissions to perform the <code>rekognition:CreateDataset</code> action. If you want to copy an
+ * existing dataset, you also require permission to perform the <code>rekognition:ListDatasetEntries</code>
+ */
+CreateDatasetResponse * RekognitionClient::createDataset(const CreateDatasetRequest &request)
+{
+    return qobject_cast<CreateDatasetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * CreateProjectResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Amazon Rekognition Custom Labels project. A project is a logical grouping of resources (images, Labels,
- * models) and operations (training, evaluation and detection).
+ * Creates a new Amazon Rekognition Custom Labels project. A project is a group of resources (datasets, model versions)
+ * that you use to create and manage Amazon Rekognition Custom Labels models.
  *
  * </p
  *
@@ -339,17 +733,44 @@ CreateProjectResponse * RekognitionClient::createProject(const CreateProjectRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new version of a model and begins training. Models are managed as part of an Amazon Rekognition Custom Labels
- * project. You can specify one training dataset and one testing dataset. The response from
- * <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the version of the model.
+ * project. The response from <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the version of the
+ * model.
  *
  * </p
  *
- * Training takes a while to complete. You can get the current status by calling
+ * Training uses the training and test datasets associated with the project. For more information, see Creating training
+ * and test dataset in the <i>Amazon Rekognition Custom Labels Developer Guide</i>.
  *
- * <a>DescribeProjectVersions</a>>
+ * </p <note>
+ *
+ * You can train a model in a project that doesn't have associated datasets by specifying manifest files in the
+ * <code>TrainingData</code> and <code>TestingData</code> fields.
+ *
+ * </p
+ *
+ * If you open the console after training a model with manifest files, Amazon Rekognition Custom Labels creates the
+ * datasets for you using the most recent manifest files. You can no longer train a model version for the project by
+ * specifying manifest files.
+ *
+ * </p
+ *
+ * Instead of training with a project without associated datasets, we recommend that you use the manifest files to create
+ * training and test datasets for the
+ *
+ * project> </note>
+ *
+ * Training takes a while to complete. You can get the current status by calling <a>DescribeProjectVersions</a>. Training
+ * completed successfully if the value of the <code>Status</code> field is
+ *
+ * <code>TRAINING_COMPLETED</code>>
+ *
+ * If training fails, see Debugging a failed model training in the <i>Amazon Rekognition Custom Labels</i> developer guide.
+ *
+ * </p
  *
  * Once training has successfully completed, call <a>DescribeProjectVersions</a> to get the training results and evaluate
- * the model.
+ * the model. For more information, see Improving a trained Amazon Rekognition Custom Labels model in the <i>Amazon
+ * Rekognition Custom Labels</i> developers guide.
  *
  * </p
  *
@@ -370,27 +791,38 @@ CreateProjectVersionResponse * RekognitionClient::createProjectVersion(const Cre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces in a streaming
+ * Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces or to detect labels in a
+ * streaming
  *
  * video>
  *
- * Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. Amazon Rekognition Video sends
- * analysis results to Amazon Kinesis Data
+ * Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. There are two different settings
+ * for stream processors in Amazon Rekognition: detecting faces and detecting
  *
- * Streams>
+ * labels> <ul> <li>
  *
- * You provide as input a Kinesis video stream (<code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream.
- * You also specify the face recognition criteria in <code>Settings</code>. For example, the collection containing faces
- * that you want to recognize. Use <code>Name</code> to assign an identifier for the stream processor. You use
- * <code>Name</code> to manage the stream processor. For example, you can start processing the source video by calling
- * <a>StartStreamProcessor</a> with the <code>Name</code> field.
+ * If you are creating a stream processor for detecting faces, you provide as input a Kinesis video stream
+ * (<code>Input</code>) and a Kinesis data stream (<code>Output</code>) stream. You also specify the face recognition
+ * criteria in <code>Settings</code>. For example, the collection containing faces that you want to recognize. After you
+ * have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to stop
+ *
+ * processing> </li> <li>
+ *
+ * If you are creating a stream processor to detect labels, you provide as input a Kinesis video stream
+ * (<code>Input</code>), Amazon S3 bucket information (<code>Output</code>), and an Amazon SNS topic ARN
+ * (<code>NotificationChannel</code>). You can also provide a KMS key ID to encrypt the data sent to your Amazon S3 bucket.
+ * You specify what you want to detect in <code>ConnectedHomeSettings</code>, such as people, packages and people, or pets,
+ * people, and packages. You can also specify where in the frame you want Amazon Rekognition to monitor with
+ * <code>RegionsOfInterest</code>. When you run the <a>StartStreamProcessor</a> operation on a label detection stream
+ * processor, you input start and stop information to determine the length of the processing
+ *
+ * time> </li> </ul>
+ *
+ * Use <code>Name</code> to assign an identifier for the stream processor. You use <code>Name</code> to manage the stream
+ * processor. For example, you can start processing the source video by calling <a>StartStreamProcessor</a> with the
+ * <code>Name</code> field.
  *
  * </p
- *
- * After you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to stop processing. You can delete
- * the stream processor by calling
- *
- * <a>DeleteStreamProcessor</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:CreateStreamProcessor</code> action. If you want to
  * tag your stream processor, you also require permission to perform the <code>rekognition:TagResource</code>
@@ -406,15 +838,41 @@ CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified collection. Note that this operation removes all faces in the collection. For an example, see
+ * Deletes the specified collection. Note that this operation removes all faces in the collection. For an example, see <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/dg/delete-collection-procedure.html">Deleting a
  *
- * <a>delete-collection-procedure</a>>
+ * collection</a>>
  *
  * This operation requires permissions to perform the <code>rekognition:DeleteCollection</code>
  */
 DeleteCollectionResponse * RekognitionClient::deleteCollection(const DeleteCollectionRequest &request)
 {
     return qobject_cast<DeleteCollectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DeleteDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing Amazon Rekognition Custom Labels dataset. Deleting a dataset might take while. Use
+ * <a>DescribeDataset</a> to check the current status. The dataset is still deleting if the value of <code>Status</code> is
+ * <code>DELETE_IN_PROGRESS</code>. If you try to access the dataset after it is deleted, you get a
+ * <code>ResourceNotFoundException</code> exception.
+ *
+ * </p
+ *
+ * You can't delete a dataset while it is creating (<code>Status</code> = <code>CREATE_IN_PROGRESS</code>) or if the
+ * dataset is updating (<code>Status</code> =
+ *
+ * <code>UPDATE_IN_PROGRESS</code>)>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DeleteDataset</code>
+ */
+DeleteDatasetResponse * RekognitionClient::deleteDataset(const DeleteDatasetRequest &request)
+{
+    return qobject_cast<DeleteDatasetResponse *>(send(request));
 }
 
 /*!
@@ -445,11 +903,35 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
  *
  * <a>DeleteProjectVersion</a>>
  *
+ * <code>DeleteProject</code> is an asynchronous operation. To check if the project is deleted, call
+ * <a>DescribeProjects</a>. The project is deleted when the project no longer appears in the response. Be aware that
+ * deleting a given project will also delete any <code>ProjectPolicies</code> associated with that
+ *
+ * project>
+ *
  * This operation requires permissions to perform the <code>rekognition:DeleteProject</code> action.
  */
 DeleteProjectResponse * RekognitionClient::deleteProject(const DeleteProjectRequest &request)
 {
     return qobject_cast<DeleteProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DeleteProjectPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing project
+ *
+ * policy>
+ *
+ * To get a list of project policies attached to a project, call <a>ListProjectPolicies</a>. To attach a project policy to
+ * a project, call
+ */
+DeleteProjectPolicyResponse * RekognitionClient::deleteProjectPolicy(const DeleteProjectPolicyRequest &request)
+{
+    return qobject_cast<DeleteProjectPolicyResponse *>(send(request));
 }
 
 /*!
@@ -510,12 +992,31 @@ DescribeCollectionResponse * RekognitionClient::describeCollection(const Describ
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DescribeDatasetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an Amazon Rekognition Custom Labels dataset. You can get information such as the current status of a dataset
+ * and statistics about the images and labels in a dataset.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:DescribeDataset</code>
+ */
+DescribeDatasetResponse * RekognitionClient::describeDataset(const DescribeDatasetRequest &request)
+{
+    return qobject_cast<DescribeDatasetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * DescribeProjectVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists and describes the models in an Amazon Rekognition Custom Labels project. You can specify up to 10 model versions
- * in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all models are
+ * Lists and describes the versions of a model in an Amazon Rekognition Custom Labels project. You can specify up to 10
+ * model versions in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all model versions in
+ * the project are
  *
  * returned>
  *
@@ -532,9 +1033,9 @@ DescribeProjectVersionsResponse * RekognitionClient::describeProjectVersions(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists and gets information about your Amazon Rekognition Custom Labels
+ * Gets information about your Amazon Rekognition Custom Labels projects.
  *
- * projects>
+ * </p
  *
  * This operation requires permissions to perform the <code>rekognition:DescribeProjects</code>
  */
@@ -585,24 +1086,31 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  *
  * </p
  *
- * During training model calculates a threshold value that determines if a prediction for a label is true. By default,
- * <code>DetectCustomLabels</code> doesn't return labels whose confidence value is below the model's calculated threshold
- * value. To filter labels that are returned, specify a value for <code>MinConfidence</code> that is higher than the
- * model's calculated threshold. You can get the model's calculated threshold from the model's training results shown in
- * the Amazon Rekognition Custom Labels console. To get all labels, regardless of confidence, specify a
- * <code>MinConfidence</code> value of 0.
+ * To filter labels that are returned, specify a value for <code>MinConfidence</code>.
+ * <code>DetectCustomLabelsLabels</code> only returns labels with a confidence that's higher than the specified value. The
+ * value of <code>MinConfidence</code> maps to the assumed threshold values created during training. For more information,
+ * see <i>Assumed threshold</i> in the Amazon Rekognition Custom Labels Developer Guide. Amazon Rekognition Custom Labels
+ * metrics expresses an assumed threshold as a floating point value between 0-1. The range of <code>MinConfidence</code>
+ * normalizes the threshold value to a percentage value (0-100). Confidence responses from <code>DetectCustomLabels</code>
+ * are also returned as a percentage. You can use <code>MinConfidence</code> to change the precision and recall or your
+ * model. For more information, see <i>Analyzing an image</i> in the Amazon Rekognition Custom Labels Developer Guide.
  *
  * </p
  *
- * You can also add the <code>MaxResults</code> parameter to limit the number of labels returned.
+ * If you don't specify a value for <code>MinConfidence</code>, <code>DetectCustomLabels</code> returns labels based on the
+ * assumed threshold of each
  *
- * </p
+ * label>
  *
  * This is a stateless API operation. That is, the operation does not persist any
  *
  * data>
  *
  * This operation requires permissions to perform the <code>rekognition:DetectCustomLabels</code> action.
+ *
+ * </p
+ *
+ * For more information, see <i>Analyzing an image</i> in the Amazon Rekognition Custom Labels Developer Guide.
  */
 DetectCustomLabelsResponse * RekognitionClient::detectCustomLabels(const DetectCustomLabelsRequest &request)
 {
@@ -660,7 +1168,7 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  *
  * </p
  *
- * For an example, see Analyzing Images Stored in an Amazon S3 Bucket in the Amazon Rekognition Developer
+ * For an example, see Analyzing images stored in an Amazon S3 bucket in the Amazon Rekognition Developer
  *
  * Guide> <note>
  *
@@ -869,8 +1377,8 @@ DetectProtectiveEquipmentResponse * RekognitionClient::detectProtectiveEquipment
  *
  * </p
  *
- * A word is one or more ISO basic latin script characters that are not separated by spaces. <code>DetectText</code> can
- * detect up to 50 words in an
+ * A word is one or more script characters that are not separated by spaces. <code>DetectText</code> can detect up to 100
+ * words in an
  *
  * image>
  *
@@ -891,7 +1399,7 @@ DetectProtectiveEquipmentResponse * RekognitionClient::detectProtectiveEquipment
  *
  * axis>
  *
- * For more information, see DetectText in the Amazon Rekognition Developer
+ * For more information, see Detecting text in the Amazon Rekognition Developer
  */
 DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &request)
 {
@@ -900,16 +1408,47 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DistributeDatasetEntriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Distributes the entries (images) in a training dataset across the training dataset and the test dataset for a project.
+ * <code>DistributeDatasetEntries</code> moves 20% of the training dataset images to the test dataset. An entry is a JSON
+ * Line that describes an image.
+ *
+ * </p
+ *
+ * You supply the Amazon Resource Names (ARN) of a project's training dataset and test dataset. The training dataset must
+ * contain the images that you want to split. The test dataset must be empty. The datasets must belong to the same project.
+ * To create training and test datasets for a project, call
+ *
+ * <a>CreateDataset</a>>
+ *
+ * Distributing a dataset takes a while to complete. To check the status call <code>DescribeDataset</code>. The operation
+ * is complete when the <code>Status</code> field for the training dataset and the test dataset is
+ * <code>UPDATE_COMPLETE</code>. If the dataset split fails, the value of <code>Status</code> is
+ *
+ * <code>UPDATE_FAILED</code>>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DistributeDatasetEntries</code>
+ */
+DistributeDatasetEntriesResponse * RekognitionClient::distributeDatasetEntries(const DistributeDatasetEntriesRequest &request)
+{
+    return qobject_cast<DistributeDatasetEntriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * GetCelebrityInfoResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the name and additional information about a celebrity based on his or her Amazon Rekognition ID. The additional
+ * Gets the name and additional information about a celebrity based on their Amazon Rekognition ID. The additional
  * information is returned as an array of URLs. If there is no additional information about the celebrity, this list is
  *
  * empty>
  *
- * For more information, see Recognizing Celebrities in an Image in the Amazon Rekognition Developer
+ * For more information, see Getting information about a celebrity in the Amazon Rekognition Developer
  *
  * Guide>
  *
@@ -931,12 +1470,15 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  * <a>StartCelebrityRecognition</a>>
  *
  * Celebrity recognition in a video is an asynchronous operation. Analysis is started by a call to
- * <a>StartCelebrityRecognition</a> which returns a job identifier (<code>JobId</code>). When the celebrity recognition
- * operation finishes, Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service
- * topic registered in the initial call to <code>StartCelebrityRecognition</code>. To get the results of the celebrity
- * recognition analysis, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If
- * so, call <code>GetCelebrityDetection</code> and pass the job identifier (<code>JobId</code>) from the initial call to
- * <code>StartCelebrityDetection</code>.
+ * <a>StartCelebrityRecognition</a> which returns a job identifier (<code>JobId</code>).
+ *
+ * </p
+ *
+ * When the celebrity recognition operation finishes, Amazon Rekognition Video publishes a completion status to the Amazon
+ * Simple Notification Service topic registered in the initial call to <code>StartCelebrityRecognition</code>. To get the
+ * results of the celebrity recognition analysis, first check that the status value published to the Amazon SNS topic is
+ * <code>SUCCEEDED</code>. If so, call <code>GetCelebrityDetection</code> and pass the job identifier (<code>JobId</code>)
+ * from the initial call to <code>StartCelebrityDetection</code>.
  *
  * </p
  *
@@ -947,14 +1489,16 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  * <code>GetCelebrityRecognition</code> returns detected celebrities and the time(s) they are detected in an array
  * (<code>Celebrities</code>) of <a>CelebrityRecognition</a> objects. Each <code>CelebrityRecognition</code> contains
  * information about the celebrity in a <a>CelebrityDetail</a> object and the time, <code>Timestamp</code>, the celebrity
- * was detected.
+ * was detected. This <a>CelebrityDetail</a> object stores information about the detected celebrity's face attributes, a
+ * face bounding box, known gender, the celebrity's name, and a confidence
  *
- * </p <note>
+ * estimate> <note>
  *
  * <code>GetCelebrityRecognition</code> only returns the default facial attributes (<code>BoundingBox</code>,
- * <code>Confidence</code>, <code>Landmarks</code>, <code>Pose</code>, and <code>Quality</code>). The other facial
- * attributes listed in the <code>Face</code> object of the following response syntax are not returned. For more
- * information, see FaceDetail in the Amazon Rekognition Developer Guide.
+ * <code>Confidence</code>, <code>Landmarks</code>, <code>Pose</code>, and <code>Quality</code>). The
+ * <code>BoundingBox</code> field only applies to the detected face instance. The other facial attributes listed in the
+ * <code>Face</code> object of the following response syntax are not returned. For more information, see FaceDetail in the
+ * Amazon Rekognition Developer Guide.
  *
  * </p </note>
  *
@@ -988,15 +1532,18 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the unsafe content analysis results for a Amazon Rekognition Video analysis started by
+ * Gets the inappropriate, unwanted, or offensive content analysis results for a Amazon Rekognition Video analysis started
+ * by <a>StartContentModeration</a>. For a list of moderation labels in Amazon Rekognition, see <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html#moderation-api">Using the image and video
+ * moderation
  *
- * <a>StartContentModeration</a>>
+ * APIs</a>>
  *
- * Unsafe content analysis of a video is an asynchronous operation. You start analysis by calling
- * <a>StartContentModeration</a> which returns a job identifier (<code>JobId</code>). When analysis finishes, Amazon
- * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the
- * initial call to <code>StartContentModeration</code>. To get the results of the unsafe content analysis, first check that
- * the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call
+ * Amazon Rekognition Video inappropriate or offensive content detection in a stored video is an asynchronous operation.
+ * You start analysis by calling <a>StartContentModeration</a> which returns a job identifier (<code>JobId</code>). When
+ * analysis finishes, Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service
+ * topic registered in the initial call to <code>StartContentModeration</code>. To get the results of the content analysis,
+ * first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call
  * <code>GetContentModeration</code> and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartContentModeration</code>.
  *
@@ -1006,8 +1553,8 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * Guide>
  *
- * <code>GetContentModeration</code> returns detected unsafe content labels, and the time they are detected, in an array,
- * <code>ModerationLabels</code>, of <a>ContentModerationDetection</a> objects.
+ * <code>GetContentModeration</code> returns detected inappropriate, unwanted, or offensive content moderation labels, and
+ * the time they are detected, in an array, <code>ModerationLabels</code>, of <a>ContentModerationDetection</a> objects.
  *
  * </p
  *
@@ -1024,7 +1571,7 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * <code>GetContentModeration</code>>
  *
- * For more information, see Detecting Unsafe Content in the Amazon Rekognition Developer
+ * For more information, see moderating content in the Amazon Rekognition Developer
  */
 GetContentModerationResponse * RekognitionClient::getContentModeration(const GetContentModerationRequest &request)
 {
@@ -1248,7 +1795,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * <code>GetSegmentDetection</code>>
  *
- * For more information, see Detecting Video Segments in Stored Video in the Amazon Rekognition Developer
+ * For more information, see Detecting video segments in stored video in the Amazon Rekognition Developer
  */
 GetSegmentDetectionResponse * RekognitionClient::getSegmentDetection(const GetSegmentDetectionRequest &request)
 {
@@ -1312,7 +1859,7 @@ GetTextDetectionResponse * RekognitionClient::getTextDetection(const GetTextDete
  *
  * operations>
  *
- * For more information, see Adding Faces to a Collection in the Amazon Rekognition Developer
+ * For more information, see Adding faces to a collection in the Amazon Rekognition Developer
  *
  * Guide>
  *
@@ -1421,7 +1968,9 @@ GetTextDetectionResponse * RekognitionClient::getTextDetection(const GetTextDete
  * attributes. If you provide the same image, specify the same collection, and use the same external ID in the
  * <code>IndexFaces</code> operation, Amazon Rekognition doesn't save duplicate face
  *
- * metadata> <p/>
+ * metadata>
+ *
+ * </p
  *
  * The input image is passed either as base64-encoded image bytes, or as a reference to an image in an Amazon S3 bucket. If
  * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes isn't supported. The image must be
@@ -1447,7 +1996,7 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
  *
  * IDs>
  *
- * For an example, see Listing Collections in the Amazon Rekognition Developer
+ * For an example, see Listing collections in the Amazon Rekognition Developer
  *
  * Guide>
  *
@@ -1456,6 +2005,56 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
 ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectionsRequest &request)
 {
     return qobject_cast<ListCollectionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * ListDatasetEntriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the entries (images) within a dataset. An entry is a JSON Line that contains the information for a single image,
+ * including the image location, assigned labels, and object location bounding boxes. For more information, see <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/md-manifest-files.html">Creating a manifest
+ *
+ * file</a>>
+ *
+ * JSON Lines in the response include information about non-terminal errors found in the dataset. Non terminal errors are
+ * reported in <code>errors</code> lists within each JSON Line. The same information is reported in the training and
+ * testing validation result manifests that Amazon Rekognition Custom Labels creates during model training.
+ *
+ * </p
+ *
+ * You can filter the response in variety of ways, such as choosing which labels to return and returning JSON Lines created
+ * after a specific date.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:ListDatasetEntries</code>
+ */
+ListDatasetEntriesResponse * RekognitionClient::listDatasetEntries(const ListDatasetEntriesRequest &request)
+{
+    return qobject_cast<ListDatasetEntriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * ListDatasetLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the labels in a dataset. Amazon Rekognition Custom Labels uses labels to describe images. For more information,
+ * see <a href="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/md-labeling-images.html">Labeling
+ * images</a>.
+ *
+ * </p
+ *
+ * Lists the labels in a dataset. Amazon Rekognition Custom Labels uses labels to describe images. For more information,
+ * see Labeling images in the <i>Amazon Rekognition Custom Labels Developer Guide</i>.
+ */
+ListDatasetLabelsResponse * RekognitionClient::listDatasetLabels(const ListDatasetLabelsRequest &request)
+{
+    return qobject_cast<ListDatasetLabelsResponse *>(send(request));
 }
 
 /*!
@@ -1475,6 +2074,23 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
 ListFacesResponse * RekognitionClient::listFaces(const ListFacesRequest &request)
 {
     return qobject_cast<ListFacesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * ListProjectPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the project policies attached to a
+ *
+ * project>
+ *
+ * To attach a project policy to a project, call <a>PutProjectPolicy</a>. To remove a project policy from a project, call
+ */
+ListProjectPoliciesResponse * RekognitionClient::listProjectPolicies(const ListProjectPoliciesRequest &request)
+{
+    return qobject_cast<ListProjectPoliciesResponse *>(send(request));
 }
 
 /*!
@@ -1509,17 +2125,52 @@ ListTagsForResourceResponse * RekognitionClient::listTagsForResource(const ListT
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * PutProjectPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project policy
+ * specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in the trusted
+ * AWS account. To copy a model version you use the <a>CopyProjectVersion</a>
+ *
+ * operation>
+ *
+ * For more information about the format of a project policy document, see Attaching a project policy (SDK) in the
+ * <i>Amazon Rekognition Custom Labels Developer Guide</i>.
+ *
+ * </p
+ *
+ * The response from <code>PutProjectPolicy</code> is a revision ID for the project policy. You can attach multiple project
+ * policies to a project. You can also update an existing project policy by specifying the policy revision ID of the
+ * existing
+ *
+ * policy>
+ *
+ * To remove a project policy from a project, call <a>DeleteProjectPolicy</a>. To get a list of project policies attached
+ * to a project, call <a>ListProjectPolicies</a>.
+ *
+ * </p
+ *
+ * You copy a model version by calling
+ */
+PutProjectPolicyResponse * RekognitionClient::putProjectPolicy(const PutProjectPolicyRequest &request)
+{
+    return qobject_cast<PutProjectPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * RecognizeCelebritiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of celebrities recognized in the input image. For more information, see Recognizing Celebrities in the
+ * Returns an array of celebrities recognized in the input image. For more information, see Recognizing celebrities in the
  * Amazon Rekognition Developer Guide.
  *
  * </p
  *
- * <code>RecognizeCelebrities</code> returns the 64 largest faces in the image. It lists recognized celebrities in the
- * <code>CelebrityFaces</code> array and unrecognized faces in the <code>UnrecognizedFaces</code> array.
+ * <code>RecognizeCelebrities</code> returns the 64 largest faces in the image. It lists the recognized celebrities in the
+ * <code>CelebrityFaces</code> array and any unrecognized faces in the <code>UnrecognizedFaces</code> array.
  * <code>RecognizeCelebrities</code> doesn't return celebrities whose faces aren't among the largest 64 faces in the
  *
  * image>
@@ -1543,7 +2194,7 @@ ListTagsForResourceResponse * RekognitionClient::listTagsForResource(const ListT
  *
  * </p
  *
- * For an example, see Recognizing Celebrities in an Image in the Amazon Rekognition Developer
+ * For an example, see Recognizing celebrities in an image in the Amazon Rekognition Developer
  *
  * Guide>
  *
@@ -1577,7 +2228,7 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
  *
  * </p
  *
- * For an example, see Searching for a Face Using Its Face ID in the Amazon Rekognition Developer
+ * For an example, see Searching for a face using its face ID in the Amazon Rekognition Developer
  *
  * Guide>
  *
@@ -1671,7 +2322,7 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
  *
  * </p
  *
- * For more information, see Recognizing Celebrities in the Amazon Rekognition Developer
+ * For more information, see Recognizing celebrities in the Amazon Rekognition Developer
  */
 StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition(const StartCelebrityRecognitionRequest &request)
 {
@@ -1684,24 +2335,27 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts asynchronous detection of unsafe content in a stored
+ * Starts asynchronous detection of inappropriate, unwanted, or offensive content in a stored video. For a list of
+ * moderation labels in Amazon Rekognition, see <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/dg/moderation.html#moderation-api">Using the image and video
+ * moderation
  *
- * video>
+ * APIs</a>>
  *
  * Amazon Rekognition Video can moderate content in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
  * bucket name and the filename of the video. <code>StartContentModeration</code> returns a job identifier
- * (<code>JobId</code>) which you use to get the results of the analysis. When unsafe content analysis is finished, Amazon
+ * (<code>JobId</code>) which you use to get the results of the analysis. When content analysis is finished, Amazon
  * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in
  *
  * <code>NotificationChannel</code>>
  *
- * To get the results of the unsafe content analysis, first check that the status value published to the Amazon SNS topic
- * is <code>SUCCEEDED</code>. If so, call <a>GetContentModeration</a> and pass the job identifier (<code>JobId</code>) from
+ * To get the results of the content analysis, first check that the status value published to the Amazon SNS topic is
+ * <code>SUCCEEDED</code>. If so, call <a>GetContentModeration</a> and pass the job identifier (<code>JobId</code>) from
  * the initial call to <code>StartContentModeration</code>.
  *
  * </p
  *
- * For more information, see Detecting Unsafe Content in the Amazon Rekognition Developer
+ * For more information, see Moderating content in the Amazon Rekognition Developer
  */
 StartContentModerationResponse * RekognitionClient::startContentModeration(const StartContentModerationRequest &request)
 {
@@ -1728,7 +2382,7 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  *
  * <code>StartFaceDetection</code>>
  *
- * For more information, see Detecting Faces in a Stored Video in the Amazon Rekognition Developer
+ * For more information, see Detecting faces in a stored video in the Amazon Rekognition Developer
  */
 StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFaceDetectionRequest &request)
 {
@@ -1751,7 +2405,9 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
  * status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>. To get the
  * search results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so,
  * call <a>GetFaceSearch</a> and pass the job identifier (<code>JobId</code>) from the initial call to
- * <code>StartFaceSearch</code>. For more information, see
+ * <code>StartFaceSearch</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/dg/procedure-person-search-videos.html">Searching stored videos for
+ * faces</a>.
  */
 StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSearchRequest &request)
 {
@@ -1784,6 +2440,8 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
  * To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic
  * is <code>SUCCEEDED</code>. If so, call <a>GetLabelDetection</a> and pass the job identifier (<code>JobId</code>) from
  * the initial call to
+ *
+ * <code>StartLabelDetection</code>>
  */
 StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const StartLabelDetectionRequest &request)
 {
@@ -1836,6 +2494,11 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
  *
  * <a>StopProjectVersion</a>> </note>
  *
+ * For more information, see <i>Running a trained Amazon Rekognition Custom Labels model</i> in the Amazon Rekognition
+ * Custom Labels
+ *
+ * Guide>
+ *
  * This operation requires permissions to perform the <code>rekognition:StartProjectVersion</code>
  */
 StartProjectVersionResponse * RekognitionClient::startProjectVersion(const StartProjectVersionRequest &request)
@@ -1873,7 +2536,7 @@ StartProjectVersionResponse * RekognitionClient::startProjectVersion(const Start
  *
  * </p
  *
- * For more information, see Detecting Video Segments in Stored Video in the Amazon Rekognition Developer
+ * For more information, see Detecting video segments in stored video in the Amazon Rekognition Developer
  */
 StartSegmentDetectionResponse * RekognitionClient::startSegmentDetection(const StartSegmentDetectionRequest &request)
 {
@@ -1889,6 +2552,11 @@ StartSegmentDetectionResponse * RekognitionClient::startSegmentDetection(const S
  * Starts processing a stream processor. You create a stream processor by calling <a>CreateStreamProcessor</a>. To tell
  * <code>StartStreamProcessor</code> which stream processor to start, use the value of the <code>Name</code> field
  * specified in the call to
+ *
+ * <code>CreateStreamProcessor</code>>
+ *
+ * If you are using a label detection stream processor to detect labels, you need to provide a <code>Start selector</code>
+ * and a <code>Stop selector</code> to determine the length of the stream processing
  */
 StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const StartStreamProcessorRequest &request)
 {
@@ -1981,6 +2649,67 @@ TagResourceResponse * RekognitionClient::tagResource(const TagResourceRequest &r
 UntagResourceResponse * RekognitionClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * UpdateDatasetEntriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates one or more entries (images) in a dataset. An entry is a JSON Line which contains the information for a
+ * single image, including the image location, assigned labels, and object location bounding boxes. For more information,
+ * see Image-Level labels in manifest files and Object localization in manifest files in the <i>Amazon Rekognition Custom
+ * Labels Developer Guide</i>.
+ *
+ * </p
+ *
+ * If the <code>source-ref</code> field in the JSON line references an existing image, the existing image in the dataset is
+ * updated. If <code>source-ref</code> field doesn't reference an existing image, the image is added as a new image to the
+ * dataset.
+ *
+ * </p
+ *
+ * You specify the changes that you want to make in the <code>Changes</code> input parameter. There isn't a limit to the
+ * number JSON Lines that you can change, but the size of <code>Changes</code> must be less than
+ *
+ * 5MB>
+ *
+ * <code>UpdateDatasetEntries</code> returns immediatly, but the dataset update might take a while to complete. Use
+ * <a>DescribeDataset</a> to check the current status. The dataset updated successfully if the value of <code>Status</code>
+ * is <code>UPDATE_COMPLETE</code>.
+ *
+ * </p
+ *
+ * To check if any non-terminal errors occured, call <a>ListDatasetEntries</a> and check for the presence of
+ * <code>errors</code> lists in the JSON
+ *
+ * Lines>
+ *
+ * Dataset update fails if a terminal error occurs (<code>Status</code> = <code>UPDATE_FAILED</code>). Currently, you can't
+ * access the terminal error information from the Amazon Rekognition Custom Labels SDK.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:UpdateDatasetEntries</code>
+ */
+UpdateDatasetEntriesResponse * RekognitionClient::updateDatasetEntries(const UpdateDatasetEntriesRequest &request)
+{
+    return qobject_cast<UpdateDatasetEntriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * UpdateStreamProcessorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to update a stream processor. You can change some settings and regions of interest and delete certain
+ * parameters.
+ */
+UpdateStreamProcessorResponse * RekognitionClient::updateStreamProcessor(const UpdateStreamProcessorRequest &request)
+{
+    return qobject_cast<UpdateStreamProcessorResponse *>(send(request));
 }
 
 /*!

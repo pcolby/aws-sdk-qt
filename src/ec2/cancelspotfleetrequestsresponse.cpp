@@ -25,22 +25,22 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 /*!
- * \class QtAws::EC2::CancelSpotFleetRequestsResponse
- * \brief The CancelSpotFleetRequestsResponse class provides an interace for EC2 CancelSpotFleetRequests responses.
+ * \class QtAws::Ec2::CancelSpotFleetRequestsResponse
+ * \brief The CancelSpotFleetRequestsResponse class provides an interace for Ec2 CancelSpotFleetRequests responses.
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon
- *  Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud where you can
- *  launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block
- *  level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can
- *  be attached to any running instance and used like a hard
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ *  Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon
+ *  Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon
+ *  Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly
+ *  available and reliable storage volumes that can be attached to any running instance and used like a hard
  * 
  *  drive>
  * 
@@ -63,8 +63,8 @@ namespace EC2 {
  * 
  *  </p </li> <li>
  * 
- *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ *  Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  *
  * \sa Ec2Client::cancelSpotFleetRequests
  */
@@ -93,7 +93,7 @@ const CancelSpotFleetRequestsRequest * CancelSpotFleetRequestsResponse::request(
 
 /*!
  * \reimp
- * Parses a successful EC2 CancelSpotFleetRequests \a response.
+ * Parses a successful Ec2 CancelSpotFleetRequests \a response.
  */
 void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,11 +103,11 @@ void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::CancelSpotFleetRequestsResponsePrivate
+ * \class QtAws::Ec2::CancelSpotFleetRequestsResponsePrivate
  * \brief The CancelSpotFleetRequestsResponsePrivate class provides private implementation for CancelSpotFleetRequestsResponse.
  * \internal
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  */
 
 /*!
@@ -120,7 +120,7 @@ CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
 }
 
 /*!
- * Parses a EC2 CancelSpotFleetRequests response element from \a xml.
+ * Parses a Ec2 CancelSpotFleetRequests response element from \a xml.
  */
 void CancelSpotFleetRequestsResponsePrivate::parseCancelSpotFleetRequestsResponse(QXmlStreamReader &xml)
 {
@@ -128,5 +128,5 @@ void CancelSpotFleetRequestsResponsePrivate::parseCancelSpotFleetRequestsRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws

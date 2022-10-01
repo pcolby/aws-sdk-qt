@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DescribeExportRequest
- * \brief The DescribeExportRequest class provides an interface for DynamoDB DescribeExport requests.
+ * \class QtAws::DynamoDb::DescribeExportRequest
+ * \brief The DescribeExportRequest class provides an interface for DynamoDb DescribeExport requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::describeExport
+ * \sa DynamoDbClient::describeExport
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeExportRequest::DescribeExportRequest(const DescribeExportRequest &other)
-    : DynamoDBRequest(new DescribeExportRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new DescribeExportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DescribeExportRequest::DescribeExportRequest(const DescribeExportRequest &other)
  * Constructs a DescribeExportRequest object.
  */
 DescribeExportRequest::DescribeExportRequest()
-    : DynamoDBRequest(new DescribeExportRequestPrivate(DynamoDBRequest::DescribeExportAction, this))
+    : DynamoDbRequest(new DescribeExportRequestPrivate(DynamoDbRequest::DescribeExportAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * DescribeExportRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::DynamoDB::DescribeExportRequestPrivate
+ * \class QtAws::DynamoDb::DescribeExportRequestPrivate
  * \brief The DescribeExportRequestPrivate class provides private implementation for DescribeExportRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DescribeExportRequestPrivate object for DynamoDB \a action,
+ * Constructs a DescribeExportRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 DescribeExportRequestPrivate::DescribeExportRequestPrivate(
-    const DynamoDBRequest::Action action, DescribeExportRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, DescribeExportRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ DescribeExportRequestPrivate::DescribeExportRequestPrivate(
  */
 DescribeExportRequestPrivate::DescribeExportRequestPrivate(
     const DescribeExportRequestPrivate &other, DescribeExportRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "getdeploymentrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetDeploymentResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetDeploymentResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetDeploymentResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

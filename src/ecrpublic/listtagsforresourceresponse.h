@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSECRPUBLIC_EXPORT ListTagsForResourceResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT ListTagsForResourceResponse : public EcrPublicResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

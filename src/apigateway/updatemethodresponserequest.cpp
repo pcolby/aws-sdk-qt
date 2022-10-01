@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateMethodResponseRequest
- * \brief The UpdateMethodResponseRequest class provides an interface for APIGateway UpdateMethodResponse requests.
+ * \class QtAws::ApiGateway::UpdateMethodResponseRequest
+ * \brief The UpdateMethodResponseRequest class provides an interface for ApiGateway UpdateMethodResponse requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateMethodResponse
+ * \sa ApiGatewayClient::updateMethodResponse
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateMethodResponseRequest::UpdateMethodResponseRequest(const UpdateMethodResponseRequest &other)
-    : APIGatewayRequest(new UpdateMethodResponseRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateMethodResponseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateMethodResponseRequest::UpdateMethodResponseRequest(const UpdateMethodRespo
  * Constructs a UpdateMethodResponseRequest object.
  */
 UpdateMethodResponseRequest::UpdateMethodResponseRequest()
-    : APIGatewayRequest(new UpdateMethodResponseRequestPrivate(APIGatewayRequest::UpdateMethodResponseAction, this))
+    : ApiGatewayRequest(new UpdateMethodResponseRequestPrivate(ApiGatewayRequest::UpdateMethodResponseAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateMethodResponseRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateMethodResponseRequestPrivate
+ * \class QtAws::ApiGateway::UpdateMethodResponseRequestPrivate
  * \brief The UpdateMethodResponseRequestPrivate class provides private implementation for UpdateMethodResponseRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateMethodResponseRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateMethodResponseRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateMethodResponseRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateMethodResponseRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
  */
 UpdateMethodResponseRequestPrivate::UpdateMethodResponseRequestPrivate(
     const UpdateMethodResponseRequestPrivate &other, UpdateMethodResponseRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

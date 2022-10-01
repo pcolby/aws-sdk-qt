@@ -1,18 +1,25 @@
 add_compile_definitions(QTAWSRAM_LIBRARY)
 
 add_library(QtAwsRam
+  qtawsramglobal.h
+  ramclient.h
+  ramclient_p.h
+  ramrequest.h
+  ramrequest_p.h
+  ramresponse.h
+  ramresponse_p.h
   acceptresourceshareinvitationrequest.h
   acceptresourceshareinvitationrequest_p.h
   acceptresourceshareinvitationresponse.h
   acceptresourceshareinvitationresponse_p.h
-  associateresourcesharepermissionrequest.h
-  associateresourcesharepermissionrequest_p.h
-  associateresourcesharepermissionresponse.h
-  associateresourcesharepermissionresponse_p.h
   associateresourcesharerequest.h
   associateresourcesharerequest_p.h
   associateresourceshareresponse.h
   associateresourceshareresponse_p.h
+  associateresourcesharepermissionrequest.h
+  associateresourcesharepermissionrequest_p.h
+  associateresourcesharepermissionresponse.h
+  associateresourcesharepermissionresponse_p.h
   createresourcesharerequest.h
   createresourcesharerequest_p.h
   createresourceshareresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsRam
   deleteresourcesharerequest_p.h
   deleteresourceshareresponse.h
   deleteresourceshareresponse_p.h
-  disassociateresourcesharepermissionrequest.h
-  disassociateresourcesharepermissionrequest_p.h
-  disassociateresourcesharepermissionresponse.h
-  disassociateresourcesharepermissionresponse_p.h
   disassociateresourcesharerequest.h
   disassociateresourcesharerequest_p.h
   disassociateresourceshareresponse.h
   disassociateresourceshareresponse_p.h
+  disassociateresourcesharepermissionrequest.h
+  disassociateresourcesharepermissionrequest_p.h
+  disassociateresourcesharepermissionresponse.h
+  disassociateresourcesharepermissionresponse_p.h
   enablesharingwithawsorganizationrequest.h
   enablesharingwithawsorganizationrequest_p.h
   enablesharingwithawsorganizationresponse.h
@@ -57,6 +64,10 @@ add_library(QtAwsRam
   listpendinginvitationresourcesrequest_p.h
   listpendinginvitationresourcesresponse.h
   listpendinginvitationresourcesresponse_p.h
+  listpermissionversionsrequest.h
+  listpermissionversionsrequest_p.h
+  listpermissionversionsresponse.h
+  listpermissionversionsresponse_p.h
   listpermissionsrequest.h
   listpermissionsrequest_p.h
   listpermissionsresponse.h
@@ -69,25 +80,18 @@ add_library(QtAwsRam
   listresourcesharepermissionsrequest_p.h
   listresourcesharepermissionsresponse.h
   listresourcesharepermissionsresponse_p.h
-  listresourcesrequest.h
-  listresourcesrequest_p.h
-  listresourcesresponse.h
-  listresourcesresponse_p.h
   listresourcetypesrequest.h
   listresourcetypesrequest_p.h
   listresourcetypesresponse.h
   listresourcetypesresponse_p.h
+  listresourcesrequest.h
+  listresourcesrequest_p.h
+  listresourcesresponse.h
+  listresourcesresponse_p.h
   promoteresourcesharecreatedfrompolicyrequest.h
   promoteresourcesharecreatedfrompolicyrequest_p.h
   promoteresourcesharecreatedfrompolicyresponse.h
   promoteresourcesharecreatedfrompolicyresponse_p.h
-  qtawsramglobal.h
-  ramclient.h
-  ramclient_p.h
-  ramrequest.h
-  ramrequest_p.h
-  ramresponse.h
-  ramresponse_p.h
   rejectresourceshareinvitationrequest.h
   rejectresourceshareinvitationrequest_p.h
   rejectresourceshareinvitationresponse.h
@@ -104,20 +108,23 @@ add_library(QtAwsRam
   updateresourcesharerequest_p.h
   updateresourceshareresponse.h
   updateresourceshareresponse_p.h
+  ramclient.cpp
+  ramrequest.cpp
+  ramresponse.cpp
   acceptresourceshareinvitationrequest.cpp
   acceptresourceshareinvitationresponse.cpp
-  associateresourcesharepermissionrequest.cpp
-  associateresourcesharepermissionresponse.cpp
   associateresourcesharerequest.cpp
   associateresourceshareresponse.cpp
+  associateresourcesharepermissionrequest.cpp
+  associateresourcesharepermissionresponse.cpp
   createresourcesharerequest.cpp
   createresourceshareresponse.cpp
   deleteresourcesharerequest.cpp
   deleteresourceshareresponse.cpp
-  disassociateresourcesharepermissionrequest.cpp
-  disassociateresourcesharepermissionresponse.cpp
   disassociateresourcesharerequest.cpp
   disassociateresourceshareresponse.cpp
+  disassociateresourcesharepermissionrequest.cpp
+  disassociateresourcesharepermissionresponse.cpp
   enablesharingwithawsorganizationrequest.cpp
   enablesharingwithawsorganizationresponse.cpp
   getpermissionrequest.cpp
@@ -132,21 +139,20 @@ add_library(QtAwsRam
   getresourcesharesresponse.cpp
   listpendinginvitationresourcesrequest.cpp
   listpendinginvitationresourcesresponse.cpp
+  listpermissionversionsrequest.cpp
+  listpermissionversionsresponse.cpp
   listpermissionsrequest.cpp
   listpermissionsresponse.cpp
   listprincipalsrequest.cpp
   listprincipalsresponse.cpp
   listresourcesharepermissionsrequest.cpp
   listresourcesharepermissionsresponse.cpp
-  listresourcesrequest.cpp
-  listresourcesresponse.cpp
   listresourcetypesrequest.cpp
   listresourcetypesresponse.cpp
+  listresourcesrequest.cpp
+  listresourcesresponse.cpp
   promoteresourcesharecreatedfrompolicyrequest.cpp
   promoteresourcesharecreatedfrompolicyresponse.cpp
-  ramclient.cpp
-  ramrequest.cpp
-  ramresponse.cpp
   rejectresourceshareinvitationrequest.cpp
   rejectresourceshareinvitationresponse.cpp
   tagresourcerequest.cpp

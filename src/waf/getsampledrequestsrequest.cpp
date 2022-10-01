@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetSampledRequestsRequest
- * \brief The GetSampledRequestsRequest class provides an interface for WAF GetSampledRequests requests.
+ * \class QtAws::Waf::GetSampledRequestsRequest
+ * \brief The GetSampledRequestsRequest class provides an interface for Waf GetSampledRequests requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAF::GetSampledRequestsRequestPrivate
+ * \class QtAws::Waf::GetSampledRequestsRequestPrivate
  * \brief The GetSampledRequestsRequestPrivate class provides private implementation for GetSampledRequestsRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RebootDBInstanceRequest
- * \brief The RebootDBInstanceRequest class provides an interface for DocDB RebootDBInstance requests.
+ * \class QtAws::DocDb::RebootDBInstanceRequest
+ * \brief The RebootDBInstanceRequest class provides an interface for DocDb RebootDBInstance requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::rebootDBInstance
+ * \sa DocDbClient::rebootDBInstance
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &other)
-    : DocDBRequest(new RebootDBInstanceRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RebootDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &
  * Constructs a RebootDBInstanceRequest object.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest()
-    : DocDBRequest(new RebootDBInstanceRequestPrivate(DocDBRequest::RebootDBInstanceAction, this))
+    : DocDbRequest(new RebootDBInstanceRequestPrivate(DocDbRequest::RebootDBInstanceAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DocDB::RebootDBInstanceRequestPrivate
+ * \class QtAws::DocDb::RebootDBInstanceRequestPrivate
  * \brief The RebootDBInstanceRequestPrivate class provides private implementation for RebootDBInstanceRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RebootDBInstanceRequestPrivate object for DocDB \a action,
+ * Constructs a RebootDBInstanceRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
-    const DocDBRequest::Action action, RebootDBInstanceRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RebootDBInstanceRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RebootDBInstanceRequestPrivate &other, RebootDBInstanceRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

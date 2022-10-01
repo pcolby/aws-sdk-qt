@@ -24,14 +24,14 @@
 #include "putconfigurationsettrackingoptionsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetTrackingOptionsRequest;
 
-class PutConfigurationSetTrackingOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetTrackingOptionsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutConfigurationSetTrackingOptionsRequestPrivate(const Sesv2Request::Action action,
+    PutConfigurationSetTrackingOptionsRequestPrivate(const SESv2Request::Action action,
                                    PutConfigurationSetTrackingOptionsRequest * const q);
     PutConfigurationSetTrackingOptionsRequestPrivate(const PutConfigurationSetTrackingOptionsRequestPrivate &other,
                                    PutConfigurationSetTrackingOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

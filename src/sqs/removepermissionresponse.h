@@ -24,7 +24,7 @@
 #include "removepermissionrequest.h"
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 class RemovePermissionResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws
 
 #endif

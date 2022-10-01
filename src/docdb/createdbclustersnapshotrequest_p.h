@@ -24,14 +24,14 @@
 #include "createdbclustersnapshotrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CreateDBClusterSnapshotRequest;
 
-class CreateDBClusterSnapshotRequestPrivate : public DocDBRequestPrivate {
+class CreateDBClusterSnapshotRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    CreateDBClusterSnapshotRequestPrivate(const DocDBRequest::Action action,
+    CreateDBClusterSnapshotRequestPrivate(const DocDbRequest::Action action,
                                    CreateDBClusterSnapshotRequest * const q);
     CreateDBClusterSnapshotRequestPrivate(const CreateDBClusterSnapshotRequestPrivate &other,
                                    CreateDBClusterSnapshotRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

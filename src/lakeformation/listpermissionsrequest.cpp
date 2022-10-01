@@ -31,9 +31,9 @@ namespace LakeFormation {
  *
  * \inmodule QtAwsLakeFormation
  *
- *  <fullname>AWS Lake Formation</fullname>
+ *  <fullname>Lake Formation</fullname>
  * 
- *  Defines the public endpoint for the AWS Lake Formation
+ *  Defines the public endpoint for the Lake Formation
  *
  * \sa LakeFormationClient::listPermissions
  */

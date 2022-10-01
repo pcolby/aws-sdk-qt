@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetChangeTokenStatusResponse
- * \brief The GetChangeTokenStatusResponse class provides an interace for WAF GetChangeTokenStatus responses.
+ * \class QtAws::Waf::GetChangeTokenStatusResponse
+ * \brief The GetChangeTokenStatusResponse class provides an interace for Waf GetChangeTokenStatus responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful WAF GetChangeTokenStatus \a response.
+ * Parses a successful Waf GetChangeTokenStatus \a response.
  */
 void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetChangeTokenStatusResponsePrivate
+ * \class QtAws::Waf::GetChangeTokenStatusResponsePrivate
  * \brief The GetChangeTokenStatusResponsePrivate class provides private implementation for GetChangeTokenStatusResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetChangeTokenStatus response element from \a xml.
+ * Parses a Waf GetChangeTokenStatus response element from \a xml.
  */
 void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

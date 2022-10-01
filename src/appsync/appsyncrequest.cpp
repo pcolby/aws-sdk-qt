@@ -36,9 +36,11 @@ namespace AppSync {
  * This enum describes the actions that can be performed as AppSync
  * requests.
  *
+ * \value AssociateApiAction AppSync AssociateApi action.
  * \value CreateApiCacheAction AppSync CreateApiCache action.
  * \value CreateApiKeyAction AppSync CreateApiKey action.
  * \value CreateDataSourceAction AppSync CreateDataSource action.
+ * \value CreateDomainNameAction AppSync CreateDomainName action.
  * \value CreateFunctionAction AppSync CreateFunction action.
  * \value CreateGraphqlApiAction AppSync CreateGraphqlApi action.
  * \value CreateResolverAction AppSync CreateResolver action.
@@ -46,13 +48,18 @@ namespace AppSync {
  * \value DeleteApiCacheAction AppSync DeleteApiCache action.
  * \value DeleteApiKeyAction AppSync DeleteApiKey action.
  * \value DeleteDataSourceAction AppSync DeleteDataSource action.
+ * \value DeleteDomainNameAction AppSync DeleteDomainName action.
  * \value DeleteFunctionAction AppSync DeleteFunction action.
  * \value DeleteGraphqlApiAction AppSync DeleteGraphqlApi action.
  * \value DeleteResolverAction AppSync DeleteResolver action.
  * \value DeleteTypeAction AppSync DeleteType action.
+ * \value DisassociateApiAction AppSync DisassociateApi action.
+ * \value EvaluateMappingTemplateAction AppSync EvaluateMappingTemplate action.
  * \value FlushApiCacheAction AppSync FlushApiCache action.
+ * \value GetApiAssociationAction AppSync GetApiAssociation action.
  * \value GetApiCacheAction AppSync GetApiCache action.
  * \value GetDataSourceAction AppSync GetDataSource action.
+ * \value GetDomainNameAction AppSync GetDomainName action.
  * \value GetFunctionAction AppSync GetFunction action.
  * \value GetGraphqlApiAction AppSync GetGraphqlApi action.
  * \value GetIntrospectionSchemaAction AppSync GetIntrospectionSchema action.
@@ -61,6 +68,7 @@ namespace AppSync {
  * \value GetTypeAction AppSync GetType action.
  * \value ListApiKeysAction AppSync ListApiKeys action.
  * \value ListDataSourcesAction AppSync ListDataSources action.
+ * \value ListDomainNamesAction AppSync ListDomainNames action.
  * \value ListFunctionsAction AppSync ListFunctions action.
  * \value ListGraphqlApisAction AppSync ListGraphqlApis action.
  * \value ListResolversAction AppSync ListResolvers action.
@@ -73,6 +81,7 @@ namespace AppSync {
  * \value UpdateApiCacheAction AppSync UpdateApiCache action.
  * \value UpdateApiKeyAction AppSync UpdateApiKey action.
  * \value UpdateDataSourceAction AppSync UpdateDataSource action.
+ * \value UpdateDomainNameAction AppSync UpdateDomainName action.
  * \value UpdateFunctionAction AppSync UpdateFunction action.
  * \value UpdateGraphqlApiAction AppSync UpdateGraphqlApi action.
  * \value UpdateResolverAction AppSync UpdateResolver action.
@@ -284,7 +293,7 @@ QNetworkRequest AppSyncRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppSyncRequestPrivate::AppSyncRequestPrivate(const AppSyncRequest::Action action, AppSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }
@@ -318,9 +327,11 @@ QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
     #define ActionToString(action) \
         case AppSyncRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AssociateApi);
         ActionToString(CreateApiCache);
         ActionToString(CreateApiKey);
         ActionToString(CreateDataSource);
+        ActionToString(CreateDomainName);
         ActionToString(CreateFunction);
         ActionToString(CreateGraphqlApi);
         ActionToString(CreateResolver);
@@ -328,13 +339,18 @@ QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
         ActionToString(DeleteApiCache);
         ActionToString(DeleteApiKey);
         ActionToString(DeleteDataSource);
+        ActionToString(DeleteDomainName);
         ActionToString(DeleteFunction);
         ActionToString(DeleteGraphqlApi);
         ActionToString(DeleteResolver);
         ActionToString(DeleteType);
+        ActionToString(DisassociateApi);
+        ActionToString(EvaluateMappingTemplate);
         ActionToString(FlushApiCache);
+        ActionToString(GetApiAssociation);
         ActionToString(GetApiCache);
         ActionToString(GetDataSource);
+        ActionToString(GetDomainName);
         ActionToString(GetFunction);
         ActionToString(GetGraphqlApi);
         ActionToString(GetIntrospectionSchema);
@@ -343,6 +359,7 @@ QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
         ActionToString(GetType);
         ActionToString(ListApiKeys);
         ActionToString(ListDataSources);
+        ActionToString(ListDomainNames);
         ActionToString(ListFunctions);
         ActionToString(ListGraphqlApis);
         ActionToString(ListResolvers);
@@ -355,6 +372,7 @@ QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
         ActionToString(UpdateApiCache);
         ActionToString(UpdateApiKey);
         ActionToString(UpdateDataSource);
+        ActionToString(UpdateDomainName);
         ActionToString(UpdateFunction);
         ActionToString(UpdateGraphqlApi);
         ActionToString(UpdateResolver);

@@ -24,7 +24,7 @@
 #include "putidentitypolicyrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class PutIdentityPolicyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

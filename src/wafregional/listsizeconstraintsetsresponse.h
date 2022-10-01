@@ -24,11 +24,11 @@
 #include "listsizeconstraintsetsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListSizeConstraintSetsResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT ListSizeConstraintSetsResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListSizeConstraintSetsResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

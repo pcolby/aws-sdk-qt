@@ -265,7 +265,7 @@ QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequest::Action action, SecretsManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-10-17"))
 {
 
 }

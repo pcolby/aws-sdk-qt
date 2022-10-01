@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::FisResponse
- * \brief The FisResponse class provides an interface for FIS responses.
+ * \class QtAws::Fis::FisResponse
+ * \brief The FisResponse class provides an interface for Fis responses.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -76,11 +76,11 @@ void FisResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FIS::FisResponsePrivate
+ * \class QtAws::Fis::FisResponsePrivate
  * \brief The FisResponsePrivate class provides private implementation for FisResponse.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
@@ -92,5 +92,5 @@ FisResponsePrivate::FisResponsePrivate(
 
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

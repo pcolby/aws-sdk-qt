@@ -24,7 +24,7 @@
 #include "batchgetstreamkeyrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class BatchGetStreamKeyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

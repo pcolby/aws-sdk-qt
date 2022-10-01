@@ -24,14 +24,14 @@
 #include "listratebasedrulesrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListRateBasedRulesRequest;
 
-class ListRateBasedRulesRequestPrivate : public WAFRegionalRequestPrivate {
+class ListRateBasedRulesRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListRateBasedRulesRequestPrivate(const WAFRegionalRequest::Action action,
+    ListRateBasedRulesRequestPrivate(const WafRegionalRequest::Action action,
                                    ListRateBasedRulesRequest * const q);
     ListRateBasedRulesRequestPrivate(const ListRateBasedRulesRequestPrivate &other,
                                    ListRateBasedRulesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

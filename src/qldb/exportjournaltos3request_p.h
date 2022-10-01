@@ -24,7 +24,7 @@
 #include "exportjournaltos3request.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class ExportJournalToS3Request;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::IncreaseReplicationFactorResponse
- * \brief The IncreaseReplicationFactorResponse class provides an interace for DAX IncreaseReplicationFactor responses.
+ * \class QtAws::Dax::IncreaseReplicationFactorResponse
+ * \brief The IncreaseReplicationFactorResponse class provides an interace for Dax IncreaseReplicationFactor responses.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -65,7 +65,7 @@ const IncreaseReplicationFactorRequest * IncreaseReplicationFactorResponse::requ
 
 /*!
  * \reimp
- * Parses a successful DAX IncreaseReplicationFactor \a response.
+ * Parses a successful Dax IncreaseReplicationFactor \a response.
  */
 void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,11 +75,11 @@ void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::IncreaseReplicationFactorResponsePrivate
+ * \class QtAws::Dax::IncreaseReplicationFactorResponsePrivate
  * \brief The IncreaseReplicationFactorResponsePrivate class provides private implementation for IncreaseReplicationFactorResponse.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -92,7 +92,7 @@ IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePriva
 }
 
 /*!
- * Parses a DAX IncreaseReplicationFactor response element from \a xml.
+ * Parses a Dax IncreaseReplicationFactor response element from \a xml.
  */
 void IncreaseReplicationFactorResponsePrivate::parseIncreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {
@@ -100,5 +100,5 @@ void IncreaseReplicationFactorResponsePrivate::parseIncreaseReplicationFactorRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

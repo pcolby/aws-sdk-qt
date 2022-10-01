@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::ListEventTypesResponse
- * \brief The ListEventTypesResponse class provides an interace for CodeStarNotifications ListEventTypes responses.
+ * \class QtAws::CodestarNotifications::ListEventTypesResponse
+ * \brief The ListEventTypesResponse class provides an interace for CodestarNotifications ListEventTypes responses.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -74,7 +74,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -106,9 +106,11 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::listEventTypes
+ * \sa CodestarNotificationsClient::listEventTypes
  */
 
 /*!
@@ -118,7 +120,7 @@ ListEventTypesResponse::ListEventTypesResponse(
         const ListEventTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarNotificationsResponse(new ListEventTypesResponsePrivate(this), parent)
+    : CodestarNotificationsResponse(new ListEventTypesResponsePrivate(this), parent)
 {
     setRequest(new ListEventTypesRequest(request));
     setReply(reply);
@@ -135,7 +137,7 @@ const ListEventTypesRequest * ListEventTypesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CodeStarNotifications ListEventTypes \a response.
+ * Parses a successful CodestarNotifications ListEventTypes \a response.
  */
 void ListEventTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -145,24 +147,24 @@ void ListEventTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::ListEventTypesResponsePrivate
+ * \class QtAws::CodestarNotifications::ListEventTypesResponsePrivate
  * \brief The ListEventTypesResponsePrivate class provides private implementation for ListEventTypesResponse.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
  * Constructs a ListEventTypesResponsePrivate object with public implementation \a q.
  */
 ListEventTypesResponsePrivate::ListEventTypesResponsePrivate(
-    ListEventTypesResponse * const q) : CodeStarNotificationsResponsePrivate(q)
+    ListEventTypesResponse * const q) : CodestarNotificationsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CodeStarNotifications ListEventTypes response element from \a xml.
+ * Parses a CodestarNotifications ListEventTypes response element from \a xml.
  */
 void ListEventTypesResponsePrivate::parseListEventTypesResponse(QXmlStreamReader &xml)
 {
@@ -170,5 +172,5 @@ void ListEventTypesResponsePrivate::parseListEventTypesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSTIMESTREAMWRITE_LIBRARY)
 
 add_library(QtAwsTimestreamWrite
+  qtawstimestreamwriteglobal.h
+  timestreamwriteclient.h
+  timestreamwriteclient_p.h
+  timestreamwriterequest.h
+  timestreamwriterequest_p.h
+  timestreamwriteresponse.h
+  timestreamwriteresponse_p.h
   createdatabaserequest.h
   createdatabaserequest_p.h
   createdatabaseresponse.h
@@ -41,17 +48,10 @@ add_library(QtAwsTimestreamWrite
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawstimestreamwriteglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
   tagresourceresponse_p.h
-  timestreamwriteclient.h
-  timestreamwriteclient_p.h
-  timestreamwriterequest.h
-  timestreamwriterequest_p.h
-  timestreamwriteresponse.h
-  timestreamwriteresponse_p.h
   untagresourcerequest.h
   untagresourcerequest_p.h
   untagresourceresponse.h
@@ -68,6 +68,9 @@ add_library(QtAwsTimestreamWrite
   writerecordsrequest_p.h
   writerecordsresponse.h
   writerecordsresponse_p.h
+  timestreamwriteclient.cpp
+  timestreamwriterequest.cpp
+  timestreamwriteresponse.cpp
   createdatabaserequest.cpp
   createdatabaseresponse.cpp
   createtablerequest.cpp
@@ -90,9 +93,6 @@ add_library(QtAwsTimestreamWrite
   listtagsforresourceresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
-  timestreamwriteclient.cpp
-  timestreamwriterequest.cpp
-  timestreamwriteresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updatedatabaserequest.cpp

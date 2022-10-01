@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCanceledResponse
- * \brief The RespondActivityTaskCanceledResponse class provides an interace for SWF RespondActivityTaskCanceled responses.
+ * \class QtAws::Swf::RespondActivityTaskCanceledResponse
+ * \brief The RespondActivityTaskCanceledResponse class provides an interace for Swf RespondActivityTaskCanceled responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::
 
 /*!
  * \reimp
- * Parses a successful SWF RespondActivityTaskCanceled \a response.
+ * Parses a successful Swf RespondActivityTaskCanceled \a response.
  */
 void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RespondActivityTaskCanceledResponsePrivate
+ * \class QtAws::Swf::RespondActivityTaskCanceledResponsePrivate
  * \brief The RespondActivityTaskCanceledResponsePrivate class provides private implementation for RespondActivityTaskCanceledResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponseP
 }
 
 /*!
- * Parses a SWF RespondActivityTaskCanceled response element from \a xml.
+ * Parses a Swf RespondActivityTaskCanceled response element from \a xml.
  */
 void RespondActivityTaskCanceledResponsePrivate::parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RespondActivityTaskCanceledResponsePrivate::parseRespondActivityTaskCancele
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

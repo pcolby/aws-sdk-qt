@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteXssMatchSetRequest
- * \brief The DeleteXssMatchSetRequest class provides an interface for WAF DeleteXssMatchSet requests.
+ * \class QtAws::Waf::DeleteXssMatchSetRequest
+ * \brief The DeleteXssMatchSetRequest class provides an interface for Waf DeleteXssMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAF::DeleteXssMatchSetRequestPrivate
+ * \class QtAws::Waf::DeleteXssMatchSetRequestPrivate
  * \brief The DeleteXssMatchSetRequestPrivate class provides private implementation for DeleteXssMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

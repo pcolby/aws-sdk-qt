@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetDomainNamesRequest
- * \brief The GetDomainNamesRequest class provides an interface for APIGateway GetDomainNames requests.
+ * \class QtAws::ApiGateway::GetDomainNamesRequest
+ * \brief The GetDomainNamesRequest class provides an interface for ApiGateway GetDomainNames requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getDomainNames
+ * \sa ApiGatewayClient::getDomainNames
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
-    : APIGatewayRequest(new GetDomainNamesRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetDomainNamesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
  * Constructs a GetDomainNamesRequest object.
  */
 GetDomainNamesRequest::GetDomainNamesRequest()
-    : APIGatewayRequest(new GetDomainNamesRequestPrivate(APIGatewayRequest::GetDomainNamesAction, this))
+    : ApiGatewayRequest(new GetDomainNamesRequestPrivate(ApiGatewayRequest::GetDomainNamesAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::APIGateway::GetDomainNamesRequestPrivate
+ * \class QtAws::ApiGateway::GetDomainNamesRequestPrivate
  * \brief The GetDomainNamesRequestPrivate class provides private implementation for GetDomainNamesRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetDomainNamesRequestPrivate object for APIGateway \a action,
+ * Constructs a GetDomainNamesRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
-    const APIGatewayRequest::Action action, GetDomainNamesRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetDomainNamesRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
  */
 GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
     const GetDomainNamesRequestPrivate &other, GetDomainNamesRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

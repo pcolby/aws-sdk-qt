@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSGLUE_LIBRARY)
 
 add_library(QtAwsGlue
+  qtawsglueglobal.h
+  glueclient.h
+  glueclient_p.h
+  gluerequest.h
+  gluerequest_p.h
+  glueresponse.h
+  glueresponse_p.h
   batchcreatepartitionrequest.h
   batchcreatepartitionrequest_p.h
   batchcreatepartitionresponse.h
@@ -21,10 +28,18 @@ add_library(QtAwsGlue
   batchdeletetableversionrequest_p.h
   batchdeletetableversionresponse.h
   batchdeletetableversionresponse_p.h
+  batchgetblueprintsrequest.h
+  batchgetblueprintsrequest_p.h
+  batchgetblueprintsresponse.h
+  batchgetblueprintsresponse_p.h
   batchgetcrawlersrequest.h
   batchgetcrawlersrequest_p.h
   batchgetcrawlersresponse.h
   batchgetcrawlersresponse_p.h
+  batchgetcustomentitytypesrequest.h
+  batchgetcustomentitytypesrequest_p.h
+  batchgetcustomentitytypesresponse.h
+  batchgetcustomentitytypesresponse_p.h
   batchgetdevendpointsrequest.h
   batchgetdevendpointsrequest_p.h
   batchgetdevendpointsresponse.h
@@ -57,10 +72,18 @@ add_library(QtAwsGlue
   cancelmltaskrunrequest_p.h
   cancelmltaskrunresponse.h
   cancelmltaskrunresponse_p.h
+  cancelstatementrequest.h
+  cancelstatementrequest_p.h
+  cancelstatementresponse.h
+  cancelstatementresponse_p.h
   checkschemaversionvalidityrequest.h
   checkschemaversionvalidityrequest_p.h
   checkschemaversionvalidityresponse.h
   checkschemaversionvalidityresponse_p.h
+  createblueprintrequest.h
+  createblueprintrequest_p.h
+  createblueprintresponse.h
+  createblueprintresponse_p.h
   createclassifierrequest.h
   createclassifierrequest_p.h
   createclassifierresponse.h
@@ -73,6 +96,10 @@ add_library(QtAwsGlue
   createcrawlerrequest_p.h
   createcrawlerresponse.h
   createcrawlerresponse_p.h
+  createcustomentitytyperequest.h
+  createcustomentitytyperequest_p.h
+  createcustomentitytyperesponse.h
+  createcustomentitytyperesponse_p.h
   createdatabaserequest.h
   createdatabaserequest_p.h
   createdatabaseresponse.h
@@ -89,14 +116,14 @@ add_library(QtAwsGlue
   createmltransformrequest_p.h
   createmltransformresponse.h
   createmltransformresponse_p.h
-  createpartitionindexrequest.h
-  createpartitionindexrequest_p.h
-  createpartitionindexresponse.h
-  createpartitionindexresponse_p.h
   createpartitionrequest.h
   createpartitionrequest_p.h
   createpartitionresponse.h
   createpartitionresponse_p.h
+  createpartitionindexrequest.h
+  createpartitionindexrequest_p.h
+  createpartitionindexresponse.h
+  createpartitionindexresponse_p.h
   createregistryrequest.h
   createregistryrequest_p.h
   createregistryresponse.h
@@ -113,6 +140,10 @@ add_library(QtAwsGlue
   createsecurityconfigurationrequest_p.h
   createsecurityconfigurationresponse.h
   createsecurityconfigurationresponse_p.h
+  createsessionrequest.h
+  createsessionrequest_p.h
+  createsessionresponse.h
+  createsessionresponse_p.h
   createtablerequest.h
   createtablerequest_p.h
   createtableresponse.h
@@ -129,6 +160,10 @@ add_library(QtAwsGlue
   createworkflowrequest_p.h
   createworkflowresponse.h
   createworkflowresponse_p.h
+  deleteblueprintrequest.h
+  deleteblueprintrequest_p.h
+  deleteblueprintresponse.h
+  deleteblueprintresponse_p.h
   deleteclassifierrequest.h
   deleteclassifierrequest_p.h
   deleteclassifierresponse.h
@@ -149,6 +184,10 @@ add_library(QtAwsGlue
   deletecrawlerrequest_p.h
   deletecrawlerresponse.h
   deletecrawlerresponse_p.h
+  deletecustomentitytyperequest.h
+  deletecustomentitytyperequest_p.h
+  deletecustomentitytyperesponse.h
+  deletecustomentitytyperesponse_p.h
   deletedatabaserequest.h
   deletedatabaserequest_p.h
   deletedatabaseresponse.h
@@ -165,14 +204,14 @@ add_library(QtAwsGlue
   deletemltransformrequest_p.h
   deletemltransformresponse.h
   deletemltransformresponse_p.h
-  deletepartitionindexrequest.h
-  deletepartitionindexrequest_p.h
-  deletepartitionindexresponse.h
-  deletepartitionindexresponse_p.h
   deletepartitionrequest.h
   deletepartitionrequest_p.h
   deletepartitionresponse.h
   deletepartitionresponse_p.h
+  deletepartitionindexrequest.h
+  deletepartitionindexrequest_p.h
+  deletepartitionindexresponse.h
+  deletepartitionindexresponse_p.h
   deleteregistryrequest.h
   deleteregistryrequest_p.h
   deleteregistryresponse.h
@@ -193,6 +232,10 @@ add_library(QtAwsGlue
   deletesecurityconfigurationrequest_p.h
   deletesecurityconfigurationresponse.h
   deletesecurityconfigurationresponse_p.h
+  deletesessionrequest.h
+  deletesessionrequest_p.h
+  deletesessionresponse.h
+  deletesessionresponse_p.h
   deletetablerequest.h
   deletetablerequest_p.h
   deletetableresponse.h
@@ -213,6 +256,18 @@ add_library(QtAwsGlue
   deleteworkflowrequest_p.h
   deleteworkflowresponse.h
   deleteworkflowresponse_p.h
+  getblueprintrequest.h
+  getblueprintrequest_p.h
+  getblueprintresponse.h
+  getblueprintresponse_p.h
+  getblueprintrunrequest.h
+  getblueprintrunrequest_p.h
+  getblueprintrunresponse.h
+  getblueprintrunresponse_p.h
+  getblueprintrunsrequest.h
+  getblueprintrunsrequest_p.h
+  getblueprintrunsresponse.h
+  getblueprintrunsresponse_p.h
   getcatalogimportstatusrequest.h
   getcatalogimportstatusrequest_p.h
   getcatalogimportstatusresponse.h
@@ -241,18 +296,26 @@ add_library(QtAwsGlue
   getconnectionsrequest_p.h
   getconnectionsresponse.h
   getconnectionsresponse_p.h
-  getcrawlermetricsrequest.h
-  getcrawlermetricsrequest_p.h
-  getcrawlermetricsresponse.h
-  getcrawlermetricsresponse_p.h
   getcrawlerrequest.h
   getcrawlerrequest_p.h
   getcrawlerresponse.h
   getcrawlerresponse_p.h
+  getcrawlermetricsrequest.h
+  getcrawlermetricsrequest_p.h
+  getcrawlermetricsresponse.h
+  getcrawlermetricsresponse_p.h
   getcrawlersrequest.h
   getcrawlersrequest_p.h
   getcrawlersresponse.h
   getcrawlersresponse_p.h
+  getcustomentitytyperequest.h
+  getcustomentitytyperequest_p.h
+  getcustomentitytyperesponse.h
+  getcustomentitytyperesponse_p.h
+  getdatacatalogencryptionsettingsrequest.h
+  getdatacatalogencryptionsettingsrequest_p.h
+  getdatacatalogencryptionsettingsresponse.h
+  getdatacatalogencryptionsettingsresponse_p.h
   getdatabaserequest.h
   getdatabaserequest_p.h
   getdatabaseresponse.h
@@ -261,10 +324,6 @@ add_library(QtAwsGlue
   getdatabasesrequest_p.h
   getdatabasesresponse.h
   getdatabasesresponse_p.h
-  getdatacatalogencryptionsettingsrequest.h
-  getdatacatalogencryptionsettingsrequest_p.h
-  getdatacatalogencryptionsettingsresponse.h
-  getdatacatalogencryptionsettingsresponse_p.h
   getdataflowgraphrequest.h
   getdataflowgraphrequest_p.h
   getdataflowgraphresponse.h
@@ -277,14 +336,14 @@ add_library(QtAwsGlue
   getdevendpointsrequest_p.h
   getdevendpointsresponse.h
   getdevendpointsresponse_p.h
-  getjobbookmarkrequest.h
-  getjobbookmarkrequest_p.h
-  getjobbookmarkresponse.h
-  getjobbookmarkresponse_p.h
   getjobrequest.h
   getjobrequest_p.h
   getjobresponse.h
   getjobresponse_p.h
+  getjobbookmarkrequest.h
+  getjobbookmarkrequest_p.h
+  getjobbookmarkresponse.h
+  getjobbookmarkresponse_p.h
   getjobrunrequest.h
   getjobrunrequest_p.h
   getjobrunresponse.h
@@ -297,10 +356,6 @@ add_library(QtAwsGlue
   getjobsrequest_p.h
   getjobsresponse.h
   getjobsresponse_p.h
-  getmappingrequest.h
-  getmappingrequest_p.h
-  getmappingresponse.h
-  getmappingresponse_p.h
   getmltaskrunrequest.h
   getmltaskrunrequest_p.h
   getmltaskrunresponse.h
@@ -317,14 +372,18 @@ add_library(QtAwsGlue
   getmltransformsrequest_p.h
   getmltransformsresponse.h
   getmltransformsresponse_p.h
-  getpartitionindexesrequest.h
-  getpartitionindexesrequest_p.h
-  getpartitionindexesresponse.h
-  getpartitionindexesresponse_p.h
+  getmappingrequest.h
+  getmappingrequest_p.h
+  getmappingresponse.h
+  getmappingresponse_p.h
   getpartitionrequest.h
   getpartitionrequest_p.h
   getpartitionresponse.h
   getpartitionresponse_p.h
+  getpartitionindexesrequest.h
+  getpartitionindexesrequest_p.h
+  getpartitionindexesresponse.h
+  getpartitionindexesresponse_p.h
   getpartitionsrequest.h
   getpartitionsrequest_p.h
   getpartitionsresponse.h
@@ -345,14 +404,14 @@ add_library(QtAwsGlue
   getresourcepolicyrequest_p.h
   getresourcepolicyresponse.h
   getresourcepolicyresponse_p.h
-  getschemabydefinitionrequest.h
-  getschemabydefinitionrequest_p.h
-  getschemabydefinitionresponse.h
-  getschemabydefinitionresponse_p.h
   getschemarequest.h
   getschemarequest_p.h
   getschemaresponse.h
   getschemaresponse_p.h
+  getschemabydefinitionrequest.h
+  getschemabydefinitionrequest_p.h
+  getschemabydefinitionresponse.h
+  getschemabydefinitionresponse_p.h
   getschemaversionrequest.h
   getschemaversionrequest_p.h
   getschemaversionresponse.h
@@ -369,14 +428,18 @@ add_library(QtAwsGlue
   getsecurityconfigurationsrequest_p.h
   getsecurityconfigurationsresponse.h
   getsecurityconfigurationsresponse_p.h
+  getsessionrequest.h
+  getsessionrequest_p.h
+  getsessionresponse.h
+  getsessionresponse_p.h
+  getstatementrequest.h
+  getstatementrequest_p.h
+  getstatementresponse.h
+  getstatementresponse_p.h
   gettablerequest.h
   gettablerequest_p.h
   gettableresponse.h
   gettableresponse_p.h
-  gettablesrequest.h
-  gettablesrequest_p.h
-  gettablesresponse.h
-  gettablesresponse_p.h
   gettableversionrequest.h
   gettableversionrequest_p.h
   gettableversionresponse.h
@@ -385,6 +448,10 @@ add_library(QtAwsGlue
   gettableversionsrequest_p.h
   gettableversionsresponse.h
   gettableversionsresponse_p.h
+  gettablesrequest.h
+  gettablesrequest_p.h
+  gettablesresponse.h
+  gettablesresponse_p.h
   gettagsrequest.h
   gettagsrequest_p.h
   gettagsresponse.h
@@ -397,6 +464,18 @@ add_library(QtAwsGlue
   gettriggersrequest_p.h
   gettriggersresponse.h
   gettriggersresponse_p.h
+  getunfilteredpartitionmetadatarequest.h
+  getunfilteredpartitionmetadatarequest_p.h
+  getunfilteredpartitionmetadataresponse.h
+  getunfilteredpartitionmetadataresponse_p.h
+  getunfilteredpartitionsmetadatarequest.h
+  getunfilteredpartitionsmetadatarequest_p.h
+  getunfilteredpartitionsmetadataresponse.h
+  getunfilteredpartitionsmetadataresponse_p.h
+  getunfilteredtablemetadatarequest.h
+  getunfilteredtablemetadatarequest_p.h
+  getunfilteredtablemetadataresponse.h
+  getunfilteredtablemetadataresponse_p.h
   getuserdefinedfunctionrequest.h
   getuserdefinedfunctionrequest_p.h
   getuserdefinedfunctionresponse.h
@@ -409,32 +488,38 @@ add_library(QtAwsGlue
   getworkflowrequest_p.h
   getworkflowresponse.h
   getworkflowresponse_p.h
-  getworkflowrunpropertiesrequest.h
-  getworkflowrunpropertiesrequest_p.h
-  getworkflowrunpropertiesresponse.h
-  getworkflowrunpropertiesresponse_p.h
   getworkflowrunrequest.h
   getworkflowrunrequest_p.h
   getworkflowrunresponse.h
   getworkflowrunresponse_p.h
+  getworkflowrunpropertiesrequest.h
+  getworkflowrunpropertiesrequest_p.h
+  getworkflowrunpropertiesresponse.h
+  getworkflowrunpropertiesresponse_p.h
   getworkflowrunsrequest.h
   getworkflowrunsrequest_p.h
   getworkflowrunsresponse.h
   getworkflowrunsresponse_p.h
-  glueclient.h
-  glueclient_p.h
-  gluerequest.h
-  gluerequest_p.h
-  glueresponse.h
-  glueresponse_p.h
   importcatalogtogluerequest.h
   importcatalogtogluerequest_p.h
   importcatalogtoglueresponse.h
   importcatalogtoglueresponse_p.h
+  listblueprintsrequest.h
+  listblueprintsrequest_p.h
+  listblueprintsresponse.h
+  listblueprintsresponse_p.h
   listcrawlersrequest.h
   listcrawlersrequest_p.h
   listcrawlersresponse.h
   listcrawlersresponse_p.h
+  listcrawlsrequest.h
+  listcrawlsrequest_p.h
+  listcrawlsresponse.h
+  listcrawlsresponse_p.h
+  listcustomentitytypesrequest.h
+  listcustomentitytypesrequest_p.h
+  listcustomentitytypesresponse.h
+  listcustomentitytypesresponse_p.h
   listdevendpointsrequest.h
   listdevendpointsrequest_p.h
   listdevendpointsresponse.h
@@ -451,14 +536,22 @@ add_library(QtAwsGlue
   listregistriesrequest_p.h
   listregistriesresponse.h
   listregistriesresponse_p.h
-  listschemasrequest.h
-  listschemasrequest_p.h
-  listschemasresponse.h
-  listschemasresponse_p.h
   listschemaversionsrequest.h
   listschemaversionsrequest_p.h
   listschemaversionsresponse.h
   listschemaversionsresponse_p.h
+  listschemasrequest.h
+  listschemasrequest_p.h
+  listschemasresponse.h
+  listschemasresponse_p.h
+  listsessionsrequest.h
+  listsessionsrequest_p.h
+  listsessionsresponse.h
+  listsessionsresponse_p.h
+  liststatementsrequest.h
+  liststatementsrequest_p.h
+  liststatementsresponse.h
+  liststatementsresponse_p.h
   listtriggersrequest.h
   listtriggersrequest_p.h
   listtriggersresponse.h
@@ -483,7 +576,6 @@ add_library(QtAwsGlue
   putworkflowrunpropertiesrequest_p.h
   putworkflowrunpropertiesresponse.h
   putworkflowrunpropertiesresponse_p.h
-  qtawsglueglobal.h
   queryschemaversionmetadatarequest.h
   queryschemaversionmetadatarequest_p.h
   queryschemaversionmetadataresponse.h
@@ -504,10 +596,18 @@ add_library(QtAwsGlue
   resumeworkflowrunrequest_p.h
   resumeworkflowrunresponse.h
   resumeworkflowrunresponse_p.h
+  runstatementrequest.h
+  runstatementrequest_p.h
+  runstatementresponse.h
+  runstatementresponse_p.h
   searchtablesrequest.h
   searchtablesrequest_p.h
   searchtablesresponse.h
   searchtablesresponse_p.h
+  startblueprintrunrequest.h
+  startblueprintrunrequest_p.h
+  startblueprintrunresponse.h
+  startblueprintrunresponse_p.h
   startcrawlerrequest.h
   startcrawlerrequest_p.h
   startcrawlerresponse.h
@@ -552,6 +652,10 @@ add_library(QtAwsGlue
   stopcrawlerschedulerequest_p.h
   stopcrawlerscheduleresponse.h
   stopcrawlerscheduleresponse_p.h
+  stopsessionrequest.h
+  stopsessionrequest_p.h
+  stopsessionresponse.h
+  stopsessionresponse_p.h
   stoptriggerrequest.h
   stoptriggerrequest_p.h
   stoptriggerresponse.h
@@ -568,6 +672,10 @@ add_library(QtAwsGlue
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateblueprintrequest.h
+  updateblueprintrequest_p.h
+  updateblueprintresponse.h
+  updateblueprintresponse_p.h
   updateclassifierrequest.h
   updateclassifierrequest_p.h
   updateclassifierresponse.h
@@ -636,6 +744,9 @@ add_library(QtAwsGlue
   updateworkflowrequest_p.h
   updateworkflowresponse.h
   updateworkflowresponse_p.h
+  glueclient.cpp
+  gluerequest.cpp
+  glueresponse.cpp
   batchcreatepartitionrequest.cpp
   batchcreatepartitionresponse.cpp
   batchdeleteconnectionrequest.cpp
@@ -646,8 +757,12 @@ add_library(QtAwsGlue
   batchdeletetableresponse.cpp
   batchdeletetableversionrequest.cpp
   batchdeletetableversionresponse.cpp
+  batchgetblueprintsrequest.cpp
+  batchgetblueprintsresponse.cpp
   batchgetcrawlersrequest.cpp
   batchgetcrawlersresponse.cpp
+  batchgetcustomentitytypesrequest.cpp
+  batchgetcustomentitytypesresponse.cpp
   batchgetdevendpointsrequest.cpp
   batchgetdevendpointsresponse.cpp
   batchgetjobsrequest.cpp
@@ -664,14 +779,20 @@ add_library(QtAwsGlue
   batchupdatepartitionresponse.cpp
   cancelmltaskrunrequest.cpp
   cancelmltaskrunresponse.cpp
+  cancelstatementrequest.cpp
+  cancelstatementresponse.cpp
   checkschemaversionvalidityrequest.cpp
   checkschemaversionvalidityresponse.cpp
+  createblueprintrequest.cpp
+  createblueprintresponse.cpp
   createclassifierrequest.cpp
   createclassifierresponse.cpp
   createconnectionrequest.cpp
   createconnectionresponse.cpp
   createcrawlerrequest.cpp
   createcrawlerresponse.cpp
+  createcustomentitytyperequest.cpp
+  createcustomentitytyperesponse.cpp
   createdatabaserequest.cpp
   createdatabaseresponse.cpp
   createdevendpointrequest.cpp
@@ -680,10 +801,10 @@ add_library(QtAwsGlue
   createjobresponse.cpp
   createmltransformrequest.cpp
   createmltransformresponse.cpp
-  createpartitionindexrequest.cpp
-  createpartitionindexresponse.cpp
   createpartitionrequest.cpp
   createpartitionresponse.cpp
+  createpartitionindexrequest.cpp
+  createpartitionindexresponse.cpp
   createregistryrequest.cpp
   createregistryresponse.cpp
   createschemarequest.cpp
@@ -692,6 +813,8 @@ add_library(QtAwsGlue
   createscriptresponse.cpp
   createsecurityconfigurationrequest.cpp
   createsecurityconfigurationresponse.cpp
+  createsessionrequest.cpp
+  createsessionresponse.cpp
   createtablerequest.cpp
   createtableresponse.cpp
   createtriggerrequest.cpp
@@ -700,6 +823,8 @@ add_library(QtAwsGlue
   createuserdefinedfunctionresponse.cpp
   createworkflowrequest.cpp
   createworkflowresponse.cpp
+  deleteblueprintrequest.cpp
+  deleteblueprintresponse.cpp
   deleteclassifierrequest.cpp
   deleteclassifierresponse.cpp
   deletecolumnstatisticsforpartitionrequest.cpp
@@ -710,6 +835,8 @@ add_library(QtAwsGlue
   deleteconnectionresponse.cpp
   deletecrawlerrequest.cpp
   deletecrawlerresponse.cpp
+  deletecustomentitytyperequest.cpp
+  deletecustomentitytyperesponse.cpp
   deletedatabaserequest.cpp
   deletedatabaseresponse.cpp
   deletedevendpointrequest.cpp
@@ -718,10 +845,10 @@ add_library(QtAwsGlue
   deletejobresponse.cpp
   deletemltransformrequest.cpp
   deletemltransformresponse.cpp
-  deletepartitionindexrequest.cpp
-  deletepartitionindexresponse.cpp
   deletepartitionrequest.cpp
   deletepartitionresponse.cpp
+  deletepartitionindexrequest.cpp
+  deletepartitionindexresponse.cpp
   deleteregistryrequest.cpp
   deleteregistryresponse.cpp
   deleteresourcepolicyrequest.cpp
@@ -732,6 +859,8 @@ add_library(QtAwsGlue
   deleteschemaversionsresponse.cpp
   deletesecurityconfigurationrequest.cpp
   deletesecurityconfigurationresponse.cpp
+  deletesessionrequest.cpp
+  deletesessionresponse.cpp
   deletetablerequest.cpp
   deletetableresponse.cpp
   deletetableversionrequest.cpp
@@ -742,6 +871,12 @@ add_library(QtAwsGlue
   deleteuserdefinedfunctionresponse.cpp
   deleteworkflowrequest.cpp
   deleteworkflowresponse.cpp
+  getblueprintrequest.cpp
+  getblueprintresponse.cpp
+  getblueprintrunrequest.cpp
+  getblueprintrunresponse.cpp
+  getblueprintrunsrequest.cpp
+  getblueprintrunsresponse.cpp
   getcatalogimportstatusrequest.cpp
   getcatalogimportstatusresponse.cpp
   getclassifierrequest.cpp
@@ -756,36 +891,36 @@ add_library(QtAwsGlue
   getconnectionresponse.cpp
   getconnectionsrequest.cpp
   getconnectionsresponse.cpp
-  getcrawlermetricsrequest.cpp
-  getcrawlermetricsresponse.cpp
   getcrawlerrequest.cpp
   getcrawlerresponse.cpp
+  getcrawlermetricsrequest.cpp
+  getcrawlermetricsresponse.cpp
   getcrawlersrequest.cpp
   getcrawlersresponse.cpp
+  getcustomentitytyperequest.cpp
+  getcustomentitytyperesponse.cpp
+  getdatacatalogencryptionsettingsrequest.cpp
+  getdatacatalogencryptionsettingsresponse.cpp
   getdatabaserequest.cpp
   getdatabaseresponse.cpp
   getdatabasesrequest.cpp
   getdatabasesresponse.cpp
-  getdatacatalogencryptionsettingsrequest.cpp
-  getdatacatalogencryptionsettingsresponse.cpp
   getdataflowgraphrequest.cpp
   getdataflowgraphresponse.cpp
   getdevendpointrequest.cpp
   getdevendpointresponse.cpp
   getdevendpointsrequest.cpp
   getdevendpointsresponse.cpp
-  getjobbookmarkrequest.cpp
-  getjobbookmarkresponse.cpp
   getjobrequest.cpp
   getjobresponse.cpp
+  getjobbookmarkrequest.cpp
+  getjobbookmarkresponse.cpp
   getjobrunrequest.cpp
   getjobrunresponse.cpp
   getjobrunsrequest.cpp
   getjobrunsresponse.cpp
   getjobsrequest.cpp
   getjobsresponse.cpp
-  getmappingrequest.cpp
-  getmappingresponse.cpp
   getmltaskrunrequest.cpp
   getmltaskrunresponse.cpp
   getmltaskrunsrequest.cpp
@@ -794,10 +929,12 @@ add_library(QtAwsGlue
   getmltransformresponse.cpp
   getmltransformsrequest.cpp
   getmltransformsresponse.cpp
-  getpartitionindexesrequest.cpp
-  getpartitionindexesresponse.cpp
+  getmappingrequest.cpp
+  getmappingresponse.cpp
   getpartitionrequest.cpp
   getpartitionresponse.cpp
+  getpartitionindexesrequest.cpp
+  getpartitionindexesresponse.cpp
   getpartitionsrequest.cpp
   getpartitionsresponse.cpp
   getplanrequest.cpp
@@ -808,10 +945,10 @@ add_library(QtAwsGlue
   getresourcepoliciesresponse.cpp
   getresourcepolicyrequest.cpp
   getresourcepolicyresponse.cpp
-  getschemabydefinitionrequest.cpp
-  getschemabydefinitionresponse.cpp
   getschemarequest.cpp
   getschemaresponse.cpp
+  getschemabydefinitionrequest.cpp
+  getschemabydefinitionresponse.cpp
   getschemaversionrequest.cpp
   getschemaversionresponse.cpp
   getschemaversionsdiffrequest.cpp
@@ -820,39 +957,52 @@ add_library(QtAwsGlue
   getsecurityconfigurationresponse.cpp
   getsecurityconfigurationsrequest.cpp
   getsecurityconfigurationsresponse.cpp
+  getsessionrequest.cpp
+  getsessionresponse.cpp
+  getstatementrequest.cpp
+  getstatementresponse.cpp
   gettablerequest.cpp
   gettableresponse.cpp
-  gettablesrequest.cpp
-  gettablesresponse.cpp
   gettableversionrequest.cpp
   gettableversionresponse.cpp
   gettableversionsrequest.cpp
   gettableversionsresponse.cpp
+  gettablesrequest.cpp
+  gettablesresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
   gettriggerrequest.cpp
   gettriggerresponse.cpp
   gettriggersrequest.cpp
   gettriggersresponse.cpp
+  getunfilteredpartitionmetadatarequest.cpp
+  getunfilteredpartitionmetadataresponse.cpp
+  getunfilteredpartitionsmetadatarequest.cpp
+  getunfilteredpartitionsmetadataresponse.cpp
+  getunfilteredtablemetadatarequest.cpp
+  getunfilteredtablemetadataresponse.cpp
   getuserdefinedfunctionrequest.cpp
   getuserdefinedfunctionresponse.cpp
   getuserdefinedfunctionsrequest.cpp
   getuserdefinedfunctionsresponse.cpp
   getworkflowrequest.cpp
   getworkflowresponse.cpp
-  getworkflowrunpropertiesrequest.cpp
-  getworkflowrunpropertiesresponse.cpp
   getworkflowrunrequest.cpp
   getworkflowrunresponse.cpp
+  getworkflowrunpropertiesrequest.cpp
+  getworkflowrunpropertiesresponse.cpp
   getworkflowrunsrequest.cpp
   getworkflowrunsresponse.cpp
-  glueclient.cpp
-  gluerequest.cpp
-  glueresponse.cpp
   importcatalogtogluerequest.cpp
   importcatalogtoglueresponse.cpp
+  listblueprintsrequest.cpp
+  listblueprintsresponse.cpp
   listcrawlersrequest.cpp
   listcrawlersresponse.cpp
+  listcrawlsrequest.cpp
+  listcrawlsresponse.cpp
+  listcustomentitytypesrequest.cpp
+  listcustomentitytypesresponse.cpp
   listdevendpointsrequest.cpp
   listdevendpointsresponse.cpp
   listjobsrequest.cpp
@@ -861,10 +1011,14 @@ add_library(QtAwsGlue
   listmltransformsresponse.cpp
   listregistriesrequest.cpp
   listregistriesresponse.cpp
-  listschemasrequest.cpp
-  listschemasresponse.cpp
   listschemaversionsrequest.cpp
   listschemaversionsresponse.cpp
+  listschemasrequest.cpp
+  listschemasresponse.cpp
+  listsessionsrequest.cpp
+  listsessionsresponse.cpp
+  liststatementsrequest.cpp
+  liststatementsresponse.cpp
   listtriggersrequest.cpp
   listtriggersresponse.cpp
   listworkflowsrequest.cpp
@@ -887,8 +1041,12 @@ add_library(QtAwsGlue
   resetjobbookmarkresponse.cpp
   resumeworkflowrunrequest.cpp
   resumeworkflowrunresponse.cpp
+  runstatementrequest.cpp
+  runstatementresponse.cpp
   searchtablesrequest.cpp
   searchtablesresponse.cpp
+  startblueprintrunrequest.cpp
+  startblueprintrunresponse.cpp
   startcrawlerrequest.cpp
   startcrawlerresponse.cpp
   startcrawlerschedulerequest.cpp
@@ -911,6 +1069,8 @@ add_library(QtAwsGlue
   stopcrawlerresponse.cpp
   stopcrawlerschedulerequest.cpp
   stopcrawlerscheduleresponse.cpp
+  stopsessionrequest.cpp
+  stopsessionresponse.cpp
   stoptriggerrequest.cpp
   stoptriggerresponse.cpp
   stopworkflowrunrequest.cpp
@@ -919,6 +1079,8 @@ add_library(QtAwsGlue
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateblueprintrequest.cpp
+  updateblueprintresponse.cpp
   updateclassifierrequest.cpp
   updateclassifierresponse.cpp
   updatecolumnstatisticsforpartitionrequest.cpp

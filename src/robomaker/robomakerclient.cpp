@@ -247,6 +247,10 @@ BatchDescribeSimulationJobResponse * RoboMakerClient::batchDescribeSimulationJob
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels the specified deployment
+ *
+ * job> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 CancelDeploymentJobResponse * RoboMakerClient::cancelDeploymentJob(const CancelDeploymentJobRequest &request)
 {
@@ -314,7 +318,11 @@ CancelWorldGenerationJobResponse * RoboMakerClient::cancelWorldGenerationJob(con
  *
  * Deploys a specific version of a robot application to robots in a
  *
- * fleet>
+ * fleet> <b>
+ *
+ * This API is no longer supported and will throw an error if
+ *
+ * used> </b>
  *
  * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new
  * version, use <code>CreateRobotApplicationVersion</code> or see <a
@@ -337,6 +345,10 @@ CreateDeploymentJobResponse * RoboMakerClient::createDeploymentJob(const CreateD
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a fleet, a logical group of robots running the same robot
+ *
+ * application> <b>
+ *
+ * This API is no longer supported and will throw an error if
  */
 CreateFleetResponse * RoboMakerClient::createFleet(const CreateFleetRequest &request)
 {
@@ -350,6 +362,10 @@ CreateFleetResponse * RoboMakerClient::createFleet(const CreateFleetRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * robot> <b>
+ *
+ * This API is no longer supported and will throw an error if
  */
 CreateRobotResponse * RoboMakerClient::createRobot(const CreateRobotRequest &request)
 {
@@ -471,6 +487,10 @@ CreateWorldTemplateResponse * RoboMakerClient::createWorldTemplate(const CreateW
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a
+ *
+ * fleet> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DeleteFleetResponse * RoboMakerClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -484,6 +504,10 @@ DeleteFleetResponse * RoboMakerClient::deleteFleet(const DeleteFleetRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a
+ *
+ * robot> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DeleteRobotResponse * RoboMakerClient::deleteRobot(const DeleteRobotRequest &request)
 {
@@ -536,6 +560,10 @@ DeleteWorldTemplateResponse * RoboMakerClient::deleteWorldTemplate(const DeleteW
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deregisters a
+ *
+ * robot> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DeregisterRobotResponse * RoboMakerClient::deregisterRobot(const DeregisterRobotRequest &request)
 {
@@ -549,6 +577,10 @@ DeregisterRobotResponse * RoboMakerClient::deregisterRobot(const DeregisterRobot
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a deployment
+ *
+ * job> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DescribeDeploymentJobResponse * RoboMakerClient::describeDeploymentJob(const DescribeDeploymentJobRequest &request)
 {
@@ -562,6 +594,10 @@ DescribeDeploymentJobResponse * RoboMakerClient::describeDeploymentJob(const Des
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a
+ *
+ * fleet> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DescribeFleetResponse * RoboMakerClient::describeFleet(const DescribeFleetRequest &request)
 {
@@ -575,6 +611,10 @@ DescribeFleetResponse * RoboMakerClient::describeFleet(const DescribeFleetReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a
+ *
+ * robot> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 DescribeRobotResponse * RoboMakerClient::describeRobot(const DescribeRobotRequest &request)
 {
@@ -704,7 +744,11 @@ GetWorldTemplateBodyResponse * RoboMakerClient::getWorldTemplateBody(const GetWo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.
+ * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
+ *
+ * jobs> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 ListDeploymentJobsResponse * RoboMakerClient::listDeploymentJobs(const ListDeploymentJobsRequest &request)
 {
@@ -717,7 +761,11 @@ ListDeploymentJobsResponse * RoboMakerClient::listDeploymentJobs(const ListDeplo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
+ * Returns a list of fleets. You can optionally provide filters to retrieve specific
+ *
+ * fleets> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 ListFleetsResponse * RoboMakerClient::listFleets(const ListFleetsRequest &request)
 {
@@ -744,6 +792,10 @@ ListRobotApplicationsResponse * RoboMakerClient::listRobotApplications(const Lis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of robots. You can optionally provide filters to retrieve specific
+ *
+ * robots> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 ListRobotsResponse * RoboMakerClient::listRobots(const ListRobotsRequest &request)
 {
@@ -862,6 +914,10 @@ ListWorldsResponse * RoboMakerClient::listWorlds(const ListWorldsRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Registers a robot with a
+ *
+ * fleet> <b>
+ *
+ * This API is no longer supported and will throw an error if
  */
 RegisterRobotResponse * RoboMakerClient::registerRobot(const RegisterRobotRequest &request)
 {
@@ -901,6 +957,10 @@ StartSimulationJobBatchResponse * RoboMakerClient::startSimulationJobBatch(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a
+ *
+ * deployment> <b>
+ *
+ * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment
  */
 SyncDeploymentJobResponse * RoboMakerClient::syncDeploymentJob(const SyncDeploymentJobRequest &request)
 {

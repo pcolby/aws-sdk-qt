@@ -41,17 +41,21 @@ namespace LookoutMetrics {
  * \value CreateAlertAction LookoutMetrics CreateAlert action.
  * \value CreateAnomalyDetectorAction LookoutMetrics CreateAnomalyDetector action.
  * \value CreateMetricSetAction LookoutMetrics CreateMetricSet action.
+ * \value DeactivateAnomalyDetectorAction LookoutMetrics DeactivateAnomalyDetector action.
  * \value DeleteAlertAction LookoutMetrics DeleteAlert action.
  * \value DeleteAnomalyDetectorAction LookoutMetrics DeleteAnomalyDetector action.
  * \value DescribeAlertAction LookoutMetrics DescribeAlert action.
  * \value DescribeAnomalyDetectionExecutionsAction LookoutMetrics DescribeAnomalyDetectionExecutions action.
  * \value DescribeAnomalyDetectorAction LookoutMetrics DescribeAnomalyDetector action.
  * \value DescribeMetricSetAction LookoutMetrics DescribeMetricSet action.
+ * \value DetectMetricSetConfigAction LookoutMetrics DetectMetricSetConfig action.
  * \value GetAnomalyGroupAction LookoutMetrics GetAnomalyGroup action.
+ * \value GetDataQualityMetricsAction LookoutMetrics GetDataQualityMetrics action.
  * \value GetFeedbackAction LookoutMetrics GetFeedback action.
  * \value GetSampleDataAction LookoutMetrics GetSampleData action.
  * \value ListAlertsAction LookoutMetrics ListAlerts action.
  * \value ListAnomalyDetectorsAction LookoutMetrics ListAnomalyDetectors action.
+ * \value ListAnomalyGroupRelatedMetricsAction LookoutMetrics ListAnomalyGroupRelatedMetrics action.
  * \value ListAnomalyGroupSummariesAction LookoutMetrics ListAnomalyGroupSummaries action.
  * \value ListAnomalyGroupTimeSeriesAction LookoutMetrics ListAnomalyGroupTimeSeries action.
  * \value ListMetricSetsAction LookoutMetrics ListMetricSets action.
@@ -59,6 +63,7 @@ namespace LookoutMetrics {
  * \value PutFeedbackAction LookoutMetrics PutFeedback action.
  * \value TagResourceAction LookoutMetrics TagResource action.
  * \value UntagResourceAction LookoutMetrics UntagResource action.
+ * \value UpdateAlertAction LookoutMetrics UpdateAlert action.
  * \value UpdateAnomalyDetectorAction LookoutMetrics UpdateAnomalyDetector action.
  * \value UpdateMetricSetAction LookoutMetrics UpdateMetricSet action.
  */
@@ -268,7 +273,7 @@ QNetworkRequest LookoutMetricsRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 LookoutMetricsRequestPrivate::LookoutMetricsRequestPrivate(const LookoutMetricsRequest::Action action, LookoutMetricsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }
@@ -307,17 +312,21 @@ QString LookoutMetricsRequestPrivate::toString(const LookoutMetricsRequest::Acti
         ActionToString(CreateAlert);
         ActionToString(CreateAnomalyDetector);
         ActionToString(CreateMetricSet);
+        ActionToString(DeactivateAnomalyDetector);
         ActionToString(DeleteAlert);
         ActionToString(DeleteAnomalyDetector);
         ActionToString(DescribeAlert);
         ActionToString(DescribeAnomalyDetectionExecutions);
         ActionToString(DescribeAnomalyDetector);
         ActionToString(DescribeMetricSet);
+        ActionToString(DetectMetricSetConfig);
         ActionToString(GetAnomalyGroup);
+        ActionToString(GetDataQualityMetrics);
         ActionToString(GetFeedback);
         ActionToString(GetSampleData);
         ActionToString(ListAlerts);
         ActionToString(ListAnomalyDetectors);
+        ActionToString(ListAnomalyGroupRelatedMetrics);
         ActionToString(ListAnomalyGroupSummaries);
         ActionToString(ListAnomalyGroupTimeSeries);
         ActionToString(ListMetricSets);
@@ -325,6 +334,7 @@ QString LookoutMetricsRequestPrivate::toString(const LookoutMetricsRequest::Acti
         ActionToString(PutFeedback);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateAlert);
         ActionToString(UpdateAnomalyDetector);
         ActionToString(UpdateMetricSet);
         default:

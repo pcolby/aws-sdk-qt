@@ -37,6 +37,7 @@ namespace SageMakerRuntime {
  * requests.
  *
  * \value InvokeEndpointAction SageMakerRuntime InvokeEndpoint action.
+ * \value InvokeEndpointAsyncAction SageMakerRuntime InvokeEndpointAsync action.
  */
 
 /*!
@@ -244,7 +245,7 @@ QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRuntimeRequest::Action action, SageMakerRuntimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-05-13"))
 {
 
 }
@@ -279,6 +280,7 @@ QString SageMakerRuntimeRequestPrivate::toString(const SageMakerRuntimeRequest::
         case SageMakerRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(InvokeEndpoint);
+        ActionToString(InvokeEndpointAsync);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

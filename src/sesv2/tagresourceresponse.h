@@ -24,11 +24,11 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class TagResourceResponsePrivate;
 
-class QTAWSSESV2_EXPORT TagResourceResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT TagResourceResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

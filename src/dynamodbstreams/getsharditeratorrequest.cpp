@@ -23,13 +23,13 @@
 #include "dynamodbstreamsrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::GetShardIteratorRequest
- * \brief The GetShardIteratorRequest class provides an interface for DynamoDBStreams GetShardIterator requests.
+ * \class QtAws::DynamoDbStreams::GetShardIteratorRequest
+ * \brief The GetShardIteratorRequest class provides an interface for DynamoDbStreams GetShardIterator requests.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -38,14 +38,14 @@ namespace DynamoDBStreams {
  *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
  *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  *
- * \sa DynamoDBStreamsClient::getShardIterator
+ * \sa DynamoDbStreamsClient::getShardIterator
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetShardIteratorRequest::GetShardIteratorRequest(const GetShardIteratorRequest &other)
-    : DynamoDBStreamsRequest(new GetShardIteratorRequestPrivate(*other.d_func(), this))
+    : DynamoDbStreamsRequest(new GetShardIteratorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetShardIteratorRequest::GetShardIteratorRequest(const GetShardIteratorRequest &
  * Constructs a GetShardIteratorRequest object.
  */
 GetShardIteratorRequest::GetShardIteratorRequest()
-    : DynamoDBStreamsRequest(new GetShardIteratorRequestPrivate(DynamoDBStreamsRequest::GetShardIteratorAction, this))
+    : DynamoDbStreamsRequest(new GetShardIteratorRequestPrivate(DynamoDbStreamsRequest::GetShardIteratorAction, this))
 {
 
 }
@@ -79,20 +79,20 @@ QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::GetShardIteratorRequestPrivate
+ * \class QtAws::DynamoDbStreams::GetShardIteratorRequestPrivate
  * \brief The GetShardIteratorRequestPrivate class provides private implementation for GetShardIteratorRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a GetShardIteratorRequestPrivate object for DynamoDBStreams \a action,
+ * Constructs a GetShardIteratorRequestPrivate object for DynamoDbStreams \a action,
  * with public implementation \a q.
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
-    const DynamoDBStreamsRequest::Action action, GetShardIteratorRequest * const q)
-    : DynamoDBStreamsRequestPrivate(action, q)
+    const DynamoDbStreamsRequest::Action action, GetShardIteratorRequest * const q)
+    : DynamoDbStreamsRequestPrivate(action, q)
 {
 
 }
@@ -105,10 +105,10 @@ GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const GetShardIteratorRequestPrivate &other, GetShardIteratorRequest * const q)
-    : DynamoDBStreamsRequestPrivate(other, q)
+    : DynamoDbStreamsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

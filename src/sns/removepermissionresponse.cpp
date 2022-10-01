@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::RemovePermissionResponse
- * \brief The RemovePermissionResponse class provides an interace for SNS RemovePermission responses.
+ * \class QtAws::Sns::RemovePermissionResponse
+ * \brief The RemovePermissionResponse class provides an interace for Sns RemovePermission responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS RemovePermission \a response.
+ * Parses a successful Sns RemovePermission \a response.
  */
 void RemovePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::RemovePermissionResponsePrivate
+ * \class QtAws::Sns::RemovePermissionResponsePrivate
  * \brief The RemovePermissionResponsePrivate class provides private implementation for RemovePermissionResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 }
 
 /*!
- * Parses a SNS RemovePermission response element from \a xml.
+ * Parses a Sns RemovePermission response element from \a xml.
  */
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

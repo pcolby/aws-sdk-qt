@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DescribeConfigurationRevisionResponse
- * \brief The DescribeConfigurationRevisionResponse class provides an interace for MQ DescribeConfigurationRevision responses.
+ * \class QtAws::Mq::DescribeConfigurationRevisionResponse
+ * \brief The DescribeConfigurationRevisionResponse class provides an interace for Mq DescribeConfigurationRevision responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::describeConfigurationRevision
  */
@@ -63,7 +64,7 @@ const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionRespon
 
 /*!
  * \reimp
- * Parses a successful MQ DescribeConfigurationRevision \a response.
+ * Parses a successful Mq DescribeConfigurationRevision \a response.
  */
 void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DescribeConfigurationRevisionResponsePrivate
+ * \class QtAws::Mq::DescribeConfigurationRevisionResponsePrivate
  * \brief The DescribeConfigurationRevisionResponsePrivate class provides private implementation for DescribeConfigurationRevisionResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionRespo
 }
 
 /*!
- * Parses a MQ DescribeConfigurationRevision response element from \a xml.
+ * Parses a Mq DescribeConfigurationRevision response element from \a xml.
  */
 void DescribeConfigurationRevisionResponsePrivate::parseDescribeConfigurationRevisionResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DescribeConfigurationRevisionResponsePrivate::parseDescribeConfigurationRev
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

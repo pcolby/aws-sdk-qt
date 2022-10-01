@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::ModifyClusterResponse
- * \brief The ModifyClusterResponse class provides an interace for EMR ModifyCluster responses.
+ * \class QtAws::Emr::ModifyClusterResponse
+ * \brief The ModifyClusterResponse class provides an interace for Emr ModifyCluster responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::modifyCluster
  */
@@ -64,7 +64,7 @@ const ModifyClusterRequest * ModifyClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR ModifyCluster \a response.
+ * Parses a successful Emr ModifyCluster \a response.
  */
 void ModifyClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void ModifyClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::ModifyClusterResponsePrivate
+ * \class QtAws::Emr::ModifyClusterResponsePrivate
  * \brief The ModifyClusterResponsePrivate class provides private implementation for ModifyClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
 }
 
 /*!
- * Parses a EMR ModifyCluster response element from \a xml.
+ * Parses a Emr ModifyCluster response element from \a xml.
  */
 void ModifyClusterResponsePrivate::parseModifyClusterResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void ModifyClusterResponsePrivate::parseModifyClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

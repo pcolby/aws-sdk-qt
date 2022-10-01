@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 /*!
- * \class QtAws::DLM::GetLifecyclePoliciesResponse
- * \brief The GetLifecyclePoliciesResponse class provides an interace for DLM GetLifecyclePolicies responses.
+ * \class QtAws::Dlm::GetLifecyclePoliciesResponse
+ * \brief The GetLifecyclePoliciesResponse class provides an interace for Dlm GetLifecyclePolicies responses.
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  *
  *  <fullname>Amazon Data Lifecycle Manager</fullname>
  * 
- *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your AWS resources. You create lifecycle policies,
- *  which are used to automate operations on the specified
+ *  With Amazon Data Lifecycle Manager, you can manage the lifecycle of your Amazon Web Services resources. You create
+ *  lifecycle policies, which are used to automate operations on the specified
  * 
  *  resources>
  * 
@@ -71,7 +71,7 @@ const GetLifecyclePoliciesRequest * GetLifecyclePoliciesResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful DLM GetLifecyclePolicies \a response.
+ * Parses a successful Dlm GetLifecyclePolicies \a response.
  */
 void GetLifecyclePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void GetLifecyclePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DLM::GetLifecyclePoliciesResponsePrivate
+ * \class QtAws::Dlm::GetLifecyclePoliciesResponsePrivate
  * \brief The GetLifecyclePoliciesResponsePrivate class provides private implementation for GetLifecyclePoliciesResponse.
  * \internal
  *
- * \inmodule QtAwsDLM
+ * \inmodule QtAwsDlm
  */
 
 /*!
@@ -98,7 +98,7 @@ GetLifecyclePoliciesResponsePrivate::GetLifecyclePoliciesResponsePrivate(
 }
 
 /*!
- * Parses a DLM GetLifecyclePolicies response element from \a xml.
+ * Parses a Dlm GetLifecyclePolicies response element from \a xml.
  */
 void GetLifecyclePoliciesResponsePrivate::parseGetLifecyclePoliciesResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void GetLifecyclePoliciesResponsePrivate::parseGetLifecyclePoliciesResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws

@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyBackupAttributesResponse
- * \brief The ModifyBackupAttributesResponse class provides an interace for CloudHSMV2 ModifyBackupAttributes responses.
+ * \class QtAws::CloudHsmV2::ModifyBackupAttributesResponse
+ * \brief The ModifyBackupAttributesResponse class provides an interace for CloudHsmV2 ModifyBackupAttributes responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::modifyBackupAttributes
+ * \sa CloudHsmV2Client::modifyBackupAttributes
  */
 
 /*!
@@ -46,7 +46,7 @@ ModifyBackupAttributesResponse::ModifyBackupAttributesResponse(
         const ModifyBackupAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new ModifyBackupAttributesResponsePrivate(this), parent)
+    : CloudHsmV2Response(new ModifyBackupAttributesResponsePrivate(this), parent)
 {
     setRequest(new ModifyBackupAttributesRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const ModifyBackupAttributesRequest * ModifyBackupAttributesResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 ModifyBackupAttributes \a response.
+ * Parses a successful CloudHsmV2 ModifyBackupAttributes \a response.
  */
 void ModifyBackupAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void ModifyBackupAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::ModifyBackupAttributesResponsePrivate
+ * \class QtAws::CloudHsmV2::ModifyBackupAttributesResponsePrivate
  * \brief The ModifyBackupAttributesResponsePrivate class provides private implementation for ModifyBackupAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a ModifyBackupAttributesResponsePrivate object with public implementation \a q.
  */
 ModifyBackupAttributesResponsePrivate::ModifyBackupAttributesResponsePrivate(
-    ModifyBackupAttributesResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    ModifyBackupAttributesResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 ModifyBackupAttributes response element from \a xml.
+ * Parses a CloudHsmV2 ModifyBackupAttributes response element from \a xml.
  */
 void ModifyBackupAttributesResponsePrivate::parseModifyBackupAttributesResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void ModifyBackupAttributesResponsePrivate::parseModifyBackupAttributesResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

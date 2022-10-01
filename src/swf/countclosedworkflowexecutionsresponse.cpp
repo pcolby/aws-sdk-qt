@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::CountClosedWorkflowExecutionsResponse
- * \brief The CountClosedWorkflowExecutionsResponse class provides an interace for SWF CountClosedWorkflowExecutions responses.
+ * \class QtAws::Swf::CountClosedWorkflowExecutionsResponse
+ * \brief The CountClosedWorkflowExecutionsResponse class provides an interace for Swf CountClosedWorkflowExecutions responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const CountClosedWorkflowExecutionsRequest * CountClosedWorkflowExecutionsRespon
 
 /*!
  * \reimp
- * Parses a successful SWF CountClosedWorkflowExecutions \a response.
+ * Parses a successful Swf CountClosedWorkflowExecutions \a response.
  */
 void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::CountClosedWorkflowExecutionsResponsePrivate
+ * \class QtAws::Swf::CountClosedWorkflowExecutionsResponsePrivate
  * \brief The CountClosedWorkflowExecutionsResponsePrivate class provides private implementation for CountClosedWorkflowExecutionsResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsRespo
 }
 
 /*!
- * Parses a SWF CountClosedWorkflowExecutions response element from \a xml.
+ * Parses a Swf CountClosedWorkflowExecutions response element from \a xml.
  */
 void CountClosedWorkflowExecutionsResponsePrivate::parseCountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void CountClosedWorkflowExecutionsResponsePrivate::parseCountClosedWorkflowExecu
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

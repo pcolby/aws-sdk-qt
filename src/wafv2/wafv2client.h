@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace WAFV2 {
+namespace Wafv2 {
 
 class Wafv2ClientPrivate;
 class AssociateWebACLRequest;
@@ -60,10 +60,16 @@ class DescribeManagedRuleGroupRequest;
 class DescribeManagedRuleGroupResponse;
 class DisassociateWebACLRequest;
 class DisassociateWebACLResponse;
+class GenerateMobileSdkReleaseUrlRequest;
+class GenerateMobileSdkReleaseUrlResponse;
 class GetIPSetRequest;
 class GetIPSetResponse;
 class GetLoggingConfigurationRequest;
 class GetLoggingConfigurationResponse;
+class GetManagedRuleSetRequest;
+class GetManagedRuleSetResponse;
+class GetMobileSdkReleaseRequest;
+class GetMobileSdkReleaseResponse;
 class GetPermissionPolicyRequest;
 class GetPermissionPolicyResponse;
 class GetRateBasedStatementManagedKeysRequest;
@@ -78,12 +84,18 @@ class GetWebACLRequest;
 class GetWebACLResponse;
 class GetWebACLForResourceRequest;
 class GetWebACLForResourceResponse;
+class ListAvailableManagedRuleGroupVersionsRequest;
+class ListAvailableManagedRuleGroupVersionsResponse;
 class ListAvailableManagedRuleGroupsRequest;
 class ListAvailableManagedRuleGroupsResponse;
 class ListIPSetsRequest;
 class ListIPSetsResponse;
 class ListLoggingConfigurationsRequest;
 class ListLoggingConfigurationsResponse;
+class ListManagedRuleSetsRequest;
+class ListManagedRuleSetsResponse;
+class ListMobileSdkReleasesRequest;
+class ListMobileSdkReleasesResponse;
 class ListRegexPatternSetsRequest;
 class ListRegexPatternSetsResponse;
 class ListResourcesForWebACLRequest;
@@ -96,6 +108,8 @@ class ListWebACLsRequest;
 class ListWebACLsResponse;
 class PutLoggingConfigurationRequest;
 class PutLoggingConfigurationResponse;
+class PutManagedRuleSetVersionsRequest;
+class PutManagedRuleSetVersionsResponse;
 class PutPermissionPolicyRequest;
 class PutPermissionPolicyResponse;
 class TagResourceRequest;
@@ -104,6 +118,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateIPSetRequest;
 class UpdateIPSetResponse;
+class UpdateManagedRuleSetVersionExpiryDateRequest;
+class UpdateManagedRuleSetVersionExpiryDateResponse;
 class UpdateRegexPatternSetRequest;
 class UpdateRegexPatternSetResponse;
 class UpdateRuleGroupRequest;
@@ -142,8 +158,11 @@ public slots:
     DeleteWebACLResponse * deleteWebACL(const DeleteWebACLRequest &request);
     DescribeManagedRuleGroupResponse * describeManagedRuleGroup(const DescribeManagedRuleGroupRequest &request);
     DisassociateWebACLResponse * disassociateWebACL(const DisassociateWebACLRequest &request);
+    GenerateMobileSdkReleaseUrlResponse * generateMobileSdkReleaseUrl(const GenerateMobileSdkReleaseUrlRequest &request);
     GetIPSetResponse * getIPSet(const GetIPSetRequest &request);
     GetLoggingConfigurationResponse * getLoggingConfiguration(const GetLoggingConfigurationRequest &request);
+    GetManagedRuleSetResponse * getManagedRuleSet(const GetManagedRuleSetRequest &request);
+    GetMobileSdkReleaseResponse * getMobileSdkRelease(const GetMobileSdkReleaseRequest &request);
     GetPermissionPolicyResponse * getPermissionPolicy(const GetPermissionPolicyRequest &request);
     GetRateBasedStatementManagedKeysResponse * getRateBasedStatementManagedKeys(const GetRateBasedStatementManagedKeysRequest &request);
     GetRegexPatternSetResponse * getRegexPatternSet(const GetRegexPatternSetRequest &request);
@@ -151,19 +170,24 @@ public slots:
     GetSampledRequestsResponse * getSampledRequests(const GetSampledRequestsRequest &request);
     GetWebACLResponse * getWebACL(const GetWebACLRequest &request);
     GetWebACLForResourceResponse * getWebACLForResource(const GetWebACLForResourceRequest &request);
+    ListAvailableManagedRuleGroupVersionsResponse * listAvailableManagedRuleGroupVersions(const ListAvailableManagedRuleGroupVersionsRequest &request);
     ListAvailableManagedRuleGroupsResponse * listAvailableManagedRuleGroups(const ListAvailableManagedRuleGroupsRequest &request);
     ListIPSetsResponse * listIPSets(const ListIPSetsRequest &request);
     ListLoggingConfigurationsResponse * listLoggingConfigurations(const ListLoggingConfigurationsRequest &request);
+    ListManagedRuleSetsResponse * listManagedRuleSets(const ListManagedRuleSetsRequest &request);
+    ListMobileSdkReleasesResponse * listMobileSdkReleases(const ListMobileSdkReleasesRequest &request);
     ListRegexPatternSetsResponse * listRegexPatternSets(const ListRegexPatternSetsRequest &request);
     ListResourcesForWebACLResponse * listResourcesForWebACL(const ListResourcesForWebACLRequest &request);
     ListRuleGroupsResponse * listRuleGroups(const ListRuleGroupsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListWebACLsResponse * listWebACLs(const ListWebACLsRequest &request);
     PutLoggingConfigurationResponse * putLoggingConfiguration(const PutLoggingConfigurationRequest &request);
+    PutManagedRuleSetVersionsResponse * putManagedRuleSetVersions(const PutManagedRuleSetVersionsRequest &request);
     PutPermissionPolicyResponse * putPermissionPolicy(const PutPermissionPolicyRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateIPSetResponse * updateIPSet(const UpdateIPSetRequest &request);
+    UpdateManagedRuleSetVersionExpiryDateResponse * updateManagedRuleSetVersionExpiryDate(const UpdateManagedRuleSetVersionExpiryDateRequest &request);
     UpdateRegexPatternSetResponse * updateRegexPatternSet(const UpdateRegexPatternSetRequest &request);
     UpdateRuleGroupResponse * updateRuleGroup(const UpdateRuleGroupRequest &request);
     UpdateWebACLResponse * updateWebACL(const UpdateWebACLRequest &request);
@@ -174,7 +198,7 @@ private:
 
 };
 
-} // namespace WAFV2
+} // namespace Wafv2
 } // namespace QtAws
 
 #endif

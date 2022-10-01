@@ -24,14 +24,14 @@
 #include "describetablerequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeTableRequest;
 
-class DescribeTableRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeTableRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    DescribeTableRequestPrivate(const DynamoDBRequest::Action action,
+    DescribeTableRequestPrivate(const DynamoDbRequest::Action action,
                                    DescribeTableRequest * const q);
     DescribeTableRequestPrivate(const DescribeTableRequestPrivate &other,
                                    DescribeTableRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

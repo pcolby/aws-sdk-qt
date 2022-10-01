@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::BatchDeleteImageRequest
- * \brief The BatchDeleteImageRequest class provides an interface for ECRPublic BatchDeleteImage requests.
+ * \class QtAws::EcrPublic::BatchDeleteImageRequest
+ * \brief The BatchDeleteImageRequest class provides an interface for EcrPublic BatchDeleteImage requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::batchDeleteImage
+ * \sa EcrPublicClient::batchDeleteImage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &other)
-    : ECRPublicRequest(new BatchDeleteImageRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new BatchDeleteImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &
  * Constructs a BatchDeleteImageRequest object.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest()
-    : ECRPublicRequest(new BatchDeleteImageRequestPrivate(ECRPublicRequest::BatchDeleteImageAction, this))
+    : EcrPublicRequest(new BatchDeleteImageRequestPrivate(EcrPublicRequest::BatchDeleteImageAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::ECRPublic::BatchDeleteImageRequestPrivate
+ * \class QtAws::EcrPublic::BatchDeleteImageRequestPrivate
  * \brief The BatchDeleteImageRequestPrivate class provides private implementation for BatchDeleteImageRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a BatchDeleteImageRequestPrivate object for ECRPublic \a action,
+ * Constructs a BatchDeleteImageRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
-    const ECRPublicRequest::Action action, BatchDeleteImageRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, BatchDeleteImageRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const BatchDeleteImageRequestPrivate &other, BatchDeleteImageRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

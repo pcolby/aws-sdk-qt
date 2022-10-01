@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::ListTagsResponse
- * \brief The ListTagsResponse class provides an interace for CloudHSMV2 ListTags responses.
+ * \class QtAws::CloudHsmV2::ListTagsResponse
+ * \brief The ListTagsResponse class provides an interace for CloudHsmV2 ListTags responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::listTags
+ * \sa CloudHsmV2Client::listTags
  */
 
 /*!
@@ -46,7 +46,7 @@ ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new ListTagsResponsePrivate(this), parent)
+    : CloudHsmV2Response(new ListTagsResponsePrivate(this), parent)
 {
     setRequest(new ListTagsRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const ListTagsRequest * ListTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 ListTags \a response.
+ * Parses a successful CloudHsmV2 ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::ListTagsResponsePrivate
+ * \class QtAws::CloudHsmV2::ListTagsResponsePrivate
  * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
-    ListTagsResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    ListTagsResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 ListTags response element from \a xml.
+ * Parses a CloudHsmV2 ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

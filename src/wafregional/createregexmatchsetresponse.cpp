@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateRegexMatchSetResponse
- * \brief The CreateRegexMatchSetResponse class provides an interace for WAFRegional CreateRegexMatchSet responses.
+ * \class QtAws::WafRegional::CreateRegexMatchSetResponse
+ * \brief The CreateRegexMatchSetResponse class provides an interace for WafRegional CreateRegexMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createRegexMatchSet
+ * \sa WafRegionalClient::createRegexMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ CreateRegexMatchSetResponse::CreateRegexMatchSetResponse(
         const CreateRegexMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateRegexMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new CreateRegexMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateRegexMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const CreateRegexMatchSetRequest * CreateRegexMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional CreateRegexMatchSet \a response.
+ * Parses a successful WafRegional CreateRegexMatchSet \a response.
  */
 void CreateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void CreateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateRegexMatchSetResponsePrivate
+ * \class QtAws::WafRegional::CreateRegexMatchSetResponsePrivate
  * \brief The CreateRegexMatchSetResponsePrivate class provides private implementation for CreateRegexMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a CreateRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateRegexMatchSetResponsePrivate::CreateRegexMatchSetResponsePrivate(
-    CreateRegexMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    CreateRegexMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional CreateRegexMatchSet response element from \a xml.
+ * Parses a WafRegional CreateRegexMatchSet response element from \a xml.
  */
 void CreateRegexMatchSetResponsePrivate::parseCreateRegexMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void CreateRegexMatchSetResponsePrivate::parseCreateRegexMatchSetResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSERVICEDISCOVERY_LIBRARY)
 
 add_library(QtAwsServiceDiscovery
+  qtawsservicediscoveryglobal.h
+  servicediscoveryclient.h
+  servicediscoveryclient_p.h
+  servicediscoveryrequest.h
+  servicediscoveryrequest_p.h
+  servicediscoveryresponse.h
+  servicediscoveryresponse_p.h
   createhttpnamespacerequest.h
   createhttpnamespacerequest_p.h
   createhttpnamespaceresponse.h
@@ -73,17 +80,10 @@ add_library(QtAwsServiceDiscovery
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawsservicediscoveryglobal.h
   registerinstancerequest.h
   registerinstancerequest_p.h
   registerinstanceresponse.h
   registerinstanceresponse_p.h
-  servicediscoveryclient.h
-  servicediscoveryclient_p.h
-  servicediscoveryrequest.h
-  servicediscoveryrequest_p.h
-  servicediscoveryresponse.h
-  servicediscoveryresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -92,14 +92,29 @@ add_library(QtAwsServiceDiscovery
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatehttpnamespacerequest.h
+  updatehttpnamespacerequest_p.h
+  updatehttpnamespaceresponse.h
+  updatehttpnamespaceresponse_p.h
   updateinstancecustomhealthstatusrequest.h
   updateinstancecustomhealthstatusrequest_p.h
   updateinstancecustomhealthstatusresponse.h
   updateinstancecustomhealthstatusresponse_p.h
+  updateprivatednsnamespacerequest.h
+  updateprivatednsnamespacerequest_p.h
+  updateprivatednsnamespaceresponse.h
+  updateprivatednsnamespaceresponse_p.h
+  updatepublicdnsnamespacerequest.h
+  updatepublicdnsnamespacerequest_p.h
+  updatepublicdnsnamespaceresponse.h
+  updatepublicdnsnamespaceresponse_p.h
   updateservicerequest.h
   updateservicerequest_p.h
   updateserviceresponse.h
   updateserviceresponse_p.h
+  servicediscoveryclient.cpp
+  servicediscoveryrequest.cpp
+  servicediscoveryresponse.cpp
   createhttpnamespacerequest.cpp
   createhttpnamespaceresponse.cpp
   createprivatednsnamespacerequest.cpp
@@ -138,15 +153,18 @@ add_library(QtAwsServiceDiscovery
   listtagsforresourceresponse.cpp
   registerinstancerequest.cpp
   registerinstanceresponse.cpp
-  servicediscoveryclient.cpp
-  servicediscoveryrequest.cpp
-  servicediscoveryresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatehttpnamespacerequest.cpp
+  updatehttpnamespaceresponse.cpp
   updateinstancecustomhealthstatusrequest.cpp
   updateinstancecustomhealthstatusresponse.cpp
+  updateprivatednsnamespacerequest.cpp
+  updateprivatednsnamespaceresponse.cpp
+  updatepublicdnsnamespacerequest.cpp
+  updatepublicdnsnamespaceresponse.cpp
   updateservicerequest.cpp
   updateserviceresponse.cpp)
 

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::VerifyDomainDkimRequest
- * \brief The VerifyDomainDkimRequest class provides an interface for SES VerifyDomainDkim requests.
+ * \class QtAws::Ses::VerifyDomainDkimRequest
+ * \brief The VerifyDomainDkimRequest class provides an interface for Ses VerifyDomainDkim requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SES::VerifyDomainDkimRequestPrivate
+ * \class QtAws::Ses::VerifyDomainDkimRequestPrivate
  * \brief The VerifyDomainDkimRequestPrivate class provides private implementation for VerifyDomainDkimRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

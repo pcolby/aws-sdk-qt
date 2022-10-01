@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleRequest
- * \brief The GetRateBasedRuleRequest class provides an interface for WAFRegional GetRateBasedRule requests.
+ * \class QtAws::WafRegional::GetRateBasedRuleRequest
+ * \brief The GetRateBasedRuleRequest class provides an interface for WafRegional GetRateBasedRule requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getRateBasedRule
+ * \sa WafRegionalClient::getRateBasedRule
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &other)
-    : WAFRegionalRequest(new GetRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &
  * Constructs a GetRateBasedRuleRequest object.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest()
-    : WAFRegionalRequest(new GetRateBasedRuleRequestPrivate(WAFRegionalRequest::GetRateBasedRuleAction, this))
+    : WafRegionalRequest(new GetRateBasedRuleRequestPrivate(WafRegionalRequest::GetRateBasedRuleAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::WAFRegional::GetRateBasedRuleRequestPrivate
+ * \class QtAws::WafRegional::GetRateBasedRuleRequestPrivate
  * \brief The GetRateBasedRuleRequestPrivate class provides private implementation for GetRateBasedRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetRateBasedRuleRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetRateBasedRuleRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
-    const WAFRegionalRequest::Action action, GetRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetRateBasedRuleRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
     const GetRateBasedRuleRequestPrivate &other, GetRateBasedRuleRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

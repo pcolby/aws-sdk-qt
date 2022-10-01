@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::ChangePasswordResponse
- * \brief The ChangePasswordResponse class provides an interace for IAM ChangePassword responses.
+ * \class QtAws::Iam::ChangePasswordResponse
+ * \brief The ChangePasswordResponse class provides an interace for Iam ChangePassword responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::changePassword
  */
@@ -68,7 +68,7 @@ const ChangePasswordRequest * ChangePasswordResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM ChangePassword \a response.
+ * Parses a successful Iam ChangePassword \a response.
  */
 void ChangePasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::ChangePasswordResponsePrivate
+ * \class QtAws::Iam::ChangePasswordResponsePrivate
  * \brief The ChangePasswordResponsePrivate class provides private implementation for ChangePasswordResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
 }
 
 /*!
- * Parses a IAM ChangePassword response element from \a xml.
+ * Parses a Iam ChangePassword response element from \a xml.
  */
 void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

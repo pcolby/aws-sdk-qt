@@ -24,11 +24,11 @@
 #include "listjobrunsrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class ListJobRunsResponsePrivate;
 
-class QTAWSEMRCONTAINERS_EXPORT ListJobRunsResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT ListJobRunsResponse : public EmrcontainersResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

@@ -23,10 +23,14 @@
 #include "core/awssignaturev4.h"
 #include "deletethingshadowrequest.h"
 #include "deletethingshadowresponse.h"
+#include "getretainedmessagerequest.h"
+#include "getretainedmessageresponse.h"
 #include "getthingshadowrequest.h"
 #include "getthingshadowresponse.h"
 #include "listnamedshadowsforthingrequest.h"
 #include "listnamedshadowsforthingresponse.h"
+#include "listretainedmessagesrequest.h"
+#include "listretainedmessagesresponse.h"
 #include "publishrequest.h"
 #include "publishresponse.h"
 #include "updatethingshadowrequest.h"
@@ -54,16 +58,16 @@ namespace IoTDataPlane {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTDataPlane
  *
- *  <fullname>AWS IoT</fullname>
+ *  <fullname>IoT data</fullname>
  * 
- *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
- *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
- *  messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is a persistent representation of your
- *  things and their state in the AWS
+ *  IoT data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ *  embedded devices, or smart appliances) and the Amazon Web Services cloud. It implements a broker for applications and
+ *  things to publish messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is a persistent
+ *  representation of your things and their state in the Amazon Web Services
  * 
  *  cloud>
  * 
- *  Find the endpoint address for actions in the AWS IoT data plane by running this CLI
+ *  Find the endpoint address for actions in IoT data by running this CLI
  * 
  *  command>
  * 
@@ -71,8 +75,8 @@ namespace IoTDataPlane {
  * 
  *  </p
  * 
- *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS Signature
- *  Version 4</a> to sign requests is:
+ *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon Web
+ *  ServicesSignature Version 4</a> to sign requests is:
  */
 
 /*!
@@ -93,7 +97,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     Q_D(IoTDataPlaneClient);
     d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("data.iot");
+    d->endpointPrefix = QStringLiteral("data-ats.iot");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
@@ -122,7 +126,7 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     d->apiVersion = QStringLiteral("2015-05-28");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("data.iot");
+    d->endpointPrefix = QStringLiteral("data-ats.iot");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
     d->serviceName = QStringLiteral("iotdata");
@@ -138,13 +142,46 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  *
  * thing>
  *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingShadow</a>
+ *
+ * action>
+ *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the AWS
- * IoT Developer
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the IoT
+ * Developer
  */
 DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteThingShadowRequest &request)
 {
     return qobject_cast<DeleteThingShadowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * GetRetainedMessageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the details of a single retained message for the specified
+ *
+ * topic>
+ *
+ * This action returns the message payload of the retained message, which can incur messaging costs. To list only the topic
+ * names of the retained messages, call <a
+ *
+ * href="/iot/latest/developerguide/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">GetRetainedMessage</a>
+ *
+ * action>
+ *
+ * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web
+ * Services IoT Core pricing -
+ */
+GetRetainedMessageResponse * IoTDataPlaneClient::getRetainedMessage(const GetRetainedMessageRequest &request)
+{
+    return qobject_cast<GetRetainedMessageResponse *>(send(request));
 }
 
 /*!
@@ -157,8 +194,13 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
  *
  * thing>
  *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetThingShadow</a>
+ *
+ * action>
+ *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the AWS IoT
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the IoT
  * Developer
  */
 GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadowRequest &request)
@@ -173,6 +215,11 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the shadows for the specified
+ *
+ * thing>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListNamedShadowsForThing</a>
  */
 ListNamedShadowsForThingResponse * IoTDataPlaneClient::listNamedShadowsForThing(const ListNamedShadowsForThingRequest &request)
 {
@@ -181,16 +228,60 @@ ListNamedShadowsForThingResponse * IoTDataPlaneClient::listNamedShadowsForThing(
 
 /*!
  * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * ListRetainedMessagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists summary information about the retained messages stored for the
+ *
+ * account>
+ *
+ * This action returns only the topic names of the retained messages. It doesn't return any message payloads. Although this
+ * action doesn't return a message payload, it can still incur messaging
+ *
+ * costs>
+ *
+ * To get the message payload of a retained message, call <a
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/API_iotdata_GetRetainedMessage.html">GetRetainedMessage</a>
+ * with the topic name of the retained
+ *
+ * message>
+ *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">ListRetainedMessages</a>
+ *
+ * action>
+ *
+ * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web
+ * Services IoT Core pricing -
+ */
+ListRetainedMessagesResponse * IoTDataPlaneClient::listRetainedMessages(const ListRetainedMessagesRequest &request)
+{
+    return qobject_cast<ListRetainedMessagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
  * PublishResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Publishes state
+ * Publishes an MQTT
  *
- * information>
+ * message>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
- * Protocol</a> in the AWS IoT Developer
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">Publish</a>
+ *
+ * action>
+ *
+ * For more information about MQTT messages, see <a
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html">MQTT Protocol</a> in the IoT Developer
+ *
+ * Guide>
+ *
+ * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web
+ * Services IoT Core pricing -
  */
 PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
 {
@@ -207,9 +298,14 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
  *
  * thing>
  *
+ * Requires permission to access the <a
+ * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingShadow</a>
+ *
+ * action>
+ *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the AWS
- * IoT Developer
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the IoT
+ * Developer
  */
 UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateThingShadowRequest &request)
 {

@@ -23,7 +23,7 @@
 #include "fmsrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class ListTagsForResourceRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

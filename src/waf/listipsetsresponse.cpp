@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListIPSetsResponse
- * \brief The ListIPSetsResponse class provides an interace for WAF ListIPSets responses.
+ * \class QtAws::Waf::ListIPSetsResponse
+ * \brief The ListIPSetsResponse class provides an interace for Waf ListIPSets responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF ListIPSets \a response.
+ * Parses a successful Waf ListIPSets \a response.
  */
 void ListIPSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::ListIPSetsResponsePrivate
+ * \class QtAws::Waf::ListIPSetsResponsePrivate
  * \brief The ListIPSetsResponsePrivate class provides private implementation for ListIPSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
 }
 
 /*!
- * Parses a WAF ListIPSets response element from \a xml.
+ * Parses a Waf ListIPSets response element from \a xml.
  */
 void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

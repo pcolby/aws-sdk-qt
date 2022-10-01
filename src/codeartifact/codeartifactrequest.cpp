@@ -46,6 +46,7 @@ namespace CodeArtifact {
  * \value DeleteRepositoryAction CodeArtifact DeleteRepository action.
  * \value DeleteRepositoryPermissionsPolicyAction CodeArtifact DeleteRepositoryPermissionsPolicy action.
  * \value DescribeDomainAction CodeArtifact DescribeDomain action.
+ * \value DescribePackageAction CodeArtifact DescribePackage action.
  * \value DescribePackageVersionAction CodeArtifact DescribePackageVersion action.
  * \value DescribeRepositoryAction CodeArtifact DescribeRepository action.
  * \value DisassociateExternalConnectionAction CodeArtifact DisassociateExternalConnection action.
@@ -65,6 +66,7 @@ namespace CodeArtifact {
  * \value ListRepositoriesInDomainAction CodeArtifact ListRepositoriesInDomain action.
  * \value ListTagsForResourceAction CodeArtifact ListTagsForResource action.
  * \value PutDomainPermissionsPolicyAction CodeArtifact PutDomainPermissionsPolicy action.
+ * \value PutPackageOriginConfigurationAction CodeArtifact PutPackageOriginConfiguration action.
  * \value PutRepositoryPermissionsPolicyAction CodeArtifact PutRepositoryPermissionsPolicy action.
  * \value TagResourceAction CodeArtifact TagResource action.
  * \value UntagResourceAction CodeArtifact UntagResource action.
@@ -277,7 +279,7 @@ QNetworkRequest CodeArtifactRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeArtifactRequestPrivate::CodeArtifactRequestPrivate(const CodeArtifactRequest::Action action, CodeArtifactRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-22"))
 {
 
 }
@@ -321,6 +323,7 @@ QString CodeArtifactRequestPrivate::toString(const CodeArtifactRequest::Action &
         ActionToString(DeleteRepository);
         ActionToString(DeleteRepositoryPermissionsPolicy);
         ActionToString(DescribeDomain);
+        ActionToString(DescribePackage);
         ActionToString(DescribePackageVersion);
         ActionToString(DescribeRepository);
         ActionToString(DisassociateExternalConnection);
@@ -340,6 +343,7 @@ QString CodeArtifactRequestPrivate::toString(const CodeArtifactRequest::Action &
         ActionToString(ListRepositoriesInDomain);
         ActionToString(ListTagsForResource);
         ActionToString(PutDomainPermissionsPolicy);
+        ActionToString(PutPackageOriginConfiguration);
         ActionToString(PutRepositoryPermissionsPolicy);
         ActionToString(TagResource);
         ActionToString(UntagResource);

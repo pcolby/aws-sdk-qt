@@ -89,7 +89,7 @@ MobileClient::MobileClient(
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AWS Mobile");
-    d->serviceName = QStringLiteral("AWSMobileHubService");
+    d->serviceName = QStringLiteral("awsmobilehubservice");
 }
 
 /*!
@@ -117,7 +117,7 @@ MobileClient::MobileClient(
     d->endpointPrefix = QStringLiteral("mobile");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Mobile");
-    d->serviceName = QStringLiteral("AWSMobileHubService");
+    d->serviceName = QStringLiteral("awsmobilehubservice");
 }
 
 /*!

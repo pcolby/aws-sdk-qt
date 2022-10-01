@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSHEALTHLAKE_LIBRARY)
 
 add_library(QtAwsHealthLake
+  qtawshealthlakeglobal.h
+  healthlakeclient.h
+  healthlakeclient_p.h
+  healthlakerequest.h
+  healthlakerequest_p.h
+  healthlakeresponse.h
+  healthlakeresponse_p.h
   createfhirdatastorerequest.h
   createfhirdatastorerequest_p.h
   createfhirdatastoreresponse.h
@@ -21,17 +28,22 @@ add_library(QtAwsHealthLake
   describefhirimportjobrequest_p.h
   describefhirimportjobresponse.h
   describefhirimportjobresponse_p.h
-  healthlakeclient.h
-  healthlakeclient_p.h
-  healthlakerequest.h
-  healthlakerequest_p.h
-  healthlakeresponse.h
-  healthlakeresponse_p.h
   listfhirdatastoresrequest.h
   listfhirdatastoresrequest_p.h
   listfhirdatastoresresponse.h
   listfhirdatastoresresponse_p.h
-  qtawshealthlakeglobal.h
+  listfhirexportjobsrequest.h
+  listfhirexportjobsrequest_p.h
+  listfhirexportjobsresponse.h
+  listfhirexportjobsresponse_p.h
+  listfhirimportjobsrequest.h
+  listfhirimportjobsrequest_p.h
+  listfhirimportjobsresponse.h
+  listfhirimportjobsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   startfhirexportjobrequest.h
   startfhirexportjobrequest_p.h
   startfhirexportjobresponse.h
@@ -40,6 +52,17 @@ add_library(QtAwsHealthLake
   startfhirimportjobrequest_p.h
   startfhirimportjobresponse.h
   startfhirimportjobresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  healthlakeclient.cpp
+  healthlakerequest.cpp
+  healthlakeresponse.cpp
   createfhirdatastorerequest.cpp
   createfhirdatastoreresponse.cpp
   deletefhirdatastorerequest.cpp
@@ -50,15 +73,22 @@ add_library(QtAwsHealthLake
   describefhirexportjobresponse.cpp
   describefhirimportjobrequest.cpp
   describefhirimportjobresponse.cpp
-  healthlakeclient.cpp
-  healthlakerequest.cpp
-  healthlakeresponse.cpp
   listfhirdatastoresrequest.cpp
   listfhirdatastoresresponse.cpp
+  listfhirexportjobsrequest.cpp
+  listfhirexportjobsresponse.cpp
+  listfhirimportjobsrequest.cpp
+  listfhirimportjobsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   startfhirexportjobrequest.cpp
   startfhirexportjobresponse.cpp
   startfhirimportjobrequest.cpp
-  startfhirimportjobresponse.cpp)
+  startfhirimportjobresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 target_link_libraries(QtAwsHealthLake
   PRIVATE QtAwsCore

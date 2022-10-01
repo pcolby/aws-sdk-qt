@@ -338,7 +338,7 @@ QNetworkRequest GameLiftRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GameLiftRequestPrivate::GameLiftRequestPrivate(const GameLiftRequest::Action action, GameLiftRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-10-01"))
 {
 
 }

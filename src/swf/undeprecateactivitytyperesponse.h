@@ -24,7 +24,7 @@
 #include "undeprecateactivitytyperequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class UndeprecateActivityTypeResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

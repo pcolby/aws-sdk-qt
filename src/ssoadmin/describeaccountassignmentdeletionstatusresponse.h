@@ -24,11 +24,11 @@
 #include "describeaccountassignmentdeletionstatusrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DescribeAccountAssignmentDeletionStatusResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT DescribeAccountAssignmentDeletionStatusResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DescribeAccountAssignmentDeletionStatusResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

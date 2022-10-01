@@ -24,14 +24,14 @@
 #include "sendactivationcoderequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class SendActivationCodeRequest;
 
-class SendActivationCodeRequestPrivate : public SSMContactsRequestPrivate {
+class SendActivationCodeRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    SendActivationCodeRequestPrivate(const SSMContactsRequest::Action action,
+    SendActivationCodeRequestPrivate(const SsmContactsRequest::Action action,
                                    SendActivationCodeRequest * const q);
     SendActivationCodeRequestPrivate(const SendActivationCodeRequestPrivate &other,
                                    SendActivationCodeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

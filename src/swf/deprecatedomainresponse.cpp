@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::DeprecateDomainResponse
- * \brief The DeprecateDomainResponse class provides an interace for SWF DeprecateDomain responses.
+ * \class QtAws::Swf::DeprecateDomainResponse
+ * \brief The DeprecateDomainResponse class provides an interace for Swf DeprecateDomain responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const DeprecateDomainRequest * DeprecateDomainResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF DeprecateDomain \a response.
+ * Parses a successful Swf DeprecateDomain \a response.
  */
 void DeprecateDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void DeprecateDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::DeprecateDomainResponsePrivate
+ * \class QtAws::Swf::DeprecateDomainResponsePrivate
  * \brief The DeprecateDomainResponsePrivate class provides private implementation for DeprecateDomainResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
 }
 
 /*!
- * Parses a SWF DeprecateDomain response element from \a xml.
+ * Parses a Swf DeprecateDomain response element from \a xml.
  */
 void DeprecateDomainResponsePrivate::parseDeprecateDomainResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void DeprecateDomainResponsePrivate::parseDeprecateDomainResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

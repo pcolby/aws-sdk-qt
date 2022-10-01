@@ -49,6 +49,8 @@
 #include "getresourcesharesresponse.h"
 #include "listpendinginvitationresourcesrequest.h"
 #include "listpendinginvitationresourcesresponse.h"
+#include "listpermissionversionsrequest.h"
+#include "listpermissionversionsresponse.h"
 #include "listpermissionsrequest.h"
 #include "listpermissionsresponse.h"
 #include "listprincipalsrequest.h"
@@ -74,8 +76,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::RAM
- * \brief Contains classess for accessing AWS Resource Access Manager (RAM).
+ * \namespace QtAws::Ram
+ * \brief Contains classess for accessing AWS Resource Access Manager.
  *
  * \inmodule QtAwsRam
  *
@@ -83,24 +85,33 @@
  */
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 /*!
- * \class QtAws::RAM::RamClient
- * \brief The RamClient class provides access to the AWS Resource Access Manager (RAM) service.
+ * \class QtAws::Ram::RamClient
+ * \brief The RamClient class provides access to the AWS Resource Access Manager service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  *
- *  Use AWS Resource Access Manager to share AWS resources between AWS accounts. To share a resource, you create a resource
- *  share, associate the resource with the resource share, and specify the principals that can access the resources
- *  associated with the resource share. The following principals are supported: AWS accounts, organizational units (OU) from
- *  AWS Organizations, and organizations from AWS
+ *  This is the <i>Resource Access Manager API Reference</i>. This documentation provides descriptions and syntax for each
+ *  of the actions and data types in RAM. RAM is a service that helps you securely share your Amazon Web Services resources
+ *  across Amazon Web Services accounts. If you have multiple Amazon Web Services accounts, you can use RAM to share those
+ *  resources with other accounts. If you use Organizations to manage your accounts, then you share your resources with your
+ *  organization or organizational units (OUs). For supported resource types, you can also share resources with individual
+ *  Identity and Access Management (IAM) roles an users.
  * 
- *  Organizations>
+ *  </p
  * 
- *  For more information, see the <a href="https://docs.aws.amazon.com/ram/latest/userguide/">AWS Resource Access Manager
- *  User
+ *  To learn more about RAM, see the following
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/ram">Resource Access Manager product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/ram/latest/userguide/">Resource Access Manager User Guide</a>
  */
 
 /*!
@@ -162,7 +173,9 @@ RamClient::RamClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Accepts an invitation to a resource share from another AWS
+ * Accepts an invitation to a resource share from another Amazon Web Services account. After you accept the invitation, the
+ * resources included in the resource share are available to interact with in the relevant Amazon Web Services Management
+ * Consoles and
  */
 AcceptResourceShareInvitationResponse * RamClient::acceptResourceShareInvitation(const AcceptResourceShareInvitationRequest &request)
 {
@@ -175,7 +188,9 @@ AcceptResourceShareInvitationResponse * RamClient::acceptResourceShareInvitation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates the specified resource share with the specified principals and
+ * Adds the specified list of principals and list of resources to a resource share. Principals that already have access to
+ * this resource share immediately receive access to the added resources. Newly added principals immediately receive access
+ * to the resources shared in this resource share.
  */
 AssociateResourceShareResponse * RamClient::associateResourceShare(const AssociateResourceShareRequest &request)
 {
@@ -188,7 +203,9 @@ AssociateResourceShareResponse * RamClient::associateResourceShare(const Associa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a permission with a resource
+ * Adds or replaces the RAM permission for a resource type included in a resource share. You can have exactly one
+ * permission associated with each resource type in the resource share. You can add a new RAM permission only if there are
+ * currently no resources of that resource type currently in the resource
  */
 AssociateResourceSharePermissionResponse * RamClient::associateResourceSharePermission(const AssociateResourceSharePermissionRequest &request)
 {
@@ -201,7 +218,15 @@ AssociateResourceSharePermissionResponse * RamClient::associateResourceSharePerm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a resource
+ * Creates a resource share. You can provide a list of the <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> for
+ * the resources that you want to share, a list of principals you want to share the resources with, and the permissions to
+ * grant those
+ *
+ * principals> <note>
+ *
+ * Sharing a resource makes it available for use by principals outside of the Amazon Web Services account that created the
+ * resource. Sharing doesn't change any permissions or quotas that apply to the resource in the account that created
  */
 CreateResourceShareResponse * RamClient::createResourceShare(const CreateResourceShareRequest &request)
 {
@@ -214,7 +239,8 @@ CreateResourceShareResponse * RamClient::createResourceShare(const CreateResourc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified resource
+ * Deletes the specified resource share. This doesn't delete any of the resources that were associated with the resource
+ * share; it only stops the sharing of those resources outside of the Amazon Web Services account that created
  */
 DeleteResourceShareResponse * RamClient::deleteResourceShare(const DeleteResourceShareRequest &request)
 {
@@ -240,7 +266,9 @@ DisassociateResourceShareResponse * RamClient::disassociateResourceShare(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates an AWS RAM permission from a resource
+ * Disassociates an RAM permission from a resource share. Permission changes take effect immediately. You can remove a RAM
+ * permission from a resource share only if there are currently no resources of the relevant resource type currently
+ * attached to the resource
  */
 DisassociateResourceSharePermissionResponse * RamClient::disassociateResourceSharePermission(const DisassociateResourceSharePermissionRequest &request)
 {
@@ -253,11 +281,15 @@ DisassociateResourceSharePermissionResponse * RamClient::disassociateResourceSha
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables resource sharing within your AWS
+ * Enables resource sharing within your organization in Organizations. Calling this operation enables RAM to retrieve
+ * information about the organization and its structure. This lets you share resources with all of the accounts in an
+ * organization by specifying the organization's ID, or all of the accounts in an organizational unit (OU) by specifying
+ * the OU's ID. Until you enable sharing within the organization, you can specify only individual Amazon Web Services
+ * accounts, or for supported resource types, IAM users and
  *
- * Organization>
+ * roles>
  *
- * The caller must be the master account for the AWS
+ * You must call this operation from an IAM user or role in the organization's management
  */
 EnableSharingWithAwsOrganizationResponse * RamClient::enableSharingWithAwsOrganization(const EnableSharingWithAwsOrganizationRequest &request)
 {
@@ -270,7 +302,7 @@ EnableSharingWithAwsOrganizationResponse * RamClient::enableSharingWithAwsOrgani
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the contents of an AWS RAM permission in JSON
+ * Gets the contents of an RAM permission in JSON
  */
 GetPermissionResponse * RamClient::getPermission(const GetPermissionRequest &request)
 {
@@ -283,7 +315,7 @@ GetPermissionResponse * RamClient::getPermission(const GetPermissionRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the policies for the specified resources that you own and have
+ * Retrieves the resource policies for the specified resources that you own and have
  */
 GetResourcePoliciesResponse * RamClient::getResourcePolicies(const GetResourcePoliciesRequest &request)
 {
@@ -296,7 +328,7 @@ GetResourcePoliciesResponse * RamClient::getResourcePolicies(const GetResourcePo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the resources or principals for the resource shares that you
+ * Retrieves the resource and principal associations for resource shares that you
  */
 GetResourceShareAssociationsResponse * RamClient::getResourceShareAssociations(const GetResourceShareAssociationsRequest &request)
 {
@@ -309,7 +341,7 @@ GetResourceShareAssociationsResponse * RamClient::getResourceShareAssociations(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the invitations that you have received for resource
+ * Retrieves details about invitations that you have received for resource
  */
 GetResourceShareInvitationsResponse * RamClient::getResourceShareInvitations(const GetResourceShareInvitationsRequest &request)
 {
@@ -322,7 +354,7 @@ GetResourceShareInvitationsResponse * RamClient::getResourceShareInvitations(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the resource shares that you own or the resource shares that are shared with
+ * Retrieves details about the resource shares that you own or that are shared with
  */
 GetResourceSharesResponse * RamClient::getResourceShares(const GetResourceSharesRequest &request)
 {
@@ -335,7 +367,8 @@ GetResourceSharesResponse * RamClient::getResourceShares(const GetResourceShares
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the resources in a resource share that is shared with you but that the invitation is still pending
+ * Lists the resources in a resource share that is shared with you but for which the invitation is still
+ * <code>PENDING</code>. That means that you haven't accepted or rejected the invitation and the invitation hasn't
  */
 ListPendingInvitationResourcesResponse * RamClient::listPendingInvitationResources(const ListPendingInvitationResourcesRequest &request)
 {
@@ -344,11 +377,24 @@ ListPendingInvitationResourcesResponse * RamClient::listPendingInvitationResourc
 
 /*!
  * Sends \a request to the RamClient service, and returns a pointer to an
+ * ListPermissionVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the available versions of the specified RAM
+ */
+ListPermissionVersionsResponse * RamClient::listPermissionVersions(const ListPermissionVersionsRequest &request)
+{
+    return qobject_cast<ListPermissionVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RamClient service, and returns a pointer to an
  * ListPermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the AWS RAM
+ * Retrieves a list of available RAM permissions that you can use for the supported resource types.
  */
 ListPermissionsResponse * RamClient::listPermissions(const ListPermissionsRequest &request)
 {
@@ -361,7 +407,7 @@ ListPermissionsResponse * RamClient::listPermissions(const ListPermissionsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the principals that you have shared resources with or that have shared resources with
+ * Lists the principals that you are sharing resources with or that are sharing resources with
  */
 ListPrincipalsResponse * RamClient::listPrincipals(const ListPrincipalsRequest &request)
 {
@@ -374,7 +420,7 @@ ListPrincipalsResponse * RamClient::listPrincipals(const ListPrincipalsRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the AWS RAM permissions that are associated with a resource
+ * Lists the RAM permissions that are associated with a resource
  */
 ListResourceSharePermissionsResponse * RamClient::listResourceSharePermissions(const ListResourceSharePermissionsRequest &request)
 {
@@ -387,7 +433,7 @@ ListResourceSharePermissionsResponse * RamClient::listResourceSharePermissions(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the shareable resource types supported by AWS
+ * Lists the resource types that can be shared by
  */
 ListResourceTypesResponse * RamClient::listResourceTypes(const ListResourceTypesRequest &request)
 {
@@ -400,7 +446,7 @@ ListResourceTypesResponse * RamClient::listResourceTypes(const ListResourceTypes
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the resources that you added to a resource shares or the resources that are shared with
+ * Lists the resources that you added to a resource share or the resources that are shared with
  */
 ListResourcesResponse * RamClient::listResources(const ListResourcesRequest &request)
 {
@@ -413,20 +459,14 @@ ListResourcesResponse * RamClient::listResources(const ListResourcesRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resource shares that were created by attaching a policy to a resource are visible only to the resource share owner, and
- * the resource share cannot be modified in AWS
+ * When you attach a resource-based permission policy to a resource, it automatically creates a resource share. However,
+ * resource shares created this way are visible only to the resource share owner, and the resource share can't be modified
+ * in
  *
  * RAM>
  *
- * Use this API action to promote the resource share. When you promote the resource share, it
- *
- * becomes> <ul> <li>
- *
- * Visible to all principals that it is shared
- *
- * with> </li> <li>
- *
- * Modifiable in AWS
+ * You can use this operation to promote the resource share to a full RAM resource share. When you promote a resource
+ * share, you can then manage the resource share in RAM and it becomes visible to all of the principals you shared it
  */
 PromoteResourceShareCreatedFromPolicyResponse * RamClient::promoteResourceShareCreatedFromPolicy(const PromoteResourceShareCreatedFromPolicyRequest &request)
 {
@@ -439,7 +479,7 @@ PromoteResourceShareCreatedFromPolicyResponse * RamClient::promoteResourceShareC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Rejects an invitation to a resource share from another AWS
+ * Rejects an invitation to a resource share from another Amazon Web Services
  */
 RejectResourceShareInvitationResponse * RamClient::rejectResourceShareInvitation(const RejectResourceShareInvitationRequest &request)
 {
@@ -452,7 +492,8 @@ RejectResourceShareInvitationResponse * RamClient::rejectResourceShareInvitation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds the specified tags to the specified resource share that you
+ * Adds the specified tag keys and values to the specified resource share. The tags are attached only to the resource
+ * share, not to the resources that are in the resource
  */
 TagResourceResponse * RamClient::tagResource(const TagResourceRequest &request)
 {
@@ -465,7 +506,7 @@ TagResourceResponse * RamClient::tagResource(const TagResourceRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified tags from the specified resource share that you
+ * Removes the specified tag key and value pairs from the specified resource
  */
 UntagResourceResponse * RamClient::untagResource(const UntagResourceRequest &request)
 {
@@ -478,7 +519,7 @@ UntagResourceResponse * RamClient::untagResource(const UntagResourceRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified resource share that you
+ * Modifies some of the properties of the specified resource
  */
 UpdateResourceShareResponse * RamClient::updateResourceShare(const UpdateResourceShareRequest &request)
 {
@@ -486,12 +527,12 @@ UpdateResourceShareResponse * RamClient::updateResourceShare(const UpdateResourc
 }
 
 /*!
- * \class QtAws::RAM::RamClientPrivate
+ * \class QtAws::Ram::RamClientPrivate
  * \brief The RamClientPrivate class provides private implementation for RamClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsRAM
+ * \inmodule QtAwsRam
  */
 
 /*!
@@ -503,5 +544,5 @@ RamClientPrivate::RamClientPrivate(RamClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws

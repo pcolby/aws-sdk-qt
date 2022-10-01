@@ -24,14 +24,14 @@
 #include "listsizeconstraintsetsrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class ListSizeConstraintSetsRequest;
 
-class ListSizeConstraintSetsRequestPrivate : public WAFRegionalRequestPrivate {
+class ListSizeConstraintSetsRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    ListSizeConstraintSetsRequestPrivate(const WAFRegionalRequest::Action action,
+    ListSizeConstraintSetsRequestPrivate(const WafRegionalRequest::Action action,
                                    ListSizeConstraintSetsRequest * const q);
     ListSizeConstraintSetsRequestPrivate(const ListSizeConstraintSetsRequestPrivate &other,
                                    ListSizeConstraintSetsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

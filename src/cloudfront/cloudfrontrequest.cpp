@@ -36,6 +36,7 @@ namespace CloudFront {
  * This enum describes the actions that can be performed as CloudFront
  * requests.
  *
+ * \value AssociateAliasAction CloudFront AssociateAlias action.
  * \value CreateCachePolicyAction CloudFront CreateCachePolicy action.
  * \value CreateCloudFrontOriginAccessIdentityAction CloudFront CreateCloudFrontOriginAccessIdentity action.
  * \value CreateDistributionAction CloudFront CreateDistribution action.
@@ -46,9 +47,11 @@ namespace CloudFront {
  * \value CreateInvalidationAction CloudFront CreateInvalidation action.
  * \value CreateKeyGroupAction CloudFront CreateKeyGroup action.
  * \value CreateMonitoringSubscriptionAction CloudFront CreateMonitoringSubscription action.
+ * \value CreateOriginAccessControlAction CloudFront CreateOriginAccessControl action.
  * \value CreateOriginRequestPolicyAction CloudFront CreateOriginRequestPolicy action.
  * \value CreatePublicKeyAction CloudFront CreatePublicKey action.
  * \value CreateRealtimeLogConfigAction CloudFront CreateRealtimeLogConfig action.
+ * \value CreateResponseHeadersPolicyAction CloudFront CreateResponseHeadersPolicy action.
  * \value CreateStreamingDistributionAction CloudFront CreateStreamingDistribution action.
  * \value CreateStreamingDistributionWithTagsAction CloudFront CreateStreamingDistributionWithTags action.
  * \value DeleteCachePolicyAction CloudFront DeleteCachePolicy action.
@@ -59,9 +62,11 @@ namespace CloudFront {
  * \value DeleteFunctionAction CloudFront DeleteFunction action.
  * \value DeleteKeyGroupAction CloudFront DeleteKeyGroup action.
  * \value DeleteMonitoringSubscriptionAction CloudFront DeleteMonitoringSubscription action.
+ * \value DeleteOriginAccessControlAction CloudFront DeleteOriginAccessControl action.
  * \value DeleteOriginRequestPolicyAction CloudFront DeleteOriginRequestPolicy action.
  * \value DeletePublicKeyAction CloudFront DeletePublicKey action.
  * \value DeleteRealtimeLogConfigAction CloudFront DeleteRealtimeLogConfig action.
+ * \value DeleteResponseHeadersPolicyAction CloudFront DeleteResponseHeadersPolicy action.
  * \value DeleteStreamingDistributionAction CloudFront DeleteStreamingDistribution action.
  * \value DescribeFunctionAction CloudFront DescribeFunction action.
  * \value GetCachePolicyAction CloudFront GetCachePolicy action.
@@ -79,29 +84,37 @@ namespace CloudFront {
  * \value GetKeyGroupAction CloudFront GetKeyGroup action.
  * \value GetKeyGroupConfigAction CloudFront GetKeyGroupConfig action.
  * \value GetMonitoringSubscriptionAction CloudFront GetMonitoringSubscription action.
+ * \value GetOriginAccessControlAction CloudFront GetOriginAccessControl action.
+ * \value GetOriginAccessControlConfigAction CloudFront GetOriginAccessControlConfig action.
  * \value GetOriginRequestPolicyAction CloudFront GetOriginRequestPolicy action.
  * \value GetOriginRequestPolicyConfigAction CloudFront GetOriginRequestPolicyConfig action.
  * \value GetPublicKeyAction CloudFront GetPublicKey action.
  * \value GetPublicKeyConfigAction CloudFront GetPublicKeyConfig action.
  * \value GetRealtimeLogConfigAction CloudFront GetRealtimeLogConfig action.
+ * \value GetResponseHeadersPolicyAction CloudFront GetResponseHeadersPolicy action.
+ * \value GetResponseHeadersPolicyConfigAction CloudFront GetResponseHeadersPolicyConfig action.
  * \value GetStreamingDistributionAction CloudFront GetStreamingDistribution action.
  * \value GetStreamingDistributionConfigAction CloudFront GetStreamingDistributionConfig action.
  * \value ListCachePoliciesAction CloudFront ListCachePolicies action.
  * \value ListCloudFrontOriginAccessIdentitiesAction CloudFront ListCloudFrontOriginAccessIdentities action.
+ * \value ListConflictingAliasesAction CloudFront ListConflictingAliases action.
  * \value ListDistributionsAction CloudFront ListDistributions action.
  * \value ListDistributionsByCachePolicyIdAction CloudFront ListDistributionsByCachePolicyId action.
  * \value ListDistributionsByKeyGroupAction CloudFront ListDistributionsByKeyGroup action.
  * \value ListDistributionsByOriginRequestPolicyIdAction CloudFront ListDistributionsByOriginRequestPolicyId action.
  * \value ListDistributionsByRealtimeLogConfigAction CloudFront ListDistributionsByRealtimeLogConfig action.
+ * \value ListDistributionsByResponseHeadersPolicyIdAction CloudFront ListDistributionsByResponseHeadersPolicyId action.
  * \value ListDistributionsByWebACLIdAction CloudFront ListDistributionsByWebACLId action.
  * \value ListFieldLevelEncryptionConfigsAction CloudFront ListFieldLevelEncryptionConfigs action.
  * \value ListFieldLevelEncryptionProfilesAction CloudFront ListFieldLevelEncryptionProfiles action.
  * \value ListFunctionsAction CloudFront ListFunctions action.
  * \value ListInvalidationsAction CloudFront ListInvalidations action.
  * \value ListKeyGroupsAction CloudFront ListKeyGroups action.
+ * \value ListOriginAccessControlsAction CloudFront ListOriginAccessControls action.
  * \value ListOriginRequestPoliciesAction CloudFront ListOriginRequestPolicies action.
  * \value ListPublicKeysAction CloudFront ListPublicKeys action.
  * \value ListRealtimeLogConfigsAction CloudFront ListRealtimeLogConfigs action.
+ * \value ListResponseHeadersPoliciesAction CloudFront ListResponseHeadersPolicies action.
  * \value ListStreamingDistributionsAction CloudFront ListStreamingDistributions action.
  * \value ListTagsForResourceAction CloudFront ListTagsForResource action.
  * \value PublishFunctionAction CloudFront PublishFunction action.
@@ -115,9 +128,11 @@ namespace CloudFront {
  * \value UpdateFieldLevelEncryptionProfileAction CloudFront UpdateFieldLevelEncryptionProfile action.
  * \value UpdateFunctionAction CloudFront UpdateFunction action.
  * \value UpdateKeyGroupAction CloudFront UpdateKeyGroup action.
+ * \value UpdateOriginAccessControlAction CloudFront UpdateOriginAccessControl action.
  * \value UpdateOriginRequestPolicyAction CloudFront UpdateOriginRequestPolicy action.
  * \value UpdatePublicKeyAction CloudFront UpdatePublicKey action.
  * \value UpdateRealtimeLogConfigAction CloudFront UpdateRealtimeLogConfig action.
+ * \value UpdateResponseHeadersPolicyAction CloudFront UpdateResponseHeadersPolicy action.
  * \value UpdateStreamingDistributionAction CloudFront UpdateStreamingDistribution action.
  */
 
@@ -326,7 +341,7 @@ QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Action action, CloudFrontRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-05-31"))
 {
 
 }
@@ -360,6 +375,7 @@ QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &acti
     #define ActionToString(action) \
         case CloudFrontRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
+        ActionToString(AssociateAlias);
         ActionToString(CreateCachePolicy);
         ActionToString(CreateCloudFrontOriginAccessIdentity);
         ActionToString(CreateDistribution);
@@ -370,9 +386,11 @@ QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &acti
         ActionToString(CreateInvalidation);
         ActionToString(CreateKeyGroup);
         ActionToString(CreateMonitoringSubscription);
+        ActionToString(CreateOriginAccessControl);
         ActionToString(CreateOriginRequestPolicy);
         ActionToString(CreatePublicKey);
         ActionToString(CreateRealtimeLogConfig);
+        ActionToString(CreateResponseHeadersPolicy);
         ActionToString(CreateStreamingDistribution);
         ActionToString(CreateStreamingDistributionWithTags);
         ActionToString(DeleteCachePolicy);
@@ -383,9 +401,11 @@ QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &acti
         ActionToString(DeleteFunction);
         ActionToString(DeleteKeyGroup);
         ActionToString(DeleteMonitoringSubscription);
+        ActionToString(DeleteOriginAccessControl);
         ActionToString(DeleteOriginRequestPolicy);
         ActionToString(DeletePublicKey);
         ActionToString(DeleteRealtimeLogConfig);
+        ActionToString(DeleteResponseHeadersPolicy);
         ActionToString(DeleteStreamingDistribution);
         ActionToString(DescribeFunction);
         ActionToString(GetCachePolicy);
@@ -403,29 +423,37 @@ QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &acti
         ActionToString(GetKeyGroup);
         ActionToString(GetKeyGroupConfig);
         ActionToString(GetMonitoringSubscription);
+        ActionToString(GetOriginAccessControl);
+        ActionToString(GetOriginAccessControlConfig);
         ActionToString(GetOriginRequestPolicy);
         ActionToString(GetOriginRequestPolicyConfig);
         ActionToString(GetPublicKey);
         ActionToString(GetPublicKeyConfig);
         ActionToString(GetRealtimeLogConfig);
+        ActionToString(GetResponseHeadersPolicy);
+        ActionToString(GetResponseHeadersPolicyConfig);
         ActionToString(GetStreamingDistribution);
         ActionToString(GetStreamingDistributionConfig);
         ActionToString(ListCachePolicies);
         ActionToString(ListCloudFrontOriginAccessIdentities);
+        ActionToString(ListConflictingAliases);
         ActionToString(ListDistributions);
         ActionToString(ListDistributionsByCachePolicyId);
         ActionToString(ListDistributionsByKeyGroup);
         ActionToString(ListDistributionsByOriginRequestPolicyId);
         ActionToString(ListDistributionsByRealtimeLogConfig);
+        ActionToString(ListDistributionsByResponseHeadersPolicyId);
         ActionToString(ListDistributionsByWebACLId);
         ActionToString(ListFieldLevelEncryptionConfigs);
         ActionToString(ListFieldLevelEncryptionProfiles);
         ActionToString(ListFunctions);
         ActionToString(ListInvalidations);
         ActionToString(ListKeyGroups);
+        ActionToString(ListOriginAccessControls);
         ActionToString(ListOriginRequestPolicies);
         ActionToString(ListPublicKeys);
         ActionToString(ListRealtimeLogConfigs);
+        ActionToString(ListResponseHeadersPolicies);
         ActionToString(ListStreamingDistributions);
         ActionToString(ListTagsForResource);
         ActionToString(PublishFunction);
@@ -439,9 +467,11 @@ QString CloudFrontRequestPrivate::toString(const CloudFrontRequest::Action &acti
         ActionToString(UpdateFieldLevelEncryptionProfile);
         ActionToString(UpdateFunction);
         ActionToString(UpdateKeyGroup);
+        ActionToString(UpdateOriginAccessControl);
         ActionToString(UpdateOriginRequestPolicy);
         ActionToString(UpdatePublicKey);
         ActionToString(UpdateRealtimeLogConfig);
+        ActionToString(UpdateResponseHeadersPolicy);
         ActionToString(UpdateStreamingDistribution);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");

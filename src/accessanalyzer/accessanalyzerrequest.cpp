@@ -271,7 +271,7 @@ QNetworkRequest AccessAnalyzerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 AccessAnalyzerRequestPrivate::AccessAnalyzerRequestPrivate(const AccessAnalyzerRequest::Action action, AccessAnalyzerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-11-01"))
 {
 
 }

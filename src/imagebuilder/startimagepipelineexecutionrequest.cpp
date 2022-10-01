@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::StartImagePipelineExecutionRequest
- * \brief The StartImagePipelineExecutionRequest class provides an interface for imagebuilder StartImagePipelineExecution requests.
+ * \class QtAws::ImageBuilder::StartImagePipelineExecutionRequest
+ * \brief The StartImagePipelineExecutionRequest class provides an interface for ImageBuilder StartImagePipelineExecution requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::startImagePipelineExecution
+ * \sa ImageBuilderClient::startImagePipelineExecution
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartImagePipelineExecutionRequest::StartImagePipelineExecutionRequest(const StartImagePipelineExecutionRequest &other)
-    : imagebuilderRequest(new StartImagePipelineExecutionRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new StartImagePipelineExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ StartImagePipelineExecutionRequest::StartImagePipelineExecutionRequest(const Sta
  * Constructs a StartImagePipelineExecutionRequest object.
  */
 StartImagePipelineExecutionRequest::StartImagePipelineExecutionRequest()
-    : imagebuilderRequest(new StartImagePipelineExecutionRequestPrivate(imagebuilderRequest::StartImagePipelineExecutionAction, this))
+    : ImageBuilderRequest(new StartImagePipelineExecutionRequestPrivate(ImageBuilderRequest::StartImagePipelineExecutionAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * StartImagePipelineExecutionRequest::response(
 }
 
 /*!
- * \class QtAws::imagebuilder::StartImagePipelineExecutionRequestPrivate
+ * \class QtAws::ImageBuilder::StartImagePipelineExecutionRequestPrivate
  * \brief The StartImagePipelineExecutionRequestPrivate class provides private implementation for StartImagePipelineExecutionRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a StartImagePipelineExecutionRequestPrivate object for imagebuilder \a action,
+ * Constructs a StartImagePipelineExecutionRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 StartImagePipelineExecutionRequestPrivate::StartImagePipelineExecutionRequestPrivate(
-    const imagebuilderRequest::Action action, StartImagePipelineExecutionRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, StartImagePipelineExecutionRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ StartImagePipelineExecutionRequestPrivate::StartImagePipelineExecutionRequestPri
  */
 StartImagePipelineExecutionRequestPrivate::StartImagePipelineExecutionRequestPrivate(
     const StartImagePipelineExecutionRequestPrivate &other, StartImagePipelineExecutionRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

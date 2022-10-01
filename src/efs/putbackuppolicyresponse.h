@@ -24,7 +24,7 @@
 #include "putbackuppolicyrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class PutBackupPolicyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

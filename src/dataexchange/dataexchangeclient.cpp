@@ -25,6 +25,8 @@
 #include "canceljobresponse.h"
 #include "createdatasetrequest.h"
 #include "createdatasetresponse.h"
+#include "createeventactionrequest.h"
+#include "createeventactionresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
 #include "createrevisionrequest.h"
@@ -33,12 +35,16 @@
 #include "deleteassetresponse.h"
 #include "deletedatasetrequest.h"
 #include "deletedatasetresponse.h"
+#include "deleteeventactionrequest.h"
+#include "deleteeventactionresponse.h"
 #include "deleterevisionrequest.h"
 #include "deleterevisionresponse.h"
 #include "getassetrequest.h"
 #include "getassetresponse.h"
 #include "getdatasetrequest.h"
 #include "getdatasetresponse.h"
+#include "geteventactionrequest.h"
+#include "geteventactionresponse.h"
 #include "getjobrequest.h"
 #include "getjobresponse.h"
 #include "getrevisionrequest.h"
@@ -47,12 +53,18 @@
 #include "listdatasetrevisionsresponse.h"
 #include "listdatasetsrequest.h"
 #include "listdatasetsresponse.h"
+#include "listeventactionsrequest.h"
+#include "listeventactionsresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
 #include "listrevisionassetsrequest.h"
 #include "listrevisionassetsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "revokerevisionrequest.h"
+#include "revokerevisionresponse.h"
+#include "sendapiassetrequest.h"
+#include "sendapiassetresponse.h"
 #include "startjobrequest.h"
 #include "startjobresponse.h"
 #include "tagresourcerequest.h"
@@ -63,6 +75,8 @@
 #include "updateassetresponse.h"
 #include "updatedatasetrequest.h"
 #include "updatedatasetresponse.h"
+#include "updateeventactionrequest.h"
+#include "updateeventactionresponse.h"
 #include "updaterevisionrequest.h"
 #include "updaterevisionresponse.h"
 
@@ -89,16 +103,26 @@ namespace DataExchange {
  * \inmodule QtAwsDataExchange
  *
  *  AWS Data Exchange is a service that makes it easy for AWS customers to exchange data in the cloud. You can use the AWS
- *  Data Exchange APIs to create, update, manage, and access file-based data set in the AWS Cloud.</p><p>As a subscriber,
- *  you can view and access the data sets that you have an entitlement to through a subscription. You can use the APIS to
- *  download or copy your entitled data sets to Amazon S3 for use across a variety of AWS analytics and machine learning
- *  services.</p><p>As a provider, you can create and manage your data sets that you would like to publish to a product.
- *  Being able to package and provide your data sets into products requires a few steps to determine eligibility. For more
- *  information, visit the AWS Data Exchange User Guide.</p><p>A data set is a collection of data that can be changed or
- *  updated over time. Data sets can be updated using revisions, which represent a new version or incremental change to a
- *  data set. A revision contains one or more assets. An asset in AWS Data Exchange is a piece of data that can be stored as
- *  an Amazon S3 object. The asset can be a structured data file, an image file, or some other data file. Jobs are
- *  asynchronous import or export operations used to create or copy
+ *  Data Exchange APIs to create, update, manage, and access file-based data set in the AWS
+ * 
+ *  Cloud>
+ * 
+ *  As a subscriber, you can view and access the data sets that you have an entitlement to through a subscription. You can
+ *  use the APIS to download or copy your entitled data sets to Amazon S3 for use across a variety of AWS analytics and
+ *  machine learning
+ * 
+ *  services>
+ * 
+ *  As a provider, you can create and manage your data sets that you would like to publish to a product. Being able to
+ *  package and provide your data sets into products requires a few steps to determine eligibility. For more information,
+ *  visit the AWS Data Exchange User
+ * 
+ *  Guide>
+ * 
+ *  A data set is a collection of data that can be changed or updated over time. Data sets can be updated using revisions,
+ *  which represent a new version or incremental change to a data set. A revision contains one or more assets. An asset in
+ *  AWS Data Exchange is a piece of data that can be stored as an Amazon S3 object. The asset can be a structured data file,
+ *  an image file, or some other data file. Jobs are asynchronous import or export operations used to create or copy
  */
 
 /*!
@@ -182,6 +206,19 @@ CreateDataSetResponse * DataExchangeClient::createDataSet(const CreateDataSetReq
 
 /*!
  * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * CreateEventActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation creates an event
+ */
+CreateEventActionResponse * DataExchangeClient::createEventAction(const CreateEventActionRequest &request)
+{
+    return qobject_cast<CreateEventActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
  * CreateJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -234,6 +271,19 @@ DeleteDataSetResponse * DataExchangeClient::deleteDataSet(const DeleteDataSetReq
 
 /*!
  * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * DeleteEventActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation deletes the event
+ */
+DeleteEventActionResponse * DataExchangeClient::deleteEventAction(const DeleteEventActionRequest &request)
+{
+    return qobject_cast<DeleteEventActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
  * DeleteRevisionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -269,6 +319,19 @@ GetAssetResponse * DataExchangeClient::getAsset(const GetAssetRequest &request)
 GetDataSetResponse * DataExchangeClient::getDataSet(const GetDataSetRequest &request)
 {
     return qobject_cast<GetDataSetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * GetEventActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation retrieves information about an event
+ */
+GetEventActionResponse * DataExchangeClient::getEventAction(const GetEventActionRequest &request)
+{
+    return qobject_cast<GetEventActionResponse *>(send(request));
 }
 
 /*!
@@ -326,6 +389,19 @@ ListDataSetsResponse * DataExchangeClient::listDataSets(const ListDataSetsReques
 
 /*!
  * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * ListEventActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation lists your event
+ */
+ListEventActionsResponse * DataExchangeClient::listEventActions(const ListEventActionsRequest &request)
+{
+    return qobject_cast<ListEventActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
  * ListJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -361,6 +437,32 @@ ListRevisionAssetsResponse * DataExchangeClient::listRevisionAssets(const ListRe
 ListTagsForResourceResponse * DataExchangeClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * RevokeRevisionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation revokes subscribers' access to a
+ */
+RevokeRevisionResponse * DataExchangeClient::revokeRevision(const RevokeRevisionRequest &request)
+{
+    return qobject_cast<RevokeRevisionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * SendApiAssetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation invokes an API Gateway API asset. The request is proxied to the provider’s API Gateway
+ */
+SendApiAssetResponse * DataExchangeClient::sendApiAsset(const SendApiAssetRequest &request)
+{
+    return qobject_cast<SendApiAssetResponse *>(send(request));
 }
 
 /*!
@@ -426,6 +528,19 @@ UpdateAssetResponse * DataExchangeClient::updateAsset(const UpdateAssetRequest &
 UpdateDataSetResponse * DataExchangeClient::updateDataSet(const UpdateDataSetRequest &request)
 {
     return qobject_cast<UpdateDataSetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataExchangeClient service, and returns a pointer to an
+ * UpdateEventActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation updates the event
+ */
+UpdateEventActionResponse * DataExchangeClient::updateEventAction(const UpdateEventActionRequest &request)
+{
+    return qobject_cast<UpdateEventActionResponse *>(send(request));
 }
 
 /*!

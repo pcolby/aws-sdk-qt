@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateXssMatchSetRequest
- * \brief The UpdateXssMatchSetRequest class provides an interface for WAF UpdateXssMatchSet requests.
+ * \class QtAws::Waf::UpdateXssMatchSetRequest
+ * \brief The UpdateXssMatchSetRequest class provides an interface for Waf UpdateXssMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAF::UpdateXssMatchSetRequestPrivate
+ * \class QtAws::Waf::UpdateXssMatchSetRequestPrivate
  * \brief The UpdateXssMatchSetRequestPrivate class provides private implementation for UpdateXssMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

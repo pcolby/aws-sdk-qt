@@ -24,11 +24,11 @@
 #include "describecertificatesrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeCertificatesResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DescribeCertificatesResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeCertificatesResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

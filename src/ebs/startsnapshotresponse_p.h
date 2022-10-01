@@ -23,7 +23,7 @@
 #include "ebsresponse_p.h"
 
 namespace QtAws {
-namespace EBS {
+namespace Ebs {
 
 class StartSnapshotResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EBS
+} // namespace Ebs
 } // namespace QtAws
 
 #endif

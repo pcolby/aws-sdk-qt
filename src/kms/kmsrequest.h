@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace KMS {
+namespace Kms {
 
 class KmsRequestPrivate;
 
 class QTAWSKMS_EXPORT KmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by KMS.
+    /// Actions supported by Kms.
     enum Action {
         CancelKeyDeletionAction,
         ConnectCustomKeyStoreAction,
@@ -61,6 +61,7 @@ public:
         GenerateDataKeyPairAction,
         GenerateDataKeyPairWithoutPlaintextAction,
         GenerateDataKeyWithoutPlaintextAction,
+        GenerateMacAction,
         GenerateRandomAction,
         GetKeyPolicyAction,
         GetKeyRotationStatusAction,
@@ -75,6 +76,7 @@ public:
         ListRetirableGrantsAction,
         PutKeyPolicyAction,
         ReEncryptAction,
+        ReplicateKeyAction,
         RetireGrantAction,
         RevokeGrantAction,
         ScheduleKeyDeletionAction,
@@ -84,7 +86,9 @@ public:
         UpdateAliasAction,
         UpdateCustomKeyStoreAction,
         UpdateKeyDescriptionAction,
+        UpdatePrimaryRegionAction,
         VerifyAction,
+        VerifyMacAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
@@ -121,7 +125,7 @@ private:
 
 };
 
-} // namespace KMS
+} // namespace Kms
 } // namespace QtAws
 
 #endif

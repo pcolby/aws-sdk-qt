@@ -24,7 +24,7 @@
 #include "listnotebookexecutionsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class ListNotebookExecutionsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

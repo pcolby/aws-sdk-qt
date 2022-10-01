@@ -1,16 +1,25 @@
 add_compile_definitions(QTAWSCLOUDFORMATION_LIBRARY)
 
 add_library(QtAwsCloudFormation
-  cancelupdatestackrequest.h
-  cancelupdatestackrequest_p.h
-  cancelupdatestackresponse.h
-  cancelupdatestackresponse_p.h
+  qtawscloudformationglobal.h
   cloudformationclient.h
   cloudformationclient_p.h
   cloudformationrequest.h
   cloudformationrequest_p.h
   cloudformationresponse.h
   cloudformationresponse_p.h
+  activatetyperequest.h
+  activatetyperequest_p.h
+  activatetyperesponse.h
+  activatetyperesponse_p.h
+  batchdescribetypeconfigurationsrequest.h
+  batchdescribetypeconfigurationsrequest_p.h
+  batchdescribetypeconfigurationsresponse.h
+  batchdescribetypeconfigurationsresponse_p.h
+  cancelupdatestackrequest.h
+  cancelupdatestackrequest_p.h
+  cancelupdatestackresponse.h
+  cancelupdatestackresponse_p.h
   continueupdaterollbackrequest.h
   continueupdaterollbackrequest_p.h
   continueupdaterollbackresponse.h
@@ -19,30 +28,34 @@ add_library(QtAwsCloudFormation
   createchangesetrequest_p.h
   createchangesetresponse.h
   createchangesetresponse_p.h
-  createstackinstancesrequest.h
-  createstackinstancesrequest_p.h
-  createstackinstancesresponse.h
-  createstackinstancesresponse_p.h
   createstackrequest.h
   createstackrequest_p.h
   createstackresponse.h
   createstackresponse_p.h
+  createstackinstancesrequest.h
+  createstackinstancesrequest_p.h
+  createstackinstancesresponse.h
+  createstackinstancesresponse_p.h
   createstacksetrequest.h
   createstacksetrequest_p.h
   createstacksetresponse.h
   createstacksetresponse_p.h
+  deactivatetyperequest.h
+  deactivatetyperequest_p.h
+  deactivatetyperesponse.h
+  deactivatetyperesponse_p.h
   deletechangesetrequest.h
   deletechangesetrequest_p.h
   deletechangesetresponse.h
   deletechangesetresponse_p.h
-  deletestackinstancesrequest.h
-  deletestackinstancesrequest_p.h
-  deletestackinstancesresponse.h
-  deletestackinstancesresponse_p.h
   deletestackrequest.h
   deletestackrequest_p.h
   deletestackresponse.h
   deletestackresponse_p.h
+  deletestackinstancesrequest.h
+  deletestackinstancesrequest_p.h
+  deletestackinstancesresponse.h
+  deletestackinstancesresponse_p.h
   deletestacksetrequest.h
   deletestacksetrequest_p.h
   deletestacksetresponse.h
@@ -59,6 +72,14 @@ add_library(QtAwsCloudFormation
   describechangesetrequest_p.h
   describechangesetresponse.h
   describechangesetresponse_p.h
+  describechangesethooksrequest.h
+  describechangesethooksrequest_p.h
+  describechangesethooksresponse.h
+  describechangesethooksresponse_p.h
+  describepublisherrequest.h
+  describepublisherrequest_p.h
+  describepublisherresponse.h
+  describepublisherresponse_p.h
   describestackdriftdetectionstatusrequest.h
   describestackdriftdetectionstatusrequest_p.h
   describestackdriftdetectionstatusresponse.h
@@ -71,38 +92,38 @@ add_library(QtAwsCloudFormation
   describestackinstancerequest_p.h
   describestackinstanceresponse.h
   describestackinstanceresponse_p.h
-  describestackresourcedriftsrequest.h
-  describestackresourcedriftsrequest_p.h
-  describestackresourcedriftsresponse.h
-  describestackresourcedriftsresponse_p.h
   describestackresourcerequest.h
   describestackresourcerequest_p.h
   describestackresourceresponse.h
   describestackresourceresponse_p.h
+  describestackresourcedriftsrequest.h
+  describestackresourcedriftsrequest_p.h
+  describestackresourcedriftsresponse.h
+  describestackresourcedriftsresponse_p.h
   describestackresourcesrequest.h
   describestackresourcesrequest_p.h
   describestackresourcesresponse.h
   describestackresourcesresponse_p.h
-  describestacksetoperationrequest.h
-  describestacksetoperationrequest_p.h
-  describestacksetoperationresponse.h
-  describestacksetoperationresponse_p.h
   describestacksetrequest.h
   describestacksetrequest_p.h
   describestacksetresponse.h
   describestacksetresponse_p.h
+  describestacksetoperationrequest.h
+  describestacksetoperationrequest_p.h
+  describestacksetoperationresponse.h
+  describestacksetoperationresponse_p.h
   describestacksrequest.h
   describestacksrequest_p.h
   describestacksresponse.h
   describestacksresponse_p.h
-  describetyperegistrationrequest.h
-  describetyperegistrationrequest_p.h
-  describetyperegistrationresponse.h
-  describetyperegistrationresponse_p.h
   describetyperequest.h
   describetyperequest_p.h
   describetyperesponse.h
   describetyperesponse_p.h
+  describetyperegistrationrequest.h
+  describetyperegistrationrequest_p.h
+  describetyperegistrationresponse.h
+  describetyperegistrationresponse_p.h
   detectstackdriftrequest.h
   detectstackdriftrequest_p.h
   detectstackdriftresponse.h
@@ -135,6 +156,10 @@ add_library(QtAwsCloudFormation
   gettemplatesummaryrequest_p.h
   gettemplatesummaryresponse.h
   gettemplatesummaryresponse_p.h
+  importstackstostacksetrequest.h
+  importstackstostacksetrequest_p.h
+  importstackstostacksetresponse.h
+  importstackstostacksetresponse_p.h
   listchangesetsrequest.h
   listchangesetsrequest_p.h
   listchangesetsresponse.h
@@ -175,27 +200,42 @@ add_library(QtAwsCloudFormation
   listtyperegistrationsrequest_p.h
   listtyperegistrationsresponse.h
   listtyperegistrationsresponse_p.h
-  listtypesrequest.h
-  listtypesrequest_p.h
-  listtypesresponse.h
-  listtypesresponse_p.h
   listtypeversionsrequest.h
   listtypeversionsrequest_p.h
   listtypeversionsresponse.h
   listtypeversionsresponse_p.h
-  qtawscloudformationglobal.h
+  listtypesrequest.h
+  listtypesrequest_p.h
+  listtypesresponse.h
+  listtypesresponse_p.h
+  publishtyperequest.h
+  publishtyperequest_p.h
+  publishtyperesponse.h
+  publishtyperesponse_p.h
   recordhandlerprogressrequest.h
   recordhandlerprogressrequest_p.h
   recordhandlerprogressresponse.h
   recordhandlerprogressresponse_p.h
+  registerpublisherrequest.h
+  registerpublisherrequest_p.h
+  registerpublisherresponse.h
+  registerpublisherresponse_p.h
   registertyperequest.h
   registertyperequest_p.h
   registertyperesponse.h
   registertyperesponse_p.h
+  rollbackstackrequest.h
+  rollbackstackrequest_p.h
+  rollbackstackresponse.h
+  rollbackstackresponse_p.h
   setstackpolicyrequest.h
   setstackpolicyrequest_p.h
   setstackpolicyresponse.h
   setstackpolicyresponse_p.h
+  settypeconfigurationrequest.h
+  settypeconfigurationrequest_p.h
+  settypeconfigurationresponse.h
+  settypeconfigurationresponse_p.h
   settypedefaultversionrequest.h
   settypedefaultversionrequest_p.h
   settypedefaultversionresponse.h
@@ -208,14 +248,18 @@ add_library(QtAwsCloudFormation
   stopstacksetoperationrequest_p.h
   stopstacksetoperationresponse.h
   stopstacksetoperationresponse_p.h
-  updatestackinstancesrequest.h
-  updatestackinstancesrequest_p.h
-  updatestackinstancesresponse.h
-  updatestackinstancesresponse_p.h
+  testtyperequest.h
+  testtyperequest_p.h
+  testtyperesponse.h
+  testtyperesponse_p.h
   updatestackrequest.h
   updatestackrequest_p.h
   updatestackresponse.h
   updatestackresponse_p.h
+  updatestackinstancesrequest.h
+  updatestackinstancesrequest_p.h
+  updatestackinstancesresponse.h
+  updatestackinstancesresponse_p.h
   updatestacksetrequest.h
   updatestacksetrequest_p.h
   updatestacksetresponse.h
@@ -228,27 +272,33 @@ add_library(QtAwsCloudFormation
   validatetemplaterequest_p.h
   validatetemplateresponse.h
   validatetemplateresponse_p.h
-  cancelupdatestackrequest.cpp
-  cancelupdatestackresponse.cpp
   cloudformationclient.cpp
   cloudformationrequest.cpp
   cloudformationresponse.cpp
+  activatetyperequest.cpp
+  activatetyperesponse.cpp
+  batchdescribetypeconfigurationsrequest.cpp
+  batchdescribetypeconfigurationsresponse.cpp
+  cancelupdatestackrequest.cpp
+  cancelupdatestackresponse.cpp
   continueupdaterollbackrequest.cpp
   continueupdaterollbackresponse.cpp
   createchangesetrequest.cpp
   createchangesetresponse.cpp
-  createstackinstancesrequest.cpp
-  createstackinstancesresponse.cpp
   createstackrequest.cpp
   createstackresponse.cpp
+  createstackinstancesrequest.cpp
+  createstackinstancesresponse.cpp
   createstacksetrequest.cpp
   createstacksetresponse.cpp
+  deactivatetyperequest.cpp
+  deactivatetyperesponse.cpp
   deletechangesetrequest.cpp
   deletechangesetresponse.cpp
-  deletestackinstancesrequest.cpp
-  deletestackinstancesresponse.cpp
   deletestackrequest.cpp
   deletestackresponse.cpp
+  deletestackinstancesrequest.cpp
+  deletestackinstancesresponse.cpp
   deletestacksetrequest.cpp
   deletestacksetresponse.cpp
   deregistertyperequest.cpp
@@ -257,28 +307,32 @@ add_library(QtAwsCloudFormation
   describeaccountlimitsresponse.cpp
   describechangesetrequest.cpp
   describechangesetresponse.cpp
+  describechangesethooksrequest.cpp
+  describechangesethooksresponse.cpp
+  describepublisherrequest.cpp
+  describepublisherresponse.cpp
   describestackdriftdetectionstatusrequest.cpp
   describestackdriftdetectionstatusresponse.cpp
   describestackeventsrequest.cpp
   describestackeventsresponse.cpp
   describestackinstancerequest.cpp
   describestackinstanceresponse.cpp
-  describestackresourcedriftsrequest.cpp
-  describestackresourcedriftsresponse.cpp
   describestackresourcerequest.cpp
   describestackresourceresponse.cpp
+  describestackresourcedriftsrequest.cpp
+  describestackresourcedriftsresponse.cpp
   describestackresourcesrequest.cpp
   describestackresourcesresponse.cpp
-  describestacksetoperationrequest.cpp
-  describestacksetoperationresponse.cpp
   describestacksetrequest.cpp
   describestacksetresponse.cpp
+  describestacksetoperationrequest.cpp
+  describestacksetoperationresponse.cpp
   describestacksrequest.cpp
   describestacksresponse.cpp
-  describetyperegistrationrequest.cpp
-  describetyperegistrationresponse.cpp
   describetyperequest.cpp
   describetyperesponse.cpp
+  describetyperegistrationrequest.cpp
+  describetyperegistrationresponse.cpp
   detectstackdriftrequest.cpp
   detectstackdriftresponse.cpp
   detectstackresourcedriftrequest.cpp
@@ -295,6 +349,8 @@ add_library(QtAwsCloudFormation
   gettemplateresponse.cpp
   gettemplatesummaryrequest.cpp
   gettemplatesummaryresponse.cpp
+  importstackstostacksetrequest.cpp
+  importstackstostacksetresponse.cpp
   listchangesetsrequest.cpp
   listchangesetsresponse.cpp
   listexportsrequest.cpp
@@ -315,26 +371,36 @@ add_library(QtAwsCloudFormation
   liststacksresponse.cpp
   listtyperegistrationsrequest.cpp
   listtyperegistrationsresponse.cpp
-  listtypesrequest.cpp
-  listtypesresponse.cpp
   listtypeversionsrequest.cpp
   listtypeversionsresponse.cpp
+  listtypesrequest.cpp
+  listtypesresponse.cpp
+  publishtyperequest.cpp
+  publishtyperesponse.cpp
   recordhandlerprogressrequest.cpp
   recordhandlerprogressresponse.cpp
+  registerpublisherrequest.cpp
+  registerpublisherresponse.cpp
   registertyperequest.cpp
   registertyperesponse.cpp
+  rollbackstackrequest.cpp
+  rollbackstackresponse.cpp
   setstackpolicyrequest.cpp
   setstackpolicyresponse.cpp
+  settypeconfigurationrequest.cpp
+  settypeconfigurationresponse.cpp
   settypedefaultversionrequest.cpp
   settypedefaultversionresponse.cpp
   signalresourcerequest.cpp
   signalresourceresponse.cpp
   stopstacksetoperationrequest.cpp
   stopstacksetoperationresponse.cpp
-  updatestackinstancesrequest.cpp
-  updatestackinstancesresponse.cpp
+  testtyperequest.cpp
+  testtyperesponse.cpp
   updatestackrequest.cpp
   updatestackresponse.cpp
+  updatestackinstancesrequest.cpp
+  updatestackinstancesresponse.cpp
   updatestacksetrequest.cpp
   updatestacksetresponse.cpp
   updateterminationprotectionrequest.cpp

@@ -39,6 +39,7 @@ class QTAWSCOMPUTEOPTIMIZER_EXPORT ComputeOptimizerRequest : public QtAws::Core:
 public:
     /// Actions supported by ComputeOptimizer.
     enum Action {
+        DeleteRecommendationPreferencesAction,
         DescribeRecommendationExportJobsAction,
         ExportAutoScalingGroupRecommendationsAction,
         ExportEBSVolumeRecommendationsAction,
@@ -48,9 +49,13 @@ public:
         GetEBSVolumeRecommendationsAction,
         GetEC2InstanceRecommendationsAction,
         GetEC2RecommendationProjectedMetricsAction,
+        GetEffectiveRecommendationPreferencesAction,
         GetEnrollmentStatusAction,
+        GetEnrollmentStatusesForOrganizationAction,
         GetLambdaFunctionRecommendationsAction,
+        GetRecommendationPreferencesAction,
         GetRecommendationSummariesAction,
+        PutRecommendationPreferencesAction,
         UpdateEnrollmentStatusAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

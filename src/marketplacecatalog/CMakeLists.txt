@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSMARKETPLACECATALOG_LIBRARY)
 
 add_library(QtAwsMarketplaceCatalog
+  qtawsmarketplacecatalogglobal.h
+  marketplacecatalogclient.h
+  marketplacecatalogclient_p.h
+  marketplacecatalogrequest.h
+  marketplacecatalogrequest_p.h
+  marketplacecatalogresponse.h
+  marketplacecatalogresponse_p.h
   cancelchangesetrequest.h
   cancelchangesetrequest_p.h
   cancelchangesetresponse.h
@@ -21,17 +28,13 @@ add_library(QtAwsMarketplaceCatalog
   listentitiesrequest_p.h
   listentitiesresponse.h
   listentitiesresponse_p.h
-  marketplacecatalogclient.h
-  marketplacecatalogclient_p.h
-  marketplacecatalogrequest.h
-  marketplacecatalogrequest_p.h
-  marketplacecatalogresponse.h
-  marketplacecatalogresponse_p.h
-  qtawsmarketplacecatalogglobal.h
   startchangesetrequest.h
   startchangesetrequest_p.h
   startchangesetresponse.h
   startchangesetresponse_p.h
+  marketplacecatalogclient.cpp
+  marketplacecatalogrequest.cpp
+  marketplacecatalogresponse.cpp
   cancelchangesetrequest.cpp
   cancelchangesetresponse.cpp
   describechangesetrequest.cpp
@@ -42,9 +45,6 @@ add_library(QtAwsMarketplaceCatalog
   listchangesetsresponse.cpp
   listentitiesrequest.cpp
   listentitiesresponse.cpp
-  marketplacecatalogclient.cpp
-  marketplacecatalogrequest.cpp
-  marketplacecatalogresponse.cpp
   startchangesetrequest.cpp
   startchangesetresponse.cpp)
 

@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::UpdateStudioSessionMappingRequest
- * \brief The UpdateStudioSessionMappingRequest class provides an interface for EMR UpdateStudioSessionMapping requests.
+ * \class QtAws::Emr::UpdateStudioSessionMappingRequest
+ * \brief The UpdateStudioSessionMappingRequest class provides an interface for Emr UpdateStudioSessionMapping requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::updateStudioSessionMapping
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * UpdateStudioSessionMappingRequest::response(Q
 }
 
 /*!
- * \class QtAws::EMR::UpdateStudioSessionMappingRequestPrivate
+ * \class QtAws::Emr::UpdateStudioSessionMappingRequestPrivate
  * \brief The UpdateStudioSessionMappingRequestPrivate class provides private implementation for UpdateStudioSessionMappingRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ UpdateStudioSessionMappingRequestPrivate::UpdateStudioSessionMappingRequestPriva
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

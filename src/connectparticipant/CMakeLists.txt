@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSCONNECTPARTICIPANT_LIBRARY)
 
 add_library(QtAwsConnectParticipant
-  completeattachmentuploadrequest.h
-  completeattachmentuploadrequest_p.h
-  completeattachmentuploadresponse.h
-  completeattachmentuploadresponse_p.h
+  qtawsconnectparticipantglobal.h
   connectparticipantclient.h
   connectparticipantclient_p.h
   connectparticipantrequest.h
   connectparticipantrequest_p.h
   connectparticipantresponse.h
   connectparticipantresponse_p.h
+  completeattachmentuploadrequest.h
+  completeattachmentuploadrequest_p.h
+  completeattachmentuploadresponse.h
+  completeattachmentuploadresponse_p.h
   createparticipantconnectionrequest.h
   createparticipantconnectionrequest_p.h
   createparticipantconnectionresponse.h
@@ -27,7 +28,6 @@ add_library(QtAwsConnectParticipant
   gettranscriptrequest_p.h
   gettranscriptresponse.h
   gettranscriptresponse_p.h
-  qtawsconnectparticipantglobal.h
   sendeventrequest.h
   sendeventrequest_p.h
   sendeventresponse.h
@@ -40,11 +40,11 @@ add_library(QtAwsConnectParticipant
   startattachmentuploadrequest_p.h
   startattachmentuploadresponse.h
   startattachmentuploadresponse_p.h
-  completeattachmentuploadrequest.cpp
-  completeattachmentuploadresponse.cpp
   connectparticipantclient.cpp
   connectparticipantrequest.cpp
   connectparticipantresponse.cpp
+  completeattachmentuploadrequest.cpp
+  completeattachmentuploadresponse.cpp
   createparticipantconnectionrequest.cpp
   createparticipantconnectionresponse.cpp
   disconnectparticipantrequest.cpp

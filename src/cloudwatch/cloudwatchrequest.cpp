@@ -57,6 +57,7 @@ namespace CloudWatch {
  * \value GetMetricStreamAction CloudWatch GetMetricStream action.
  * \value GetMetricWidgetImageAction CloudWatch GetMetricWidgetImage action.
  * \value ListDashboardsAction CloudWatch ListDashboards action.
+ * \value ListManagedInsightRulesAction CloudWatch ListManagedInsightRules action.
  * \value ListMetricStreamsAction CloudWatch ListMetricStreams action.
  * \value ListMetricsAction CloudWatch ListMetrics action.
  * \value ListTagsForResourceAction CloudWatch ListTagsForResource action.
@@ -64,6 +65,7 @@ namespace CloudWatch {
  * \value PutCompositeAlarmAction CloudWatch PutCompositeAlarm action.
  * \value PutDashboardAction CloudWatch PutDashboard action.
  * \value PutInsightRuleAction CloudWatch PutInsightRule action.
+ * \value PutManagedInsightRulesAction CloudWatch PutManagedInsightRules action.
  * \value PutMetricAlarmAction CloudWatch PutMetricAlarm action.
  * \value PutMetricDataAction CloudWatch PutMetricData action.
  * \value PutMetricStreamAction CloudWatch PutMetricStream action.
@@ -279,7 +281,7 @@ QNetworkRequest CloudWatchRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudWatchRequestPrivate::CloudWatchRequestPrivate(const CloudWatchRequest::Action action, CloudWatchRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2010-08-01"))
 {
 
 }
@@ -334,6 +336,7 @@ QString CloudWatchRequestPrivate::toString(const CloudWatchRequest::Action &acti
         ActionToString(GetMetricStream);
         ActionToString(GetMetricWidgetImage);
         ActionToString(ListDashboards);
+        ActionToString(ListManagedInsightRules);
         ActionToString(ListMetricStreams);
         ActionToString(ListMetrics);
         ActionToString(ListTagsForResource);
@@ -341,6 +344,7 @@ QString CloudWatchRequestPrivate::toString(const CloudWatchRequest::Action &acti
         ActionToString(PutCompositeAlarm);
         ActionToString(PutDashboard);
         ActionToString(PutInsightRule);
+        ActionToString(PutManagedInsightRules);
         ActionToString(PutMetricAlarm);
         ActionToString(PutMetricData);
         ActionToString(PutMetricStream);

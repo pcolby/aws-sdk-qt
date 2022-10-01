@@ -247,7 +247,7 @@ QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &en
  * with public implementation \a q.
  */
 CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequest::Action action, CostandUsageReportServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-01-06"))
 {
 
 }

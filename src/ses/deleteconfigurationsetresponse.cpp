@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetResponse
- * \brief The DeleteConfigurationSetResponse class provides an interace for SES DeleteConfigurationSet responses.
+ * \class QtAws::Ses::DeleteConfigurationSetResponse
+ * \brief The DeleteConfigurationSetResponse class provides an interace for Ses DeleteConfigurationSet responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SES DeleteConfigurationSet \a response.
+ * Parses a successful Ses DeleteConfigurationSet \a response.
  */
 void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::DeleteConfigurationSetResponsePrivate
+ * \class QtAws::Ses::DeleteConfigurationSetResponsePrivate
  * \brief The DeleteConfigurationSetResponsePrivate class provides private implementation for DeleteConfigurationSetResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
 }
 
 /*!
- * Parses a SES DeleteConfigurationSet response element from \a xml.
+ * Parses a Ses DeleteConfigurationSet response element from \a xml.
  */
 void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

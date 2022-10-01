@@ -24,11 +24,11 @@
 #include "createdocumentationpartrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateDocumentationPartResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT CreateDocumentationPartResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT CreateDocumentationPartResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

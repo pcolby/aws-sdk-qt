@@ -256,7 +256,7 @@ QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, Cloud9Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-09-23"))
 {
 
 }

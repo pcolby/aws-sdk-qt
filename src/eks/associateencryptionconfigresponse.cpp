@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::AssociateEncryptionConfigResponse
- * \brief The AssociateEncryptionConfigResponse class provides an interace for EKS AssociateEncryptionConfig responses.
+ * \class QtAws::Eks::AssociateEncryptionConfigResponse
+ * \brief The AssociateEncryptionConfigResponse class provides an interace for Eks AssociateEncryptionConfig responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const AssociateEncryptionConfigRequest * AssociateEncryptionConfigResponse::requ
 
 /*!
  * \reimp
- * Parses a successful EKS AssociateEncryptionConfig \a response.
+ * Parses a successful Eks AssociateEncryptionConfig \a response.
  */
 void AssociateEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void AssociateEncryptionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::AssociateEncryptionConfigResponsePrivate
+ * \class QtAws::Eks::AssociateEncryptionConfigResponsePrivate
  * \brief The AssociateEncryptionConfigResponsePrivate class provides private implementation for AssociateEncryptionConfigResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ AssociateEncryptionConfigResponsePrivate::AssociateEncryptionConfigResponsePriva
 }
 
 /*!
- * Parses a EKS AssociateEncryptionConfig response element from \a xml.
+ * Parses a Eks AssociateEncryptionConfig response element from \a xml.
  */
 void AssociateEncryptionConfigResponsePrivate::parseAssociateEncryptionConfigResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void AssociateEncryptionConfigResponsePrivate::parseAssociateEncryptionConfigRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

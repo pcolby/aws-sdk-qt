@@ -25,23 +25,23 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::CreateSuiteDefinitionResponse
- * \brief The CreateSuiteDefinitionResponse class provides an interace for IoTDeviceAdvisor CreateSuiteDefinition responses.
+ * \class QtAws::IotDeviceAdvisor::CreateSuiteDefinitionResponse
+ * \brief The CreateSuiteDefinitionResponse class provides an interace for IotDeviceAdvisor CreateSuiteDefinition responses.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::createSuiteDefinition
+ * \sa IotDeviceAdvisorClient::createSuiteDefinition
  */
 
 /*!
@@ -51,7 +51,7 @@ CreateSuiteDefinitionResponse::CreateSuiteDefinitionResponse(
         const CreateSuiteDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTDeviceAdvisorResponse(new CreateSuiteDefinitionResponsePrivate(this), parent)
+    : IotDeviceAdvisorResponse(new CreateSuiteDefinitionResponsePrivate(this), parent)
 {
     setRequest(new CreateSuiteDefinitionRequest(request));
     setReply(reply);
@@ -68,7 +68,7 @@ const CreateSuiteDefinitionRequest * CreateSuiteDefinitionResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful IoTDeviceAdvisor CreateSuiteDefinition \a response.
+ * Parses a successful IotDeviceAdvisor CreateSuiteDefinition \a response.
  */
 void CreateSuiteDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,24 +78,24 @@ void CreateSuiteDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::CreateSuiteDefinitionResponsePrivate
+ * \class QtAws::IotDeviceAdvisor::CreateSuiteDefinitionResponsePrivate
  * \brief The CreateSuiteDefinitionResponsePrivate class provides private implementation for CreateSuiteDefinitionResponse.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
  * Constructs a CreateSuiteDefinitionResponsePrivate object with public implementation \a q.
  */
 CreateSuiteDefinitionResponsePrivate::CreateSuiteDefinitionResponsePrivate(
-    CreateSuiteDefinitionResponse * const q) : IoTDeviceAdvisorResponsePrivate(q)
+    CreateSuiteDefinitionResponse * const q) : IotDeviceAdvisorResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a IoTDeviceAdvisor CreateSuiteDefinition response element from \a xml.
+ * Parses a IotDeviceAdvisor CreateSuiteDefinition response element from \a xml.
  */
 void CreateSuiteDefinitionResponsePrivate::parseCreateSuiteDefinitionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void CreateSuiteDefinitionResponsePrivate::parseCreateSuiteDefinitionResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

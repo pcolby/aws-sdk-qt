@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
-class SSOAdminClient;
+class SsoAdminClient;
 
-class SSOAdminClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsoAdminClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit SSOAdminClientPrivate(SSOAdminClient * const q);
+    explicit SsoAdminClientPrivate(SsoAdminClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(SSOAdminClient)
-    Q_DISABLE_COPY(SSOAdminClientPrivate)
+    Q_DECLARE_PUBLIC(SsoAdminClient)
+    Q_DISABLE_COPY(SsoAdminClientPrivate)
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::DeleteDistributionConfigurationResponse
- * \brief The DeleteDistributionConfigurationResponse class provides an interace for imagebuilder DeleteDistributionConfiguration responses.
+ * \class QtAws::ImageBuilder::DeleteDistributionConfigurationResponse
+ * \brief The DeleteDistributionConfigurationResponse class provides an interace for ImageBuilder DeleteDistributionConfiguration responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::deleteDistributionConfiguration
+ * \sa ImageBuilderClient::deleteDistributionConfiguration
  */
 
 /*!
@@ -47,7 +47,7 @@ DeleteDistributionConfigurationResponse::DeleteDistributionConfigurationResponse
         const DeleteDistributionConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new DeleteDistributionConfigurationResponsePrivate(this), parent)
+    : ImageBuilderResponse(new DeleteDistributionConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteDistributionConfigurationRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const DeleteDistributionConfigurationRequest * DeleteDistributionConfigurationRe
 
 /*!
  * \reimp
- * Parses a successful imagebuilder DeleteDistributionConfiguration \a response.
+ * Parses a successful ImageBuilder DeleteDistributionConfiguration \a response.
  */
 void DeleteDistributionConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void DeleteDistributionConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::DeleteDistributionConfigurationResponsePrivate
+ * \class QtAws::ImageBuilder::DeleteDistributionConfigurationResponsePrivate
  * \brief The DeleteDistributionConfigurationResponsePrivate class provides private implementation for DeleteDistributionConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a DeleteDistributionConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteDistributionConfigurationResponsePrivate::DeleteDistributionConfigurationResponsePrivate(
-    DeleteDistributionConfigurationResponse * const q) : imagebuilderResponsePrivate(q)
+    DeleteDistributionConfigurationResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder DeleteDistributionConfiguration response element from \a xml.
+ * Parses a ImageBuilder DeleteDistributionConfiguration response element from \a xml.
  */
 void DeleteDistributionConfigurationResponsePrivate::parseDeleteDistributionConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteDistributionConfigurationResponsePrivate::parseDeleteDistributionConf
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

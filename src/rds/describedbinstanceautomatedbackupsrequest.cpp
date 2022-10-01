@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBInstanceAutomatedBackupsRequest
- * \brief The DescribeDBInstanceAutomatedBackupsRequest class provides an interface for RDS DescribeDBInstanceAutomatedBackups requests.
+ * \class QtAws::Rds::DescribeDBInstanceAutomatedBackupsRequest
+ * \brief The DescribeDBInstanceAutomatedBackupsRequest class provides an interface for Rds DescribeDBInstanceAutomatedBackups requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBInstanceAutomatedBackupsRequest::re
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBInstanceAutomatedBackupsRequestPrivate
+ * \class QtAws::Rds::DescribeDBInstanceAutomatedBackupsRequestPrivate
  * \brief The DescribeDBInstanceAutomatedBackupsRequestPrivate class provides private implementation for DescribeDBInstanceAutomatedBackupsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBInstanceAutomatedBackupsRequestPrivate::DescribeDBInstanceAutomatedBac
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

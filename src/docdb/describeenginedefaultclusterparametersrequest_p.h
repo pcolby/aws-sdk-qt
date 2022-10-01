@@ -24,14 +24,14 @@
 #include "describeenginedefaultclusterparametersrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeEngineDefaultClusterParametersRequest;
 
-class DescribeEngineDefaultClusterParametersRequestPrivate : public DocDBRequestPrivate {
+class DescribeEngineDefaultClusterParametersRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DescribeEngineDefaultClusterParametersRequestPrivate(const DocDBRequest::Action action,
+    DescribeEngineDefaultClusterParametersRequestPrivate(const DocDbRequest::Action action,
                                    DescribeEngineDefaultClusterParametersRequest * const q);
     DescribeEngineDefaultClusterParametersRequestPrivate(const DescribeEngineDefaultClusterParametersRequestPrivate &other,
                                    DescribeEngineDefaultClusterParametersRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSOPSWORKSCM_LIBRARY)
 
-add_library(QtAwsOpsWorksCM
+add_library(QtAwsOpsWorksCm
+  qtawsopsworkscmglobal.h
+  opsworkscmclient.h
+  opsworkscmclient_p.h
+  opsworkscmrequest.h
+  opsworkscmrequest_p.h
+  opsworkscmresponse.h
+  opsworkscmresponse_p.h
   associatenoderequest.h
   associatenoderequest_p.h
   associatenoderesponse.h
@@ -53,13 +60,6 @@ add_library(QtAwsOpsWorksCM
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  opsworkscmclient.h
-  opsworkscmclient_p.h
-  opsworkscmrequest.h
-  opsworkscmrequest_p.h
-  opsworkscmresponse.h
-  opsworkscmresponse_p.h
-  qtawsopsworkscmglobal.h
   restoreserverrequest.h
   restoreserverrequest_p.h
   restoreserverresponse.h
@@ -76,14 +76,17 @@ add_library(QtAwsOpsWorksCM
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
-  updateserverengineattributesrequest.h
-  updateserverengineattributesrequest_p.h
-  updateserverengineattributesresponse.h
-  updateserverengineattributesresponse_p.h
   updateserverrequest.h
   updateserverrequest_p.h
   updateserverresponse.h
   updateserverresponse_p.h
+  updateserverengineattributesrequest.h
+  updateserverengineattributesrequest_p.h
+  updateserverengineattributesresponse.h
+  updateserverengineattributesresponse_p.h
+  opsworkscmclient.cpp
+  opsworkscmrequest.cpp
+  opsworkscmresponse.cpp
   associatenoderequest.cpp
   associatenoderesponse.cpp
   createbackuprequest.cpp
@@ -110,9 +113,6 @@ add_library(QtAwsOpsWorksCM
   exportserverengineattributeresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  opsworkscmclient.cpp
-  opsworkscmrequest.cpp
-  opsworkscmresponse.cpp
   restoreserverrequest.cpp
   restoreserverresponse.cpp
   startmaintenancerequest.cpp
@@ -121,12 +121,12 @@ add_library(QtAwsOpsWorksCM
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
-  updateserverengineattributesrequest.cpp
-  updateserverengineattributesresponse.cpp
   updateserverrequest.cpp
-  updateserverresponse.cpp)
+  updateserverresponse.cpp
+  updateserverengineattributesrequest.cpp
+  updateserverengineattributesresponse.cpp)
 
-target_link_libraries(QtAwsOpsWorksCM
+target_link_libraries(QtAwsOpsWorksCm
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

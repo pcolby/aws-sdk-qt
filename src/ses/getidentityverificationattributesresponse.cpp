@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetIdentityVerificationAttributesResponse
- * \brief The GetIdentityVerificationAttributesResponse class provides an interace for SES GetIdentityVerificationAttributes responses.
+ * \class QtAws::Ses::GetIdentityVerificationAttributesResponse
+ * \brief The GetIdentityVerificationAttributesResponse class provides an interace for Ses GetIdentityVerificationAttributes responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttribut
 
 /*!
  * \reimp
- * Parses a successful SES GetIdentityVerificationAttributes \a response.
+ * Parses a successful Ses GetIdentityVerificationAttributes \a response.
  */
 void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::SES::GetIdentityVerificationAttributesResponsePrivate
+ * \class QtAws::Ses::GetIdentityVerificationAttributesResponsePrivate
  * \brief The GetIdentityVerificationAttributesResponsePrivate class provides private implementation for GetIdentityVerificationAttributesResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttribu
 }
 
 /*!
- * Parses a SES GetIdentityVerificationAttributes response element from \a xml.
+ * Parses a Ses GetIdentityVerificationAttributes response element from \a xml.
  */
 void GetIdentityVerificationAttributesResponsePrivate::parseGetIdentityVerificationAttributesResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetIdentityVerificationAttributesResponsePrivate::parseGetIdentityVerificat
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

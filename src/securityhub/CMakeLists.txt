@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSECURITYHUB_LIBRARY)
 
 add_library(QtAwsSecurityHub
+  qtawssecurityhubglobal.h
+  securityhubclient.h
+  securityhubclient_p.h
+  securityhubrequest.h
+  securityhubrequest_p.h
+  securityhubresponse.h
+  securityhubresponse_p.h
   acceptadministratorinvitationrequest.h
   acceptadministratorinvitationrequest_p.h
   acceptadministratorinvitationresponse.h
@@ -29,6 +36,10 @@ add_library(QtAwsSecurityHub
   createactiontargetrequest_p.h
   createactiontargetresponse.h
   createactiontargetresponse_p.h
+  createfindingaggregatorrequest.h
+  createfindingaggregatorrequest_p.h
+  createfindingaggregatorresponse.h
+  createfindingaggregatorresponse_p.h
   createinsightrequest.h
   createinsightrequest_p.h
   createinsightresponse.h
@@ -45,6 +56,10 @@ add_library(QtAwsSecurityHub
   deleteactiontargetrequest_p.h
   deleteactiontargetresponse.h
   deleteactiontargetresponse_p.h
+  deletefindingaggregatorrequest.h
+  deletefindingaggregatorrequest_p.h
+  deletefindingaggregatorresponse.h
+  deletefindingaggregatorresponse_p.h
   deleteinsightrequest.h
   deleteinsightrequest_p.h
   deleteinsightresponse.h
@@ -73,14 +88,14 @@ add_library(QtAwsSecurityHub
   describeproductsrequest_p.h
   describeproductsresponse.h
   describeproductsresponse_p.h
-  describestandardscontrolsrequest.h
-  describestandardscontrolsrequest_p.h
-  describestandardscontrolsresponse.h
-  describestandardscontrolsresponse_p.h
   describestandardsrequest.h
   describestandardsrequest_p.h
   describestandardsresponse.h
   describestandardsresponse_p.h
+  describestandardscontrolsrequest.h
+  describestandardscontrolsrequest_p.h
+  describestandardscontrolsresponse.h
+  describestandardscontrolsresponse_p.h
   disableimportfindingsforproductrequest.h
   disableimportfindingsforproductrequest_p.h
   disableimportfindingsforproductresponse.h
@@ -125,6 +140,10 @@ add_library(QtAwsSecurityHub
   getenabledstandardsrequest_p.h
   getenabledstandardsresponse.h
   getenabledstandardsresponse_p.h
+  getfindingaggregatorrequest.h
+  getfindingaggregatorrequest_p.h
+  getfindingaggregatorresponse.h
+  getfindingaggregatorresponse_p.h
   getfindingsrequest.h
   getfindingsrequest_p.h
   getfindingsresponse.h
@@ -157,6 +176,10 @@ add_library(QtAwsSecurityHub
   listenabledproductsforimportrequest_p.h
   listenabledproductsforimportresponse.h
   listenabledproductsforimportresponse_p.h
+  listfindingaggregatorsrequest.h
+  listfindingaggregatorsrequest_p.h
+  listfindingaggregatorsresponse.h
+  listfindingaggregatorsresponse_p.h
   listinvitationsrequest.h
   listinvitationsrequest_p.h
   listinvitationsresponse.h
@@ -173,13 +196,6 @@ add_library(QtAwsSecurityHub
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawssecurityhubglobal.h
-  securityhubclient.h
-  securityhubclient_p.h
-  securityhubrequest.h
-  securityhubrequest_p.h
-  securityhubresponse.h
-  securityhubresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -192,6 +208,10 @@ add_library(QtAwsSecurityHub
   updateactiontargetrequest_p.h
   updateactiontargetresponse.h
   updateactiontargetresponse_p.h
+  updatefindingaggregatorrequest.h
+  updatefindingaggregatorrequest_p.h
+  updatefindingaggregatorresponse.h
+  updatefindingaggregatorresponse_p.h
   updatefindingsrequest.h
   updatefindingsrequest_p.h
   updatefindingsresponse.h
@@ -212,6 +232,9 @@ add_library(QtAwsSecurityHub
   updatestandardscontrolrequest_p.h
   updatestandardscontrolresponse.h
   updatestandardscontrolresponse_p.h
+  securityhubclient.cpp
+  securityhubrequest.cpp
+  securityhubresponse.cpp
   acceptadministratorinvitationrequest.cpp
   acceptadministratorinvitationresponse.cpp
   acceptinvitationrequest.cpp
@@ -226,6 +249,8 @@ add_library(QtAwsSecurityHub
   batchupdatefindingsresponse.cpp
   createactiontargetrequest.cpp
   createactiontargetresponse.cpp
+  createfindingaggregatorrequest.cpp
+  createfindingaggregatorresponse.cpp
   createinsightrequest.cpp
   createinsightresponse.cpp
   createmembersrequest.cpp
@@ -234,6 +259,8 @@ add_library(QtAwsSecurityHub
   declineinvitationsresponse.cpp
   deleteactiontargetrequest.cpp
   deleteactiontargetresponse.cpp
+  deletefindingaggregatorrequest.cpp
+  deletefindingaggregatorresponse.cpp
   deleteinsightrequest.cpp
   deleteinsightresponse.cpp
   deleteinvitationsrequest.cpp
@@ -248,10 +275,10 @@ add_library(QtAwsSecurityHub
   describeorganizationconfigurationresponse.cpp
   describeproductsrequest.cpp
   describeproductsresponse.cpp
-  describestandardscontrolsrequest.cpp
-  describestandardscontrolsresponse.cpp
   describestandardsrequest.cpp
   describestandardsresponse.cpp
+  describestandardscontrolsrequest.cpp
+  describestandardscontrolsresponse.cpp
   disableimportfindingsforproductrequest.cpp
   disableimportfindingsforproductresponse.cpp
   disableorganizationadminaccountrequest.cpp
@@ -274,6 +301,8 @@ add_library(QtAwsSecurityHub
   getadministratoraccountresponse.cpp
   getenabledstandardsrequest.cpp
   getenabledstandardsresponse.cpp
+  getfindingaggregatorrequest.cpp
+  getfindingaggregatorresponse.cpp
   getfindingsrequest.cpp
   getfindingsresponse.cpp
   getinsightresultsrequest.cpp
@@ -290,6 +319,8 @@ add_library(QtAwsSecurityHub
   invitemembersresponse.cpp
   listenabledproductsforimportrequest.cpp
   listenabledproductsforimportresponse.cpp
+  listfindingaggregatorsrequest.cpp
+  listfindingaggregatorsresponse.cpp
   listinvitationsrequest.cpp
   listinvitationsresponse.cpp
   listmembersrequest.cpp
@@ -298,15 +329,14 @@ add_library(QtAwsSecurityHub
   listorganizationadminaccountsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  securityhubclient.cpp
-  securityhubrequest.cpp
-  securityhubresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateactiontargetrequest.cpp
   updateactiontargetresponse.cpp
+  updatefindingaggregatorrequest.cpp
+  updatefindingaggregatorresponse.cpp
   updatefindingsrequest.cpp
   updatefindingsresponse.cpp
   updateinsightrequest.cpp

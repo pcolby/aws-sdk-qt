@@ -112,7 +112,6 @@ public slots:
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     DisassociateConfigurationItemsFromApplicationResponse * disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request);
     ExportConfigurationsResponse * exportConfigurations(const ExportConfigurationsRequest &request);
-    ExportConfigurationsResponse * exportConfigurations();
     GetDiscoverySummaryResponse * getDiscoverySummary(const GetDiscoverySummaryRequest &request);
     ListConfigurationsResponse * listConfigurations(const ListConfigurationsRequest &request);
     ListServerNeighborsResponse * listServerNeighbors(const ListServerNeighborsRequest &request);

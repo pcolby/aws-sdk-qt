@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetSizeConstraintSetResponse
- * \brief The GetSizeConstraintSetResponse class provides an interace for WAF GetSizeConstraintSet responses.
+ * \class QtAws::Waf::GetSizeConstraintSetResponse
+ * \brief The GetSizeConstraintSetResponse class provides an interace for Waf GetSizeConstraintSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful WAF GetSizeConstraintSet \a response.
+ * Parses a successful Waf GetSizeConstraintSet \a response.
  */
 void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetSizeConstraintSetResponsePrivate
+ * \class QtAws::Waf::GetSizeConstraintSetResponsePrivate
  * \brief The GetSizeConstraintSetResponsePrivate class provides private implementation for GetSizeConstraintSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetSizeConstraintSet response element from \a xml.
+ * Parses a Waf GetSizeConstraintSet response element from \a xml.
  */
 void GetSizeConstraintSetResponsePrivate::parseGetSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetSizeConstraintSetResponsePrivate::parseGetSizeConstraintSetResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListDomainsRequest
- * \brief The ListDomainsRequest class provides an interface for SWF ListDomains requests.
+ * \class QtAws::Swf::ListDomainsRequest
+ * \brief The ListDomainsRequest class provides an interface for Swf ListDomains requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::SWF::ListDomainsRequestPrivate
+ * \class QtAws::Swf::ListDomainsRequestPrivate
  * \brief The ListDomainsRequestPrivate class provides private implementation for ListDomainsRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

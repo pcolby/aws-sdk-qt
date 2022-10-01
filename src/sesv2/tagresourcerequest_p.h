@@ -24,14 +24,14 @@
 #include "tagresourcerequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class TagResourceRequest;
 
-class TagResourceRequestPrivate : public Sesv2RequestPrivate {
+class TagResourceRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    TagResourceRequestPrivate(const Sesv2Request::Action action,
+    TagResourceRequestPrivate(const SESv2Request::Action action,
                                    TagResourceRequest * const q);
     TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
                                    TagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

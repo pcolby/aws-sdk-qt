@@ -21,57 +21,59 @@
 #include "eksrequest_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::EksRequest
- * \brief The EksRequest class provides an interface for EKS requests.
+ * \class QtAws::Eks::EksRequest
+ * \brief The EksRequest class provides an interface for Eks requests.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
  * \enum EksRequest::Action
  *
- * This enum describes the actions that can be performed as EKS
+ * This enum describes the actions that can be performed as Eks
  * requests.
  *
- * \value AssociateEncryptionConfigAction EKS AssociateEncryptionConfig action.
- * \value AssociateIdentityProviderConfigAction EKS AssociateIdentityProviderConfig action.
- * \value CreateAddonAction EKS CreateAddon action.
- * \value CreateClusterAction EKS CreateCluster action.
- * \value CreateFargateProfileAction EKS CreateFargateProfile action.
- * \value CreateNodegroupAction EKS CreateNodegroup action.
- * \value DeleteAddonAction EKS DeleteAddon action.
- * \value DeleteClusterAction EKS DeleteCluster action.
- * \value DeleteFargateProfileAction EKS DeleteFargateProfile action.
- * \value DeleteNodegroupAction EKS DeleteNodegroup action.
- * \value DescribeAddonAction EKS DescribeAddon action.
- * \value DescribeAddonVersionsAction EKS DescribeAddonVersions action.
- * \value DescribeClusterAction EKS DescribeCluster action.
- * \value DescribeFargateProfileAction EKS DescribeFargateProfile action.
- * \value DescribeIdentityProviderConfigAction EKS DescribeIdentityProviderConfig action.
- * \value DescribeNodegroupAction EKS DescribeNodegroup action.
- * \value DescribeUpdateAction EKS DescribeUpdate action.
- * \value DisassociateIdentityProviderConfigAction EKS DisassociateIdentityProviderConfig action.
- * \value ListAddonsAction EKS ListAddons action.
- * \value ListClustersAction EKS ListClusters action.
- * \value ListFargateProfilesAction EKS ListFargateProfiles action.
- * \value ListIdentityProviderConfigsAction EKS ListIdentityProviderConfigs action.
- * \value ListNodegroupsAction EKS ListNodegroups action.
- * \value ListTagsForResourceAction EKS ListTagsForResource action.
- * \value ListUpdatesAction EKS ListUpdates action.
- * \value TagResourceAction EKS TagResource action.
- * \value UntagResourceAction EKS UntagResource action.
- * \value UpdateAddonAction EKS UpdateAddon action.
- * \value UpdateClusterConfigAction EKS UpdateClusterConfig action.
- * \value UpdateClusterVersionAction EKS UpdateClusterVersion action.
- * \value UpdateNodegroupConfigAction EKS UpdateNodegroupConfig action.
- * \value UpdateNodegroupVersionAction EKS UpdateNodegroupVersion action.
+ * \value AssociateEncryptionConfigAction Eks AssociateEncryptionConfig action.
+ * \value AssociateIdentityProviderConfigAction Eks AssociateIdentityProviderConfig action.
+ * \value CreateAddonAction Eks CreateAddon action.
+ * \value CreateClusterAction Eks CreateCluster action.
+ * \value CreateFargateProfileAction Eks CreateFargateProfile action.
+ * \value CreateNodegroupAction Eks CreateNodegroup action.
+ * \value DeleteAddonAction Eks DeleteAddon action.
+ * \value DeleteClusterAction Eks DeleteCluster action.
+ * \value DeleteFargateProfileAction Eks DeleteFargateProfile action.
+ * \value DeleteNodegroupAction Eks DeleteNodegroup action.
+ * \value DeregisterClusterAction Eks DeregisterCluster action.
+ * \value DescribeAddonAction Eks DescribeAddon action.
+ * \value DescribeAddonVersionsAction Eks DescribeAddonVersions action.
+ * \value DescribeClusterAction Eks DescribeCluster action.
+ * \value DescribeFargateProfileAction Eks DescribeFargateProfile action.
+ * \value DescribeIdentityProviderConfigAction Eks DescribeIdentityProviderConfig action.
+ * \value DescribeNodegroupAction Eks DescribeNodegroup action.
+ * \value DescribeUpdateAction Eks DescribeUpdate action.
+ * \value DisassociateIdentityProviderConfigAction Eks DisassociateIdentityProviderConfig action.
+ * \value ListAddonsAction Eks ListAddons action.
+ * \value ListClustersAction Eks ListClusters action.
+ * \value ListFargateProfilesAction Eks ListFargateProfiles action.
+ * \value ListIdentityProviderConfigsAction Eks ListIdentityProviderConfigs action.
+ * \value ListNodegroupsAction Eks ListNodegroups action.
+ * \value ListTagsForResourceAction Eks ListTagsForResource action.
+ * \value ListUpdatesAction Eks ListUpdates action.
+ * \value RegisterClusterAction Eks RegisterCluster action.
+ * \value TagResourceAction Eks TagResource action.
+ * \value UntagResourceAction Eks UntagResource action.
+ * \value UpdateAddonAction Eks UpdateAddon action.
+ * \value UpdateClusterConfigAction Eks UpdateClusterConfig action.
+ * \value UpdateClusterVersionAction Eks UpdateClusterVersion action.
+ * \value UpdateNodegroupConfigAction Eks UpdateNodegroupConfig action.
+ * \value UpdateNodegroupVersionAction Eks UpdateNodegroupVersion action.
  */
 
 /*!
- * Constructs a EksRequest object for EKS \a action.
+ * Constructs a EksRequest object for Eks \a action.
  */
 EksRequest::EksRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EksRequestPrivate(action, this))
@@ -112,7 +114,7 @@ EksRequest::EksRequest(EksRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the EKS action to be performed by this request.
+ * Returns the Eks action to be performed by this request.
  */
 EksRequest::Action EksRequest::action() const
 {
@@ -121,7 +123,7 @@ EksRequest::Action EksRequest::action() const
 }
 
 /*!
- * Returns the name of the EKS action to be performed by this request.
+ * Returns the name of the Eks action to be performed by this request.
  */
 QString EksRequest::actionString() const
 {
@@ -129,7 +131,7 @@ QString EksRequest::actionString() const
 }
 
 /*!
- * Returns the EKS API version implemented by this request.
+ * Returns the Eks API version implemented by this request.
  */
 QString EksRequest::apiVersion() const
 {
@@ -138,7 +140,7 @@ QString EksRequest::apiVersion() const
 }
 
 /*!
- * Sets the EKS action to be performed by this request to \a action.
+ * Sets the Eks action to be performed by this request to \a action.
  */
 void EksRequest::setAction(const Action action)
 {
@@ -147,7 +149,7 @@ void EksRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the EKS API version to include in this request to \a version.
+ * Sets the Eks API version to include in this request to \a version.
  */
 void EksRequest::setApiVersion(const QString &version)
 {
@@ -172,15 +174,15 @@ bool EksRequest::operator==(const EksRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid EKS queue name.
+ * Returns \c tue if \a queueName is a valid Eks queue name.
  *
- * @par From EKS FAQs:
+ * @par From Eks FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid EKS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Eks queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -247,10 +249,10 @@ void EksRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the EKS request using the given
+ * Returns a network request for the Eks request using the given
  * \a endpoint.
  *
- * This EKS implementation builds request URLs by combining the
+ * This Eks implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -263,19 +265,19 @@ QNetworkRequest EksRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::EKS::EksRequestPrivate
+ * \class QtAws::Eks::EksRequestPrivate
  * \brief The EksRequestPrivate class provides private implementation for EksRequest.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
- * Constructs a EksRequestPrivate object for EKS \a action,
+ * Constructs a EksRequestPrivate object for Eks \a action,
  * with public implementation \a q.
  */
 EksRequestPrivate::EksRequestPrivate(const EksRequest::Action action, EksRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-01"))
 {
 
 }
@@ -301,7 +303,7 @@ EksRequestPrivate::EksRequestPrivate(const EksRequestPrivate &other,
  * invalid.
  *
  * This function converts EksRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the EKS service's Action
+ * string representations, appropriate for use with the Eks service's Action
  * query parameters.
  */
 QString EksRequestPrivate::toString(const EksRequest::Action &action)
@@ -319,6 +321,7 @@ QString EksRequestPrivate::toString(const EksRequest::Action &action)
         ActionToString(DeleteCluster);
         ActionToString(DeleteFargateProfile);
         ActionToString(DeleteNodegroup);
+        ActionToString(DeregisterCluster);
         ActionToString(DescribeAddon);
         ActionToString(DescribeAddonVersions);
         ActionToString(DescribeCluster);
@@ -334,6 +337,7 @@ QString EksRequestPrivate::toString(const EksRequest::Action &action)
         ActionToString(ListNodegroups);
         ActionToString(ListTagsForResource);
         ActionToString(ListUpdates);
+        ActionToString(RegisterCluster);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateAddon);
@@ -348,5 +352,5 @@ QString EksRequestPrivate::toString(const EksRequest::Action &action)
     return QString();
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

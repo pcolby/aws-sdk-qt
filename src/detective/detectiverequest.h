@@ -40,20 +40,29 @@ public:
     /// Actions supported by Detective.
     enum Action {
         AcceptInvitationAction,
+        BatchGetGraphMemberDatasourcesAction,
+        BatchGetMembershipDatasourcesAction,
         CreateGraphAction,
         CreateMembersAction,
         DeleteGraphAction,
         DeleteMembersAction,
+        DescribeOrganizationConfigurationAction,
+        DisableOrganizationAdminAccountAction,
         DisassociateMembershipAction,
+        EnableOrganizationAdminAccountAction,
         GetMembersAction,
+        ListDatasourcePackagesAction,
         ListGraphsAction,
         ListInvitationsAction,
         ListMembersAction,
+        ListOrganizationAdminAccountsAction,
         ListTagsForResourceAction,
         RejectInvitationAction,
         StartMonitoringMemberAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateDatasourcePackagesAction,
+        UpdateOrganizationConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

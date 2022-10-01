@@ -31,6 +31,7 @@ namespace TimestreamQuery {
  *
  * \inmodule QtAwsTimestreamQuery
  *
+ *  <fullname>Amazon Timestream Query </fullname>
  *
  * \sa TimestreamQueryClient::cancelQuery
  */

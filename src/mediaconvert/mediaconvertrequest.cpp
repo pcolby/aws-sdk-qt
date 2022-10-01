@@ -43,12 +43,14 @@ namespace MediaConvert {
  * \value CreatePresetAction MediaConvert CreatePreset action.
  * \value CreateQueueAction MediaConvert CreateQueue action.
  * \value DeleteJobTemplateAction MediaConvert DeleteJobTemplate action.
+ * \value DeletePolicyAction MediaConvert DeletePolicy action.
  * \value DeletePresetAction MediaConvert DeletePreset action.
  * \value DeleteQueueAction MediaConvert DeleteQueue action.
  * \value DescribeEndpointsAction MediaConvert DescribeEndpoints action.
  * \value DisassociateCertificateAction MediaConvert DisassociateCertificate action.
  * \value GetJobAction MediaConvert GetJob action.
  * \value GetJobTemplateAction MediaConvert GetJobTemplate action.
+ * \value GetPolicyAction MediaConvert GetPolicy action.
  * \value GetPresetAction MediaConvert GetPreset action.
  * \value GetQueueAction MediaConvert GetQueue action.
  * \value ListJobTemplatesAction MediaConvert ListJobTemplates action.
@@ -56,6 +58,7 @@ namespace MediaConvert {
  * \value ListPresetsAction MediaConvert ListPresets action.
  * \value ListQueuesAction MediaConvert ListQueues action.
  * \value ListTagsForResourceAction MediaConvert ListTagsForResource action.
+ * \value PutPolicyAction MediaConvert PutPolicy action.
  * \value TagResourceAction MediaConvert TagResource action.
  * \value UntagResourceAction MediaConvert UntagResource action.
  * \value UpdateJobTemplateAction MediaConvert UpdateJobTemplate action.
@@ -268,7 +271,7 @@ QNetworkRequest MediaConvertRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest::Action action, MediaConvertRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-08-29"))
 {
 
 }
@@ -309,12 +312,14 @@ QString MediaConvertRequestPrivate::toString(const MediaConvertRequest::Action &
         ActionToString(CreatePreset);
         ActionToString(CreateQueue);
         ActionToString(DeleteJobTemplate);
+        ActionToString(DeletePolicy);
         ActionToString(DeletePreset);
         ActionToString(DeleteQueue);
         ActionToString(DescribeEndpoints);
         ActionToString(DisassociateCertificate);
         ActionToString(GetJob);
         ActionToString(GetJobTemplate);
+        ActionToString(GetPolicy);
         ActionToString(GetPreset);
         ActionToString(GetQueue);
         ActionToString(ListJobTemplates);
@@ -322,6 +327,7 @@ QString MediaConvertRequestPrivate::toString(const MediaConvertRequest::Action &
         ActionToString(ListPresets);
         ActionToString(ListQueues);
         ActionToString(ListTagsForResource);
+        ActionToString(PutPolicy);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateJobTemplate);

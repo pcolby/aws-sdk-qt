@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::SwfResponse
- * \brief The SwfResponse class provides an interface for SWF responses.
+ * \class QtAws::Swf::SwfResponse
+ * \brief The SwfResponse class provides an interface for Swf responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -76,11 +76,11 @@ void SwfResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::SwfResponsePrivate
+ * \class QtAws::Swf::SwfResponsePrivate
  * \brief The SwfResponsePrivate class provides private implementation for SwfResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -92,5 +92,5 @@ SwfResponsePrivate::SwfResponsePrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

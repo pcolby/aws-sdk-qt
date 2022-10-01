@@ -24,7 +24,7 @@
 #include "listidentityproviderconfigsrequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class ListIdentityProviderConfigsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

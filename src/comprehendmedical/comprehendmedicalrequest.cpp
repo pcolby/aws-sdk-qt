@@ -40,23 +40,28 @@ namespace ComprehendMedical {
  * \value DescribeICD10CMInferenceJobAction ComprehendMedical DescribeICD10CMInferenceJob action.
  * \value DescribePHIDetectionJobAction ComprehendMedical DescribePHIDetectionJob action.
  * \value DescribeRxNormInferenceJobAction ComprehendMedical DescribeRxNormInferenceJob action.
+ * \value DescribeSNOMEDCTInferenceJobAction ComprehendMedical DescribeSNOMEDCTInferenceJob action.
  * \value DetectEntitiesAction ComprehendMedical DetectEntities action.
  * \value DetectEntitiesV2Action ComprehendMedical DetectEntitiesV2 action.
  * \value DetectPHIAction ComprehendMedical DetectPHI action.
  * \value InferICD10CMAction ComprehendMedical InferICD10CM action.
  * \value InferRxNormAction ComprehendMedical InferRxNorm action.
+ * \value InferSNOMEDCTAction ComprehendMedical InferSNOMEDCT action.
  * \value ListEntitiesDetectionV2JobsAction ComprehendMedical ListEntitiesDetectionV2Jobs action.
  * \value ListICD10CMInferenceJobsAction ComprehendMedical ListICD10CMInferenceJobs action.
  * \value ListPHIDetectionJobsAction ComprehendMedical ListPHIDetectionJobs action.
  * \value ListRxNormInferenceJobsAction ComprehendMedical ListRxNormInferenceJobs action.
+ * \value ListSNOMEDCTInferenceJobsAction ComprehendMedical ListSNOMEDCTInferenceJobs action.
  * \value StartEntitiesDetectionV2JobAction ComprehendMedical StartEntitiesDetectionV2Job action.
  * \value StartICD10CMInferenceJobAction ComprehendMedical StartICD10CMInferenceJob action.
  * \value StartPHIDetectionJobAction ComprehendMedical StartPHIDetectionJob action.
  * \value StartRxNormInferenceJobAction ComprehendMedical StartRxNormInferenceJob action.
+ * \value StartSNOMEDCTInferenceJobAction ComprehendMedical StartSNOMEDCTInferenceJob action.
  * \value StopEntitiesDetectionV2JobAction ComprehendMedical StopEntitiesDetectionV2Job action.
  * \value StopICD10CMInferenceJobAction ComprehendMedical StopICD10CMInferenceJob action.
  * \value StopPHIDetectionJobAction ComprehendMedical StopPHIDetectionJob action.
  * \value StopRxNormInferenceJobAction ComprehendMedical StopRxNormInferenceJob action.
+ * \value StopSNOMEDCTInferenceJobAction ComprehendMedical StopSNOMEDCTInferenceJob action.
  */
 
 /*!
@@ -264,7 +269,7 @@ QNetworkRequest ComprehendMedicalRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 ComprehendMedicalRequestPrivate::ComprehendMedicalRequestPrivate(const ComprehendMedicalRequest::Action action, ComprehendMedicalRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-10-30"))
 {
 
 }
@@ -302,23 +307,28 @@ QString ComprehendMedicalRequestPrivate::toString(const ComprehendMedicalRequest
         ActionToString(DescribeICD10CMInferenceJob);
         ActionToString(DescribePHIDetectionJob);
         ActionToString(DescribeRxNormInferenceJob);
+        ActionToString(DescribeSNOMEDCTInferenceJob);
         ActionToString(DetectEntities);
         ActionToString(DetectEntitiesV2);
         ActionToString(DetectPHI);
         ActionToString(InferICD10CM);
         ActionToString(InferRxNorm);
+        ActionToString(InferSNOMEDCT);
         ActionToString(ListEntitiesDetectionV2Jobs);
         ActionToString(ListICD10CMInferenceJobs);
         ActionToString(ListPHIDetectionJobs);
         ActionToString(ListRxNormInferenceJobs);
+        ActionToString(ListSNOMEDCTInferenceJobs);
         ActionToString(StartEntitiesDetectionV2Job);
         ActionToString(StartICD10CMInferenceJob);
         ActionToString(StartPHIDetectionJob);
         ActionToString(StartRxNormInferenceJob);
+        ActionToString(StartSNOMEDCTInferenceJob);
         ActionToString(StopEntitiesDetectionV2Job);
         ActionToString(StopICD10CMInferenceJob);
         ActionToString(StopPHIDetectionJob);
         ActionToString(StopRxNormInferenceJob);
+        ActionToString(StopSNOMEDCTInferenceJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

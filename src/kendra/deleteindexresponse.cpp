@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteIndexResponse
- * \brief The DeleteIndexResponse class provides an interace for kendra DeleteIndex responses.
+ * \class QtAws::Kendra::DeleteIndexResponse
+ * \brief The DeleteIndexResponse class provides an interace for Kendra DeleteIndex responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteIndex
+ * \sa KendraClient::deleteIndex
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteIndexResponse::DeleteIndexResponse(
         const DeleteIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DeleteIndexResponsePrivate(this), parent)
+    : KendraResponse(new DeleteIndexResponsePrivate(this), parent)
 {
     setRequest(new DeleteIndexRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteIndexRequest * DeleteIndexResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DeleteIndex \a response.
+ * Parses a successful Kendra DeleteIndex \a response.
  */
 void DeleteIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DeleteIndexResponsePrivate
+ * \class QtAws::Kendra::DeleteIndexResponsePrivate
  * \brief The DeleteIndexResponsePrivate class provides private implementation for DeleteIndexResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DeleteIndexResponsePrivate object with public implementation \a q.
  */
 DeleteIndexResponsePrivate::DeleteIndexResponsePrivate(
-    DeleteIndexResponse * const q) : kendraResponsePrivate(q)
+    DeleteIndexResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DeleteIndex response element from \a xml.
+ * Parses a Kendra DeleteIndex response element from \a xml.
  */
 void DeleteIndexResponsePrivate::parseDeleteIndexResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteIndexResponsePrivate::parseDeleteIndexResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

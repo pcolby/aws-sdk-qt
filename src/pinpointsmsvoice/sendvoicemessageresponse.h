@@ -24,11 +24,11 @@
 #include "sendvoicemessagerequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class SendVoiceMessageResponsePrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT SendVoiceMessageResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT SendVoiceMessageResponse : public PinpointSmsVoiceResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

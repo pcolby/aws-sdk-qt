@@ -23,13 +23,13 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::ListEventTypesRequest
- * \brief The ListEventTypesRequest class provides an interface for CodeStarNotifications ListEventTypes requests.
+ * \class QtAws::CodestarNotifications::ListEventTypesRequest
+ * \brief The ListEventTypesRequest class provides an interface for CodestarNotifications ListEventTypes requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  *
  *  This AWS CodeStar Notifications API Reference provides descriptions and usage examples of the operations and data types
  *  for the AWS CodeStar Notifications API. You can use the AWS CodeStar Notifications API to work with the following
@@ -72,7 +72,7 @@ namespace CodeStarNotifications {
  * 
  *  </p <ul> <li>
  * 
- *  <a>DeleteTarget</a>, which removes a notification rule target (SNS topic) from a notification rule.
+ *  <a>DeleteTarget</a>, which removes a notification rule target from a notification rule.
  * 
  *  </p </li> <li>
  * 
@@ -104,16 +104,18 @@ namespace CodeStarNotifications {
  * 
  *  </p </li> </ul>
  * 
- *  For information about how to use AWS CodeStar Notifications, see link in the CodeStarNotifications User Guide.
+ *  For information about how to use AWS CodeStar Notifications, see the <a
+ *  href="https://docs.aws.amazon.com/dtconsole/latest/userguide/what-is-dtconsole.html">Amazon Web Services Developer Tools
+ *  Console User Guide</a>.
  *
- * \sa CodeStarNotificationsClient::listEventTypes
+ * \sa CodestarNotificationsClient::listEventTypes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListEventTypesRequest::ListEventTypesRequest(const ListEventTypesRequest &other)
-    : CodeStarNotificationsRequest(new ListEventTypesRequestPrivate(*other.d_func(), this))
+    : CodestarNotificationsRequest(new ListEventTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +124,7 @@ ListEventTypesRequest::ListEventTypesRequest(const ListEventTypesRequest &other)
  * Constructs a ListEventTypesRequest object.
  */
 ListEventTypesRequest::ListEventTypesRequest()
-    : CodeStarNotificationsRequest(new ListEventTypesRequestPrivate(CodeStarNotificationsRequest::ListEventTypesAction, this))
+    : CodestarNotificationsRequest(new ListEventTypesRequestPrivate(CodestarNotificationsRequest::ListEventTypesAction, this))
 {
 
 }
@@ -147,20 +149,20 @@ QtAws::Core::AwsAbstractResponse * ListEventTypesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::ListEventTypesRequestPrivate
+ * \class QtAws::CodestarNotifications::ListEventTypesRequestPrivate
  * \brief The ListEventTypesRequestPrivate class provides private implementation for ListEventTypesRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a ListEventTypesRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a ListEventTypesRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
 ListEventTypesRequestPrivate::ListEventTypesRequestPrivate(
-    const CodeStarNotificationsRequest::Action action, ListEventTypesRequest * const q)
-    : CodeStarNotificationsRequestPrivate(action, q)
+    const CodestarNotificationsRequest::Action action, ListEventTypesRequest * const q)
+    : CodestarNotificationsRequestPrivate(action, q)
 {
 
 }
@@ -173,10 +175,10 @@ ListEventTypesRequestPrivate::ListEventTypesRequestPrivate(
  */
 ListEventTypesRequestPrivate::ListEventTypesRequestPrivate(
     const ListEventTypesRequestPrivate &other, ListEventTypesRequest * const q)
-    : CodeStarNotificationsRequestPrivate(other, q)
+    : CodestarNotificationsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

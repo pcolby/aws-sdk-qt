@@ -245,7 +245,7 @@ QNetworkRequest WorkMailMessageFlowRequest::unsignedRequest(const QUrl &endpoint
  * with public implementation \a q.
  */
 WorkMailMessageFlowRequestPrivate::WorkMailMessageFlowRequestPrivate(const WorkMailMessageFlowRequest::Action action, WorkMailMessageFlowRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-05-01"))
 {
 
 }

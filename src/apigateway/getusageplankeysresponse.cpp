@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlanKeysResponse
- * \brief The GetUsagePlanKeysResponse class provides an interace for APIGateway GetUsagePlanKeys responses.
+ * \class QtAws::ApiGateway::GetUsagePlanKeysResponse
+ * \brief The GetUsagePlanKeysResponse class provides an interace for ApiGateway GetUsagePlanKeys responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getUsagePlanKeys
+ * \sa ApiGatewayClient::getUsagePlanKeys
  */
 
 /*!
@@ -49,7 +49,7 @@ GetUsagePlanKeysResponse::GetUsagePlanKeysResponse(
         const GetUsagePlanKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetUsagePlanKeysResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetUsagePlanKeysResponsePrivate(this), parent)
 {
     setRequest(new GetUsagePlanKeysRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetUsagePlanKeys \a response.
+ * Parses a successful ApiGateway GetUsagePlanKeys \a response.
  */
 void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetUsagePlanKeysResponsePrivate
+ * \class QtAws::ApiGateway::GetUsagePlanKeysResponsePrivate
  * \brief The GetUsagePlanKeysResponsePrivate class provides private implementation for GetUsagePlanKeysResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetUsagePlanKeysResponsePrivate object with public implementation \a q.
  */
 GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponsePrivate(
-    GetUsagePlanKeysResponse * const q) : APIGatewayResponsePrivate(q)
+    GetUsagePlanKeysResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetUsagePlanKeys response element from \a xml.
+ * Parses a ApiGateway GetUsagePlanKeys response element from \a xml.
  */
 void GetUsagePlanKeysResponsePrivate::parseGetUsagePlanKeysResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetUsagePlanKeysResponsePrivate::parseGetUsagePlanKeysResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

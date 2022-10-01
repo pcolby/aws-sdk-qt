@@ -24,7 +24,7 @@
 #include "cancelstepsrequest.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class CancelStepsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

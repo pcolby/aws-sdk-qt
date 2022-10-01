@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
-class CloudHSMV2Response;
+class CloudHsmV2Response;
 
-class CloudHSMV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudHsmV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit CloudHSMV2ResponsePrivate(CloudHSMV2Response * const q);
+    explicit CloudHsmV2ResponsePrivate(CloudHsmV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(CloudHSMV2Response)
-    Q_DISABLE_COPY(CloudHSMV2ResponsePrivate)
+    Q_DECLARE_PUBLIC(CloudHsmV2Response)
+    Q_DISABLE_COPY(CloudHsmV2ResponsePrivate)
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

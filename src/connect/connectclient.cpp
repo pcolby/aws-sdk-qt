@@ -25,20 +25,32 @@
 #include "associateapprovedoriginresponse.h"
 #include "associatebotrequest.h"
 #include "associatebotresponse.h"
+#include "associatedefaultvocabularyrequest.h"
+#include "associatedefaultvocabularyresponse.h"
 #include "associateinstancestorageconfigrequest.h"
 #include "associateinstancestorageconfigresponse.h"
 #include "associatelambdafunctionrequest.h"
 #include "associatelambdafunctionresponse.h"
 #include "associatelexbotrequest.h"
 #include "associatelexbotresponse.h"
+#include "associatephonenumbercontactflowrequest.h"
+#include "associatephonenumbercontactflowresponse.h"
 #include "associatequeuequickconnectsrequest.h"
 #include "associatequeuequickconnectsresponse.h"
 #include "associateroutingprofilequeuesrequest.h"
 #include "associateroutingprofilequeuesresponse.h"
 #include "associatesecuritykeyrequest.h"
 #include "associatesecuritykeyresponse.h"
+#include "claimphonenumberrequest.h"
+#include "claimphonenumberresponse.h"
+#include "createagentstatusrequest.h"
+#include "createagentstatusresponse.h"
 #include "createcontactflowrequest.h"
 #include "createcontactflowresponse.h"
+#include "createcontactflowmodulerequest.h"
+#include "createcontactflowmoduleresponse.h"
+#include "createhoursofoperationrequest.h"
+#include "createhoursofoperationresponse.h"
 #include "createinstancerequest.h"
 #include "createinstanceresponse.h"
 #include "createintegrationassociationrequest.h"
@@ -49,26 +61,50 @@
 #include "createquickconnectresponse.h"
 #include "createroutingprofilerequest.h"
 #include "createroutingprofileresponse.h"
+#include "createsecurityprofilerequest.h"
+#include "createsecurityprofileresponse.h"
+#include "createtasktemplaterequest.h"
+#include "createtasktemplateresponse.h"
 #include "createusecaserequest.h"
 #include "createusecaseresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
 #include "createuserhierarchygrouprequest.h"
 #include "createuserhierarchygroupresponse.h"
+#include "createvocabularyrequest.h"
+#include "createvocabularyresponse.h"
+#include "deletecontactflowrequest.h"
+#include "deletecontactflowresponse.h"
+#include "deletecontactflowmodulerequest.h"
+#include "deletecontactflowmoduleresponse.h"
+#include "deletehoursofoperationrequest.h"
+#include "deletehoursofoperationresponse.h"
 #include "deleteinstancerequest.h"
 #include "deleteinstanceresponse.h"
 #include "deleteintegrationassociationrequest.h"
 #include "deleteintegrationassociationresponse.h"
 #include "deletequickconnectrequest.h"
 #include "deletequickconnectresponse.h"
+#include "deletesecurityprofilerequest.h"
+#include "deletesecurityprofileresponse.h"
+#include "deletetasktemplaterequest.h"
+#include "deletetasktemplateresponse.h"
 #include "deleteusecaserequest.h"
 #include "deleteusecaseresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
 #include "deleteuserhierarchygrouprequest.h"
 #include "deleteuserhierarchygroupresponse.h"
+#include "deletevocabularyrequest.h"
+#include "deletevocabularyresponse.h"
+#include "describeagentstatusrequest.h"
+#include "describeagentstatusresponse.h"
+#include "describecontactrequest.h"
+#include "describecontactresponse.h"
 #include "describecontactflowrequest.h"
 #include "describecontactflowresponse.h"
+#include "describecontactflowmodulerequest.h"
+#include "describecontactflowmoduleresponse.h"
 #include "describehoursofoperationrequest.h"
 #include "describehoursofoperationresponse.h"
 #include "describeinstancerequest.h"
@@ -77,18 +113,24 @@
 #include "describeinstanceattributeresponse.h"
 #include "describeinstancestorageconfigrequest.h"
 #include "describeinstancestorageconfigresponse.h"
+#include "describephonenumberrequest.h"
+#include "describephonenumberresponse.h"
 #include "describequeuerequest.h"
 #include "describequeueresponse.h"
 #include "describequickconnectrequest.h"
 #include "describequickconnectresponse.h"
 #include "describeroutingprofilerequest.h"
 #include "describeroutingprofileresponse.h"
+#include "describesecurityprofilerequest.h"
+#include "describesecurityprofileresponse.h"
 #include "describeuserrequest.h"
 #include "describeuserresponse.h"
 #include "describeuserhierarchygrouprequest.h"
 #include "describeuserhierarchygroupresponse.h"
 #include "describeuserhierarchystructurerequest.h"
 #include "describeuserhierarchystructureresponse.h"
+#include "describevocabularyrequest.h"
+#include "describevocabularyresponse.h"
 #include "disassociateapprovedoriginrequest.h"
 #include "disassociateapprovedoriginresponse.h"
 #include "disassociatebotrequest.h"
@@ -99,6 +141,8 @@
 #include "disassociatelambdafunctionresponse.h"
 #include "disassociatelexbotrequest.h"
 #include "disassociatelexbotresponse.h"
+#include "disassociatephonenumbercontactflowrequest.h"
+#include "disassociatephonenumbercontactflowresponse.h"
 #include "disassociatequeuequickconnectsrequest.h"
 #include "disassociatequeuequickconnectsresponse.h"
 #include "disassociateroutingprofilequeuesrequest.h"
@@ -109,16 +153,28 @@
 #include "getcontactattributesresponse.h"
 #include "getcurrentmetricdatarequest.h"
 #include "getcurrentmetricdataresponse.h"
+#include "getcurrentuserdatarequest.h"
+#include "getcurrentuserdataresponse.h"
 #include "getfederationtokenrequest.h"
 #include "getfederationtokenresponse.h"
 #include "getmetricdatarequest.h"
 #include "getmetricdataresponse.h"
+#include "gettasktemplaterequest.h"
+#include "gettasktemplateresponse.h"
+#include "listagentstatusesrequest.h"
+#include "listagentstatusesresponse.h"
 #include "listapprovedoriginsrequest.h"
 #include "listapprovedoriginsresponse.h"
 #include "listbotsrequest.h"
 #include "listbotsresponse.h"
+#include "listcontactflowmodulesrequest.h"
+#include "listcontactflowmodulesresponse.h"
 #include "listcontactflowsrequest.h"
 #include "listcontactflowsresponse.h"
+#include "listcontactreferencesrequest.h"
+#include "listcontactreferencesresponse.h"
+#include "listdefaultvocabulariesrequest.h"
+#include "listdefaultvocabulariesresponse.h"
 #include "listhoursofoperationsrequest.h"
 #include "listhoursofoperationsresponse.h"
 #include "listinstanceattributesrequest.h"
@@ -135,6 +191,8 @@
 #include "listlexbotsresponse.h"
 #include "listphonenumbersrequest.h"
 #include "listphonenumbersresponse.h"
+#include "listphonenumbersv2request.h"
+#include "listphonenumbersv2response.h"
 #include "listpromptsrequest.h"
 #include "listpromptsresponse.h"
 #include "listqueuequickconnectsrequest.h"
@@ -149,22 +207,44 @@
 #include "listroutingprofilesresponse.h"
 #include "listsecuritykeysrequest.h"
 #include "listsecuritykeysresponse.h"
+#include "listsecurityprofilepermissionsrequest.h"
+#include "listsecurityprofilepermissionsresponse.h"
 #include "listsecurityprofilesrequest.h"
 #include "listsecurityprofilesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtasktemplatesrequest.h"
+#include "listtasktemplatesresponse.h"
 #include "listusecasesrequest.h"
 #include "listusecasesresponse.h"
 #include "listuserhierarchygroupsrequest.h"
 #include "listuserhierarchygroupsresponse.h"
 #include "listusersrequest.h"
 #include "listusersresponse.h"
+#include "putuserstatusrequest.h"
+#include "putuserstatusresponse.h"
+#include "releasephonenumberrequest.h"
+#include "releasephonenumberresponse.h"
 #include "resumecontactrecordingrequest.h"
 #include "resumecontactrecordingresponse.h"
+#include "searchavailablephonenumbersrequest.h"
+#include "searchavailablephonenumbersresponse.h"
+#include "searchqueuesrequest.h"
+#include "searchqueuesresponse.h"
+#include "searchroutingprofilesrequest.h"
+#include "searchroutingprofilesresponse.h"
+#include "searchsecurityprofilesrequest.h"
+#include "searchsecurityprofilesresponse.h"
+#include "searchusersrequest.h"
+#include "searchusersresponse.h"
+#include "searchvocabulariesrequest.h"
+#include "searchvocabulariesresponse.h"
 #include "startchatcontactrequest.h"
 #include "startchatcontactresponse.h"
 #include "startcontactrecordingrequest.h"
 #include "startcontactrecordingresponse.h"
+#include "startcontactstreamingrequest.h"
+#include "startcontactstreamingresponse.h"
 #include "startoutboundvoicecontactrequest.h"
 #include "startoutboundvoicecontactresponse.h"
 #include "starttaskcontactrequest.h"
@@ -173,22 +253,42 @@
 #include "stopcontactresponse.h"
 #include "stopcontactrecordingrequest.h"
 #include "stopcontactrecordingresponse.h"
+#include "stopcontactstreamingrequest.h"
+#include "stopcontactstreamingresponse.h"
 #include "suspendcontactrecordingrequest.h"
 #include "suspendcontactrecordingresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
+#include "transfercontactrequest.h"
+#include "transfercontactresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateagentstatusrequest.h"
+#include "updateagentstatusresponse.h"
+#include "updatecontactrequest.h"
+#include "updatecontactresponse.h"
 #include "updatecontactattributesrequest.h"
 #include "updatecontactattributesresponse.h"
 #include "updatecontactflowcontentrequest.h"
 #include "updatecontactflowcontentresponse.h"
+#include "updatecontactflowmetadatarequest.h"
+#include "updatecontactflowmetadataresponse.h"
+#include "updatecontactflowmodulecontentrequest.h"
+#include "updatecontactflowmodulecontentresponse.h"
+#include "updatecontactflowmodulemetadatarequest.h"
+#include "updatecontactflowmodulemetadataresponse.h"
 #include "updatecontactflownamerequest.h"
 #include "updatecontactflownameresponse.h"
+#include "updatecontactschedulerequest.h"
+#include "updatecontactscheduleresponse.h"
+#include "updatehoursofoperationrequest.h"
+#include "updatehoursofoperationresponse.h"
 #include "updateinstanceattributerequest.h"
 #include "updateinstanceattributeresponse.h"
 #include "updateinstancestorageconfigrequest.h"
 #include "updateinstancestorageconfigresponse.h"
+#include "updatephonenumberrequest.h"
+#include "updatephonenumberresponse.h"
 #include "updatequeuehoursofoperationrequest.h"
 #include "updatequeuehoursofoperationresponse.h"
 #include "updatequeuemaxcontactsrequest.h"
@@ -211,6 +311,10 @@
 #include "updateroutingprofilenameresponse.h"
 #include "updateroutingprofilequeuesrequest.h"
 #include "updateroutingprofilequeuesresponse.h"
+#include "updatesecurityprofilerequest.h"
+#include "updatesecurityprofileresponse.h"
+#include "updatetasktemplaterequest.h"
+#include "updatetasktemplateresponse.h"
 #include "updateuserhierarchyrequest.h"
 #include "updateuserhierarchyresponse.h"
 #include "updateuserhierarchygroupnamerequest.h"
@@ -265,12 +369,12 @@ namespace Connect {
  * 
  *  Guide</i>>
  * 
- *  You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see <a
- *  href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
+ *  You can connect programmatically to an Amazon Web Services service by using an endpoint. For a list of Amazon Connect
+ *  endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
  * 
  *  Endpoints</a>> <note>
  * 
- *  Working with contact flows? Check out the <a
+ *  Working with flows? Check out the <a
  *  href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  */
 
@@ -363,6 +467,20 @@ AssociateBotResponse * ConnectClient::associateBot(const AssociateBotRequest &re
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * AssociateDefaultVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates an existing vocabulary as the default. Contact Lens for Amazon Connect uses the vocabulary in post-call and
+ * real-time analysis sessions for the given
+ */
+AssociateDefaultVocabularyResponse * ConnectClient::associateDefaultVocabulary(const AssociateDefaultVocabularyRequest &request)
+{
+    return qobject_cast<AssociateDefaultVocabularyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * AssociateInstanceStorageConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -420,6 +538,19 @@ AssociateLexBotResponse * ConnectClient::associateLexBot(const AssociateLexBotRe
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * AssociatePhoneNumberContactFlowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a flow with a phone number claimed to your Amazon Connect
+ */
+AssociatePhoneNumberContactFlowResponse * ConnectClient::associatePhoneNumberContactFlow(const AssociatePhoneNumberContactFlowRequest &request)
+{
+    return qobject_cast<AssociatePhoneNumberContactFlowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * AssociateQueueQuickConnectsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -467,20 +598,80 @@ AssociateSecurityKeyResponse * ConnectClient::associateSecurityKey(const Associa
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ClaimPhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Claims an available phone number to your Amazon Connect
+ */
+ClaimPhoneNumberResponse * ConnectClient::claimPhoneNumber(const ClaimPhoneNumberRequest &request)
+{
+    return qobject_cast<ClaimPhoneNumberResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateAgentStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Creates an agent status for the specified Amazon Connect
+ */
+CreateAgentStatusResponse * ConnectClient::createAgentStatus(const CreateAgentStatusRequest &request)
+{
+    return qobject_cast<CreateAgentStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * CreateContactFlowResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a contact flow for the specified Amazon Connect
+ * Creates a flow for the specified Amazon Connect
  *
  * instance>
  *
- * You can also create and update contact flows using the <a
+ * You can also create and update flows using the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  */
 CreateContactFlowResponse * ConnectClient::createContactFlow(const CreateContactFlowRequest &request)
 {
     return qobject_cast<CreateContactFlowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateContactFlowModuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a flow module for the specified Amazon Connect instance.
+ */
+CreateContactFlowModuleResponse * ConnectClient::createContactFlowModule(const CreateContactFlowModuleRequest &request)
+{
+    return qobject_cast<CreateContactFlowModuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateHoursOfOperationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Creates hours of operation.
+ */
+CreateHoursOfOperationResponse * ConnectClient::createHoursOfOperation(const CreateHoursOfOperationRequest &request)
+{
+    return qobject_cast<CreateHoursOfOperationResponse *>(send(request));
 }
 
 /*!
@@ -514,7 +705,7 @@ CreateInstanceResponse * ConnectClient::createInstance(const CreateInstanceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create an AppIntegration association with an Amazon Connect
+ * Creates an Amazon Web Services resource association with an Amazon Connect
  */
 CreateIntegrationAssociationResponse * ConnectClient::createIntegrationAssociation(const CreateIntegrationAssociationRequest &request)
 {
@@ -544,10 +735,6 @@ CreateQueueResponse * ConnectClient::createQueue(const CreateQueueRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
- *
  * Creates a quick connect for the specified Amazon Connect
  */
 CreateQuickConnectResponse * ConnectClient::createQuickConnect(const CreateQuickConnectRequest &request)
@@ -570,11 +757,41 @@ CreateRoutingProfileResponse * ConnectClient::createRoutingProfile(const CreateR
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateSecurityProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Creates a security
+ */
+CreateSecurityProfileResponse * ConnectClient::createSecurityProfile(const CreateSecurityProfileRequest &request)
+{
+    return qobject_cast<CreateSecurityProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateTaskTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new task template in the specified Amazon Connect
+ */
+CreateTaskTemplateResponse * ConnectClient::createTaskTemplate(const CreateTaskTemplateRequest &request)
+{
+    return qobject_cast<CreateTaskTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * CreateUseCaseResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a use case for an AppIntegration
+ * Creates a use case for an integration
  */
 CreateUseCaseResponse * ConnectClient::createUseCase(const CreateUseCaseRequest &request)
 {
@@ -615,6 +832,64 @@ CreateUserHierarchyGroupResponse * ConnectClient::createUserHierarchyGroup(const
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * CreateVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a custom vocabulary associated with your Amazon Connect instance. You can set a custom vocabulary to be your
+ * default vocabulary for a given language. Contact Lens for Amazon Connect uses the default vocabulary in post-call and
+ * real-time contact analysis sessions for that
+ */
+CreateVocabularyResponse * ConnectClient::createVocabulary(const CreateVocabularyRequest &request)
+{
+    return qobject_cast<CreateVocabularyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteContactFlowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a flow for the specified Amazon Connect
+ */
+DeleteContactFlowResponse * ConnectClient::deleteContactFlow(const DeleteContactFlowRequest &request)
+{
+    return qobject_cast<DeleteContactFlowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteContactFlowModuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified flow
+ */
+DeleteContactFlowModuleResponse * ConnectClient::deleteContactFlowModule(const DeleteContactFlowModuleRequest &request)
+{
+    return qobject_cast<DeleteContactFlowModuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteHoursOfOperationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Deletes an hours of
+ */
+DeleteHoursOfOperationResponse * ConnectClient::deleteHoursOfOperation(const DeleteHoursOfOperationRequest &request)
+{
+    return qobject_cast<DeleteHoursOfOperationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * DeleteInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -642,8 +917,8 @@ DeleteInstanceResponse * ConnectClient::deleteInstance(const DeleteInstanceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AppIntegration association from an Amazon Connect instance. The association must not have any use cases
- * associated with
+ * Deletes an Amazon Web Services resource association from an Amazon Connect instance. The association must not have any
+ * use cases associated with
  */
 DeleteIntegrationAssociationResponse * ConnectClient::deleteIntegrationAssociation(const DeleteIntegrationAssociationRequest &request)
 {
@@ -656,10 +931,6 @@ DeleteIntegrationAssociationResponse * ConnectClient::deleteIntegrationAssociati
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
- *
  * Deletes a quick
  */
 DeleteQuickConnectResponse * ConnectClient::deleteQuickConnect(const DeleteQuickConnectRequest &request)
@@ -669,11 +940,41 @@ DeleteQuickConnectResponse * ConnectClient::deleteQuickConnect(const DeleteQuick
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteSecurityProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Deletes a security
+ */
+DeleteSecurityProfileResponse * ConnectClient::deleteSecurityProfile(const DeleteSecurityProfileRequest &request)
+{
+    return qobject_cast<DeleteSecurityProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteTaskTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the task
+ */
+DeleteTaskTemplateResponse * ConnectClient::deleteTaskTemplate(const DeleteTaskTemplateRequest &request)
+{
+    return qobject_cast<DeleteTaskTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * DeleteUseCaseResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a use case from an AppIntegration
+ * Deletes a use case from an integration
  */
 DeleteUseCaseResponse * ConnectClient::deleteUseCase(const DeleteUseCaseRequest &request)
 {
@@ -714,20 +1015,88 @@ DeleteUserHierarchyGroupResponse * ConnectClient::deleteUserHierarchyGroup(const
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DeleteVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the vocabulary that has the given
+ */
+DeleteVocabularyResponse * ConnectClient::deleteVocabulary(const DeleteVocabularyRequest &request)
+{
+    return qobject_cast<DeleteVocabularyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribeAgentStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Describes an agent
+ */
+DescribeAgentStatusResponse * ConnectClient::describeAgentStatus(const DescribeAgentStatusRequest &request)
+{
+    return qobject_cast<DescribeAgentStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribeContactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Describes the specified contact.
+ *
+ * </p <b>
+ *
+ * Contact information remains available in Amazon Connect for 24 months, and then it is
+ *
+ * deleted>
+ *
+ * Only data from November 12, 2021, and later is returned by this
+ */
+DescribeContactResponse * ConnectClient::describeContact(const DescribeContactRequest &request)
+{
+    return qobject_cast<DescribeContactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * DescribeContactFlowResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified contact
+ * Describes the specified
  *
  * flow>
  *
- * You can also create and update contact flows using the <a
+ * You can also create and update flows using the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  */
 DescribeContactFlowResponse * ConnectClient::describeContactFlow(const DescribeContactFlowRequest &request)
 {
     return qobject_cast<DescribeContactFlowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribeContactFlowModuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified flow
+ */
+DescribeContactFlowModuleResponse * ConnectClient::describeContactFlowModule(const DescribeContactFlowModuleRequest &request)
+{
+    return qobject_cast<DescribeContactFlowModuleResponse *>(send(request));
 }
 
 /*!
@@ -806,6 +1175,19 @@ DescribeInstanceStorageConfigResponse * ConnectClient::describeInstanceStorageCo
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribePhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details and status of a phone number that’s claimed to your Amazon Connect
+ */
+DescribePhoneNumberResponse * ConnectClient::describePhoneNumber(const DescribePhoneNumberRequest &request)
+{
+    return qobject_cast<DescribePhoneNumberResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * DescribeQueueResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -827,10 +1209,6 @@ DescribeQueueResponse * ConnectClient::describeQueue(const DescribeQueueRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
- *
  * Describes the quick
  */
 DescribeQuickConnectResponse * ConnectClient::describeQuickConnect(const DescribeQuickConnectRequest &request)
@@ -849,6 +1227,23 @@ DescribeQuickConnectResponse * ConnectClient::describeQuickConnect(const Describ
 DescribeRoutingProfileResponse * ConnectClient::describeRoutingProfile(const DescribeRoutingProfileRequest &request)
 {
     return qobject_cast<DescribeRoutingProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribeSecurityProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Gets basic information about the security
+ */
+DescribeSecurityProfileResponse * ConnectClient::describeSecurityProfile(const DescribeSecurityProfileRequest &request)
+{
+    return qobject_cast<DescribeSecurityProfileResponse *>(send(request));
 }
 
 /*!
@@ -889,6 +1284,19 @@ DescribeUserHierarchyGroupResponse * ConnectClient::describeUserHierarchyGroup(c
 DescribeUserHierarchyStructureResponse * ConnectClient::describeUserHierarchyStructure(const DescribeUserHierarchyStructureRequest &request)
 {
     return qobject_cast<DescribeUserHierarchyStructureResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DescribeVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified
+ */
+DescribeVocabularyResponse * ConnectClient::describeVocabulary(const DescribeVocabularyRequest &request)
+{
+    return qobject_cast<DescribeVocabularyResponse *>(send(request));
 }
 
 /*!
@@ -952,7 +1360,7 @@ DisassociateInstanceStorageConfigResponse * ConnectClient::disassociateInstanceS
  *
  * change>
  *
- * Remove the Lambda function from the dropdown options available in the relevant contact flow
+ * Remove the Lambda function from the dropdown options available in the relevant flow
  */
 DisassociateLambdaFunctionResponse * ConnectClient::disassociateLambdaFunction(const DisassociateLambdaFunctionRequest &request)
 {
@@ -974,6 +1382,19 @@ DisassociateLambdaFunctionResponse * ConnectClient::disassociateLambdaFunction(c
 DisassociateLexBotResponse * ConnectClient::disassociateLexBot(const DisassociateLexBotRequest &request)
 {
     return qobject_cast<DisassociateLexBotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * DisassociatePhoneNumberContactFlowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the flow association from a phone number claimed to your Amazon Connect instance, if a flow association
+ */
+DisassociatePhoneNumberContactFlowResponse * ConnectClient::disassociatePhoneNumberContactFlow(const DisassociatePhoneNumberContactFlowRequest &request)
+{
+    return qobject_cast<DisassociatePhoneNumberContactFlowResponse *>(send(request));
 }
 
 /*!
@@ -1057,6 +1478,19 @@ GetCurrentMetricDataResponse * ConnectClient::getCurrentMetricData(const GetCurr
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * GetCurrentUserDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the real-time active user data from the specified Amazon Connect instance.
+ */
+GetCurrentUserDataResponse * ConnectClient::getCurrentUserData(const GetCurrentUserDataRequest &request)
+{
+    return qobject_cast<GetCurrentUserDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * GetFederationTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1098,6 +1532,36 @@ GetMetricDataResponse * ConnectClient::getMetricData(const GetMetricDataRequest 
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * GetTaskTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details about a specific task template in the specified Amazon Connect
+ */
+GetTaskTemplateResponse * ConnectClient::getTaskTemplate(const GetTaskTemplateRequest &request)
+{
+    return qobject_cast<GetTaskTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListAgentStatusesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Lists agent
+ */
+ListAgentStatusesResponse * ConnectClient::listAgentStatuses(const ListAgentStatusesRequest &request)
+{
+    return qobject_cast<ListAgentStatusesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * ListApprovedOriginsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1124,7 +1588,7 @@ ListApprovedOriginsResponse * ConnectClient::listApprovedOrigins(const ListAppro
  * change>
  *
  * For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated with
- * the instance.
+ * the instance. Use this API to returns both Amazon Lex V1 and V2
  */
 ListBotsResponse * ConnectClient::listBots(const ListBotsRequest &request)
 {
@@ -1133,26 +1597,69 @@ ListBotsResponse * ConnectClient::listBots(const ListBotsRequest &request)
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListContactFlowModulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides information about the flow modules for the specified Amazon Connect
+ */
+ListContactFlowModulesResponse * ConnectClient::listContactFlowModules(const ListContactFlowModulesRequest &request)
+{
+    return qobject_cast<ListContactFlowModulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * ListContactFlowsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information about the contact flows for the specified Amazon Connect
+ * Provides information about the flows for the specified Amazon Connect
  *
  * instance>
  *
- * You can also create and update contact flows using the <a
+ * You can also create and update flows using the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  *
  * language</a>>
  *
- * For more information about contact flows, see <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Contact Flows</a> in the
- * <i>Amazon Connect Administrator
+ * For more information about flows, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/concepts-contact-flows.html">Flows</a> in the <i>Amazon
+ * Connect Administrator
  */
 ListContactFlowsResponse * ConnectClient::listContactFlows(const ListContactFlowsRequest &request)
 {
     return qobject_cast<ListContactFlowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListContactReferencesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * For the specified <code>referenceTypes</code>, returns a list of references associated with the contact.
+ */
+ListContactReferencesResponse * ConnectClient::listContactReferences(const ListContactReferencesRequest &request)
+{
+    return qobject_cast<ListContactReferencesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListDefaultVocabulariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the default vocabularies for the specified Amazon Connect
+ */
+ListDefaultVocabulariesResponse * ConnectClient::listDefaultVocabularies(const ListDefaultVocabulariesRequest &request)
+{
+    return qobject_cast<ListDefaultVocabulariesResponse *>(send(request));
 }
 
 /*!
@@ -1232,7 +1739,7 @@ ListInstancesResponse * ConnectClient::listInstances(const ListInstancesRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides summary information about the AppIntegration associations for the specified Amazon Connect
+ * Provides summary information about the Amazon Web Services resource associations for the specified Amazon Connect
  */
 ListIntegrationAssociationsResponse * ConnectClient::listIntegrationAssociations(const ListIntegrationAssociationsRequest &request)
 {
@@ -1249,7 +1756,7 @@ ListIntegrationAssociationsResponse * ConnectClient::listIntegrationAssociations
  *
  * change>
  *
- * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant contact flow
+ * Returns a paginated list of all Lambda functions that display in the dropdown options in the relevant flow
  */
 ListLambdaFunctionsResponse * ConnectClient::listLambdaFunctions(const ListLambdaFunctionsRequest &request)
 {
@@ -1266,7 +1773,9 @@ ListLambdaFunctionsResponse * ConnectClient::listLambdaFunctions(const ListLambd
  *
  * change>
  *
- * Returns a paginated list of all the Amazon Lex bots currently associated with the
+ * Returns a paginated list of all the Amazon Lex V1 bots currently associated with the instance. To return both Amazon Lex
+ * V1 and V2 bots, use the <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListBots.html">ListBots</a>
+ * API.
  */
 ListLexBotsResponse * ConnectClient::listLexBots(const ListLexBotsRequest &request)
 {
@@ -1290,6 +1799,25 @@ ListLexBotsResponse * ConnectClient::listLexBots(const ListLexBotsRequest &reque
 ListPhoneNumbersResponse * ConnectClient::listPhoneNumbers(const ListPhoneNumbersRequest &request)
 {
     return qobject_cast<ListPhoneNumbersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListPhoneNumbersV2Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists phone numbers claimed to your Amazon Connect instance.
+ *
+ * </p
+ *
+ * For more information about phone numbers, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone Numbers for
+ * Your Contact Center</a> in the <i>Amazon Connect Administrator
+ */
+ListPhoneNumbersV2Response * ConnectClient::listPhoneNumbersV2(const ListPhoneNumbersV2Request &request)
+{
+    return qobject_cast<ListPhoneNumbersV2Response *>(send(request));
 }
 
 /*!
@@ -1353,10 +1881,6 @@ ListQueuesResponse * ConnectClient::listQueues(const ListQueuesRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
- *
  * Provides information about the quick connects for the specified Amazon Connect instance.
  */
 ListQuickConnectsResponse * ConnectClient::listQuickConnects(const ListQuickConnectsRequest &request)
@@ -1416,6 +1940,23 @@ ListSecurityKeysResponse * ConnectClient::listSecurityKeys(const ListSecurityKey
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListSecurityProfilePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Lists the permissions granted to a security
+ */
+ListSecurityProfilePermissionsResponse * ConnectClient::listSecurityProfilePermissions(const ListSecurityProfilePermissionsRequest &request)
+{
+    return qobject_cast<ListSecurityProfilePermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * ListSecurityProfilesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1454,11 +1995,24 @@ ListTagsForResourceResponse * ConnectClient::listTagsForResource(const ListTagsF
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ListTaskTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists task templates for the specified Amazon Connect
+ */
+ListTaskTemplatesResponse * ConnectClient::listTaskTemplates(const ListTaskTemplatesRequest &request)
+{
+    return qobject_cast<ListTaskTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * ListUseCasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the use cases.
+ * Lists the use cases for the integration association.
  */
 ListUseCasesResponse * ConnectClient::listUseCases(const ListUseCasesRequest &request)
 {
@@ -1499,6 +2053,40 @@ ListUsersResponse * ConnectClient::listUsers(const ListUsersRequest &request)
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * PutUserStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact, this sets
+ * the agent's next
+ *
+ * status>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/metrics-agent-status.html">Agent status</a> and <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/set-next-status.html">Set your next status</a> in the
+ * <i>Amazon Connect Administrator
+ */
+PutUserStatusResponse * ConnectClient::putUserStatus(const PutUserStatusRequest &request)
+{
+    return qobject_cast<PutUserStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * ReleasePhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Releases a phone number previously claimed to an Amazon Connect
+ */
+ReleasePhoneNumberResponse * ConnectClient::releasePhoneNumber(const ReleasePhoneNumberRequest &request)
+{
+    return qobject_cast<ReleasePhoneNumberResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * ResumeContactRecordingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1517,11 +2105,102 @@ ResumeContactRecordingResponse * ConnectClient::resumeContactRecording(const Res
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchAvailablePhoneNumbersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches for available phone numbers that you can claim to your Amazon Connect
+ */
+SearchAvailablePhoneNumbersResponse * ConnectClient::searchAvailablePhoneNumbers(const SearchAvailablePhoneNumbersRequest &request)
+{
+    return qobject_cast<SearchAvailablePhoneNumbersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchQueuesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Searches queues in an Amazon Connect instance, with optional
+ */
+SearchQueuesResponse * ConnectClient::searchQueues(const SearchQueuesRequest &request)
+{
+    return qobject_cast<SearchQueuesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchRoutingProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Searches routing profiles in an Amazon Connect instance, with optional
+ */
+SearchRoutingProfilesResponse * ConnectClient::searchRoutingProfiles(const SearchRoutingProfilesRequest &request)
+{
+    return qobject_cast<SearchRoutingProfilesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchSecurityProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Searches security profiles in an Amazon Connect instance, with optional
+ */
+SearchSecurityProfilesResponse * ConnectClient::searchSecurityProfiles(const SearchSecurityProfilesRequest &request)
+{
+    return qobject_cast<SearchSecurityProfilesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches users in an Amazon Connect instance, with optional
+ */
+SearchUsersResponse * ConnectClient::searchUsers(const SearchUsersRequest &request)
+{
+    return qobject_cast<SearchUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * SearchVocabulariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
+ * <code>NameStartsWith</code>, and
+ */
+SearchVocabulariesResponse * ConnectClient::searchVocabularies(const SearchVocabulariesRequest &request)
+{
+    return qobject_cast<SearchVocabulariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * StartChatContactResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a contact flow to start a new chat for the customer. Response of this API provides a token required to obtain
+ * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain
  * credentials from the <a
  * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html">CreateParticipantConnection</a>
  * API in the Amazon Connect Participant
@@ -1535,7 +2214,7 @@ ResumeContactRecordingResponse * ConnectClient::resumeContactRecording(const Res
  *
  * </p
  *
- * A 429 error occurs in two
+ * A 429 error occurs in the following
  *
  * situations> <ul> <li>
  *
@@ -1547,6 +2226,11 @@ ResumeContactRecordingResponse * ConnectClient::resumeContactRecording(const Res
  * concurrent active chats</a> is exceeded. Active chat throttling returns a
  *
  * <code>LimitExceededException</code>> </li> </ul>
+ *
+ * If you use the <code>ChatDurationInMinutes</code> parameter and receive a 400 error, your account may not support the
+ * ability to configure custom chat durations. For more information, contact Amazon Web Services Support.
+ *
+ * </p
  *
  * For more information about chat, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/chat.html">Chat</a>
  * in the <i>Amazon Connect Administrator
@@ -1562,10 +2246,22 @@ StartChatContactResponse * ConnectClient::startChatContact(const StartChatContac
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts recording the contact when the agent joins the call. StartContactRecording is a one-time action. For example, if
- * you use StopContactRecording to stop recording an ongoing call, you can't use StartContactRecording to restart it. For
- * scenarios where the recording has started and you want to suspend and resume it, such as when collecting sensitive
- * information (for example, a credit card number), use SuspendContactRecording and
+ * Starts recording the contact:
+ *
+ * </p <ul> <li>
+ *
+ * If the API is called <i>before</i> the agent joins the call, recording starts when the agent joins the
+ *
+ * call> </li> <li>
+ *
+ * If the API is called <i>after</i> the agent joins the call, recording starts at the time of the API
+ *
+ * call> </li> </ul>
+ *
+ * StartContactRecording is a one-time action. For example, if you use StopContactRecording to stop recording an ongoing
+ * call, you can't use StartContactRecording to restart it. For scenarios where the recording has started and you want to
+ * suspend and resume it, such as when collecting sensitive information (for example, a credit card number), use
+ * SuspendContactRecording and
  *
  * ResumeContactRecording>
  *
@@ -1583,18 +2279,36 @@ StartContactRecordingResponse * ConnectClient::startContactRecording(const Start
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * StartContactStreamingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates real-time message streaming for a new chat
+ *
+ * contact>
+ *
+ * For more information about message streaming, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-message-streaming.html">Enable real-time chat message
+ * streaming</a> in the <i>Amazon Connect Administrator
+ */
+StartContactStreamingResponse * ConnectClient::startContactStreaming(const StartContactStreamingRequest &request)
+{
+    return qobject_cast<StartContactStreamingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * StartOutboundVoiceContactResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact flow
- * that's specified (in
+ * Places an outbound call to a contact, and then initiates the flow. It performs the actions in the flow that's specified
+ * (in
  *
  * <code>ContactFlowId</code>)>
  *
- * Agents do not initiate the outbound API, which means that they do not dial the contact. If the contact flow places an
- * outbound call to a contact, and then puts the contact in queue, the call is then routed to the agent, like any other
- * inbound
+ * Agents do not initiate the outbound API, which means that they do not dial the contact. If the flow places an outbound
+ * call to a contact, and then puts the contact in queue, the call is then routed to the agent, like any other inbound
  *
  * case>
  *
@@ -1606,6 +2320,13 @@ StartContactRecordingResponse * ConnectClient::startContactRecording(const Start
  * service quota increase request. For more information, see <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect Service
  * Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
+ *
+ * </p </note> <note>
+ *
+ * Campaign calls are not allowed by default. Before you can make a call with <code>TrafficType</code> =
+ * <code>CAMPAIGN</code>, you must submit a service quota increase request to the quota <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#outbound-communications-quotas">Amazon
+ * Connect campaigns</a>.
  */
 StartOutboundVoiceContactResponse * ConnectClient::startOutboundVoiceContact(const StartOutboundVoiceContactRequest &request)
 {
@@ -1618,7 +2339,7 @@ StartOutboundVoiceContactResponse * ConnectClient::startOutboundVoiceContact(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a contact flow to start a new
+ * Initiates a flow to start a new
  */
 StartTaskContactResponse * ConnectClient::startTaskContact(const StartTaskContactRequest &request)
 {
@@ -1631,7 +2352,13 @@ StartTaskContactResponse * ConnectClient::startTaskContact(const StartTaskContac
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Ends the specified
+ * Ends the specified contact. This call does not work for the following initiation
+ *
+ * methods> <ul> <li>
+ *
+ * DISCONNEC> </li> <li>
+ *
+ * TRANSFE> </li> <li>
  */
 StopContactResponse * ConnectClient::stopContact(const StopContactRequest &request)
 {
@@ -1656,6 +2383,21 @@ StopContactResponse * ConnectClient::stopContact(const StopContactRequest &reque
 StopContactRecordingResponse * ConnectClient::stopContactRecording(const StopContactRecordingRequest &request)
 {
     return qobject_cast<StopContactRecordingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * StopContactStreamingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Ends message streaming on a specified contact. To restart message streaming on that contact, call the <a
+ * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactStreaming.html">StartContactStreaming</a>
+ * API.
+ */
+StopContactStreamingResponse * ConnectClient::stopContactStreaming(const StopContactStreamingRequest &request)
+{
+    return qobject_cast<StopContactStreamingResponse *>(send(request));
 }
 
 /*!
@@ -1691,9 +2433,11 @@ SuspendContactRecordingResponse * ConnectClient::suspendContactRecording(const S
  *
  * resource>
  *
- * The supported resource types are users, routing profiles, queues, quick connects, and contact
+ * Some of the supported resource types are agents, routing profiles, queues, quick connects, contact flows, agent
+ * statuses, hours of operation, phone numbers, security profiles, and task templates. For a complete list, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/tagging.html">Tagging resources in Amazon
  *
- * flows>
+ * Connect</a>>
  *
  * For sample policies that use tags, see <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_id-based-policy-examples.html">Amazon Connect
@@ -1702,6 +2446,46 @@ SuspendContactRecordingResponse * ConnectClient::suspendContactRecording(const S
 TagResourceResponse * ConnectClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * TransferContactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Transfers contacts from one agent or queue to another agent or queue at any point after a contact is created. You can
+ * transfer a contact to another queue by providing the flow which orchestrates the contact to the destination queue. This
+ * gives you more control over contact handling and helps you adhere to the service level agreement (SLA) guaranteed to
+ * your
+ *
+ * customers>
+ *
+ * Note the following
+ *
+ * requirements> <ul> <li>
+ *
+ * Transfer is supported for only <code>TASK</code>
+ *
+ * contacts> </li> <li>
+ *
+ * Do not use both <code>QueueId</code> and <code>UserId</code> in the same
+ *
+ * call> </li> <li>
+ *
+ * The following flow types are supported: Inbound flow, Transfer to agent flow, and Transfer to queue
+ *
+ * flow> </li> <li>
+ *
+ * The <code>TransferContact</code> API can be called only on active
+ *
+ * contacts> </li> <li>
+ *
+ * A contact cannot be transferred more than 11
+ */
+TransferContactResponse * ConnectClient::transferContact(const TransferContactRequest &request)
+{
+    return qobject_cast<TransferContactResponse *>(send(request));
 }
 
 /*!
@@ -1715,6 +2499,45 @@ TagResourceResponse * ConnectClient::tagResource(const TagResourceRequest &reque
 UntagResourceResponse * ConnectClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateAgentStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Updates agent
+ */
+UpdateAgentStatusResponse * ConnectClient::updateAgentStatus(const UpdateAgentStatusRequest &request)
+{
+    return qobject_cast<UpdateAgentStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateContactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Adds or updates user-defined contact information associated with the specified contact. At least one field to be updated
+ * must be present in the
+ *
+ * request> <b>
+ *
+ * You can add or update user-defined contact information for both ongoing and completed
+ */
+UpdateContactResponse * ConnectClient::updateContact(const UpdateContactRequest &request)
+{
+    return qobject_cast<UpdateContactResponse *>(send(request));
 }
 
 /*!
@@ -1735,18 +2558,10 @@ UntagResourceResponse * ConnectClient::untagResource(const UntagResourceRequest 
  *
  * callers>
  *
- * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about CTR
- * retention and the maximum size of the CTR attributes section, see <a
+ * Contact attributes are available in Amazon Connect for 24 months, and are then deleted. For information about contact
+ * record retention and the maximum size of the contact record attributes section, see <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html#feature-limits">Feature
  * specifications</a> in the <i>Amazon Connect Administrator Guide</i>.
- *
- * </p
- *
- * <b>Important:</b> You cannot use the operation to update attributes for contacts that occurred prior to the release of
- * the API, which was September 12, 2018. You can update attributes only for contacts that started after the release of the
- * API. If you attempt to update attributes for a contact that occurred prior to the release of the API, a 400 error is
- * returned. This applies also to queued callbacks that were initiated prior to the release of the API but are still active
- * in your
  */
 UpdateContactAttributesResponse * ConnectClient::updateContactAttributes(const UpdateContactAttributesRequest &request)
 {
@@ -1759,11 +2574,11 @@ UpdateContactAttributesResponse * ConnectClient::updateContactAttributes(const U
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified contact
+ * Updates the specified
  *
  * flow>
  *
- * You can also create and update contact flows using the <a
+ * You can also create and update flows using the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  */
 UpdateContactFlowContentResponse * ConnectClient::updateContactFlowContent(const UpdateContactFlowContentRequest &request)
@@ -1773,20 +2588,89 @@ UpdateContactFlowContentResponse * ConnectClient::updateContactFlowContent(const
 
 /*!
  * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateContactFlowMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates metadata about specified
+ */
+UpdateContactFlowMetadataResponse * ConnectClient::updateContactFlowMetadata(const UpdateContactFlowMetadataRequest &request)
+{
+    return qobject_cast<UpdateContactFlowMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateContactFlowModuleContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates specified flow module for the specified Amazon Connect instance.
+ */
+UpdateContactFlowModuleContentResponse * ConnectClient::updateContactFlowModuleContent(const UpdateContactFlowModuleContentRequest &request)
+{
+    return qobject_cast<UpdateContactFlowModuleContentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateContactFlowModuleMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates metadata about specified flow
+ */
+UpdateContactFlowModuleMetadataResponse * ConnectClient::updateContactFlowModuleMetadata(const UpdateContactFlowModuleMetadataRequest &request)
+{
+    return qobject_cast<UpdateContactFlowModuleMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
  * UpdateContactFlowNameResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The name of the contact
+ * The name of the
  *
  * flow>
  *
- * You can also create and update contact flows using the <a
+ * You can also create and update flows using the <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  */
 UpdateContactFlowNameResponse * ConnectClient::updateContactFlowName(const UpdateContactFlowNameRequest &request)
 {
     return qobject_cast<UpdateContactFlowNameResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateContactScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the scheduled time of a task contact that is already
+ */
+UpdateContactScheduleResponse * ConnectClient::updateContactSchedule(const UpdateContactScheduleRequest &request)
+{
+    return qobject_cast<UpdateContactScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateHoursOfOperationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Updates the hours of
+ */
+UpdateHoursOfOperationResponse * ConnectClient::updateHoursOfOperation(const UpdateHoursOfOperationRequest &request)
+{
+    return qobject_cast<UpdateHoursOfOperationResponse *>(send(request));
 }
 
 /*!
@@ -1821,6 +2705,20 @@ UpdateInstanceAttributeResponse * ConnectClient::updateInstanceAttribute(const U
 UpdateInstanceStorageConfigResponse * ConnectClient::updateInstanceStorageConfig(const UpdateInstanceStorageConfigRequest &request)
 {
     return qobject_cast<UpdateInstanceStorageConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdatePhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates your claimed phone number from its current Amazon Connect instance to another Amazon Connect instance in the
+ * same
+ */
+UpdatePhoneNumberResponse * ConnectClient::updatePhoneNumber(const UpdatePhoneNumberRequest &request)
+{
+    return qobject_cast<UpdatePhoneNumberResponse *>(send(request));
 }
 
 /*!
@@ -1914,10 +2812,6 @@ UpdateQueueStatusResponse * ConnectClient::updateQueueStatus(const UpdateQueueSt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
- *
  * Updates the configuration settings for the specified quick
  */
 UpdateQuickConnectConfigResponse * ConnectClient::updateQuickConnectConfig(const UpdateQuickConnectConfigRequest &request)
@@ -1930,10 +2824,6 @@ UpdateQuickConnectConfigResponse * ConnectClient::updateQuickConnectConfig(const
  * UpdateQuickConnectNameResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
- *
- * This API is in preview release for Amazon Connect and is subject to
- *
- * change>
  *
  * Updates the name and description of a quick connect. The request accepts the following data in JSON format. At least
  * <code>Name</code> or <code>Description</code> must be
@@ -1994,6 +2884,37 @@ UpdateRoutingProfileNameResponse * ConnectClient::updateRoutingProfileName(const
 UpdateRoutingProfileQueuesResponse * ConnectClient::updateRoutingProfileQueues(const UpdateRoutingProfileQueuesRequest &request)
 {
     return qobject_cast<UpdateRoutingProfileQueuesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateSecurityProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API is in preview release for Amazon Connect and is subject to
+ *
+ * change>
+ *
+ * Updates a security
+ */
+UpdateSecurityProfileResponse * ConnectClient::updateSecurityProfile(const UpdateSecurityProfileRequest &request)
+{
+    return qobject_cast<UpdateSecurityProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConnectClient service, and returns a pointer to an
+ * UpdateTaskTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates details about a specific task template in the specified Amazon Connect instance. This operation does not support
+ * partial updates. Instead it does a full update of template
+ */
+UpdateTaskTemplateResponse * ConnectClient::updateTaskTemplate(const UpdateTaskTemplateRequest &request)
+{
+    return qobject_cast<UpdateTaskTemplateResponse *>(send(request));
 }
 
 /*!

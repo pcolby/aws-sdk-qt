@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetGroupPolicyResponse
- * \brief The GetGroupPolicyResponse class provides an interace for IAM GetGroupPolicy responses.
+ * \class QtAws::Iam::GetGroupPolicyResponse
+ * \brief The GetGroupPolicyResponse class provides an interace for Iam GetGroupPolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getGroupPolicy
  */
@@ -68,7 +68,7 @@ const GetGroupPolicyRequest * GetGroupPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM GetGroupPolicy \a response.
+ * Parses a successful Iam GetGroupPolicy \a response.
  */
 void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetGroupPolicyResponsePrivate
+ * \class QtAws::Iam::GetGroupPolicyResponsePrivate
  * \brief The GetGroupPolicyResponsePrivate class provides private implementation for GetGroupPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM GetGroupPolicy response element from \a xml.
+ * Parses a Iam GetGroupPolicy response element from \a xml.
  */
 void GetGroupPolicyResponsePrivate::parseGetGroupPolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetGroupPolicyResponsePrivate::parseGetGroupPolicyResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "liststreamsrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class ListStreamsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

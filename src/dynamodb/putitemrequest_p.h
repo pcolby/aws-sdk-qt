@@ -24,14 +24,14 @@
 #include "putitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class PutItemRequest;
 
-class PutItemRequestPrivate : public DynamoDBRequestPrivate {
+class PutItemRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    PutItemRequestPrivate(const DynamoDBRequest::Action action,
+    PutItemRequestPrivate(const DynamoDbRequest::Action action,
                                    PutItemRequest * const q);
     PutItemRequestPrivate(const PutItemRequestPrivate &other,
                                    PutItemRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

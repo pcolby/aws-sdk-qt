@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class BatchCheckLayerAvailabilityRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT BatchCheckLayerAvailabilityRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT BatchCheckLayerAvailabilityRequest : public EcrPublicRequest {
 
 public:
     BatchCheckLayerAvailabilityRequest(const BatchCheckLayerAvailabilityRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::PutAutoScalingPolicyResponse
- * \brief The PutAutoScalingPolicyResponse class provides an interace for EMR PutAutoScalingPolicy responses.
+ * \class QtAws::Emr::PutAutoScalingPolicyResponse
+ * \brief The PutAutoScalingPolicyResponse class provides an interace for Emr PutAutoScalingPolicy responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::putAutoScalingPolicy
  */
@@ -64,7 +64,7 @@ const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMR PutAutoScalingPolicy \a response.
+ * Parses a successful Emr PutAutoScalingPolicy \a response.
  */
 void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::PutAutoScalingPolicyResponsePrivate
+ * \class QtAws::Emr::PutAutoScalingPolicyResponsePrivate
  * \brief The PutAutoScalingPolicyResponsePrivate class provides private implementation for PutAutoScalingPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
 }
 
 /*!
- * Parses a EMR PutAutoScalingPolicy response element from \a xml.
+ * Parses a Emr PutAutoScalingPolicy response element from \a xml.
  */
 void PutAutoScalingPolicyResponsePrivate::parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void PutAutoScalingPolicyResponsePrivate::parsePutAutoScalingPolicyResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

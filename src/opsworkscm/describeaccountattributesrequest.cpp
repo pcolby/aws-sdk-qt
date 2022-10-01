@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeAccountAttributesRequest
- * \brief The DescribeAccountAttributesRequest class provides an interface for OpsWorksCM DescribeAccountAttributes requests.
+ * \class QtAws::OpsWorksCm::DescribeAccountAttributesRequest
+ * \brief The DescribeAccountAttributesRequest class provides an interface for OpsWorksCm DescribeAccountAttributes requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeAccountAttributes
+ * \sa OpsWorksCmClient::describeAccountAttributes
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
-    : OpsWorksCMRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
  * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
-    : OpsWorksCMRequest(new DescribeAccountAttributesRequestPrivate(OpsWorksCMRequest::DescribeAccountAttributesAction, this))
+    : OpsWorksCmRequest(new DescribeAccountAttributesRequestPrivate(OpsWorksCmRequest::DescribeAccountAttributesAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeAccountAttributesRequestPrivate
+ * \class QtAws::OpsWorksCm::DescribeAccountAttributesRequestPrivate
  * \brief The DescribeAccountAttributesRequestPrivate class provides private implementation for DescribeAccountAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DescribeAccountAttributesRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DescribeAccountAttributesRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
-    const OpsWorksCMRequest::Action action, DescribeAccountAttributesRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DescribeAccountAttributesRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

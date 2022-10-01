@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::ListActivitiesResponse
- * \brief The ListActivitiesResponse class provides an interace for SFN ListActivities responses.
+ * \class QtAws::Sfn::ListActivitiesResponse
+ * \brief The ListActivitiesResponse class provides an interace for Sfn ListActivities responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const ListActivitiesRequest * ListActivitiesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN ListActivities \a response.
+ * Parses a successful Sfn ListActivities \a response.
  */
 void ListActivitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void ListActivitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::ListActivitiesResponsePrivate
+ * \class QtAws::Sfn::ListActivitiesResponsePrivate
  * \brief The ListActivitiesResponsePrivate class provides private implementation for ListActivitiesResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
 }
 
 /*!
- * Parses a SFN ListActivities response element from \a xml.
+ * Parses a Sfn ListActivities response element from \a xml.
  */
 void ListActivitiesResponsePrivate::parseListActivitiesResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ListActivitiesResponsePrivate::parseListActivitiesResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

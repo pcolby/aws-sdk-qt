@@ -24,11 +24,11 @@
 #include "describetablereplicaautoscalingrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeTableReplicaAutoScalingResponsePrivate;
 
-class QTAWSDYNAMODB_EXPORT DescribeTableReplicaAutoScalingResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT DescribeTableReplicaAutoScalingResponse : public DynamoDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

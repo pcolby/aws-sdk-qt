@@ -259,7 +259,7 @@ QNetworkRequest ResourceGroupsRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsRequest::Action action, ResourceGroupsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-27"))
 {
 
 }

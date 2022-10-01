@@ -23,25 +23,25 @@
 #include "ec2instanceconnectrequest_p.h"
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 /*!
- * \class QtAws::EC2InstanceConnect::SendSerialConsoleSSHPublicKeyRequest
- * \brief The SendSerialConsoleSSHPublicKeyRequest class provides an interface for EC2InstanceConnect SendSerialConsoleSSHPublicKey requests.
+ * \class QtAws::Ec2InstanceConnect::SendSerialConsoleSSHPublicKeyRequest
+ * \brief The SendSerialConsoleSSHPublicKeyRequest class provides an interface for Ec2InstanceConnect SendSerialConsoleSSHPublicKey requests.
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  *
  *  Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing
  *  users a simple and secure way to connect to their
  *
- * \sa EC2InstanceConnectClient::sendSerialConsoleSSHPublicKey
+ * \sa Ec2InstanceConnectClient::sendSerialConsoleSSHPublicKey
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 SendSerialConsoleSSHPublicKeyRequest::SendSerialConsoleSSHPublicKeyRequest(const SendSerialConsoleSSHPublicKeyRequest &other)
-    : EC2InstanceConnectRequest(new SendSerialConsoleSSHPublicKeyRequestPrivate(*other.d_func(), this))
+    : Ec2InstanceConnectRequest(new SendSerialConsoleSSHPublicKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ SendSerialConsoleSSHPublicKeyRequest::SendSerialConsoleSSHPublicKeyRequest(const
  * Constructs a SendSerialConsoleSSHPublicKeyRequest object.
  */
 SendSerialConsoleSSHPublicKeyRequest::SendSerialConsoleSSHPublicKeyRequest()
-    : EC2InstanceConnectRequest(new SendSerialConsoleSSHPublicKeyRequestPrivate(EC2InstanceConnectRequest::SendSerialConsoleSSHPublicKeyAction, this))
+    : Ec2InstanceConnectRequest(new SendSerialConsoleSSHPublicKeyRequestPrivate(Ec2InstanceConnectRequest::SendSerialConsoleSSHPublicKeyAction, this))
 {
 
 }
@@ -75,20 +75,20 @@ QtAws::Core::AwsAbstractResponse * SendSerialConsoleSSHPublicKeyRequest::respons
 }
 
 /*!
- * \class QtAws::EC2InstanceConnect::SendSerialConsoleSSHPublicKeyRequestPrivate
+ * \class QtAws::Ec2InstanceConnect::SendSerialConsoleSSHPublicKeyRequestPrivate
  * \brief The SendSerialConsoleSSHPublicKeyRequestPrivate class provides private implementation for SendSerialConsoleSSHPublicKeyRequest.
  * \internal
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  */
 
 /*!
- * Constructs a SendSerialConsoleSSHPublicKeyRequestPrivate object for EC2InstanceConnect \a action,
+ * Constructs a SendSerialConsoleSSHPublicKeyRequestPrivate object for Ec2InstanceConnect \a action,
  * with public implementation \a q.
  */
 SendSerialConsoleSSHPublicKeyRequestPrivate::SendSerialConsoleSSHPublicKeyRequestPrivate(
-    const EC2InstanceConnectRequest::Action action, SendSerialConsoleSSHPublicKeyRequest * const q)
-    : EC2InstanceConnectRequestPrivate(action, q)
+    const Ec2InstanceConnectRequest::Action action, SendSerialConsoleSSHPublicKeyRequest * const q)
+    : Ec2InstanceConnectRequestPrivate(action, q)
 {
 
 }
@@ -101,10 +101,10 @@ SendSerialConsoleSSHPublicKeyRequestPrivate::SendSerialConsoleSSHPublicKeyReques
  */
 SendSerialConsoleSSHPublicKeyRequestPrivate::SendSerialConsoleSSHPublicKeyRequestPrivate(
     const SendSerialConsoleSSHPublicKeyRequestPrivate &other, SendSerialConsoleSSHPublicKeyRequest * const q)
-    : EC2InstanceConnectRequestPrivate(other, q)
+    : Ec2InstanceConnectRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws

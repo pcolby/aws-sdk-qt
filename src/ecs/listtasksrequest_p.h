@@ -24,7 +24,7 @@
 #include "listtasksrequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class ListTasksRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

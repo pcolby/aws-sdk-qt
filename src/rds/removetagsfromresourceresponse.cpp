@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RemoveTagsFromResourceResponse
- * \brief The RemoveTagsFromResourceResponse class provides an interace for RDS RemoveTagsFromResource responses.
+ * \class QtAws::Rds::RemoveTagsFromResourceResponse
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for Rds RemoveTagsFromResource responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful RDS RemoveTagsFromResource \a response.
+ * Parses a successful Rds RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RemoveTagsFromResourceResponsePrivate
+ * \class QtAws::Rds::RemoveTagsFromResourceResponsePrivate
  * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 }
 
 /*!
- * Parses a RDS RemoveTagsFromResource response element from \a xml.
+ * Parses a Rds RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

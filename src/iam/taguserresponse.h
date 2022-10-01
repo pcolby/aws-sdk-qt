@@ -24,7 +24,7 @@
 #include "taguserrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class TagUserResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

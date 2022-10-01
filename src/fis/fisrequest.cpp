@@ -21,39 +21,41 @@
 #include "fisrequest_p.h"
 
 namespace QtAws {
-namespace FIS {
+namespace Fis {
 
 /*!
- * \class QtAws::FIS::FisRequest
- * \brief The FisRequest class provides an interface for FIS requests.
+ * \class QtAws::Fis::FisRequest
+ * \brief The FisRequest class provides an interface for Fis requests.
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
  * \enum FisRequest::Action
  *
- * This enum describes the actions that can be performed as FIS
+ * This enum describes the actions that can be performed as Fis
  * requests.
  *
- * \value CreateExperimentTemplateAction FIS CreateExperimentTemplate action.
- * \value DeleteExperimentTemplateAction FIS DeleteExperimentTemplate action.
- * \value GetActionAction FIS GetAction action.
- * \value GetExperimentAction FIS GetExperiment action.
- * \value GetExperimentTemplateAction FIS GetExperimentTemplate action.
- * \value ListActionsAction FIS ListActions action.
- * \value ListExperimentTemplatesAction FIS ListExperimentTemplates action.
- * \value ListExperimentsAction FIS ListExperiments action.
- * \value ListTagsForResourceAction FIS ListTagsForResource action.
- * \value StartExperimentAction FIS StartExperiment action.
- * \value StopExperimentAction FIS StopExperiment action.
- * \value TagResourceAction FIS TagResource action.
- * \value UntagResourceAction FIS UntagResource action.
- * \value UpdateExperimentTemplateAction FIS UpdateExperimentTemplate action.
+ * \value CreateExperimentTemplateAction Fis CreateExperimentTemplate action.
+ * \value DeleteExperimentTemplateAction Fis DeleteExperimentTemplate action.
+ * \value GetActionAction Fis GetAction action.
+ * \value GetExperimentAction Fis GetExperiment action.
+ * \value GetExperimentTemplateAction Fis GetExperimentTemplate action.
+ * \value GetTargetResourceTypeAction Fis GetTargetResourceType action.
+ * \value ListActionsAction Fis ListActions action.
+ * \value ListExperimentTemplatesAction Fis ListExperimentTemplates action.
+ * \value ListExperimentsAction Fis ListExperiments action.
+ * \value ListTagsForResourceAction Fis ListTagsForResource action.
+ * \value ListTargetResourceTypesAction Fis ListTargetResourceTypes action.
+ * \value StartExperimentAction Fis StartExperiment action.
+ * \value StopExperimentAction Fis StopExperiment action.
+ * \value TagResourceAction Fis TagResource action.
+ * \value UntagResourceAction Fis UntagResource action.
+ * \value UpdateExperimentTemplateAction Fis UpdateExperimentTemplate action.
  */
 
 /*!
- * Constructs a FisRequest object for FIS \a action.
+ * Constructs a FisRequest object for Fis \a action.
  */
 FisRequest::FisRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new FisRequestPrivate(action, this))
@@ -94,7 +96,7 @@ FisRequest::FisRequest(FisRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the FIS action to be performed by this request.
+ * Returns the Fis action to be performed by this request.
  */
 FisRequest::Action FisRequest::action() const
 {
@@ -103,7 +105,7 @@ FisRequest::Action FisRequest::action() const
 }
 
 /*!
- * Returns the name of the FIS action to be performed by this request.
+ * Returns the name of the Fis action to be performed by this request.
  */
 QString FisRequest::actionString() const
 {
@@ -111,7 +113,7 @@ QString FisRequest::actionString() const
 }
 
 /*!
- * Returns the FIS API version implemented by this request.
+ * Returns the Fis API version implemented by this request.
  */
 QString FisRequest::apiVersion() const
 {
@@ -120,7 +122,7 @@ QString FisRequest::apiVersion() const
 }
 
 /*!
- * Sets the FIS action to be performed by this request to \a action.
+ * Sets the Fis action to be performed by this request to \a action.
  */
 void FisRequest::setAction(const Action action)
 {
@@ -129,7 +131,7 @@ void FisRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the FIS API version to include in this request to \a version.
+ * Sets the Fis API version to include in this request to \a version.
  */
 void FisRequest::setApiVersion(const QString &version)
 {
@@ -154,15 +156,15 @@ bool FisRequest::operator==(const FisRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid FIS queue name.
+ * Returns \c tue if \a queueName is a valid Fis queue name.
  *
- * @par From FIS FAQs:
+ * @par From Fis FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid FIS queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Fis queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -229,10 +231,10 @@ void FisRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the FIS request using the given
+ * Returns a network request for the Fis request using the given
  * \a endpoint.
  *
- * This FIS implementation builds request URLs by combining the
+ * This Fis implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -245,19 +247,19 @@ QNetworkRequest FisRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::FIS::FisRequestPrivate
+ * \class QtAws::Fis::FisRequestPrivate
  * \brief The FisRequestPrivate class provides private implementation for FisRequest.
  * \internal
  *
- * \inmodule QtAwsFIS
+ * \inmodule QtAwsFis
  */
 
 /*!
- * Constructs a FisRequestPrivate object for FIS \a action,
+ * Constructs a FisRequestPrivate object for Fis \a action,
  * with public implementation \a q.
  */
 FisRequestPrivate::FisRequestPrivate(const FisRequest::Action action, FisRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-12-01"))
 {
 
 }
@@ -283,7 +285,7 @@ FisRequestPrivate::FisRequestPrivate(const FisRequestPrivate &other,
  * invalid.
  *
  * This function converts FisRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the FIS service's Action
+ * string representations, appropriate for use with the Fis service's Action
  * query parameters.
  */
 QString FisRequestPrivate::toString(const FisRequest::Action &action)
@@ -296,10 +298,12 @@ QString FisRequestPrivate::toString(const FisRequest::Action &action)
         ActionToString(GetAction);
         ActionToString(GetExperiment);
         ActionToString(GetExperimentTemplate);
+        ActionToString(GetTargetResourceType);
         ActionToString(ListActions);
         ActionToString(ListExperimentTemplates);
         ActionToString(ListExperiments);
         ActionToString(ListTagsForResource);
+        ActionToString(ListTargetResourceTypes);
         ActionToString(StartExperiment);
         ActionToString(StopExperiment);
         ActionToString(TagResource);
@@ -312,5 +316,5 @@ QString FisRequestPrivate::toString(const FisRequest::Action &action)
     return QString();
 }
 
-} // namespace FIS
+} // namespace Fis
 } // namespace QtAws

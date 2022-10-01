@@ -24,11 +24,11 @@
 #include "flushstagecacherequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class FlushStageCacheResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT FlushStageCacheResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT FlushStageCacheResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

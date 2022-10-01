@@ -24,7 +24,7 @@
 #include "createopsitemrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class CreateOpsItemRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

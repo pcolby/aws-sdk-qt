@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::SsooidcResponse
- * \brief The SsooidcResponse class provides an interface for SSOOIDC responses.
+ * \class QtAws::SsoOidc::SsoOidcResponse
+ * \brief The SsoOidcResponse class provides an interface for SsoOidc responses.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a SsooidcResponse object with parent \a parent.
+ * Constructs a SsoOidcResponse object with parent \a parent.
  */
-SsooidcResponse::SsooidcResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SsooidcResponsePrivate(this), parent)
+SsoOidcResponse::SsoOidcResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SsoOidcResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SsooidcResponse object with private implementation \a d,
+ * Constructs a SsoOidcResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SsooidcResponsePrivate.
+ * implementation that inherits from SsoOidcResponsePrivate.
  */
-SsooidcResponse::SsooidcResponse(SsooidcResponsePrivate * const d, QObject * const parent)
+SsoOidcResponse::SsoOidcResponse(SsoOidcResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SsooidcResponse::SsooidcResponse(SsooidcResponsePrivate * const d, QObject * con
 /*!
  * \reimp
  */
-void SsooidcResponse::parseFailure(QIODevice &response)
+void SsoOidcResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(SsooidcResponse);
+    //Q_D(SsoOidcResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void SsooidcResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSOOIDC::SsooidcResponsePrivate
- * \brief The SsooidcResponsePrivate class provides private implementation for SsooidcResponse.
+ * \class QtAws::SsoOidc::SsoOidcResponsePrivate
+ * \brief The SsoOidcResponsePrivate class provides private implementation for SsoOidcResponse.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
- * Constructs a SsooidcResponsePrivate object with public implementation \a q.
+ * Constructs a SsoOidcResponsePrivate object with public implementation \a q.
  */
-SsooidcResponsePrivate::SsooidcResponsePrivate(
-    SsooidcResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SsoOidcResponsePrivate::SsoOidcResponsePrivate(
+    SsoOidcResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

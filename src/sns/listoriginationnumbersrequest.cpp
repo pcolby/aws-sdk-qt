@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListOriginationNumbersRequest
- * \brief The ListOriginationNumbersRequest class provides an interface for SNS ListOriginationNumbers requests.
+ * \class QtAws::Sns::ListOriginationNumbersRequest
+ * \brief The ListOriginationNumbersRequest class provides an interface for Sns ListOriginationNumbers requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * ListOriginationNumbersRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::SNS::ListOriginationNumbersRequestPrivate
+ * \class QtAws::Sns::ListOriginationNumbersRequestPrivate
  * \brief The ListOriginationNumbersRequestPrivate class provides private implementation for ListOriginationNumbersRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ ListOriginationNumbersRequestPrivate::ListOriginationNumbersRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

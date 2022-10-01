@@ -244,7 +244,7 @@ QNetworkRequest ConnectContactLensRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 ConnectContactLensRequestPrivate::ConnectContactLensRequestPrivate(const ConnectContactLensRequest::Action action, ConnectContactLensRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-08-21"))
 {
 
 }

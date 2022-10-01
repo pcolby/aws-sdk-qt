@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StopDBClusterRequest
- * \brief The StopDBClusterRequest class provides an interface for RDS StopDBCluster requests.
+ * \class QtAws::Rds::StopDBClusterRequest
+ * \brief The StopDBClusterRequest class provides an interface for Rds StopDBCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * StopDBClusterRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::RDS::StopDBClusterRequestPrivate
+ * \class QtAws::Rds::StopDBClusterRequestPrivate
  * \brief The StopDBClusterRequestPrivate class provides private implementation for StopDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ StopDBClusterRequestPrivate::StopDBClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

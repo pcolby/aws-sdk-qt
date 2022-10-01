@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::TagResourceRequest
- * \brief The TagResourceRequest class provides an interface for WAFRegional TagResource requests.
+ * \class QtAws::WafRegional::TagResourceRequest
+ * \brief The TagResourceRequest class provides an interface for WafRegional TagResource requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::tagResource
+ * \sa WafRegionalClient::tagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : WAFRegionalRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : WAFRegionalRequest(new TagResourceRequestPrivate(WAFRegionalRequest::TagResourceAction, this))
+    : WafRegionalRequest(new TagResourceRequestPrivate(WafRegionalRequest::TagResourceAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAFRegional::TagResourceRequestPrivate
+ * \class QtAws::WafRegional::TagResourceRequestPrivate
  * \brief The TagResourceRequestPrivate class provides private implementation for TagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for WAFRegional \a action,
+ * Constructs a TagResourceRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const WAFRegionalRequest::Action action, TagResourceRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, TagResourceRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

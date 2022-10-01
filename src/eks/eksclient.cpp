@@ -41,6 +41,8 @@
 #include "deletefargateprofileresponse.h"
 #include "deletenodegrouprequest.h"
 #include "deletenodegroupresponse.h"
+#include "deregisterclusterrequest.h"
+#include "deregisterclusterresponse.h"
 #include "describeaddonrequest.h"
 #include "describeaddonresponse.h"
 #include "describeaddonversionsrequest.h"
@@ -71,6 +73,8 @@
 #include "listtagsforresourceresponse.h"
 #include "listupdatesrequest.h"
 #include "listupdatesresponse.h"
+#include "registerclusterrequest.h"
+#include "registerclusterresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -90,8 +94,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::EKS
- * \brief Contains classess for accessing Amazon Elastic Kubernetes Service ( EKS).
+ * \namespace QtAws::Eks
+ * \brief Contains classess for accessing Amazon Elastic Kubernetes Service.
  *
  * \inmodule QtAwsEks
  *
@@ -99,18 +103,18 @@
  */
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::EksClient
- * \brief The EksClient class provides access to the Amazon Elastic Kubernetes Service ( EKS) service.
+ * \class QtAws::Eks::EksClient
+ * \brief The EksClient class provides access to the Amazon Elastic Kubernetes Service service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -184,7 +188,7 @@ EksClient::EksClient(
  * cluster>
  *
  * You can use this API to enable encryption on existing clusters which do not have encryption already enabled. This allows
- * you to implement a defense-in-depth security strategy without migrating applications to new EKS
+ * you to implement a defense-in-depth security strategy without migrating applications to new Amazon EKS
  */
 AssociateEncryptionConfigResponse * EksClient::associateEncryptionConfig(const AssociateEncryptionConfigRequest &request)
 {
@@ -223,9 +227,10 @@ AssociateIdentityProviderConfigResponse * EksClient::associateIdentityProviderCo
  * add-on>
  *
  * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon
- * EKS clusters. Amazon EKS add-ons can only be used with Amazon EKS clusters running version 1.18 with platform version
- * <code>eks.3</code> or later because add-ons rely on the Server-side Apply Kubernetes feature, which is only available in
- * Kubernetes 1.18 and
+ * EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons rely on the
+ * Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more information, see <a
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html">Amazon EKS add-ons</a> in the <i>Amazon EKS
+ * User
  */
 CreateAddonResponse * EksClient::createAddon(const CreateAddonRequest &request)
 {
@@ -243,9 +248,9 @@ CreateAddonResponse * EksClient::createAddon(const CreateAddonRequest &request)
  * </p
  *
  * The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as
- * <code>etcd</code> and the API server. The control plane runs in an account managed by AWS, and the Kubernetes API is
- * exposed via the Amazon EKS API server endpoint. Each Amazon EKS cluster control plane is single-tenant and unique and
- * runs on its own set of Amazon EC2
+ * <code>etcd</code> and the API server. The control plane runs in an account managed by Amazon Web Services, and the
+ * Kubernetes API is exposed by the Amazon EKS API server endpoint. Each Amazon EKS cluster control plane is single tenant
+ * and unique. It runs on its own set of Amazon EC2
  *
  * instances>
  *
@@ -256,14 +261,14 @@ CreateAddonResponse * EksClient::createAddon(const CreateAddonRequest &request)
  *
  * flows)>
  *
- * Amazon EKS nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server
- * endpoint and a certificate file that is created for your
+ * Amazon EKS nodes run in your Amazon Web Services account and connect to your cluster's control plane over the Kubernetes
+ * API server endpoint and a certificate file that is created for your
  *
  * cluster>
  *
- * Cluster creation typically takes several minutes. After you create an Amazon EKS cluster, you must configure your
- * Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more information, see <a
- * href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster Authentication</a> and <a
+ * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must configure
+ * your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more information, see
+ * <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster Authentication</a> and <a
  * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching Amazon EKS nodes</a> in the
  * <i>Amazon EKS User
  */
@@ -278,8 +283,8 @@ CreateClusterResponse * EksClient::createCluster(const CreateClusterRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Fargate profile for your Amazon EKS cluster. You must have at least one Fargate profile in a cluster to
- * be able to run pods on
+ * Creates an Fargate profile for your Amazon EKS cluster. You must have at least one Fargate profile in a cluster to be
+ * able to run pods on
  *
  * Fargate>
  *
@@ -312,7 +317,7 @@ CreateClusterResponse * EksClient::createCluster(const CreateClusterRequest &req
  *
  * cluster>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html">AWS Fargate
+ * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html">Fargate
  * Profile</a> in the <i>Amazon EKS User
  */
 CreateFargateProfileResponse * EksClient::createFargateProfile(const CreateFargateProfileRequest &request)
@@ -335,9 +340,10 @@ CreateFargateProfileResponse * EksClient::createFargateProfile(const CreateFarga
  * support</a>>
  *
  * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
- * managed by AWS for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS optimized Amazon Linux 2 AMI.
- * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed
- * Node Groups</a> in the <i>Amazon EKS User Guide</i>.
+ * managed by Amazon Web Services for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS optimized
+ * Amazon Linux 2 AMI. For more information, see <a
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed Node Groups</a> in the
+ * <i>Amazon EKS User Guide</i>.
  */
 CreateNodegroupResponse * EksClient::createNodegroup(const CreateNodegroupRequest &request)
 {
@@ -394,7 +400,7 @@ DeleteClusterResponse * EksClient::deleteCluster(const DeleteClusterRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Fargate
+ * Deletes an Fargate
  *
  * profile>
  *
@@ -423,6 +429,19 @@ DeleteFargateProfileResponse * EksClient::deleteFargateProfile(const DeleteFarga
 DeleteNodegroupResponse * EksClient::deleteNodegroup(const DeleteNodegroupRequest &request)
 {
     return qobject_cast<DeleteNodegroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
+ * DeregisterClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deregisters a connected cluster to remove it from the Amazon EKS control
+ */
+DeregisterClusterResponse * EksClient::deregisterCluster(const DeregisterClusterRequest &request)
+{
+    return qobject_cast<DeregisterClusterResponse *>(send(request));
 }
 
 /*!
@@ -481,7 +500,7 @@ DescribeClusterResponse * EksClient::describeCluster(const DescribeClusterReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns descriptive information about an AWS Fargate
+ * Returns descriptive information about an Fargate
  */
 DescribeFargateProfileResponse * EksClient::describeFargateProfile(const DescribeFargateProfileRequest &request)
 {
@@ -520,9 +539,10 @@ DescribeNodegroupResponse * EksClient::describeNodegroup(const DescribeNodegroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns descriptive information about an update against your Amazon EKS cluster or associated managed node
+ * Returns descriptive information about an update against your Amazon EKS cluster or associated managed node group or
+ * Amazon EKS
  *
- * group>
+ * add-on>
  *
  * When the status of the update is <code>Succeeded</code>, the update is complete. If an update fails, the status is
  * <code>Failed</code>, and an error detail explains the reason for the
@@ -540,7 +560,7 @@ DescribeUpdateResponse * EksClient::describeUpdate(const DescribeUpdateRequest &
  *
  * Disassociates an identity provider configuration from a cluster. If you disassociate an identity provider from your
  * cluster, users included in the provider can no longer access the cluster. However, you can still access the cluster with
- * AWS IAM
+ * Amazon Web Services IAM
  */
 DisassociateIdentityProviderConfigResponse * EksClient::disassociateIdentityProviderConfig(const DisassociateIdentityProviderConfigRequest &request)
 {
@@ -566,7 +586,7 @@ ListAddonsResponse * EksClient::listAddons(const ListAddonsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Amazon EKS clusters in your AWS account in the specified
+ * Lists the Amazon EKS clusters in your Amazon Web Services account in the specified
  */
 ListClustersResponse * EksClient::listClusters(const ListClustersRequest &request)
 {
@@ -579,7 +599,7 @@ ListClustersResponse * EksClient::listClusters(const ListClustersRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the AWS Fargate profiles associated with the specified cluster in your AWS account in the specified
+ * Lists the Fargate profiles associated with the specified cluster in your Amazon Web Services account in the specified
  */
 ListFargateProfilesResponse * EksClient::listFargateProfiles(const ListFargateProfilesRequest &request)
 {
@@ -605,8 +625,8 @@ ListIdentityProviderConfigsResponse * EksClient::listIdentityProviderConfigs(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Amazon EKS managed node groups associated with the specified cluster in your AWS account in the specified
- * Region. Self-managed node groups are not
+ * Lists the Amazon EKS managed node groups associated with the specified cluster in your Amazon Web Services account in
+ * the specified Region. Self-managed node groups are not
  */
 ListNodegroupsResponse * EksClient::listNodegroups(const ListNodegroupsRequest &request)
 {
@@ -632,11 +652,48 @@ ListTagsForResourceResponse * EksClient::listTagsForResource(const ListTagsForRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the updates associated with an Amazon EKS cluster or managed node group in your AWS account, in the specified
+ * Lists the updates associated with an Amazon EKS cluster or managed node group in your Amazon Web Services account, in
+ * the specified
  */
 ListUpdatesResponse * EksClient::listUpdates(const ListUpdatesRequest &request)
 {
     return qobject_cast<ListUpdatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
+ * RegisterClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Connects a Kubernetes cluster to the Amazon EKS control plane.
+ *
+ * </p
+ *
+ * Any Kubernetes cluster can be connected to the Amazon EKS control plane to view current information about the cluster
+ * and its nodes.
+ *
+ * </p
+ *
+ * Cluster connection requires two steps. First, send a <code> <a>RegisterClusterRequest</a> </code> to add it to the
+ * Amazon EKS control
+ *
+ * plane>
+ *
+ * Second, a <a
+ * href="https://amazon-eks.s3.us-west-2.amazonaws.com/eks-connector/manifests/eks-connector/latest/eks-connector.yaml">Manifest</a>
+ * containing the <code>activationID</code> and <code>activationCode</code> must be applied to the Kubernetes cluster
+ * through it's native provider to provide
+ *
+ * visibility>
+ *
+ * After the Manifest is updated and applied, then the connected cluster is visible to the Amazon EKS control plane. If the
+ * Manifest is not applied within three days, then the connected cluster will no longer be visible and must be
+ * deregistered. See
+ */
+RegisterClusterResponse * EksClient::registerCluster(const RegisterClusterRequest &request)
+{
+    return qobject_cast<RegisterClusterResponse *>(send(request));
 }
 
 /*!
@@ -701,14 +758,14 @@ UpdateAddonResponse * EksClient::updateAddon(const UpdateAddonRequest &request)
  * </i>> <note>
  *
  * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more
- * information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ * information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch
  *
  * Pricing</a>> </note>
  *
  * You can also use this API operation to enable or disable public and private access to your cluster's Kubernetes API
  * server endpoint. By default, public access is enabled, and private access is disabled. For more information, see <a
- * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
- * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access
+ * control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
  *
  * </p <b>
  *
@@ -805,12 +862,12 @@ UpdateNodegroupVersionResponse * EksClient::updateNodegroupVersion(const UpdateN
 }
 
 /*!
- * \class QtAws::EKS::EksClientPrivate
+ * \class QtAws::Eks::EksClientPrivate
  * \brief The EksClientPrivate class provides private implementation for EksClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -822,5 +879,5 @@ EksClientPrivate::EksClientPrivate(EksClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

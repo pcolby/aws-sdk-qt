@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
 /*!
- * \class QtAws::SSOOIDC::StartDeviceAuthorizationResponse
- * \brief The StartDeviceAuthorizationResponse class provides an interace for SSOOIDC StartDeviceAuthorization responses.
+ * \class QtAws::SsoOidc::StartDeviceAuthorizationResponse
+ * \brief The StartDeviceAuthorizationResponse class provides an interace for SsoOidc StartDeviceAuthorization responses.
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  *
  *  AWS Single Sign-On (SSO) OpenID Connect (OIDC) is a web service that enables a client (such as AWS CLI or a native
  *  application) to register with AWS SSO. The service also enables the client to fetch the user’s access token upon
@@ -56,7 +56,7 @@ namespace SSOOIDC {
  *  AWS services. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
  *
- * \sa SsooidcClient::startDeviceAuthorization
+ * \sa SsoOidcClient::startDeviceAuthorization
  */
 
 /*!
@@ -66,7 +66,7 @@ StartDeviceAuthorizationResponse::StartDeviceAuthorizationResponse(
         const StartDeviceAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SsooidcResponse(new StartDeviceAuthorizationResponsePrivate(this), parent)
+    : SsoOidcResponse(new StartDeviceAuthorizationResponsePrivate(this), parent)
 {
     setRequest(new StartDeviceAuthorizationRequest(request));
     setReply(reply);
@@ -83,7 +83,7 @@ const StartDeviceAuthorizationRequest * StartDeviceAuthorizationResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SSOOIDC StartDeviceAuthorization \a response.
+ * Parses a successful SsoOidc StartDeviceAuthorization \a response.
  */
 void StartDeviceAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -93,24 +93,24 @@ void StartDeviceAuthorizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSOOIDC::StartDeviceAuthorizationResponsePrivate
+ * \class QtAws::SsoOidc::StartDeviceAuthorizationResponsePrivate
  * \brief The StartDeviceAuthorizationResponsePrivate class provides private implementation for StartDeviceAuthorizationResponse.
  * \internal
  *
- * \inmodule QtAwsSSOOIDC
+ * \inmodule QtAwsSsoOidc
  */
 
 /*!
  * Constructs a StartDeviceAuthorizationResponsePrivate object with public implementation \a q.
  */
 StartDeviceAuthorizationResponsePrivate::StartDeviceAuthorizationResponsePrivate(
-    StartDeviceAuthorizationResponse * const q) : SsooidcResponsePrivate(q)
+    StartDeviceAuthorizationResponse * const q) : SsoOidcResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSOOIDC StartDeviceAuthorization response element from \a xml.
+ * Parses a SsoOidc StartDeviceAuthorization response element from \a xml.
  */
 void StartDeviceAuthorizationResponsePrivate::parseStartDeviceAuthorizationResponse(QXmlStreamReader &xml)
 {
@@ -118,5 +118,5 @@ void StartDeviceAuthorizationResponsePrivate::parseStartDeviceAuthorizationRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws

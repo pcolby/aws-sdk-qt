@@ -38,6 +38,7 @@ namespace Macie2 {
  *
  * \value AcceptInvitationAction Macie2 AcceptInvitation action.
  * \value BatchGetCustomDataIdentifiersAction Macie2 BatchGetCustomDataIdentifiers action.
+ * \value CreateAllowListAction Macie2 CreateAllowList action.
  * \value CreateClassificationJobAction Macie2 CreateClassificationJob action.
  * \value CreateCustomDataIdentifierAction Macie2 CreateCustomDataIdentifier action.
  * \value CreateFindingsFilterAction Macie2 CreateFindingsFilter action.
@@ -45,6 +46,7 @@ namespace Macie2 {
  * \value CreateMemberAction Macie2 CreateMember action.
  * \value CreateSampleFindingsAction Macie2 CreateSampleFindings action.
  * \value DeclineInvitationsAction Macie2 DeclineInvitations action.
+ * \value DeleteAllowListAction Macie2 DeleteAllowList action.
  * \value DeleteCustomDataIdentifierAction Macie2 DeleteCustomDataIdentifier action.
  * \value DeleteFindingsFilterAction Macie2 DeleteFindingsFilter action.
  * \value DeleteInvitationsAction Macie2 DeleteInvitations action.
@@ -60,6 +62,7 @@ namespace Macie2 {
  * \value EnableMacieAction Macie2 EnableMacie action.
  * \value EnableOrganizationAdminAccountAction Macie2 EnableOrganizationAdminAccount action.
  * \value GetAdministratorAccountAction Macie2 GetAdministratorAccount action.
+ * \value GetAllowListAction Macie2 GetAllowList action.
  * \value GetBucketStatisticsAction Macie2 GetBucketStatistics action.
  * \value GetClassificationExportConfigurationAction Macie2 GetClassificationExportConfiguration action.
  * \value GetCustomDataIdentifierAction Macie2 GetCustomDataIdentifier action.
@@ -71,13 +74,18 @@ namespace Macie2 {
  * \value GetMacieSessionAction Macie2 GetMacieSession action.
  * \value GetMasterAccountAction Macie2 GetMasterAccount action.
  * \value GetMemberAction Macie2 GetMember action.
+ * \value GetRevealConfigurationAction Macie2 GetRevealConfiguration action.
+ * \value GetSensitiveDataOccurrencesAction Macie2 GetSensitiveDataOccurrences action.
+ * \value GetSensitiveDataOccurrencesAvailabilityAction Macie2 GetSensitiveDataOccurrencesAvailability action.
  * \value GetUsageStatisticsAction Macie2 GetUsageStatistics action.
  * \value GetUsageTotalsAction Macie2 GetUsageTotals action.
+ * \value ListAllowListsAction Macie2 ListAllowLists action.
  * \value ListClassificationJobsAction Macie2 ListClassificationJobs action.
  * \value ListCustomDataIdentifiersAction Macie2 ListCustomDataIdentifiers action.
  * \value ListFindingsAction Macie2 ListFindings action.
  * \value ListFindingsFiltersAction Macie2 ListFindingsFilters action.
  * \value ListInvitationsAction Macie2 ListInvitations action.
+ * \value ListManagedDataIdentifiersAction Macie2 ListManagedDataIdentifiers action.
  * \value ListMembersAction Macie2 ListMembers action.
  * \value ListOrganizationAdminAccountsAction Macie2 ListOrganizationAdminAccounts action.
  * \value ListTagsForResourceAction Macie2 ListTagsForResource action.
@@ -87,11 +95,13 @@ namespace Macie2 {
  * \value TagResourceAction Macie2 TagResource action.
  * \value TestCustomDataIdentifierAction Macie2 TestCustomDataIdentifier action.
  * \value UntagResourceAction Macie2 UntagResource action.
+ * \value UpdateAllowListAction Macie2 UpdateAllowList action.
  * \value UpdateClassificationJobAction Macie2 UpdateClassificationJob action.
  * \value UpdateFindingsFilterAction Macie2 UpdateFindingsFilter action.
  * \value UpdateMacieSessionAction Macie2 UpdateMacieSession action.
  * \value UpdateMemberSessionAction Macie2 UpdateMemberSession action.
  * \value UpdateOrganizationConfigurationAction Macie2 UpdateOrganizationConfiguration action.
+ * \value UpdateRevealConfigurationAction Macie2 UpdateRevealConfiguration action.
  */
 
 /*!
@@ -299,7 +309,7 @@ QNetworkRequest Macie2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Macie2RequestPrivate::Macie2RequestPrivate(const Macie2Request::Action action, Macie2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-01-01"))
 {
 
 }
@@ -335,6 +345,7 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
     switch (action) {
         ActionToString(AcceptInvitation);
         ActionToString(BatchGetCustomDataIdentifiers);
+        ActionToString(CreateAllowList);
         ActionToString(CreateClassificationJob);
         ActionToString(CreateCustomDataIdentifier);
         ActionToString(CreateFindingsFilter);
@@ -342,6 +353,7 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
         ActionToString(CreateMember);
         ActionToString(CreateSampleFindings);
         ActionToString(DeclineInvitations);
+        ActionToString(DeleteAllowList);
         ActionToString(DeleteCustomDataIdentifier);
         ActionToString(DeleteFindingsFilter);
         ActionToString(DeleteInvitations);
@@ -357,6 +369,7 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
         ActionToString(EnableMacie);
         ActionToString(EnableOrganizationAdminAccount);
         ActionToString(GetAdministratorAccount);
+        ActionToString(GetAllowList);
         ActionToString(GetBucketStatistics);
         ActionToString(GetClassificationExportConfiguration);
         ActionToString(GetCustomDataIdentifier);
@@ -368,13 +381,18 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
         ActionToString(GetMacieSession);
         ActionToString(GetMasterAccount);
         ActionToString(GetMember);
+        ActionToString(GetRevealConfiguration);
+        ActionToString(GetSensitiveDataOccurrences);
+        ActionToString(GetSensitiveDataOccurrencesAvailability);
         ActionToString(GetUsageStatistics);
         ActionToString(GetUsageTotals);
+        ActionToString(ListAllowLists);
         ActionToString(ListClassificationJobs);
         ActionToString(ListCustomDataIdentifiers);
         ActionToString(ListFindings);
         ActionToString(ListFindingsFilters);
         ActionToString(ListInvitations);
+        ActionToString(ListManagedDataIdentifiers);
         ActionToString(ListMembers);
         ActionToString(ListOrganizationAdminAccounts);
         ActionToString(ListTagsForResource);
@@ -384,11 +402,13 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
         ActionToString(TagResource);
         ActionToString(TestCustomDataIdentifier);
         ActionToString(UntagResource);
+        ActionToString(UpdateAllowList);
         ActionToString(UpdateClassificationJob);
         ActionToString(UpdateFindingsFilter);
         ActionToString(UpdateMacieSession);
         ActionToString(UpdateMemberSession);
         ActionToString(UpdateOrganizationConfiguration);
+        ActionToString(UpdateRevealConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

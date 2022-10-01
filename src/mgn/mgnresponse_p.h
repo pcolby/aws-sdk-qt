@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnResponse;
+class MgnResponse;
 
-class mgnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MgnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit mgnResponsePrivate(mgnResponse * const q);
+    explicit MgnResponsePrivate(MgnResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(mgnResponse)
-    Q_DISABLE_COPY(mgnResponsePrivate)
+    Q_DECLARE_PUBLIC(MgnResponse)
+    Q_DISABLE_COPY(MgnResponsePrivate)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

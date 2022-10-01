@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBParameterGroupRequest
- * \brief The ModifyDBParameterGroupRequest class provides an interface for RDS ModifyDBParameterGroup requests.
+ * \class QtAws::Rds::ModifyDBParameterGroupRequest
+ * \brief The ModifyDBParameterGroupRequest class provides an interface for Rds ModifyDBParameterGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBParameterGroupRequestPrivate
+ * \class QtAws::Rds::ModifyDBParameterGroupRequestPrivate
  * \brief The ModifyDBParameterGroupRequestPrivate class provides private implementation for ModifyDBParameterGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

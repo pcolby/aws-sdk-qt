@@ -24,14 +24,14 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class ListTagsForResourceRequest;
 
-class ListTagsForResourceRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    ListTagsForResourceRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    ListTagsForResourceRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    ListTagsForResourceRequest * const q);
     ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
                                    ListTagsForResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

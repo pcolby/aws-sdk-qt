@@ -24,7 +24,7 @@
 #include "rebootnoderequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class RebootNodeRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

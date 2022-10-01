@@ -21,41 +21,41 @@
 #include "codestarnotificationsrequest_p.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsRequest
- * \brief The CodeStarNotificationsRequest class provides an interface for CodeStarNotifications requests.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsRequest
+ * \brief The CodestarNotificationsRequest class provides an interface for CodestarNotifications requests.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * \enum CodeStarNotificationsRequest::Action
+ * \enum CodestarNotificationsRequest::Action
  *
- * This enum describes the actions that can be performed as CodeStarNotifications
+ * This enum describes the actions that can be performed as CodestarNotifications
  * requests.
  *
- * \value CreateNotificationRuleAction CodeStarNotifications CreateNotificationRule action.
- * \value DeleteNotificationRuleAction CodeStarNotifications DeleteNotificationRule action.
- * \value DeleteTargetAction CodeStarNotifications DeleteTarget action.
- * \value DescribeNotificationRuleAction CodeStarNotifications DescribeNotificationRule action.
- * \value ListEventTypesAction CodeStarNotifications ListEventTypes action.
- * \value ListNotificationRulesAction CodeStarNotifications ListNotificationRules action.
- * \value ListTagsForResourceAction CodeStarNotifications ListTagsForResource action.
- * \value ListTargetsAction CodeStarNotifications ListTargets action.
- * \value SubscribeAction CodeStarNotifications Subscribe action.
- * \value TagResourceAction CodeStarNotifications TagResource action.
- * \value UnsubscribeAction CodeStarNotifications Unsubscribe action.
- * \value UntagResourceAction CodeStarNotifications UntagResource action.
- * \value UpdateNotificationRuleAction CodeStarNotifications UpdateNotificationRule action.
+ * \value CreateNotificationRuleAction CodestarNotifications CreateNotificationRule action.
+ * \value DeleteNotificationRuleAction CodestarNotifications DeleteNotificationRule action.
+ * \value DeleteTargetAction CodestarNotifications DeleteTarget action.
+ * \value DescribeNotificationRuleAction CodestarNotifications DescribeNotificationRule action.
+ * \value ListEventTypesAction CodestarNotifications ListEventTypes action.
+ * \value ListNotificationRulesAction CodestarNotifications ListNotificationRules action.
+ * \value ListTagsForResourceAction CodestarNotifications ListTagsForResource action.
+ * \value ListTargetsAction CodestarNotifications ListTargets action.
+ * \value SubscribeAction CodestarNotifications Subscribe action.
+ * \value TagResourceAction CodestarNotifications TagResource action.
+ * \value UnsubscribeAction CodestarNotifications Unsubscribe action.
+ * \value UntagResourceAction CodestarNotifications UntagResource action.
+ * \value UpdateNotificationRuleAction CodestarNotifications UpdateNotificationRule action.
  */
 
 /*!
- * Constructs a CodeStarNotificationsRequest object for CodeStarNotifications \a action.
+ * Constructs a CodestarNotificationsRequest object for CodestarNotifications \a action.
  */
-CodeStarNotificationsRequest::CodeStarNotificationsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarNotificationsRequestPrivate(action, this))
+CodestarNotificationsRequest::CodestarNotificationsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new CodestarNotificationsRequestPrivate(action, this))
 {
 
 }
@@ -63,18 +63,18 @@ CodeStarNotificationsRequest::CodeStarNotificationsRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-CodeStarNotificationsRequest::CodeStarNotificationsRequest(const CodeStarNotificationsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarNotificationsRequestPrivate(*other.d_func(), this))
+CodestarNotificationsRequest::CodestarNotificationsRequest(const CodestarNotificationsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new CodestarNotificationsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the CodeStarNotificationsRequest object to be equal to \a other.
+ * Sets the CodestarNotificationsRequest object to be equal to \a other.
  */
-CodeStarNotificationsRequest& CodeStarNotificationsRequest::operator=(const CodeStarNotificationsRequest &other)
+CodestarNotificationsRequest& CodestarNotificationsRequest::operator=(const CodestarNotificationsRequest &other)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -82,57 +82,57 @@ CodeStarNotificationsRequest& CodeStarNotificationsRequest::operator=(const Code
 }
 
 /*!
- * Constructs aa CodeStarNotificationsRequest object with private implementation \a d.
+ * Constructs aa CodestarNotificationsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CodeStarNotificationsRequestPrivate.
+ * implementation that inherits from CodestarNotificationsRequestPrivate.
  */
-CodeStarNotificationsRequest::CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CodestarNotificationsRequest::CodestarNotificationsRequest(CodestarNotificationsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the CodeStarNotifications action to be performed by this request.
+ * Returns the CodestarNotifications action to be performed by this request.
  */
-CodeStarNotificationsRequest::Action CodeStarNotificationsRequest::action() const
+CodestarNotificationsRequest::Action CodestarNotificationsRequest::action() const
 {
-    Q_D(const CodeStarNotificationsRequest);
+    Q_D(const CodestarNotificationsRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the CodeStarNotifications action to be performed by this request.
+ * Returns the name of the CodestarNotifications action to be performed by this request.
  */
-QString CodeStarNotificationsRequest::actionString() const
+QString CodestarNotificationsRequest::actionString() const
 {
-    return CodeStarNotificationsRequestPrivate::toString(action());
+    return CodestarNotificationsRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the CodeStarNotifications API version implemented by this request.
+ * Returns the CodestarNotifications API version implemented by this request.
  */
-QString CodeStarNotificationsRequest::apiVersion() const
+QString CodestarNotificationsRequest::apiVersion() const
 {
-    Q_D(const CodeStarNotificationsRequest);
+    Q_D(const CodestarNotificationsRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the CodeStarNotifications action to be performed by this request to \a action.
+ * Sets the CodestarNotifications action to be performed by this request to \a action.
  */
-void CodeStarNotificationsRequest::setAction(const Action action)
+void CodestarNotificationsRequest::setAction(const Action action)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->action = action;
 }
 
 /*!
- * Sets the CodeStarNotifications API version to include in this request to \a version.
+ * Sets the CodestarNotifications API version to include in this request to \a version.
  */
-void CodeStarNotificationsRequest::setApiVersion(const QString &version)
+void CodestarNotificationsRequest::setApiVersion(const QString &version)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->apiVersion = version;
 }
 
@@ -144,7 +144,7 @@ void CodeStarNotificationsRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool CodeStarNotificationsRequest::operator==(const CodeStarNotificationsRequest &other) const
+bool CodestarNotificationsRequest::operator==(const CodestarNotificationsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -153,19 +153,19 @@ bool CodeStarNotificationsRequest::operator==(const CodeStarNotificationsRequest
 }
 
 /*
- * Returns \c tue if \a queueName is a valid CodeStarNotifications queue name.
+ * Returns \c tue if \a queueName is a valid CodestarNotifications queue name.
  *
- * @par From CodeStarNotifications FAQs:
+ * @par From CodestarNotifications FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid CodeStarNotifications queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid CodestarNotifications queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool CodeStarNotificationsRequest::isValidQueueName(const QString &queueName)
+/*bool CodestarNotificationsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -175,45 +175,45 @@ bool CodeStarNotificationsRequest::operator==(const CodeStarNotificationsRequest
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int CodeStarNotificationsRequest::clearParameter(const QString &name)
+int CodestarNotificationsRequest::clearParameter(const QString &name)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void CodeStarNotificationsRequest::clearParameters()
+void CodestarNotificationsRequest::clearParameters()
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant CodeStarNotificationsRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant CodestarNotificationsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const CodeStarNotificationsRequest);
+    Q_D(const CodestarNotificationsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &CodeStarNotificationsRequest::parameters() const
+const QVariantMap &CodestarNotificationsRequest::parameters() const
 {
-    Q_D(const CodeStarNotificationsRequest);
+    Q_D(const CodestarNotificationsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void CodeStarNotificationsRequest::setParameter(const QString &name, const QVariant &value)
+void CodestarNotificationsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -221,42 +221,42 @@ void CodeStarNotificationsRequest::setParameter(const QString &name, const QVari
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void CodeStarNotificationsRequest::setParameters(const QVariantMap &parameters)
+void CodestarNotificationsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(CodeStarNotificationsRequest);
+    Q_D(CodestarNotificationsRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the CodeStarNotifications request using the given
+ * Returns a network request for the CodestarNotifications request using the given
  * \a endpoint.
  *
- * This CodeStarNotifications implementation builds request URLs by combining the
+ * This CodestarNotifications implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest CodeStarNotificationsRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest CodestarNotificationsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const CodeStarNotificationsRequest);
+    //Q_D(const CodestarNotificationsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsRequestPrivate
- * \brief The CodeStarNotificationsRequestPrivate class provides private implementation for CodeStarNotificationsRequest.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsRequestPrivate
+ * \brief The CodestarNotificationsRequestPrivate class provides private implementation for CodestarNotificationsRequest.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a CodeStarNotificationsRequestPrivate object for CodeStarNotifications \a action,
+ * Constructs a CodestarNotificationsRequestPrivate object for CodestarNotifications \a action,
  * with public implementation \a q.
  */
-CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequest::Action action, CodeStarNotificationsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+CodestarNotificationsRequestPrivate::CodestarNotificationsRequestPrivate(const CodestarNotificationsRequest::Action action, CodestarNotificationsRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-10-15"))
 {
 
 }
@@ -267,10 +267,10 @@ CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const C
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the CodeStarNotificationsRequest class's copy constructor.
+ * This is required to support the CodestarNotificationsRequest class's copy constructor.
  */
-CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequestPrivate &other,
-                                     CodeStarNotificationsRequest * const q)
+CodestarNotificationsRequestPrivate::CodestarNotificationsRequestPrivate(const CodestarNotificationsRequestPrivate &other,
+                                     CodestarNotificationsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -281,14 +281,14 @@ CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const C
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts CodeStarNotificationsRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the CodeStarNotifications service's Action
+ * This function converts CodestarNotificationsRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the CodestarNotifications service's Action
  * query parameters.
  */
-QString CodeStarNotificationsRequestPrivate::toString(const CodeStarNotificationsRequest::Action &action)
+QString CodestarNotificationsRequestPrivate::toString(const CodestarNotificationsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case CodeStarNotificationsRequest::action##Action: return QStringLiteral(#action)
+        case CodestarNotificationsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateNotificationRule);
         ActionToString(DeleteNotificationRule);
@@ -310,5 +310,5 @@ QString CodeStarNotificationsRequestPrivate::toString(const CodeStarNotification
     return QString();
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

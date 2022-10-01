@@ -24,16 +24,16 @@
 #include "swfrequest.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 class SwfRequest;
 
 class SwfRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SwfRequest::Action action; ///< SWF action to be performed.
-    QString apiVersion;        ///< SWF API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SWF request (query string) parameters. @todo?
+    SwfRequest::Action action; ///< Swf action to be performed.
+    QString apiVersion;        ///< Swf API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Swf request (query string) parameters. @todo?
 
     SwfRequestPrivate(const SwfRequest::Action action, SwfRequest * const q);
     SwfRequestPrivate(const SwfRequestPrivate &other, SwfRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws
 
 #endif

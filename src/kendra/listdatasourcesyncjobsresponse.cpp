@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::ListDataSourceSyncJobsResponse
- * \brief The ListDataSourceSyncJobsResponse class provides an interace for kendra ListDataSourceSyncJobs responses.
+ * \class QtAws::Kendra::ListDataSourceSyncJobsResponse
+ * \brief The ListDataSourceSyncJobsResponse class provides an interace for Kendra ListDataSourceSyncJobs responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::listDataSourceSyncJobs
+ * \sa KendraClient::listDataSourceSyncJobs
  */
 
 /*!
@@ -45,7 +45,7 @@ ListDataSourceSyncJobsResponse::ListDataSourceSyncJobsResponse(
         const ListDataSourceSyncJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new ListDataSourceSyncJobsResponsePrivate(this), parent)
+    : KendraResponse(new ListDataSourceSyncJobsResponsePrivate(this), parent)
 {
     setRequest(new ListDataSourceSyncJobsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const ListDataSourceSyncJobsRequest * ListDataSourceSyncJobsResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful kendra ListDataSourceSyncJobs \a response.
+ * Parses a successful Kendra ListDataSourceSyncJobs \a response.
  */
 void ListDataSourceSyncJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void ListDataSourceSyncJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::ListDataSourceSyncJobsResponsePrivate
+ * \class QtAws::Kendra::ListDataSourceSyncJobsResponsePrivate
  * \brief The ListDataSourceSyncJobsResponsePrivate class provides private implementation for ListDataSourceSyncJobsResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a ListDataSourceSyncJobsResponsePrivate object with public implementation \a q.
  */
 ListDataSourceSyncJobsResponsePrivate::ListDataSourceSyncJobsResponsePrivate(
-    ListDataSourceSyncJobsResponse * const q) : kendraResponsePrivate(q)
+    ListDataSourceSyncJobsResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra ListDataSourceSyncJobs response element from \a xml.
+ * Parses a Kendra ListDataSourceSyncJobs response element from \a xml.
  */
 void ListDataSourceSyncJobsResponsePrivate::parseListDataSourceSyncJobsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void ListDataSourceSyncJobsResponsePrivate::parseListDataSourceSyncJobsResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

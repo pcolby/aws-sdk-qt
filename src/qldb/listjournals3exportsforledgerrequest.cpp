@@ -23,13 +23,13 @@
 #include "qldbrequest_p.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::ListJournalS3ExportsForLedgerRequest
- * \brief The ListJournalS3ExportsForLedgerRequest class provides an interface for QLDB ListJournalS3ExportsForLedger requests.
+ * \class QtAws::Qldb::ListJournalS3ExportsForLedgerRequest
+ * \brief The ListJournalS3ExportsForLedgerRequest class provides an interface for Qldb ListJournalS3ExportsForLedger requests.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -74,11 +74,11 @@ QtAws::Core::AwsAbstractResponse * ListJournalS3ExportsForLedgerRequest::respons
 }
 
 /*!
- * \class QtAws::QLDB::ListJournalS3ExportsForLedgerRequestPrivate
+ * \class QtAws::Qldb::ListJournalS3ExportsForLedgerRequestPrivate
  * \brief The ListJournalS3ExportsForLedgerRequestPrivate class provides private implementation for ListJournalS3ExportsForLedgerRequest.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -105,5 +105,5 @@ ListJournalS3ExportsForLedgerRequestPrivate::ListJournalS3ExportsForLedgerReques
 
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

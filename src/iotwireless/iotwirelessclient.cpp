@@ -23,16 +23,30 @@
 #include "core/awssignaturev4.h"
 #include "associateawsaccountwithpartneraccountrequest.h"
 #include "associateawsaccountwithpartneraccountresponse.h"
+#include "associatemulticastgroupwithfuotataskrequest.h"
+#include "associatemulticastgroupwithfuotataskresponse.h"
+#include "associatewirelessdevicewithfuotataskrequest.h"
+#include "associatewirelessdevicewithfuotataskresponse.h"
+#include "associatewirelessdevicewithmulticastgrouprequest.h"
+#include "associatewirelessdevicewithmulticastgroupresponse.h"
 #include "associatewirelessdevicewiththingrequest.h"
 #include "associatewirelessdevicewiththingresponse.h"
 #include "associatewirelessgatewaywithcertificaterequest.h"
 #include "associatewirelessgatewaywithcertificateresponse.h"
 #include "associatewirelessgatewaywiththingrequest.h"
 #include "associatewirelessgatewaywiththingresponse.h"
+#include "cancelmulticastgroupsessionrequest.h"
+#include "cancelmulticastgroupsessionresponse.h"
 #include "createdestinationrequest.h"
 #include "createdestinationresponse.h"
 #include "createdeviceprofilerequest.h"
 #include "createdeviceprofileresponse.h"
+#include "createfuotataskrequest.h"
+#include "createfuotataskresponse.h"
+#include "createmulticastgrouprequest.h"
+#include "createmulticastgroupresponse.h"
+#include "createnetworkanalyzerconfigurationrequest.h"
+#include "createnetworkanalyzerconfigurationresponse.h"
 #include "createserviceprofilerequest.h"
 #include "createserviceprofileresponse.h"
 #include "createwirelessdevicerequest.h"
@@ -47,6 +61,14 @@
 #include "deletedestinationresponse.h"
 #include "deletedeviceprofilerequest.h"
 #include "deletedeviceprofileresponse.h"
+#include "deletefuotataskrequest.h"
+#include "deletefuotataskresponse.h"
+#include "deletemulticastgrouprequest.h"
+#include "deletemulticastgroupresponse.h"
+#include "deletenetworkanalyzerconfigurationrequest.h"
+#include "deletenetworkanalyzerconfigurationresponse.h"
+#include "deletequeuedmessagesrequest.h"
+#include "deletequeuedmessagesresponse.h"
 #include "deleteserviceprofilerequest.h"
 #include "deleteserviceprofileresponse.h"
 #include "deletewirelessdevicerequest.h"
@@ -59,6 +81,12 @@
 #include "deletewirelessgatewaytaskdefinitionresponse.h"
 #include "disassociateawsaccountfrompartneraccountrequest.h"
 #include "disassociateawsaccountfrompartneraccountresponse.h"
+#include "disassociatemulticastgroupfromfuotataskrequest.h"
+#include "disassociatemulticastgroupfromfuotataskresponse.h"
+#include "disassociatewirelessdevicefromfuotataskrequest.h"
+#include "disassociatewirelessdevicefromfuotataskresponse.h"
+#include "disassociatewirelessdevicefrommulticastgrouprequest.h"
+#include "disassociatewirelessdevicefrommulticastgroupresponse.h"
 #include "disassociatewirelessdevicefromthingrequest.h"
 #include "disassociatewirelessdevicefromthingresponse.h"
 #include "disassociatewirelessgatewayfromcertificaterequest.h"
@@ -69,10 +97,26 @@
 #include "getdestinationresponse.h"
 #include "getdeviceprofilerequest.h"
 #include "getdeviceprofileresponse.h"
+#include "geteventconfigurationbyresourcetypesrequest.h"
+#include "geteventconfigurationbyresourcetypesresponse.h"
+#include "getfuotataskrequest.h"
+#include "getfuotataskresponse.h"
 #include "getloglevelsbyresourcetypesrequest.h"
 #include "getloglevelsbyresourcetypesresponse.h"
+#include "getmulticastgrouprequest.h"
+#include "getmulticastgroupresponse.h"
+#include "getmulticastgroupsessionrequest.h"
+#include "getmulticastgroupsessionresponse.h"
+#include "getnetworkanalyzerconfigurationrequest.h"
+#include "getnetworkanalyzerconfigurationresponse.h"
 #include "getpartneraccountrequest.h"
 #include "getpartneraccountresponse.h"
+#include "getpositionrequest.h"
+#include "getpositionresponse.h"
+#include "getpositionconfigurationrequest.h"
+#include "getpositionconfigurationresponse.h"
+#include "getresourceeventconfigurationrequest.h"
+#include "getresourceeventconfigurationresponse.h"
 #include "getresourceloglevelrequest.h"
 #include "getresourceloglevelresponse.h"
 #include "getserviceendpointrequest.h"
@@ -99,8 +143,22 @@
 #include "listdestinationsresponse.h"
 #include "listdeviceprofilesrequest.h"
 #include "listdeviceprofilesresponse.h"
+#include "listeventconfigurationsrequest.h"
+#include "listeventconfigurationsresponse.h"
+#include "listfuotatasksrequest.h"
+#include "listfuotatasksresponse.h"
+#include "listmulticastgroupsrequest.h"
+#include "listmulticastgroupsresponse.h"
+#include "listmulticastgroupsbyfuotataskrequest.h"
+#include "listmulticastgroupsbyfuotataskresponse.h"
+#include "listnetworkanalyzerconfigurationsrequest.h"
+#include "listnetworkanalyzerconfigurationsresponse.h"
 #include "listpartneraccountsrequest.h"
 #include "listpartneraccountsresponse.h"
+#include "listpositionconfigurationsrequest.h"
+#include "listpositionconfigurationsresponse.h"
+#include "listqueuedmessagesrequest.h"
+#include "listqueuedmessagesresponse.h"
 #include "listserviceprofilesrequest.h"
 #include "listserviceprofilesresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -111,14 +169,26 @@
 #include "listwirelessgatewaytaskdefinitionsresponse.h"
 #include "listwirelessgatewaysrequest.h"
 #include "listwirelessgatewaysresponse.h"
+#include "putpositionconfigurationrequest.h"
+#include "putpositionconfigurationresponse.h"
 #include "putresourceloglevelrequest.h"
 #include "putresourceloglevelresponse.h"
 #include "resetallresourceloglevelsrequest.h"
 #include "resetallresourceloglevelsresponse.h"
 #include "resetresourceloglevelrequest.h"
 #include "resetresourceloglevelresponse.h"
+#include "senddatatomulticastgrouprequest.h"
+#include "senddatatomulticastgroupresponse.h"
 #include "senddatatowirelessdevicerequest.h"
 #include "senddatatowirelessdeviceresponse.h"
+#include "startbulkassociatewirelessdevicewithmulticastgrouprequest.h"
+#include "startbulkassociatewirelessdevicewithmulticastgroupresponse.h"
+#include "startbulkdisassociatewirelessdevicefrommulticastgrouprequest.h"
+#include "startbulkdisassociatewirelessdevicefrommulticastgroupresponse.h"
+#include "startfuotataskrequest.h"
+#include "startfuotataskresponse.h"
+#include "startmulticastgroupsessionrequest.h"
+#include "startmulticastgroupsessionresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "testwirelessdevicerequest.h"
@@ -127,10 +197,22 @@
 #include "untagresourceresponse.h"
 #include "updatedestinationrequest.h"
 #include "updatedestinationresponse.h"
+#include "updateeventconfigurationbyresourcetypesrequest.h"
+#include "updateeventconfigurationbyresourcetypesresponse.h"
+#include "updatefuotataskrequest.h"
+#include "updatefuotataskresponse.h"
 #include "updateloglevelsbyresourcetypesrequest.h"
 #include "updateloglevelsbyresourcetypesresponse.h"
+#include "updatemulticastgrouprequest.h"
+#include "updatemulticastgroupresponse.h"
+#include "updatenetworkanalyzerconfigurationrequest.h"
+#include "updatenetworkanalyzerconfigurationresponse.h"
 #include "updatepartneraccountrequest.h"
 #include "updatepartneraccountresponse.h"
+#include "updatepositionrequest.h"
+#include "updatepositionresponse.h"
+#include "updateresourceeventconfigurationrequest.h"
+#include "updateresourceeventconfigurationresponse.h"
 #include "updatewirelessdevicerequest.h"
 #include "updatewirelessdeviceresponse.h"
 #include "updatewirelessgatewayrequest.h"
@@ -158,7 +240,21 @@ namespace IoTWireless {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTWireless
  *
- *  AWS IoT Wireless API
+ *  AWS IoT Wireless provides bi-directional communication between internet-connected wireless devices and the AWS Cloud. To
+ *  onboard both LoRaWAN and Sidewalk devices to AWS IoT, use the IoT Wireless API. These wireless devices use the Low Power
+ *  Wide Area Networking (LPWAN) communication protocol to communicate with AWS
+ * 
+ *  IoT>
+ * 
+ *  Using the API, you can perform create, read, update, and delete operations for your wireless devices, gateways,
+ *  destinations, and profiles. After onboarding your devices, you can use the API operations to set log levels and monitor
+ *  your devices with
+ * 
+ *  CloudWatch>
+ * 
+ *  You can also use the API operations to create multicast groups and schedule a multicast session for sending a downlink
+ *  message to devices in the group. By using Firmware Updates Over-The-Air (FUOTA) API operations, you can create a FUOTA
+ *  task and schedule a session to update the firmware of individual devices or an entire group of devices in a multicast
  */
 
 /*!
@@ -229,6 +325,45 @@ AssociateAwsAccountWithPartnerAccountResponse * IoTWirelessClient::associateAwsA
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * AssociateMulticastGroupWithFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associate a multicast group with a FUOTA
+ */
+AssociateMulticastGroupWithFuotaTaskResponse * IoTWirelessClient::associateMulticastGroupWithFuotaTask(const AssociateMulticastGroupWithFuotaTaskRequest &request)
+{
+    return qobject_cast<AssociateMulticastGroupWithFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * AssociateWirelessDeviceWithFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associate a wireless device with a FUOTA
+ */
+AssociateWirelessDeviceWithFuotaTaskResponse * IoTWirelessClient::associateWirelessDeviceWithFuotaTask(const AssociateWirelessDeviceWithFuotaTaskRequest &request)
+{
+    return qobject_cast<AssociateWirelessDeviceWithFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * AssociateWirelessDeviceWithMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a wireless device with a multicast
+ */
+AssociateWirelessDeviceWithMulticastGroupResponse * IoTWirelessClient::associateWirelessDeviceWithMulticastGroup(const AssociateWirelessDeviceWithMulticastGroupRequest &request)
+{
+    return qobject_cast<AssociateWirelessDeviceWithMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * AssociateWirelessDeviceWithThingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -268,6 +403,19 @@ AssociateWirelessGatewayWithThingResponse * IoTWirelessClient::associateWireless
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * CancelMulticastGroupSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an existing multicast group
+ */
+CancelMulticastGroupSessionResponse * IoTWirelessClient::cancelMulticastGroupSession(const CancelMulticastGroupSessionRequest &request)
+{
+    return qobject_cast<CancelMulticastGroupSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * CreateDestinationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -290,6 +438,45 @@ CreateDestinationResponse * IoTWirelessClient::createDestination(const CreateDes
 CreateDeviceProfileResponse * IoTWirelessClient::createDeviceProfile(const CreateDeviceProfileRequest &request)
 {
     return qobject_cast<CreateDeviceProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * CreateFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a FUOTA
+ */
+CreateFuotaTaskResponse * IoTWirelessClient::createFuotaTask(const CreateFuotaTaskRequest &request)
+{
+    return qobject_cast<CreateFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * CreateMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a multicast
+ */
+CreateMulticastGroupResponse * IoTWirelessClient::createMulticastGroup(const CreateMulticastGroupRequest &request)
+{
+    return qobject_cast<CreateMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * CreateNetworkAnalyzerConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new network analyzer
+ */
+CreateNetworkAnalyzerConfigurationResponse * IoTWirelessClient::createNetworkAnalyzerConfiguration(const CreateNetworkAnalyzerConfigurationRequest &request)
+{
+    return qobject_cast<CreateNetworkAnalyzerConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -385,6 +572,58 @@ DeleteDeviceProfileResponse * IoTWirelessClient::deleteDeviceProfile(const Delet
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DeleteFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a FUOTA
+ */
+DeleteFuotaTaskResponse * IoTWirelessClient::deleteFuotaTask(const DeleteFuotaTaskRequest &request)
+{
+    return qobject_cast<DeleteFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DeleteMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a multicast group if it is not in use by a fuota
+ */
+DeleteMulticastGroupResponse * IoTWirelessClient::deleteMulticastGroup(const DeleteMulticastGroupRequest &request)
+{
+    return qobject_cast<DeleteMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DeleteNetworkAnalyzerConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a network analyzer
+ */
+DeleteNetworkAnalyzerConfigurationResponse * IoTWirelessClient::deleteNetworkAnalyzerConfiguration(const DeleteNetworkAnalyzerConfigurationRequest &request)
+{
+    return qobject_cast<DeleteNetworkAnalyzerConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DeleteQueuedMessagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove queued messages from the downlink
+ */
+DeleteQueuedMessagesResponse * IoTWirelessClient::deleteQueuedMessages(const DeleteQueuedMessagesRequest &request)
+{
+    return qobject_cast<DeleteQueuedMessagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * DeleteServiceProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -464,6 +703,45 @@ DisassociateAwsAccountFromPartnerAccountResponse * IoTWirelessClient::disassocia
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DisassociateMulticastGroupFromFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a multicast group from a fuota
+ */
+DisassociateMulticastGroupFromFuotaTaskResponse * IoTWirelessClient::disassociateMulticastGroupFromFuotaTask(const DisassociateMulticastGroupFromFuotaTaskRequest &request)
+{
+    return qobject_cast<DisassociateMulticastGroupFromFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DisassociateWirelessDeviceFromFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a wireless device from a FUOTA
+ */
+DisassociateWirelessDeviceFromFuotaTaskResponse * IoTWirelessClient::disassociateWirelessDeviceFromFuotaTask(const DisassociateWirelessDeviceFromFuotaTaskRequest &request)
+{
+    return qobject_cast<DisassociateWirelessDeviceFromFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * DisassociateWirelessDeviceFromMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a wireless device from a multicast
+ */
+DisassociateWirelessDeviceFromMulticastGroupResponse * IoTWirelessClient::disassociateWirelessDeviceFromMulticastGroup(const DisassociateWirelessDeviceFromMulticastGroupRequest &request)
+{
+    return qobject_cast<DisassociateWirelessDeviceFromMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * DisassociateWirelessDeviceFromThingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -529,16 +807,81 @@ GetDeviceProfileResponse * IoTWirelessClient::getDeviceProfile(const GetDevicePr
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetEventConfigurationByResourceTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the event configuration based on resource
+ */
+GetEventConfigurationByResourceTypesResponse * IoTWirelessClient::getEventConfigurationByResourceTypes(const GetEventConfigurationByResourceTypesRequest &request)
+{
+    return qobject_cast<GetEventConfigurationByResourceTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a FUOTA
+ */
+GetFuotaTaskResponse * IoTWirelessClient::getFuotaTask(const GetFuotaTaskRequest &request)
+{
+    return qobject_cast<GetFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * GetLogLevelsByResourceTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns current default log-levels, or log levels by resource types, could be for wireless device log options or
- * wireless gateway log
+ * Returns current default log levels or log levels by resource types. Based on resource types, log levels can be for
+ * wireless device log options or wireless gateway log
  */
 GetLogLevelsByResourceTypesResponse * IoTWirelessClient::getLogLevelsByResourceTypes(const GetLogLevelsByResourceTypesRequest &request)
 {
     return qobject_cast<GetLogLevelsByResourceTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a multicast
+ */
+GetMulticastGroupResponse * IoTWirelessClient::getMulticastGroup(const GetMulticastGroupRequest &request)
+{
+    return qobject_cast<GetMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetMulticastGroupSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a multicast group
+ */
+GetMulticastGroupSessionResponse * IoTWirelessClient::getMulticastGroupSession(const GetMulticastGroupSessionRequest &request)
+{
+    return qobject_cast<GetMulticastGroupSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetNetworkAnalyzerConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get network analyzer
+ */
+GetNetworkAnalyzerConfigurationResponse * IoTWirelessClient::getNetworkAnalyzerConfiguration(const GetNetworkAnalyzerConfigurationRequest &request)
+{
+    return qobject_cast<GetNetworkAnalyzerConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -557,12 +900,51 @@ GetPartnerAccountResponse * IoTWirelessClient::getPartnerAccount(const GetPartne
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetPositionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the position information for a given
+ */
+GetPositionResponse * IoTWirelessClient::getPosition(const GetPositionRequest &request)
+{
+    return qobject_cast<GetPositionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetPositionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get position configuration for a given
+ */
+GetPositionConfigurationResponse * IoTWirelessClient::getPositionConfiguration(const GetPositionConfigurationRequest &request)
+{
+    return qobject_cast<GetPositionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * GetResourceEventConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the event configuration for a particular resource
+ */
+GetResourceEventConfigurationResponse * IoTWirelessClient::getResourceEventConfiguration(const GetResourceEventConfigurationRequest &request)
+{
+    return qobject_cast<GetResourceEventConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * GetResourceLogLevelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Fetches the log-level override if any for a given resource-ID and resource-type, coulde be a wireless device or a
- * wireless
+ * Fetches the log-level override, if any, for a given resource-ID and resource-type. It can be used for a wireless device
+ * or a wireless
  */
 GetResourceLogLevelResponse * IoTWirelessClient::getResourceLogLevel(const GetResourceLogLevelRequest &request)
 {
@@ -727,6 +1109,71 @@ ListDeviceProfilesResponse * IoTWirelessClient::listDeviceProfiles(const ListDev
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListEventConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List event configurations where at least one event topic has been
+ */
+ListEventConfigurationsResponse * IoTWirelessClient::listEventConfigurations(const ListEventConfigurationsRequest &request)
+{
+    return qobject_cast<ListEventConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListFuotaTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the FUOTA tasks registered to your AWS
+ */
+ListFuotaTasksResponse * IoTWirelessClient::listFuotaTasks(const ListFuotaTasksRequest &request)
+{
+    return qobject_cast<ListFuotaTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListMulticastGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the multicast groups registered to your AWS
+ */
+ListMulticastGroupsResponse * IoTWirelessClient::listMulticastGroups(const ListMulticastGroupsRequest &request)
+{
+    return qobject_cast<ListMulticastGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListMulticastGroupsByFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List all multicast groups associated with a fuota
+ */
+ListMulticastGroupsByFuotaTaskResponse * IoTWirelessClient::listMulticastGroupsByFuotaTask(const ListMulticastGroupsByFuotaTaskRequest &request)
+{
+    return qobject_cast<ListMulticastGroupsByFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListNetworkAnalyzerConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the network analyzer
+ */
+ListNetworkAnalyzerConfigurationsResponse * IoTWirelessClient::listNetworkAnalyzerConfigurations(const ListNetworkAnalyzerConfigurationsRequest &request)
+{
+    return qobject_cast<ListNetworkAnalyzerConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * ListPartnerAccountsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -736,6 +1183,32 @@ ListDeviceProfilesResponse * IoTWirelessClient::listDeviceProfiles(const ListDev
 ListPartnerAccountsResponse * IoTWirelessClient::listPartnerAccounts(const ListPartnerAccountsRequest &request)
 {
     return qobject_cast<ListPartnerAccountsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListPositionConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List position configurations for a given resource, such as positioning
+ */
+ListPositionConfigurationsResponse * IoTWirelessClient::listPositionConfigurations(const ListPositionConfigurationsRequest &request)
+{
+    return qobject_cast<ListPositionConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * ListQueuedMessagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List queued messages in the downlink
+ */
+ListQueuedMessagesResponse * IoTWirelessClient::listQueuedMessages(const ListQueuedMessagesRequest &request)
+{
+    return qobject_cast<ListQueuedMessagesResponse *>(send(request));
 }
 
 /*!
@@ -805,11 +1278,25 @@ ListWirelessGatewaysResponse * IoTWirelessClient::listWirelessGateways(const Lis
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * PutPositionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Put position configuration for a given
+ */
+PutPositionConfigurationResponse * IoTWirelessClient::putPositionConfiguration(const PutPositionConfigurationRequest &request)
+{
+    return qobject_cast<PutPositionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * PutResourceLogLevelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the log-level override for a resource-ID and resource-type, could be a wireless gateway or a wireless
+ * Sets the log-level override for a resource-ID and resource-type. This option can be specified for a wireless gateway or
+ * a wireless device. A limit of 200 log level override can be set per
  */
 PutResourceLogLevelResponse * IoTWirelessClient::putResourceLogLevel(const PutResourceLogLevelRequest &request)
 {
@@ -822,7 +1309,7 @@ PutResourceLogLevelResponse * IoTWirelessClient::putResourceLogLevel(const PutRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Remove log-level overrides if any for all resources (both wireless devices and wireless
+ * Removes the log-level overrides for all resources; both wireless devices and wireless
  */
 ResetAllResourceLogLevelsResponse * IoTWirelessClient::resetAllResourceLogLevels(const ResetAllResourceLogLevelsRequest &request)
 {
@@ -835,11 +1322,25 @@ ResetAllResourceLogLevelsResponse * IoTWirelessClient::resetAllResourceLogLevels
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Remove log-level override if any for a specific resource-ID and resource-type, could be a wireless device or a wireless
+ * Removes the log-level override, if any, for a specific resource-ID and resource-type. It can be used for a wireless
+ * device or a wireless
  */
 ResetResourceLogLevelResponse * IoTWirelessClient::resetResourceLogLevel(const ResetResourceLogLevelRequest &request)
 {
     return qobject_cast<ResetResourceLogLevelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * SendDataToMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sends the specified data to a multicast
+ */
+SendDataToMulticastGroupResponse * IoTWirelessClient::sendDataToMulticastGroup(const SendDataToMulticastGroupRequest &request)
+{
+    return qobject_cast<SendDataToMulticastGroupResponse *>(send(request));
 }
 
 /*!
@@ -853,6 +1354,58 @@ ResetResourceLogLevelResponse * IoTWirelessClient::resetResourceLogLevel(const R
 SendDataToWirelessDeviceResponse * IoTWirelessClient::sendDataToWirelessDevice(const SendDataToWirelessDeviceRequest &request)
 {
     return qobject_cast<SendDataToWirelessDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * StartBulkAssociateWirelessDeviceWithMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a bulk association of all qualifying wireless devices with a multicast
+ */
+StartBulkAssociateWirelessDeviceWithMulticastGroupResponse * IoTWirelessClient::startBulkAssociateWirelessDeviceWithMulticastGroup(const StartBulkAssociateWirelessDeviceWithMulticastGroupRequest &request)
+{
+    return qobject_cast<StartBulkAssociateWirelessDeviceWithMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * StartBulkDisassociateWirelessDeviceFromMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a bulk disassociatin of all qualifying wireless devices from a multicast
+ */
+StartBulkDisassociateWirelessDeviceFromMulticastGroupResponse * IoTWirelessClient::startBulkDisassociateWirelessDeviceFromMulticastGroup(const StartBulkDisassociateWirelessDeviceFromMulticastGroupRequest &request)
+{
+    return qobject_cast<StartBulkDisassociateWirelessDeviceFromMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * StartFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a FUOTA
+ */
+StartFuotaTaskResponse * IoTWirelessClient::startFuotaTask(const StartFuotaTaskRequest &request)
+{
+    return qobject_cast<StartFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * StartMulticastGroupSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a multicast group
+ */
+StartMulticastGroupSessionResponse * IoTWirelessClient::startMulticastGroupSession(const StartMulticastGroupSessionRequest &request)
+{
+    return qobject_cast<StartMulticastGroupSessionResponse *>(send(request));
 }
 
 /*!
@@ -909,16 +1462,68 @@ UpdateDestinationResponse * IoTWirelessClient::updateDestination(const UpdateDes
 
 /*!
  * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdateEventConfigurationByResourceTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update the event configuration based on resource
+ */
+UpdateEventConfigurationByResourceTypesResponse * IoTWirelessClient::updateEventConfigurationByResourceTypes(const UpdateEventConfigurationByResourceTypesRequest &request)
+{
+    return qobject_cast<UpdateEventConfigurationByResourceTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdateFuotaTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates properties of a FUOTA
+ */
+UpdateFuotaTaskResponse * IoTWirelessClient::updateFuotaTask(const UpdateFuotaTaskRequest &request)
+{
+    return qobject_cast<UpdateFuotaTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
  * UpdateLogLevelsByResourceTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Set default log level, or log levels by resource types, could be for wireless device log options or wireless gateways
- * log options. This is to control the log messages that will be displayed in
+ * Set default log level, or log levels by resource types. This can be for wireless device log options or wireless gateways
+ * log options and is used to control the log messages that'll be displayed in
  */
 UpdateLogLevelsByResourceTypesResponse * IoTWirelessClient::updateLogLevelsByResourceTypes(const UpdateLogLevelsByResourceTypesRequest &request)
 {
     return qobject_cast<UpdateLogLevelsByResourceTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdateMulticastGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates properties of a multicast group
+ */
+UpdateMulticastGroupResponse * IoTWirelessClient::updateMulticastGroup(const UpdateMulticastGroupRequest &request)
+{
+    return qobject_cast<UpdateMulticastGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdateNetworkAnalyzerConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update network analyzer
+ */
+UpdateNetworkAnalyzerConfigurationResponse * IoTWirelessClient::updateNetworkAnalyzerConfiguration(const UpdateNetworkAnalyzerConfigurationRequest &request)
+{
+    return qobject_cast<UpdateNetworkAnalyzerConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -932,6 +1537,32 @@ UpdateLogLevelsByResourceTypesResponse * IoTWirelessClient::updateLogLevelsByRes
 UpdatePartnerAccountResponse * IoTWirelessClient::updatePartnerAccount(const UpdatePartnerAccountRequest &request)
 {
     return qobject_cast<UpdatePartnerAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdatePositionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update the position information of a
+ */
+UpdatePositionResponse * IoTWirelessClient::updatePosition(const UpdatePositionRequest &request)
+{
+    return qobject_cast<UpdatePositionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTWirelessClient service, and returns a pointer to an
+ * UpdateResourceEventConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update the event configuration for a particular resource
+ */
+UpdateResourceEventConfigurationResponse * IoTWirelessClient::updateResourceEventConfiguration(const UpdateResourceEventConfigurationRequest &request)
+{
+    return qobject_cast<UpdateResourceEventConfigurationResponse *>(send(request));
 }
 
 /*!

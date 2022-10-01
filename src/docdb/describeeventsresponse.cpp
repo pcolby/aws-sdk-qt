@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEventsResponse
- * \brief The DescribeEventsResponse class provides an interace for DocDB DescribeEvents responses.
+ * \class QtAws::DocDb::DescribeEventsResponse
+ * \brief The DescribeEventsResponse class provides an interace for DocDb DescribeEvents responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEvents
+ * \sa DocDbClient::describeEvents
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeEventsResponse::DescribeEventsResponse(
         const DescribeEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeEventsResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeEventsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeEvents \a response.
+ * Parses a successful DocDb DescribeEvents \a response.
  */
 void DescribeEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEventsResponsePrivate
+ * \class QtAws::DocDb::DescribeEventsResponsePrivate
  * \brief The DescribeEventsResponsePrivate class provides private implementation for DescribeEventsResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeEventsResponsePrivate object with public implementation \a q.
  */
 DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
-    DescribeEventsResponse * const q) : DocDBResponsePrivate(q)
+    DescribeEventsResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeEvents response element from \a xml.
+ * Parses a DocDb DescribeEvents response element from \a xml.
  */
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
-class PinpointSMSVoiceClient;
+class PinpointSmsVoiceClient;
 
-class PinpointSMSVoiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PinpointSmsVoiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q);
+    explicit PinpointSmsVoiceClientPrivate(PinpointSmsVoiceClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(PinpointSMSVoiceClient)
-    Q_DISABLE_COPY(PinpointSMSVoiceClientPrivate)
+    Q_DECLARE_PUBLIC(PinpointSmsVoiceClient)
+    Q_DISABLE_COPY(PinpointSmsVoiceClientPrivate)
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

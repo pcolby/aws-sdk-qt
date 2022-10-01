@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DeleteRepositoryResponse
- * \brief The DeleteRepositoryResponse class provides an interace for ECR DeleteRepository responses.
+ * \class QtAws::Ecr::DeleteRepositoryResponse
+ * \brief The DeleteRepositoryResponse class provides an interace for Ecr DeleteRepository responses.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -40,6 +40,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::deleteRepository
  */
@@ -68,7 +74,7 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECR DeleteRepository \a response.
+ * Parses a successful Ecr DeleteRepository \a response.
  */
 void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +84,11 @@ void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::DeleteRepositoryResponsePrivate
+ * \class QtAws::Ecr::DeleteRepositoryResponsePrivate
  * \brief The DeleteRepositoryResponsePrivate class provides private implementation for DeleteRepositoryResponse.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -95,7 +101,7 @@ DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
 }
 
 /*!
- * Parses a ECR DeleteRepository response element from \a xml.
+ * Parses a Ecr DeleteRepository response element from \a xml.
  */
 void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +109,5 @@ void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

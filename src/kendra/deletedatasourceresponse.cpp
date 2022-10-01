@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteDataSourceResponse
- * \brief The DeleteDataSourceResponse class provides an interace for kendra DeleteDataSource responses.
+ * \class QtAws::Kendra::DeleteDataSourceResponse
+ * \brief The DeleteDataSourceResponse class provides an interace for Kendra DeleteDataSource responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteDataSource
+ * \sa KendraClient::deleteDataSource
  */
 
 /*!
@@ -45,7 +45,7 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
         const DeleteDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DeleteDataSourceResponsePrivate(this), parent)
+    : KendraResponse(new DeleteDataSourceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDataSourceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DeleteDataSource \a response.
+ * Parses a successful Kendra DeleteDataSource \a response.
  */
 void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DeleteDataSourceResponsePrivate
+ * \class QtAws::Kendra::DeleteDataSourceResponsePrivate
  * \brief The DeleteDataSourceResponsePrivate class provides private implementation for DeleteDataSourceResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DeleteDataSourceResponsePrivate object with public implementation \a q.
  */
 DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
-    DeleteDataSourceResponse * const q) : kendraResponsePrivate(q)
+    DeleteDataSourceResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DeleteDataSource response element from \a xml.
+ * Parses a Kendra DeleteDataSource response element from \a xml.
  */
 void DeleteDataSourceResponsePrivate::parseDeleteDataSourceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DeleteDataSourceResponsePrivate::parseDeleteDataSourceResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

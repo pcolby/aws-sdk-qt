@@ -24,14 +24,14 @@
 #include "getaccountrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetAccountRequest;
 
-class GetAccountRequestPrivate : public Sesv2RequestPrivate {
+class GetAccountRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetAccountRequestPrivate(const Sesv2Request::Action action,
+    GetAccountRequestPrivate(const SESv2Request::Action action,
                                    GetAccountRequest * const q);
     GetAccountRequestPrivate(const GetAccountRequestPrivate &other,
                                    GetAccountRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

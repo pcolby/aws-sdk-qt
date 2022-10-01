@@ -31,10 +31,8 @@ namespace LicenseManager {
  *
  * \inmodule QtAwsLicenseManager
  *
- *  <fullname> AWS License Manager </fullname>
- * 
- *  AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- *  on-premises
+ *  License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ *  and on-premises
  *
  * \sa LicenseManagerClient::deleteLicenseManagerReportGenerator
  */

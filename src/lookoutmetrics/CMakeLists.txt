@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLOOKOUTMETRICS_LIBRARY)
 
 add_library(QtAwsLookoutMetrics
+  qtawslookoutmetricsglobal.h
+  lookoutmetricsclient.h
+  lookoutmetricsclient_p.h
+  lookoutmetricsrequest.h
+  lookoutmetricsrequest_p.h
+  lookoutmetricsresponse.h
+  lookoutmetricsresponse_p.h
   activateanomalydetectorrequest.h
   activateanomalydetectorrequest_p.h
   activateanomalydetectorresponse.h
@@ -21,6 +28,10 @@ add_library(QtAwsLookoutMetrics
   createmetricsetrequest_p.h
   createmetricsetresponse.h
   createmetricsetresponse_p.h
+  deactivateanomalydetectorrequest.h
+  deactivateanomalydetectorrequest_p.h
+  deactivateanomalydetectorresponse.h
+  deactivateanomalydetectorresponse_p.h
   deletealertrequest.h
   deletealertrequest_p.h
   deletealertresponse.h
@@ -45,10 +56,18 @@ add_library(QtAwsLookoutMetrics
   describemetricsetrequest_p.h
   describemetricsetresponse.h
   describemetricsetresponse_p.h
+  detectmetricsetconfigrequest.h
+  detectmetricsetconfigrequest_p.h
+  detectmetricsetconfigresponse.h
+  detectmetricsetconfigresponse_p.h
   getanomalygrouprequest.h
   getanomalygrouprequest_p.h
   getanomalygroupresponse.h
   getanomalygroupresponse_p.h
+  getdataqualitymetricsrequest.h
+  getdataqualitymetricsrequest_p.h
+  getdataqualitymetricsresponse.h
+  getdataqualitymetricsresponse_p.h
   getfeedbackrequest.h
   getfeedbackrequest_p.h
   getfeedbackresponse.h
@@ -65,6 +84,10 @@ add_library(QtAwsLookoutMetrics
   listanomalydetectorsrequest_p.h
   listanomalydetectorsresponse.h
   listanomalydetectorsresponse_p.h
+  listanomalygrouprelatedmetricsrequest.h
+  listanomalygrouprelatedmetricsrequest_p.h
+  listanomalygrouprelatedmetricsresponse.h
+  listanomalygrouprelatedmetricsresponse_p.h
   listanomalygroupsummariesrequest.h
   listanomalygroupsummariesrequest_p.h
   listanomalygroupsummariesresponse.h
@@ -81,17 +104,10 @@ add_library(QtAwsLookoutMetrics
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  lookoutmetricsclient.h
-  lookoutmetricsclient_p.h
-  lookoutmetricsrequest.h
-  lookoutmetricsrequest_p.h
-  lookoutmetricsresponse.h
-  lookoutmetricsresponse_p.h
   putfeedbackrequest.h
   putfeedbackrequest_p.h
   putfeedbackresponse.h
   putfeedbackresponse_p.h
-  qtawslookoutmetricsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -100,6 +116,10 @@ add_library(QtAwsLookoutMetrics
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatealertrequest.h
+  updatealertrequest_p.h
+  updatealertresponse.h
+  updatealertresponse_p.h
   updateanomalydetectorrequest.h
   updateanomalydetectorrequest_p.h
   updateanomalydetectorresponse.h
@@ -108,6 +128,9 @@ add_library(QtAwsLookoutMetrics
   updatemetricsetrequest_p.h
   updatemetricsetresponse.h
   updatemetricsetresponse_p.h
+  lookoutmetricsclient.cpp
+  lookoutmetricsrequest.cpp
+  lookoutmetricsresponse.cpp
   activateanomalydetectorrequest.cpp
   activateanomalydetectorresponse.cpp
   backtestanomalydetectorrequest.cpp
@@ -118,6 +141,8 @@ add_library(QtAwsLookoutMetrics
   createanomalydetectorresponse.cpp
   createmetricsetrequest.cpp
   createmetricsetresponse.cpp
+  deactivateanomalydetectorrequest.cpp
+  deactivateanomalydetectorresponse.cpp
   deletealertrequest.cpp
   deletealertresponse.cpp
   deleteanomalydetectorrequest.cpp
@@ -130,8 +155,12 @@ add_library(QtAwsLookoutMetrics
   describeanomalydetectorresponse.cpp
   describemetricsetrequest.cpp
   describemetricsetresponse.cpp
+  detectmetricsetconfigrequest.cpp
+  detectmetricsetconfigresponse.cpp
   getanomalygrouprequest.cpp
   getanomalygroupresponse.cpp
+  getdataqualitymetricsrequest.cpp
+  getdataqualitymetricsresponse.cpp
   getfeedbackrequest.cpp
   getfeedbackresponse.cpp
   getsampledatarequest.cpp
@@ -140,6 +169,8 @@ add_library(QtAwsLookoutMetrics
   listalertsresponse.cpp
   listanomalydetectorsrequest.cpp
   listanomalydetectorsresponse.cpp
+  listanomalygrouprelatedmetricsrequest.cpp
+  listanomalygrouprelatedmetricsresponse.cpp
   listanomalygroupsummariesrequest.cpp
   listanomalygroupsummariesresponse.cpp
   listanomalygrouptimeseriesrequest.cpp
@@ -148,15 +179,14 @@ add_library(QtAwsLookoutMetrics
   listmetricsetsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  lookoutmetricsclient.cpp
-  lookoutmetricsrequest.cpp
-  lookoutmetricsresponse.cpp
   putfeedbackrequest.cpp
   putfeedbackresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatealertrequest.cpp
+  updatealertresponse.cpp
   updateanomalydetectorrequest.cpp
   updateanomalydetectorresponse.cpp
   updatemetricsetrequest.cpp

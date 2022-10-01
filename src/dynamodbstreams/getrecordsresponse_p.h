@@ -23,11 +23,11 @@
 #include "dynamodbstreamsresponse_p.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class GetRecordsResponse;
 
-class GetRecordsResponsePrivate : public DynamoDBStreamsResponsePrivate {
+class GetRecordsResponsePrivate : public DynamoDbStreamsResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

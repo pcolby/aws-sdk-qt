@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
-class FinSpaceDataResponsePrivate;
+class FinspaceDataResponsePrivate;
 
-class QTAWSFINSPACEDATA_EXPORT FinSpaceDataResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFINSPACEDATA_EXPORT FinspaceDataResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    FinSpaceDataResponse(QObject * const parent = 0);
+    FinspaceDataResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    FinSpaceDataResponse(FinSpaceDataResponsePrivate * const d, QObject * const parent);
+    FinspaceDataResponse(FinspaceDataResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(FinSpaceDataResponse)
-    Q_DISABLE_COPY(FinSpaceDataResponse)
+    Q_DECLARE_PRIVATE(FinspaceDataResponse)
+    Q_DISABLE_COPY(FinspaceDataResponse)
 
 };
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws
 
 #endif

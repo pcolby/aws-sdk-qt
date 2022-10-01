@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::StopExecutionResponse
- * \brief The StopExecutionResponse class provides an interace for SFN StopExecution responses.
+ * \class QtAws::Sfn::StopExecutionResponse
+ * \brief The StopExecutionResponse class provides an interace for Sfn StopExecution responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const StopExecutionRequest * StopExecutionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN StopExecution \a response.
+ * Parses a successful Sfn StopExecution \a response.
  */
 void StopExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void StopExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::StopExecutionResponsePrivate
+ * \class QtAws::Sfn::StopExecutionResponsePrivate
  * \brief The StopExecutionResponsePrivate class provides private implementation for StopExecutionResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ StopExecutionResponsePrivate::StopExecutionResponsePrivate(
 }
 
 /*!
- * Parses a SFN StopExecution response element from \a xml.
+ * Parses a Sfn StopExecution response element from \a xml.
  */
 void StopExecutionResponsePrivate::parseStopExecutionResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void StopExecutionResponsePrivate::parseStopExecutionResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

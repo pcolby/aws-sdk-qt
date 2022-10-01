@@ -23,24 +23,24 @@
 #include "finspacedatarequest_p.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::CreateChangesetRequest
- * \brief The CreateChangesetRequest class provides an interface for FinSpaceData CreateChangeset requests.
+ * \class QtAws::FinspaceData::CreateChangesetRequest
+ * \brief The CreateChangesetRequest class provides an interface for FinspaceData CreateChangeset requests.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::createChangeset
+ * \sa FinspaceDataClient::createChangeset
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateChangesetRequest::CreateChangesetRequest(const CreateChangesetRequest &other)
-    : FinSpaceDataRequest(new CreateChangesetRequestPrivate(*other.d_func(), this))
+    : FinspaceDataRequest(new CreateChangesetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateChangesetRequest::CreateChangesetRequest(const CreateChangesetRequest &oth
  * Constructs a CreateChangesetRequest object.
  */
 CreateChangesetRequest::CreateChangesetRequest()
-    : FinSpaceDataRequest(new CreateChangesetRequestPrivate(FinSpaceDataRequest::CreateChangesetAction, this))
+    : FinspaceDataRequest(new CreateChangesetRequestPrivate(FinspaceDataRequest::CreateChangesetAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateChangesetRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::FinSpaceData::CreateChangesetRequestPrivate
+ * \class QtAws::FinspaceData::CreateChangesetRequestPrivate
  * \brief The CreateChangesetRequestPrivate class provides private implementation for CreateChangesetRequest.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
- * Constructs a CreateChangesetRequestPrivate object for FinSpaceData \a action,
+ * Constructs a CreateChangesetRequestPrivate object for FinspaceData \a action,
  * with public implementation \a q.
  */
 CreateChangesetRequestPrivate::CreateChangesetRequestPrivate(
-    const FinSpaceDataRequest::Action action, CreateChangesetRequest * const q)
-    : FinSpaceDataRequestPrivate(action, q)
+    const FinspaceDataRequest::Action action, CreateChangesetRequest * const q)
+    : FinspaceDataRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateChangesetRequestPrivate::CreateChangesetRequestPrivate(
  */
 CreateChangesetRequestPrivate::CreateChangesetRequestPrivate(
     const CreateChangesetRequestPrivate &other, CreateChangesetRequest * const q)
-    : FinSpaceDataRequestPrivate(other, q)
+    : FinspaceDataRequestPrivate(other, q)
 {
 
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

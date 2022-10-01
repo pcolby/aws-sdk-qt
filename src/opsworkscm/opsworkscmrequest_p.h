@@ -24,28 +24,28 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
-class OpsWorksCMRequest;
+class OpsWorksCmRequest;
 
-class OpsWorksCMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class OpsWorksCmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    OpsWorksCMRequest::Action action; ///< OpsWorksCM action to be performed.
-    QString apiVersion;        ///< OpsWorksCM API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< OpsWorksCM request (query string) parameters. @todo?
+    OpsWorksCmRequest::Action action; ///< OpsWorksCm action to be performed.
+    QString apiVersion;        ///< OpsWorksCm API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< OpsWorksCm request (query string) parameters. @todo?
 
-    OpsWorksCMRequestPrivate(const OpsWorksCMRequest::Action action, OpsWorksCMRequest * const q);
-    OpsWorksCMRequestPrivate(const OpsWorksCMRequestPrivate &other, OpsWorksCMRequest * const q);
+    OpsWorksCmRequestPrivate(const OpsWorksCmRequest::Action action, OpsWorksCmRequest * const q);
+    OpsWorksCmRequestPrivate(const OpsWorksCmRequestPrivate &other, OpsWorksCmRequest * const q);
 
-    static QString toString(const OpsWorksCMRequest::Action &action);
+    static QString toString(const OpsWorksCmRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(OpsWorksCMRequest)
+    Q_DECLARE_PUBLIC(OpsWorksCmRequest)
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

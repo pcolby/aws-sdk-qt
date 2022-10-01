@@ -24,14 +24,14 @@
 #include "putresourcepolicyrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class PutResourcePolicyRequest;
 
-class PutResourcePolicyRequestPrivate : public SSMIncidentsRequestPrivate {
+class PutResourcePolicyRequestPrivate : public SsmIncidentsRequestPrivate {
 
 public:
-    PutResourcePolicyRequestPrivate(const SSMIncidentsRequest::Action action,
+    PutResourcePolicyRequestPrivate(const SsmIncidentsRequest::Action action,
                                    PutResourcePolicyRequest * const q);
     PutResourcePolicyRequestPrivate(const PutResourcePolicyRequestPrivate &other,
                                    PutResourcePolicyRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

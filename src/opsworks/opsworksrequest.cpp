@@ -317,7 +317,7 @@ QNetworkRequest OpsWorksRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 OpsWorksRequestPrivate::OpsWorksRequestPrivate(const OpsWorksRequest::Action action, OpsWorksRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2013-02-18"))
 {
 
 }

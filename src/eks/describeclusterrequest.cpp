@@ -23,17 +23,17 @@
 #include "eksrequest_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeClusterRequest
- * \brief The DescribeClusterRequest class provides an interface for EKS DescribeCluster requests.
+ * \class QtAws::Eks::DescribeClusterRequest
+ * \brief The DescribeClusterRequest class provides an interface for Eks DescribeCluster requests.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::EKS::DescribeClusterRequestPrivate
+ * \class QtAws::Eks::DescribeClusterRequestPrivate
  * \brief The DescribeClusterRequestPrivate class provides private implementation for DescribeClusterRequest.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -114,5 +114,5 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

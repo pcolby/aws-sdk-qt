@@ -25,32 +25,31 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SQS {
+namespace Sqs {
 
 /*!
- * \class QtAws::SQS::RemovePermissionResponse
- * \brief The RemovePermissionResponse class provides an interace for SQS RemovePermission responses.
+ * \class QtAws::Sqs::RemovePermissionResponse
+ * \brief The RemovePermissionResponse class provides an interace for Sqs RemovePermission responses.
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  *
- *  Welcome to the <i>Amazon Simple Queue Service API
+ *  Welcome to the <i>Amazon SQS API
  * 
  *  Reference</i>>
  * 
- *  Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel
- *  between applications or microservices. Amazon SQS moves data between distributed application components and helps you
- *  decouple these
+ *  Amazon SQS is a reliable, highly-scalable hosted queue for storing messages as they travel between applications or
+ *  microservices. Amazon SQS moves data between distributed application components and helps you decouple these
  * 
  *  components>
  * 
  *  For information on the permissions you need to use this API, see <a
  *  href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-authentication-and-access-control.html">Identity
- *  and access management</a> in the <i>Amazon Simple Queue Service Developer Guide.</i>
+ *  and access management</a> in the <i>Amazon SQS Developer Guide.</i>
  * 
  *  </p
  * 
- *  You can use <a href="http://aws.amazon.com/tools/#sdk">AWS SDKs</a> to access Amazon SQS using your favorite programming
- *  language. The SDKs perform tasks such as the following
+ *  You can use <a href="http://aws.amazon.com/tools/#sdk">Amazon Web Services SDKs</a> to access Amazon SQS using your
+ *  favorite programming language. The SDKs perform tasks such as the following
  * 
  *  automatically> <ul> <li>
  * 
@@ -74,7 +73,7 @@ namespace SQS {
  * 
  *  </p </li> <li>
  * 
- *  <i>Amazon Simple Queue Service Developer Guide</i>
+ *  <i>Amazon SQS Developer Guide</i>
  * 
  *  </p <ul> <li>
  * 
@@ -94,8 +93,8 @@ namespace SQS {
  * 
  *  </p </li> </ul> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>AWS CLI Command
- *  Reference</i> </a>
+ *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>Command Line Interface</i>
+ *  </a>
  * 
  *  </p </li> <li>
  * 
@@ -132,7 +131,7 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SQS RemovePermission \a response.
+ * Parses a successful Sqs RemovePermission \a response.
  */
 void RemovePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -142,11 +141,11 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SQS::RemovePermissionResponsePrivate
+ * \class QtAws::Sqs::RemovePermissionResponsePrivate
  * \brief The RemovePermissionResponsePrivate class provides private implementation for RemovePermissionResponse.
  * \internal
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  */
 
 /*!
@@ -159,7 +158,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 }
 
 /*!
- * Parses a SQS RemovePermission response element from \a xml.
+ * Parses a Sqs RemovePermission response element from \a xml.
  */
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {
@@ -167,5 +166,5 @@ void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SQS
+} // namespace Sqs
 } // namespace QtAws

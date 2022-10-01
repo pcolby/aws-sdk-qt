@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSELASTICBEANSTALK_LIBRARY)
 
 add_library(QtAwsElasticBeanstalk
+  qtawselasticbeanstalkglobal.h
+  elasticbeanstalkclient.h
+  elasticbeanstalkclient_p.h
+  elasticbeanstalkrequest.h
+  elasticbeanstalkrequest_p.h
+  elasticbeanstalkresponse.h
+  elasticbeanstalkresponse_p.h
   abortenvironmentupdaterequest.h
   abortenvironmentupdaterequest_p.h
   abortenvironmentupdateresponse.h
@@ -69,14 +76,14 @@ add_library(QtAwsElasticBeanstalk
   describeaccountattributesrequest_p.h
   describeaccountattributesresponse.h
   describeaccountattributesresponse_p.h
-  describeapplicationsrequest.h
-  describeapplicationsrequest_p.h
-  describeapplicationsresponse.h
-  describeapplicationsresponse_p.h
   describeapplicationversionsrequest.h
   describeapplicationversionsrequest_p.h
   describeapplicationversionsresponse.h
   describeapplicationversionsresponse_p.h
+  describeapplicationsrequest.h
+  describeapplicationsrequest_p.h
+  describeapplicationsresponse.h
+  describeapplicationsresponse_p.h
   describeconfigurationoptionsrequest.h
   describeconfigurationoptionsrequest_p.h
   describeconfigurationoptionsresponse.h
@@ -121,12 +128,6 @@ add_library(QtAwsElasticBeanstalk
   disassociateenvironmentoperationsrolerequest_p.h
   disassociateenvironmentoperationsroleresponse.h
   disassociateenvironmentoperationsroleresponse_p.h
-  elasticbeanstalkclient.h
-  elasticbeanstalkclient_p.h
-  elasticbeanstalkrequest.h
-  elasticbeanstalkrequest_p.h
-  elasticbeanstalkresponse.h
-  elasticbeanstalkresponse_p.h
   listavailablesolutionstacksrequest.h
   listavailablesolutionstacksrequest_p.h
   listavailablesolutionstacksresponse.h
@@ -143,7 +144,6 @@ add_library(QtAwsElasticBeanstalk
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawselasticbeanstalkglobal.h
   rebuildenvironmentrequest.h
   rebuildenvironmentrequest_p.h
   rebuildenvironmentresponse.h
@@ -170,12 +170,12 @@ add_library(QtAwsElasticBeanstalk
   terminateenvironmentresponse_p.h
   updateapplicationrequest.h
   updateapplicationrequest_p.h
+  updateapplicationresponse.h
+  updateapplicationresponse_p.h
   updateapplicationresourcelifecyclerequest.h
   updateapplicationresourcelifecyclerequest_p.h
   updateapplicationresourcelifecycleresponse.h
   updateapplicationresourcelifecycleresponse_p.h
-  updateapplicationresponse.h
-  updateapplicationresponse_p.h
   updateapplicationversionrequest.h
   updateapplicationversionrequest_p.h
   updateapplicationversionresponse.h
@@ -196,6 +196,9 @@ add_library(QtAwsElasticBeanstalk
   validateconfigurationsettingsrequest_p.h
   validateconfigurationsettingsresponse.h
   validateconfigurationsettingsresponse_p.h
+  elasticbeanstalkclient.cpp
+  elasticbeanstalkrequest.cpp
+  elasticbeanstalkresponse.cpp
   abortenvironmentupdaterequest.cpp
   abortenvironmentupdateresponse.cpp
   applyenvironmentmanagedactionrequest.cpp
@@ -230,10 +233,10 @@ add_library(QtAwsElasticBeanstalk
   deleteplatformversionresponse.cpp
   describeaccountattributesrequest.cpp
   describeaccountattributesresponse.cpp
-  describeapplicationsrequest.cpp
-  describeapplicationsresponse.cpp
   describeapplicationversionsrequest.cpp
   describeapplicationversionsresponse.cpp
+  describeapplicationsrequest.cpp
+  describeapplicationsresponse.cpp
   describeconfigurationoptionsrequest.cpp
   describeconfigurationoptionsresponse.cpp
   describeconfigurationsettingsrequest.cpp
@@ -256,9 +259,6 @@ add_library(QtAwsElasticBeanstalk
   describeplatformversionresponse.cpp
   disassociateenvironmentoperationsrolerequest.cpp
   disassociateenvironmentoperationsroleresponse.cpp
-  elasticbeanstalkclient.cpp
-  elasticbeanstalkrequest.cpp
-  elasticbeanstalkresponse.cpp
   listavailablesolutionstacksrequest.cpp
   listavailablesolutionstacksresponse.cpp
   listplatformbranchesrequest.cpp
@@ -280,9 +280,9 @@ add_library(QtAwsElasticBeanstalk
   terminateenvironmentrequest.cpp
   terminateenvironmentresponse.cpp
   updateapplicationrequest.cpp
+  updateapplicationresponse.cpp
   updateapplicationresourcelifecyclerequest.cpp
   updateapplicationresourcelifecycleresponse.cpp
-  updateapplicationresponse.cpp
   updateapplicationversionrequest.cpp
   updateapplicationversionresponse.cpp
   updateconfigurationtemplaterequest.cpp

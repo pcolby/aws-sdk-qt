@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::GetQuerySuggestionsRequest
- * \brief The GetQuerySuggestionsRequest class provides an interface for kendra GetQuerySuggestions requests.
+ * \class QtAws::Kendra::GetQuerySuggestionsRequest
+ * \brief The GetQuerySuggestionsRequest class provides an interface for Kendra GetQuerySuggestions requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::getQuerySuggestions
+ * \sa KendraClient::getQuerySuggestions
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetQuerySuggestionsRequest::GetQuerySuggestionsRequest(const GetQuerySuggestionsRequest &other)
-    : kendraRequest(new GetQuerySuggestionsRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new GetQuerySuggestionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ GetQuerySuggestionsRequest::GetQuerySuggestionsRequest(const GetQuerySuggestions
  * Constructs a GetQuerySuggestionsRequest object.
  */
 GetQuerySuggestionsRequest::GetQuerySuggestionsRequest()
-    : kendraRequest(new GetQuerySuggestionsRequestPrivate(kendraRequest::GetQuerySuggestionsAction, this))
+    : KendraRequest(new GetQuerySuggestionsRequestPrivate(KendraRequest::GetQuerySuggestionsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * GetQuerySuggestionsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::kendra::GetQuerySuggestionsRequestPrivate
+ * \class QtAws::Kendra::GetQuerySuggestionsRequestPrivate
  * \brief The GetQuerySuggestionsRequestPrivate class provides private implementation for GetQuerySuggestionsRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a GetQuerySuggestionsRequestPrivate object for kendra \a action,
+ * Constructs a GetQuerySuggestionsRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 GetQuerySuggestionsRequestPrivate::GetQuerySuggestionsRequestPrivate(
-    const kendraRequest::Action action, GetQuerySuggestionsRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, GetQuerySuggestionsRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ GetQuerySuggestionsRequestPrivate::GetQuerySuggestionsRequestPrivate(
  */
 GetQuerySuggestionsRequestPrivate::GetQuerySuggestionsRequestPrivate(
     const GetQuerySuggestionsRequestPrivate &other, GetQuerySuggestionsRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

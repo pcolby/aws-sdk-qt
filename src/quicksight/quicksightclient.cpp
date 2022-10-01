@@ -25,6 +25,8 @@
 #include "cancelingestionresponse.h"
 #include "createaccountcustomizationrequest.h"
 #include "createaccountcustomizationresponse.h"
+#include "createaccountsubscriptionrequest.h"
+#include "createaccountsubscriptionresponse.h"
 #include "createanalysisrequest.h"
 #include "createanalysisresponse.h"
 #include "createdashboardrequest.h"
@@ -33,6 +35,10 @@
 #include "createdatasetresponse.h"
 #include "createdatasourcerequest.h"
 #include "createdatasourceresponse.h"
+#include "createfolderrequest.h"
+#include "createfolderresponse.h"
+#include "createfoldermembershiprequest.h"
+#include "createfoldermembershipresponse.h"
 #include "creategrouprequest.h"
 #include "creategroupresponse.h"
 #include "creategroupmembershiprequest.h"
@@ -61,6 +67,10 @@
 #include "deletedatasetresponse.h"
 #include "deletedatasourcerequest.h"
 #include "deletedatasourceresponse.h"
+#include "deletefolderrequest.h"
+#include "deletefolderresponse.h"
+#include "deletefoldermembershiprequest.h"
+#include "deletefoldermembershipresponse.h"
 #include "deletegrouprequest.h"
 #include "deletegroupresponse.h"
 #include "deletegroupmembershiprequest.h"
@@ -85,6 +95,8 @@
 #include "describeaccountcustomizationresponse.h"
 #include "describeaccountsettingsrequest.h"
 #include "describeaccountsettingsresponse.h"
+#include "describeaccountsubscriptionrequest.h"
+#include "describeaccountsubscriptionresponse.h"
 #include "describeanalysisrequest.h"
 #include "describeanalysisresponse.h"
 #include "describeanalysispermissionsrequest.h"
@@ -101,12 +113,22 @@
 #include "describedatasourceresponse.h"
 #include "describedatasourcepermissionsrequest.h"
 #include "describedatasourcepermissionsresponse.h"
+#include "describefolderrequest.h"
+#include "describefolderresponse.h"
+#include "describefolderpermissionsrequest.h"
+#include "describefolderpermissionsresponse.h"
+#include "describefolderresolvedpermissionsrequest.h"
+#include "describefolderresolvedpermissionsresponse.h"
 #include "describegrouprequest.h"
 #include "describegroupresponse.h"
+#include "describegroupmembershiprequest.h"
+#include "describegroupmembershipresponse.h"
 #include "describeiampolicyassignmentrequest.h"
 #include "describeiampolicyassignmentresponse.h"
 #include "describeingestionrequest.h"
 #include "describeingestionresponse.h"
+#include "describeiprestrictionrequest.h"
+#include "describeiprestrictionresponse.h"
 #include "describenamespacerequest.h"
 #include "describenamespaceresponse.h"
 #include "describetemplaterequest.h"
@@ -123,6 +145,10 @@
 #include "describethemepermissionsresponse.h"
 #include "describeuserrequest.h"
 #include "describeuserresponse.h"
+#include "generateembedurlforanonymoususerrequest.h"
+#include "generateembedurlforanonymoususerresponse.h"
+#include "generateembedurlforregistereduserrequest.h"
+#include "generateembedurlforregistereduserresponse.h"
 #include "getdashboardembedurlrequest.h"
 #include "getdashboardembedurlresponse.h"
 #include "getsessionembedurlrequest.h"
@@ -137,6 +163,10 @@
 #include "listdatasetsresponse.h"
 #include "listdatasourcesrequest.h"
 #include "listdatasourcesresponse.h"
+#include "listfoldermembersrequest.h"
+#include "listfoldermembersresponse.h"
+#include "listfoldersrequest.h"
+#include "listfoldersresponse.h"
 #include "listgroupmembershipsrequest.h"
 #include "listgroupmembershipsresponse.h"
 #include "listgroupsrequest.h"
@@ -175,6 +205,10 @@
 #include "searchanalysesresponse.h"
 #include "searchdashboardsrequest.h"
 #include "searchdashboardsresponse.h"
+#include "searchfoldersrequest.h"
+#include "searchfoldersresponse.h"
+#include "searchgroupsrequest.h"
+#include "searchgroupsresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -201,10 +235,18 @@
 #include "updatedatasourceresponse.h"
 #include "updatedatasourcepermissionsrequest.h"
 #include "updatedatasourcepermissionsresponse.h"
+#include "updatefolderrequest.h"
+#include "updatefolderresponse.h"
+#include "updatefolderpermissionsrequest.h"
+#include "updatefolderpermissionsresponse.h"
 #include "updategrouprequest.h"
 #include "updategroupresponse.h"
 #include "updateiampolicyassignmentrequest.h"
 #include "updateiampolicyassignmentresponse.h"
+#include "updateiprestrictionrequest.h"
+#include "updateiprestrictionresponse.h"
+#include "updatepublicsharingsettingsrequest.h"
+#include "updatepublicsharingsettingsresponse.h"
 #include "updatetemplaterequest.h"
 #include "updatetemplateresponse.h"
 #include "updatetemplatealiasrequest.h"
@@ -244,9 +286,9 @@ namespace QuickSight {
  *
  *  <fullname>Amazon QuickSight API Reference</fullname>
  * 
- *  Amazon QuickSight is a fully managed, serverless business intelligence service for the AWS Cloud that makes it easy to
- *  extend data and insights to every user in your organization. This API reference contains documentation for a programming
- *  interface that you can use to manage Amazon QuickSight.
+ *  Amazon QuickSight is a fully managed, serverless business intelligence service for the Amazon Web Services Cloud that
+ *  makes it easy to extend data and insights to every user in your organization. This API reference contains documentation
+ *  for a programming interface that you can use to manage Amazon QuickSight.
  */
 
 /*!
@@ -321,29 +363,81 @@ CancelIngestionResponse * QuickSightClient::cancelIngestion(const CancelIngestio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates Amazon QuickSight customizations the current AWS Region. Currently, you can add a custom default theme by using
- * the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API operation. To further
- * customize QuickSight by removing QuickSight sample assets and videos for all new users, see <a
- * href="https://docs.aws.amazon.com/quicksight/latest/user/customizing-quicksight.html">Customizing QuickSight</a> in the
- * <i>Amazon QuickSight User Guide.</i>
+ * Creates Amazon QuickSight customizations for the current Amazon Web Services Region. Currently, you can add a custom
+ * default theme by using the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API
+ * operation. To further customize Amazon QuickSight by removing Amazon QuickSight sample assets and videos for all new
+ * users, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/customizing-quicksight.html">Customizing Amazon
+ * QuickSight</a> in the <i>Amazon QuickSight User Guide.</i>
  *
  * </p
  *
- * You can create customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead.
- * Customizations that apply to a namespace always override customizations that apply to an AWS account. To find out which
- * customizations apply, use the <code>DescribeAccountCustomization</code> API
+ * You can create customizations for your Amazon Web Services account or, if you specify a namespace, for a QuickSight
+ * namespace instead. Customizations that apply to a namespace always override customizations that apply to an Amazon Web
+ * Services account. To find out which customizations apply, use the <code>DescribeAccountCustomization</code> API
  *
  * operation>
  *
  * Before you use the <code>CreateAccountCustomization</code> API operation to add a theme as the namespace default, make
  * sure that you first share the theme with the namespace. If you don't share it with the namespace, the theme isn't
  * visible to your users even if you make it the default theme. To check if the theme is shared, view the current
- * permissions by using the <code> <a>DescribeThemePermissions</a> </code> API operation. To share the theme, grant
- * permissions by using the <code> <a>UpdateThemePermissions</a> </code> API operation.
+ * permissions by using the <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeThemePermissions.html">DescribeThemePermissions</a>
+ * </code> API operation. To share the theme, grant permissions by using the <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateThemePermissions.html">UpdateThemePermissions</a>
+ * </code> API operation.
  */
 CreateAccountCustomizationResponse * QuickSightClient::createAccountCustomization(const CreateAccountCustomizationRequest &request)
 {
     return qobject_cast<CreateAccountCustomizationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * CreateAccountSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon QuickSight account, or subscribes to Amazon QuickSight
+ *
+ * Q>
+ *
+ * The Amazon Web Services Region for the account is derived from what is configured in the CLI or SDK. This operation
+ * isn't supported in the US East (Ohio) Region, South America (Sao Paulo) Region, or Asia Pacific (Singapore) Region.
+ *
+ * </p
+ *
+ * Before you use this operation, make sure that you can connect to an existing Amazon Web Services account. If you don't
+ * have an Amazon Web Services account, see <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/user/setting-up-aws-sign-up.html">Sign up for Amazon Web
+ * Services</a> in the <i>Amazon QuickSight User Guide</i>. The person who signs up for Amazon QuickSight needs to have the
+ * correct Identity and Access Management (IAM) permissions. For more information, see <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/user/iam-policy-examples.html">IAM Policy Examples for Amazon
+ * QuickSight</a> in the <i>Amazon QuickSight User
+ *
+ * Guide</i>>
+ *
+ * If your IAM policy includes both the <code>Subscribe</code> and <code>CreateAccountSubscription</code> actions, make
+ * sure that both actions are set to <code>Allow</code>. If either action is set to <code>Deny</code>, the
+ * <code>Deny</code> action prevails and your API call
+ *
+ * fails>
+ *
+ * You can't pass an existing IAM role to access other Amazon Web Services services using this API operation. To pass your
+ * existing IAM role to Amazon QuickSight, see <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/user/security_iam_service-with-iam.html#security-create-iam-role">Passing
+ * IAM roles to Amazon QuickSight</a> in the <i>Amazon QuickSight User
+ *
+ * Guide</i>>
+ *
+ * You can't set default resource access on the new account from the Amazon QuickSight API. Instead, add default resource
+ * access from the Amazon QuickSight console. For more information about setting default resource access to Amazon Web
+ * Services services, see <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/user/scoping-policies-defaults.html">Setting default resource access
+ * to Amazon Web Services services</a> in the <i>Amazon QuickSight User
+ */
+CreateAccountSubscriptionResponse * QuickSightClient::createAccountSubscription(const CreateAccountSubscriptionRequest &request)
+{
+    return qobject_cast<CreateAccountSubscriptionResponse *>(send(request));
 }
 
 /*!
@@ -365,13 +459,14 @@ CreateAnalysisResponse * QuickSightClient::createAnalysis(const CreateAnalysisRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a dashboard from a template. To first create a template, see the <code> <a>CreateTemplate</a> </code> API
+ * Creates a dashboard from a template. To first create a template, see the <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplate.html">CreateTemplate</a> </code> API
  *
  * operation>
  *
- * A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share
- * QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. If you have the
- * correct permissions, you can create a dashboard from a template that exists in a different AWS
+ * A dashboard is an entity in Amazon QuickSight that identifies Amazon QuickSight reports, created from analyses. You can
+ * share Amazon QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. If you
+ * have the correct permissions, you can create a dashboard from a template that exists in a different Amazon Web Services
  */
 CreateDashboardResponse * QuickSightClient::createDashboard(const CreateDashboardRequest &request)
 {
@@ -384,7 +479,7 @@ CreateDashboardResponse * QuickSightClient::createDashboard(const CreateDashboar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a
+ * Creates a dataset. This operation doesn't support datasets that include uploaded files as a
  */
 CreateDataSetResponse * QuickSightClient::createDataSet(const CreateDataSetRequest &request)
 {
@@ -406,16 +501,43 @@ CreateDataSourceResponse * QuickSightClient::createDataSource(const CreateDataSo
 
 /*!
  * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * CreateFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an empty shared
+ */
+CreateFolderResponse * QuickSightClient::createFolder(const CreateFolderRequest &request)
+{
+    return qobject_cast<CreateFolderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * CreateFolderMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds an asset, such as a dashboard, analysis, or dataset into a
+ */
+CreateFolderMembershipResponse * QuickSightClient::createFolderMembership(const CreateFolderMembershipRequest &request)
+{
+    return qobject_cast<CreateFolderMembershipResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
  * CreateGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon QuickSight
+ * Use the <code>CreateGroup</code> operation to create a group in Amazon QuickSight. You can create up to 10,000 groups in
+ * a namespace. If you want to create more than 10,000 groups in a namespace, contact AWS
  *
- * group>
+ * Support>
  *
  * The permissions resource is
- * <code>arn:aws:quicksight:us-east-1:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i>
+ * <code>arn:aws:quicksight:<your-region>:<i><relevant-aws-account-id></i>:group/default/<i><group-name></i>
  *
  * </code>>
  *
@@ -446,8 +568,8 @@ CreateGroupMembershipResponse * QuickSightClient::createGroupMembership(const Cr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy
- * assignment is attached to the specified groups or users of Amazon QuickSight. Assignment names are unique per AWS
- * account. To avoid overwriting rules in other namespaces, use assignment names that are
+ * assignment is attached to the specified groups or users of Amazon QuickSight. Assignment names are unique per Amazon Web
+ * Services account. To avoid overwriting rules in other namespaces, use assignment names that are
  */
 CreateIAMPolicyAssignmentResponse * QuickSightClient::createIAMPolicyAssignment(const CreateIAMPolicyAssignmentRequest &request)
 {
@@ -460,14 +582,16 @@ CreateIAMPolicyAssignmentResponse * QuickSightClient::createIAMPolicyAssignment(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates and starts a new SPICE ingestion on a
+ * Creates and starts a new SPICE ingestion for a dataset. You can manually refresh datasets in an Enterprise edition
+ * account 32 times in a 24-hour period. You can manually refresh datasets in a Standard edition account 8 times in a
+ * 24-hour period. Each 24-hour period is measured starting 24 hours before the current date and
  *
- * datase>
+ * time>
  *
  * Any ingestions operating on tagged datasets inherit the same tags automatically for use in access control. For an
  * example, see <a href="http://aws.amazon.com/premiumsupport/knowledge-center/iam-ec2-resource-tags/">How do I create an
- * IAM policy to control access to Amazon EC2 resources using tags?</a> in the AWS Knowledge Center. Tags are visible on
- * the tagged dataset, but not on the ingestion
+ * IAM policy to control access to Amazon EC2 resources using tags?</a> in the Amazon Web Services Knowledge Center. Tags
+ * are visible on the tagged dataset, but not on the ingestion
  */
 CreateIngestionResponse * QuickSightClient::createIngestion(const CreateIngestionRequest &request)
 {
@@ -484,11 +608,12 @@ CreateIngestionResponse * QuickSightClient::createIngestion(const CreateIngestio
  *
  * QuickSight>
  *
- * A namespace allows you to isolate the QuickSight users and groups that are registered for that namespace. Users that
- * access the namespace can share assets only with other users or groups in the same namespace. They can't see users and
- * groups in other namespaces. You can create a namespace after your AWS account is subscribed to QuickSight. The namespace
- * must be unique within the AWS account. By default, there is a limit of 100 namespaces per AWS account. To increase your
- * limit, create a ticket with AWS Support.
+ * A namespace allows you to isolate the Amazon QuickSight users and groups that are registered for that namespace. Users
+ * that access the namespace can share assets only with other users or groups in the same namespace. They can't see users
+ * and groups in other namespaces. You can create a namespace after your Amazon Web Services account is subscribed to
+ * Amazon QuickSight. The namespace must be unique within the Amazon Web Services account. By default, there is a limit of
+ * 100 namespaces per Amazon Web Services account. To increase your limit, create a ticket with Amazon Web Services
+ * Support.
  */
 CreateNamespaceResponse * QuickSightClient::createNamespace(const CreateNamespaceRequest &request)
 {
@@ -501,14 +626,15 @@ CreateNamespaceResponse * QuickSightClient::createNamespace(const CreateNamespac
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a template from an existing QuickSight analysis or template. You can use the resulting template to create a
+ * Creates a template from an existing Amazon QuickSight analysis or template. You can use the resulting template to create
+ * a
  *
  * dashboard>
  *
- * A <i>template</i> is an entity in QuickSight that encapsulates the metadata required to create an analysis and that you
- * can use to create s dashboard. A template adds a layer of abstraction by using placeholders to replace the dataset
- * associated with the analysis. You can use templates to create dashboards by replacing dataset placeholders with datasets
- * that follow the same schema that was used to create the source analysis and
+ * A <i>template</i> is an entity in Amazon QuickSight that encapsulates the metadata required to create an analysis and
+ * that you can use to create s dashboard. A template adds a layer of abstraction by using placeholders to replace the
+ * dataset associated with the analysis. You can use templates to create dashboards by replacing dataset placeholders with
+ * datasets that follow the same schema that was used to create the source analysis and
  */
 CreateTemplateResponse * QuickSightClient::createTemplate(const CreateTemplateRequest &request)
 {
@@ -566,7 +692,8 @@ CreateThemeAliasResponse * QuickSightClient::createThemeAlias(const CreateThemeA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes all Amazon QuickSight customizations in this AWS Region for the specified AWS account and QuickSight
+ * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region for the specified Amazon Web Services
+ * account and Amazon QuickSight
  */
 DeleteAccountCustomizationResponse * QuickSightClient::deleteAccountCustomization(const DeleteAccountCustomizationRequest &request)
 {
@@ -580,9 +707,9 @@ DeleteAccountCustomizationResponse * QuickSightClient::deleteAccountCustomizatio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an analysis from Amazon QuickSight. You can optionally include a recovery window during which you can restore
- * the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. QuickSight attaches a
- * <code>DeletionTime</code> stamp to the response that specifies the end of the recovery window. At the end of the
- * recovery window, QuickSight deletes the analysis
+ * the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. Amazon QuickSight
+ * attaches a <code>DeletionTime</code> stamp to the response that specifies the end of the recovery window. At the end of
+ * the recovery window, Amazon QuickSight deletes the analysis
  *
  * permanently>
  *
@@ -592,8 +719,8 @@ DeleteAccountCustomizationResponse * QuickSightClient::deleteAccountCustomizatio
  *
  * it>
  *
- * An analysis that's scheduled for deletion isn't accessible in the QuickSight console. To access it in the console,
- * restore it. Deleting an analysis doesn't delete the dashboards that you publish from
+ * An analysis that's scheduled for deletion isn't accessible in the Amazon QuickSight console. To access it in the
+ * console, restore it. Deleting an analysis doesn't delete the dashboards that you publish from
  */
 DeleteAnalysisResponse * QuickSightClient::deleteAnalysis(const DeleteAnalysisRequest &request)
 {
@@ -637,6 +764,32 @@ DeleteDataSetResponse * QuickSightClient::deleteDataSet(const DeleteDataSetReque
 DeleteDataSourceResponse * QuickSightClient::deleteDataSource(const DeleteDataSourceRequest &request)
 {
     return qobject_cast<DeleteDataSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DeleteFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an empty
+ */
+DeleteFolderResponse * QuickSightClient::deleteFolder(const DeleteFolderRequest &request)
+{
+    return qobject_cast<DeleteFolderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DeleteFolderMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an asset, such as a dashboard, analysis, or dataset, from a
+ */
+DeleteFolderMembershipResponse * QuickSightClient::deleteFolderMembership(const DeleteFolderMembershipRequest &request)
+{
+    return qobject_cast<DeleteFolderMembershipResponse *>(send(request));
 }
 
 /*!
@@ -753,8 +906,8 @@ DeleteThemeAliasResponse * QuickSightClient::deleteThemeAlias(const DeleteThemeA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the Amazon QuickSight user that is associated with the identity of the AWS Identity and Access Management (IAM)
- * user or role that's making the call. The IAM user isn't deleted as a result of this call.
+ * Deletes the Amazon QuickSight user that is associated with the identity of the Identity and Access Management (IAM) user
+ * or role that's making the call. The IAM user isn't deleted as a result of this call.
  */
 DeleteUserResponse * QuickSightClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -780,9 +933,9 @@ DeleteUserByPrincipalIdResponse * QuickSightClient::deleteUserByPrincipalId(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the customizations associated with the provided AWS account and Amazon QuickSight namespace in an AWS Region.
- * The QuickSight console evaluates which customizations to apply by running this API operation with the
- * <code>Resolved</code> flag included.
+ * Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon QuickSight
+ * namespace in an Amazon Web Services Region. The Amazon QuickSight console evaluates which customizations to apply by
+ * running this API operation with the <code>Resolved</code> flag included.
  *
  * </p
  *
@@ -791,21 +944,22 @@ DeleteUserByPrincipalIdResponse * QuickSightClient::deleteUserByPrincipalId(cons
  *
  * </p <ul> <li>
  *
- * <code>AWS Account</code> - The AWS account exists at the top of the hierarchy. It has the potential to use all of the
- * AWS Regions and AWS Services. When you subscribe to QuickSight, you choose one AWS Region to use as your home Region.
- * That's where your free SPICE capacity is located. You can use QuickSight in any supported AWS Region.
+ * <code>Amazon Web Services account</code> - The Amazon Web Services account exists at the top of the hierarchy. It has
+ * the potential to use all of the Amazon Web Services Regions and Amazon Web Services Services. When you subscribe to
+ * Amazon QuickSight, you choose one Amazon Web Services Region to use as your home Region. That's where your free SPICE
+ * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region.
  *
  * </p </li> <li>
  *
- * <code>AWS Region</code> - In each AWS Region where you sign in to QuickSight at least once, QuickSight acts as a
- * separate instance of the same service. If you have a user directory, it resides in us-east-1, which is the US East (N.
- * Virginia). Generally speaking, these users have access to QuickSight in any AWS Region, unless they are constrained to a
- * namespace.
+ * <code>Amazon Web Services Region</code> - In each Amazon Web Services Region where you sign in to Amazon QuickSight at
+ * least once, Amazon QuickSight acts as a separate instance of the same service. If you have a user directory, it resides
+ * in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have access to Amazon QuickSight in
+ * any Amazon Web Services Region, unless they are constrained to a namespace.
  *
  * </p
  *
- * To run the command in a different AWS Region, you change your Region settings. If you're using the AWS CLI, you can use
- * one of the following
+ * To run the command in a different Amazon Web Services Region, you change your Region settings. If you're using the CLI,
+ * you can use one of the following
  *
  * options> <ul> <li>
  *
@@ -817,23 +971,24 @@ DeleteUserByPrincipalIdResponse * QuickSightClient::deleteUserByPrincipalId(cons
  *
  * </p </li> <li>
  *
- * Run <code>aws configure</code> to change your default AWS Region. Use Enter to key the same settings for your keys. For
- * more information, see <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configuring the
- * AWS
+ * Run <code>aws configure</code> to change your default Amazon Web Services Region. Use Enter to key the same settings for
+ * your keys. For more information, see <a
+ * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configuring the
  *
  * CLI</a>> </li> </ul> </li> <li>
  *
  * <code>Namespace</code> - A QuickSight namespace is a partition that contains users and assets (data sources, datasets,
  * dashboards, and so on). To access assets that are in a specific namespace, users and groups must also be part of the
  * same namespace. People who share a namespace are completely isolated from users and assets in other namespaces, even if
- * they are in the same AWS account and AWS
+ * they are in the same Amazon Web Services account and Amazon Web Services
  *
  * Region> </li> <li>
  *
- * <code>Applied customizations</code> - Within an AWS Region, a set of QuickSight customizations can apply to an AWS
- * account or to a namespace. Settings that you apply to a namespace override settings that you apply to an AWS account.
- * All settings are isolated to a single AWS Region. To apply them in other AWS Regions, run the
- * <code>CreateAccountCustomization</code> command in each AWS Region where you want to apply the same customizations.
+ * <code>Applied customizations</code> - Within an Amazon Web Services Region, a set of Amazon QuickSight customizations
+ * can apply to an Amazon Web Services account or to a namespace. Settings that you apply to a namespace override settings
+ * that you apply to an Amazon Web Services account. All settings are isolated to a single Amazon Web Services Region. To
+ * apply them in other Amazon Web Services Regions, run the <code>CreateAccountCustomization</code> command in each Amazon
+ * Web Services Region where you want to apply the same customizations.
  */
 DescribeAccountCustomizationResponse * QuickSightClient::describeAccountCustomization(const DescribeAccountCustomizationRequest &request)
 {
@@ -846,11 +1001,27 @@ DescribeAccountCustomizationResponse * QuickSightClient::describeAccountCustomiz
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the settings that were used when your QuickSight subscription was first created in this AWS
+ * Describes the settings that were used when your Amazon QuickSight subscription was first created in this Amazon Web
+ * Services
  */
 DescribeAccountSettingsResponse * QuickSightClient::describeAccountSettings(const DescribeAccountSettingsRequest &request)
 {
     return qobject_cast<DescribeAccountSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeAccountSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use the DescribeAccountSubscription operation to receive a description of a Amazon QuickSight account's subscription. A
+ * successful API call returns an <code>AccountInfo</code> object that includes an account's name, subscription status,
+ * authentication type, edition, and notification email
+ */
+DescribeAccountSubscriptionResponse * QuickSightClient::describeAccountSubscription(const DescribeAccountSubscriptionRequest &request)
+{
+    return qobject_cast<DescribeAccountSubscriptionResponse *>(send(request));
 }
 
 /*!
@@ -911,7 +1082,7 @@ DescribeDashboardPermissionsResponse * QuickSightClient::describeDashboardPermis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes a dataset.
+ * Describes a dataset. This operation doesn't support datasets that include uploaded files as a
  */
 DescribeDataSetResponse * QuickSightClient::describeDataSet(const DescribeDataSetRequest &request)
 {
@@ -963,6 +1134,46 @@ DescribeDataSourcePermissionsResponse * QuickSightClient::describeDataSourcePerm
 
 /*!
  * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a
+ */
+DescribeFolderResponse * QuickSightClient::describeFolder(const DescribeFolderRequest &request)
+{
+    return qobject_cast<DescribeFolderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeFolderPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes permissions for a
+ */
+DescribeFolderPermissionsResponse * QuickSightClient::describeFolderPermissions(const DescribeFolderPermissionsRequest &request)
+{
+    return qobject_cast<DescribeFolderPermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeFolderResolvedPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the folder resolved permissions. Permissions consists of both folder direct permissions and the inherited
+ * permissions from the ancestor
+ */
+DescribeFolderResolvedPermissionsResponse * QuickSightClient::describeFolderResolvedPermissions(const DescribeFolderResolvedPermissionsRequest &request)
+{
+    return qobject_cast<DescribeFolderResolvedPermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
  * DescribeGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -972,6 +1183,20 @@ DescribeDataSourcePermissionsResponse * QuickSightClient::describeDataSourcePerm
 DescribeGroupResponse * QuickSightClient::describeGroup(const DescribeGroupRequest &request)
 {
     return qobject_cast<DescribeGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeGroupMembershipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use the <code>DescribeGroupMembership</code> operation to determine if a user is a member of the specified group. If the
+ * user exists and is a member of the specified group, an associated <code>GroupMember</code> object is
+ */
+DescribeGroupMembershipResponse * QuickSightClient::describeGroupMembership(const DescribeGroupMembershipRequest &request)
+{
+    return qobject_cast<DescribeGroupMembershipResponse *>(send(request));
 }
 
 /*!
@@ -998,6 +1223,19 @@ DescribeIAMPolicyAssignmentResponse * QuickSightClient::describeIAMPolicyAssignm
 DescribeIngestionResponse * QuickSightClient::describeIngestion(const DescribeIngestionRequest &request)
 {
     return qobject_cast<DescribeIngestionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DescribeIpRestrictionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a summary and status of IP
+ */
+DescribeIpRestrictionResponse * QuickSightClient::describeIpRestriction(const DescribeIpRestrictionRequest &request)
+{
+    return qobject_cast<DescribeIpRestrictionResponse *>(send(request));
 }
 
 /*!
@@ -1106,19 +1344,116 @@ DescribeUserResponse * QuickSightClient::describeUser(const DescribeUserRequest 
 
 /*!
  * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * GenerateEmbedUrlForAnonymousUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Generates an embed URL that you can use to embed an Amazon QuickSight dashboard or visual in your website, without
+ * having to register any reader users. Before you use this action, make sure that you have configured the dashboards and
+ *
+ * permissions>
+ *
+ * The following rules apply to the generated
+ *
+ * URL> <ul> <li>
+ *
+ * It contains a temporary bearer token. It is valid for 5 minutes after it is generated. Once redeemed within this period,
+ * it cannot be re-used
+ *
+ * again> </li> <li>
+ *
+ * The URL validity period should not be confused with the actual session lifetime that can be customized using the <code>
+ * <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GenerateEmbedUrlForAnonymousUser.html#QS-GenerateEmbedUrlForAnonymousUser-request-SessionLifetimeInMinutes">SessionLifetimeInMinutes</a>
+ * </code> parameter. The resulting user session is valid for 15 minutes (minimum) to 10 hours (maximum). The default
+ * session duration is 10
+ *
+ * hours> </li> <li>
+ *
+ * You are charged only when the URL is used or there is interaction with Amazon
+ *
+ * QuickSight> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html">Embedded
+ * Analytics</a> in the <i>Amazon QuickSight User
+ *
+ * Guide</i>>
+ *
+ * For more information about the high-level steps for embedding and for an interactive demo of the ways you can customize
+ * embedding, visit the <a href="https://docs.aws.amazon.com/quicksight/latest/user/quicksight-dev-portal.html">Amazon
+ * QuickSight Developer
+ */
+GenerateEmbedUrlForAnonymousUserResponse * QuickSightClient::generateEmbedUrlForAnonymousUser(const GenerateEmbedUrlForAnonymousUserRequest &request)
+{
+    return qobject_cast<GenerateEmbedUrlForAnonymousUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * GenerateEmbedUrlForRegisteredUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Generates an embed URL that you can use to embed an Amazon QuickSight experience in your website. This action can be
+ * used for any type of user registered in an Amazon QuickSight account. Before you use this action, make sure that you
+ * have configured the relevant Amazon QuickSight resource and
+ *
+ * permissions>
+ *
+ * The following rules apply to the generated
+ *
+ * URL> <ul> <li>
+ *
+ * It contains a temporary bearer token. It is valid for 5 minutes after it is generated. Once redeemed within this period,
+ * it cannot be re-used
+ *
+ * again> </li> <li>
+ *
+ * The URL validity period should not be confused with the actual session lifetime that can be customized using the <code>
+ * <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GenerateEmbedUrlForRegisteredUser.html#QS-GenerateEmbedUrlForRegisteredUser-request-SessionLifetimeInMinutes">SessionLifetimeInMinutes</a>
+ * </code>
+ *
+ * parameter>
+ *
+ * The resulting user session is valid for 15 minutes (minimum) to 10 hours (maximum). The default session duration is 10
+ *
+ * hours> </li> <li>
+ *
+ * You are charged only when the URL is used or there is interaction with Amazon
+ *
+ * QuickSight> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html">Embedded
+ * Analytics</a> in the <i>Amazon QuickSight User
+ *
+ * Guide</i>>
+ *
+ * For more information about the high-level steps for embedding and for an interactive demo of the ways you can customize
+ * embedding, visit the <a href="https://docs.aws.amazon.com/quicksight/latest/user/quicksight-dev-portal.html">Amazon
+ * QuickSight Developer
+ */
+GenerateEmbedUrlForRegisteredUserResponse * QuickSightClient::generateEmbedUrlForRegisteredUser(const GenerateEmbedUrlForRegisteredUserRequest &request)
+{
+    return qobject_cast<GenerateEmbedUrlForRegisteredUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
  * GetDashboardEmbedUrlResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Generates a session URL and authorization code that you can use to embed an Amazon QuickSight read-only dashboard in
- * your web server code. Before you use this command, make sure that you have configured the dashboards and permissions.
+ * Generates a temporary session URL and authorization code(bearer token) that you can use to embed an Amazon QuickSight
+ * read-only dashboard in your website or application. Before you use this command, make sure that you have configured the
+ * dashboards and permissions.
  *
  * </p
  *
  * Currently, you can use <code>GetDashboardEmbedURL</code> only from the server, not from the user's browser. The
- * following rules apply to the combination of URL and authorization
+ * following rules apply to the generated
  *
- * code> <ul> <li>
+ * URL> <ul> <li>
  *
  * They must be used
  *
@@ -1132,12 +1467,24 @@ DescribeUserResponse * QuickSightClient::describeUser(const DescribeUserRequest 
  *
  * command> </li> <li>
  *
- * The resulting user session is valid for 10
+ * You are charged only when the URL is used or there is interaction with Amazon
  *
- * hours> </li> </ul>
+ * QuickSight> </li> <li>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html">Embedded
- * Analytics</a> in the <i>Amazon QuickSight User
+ * The resulting user session is valid for 15 minutes (default) up to 10 hours (maximum). You can use the optional
+ * <code>SessionLifetimeInMinutes</code> parameter to customize session
+ *
+ * duration> </li> </ul>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics-deprecated.html">Embedding Analytics Using
+ * GetDashboardEmbedUrl</a> in the <i>Amazon QuickSight User
+ *
+ * Guide</i>>
+ *
+ * For more information about the high-level steps for embedding and for an interactive demo of the ways you can customize
+ * embedding, visit the <a href="https://docs.aws.amazon.com/quicksight/latest/user/quicksight-dev-portal.html">Amazon
+ * QuickSight Developer
  */
 GetDashboardEmbedUrlResponse * QuickSightClient::getDashboardEmbedUrl(const GetDashboardEmbedUrlRequest &request)
 {
@@ -1150,18 +1497,20 @@ GetDashboardEmbedUrlResponse * QuickSightClient::getDashboardEmbedUrl(const GetD
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Generates a session URL and authorization code that you can use to embed the Amazon QuickSight console in your web
- * server code. Use <code>GetSessionEmbedUrl</code> where you want to provide an authoring portal that allows users to
- * create data sources, datasets, analyses, and dashboards. The users who access an embedded QuickSight console need belong
- * to the author or admin security cohort. If you want to restrict permissions to some of these features, add a custom
- * permissions profile to the user with the <code> <a>UpdateUser</a> </code> API operation. Use <code> <a>RegisterUser</a>
- * </code> API operation to add a new user with a custom permission profile attached. For more information, see the
- * following sections in the <i>Amazon QuickSight User
+ * Generates a session URL and authorization code that you can use to embed the Amazon Amazon QuickSight console in your
+ * web server code. Use <code>GetSessionEmbedUrl</code> where you want to provide an authoring portal that allows users to
+ * create data sources, datasets, analyses, and dashboards. The users who access an embedded Amazon QuickSight console need
+ * belong to the author or admin security cohort. If you want to restrict permissions to some of these features, add a
+ * custom permissions profile to the user with the <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateUser.html">UpdateUser</a> </code> API
+ * operation. Use <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_RegisterUser.html">RegisterUser</a> </code> API
+ * operation to add a new user with a custom permission profile attached. For more information, see the following sections
+ * in the <i>Amazon QuickSight User
  *
  * Guide</i>> <ul> <li>
  *
- * <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-the-quicksight-console.html">Embedding the Amazon
- * QuickSight Console</a>
+ * <a href="https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html">Embedding Analytics</a>
  *
  * </p </li> <li>
  *
@@ -1180,7 +1529,7 @@ GetSessionEmbedUrlResponse * QuickSightClient::getSessionEmbedUrl(const GetSessi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists Amazon QuickSight analyses that exist in the specified AWS
+ * Lists Amazon QuickSight analyses that exist in the specified Amazon Web Services
  */
 ListAnalysesResponse * QuickSightClient::listAnalyses(const ListAnalysesRequest &request)
 {
@@ -1193,7 +1542,7 @@ ListAnalysesResponse * QuickSightClient::listAnalyses(const ListAnalysesRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the versions of the dashboards in the QuickSight
+ * Lists all the versions of the dashboards in the Amazon QuickSight
  */
 ListDashboardVersionsResponse * QuickSightClient::listDashboardVersions(const ListDashboardVersionsRequest &request)
 {
@@ -1206,7 +1555,7 @@ ListDashboardVersionsResponse * QuickSightClient::listDashboardVersions(const Li
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists dashboards in an AWS
+ * Lists dashboards in an Amazon Web Services
  */
 ListDashboardsResponse * QuickSightClient::listDashboards(const ListDashboardsRequest &request)
 {
@@ -1219,7 +1568,7 @@ ListDashboardsResponse * QuickSightClient::listDashboards(const ListDashboardsRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the datasets belonging to the current AWS account in an AWS
+ * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services
  *
  * Region>
  *
@@ -1236,11 +1585,37 @@ ListDataSetsResponse * QuickSightClient::listDataSets(const ListDataSetsRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists data sources in current AWS Region that belong to this AWS
+ * Lists data sources in current Amazon Web Services Region that belong to this Amazon Web Services
  */
 ListDataSourcesResponse * QuickSightClient::listDataSources(const ListDataSourcesRequest &request)
 {
     return qobject_cast<ListDataSourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * ListFolderMembersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List all assets (<code>DASHBOARD</code>, <code>ANALYSIS</code>, and <code>DATASET</code>) in a folder.
+ */
+ListFolderMembersResponse * QuickSightClient::listFolderMembers(const ListFolderMembersRequest &request)
+{
+    return qobject_cast<ListFolderMembersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * ListFoldersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all folders in an
+ */
+ListFoldersResponse * QuickSightClient::listFolders(const ListFoldersRequest &request)
+{
+    return qobject_cast<ListFoldersResponse *>(send(request));
 }
 
 /*!
@@ -1315,7 +1690,7 @@ ListIngestionsResponse * QuickSightClient::listIngestions(const ListIngestionsRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the namespaces for the specified AWS
+ * Lists the namespaces for the specified Amazon Web Services account. This operation doesn't list deleted
  */
 ListNamespacesResponse * QuickSightClient::listNamespaces(const ListNamespacesRequest &request)
 {
@@ -1393,7 +1768,7 @@ ListThemeAliasesResponse * QuickSightClient::listThemeAliases(const ListThemeAli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the versions of the themes in the current AWS
+ * Lists all the versions of the themes in the current Amazon Web Services
  */
 ListThemeVersionsResponse * QuickSightClient::listThemeVersions(const ListThemeVersionsRequest &request)
 {
@@ -1406,7 +1781,7 @@ ListThemeVersionsResponse * QuickSightClient::listThemeVersions(const ListThemeV
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the themes in the current AWS
+ * Lists all the themes in the current Amazon Web Services
  */
 ListThemesResponse * QuickSightClient::listThemes(const ListThemesRequest &request)
 {
@@ -1445,8 +1820,8 @@ ListUsersResponse * QuickSightClient::listUsers(const ListUsersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon QuickSight user, whose identity is associated with the AWS Identity and Access Management (IAM)
- * identity or role specified in the request.
+ * Creates an Amazon QuickSight user, whose identity is associated with the Identity and Access Management (IAM) identity
+ * or role specified in the request.
  */
 RegisterUserResponse * QuickSightClient::registerUser(const RegisterUserRequest &request)
 {
@@ -1473,6 +1848,10 @@ RestoreAnalysisResponse * QuickSightClient::restoreAnalysis(const RestoreAnalysi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Searches for analyses that belong to the user specified in the
+ *
+ * filter> <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
  */
 SearchAnalysesResponse * QuickSightClient::searchAnalyses(const SearchAnalysesRequest &request)
 {
@@ -1486,6 +1865,10 @@ SearchAnalysesResponse * QuickSightClient::searchAnalyses(const SearchAnalysesRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Searches for dashboards that belong to a user.
+ *
+ * </p <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
  */
 SearchDashboardsResponse * QuickSightClient::searchDashboards(const SearchDashboardsRequest &request)
 {
@@ -1494,11 +1877,38 @@ SearchDashboardsResponse * QuickSightClient::searchDashboards(const SearchDashbo
 
 /*!
  * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * SearchFoldersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches the subfolders in a
+ */
+SearchFoldersResponse * QuickSightClient::searchFolders(const SearchFoldersRequest &request)
+{
+    return qobject_cast<SearchFoldersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * SearchGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use the <code>SearchGroups</code> operation to search groups in a specified Amazon QuickSight namespace using the
+ * supplied
+ */
+SearchGroupsResponse * QuickSightClient::searchGroups(const SearchGroupsRequest &request)
+{
+    return qobject_cast<SearchGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Assigns one or more tags (key-value pairs) to the specified QuickSight resource.
+ * Assigns one or more tags (key-value pairs) to the specified Amazon QuickSight resource.
  *
  * </p
  *
@@ -1510,21 +1920,22 @@ SearchDashboardsResponse * QuickSightClient::searchDashboards(const SearchDashbo
  *
  * tag>
  *
- * You can associate as many as 50 tags with a resource. QuickSight supports tagging on data set, data source, dashboard,
- * and template.
+ * You can associate as many as 50 tags with a resource. Amazon QuickSight supports tagging on data set, data source,
+ * dashboard, and template.
  *
  * </p
  *
- * Tagging for QuickSight works in a similar way to tagging for other AWS services, except for the
+ * Tagging for Amazon QuickSight works in a similar way to tagging for other Amazon Web Services services, except for the
  *
  * following> <ul> <li>
  *
- * You can't use tags to track AWS costs for QuickSight. This restriction is because QuickSight costs are based on users
- * and SPICE capacity, which aren't taggable
+ * You can't use tags to track costs for Amazon QuickSight. This isn't possible because you can't tag the resources that
+ * Amazon QuickSight costs are based on, for example Amazon QuickSight storage capacity (SPICE), number of users, type of
+ * users, and usage
  *
- * resources> </li> <li>
+ * metrics> </li> <li>
  *
- * QuickSight doesn't currently support the Tag Editor for AWS Resource
+ * Amazon QuickSight doesn't currently support the tag editor for Resource
  */
 TagResourceResponse * QuickSightClient::tagResource(const TagResourceRequest &request)
 {
@@ -1550,13 +1961,14 @@ UntagResourceResponse * QuickSightClient::untagResource(const UntagResourceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates Amazon QuickSight customizations the current AWS Region. Currently, the only customization you can use is a
+ * Updates Amazon QuickSight customizations for the current Amazon Web Services Region. Currently, the only customization
+ * that you can use is a
  *
  * theme>
  *
- * You can use customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead.
- * Customizations that apply to a namespace override customizations that apply to an AWS account. To find out which
- * customizations apply, use the <code>DescribeAccountCustomization</code> API operation.
+ * You can use customizations for your Amazon Web Services account or, if you specify a namespace, for a Amazon QuickSight
+ * namespace instead. Customizations that apply to a namespace override customizations that apply to an Amazon Web Services
+ * account. To find out which customizations apply, use the <code>DescribeAccountCustomization</code> API operation.
  */
 UpdateAccountCustomizationResponse * QuickSightClient::updateAccountCustomization(const UpdateAccountCustomizationRequest &request)
 {
@@ -1569,7 +1981,7 @@ UpdateAccountCustomizationResponse * QuickSightClient::updateAccountCustomizatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the Amazon QuickSight settings in your AWS
+ * Updates the Amazon QuickSight settings in your Amazon Web Services
  */
 UpdateAccountSettingsResponse * QuickSightClient::updateAccountSettings(const UpdateAccountSettingsRequest &request)
 {
@@ -1608,7 +2020,14 @@ UpdateAnalysisPermissionsResponse * QuickSightClient::updateAnalysisPermissions(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a dashboard in an AWS
+ * Updates a dashboard in an Amazon Web Services
+ *
+ * account> <note>
+ *
+ * Updating a Dashboard creates a new dashboard version but does not immediately publish the new version. You can update
+ * the published version of a dashboard by using the <code> <a
+ * href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateDashboardPublishedVersion.html">UpdateDashboardPublishedVersion</a>
+ * </code> API
  */
 UpdateDashboardResponse * QuickSightClient::updateDashboard(const UpdateDashboardRequest &request)
 {
@@ -1647,7 +2066,7 @@ UpdateDashboardPublishedVersionResponse * QuickSightClient::updateDashboardPubli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a
+ * Updates a dataset. This operation doesn't support datasets that include uploaded files as a
  */
 UpdateDataSetResponse * QuickSightClient::updateDataSet(const UpdateDataSetRequest &request)
 {
@@ -1699,6 +2118,32 @@ UpdateDataSourcePermissionsResponse * QuickSightClient::updateDataSourcePermissi
 
 /*!
  * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * UpdateFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the name of a
+ */
+UpdateFolderResponse * QuickSightClient::updateFolder(const UpdateFolderRequest &request)
+{
+    return qobject_cast<UpdateFolderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * UpdateFolderPermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates permissions of a
+ */
+UpdateFolderPermissionsResponse * QuickSightClient::updateFolderPermissions(const UpdateFolderPermissionsRequest &request)
+{
+    return qobject_cast<UpdateFolderPermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
  * UpdateGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1722,6 +2167,45 @@ UpdateGroupResponse * QuickSightClient::updateGroup(const UpdateGroupRequest &re
 UpdateIAMPolicyAssignmentResponse * QuickSightClient::updateIAMPolicyAssignment(const UpdateIAMPolicyAssignmentRequest &request)
 {
     return qobject_cast<UpdateIAMPolicyAssignmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * UpdateIpRestrictionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the content and status of IP rules. To use this operation, you need to provide the entire map of rules. You can
+ * use the <code>DescribeIpRestriction</code> operation to get the current rule
+ */
+UpdateIpRestrictionResponse * QuickSightClient::updateIpRestriction(const UpdateIpRestrictionRequest &request)
+{
+    return qobject_cast<UpdateIpRestrictionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * UpdatePublicSharingSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use the <code>UpdatePublicSharingSettings</code> operation to turn on or turn off the public sharing settings of an
+ * Amazon QuickSight
+ *
+ * dashboard>
+ *
+ * To use this operation, turn on session capacity pricing for your Amazon QuickSight
+ *
+ * account>
+ *
+ * Before you can turn on public sharing on your account, make sure to give public sharing permissions to an administrative
+ * user in the Identity and Access Management (IAM) console. For more information on using IAM with Amazon QuickSight, see
+ * <a href="https://docs.aws.amazon.com/quicksight/latest/user/security_iam_service-with-iam.html">Using Amazon QuickSight
+ * with IAM</a> in the <i>Amazon QuickSight User
+ */
+UpdatePublicSharingSettingsResponse * QuickSightClient::updatePublicSharingSettings(const UpdatePublicSharingSettingsRequest &request)
+{
+    return qobject_cast<UpdatePublicSharingSettingsResponse *>(send(request));
 }
 
 /*!

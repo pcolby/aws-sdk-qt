@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CreateImageResponse
- * \brief The CreateImageResponse class provides an interace for imagebuilder CreateImage responses.
+ * \class QtAws::ImageBuilder::CreateImageResponse
+ * \brief The CreateImageResponse class provides an interace for ImageBuilder CreateImage responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::createImage
+ * \sa ImageBuilderClient::createImage
  */
 
 /*!
@@ -47,7 +47,7 @@ CreateImageResponse::CreateImageResponse(
         const CreateImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new CreateImageResponsePrivate(this), parent)
+    : ImageBuilderResponse(new CreateImageResponsePrivate(this), parent)
 {
     setRequest(new CreateImageRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const CreateImageRequest * CreateImageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder CreateImage \a response.
+ * Parses a successful ImageBuilder CreateImage \a response.
  */
 void CreateImageResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void CreateImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::CreateImageResponsePrivate
+ * \class QtAws::ImageBuilder::CreateImageResponsePrivate
  * \brief The CreateImageResponsePrivate class provides private implementation for CreateImageResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a CreateImageResponsePrivate object with public implementation \a q.
  */
 CreateImageResponsePrivate::CreateImageResponsePrivate(
-    CreateImageResponse * const q) : imagebuilderResponsePrivate(q)
+    CreateImageResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder CreateImage response element from \a xml.
+ * Parses a ImageBuilder CreateImage response element from \a xml.
  */
 void CreateImageResponsePrivate::parseCreateImageResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void CreateImageResponsePrivate::parseCreateImageResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

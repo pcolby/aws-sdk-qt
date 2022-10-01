@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::FailoverDBClusterRequest
- * \brief The FailoverDBClusterRequest class provides an interface for RDS FailoverDBCluster requests.
+ * \class QtAws::Rds::FailoverDBClusterRequest
+ * \brief The FailoverDBClusterRequest class provides an interface for Rds FailoverDBCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::RDS::FailoverDBClusterRequestPrivate
+ * \class QtAws::Rds::FailoverDBClusterRequestPrivate
  * \brief The FailoverDBClusterRequestPrivate class provides private implementation for FailoverDBClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

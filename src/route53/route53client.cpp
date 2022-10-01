@@ -25,10 +25,14 @@
 #include "activatekeysigningkeyresponse.h"
 #include "associatevpcwithhostedzonerequest.h"
 #include "associatevpcwithhostedzoneresponse.h"
+#include "changecidrcollectionrequest.h"
+#include "changecidrcollectionresponse.h"
 #include "changeresourcerecordsetsrequest.h"
 #include "changeresourcerecordsetsresponse.h"
 #include "changetagsforresourcerequest.h"
 #include "changetagsforresourceresponse.h"
+#include "createcidrcollectionrequest.h"
+#include "createcidrcollectionresponse.h"
 #include "createhealthcheckrequest.h"
 #include "createhealthcheckresponse.h"
 #include "createhostedzonerequest.h"
@@ -49,6 +53,8 @@
 #include "createvpcassociationauthorizationresponse.h"
 #include "deactivatekeysigningkeyrequest.h"
 #include "deactivatekeysigningkeyresponse.h"
+#include "deletecidrcollectionrequest.h"
+#include "deletecidrcollectionresponse.h"
 #include "deletehealthcheckrequest.h"
 #include "deletehealthcheckresponse.h"
 #include "deletehostedzonerequest.h"
@@ -107,6 +113,12 @@
 #include "gettrafficpolicyinstanceresponse.h"
 #include "gettrafficpolicyinstancecountrequest.h"
 #include "gettrafficpolicyinstancecountresponse.h"
+#include "listcidrblocksrequest.h"
+#include "listcidrblocksresponse.h"
+#include "listcidrcollectionsrequest.h"
+#include "listcidrcollectionsresponse.h"
+#include "listcidrlocationsrequest.h"
+#include "listcidrlocationsresponse.h"
 #include "listgeolocationsrequest.h"
 #include "listgeolocationsresponse.h"
 #include "listhealthchecksrequest.h"
@@ -256,14 +268,83 @@ ActivateKeySigningKeyResponse * Route53Client::activateKeySigningKey(const Activ
  *
  * zone> </b> <note>
  *
- * If you want to associate a VPC that was created by using one AWS account with a private hosted zone that was created by
- * using a different account, the AWS account that created the private hosted zone must first submit a
- * <code>CreateVPCAssociationAuthorization</code> request. Then the account that created the VPC must submit an
- * <code>AssociateVPCWithHostedZone</code>
+ * If you want to associate a VPC that was created by using one Amazon Web Services account with a private hosted zone that
+ * was created by using a different account, the Amazon Web Services account that created the private hosted zone must
+ * first submit a <code>CreateVPCAssociationAuthorization</code> request. Then the account that created the VPC must submit
+ * an <code>AssociateVPCWithHostedZone</code>
+ *
+ * request> </note> <note>
+ *
+ * When granting access, the hosted zone and the Amazon VPC must belong to the same partition. A partition is a group of
+ * Amazon Web Services Regions. Each Amazon Web Services account is scoped to one
+ *
+ * partition>
+ *
+ * The following are the supported
+ *
+ * partitions> <ul> <li>
+ *
+ * <code>aws</code> - Amazon Web Services
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-cn</code> - China
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US)
+ *
+ * Regio> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+ * Management</a> in the <i>Amazon Web Services General
  */
 AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(const AssociateVPCWithHostedZoneRequest &request)
 {
     return qobject_cast<AssociateVPCWithHostedZoneResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ChangeCidrCollectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates, changes, or deletes CIDR blocks within a collection. Contains authoritative IP information mapping blocks to
+ * one or multiple
+ *
+ * locations>
+ *
+ * A change request can update multiple locations in a collection at a time, which is helpful if you want to move one or
+ * more CIDR blocks from one location to another in one transaction, without downtime.
+ *
+ * </p
+ *
+ * <b>Limits</b>
+ *
+ * </p
+ *
+ * The max number of CIDR blocks included in the request is 1000. As a result, big updates require multiple API
+ *
+ * calls>
+ *
+ * <b> PUT and DELETE_IF_EXISTS</b>
+ *
+ * </p
+ *
+ * Use <code>ChangeCidrCollection</code> to perform the following
+ *
+ * actions> <ul> <li>
+ *
+ * <code>PUT</code>: Create a CIDR block within the specified
+ *
+ * collection> </li> <li>
+ *
+ * <code> DELETE_IF_EXISTS</code>: Delete an existing CIDR block from the
+ */
+ChangeCidrCollectionResponse * Route53Client::changeCidrCollection(const ChangeCidrCollectionRequest &request)
+{
+    return qobject_cast<ChangeCidrCollectionResponse *>(send(request));
 }
 
 /*!
@@ -340,8 +421,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  *
  * values> </li> <li>
  *
- * <code>UPSERT</code>: If a resource record set does not already exist, AWS creates it. If a resource set does exist,
- * Route 53 updates it with the values in the request.
+ * <code>UPSERT</code>: If a resource set exists Route 53 updates it with the values in the request.
  *
  * </p </li> </ul>
  *
@@ -399,11 +479,24 @@ ChangeResourceRecordSetsResponse * Route53Client::changeResourceRecordSets(const
  *
  * For information about using tags for cost allocation, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
- * in the <i>AWS Billing and Cost Management User
+ * in the <i>Billing and Cost Management User
  */
 ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const ChangeTagsForResourceRequest &request)
 {
     return qobject_cast<ChangeTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * CreateCidrCollectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a CIDR collection in the current Amazon Web Services
+ */
+CreateCidrCollectionResponse * Route53Client::createCidrCollection(const CreateCidrCollectionRequest &request)
+{
+    return qobject_cast<CreateCidrCollectionResponse *>(send(request));
 }
 
 /*!
@@ -481,8 +574,8 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * sets> </b>
  *
- * For more information about charges for hosted zones, see <a href="http://aws.amazon.com/route53/pricing/">Amazon Route
- * 53
+ * For more information about charges for hosted zones, see <a href="http://aws.amazon.com/route53/pricing/">Amazon
+ * Route 53
  *
  * Pricing</a>>
  *
@@ -496,7 +589,7 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * For public hosted zones, Route 53 automatically creates a default SOA record and four NS records for the zone. For more
  * information about SOA and NS records, see <a
- * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA Records that Route 53
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA Records that Route 53
  * Creates for a Hosted Zone</a> in the <i>Amazon Route 53 Developer
  *
  * Guide</i>>
@@ -506,20 +599,46 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * element> </li> <li>
  *
- * If your domain is registered with a registrar other than Route 53, you must update the name servers with your registrar
+ * If your domain is registered with a registrar other than Route 53, you must update the name servers with your registrar
  * to make Route 53 the DNS service for the domain. For more information, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">Migrating DNS Service for an Existing
- * Domain to Amazon Route 53</a> in the <i>Amazon Route 53 Developer Guide</i>.
+ * Domain to Amazon Route 53</a> in the <i>Amazon Route 53 Developer Guide</i>.
  *
  * </p </li> </ul>
  *
  * When you submit a <code>CreateHostedZone</code> request, the initial status of the hosted zone is <code>PENDING</code>.
- * For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers. When
+ * For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers. When
  * the NS and SOA records are available, the status of the zone changes to
  *
  * <code>INSYNC</code>>
  *
  * The <code>CreateHostedZone</code> request requires the caller to have an <code>ec2:DescribeVpcs</code>
+ *
+ * permission> <note>
+ *
+ * When creating private hosted zones, the Amazon VPC must belong to the same partition where the hosted zone is created. A
+ * partition is a group of Amazon Web Services Regions. Each Amazon Web Services account is scoped to one
+ *
+ * partition>
+ *
+ * The following are the supported
+ *
+ * partitions> <ul> <li>
+ *
+ * <code>aws</code> - Amazon Web Services
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-cn</code> - China
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US)
+ *
+ * Regio> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+ * Management</a> in the <i>Amazon Web Services General
  */
 CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZoneRequest &request)
 {
@@ -588,7 +707,8 @@ CreateKeySigningKeyResponse * Route53Client::createKeySigningKey(const CreateKey
  *
  * region> </li> <li>
  *
- * You must use the same AWS account to create the log group and the hosted zone that you want to configure query logging
+ * You must use the same Amazon Web Services account to create the log group and the hosted zone that you want to configure
+ * query logging
  *
  * for> </li> <li>
  *
@@ -601,9 +721,9 @@ CreateKeySigningKeyResponse * Route53Client::createKeySigningKey(const CreateKey
  * </p
  *
  * In the next step, you'll create a resource policy, which controls access to one or more log groups and the associated
- * AWS resources, such as Route 53 hosted zones. There's a limit on the number of resource policies that you can create, so
- * we recommend that you use a consistent prefix so you can use the same resource policy for all the log groups that you
- * create for query
+ * Amazon Web Services resources, such as Route 53 hosted zones. There's a limit on the number of resource policies that
+ * you can create, so we recommend that you use a consistent prefix so you can use the same resource policy for all the log
+ * groups that you create for query
  *
  * logging> </li> </ul> </li> <li>
  *
@@ -616,10 +736,31 @@ CreateKeySigningKeyResponse * Route53Client::createKeySigningKey(const CreateKey
  *
  * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/&ast;</code>
  *
- * </p <note>
+ * </p
+ *
+ * To avoid the confused deputy problem, a security issue where an entity without a permission for an action can coerce a
+ * more-privileged entity to perform it, you can optionally limit the permissions that a service has to a resource in a
+ * resource-based policy by supplying the following
+ *
+ * values> <ul> <li>
+ *
+ * For <code>aws:SourceArn</code>, supply the hosted zone ARN used in creating the query logging configuration. For
+ * example, <code>aws:SourceArn: arn:aws:route53:::hostedzone/hosted zone
+ *
+ * ID</code>> </li> <li>
+ *
+ * For <code>aws:SourceAccount</code>, supply the account ID for the account that creates the query logging configuration.
+ * For example,
+ *
+ * <code>aws:SourceAccount:111111111111</code>> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The confused
+ * deputy problem</a> in the <i>Amazon Web Services IAM User
+ *
+ * Guide</i>> <note>
  *
  * You can't use the CloudWatch console to create or edit a resource policy. You must use the CloudWatch API, one of the
- * AWS SDKs, or the AWS
+ * Amazon Web Services SDKs, or the
  *
  * CLI> </note> </li> </ol> </dd> <dt>Log Streams and Edge Locations</dt> <dd>
  *
@@ -689,7 +830,7 @@ CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones that were created by
- * the same AWS account.
+ * the same Amazon Web Services account.
  *
  * </p
  *
@@ -813,10 +954,11 @@ CreateTrafficPolicyVersionResponse * Route53Client::createTrafficPolicyVersion(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Authorizes the AWS account that created a specified VPC to submit an <code>AssociateVPCWithHostedZone</code> request to
- * associate the VPC with a specified hosted zone that was created by a different account. To submit a
- * <code>CreateVPCAssociationAuthorization</code> request, you must use the account that created the hosted zone. After you
- * authorize the association, use the account that created the VPC to submit an <code>AssociateVPCWithHostedZone</code>
+ * Authorizes the Amazon Web Services account that created a specified VPC to submit an
+ * <code>AssociateVPCWithHostedZone</code> request to associate the VPC with a specified hosted zone that was created by a
+ * different account. To submit a <code>CreateVPCAssociationAuthorization</code> request, you must use the account that
+ * created the hosted zone. After you authorize the association, use the account that created the VPC to submit an
+ * <code>AssociateVPCWithHostedZone</code>
  *
  * request> <note>
  *
@@ -844,6 +986,19 @@ DeactivateKeySigningKeyResponse * Route53Client::deactivateKeySigningKey(const D
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * DeleteCidrCollectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a CIDR collection in the current Amazon Web Services account. The collection must be empty before it can be
+ */
+DeleteCidrCollectionResponse * Route53Client::deleteCidrCollection(const DeleteCidrCollectionRequest &request)
+{
+    return qobject_cast<DeleteCidrCollectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * DeleteHealthCheckResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -861,10 +1016,10 @@ DeactivateKeySigningKeyResponse * Route53Client::deactivateKeySigningKey(const D
  *
  * Guide</i>> </b>
  *
- * If you're using AWS Cloud Map and you configured Cloud Map to create a Route 53 health check when you register an
- * instance, you can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the health check. The health check
- * is deleted automatically when you deregister the instance; there can be a delay of several hours before the health check
- * is deleted from Route 53.
+ * If you're using Cloud Map and you configured Cloud Map to create a Route 53 health check when you register an instance,
+ * you can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the health check. The health check is
+ * deleted automatically when you deregister the instance; there can be a delay of several hours before the health check is
+ * deleted from Route 53.
  */
 DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthCheckRequest &request)
 {
@@ -881,9 +1036,9 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * zone>
  *
- * If the hosted zone was created by another service, such as AWS Cloud Map, see <a
+ * If the hosted zone was created by another service, such as Cloud Map, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DeleteHostedZone.html#delete-public-hosted-zone-created-by-another-service">Deleting
- * Public Hosted Zones That Were Created by Another Service</a> in the <i>Amazon Route 53 Developer Guide</i> for
+ * Public Hosted Zones That Were Created by Another Service</a> in the <i>Amazon Route 53 Developer Guide</i> for
  * information about how to delete it. (The process is the same for public and private hosted zones that were created by
  * another
  *
@@ -904,9 +1059,9 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * If you want to avoid the monthly charge for the hosted zone, you can transfer DNS service for the domain to a free DNS
  * service. When you transfer DNS service, you have to update the name servers for the domain registration. If the domain
- * is registered with Route 53, see <a
+ * is registered with Route 53, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_UpdateDomainNameservers.html">UpdateDomainNameservers</a>
- * for information about how to replace Route 53 name servers with name servers for the new DNS service. If the domain is
+ * for information about how to replace Route 53 name servers with name servers for the new DNS service. If the domain is
  * registered with another registrar, use the method provided by the registrar to update name servers for the domain
  * registration. For more information, perform an internet search on "free DNS
  *
@@ -914,7 +1069,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * You can delete a hosted zone only if it contains only the default SOA record and NS resource record sets. If the hosted
  * zone contains other resource record sets, you must delete them before you can delete the hosted zone. If you try to
- * delete a hosted zone that contains other resource record sets, the request fails, and Route 53 returns a
+ * delete a hosted zone that contains other resource record sets, the request fails, and Route 53 returns a
  * <code>HostedZoneNotEmpty</code> error. For information about deleting records from your hosted zone, see <a
  *
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html">ChangeResourceRecordSets</a>>
@@ -927,7 +1082,8 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * zone> </li> <li>
  *
- * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current AWS
+ * Use the <code>ListHostedZones</code> action to get a list of the hosted zones associated with the current Amazon Web
+ * Services
  */
 DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZoneRequest &request)
 {
@@ -942,6 +1098,17 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
  *
  * Deletes a key-signing key (KSK). Before you can delete a KSK, you must deactivate it. The KSK must be deactivated before
  * you can delete it regardless of whether the hosted zone is enabled for DNSSEC
+ *
+ * signing>
+ *
+ * You can use <a
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">DeactivateKeySigningKey</a>
+ * to deactivate the key before you delete
+ *
+ * it>
+ *
+ * Use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a> to verify that
+ * the KSK is in an <code>INACTIVE</code>
  */
 DeleteKeySigningKeyResponse * Route53Client::deleteKeySigningKey(const DeleteKeySigningKeyRequest &request)
 {
@@ -1052,8 +1219,8 @@ DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance
  *
  * request> <b>
  *
- * Sending this request only prevents the AWS account that created the VPC from associating the VPC with the Amazon Route
- * 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
+ * Sending this request only prevents the Amazon Web Services account that created the VPC from associating the VPC with
+ * the Amazon Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone,
  * <code>DeleteVPCAssociationAuthorization</code> won't disassociate the VPC from the hosted zone. If you want to delete an
  * existing association, use
  */
@@ -1099,7 +1266,7 @@ DisableHostedZoneDNSSECResponse * Route53Client::disableHostedZoneDNSSEC(const D
  *
  * VPC> </li> <li>
  *
- * Some services, such as AWS Cloud Map and Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
+ * Some services, such as Cloud Map and Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
  * associate VPCs with the hosted zones. A service can create a hosted zone using your account or using its own account.
  * You can disassociate a VPC from a hosted zone only if the service created the hosted zone using your
  *
@@ -1109,6 +1276,32 @@ DisableHostedZoneDNSSECResponse * Route53Client::disableHostedZoneDNSSEC(const D
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html">DisassociateVPCFromHostedZone</a>,
  * if the hosted zone has a value for <code>OwningAccount</code>, you can use <code>DisassociateVPCFromHostedZone</code>.
  * If the hosted zone has a value for <code>OwningService</code>, you can't use
+ *
+ * <code>DisassociateVPCFromHostedZone</code>> </li> </ul> <note>
+ *
+ * When revoking access, the hosted zone and the Amazon VPC must belong to the same partition. A partition is a group of
+ * Amazon Web Services Regions. Each Amazon Web Services account is scoped to one
+ *
+ * partition>
+ *
+ * The following are the supported
+ *
+ * partitions> <ul> <li>
+ *
+ * <code>aws</code> - Amazon Web Services
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-cn</code> - China
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US)
+ *
+ * Regio> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+ * Management</a> in the <i>Amazon Web Services General
  */
 DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHostedZone(const DisassociateVPCFromHostedZoneRequest &request)
 {
@@ -1142,13 +1335,13 @@ EnableHostedZoneDNSSECResponse * Route53Client::enableHostedZoneDNSSEC(const Ena
  * For the default limit, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a> in the <i>Amazon Route
  * 53 Developer Guide</i>. To request a higher limit, <a
- * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53">open
  * a
  *
  * case</a>> <note>
  *
- * You can also view account limits in AWS Trusted Advisor. Sign in to the AWS Management Console and open the Trusted
- * Advisor console at <a
+ * You can also view account limits in Amazon Web Services Trusted Advisor. Sign in to the Amazon Web Services Management
+ * Console and open the Trusted Advisor console at <a
  * href="https://console.aws.amazon.com/trustedadvisor">https://console.aws.amazon.com/trustedadvisor/</a>. Then choose
  * <b>Service limits</b> in the navigation
  */
@@ -1190,7 +1383,7 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
  * public> <b>
  *
  * <code>GetCheckerIpRanges</code> still works, but we recommend that you download ip-ranges.json, which includes IP
- * address ranges for all AWS services. For more information, see <a
+ * address ranges for all Amazon Web Services services. For more information, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP Address Ranges of Amazon
  * Route 53 Servers</a> in the <i>Amazon Route 53 Developer
  */
@@ -1247,8 +1440,8 @@ GetDNSSECResponse * Route53Client::getDNSSEC(const GetDNSSECRequest &request)
  *
  * geolocation>
  *
- * <code>GET /2013-04-01/geolocation?countrycode=<i>two-character country code</i>&amp;subdivisioncode=<i>subdivision
- * code</i> </code>
+ * <code>GET /2013-04-01/geolocation?countrycode=<i>two-character country code</i>&subdivisioncode=<i>subdivision code</i>
+ * </code>
  */
 GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationRequest &request)
 {
@@ -1274,7 +1467,7 @@ GetHealthCheckResponse * Route53Client::getHealthCheck(const GetHealthCheckReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the number of health checks that are associated with the current AWS
+ * Retrieves the number of health checks that are associated with the current Amazon Web Services
  */
 GetHealthCheckCountResponse * Route53Client::getHealthCheckCount(const GetHealthCheckCountRequest &request)
 {
@@ -1301,6 +1494,11 @@ GetHealthCheckLastFailureReasonResponse * Route53Client::getHealthCheckLastFailu
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets status of a specified health check.
+ *
+ * </p <b>
+ *
+ * This API is intended for use during development to diagnose behavior. It doesn’t support production use-cases with high
+ * query rates that require immediate and actionable
  */
 GetHealthCheckStatusResponse * Route53Client::getHealthCheckStatus(const GetHealthCheckStatusRequest &request)
 {
@@ -1326,7 +1524,7 @@ GetHostedZoneResponse * Route53Client::getHostedZone(const GetHostedZoneRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the number of hosted zones that are associated with the current AWS
+ * Retrieves the number of hosted zones that are associated with the current Amazon Web Services
  */
 GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZoneCountRequest &request)
 {
@@ -1347,7 +1545,7 @@ GetHostedZoneCountResponse * Route53Client::getHostedZoneCount(const GetHostedZo
  * For the default limit, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a> in the <i>Amazon Route
  * 53 Developer Guide</i>. To request a higher limit, <a
- * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53">open
  * a
  */
 GetHostedZoneLimitResponse * Route53Client::getHostedZoneLimit(const GetHostedZoneLimitRequest &request)
@@ -1401,7 +1599,7 @@ GetReusableDelegationSetResponse * Route53Client::getReusableDelegationSet(const
  * For the default limit, see <a
  * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html">Limits</a> in the <i>Amazon Route
  * 53 Developer Guide</i>. To request a higher limit, <a
- * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;limitType=service-code-route53">open
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-route53">open
  * a
  */
 GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetLimit(const GetReusableDelegationSetLimitRequest &request)
@@ -1456,11 +1654,50 @@ GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the number of traffic policy instances that are associated with the current AWS
+ * Gets the number of traffic policy instances that are associated with the current Amazon Web Services
  */
 GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceCount(const GetTrafficPolicyInstanceCountRequest &request)
 {
     return qobject_cast<GetTrafficPolicyInstanceCountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ListCidrBlocksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of location objects and their CIDR
+ */
+ListCidrBlocksResponse * Route53Client::listCidrBlocks(const ListCidrBlocksRequest &request)
+{
+    return qobject_cast<ListCidrBlocksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ListCidrCollectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of CIDR collections in the Amazon Web Services account (metadata
+ */
+ListCidrCollectionsResponse * Route53Client::listCidrCollections(const ListCidrCollectionsRequest &request)
+{
+    return qobject_cast<ListCidrCollectionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ListCidrLocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of CIDR locations for the given collection (metadata only, does not include CIDR
+ */
+ListCidrLocationsResponse * Route53Client::listCidrLocations(const ListCidrLocationsRequest &request)
+{
+    return qobject_cast<ListCidrLocationsResponse *>(send(request));
 }
 
 /*!
@@ -1497,7 +1734,7 @@ ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocation
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieve a list of the health checks that are associated with the current AWS account.
+ * Retrieve a list of the health checks that are associated with the current Amazon Web Services account.
  */
 ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthChecksRequest &request)
 {
@@ -1510,8 +1747,8 @@ ListHealthChecksResponse * Route53Client::listHealthChecks(const ListHealthCheck
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list of the public and private hosted zones that are associated with the current AWS account. The response
- * includes a <code>HostedZones</code> child element for each hosted
+ * Retrieves a list of the public and private hosted zones that are associated with the current Amazon Web Services
+ * account. The response includes a <code>HostedZones</code> child element for each hosted
  *
  * zone>
  *
@@ -1530,7 +1767,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a list of your hosted zones in lexicographic order. The response includes a <code>HostedZones</code> child
- * element for each hosted zone created by the current AWS account.
+ * element for each hosted zone created by the current Amazon Web Services account.
  *
  * </p
  *
@@ -1581,7 +1818,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  * response> </li> <li>
  *
  * If the value of <code>IsTruncated</code> in the response is true, there are more hosted zones associated with the
- * current AWS account.
+ * current Amazon Web Services account.
  *
  * </p
  *
@@ -1591,9 +1828,10 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  * response> </li> <li>
  *
  * The <code>NextDNSName</code> and <code>NextHostedZoneId</code> elements in the response contain the domain name and the
- * hosted zone ID of the next hosted zone that is associated with the current AWS account. If you want to list more hosted
- * zones, make another call to <code>ListHostedZonesByName</code>, and specify the value of <code>NextDNSName</code> and
- * <code>NextHostedZoneId</code> in the <code>dnsname</code> and <code>hostedzoneid</code> parameters,
+ * hosted zone ID of the next hosted zone that is associated with the current Amazon Web Services account. If you want to
+ * list more hosted zones, make another call to <code>ListHostedZonesByName</code>, and specify the value of
+ * <code>NextDNSName</code> and <code>NextHostedZoneId</code> in the <code>dnsname</code> and <code>hostedzoneid</code>
+ * parameters,
  */
 ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListHostedZonesByNameRequest &request)
 {
@@ -1606,19 +1844,48 @@ ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListH
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the private hosted zones that a specified VPC is associated with, regardless of which AWS account or AWS
- * service owns the hosted zones. The <code>HostedZoneOwner</code> structure in the response contains one of the following
+ * Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web Services
+ * account or Amazon Web Services service owns the hosted zones. The <code>HostedZoneOwner</code> structure in the response
+ * contains one of the following
  *
  * values> <ul> <li>
  *
- * An <code>OwningAccount</code> element, which contains the account number of either the current AWS account or another
- * AWS account. Some services, such as AWS Cloud Map, create hosted zones using the current account.
+ * An <code>OwningAccount</code> element, which contains the account number of either the current Amazon Web Services
+ * account or another Amazon Web Services account. Some services, such as Cloud Map, create hosted zones using the current
+ * account.
  *
  * </p </li> <li>
  *
- * An <code>OwningService</code> element, which identifies the AWS service that created and owns the hosted zone. For
- * example, if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the value of <code>Owner</code> is
- * <code>efs.amazonaws.com</code>.
+ * An <code>OwningService</code> element, which identifies the Amazon Web Services service that created and owns the hosted
+ * zone. For example, if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the value of
+ * <code>Owner</code> is <code>efs.amazonaws.com</code>.
+ *
+ * </p </li> </ul> <note>
+ *
+ * When listing private hosted zones, the hosted zone and the Amazon VPC must belong to the same partition where the hosted
+ * zones were created. A partition is a group of Amazon Web Services Regions. Each Amazon Web Services account is scoped to
+ * one
+ *
+ * partition>
+ *
+ * The following are the supported
+ *
+ * partitions> <ul> <li>
+ *
+ * <code>aws</code> - Amazon Web Services
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-cn</code> - China
+ *
+ * Region> </li> <li>
+ *
+ * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US)
+ *
+ * Regio> </li> </ul>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access
+ * Management</a> in the <i>Amazon Web Services General
  */
 ListHostedZonesByVPCResponse * Route53Client::listHostedZonesByVPC(const ListHostedZonesByVPCRequest &request)
 {
@@ -1631,8 +1898,8 @@ ListHostedZonesByVPCResponse * Route53Client::listHostedZonesByVPC(const ListHos
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the configurations for DNS query logging that are associated with the current AWS account or the configuration
- * that is associated with a specified hosted
+ * Lists the configurations for DNS query logging that are associated with the current Amazon Web Services account or the
+ * configuration that is associated with a specified hosted
  *
  * zone>
  *
@@ -1675,8 +1942,8 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  * </p
  *
  * Note the trailing dot, which can change the sort order when the record name contains characters that appear before
- * <code>.</code> (decimal 46) in the ASCII table. These characters include the following: <code>! " # $ % &amp; ' ( ) * +
- * , -</code>
+ * <code>.</code> (decimal 46) in the ASCII table. These characters include the following: <code>! " # $ % & ' ( ) * + ,
+ * -</code>
  *
  * </p
  *
@@ -1750,7 +2017,7 @@ ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list of the reusable delegation sets that are associated with the current AWS
+ * Retrieves a list of the reusable delegation sets that are associated with the current Amazon Web Services
  */
 ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(const ListReusableDelegationSetsRequest &request)
 {
@@ -1769,7 +2036,7 @@ ListReusableDelegationSetsResponse * Route53Client::listReusableDelegationSets(c
  *
  * For information about using tags for cost allocation, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
- * in the <i>AWS Billing and Cost Management User
+ * in the <i>Billing and Cost Management User
  */
 ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1788,7 +2055,7 @@ ListTagsForResourceResponse * Route53Client::listTagsForResource(const ListTagsF
  *
  * For information about using tags for cost allocation, see <a
  * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
- * in the <i>AWS Billing and Cost Management User
+ * in the <i>Billing and Cost Management User
  */
 ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTagsForResourcesRequest &request)
 {
@@ -1801,8 +2068,8 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about the latest version for every traffic policy that is associated with the current AWS account.
- * Policies are listed in the order that they were created in.
+ * Gets information about the latest version for every traffic policy that is associated with the current Amazon Web
+ * Services account. Policies are listed in the order that they were created in.
  *
  * </p
  *
@@ -1820,7 +2087,7 @@ ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTraff
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about the traffic policy instances that you created by using the current AWS
+ * Gets information about the traffic policy instances that you created by using the current Amazon Web Services
  *
  * account> <note>
  *

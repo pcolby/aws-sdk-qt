@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIVS_LIBRARY)
 
 add_library(QtAwsIvs
+  qtawsivsglobal.h
+  ivsclient.h
+  ivsclient_p.h
+  ivsrequest.h
+  ivsrequest_p.h
+  ivsresponse.h
+  ivsresponse_p.h
   batchgetchannelrequest.h
   batchgetchannelrequest_p.h
   batchgetchannelresponse.h
@@ -49,24 +56,22 @@ add_library(QtAwsIvs
   getrecordingconfigurationrequest_p.h
   getrecordingconfigurationresponse.h
   getrecordingconfigurationresponse_p.h
-  getstreamkeyrequest.h
-  getstreamkeyrequest_p.h
-  getstreamkeyresponse.h
-  getstreamkeyresponse_p.h
   getstreamrequest.h
   getstreamrequest_p.h
   getstreamresponse.h
   getstreamresponse_p.h
+  getstreamkeyrequest.h
+  getstreamkeyrequest_p.h
+  getstreamkeyresponse.h
+  getstreamkeyresponse_p.h
+  getstreamsessionrequest.h
+  getstreamsessionrequest_p.h
+  getstreamsessionresponse.h
+  getstreamsessionresponse_p.h
   importplaybackkeypairrequest.h
   importplaybackkeypairrequest_p.h
   importplaybackkeypairresponse.h
   importplaybackkeypairresponse_p.h
-  ivsclient.h
-  ivsclient_p.h
-  ivsrequest.h
-  ivsrequest_p.h
-  ivsresponse.h
-  ivsresponse_p.h
   listchannelsrequest.h
   listchannelsrequest_p.h
   listchannelsresponse.h
@@ -83,6 +88,10 @@ add_library(QtAwsIvs
   liststreamkeysrequest_p.h
   liststreamkeysresponse.h
   liststreamkeysresponse_p.h
+  liststreamsessionsrequest.h
+  liststreamsessionsrequest_p.h
+  liststreamsessionsresponse.h
+  liststreamsessionsresponse_p.h
   liststreamsrequest.h
   liststreamsrequest_p.h
   liststreamsresponse.h
@@ -95,7 +104,6 @@ add_library(QtAwsIvs
   putmetadatarequest_p.h
   putmetadataresponse.h
   putmetadataresponse_p.h
-  qtawsivsglobal.h
   stopstreamrequest.h
   stopstreamrequest_p.h
   stopstreamresponse.h
@@ -112,6 +120,9 @@ add_library(QtAwsIvs
   updatechannelrequest_p.h
   updatechannelresponse.h
   updatechannelresponse_p.h
+  ivsclient.cpp
+  ivsrequest.cpp
+  ivsresponse.cpp
   batchgetchannelrequest.cpp
   batchgetchannelresponse.cpp
   batchgetstreamkeyrequest.cpp
@@ -136,15 +147,14 @@ add_library(QtAwsIvs
   getplaybackkeypairresponse.cpp
   getrecordingconfigurationrequest.cpp
   getrecordingconfigurationresponse.cpp
-  getstreamkeyrequest.cpp
-  getstreamkeyresponse.cpp
   getstreamrequest.cpp
   getstreamresponse.cpp
+  getstreamkeyrequest.cpp
+  getstreamkeyresponse.cpp
+  getstreamsessionrequest.cpp
+  getstreamsessionresponse.cpp
   importplaybackkeypairrequest.cpp
   importplaybackkeypairresponse.cpp
-  ivsclient.cpp
-  ivsrequest.cpp
-  ivsresponse.cpp
   listchannelsrequest.cpp
   listchannelsresponse.cpp
   listplaybackkeypairsrequest.cpp
@@ -153,6 +163,8 @@ add_library(QtAwsIvs
   listrecordingconfigurationsresponse.cpp
   liststreamkeysrequest.cpp
   liststreamkeysresponse.cpp
+  liststreamsessionsrequest.cpp
+  liststreamsessionsresponse.cpp
   liststreamsrequest.cpp
   liststreamsresponse.cpp
   listtagsforresourcerequest.cpp

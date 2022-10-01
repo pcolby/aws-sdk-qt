@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSTS_LIBRARY)
 
 add_library(QtAwsSts
+  qtawsstsglobal.h
+  stsclient.h
+  stsclient_p.h
+  stsrequest.h
+  stsrequest_p.h
+  stsresponse.h
+  stsresponse_p.h
   assumerolerequest.h
   assumerolerequest_p.h
   assumeroleresponse.h
@@ -33,13 +40,9 @@ add_library(QtAwsSts
   getsessiontokenrequest_p.h
   getsessiontokenresponse.h
   getsessiontokenresponse_p.h
-  qtawsstsglobal.h
-  stsclient.h
-  stsclient_p.h
-  stsrequest.h
-  stsrequest_p.h
-  stsresponse.h
-  stsresponse_p.h
+  stsclient.cpp
+  stsrequest.cpp
+  stsresponse.cpp
   assumerolerequest.cpp
   assumeroleresponse.cpp
   assumerolewithsamlrequest.cpp
@@ -55,10 +58,7 @@ add_library(QtAwsSts
   getfederationtokenrequest.cpp
   getfederationtokenresponse.cpp
   getsessiontokenrequest.cpp
-  getsessiontokenresponse.cpp
-  stsclient.cpp
-  stsrequest.cpp
-  stsresponse.cpp)
+  getsessiontokenresponse.cpp)
 
 target_link_libraries(QtAwsSts
   PRIVATE QtAwsCore

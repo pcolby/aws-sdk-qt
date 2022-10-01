@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CancelImageCreationResponse
- * \brief The CancelImageCreationResponse class provides an interace for imagebuilder CancelImageCreation responses.
+ * \class QtAws::ImageBuilder::CancelImageCreationResponse
+ * \brief The CancelImageCreationResponse class provides an interace for ImageBuilder CancelImageCreation responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::cancelImageCreation
+ * \sa ImageBuilderClient::cancelImageCreation
  */
 
 /*!
@@ -47,7 +47,7 @@ CancelImageCreationResponse::CancelImageCreationResponse(
         const CancelImageCreationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new CancelImageCreationResponsePrivate(this), parent)
+    : ImageBuilderResponse(new CancelImageCreationResponsePrivate(this), parent)
 {
     setRequest(new CancelImageCreationRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const CancelImageCreationRequest * CancelImageCreationResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful imagebuilder CancelImageCreation \a response.
+ * Parses a successful ImageBuilder CancelImageCreation \a response.
  */
 void CancelImageCreationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void CancelImageCreationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::imagebuilder::CancelImageCreationResponsePrivate
+ * \class QtAws::ImageBuilder::CancelImageCreationResponsePrivate
  * \brief The CancelImageCreationResponsePrivate class provides private implementation for CancelImageCreationResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a CancelImageCreationResponsePrivate object with public implementation \a q.
  */
 CancelImageCreationResponsePrivate::CancelImageCreationResponsePrivate(
-    CancelImageCreationResponse * const q) : imagebuilderResponsePrivate(q)
+    CancelImageCreationResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder CancelImageCreation response element from \a xml.
+ * Parses a ImageBuilder CancelImageCreation response element from \a xml.
  */
 void CancelImageCreationResponsePrivate::parseCancelImageCreationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void CancelImageCreationResponsePrivate::parseCancelImageCreationResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

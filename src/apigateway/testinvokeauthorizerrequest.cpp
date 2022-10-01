@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::TestInvokeAuthorizerRequest
- * \brief The TestInvokeAuthorizerRequest class provides an interface for APIGateway TestInvokeAuthorizer requests.
+ * \class QtAws::ApiGateway::TestInvokeAuthorizerRequest
+ * \brief The TestInvokeAuthorizerRequest class provides an interface for ApiGateway TestInvokeAuthorizer requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::testInvokeAuthorizer
+ * \sa ApiGatewayClient::testInvokeAuthorizer
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest(const TestInvokeAuthorizerRequest &other)
-    : APIGatewayRequest(new TestInvokeAuthorizerRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new TestInvokeAuthorizerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest(const TestInvokeAuthori
  * Constructs a TestInvokeAuthorizerRequest object.
  */
 TestInvokeAuthorizerRequest::TestInvokeAuthorizerRequest()
-    : APIGatewayRequest(new TestInvokeAuthorizerRequestPrivate(APIGatewayRequest::TestInvokeAuthorizerAction, this))
+    : ApiGatewayRequest(new TestInvokeAuthorizerRequestPrivate(ApiGatewayRequest::TestInvokeAuthorizerAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::APIGateway::TestInvokeAuthorizerRequestPrivate
+ * \class QtAws::ApiGateway::TestInvokeAuthorizerRequestPrivate
  * \brief The TestInvokeAuthorizerRequestPrivate class provides private implementation for TestInvokeAuthorizerRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a TestInvokeAuthorizerRequestPrivate object for APIGateway \a action,
+ * Constructs a TestInvokeAuthorizerRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
-    const APIGatewayRequest::Action action, TestInvokeAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, TestInvokeAuthorizerRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const TestInvokeAuthorizerRequestPrivate &other, TestInvokeAuthorizerRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

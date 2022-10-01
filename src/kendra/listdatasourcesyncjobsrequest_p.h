@@ -24,14 +24,14 @@
 #include "listdatasourcesyncjobsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListDataSourceSyncJobsRequest;
 
-class ListDataSourceSyncJobsRequestPrivate : public kendraRequestPrivate {
+class ListDataSourceSyncJobsRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ListDataSourceSyncJobsRequestPrivate(const kendraRequest::Action action,
+    ListDataSourceSyncJobsRequestPrivate(const KendraRequest::Action action,
                                    ListDataSourceSyncJobsRequest * const q);
     ListDataSourceSyncJobsRequestPrivate(const ListDataSourceSyncJobsRequestPrivate &other,
                                    ListDataSourceSyncJobsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "getdedicatedipsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetDedicatedIpsRequest;
 
-class GetDedicatedIpsRequestPrivate : public Sesv2RequestPrivate {
+class GetDedicatedIpsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetDedicatedIpsRequestPrivate(const Sesv2Request::Action action,
+    GetDedicatedIpsRequestPrivate(const SESv2Request::Action action,
                                    GetDedicatedIpsRequest * const q);
     GetDedicatedIpsRequestPrivate(const GetDedicatedIpsRequestPrivate &other,
                                    GetDedicatedIpsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

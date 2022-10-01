@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::SendTaskFailureResponse
- * \brief The SendTaskFailureResponse class provides an interace for SFN SendTaskFailure responses.
+ * \class QtAws::Sfn::SendTaskFailureResponse
+ * \brief The SendTaskFailureResponse class provides an interace for Sfn SendTaskFailure responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const SendTaskFailureRequest * SendTaskFailureResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN SendTaskFailure \a response.
+ * Parses a successful Sfn SendTaskFailure \a response.
  */
 void SendTaskFailureResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void SendTaskFailureResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::SendTaskFailureResponsePrivate
+ * \class QtAws::Sfn::SendTaskFailureResponsePrivate
  * \brief The SendTaskFailureResponsePrivate class provides private implementation for SendTaskFailureResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
 }
 
 /*!
- * Parses a SFN SendTaskFailure response element from \a xml.
+ * Parses a Sfn SendTaskFailure response element from \a xml.
  */
 void SendTaskFailureResponsePrivate::parseSendTaskFailureResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void SendTaskFailureResponsePrivate::parseSendTaskFailureResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

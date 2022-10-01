@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetTagsResponse
- * \brief The GetTagsResponse class provides an interace for APIGateway GetTags responses.
+ * \class QtAws::ApiGateway::GetTagsResponse
+ * \brief The GetTagsResponse class provides an interace for ApiGateway GetTags responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getTags
+ * \sa ApiGatewayClient::getTags
  */
 
 /*!
@@ -49,7 +49,7 @@ GetTagsResponse::GetTagsResponse(
         const GetTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetTagsResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetTagsResponsePrivate(this), parent)
 {
     setRequest(new GetTagsRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetTagsRequest * GetTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetTags \a response.
+ * Parses a successful ApiGateway GetTags \a response.
  */
 void GetTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetTagsResponsePrivate
+ * \class QtAws::ApiGateway::GetTagsResponsePrivate
  * \brief The GetTagsResponsePrivate class provides private implementation for GetTagsResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetTagsResponsePrivate object with public implementation \a q.
  */
 GetTagsResponsePrivate::GetTagsResponsePrivate(
-    GetTagsResponse * const q) : APIGatewayResponsePrivate(q)
+    GetTagsResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetTags response element from \a xml.
+ * Parses a ApiGateway GetTags response element from \a xml.
  */
 void GetTagsResponsePrivate::parseGetTagsResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetTagsResponsePrivate::parseGetTagsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "listconfigurationrevisionsrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class ListConfigurationRevisionsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

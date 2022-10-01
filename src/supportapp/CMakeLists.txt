@@ -1,0 +1,72 @@
+add_compile_definitions(QTAWSSUPPORTAPP_LIBRARY)
+
+add_library(QtAwsSupportApp
+  qtawssupportappglobal.h
+  supportappclient.h
+  supportappclient_p.h
+  supportapprequest.h
+  supportapprequest_p.h
+  supportappresponse.h
+  supportappresponse_p.h
+  createslackchannelconfigurationrequest.h
+  createslackchannelconfigurationrequest_p.h
+  createslackchannelconfigurationresponse.h
+  createslackchannelconfigurationresponse_p.h
+  deleteaccountaliasrequest.h
+  deleteaccountaliasrequest_p.h
+  deleteaccountaliasresponse.h
+  deleteaccountaliasresponse_p.h
+  deleteslackchannelconfigurationrequest.h
+  deleteslackchannelconfigurationrequest_p.h
+  deleteslackchannelconfigurationresponse.h
+  deleteslackchannelconfigurationresponse_p.h
+  deleteslackworkspaceconfigurationrequest.h
+  deleteslackworkspaceconfigurationrequest_p.h
+  deleteslackworkspaceconfigurationresponse.h
+  deleteslackworkspaceconfigurationresponse_p.h
+  getaccountaliasrequest.h
+  getaccountaliasrequest_p.h
+  getaccountaliasresponse.h
+  getaccountaliasresponse_p.h
+  listslackchannelconfigurationsrequest.h
+  listslackchannelconfigurationsrequest_p.h
+  listslackchannelconfigurationsresponse.h
+  listslackchannelconfigurationsresponse_p.h
+  listslackworkspaceconfigurationsrequest.h
+  listslackworkspaceconfigurationsrequest_p.h
+  listslackworkspaceconfigurationsresponse.h
+  listslackworkspaceconfigurationsresponse_p.h
+  putaccountaliasrequest.h
+  putaccountaliasrequest_p.h
+  putaccountaliasresponse.h
+  putaccountaliasresponse_p.h
+  updateslackchannelconfigurationrequest.h
+  updateslackchannelconfigurationrequest_p.h
+  updateslackchannelconfigurationresponse.h
+  updateslackchannelconfigurationresponse_p.h
+  supportappclient.cpp
+  supportapprequest.cpp
+  supportappresponse.cpp
+  createslackchannelconfigurationrequest.cpp
+  createslackchannelconfigurationresponse.cpp
+  deleteaccountaliasrequest.cpp
+  deleteaccountaliasresponse.cpp
+  deleteslackchannelconfigurationrequest.cpp
+  deleteslackchannelconfigurationresponse.cpp
+  deleteslackworkspaceconfigurationrequest.cpp
+  deleteslackworkspaceconfigurationresponse.cpp
+  getaccountaliasrequest.cpp
+  getaccountaliasresponse.cpp
+  listslackchannelconfigurationsrequest.cpp
+  listslackchannelconfigurationsresponse.cpp
+  listslackworkspaceconfigurationsrequest.cpp
+  listslackworkspaceconfigurationsresponse.cpp
+  putaccountaliasrequest.cpp
+  putaccountaliasresponse.cpp
+  updateslackchannelconfigurationrequest.cpp
+  updateslackchannelconfigurationresponse.cpp)
+
+target_link_libraries(QtAwsSupportApp
+  PRIVATE QtAwsCore
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

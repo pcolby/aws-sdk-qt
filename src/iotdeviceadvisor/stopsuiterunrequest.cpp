@@ -23,30 +23,30 @@
 #include "iotdeviceadvisorrequest_p.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::StopSuiteRunRequest
- * \brief The StopSuiteRunRequest class provides an interface for IoTDeviceAdvisor StopSuiteRun requests.
+ * \class QtAws::IotDeviceAdvisor::StopSuiteRunRequest
+ * \brief The StopSuiteRunRequest class provides an interface for IotDeviceAdvisor StopSuiteRun requests.
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  *
- *  AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- *  software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and
- *  secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can confirm
- *  that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive software
- *  updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS Partner
- *  Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device in and wait
- *  for it to be
+ *  Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices
+ *  during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for
+ *  reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using
+ *  Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best
+ *  practices and, if applicable, receive software updates from IoT Device Management. You can also download signed
+ *  qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon
+ *  Web Services Partner Device Catalog without the need to send your device in and wait for it to be
  *
- * \sa IoTDeviceAdvisorClient::stopSuiteRun
+ * \sa IotDeviceAdvisorClient::stopSuiteRun
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StopSuiteRunRequest::StopSuiteRunRequest(const StopSuiteRunRequest &other)
-    : IoTDeviceAdvisorRequest(new StopSuiteRunRequestPrivate(*other.d_func(), this))
+    : IotDeviceAdvisorRequest(new StopSuiteRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -55,7 +55,7 @@ StopSuiteRunRequest::StopSuiteRunRequest(const StopSuiteRunRequest &other)
  * Constructs a StopSuiteRunRequest object.
  */
 StopSuiteRunRequest::StopSuiteRunRequest()
-    : IoTDeviceAdvisorRequest(new StopSuiteRunRequestPrivate(IoTDeviceAdvisorRequest::StopSuiteRunAction, this))
+    : IotDeviceAdvisorRequest(new StopSuiteRunRequestPrivate(IotDeviceAdvisorRequest::StopSuiteRunAction, this))
 {
 
 }
@@ -80,20 +80,20 @@ QtAws::Core::AwsAbstractResponse * StopSuiteRunRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::IoTDeviceAdvisor::StopSuiteRunRequestPrivate
+ * \class QtAws::IotDeviceAdvisor::StopSuiteRunRequestPrivate
  * \brief The StopSuiteRunRequestPrivate class provides private implementation for StopSuiteRunRequest.
  * \internal
  *
- * \inmodule QtAwsIoTDeviceAdvisor
+ * \inmodule QtAwsIotDeviceAdvisor
  */
 
 /*!
- * Constructs a StopSuiteRunRequestPrivate object for IoTDeviceAdvisor \a action,
+ * Constructs a StopSuiteRunRequestPrivate object for IotDeviceAdvisor \a action,
  * with public implementation \a q.
  */
 StopSuiteRunRequestPrivate::StopSuiteRunRequestPrivate(
-    const IoTDeviceAdvisorRequest::Action action, StopSuiteRunRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(action, q)
+    const IotDeviceAdvisorRequest::Action action, StopSuiteRunRequest * const q)
+    : IotDeviceAdvisorRequestPrivate(action, q)
 {
 
 }
@@ -106,10 +106,10 @@ StopSuiteRunRequestPrivate::StopSuiteRunRequestPrivate(
  */
 StopSuiteRunRequestPrivate::StopSuiteRunRequestPrivate(
     const StopSuiteRunRequestPrivate &other, StopSuiteRunRequest * const q)
-    : IoTDeviceAdvisorRequestPrivate(other, q)
+    : IotDeviceAdvisorRequestPrivate(other, q)
 {
 
 }
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "updatelifecyclepolicyrequest.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class UpdateLifecyclePolicyRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

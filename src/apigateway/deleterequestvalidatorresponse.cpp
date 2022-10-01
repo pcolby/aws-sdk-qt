@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteRequestValidatorResponse
- * \brief The DeleteRequestValidatorResponse class provides an interace for APIGateway DeleteRequestValidator responses.
+ * \class QtAws::ApiGateway::DeleteRequestValidatorResponse
+ * \brief The DeleteRequestValidatorResponse class provides an interace for ApiGateway DeleteRequestValidator responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteRequestValidator
+ * \sa ApiGatewayClient::deleteRequestValidator
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
         const DeleteRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteRequestValidatorResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new DeleteRequestValidatorRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteRequestValidator \a response.
+ * Parses a successful ApiGateway DeleteRequestValidator \a response.
  */
 void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteRequestValidatorResponsePrivate
+ * \class QtAws::ApiGateway::DeleteRequestValidatorResponsePrivate
  * \brief The DeleteRequestValidatorResponsePrivate class provides private implementation for DeleteRequestValidatorResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteRequestValidatorResponsePrivate object with public implementation \a q.
  */
 DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
-    DeleteRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteRequestValidatorResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteRequestValidator response element from \a xml.
+ * Parses a ApiGateway DeleteRequestValidator response element from \a xml.
  */
 void DeleteRequestValidatorResponsePrivate::parseDeleteRequestValidatorResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteRequestValidatorResponsePrivate::parseDeleteRequestValidatorResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

@@ -42,10 +42,20 @@ class DescribeFHIRImportJobRequest;
 class DescribeFHIRImportJobResponse;
 class ListFHIRDatastoresRequest;
 class ListFHIRDatastoresResponse;
+class ListFHIRExportJobsRequest;
+class ListFHIRExportJobsResponse;
+class ListFHIRImportJobsRequest;
+class ListFHIRImportJobsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class StartFHIRExportJobRequest;
 class StartFHIRExportJobResponse;
 class StartFHIRImportJobRequest;
 class StartFHIRImportJobResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWSHEALTHLAKE_EXPORT HealthLakeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -69,8 +79,13 @@ public slots:
     DescribeFHIRExportJobResponse * describeFHIRExportJob(const DescribeFHIRExportJobRequest &request);
     DescribeFHIRImportJobResponse * describeFHIRImportJob(const DescribeFHIRImportJobRequest &request);
     ListFHIRDatastoresResponse * listFHIRDatastores(const ListFHIRDatastoresRequest &request);
+    ListFHIRExportJobsResponse * listFHIRExportJobs(const ListFHIRExportJobsRequest &request);
+    ListFHIRImportJobsResponse * listFHIRImportJobs(const ListFHIRImportJobsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     StartFHIRExportJobResponse * startFHIRExportJob(const StartFHIRExportJobRequest &request);
     StartFHIRImportJobResponse * startFHIRImportJob(const StartFHIRImportJobRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(HealthLakeClient)

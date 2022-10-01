@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 class SsoClientPrivate;
 class GetRoleCredentialsRequest;
@@ -66,7 +66,7 @@ private:
 
 };
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::UpdateRateBasedRuleRequest
- * \brief The UpdateRateBasedRuleRequest class provides an interface for WAF UpdateRateBasedRule requests.
+ * \class QtAws::Waf::UpdateRateBasedRuleRequest
+ * \brief The UpdateRateBasedRuleRequest class provides an interface for Waf UpdateRateBasedRule requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::WAF::UpdateRateBasedRuleRequestPrivate
+ * \class QtAws::Waf::UpdateRateBasedRuleRequestPrivate
  * \brief The UpdateRateBasedRuleRequestPrivate class provides private implementation for UpdateRateBasedRuleRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

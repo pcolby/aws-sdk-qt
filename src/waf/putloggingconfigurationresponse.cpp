@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::PutLoggingConfigurationResponse
- * \brief The PutLoggingConfigurationResponse class provides an interace for WAF PutLoggingConfiguration responses.
+ * \class QtAws::Waf::PutLoggingConfigurationResponse
+ * \brief The PutLoggingConfigurationResponse class provides an interace for Waf PutLoggingConfiguration responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const PutLoggingConfigurationRequest * PutLoggingConfigurationResponse::request(
 
 /*!
  * \reimp
- * Parses a successful WAF PutLoggingConfiguration \a response.
+ * Parses a successful Waf PutLoggingConfiguration \a response.
  */
 void PutLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void PutLoggingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::PutLoggingConfigurationResponsePrivate
+ * \class QtAws::Waf::PutLoggingConfigurationResponsePrivate
  * \brief The PutLoggingConfigurationResponsePrivate class provides private implementation for PutLoggingConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ PutLoggingConfigurationResponsePrivate::PutLoggingConfigurationResponsePrivate(
 }
 
 /*!
- * Parses a WAF PutLoggingConfiguration response element from \a xml.
+ * Parses a Waf PutLoggingConfiguration response element from \a xml.
  */
 void PutLoggingConfigurationResponsePrivate::parsePutLoggingConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void PutLoggingConfigurationResponsePrivate::parsePutLoggingConfigurationRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

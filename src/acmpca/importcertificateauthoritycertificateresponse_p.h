@@ -23,11 +23,11 @@
 #include "acmpcaresponse_p.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class ImportCertificateAuthorityCertificateResponse;
 
-class ImportCertificateAuthorityCertificateResponsePrivate : public AcmpcaResponsePrivate {
+class ImportCertificateAuthorityCertificateResponsePrivate : public AcmPcaResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

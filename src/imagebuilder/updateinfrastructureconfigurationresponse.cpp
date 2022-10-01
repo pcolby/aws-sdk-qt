@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::UpdateInfrastructureConfigurationResponse
- * \brief The UpdateInfrastructureConfigurationResponse class provides an interace for imagebuilder UpdateInfrastructureConfiguration responses.
+ * \class QtAws::ImageBuilder::UpdateInfrastructureConfigurationResponse
+ * \brief The UpdateInfrastructureConfigurationResponse class provides an interace for ImageBuilder UpdateInfrastructureConfiguration responses.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::updateInfrastructureConfiguration
+ * \sa ImageBuilderClient::updateInfrastructureConfiguration
  */
 
 /*!
@@ -47,7 +47,7 @@ UpdateInfrastructureConfigurationResponse::UpdateInfrastructureConfigurationResp
         const UpdateInfrastructureConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : imagebuilderResponse(new UpdateInfrastructureConfigurationResponsePrivate(this), parent)
+    : ImageBuilderResponse(new UpdateInfrastructureConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateInfrastructureConfigurationRequest(request));
     setReply(reply);
@@ -64,7 +64,7 @@ const UpdateInfrastructureConfigurationRequest * UpdateInfrastructureConfigurati
 
 /*!
  * \reimp
- * Parses a successful imagebuilder UpdateInfrastructureConfiguration \a response.
+ * Parses a successful ImageBuilder UpdateInfrastructureConfiguration \a response.
  */
 void UpdateInfrastructureConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,24 +74,24 @@ void UpdateInfrastructureConfigurationResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::imagebuilder::UpdateInfrastructureConfigurationResponsePrivate
+ * \class QtAws::ImageBuilder::UpdateInfrastructureConfigurationResponsePrivate
  * \brief The UpdateInfrastructureConfigurationResponsePrivate class provides private implementation for UpdateInfrastructureConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
  * Constructs a UpdateInfrastructureConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateInfrastructureConfigurationResponsePrivate::UpdateInfrastructureConfigurationResponsePrivate(
-    UpdateInfrastructureConfigurationResponse * const q) : imagebuilderResponsePrivate(q)
+    UpdateInfrastructureConfigurationResponse * const q) : ImageBuilderResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a imagebuilder UpdateInfrastructureConfiguration response element from \a xml.
+ * Parses a ImageBuilder UpdateInfrastructureConfiguration response element from \a xml.
  */
 void UpdateInfrastructureConfigurationResponsePrivate::parseUpdateInfrastructureConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void UpdateInfrastructureConfigurationResponsePrivate::parseUpdateInfrastructure
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

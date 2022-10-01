@@ -24,7 +24,7 @@
 #include "deleteparametergrouprequest.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 class DeleteParameterGroupRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws
 
 #endif

@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::GetInfrastructureConfigurationRequest
- * \brief The GetInfrastructureConfigurationRequest class provides an interface for imagebuilder GetInfrastructureConfiguration requests.
+ * \class QtAws::ImageBuilder::GetInfrastructureConfigurationRequest
+ * \brief The GetInfrastructureConfigurationRequest class provides an interface for ImageBuilder GetInfrastructureConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::getInfrastructureConfiguration
+ * \sa ImageBuilderClient::getInfrastructureConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetInfrastructureConfigurationRequest::GetInfrastructureConfigurationRequest(const GetInfrastructureConfigurationRequest &other)
-    : imagebuilderRequest(new GetInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new GetInfrastructureConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ GetInfrastructureConfigurationRequest::GetInfrastructureConfigurationRequest(con
  * Constructs a GetInfrastructureConfigurationRequest object.
  */
 GetInfrastructureConfigurationRequest::GetInfrastructureConfigurationRequest()
-    : imagebuilderRequest(new GetInfrastructureConfigurationRequestPrivate(imagebuilderRequest::GetInfrastructureConfigurationAction, this))
+    : ImageBuilderRequest(new GetInfrastructureConfigurationRequestPrivate(ImageBuilderRequest::GetInfrastructureConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * GetInfrastructureConfigurationRequest::respon
 }
 
 /*!
- * \class QtAws::imagebuilder::GetInfrastructureConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::GetInfrastructureConfigurationRequestPrivate
  * \brief The GetInfrastructureConfigurationRequestPrivate class provides private implementation for GetInfrastructureConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a GetInfrastructureConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a GetInfrastructureConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 GetInfrastructureConfigurationRequestPrivate::GetInfrastructureConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, GetInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, GetInfrastructureConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ GetInfrastructureConfigurationRequestPrivate::GetInfrastructureConfigurationRequ
  */
 GetInfrastructureConfigurationRequestPrivate::GetInfrastructureConfigurationRequestPrivate(
     const GetInfrastructureConfigurationRequestPrivate &other, GetInfrastructureConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

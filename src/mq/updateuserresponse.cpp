@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::UpdateUserResponse
- * \brief The UpdateUserResponse class provides an interace for MQ UpdateUser responses.
+ * \class QtAws::Mq::UpdateUserResponse
+ * \brief The UpdateUserResponse class provides an interace for Mq UpdateUser responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::updateUser
  */
@@ -63,7 +64,7 @@ const UpdateUserRequest * UpdateUserResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ UpdateUser \a response.
+ * Parses a successful Mq UpdateUser \a response.
  */
 void UpdateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void UpdateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::UpdateUserResponsePrivate
+ * \class QtAws::Mq::UpdateUserResponsePrivate
  * \brief The UpdateUserResponsePrivate class provides private implementation for UpdateUserResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ UpdateUserResponsePrivate::UpdateUserResponsePrivate(
 }
 
 /*!
- * Parses a MQ UpdateUser response element from \a xml.
+ * Parses a Mq UpdateUser response element from \a xml.
  */
 void UpdateUserResponsePrivate::parseUpdateUserResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void UpdateUserResponsePrivate::parseUpdateUserResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

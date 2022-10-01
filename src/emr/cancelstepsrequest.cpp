@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::CancelStepsRequest
- * \brief The CancelStepsRequest class provides an interface for EMR CancelSteps requests.
+ * \class QtAws::Emr::CancelStepsRequest
+ * \brief The CancelStepsRequest class provides an interface for Emr CancelSteps requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::cancelSteps
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::EMR::CancelStepsRequestPrivate
+ * \class QtAws::Emr::CancelStepsRequestPrivate
  * \brief The CancelStepsRequestPrivate class provides private implementation for CancelStepsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

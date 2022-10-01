@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RevokeDBSecurityGroupIngressRequest
- * \brief The RevokeDBSecurityGroupIngressRequest class provides an interface for RDS RevokeDBSecurityGroupIngress requests.
+ * \class QtAws::Rds::RevokeDBSecurityGroupIngressRequest
+ * \brief The RevokeDBSecurityGroupIngressRequest class provides an interface for Rds RevokeDBSecurityGroupIngress requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response
 }
 
 /*!
- * \class QtAws::RDS::RevokeDBSecurityGroupIngressRequestPrivate
+ * \class QtAws::Rds::RevokeDBSecurityGroupIngressRequestPrivate
  * \brief The RevokeDBSecurityGroupIngressRequestPrivate class provides private implementation for RevokeDBSecurityGroupIngressRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestP
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

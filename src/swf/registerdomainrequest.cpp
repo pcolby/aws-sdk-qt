@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RegisterDomainRequest
- * \brief The RegisterDomainRequest class provides an interface for SWF RegisterDomain requests.
+ * \class QtAws::Swf::RegisterDomainRequest
+ * \brief The RegisterDomainRequest class provides an interface for Swf RegisterDomain requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SWF::RegisterDomainRequestPrivate
+ * \class QtAws::Swf::RegisterDomainRequestPrivate
  * \brief The RegisterDomainRequestPrivate class provides private implementation for RegisterDomainRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

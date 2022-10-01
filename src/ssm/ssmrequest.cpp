@@ -21,160 +21,160 @@
 #include "ssmrequest_p.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 /*!
- * \class QtAws::SSM::SsmRequest
- * \brief The SsmRequest class provides an interface for SSM requests.
+ * \class QtAws::Ssm::SsmRequest
+ * \brief The SsmRequest class provides an interface for Ssm requests.
  *
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  */
 
 /*!
  * \enum SsmRequest::Action
  *
- * This enum describes the actions that can be performed as SSM
+ * This enum describes the actions that can be performed as Ssm
  * requests.
  *
- * \value AddTagsToResourceAction SSM AddTagsToResource action.
- * \value AssociateOpsItemRelatedItemAction SSM AssociateOpsItemRelatedItem action.
- * \value CancelCommandAction SSM CancelCommand action.
- * \value CancelMaintenanceWindowExecutionAction SSM CancelMaintenanceWindowExecution action.
- * \value CreateActivationAction SSM CreateActivation action.
- * \value CreateAssociationAction SSM CreateAssociation action.
- * \value CreateAssociationBatchAction SSM CreateAssociationBatch action.
- * \value CreateDocumentAction SSM CreateDocument action.
- * \value CreateMaintenanceWindowAction SSM CreateMaintenanceWindow action.
- * \value CreateOpsItemAction SSM CreateOpsItem action.
- * \value CreateOpsMetadataAction SSM CreateOpsMetadata action.
- * \value CreatePatchBaselineAction SSM CreatePatchBaseline action.
- * \value CreateResourceDataSyncAction SSM CreateResourceDataSync action.
- * \value DeleteActivationAction SSM DeleteActivation action.
- * \value DeleteAssociationAction SSM DeleteAssociation action.
- * \value DeleteDocumentAction SSM DeleteDocument action.
- * \value DeleteInventoryAction SSM DeleteInventory action.
- * \value DeleteMaintenanceWindowAction SSM DeleteMaintenanceWindow action.
- * \value DeleteOpsMetadataAction SSM DeleteOpsMetadata action.
- * \value DeleteParameterAction SSM DeleteParameter action.
- * \value DeleteParametersAction SSM DeleteParameters action.
- * \value DeletePatchBaselineAction SSM DeletePatchBaseline action.
- * \value DeleteResourceDataSyncAction SSM DeleteResourceDataSync action.
- * \value DeregisterManagedInstanceAction SSM DeregisterManagedInstance action.
- * \value DeregisterPatchBaselineForPatchGroupAction SSM DeregisterPatchBaselineForPatchGroup action.
- * \value DeregisterTargetFromMaintenanceWindowAction SSM DeregisterTargetFromMaintenanceWindow action.
- * \value DeregisterTaskFromMaintenanceWindowAction SSM DeregisterTaskFromMaintenanceWindow action.
- * \value DescribeActivationsAction SSM DescribeActivations action.
- * \value DescribeAssociationAction SSM DescribeAssociation action.
- * \value DescribeAssociationExecutionTargetsAction SSM DescribeAssociationExecutionTargets action.
- * \value DescribeAssociationExecutionsAction SSM DescribeAssociationExecutions action.
- * \value DescribeAutomationExecutionsAction SSM DescribeAutomationExecutions action.
- * \value DescribeAutomationStepExecutionsAction SSM DescribeAutomationStepExecutions action.
- * \value DescribeAvailablePatchesAction SSM DescribeAvailablePatches action.
- * \value DescribeDocumentAction SSM DescribeDocument action.
- * \value DescribeDocumentPermissionAction SSM DescribeDocumentPermission action.
- * \value DescribeEffectiveInstanceAssociationsAction SSM DescribeEffectiveInstanceAssociations action.
- * \value DescribeEffectivePatchesForPatchBaselineAction SSM DescribeEffectivePatchesForPatchBaseline action.
- * \value DescribeInstanceAssociationsStatusAction SSM DescribeInstanceAssociationsStatus action.
- * \value DescribeInstanceInformationAction SSM DescribeInstanceInformation action.
- * \value DescribeInstancePatchStatesAction SSM DescribeInstancePatchStates action.
- * \value DescribeInstancePatchStatesForPatchGroupAction SSM DescribeInstancePatchStatesForPatchGroup action.
- * \value DescribeInstancePatchesAction SSM DescribeInstancePatches action.
- * \value DescribeInventoryDeletionsAction SSM DescribeInventoryDeletions action.
- * \value DescribeMaintenanceWindowExecutionTaskInvocationsAction SSM DescribeMaintenanceWindowExecutionTaskInvocations action.
- * \value DescribeMaintenanceWindowExecutionTasksAction SSM DescribeMaintenanceWindowExecutionTasks action.
- * \value DescribeMaintenanceWindowExecutionsAction SSM DescribeMaintenanceWindowExecutions action.
- * \value DescribeMaintenanceWindowScheduleAction SSM DescribeMaintenanceWindowSchedule action.
- * \value DescribeMaintenanceWindowTargetsAction SSM DescribeMaintenanceWindowTargets action.
- * \value DescribeMaintenanceWindowTasksAction SSM DescribeMaintenanceWindowTasks action.
- * \value DescribeMaintenanceWindowsAction SSM DescribeMaintenanceWindows action.
- * \value DescribeMaintenanceWindowsForTargetAction SSM DescribeMaintenanceWindowsForTarget action.
- * \value DescribeOpsItemsAction SSM DescribeOpsItems action.
- * \value DescribeParametersAction SSM DescribeParameters action.
- * \value DescribePatchBaselinesAction SSM DescribePatchBaselines action.
- * \value DescribePatchGroupStateAction SSM DescribePatchGroupState action.
- * \value DescribePatchGroupsAction SSM DescribePatchGroups action.
- * \value DescribePatchPropertiesAction SSM DescribePatchProperties action.
- * \value DescribeSessionsAction SSM DescribeSessions action.
- * \value DisassociateOpsItemRelatedItemAction SSM DisassociateOpsItemRelatedItem action.
- * \value GetAutomationExecutionAction SSM GetAutomationExecution action.
- * \value GetCalendarStateAction SSM GetCalendarState action.
- * \value GetCommandInvocationAction SSM GetCommandInvocation action.
- * \value GetConnectionStatusAction SSM GetConnectionStatus action.
- * \value GetDefaultPatchBaselineAction SSM GetDefaultPatchBaseline action.
- * \value GetDeployablePatchSnapshotForInstanceAction SSM GetDeployablePatchSnapshotForInstance action.
- * \value GetDocumentAction SSM GetDocument action.
- * \value GetInventoryAction SSM GetInventory action.
- * \value GetInventorySchemaAction SSM GetInventorySchema action.
- * \value GetMaintenanceWindowAction SSM GetMaintenanceWindow action.
- * \value GetMaintenanceWindowExecutionAction SSM GetMaintenanceWindowExecution action.
- * \value GetMaintenanceWindowExecutionTaskAction SSM GetMaintenanceWindowExecutionTask action.
- * \value GetMaintenanceWindowExecutionTaskInvocationAction SSM GetMaintenanceWindowExecutionTaskInvocation action.
- * \value GetMaintenanceWindowTaskAction SSM GetMaintenanceWindowTask action.
- * \value GetOpsItemAction SSM GetOpsItem action.
- * \value GetOpsMetadataAction SSM GetOpsMetadata action.
- * \value GetOpsSummaryAction SSM GetOpsSummary action.
- * \value GetParameterAction SSM GetParameter action.
- * \value GetParameterHistoryAction SSM GetParameterHistory action.
- * \value GetParametersAction SSM GetParameters action.
- * \value GetParametersByPathAction SSM GetParametersByPath action.
- * \value GetPatchBaselineAction SSM GetPatchBaseline action.
- * \value GetPatchBaselineForPatchGroupAction SSM GetPatchBaselineForPatchGroup action.
- * \value GetServiceSettingAction SSM GetServiceSetting action.
- * \value LabelParameterVersionAction SSM LabelParameterVersion action.
- * \value ListAssociationVersionsAction SSM ListAssociationVersions action.
- * \value ListAssociationsAction SSM ListAssociations action.
- * \value ListCommandInvocationsAction SSM ListCommandInvocations action.
- * \value ListCommandsAction SSM ListCommands action.
- * \value ListComplianceItemsAction SSM ListComplianceItems action.
- * \value ListComplianceSummariesAction SSM ListComplianceSummaries action.
- * \value ListDocumentMetadataHistoryAction SSM ListDocumentMetadataHistory action.
- * \value ListDocumentVersionsAction SSM ListDocumentVersions action.
- * \value ListDocumentsAction SSM ListDocuments action.
- * \value ListInventoryEntriesAction SSM ListInventoryEntries action.
- * \value ListOpsItemEventsAction SSM ListOpsItemEvents action.
- * \value ListOpsItemRelatedItemsAction SSM ListOpsItemRelatedItems action.
- * \value ListOpsMetadataAction SSM ListOpsMetadata action.
- * \value ListResourceComplianceSummariesAction SSM ListResourceComplianceSummaries action.
- * \value ListResourceDataSyncAction SSM ListResourceDataSync action.
- * \value ListTagsForResourceAction SSM ListTagsForResource action.
- * \value ModifyDocumentPermissionAction SSM ModifyDocumentPermission action.
- * \value PutComplianceItemsAction SSM PutComplianceItems action.
- * \value PutInventoryAction SSM PutInventory action.
- * \value PutParameterAction SSM PutParameter action.
- * \value RegisterDefaultPatchBaselineAction SSM RegisterDefaultPatchBaseline action.
- * \value RegisterPatchBaselineForPatchGroupAction SSM RegisterPatchBaselineForPatchGroup action.
- * \value RegisterTargetWithMaintenanceWindowAction SSM RegisterTargetWithMaintenanceWindow action.
- * \value RegisterTaskWithMaintenanceWindowAction SSM RegisterTaskWithMaintenanceWindow action.
- * \value RemoveTagsFromResourceAction SSM RemoveTagsFromResource action.
- * \value ResetServiceSettingAction SSM ResetServiceSetting action.
- * \value ResumeSessionAction SSM ResumeSession action.
- * \value SendAutomationSignalAction SSM SendAutomationSignal action.
- * \value SendCommandAction SSM SendCommand action.
- * \value StartAssociationsOnceAction SSM StartAssociationsOnce action.
- * \value StartAutomationExecutionAction SSM StartAutomationExecution action.
- * \value StartChangeRequestExecutionAction SSM StartChangeRequestExecution action.
- * \value StartSessionAction SSM StartSession action.
- * \value StopAutomationExecutionAction SSM StopAutomationExecution action.
- * \value TerminateSessionAction SSM TerminateSession action.
- * \value UnlabelParameterVersionAction SSM UnlabelParameterVersion action.
- * \value UpdateAssociationAction SSM UpdateAssociation action.
- * \value UpdateAssociationStatusAction SSM UpdateAssociationStatus action.
- * \value UpdateDocumentAction SSM UpdateDocument action.
- * \value UpdateDocumentDefaultVersionAction SSM UpdateDocumentDefaultVersion action.
- * \value UpdateDocumentMetadataAction SSM UpdateDocumentMetadata action.
- * \value UpdateMaintenanceWindowAction SSM UpdateMaintenanceWindow action.
- * \value UpdateMaintenanceWindowTargetAction SSM UpdateMaintenanceWindowTarget action.
- * \value UpdateMaintenanceWindowTaskAction SSM UpdateMaintenanceWindowTask action.
- * \value UpdateManagedInstanceRoleAction SSM UpdateManagedInstanceRole action.
- * \value UpdateOpsItemAction SSM UpdateOpsItem action.
- * \value UpdateOpsMetadataAction SSM UpdateOpsMetadata action.
- * \value UpdatePatchBaselineAction SSM UpdatePatchBaseline action.
- * \value UpdateResourceDataSyncAction SSM UpdateResourceDataSync action.
- * \value UpdateServiceSettingAction SSM UpdateServiceSetting action.
+ * \value AddTagsToResourceAction Ssm AddTagsToResource action.
+ * \value AssociateOpsItemRelatedItemAction Ssm AssociateOpsItemRelatedItem action.
+ * \value CancelCommandAction Ssm CancelCommand action.
+ * \value CancelMaintenanceWindowExecutionAction Ssm CancelMaintenanceWindowExecution action.
+ * \value CreateActivationAction Ssm CreateActivation action.
+ * \value CreateAssociationAction Ssm CreateAssociation action.
+ * \value CreateAssociationBatchAction Ssm CreateAssociationBatch action.
+ * \value CreateDocumentAction Ssm CreateDocument action.
+ * \value CreateMaintenanceWindowAction Ssm CreateMaintenanceWindow action.
+ * \value CreateOpsItemAction Ssm CreateOpsItem action.
+ * \value CreateOpsMetadataAction Ssm CreateOpsMetadata action.
+ * \value CreatePatchBaselineAction Ssm CreatePatchBaseline action.
+ * \value CreateResourceDataSyncAction Ssm CreateResourceDataSync action.
+ * \value DeleteActivationAction Ssm DeleteActivation action.
+ * \value DeleteAssociationAction Ssm DeleteAssociation action.
+ * \value DeleteDocumentAction Ssm DeleteDocument action.
+ * \value DeleteInventoryAction Ssm DeleteInventory action.
+ * \value DeleteMaintenanceWindowAction Ssm DeleteMaintenanceWindow action.
+ * \value DeleteOpsMetadataAction Ssm DeleteOpsMetadata action.
+ * \value DeleteParameterAction Ssm DeleteParameter action.
+ * \value DeleteParametersAction Ssm DeleteParameters action.
+ * \value DeletePatchBaselineAction Ssm DeletePatchBaseline action.
+ * \value DeleteResourceDataSyncAction Ssm DeleteResourceDataSync action.
+ * \value DeregisterManagedInstanceAction Ssm DeregisterManagedInstance action.
+ * \value DeregisterPatchBaselineForPatchGroupAction Ssm DeregisterPatchBaselineForPatchGroup action.
+ * \value DeregisterTargetFromMaintenanceWindowAction Ssm DeregisterTargetFromMaintenanceWindow action.
+ * \value DeregisterTaskFromMaintenanceWindowAction Ssm DeregisterTaskFromMaintenanceWindow action.
+ * \value DescribeActivationsAction Ssm DescribeActivations action.
+ * \value DescribeAssociationAction Ssm DescribeAssociation action.
+ * \value DescribeAssociationExecutionTargetsAction Ssm DescribeAssociationExecutionTargets action.
+ * \value DescribeAssociationExecutionsAction Ssm DescribeAssociationExecutions action.
+ * \value DescribeAutomationExecutionsAction Ssm DescribeAutomationExecutions action.
+ * \value DescribeAutomationStepExecutionsAction Ssm DescribeAutomationStepExecutions action.
+ * \value DescribeAvailablePatchesAction Ssm DescribeAvailablePatches action.
+ * \value DescribeDocumentAction Ssm DescribeDocument action.
+ * \value DescribeDocumentPermissionAction Ssm DescribeDocumentPermission action.
+ * \value DescribeEffectiveInstanceAssociationsAction Ssm DescribeEffectiveInstanceAssociations action.
+ * \value DescribeEffectivePatchesForPatchBaselineAction Ssm DescribeEffectivePatchesForPatchBaseline action.
+ * \value DescribeInstanceAssociationsStatusAction Ssm DescribeInstanceAssociationsStatus action.
+ * \value DescribeInstanceInformationAction Ssm DescribeInstanceInformation action.
+ * \value DescribeInstancePatchStatesAction Ssm DescribeInstancePatchStates action.
+ * \value DescribeInstancePatchStatesForPatchGroupAction Ssm DescribeInstancePatchStatesForPatchGroup action.
+ * \value DescribeInstancePatchesAction Ssm DescribeInstancePatches action.
+ * \value DescribeInventoryDeletionsAction Ssm DescribeInventoryDeletions action.
+ * \value DescribeMaintenanceWindowExecutionTaskInvocationsAction Ssm DescribeMaintenanceWindowExecutionTaskInvocations action.
+ * \value DescribeMaintenanceWindowExecutionTasksAction Ssm DescribeMaintenanceWindowExecutionTasks action.
+ * \value DescribeMaintenanceWindowExecutionsAction Ssm DescribeMaintenanceWindowExecutions action.
+ * \value DescribeMaintenanceWindowScheduleAction Ssm DescribeMaintenanceWindowSchedule action.
+ * \value DescribeMaintenanceWindowTargetsAction Ssm DescribeMaintenanceWindowTargets action.
+ * \value DescribeMaintenanceWindowTasksAction Ssm DescribeMaintenanceWindowTasks action.
+ * \value DescribeMaintenanceWindowsAction Ssm DescribeMaintenanceWindows action.
+ * \value DescribeMaintenanceWindowsForTargetAction Ssm DescribeMaintenanceWindowsForTarget action.
+ * \value DescribeOpsItemsAction Ssm DescribeOpsItems action.
+ * \value DescribeParametersAction Ssm DescribeParameters action.
+ * \value DescribePatchBaselinesAction Ssm DescribePatchBaselines action.
+ * \value DescribePatchGroupStateAction Ssm DescribePatchGroupState action.
+ * \value DescribePatchGroupsAction Ssm DescribePatchGroups action.
+ * \value DescribePatchPropertiesAction Ssm DescribePatchProperties action.
+ * \value DescribeSessionsAction Ssm DescribeSessions action.
+ * \value DisassociateOpsItemRelatedItemAction Ssm DisassociateOpsItemRelatedItem action.
+ * \value GetAutomationExecutionAction Ssm GetAutomationExecution action.
+ * \value GetCalendarStateAction Ssm GetCalendarState action.
+ * \value GetCommandInvocationAction Ssm GetCommandInvocation action.
+ * \value GetConnectionStatusAction Ssm GetConnectionStatus action.
+ * \value GetDefaultPatchBaselineAction Ssm GetDefaultPatchBaseline action.
+ * \value GetDeployablePatchSnapshotForInstanceAction Ssm GetDeployablePatchSnapshotForInstance action.
+ * \value GetDocumentAction Ssm GetDocument action.
+ * \value GetInventoryAction Ssm GetInventory action.
+ * \value GetInventorySchemaAction Ssm GetInventorySchema action.
+ * \value GetMaintenanceWindowAction Ssm GetMaintenanceWindow action.
+ * \value GetMaintenanceWindowExecutionAction Ssm GetMaintenanceWindowExecution action.
+ * \value GetMaintenanceWindowExecutionTaskAction Ssm GetMaintenanceWindowExecutionTask action.
+ * \value GetMaintenanceWindowExecutionTaskInvocationAction Ssm GetMaintenanceWindowExecutionTaskInvocation action.
+ * \value GetMaintenanceWindowTaskAction Ssm GetMaintenanceWindowTask action.
+ * \value GetOpsItemAction Ssm GetOpsItem action.
+ * \value GetOpsMetadataAction Ssm GetOpsMetadata action.
+ * \value GetOpsSummaryAction Ssm GetOpsSummary action.
+ * \value GetParameterAction Ssm GetParameter action.
+ * \value GetParameterHistoryAction Ssm GetParameterHistory action.
+ * \value GetParametersAction Ssm GetParameters action.
+ * \value GetParametersByPathAction Ssm GetParametersByPath action.
+ * \value GetPatchBaselineAction Ssm GetPatchBaseline action.
+ * \value GetPatchBaselineForPatchGroupAction Ssm GetPatchBaselineForPatchGroup action.
+ * \value GetServiceSettingAction Ssm GetServiceSetting action.
+ * \value LabelParameterVersionAction Ssm LabelParameterVersion action.
+ * \value ListAssociationVersionsAction Ssm ListAssociationVersions action.
+ * \value ListAssociationsAction Ssm ListAssociations action.
+ * \value ListCommandInvocationsAction Ssm ListCommandInvocations action.
+ * \value ListCommandsAction Ssm ListCommands action.
+ * \value ListComplianceItemsAction Ssm ListComplianceItems action.
+ * \value ListComplianceSummariesAction Ssm ListComplianceSummaries action.
+ * \value ListDocumentMetadataHistoryAction Ssm ListDocumentMetadataHistory action.
+ * \value ListDocumentVersionsAction Ssm ListDocumentVersions action.
+ * \value ListDocumentsAction Ssm ListDocuments action.
+ * \value ListInventoryEntriesAction Ssm ListInventoryEntries action.
+ * \value ListOpsItemEventsAction Ssm ListOpsItemEvents action.
+ * \value ListOpsItemRelatedItemsAction Ssm ListOpsItemRelatedItems action.
+ * \value ListOpsMetadataAction Ssm ListOpsMetadata action.
+ * \value ListResourceComplianceSummariesAction Ssm ListResourceComplianceSummaries action.
+ * \value ListResourceDataSyncAction Ssm ListResourceDataSync action.
+ * \value ListTagsForResourceAction Ssm ListTagsForResource action.
+ * \value ModifyDocumentPermissionAction Ssm ModifyDocumentPermission action.
+ * \value PutComplianceItemsAction Ssm PutComplianceItems action.
+ * \value PutInventoryAction Ssm PutInventory action.
+ * \value PutParameterAction Ssm PutParameter action.
+ * \value RegisterDefaultPatchBaselineAction Ssm RegisterDefaultPatchBaseline action.
+ * \value RegisterPatchBaselineForPatchGroupAction Ssm RegisterPatchBaselineForPatchGroup action.
+ * \value RegisterTargetWithMaintenanceWindowAction Ssm RegisterTargetWithMaintenanceWindow action.
+ * \value RegisterTaskWithMaintenanceWindowAction Ssm RegisterTaskWithMaintenanceWindow action.
+ * \value RemoveTagsFromResourceAction Ssm RemoveTagsFromResource action.
+ * \value ResetServiceSettingAction Ssm ResetServiceSetting action.
+ * \value ResumeSessionAction Ssm ResumeSession action.
+ * \value SendAutomationSignalAction Ssm SendAutomationSignal action.
+ * \value SendCommandAction Ssm SendCommand action.
+ * \value StartAssociationsOnceAction Ssm StartAssociationsOnce action.
+ * \value StartAutomationExecutionAction Ssm StartAutomationExecution action.
+ * \value StartChangeRequestExecutionAction Ssm StartChangeRequestExecution action.
+ * \value StartSessionAction Ssm StartSession action.
+ * \value StopAutomationExecutionAction Ssm StopAutomationExecution action.
+ * \value TerminateSessionAction Ssm TerminateSession action.
+ * \value UnlabelParameterVersionAction Ssm UnlabelParameterVersion action.
+ * \value UpdateAssociationAction Ssm UpdateAssociation action.
+ * \value UpdateAssociationStatusAction Ssm UpdateAssociationStatus action.
+ * \value UpdateDocumentAction Ssm UpdateDocument action.
+ * \value UpdateDocumentDefaultVersionAction Ssm UpdateDocumentDefaultVersion action.
+ * \value UpdateDocumentMetadataAction Ssm UpdateDocumentMetadata action.
+ * \value UpdateMaintenanceWindowAction Ssm UpdateMaintenanceWindow action.
+ * \value UpdateMaintenanceWindowTargetAction Ssm UpdateMaintenanceWindowTarget action.
+ * \value UpdateMaintenanceWindowTaskAction Ssm UpdateMaintenanceWindowTask action.
+ * \value UpdateManagedInstanceRoleAction Ssm UpdateManagedInstanceRole action.
+ * \value UpdateOpsItemAction Ssm UpdateOpsItem action.
+ * \value UpdateOpsMetadataAction Ssm UpdateOpsMetadata action.
+ * \value UpdatePatchBaselineAction Ssm UpdatePatchBaseline action.
+ * \value UpdateResourceDataSyncAction Ssm UpdateResourceDataSync action.
+ * \value UpdateServiceSettingAction Ssm UpdateServiceSetting action.
  */
 
 /*!
- * Constructs a SsmRequest object for SSM \a action.
+ * Constructs a SsmRequest object for Ssm \a action.
  */
 SsmRequest::SsmRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SsmRequestPrivate(action, this))
@@ -215,7 +215,7 @@ SsmRequest::SsmRequest(SsmRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 }
 
 /*!
- * Returns the SSM action to be performed by this request.
+ * Returns the Ssm action to be performed by this request.
  */
 SsmRequest::Action SsmRequest::action() const
 {
@@ -224,7 +224,7 @@ SsmRequest::Action SsmRequest::action() const
 }
 
 /*!
- * Returns the name of the SSM action to be performed by this request.
+ * Returns the name of the Ssm action to be performed by this request.
  */
 QString SsmRequest::actionString() const
 {
@@ -232,7 +232,7 @@ QString SsmRequest::actionString() const
 }
 
 /*!
- * Returns the SSM API version implemented by this request.
+ * Returns the Ssm API version implemented by this request.
  */
 QString SsmRequest::apiVersion() const
 {
@@ -241,7 +241,7 @@ QString SsmRequest::apiVersion() const
 }
 
 /*!
- * Sets the SSM action to be performed by this request to \a action.
+ * Sets the Ssm action to be performed by this request to \a action.
  */
 void SsmRequest::setAction(const Action action)
 {
@@ -250,7 +250,7 @@ void SsmRequest::setAction(const Action action)
 }
 
 /*!
- * Sets the SSM API version to include in this request to \a version.
+ * Sets the Ssm API version to include in this request to \a version.
  */
 void SsmRequest::setApiVersion(const QString &version)
 {
@@ -275,15 +275,15 @@ bool SsmRequest::operator==(const SsmRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SSM queue name.
+ * Returns \c tue if \a queueName is a valid Ssm queue name.
  *
- * @par From SSM FAQs:
+ * @par From Ssm FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SSM queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Ssm queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
@@ -350,10 +350,10 @@ void SsmRequest::setParameters(const QVariantMap &parameters)
 }
 
 /*!
- * Returns a network request for the SSM request using the given
+ * Returns a network request for the Ssm request using the given
  * \a endpoint.
  *
- * This SSM implementation builds request URLs by combining the
+ * This Ssm implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
@@ -366,19 +366,19 @@ QNetworkRequest SsmRequest::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::SSM::SsmRequestPrivate
+ * \class QtAws::Ssm::SsmRequestPrivate
  * \brief The SsmRequestPrivate class provides private implementation for SsmRequest.
  * \internal
  *
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  */
 
 /*!
- * Constructs a SsmRequestPrivate object for SSM \a action,
+ * Constructs a SsmRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 SsmRequestPrivate::SsmRequestPrivate(const SsmRequest::Action action, SsmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2014-11-06"))
 {
 
 }
@@ -404,7 +404,7 @@ SsmRequestPrivate::SsmRequestPrivate(const SsmRequestPrivate &other,
  * invalid.
  *
  * This function converts SsmRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the SSM service's Action
+ * string representations, appropriate for use with the Ssm service's Action
  * query parameters.
  */
 QString SsmRequestPrivate::toString(const SsmRequest::Action &action)
@@ -554,5 +554,5 @@ QString SsmRequestPrivate::toString(const SsmRequest::Action &action)
     return QString();
 }
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeStepResponse
- * \brief The DescribeStepResponse class provides an interace for EMR DescribeStep responses.
+ * \class QtAws::Emr::DescribeStepResponse
+ * \brief The DescribeStepResponse class provides an interace for Emr DescribeStep responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeStep
  */
@@ -64,7 +64,7 @@ const DescribeStepRequest * DescribeStepResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR DescribeStep \a response.
+ * Parses a successful Emr DescribeStep \a response.
  */
 void DescribeStepResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DescribeStepResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DescribeStepResponsePrivate
+ * \class QtAws::Emr::DescribeStepResponsePrivate
  * \brief The DescribeStepResponsePrivate class provides private implementation for DescribeStepResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DescribeStepResponsePrivate::DescribeStepResponsePrivate(
 }
 
 /*!
- * Parses a EMR DescribeStep response element from \a xml.
+ * Parses a Emr DescribeStep response element from \a xml.
  */
 void DescribeStepResponsePrivate::parseDescribeStepResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DescribeStepResponsePrivate::parseDescribeStepResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

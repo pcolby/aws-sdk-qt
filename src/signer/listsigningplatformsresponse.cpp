@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::ListSigningPlatformsResponse
- * \brief The ListSigningPlatformsResponse class provides an interace for signer ListSigningPlatforms responses.
+ * \class QtAws::Signer::ListSigningPlatformsResponse
+ * \brief The ListSigningPlatformsResponse class provides an interace for Signer ListSigningPlatforms responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::listSigningPlatforms
+ * \sa SignerClient::listSigningPlatforms
  */
 
 /*!
@@ -69,7 +71,7 @@ ListSigningPlatformsResponse::ListSigningPlatformsResponse(
         const ListSigningPlatformsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new ListSigningPlatformsResponsePrivate(this), parent)
+    : SignerResponse(new ListSigningPlatformsResponsePrivate(this), parent)
 {
     setRequest(new ListSigningPlatformsRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const ListSigningPlatformsRequest * ListSigningPlatformsResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful signer ListSigningPlatforms \a response.
+ * Parses a successful Signer ListSigningPlatforms \a response.
  */
 void ListSigningPlatformsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void ListSigningPlatformsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::ListSigningPlatformsResponsePrivate
+ * \class QtAws::Signer::ListSigningPlatformsResponsePrivate
  * \brief The ListSigningPlatformsResponsePrivate class provides private implementation for ListSigningPlatformsResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a ListSigningPlatformsResponsePrivate object with public implementation \a q.
  */
 ListSigningPlatformsResponsePrivate::ListSigningPlatformsResponsePrivate(
-    ListSigningPlatformsResponse * const q) : signerResponsePrivate(q)
+    ListSigningPlatformsResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer ListSigningPlatforms response element from \a xml.
+ * Parses a Signer ListSigningPlatforms response element from \a xml.
  */
 void ListSigningPlatformsResponsePrivate::parseListSigningPlatformsResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void ListSigningPlatformsResponsePrivate::parseListSigningPlatformsResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

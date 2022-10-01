@@ -24,11 +24,11 @@
 #include "listquerysuggestionsblocklistsrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListQuerySuggestionsBlockListsResponsePrivate;
 
-class QTAWSKENDRA_EXPORT ListQuerySuggestionsBlockListsResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ListQuerySuggestionsBlockListsResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

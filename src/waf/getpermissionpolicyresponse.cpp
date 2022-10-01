@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::GetPermissionPolicyResponse
- * \brief The GetPermissionPolicyResponse class provides an interace for WAF GetPermissionPolicy responses.
+ * \class QtAws::Waf::GetPermissionPolicyResponse
+ * \brief The GetPermissionPolicyResponse class provides an interace for Waf GetPermissionPolicy responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF GetPermissionPolicy \a response.
+ * Parses a successful Waf GetPermissionPolicy \a response.
  */
 void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::GetPermissionPolicyResponsePrivate
+ * \class QtAws::Waf::GetPermissionPolicyResponsePrivate
  * \brief The GetPermissionPolicyResponsePrivate class provides private implementation for GetPermissionPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
 }
 
 /*!
- * Parses a WAF GetPermissionPolicy response element from \a xml.
+ * Parses a Waf GetPermissionPolicy response element from \a xml.
  */
 void GetPermissionPolicyResponsePrivate::parseGetPermissionPolicyResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void GetPermissionPolicyResponsePrivate::parseGetPermissionPolicyResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

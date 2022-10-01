@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyEventSubscriptionResponse
- * \brief The ModifyEventSubscriptionResponse class provides an interace for RDS ModifyEventSubscription responses.
+ * \class QtAws::Rds::ModifyEventSubscriptionResponse
+ * \brief The ModifyEventSubscriptionResponse class provides an interace for Rds ModifyEventSubscription responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyEventSubscription \a response.
+ * Parses a successful Rds ModifyEventSubscription \a response.
  */
 void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyEventSubscriptionResponsePrivate
+ * \class QtAws::Rds::ModifyEventSubscriptionResponsePrivate
  * \brief The ModifyEventSubscriptionResponsePrivate class provides private implementation for ModifyEventSubscriptionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
 }
 
 /*!
- * Parses a RDS ModifyEventSubscription response element from \a xml.
+ * Parses a Rds ModifyEventSubscription response element from \a xml.
  */
 void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::StsResponse
- * \brief The StsResponse class provides an interface for STS responses.
+ * \class QtAws::Sts::StsResponse
+ * \brief The StsResponse class provides an interface for Sts responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -76,11 +76,11 @@ void StsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::StsResponsePrivate
+ * \class QtAws::Sts::StsResponsePrivate
  * \brief The StsResponsePrivate class provides private implementation for StsResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -92,5 +92,5 @@ StsResponsePrivate::StsResponsePrivate(
 
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

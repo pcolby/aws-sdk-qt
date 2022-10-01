@@ -23,11 +23,11 @@
 #include "acmpcarequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class IssueCertificateRequestPrivate;
 
-class QTAWSACMPCA_EXPORT IssueCertificateRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT IssueCertificateRequest : public AcmPcaRequest {
 
 public:
     IssueCertificateRequest(const IssueCertificateRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DeactivateContactChannelResponse
- * \brief The DeactivateContactChannelResponse class provides an interace for SSMContacts DeactivateContactChannel responses.
+ * \class QtAws::SsmContacts::DeactivateContactChannelResponse
+ * \brief The DeactivateContactChannelResponse class provides an interace for SsmContacts DeactivateContactChannel responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::deactivateContactChannel
+ * \sa SsmContactsClient::deactivateContactChannel
  */
 
 /*!
@@ -44,7 +54,7 @@ DeactivateContactChannelResponse::DeactivateContactChannelResponse(
         const DeactivateContactChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new DeactivateContactChannelResponsePrivate(this), parent)
+    : SsmContactsResponse(new DeactivateContactChannelResponsePrivate(this), parent)
 {
     setRequest(new DeactivateContactChannelRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const DeactivateContactChannelRequest * DeactivateContactChannelResponse::reques
 
 /*!
  * \reimp
- * Parses a successful SSMContacts DeactivateContactChannel \a response.
+ * Parses a successful SsmContacts DeactivateContactChannel \a response.
  */
 void DeactivateContactChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void DeactivateContactChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::DeactivateContactChannelResponsePrivate
+ * \class QtAws::SsmContacts::DeactivateContactChannelResponsePrivate
  * \brief The DeactivateContactChannelResponsePrivate class provides private implementation for DeactivateContactChannelResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a DeactivateContactChannelResponsePrivate object with public implementation \a q.
  */
 DeactivateContactChannelResponsePrivate::DeactivateContactChannelResponsePrivate(
-    DeactivateContactChannelResponse * const q) : SSMContactsResponsePrivate(q)
+    DeactivateContactChannelResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts DeactivateContactChannel response element from \a xml.
+ * Parses a SsmContacts DeactivateContactChannel response element from \a xml.
  */
 void DeactivateContactChannelResponsePrivate::parseDeactivateContactChannelResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void DeactivateContactChannelResponsePrivate::parseDeactivateContactChannelRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

@@ -24,11 +24,11 @@
 #include "describeaccountattributesrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeAccountAttributesResponsePrivate;
 
-class QTAWSOPSWORKSCM_EXPORT DescribeAccountAttributesResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DescribeAccountAttributesResponse : public OpsWorksCmResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

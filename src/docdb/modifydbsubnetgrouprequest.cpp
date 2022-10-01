@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::ModifyDBSubnetGroupRequest
- * \brief The ModifyDBSubnetGroupRequest class provides an interface for DocDB ModifyDBSubnetGroup requests.
+ * \class QtAws::DocDb::ModifyDBSubnetGroupRequest
+ * \brief The ModifyDBSubnetGroupRequest class provides an interface for DocDb ModifyDBSubnetGroup requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::modifyDBSubnetGroup
+ * \sa DocDbClient::modifyDBSubnetGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroupRequest &other)
-    : DocDBRequest(new ModifyDBSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new ModifyDBSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroup
  * Constructs a ModifyDBSubnetGroupRequest object.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest()
-    : DocDBRequest(new ModifyDBSubnetGroupRequestPrivate(DocDBRequest::ModifyDBSubnetGroupAction, this))
+    : DocDbRequest(new ModifyDBSubnetGroupRequestPrivate(DocDbRequest::ModifyDBSubnetGroupAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::ModifyDBSubnetGroupRequestPrivate
+ * \class QtAws::DocDb::ModifyDBSubnetGroupRequestPrivate
  * \brief The ModifyDBSubnetGroupRequestPrivate class provides private implementation for ModifyDBSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a ModifyDBSubnetGroupRequestPrivate object for DocDB \a action,
+ * Constructs a ModifyDBSubnetGroupRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
-    const DocDBRequest::Action action, ModifyDBSubnetGroupRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, ModifyDBSubnetGroupRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const ModifyDBSubnetGroupRequestPrivate &other, ModifyDBSubnetGroupRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

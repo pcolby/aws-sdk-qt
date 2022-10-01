@@ -23,11 +23,11 @@
 #include "acmpcarequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class ListTagsRequestPrivate;
 
-class QTAWSACMPCA_EXPORT ListTagsRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT ListTagsRequest : public AcmPcaRequest {
 
 public:
     ListTagsRequest(const ListTagsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

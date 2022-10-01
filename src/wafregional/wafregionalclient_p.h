@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalClient;
+class WafRegionalClient;
 
-class WAFRegionalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WafRegionalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit WAFRegionalClientPrivate(WAFRegionalClient * const q);
+    explicit WafRegionalClientPrivate(WafRegionalClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(WAFRegionalClient)
-    Q_DISABLE_COPY(WAFRegionalClientPrivate)
+    Q_DECLARE_PUBLIC(WafRegionalClient)
+    Q_DISABLE_COPY(WafRegionalClientPrivate)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

@@ -86,6 +86,8 @@ class SubscribeToShardRequest;
 class SubscribeToShardResponse;
 class UpdateShardCountRequest;
 class UpdateShardCountResponse;
+class UpdateStreamModeRequest;
+class UpdateStreamModeResponse;
 
 class QTAWSKINESIS_EXPORT KinesisClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -131,6 +133,7 @@ public slots:
     StopStreamEncryptionResponse * stopStreamEncryption(const StopStreamEncryptionRequest &request);
     SubscribeToShardResponse * subscribeToShard(const SubscribeToShardRequest &request);
     UpdateShardCountResponse * updateShardCount(const UpdateShardCountRequest &request);
+    UpdateStreamModeResponse * updateStreamMode(const UpdateStreamModeRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisClient)

@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "batchgetnamedqueryrequest.h"
 #include "batchgetnamedqueryresponse.h"
+#include "batchgetpreparedstatementrequest.h"
+#include "batchgetpreparedstatementresponse.h"
 #include "batchgetqueryexecutionrequest.h"
 #include "batchgetqueryexecutionresponse.h"
 #include "createdatacatalogrequest.h"
@@ -53,6 +55,8 @@
 #include "getqueryexecutionresponse.h"
 #include "getqueryresultsrequest.h"
 #include "getqueryresultsresponse.h"
+#include "getqueryruntimestatisticsrequest.h"
+#include "getqueryruntimestatisticsresponse.h"
 #include "gettablemetadatarequest.h"
 #include "gettablemetadataresponse.h"
 #include "getworkgrouprequest.h"
@@ -85,6 +89,8 @@
 #include "untagresourceresponse.h"
 #include "updatedatacatalogrequest.h"
 #include "updatedatacatalogresponse.h"
+#include "updatenamedqueryrequest.h"
+#include "updatenamedqueryresponse.h"
 #include "updatepreparedstatementrequest.h"
 #include "updatepreparedstatementresponse.h"
 #include "updateworkgrouprequest.h"
@@ -127,7 +133,7 @@ namespace Athena {
  * 
  *  JDBC</a>>
  * 
- *  For code samples using the AWS SDK for Java, see <a
+ *  For code samples using the Amazon Web Services SDK for Java, see <a
  *  href="https://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  *  Athena User
  */
@@ -205,6 +211,21 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * BatchGetPreparedStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the details of a single prepared statement or a list of up to 256 prepared statements for the array of prepared
+ * statement names that you provide. Requires you to have access to the workgroup to which the prepared statements belong.
+ * If a prepared statement cannot be retrieved for the name specified, the statement is listed in
+ */
+BatchGetPreparedStatementResponse * AthenaClient::batchGetPreparedStatement(const BatchGetPreparedStatementRequest &request)
+{
+    return qobject_cast<BatchGetPreparedStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * BatchGetQueryExecutionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -226,7 +247,7 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates (registers) a data catalog with the specified name and properties. Catalogs created are visible to all users of
- * the same AWS
+ * the same Amazon Web Services
  */
 CreateDataCatalogResponse * AthenaClient::createDataCatalog(const CreateDataCatalogRequest &request)
 {
@@ -243,7 +264,7 @@ CreateDataCatalogResponse * AthenaClient::createDataCatalog(const CreateDataCata
  *
  * workgroup>
  *
- * For code samples using the AWS SDK for Java, see <a
+ * For code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -301,7 +322,7 @@ DeleteDataCatalogResponse * AthenaClient::deleteDataCatalog(const DeleteDataCata
  *
  * saved>
  *
- * For code samples using the AWS SDK for Java, see <a
+ * For code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -431,6 +452,21 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetQueryRuntimeStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns query execution runtime statistics related to a single execution of a query if you have access to the workgroup
+ * in which the query ran. The query execution runtime statistics is returned only when <a>QueryExecutionStatus$State</a>
+ * is in a SUCCEEDED or FAILED
+ */
+GetQueryRuntimeStatisticsResponse * AthenaClient::getQueryRuntimeStatistics(const GetQueryRuntimeStatisticsRequest &request)
+{
+    return qobject_cast<GetQueryRuntimeStatisticsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * GetTableMetadataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -461,7 +497,7 @@ GetWorkGroupResponse * AthenaClient::getWorkGroup(const GetWorkGroupRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the data catalogs in the current AWS
+ * Lists the data catalogs in the current Amazon Web Services
  */
 ListDataCatalogsResponse * AthenaClient::listDataCatalogs(const ListDataCatalogsRequest &request)
 {
@@ -505,7 +541,7 @@ ListEngineVersionsResponse * AthenaClient::listEngineVersions(const ListEngineVe
  *
  * workgroup>
  *
- * For code samples using the AWS SDK for Java, see <a
+ * For code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -520,7 +556,7 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the prepared statements in the specfied
+ * Lists the prepared statements in the specified
  */
 ListPreparedStatementsResponse * AthenaClient::listPreparedStatements(const ListPreparedStatementsRequest &request)
 {
@@ -539,7 +575,7 @@ ListPreparedStatementsResponse * AthenaClient::listPreparedStatements(const List
  *
  * ran>
  *
- * For code samples using the AWS SDK for Java, see <a
+ * For code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -595,7 +631,7 @@ ListWorkGroupsResponse * AthenaClient::listWorkGroups(const ListWorkGroupsReques
  *
  * Runs the SQL query statements contained in the <code>Query</code>. Requires you to have access to the workgroup in which
  * the query ran. Running queries against an external catalog requires <a>GetDataCatalog</a> permission to the catalog. For
- * code samples using the AWS SDK for Java, see <a
+ * code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -614,7 +650,7 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
  *
  * ran>
  *
- * For code samples using the AWS SDK for Java, see <a
+ * For code samples using the Amazon Web Services SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -667,6 +703,19 @@ UntagResourceResponse * AthenaClient::untagResource(const UntagResourceRequest &
 UpdateDataCatalogResponse * AthenaClient::updateDataCatalog(const UpdateDataCatalogRequest &request)
 {
     return qobject_cast<UpdateDataCatalogResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * UpdateNamedQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a <a>NamedQuery</a> object. The database or workgroup cannot be
+ */
+UpdateNamedQueryResponse * AthenaClient::updateNamedQuery(const UpdateNamedQueryRequest &request)
+{
+    return qobject_cast<UpdateNamedQueryResponse *>(send(request));
 }
 
 /*!

@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::GetPolicyResponse
- * \brief The GetPolicyResponse class provides an interace for FMS GetPolicy responses.
+ * \class QtAws::Fms::GetPolicyResponse
+ * \brief The GetPolicyResponse class provides an interace for Fms GetPolicy responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const GetPolicyRequest * GetPolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS GetPolicy \a response.
+ * Parses a successful Fms GetPolicy \a response.
  */
 void GetPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void GetPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::GetPolicyResponsePrivate
+ * \class QtAws::Fms::GetPolicyResponsePrivate
  * \brief The GetPolicyResponsePrivate class provides private implementation for GetPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 }
 
 /*!
- * Parses a FMS GetPolicy response element from \a xml.
+ * Parses a Fms GetPolicy response element from \a xml.
  */
 void GetPolicyResponsePrivate::parseGetPolicyResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void GetPolicyResponsePrivate::parseGetPolicyResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

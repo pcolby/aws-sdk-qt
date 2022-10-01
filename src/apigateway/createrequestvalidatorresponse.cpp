@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::CreateRequestValidatorResponse
- * \brief The CreateRequestValidatorResponse class provides an interace for APIGateway CreateRequestValidator responses.
+ * \class QtAws::ApiGateway::CreateRequestValidatorResponse
+ * \brief The CreateRequestValidatorResponse class provides an interace for ApiGateway CreateRequestValidator responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::createRequestValidator
+ * \sa ApiGatewayClient::createRequestValidator
  */
 
 /*!
@@ -49,7 +49,7 @@ CreateRequestValidatorResponse::CreateRequestValidatorResponse(
         const CreateRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateRequestValidatorResponsePrivate(this), parent)
+    : ApiGatewayResponse(new CreateRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new CreateRequestValidatorRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const CreateRequestValidatorRequest * CreateRequestValidatorResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful APIGateway CreateRequestValidator \a response.
+ * Parses a successful ApiGateway CreateRequestValidator \a response.
  */
 void CreateRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void CreateRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::CreateRequestValidatorResponsePrivate
+ * \class QtAws::ApiGateway::CreateRequestValidatorResponsePrivate
  * \brief The CreateRequestValidatorResponsePrivate class provides private implementation for CreateRequestValidatorResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a CreateRequestValidatorResponsePrivate object with public implementation \a q.
  */
 CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
-    CreateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
+    CreateRequestValidatorResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway CreateRequestValidator response element from \a xml.
+ * Parses a ApiGateway CreateRequestValidator response element from \a xml.
  */
 void CreateRequestValidatorResponsePrivate::parseCreateRequestValidatorResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void CreateRequestValidatorResponsePrivate::parseCreateRequestValidatorResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

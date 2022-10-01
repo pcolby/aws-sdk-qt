@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetApiKeyRequest
- * \brief The GetApiKeyRequest class provides an interface for APIGateway GetApiKey requests.
+ * \class QtAws::ApiGateway::GetApiKeyRequest
+ * \brief The GetApiKeyRequest class provides an interface for ApiGateway GetApiKey requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getApiKey
+ * \sa ApiGatewayClient::getApiKey
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetApiKeyRequest::GetApiKeyRequest(const GetApiKeyRequest &other)
-    : APIGatewayRequest(new GetApiKeyRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetApiKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetApiKeyRequest::GetApiKeyRequest(const GetApiKeyRequest &other)
  * Constructs a GetApiKeyRequest object.
  */
 GetApiKeyRequest::GetApiKeyRequest()
-    : APIGatewayRequest(new GetApiKeyRequestPrivate(APIGatewayRequest::GetApiKeyAction, this))
+    : ApiGatewayRequest(new GetApiKeyRequestPrivate(ApiGatewayRequest::GetApiKeyAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetApiKeyRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::APIGateway::GetApiKeyRequestPrivate
+ * \class QtAws::ApiGateway::GetApiKeyRequestPrivate
  * \brief The GetApiKeyRequestPrivate class provides private implementation for GetApiKeyRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetApiKeyRequestPrivate object for APIGateway \a action,
+ * Constructs a GetApiKeyRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
-    const APIGatewayRequest::Action action, GetApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetApiKeyRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
  */
 GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
     const GetApiKeyRequestPrivate &other, GetApiKeyRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

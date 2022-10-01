@@ -24,7 +24,7 @@
 #include "setsubscriptionattributesrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class SetSubscriptionAttributesResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

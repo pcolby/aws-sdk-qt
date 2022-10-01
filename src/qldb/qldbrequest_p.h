@@ -24,16 +24,16 @@
 #include "qldbrequest.h"
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 class QldbRequest;
 
 class QldbRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    QldbRequest::Action action; ///< QLDB action to be performed.
-    QString apiVersion;        ///< QLDB API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< QLDB request (query string) parameters. @todo?
+    QldbRequest::Action action; ///< Qldb action to be performed.
+    QString apiVersion;        ///< Qldb API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Qldb request (query string) parameters. @todo?
 
     QldbRequestPrivate(const QldbRequest::Action action, QldbRequest * const q);
     QldbRequestPrivate(const QldbRequestPrivate &other, QldbRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws
 
 #endif

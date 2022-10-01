@@ -41,6 +41,7 @@ namespace Pinpoint {
  * \value CreateEmailTemplateAction Pinpoint CreateEmailTemplate action.
  * \value CreateExportJobAction Pinpoint CreateExportJob action.
  * \value CreateImportJobAction Pinpoint CreateImportJob action.
+ * \value CreateInAppTemplateAction Pinpoint CreateInAppTemplate action.
  * \value CreateJourneyAction Pinpoint CreateJourney action.
  * \value CreatePushTemplateAction Pinpoint CreatePushTemplate action.
  * \value CreateRecommenderConfigurationAction Pinpoint CreateRecommenderConfiguration action.
@@ -60,6 +61,7 @@ namespace Pinpoint {
  * \value DeleteEndpointAction Pinpoint DeleteEndpoint action.
  * \value DeleteEventStreamAction Pinpoint DeleteEventStream action.
  * \value DeleteGcmChannelAction Pinpoint DeleteGcmChannel action.
+ * \value DeleteInAppTemplateAction Pinpoint DeleteInAppTemplate action.
  * \value DeleteJourneyAction Pinpoint DeleteJourney action.
  * \value DeletePushTemplateAction Pinpoint DeletePushTemplate action.
  * \value DeleteRecommenderConfigurationAction Pinpoint DeleteRecommenderConfiguration action.
@@ -95,6 +97,8 @@ namespace Pinpoint {
  * \value GetGcmChannelAction Pinpoint GetGcmChannel action.
  * \value GetImportJobAction Pinpoint GetImportJob action.
  * \value GetImportJobsAction Pinpoint GetImportJobs action.
+ * \value GetInAppMessagesAction Pinpoint GetInAppMessages action.
+ * \value GetInAppTemplateAction Pinpoint GetInAppTemplate action.
  * \value GetJourneyAction Pinpoint GetJourney action.
  * \value GetJourneyDateRangeKpiAction Pinpoint GetJourneyDateRangeKpi action.
  * \value GetJourneyExecutionActivityMetricsAction Pinpoint GetJourneyExecutionActivityMetrics action.
@@ -122,6 +126,7 @@ namespace Pinpoint {
  * \value PutEventsAction Pinpoint PutEvents action.
  * \value RemoveAttributesAction Pinpoint RemoveAttributes action.
  * \value SendMessagesAction Pinpoint SendMessages action.
+ * \value SendOTPMessageAction Pinpoint SendOTPMessage action.
  * \value SendUsersMessagesAction Pinpoint SendUsersMessages action.
  * \value TagResourceAction Pinpoint TagResource action.
  * \value UntagResourceAction Pinpoint UntagResource action.
@@ -138,6 +143,7 @@ namespace Pinpoint {
  * \value UpdateEndpointAction Pinpoint UpdateEndpoint action.
  * \value UpdateEndpointsBatchAction Pinpoint UpdateEndpointsBatch action.
  * \value UpdateGcmChannelAction Pinpoint UpdateGcmChannel action.
+ * \value UpdateInAppTemplateAction Pinpoint UpdateInAppTemplate action.
  * \value UpdateJourneyAction Pinpoint UpdateJourney action.
  * \value UpdateJourneyStateAction Pinpoint UpdateJourneyState action.
  * \value UpdatePushTemplateAction Pinpoint UpdatePushTemplate action.
@@ -148,6 +154,7 @@ namespace Pinpoint {
  * \value UpdateTemplateActiveVersionAction Pinpoint UpdateTemplateActiveVersion action.
  * \value UpdateVoiceChannelAction Pinpoint UpdateVoiceChannel action.
  * \value UpdateVoiceTemplateAction Pinpoint UpdateVoiceTemplate action.
+ * \value VerifyOTPMessageAction Pinpoint VerifyOTPMessage action.
  */
 
 /*!
@@ -355,7 +362,7 @@ QNetworkRequest PinpointRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 PinpointRequestPrivate::PinpointRequestPrivate(const PinpointRequest::Action action, PinpointRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-12-01"))
 {
 
 }
@@ -394,6 +401,7 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(CreateEmailTemplate);
         ActionToString(CreateExportJob);
         ActionToString(CreateImportJob);
+        ActionToString(CreateInAppTemplate);
         ActionToString(CreateJourney);
         ActionToString(CreatePushTemplate);
         ActionToString(CreateRecommenderConfiguration);
@@ -413,6 +421,7 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(DeleteEndpoint);
         ActionToString(DeleteEventStream);
         ActionToString(DeleteGcmChannel);
+        ActionToString(DeleteInAppTemplate);
         ActionToString(DeleteJourney);
         ActionToString(DeletePushTemplate);
         ActionToString(DeleteRecommenderConfiguration);
@@ -448,6 +457,8 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(GetGcmChannel);
         ActionToString(GetImportJob);
         ActionToString(GetImportJobs);
+        ActionToString(GetInAppMessages);
+        ActionToString(GetInAppTemplate);
         ActionToString(GetJourney);
         ActionToString(GetJourneyDateRangeKpi);
         ActionToString(GetJourneyExecutionActivityMetrics);
@@ -475,6 +486,7 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(PutEvents);
         ActionToString(RemoveAttributes);
         ActionToString(SendMessages);
+        ActionToString(SendOTPMessage);
         ActionToString(SendUsersMessages);
         ActionToString(TagResource);
         ActionToString(UntagResource);
@@ -491,6 +503,7 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(UpdateEndpoint);
         ActionToString(UpdateEndpointsBatch);
         ActionToString(UpdateGcmChannel);
+        ActionToString(UpdateInAppTemplate);
         ActionToString(UpdateJourney);
         ActionToString(UpdateJourneyState);
         ActionToString(UpdatePushTemplate);
@@ -501,6 +514,7 @@ QString PinpointRequestPrivate::toString(const PinpointRequest::Action &action)
         ActionToString(UpdateTemplateActiveVersion);
         ActionToString(UpdateVoiceChannel);
         ActionToString(UpdateVoiceTemplate);
+        ActionToString(VerifyOTPMessage);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

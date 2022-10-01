@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::CreateActivityResponse
- * \brief The CreateActivityResponse class provides an interace for SFN CreateActivity responses.
+ * \class QtAws::Sfn::CreateActivityResponse
+ * \brief The CreateActivityResponse class provides an interace for Sfn CreateActivity responses.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -80,7 +80,7 @@ const CreateActivityRequest * CreateActivityResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SFN CreateActivity \a response.
+ * Parses a successful Sfn CreateActivity \a response.
  */
 void CreateActivityResponse::parseSuccess(QIODevice &response)
 {
@@ -90,11 +90,11 @@ void CreateActivityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::CreateActivityResponsePrivate
+ * \class QtAws::Sfn::CreateActivityResponsePrivate
  * \brief The CreateActivityResponsePrivate class provides private implementation for CreateActivityResponse.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -107,7 +107,7 @@ CreateActivityResponsePrivate::CreateActivityResponsePrivate(
 }
 
 /*!
- * Parses a SFN CreateActivity response element from \a xml.
+ * Parses a Sfn CreateActivity response element from \a xml.
  */
 void CreateActivityResponsePrivate::parseCreateActivityResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void CreateActivityResponsePrivate::parseCreateActivityResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

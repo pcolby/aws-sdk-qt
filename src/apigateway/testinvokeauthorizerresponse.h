@@ -24,11 +24,11 @@
 #include "testinvokeauthorizerrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class TestInvokeAuthorizerResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT TestInvokeAuthorizerResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT TestInvokeAuthorizerResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

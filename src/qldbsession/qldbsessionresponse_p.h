@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace QLDBSession {
+namespace QldbSession {
 
-class QLDBSessionResponse;
+class QldbSessionResponse;
 
-class QLDBSessionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QldbSessionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit QLDBSessionResponsePrivate(QLDBSessionResponse * const q);
+    explicit QldbSessionResponsePrivate(QldbSessionResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(QLDBSessionResponse)
-    Q_DISABLE_COPY(QLDBSessionResponsePrivate)
+    Q_DECLARE_PUBLIC(QldbSessionResponse)
+    Q_DISABLE_COPY(QldbSessionResponsePrivate)
 
 };
 
-} // namespace QLDBSession
+} // namespace QldbSession
 } // namespace QtAws
 
 #endif

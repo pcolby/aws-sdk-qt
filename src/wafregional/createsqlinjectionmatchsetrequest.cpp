@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetRequest
- * \brief The CreateSqlInjectionMatchSetRequest class provides an interface for WAFRegional CreateSqlInjectionMatchSet requests.
+ * \class QtAws::WafRegional::CreateSqlInjectionMatchSetRequest
+ * \brief The CreateSqlInjectionMatchSetRequest class provides an interface for WafRegional CreateSqlInjectionMatchSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createSqlInjectionMatchSet
+ * \sa WafRegionalClient::createSqlInjectionMatchSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest(const CreateSqlInjectionMatchSetRequest &other)
-    : WAFRegionalRequest(new CreateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest(const Creat
  * Constructs a CreateSqlInjectionMatchSetRequest object.
  */
 CreateSqlInjectionMatchSetRequest::CreateSqlInjectionMatchSetRequest()
-    : WAFRegionalRequest(new CreateSqlInjectionMatchSetRequestPrivate(WAFRegionalRequest::CreateSqlInjectionMatchSetAction, this))
+    : WafRegionalRequest(new CreateSqlInjectionMatchSetRequestPrivate(WafRegionalRequest::CreateSqlInjectionMatchSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetRequestPrivate
+ * \class QtAws::WafRegional::CreateSqlInjectionMatchSetRequestPrivate
  * \brief The CreateSqlInjectionMatchSetRequestPrivate class provides private implementation for CreateSqlInjectionMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateSqlInjectionMatchSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateSqlInjectionMatchSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateSqlInjectionMatchSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPriva
  */
 CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPrivate(
     const CreateSqlInjectionMatchSetRequestPrivate &other, CreateSqlInjectionMatchSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

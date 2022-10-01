@@ -64,23 +64,23 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::OpsWorksCM
- * \brief Contains classess for accessing AWS OpsWorks CM (OpsWorksCM).
+ * \namespace QtAws::OpsWorksCm
+ * \brief Contains classess for accessing AWS OpsWorks CM.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  * @todo Move this to a separate template file.
  */
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMClient
- * \brief The OpsWorksCMClient class provides access to the AWS OpsWorks CM (OpsWorksCM) service.
+ * \class QtAws::OpsWorksCm::OpsWorksCmClient
+ * \brief The OpsWorksCmClient class provides access to the AWS OpsWorks CM service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -164,21 +164,21 @@ namespace OpsWorksCM {
  */
 
 /*!
- * \brief Constructs a OpsWorksCMClient object.
+ * \brief Constructs a OpsWorksCmClient object.
  *
  * The new client object will \a region, \a credentials, and \a manager for
  * network operations.
  *
  * The new object will be owned by \a parent, if set.
  */
-OpsWorksCMClient::OpsWorksCMClient(
+OpsWorksCmClient::OpsWorksCmClient(
     const QtAws::Core::AwsRegion::Region region,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksCmClientPrivate(this), parent)
 {
-    Q_D(OpsWorksCMClient);
+    Q_D(OpsWorksCmClient);
     d->apiVersion = QStringLiteral("2016-11-01");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("opsworks-cm");
@@ -189,7 +189,7 @@ OpsWorksCMClient::OpsWorksCMClient(
 }
 
 /*!
- * \overload OpsWorksCMClient()
+ * \overload OpsWorksCmClient()
  *
  * This overload allows the caller to specify the specific \a endpoint to send
  * requests to.  Typically, it is easier to use the alternative constructor,
@@ -199,14 +199,14 @@ OpsWorksCMClient::OpsWorksCMClient(
  *
  * \sa QtAws::Core::AwsEndpoint::getEndpoint
  */
-OpsWorksCMClient::OpsWorksCMClient(
+OpsWorksCmClient::OpsWorksCmClient(
     const QUrl &endpoint,
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OpsWorksCMClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(new OpsWorksCmClientPrivate(this), parent)
 {
-    Q_D(OpsWorksCMClient);
+    Q_D(OpsWorksCmClient);
     d->apiVersion = QStringLiteral("2016-11-01");
     d->credentials = credentials;
     d->endpoint = endpoint;
@@ -217,7 +217,7 @@ OpsWorksCMClient::OpsWorksCMClient(
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * AssociateNodeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -252,13 +252,13 @@ OpsWorksCMClient::OpsWorksCMClient(
  * API call can be integrated into Auto Scaling configurations, AWS Cloudformation templates, or the user data of a
  * server's instance.
  */
-AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeRequest &request)
+AssociateNodeResponse * OpsWorksCmClient::associateNode(const AssociateNodeRequest &request)
 {
     return qobject_cast<AssociateNodeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * CreateBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -282,13 +282,13 @@ AssociateNodeResponse * OpsWorksCMClient::associateNode(const AssociateNodeReque
  * UNHEALTHY. A <code>ResourceNotFoundException</code> is thrown when the server is not found. A
  * <code>ValidationException</code> is thrown when parameters of the request are not valid.
  */
-CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest &request)
+CreateBackupResponse * OpsWorksCmClient::createBackup(const CreateBackupRequest &request)
 {
     return qobject_cast<CreateBackupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * CreateServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -333,13 +333,13 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  * To specify your own domain for a server, and provide your own self-signed or CA-signed certificate and private key,
  * specify values for <code>CustomDomain</code>, <code>CustomCertificate</code>, and
  */
-CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
+CreateServerResponse * OpsWorksCmClient::createServer(const CreateServerRequest &request)
 {
     return qobject_cast<CreateServerResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DeleteBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -352,13 +352,13 @@ CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest 
  * <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * thrown when parameters of the request are not valid.
  */
-DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest &request)
+DeleteBackupResponse * OpsWorksCmClient::deleteBackup(const DeleteBackupRequest &request)
 {
     return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DeleteServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -379,13 +379,13 @@ DeleteBackupResponse * OpsWorksCMClient::deleteBackup(const DeleteBackupRequest 
  *
  * </p
  */
-DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest &request)
+DeleteServerResponse * OpsWorksCmClient::deleteServer(const DeleteServerRequest &request)
 {
     return qobject_cast<DeleteServerResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DescribeAccountAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -396,13 +396,13 @@ DeleteServerResponse * OpsWorksCMClient::deleteServer(const DeleteServerRequest 
  *
  * This operation is synchronous.
  */
-DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
+DescribeAccountAttributesResponse * OpsWorksCmClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DescribeBackupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -419,13 +419,13 @@ DescribeAccountAttributesResponse * OpsWorksCMClient::describeAccountAttributes(
  * A <code>ResourceNotFoundException</code> is thrown when the backup does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  */
-DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackupsRequest &request)
+DescribeBackupsResponse * OpsWorksCmClient::describeBackups(const DescribeBackupsRequest &request)
 {
     return qobject_cast<DescribeBackupsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DescribeEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -441,13 +441,13 @@ DescribeBackupsResponse * OpsWorksCMClient::describeBackups(const DescribeBackup
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  */
-DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRequest &request)
+DescribeEventsResponse * OpsWorksCmClient::describeEvents(const DescribeEventsRequest &request)
 {
     return qobject_cast<DescribeEventsResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DescribeNodeAssociationStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -460,13 +460,13 @@ DescribeEventsResponse * OpsWorksCMClient::describeEvents(const DescribeEventsRe
  * specified token is found, or when the server does not exist. A <code>ValidationException</code> is raised when
  * parameters of the request are not valid.
  */
-DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
+DescribeNodeAssociationStatusResponse * OpsWorksCmClient::describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request)
 {
     return qobject_cast<DescribeNodeAssociationStatusResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DescribeServersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -483,13 +483,13 @@ DescribeNodeAssociationStatusResponse * OpsWorksCMClient::describeNodeAssociatio
  * A <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  */
-DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServersRequest &request)
+DescribeServersResponse * OpsWorksCmClient::describeServers(const DescribeServersRequest &request)
 {
     return qobject_cast<DescribeServersResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * DisassociateNodeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -504,13 +504,13 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  */
-DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
+DisassociateNodeResponse * OpsWorksCmClient::disassociateNode(const DisassociateNodeRequest &request)
 {
     return qobject_cast<DisassociateNodeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * ExportServerEngineAttributeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -528,13 +528,13 @@ DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const Disassociate
  * <code>ResourceNotFoundException</code> is thrown when the server does not exist. An <code>InvalidStateException</code>
  * is thrown when the server is in any of the following states: CREATING, TERMINATED, FAILED or DELETING.
  */
-ExportServerEngineAttributeResponse * OpsWorksCMClient::exportServerEngineAttribute(const ExportServerEngineAttributeRequest &request)
+ExportServerEngineAttributeResponse * OpsWorksCmClient::exportServerEngineAttribute(const ExportServerEngineAttributeRequest &request)
 {
     return qobject_cast<ExportServerEngineAttributeResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -542,13 +542,13 @@ ExportServerEngineAttributeResponse * OpsWorksCMClient::exportServerEngineAttrib
  * Returns a list of tags that are applied to the specified AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet
  * Enterprise servers or
  */
-ListTagsForResourceResponse * OpsWorksCMClient::listTagsForResource(const ListTagsForResourceRequest &request)
+ListTagsForResourceResponse * OpsWorksCmClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * RestoreServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -574,13 +574,13 @@ ListTagsForResourceResponse * OpsWorksCMClient::listTagsForResource(const ListTa
  * <code>ResourceNotFoundException</code> is thrown when the server does not exist. A <code>ValidationException</code> is
  * raised when parameters of the request are not valid.
  */
-RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerRequest &request)
+RestoreServerResponse * OpsWorksCmClient::restoreServer(const RestoreServerRequest &request)
 {
     return qobject_cast<RestoreServerResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * StartMaintenanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -595,39 +595,39 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
  * <code>InvalidStateException</code> is thrown. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  */
-StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
+StartMaintenanceResponse * OpsWorksCmClient::startMaintenance(const StartMaintenanceRequest &request)
 {
     return qobject_cast<StartMaintenanceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Applies tags to an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server, or to server
  */
-TagResourceResponse * OpsWorksCMClient::tagResource(const TagResourceRequest &request)
+TagResourceResponse * OpsWorksCmClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes specified tags from an AWS OpsWorks-CM server or
  */
-UntagResourceResponse * OpsWorksCMClient::untagResource(const UntagResourceRequest &request)
+UntagResourceResponse * OpsWorksCmClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * UpdateServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -638,13 +638,13 @@ UntagResourceResponse * OpsWorksCMClient::untagResource(const UntagResourceReque
  *
  * This operation is synchronous.
  */
-UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest &request)
+UpdateServerResponse * OpsWorksCmClient::updateServer(const UpdateServerRequest &request)
 {
     return qobject_cast<UpdateServerResponse *>(send(request));
 }
 
 /*!
- * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * Sends \a request to the OpsWorksCmClient service, and returns a pointer to an
  * UpdateServerEngineAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -663,28 +663,28 @@ UpdateServerResponse * OpsWorksCMClient::updateServer(const UpdateServerRequest 
  * <code>InvalidStateException</code> is raised. A <code>ResourceNotFoundException</code> is thrown when the server does
  * not exist. A <code>ValidationException</code> is raised when parameters of the request are not valid.
  */
-UpdateServerEngineAttributesResponse * OpsWorksCMClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
+UpdateServerEngineAttributesResponse * OpsWorksCmClient::updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request)
 {
     return qobject_cast<UpdateServerEngineAttributesResponse *>(send(request));
 }
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMClientPrivate
- * \brief The OpsWorksCMClientPrivate class provides private implementation for OpsWorksCMClient.
+ * \class QtAws::OpsWorksCm::OpsWorksCmClientPrivate
+ * \brief The OpsWorksCmClientPrivate class provides private implementation for OpsWorksCmClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a OpsWorksCMClientPrivate object with public implementation \a q.
+ * Constructs a OpsWorksCmClientPrivate object with public implementation \a q.
  */
-OpsWorksCMClientPrivate::OpsWorksCMClientPrivate(OpsWorksCMClient * const q)
+OpsWorksCmClientPrivate::OpsWorksCmClientPrivate(OpsWorksCmClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

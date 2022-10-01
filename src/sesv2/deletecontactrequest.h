@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class DeleteContactRequestPrivate;
 
-class QTAWSSESV2_EXPORT DeleteContactRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT DeleteContactRequest : public SESv2Request {
 
 public:
     DeleteContactRequest(const DeleteContactRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

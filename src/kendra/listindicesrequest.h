@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListIndicesRequestPrivate;
 
-class QTAWSKENDRA_EXPORT ListIndicesRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT ListIndicesRequest : public KendraRequest {
 
 public:
     ListIndicesRequest(const ListIndicesRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

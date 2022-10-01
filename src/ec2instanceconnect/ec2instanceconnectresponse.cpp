@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 /*!
- * \class QtAws::EC2InstanceConnect::EC2InstanceConnectResponse
- * \brief The EC2InstanceConnectResponse class provides an interface for EC2InstanceConnect responses.
+ * \class QtAws::Ec2InstanceConnect::Ec2InstanceConnectResponse
+ * \brief The Ec2InstanceConnectResponse class provides an interface for Ec2InstanceConnect responses.
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  */
 
 /*!
- * Constructs a EC2InstanceConnectResponse object with parent \a parent.
+ * Constructs a Ec2InstanceConnectResponse object with parent \a parent.
  */
-EC2InstanceConnectResponse::EC2InstanceConnectResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EC2InstanceConnectResponsePrivate(this), parent)
+Ec2InstanceConnectResponse::Ec2InstanceConnectResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new Ec2InstanceConnectResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a EC2InstanceConnectResponse object with private implementation \a d,
+ * Constructs a Ec2InstanceConnectResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EC2InstanceConnectResponsePrivate.
+ * implementation that inherits from Ec2InstanceConnectResponsePrivate.
  */
-EC2InstanceConnectResponse::EC2InstanceConnectResponse(EC2InstanceConnectResponsePrivate * const d, QObject * const parent)
+Ec2InstanceConnectResponse::Ec2InstanceConnectResponse(Ec2InstanceConnectResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ EC2InstanceConnectResponse::EC2InstanceConnectResponse(EC2InstanceConnectRespons
 /*!
  * \reimp
  */
-void EC2InstanceConnectResponse::parseFailure(QIODevice &response)
+void Ec2InstanceConnectResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(EC2InstanceConnectResponse);
+    //Q_D(Ec2InstanceConnectResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void EC2InstanceConnectResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2InstanceConnect::EC2InstanceConnectResponsePrivate
- * \brief The EC2InstanceConnectResponsePrivate class provides private implementation for EC2InstanceConnectResponse.
+ * \class QtAws::Ec2InstanceConnect::Ec2InstanceConnectResponsePrivate
+ * \brief The Ec2InstanceConnectResponsePrivate class provides private implementation for Ec2InstanceConnectResponse.
  * \internal
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  */
 
 /*!
- * Constructs a EC2InstanceConnectResponsePrivate object with public implementation \a q.
+ * Constructs a Ec2InstanceConnectResponsePrivate object with public implementation \a q.
  */
-EC2InstanceConnectResponsePrivate::EC2InstanceConnectResponsePrivate(
-    EC2InstanceConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+Ec2InstanceConnectResponsePrivate::Ec2InstanceConnectResponsePrivate(
+    Ec2InstanceConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws

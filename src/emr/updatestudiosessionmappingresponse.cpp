@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::UpdateStudioSessionMappingResponse
- * \brief The UpdateStudioSessionMappingResponse class provides an interace for EMR UpdateStudioSessionMapping responses.
+ * \class QtAws::Emr::UpdateStudioSessionMappingResponse
+ * \brief The UpdateStudioSessionMappingResponse class provides an interace for Emr UpdateStudioSessionMapping responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::updateStudioSessionMapping
  */
@@ -64,7 +64,7 @@ const UpdateStudioSessionMappingRequest * UpdateStudioSessionMappingResponse::re
 
 /*!
  * \reimp
- * Parses a successful EMR UpdateStudioSessionMapping \a response.
+ * Parses a successful Emr UpdateStudioSessionMapping \a response.
  */
 void UpdateStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void UpdateStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::UpdateStudioSessionMappingResponsePrivate
+ * \class QtAws::Emr::UpdateStudioSessionMappingResponsePrivate
  * \brief The UpdateStudioSessionMappingResponsePrivate class provides private implementation for UpdateStudioSessionMappingResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ UpdateStudioSessionMappingResponsePrivate::UpdateStudioSessionMappingResponsePri
 }
 
 /*!
- * Parses a EMR UpdateStudioSessionMapping response element from \a xml.
+ * Parses a Emr UpdateStudioSessionMapping response element from \a xml.
  */
 void UpdateStudioSessionMappingResponsePrivate::parseUpdateStudioSessionMappingResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void UpdateStudioSessionMappingResponsePrivate::parseUpdateStudioSessionMappingR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

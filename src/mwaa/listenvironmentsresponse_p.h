@@ -23,7 +23,7 @@
 #include "mwaaresponse_p.h"
 
 namespace QtAws {
-namespace MWAA {
+namespace Mwaa {
 
 class ListEnvironmentsResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace MWAA
+} // namespace Mwaa
 } // namespace QtAws
 
 #endif

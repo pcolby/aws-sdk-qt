@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DeleteAddonResponse
- * \brief The DeleteAddonResponse class provides an interace for EKS DeleteAddon responses.
+ * \class QtAws::Eks::DeleteAddonResponse
+ * \brief The DeleteAddonResponse class provides an interace for Eks DeleteAddon responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DeleteAddonRequest * DeleteAddonResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS DeleteAddon \a response.
+ * Parses a successful Eks DeleteAddon \a response.
  */
 void DeleteAddonResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DeleteAddonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DeleteAddonResponsePrivate
+ * \class QtAws::Eks::DeleteAddonResponsePrivate
  * \brief The DeleteAddonResponsePrivate class provides private implementation for DeleteAddonResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DeleteAddonResponsePrivate::DeleteAddonResponsePrivate(
 }
 
 /*!
- * Parses a EKS DeleteAddon response element from \a xml.
+ * Parses a Eks DeleteAddon response element from \a xml.
  */
 void DeleteAddonResponsePrivate::parseDeleteAddonResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DeleteAddonResponsePrivate::parseDeleteAddonResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

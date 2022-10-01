@@ -277,7 +277,7 @@ QNetworkRequest ElasticLoadBalancingv2Request::unsignedRequest(const QUrl &endpo
  * with public implementation \a q.
  */
 ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const ElasticLoadBalancingv2Request::Action action, ElasticLoadBalancingv2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-12-01"))
 {
 
 }

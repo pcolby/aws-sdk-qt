@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeletePlatformApplicationResponse
- * \brief The DeletePlatformApplicationResponse class provides an interace for SNS DeletePlatformApplication responses.
+ * \class QtAws::Sns::DeletePlatformApplicationResponse
+ * \brief The DeletePlatformApplicationResponse class provides an interace for Sns DeletePlatformApplication responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::requ
 
 /*!
  * \reimp
- * Parses a successful SNS DeletePlatformApplication \a response.
+ * Parses a successful Sns DeletePlatformApplication \a response.
  */
 void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::DeletePlatformApplicationResponsePrivate
+ * \class QtAws::Sns::DeletePlatformApplicationResponsePrivate
  * \brief The DeletePlatformApplicationResponsePrivate class provides private implementation for DeletePlatformApplicationResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePriva
 }
 
 /*!
- * Parses a SNS DeletePlatformApplication response element from \a xml.
+ * Parses a Sns DeletePlatformApplication response element from \a xml.
  */
 void DeletePlatformApplicationResponsePrivate::parseDeletePlatformApplicationResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void DeletePlatformApplicationResponsePrivate::parseDeletePlatformApplicationRes
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

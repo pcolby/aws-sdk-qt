@@ -114,6 +114,8 @@ class StopBuildBatchRequest;
 class StopBuildBatchResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
+class UpdateProjectVisibilityRequest;
+class UpdateProjectVisibilityResponse;
 class UpdateReportGroupRequest;
 class UpdateReportGroupResponse;
 class UpdateWebhookRequest;
@@ -177,6 +179,7 @@ public slots:
     StopBuildResponse * stopBuild(const StopBuildRequest &request);
     StopBuildBatchResponse * stopBuildBatch(const StopBuildBatchRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
+    UpdateProjectVisibilityResponse * updateProjectVisibility(const UpdateProjectVisibilityRequest &request);
     UpdateReportGroupResponse * updateReportGroup(const UpdateReportGroupRequest &request);
     UpdateWebhookResponse * updateWebhook(const UpdateWebhookRequest &request);
 

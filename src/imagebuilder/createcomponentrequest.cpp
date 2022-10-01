@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CreateComponentRequest
- * \brief The CreateComponentRequest class provides an interface for imagebuilder CreateComponent requests.
+ * \class QtAws::ImageBuilder::CreateComponentRequest
+ * \brief The CreateComponentRequest class provides an interface for ImageBuilder CreateComponent requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::createComponent
+ * \sa ImageBuilderClient::createComponent
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateComponentRequest::CreateComponentRequest(const CreateComponentRequest &other)
-    : imagebuilderRequest(new CreateComponentRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new CreateComponentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ CreateComponentRequest::CreateComponentRequest(const CreateComponentRequest &oth
  * Constructs a CreateComponentRequest object.
  */
 CreateComponentRequest::CreateComponentRequest()
-    : imagebuilderRequest(new CreateComponentRequestPrivate(imagebuilderRequest::CreateComponentAction, this))
+    : ImageBuilderRequest(new CreateComponentRequestPrivate(ImageBuilderRequest::CreateComponentAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * CreateComponentRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::imagebuilder::CreateComponentRequestPrivate
+ * \class QtAws::ImageBuilder::CreateComponentRequestPrivate
  * \brief The CreateComponentRequestPrivate class provides private implementation for CreateComponentRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a CreateComponentRequestPrivate object for imagebuilder \a action,
+ * Constructs a CreateComponentRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 CreateComponentRequestPrivate::CreateComponentRequestPrivate(
-    const imagebuilderRequest::Action action, CreateComponentRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, CreateComponentRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ CreateComponentRequestPrivate::CreateComponentRequestPrivate(
  */
 CreateComponentRequestPrivate::CreateComponentRequestPrivate(
     const CreateComponentRequestPrivate &other, CreateComponentRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

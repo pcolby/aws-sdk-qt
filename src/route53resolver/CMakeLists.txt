@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSROUTE53RESOLVER_LIBRARY)
 
 add_library(QtAwsRoute53Resolver
+  qtawsroute53resolverglobal.h
+  route53resolverclient.h
+  route53resolverclient_p.h
+  route53resolverrequest.h
+  route53resolverrequest_p.h
+  route53resolverresponse.h
+  route53resolverresponse_p.h
   associatefirewallrulegrouprequest.h
   associatefirewallrulegrouprequest_p.h
   associatefirewallrulegroupresponse.h
@@ -21,14 +28,14 @@ add_library(QtAwsRoute53Resolver
   createfirewalldomainlistrequest_p.h
   createfirewalldomainlistresponse.h
   createfirewalldomainlistresponse_p.h
-  createfirewallrulegrouprequest.h
-  createfirewallrulegrouprequest_p.h
-  createfirewallrulegroupresponse.h
-  createfirewallrulegroupresponse_p.h
   createfirewallrulerequest.h
   createfirewallrulerequest_p.h
   createfirewallruleresponse.h
   createfirewallruleresponse_p.h
+  createfirewallrulegrouprequest.h
+  createfirewallrulegrouprequest_p.h
+  createfirewallrulegroupresponse.h
+  createfirewallrulegroupresponse_p.h
   createresolverendpointrequest.h
   createresolverendpointrequest_p.h
   createresolverendpointresponse.h
@@ -45,14 +52,14 @@ add_library(QtAwsRoute53Resolver
   deletefirewalldomainlistrequest_p.h
   deletefirewalldomainlistresponse.h
   deletefirewalldomainlistresponse_p.h
-  deletefirewallrulegrouprequest.h
-  deletefirewallrulegrouprequest_p.h
-  deletefirewallrulegroupresponse.h
-  deletefirewallrulegroupresponse_p.h
   deletefirewallrulerequest.h
   deletefirewallrulerequest_p.h
   deletefirewallruleresponse.h
   deletefirewallruleresponse_p.h
+  deletefirewallrulegrouprequest.h
+  deletefirewallrulegrouprequest_p.h
+  deletefirewallrulegroupresponse.h
+  deletefirewallrulegroupresponse_p.h
   deleteresolverendpointrequest.h
   deleteresolverendpointrequest_p.h
   deleteresolverendpointresponse.h
@@ -89,6 +96,10 @@ add_library(QtAwsRoute53Resolver
   getfirewalldomainlistrequest_p.h
   getfirewalldomainlistresponse.h
   getfirewalldomainlistresponse_p.h
+  getfirewallrulegrouprequest.h
+  getfirewallrulegrouprequest_p.h
+  getfirewallrulegroupresponse.h
+  getfirewallrulegroupresponse_p.h
   getfirewallrulegroupassociationrequest.h
   getfirewallrulegroupassociationrequest_p.h
   getfirewallrulegroupassociationresponse.h
@@ -97,10 +108,10 @@ add_library(QtAwsRoute53Resolver
   getfirewallrulegrouppolicyrequest_p.h
   getfirewallrulegrouppolicyresponse.h
   getfirewallrulegrouppolicyresponse_p.h
-  getfirewallrulegrouprequest.h
-  getfirewallrulegrouprequest_p.h
-  getfirewallrulegroupresponse.h
-  getfirewallrulegroupresponse_p.h
+  getresolverconfigrequest.h
+  getresolverconfigrequest_p.h
+  getresolverconfigresponse.h
+  getresolverconfigresponse_p.h
   getresolverdnssecconfigrequest.h
   getresolverdnssecconfigrequest_p.h
   getresolverdnssecconfigresponse.h
@@ -109,6 +120,10 @@ add_library(QtAwsRoute53Resolver
   getresolverendpointrequest_p.h
   getresolverendpointresponse.h
   getresolverendpointresponse_p.h
+  getresolverquerylogconfigrequest.h
+  getresolverquerylogconfigrequest_p.h
+  getresolverquerylogconfigresponse.h
+  getresolverquerylogconfigresponse_p.h
   getresolverquerylogconfigassociationrequest.h
   getresolverquerylogconfigassociationrequest_p.h
   getresolverquerylogconfigassociationresponse.h
@@ -117,10 +132,10 @@ add_library(QtAwsRoute53Resolver
   getresolverquerylogconfigpolicyrequest_p.h
   getresolverquerylogconfigpolicyresponse.h
   getresolverquerylogconfigpolicyresponse_p.h
-  getresolverquerylogconfigrequest.h
-  getresolverquerylogconfigrequest_p.h
-  getresolverquerylogconfigresponse.h
-  getresolverquerylogconfigresponse_p.h
+  getresolverrulerequest.h
+  getresolverrulerequest_p.h
+  getresolverruleresponse.h
+  getresolverruleresponse_p.h
   getresolverruleassociationrequest.h
   getresolverruleassociationrequest_p.h
   getresolverruleassociationresponse.h
@@ -129,10 +144,6 @@ add_library(QtAwsRoute53Resolver
   getresolverrulepolicyrequest_p.h
   getresolverrulepolicyresponse.h
   getresolverrulepolicyresponse_p.h
-  getresolverrulerequest.h
-  getresolverrulerequest_p.h
-  getresolverruleresponse.h
-  getresolverruleresponse_p.h
   importfirewalldomainsrequest.h
   importfirewalldomainsrequest_p.h
   importfirewalldomainsresponse.h
@@ -161,6 +172,10 @@ add_library(QtAwsRoute53Resolver
   listfirewallrulesrequest_p.h
   listfirewallrulesresponse.h
   listfirewallrulesresponse_p.h
+  listresolverconfigsrequest.h
+  listresolverconfigsrequest_p.h
+  listresolverconfigsresponse.h
+  listresolverconfigsresponse_p.h
   listresolverdnssecconfigsrequest.h
   listresolverdnssecconfigsrequest_p.h
   listresolverdnssecconfigsresponse.h
@@ -205,13 +220,6 @@ add_library(QtAwsRoute53Resolver
   putresolverrulepolicyrequest_p.h
   putresolverrulepolicyresponse.h
   putresolverrulepolicyresponse_p.h
-  qtawsroute53resolverglobal.h
-  route53resolverclient.h
-  route53resolverclient_p.h
-  route53resolverrequest.h
-  route53resolverrequest_p.h
-  route53resolverresponse.h
-  route53resolverresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -228,14 +236,18 @@ add_library(QtAwsRoute53Resolver
   updatefirewalldomainsrequest_p.h
   updatefirewalldomainsresponse.h
   updatefirewalldomainsresponse_p.h
-  updatefirewallrulegroupassociationrequest.h
-  updatefirewallrulegroupassociationrequest_p.h
-  updatefirewallrulegroupassociationresponse.h
-  updatefirewallrulegroupassociationresponse_p.h
   updatefirewallrulerequest.h
   updatefirewallrulerequest_p.h
   updatefirewallruleresponse.h
   updatefirewallruleresponse_p.h
+  updatefirewallrulegroupassociationrequest.h
+  updatefirewallrulegroupassociationrequest_p.h
+  updatefirewallrulegroupassociationresponse.h
+  updatefirewallrulegroupassociationresponse_p.h
+  updateresolverconfigrequest.h
+  updateresolverconfigrequest_p.h
+  updateresolverconfigresponse.h
+  updateresolverconfigresponse_p.h
   updateresolverdnssecconfigrequest.h
   updateresolverdnssecconfigrequest_p.h
   updateresolverdnssecconfigresponse.h
@@ -248,6 +260,9 @@ add_library(QtAwsRoute53Resolver
   updateresolverrulerequest_p.h
   updateresolverruleresponse.h
   updateresolverruleresponse_p.h
+  route53resolverclient.cpp
+  route53resolverrequest.cpp
+  route53resolverresponse.cpp
   associatefirewallrulegrouprequest.cpp
   associatefirewallrulegroupresponse.cpp
   associateresolverendpointipaddressrequest.cpp
@@ -258,10 +273,10 @@ add_library(QtAwsRoute53Resolver
   associateresolverruleresponse.cpp
   createfirewalldomainlistrequest.cpp
   createfirewalldomainlistresponse.cpp
-  createfirewallrulegrouprequest.cpp
-  createfirewallrulegroupresponse.cpp
   createfirewallrulerequest.cpp
   createfirewallruleresponse.cpp
+  createfirewallrulegrouprequest.cpp
+  createfirewallrulegroupresponse.cpp
   createresolverendpointrequest.cpp
   createresolverendpointresponse.cpp
   createresolverquerylogconfigrequest.cpp
@@ -270,10 +285,10 @@ add_library(QtAwsRoute53Resolver
   createresolverruleresponse.cpp
   deletefirewalldomainlistrequest.cpp
   deletefirewalldomainlistresponse.cpp
-  deletefirewallrulegrouprequest.cpp
-  deletefirewallrulegroupresponse.cpp
   deletefirewallrulerequest.cpp
   deletefirewallruleresponse.cpp
+  deletefirewallrulegrouprequest.cpp
+  deletefirewallrulegroupresponse.cpp
   deleteresolverendpointrequest.cpp
   deleteresolverendpointresponse.cpp
   deleteresolverquerylogconfigrequest.cpp
@@ -292,28 +307,30 @@ add_library(QtAwsRoute53Resolver
   getfirewallconfigresponse.cpp
   getfirewalldomainlistrequest.cpp
   getfirewalldomainlistresponse.cpp
+  getfirewallrulegrouprequest.cpp
+  getfirewallrulegroupresponse.cpp
   getfirewallrulegroupassociationrequest.cpp
   getfirewallrulegroupassociationresponse.cpp
   getfirewallrulegrouppolicyrequest.cpp
   getfirewallrulegrouppolicyresponse.cpp
-  getfirewallrulegrouprequest.cpp
-  getfirewallrulegroupresponse.cpp
+  getresolverconfigrequest.cpp
+  getresolverconfigresponse.cpp
   getresolverdnssecconfigrequest.cpp
   getresolverdnssecconfigresponse.cpp
   getresolverendpointrequest.cpp
   getresolverendpointresponse.cpp
+  getresolverquerylogconfigrequest.cpp
+  getresolverquerylogconfigresponse.cpp
   getresolverquerylogconfigassociationrequest.cpp
   getresolverquerylogconfigassociationresponse.cpp
   getresolverquerylogconfigpolicyrequest.cpp
   getresolverquerylogconfigpolicyresponse.cpp
-  getresolverquerylogconfigrequest.cpp
-  getresolverquerylogconfigresponse.cpp
+  getresolverrulerequest.cpp
+  getresolverruleresponse.cpp
   getresolverruleassociationrequest.cpp
   getresolverruleassociationresponse.cpp
   getresolverrulepolicyrequest.cpp
   getresolverrulepolicyresponse.cpp
-  getresolverrulerequest.cpp
-  getresolverruleresponse.cpp
   importfirewalldomainsrequest.cpp
   importfirewalldomainsresponse.cpp
   listfirewallconfigsrequest.cpp
@@ -328,6 +345,8 @@ add_library(QtAwsRoute53Resolver
   listfirewallrulegroupsresponse.cpp
   listfirewallrulesrequest.cpp
   listfirewallrulesresponse.cpp
+  listresolverconfigsrequest.cpp
+  listresolverconfigsresponse.cpp
   listresolverdnssecconfigsrequest.cpp
   listresolverdnssecconfigsresponse.cpp
   listresolverendpointipaddressesrequest.cpp
@@ -350,9 +369,6 @@ add_library(QtAwsRoute53Resolver
   putresolverquerylogconfigpolicyresponse.cpp
   putresolverrulepolicyrequest.cpp
   putresolverrulepolicyresponse.cpp
-  route53resolverclient.cpp
-  route53resolverrequest.cpp
-  route53resolverresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
@@ -361,10 +377,12 @@ add_library(QtAwsRoute53Resolver
   updatefirewallconfigresponse.cpp
   updatefirewalldomainsrequest.cpp
   updatefirewalldomainsresponse.cpp
-  updatefirewallrulegroupassociationrequest.cpp
-  updatefirewallrulegroupassociationresponse.cpp
   updatefirewallrulerequest.cpp
   updatefirewallruleresponse.cpp
+  updatefirewallrulegroupassociationrequest.cpp
+  updatefirewallrulegroupassociationresponse.cpp
+  updateresolverconfigrequest.cpp
+  updateresolverconfigresponse.cpp
   updateresolverdnssecconfigrequest.cpp
   updateresolverdnssecconfigresponse.cpp
   updateresolverendpointrequest.cpp

@@ -23,16 +23,17 @@
 #include "mqrequest_p.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DeleteUserRequest
- * \brief The DeleteUserRequest class provides an interface for MQ DeleteUser requests.
+ * \class QtAws::Mq::DeleteUserRequest
+ * \brief The DeleteUserRequest class provides an interface for Mq DeleteUser requests.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::deleteUser
  */
@@ -75,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::MQ::DeleteUserRequestPrivate
+ * \class QtAws::Mq::DeleteUserRequestPrivate
  * \brief The DeleteUserRequestPrivate class provides private implementation for DeleteUserRequest.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -106,5 +107,5 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

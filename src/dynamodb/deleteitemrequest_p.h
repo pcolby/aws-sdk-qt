@@ -24,14 +24,14 @@
 #include "deleteitemrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DeleteItemRequest;
 
-class DeleteItemRequestPrivate : public DynamoDBRequestPrivate {
+class DeleteItemRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    DeleteItemRequestPrivate(const DynamoDBRequest::Action action,
+    DeleteItemRequestPrivate(const DynamoDbRequest::Action action,
                                    DeleteItemRequest * const q);
     DeleteItemRequestPrivate(const DeleteItemRequestPrivate &other,
                                    DeleteItemRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

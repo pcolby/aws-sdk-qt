@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DisassociateNodeResponse
- * \brief The DisassociateNodeResponse class provides an interace for OpsWorksCM DisassociateNode responses.
+ * \class QtAws::OpsWorksCm::DisassociateNodeResponse
+ * \brief The DisassociateNodeResponse class provides an interace for OpsWorksCm DisassociateNode responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::disassociateNode
+ * \sa OpsWorksCmClient::disassociateNode
  */
 
 /*!
@@ -123,7 +123,7 @@ DisassociateNodeResponse::DisassociateNodeResponse(
         const DisassociateNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DisassociateNodeResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DisassociateNodeResponsePrivate(this), parent)
 {
     setRequest(new DisassociateNodeRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DisassociateNodeRequest * DisassociateNodeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DisassociateNode \a response.
+ * Parses a successful OpsWorksCm DisassociateNode \a response.
  */
 void DisassociateNodeResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DisassociateNodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DisassociateNodeResponsePrivate
+ * \class QtAws::OpsWorksCm::DisassociateNodeResponsePrivate
  * \brief The DisassociateNodeResponsePrivate class provides private implementation for DisassociateNodeResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DisassociateNodeResponsePrivate object with public implementation \a q.
  */
 DisassociateNodeResponsePrivate::DisassociateNodeResponsePrivate(
-    DisassociateNodeResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DisassociateNodeResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DisassociateNode response element from \a xml.
+ * Parses a OpsWorksCm DisassociateNode response element from \a xml.
  */
 void DisassociateNodeResponsePrivate::parseDisassociateNodeResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DisassociateNodeResponsePrivate::parseDisassociateNodeResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::PutManagedScalingPolicyResponse
- * \brief The PutManagedScalingPolicyResponse class provides an interace for EMR PutManagedScalingPolicy responses.
+ * \class QtAws::Emr::PutManagedScalingPolicyResponse
+ * \brief The PutManagedScalingPolicyResponse class provides an interace for Emr PutManagedScalingPolicy responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::putManagedScalingPolicy
  */
@@ -64,7 +64,7 @@ const PutManagedScalingPolicyRequest * PutManagedScalingPolicyResponse::request(
 
 /*!
  * \reimp
- * Parses a successful EMR PutManagedScalingPolicy \a response.
+ * Parses a successful Emr PutManagedScalingPolicy \a response.
  */
 void PutManagedScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void PutManagedScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::PutManagedScalingPolicyResponsePrivate
+ * \class QtAws::Emr::PutManagedScalingPolicyResponsePrivate
  * \brief The PutManagedScalingPolicyResponsePrivate class provides private implementation for PutManagedScalingPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ PutManagedScalingPolicyResponsePrivate::PutManagedScalingPolicyResponsePrivate(
 }
 
 /*!
- * Parses a EMR PutManagedScalingPolicy response element from \a xml.
+ * Parses a Emr PutManagedScalingPolicy response element from \a xml.
  */
 void PutManagedScalingPolicyResponsePrivate::parsePutManagedScalingPolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void PutManagedScalingPolicyResponsePrivate::parsePutManagedScalingPolicyRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

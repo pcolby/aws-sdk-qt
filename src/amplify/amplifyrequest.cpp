@@ -280,7 +280,7 @@ QNetworkRequest AmplifyRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AmplifyRequestPrivate::AmplifyRequestPrivate(const AmplifyRequest::Action action, AmplifyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }

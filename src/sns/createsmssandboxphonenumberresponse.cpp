@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::CreateSMSSandboxPhoneNumberResponse
- * \brief The CreateSMSSandboxPhoneNumberResponse class provides an interace for SNS CreateSMSSandboxPhoneNumber responses.
+ * \class QtAws::Sns::CreateSMSSandboxPhoneNumberResponse
+ * \brief The CreateSMSSandboxPhoneNumberResponse class provides an interace for Sns CreateSMSSandboxPhoneNumber responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const CreateSMSSandboxPhoneNumberRequest * CreateSMSSandboxPhoneNumberResponse::
 
 /*!
  * \reimp
- * Parses a successful SNS CreateSMSSandboxPhoneNumber \a response.
+ * Parses a successful Sns CreateSMSSandboxPhoneNumber \a response.
  */
 void CreateSMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void CreateSMSSandboxPhoneNumberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::CreateSMSSandboxPhoneNumberResponsePrivate
+ * \class QtAws::Sns::CreateSMSSandboxPhoneNumberResponsePrivate
  * \brief The CreateSMSSandboxPhoneNumberResponsePrivate class provides private implementation for CreateSMSSandboxPhoneNumberResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ CreateSMSSandboxPhoneNumberResponsePrivate::CreateSMSSandboxPhoneNumberResponseP
 }
 
 /*!
- * Parses a SNS CreateSMSSandboxPhoneNumber response element from \a xml.
+ * Parses a Sns CreateSMSSandboxPhoneNumber response element from \a xml.
  */
 void CreateSMSSandboxPhoneNumberResponsePrivate::parseCreateSMSSandboxPhoneNumberResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void CreateSMSSandboxPhoneNumberResponsePrivate::parseCreateSMSSandboxPhoneNumbe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

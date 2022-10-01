@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetResponse
- * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for WAFRegional DeleteSqlInjectionMatchSet responses.
+ * \class QtAws::WafRegional::DeleteSqlInjectionMatchSetResponse
+ * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for WafRegional DeleteSqlInjectionMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteSqlInjectionMatchSet
+ * \sa WafRegionalClient::deleteSqlInjectionMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
         const DeleteSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSqlInjectionMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteSqlInjectionMatchSet \a response.
+ * Parses a successful WafRegional DeleteSqlInjectionMatchSet \a response.
  */
 void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteSqlInjectionMatchSetResponsePrivate
  * \brief The DeleteSqlInjectionMatchSetResponsePrivate class provides private implementation for DeleteSqlInjectionMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePrivate(
-    DeleteSqlInjectionMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteSqlInjectionMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteSqlInjectionMatchSet response element from \a xml.
+ * Parses a WafRegional DeleteSqlInjectionMatchSet response element from \a xml.
  */
 void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

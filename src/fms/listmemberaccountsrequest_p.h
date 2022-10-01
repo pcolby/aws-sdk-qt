@@ -24,7 +24,7 @@
 #include "listmemberaccountsrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class ListMemberAccountsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

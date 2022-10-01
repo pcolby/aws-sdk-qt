@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeBackupsResponse
- * \brief The DescribeBackupsResponse class provides an interace for CloudHSMV2 DescribeBackups responses.
+ * \class QtAws::CloudHsmV2::DescribeBackupsResponse
+ * \brief The DescribeBackupsResponse class provides an interace for CloudHsmV2 DescribeBackups responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::describeBackups
+ * \sa CloudHsmV2Client::describeBackups
  */
 
 /*!
@@ -46,7 +46,7 @@ DescribeBackupsResponse::DescribeBackupsResponse(
         const DescribeBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new DescribeBackupsResponsePrivate(this), parent)
+    : CloudHsmV2Response(new DescribeBackupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeBackupsRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 DescribeBackups \a response.
+ * Parses a successful CloudHsmV2 DescribeBackups \a response.
  */
 void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::DescribeBackupsResponsePrivate
+ * \class QtAws::CloudHsmV2::DescribeBackupsResponsePrivate
  * \brief The DescribeBackupsResponsePrivate class provides private implementation for DescribeBackupsResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a DescribeBackupsResponsePrivate object with public implementation \a q.
  */
 DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
-    DescribeBackupsResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    DescribeBackupsResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 DescribeBackups response element from \a xml.
+ * Parses a CloudHsmV2 DescribeBackups response element from \a xml.
  */
 void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

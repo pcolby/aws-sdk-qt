@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 /*!
- * \class QtAws::CloudHSMV2::CreateHsmResponse
- * \brief The CreateHsmResponse class provides an interace for CloudHSMV2 CreateHsm responses.
+ * \class QtAws::CloudHsmV2::CreateHsmResponse
+ * \brief The CreateHsmResponse class provides an interace for CloudHsmV2 CreateHsm responses.
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
- * \sa CloudHSMV2Client::createHsm
+ * \sa CloudHsmV2Client::createHsm
  */
 
 /*!
@@ -46,7 +46,7 @@ CreateHsmResponse::CreateHsmResponse(
         const CreateHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new CreateHsmResponsePrivate(this), parent)
+    : CloudHsmV2Response(new CreateHsmResponsePrivate(this), parent)
 {
     setRequest(new CreateHsmRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const CreateHsmRequest * CreateHsmResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSMV2 CreateHsm \a response.
+ * Parses a successful CloudHsmV2 CreateHsm \a response.
  */
 void CreateHsmResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void CreateHsmResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSMV2::CreateHsmResponsePrivate
+ * \class QtAws::CloudHsmV2::CreateHsmResponsePrivate
  * \brief The CreateHsmResponsePrivate class provides private implementation for CreateHsmResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSMV2
+ * \inmodule QtAwsCloudHsmV2
  */
 
 /*!
  * Constructs a CreateHsmResponsePrivate object with public implementation \a q.
  */
 CreateHsmResponsePrivate::CreateHsmResponsePrivate(
-    CreateHsmResponse * const q) : CloudHSMV2ResponsePrivate(q)
+    CreateHsmResponse * const q) : CloudHsmV2ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSMV2 CreateHsm response element from \a xml.
+ * Parses a CloudHsmV2 CreateHsm response element from \a xml.
  */
 void CreateHsmResponsePrivate::parseCreateHsmResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void CreateHsmResponsePrivate::parseCreateHsmResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws

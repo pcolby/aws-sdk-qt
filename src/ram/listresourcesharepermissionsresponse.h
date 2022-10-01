@@ -24,7 +24,7 @@
 #include "listresourcesharepermissionsrequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class ListResourceSharePermissionsResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

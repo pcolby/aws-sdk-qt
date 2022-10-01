@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerResponse
- * \brief The UpdateServerResponse class provides an interace for OpsWorksCM UpdateServer responses.
+ * \class QtAws::OpsWorksCm::UpdateServerResponse
+ * \brief The UpdateServerResponse class provides an interace for OpsWorksCm UpdateServer responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::updateServer
+ * \sa OpsWorksCmClient::updateServer
  */
 
 /*!
@@ -123,7 +123,7 @@ UpdateServerResponse::UpdateServerResponse(
         const UpdateServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new UpdateServerResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new UpdateServerResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const UpdateServerRequest * UpdateServerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM UpdateServer \a response.
+ * Parses a successful OpsWorksCm UpdateServer \a response.
  */
 void UpdateServerResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void UpdateServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::UpdateServerResponsePrivate
+ * \class QtAws::OpsWorksCm::UpdateServerResponsePrivate
  * \brief The UpdateServerResponsePrivate class provides private implementation for UpdateServerResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a UpdateServerResponsePrivate object with public implementation \a q.
  */
 UpdateServerResponsePrivate::UpdateServerResponsePrivate(
-    UpdateServerResponse * const q) : OpsWorksCMResponsePrivate(q)
+    UpdateServerResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM UpdateServer response element from \a xml.
+ * Parses a OpsWorksCm UpdateServer response element from \a xml.
  */
 void UpdateServerResponsePrivate::parseUpdateServerResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void UpdateServerResponsePrivate::parseUpdateServerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

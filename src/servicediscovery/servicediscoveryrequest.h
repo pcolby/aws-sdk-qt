@@ -60,7 +60,10 @@ public:
         RegisterInstanceAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateHttpNamespaceAction,
         UpdateInstanceCustomHealthStatusAction,
+        UpdatePrivateDnsNamespaceAction,
+        UpdatePublicDnsNamespaceAction,
         UpdateServiceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

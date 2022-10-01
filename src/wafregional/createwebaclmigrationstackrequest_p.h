@@ -24,14 +24,14 @@
 #include "createwebaclmigrationstackrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class CreateWebACLMigrationStackRequest;
 
-class CreateWebACLMigrationStackRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateWebACLMigrationStackRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    CreateWebACLMigrationStackRequestPrivate(const WAFRegionalRequest::Action action,
+    CreateWebACLMigrationStackRequestPrivate(const WafRegionalRequest::Action action,
                                    CreateWebACLMigrationStackRequest * const q);
     CreateWebACLMigrationStackRequestPrivate(const CreateWebACLMigrationStackRequestPrivate &other,
                                    CreateWebACLMigrationStackRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

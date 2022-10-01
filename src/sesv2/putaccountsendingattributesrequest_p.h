@@ -24,14 +24,14 @@
 #include "putaccountsendingattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountSendingAttributesRequest;
 
-class PutAccountSendingAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutAccountSendingAttributesRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutAccountSendingAttributesRequestPrivate(const Sesv2Request::Action action,
+    PutAccountSendingAttributesRequestPrivate(const SESv2Request::Action action,
                                    PutAccountSendingAttributesRequest * const q);
     PutAccountSendingAttributesRequestPrivate(const PutAccountSendingAttributesRequestPrivate &other,
                                    PutAccountSendingAttributesRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

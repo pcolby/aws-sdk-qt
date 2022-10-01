@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ResetDBParameterGroupResponse
- * \brief The ResetDBParameterGroupResponse class provides an interace for RDS ResetDBParameterGroup responses.
+ * \class QtAws::Rds::ResetDBParameterGroupResponse
+ * \brief The ResetDBParameterGroupResponse class provides an interace for Rds ResetDBParameterGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful RDS ResetDBParameterGroup \a response.
+ * Parses a successful Rds ResetDBParameterGroup \a response.
  */
 void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ResetDBParameterGroupResponsePrivate
+ * \class QtAws::Rds::ResetDBParameterGroupResponsePrivate
  * \brief The ResetDBParameterGroupResponsePrivate class provides private implementation for ResetDBParameterGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
 }
 
 /*!
- * Parses a RDS ResetDBParameterGroup response element from \a xml.
+ * Parses a Rds ResetDBParameterGroup response element from \a xml.
  */
 void ResetDBParameterGroupResponsePrivate::parseResetDBParameterGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ResetDBParameterGroupResponsePrivate::parseResetDBParameterGroupResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

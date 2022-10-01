@@ -49,6 +49,7 @@ namespace ElasticsearchService {
  * \value DeleteOutboundCrossClusterSearchConnectionAction ElasticsearchService DeleteOutboundCrossClusterSearchConnection action.
  * \value DeletePackageAction ElasticsearchService DeletePackage action.
  * \value DescribeDomainAutoTunesAction ElasticsearchService DescribeDomainAutoTunes action.
+ * \value DescribeDomainChangeProgressAction ElasticsearchService DescribeDomainChangeProgress action.
  * \value DescribeElasticsearchDomainAction ElasticsearchService DescribeElasticsearchDomain action.
  * \value DescribeElasticsearchDomainConfigAction ElasticsearchService DescribeElasticsearchDomainConfig action.
  * \value DescribeElasticsearchDomainsAction ElasticsearchService DescribeElasticsearchDomains action.
@@ -283,7 +284,7 @@ QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoin
  * with public implementation \a q.
  */
 ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequest::Action action, ElasticsearchServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2015-01-01"))
 {
 
 }
@@ -330,6 +331,7 @@ QString ElasticsearchServiceRequestPrivate::toString(const ElasticsearchServiceR
         ActionToString(DeleteOutboundCrossClusterSearchConnection);
         ActionToString(DeletePackage);
         ActionToString(DescribeDomainAutoTunes);
+        ActionToString(DescribeDomainChangeProgress);
         ActionToString(DescribeElasticsearchDomain);
         ActionToString(DescribeElasticsearchDomainConfig);
         ActionToString(DescribeElasticsearchDomains);

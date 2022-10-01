@@ -24,7 +24,7 @@
 #include "accepttransitgatewayvpcattachmentrequest.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class AcceptTransitGatewayVpcAttachmentResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

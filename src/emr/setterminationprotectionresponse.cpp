@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::SetTerminationProtectionResponse
- * \brief The SetTerminationProtectionResponse class provides an interace for EMR SetTerminationProtection responses.
+ * \class QtAws::Emr::SetTerminationProtectionResponse
+ * \brief The SetTerminationProtectionResponse class provides an interace for Emr SetTerminationProtection responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::setTerminationProtection
  */
@@ -64,7 +64,7 @@ const SetTerminationProtectionRequest * SetTerminationProtectionResponse::reques
 
 /*!
  * \reimp
- * Parses a successful EMR SetTerminationProtection \a response.
+ * Parses a successful Emr SetTerminationProtection \a response.
  */
 void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::SetTerminationProtectionResponsePrivate
+ * \class QtAws::Emr::SetTerminationProtectionResponsePrivate
  * \brief The SetTerminationProtectionResponsePrivate class provides private implementation for SetTerminationProtectionResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate
 }
 
 /*!
- * Parses a EMR SetTerminationProtection response element from \a xml.
+ * Parses a Emr SetTerminationProtection response element from \a xml.
  */
 void SetTerminationProtectionResponsePrivate::parseSetTerminationProtectionResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void SetTerminationProtectionResponsePrivate::parseSetTerminationProtectionRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -1,0 +1,96 @@
+add_compile_definitions(QTAWSKEYSPACES_LIBRARY)
+
+add_library(QtAwsKeyspaces
+  qtawskeyspacesglobal.h
+  keyspacesclient.h
+  keyspacesclient_p.h
+  keyspacesrequest.h
+  keyspacesrequest_p.h
+  keyspacesresponse.h
+  keyspacesresponse_p.h
+  createkeyspacerequest.h
+  createkeyspacerequest_p.h
+  createkeyspaceresponse.h
+  createkeyspaceresponse_p.h
+  createtablerequest.h
+  createtablerequest_p.h
+  createtableresponse.h
+  createtableresponse_p.h
+  deletekeyspacerequest.h
+  deletekeyspacerequest_p.h
+  deletekeyspaceresponse.h
+  deletekeyspaceresponse_p.h
+  deletetablerequest.h
+  deletetablerequest_p.h
+  deletetableresponse.h
+  deletetableresponse_p.h
+  getkeyspacerequest.h
+  getkeyspacerequest_p.h
+  getkeyspaceresponse.h
+  getkeyspaceresponse_p.h
+  gettablerequest.h
+  gettablerequest_p.h
+  gettableresponse.h
+  gettableresponse_p.h
+  listkeyspacesrequest.h
+  listkeyspacesrequest_p.h
+  listkeyspacesresponse.h
+  listkeyspacesresponse_p.h
+  listtablesrequest.h
+  listtablesrequest_p.h
+  listtablesresponse.h
+  listtablesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  restoretablerequest.h
+  restoretablerequest_p.h
+  restoretableresponse.h
+  restoretableresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updatetablerequest.h
+  updatetablerequest_p.h
+  updatetableresponse.h
+  updatetableresponse_p.h
+  keyspacesclient.cpp
+  keyspacesrequest.cpp
+  keyspacesresponse.cpp
+  createkeyspacerequest.cpp
+  createkeyspaceresponse.cpp
+  createtablerequest.cpp
+  createtableresponse.cpp
+  deletekeyspacerequest.cpp
+  deletekeyspaceresponse.cpp
+  deletetablerequest.cpp
+  deletetableresponse.cpp
+  getkeyspacerequest.cpp
+  getkeyspaceresponse.cpp
+  gettablerequest.cpp
+  gettableresponse.cpp
+  listkeyspacesrequest.cpp
+  listkeyspacesresponse.cpp
+  listtablesrequest.cpp
+  listtablesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  restoretablerequest.cpp
+  restoretableresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updatetablerequest.cpp
+  updatetableresponse.cpp)
+
+target_link_libraries(QtAwsKeyspaces
+  PRIVATE QtAwsCore
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

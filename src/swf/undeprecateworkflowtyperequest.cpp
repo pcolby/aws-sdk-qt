@@ -23,13 +23,13 @@
 #include "swfrequest_p.h"
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::UndeprecateWorkflowTypeRequest
- * \brief The UndeprecateWorkflowTypeRequest class provides an interface for SWF UndeprecateWorkflowType requests.
+ * \class QtAws::Swf::UndeprecateWorkflowTypeRequest
+ * \brief The UndeprecateWorkflowTypeRequest class provides an interface for Swf UndeprecateWorkflowType requests.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -89,11 +89,11 @@ QtAws::Core::AwsAbstractResponse * UndeprecateWorkflowTypeRequest::response(QNet
 }
 
 /*!
- * \class QtAws::SWF::UndeprecateWorkflowTypeRequestPrivate
+ * \class QtAws::Swf::UndeprecateWorkflowTypeRequestPrivate
  * \brief The UndeprecateWorkflowTypeRequestPrivate class provides private implementation for UndeprecateWorkflowTypeRequest.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -120,5 +120,5 @@ UndeprecateWorkflowTypeRequestPrivate::UndeprecateWorkflowTypeRequestPrivate(
 
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

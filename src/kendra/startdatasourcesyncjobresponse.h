@@ -24,11 +24,11 @@
 #include "startdatasourcesyncjobrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class StartDataSourceSyncJobResponsePrivate;
 
-class QTAWSKENDRA_EXPORT StartDataSourceSyncJobResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT StartDataSourceSyncJobResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

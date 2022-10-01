@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSNETWORKFIREWALL_LIBRARY)
 
 add_library(QtAwsNetworkFirewall
+  qtawsnetworkfirewallglobal.h
+  networkfirewallclient.h
+  networkfirewallclient_p.h
+  networkfirewallrequest.h
+  networkfirewallrequest_p.h
+  networkfirewallresponse.h
+  networkfirewallresponse_p.h
   associatefirewallpolicyrequest.h
   associatefirewallpolicyrequest_p.h
   associatefirewallpolicyresponse.h
@@ -9,26 +16,26 @@ add_library(QtAwsNetworkFirewall
   associatesubnetsrequest_p.h
   associatesubnetsresponse.h
   associatesubnetsresponse_p.h
-  createfirewallpolicyrequest.h
-  createfirewallpolicyrequest_p.h
-  createfirewallpolicyresponse.h
-  createfirewallpolicyresponse_p.h
   createfirewallrequest.h
   createfirewallrequest_p.h
   createfirewallresponse.h
   createfirewallresponse_p.h
+  createfirewallpolicyrequest.h
+  createfirewallpolicyrequest_p.h
+  createfirewallpolicyresponse.h
+  createfirewallpolicyresponse_p.h
   createrulegrouprequest.h
   createrulegrouprequest_p.h
   createrulegroupresponse.h
   createrulegroupresponse_p.h
-  deletefirewallpolicyrequest.h
-  deletefirewallpolicyrequest_p.h
-  deletefirewallpolicyresponse.h
-  deletefirewallpolicyresponse_p.h
   deletefirewallrequest.h
   deletefirewallrequest_p.h
   deletefirewallresponse.h
   deletefirewallresponse_p.h
+  deletefirewallpolicyrequest.h
+  deletefirewallpolicyrequest_p.h
+  deletefirewallpolicyresponse.h
+  deletefirewallpolicyresponse_p.h
   deleteresourcepolicyrequest.h
   deleteresourcepolicyrequest_p.h
   deleteresourcepolicyresponse.h
@@ -37,14 +44,14 @@ add_library(QtAwsNetworkFirewall
   deleterulegrouprequest_p.h
   deleterulegroupresponse.h
   deleterulegroupresponse_p.h
-  describefirewallpolicyrequest.h
-  describefirewallpolicyrequest_p.h
-  describefirewallpolicyresponse.h
-  describefirewallpolicyresponse_p.h
   describefirewallrequest.h
   describefirewallrequest_p.h
   describefirewallresponse.h
   describefirewallresponse_p.h
+  describefirewallpolicyrequest.h
+  describefirewallpolicyrequest_p.h
+  describefirewallpolicyresponse.h
+  describefirewallpolicyresponse_p.h
   describeloggingconfigurationrequest.h
   describeloggingconfigurationrequest_p.h
   describeloggingconfigurationresponse.h
@@ -57,6 +64,10 @@ add_library(QtAwsNetworkFirewall
   describerulegrouprequest_p.h
   describerulegroupresponse.h
   describerulegroupresponse_p.h
+  describerulegroupmetadatarequest.h
+  describerulegroupmetadatarequest_p.h
+  describerulegroupmetadataresponse.h
+  describerulegroupmetadataresponse_p.h
   disassociatesubnetsrequest.h
   disassociatesubnetsrequest_p.h
   disassociatesubnetsresponse.h
@@ -77,17 +88,10 @@ add_library(QtAwsNetworkFirewall
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  networkfirewallclient.h
-  networkfirewallclient_p.h
-  networkfirewallrequest.h
-  networkfirewallrequest_p.h
-  networkfirewallresponse.h
-  networkfirewallresponse_p.h
   putresourcepolicyrequest.h
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
-  qtawsnetworkfirewallglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -104,14 +108,18 @@ add_library(QtAwsNetworkFirewall
   updatefirewalldescriptionrequest_p.h
   updatefirewalldescriptionresponse.h
   updatefirewalldescriptionresponse_p.h
-  updatefirewallpolicychangeprotectionrequest.h
-  updatefirewallpolicychangeprotectionrequest_p.h
-  updatefirewallpolicychangeprotectionresponse.h
-  updatefirewallpolicychangeprotectionresponse_p.h
+  updatefirewallencryptionconfigurationrequest.h
+  updatefirewallencryptionconfigurationrequest_p.h
+  updatefirewallencryptionconfigurationresponse.h
+  updatefirewallencryptionconfigurationresponse_p.h
   updatefirewallpolicyrequest.h
   updatefirewallpolicyrequest_p.h
   updatefirewallpolicyresponse.h
   updatefirewallpolicyresponse_p.h
+  updatefirewallpolicychangeprotectionrequest.h
+  updatefirewallpolicychangeprotectionrequest_p.h
+  updatefirewallpolicychangeprotectionresponse.h
+  updatefirewallpolicychangeprotectionresponse_p.h
   updateloggingconfigurationrequest.h
   updateloggingconfigurationrequest_p.h
   updateloggingconfigurationresponse.h
@@ -124,34 +132,39 @@ add_library(QtAwsNetworkFirewall
   updatesubnetchangeprotectionrequest_p.h
   updatesubnetchangeprotectionresponse.h
   updatesubnetchangeprotectionresponse_p.h
+  networkfirewallclient.cpp
+  networkfirewallrequest.cpp
+  networkfirewallresponse.cpp
   associatefirewallpolicyrequest.cpp
   associatefirewallpolicyresponse.cpp
   associatesubnetsrequest.cpp
   associatesubnetsresponse.cpp
-  createfirewallpolicyrequest.cpp
-  createfirewallpolicyresponse.cpp
   createfirewallrequest.cpp
   createfirewallresponse.cpp
+  createfirewallpolicyrequest.cpp
+  createfirewallpolicyresponse.cpp
   createrulegrouprequest.cpp
   createrulegroupresponse.cpp
-  deletefirewallpolicyrequest.cpp
-  deletefirewallpolicyresponse.cpp
   deletefirewallrequest.cpp
   deletefirewallresponse.cpp
+  deletefirewallpolicyrequest.cpp
+  deletefirewallpolicyresponse.cpp
   deleteresourcepolicyrequest.cpp
   deleteresourcepolicyresponse.cpp
   deleterulegrouprequest.cpp
   deleterulegroupresponse.cpp
-  describefirewallpolicyrequest.cpp
-  describefirewallpolicyresponse.cpp
   describefirewallrequest.cpp
   describefirewallresponse.cpp
+  describefirewallpolicyrequest.cpp
+  describefirewallpolicyresponse.cpp
   describeloggingconfigurationrequest.cpp
   describeloggingconfigurationresponse.cpp
   describeresourcepolicyrequest.cpp
   describeresourcepolicyresponse.cpp
   describerulegrouprequest.cpp
   describerulegroupresponse.cpp
+  describerulegroupmetadatarequest.cpp
+  describerulegroupmetadataresponse.cpp
   disassociatesubnetsrequest.cpp
   disassociatesubnetsresponse.cpp
   listfirewallpoliciesrequest.cpp
@@ -162,9 +175,6 @@ add_library(QtAwsNetworkFirewall
   listrulegroupsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  networkfirewallclient.cpp
-  networkfirewallrequest.cpp
-  networkfirewallresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
   tagresourcerequest.cpp
@@ -175,10 +185,12 @@ add_library(QtAwsNetworkFirewall
   updatefirewalldeleteprotectionresponse.cpp
   updatefirewalldescriptionrequest.cpp
   updatefirewalldescriptionresponse.cpp
-  updatefirewallpolicychangeprotectionrequest.cpp
-  updatefirewallpolicychangeprotectionresponse.cpp
+  updatefirewallencryptionconfigurationrequest.cpp
+  updatefirewallencryptionconfigurationresponse.cpp
   updatefirewallpolicyrequest.cpp
   updatefirewallpolicyresponse.cpp
+  updatefirewallpolicychangeprotectionrequest.cpp
+  updatefirewallpolicychangeprotectionresponse.cpp
   updateloggingconfigurationrequest.cpp
   updateloggingconfigurationresponse.cpp
   updaterulegrouprequest.cpp

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::DescribeJournalKinesisStreamResponse
- * \brief The DescribeJournalKinesisStreamResponse class provides an interace for QLDB DescribeJournalKinesisStream responses.
+ * \class QtAws::Qldb::DescribeJournalKinesisStreamResponse
+ * \brief The DescribeJournalKinesisStreamResponse class provides an interace for Qldb DescribeJournalKinesisStream responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const DescribeJournalKinesisStreamRequest * DescribeJournalKinesisStreamResponse
 
 /*!
  * \reimp
- * Parses a successful QLDB DescribeJournalKinesisStream \a response.
+ * Parses a successful Qldb DescribeJournalKinesisStream \a response.
  */
 void DescribeJournalKinesisStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void DescribeJournalKinesisStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::DescribeJournalKinesisStreamResponsePrivate
+ * \class QtAws::Qldb::DescribeJournalKinesisStreamResponsePrivate
  * \brief The DescribeJournalKinesisStreamResponsePrivate class provides private implementation for DescribeJournalKinesisStreamResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ DescribeJournalKinesisStreamResponsePrivate::DescribeJournalKinesisStreamRespons
 }
 
 /*!
- * Parses a QLDB DescribeJournalKinesisStream response element from \a xml.
+ * Parses a Qldb DescribeJournalKinesisStream response element from \a xml.
  */
 void DescribeJournalKinesisStreamResponsePrivate::parseDescribeJournalKinesisStreamResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeJournalKinesisStreamResponsePrivate::parseDescribeJournalKinesisStr
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

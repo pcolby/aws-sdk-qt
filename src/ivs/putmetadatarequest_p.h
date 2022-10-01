@@ -24,7 +24,7 @@
 #include "putmetadatarequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class PutMetadataRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

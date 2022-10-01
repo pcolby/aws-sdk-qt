@@ -38,19 +38,29 @@ namespace LookoutEquipment {
  *
  * \value CreateDatasetAction LookoutEquipment CreateDataset action.
  * \value CreateInferenceSchedulerAction LookoutEquipment CreateInferenceScheduler action.
+ * \value CreateLabelAction LookoutEquipment CreateLabel action.
+ * \value CreateLabelGroupAction LookoutEquipment CreateLabelGroup action.
  * \value CreateModelAction LookoutEquipment CreateModel action.
  * \value DeleteDatasetAction LookoutEquipment DeleteDataset action.
  * \value DeleteInferenceSchedulerAction LookoutEquipment DeleteInferenceScheduler action.
+ * \value DeleteLabelAction LookoutEquipment DeleteLabel action.
+ * \value DeleteLabelGroupAction LookoutEquipment DeleteLabelGroup action.
  * \value DeleteModelAction LookoutEquipment DeleteModel action.
  * \value DescribeDataIngestionJobAction LookoutEquipment DescribeDataIngestionJob action.
  * \value DescribeDatasetAction LookoutEquipment DescribeDataset action.
  * \value DescribeInferenceSchedulerAction LookoutEquipment DescribeInferenceScheduler action.
+ * \value DescribeLabelAction LookoutEquipment DescribeLabel action.
+ * \value DescribeLabelGroupAction LookoutEquipment DescribeLabelGroup action.
  * \value DescribeModelAction LookoutEquipment DescribeModel action.
  * \value ListDataIngestionJobsAction LookoutEquipment ListDataIngestionJobs action.
  * \value ListDatasetsAction LookoutEquipment ListDatasets action.
+ * \value ListInferenceEventsAction LookoutEquipment ListInferenceEvents action.
  * \value ListInferenceExecutionsAction LookoutEquipment ListInferenceExecutions action.
  * \value ListInferenceSchedulersAction LookoutEquipment ListInferenceSchedulers action.
+ * \value ListLabelGroupsAction LookoutEquipment ListLabelGroups action.
+ * \value ListLabelsAction LookoutEquipment ListLabels action.
  * \value ListModelsAction LookoutEquipment ListModels action.
+ * \value ListSensorStatisticsAction LookoutEquipment ListSensorStatistics action.
  * \value ListTagsForResourceAction LookoutEquipment ListTagsForResource action.
  * \value StartDataIngestionJobAction LookoutEquipment StartDataIngestionJob action.
  * \value StartInferenceSchedulerAction LookoutEquipment StartInferenceScheduler action.
@@ -58,6 +68,7 @@ namespace LookoutEquipment {
  * \value TagResourceAction LookoutEquipment TagResource action.
  * \value UntagResourceAction LookoutEquipment UntagResource action.
  * \value UpdateInferenceSchedulerAction LookoutEquipment UpdateInferenceScheduler action.
+ * \value UpdateLabelGroupAction LookoutEquipment UpdateLabelGroup action.
  */
 
 /*!
@@ -265,7 +276,7 @@ QNetworkRequest LookoutEquipmentRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 LookoutEquipmentRequestPrivate::LookoutEquipmentRequestPrivate(const LookoutEquipmentRequest::Action action, LookoutEquipmentRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-12-15"))
 {
 
 }
@@ -301,19 +312,29 @@ QString LookoutEquipmentRequestPrivate::toString(const LookoutEquipmentRequest::
     switch (action) {
         ActionToString(CreateDataset);
         ActionToString(CreateInferenceScheduler);
+        ActionToString(CreateLabel);
+        ActionToString(CreateLabelGroup);
         ActionToString(CreateModel);
         ActionToString(DeleteDataset);
         ActionToString(DeleteInferenceScheduler);
+        ActionToString(DeleteLabel);
+        ActionToString(DeleteLabelGroup);
         ActionToString(DeleteModel);
         ActionToString(DescribeDataIngestionJob);
         ActionToString(DescribeDataset);
         ActionToString(DescribeInferenceScheduler);
+        ActionToString(DescribeLabel);
+        ActionToString(DescribeLabelGroup);
         ActionToString(DescribeModel);
         ActionToString(ListDataIngestionJobs);
         ActionToString(ListDatasets);
+        ActionToString(ListInferenceEvents);
         ActionToString(ListInferenceExecutions);
         ActionToString(ListInferenceSchedulers);
+        ActionToString(ListLabelGroups);
+        ActionToString(ListLabels);
         ActionToString(ListModels);
+        ActionToString(ListSensorStatistics);
         ActionToString(ListTagsForResource);
         ActionToString(StartDataIngestionJob);
         ActionToString(StartInferenceScheduler);
@@ -321,6 +342,7 @@ QString LookoutEquipmentRequestPrivate::toString(const LookoutEquipmentRequest::
         ActionToString(TagResource);
         ActionToString(UntagResource);
         ActionToString(UpdateInferenceScheduler);
+        ActionToString(UpdateLabelGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

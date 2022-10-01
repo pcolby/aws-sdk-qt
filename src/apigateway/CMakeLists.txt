@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPIGATEWAY_LIBRARY)
 
-add_library(QtAwsAPIGateway
+add_library(QtAwsApiGateway
+  qtawsapigatewayglobal.h
   apigatewayclient.h
   apigatewayclient_p.h
   apigatewayrequest.h
@@ -55,14 +56,14 @@ add_library(QtAwsAPIGateway
   createstagerequest_p.h
   createstageresponse.h
   createstageresponse_p.h
-  createusageplankeyrequest.h
-  createusageplankeyrequest_p.h
-  createusageplankeyresponse.h
-  createusageplankeyresponse_p.h
   createusageplanrequest.h
   createusageplanrequest_p.h
   createusageplanresponse.h
   createusageplanresponse_p.h
+  createusageplankeyrequest.h
+  createusageplankeyrequest_p.h
+  createusageplankeyresponse.h
+  createusageplankeyresponse_p.h
   createvpclinkrequest.h
   createvpclinkrequest_p.h
   createvpclinkresponse.h
@@ -139,14 +140,14 @@ add_library(QtAwsAPIGateway
   deletestagerequest_p.h
   deletestageresponse.h
   deletestageresponse_p.h
-  deleteusageplankeyrequest.h
-  deleteusageplankeyrequest_p.h
-  deleteusageplankeyresponse.h
-  deleteusageplankeyresponse_p.h
   deleteusageplanrequest.h
   deleteusageplanrequest_p.h
   deleteusageplanresponse.h
   deleteusageplanresponse_p.h
+  deleteusageplankeyrequest.h
+  deleteusageplankeyrequest_p.h
+  deleteusageplankeyresponse.h
+  deleteusageplankeyresponse_p.h
   deletevpclinkrequest.h
   deletevpclinkrequest_p.h
   deletevpclinkresponse.h
@@ -263,14 +264,14 @@ add_library(QtAwsAPIGateway
   getmodelrequest_p.h
   getmodelresponse.h
   getmodelresponse_p.h
-  getmodelsrequest.h
-  getmodelsrequest_p.h
-  getmodelsresponse.h
-  getmodelsresponse_p.h
   getmodeltemplaterequest.h
   getmodeltemplaterequest_p.h
   getmodeltemplateresponse.h
   getmodeltemplateresponse_p.h
+  getmodelsrequest.h
+  getmodelsrequest_p.h
+  getmodelsresponse.h
+  getmodelsresponse_p.h
   getrequestvalidatorrequest.h
   getrequestvalidatorrequest_p.h
   getrequestvalidatorresponse.h
@@ -319,6 +320,14 @@ add_library(QtAwsAPIGateway
   gettagsrequest_p.h
   gettagsresponse.h
   gettagsresponse_p.h
+  getusagerequest.h
+  getusagerequest_p.h
+  getusageresponse.h
+  getusageresponse_p.h
+  getusageplanrequest.h
+  getusageplanrequest_p.h
+  getusageplanresponse.h
+  getusageplanresponse_p.h
   getusageplankeyrequest.h
   getusageplankeyrequest_p.h
   getusageplankeyresponse.h
@@ -327,18 +336,10 @@ add_library(QtAwsAPIGateway
   getusageplankeysrequest_p.h
   getusageplankeysresponse.h
   getusageplankeysresponse_p.h
-  getusageplanrequest.h
-  getusageplanrequest_p.h
-  getusageplanresponse.h
-  getusageplanresponse_p.h
   getusageplansrequest.h
   getusageplansrequest_p.h
   getusageplansresponse.h
   getusageplansresponse_p.h
-  getusagerequest.h
-  getusagerequest_p.h
-  getusageresponse.h
-  getusageresponse_p.h
   getvpclinkrequest.h
   getvpclinkrequest_p.h
   getvpclinkresponse.h
@@ -383,7 +384,6 @@ add_library(QtAwsAPIGateway
   putrestapirequest_p.h
   putrestapiresponse.h
   putrestapiresponse_p.h
-  qtawsapigatewayglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -476,14 +476,14 @@ add_library(QtAwsAPIGateway
   updatestagerequest_p.h
   updatestageresponse.h
   updatestageresponse_p.h
-  updateusageplanrequest.h
-  updateusageplanrequest_p.h
-  updateusageplanresponse.h
-  updateusageplanresponse_p.h
   updateusagerequest.h
   updateusagerequest_p.h
   updateusageresponse.h
   updateusageresponse_p.h
+  updateusageplanrequest.h
+  updateusageplanrequest_p.h
+  updateusageplanresponse.h
+  updateusageplanresponse_p.h
   updatevpclinkrequest.h
   updatevpclinkrequest_p.h
   updatevpclinkresponse.h
@@ -515,10 +515,10 @@ add_library(QtAwsAPIGateway
   createrestapiresponse.cpp
   createstagerequest.cpp
   createstageresponse.cpp
-  createusageplankeyrequest.cpp
-  createusageplankeyresponse.cpp
   createusageplanrequest.cpp
   createusageplanresponse.cpp
+  createusageplankeyrequest.cpp
+  createusageplankeyresponse.cpp
   createvpclinkrequest.cpp
   createvpclinkresponse.cpp
   deleteapikeyrequest.cpp
@@ -557,10 +557,10 @@ add_library(QtAwsAPIGateway
   deleterestapiresponse.cpp
   deletestagerequest.cpp
   deletestageresponse.cpp
-  deleteusageplankeyrequest.cpp
-  deleteusageplankeyresponse.cpp
   deleteusageplanrequest.cpp
   deleteusageplanresponse.cpp
+  deleteusageplankeyrequest.cpp
+  deleteusageplankeyresponse.cpp
   deletevpclinkrequest.cpp
   deletevpclinkresponse.cpp
   flushstageauthorizerscacherequest.cpp
@@ -619,10 +619,10 @@ add_library(QtAwsAPIGateway
   getmethodresponseresponse.cpp
   getmodelrequest.cpp
   getmodelresponse.cpp
-  getmodelsrequest.cpp
-  getmodelsresponse.cpp
   getmodeltemplaterequest.cpp
   getmodeltemplateresponse.cpp
+  getmodelsrequest.cpp
+  getmodelsresponse.cpp
   getrequestvalidatorrequest.cpp
   getrequestvalidatorresponse.cpp
   getrequestvalidatorsrequest.cpp
@@ -647,16 +647,16 @@ add_library(QtAwsAPIGateway
   getstagesresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
+  getusagerequest.cpp
+  getusageresponse.cpp
+  getusageplanrequest.cpp
+  getusageplanresponse.cpp
   getusageplankeyrequest.cpp
   getusageplankeyresponse.cpp
   getusageplankeysrequest.cpp
   getusageplankeysresponse.cpp
-  getusageplanrequest.cpp
-  getusageplanresponse.cpp
   getusageplansrequest.cpp
   getusageplansresponse.cpp
-  getusagerequest.cpp
-  getusageresponse.cpp
   getvpclinkrequest.cpp
   getvpclinkresponse.cpp
   getvpclinksrequest.cpp
@@ -725,14 +725,14 @@ add_library(QtAwsAPIGateway
   updaterestapiresponse.cpp
   updatestagerequest.cpp
   updatestageresponse.cpp
-  updateusageplanrequest.cpp
-  updateusageplanresponse.cpp
   updateusagerequest.cpp
   updateusageresponse.cpp
+  updateusageplanrequest.cpp
+  updateusageplanresponse.cpp
   updatevpclinkrequest.cpp
   updatevpclinkresponse.cpp)
 
-target_link_libraries(QtAwsAPIGateway
+target_link_libraries(QtAwsApiGateway
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

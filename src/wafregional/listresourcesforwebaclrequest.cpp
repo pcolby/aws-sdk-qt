@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListResourcesForWebACLRequest
- * \brief The ListResourcesForWebACLRequest class provides an interface for WAFRegional ListResourcesForWebACL requests.
+ * \class QtAws::WafRegional::ListResourcesForWebACLRequest
+ * \brief The ListResourcesForWebACLRequest class provides an interface for WafRegional ListResourcesForWebACL requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listResourcesForWebACL
+ * \sa WafRegionalClient::listResourcesForWebACL
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListResourcesForWebACLRequest::ListResourcesForWebACLRequest(const ListResourcesForWebACLRequest &other)
-    : WAFRegionalRequest(new ListResourcesForWebACLRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new ListResourcesForWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ ListResourcesForWebACLRequest::ListResourcesForWebACLRequest(const ListResources
  * Constructs a ListResourcesForWebACLRequest object.
  */
 ListResourcesForWebACLRequest::ListResourcesForWebACLRequest()
-    : WAFRegionalRequest(new ListResourcesForWebACLRequestPrivate(WAFRegionalRequest::ListResourcesForWebACLAction, this))
+    : WafRegionalRequest(new ListResourcesForWebACLRequestPrivate(WafRegionalRequest::ListResourcesForWebACLAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::WAFRegional::ListResourcesForWebACLRequestPrivate
+ * \class QtAws::WafRegional::ListResourcesForWebACLRequestPrivate
  * \brief The ListResourcesForWebACLRequestPrivate class provides private implementation for ListResourcesForWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a ListResourcesForWebACLRequestPrivate object for WAFRegional \a action,
+ * Constructs a ListResourcesForWebACLRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
-    const WAFRegionalRequest::Action action, ListResourcesForWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, ListResourcesForWebACLRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const ListResourcesForWebACLRequestPrivate &other, ListResourcesForWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

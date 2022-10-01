@@ -24,11 +24,11 @@
 #include "getmodelsrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class GetModelsResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT GetModelsResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetModelsResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

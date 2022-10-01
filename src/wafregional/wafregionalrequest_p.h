@@ -24,28 +24,28 @@
 #include "wafregionalrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
-class WAFRegionalRequest;
+class WafRegionalRequest;
 
-class WAFRegionalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WafRegionalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    WAFRegionalRequest::Action action; ///< WAFRegional action to be performed.
-    QString apiVersion;        ///< WAFRegional API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< WAFRegional request (query string) parameters. @todo?
+    WafRegionalRequest::Action action; ///< WafRegional action to be performed.
+    QString apiVersion;        ///< WafRegional API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< WafRegional request (query string) parameters. @todo?
 
-    WAFRegionalRequestPrivate(const WAFRegionalRequest::Action action, WAFRegionalRequest * const q);
-    WAFRegionalRequestPrivate(const WAFRegionalRequestPrivate &other, WAFRegionalRequest * const q);
+    WafRegionalRequestPrivate(const WafRegionalRequest::Action action, WafRegionalRequest * const q);
+    WafRegionalRequestPrivate(const WafRegionalRequestPrivate &other, WafRegionalRequest * const q);
 
-    static QString toString(const WAFRegionalRequest::Action &action);
+    static QString toString(const WafRegionalRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(WAFRegionalRequest)
+    Q_DECLARE_PUBLIC(WafRegionalRequest)
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

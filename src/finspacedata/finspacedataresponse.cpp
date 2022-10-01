@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::FinSpaceDataResponse
- * \brief The FinSpaceDataResponse class provides an interface for FinSpaceData responses.
+ * \class QtAws::FinspaceData::FinspaceDataResponse
+ * \brief The FinspaceDataResponse class provides an interface for FinspaceData responses.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
- * Constructs a FinSpaceDataResponse object with parent \a parent.
+ * Constructs a FinspaceDataResponse object with parent \a parent.
  */
-FinSpaceDataResponse::FinSpaceDataResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new FinSpaceDataResponsePrivate(this), parent)
+FinspaceDataResponse::FinspaceDataResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new FinspaceDataResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a FinSpaceDataResponse object with private implementation \a d,
+ * Constructs a FinspaceDataResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from FinSpaceDataResponsePrivate.
+ * implementation that inherits from FinspaceDataResponsePrivate.
  */
-FinSpaceDataResponse::FinSpaceDataResponse(FinSpaceDataResponsePrivate * const d, QObject * const parent)
+FinspaceDataResponse::FinspaceDataResponse(FinspaceDataResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ FinSpaceDataResponse::FinSpaceDataResponse(FinSpaceDataResponsePrivate * const d
 /*!
  * \reimp
  */
-void FinSpaceDataResponse::parseFailure(QIODevice &response)
+void FinspaceDataResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(FinSpaceDataResponse);
+    //Q_D(FinspaceDataResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void FinSpaceDataResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FinSpaceData::FinSpaceDataResponsePrivate
- * \brief The FinSpaceDataResponsePrivate class provides private implementation for FinSpaceDataResponse.
+ * \class QtAws::FinspaceData::FinspaceDataResponsePrivate
+ * \brief The FinspaceDataResponsePrivate class provides private implementation for FinspaceDataResponse.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
- * Constructs a FinSpaceDataResponsePrivate object with public implementation \a q.
+ * Constructs a FinspaceDataResponsePrivate object with public implementation \a q.
  */
-FinSpaceDataResponsePrivate::FinSpaceDataResponsePrivate(
-    FinSpaceDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+FinspaceDataResponsePrivate::FinspaceDataResponsePrivate(
+    FinspaceDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

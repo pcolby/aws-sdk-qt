@@ -24,7 +24,7 @@
 #include "updatecontainerinstancesstaterequest.h"
 
 namespace QtAws {
-namespace ECS {
+namespace Ecs {
 
 class UpdateContainerInstancesStateResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ECS
+} // namespace Ecs
 } // namespace QtAws
 
 #endif

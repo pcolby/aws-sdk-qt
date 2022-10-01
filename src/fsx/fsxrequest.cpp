@@ -40,20 +40,39 @@ namespace FSx {
  * \value CancelDataRepositoryTaskAction FSx CancelDataRepositoryTask action.
  * \value CopyBackupAction FSx CopyBackup action.
  * \value CreateBackupAction FSx CreateBackup action.
+ * \value CreateDataRepositoryAssociationAction FSx CreateDataRepositoryAssociation action.
  * \value CreateDataRepositoryTaskAction FSx CreateDataRepositoryTask action.
  * \value CreateFileSystemAction FSx CreateFileSystem action.
  * \value CreateFileSystemFromBackupAction FSx CreateFileSystemFromBackup action.
+ * \value CreateSnapshotAction FSx CreateSnapshot action.
+ * \value CreateStorageVirtualMachineAction FSx CreateStorageVirtualMachine action.
+ * \value CreateVolumeAction FSx CreateVolume action.
+ * \value CreateVolumeFromBackupAction FSx CreateVolumeFromBackup action.
  * \value DeleteBackupAction FSx DeleteBackup action.
+ * \value DeleteDataRepositoryAssociationAction FSx DeleteDataRepositoryAssociation action.
  * \value DeleteFileSystemAction FSx DeleteFileSystem action.
+ * \value DeleteSnapshotAction FSx DeleteSnapshot action.
+ * \value DeleteStorageVirtualMachineAction FSx DeleteStorageVirtualMachine action.
+ * \value DeleteVolumeAction FSx DeleteVolume action.
  * \value DescribeBackupsAction FSx DescribeBackups action.
+ * \value DescribeDataRepositoryAssociationsAction FSx DescribeDataRepositoryAssociations action.
  * \value DescribeDataRepositoryTasksAction FSx DescribeDataRepositoryTasks action.
  * \value DescribeFileSystemAliasesAction FSx DescribeFileSystemAliases action.
  * \value DescribeFileSystemsAction FSx DescribeFileSystems action.
+ * \value DescribeSnapshotsAction FSx DescribeSnapshots action.
+ * \value DescribeStorageVirtualMachinesAction FSx DescribeStorageVirtualMachines action.
+ * \value DescribeVolumesAction FSx DescribeVolumes action.
  * \value DisassociateFileSystemAliasesAction FSx DisassociateFileSystemAliases action.
  * \value ListTagsForResourceAction FSx ListTagsForResource action.
+ * \value ReleaseFileSystemNfsV3LocksAction FSx ReleaseFileSystemNfsV3Locks action.
+ * \value RestoreVolumeFromSnapshotAction FSx RestoreVolumeFromSnapshot action.
  * \value TagResourceAction FSx TagResource action.
  * \value UntagResourceAction FSx UntagResource action.
+ * \value UpdateDataRepositoryAssociationAction FSx UpdateDataRepositoryAssociation action.
  * \value UpdateFileSystemAction FSx UpdateFileSystem action.
+ * \value UpdateSnapshotAction FSx UpdateSnapshot action.
+ * \value UpdateStorageVirtualMachineAction FSx UpdateStorageVirtualMachine action.
+ * \value UpdateVolumeAction FSx UpdateVolume action.
  */
 
 /*!
@@ -261,7 +280,7 @@ QNetworkRequest FSxRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 FSxRequestPrivate::FSxRequestPrivate(const FSxRequest::Action action, FSxRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-03-01"))
 {
 
 }
@@ -299,20 +318,39 @@ QString FSxRequestPrivate::toString(const FSxRequest::Action &action)
         ActionToString(CancelDataRepositoryTask);
         ActionToString(CopyBackup);
         ActionToString(CreateBackup);
+        ActionToString(CreateDataRepositoryAssociation);
         ActionToString(CreateDataRepositoryTask);
         ActionToString(CreateFileSystem);
         ActionToString(CreateFileSystemFromBackup);
+        ActionToString(CreateSnapshot);
+        ActionToString(CreateStorageVirtualMachine);
+        ActionToString(CreateVolume);
+        ActionToString(CreateVolumeFromBackup);
         ActionToString(DeleteBackup);
+        ActionToString(DeleteDataRepositoryAssociation);
         ActionToString(DeleteFileSystem);
+        ActionToString(DeleteSnapshot);
+        ActionToString(DeleteStorageVirtualMachine);
+        ActionToString(DeleteVolume);
         ActionToString(DescribeBackups);
+        ActionToString(DescribeDataRepositoryAssociations);
         ActionToString(DescribeDataRepositoryTasks);
         ActionToString(DescribeFileSystemAliases);
         ActionToString(DescribeFileSystems);
+        ActionToString(DescribeSnapshots);
+        ActionToString(DescribeStorageVirtualMachines);
+        ActionToString(DescribeVolumes);
         ActionToString(DisassociateFileSystemAliases);
         ActionToString(ListTagsForResource);
+        ActionToString(ReleaseFileSystemNfsV3Locks);
+        ActionToString(RestoreVolumeFromSnapshot);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateDataRepositoryAssociation);
         ActionToString(UpdateFileSystem);
+        ActionToString(UpdateSnapshot);
+        ActionToString(UpdateStorageVirtualMachine);
+        ActionToString(UpdateVolume);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -23,7 +23,7 @@
 #include "wafresponse_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 class UpdateXssMatchSetResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws
 
 #endif

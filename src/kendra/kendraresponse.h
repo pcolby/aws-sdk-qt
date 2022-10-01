@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
-class kendraResponsePrivate;
+class KendraResponsePrivate;
 
-class QTAWSKENDRA_EXPORT kendraResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKENDRA_EXPORT KendraResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    kendraResponse(QObject * const parent = 0);
+    KendraResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    kendraResponse(kendraResponsePrivate * const d, QObject * const parent);
+    KendraResponse(KendraResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(kendraResponse)
-    Q_DISABLE_COPY(kendraResponse)
+    Q_DECLARE_PRIVATE(KendraResponse)
+    Q_DISABLE_COPY(KendraResponse)
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

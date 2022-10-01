@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribePendingMaintenanceActionsResponse
- * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for DocDB DescribePendingMaintenanceActions responses.
+ * \class QtAws::DocDb::DescribePendingMaintenanceActionsResponse
+ * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for DocDb DescribePendingMaintenanceActions responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describePendingMaintenanceActions
+ * \sa DocDbClient::describePendingMaintenanceActions
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
         const DescribePendingMaintenanceActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
+    : DocDbResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
 {
     setRequest(new DescribePendingMaintenanceActionsRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActio
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribePendingMaintenanceActions \a response.
+ * Parses a successful DocDb DescribePendingMaintenanceActions \a response.
  */
 void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
- * \class QtAws::DocDB::DescribePendingMaintenanceActionsResponsePrivate
+ * \class QtAws::DocDb::DescribePendingMaintenanceActionsResponsePrivate
  * \brief The DescribePendingMaintenanceActionsResponsePrivate class provides private implementation for DescribePendingMaintenanceActionsResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribePendingMaintenanceActionsResponsePrivate object with public implementation \a q.
  */
 DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponsePrivate(
-    DescribePendingMaintenanceActionsResponse * const q) : DocDBResponsePrivate(q)
+    DescribePendingMaintenanceActionsResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribePendingMaintenanceActions response element from \a xml.
+ * Parses a DocDb DescribePendingMaintenanceActions response element from \a xml.
  */
 void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaint
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

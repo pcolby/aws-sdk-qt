@@ -23,11 +23,11 @@
 #include "docdbresponse_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ModifyDBClusterSnapshotAttributeResponse;
 
-class ModifyDBClusterSnapshotAttributeResponsePrivate : public DocDBResponsePrivate {
+class ModifyDBClusterSnapshotAttributeResponsePrivate : public DocDbResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

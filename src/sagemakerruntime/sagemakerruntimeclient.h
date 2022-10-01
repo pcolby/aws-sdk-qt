@@ -32,6 +32,8 @@ namespace SageMakerRuntime {
 class SageMakerRuntimeClientPrivate;
 class InvokeEndpointRequest;
 class InvokeEndpointResponse;
+class InvokeEndpointAsyncRequest;
+class InvokeEndpointAsyncResponse;
 
 class QTAWSSAGEMAKERRUNTIME_EXPORT SageMakerRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -50,6 +52,7 @@ public:
 
 public slots:
     InvokeEndpointResponse * invokeEndpoint(const InvokeEndpointRequest &request);
+    InvokeEndpointAsyncResponse * invokeEndpointAsync(const InvokeEndpointAsyncRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SageMakerRuntimeClient)

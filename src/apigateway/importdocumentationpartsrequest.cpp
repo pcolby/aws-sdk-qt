@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::ImportDocumentationPartsRequest
- * \brief The ImportDocumentationPartsRequest class provides an interface for APIGateway ImportDocumentationParts requests.
+ * \class QtAws::ApiGateway::ImportDocumentationPartsRequest
+ * \brief The ImportDocumentationPartsRequest class provides an interface for ApiGateway ImportDocumentationParts requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::importDocumentationParts
+ * \sa ApiGatewayClient::importDocumentationParts
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDocumentationPartsRequest &other)
-    : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new ImportDocumentationPartsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDoc
  * Constructs a ImportDocumentationPartsRequest object.
  */
 ImportDocumentationPartsRequest::ImportDocumentationPartsRequest()
-    : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(APIGatewayRequest::ImportDocumentationPartsAction, this))
+    : ApiGatewayRequest(new ImportDocumentationPartsRequestPrivate(ApiGatewayRequest::ImportDocumentationPartsAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::APIGateway::ImportDocumentationPartsRequestPrivate
+ * \class QtAws::ApiGateway::ImportDocumentationPartsRequestPrivate
  * \brief The ImportDocumentationPartsRequestPrivate class provides private implementation for ImportDocumentationPartsRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a ImportDocumentationPartsRequestPrivate object for APIGateway \a action,
+ * Constructs a ImportDocumentationPartsRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
-    const APIGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const ImportDocumentationPartsRequestPrivate &other, ImportDocumentationPartsRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

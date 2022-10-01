@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::DeleteVirtualClusterResponse
- * \brief The DeleteVirtualClusterResponse class provides an interace for EMRContainers DeleteVirtualCluster responses.
+ * \class QtAws::Emrcontainers::DeleteVirtualClusterResponse
+ * \brief The DeleteVirtualClusterResponse class provides an interace for Emrcontainers DeleteVirtualCluster responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::deleteVirtualCluster
+ * \sa EmrcontainersClient::deleteVirtualCluster
  */
 
 /*!
@@ -72,7 +72,7 @@ DeleteVirtualClusterResponse::DeleteVirtualClusterResponse(
         const DeleteVirtualClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new DeleteVirtualClusterResponsePrivate(this), parent)
+    : EmrcontainersResponse(new DeleteVirtualClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteVirtualClusterRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const DeleteVirtualClusterRequest * DeleteVirtualClusterResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful EMRContainers DeleteVirtualCluster \a response.
+ * Parses a successful Emrcontainers DeleteVirtualCluster \a response.
  */
 void DeleteVirtualClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void DeleteVirtualClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::DeleteVirtualClusterResponsePrivate
+ * \class QtAws::Emrcontainers::DeleteVirtualClusterResponsePrivate
  * \brief The DeleteVirtualClusterResponsePrivate class provides private implementation for DeleteVirtualClusterResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a DeleteVirtualClusterResponsePrivate object with public implementation \a q.
  */
 DeleteVirtualClusterResponsePrivate::DeleteVirtualClusterResponsePrivate(
-    DeleteVirtualClusterResponse * const q) : EMRContainersResponsePrivate(q)
+    DeleteVirtualClusterResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers DeleteVirtualCluster response element from \a xml.
+ * Parses a Emrcontainers DeleteVirtualCluster response element from \a xml.
  */
 void DeleteVirtualClusterResponsePrivate::parseDeleteVirtualClusterResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void DeleteVirtualClusterResponsePrivate::parseDeleteVirtualClusterResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

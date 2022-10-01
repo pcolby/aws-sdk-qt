@@ -23,24 +23,24 @@
 #include "finspacedatarequest_p.h"
 
 namespace QtAws {
-namespace FinSpaceData {
+namespace FinspaceData {
 
 /*!
- * \class QtAws::FinSpaceData::GetProgrammaticAccessCredentialsRequest
- * \brief The GetProgrammaticAccessCredentialsRequest class provides an interface for FinSpaceData GetProgrammaticAccessCredentials requests.
+ * \class QtAws::FinspaceData::GetProgrammaticAccessCredentialsRequest
+ * \brief The GetProgrammaticAccessCredentialsRequest class provides an interface for FinspaceData GetProgrammaticAccessCredentials requests.
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  *
- *  The FinSpace APIs let you take actions inside the FinSpace environment.
+ *  The FinSpace APIs let you take actions inside the
  *
- * \sa FinSpaceDataClient::getProgrammaticAccessCredentials
+ * \sa FinspaceDataClient::getProgrammaticAccessCredentials
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetProgrammaticAccessCredentialsRequest::GetProgrammaticAccessCredentialsRequest(const GetProgrammaticAccessCredentialsRequest &other)
-    : FinSpaceDataRequest(new GetProgrammaticAccessCredentialsRequestPrivate(*other.d_func(), this))
+    : FinspaceDataRequest(new GetProgrammaticAccessCredentialsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ GetProgrammaticAccessCredentialsRequest::GetProgrammaticAccessCredentialsRequest
  * Constructs a GetProgrammaticAccessCredentialsRequest object.
  */
 GetProgrammaticAccessCredentialsRequest::GetProgrammaticAccessCredentialsRequest()
-    : FinSpaceDataRequest(new GetProgrammaticAccessCredentialsRequestPrivate(FinSpaceDataRequest::GetProgrammaticAccessCredentialsAction, this))
+    : FinspaceDataRequest(new GetProgrammaticAccessCredentialsRequestPrivate(FinspaceDataRequest::GetProgrammaticAccessCredentialsAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * GetProgrammaticAccessCredentialsRequest::resp
 }
 
 /*!
- * \class QtAws::FinSpaceData::GetProgrammaticAccessCredentialsRequestPrivate
+ * \class QtAws::FinspaceData::GetProgrammaticAccessCredentialsRequestPrivate
  * \brief The GetProgrammaticAccessCredentialsRequestPrivate class provides private implementation for GetProgrammaticAccessCredentialsRequest.
  * \internal
  *
- * \inmodule QtAwsFinSpaceData
+ * \inmodule QtAwsFinspaceData
  */
 
 /*!
- * Constructs a GetProgrammaticAccessCredentialsRequestPrivate object for FinSpaceData \a action,
+ * Constructs a GetProgrammaticAccessCredentialsRequestPrivate object for FinspaceData \a action,
  * with public implementation \a q.
  */
 GetProgrammaticAccessCredentialsRequestPrivate::GetProgrammaticAccessCredentialsRequestPrivate(
-    const FinSpaceDataRequest::Action action, GetProgrammaticAccessCredentialsRequest * const q)
-    : FinSpaceDataRequestPrivate(action, q)
+    const FinspaceDataRequest::Action action, GetProgrammaticAccessCredentialsRequest * const q)
+    : FinspaceDataRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ GetProgrammaticAccessCredentialsRequestPrivate::GetProgrammaticAccessCredentials
  */
 GetProgrammaticAccessCredentialsRequestPrivate::GetProgrammaticAccessCredentialsRequestPrivate(
     const GetProgrammaticAccessCredentialsRequestPrivate &other, GetProgrammaticAccessCredentialsRequest * const q)
-    : FinSpaceDataRequestPrivate(other, q)
+    : FinspaceDataRequestPrivate(other, q)
 {
 
 }
 
-} // namespace FinSpaceData
+} // namespace FinspaceData
 } // namespace QtAws

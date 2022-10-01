@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::GetAccountConfigurationResponse
- * \brief The GetAccountConfigurationResponse class provides an interace for ACM GetAccountConfiguration responses.
+ * \class QtAws::Acm::GetAccountConfigurationResponse
+ * \brief The GetAccountConfigurationResponse class provides an interace for Acm GetAccountConfiguration responses.
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  *
  * \sa AcmClient::getAccountConfiguration
  */
@@ -66,7 +66,7 @@ const GetAccountConfigurationRequest * GetAccountConfigurationResponse::request(
 
 /*!
  * \reimp
- * Parses a successful ACM GetAccountConfiguration \a response.
+ * Parses a successful Acm GetAccountConfiguration \a response.
  */
 void GetAccountConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -76,11 +76,11 @@ void GetAccountConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::GetAccountConfigurationResponsePrivate
+ * \class QtAws::Acm::GetAccountConfigurationResponsePrivate
  * \brief The GetAccountConfigurationResponsePrivate class provides private implementation for GetAccountConfigurationResponse.
  * \internal
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -93,7 +93,7 @@ GetAccountConfigurationResponsePrivate::GetAccountConfigurationResponsePrivate(
 }
 
 /*!
- * Parses a ACM GetAccountConfiguration response element from \a xml.
+ * Parses a Acm GetAccountConfiguration response element from \a xml.
  */
 void GetAccountConfigurationResponsePrivate::parseGetAccountConfigurationResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetAccountConfigurationResponsePrivate::parseGetAccountConfigurationRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

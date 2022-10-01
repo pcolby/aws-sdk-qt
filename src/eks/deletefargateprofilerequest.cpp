@@ -23,17 +23,17 @@
 #include "eksrequest_p.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DeleteFargateProfileRequest
- * \brief The DeleteFargateProfileRequest class provides an interface for EKS DeleteFargateProfile requests.
+ * \class QtAws::Eks::DeleteFargateProfileRequest
+ * \brief The DeleteFargateProfileRequest class provides an interface for Eks DeleteFargateProfile requests.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -83,11 +83,11 @@ QtAws::Core::AwsAbstractResponse * DeleteFargateProfileRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::EKS::DeleteFargateProfileRequestPrivate
+ * \class QtAws::Eks::DeleteFargateProfileRequestPrivate
  * \brief The DeleteFargateProfileRequestPrivate class provides private implementation for DeleteFargateProfileRequest.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -114,5 +114,5 @@ DeleteFargateProfileRequestPrivate::DeleteFargateProfileRequestPrivate(
 
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

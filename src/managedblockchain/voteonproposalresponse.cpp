@@ -33,7 +33,7 @@ namespace ManagedBlockchain {
  *
  * \inmodule QtAwsManagedBlockchain
  *
- *  <p/>
+ *  </p
  * 
  *  Amazon Managed Blockchain is a fully managed service for creating and managing blockchain networks using open-source
  *  frameworks. Blockchain allows you to build applications where multiple parties can securely and transparently run

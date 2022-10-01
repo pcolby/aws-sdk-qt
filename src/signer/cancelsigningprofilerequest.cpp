@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::CancelSigningProfileRequest
- * \brief The CancelSigningProfileRequest class provides an interface for signer CancelSigningProfile requests.
+ * \class QtAws::Signer::CancelSigningProfileRequest
+ * \brief The CancelSigningProfileRequest class provides an interface for Signer CancelSigningProfile requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::cancelSigningProfile
+ * \sa SignerClient::cancelSigningProfile
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CancelSigningProfileRequest::CancelSigningProfileRequest(const CancelSigningProfileRequest &other)
-    : signerRequest(new CancelSigningProfileRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new CancelSigningProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ CancelSigningProfileRequest::CancelSigningProfileRequest(const CancelSigningProf
  * Constructs a CancelSigningProfileRequest object.
  */
 CancelSigningProfileRequest::CancelSigningProfileRequest()
-    : signerRequest(new CancelSigningProfileRequestPrivate(signerRequest::CancelSigningProfileAction, this))
+    : SignerRequest(new CancelSigningProfileRequestPrivate(SignerRequest::CancelSigningProfileAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * CancelSigningProfileRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::signer::CancelSigningProfileRequestPrivate
+ * \class QtAws::Signer::CancelSigningProfileRequestPrivate
  * \brief The CancelSigningProfileRequestPrivate class provides private implementation for CancelSigningProfileRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a CancelSigningProfileRequestPrivate object for signer \a action,
+ * Constructs a CancelSigningProfileRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 CancelSigningProfileRequestPrivate::CancelSigningProfileRequestPrivate(
-    const signerRequest::Action action, CancelSigningProfileRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, CancelSigningProfileRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ CancelSigningProfileRequestPrivate::CancelSigningProfileRequestPrivate(
  */
 CancelSigningProfileRequestPrivate::CancelSigningProfileRequestPrivate(
     const CancelSigningProfileRequestPrivate &other, CancelSigningProfileRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

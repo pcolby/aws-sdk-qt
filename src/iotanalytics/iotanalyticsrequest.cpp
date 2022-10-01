@@ -277,7 +277,7 @@ QNetworkRequest IoTAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTAnalyticsRequestPrivate::IoTAnalyticsRequestPrivate(const IoTAnalyticsRequest::Action action, IoTAnalyticsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-11-27"))
 {
 
 }

@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DisassociateNodeRequest
- * \brief The DisassociateNodeRequest class provides an interface for OpsWorksCM DisassociateNode requests.
+ * \class QtAws::OpsWorksCm::DisassociateNodeRequest
+ * \brief The DisassociateNodeRequest class provides an interface for OpsWorksCm DisassociateNode requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::disassociateNode
+ * \sa OpsWorksCmClient::disassociateNode
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DisassociateNodeRequest::DisassociateNodeRequest(const DisassociateNodeRequest &other)
-    : OpsWorksCMRequest(new DisassociateNodeRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DisassociateNodeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DisassociateNodeRequest::DisassociateNodeRequest(const DisassociateNodeRequest &
  * Constructs a DisassociateNodeRequest object.
  */
 DisassociateNodeRequest::DisassociateNodeRequest()
-    : OpsWorksCMRequest(new DisassociateNodeRequestPrivate(OpsWorksCMRequest::DisassociateNodeAction, this))
+    : OpsWorksCmRequest(new DisassociateNodeRequestPrivate(OpsWorksCmRequest::DisassociateNodeAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DisassociateNodeRequestPrivate
+ * \class QtAws::OpsWorksCm::DisassociateNodeRequestPrivate
  * \brief The DisassociateNodeRequestPrivate class provides private implementation for DisassociateNodeRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DisassociateNodeRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DisassociateNodeRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
-    const OpsWorksCMRequest::Action action, DisassociateNodeRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DisassociateNodeRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const DisassociateNodeRequestPrivate &other, DisassociateNodeRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

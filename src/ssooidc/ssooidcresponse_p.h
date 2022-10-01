@@ -23,26 +23,26 @@
 #include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
-class SsooidcResponse;
+class SsoOidcResponse;
 
-class SsooidcResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SsoOidcResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
-    explicit SsooidcResponsePrivate(SsooidcResponse * const q);
+    explicit SsoOidcResponsePrivate(SsoOidcResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SsooidcResponse)
-    Q_DISABLE_COPY(SsooidcResponsePrivate)
+    Q_DECLARE_PUBLIC(SsoOidcResponse)
+    Q_DISABLE_COPY(SsoOidcResponsePrivate)
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

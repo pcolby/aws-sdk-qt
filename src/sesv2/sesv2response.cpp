@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 /*!
- * \class QtAws::SESV2::Sesv2Response
- * \brief The Sesv2Response class provides an interface for SESV2 responses.
+ * \class QtAws::SESv2::SESv2Response
+ * \brief The SESv2Response class provides an interface for SESv2 responses.
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  */
 
 /*!
- * Constructs a Sesv2Response object with parent \a parent.
+ * Constructs a SESv2Response object with parent \a parent.
  */
-Sesv2Response::Sesv2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new Sesv2ResponsePrivate(this), parent)
+SESv2Response::SESv2Response(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SESv2ResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a Sesv2Response object with private implementation \a d,
+ * Constructs a SESv2Response object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from Sesv2ResponsePrivate.
+ * implementation that inherits from SESv2ResponsePrivate.
  */
-Sesv2Response::Sesv2Response(Sesv2ResponsePrivate * const d, QObject * const parent)
+SESv2Response::SESv2Response(SESv2ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ Sesv2Response::Sesv2Response(Sesv2ResponsePrivate * const d, QObject * const par
 /*!
  * \reimp
  */
-void Sesv2Response::parseFailure(QIODevice &response)
+void SESv2Response::parseFailure(QIODevice &response)
 {
-    //Q_D(Sesv2Response);
+    //Q_D(SESv2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void Sesv2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SESV2::Sesv2ResponsePrivate
- * \brief The Sesv2ResponsePrivate class provides private implementation for Sesv2Response.
+ * \class QtAws::SESv2::SESv2ResponsePrivate
+ * \brief The SESv2ResponsePrivate class provides private implementation for SESv2Response.
  * \internal
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  */
 
 /*!
- * Constructs a Sesv2ResponsePrivate object with public implementation \a q.
+ * Constructs a SESv2ResponsePrivate object with public implementation \a q.
  */
-Sesv2ResponsePrivate::Sesv2ResponsePrivate(
-    Sesv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SESv2ResponsePrivate::SESv2ResponsePrivate(
+    SESv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws

@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
-class DocDBResponsePrivate;
+class DocDbResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DocDBResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDOCDB_EXPORT DocDbResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    DocDBResponse(QObject * const parent = 0);
+    DocDbResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    DocDBResponse(DocDBResponsePrivate * const d, QObject * const parent);
+    DocDbResponse(DocDbResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(DocDBResponse)
-    Q_DISABLE_COPY(DocDBResponse)
+    Q_DECLARE_PRIVATE(DocDbResponse)
+    Q_DISABLE_COPY(DocDbResponse)
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

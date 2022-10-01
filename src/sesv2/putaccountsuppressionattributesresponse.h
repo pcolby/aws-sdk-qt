@@ -24,11 +24,11 @@
 #include "putaccountsuppressionattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountSuppressionAttributesResponsePrivate;
 
-class QTAWSSESV2_EXPORT PutAccountSuppressionAttributesResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutAccountSuppressionAttributesResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

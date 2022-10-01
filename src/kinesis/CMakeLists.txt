@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSKINESIS_LIBRARY)
 
 add_library(QtAwsKinesis
+  qtawskinesisglobal.h
+  kinesisclient.h
+  kinesisclient_p.h
+  kinesisrequest.h
+  kinesisrequest_p.h
+  kinesisresponse.h
+  kinesisresponse_p.h
   addtagstostreamrequest.h
   addtagstostreamrequest_p.h
   addtagstostreamresponse.h
@@ -25,14 +32,14 @@ add_library(QtAwsKinesis
   describelimitsrequest_p.h
   describelimitsresponse.h
   describelimitsresponse_p.h
-  describestreamconsumerrequest.h
-  describestreamconsumerrequest_p.h
-  describestreamconsumerresponse.h
-  describestreamconsumerresponse_p.h
   describestreamrequest.h
   describestreamrequest_p.h
   describestreamresponse.h
   describestreamresponse_p.h
+  describestreamconsumerrequest.h
+  describestreamconsumerrequest_p.h
+  describestreamconsumerresponse.h
+  describestreamconsumerresponse_p.h
   describestreamsummaryrequest.h
   describestreamsummaryrequest_p.h
   describestreamsummaryresponse.h
@@ -57,12 +64,6 @@ add_library(QtAwsKinesis
   increasestreamretentionperiodrequest_p.h
   increasestreamretentionperiodresponse.h
   increasestreamretentionperiodresponse_p.h
-  kinesisclient.h
-  kinesisclient_p.h
-  kinesisrequest.h
-  kinesisrequest_p.h
-  kinesisresponse.h
-  kinesisresponse_p.h
   listshardsrequest.h
   listshardsrequest_p.h
   listshardsresponse.h
@@ -91,7 +92,6 @@ add_library(QtAwsKinesis
   putrecordsrequest_p.h
   putrecordsresponse.h
   putrecordsresponse_p.h
-  qtawskinesisglobal.h
   registerstreamconsumerrequest.h
   registerstreamconsumerrequest_p.h
   registerstreamconsumerresponse.h
@@ -120,6 +120,13 @@ add_library(QtAwsKinesis
   updateshardcountrequest_p.h
   updateshardcountresponse.h
   updateshardcountresponse_p.h
+  updatestreammoderequest.h
+  updatestreammoderequest_p.h
+  updatestreammoderesponse.h
+  updatestreammoderesponse_p.h
+  kinesisclient.cpp
+  kinesisrequest.cpp
+  kinesisresponse.cpp
   addtagstostreamrequest.cpp
   addtagstostreamresponse.cpp
   createstreamrequest.cpp
@@ -132,10 +139,10 @@ add_library(QtAwsKinesis
   deregisterstreamconsumerresponse.cpp
   describelimitsrequest.cpp
   describelimitsresponse.cpp
-  describestreamconsumerrequest.cpp
-  describestreamconsumerresponse.cpp
   describestreamrequest.cpp
   describestreamresponse.cpp
+  describestreamconsumerrequest.cpp
+  describestreamconsumerresponse.cpp
   describestreamsummaryrequest.cpp
   describestreamsummaryresponse.cpp
   disableenhancedmonitoringrequest.cpp
@@ -148,9 +155,6 @@ add_library(QtAwsKinesis
   getsharditeratorresponse.cpp
   increasestreamretentionperiodrequest.cpp
   increasestreamretentionperiodresponse.cpp
-  kinesisclient.cpp
-  kinesisrequest.cpp
-  kinesisresponse.cpp
   listshardsrequest.cpp
   listshardsresponse.cpp
   liststreamconsumersrequest.cpp
@@ -178,7 +182,9 @@ add_library(QtAwsKinesis
   subscribetoshardrequest.cpp
   subscribetoshardresponse.cpp
   updateshardcountrequest.cpp
-  updateshardcountresponse.cpp)
+  updateshardcountresponse.cpp
+  updatestreammoderequest.cpp
+  updatestreammoderesponse.cpp)
 
 target_link_libraries(QtAwsKinesis
   PRIVATE QtAwsCore

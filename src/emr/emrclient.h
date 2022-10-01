@@ -27,7 +27,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 class EmrClientPrivate;
 class AddInstanceFleetRequest;
@@ -58,12 +58,16 @@ class DescribeJobFlowsRequest;
 class DescribeJobFlowsResponse;
 class DescribeNotebookExecutionRequest;
 class DescribeNotebookExecutionResponse;
+class DescribeReleaseLabelRequest;
+class DescribeReleaseLabelResponse;
 class DescribeSecurityConfigurationRequest;
 class DescribeSecurityConfigurationResponse;
 class DescribeStepRequest;
 class DescribeStepResponse;
 class DescribeStudioRequest;
 class DescribeStudioResponse;
+class GetAutoTerminationPolicyRequest;
+class GetAutoTerminationPolicyResponse;
 class GetBlockPublicAccessConfigurationRequest;
 class GetBlockPublicAccessConfigurationResponse;
 class GetManagedScalingPolicyRequest;
@@ -82,6 +86,8 @@ class ListInstancesRequest;
 class ListInstancesResponse;
 class ListNotebookExecutionsRequest;
 class ListNotebookExecutionsResponse;
+class ListReleaseLabelsRequest;
+class ListReleaseLabelsResponse;
 class ListSecurityConfigurationsRequest;
 class ListSecurityConfigurationsResponse;
 class ListStepsRequest;
@@ -98,12 +104,16 @@ class ModifyInstanceGroupsRequest;
 class ModifyInstanceGroupsResponse;
 class PutAutoScalingPolicyRequest;
 class PutAutoScalingPolicyResponse;
+class PutAutoTerminationPolicyRequest;
+class PutAutoTerminationPolicyResponse;
 class PutBlockPublicAccessConfigurationRequest;
 class PutBlockPublicAccessConfigurationResponse;
 class PutManagedScalingPolicyRequest;
 class PutManagedScalingPolicyResponse;
 class RemoveAutoScalingPolicyRequest;
 class RemoveAutoScalingPolicyResponse;
+class RemoveAutoTerminationPolicyRequest;
+class RemoveAutoTerminationPolicyResponse;
 class RemoveManagedScalingPolicyRequest;
 class RemoveManagedScalingPolicyResponse;
 class RemoveTagsRequest;
@@ -155,9 +165,11 @@ public slots:
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
     DescribeJobFlowsResponse * describeJobFlows(const DescribeJobFlowsRequest &request);
     DescribeNotebookExecutionResponse * describeNotebookExecution(const DescribeNotebookExecutionRequest &request);
+    DescribeReleaseLabelResponse * describeReleaseLabel(const DescribeReleaseLabelRequest &request);
     DescribeSecurityConfigurationResponse * describeSecurityConfiguration(const DescribeSecurityConfigurationRequest &request);
     DescribeStepResponse * describeStep(const DescribeStepRequest &request);
     DescribeStudioResponse * describeStudio(const DescribeStudioRequest &request);
+    GetAutoTerminationPolicyResponse * getAutoTerminationPolicy(const GetAutoTerminationPolicyRequest &request);
     GetBlockPublicAccessConfigurationResponse * getBlockPublicAccessConfiguration(const GetBlockPublicAccessConfigurationRequest &request);
     GetManagedScalingPolicyResponse * getManagedScalingPolicy(const GetManagedScalingPolicyRequest &request);
     GetStudioSessionMappingResponse * getStudioSessionMapping(const GetStudioSessionMappingRequest &request);
@@ -167,6 +179,7 @@ public slots:
     ListInstanceGroupsResponse * listInstanceGroups(const ListInstanceGroupsRequest &request);
     ListInstancesResponse * listInstances(const ListInstancesRequest &request);
     ListNotebookExecutionsResponse * listNotebookExecutions(const ListNotebookExecutionsRequest &request);
+    ListReleaseLabelsResponse * listReleaseLabels(const ListReleaseLabelsRequest &request);
     ListSecurityConfigurationsResponse * listSecurityConfigurations(const ListSecurityConfigurationsRequest &request);
     ListStepsResponse * listSteps(const ListStepsRequest &request);
     ListStudioSessionMappingsResponse * listStudioSessionMappings(const ListStudioSessionMappingsRequest &request);
@@ -175,9 +188,11 @@ public slots:
     ModifyInstanceFleetResponse * modifyInstanceFleet(const ModifyInstanceFleetRequest &request);
     ModifyInstanceGroupsResponse * modifyInstanceGroups(const ModifyInstanceGroupsRequest &request);
     PutAutoScalingPolicyResponse * putAutoScalingPolicy(const PutAutoScalingPolicyRequest &request);
+    PutAutoTerminationPolicyResponse * putAutoTerminationPolicy(const PutAutoTerminationPolicyRequest &request);
     PutBlockPublicAccessConfigurationResponse * putBlockPublicAccessConfiguration(const PutBlockPublicAccessConfigurationRequest &request);
     PutManagedScalingPolicyResponse * putManagedScalingPolicy(const PutManagedScalingPolicyRequest &request);
     RemoveAutoScalingPolicyResponse * removeAutoScalingPolicy(const RemoveAutoScalingPolicyRequest &request);
+    RemoveAutoTerminationPolicyResponse * removeAutoTerminationPolicy(const RemoveAutoTerminationPolicyRequest &request);
     RemoveManagedScalingPolicyResponse * removeManagedScalingPolicy(const RemoveManagedScalingPolicyRequest &request);
     RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
     RunJobFlowResponse * runJobFlow(const RunJobFlowRequest &request);
@@ -195,7 +210,7 @@ private:
 
 };
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws
 
 #endif

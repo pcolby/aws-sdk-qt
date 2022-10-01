@@ -24,14 +24,14 @@
 #include "createinfrastructureconfigurationrequest.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 class CreateInfrastructureConfigurationRequest;
 
-class CreateInfrastructureConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class CreateInfrastructureConfigurationRequestPrivate : public ImageBuilderRequestPrivate {
 
 public:
-    CreateInfrastructureConfigurationRequestPrivate(const imagebuilderRequest::Action action,
+    CreateInfrastructureConfigurationRequestPrivate(const ImageBuilderRequest::Action action,
                                    CreateInfrastructureConfigurationRequest * const q);
     CreateInfrastructureConfigurationRequestPrivate(const CreateInfrastructureConfigurationRequestPrivate &other,
                                    CreateInfrastructureConfigurationRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws
 
 #endif

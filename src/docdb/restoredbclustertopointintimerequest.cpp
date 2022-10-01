@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterToPointInTimeRequest
- * \brief The RestoreDBClusterToPointInTimeRequest class provides an interface for DocDB RestoreDBClusterToPointInTime requests.
+ * \class QtAws::DocDb::RestoreDBClusterToPointInTimeRequest
+ * \brief The RestoreDBClusterToPointInTimeRequest class provides an interface for DocDb RestoreDBClusterToPointInTime requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::restoreDBClusterToPointInTime
+ * \sa DocDbClient::restoreDBClusterToPointInTime
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other)
-    : DocDBRequest(new RestoreDBClusterToPointInTimeRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new RestoreDBClusterToPointInTimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const
  * Constructs a RestoreDBClusterToPointInTimeRequest object.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest()
-    : DocDBRequest(new RestoreDBClusterToPointInTimeRequestPrivate(DocDBRequest::RestoreDBClusterToPointInTimeAction, this))
+    : DocDbRequest(new RestoreDBClusterToPointInTimeRequestPrivate(DocDbRequest::RestoreDBClusterToPointInTimeAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
 }
 
 /*!
- * \class QtAws::DocDB::RestoreDBClusterToPointInTimeRequestPrivate
+ * \class QtAws::DocDb::RestoreDBClusterToPointInTimeRequestPrivate
  * \brief The RestoreDBClusterToPointInTimeRequestPrivate class provides private implementation for RestoreDBClusterToPointInTimeRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for DocDB \a action,
+ * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
-    const DocDBRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RestoreDBClusterToPointInTimeRequestPrivate &other, RestoreDBClusterToPointInTimeRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -24,7 +24,7 @@
 #include "deleteresourcesharerequest.h"
 
 namespace QtAws {
-namespace RAM {
+namespace Ram {
 
 class DeleteResourceShareResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace RAM
+} // namespace Ram
 } // namespace QtAws
 
 #endif

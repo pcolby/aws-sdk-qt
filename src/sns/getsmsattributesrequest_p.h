@@ -24,7 +24,7 @@
 #include "getsmsattributesrequest.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 class GetSMSAttributesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteRuleGroupResponse
- * \brief The DeleteRuleGroupResponse class provides an interace for WAFRegional DeleteRuleGroup responses.
+ * \class QtAws::WafRegional::DeleteRuleGroupResponse
+ * \brief The DeleteRuleGroupResponse class provides an interace for WafRegional DeleteRuleGroup responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteRuleGroup
+ * \sa WafRegionalClient::deleteRuleGroup
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteRuleGroupResponse::DeleteRuleGroupResponse(
         const DeleteRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteRuleGroupResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteRuleGroupRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteRuleGroupRequest * DeleteRuleGroupResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteRuleGroup \a response.
+ * Parses a successful WafRegional DeleteRuleGroup \a response.
  */
 void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteRuleGroupResponsePrivate
+ * \class QtAws::WafRegional::DeleteRuleGroupResponsePrivate
  * \brief The DeleteRuleGroupResponsePrivate class provides private implementation for DeleteRuleGroupResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteRuleGroupResponsePrivate object with public implementation \a q.
  */
 DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponsePrivate(
-    DeleteRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteRuleGroupResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteRuleGroup response element from \a xml.
+ * Parses a WafRegional DeleteRuleGroup response element from \a xml.
  */
 void DeleteRuleGroupResponsePrivate::parseDeleteRuleGroupResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteRuleGroupResponsePrivate::parseDeleteRuleGroupResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

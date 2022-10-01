@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::StopDBClusterResponse
- * \brief The StopDBClusterResponse class provides an interace for DocDB StopDBCluster responses.
+ * \class QtAws::DocDb::StopDBClusterResponse
+ * \brief The StopDBClusterResponse class provides an interace for DocDb StopDBCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::stopDBCluster
+ * \sa DocDbClient::stopDBCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ StopDBClusterResponse::StopDBClusterResponse(
         const StopDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new StopDBClusterResponsePrivate(this), parent)
+    : DocDbResponse(new StopDBClusterResponsePrivate(this), parent)
 {
     setRequest(new StopDBClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const StopDBClusterRequest * StopDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB StopDBCluster \a response.
+ * Parses a successful DocDb StopDBCluster \a response.
  */
 void StopDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void StopDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::StopDBClusterResponsePrivate
+ * \class QtAws::DocDb::StopDBClusterResponsePrivate
  * \brief The StopDBClusterResponsePrivate class provides private implementation for StopDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a StopDBClusterResponsePrivate object with public implementation \a q.
  */
 StopDBClusterResponsePrivate::StopDBClusterResponsePrivate(
-    StopDBClusterResponse * const q) : DocDBResponsePrivate(q)
+    StopDBClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB StopDBCluster response element from \a xml.
+ * Parses a DocDb StopDBCluster response element from \a xml.
  */
 void StopDBClusterResponsePrivate::parseStopDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void StopDBClusterResponsePrivate::parseStopDBClusterResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

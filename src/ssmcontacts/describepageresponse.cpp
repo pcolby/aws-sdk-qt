@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::DescribePageResponse
- * \brief The DescribePageResponse class provides an interace for SSMContacts DescribePage responses.
+ * \class QtAws::SsmContacts::DescribePageResponse
+ * \brief The DescribePageResponse class provides an interace for SsmContacts DescribePage responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::describePage
+ * \sa SsmContactsClient::describePage
  */
 
 /*!
@@ -44,7 +54,7 @@ DescribePageResponse::DescribePageResponse(
         const DescribePageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new DescribePageResponsePrivate(this), parent)
+    : SsmContactsResponse(new DescribePageResponsePrivate(this), parent)
 {
     setRequest(new DescribePageRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const DescribePageRequest * DescribePageResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts DescribePage \a response.
+ * Parses a successful SsmContacts DescribePage \a response.
  */
 void DescribePageResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void DescribePageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::DescribePageResponsePrivate
+ * \class QtAws::SsmContacts::DescribePageResponsePrivate
  * \brief The DescribePageResponsePrivate class provides private implementation for DescribePageResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a DescribePageResponsePrivate object with public implementation \a q.
  */
 DescribePageResponsePrivate::DescribePageResponsePrivate(
-    DescribePageResponse * const q) : SSMContactsResponsePrivate(q)
+    DescribePageResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts DescribePage response element from \a xml.
+ * Parses a SsmContacts DescribePage response element from \a xml.
  */
 void DescribePageResponsePrivate::parseDescribePageResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void DescribePageResponsePrivate::parseDescribePageResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

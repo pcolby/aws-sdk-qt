@@ -26,7 +26,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace EC2 {
+namespace Ec2 {
 
 class Ec2ResponsePrivate;
 
@@ -50,7 +50,7 @@ private:
 
 };
 
-} // namespace EC2
+} // namespace Ec2
 } // namespace QtAws
 
 #endif

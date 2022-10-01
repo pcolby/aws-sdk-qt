@@ -24,14 +24,14 @@
 #include "submitfeedbackrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class SubmitFeedbackRequest;
 
-class SubmitFeedbackRequestPrivate : public kendraRequestPrivate {
+class SubmitFeedbackRequestPrivate : public KendraRequestPrivate {
 
 public:
-    SubmitFeedbackRequestPrivate(const kendraRequest::Action action,
+    SubmitFeedbackRequestPrivate(const KendraRequest::Action action,
                                    SubmitFeedbackRequest * const q);
     SubmitFeedbackRequestPrivate(const SubmitFeedbackRequestPrivate &other,
                                    SubmitFeedbackRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

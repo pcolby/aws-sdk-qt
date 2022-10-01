@@ -24,11 +24,11 @@
 #include "startincidentrequest.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 class StartIncidentResponsePrivate;
 
-class QTAWSSSMINCIDENTS_EXPORT StartIncidentResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT StartIncidentResponse : public SsmIncidentsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws
 
 #endif

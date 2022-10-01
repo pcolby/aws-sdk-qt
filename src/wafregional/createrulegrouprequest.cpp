@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateRuleGroupRequest
- * \brief The CreateRuleGroupRequest class provides an interface for WAFRegional CreateRuleGroup requests.
+ * \class QtAws::WafRegional::CreateRuleGroupRequest
+ * \brief The CreateRuleGroupRequest class provides an interface for WafRegional CreateRuleGroup requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createRuleGroup
+ * \sa WafRegionalClient::createRuleGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateRuleGroupRequest::CreateRuleGroupRequest(const CreateRuleGroupRequest &other)
-    : WAFRegionalRequest(new CreateRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateRuleGroupRequest::CreateRuleGroupRequest(const CreateRuleGroupRequest &oth
  * Constructs a CreateRuleGroupRequest object.
  */
 CreateRuleGroupRequest::CreateRuleGroupRequest()
-    : WAFRegionalRequest(new CreateRuleGroupRequestPrivate(WAFRegionalRequest::CreateRuleGroupAction, this))
+    : WafRegionalRequest(new CreateRuleGroupRequestPrivate(WafRegionalRequest::CreateRuleGroupAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateRuleGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateRuleGroupRequestPrivate
+ * \class QtAws::WafRegional::CreateRuleGroupRequestPrivate
  * \brief The CreateRuleGroupRequestPrivate class provides private implementation for CreateRuleGroupRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateRuleGroupRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateRuleGroupRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateRuleGroupRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
  */
 CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
     const CreateRuleGroupRequestPrivate &other, CreateRuleGroupRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

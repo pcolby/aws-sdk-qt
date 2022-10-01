@@ -37,20 +37,29 @@ namespace Detective {
  * requests.
  *
  * \value AcceptInvitationAction Detective AcceptInvitation action.
+ * \value BatchGetGraphMemberDatasourcesAction Detective BatchGetGraphMemberDatasources action.
+ * \value BatchGetMembershipDatasourcesAction Detective BatchGetMembershipDatasources action.
  * \value CreateGraphAction Detective CreateGraph action.
  * \value CreateMembersAction Detective CreateMembers action.
  * \value DeleteGraphAction Detective DeleteGraph action.
  * \value DeleteMembersAction Detective DeleteMembers action.
+ * \value DescribeOrganizationConfigurationAction Detective DescribeOrganizationConfiguration action.
+ * \value DisableOrganizationAdminAccountAction Detective DisableOrganizationAdminAccount action.
  * \value DisassociateMembershipAction Detective DisassociateMembership action.
+ * \value EnableOrganizationAdminAccountAction Detective EnableOrganizationAdminAccount action.
  * \value GetMembersAction Detective GetMembers action.
+ * \value ListDatasourcePackagesAction Detective ListDatasourcePackages action.
  * \value ListGraphsAction Detective ListGraphs action.
  * \value ListInvitationsAction Detective ListInvitations action.
  * \value ListMembersAction Detective ListMembers action.
+ * \value ListOrganizationAdminAccountsAction Detective ListOrganizationAdminAccounts action.
  * \value ListTagsForResourceAction Detective ListTagsForResource action.
  * \value RejectInvitationAction Detective RejectInvitation action.
  * \value StartMonitoringMemberAction Detective StartMonitoringMember action.
  * \value TagResourceAction Detective TagResource action.
  * \value UntagResourceAction Detective UntagResource action.
+ * \value UpdateDatasourcePackagesAction Detective UpdateDatasourcePackages action.
+ * \value UpdateOrganizationConfigurationAction Detective UpdateOrganizationConfiguration action.
  */
 
 /*!
@@ -258,7 +267,7 @@ QNetworkRequest DetectiveRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DetectiveRequestPrivate::DetectiveRequestPrivate(const DetectiveRequest::Action action, DetectiveRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-10-26"))
 {
 
 }
@@ -293,20 +302,29 @@ QString DetectiveRequestPrivate::toString(const DetectiveRequest::Action &action
         case DetectiveRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AcceptInvitation);
+        ActionToString(BatchGetGraphMemberDatasources);
+        ActionToString(BatchGetMembershipDatasources);
         ActionToString(CreateGraph);
         ActionToString(CreateMembers);
         ActionToString(DeleteGraph);
         ActionToString(DeleteMembers);
+        ActionToString(DescribeOrganizationConfiguration);
+        ActionToString(DisableOrganizationAdminAccount);
         ActionToString(DisassociateMembership);
+        ActionToString(EnableOrganizationAdminAccount);
         ActionToString(GetMembers);
+        ActionToString(ListDatasourcePackages);
         ActionToString(ListGraphs);
         ActionToString(ListInvitations);
         ActionToString(ListMembers);
+        ActionToString(ListOrganizationAdminAccounts);
         ActionToString(ListTagsForResource);
         ActionToString(RejectInvitation);
         ActionToString(StartMonitoringMember);
         ActionToString(TagResource);
         ActionToString(UntagResource);
+        ActionToString(UpdateDatasourcePackages);
+        ActionToString(UpdateOrganizationConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetSizeConstraintSetRequest
- * \brief The GetSizeConstraintSetRequest class provides an interface for WAFRegional GetSizeConstraintSet requests.
+ * \class QtAws::WafRegional::GetSizeConstraintSetRequest
+ * \brief The GetSizeConstraintSetRequest class provides an interface for WafRegional GetSizeConstraintSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getSizeConstraintSet
+ * \sa WafRegionalClient::getSizeConstraintSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other)
-    : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraint
  * Constructs a GetSizeConstraintSetRequest object.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest()
-    : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(WAFRegionalRequest::GetSizeConstraintSetAction, this))
+    : WafRegionalRequest(new GetSizeConstraintSetRequestPrivate(WafRegionalRequest::GetSizeConstraintSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::WAFRegional::GetSizeConstraintSetRequestPrivate
+ * \class QtAws::WafRegional::GetSizeConstraintSetRequestPrivate
  * \brief The GetSizeConstraintSetRequestPrivate class provides private implementation for GetSizeConstraintSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetSizeConstraintSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetSizeConstraintSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
-    const WAFRegionalRequest::Action action, GetSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetSizeConstraintSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const GetSizeConstraintSetRequestPrivate &other, GetSizeConstraintSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

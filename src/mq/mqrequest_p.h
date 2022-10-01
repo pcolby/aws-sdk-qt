@@ -24,16 +24,16 @@
 #include "mqrequest.h"
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 class MqRequest;
 
 class MqRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    MqRequest::Action action; ///< MQ action to be performed.
-    QString apiVersion;        ///< MQ API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< MQ request (query string) parameters. @todo?
+    MqRequest::Action action; ///< Mq action to be performed.
+    QString apiVersion;        ///< Mq API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Mq request (query string) parameters. @todo?
 
     MqRequestPrivate(const MqRequest::Action action, MqRequest * const q);
     MqRequestPrivate(const MqRequestPrivate &other, MqRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws
 
 #endif

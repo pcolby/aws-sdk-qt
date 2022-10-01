@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSLEXMODELBUILDINGSERVICE_LIBRARY)
 
 add_library(QtAwsLexModelBuildingService
+  qtawslexmodelbuildingserviceglobal.h
+  lexmodelbuildingserviceclient.h
+  lexmodelbuildingserviceclient_p.h
+  lexmodelbuildingservicerequest.h
+  lexmodelbuildingservicerequest_p.h
+  lexmodelbuildingserviceresponse.h
+  lexmodelbuildingserviceresponse_p.h
   createbotversionrequest.h
   createbotversionrequest_p.h
   createbotversionresponse.h
@@ -13,6 +20,10 @@ add_library(QtAwsLexModelBuildingService
   createslottypeversionrequest_p.h
   createslottypeversionresponse.h
   createslottypeversionresponse_p.h
+  deletebotrequest.h
+  deletebotrequest_p.h
+  deletebotresponse.h
+  deletebotresponse_p.h
   deletebotaliasrequest.h
   deletebotaliasrequest_p.h
   deletebotaliasresponse.h
@@ -21,10 +32,6 @@ add_library(QtAwsLexModelBuildingService
   deletebotchannelassociationrequest_p.h
   deletebotchannelassociationresponse.h
   deletebotchannelassociationresponse_p.h
-  deletebotrequest.h
-  deletebotrequest_p.h
-  deletebotresponse.h
-  deletebotresponse_p.h
   deletebotversionrequest.h
   deletebotversionrequest_p.h
   deletebotversionresponse.h
@@ -49,14 +56,18 @@ add_library(QtAwsLexModelBuildingService
   deleteutterancesrequest_p.h
   deleteutterancesresponse.h
   deleteutterancesresponse_p.h
-  getbotaliasesrequest.h
-  getbotaliasesrequest_p.h
-  getbotaliasesresponse.h
-  getbotaliasesresponse_p.h
+  getbotrequest.h
+  getbotrequest_p.h
+  getbotresponse.h
+  getbotresponse_p.h
   getbotaliasrequest.h
   getbotaliasrequest_p.h
   getbotaliasresponse.h
   getbotaliasresponse_p.h
+  getbotaliasesrequest.h
+  getbotaliasesrequest_p.h
+  getbotaliasesresponse.h
+  getbotaliasesresponse_p.h
   getbotchannelassociationrequest.h
   getbotchannelassociationrequest_p.h
   getbotchannelassociationresponse.h
@@ -65,18 +76,14 @@ add_library(QtAwsLexModelBuildingService
   getbotchannelassociationsrequest_p.h
   getbotchannelassociationsresponse.h
   getbotchannelassociationsresponse_p.h
-  getbotrequest.h
-  getbotrequest_p.h
-  getbotresponse.h
-  getbotresponse_p.h
-  getbotsrequest.h
-  getbotsrequest_p.h
-  getbotsresponse.h
-  getbotsresponse_p.h
   getbotversionsrequest.h
   getbotversionsrequest_p.h
   getbotversionsresponse.h
   getbotversionsresponse_p.h
+  getbotsrequest.h
+  getbotsrequest_p.h
+  getbotsresponse.h
+  getbotsresponse_p.h
   getbuiltinintentrequest.h
   getbuiltinintentrequest_p.h
   getbuiltinintentresponse.h
@@ -101,48 +108,50 @@ add_library(QtAwsLexModelBuildingService
   getintentrequest_p.h
   getintentresponse.h
   getintentresponse_p.h
-  getintentsrequest.h
-  getintentsrequest_p.h
-  getintentsresponse.h
-  getintentsresponse_p.h
   getintentversionsrequest.h
   getintentversionsrequest_p.h
   getintentversionsresponse.h
   getintentversionsresponse_p.h
+  getintentsrequest.h
+  getintentsrequest_p.h
+  getintentsresponse.h
+  getintentsresponse_p.h
+  getmigrationrequest.h
+  getmigrationrequest_p.h
+  getmigrationresponse.h
+  getmigrationresponse_p.h
+  getmigrationsrequest.h
+  getmigrationsrequest_p.h
+  getmigrationsresponse.h
+  getmigrationsresponse_p.h
   getslottyperequest.h
   getslottyperequest_p.h
   getslottyperesponse.h
   getslottyperesponse_p.h
-  getslottypesrequest.h
-  getslottypesrequest_p.h
-  getslottypesresponse.h
-  getslottypesresponse_p.h
   getslottypeversionsrequest.h
   getslottypeversionsrequest_p.h
   getslottypeversionsresponse.h
   getslottypeversionsresponse_p.h
+  getslottypesrequest.h
+  getslottypesrequest_p.h
+  getslottypesresponse.h
+  getslottypesresponse_p.h
   getutterancesviewrequest.h
   getutterancesviewrequest_p.h
   getutterancesviewresponse.h
   getutterancesviewresponse_p.h
-  lexmodelbuildingserviceclient.h
-  lexmodelbuildingserviceclient_p.h
-  lexmodelbuildingservicerequest.h
-  lexmodelbuildingservicerequest_p.h
-  lexmodelbuildingserviceresponse.h
-  lexmodelbuildingserviceresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  putbotaliasrequest.h
-  putbotaliasrequest_p.h
-  putbotaliasresponse.h
-  putbotaliasresponse_p.h
   putbotrequest.h
   putbotrequest_p.h
   putbotresponse.h
   putbotresponse_p.h
+  putbotaliasrequest.h
+  putbotaliasrequest_p.h
+  putbotaliasresponse.h
+  putbotaliasresponse_p.h
   putintentrequest.h
   putintentrequest_p.h
   putintentresponse.h
@@ -151,11 +160,14 @@ add_library(QtAwsLexModelBuildingService
   putslottyperequest_p.h
   putslottyperesponse.h
   putslottyperesponse_p.h
-  qtawslexmodelbuildingserviceglobal.h
   startimportrequest.h
   startimportrequest_p.h
   startimportresponse.h
   startimportresponse_p.h
+  startmigrationrequest.h
+  startmigrationrequest_p.h
+  startmigrationresponse.h
+  startmigrationresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -164,18 +176,21 @@ add_library(QtAwsLexModelBuildingService
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  lexmodelbuildingserviceclient.cpp
+  lexmodelbuildingservicerequest.cpp
+  lexmodelbuildingserviceresponse.cpp
   createbotversionrequest.cpp
   createbotversionresponse.cpp
   createintentversionrequest.cpp
   createintentversionresponse.cpp
   createslottypeversionrequest.cpp
   createslottypeversionresponse.cpp
+  deletebotrequest.cpp
+  deletebotresponse.cpp
   deletebotaliasrequest.cpp
   deletebotaliasresponse.cpp
   deletebotchannelassociationrequest.cpp
   deletebotchannelassociationresponse.cpp
-  deletebotrequest.cpp
-  deletebotresponse.cpp
   deletebotversionrequest.cpp
   deletebotversionresponse.cpp
   deleteintentrequest.cpp
@@ -188,20 +203,20 @@ add_library(QtAwsLexModelBuildingService
   deleteslottypeversionresponse.cpp
   deleteutterancesrequest.cpp
   deleteutterancesresponse.cpp
-  getbotaliasesrequest.cpp
-  getbotaliasesresponse.cpp
+  getbotrequest.cpp
+  getbotresponse.cpp
   getbotaliasrequest.cpp
   getbotaliasresponse.cpp
+  getbotaliasesrequest.cpp
+  getbotaliasesresponse.cpp
   getbotchannelassociationrequest.cpp
   getbotchannelassociationresponse.cpp
   getbotchannelassociationsrequest.cpp
   getbotchannelassociationsresponse.cpp
-  getbotrequest.cpp
-  getbotresponse.cpp
-  getbotsrequest.cpp
-  getbotsresponse.cpp
   getbotversionsrequest.cpp
   getbotversionsresponse.cpp
+  getbotsrequest.cpp
+  getbotsresponse.cpp
   getbuiltinintentrequest.cpp
   getbuiltinintentresponse.cpp
   getbuiltinintentsrequest.cpp
@@ -214,33 +229,36 @@ add_library(QtAwsLexModelBuildingService
   getimportresponse.cpp
   getintentrequest.cpp
   getintentresponse.cpp
-  getintentsrequest.cpp
-  getintentsresponse.cpp
   getintentversionsrequest.cpp
   getintentversionsresponse.cpp
+  getintentsrequest.cpp
+  getintentsresponse.cpp
+  getmigrationrequest.cpp
+  getmigrationresponse.cpp
+  getmigrationsrequest.cpp
+  getmigrationsresponse.cpp
   getslottyperequest.cpp
   getslottyperesponse.cpp
-  getslottypesrequest.cpp
-  getslottypesresponse.cpp
   getslottypeversionsrequest.cpp
   getslottypeversionsresponse.cpp
+  getslottypesrequest.cpp
+  getslottypesresponse.cpp
   getutterancesviewrequest.cpp
   getutterancesviewresponse.cpp
-  lexmodelbuildingserviceclient.cpp
-  lexmodelbuildingservicerequest.cpp
-  lexmodelbuildingserviceresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  putbotaliasrequest.cpp
-  putbotaliasresponse.cpp
   putbotrequest.cpp
   putbotresponse.cpp
+  putbotaliasrequest.cpp
+  putbotaliasresponse.cpp
   putintentrequest.cpp
   putintentresponse.cpp
   putslottyperequest.cpp
   putslottyperesponse.cpp
   startimportrequest.cpp
   startimportresponse.cpp
+  startmigrationrequest.cpp
+  startmigrationresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

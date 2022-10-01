@@ -56,8 +56,8 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::ACM
- * \brief Contains classess for accessing AWS Certificate Manager (ACM).
+ * \namespace QtAws::Acm
+ * \brief Contains classess for accessing AWS Certificate Manager.
  *
  * \inmodule QtAwsAcm
  *
@@ -65,20 +65,20 @@
  */
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 /*!
- * \class QtAws::ACM::AcmClient
- * \brief The AcmClient class provides access to the AWS Certificate Manager (ACM) service.
+ * \class QtAws::Acm::AcmClient
+ * \brief The AcmClient class provides access to the AWS Certificate Manager service.
  *
  * \ingroup aws-clients
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
- *  <fullname>AWS Certificate Manager</fullname>
+ *  <fullname>Amazon Web Services Certificate Manager</fullname>
  * 
- *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
- *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
- *  Certificate Manager User
+ *  You can use Amazon Web Services Certificate Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
+ *  Services-based websites and applications. For more information about using ACM, see the <a
+ *  href="https://docs.aws.amazon.com/acm/latest/userguide/">Amazon Web Services Certificate Manager User
  */
 
 /*!
@@ -140,9 +140,9 @@ AcmClient::AcmClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to an ACM certificate. Tags are labels that you can use to identify and organize your AWS
- * resources. Each tag consists of a <code>key</code> and an optional <code>value</code>. You specify the certificate on
- * input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair.
+ * Adds one or more tags to an ACM certificate. Tags are labels that you can use to identify and organize your Amazon Web
+ * Services resources. Each tag consists of a <code>key</code> and an optional <code>value</code>. You specify the
+ * certificate on input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair.
  *
  * </p
  *
@@ -171,12 +171,13 @@ AddTagsToCertificateResponse * AcmClient::addTagsToCertificate(const AddTagsToCe
  *
  * Deletes a certificate and its associated private key. If this action succeeds, the certificate no longer appears in the
  * list that can be displayed by calling the <a>ListCertificates</a> action or be retrieved by calling the
- * <a>GetCertificate</a> action. The certificate will not be available for use by AWS services integrated with ACM.
+ * <a>GetCertificate</a> action. The certificate will not be available for use by Amazon Web Services services integrated
+ * with ACM.
  *
  * </p <note>
  *
- * You cannot delete an ACM certificate that is being used by another AWS service. To delete a certificate that is in use,
- * the certificate association must first be
+ * You cannot delete an ACM certificate that is being used by another Amazon Web Services service. To delete a certificate
+ * that is in use, the certificate association must first be
  */
 DeleteCertificateResponse * AcmClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
@@ -223,7 +224,7 @@ ExportCertificateResponse * AcmClient::exportCertificate(const ExportCertificate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the account configuration options associated with an AWS
+ * Returns the account configuration options associated with an Amazon Web Services
  */
 GetAccountConfigurationResponse * AcmClient::getAccountConfiguration(const GetAccountConfigurationRequest &request)
 {
@@ -236,7 +237,7 @@ GetAccountConfigurationResponse * AcmClient::getAccountConfiguration(const GetAc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the account configuration options associated with an AWS
+ * Returns the account configuration options associated with an Amazon Web Services
  */
 GetAccountConfigurationResponse * AcmClient::getAccountConfiguration()
 {
@@ -265,13 +266,13 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that <a
- * href="https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html">integrated services</a> allow only certificate
- * types and keys they support to be associated with their resources. Further, their support differs depending on whether
- * the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more
- * information about importing certificates into ACM, see <a
- * href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the <i>AWS
- * Certificate Manager User Guide</i>.
+ * Imports a certificate into Amazon Web Services Certificate Manager (ACM) to use with services that are integrated with
+ * ACM. Note that <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html">integrated services</a>
+ * allow only certificate types and keys they support to be associated with their resources. Further, their support differs
+ * depending on whether the certificate is imported into IAM or into ACM. For more information, see the documentation for
+ * each service. For more information about importing certificates into ACM, see <a
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the
+ * <i>Amazon Web Services Certificate Manager User Guide</i>.
  *
  * </p <note>
  *
@@ -442,9 +443,9 @@ RenewCertificateResponse * AcmClient::renewCertificate(const RenewCertificateReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests an ACM certificate for use with other AWS services. To request an ACM certificate, you must specify a fully
- * qualified domain name (FQDN) in the <code>DomainName</code> parameter. You can also specify additional FQDNs in the
- * <code>SubjectAlternativeNames</code> parameter.
+ * Requests an ACM certificate for use with other Amazon Web Services services. To request an ACM certificate, you must
+ * specify a fully qualified domain name (FQDN) in the <code>DomainName</code> parameter. You can also specify additional
+ * FQDNs in the <code>SubjectAlternativeNames</code> parameter.
  *
  * </p
  *
@@ -453,6 +454,13 @@ RenewCertificateResponse * AcmClient::renewCertificate(const RenewCertificateReq
  * use <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS validation</a> or <a
  * href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">email validation</a>. We recommend
  * that you use DNS validation. ACM issues public certificates after receiving approval from the domain owner.
+ *
+ * </p <note>
+ *
+ * ACM behavior differs from the <a
+ * href="https://tools.ietf.org/html/rfc6125#appendix-B.2">https://tools.ietf.org/html/rfc6125#appendix-B.2</a>RFC 6125
+ * specification of the certificate validation process. first checks for a subject alternative name, and, if it finds one,
+ * ignores the common name
  */
 RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertificateRequest &request)
 {
@@ -496,12 +504,12 @@ UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const Upd
 }
 
 /*!
- * \class QtAws::ACM::AcmClientPrivate
+ * \class QtAws::Acm::AcmClientPrivate
  * \brief The AcmClientPrivate class provides private implementation for AcmClient.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  */
 
 /*!
@@ -513,5 +521,5 @@ AcmClientPrivate::AcmClientPrivate(AcmClient * const q)
     signature = new QtAws::Core::AwsSignatureV4();
 }
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws

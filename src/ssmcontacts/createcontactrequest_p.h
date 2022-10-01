@@ -24,14 +24,14 @@
 #include "createcontactrequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class CreateContactRequest;
 
-class CreateContactRequestPrivate : public SSMContactsRequestPrivate {
+class CreateContactRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    CreateContactRequestPrivate(const SSMContactsRequest::Action action,
+    CreateContactRequestPrivate(const SsmContactsRequest::Action action,
                                    CreateContactRequest * const q);
     CreateContactRequestPrivate(const CreateContactRequestPrivate &other,
                                    CreateContactRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

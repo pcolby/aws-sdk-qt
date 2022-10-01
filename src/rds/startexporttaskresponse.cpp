@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::StartExportTaskResponse
- * \brief The StartExportTaskResponse class provides an interace for RDS StartExportTask responses.
+ * \class QtAws::Rds::StartExportTaskResponse
+ * \brief The StartExportTaskResponse class provides an interace for Rds StartExportTask responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const StartExportTaskRequest * StartExportTaskResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful RDS StartExportTask \a response.
+ * Parses a successful Rds StartExportTask \a response.
  */
 void StartExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void StartExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::StartExportTaskResponsePrivate
+ * \class QtAws::Rds::StartExportTaskResponsePrivate
  * \brief The StartExportTaskResponsePrivate class provides private implementation for StartExportTaskResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
 }
 
 /*!
- * Parses a RDS StartExportTask response element from \a xml.
+ * Parses a Rds StartExportTask response element from \a xml.
  */
 void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

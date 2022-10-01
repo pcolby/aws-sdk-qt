@@ -41,6 +41,7 @@ namespace DatabaseMigrationService {
  * \value CancelReplicationTaskAssessmentRunAction DatabaseMigrationService CancelReplicationTaskAssessmentRun action.
  * \value CreateEndpointAction DatabaseMigrationService CreateEndpoint action.
  * \value CreateEventSubscriptionAction DatabaseMigrationService CreateEventSubscription action.
+ * \value CreateFleetAdvisorCollectorAction DatabaseMigrationService CreateFleetAdvisorCollector action.
  * \value CreateReplicationInstanceAction DatabaseMigrationService CreateReplicationInstance action.
  * \value CreateReplicationSubnetGroupAction DatabaseMigrationService CreateReplicationSubnetGroup action.
  * \value CreateReplicationTaskAction DatabaseMigrationService CreateReplicationTask action.
@@ -48,6 +49,8 @@ namespace DatabaseMigrationService {
  * \value DeleteConnectionAction DatabaseMigrationService DeleteConnection action.
  * \value DeleteEndpointAction DatabaseMigrationService DeleteEndpoint action.
  * \value DeleteEventSubscriptionAction DatabaseMigrationService DeleteEventSubscription action.
+ * \value DeleteFleetAdvisorCollectorAction DatabaseMigrationService DeleteFleetAdvisorCollector action.
+ * \value DeleteFleetAdvisorDatabasesAction DatabaseMigrationService DeleteFleetAdvisorDatabases action.
  * \value DeleteReplicationInstanceAction DatabaseMigrationService DeleteReplicationInstance action.
  * \value DeleteReplicationSubnetGroupAction DatabaseMigrationService DeleteReplicationSubnetGroup action.
  * \value DeleteReplicationTaskAction DatabaseMigrationService DeleteReplicationTask action.
@@ -62,6 +65,11 @@ namespace DatabaseMigrationService {
  * \value DescribeEventCategoriesAction DatabaseMigrationService DescribeEventCategories action.
  * \value DescribeEventSubscriptionsAction DatabaseMigrationService DescribeEventSubscriptions action.
  * \value DescribeEventsAction DatabaseMigrationService DescribeEvents action.
+ * \value DescribeFleetAdvisorCollectorsAction DatabaseMigrationService DescribeFleetAdvisorCollectors action.
+ * \value DescribeFleetAdvisorDatabasesAction DatabaseMigrationService DescribeFleetAdvisorDatabases action.
+ * \value DescribeFleetAdvisorLsaAnalysisAction DatabaseMigrationService DescribeFleetAdvisorLsaAnalysis action.
+ * \value DescribeFleetAdvisorSchemaObjectSummaryAction DatabaseMigrationService DescribeFleetAdvisorSchemaObjectSummary action.
+ * \value DescribeFleetAdvisorSchemasAction DatabaseMigrationService DescribeFleetAdvisorSchemas action.
  * \value DescribeOrderableReplicationInstancesAction DatabaseMigrationService DescribeOrderableReplicationInstances action.
  * \value DescribePendingMaintenanceActionsAction DatabaseMigrationService DescribePendingMaintenanceActions action.
  * \value DescribeRefreshSchemasStatusAction DatabaseMigrationService DescribeRefreshSchemasStatus action.
@@ -86,11 +94,13 @@ namespace DatabaseMigrationService {
  * \value RefreshSchemasAction DatabaseMigrationService RefreshSchemas action.
  * \value ReloadTablesAction DatabaseMigrationService ReloadTables action.
  * \value RemoveTagsFromResourceAction DatabaseMigrationService RemoveTagsFromResource action.
+ * \value RunFleetAdvisorLsaAnalysisAction DatabaseMigrationService RunFleetAdvisorLsaAnalysis action.
  * \value StartReplicationTaskAction DatabaseMigrationService StartReplicationTask action.
  * \value StartReplicationTaskAssessmentAction DatabaseMigrationService StartReplicationTaskAssessment action.
  * \value StartReplicationTaskAssessmentRunAction DatabaseMigrationService StartReplicationTaskAssessmentRun action.
  * \value StopReplicationTaskAction DatabaseMigrationService StopReplicationTask action.
  * \value TestConnectionAction DatabaseMigrationService TestConnection action.
+ * \value UpdateSubscriptionsToEventBridgeAction DatabaseMigrationService UpdateSubscriptionsToEventBridge action.
  */
 
 /*!
@@ -298,7 +308,7 @@ QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &end
  * with public implementation \a q.
  */
 DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-01-01"))
 {
 
 }
@@ -337,6 +347,7 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
         ActionToString(CancelReplicationTaskAssessmentRun);
         ActionToString(CreateEndpoint);
         ActionToString(CreateEventSubscription);
+        ActionToString(CreateFleetAdvisorCollector);
         ActionToString(CreateReplicationInstance);
         ActionToString(CreateReplicationSubnetGroup);
         ActionToString(CreateReplicationTask);
@@ -344,6 +355,8 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
         ActionToString(DeleteConnection);
         ActionToString(DeleteEndpoint);
         ActionToString(DeleteEventSubscription);
+        ActionToString(DeleteFleetAdvisorCollector);
+        ActionToString(DeleteFleetAdvisorDatabases);
         ActionToString(DeleteReplicationInstance);
         ActionToString(DeleteReplicationSubnetGroup);
         ActionToString(DeleteReplicationTask);
@@ -358,6 +371,11 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
         ActionToString(DescribeEventCategories);
         ActionToString(DescribeEventSubscriptions);
         ActionToString(DescribeEvents);
+        ActionToString(DescribeFleetAdvisorCollectors);
+        ActionToString(DescribeFleetAdvisorDatabases);
+        ActionToString(DescribeFleetAdvisorLsaAnalysis);
+        ActionToString(DescribeFleetAdvisorSchemaObjectSummary);
+        ActionToString(DescribeFleetAdvisorSchemas);
         ActionToString(DescribeOrderableReplicationInstances);
         ActionToString(DescribePendingMaintenanceActions);
         ActionToString(DescribeRefreshSchemasStatus);
@@ -382,11 +400,13 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
         ActionToString(RefreshSchemas);
         ActionToString(ReloadTables);
         ActionToString(RemoveTagsFromResource);
+        ActionToString(RunFleetAdvisorLsaAnalysis);
         ActionToString(StartReplicationTask);
         ActionToString(StartReplicationTaskAssessment);
         ActionToString(StartReplicationTaskAssessmentRun);
         ActionToString(StopReplicationTask);
         ActionToString(TestConnection);
+        ActionToString(UpdateSubscriptionsToEventBridge);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::DeleteAppsListResponse
- * \brief The DeleteAppsListResponse class provides an interace for FMS DeleteAppsList responses.
+ * \class QtAws::Fms::DeleteAppsListResponse
+ * \brief The DeleteAppsListResponse class provides an interace for Fms DeleteAppsList responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const DeleteAppsListRequest * DeleteAppsListResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS DeleteAppsList \a response.
+ * Parses a successful Fms DeleteAppsList \a response.
  */
 void DeleteAppsListResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void DeleteAppsListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::DeleteAppsListResponsePrivate
+ * \class QtAws::Fms::DeleteAppsListResponsePrivate
  * \brief The DeleteAppsListResponsePrivate class provides private implementation for DeleteAppsListResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ DeleteAppsListResponsePrivate::DeleteAppsListResponsePrivate(
 }
 
 /*!
- * Parses a FMS DeleteAppsList response element from \a xml.
+ * Parses a Fms DeleteAppsList response element from \a xml.
  */
 void DeleteAppsListResponsePrivate::parseDeleteAppsListResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void DeleteAppsListResponsePrivate::parseDeleteAppsListResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

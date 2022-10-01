@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetAccountResponse
- * \brief The GetAccountResponse class provides an interace for APIGateway GetAccount responses.
+ * \class QtAws::ApiGateway::GetAccountResponse
+ * \brief The GetAccountResponse class provides an interace for ApiGateway GetAccount responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getAccount
+ * \sa ApiGatewayClient::getAccount
  */
 
 /*!
@@ -49,7 +49,7 @@ GetAccountResponse::GetAccountResponse(
         const GetAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetAccountResponsePrivate(this), parent)
+    : ApiGatewayResponse(new GetAccountResponsePrivate(this), parent)
 {
     setRequest(new GetAccountRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const GetAccountRequest * GetAccountResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway GetAccount \a response.
+ * Parses a successful ApiGateway GetAccount \a response.
  */
 void GetAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void GetAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::GetAccountResponsePrivate
+ * \class QtAws::ApiGateway::GetAccountResponsePrivate
  * \brief The GetAccountResponsePrivate class provides private implementation for GetAccountResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a GetAccountResponsePrivate object with public implementation \a q.
  */
 GetAccountResponsePrivate::GetAccountResponsePrivate(
-    GetAccountResponse * const q) : APIGatewayResponsePrivate(q)
+    GetAccountResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway GetAccount response element from \a xml.
+ * Parses a ApiGateway GetAccount response element from \a xml.
  */
 void GetAccountResponsePrivate::parseGetAccountResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void GetAccountResponsePrivate::parseGetAccountResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

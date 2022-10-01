@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsResponse
- * \brief The DynamoDBStreamsResponse class provides an interface for DynamoDBStreams responses.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsResponse
+ * \brief The DynamoDbStreamsResponse class provides an interface for DynamoDbStreams responses.
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a DynamoDBStreamsResponse object with parent \a parent.
+ * Constructs a DynamoDbStreamsResponse object with parent \a parent.
  */
-DynamoDBStreamsResponse::DynamoDBStreamsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DynamoDBStreamsResponsePrivate(this), parent)
+DynamoDbStreamsResponse::DynamoDbStreamsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new DynamoDbStreamsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a DynamoDBStreamsResponse object with private implementation \a d,
+ * Constructs a DynamoDbStreamsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DynamoDBStreamsResponsePrivate.
+ * implementation that inherits from DynamoDbStreamsResponsePrivate.
  */
-DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate * const d, QObject * const parent)
+DynamoDbStreamsResponse::DynamoDbStreamsResponse(DynamoDbStreamsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate 
 /*!
  * \reimp
  */
-void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
+void DynamoDbStreamsResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(DynamoDBStreamsResponse);
+    //Q_D(DynamoDbStreamsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDBStreams::DynamoDBStreamsResponsePrivate
- * \brief The DynamoDBStreamsResponsePrivate class provides private implementation for DynamoDBStreamsResponse.
+ * \class QtAws::DynamoDbStreams::DynamoDbStreamsResponsePrivate
+ * \brief The DynamoDbStreamsResponsePrivate class provides private implementation for DynamoDbStreamsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDBStreams
+ * \inmodule QtAwsDynamoDbStreams
  */
 
 /*!
- * Constructs a DynamoDBStreamsResponsePrivate object with public implementation \a q.
+ * Constructs a DynamoDbStreamsResponsePrivate object with public implementation \a q.
  */
-DynamoDBStreamsResponsePrivate::DynamoDBStreamsResponsePrivate(
-    DynamoDBStreamsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+DynamoDbStreamsResponsePrivate::DynamoDbStreamsResponsePrivate(
+    DynamoDbStreamsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws

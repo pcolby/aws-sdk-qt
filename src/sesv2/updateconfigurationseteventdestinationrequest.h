@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class UpdateConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWSSESV2_EXPORT UpdateConfigurationSetEventDestinationRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT UpdateConfigurationSetEventDestinationRequest : public SESv2Request {
 
 public:
     UpdateConfigurationSetEventDestinationRequest(const UpdateConfigurationSetEventDestinationRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

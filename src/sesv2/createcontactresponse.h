@@ -24,11 +24,11 @@
 #include "createcontactrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class CreateContactResponsePrivate;
 
-class QTAWSSESV2_EXPORT CreateContactResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT CreateContactResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceToPointInTimeResponse
- * \brief The RestoreDBInstanceToPointInTimeResponse class provides an interace for RDS RestoreDBInstanceToPointInTime responses.
+ * \class QtAws::Rds::RestoreDBInstanceToPointInTimeResponse
+ * \brief The RestoreDBInstanceToPointInTimeResponse class provides an interace for Rds RestoreDBInstanceToPointInTime responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const RestoreDBInstanceToPointInTimeRequest * RestoreDBInstanceToPointInTimeResp
 
 /*!
  * \reimp
- * Parses a successful RDS RestoreDBInstanceToPointInTime \a response.
+ * Parses a successful Rds RestoreDBInstanceToPointInTime \a response.
  */
 void RestoreDBInstanceToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void RestoreDBInstanceToPointInTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RestoreDBInstanceToPointInTimeResponsePrivate
+ * \class QtAws::Rds::RestoreDBInstanceToPointInTimeResponsePrivate
  * \brief The RestoreDBInstanceToPointInTimeResponsePrivate class provides private implementation for RestoreDBInstanceToPointInTimeResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeRes
 }
 
 /*!
- * Parses a RDS RestoreDBInstanceToPointInTime response element from \a xml.
+ * Parses a Rds RestoreDBInstanceToPointInTime response element from \a xml.
  */
 void RestoreDBInstanceToPointInTimeResponsePrivate::parseRestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void RestoreDBInstanceToPointInTimeResponsePrivate::parseRestoreDBInstanceToPoin
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsRequest
- * \brief The UpdateConfigurationSetTrackingOptionsRequest class provides an interface for SES UpdateConfigurationSetTrackingOptions requests.
+ * \class QtAws::Ses::UpdateConfigurationSetTrackingOptionsRequest
+ * \brief The UpdateConfigurationSetTrackingOptionsRequest class provides an interface for Ses UpdateConfigurationSetTrackingOptions requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetTrackingOptionsRequest:
 }
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsRequestPrivate
+ * \class QtAws::Ses::UpdateConfigurationSetTrackingOptionsRequestPrivate
  * \brief The UpdateConfigurationSetTrackingOptionsRequestPrivate class provides private implementation for UpdateConfigurationSetTrackingOptionsRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrack
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

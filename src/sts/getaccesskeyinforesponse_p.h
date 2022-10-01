@@ -23,7 +23,7 @@
 #include "stsresponse_p.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class GetAccessKeyInfoResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

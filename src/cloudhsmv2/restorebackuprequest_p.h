@@ -24,14 +24,14 @@
 #include "restorebackuprequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class RestoreBackupRequest;
 
-class RestoreBackupRequestPrivate : public CloudHSMV2RequestPrivate {
+class RestoreBackupRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    RestoreBackupRequestPrivate(const CloudHSMV2Request::Action action,
+    RestoreBackupRequestPrivate(const CloudHsmV2Request::Action action,
                                    RestoreBackupRequest * const q);
     RestoreBackupRequestPrivate(const RestoreBackupRequestPrivate &other,
                                    RestoreBackupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

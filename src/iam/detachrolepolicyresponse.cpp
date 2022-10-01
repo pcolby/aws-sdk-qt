@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DetachRolePolicyResponse
- * \brief The DetachRolePolicyResponse class provides an interace for IAM DetachRolePolicy responses.
+ * \class QtAws::Iam::DetachRolePolicyResponse
+ * \brief The DetachRolePolicyResponse class provides an interace for Iam DetachRolePolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::detachRolePolicy
  */
@@ -68,7 +68,7 @@ const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DetachRolePolicy \a response.
+ * Parses a successful Iam DetachRolePolicy \a response.
  */
 void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DetachRolePolicyResponsePrivate
+ * \class QtAws::Iam::DetachRolePolicyResponsePrivate
  * \brief The DetachRolePolicyResponsePrivate class provides private implementation for DetachRolePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM DetachRolePolicy response element from \a xml.
+ * Parses a Iam DetachRolePolicy response element from \a xml.
  */
 void DetachRolePolicyResponsePrivate::parseDetachRolePolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DetachRolePolicyResponsePrivate::parseDetachRolePolicyResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

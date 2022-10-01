@@ -24,11 +24,11 @@
 #include "putpolicyrequest.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 class PutPolicyResponsePrivate;
 
-class QTAWSACMPCA_EXPORT PutPolicyResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT PutPolicyResponse : public AcmPcaResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws
 
 #endif

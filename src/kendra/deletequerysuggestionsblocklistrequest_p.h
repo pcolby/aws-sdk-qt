@@ -24,14 +24,14 @@
 #include "deletequerysuggestionsblocklistrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteQuerySuggestionsBlockListRequest;
 
-class DeleteQuerySuggestionsBlockListRequestPrivate : public kendraRequestPrivate {
+class DeleteQuerySuggestionsBlockListRequestPrivate : public KendraRequestPrivate {
 
 public:
-    DeleteQuerySuggestionsBlockListRequestPrivate(const kendraRequest::Action action,
+    DeleteQuerySuggestionsBlockListRequestPrivate(const KendraRequest::Action action,
                                    DeleteQuerySuggestionsBlockListRequest * const q);
     DeleteQuerySuggestionsBlockListRequestPrivate(const DeleteQuerySuggestionsBlockListRequestPrivate &other,
                                    DeleteQuerySuggestionsBlockListRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

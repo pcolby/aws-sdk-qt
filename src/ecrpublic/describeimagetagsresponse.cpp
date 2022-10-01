@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::DescribeImageTagsResponse
- * \brief The DescribeImageTagsResponse class provides an interace for ECRPublic DescribeImageTags responses.
+ * \class QtAws::EcrPublic::DescribeImageTagsResponse
+ * \brief The DescribeImageTagsResponse class provides an interace for EcrPublic DescribeImageTags responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::describeImageTags
+ * \sa EcrPublicClient::describeImageTags
  */
 
 /*!
@@ -52,7 +52,7 @@ DescribeImageTagsResponse::DescribeImageTagsResponse(
         const DescribeImageTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new DescribeImageTagsResponsePrivate(this), parent)
+    : EcrPublicResponse(new DescribeImageTagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeImageTagsRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const DescribeImageTagsRequest * DescribeImageTagsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic DescribeImageTags \a response.
+ * Parses a successful EcrPublic DescribeImageTags \a response.
  */
 void DescribeImageTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void DescribeImageTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::DescribeImageTagsResponsePrivate
+ * \class QtAws::EcrPublic::DescribeImageTagsResponsePrivate
  * \brief The DescribeImageTagsResponsePrivate class provides private implementation for DescribeImageTagsResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a DescribeImageTagsResponsePrivate object with public implementation \a q.
  */
 DescribeImageTagsResponsePrivate::DescribeImageTagsResponsePrivate(
-    DescribeImageTagsResponse * const q) : ECRPublicResponsePrivate(q)
+    DescribeImageTagsResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic DescribeImageTags response element from \a xml.
+ * Parses a EcrPublic DescribeImageTags response element from \a xml.
  */
 void DescribeImageTagsResponsePrivate::parseDescribeImageTagsResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void DescribeImageTagsResponsePrivate::parseDescribeImageTagsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

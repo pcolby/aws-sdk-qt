@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSORGANIZATIONS_LIBRARY)
 
 add_library(QtAwsOrganizations
+  qtawsorganizationsglobal.h
+  organizationsclient.h
+  organizationsclient_p.h
+  organizationsrequest.h
+  organizationsrequest_p.h
+  organizationsresponse.h
+  organizationsresponse_p.h
   accepthandshakerequest.h
   accepthandshakerequest_p.h
   accepthandshakeresponse.h
@@ -13,6 +20,10 @@ add_library(QtAwsOrganizations
   cancelhandshakerequest_p.h
   cancelhandshakeresponse.h
   cancelhandshakeresponse_p.h
+  closeaccountrequest.h
+  closeaccountrequest_p.h
+  closeaccountresponse.h
+  closeaccountresponse_p.h
   createaccountrequest.h
   createaccountrequest_p.h
   createaccountresponse.h
@@ -21,14 +32,14 @@ add_library(QtAwsOrganizations
   creategovcloudaccountrequest_p.h
   creategovcloudaccountresponse.h
   creategovcloudaccountresponse_p.h
-  createorganizationalunitrequest.h
-  createorganizationalunitrequest_p.h
-  createorganizationalunitresponse.h
-  createorganizationalunitresponse_p.h
   createorganizationrequest.h
   createorganizationrequest_p.h
   createorganizationresponse.h
   createorganizationresponse_p.h
+  createorganizationalunitrequest.h
+  createorganizationalunitrequest_p.h
+  createorganizationalunitresponse.h
+  createorganizationalunitresponse_p.h
   createpolicyrequest.h
   createpolicyrequest_p.h
   createpolicyresponse.h
@@ -37,14 +48,14 @@ add_library(QtAwsOrganizations
   declinehandshakerequest_p.h
   declinehandshakeresponse.h
   declinehandshakeresponse_p.h
-  deleteorganizationalunitrequest.h
-  deleteorganizationalunitrequest_p.h
-  deleteorganizationalunitresponse.h
-  deleteorganizationalunitresponse_p.h
   deleteorganizationrequest.h
   deleteorganizationrequest_p.h
   deleteorganizationresponse.h
   deleteorganizationresponse_p.h
+  deleteorganizationalunitrequest.h
+  deleteorganizationalunitrequest_p.h
+  deleteorganizationalunitresponse.h
+  deleteorganizationalunitresponse_p.h
   deletepolicyrequest.h
   deletepolicyrequest_p.h
   deletepolicyresponse.h
@@ -69,14 +80,14 @@ add_library(QtAwsOrganizations
   describehandshakerequest_p.h
   describehandshakeresponse.h
   describehandshakeresponse_p.h
-  describeorganizationalunitrequest.h
-  describeorganizationalunitrequest_p.h
-  describeorganizationalunitresponse.h
-  describeorganizationalunitresponse_p.h
   describeorganizationrequest.h
   describeorganizationrequest_p.h
   describeorganizationresponse.h
   describeorganizationresponse_p.h
+  describeorganizationalunitrequest.h
+  describeorganizationalunitrequest_p.h
+  describeorganizationalunitresponse.h
+  describeorganizationalunitresponse_p.h
   describepolicyrequest.h
   describepolicyrequest_p.h
   describepolicyresponse.h
@@ -93,14 +104,14 @@ add_library(QtAwsOrganizations
   disablepolicytyperequest_p.h
   disablepolicytyperesponse.h
   disablepolicytyperesponse_p.h
-  enableallfeaturesrequest.h
-  enableallfeaturesrequest_p.h
-  enableallfeaturesresponse.h
-  enableallfeaturesresponse_p.h
   enableawsserviceaccessrequest.h
   enableawsserviceaccessrequest_p.h
   enableawsserviceaccessresponse.h
   enableawsserviceaccessresponse_p.h
+  enableallfeaturesrequest.h
+  enableallfeaturesrequest_p.h
+  enableallfeaturesresponse.h
+  enableallfeaturesresponse_p.h
   enablepolicytyperequest.h
   enablepolicytyperequest_p.h
   enablepolicytyperesponse.h
@@ -113,18 +124,18 @@ add_library(QtAwsOrganizations
   leaveorganizationrequest_p.h
   leaveorganizationresponse.h
   leaveorganizationresponse_p.h
-  listaccountsforparentrequest.h
-  listaccountsforparentrequest_p.h
-  listaccountsforparentresponse.h
-  listaccountsforparentresponse_p.h
-  listaccountsrequest.h
-  listaccountsrequest_p.h
-  listaccountsresponse.h
-  listaccountsresponse_p.h
   listawsserviceaccessfororganizationrequest.h
   listawsserviceaccessfororganizationrequest_p.h
   listawsserviceaccessfororganizationresponse.h
   listawsserviceaccessfororganizationresponse_p.h
+  listaccountsrequest.h
+  listaccountsrequest_p.h
+  listaccountsresponse.h
+  listaccountsresponse_p.h
+  listaccountsforparentrequest.h
+  listaccountsforparentrequest_p.h
+  listaccountsforparentresponse.h
+  listaccountsforparentresponse_p.h
   listchildrenrequest.h
   listchildrenrequest_p.h
   listchildrenresponse.h
@@ -157,14 +168,14 @@ add_library(QtAwsOrganizations
   listparentsrequest_p.h
   listparentsresponse.h
   listparentsresponse_p.h
-  listpoliciesfortargetrequest.h
-  listpoliciesfortargetrequest_p.h
-  listpoliciesfortargetresponse.h
-  listpoliciesfortargetresponse_p.h
   listpoliciesrequest.h
   listpoliciesrequest_p.h
   listpoliciesresponse.h
   listpoliciesresponse_p.h
+  listpoliciesfortargetrequest.h
+  listpoliciesfortargetrequest_p.h
+  listpoliciesfortargetresponse.h
+  listpoliciesfortargetresponse_p.h
   listrootsrequest.h
   listrootsrequest_p.h
   listrootsresponse.h
@@ -181,13 +192,6 @@ add_library(QtAwsOrganizations
   moveaccountrequest_p.h
   moveaccountresponse.h
   moveaccountresponse_p.h
-  organizationsclient.h
-  organizationsclient_p.h
-  organizationsrequest.h
-  organizationsrequest_p.h
-  organizationsresponse.h
-  organizationsresponse_p.h
-  qtawsorganizationsglobal.h
   registerdelegatedadministratorrequest.h
   registerdelegatedadministratorrequest_p.h
   registerdelegatedadministratorresponse.h
@@ -212,28 +216,33 @@ add_library(QtAwsOrganizations
   updatepolicyrequest_p.h
   updatepolicyresponse.h
   updatepolicyresponse_p.h
+  organizationsclient.cpp
+  organizationsrequest.cpp
+  organizationsresponse.cpp
   accepthandshakerequest.cpp
   accepthandshakeresponse.cpp
   attachpolicyrequest.cpp
   attachpolicyresponse.cpp
   cancelhandshakerequest.cpp
   cancelhandshakeresponse.cpp
+  closeaccountrequest.cpp
+  closeaccountresponse.cpp
   createaccountrequest.cpp
   createaccountresponse.cpp
   creategovcloudaccountrequest.cpp
   creategovcloudaccountresponse.cpp
-  createorganizationalunitrequest.cpp
-  createorganizationalunitresponse.cpp
   createorganizationrequest.cpp
   createorganizationresponse.cpp
+  createorganizationalunitrequest.cpp
+  createorganizationalunitresponse.cpp
   createpolicyrequest.cpp
   createpolicyresponse.cpp
   declinehandshakerequest.cpp
   declinehandshakeresponse.cpp
-  deleteorganizationalunitrequest.cpp
-  deleteorganizationalunitresponse.cpp
   deleteorganizationrequest.cpp
   deleteorganizationresponse.cpp
+  deleteorganizationalunitrequest.cpp
+  deleteorganizationalunitresponse.cpp
   deletepolicyrequest.cpp
   deletepolicyresponse.cpp
   deregisterdelegatedadministratorrequest.cpp
@@ -246,10 +255,10 @@ add_library(QtAwsOrganizations
   describeeffectivepolicyresponse.cpp
   describehandshakerequest.cpp
   describehandshakeresponse.cpp
-  describeorganizationalunitrequest.cpp
-  describeorganizationalunitresponse.cpp
   describeorganizationrequest.cpp
   describeorganizationresponse.cpp
+  describeorganizationalunitrequest.cpp
+  describeorganizationalunitresponse.cpp
   describepolicyrequest.cpp
   describepolicyresponse.cpp
   detachpolicyrequest.cpp
@@ -258,22 +267,22 @@ add_library(QtAwsOrganizations
   disableawsserviceaccessresponse.cpp
   disablepolicytyperequest.cpp
   disablepolicytyperesponse.cpp
-  enableallfeaturesrequest.cpp
-  enableallfeaturesresponse.cpp
   enableawsserviceaccessrequest.cpp
   enableawsserviceaccessresponse.cpp
+  enableallfeaturesrequest.cpp
+  enableallfeaturesresponse.cpp
   enablepolicytyperequest.cpp
   enablepolicytyperesponse.cpp
   inviteaccounttoorganizationrequest.cpp
   inviteaccounttoorganizationresponse.cpp
   leaveorganizationrequest.cpp
   leaveorganizationresponse.cpp
-  listaccountsforparentrequest.cpp
-  listaccountsforparentresponse.cpp
-  listaccountsrequest.cpp
-  listaccountsresponse.cpp
   listawsserviceaccessfororganizationrequest.cpp
   listawsserviceaccessfororganizationresponse.cpp
+  listaccountsrequest.cpp
+  listaccountsresponse.cpp
+  listaccountsforparentrequest.cpp
+  listaccountsforparentresponse.cpp
   listchildrenrequest.cpp
   listchildrenresponse.cpp
   listcreateaccountstatusrequest.cpp
@@ -290,10 +299,10 @@ add_library(QtAwsOrganizations
   listorganizationalunitsforparentresponse.cpp
   listparentsrequest.cpp
   listparentsresponse.cpp
-  listpoliciesfortargetrequest.cpp
-  listpoliciesfortargetresponse.cpp
   listpoliciesrequest.cpp
   listpoliciesresponse.cpp
+  listpoliciesfortargetrequest.cpp
+  listpoliciesfortargetresponse.cpp
   listrootsrequest.cpp
   listrootsresponse.cpp
   listtagsforresourcerequest.cpp
@@ -302,9 +311,6 @@ add_library(QtAwsOrganizations
   listtargetsforpolicyresponse.cpp
   moveaccountrequest.cpp
   moveaccountresponse.cpp
-  organizationsclient.cpp
-  organizationsrequest.cpp
-  organizationsresponse.cpp
   registerdelegatedadministratorrequest.cpp
   registerdelegatedadministratorresponse.cpp
   removeaccountfromorganizationrequest.cpp

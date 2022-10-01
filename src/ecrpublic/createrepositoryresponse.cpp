@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::CreateRepositoryResponse
- * \brief The CreateRepositoryResponse class provides an interace for ECRPublic CreateRepository responses.
+ * \class QtAws::EcrPublic::CreateRepositoryResponse
+ * \brief The CreateRepositoryResponse class provides an interace for EcrPublic CreateRepository responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::createRepository
+ * \sa EcrPublicClient::createRepository
  */
 
 /*!
@@ -52,7 +52,7 @@ CreateRepositoryResponse::CreateRepositoryResponse(
         const CreateRepositoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new CreateRepositoryResponsePrivate(this), parent)
+    : EcrPublicResponse(new CreateRepositoryResponsePrivate(this), parent)
 {
     setRequest(new CreateRepositoryRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful ECRPublic CreateRepository \a response.
+ * Parses a successful EcrPublic CreateRepository \a response.
  */
 void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::CreateRepositoryResponsePrivate
+ * \class QtAws::EcrPublic::CreateRepositoryResponsePrivate
  * \brief The CreateRepositoryResponsePrivate class provides private implementation for CreateRepositoryResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a CreateRepositoryResponsePrivate object with public implementation \a q.
  */
 CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
-    CreateRepositoryResponse * const q) : ECRPublicResponsePrivate(q)
+    CreateRepositoryResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic CreateRepository response element from \a xml.
+ * Parses a EcrPublic CreateRepository response element from \a xml.
  */
 void CreateRepositoryResponsePrivate::parseCreateRepositoryResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void CreateRepositoryResponsePrivate::parseCreateRepositoryResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

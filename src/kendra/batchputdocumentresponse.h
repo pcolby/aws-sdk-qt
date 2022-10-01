@@ -24,11 +24,11 @@
 #include "batchputdocumentrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class BatchPutDocumentResponsePrivate;
 
-class QTAWSKENDRA_EXPORT BatchPutDocumentResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT BatchPutDocumentResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

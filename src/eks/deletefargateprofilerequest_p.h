@@ -24,7 +24,7 @@
 #include "deletefargateprofilerequest.h"
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 class DeleteFargateProfileRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws
 
 #endif

@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DeleteQuerySuggestionsBlockListRequest
- * \brief The DeleteQuerySuggestionsBlockListRequest class provides an interface for kendra DeleteQuerySuggestionsBlockList requests.
+ * \class QtAws::Kendra::DeleteQuerySuggestionsBlockListRequest
+ * \brief The DeleteQuerySuggestionsBlockListRequest class provides an interface for Kendra DeleteQuerySuggestionsBlockList requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::deleteQuerySuggestionsBlockList
+ * \sa KendraClient::deleteQuerySuggestionsBlockList
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteQuerySuggestionsBlockListRequest::DeleteQuerySuggestionsBlockListRequest(const DeleteQuerySuggestionsBlockListRequest &other)
-    : kendraRequest(new DeleteQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new DeleteQuerySuggestionsBlockListRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteQuerySuggestionsBlockListRequest::DeleteQuerySuggestionsBlockListRequest(c
  * Constructs a DeleteQuerySuggestionsBlockListRequest object.
  */
 DeleteQuerySuggestionsBlockListRequest::DeleteQuerySuggestionsBlockListRequest()
-    : kendraRequest(new DeleteQuerySuggestionsBlockListRequestPrivate(kendraRequest::DeleteQuerySuggestionsBlockListAction, this))
+    : KendraRequest(new DeleteQuerySuggestionsBlockListRequestPrivate(KendraRequest::DeleteQuerySuggestionsBlockListAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteQuerySuggestionsBlockListRequest::respo
 }
 
 /*!
- * \class QtAws::kendra::DeleteQuerySuggestionsBlockListRequestPrivate
+ * \class QtAws::Kendra::DeleteQuerySuggestionsBlockListRequestPrivate
  * \brief The DeleteQuerySuggestionsBlockListRequestPrivate class provides private implementation for DeleteQuerySuggestionsBlockListRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a DeleteQuerySuggestionsBlockListRequestPrivate object for kendra \a action,
+ * Constructs a DeleteQuerySuggestionsBlockListRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 DeleteQuerySuggestionsBlockListRequestPrivate::DeleteQuerySuggestionsBlockListRequestPrivate(
-    const kendraRequest::Action action, DeleteQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, DeleteQuerySuggestionsBlockListRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteQuerySuggestionsBlockListRequestPrivate::DeleteQuerySuggestionsBlockListRe
  */
 DeleteQuerySuggestionsBlockListRequestPrivate::DeleteQuerySuggestionsBlockListRequestPrivate(
     const DeleteQuerySuggestionsBlockListRequestPrivate &other, DeleteQuerySuggestionsBlockListRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

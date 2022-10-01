@@ -41,6 +41,7 @@ namespace IoTSecureTunneling {
  * \value ListTagsForResourceAction IoTSecureTunneling ListTagsForResource action.
  * \value ListTunnelsAction IoTSecureTunneling ListTunnels action.
  * \value OpenTunnelAction IoTSecureTunneling OpenTunnel action.
+ * \value RotateTunnelAccessTokenAction IoTSecureTunneling RotateTunnelAccessToken action.
  * \value TagResourceAction IoTSecureTunneling TagResource action.
  * \value UntagResourceAction IoTSecureTunneling UntagResource action.
  */
@@ -250,7 +251,7 @@ QNetworkRequest IoTSecureTunnelingRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 IoTSecureTunnelingRequestPrivate::IoTSecureTunnelingRequestPrivate(const IoTSecureTunnelingRequest::Action action, IoTSecureTunnelingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-10-05"))
 {
 
 }
@@ -289,6 +290,7 @@ QString IoTSecureTunnelingRequestPrivate::toString(const IoTSecureTunnelingReque
         ActionToString(ListTagsForResource);
         ActionToString(ListTunnels);
         ActionToString(OpenTunnel);
+        ActionToString(RotateTunnelAccessToken);
         ActionToString(TagResource);
         ActionToString(UntagResource);
         default:

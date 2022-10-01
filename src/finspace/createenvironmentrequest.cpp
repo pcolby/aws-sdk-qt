@@ -23,24 +23,24 @@
 #include "finspacerequest_p.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 /*!
- * \class QtAws::finspace::CreateEnvironmentRequest
- * \brief The CreateEnvironmentRequest class provides an interface for finspace CreateEnvironment requests.
+ * \class QtAws::Finspace::CreateEnvironmentRequest
+ * \brief The CreateEnvironmentRequest class provides an interface for Finspace CreateEnvironment requests.
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  *
- *  The FinSpace management service provides the APIs for managing the FinSpace environments.
+ *  The FinSpace management service provides the APIs for managing FinSpace
  *
- * \sa finspaceClient::createEnvironment
+ * \sa FinspaceClient::createEnvironment
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateEnvironmentRequest::CreateEnvironmentRequest(const CreateEnvironmentRequest &other)
-    : finspaceRequest(new CreateEnvironmentRequestPrivate(*other.d_func(), this))
+    : FinspaceRequest(new CreateEnvironmentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateEnvironmentRequest::CreateEnvironmentRequest(const CreateEnvironmentReques
  * Constructs a CreateEnvironmentRequest object.
  */
 CreateEnvironmentRequest::CreateEnvironmentRequest()
-    : finspaceRequest(new CreateEnvironmentRequestPrivate(finspaceRequest::CreateEnvironmentAction, this))
+    : FinspaceRequest(new CreateEnvironmentRequestPrivate(FinspaceRequest::CreateEnvironmentAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::finspace::CreateEnvironmentRequestPrivate
+ * \class QtAws::Finspace::CreateEnvironmentRequestPrivate
  * \brief The CreateEnvironmentRequestPrivate class provides private implementation for CreateEnvironmentRequest.
  * \internal
  *
- * \inmodule QtAwsfinspace
+ * \inmodule QtAwsFinspace
  */
 
 /*!
- * Constructs a CreateEnvironmentRequestPrivate object for finspace \a action,
+ * Constructs a CreateEnvironmentRequestPrivate object for Finspace \a action,
  * with public implementation \a q.
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
-    const finspaceRequest::Action action, CreateEnvironmentRequest * const q)
-    : finspaceRequestPrivate(action, q)
+    const FinspaceRequest::Action action, CreateEnvironmentRequest * const q)
+    : FinspaceRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
  */
 CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
     const CreateEnvironmentRequestPrivate &other, CreateEnvironmentRequest * const q)
-    : finspaceRequestPrivate(other, q)
+    : FinspaceRequestPrivate(other, q)
 {
 
 }
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws

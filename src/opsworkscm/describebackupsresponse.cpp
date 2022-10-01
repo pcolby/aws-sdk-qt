@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeBackupsResponse
- * \brief The DescribeBackupsResponse class provides an interace for OpsWorksCM DescribeBackups responses.
+ * \class QtAws::OpsWorksCm::DescribeBackupsResponse
+ * \brief The DescribeBackupsResponse class provides an interace for OpsWorksCm DescribeBackups responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeBackups
+ * \sa OpsWorksCmClient::describeBackups
  */
 
 /*!
@@ -123,7 +123,7 @@ DescribeBackupsResponse::DescribeBackupsResponse(
         const DescribeBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DescribeBackupsResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new DescribeBackupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeBackupsRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM DescribeBackups \a response.
+ * Parses a successful OpsWorksCm DescribeBackups \a response.
  */
 void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeBackupsResponsePrivate
+ * \class QtAws::OpsWorksCm::DescribeBackupsResponsePrivate
  * \brief The DescribeBackupsResponsePrivate class provides private implementation for DescribeBackupsResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a DescribeBackupsResponsePrivate object with public implementation \a q.
  */
 DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
-    DescribeBackupsResponse * const q) : OpsWorksCMResponsePrivate(q)
+    DescribeBackupsResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM DescribeBackups response element from \a xml.
+ * Parses a OpsWorksCm DescribeBackups response element from \a xml.
  */
 void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamRead
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

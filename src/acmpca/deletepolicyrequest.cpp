@@ -23,37 +23,46 @@
 #include "acmpcarequest_p.h"
 
 namespace QtAws {
-namespace ACMPCA {
+namespace AcmPca {
 
 /*!
- * \class QtAws::ACMPCA::DeletePolicyRequest
- * \brief The DeletePolicyRequest class provides an interface for ACMPCA DeletePolicy requests.
+ * \class QtAws::AcmPca::DeletePolicyRequest
+ * \brief The DeletePolicyRequest class provides an interface for AcmPca DeletePolicy requests.
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  *
- *  This is the <i>ACM Private CA API Reference</i>. It provides descriptions, syntax, and usage examples for each of the
- *  actions and data types involved in creating and managing private certificate authorities (CA) for your
+ *  This is the <i>Certificate Manager Private Certificate Authority (PCA) API Reference</i>. It provides descriptions,
+ *  syntax, and usage examples for each of the actions and data types involved in creating and managing a private
+ *  certificate authority (CA) for your
  * 
  *  organization>
  * 
- *  The documentation for each action shows the Query API request parameters and the XML response. Alternatively, you can
- *  use one of the AWS SDKs to access an API that's tailored to the programming language or platform that you're using. For
- *  more information, see <a href="https://aws.amazon.com/tools/#SDKs">AWS
+ *  The documentation for each action shows the API request parameters and the JSON response. Alternatively, you can use one
+ *  of the Amazon Web Services SDKs to access an API that is tailored to the programming language or platform that you
+ *  prefer. For more information, see <a href="https://aws.amazon.com/tools/#SDKs">Amazon Web Services
  * 
- *  SDKs</a>> <note>
+ *  SDKs</a>>
  * 
- *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
- *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
- *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API operation has a quota that determines the number of times the operation can be called per
+ *  second. ACM Private CA throttles API requests at different rates depending on the operation. Throttling means that ACM
+ *  Private CA rejects an otherwise valid request because the request exceeds the operation's quota for the number of
+ *  requests per second. When a request is throttled, ACM Private CA returns a <a
+ *  href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/CommonErrors.html">ThrottlingException</a> error. ACM
+ *  Private CA does not guarantee a minimum request rate for APIs.
+ * 
+ *  </p
+ * 
+ *  To see an up-to-date list of your ACM Private CA quotas, or to request a quota increase, log into your Amazon Web
+ *  Services account and visit the <a href="https://console.aws.amazon.com/servicequotas/">Service Quotas</a>
  *
- * \sa AcmpcaClient::deletePolicy
+ * \sa AcmPcaClient::deletePolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
-    : AcmpcaRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
+    : AcmPcaRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +71,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
  * Constructs a DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
-    : AcmpcaRequest(new DeletePolicyRequestPrivate(AcmpcaRequest::DeletePolicyAction, this))
+    : AcmPcaRequest(new DeletePolicyRequestPrivate(AcmPcaRequest::DeletePolicyAction, this))
 {
 
 }
@@ -87,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::ACMPCA::DeletePolicyRequestPrivate
+ * \class QtAws::AcmPca::DeletePolicyRequestPrivate
  * \brief The DeletePolicyRequestPrivate class provides private implementation for DeletePolicyRequest.
  * \internal
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmPca
  */
 
 /*!
- * Constructs a DeletePolicyRequestPrivate object for Acmpca \a action,
+ * Constructs a DeletePolicyRequestPrivate object for AcmPca \a action,
  * with public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
-    const AcmpcaRequest::Action action, DeletePolicyRequest * const q)
-    : AcmpcaRequestPrivate(action, q)
+    const AcmPcaRequest::Action action, DeletePolicyRequest * const q)
+    : AcmPcaRequestPrivate(action, q)
 {
 
 }
@@ -113,10 +122,10 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const DeletePolicyRequestPrivate &other, DeletePolicyRequest * const q)
-    : AcmpcaRequestPrivate(other, q)
+    : AcmPcaRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ACMPCA
+} // namespace AcmPca
 } // namespace QtAws

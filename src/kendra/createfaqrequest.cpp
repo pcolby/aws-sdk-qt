@@ -23,24 +23,24 @@
 #include "kendrarequest_p.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::CreateFaqRequest
- * \brief The CreateFaqRequest class provides an interface for kendra CreateFaq requests.
+ * \class QtAws::Kendra::CreateFaqRequest
+ * \brief The CreateFaqRequest class provides an interface for Kendra CreateFaq requests.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::createFaq
+ * \sa KendraClient::createFaq
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateFaqRequest::CreateFaqRequest(const CreateFaqRequest &other)
-    : kendraRequest(new CreateFaqRequestPrivate(*other.d_func(), this))
+    : KendraRequest(new CreateFaqRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CreateFaqRequest::CreateFaqRequest(const CreateFaqRequest &other)
  * Constructs a CreateFaqRequest object.
  */
 CreateFaqRequest::CreateFaqRequest()
-    : kendraRequest(new CreateFaqRequestPrivate(kendraRequest::CreateFaqAction, this))
+    : KendraRequest(new CreateFaqRequestPrivate(KendraRequest::CreateFaqAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CreateFaqRequest::response(QNetworkReply * co
 }
 
 /*!
- * \class QtAws::kendra::CreateFaqRequestPrivate
+ * \class QtAws::Kendra::CreateFaqRequestPrivate
  * \brief The CreateFaqRequestPrivate class provides private implementation for CreateFaqRequest.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
- * Constructs a CreateFaqRequestPrivate object for kendra \a action,
+ * Constructs a CreateFaqRequestPrivate object for Kendra \a action,
  * with public implementation \a q.
  */
 CreateFaqRequestPrivate::CreateFaqRequestPrivate(
-    const kendraRequest::Action action, CreateFaqRequest * const q)
-    : kendraRequestPrivate(action, q)
+    const KendraRequest::Action action, CreateFaqRequest * const q)
+    : KendraRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CreateFaqRequestPrivate::CreateFaqRequestPrivate(
  */
 CreateFaqRequestPrivate::CreateFaqRequestPrivate(
     const CreateFaqRequestPrivate &other, CreateFaqRequest * const q)
-    : kendraRequestPrivate(other, q)
+    : KendraRequestPrivate(other, q)
 {
 
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "copydbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class CopyDBClusterParameterGroupRequest;
 
-class CopyDBClusterParameterGroupRequestPrivate : public DocDBRequestPrivate {
+class CopyDBClusterParameterGroupRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    CopyDBClusterParameterGroupRequestPrivate(const DocDBRequest::Action action,
+    CopyDBClusterParameterGroupRequestPrivate(const DocDbRequest::Action action,
                                    CopyDBClusterParameterGroupRequest * const q);
     CopyDBClusterParameterGroupRequestPrivate(const CopyDBClusterParameterGroupRequestPrivate &other,
                                    CopyDBClusterParameterGroupRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

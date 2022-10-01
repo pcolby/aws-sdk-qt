@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeEngineDefaultClusterParametersResponse
- * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for DocDB DescribeEngineDefaultClusterParameters responses.
+ * \class QtAws::DocDb::DescribeEngineDefaultClusterParametersResponse
+ * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for DocDb DescribeEngineDefaultClusterParameters responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeEngineDefaultClusterParameters
+ * \sa DocDbClient::describeEngineDefaultClusterParameters
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
         const DescribeEngineDefaultClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEngineDefaultClusterParametersRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClust
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeEngineDefaultClusterParameters \a response.
+ * Parses a successful DocDb DescribeEngineDefaultClusterParameters \a response.
  */
 void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &res
 }
 
 /*!
- * \class QtAws::DocDB::DescribeEngineDefaultClusterParametersResponsePrivate
+ * \class QtAws::DocDb::DescribeEngineDefaultClusterParametersResponsePrivate
  * \brief The DescribeEngineDefaultClusterParametersResponsePrivate class provides private implementation for DescribeEngineDefaultClusterParametersResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeEngineDefaultClusterParametersResponsePrivate object with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClusterParametersResponsePrivate(
-    DescribeEngineDefaultClusterParametersResponse * const q) : DocDBResponsePrivate(q)
+    DescribeEngineDefaultClusterParametersResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeEngineDefaultClusterParameters response element from \a xml.
+ * Parses a DocDb DescribeEngineDefaultClusterParameters response element from \a xml.
  */
 void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineD
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

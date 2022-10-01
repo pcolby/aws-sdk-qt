@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexPatternSetRequest
- * \brief The UpdateRegexPatternSetRequest class provides an interface for WAFRegional UpdateRegexPatternSet requests.
+ * \class QtAws::WafRegional::UpdateRegexPatternSetRequest
+ * \brief The UpdateRegexPatternSetRequest class provides an interface for WafRegional UpdateRegexPatternSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::updateRegexPatternSet
+ * \sa WafRegionalClient::updateRegexPatternSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatternSetRequest &other)
-    : WAFRegionalRequest(new UpdateRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UpdateRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatt
  * Constructs a UpdateRegexPatternSetRequest object.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest()
-    : WAFRegionalRequest(new UpdateRegexPatternSetRequestPrivate(WAFRegionalRequest::UpdateRegexPatternSetAction, this))
+    : WafRegionalRequest(new UpdateRegexPatternSetRequestPrivate(WafRegionalRequest::UpdateRegexPatternSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::WAFRegional::UpdateRegexPatternSetRequestPrivate
+ * \class QtAws::WafRegional::UpdateRegexPatternSetRequestPrivate
  * \brief The UpdateRegexPatternSetRequestPrivate class provides private implementation for UpdateRegexPatternSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UpdateRegexPatternSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a UpdateRegexPatternSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
-    const WAFRegionalRequest::Action action, UpdateRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UpdateRegexPatternSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
     const UpdateRegexPatternSetRequestPrivate &other, UpdateRegexPatternSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::RebootBrokerResponse
- * \brief The RebootBrokerResponse class provides an interace for MQ RebootBroker responses.
+ * \class QtAws::Mq::RebootBrokerResponse
+ * \brief The RebootBrokerResponse class provides an interace for Mq RebootBroker responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::rebootBroker
  */
@@ -63,7 +64,7 @@ const RebootBrokerRequest * RebootBrokerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ RebootBroker \a response.
+ * Parses a successful Mq RebootBroker \a response.
  */
 void RebootBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void RebootBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::RebootBrokerResponsePrivate
+ * \class QtAws::Mq::RebootBrokerResponsePrivate
  * \brief The RebootBrokerResponsePrivate class provides private implementation for RebootBrokerResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
 }
 
 /*!
- * Parses a MQ RebootBroker response element from \a xml.
+ * Parses a Mq RebootBroker response element from \a xml.
  */
 void RebootBrokerResponsePrivate::parseRebootBrokerResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void RebootBrokerResponsePrivate::parseRebootBrokerResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

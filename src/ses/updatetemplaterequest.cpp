@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateTemplateRequest
- * \brief The UpdateTemplateRequest class provides an interface for SES UpdateTemplate requests.
+ * \class QtAws::Ses::UpdateTemplateRequest
+ * \brief The UpdateTemplateRequest class provides an interface for Ses UpdateTemplate requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::SES::UpdateTemplateRequestPrivate
+ * \class QtAws::Ses::UpdateTemplateRequestPrivate
  * \brief The UpdateTemplateRequestPrivate class provides private implementation for UpdateTemplateRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

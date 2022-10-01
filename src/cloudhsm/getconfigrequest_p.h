@@ -24,14 +24,14 @@
 #include "getconfigrequest.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 class GetConfigRequest;
 
-class GetConfigRequestPrivate : public CloudHSMRequestPrivate {
+class GetConfigRequestPrivate : public CloudHsmRequestPrivate {
 
 public:
-    GetConfigRequestPrivate(const CloudHSMRequest::Action action,
+    GetConfigRequestPrivate(const CloudHsmRequest::Action action,
                                    GetConfigRequest * const q);
     GetConfigRequestPrivate(const GetConfigRequestPrivate &other,
                                    GetConfigRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws
 
 #endif

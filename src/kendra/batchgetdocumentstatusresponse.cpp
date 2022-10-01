@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::BatchGetDocumentStatusResponse
- * \brief The BatchGetDocumentStatusResponse class provides an interace for kendra BatchGetDocumentStatus responses.
+ * \class QtAws::Kendra::BatchGetDocumentStatusResponse
+ * \brief The BatchGetDocumentStatusResponse class provides an interace for Kendra BatchGetDocumentStatus responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::batchGetDocumentStatus
+ * \sa KendraClient::batchGetDocumentStatus
  */
 
 /*!
@@ -45,7 +45,7 @@ BatchGetDocumentStatusResponse::BatchGetDocumentStatusResponse(
         const BatchGetDocumentStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new BatchGetDocumentStatusResponsePrivate(this), parent)
+    : KendraResponse(new BatchGetDocumentStatusResponsePrivate(this), parent)
 {
     setRequest(new BatchGetDocumentStatusRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const BatchGetDocumentStatusRequest * BatchGetDocumentStatusResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful kendra BatchGetDocumentStatus \a response.
+ * Parses a successful Kendra BatchGetDocumentStatus \a response.
  */
 void BatchGetDocumentStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void BatchGetDocumentStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::BatchGetDocumentStatusResponsePrivate
+ * \class QtAws::Kendra::BatchGetDocumentStatusResponsePrivate
  * \brief The BatchGetDocumentStatusResponsePrivate class provides private implementation for BatchGetDocumentStatusResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a BatchGetDocumentStatusResponsePrivate object with public implementation \a q.
  */
 BatchGetDocumentStatusResponsePrivate::BatchGetDocumentStatusResponsePrivate(
-    BatchGetDocumentStatusResponse * const q) : kendraResponsePrivate(q)
+    BatchGetDocumentStatusResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra BatchGetDocumentStatus response element from \a xml.
+ * Parses a Kendra BatchGetDocumentStatus response element from \a xml.
  */
 void BatchGetDocumentStatusResponsePrivate::parseBatchGetDocumentStatusResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void BatchGetDocumentStatusResponsePrivate::parseBatchGetDocumentStatusResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

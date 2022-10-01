@@ -24,14 +24,14 @@
 #include "describetablereplicaautoscalingrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class DescribeTableReplicaAutoScalingRequest;
 
-class DescribeTableReplicaAutoScalingRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeTableReplicaAutoScalingRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    DescribeTableReplicaAutoScalingRequestPrivate(const DynamoDBRequest::Action action,
+    DescribeTableReplicaAutoScalingRequestPrivate(const DynamoDbRequest::Action action,
                                    DescribeTableReplicaAutoScalingRequest * const q);
     DescribeTableReplicaAutoScalingRequestPrivate(const DescribeTableReplicaAutoScalingRequestPrivate &other,
                                    DescribeTableReplicaAutoScalingRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

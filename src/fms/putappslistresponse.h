@@ -24,7 +24,7 @@
 #include "putappslistrequest.h"
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 class PutAppsListResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws
 
 #endif

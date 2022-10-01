@@ -55,6 +55,8 @@
 #include "describeprotectiongroupresponse.h"
 #include "describesubscriptionrequest.h"
 #include "describesubscriptionresponse.h"
+#include "disableapplicationlayerautomaticresponserequest.h"
+#include "disableapplicationlayerautomaticresponseresponse.h"
 #include "disableproactiveengagementrequest.h"
 #include "disableproactiveengagementresponse.h"
 #include "disassociatedrtlogbucketrequest.h"
@@ -63,6 +65,8 @@
 #include "disassociatedrtroleresponse.h"
 #include "disassociatehealthcheckrequest.h"
 #include "disassociatehealthcheckresponse.h"
+#include "enableapplicationlayerautomaticresponserequest.h"
+#include "enableapplicationlayerautomaticresponseresponse.h"
 #include "enableproactiveengagementrequest.h"
 #include "enableproactiveengagementresponse.h"
 #include "getsubscriptionstaterequest.h"
@@ -81,6 +85,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateapplicationlayerautomaticresponserequest.h"
+#include "updateapplicationlayerautomaticresponseresponse.h"
 #include "updateemergencycontactsettingsrequest.h"
 #include "updateemergencycontactsettingsresponse.h"
 #include "updateprotectiongrouprequest.h"
@@ -110,12 +116,12 @@ namespace Shield {
  * \ingroup aws-clients
  * \inmodule QtAwsShield
  *
- *  <fullname>AWS Shield Advanced</fullname>
+ *  <fullname>Shield Advanced</fullname>
  * 
- *  This is the <i>AWS Shield Advanced API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield
- *  Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the <a
- *  href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and AWS Shield Developer
+ *  This is the <i>Shield Advanced API Reference</i>. This guide is for developers who need detailed information about the
+ *  Shield Advanced API actions, data types, and errors. For detailed information about WAF and Shield Advanced features and
+ *  an overview of how to use the WAF and Shield Advanced APIs, see the <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF and Shield Developer
  */
 
 /*!
@@ -177,14 +183,15 @@ ShieldClient::ShieldClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Authorizes the DDoS Response Team (DRT) to access the specified Amazon S3 bucket containing your AWS WAF logs. You can
- * associate up to 10 Amazon S3 buckets with your
+ * Authorizes the Shield Response Team (SRT) to access the specified Amazon S3 bucket containing log data such as
+ * Application Load Balancer access logs, CloudFront logs, or logs from third party sources. You can associate up to 10
+ * Amazon S3 buckets with your
  *
  * subscription>
  *
- * To use the services of the DRT and make an <code>AssociateDRTLogBucket</code> request, you must be subscribed to the <a
- * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
- * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support
+ * To use the services of the SRT and make an <code>AssociateDRTLogBucket</code> request, you must be subscribed to the <a
+ * href="http://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
+ * href="http://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support
  */
 AssociateDRTLogBucketResponse * ShieldClient::associateDRTLogBucket(const AssociateDRTLogBucketRequest &request)
 {
@@ -197,9 +204,9 @@ AssociateDRTLogBucketResponse * ShieldClient::associateDRTLogBucket(const Associ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Authorizes the DDoS Response Team (DRT), using the specified role, to access your AWS account to assist with DDoS attack
- * mitigation during potential attacks. This enables the DRT to inspect your AWS WAF configuration and create or update AWS
- * WAF rules and web
+ * Authorizes the Shield Response Team (SRT) using the specified role, to access your Amazon Web Services account to assist
+ * with DDoS attack mitigation during potential attacks. This enables the SRT to inspect your WAF configuration and create
+ * or update WAF rules and web
  *
  * ACLs>
  *
@@ -209,32 +216,33 @@ AssociateDRTLogBucketResponse * ShieldClient::associateDRTLogBucket(const Associ
  *
  * </p
  *
- * Prior to making the <code>AssociateDRTRole</code> request, you must attach the <a
- * href="https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy">AWSShieldDRTAccessPolicy</a>
- * managed policy to the role you will specify in the request. For more information see <a href="
- * https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Attaching and Detaching IAM
- * Policies</a>. The role must also trust the service principal <code> drt.shield.amazonaws.com</code>. For more
- * information, see <a
- * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM JSON Policy
- * Elements:
+ * Prior to making the <code>AssociateDRTRole</code> request, you must attach the <code>AWSShieldDRTAccessPolicy</code>
+ * managed policy to the role that you'll specify in the request. You can access this policy in the IAM console at <a
+ * href="https://console.aws.amazon.com/iam/home?#/policies/arn:aws:iam::aws:policy/service-role/AWSShieldDRTAccessPolicy">AWSShieldDRTAccessPolicy</a>.
+ * For more information see <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html">Adding and removing
+ * IAM identity permissions</a>. The role must also trust the service principal <code>drt.shield.amazonaws.com</code>. For
+ * more information, see <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM JSON policy
+ * elements:
  *
  * Principal</a>>
  *
- * The DRT will have access only to your AWS WAF and Shield resources. By submitting this request, you authorize the DRT to
- * inspect your AWS WAF and Shield configuration and create and update AWS WAF rules and web ACLs on your behalf. The DRT
- * takes these actions only if explicitly authorized by
+ * The SRT will have access only to your WAF and Shield resources. By submitting this request, you authorize the SRT to
+ * inspect your WAF and Shield configuration and create and update WAF rules and web ACLs on your behalf. The SRT takes
+ * these actions only if explicitly authorized by
  *
  * you>
  *
  * You must have the <code>iam:PassRole</code> permission to make an <code>AssociateDRTRole</code> request. For more
- * information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a User
- * Permissions to Pass a Role to an AWS Service</a>.
+ * information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a user
+ * permissions to pass a role to an Amazon Web Services service</a>.
  *
  * </p
  *
- * To use the services of the DRT and make an <code>AssociateDRTRole</code> request, you must be subscribed to the <a
- * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
- * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support
+ * To use the services of the SRT and make an <code>AssociateDRTRole</code> request, you must be subscribed to the <a
+ * href="http://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
+ * href="http://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support
  */
 AssociateDRTRoleResponse * ShieldClient::associateDRTRole(const AssociateDRTRoleRequest &request)
 {
@@ -248,15 +256,15 @@ AssociateDRTRoleResponse * ShieldClient::associateDRTRole(const AssociateDRTRole
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds health-based detection to the Shield Advanced protection for a resource. Shield Advanced health-based detection
- * uses the health of your AWS resource to improve responsiveness and accuracy in attack detection and mitigation.
+ * uses the health of your Amazon Web Services resource to improve responsiveness and accuracy in attack detection and
+ * response.
  *
  * </p
  *
- * You define the health check in Route 53 and then associate it with your Shield Advanced protection. For more
+ * You define the health check in Route 53 and then associate it with your Shield Advanced protection. For more
  * information, see <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option">Shield
- * Advanced Health-Based Detection</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and
- * AWS Shield Developer Guide</a>.
+ * Advanced Health-Based Detection</a> in the <i>WAF Developer Guide</i>.
  */
 AssociateHealthCheckResponse * ShieldClient::associateHealthCheck(const AssociateHealthCheckRequest &request)
 {
@@ -269,8 +277,8 @@ AssociateHealthCheckResponse * ShieldClient::associateHealthCheck(const Associat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initializes proactive engagement and sets the list of contacts for the DDoS Response Team (DRT) to use. You must provide
- * at least one phone number in the emergency contact list.
+ * Initializes proactive engagement and sets the list of contacts for the Shield Response Team (SRT) to use. You must
+ * provide at least one phone number in the emergency contact list.
  *
  * </p
  *
@@ -279,8 +287,8 @@ AssociateHealthCheckResponse * ShieldClient::associateHealthCheck(const Associat
  *
  * </p <note>
  *
- * This call defines the list of email addresses and phone numbers that the DDoS Response Team (DRT) can use to contact you
- * for escalations to the DRT and to initiate proactive customer
+ * This call defines the list of email addresses and phone numbers that the SRT can use to contact you for escalations to
+ * the SRT and to initiate proactive customer
  *
  * support>
  *
@@ -299,17 +307,20 @@ AssociateProactiveEngagementDetailsResponse * ShieldClient::associateProactiveEn
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic
- * Load Balancing load balancer, AWS Global Accelerator accelerator, Elastic IP Address, or an Amazon Route 53 hosted
+ * Enables Shield Advanced for a specific Amazon Web Services resource. The resource can be an Amazon CloudFront
+ * distribution, Amazon Route 53 hosted zone, Global Accelerator standard accelerator, Elastic IP Address, Application Load
+ * Balancer, or a Classic Load Balancer. You can protect Amazon EC2 instances and Network Load Balancers by association
+ * with protected Amazon EC2 Elastic IP
  *
- * zone>
+ * addresses>
  *
- * You can add protection to only a single resource with each CreateProtection request. If you want to add protection to
- * multiple resources at once, use the <a href="https://console.aws.amazon.com/waf/">AWS WAF console</a>. For more
+ * You can add protection to only a single resource with each <code>CreateProtection</code> request. You can add protection
+ * to multiple resources at once through the Shield Advanced console at <a
+ * href="https://console.aws.amazon.com/wafv2/shieldv2#/">https://console.aws.amazon.com/wafv2/shieldv2#/</a>. For more
  * information see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html">Getting
- * Started with AWS Shield Advanced</a> and <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html">Add AWS Shield Advanced
- * Protection to more AWS
+ * Started with Shield Advanced</a> and <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html">Adding Shield Advanced
+ * protection to Amazon Web Services
  */
 CreateProtectionResponse * ShieldClient::createProtection(const CreateProtectionRequest &request)
 {
@@ -336,12 +347,17 @@ CreateProtectionGroupResponse * ShieldClient::createProtectionGroup(const Create
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Activates AWS Shield Advanced for an
+ * Activates Shield Advanced for an
  *
- * account>
+ * account> <note>
  *
- * When you initally create a subscription, your subscription is set to be automatically renewed at the end of the existing
- * subscription period. You can change this by submitting an <code>UpdateSubscription</code> request.
+ * For accounts that are members of an Organizations organization, Shield Advanced subscriptions are billed against the
+ * organization's payer account, regardless of whether the payer account itself is subscribed.
+ *
+ * </p </note>
+ *
+ * When you initially create a subscription, your subscription is set to be automatically renewed at the end of the
+ * existing subscription period. You can change this by submitting an <code>UpdateSubscription</code> request.
  */
 CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscriptionRequest &request)
 {
@@ -354,7 +370,7 @@ CreateSubscriptionResponse * ShieldClient::createSubscription(const CreateSubscr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an AWS Shield Advanced
+ * Deletes an Shield Advanced
  */
 DeleteProtectionResponse * ShieldClient::deleteProtection(const DeleteProtectionRequest &request)
 {
@@ -380,8 +396,8 @@ DeleteProtectionGroupResponse * ShieldClient::deleteProtectionGroup(const Delete
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot
- * delete a subscription prior to the completion of that commitment.
+ * Removes Shield Advanced from an account. Shield Advanced requires a 1-year subscription commitment. You cannot delete a
+ * subscription prior to the completion of that commitment.
  */
 DeleteSubscriptionResponse * ShieldClient::deleteSubscription(const DeleteSubscriptionRequest &request)
 {
@@ -407,9 +423,9 @@ DescribeAttackResponse * ShieldClient::describeAttack(const DescribeAttackReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information about the number and type of attacks AWS Shield has detected in the last year for all resources
- * that belong to your account, regardless of whether you've defined Shield protections for them. This operation is
- * available to Shield customers as well as to Shield Advanced
+ * Provides information about the number and type of attacks Shield has detected in the last year for all resources that
+ * belong to your account, regardless of whether you've defined Shield protections for them. This operation is available to
+ * Shield customers as well as to Shield Advanced
  *
  * customers>
  *
@@ -432,8 +448,8 @@ DescribeAttackStatisticsResponse * ShieldClient::describeAttackStatistics(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the current role and list of Amazon S3 log buckets used by the DDoS Response Team (DRT) to access your AWS
- * account while assisting with attack
+ * Returns the current role and list of Amazon S3 log buckets used by the Shield Response Team (SRT) to access your Amazon
+ * Web Services account while assisting with attack
  */
 DescribeDRTAccessResponse * ShieldClient::describeDRTAccess(const DescribeDRTAccessRequest &request)
 {
@@ -446,8 +462,8 @@ DescribeDRTAccessResponse * ShieldClient::describeDRTAccess(const DescribeDRTAcc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * A list of email addresses and phone numbers that the DDoS Response Team (DRT) can use to contact you if you have
- * proactive engagement enabled, for escalations to the DRT and to initiate proactive customer
+ * A list of email addresses and phone numbers that the Shield Response Team (SRT) can use to contact you if you have
+ * proactive engagement enabled, for escalations to the SRT and to initiate proactive customer
  */
 DescribeEmergencyContactSettingsResponse * ShieldClient::describeEmergencyContactSettings(const DescribeEmergencyContactSettingsRequest &request)
 {
@@ -486,7 +502,7 @@ DescribeProtectionGroupResponse * ShieldClient::describeProtectionGroup(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides details about the AWS Shield Advanced subscription for an
+ * Provides details about the Shield Advanced subscription for an
  */
 DescribeSubscriptionResponse * ShieldClient::describeSubscription(const DescribeSubscriptionRequest &request)
 {
@@ -495,12 +511,26 @@ DescribeSubscriptionResponse * ShieldClient::describeSubscription(const Describe
 
 /*!
  * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * DisableApplicationLayerAutomaticResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disable the Shield Advanced automatic application layer DDoS mitigation feature for the protected resource. This stops
+ * Shield Advanced from creating, verifying, and applying WAF rules for attacks that it detects for the resource.
+ */
+DisableApplicationLayerAutomaticResponseResponse * ShieldClient::disableApplicationLayerAutomaticResponse(const DisableApplicationLayerAutomaticResponseRequest &request)
+{
+    return qobject_cast<DisableApplicationLayerAutomaticResponseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
  * DisableProactiveEngagementResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes authorization from the DDoS Response Team (DRT) to notify contacts about escalations to the DRT and to initiate
- * proactive customer
+ * Removes authorization from the Shield Response Team (SRT) to notify contacts about escalations to the SRT and to
+ * initiate proactive customer
  */
 DisableProactiveEngagementResponse * ShieldClient::disableProactiveEngagement(const DisableProactiveEngagementRequest &request)
 {
@@ -513,15 +543,7 @@ DisableProactiveEngagementResponse * ShieldClient::disableProactiveEngagement(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the DDoS Response Team's (DRT) access to the specified Amazon S3 bucket containing your AWS WAF
- *
- * logs>
- *
- * To make a <code>DisassociateDRTLogBucket</code> request, you must be subscribed to the <a
- * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
- * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>. However, if you are not
- * subscribed to one of these support plans, but had been previously and had granted the DRT access to your account, you
- * can submit a <code>DisassociateDRTLogBucket</code> request to remove this
+ * Removes the Shield Response Team's (SRT) access to the specified Amazon S3 bucket containing the logs that you shared
  */
 DisassociateDRTLogBucketResponse * ShieldClient::disassociateDRTLogBucket(const DisassociateDRTLogBucketRequest &request)
 {
@@ -534,15 +556,7 @@ DisassociateDRTLogBucketResponse * ShieldClient::disassociateDRTLogBucket(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the DDoS Response Team's (DRT) access to your AWS
- *
- * account>
- *
- * To make a <code>DisassociateDRTRole</code> request, you must be subscribed to the <a
- * href="https://aws.amazon.com/premiumsupport/business-support/">Business Support plan</a> or the <a
- * href="https://aws.amazon.com/premiumsupport/enterprise-support/">Enterprise Support plan</a>. However, if you are not
- * subscribed to one of these support plans, but had been previously and had granted the DRT access to your account, you
- * can submit a <code>DisassociateDRTRole</code> request to remove this
+ * Removes the Shield Response Team's (SRT) access to your Amazon Web Services
  */
 DisassociateDRTRoleResponse * ShieldClient::disassociateDRTRole(const DisassociateDRTRoleRequest &request)
 {
@@ -556,16 +570,15 @@ DisassociateDRTRoleResponse * ShieldClient::disassociateDRTRole(const Disassocia
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes health-based detection from the Shield Advanced protection for a resource. Shield Advanced health-based
- * detection uses the health of your AWS resource to improve responsiveness and accuracy in attack detection and
- * mitigation.
+ * detection uses the health of your Amazon Web Services resource to improve responsiveness and accuracy in attack
+ * detection and response.
  *
  * </p
  *
- * You define the health check in Route 53 and then associate or disassociate it with your Shield Advanced protection. For
+ * You define the health check in Route 53 and then associate or disassociate it with your Shield Advanced protection. For
  * more information, see <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced-health-check-option">Shield
- * Advanced Health-Based Detection</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF and
- * AWS Shield Developer Guide</a>.
+ * Advanced Health-Based Detection</a> in the <i>WAF Developer Guide</i>.
  */
 DisassociateHealthCheckResponse * ShieldClient::disassociateHealthCheck(const DisassociateHealthCheckRequest &request)
 {
@@ -574,11 +587,51 @@ DisassociateHealthCheckResponse * ShieldClient::disassociateHealthCheck(const Di
 
 /*!
  * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * EnableApplicationLayerAutomaticResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enable the Shield Advanced automatic application layer DDoS mitigation for the protected resource.
+ *
+ * </p <note>
+ *
+ * This feature is available for Amazon CloudFront distributions and Application Load Balancers
+ *
+ * only> </note>
+ *
+ * This causes Shield Advanced to create, verify, and apply WAF rules for DDoS attacks that it detects for the resource.
+ * Shield Advanced applies the rules in a Shield rule group inside the web ACL that you've associated with the resource.
+ * For information about how automatic mitigation works and the requirements for using it, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/ddos-advanced-automatic-app-layer-response.html">Shield
+ * Advanced automatic application layer DDoS
+ *
+ * mitigation</a>> <note>
+ *
+ * Don't use this action to make changes to automatic mitigation settings when it's already enabled for a resource.
+ * Instead, use
+ *
+ * <a>UpdateApplicationLayerAutomaticResponse</a>> </note>
+ *
+ * To use this feature, you must associate a web ACL with the protected resource. The web ACL must be created using the
+ * latest version of WAF (v2). You can associate the web ACL through the Shield Advanced console at <a
+ * href="https://console.aws.amazon.com/wafv2/shieldv2#/">https://console.aws.amazon.com/wafv2/shieldv2#/</a>. For more
+ * information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html">Getting
+ * Started with Shield Advanced</a>. You can also associate the web ACL to the resource through the WAF console or the WAF
+ * API, but you must manage Shield Advanced automatic mitigation through Shield Advanced. For information about WAF, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer
+ */
+EnableApplicationLayerAutomaticResponseResponse * ShieldClient::enableApplicationLayerAutomaticResponse(const EnableApplicationLayerAutomaticResponseRequest &request)
+{
+    return qobject_cast<EnableApplicationLayerAutomaticResponseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
  * EnableProactiveEngagementResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Authorizes the DDoS Response Team (DRT) to use email and phone to notify contacts about escalations to the DRT and to
+ * Authorizes the Shield Response Team (SRT) to use email and phone to notify contacts about escalations to the SRT and to
  * initiate proactive customer
  */
 EnableProactiveEngagementResponse * ShieldClient::enableProactiveEngagement(const EnableProactiveEngagementRequest &request)
@@ -618,7 +671,8 @@ ListAttacksResponse * ShieldClient::listAttacks(const ListAttacksRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the <a>ProtectionGroup</a> objects for the
+ * Retrieves <a>ProtectionGroup</a> objects for the account. You can retrieve all protection groups or you can provide
+ * filtering criteria and retrieve just the subset of protection groups that match the criteria.
  */
 ListProtectionGroupsResponse * ShieldClient::listProtectionGroups(const ListProtectionGroupsRequest &request)
 {
@@ -631,7 +685,8 @@ ListProtectionGroupsResponse * ShieldClient::listProtectionGroups(const ListProt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all <a>Protection</a> objects for the
+ * Retrieves <a>Protection</a> objects for the account. You can retrieve all protections or you can provide filtering
+ * criteria and retrieve just the subset of protections that match the criteria.
  */
 ListProtectionsResponse * ShieldClient::listProtections(const ListProtectionsRequest &request)
 {
@@ -657,7 +712,7 @@ ListResourcesInProtectionGroupResponse * ShieldClient::listResourcesInProtection
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about AWS tags for a specified Amazon Resource Name (ARN) in AWS
+ * Gets information about Amazon Web Services tags for a specified Amazon Resource Name (ARN) in
  */
 ListTagsForResourceResponse * ShieldClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -670,7 +725,7 @@ ListTagsForResourceResponse * ShieldClient::listTagsForResource(const ListTagsFo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or updates tags for a resource in AWS
+ * Adds or updates tags for a resource in
  */
 TagResourceResponse * ShieldClient::tagResource(const TagResourceRequest &request)
 {
@@ -683,7 +738,7 @@ TagResourceResponse * ShieldClient::tagResource(const TagResourceRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes tags from a resource in AWS
+ * Removes tags from a resource in
  */
 UntagResourceResponse * ShieldClient::untagResource(const UntagResourceRequest &request)
 {
@@ -692,12 +747,25 @@ UntagResourceResponse * ShieldClient::untagResource(const UntagResourceRequest &
 
 /*!
  * Sends \a request to the ShieldClient service, and returns a pointer to an
+ * UpdateApplicationLayerAutomaticResponseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing Shield Advanced automatic application layer DDoS mitigation configuration for the specified
+ */
+UpdateApplicationLayerAutomaticResponseResponse * ShieldClient::updateApplicationLayerAutomaticResponse(const UpdateApplicationLayerAutomaticResponseRequest &request)
+{
+    return qobject_cast<UpdateApplicationLayerAutomaticResponseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ShieldClient service, and returns a pointer to an
  * UpdateEmergencyContactSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the details of the list of email addresses and phone numbers that the DDoS Response Team (DRT) can use to
- * contact you if you have proactive engagement enabled, for escalations to the DRT and to initiate proactive customer
+ * Updates the details of the list of email addresses and phone numbers that the Shield Response Team (SRT) can use to
+ * contact you if you have proactive engagement enabled, for escalations to the SRT and to initiate proactive customer
  */
 UpdateEmergencyContactSettingsResponse * ShieldClient::updateEmergencyContactSettings(const UpdateEmergencyContactSettingsRequest &request)
 {
@@ -726,6 +794,11 @@ UpdateProtectionGroupResponse * ShieldClient::updateProtectionGroup(const Update
  *
  * Updates the details of an existing subscription. Only enter values for parameters you want to change. Empty parameters
  * are not
+ *
+ * updated> <note>
+ *
+ * For accounts that are members of an Organizations organization, Shield Advanced subscriptions are billed against the
+ * organization's payer account, regardless of whether the payer account itself is subscribed.
  */
 UpdateSubscriptionResponse * ShieldClient::updateSubscription(const UpdateSubscriptionRequest &request)
 {

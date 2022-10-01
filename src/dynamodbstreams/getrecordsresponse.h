@@ -24,11 +24,11 @@
 #include "getrecordsrequest.h"
 
 namespace QtAws {
-namespace DynamoDBStreams {
+namespace DynamoDbStreams {
 
 class GetRecordsResponsePrivate;
 
-class QTAWSDYNAMODBSTREAMS_EXPORT GetRecordsResponse : public DynamoDBStreamsResponse {
+class QTAWSDYNAMODBSTREAMS_EXPORT GetRecordsResponse : public DynamoDbStreamsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DynamoDBStreams
+} // namespace DynamoDbStreams
 } // namespace QtAws
 
 #endif

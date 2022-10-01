@@ -24,14 +24,14 @@
 #include "createresourcerequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class CreateResourceRequest;
 
-class CreateResourceRequestPrivate : public APIGatewayRequestPrivate {
+class CreateResourceRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    CreateResourceRequestPrivate(const APIGatewayRequest::Action action,
+    CreateResourceRequestPrivate(const ApiGatewayRequest::Action action,
                                    CreateResourceRequest * const q);
     CreateResourceRequestPrivate(const CreateResourceRequestPrivate &other,
                                    CreateResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

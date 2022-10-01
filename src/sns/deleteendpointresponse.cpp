@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::DeleteEndpointResponse
- * \brief The DeleteEndpointResponse class provides an interace for SNS DeleteEndpoint responses.
+ * \class QtAws::Sns::DeleteEndpointResponse
+ * \brief The DeleteEndpointResponse class provides an interace for Sns DeleteEndpoint responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const DeleteEndpointRequest * DeleteEndpointResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SNS DeleteEndpoint \a response.
+ * Parses a successful Sns DeleteEndpoint \a response.
  */
 void DeleteEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::DeleteEndpointResponsePrivate
+ * \class QtAws::Sns::DeleteEndpointResponsePrivate
  * \brief The DeleteEndpointResponsePrivate class provides private implementation for DeleteEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
 }
 
 /*!
- * Parses a SNS DeleteEndpoint response element from \a xml.
+ * Parses a Sns DeleteEndpoint response element from \a xml.
  */
 void DeleteEndpointResponsePrivate::parseDeleteEndpointResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void DeleteEndpointResponsePrivate::parseDeleteEndpointResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

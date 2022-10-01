@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::CreateStudioResponse
- * \brief The CreateStudioResponse class provides an interace for EMR CreateStudio responses.
+ * \class QtAws::Emr::CreateStudioResponse
+ * \brief The CreateStudioResponse class provides an interace for Emr CreateStudio responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::createStudio
  */
@@ -64,7 +64,7 @@ const CreateStudioRequest * CreateStudioResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR CreateStudio \a response.
+ * Parses a successful Emr CreateStudio \a response.
  */
 void CreateStudioResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void CreateStudioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::CreateStudioResponsePrivate
+ * \class QtAws::Emr::CreateStudioResponsePrivate
  * \brief The CreateStudioResponsePrivate class provides private implementation for CreateStudioResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ CreateStudioResponsePrivate::CreateStudioResponsePrivate(
 }
 
 /*!
- * Parses a EMR CreateStudio response element from \a xml.
+ * Parses a Emr CreateStudio response element from \a xml.
  */
 void CreateStudioResponsePrivate::parseCreateStudioResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void CreateStudioResponsePrivate::parseCreateStudioResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

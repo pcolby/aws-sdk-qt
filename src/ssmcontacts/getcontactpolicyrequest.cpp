@@ -23,23 +23,33 @@
 #include "ssmcontactsrequest_p.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::GetContactPolicyRequest
- * \brief The GetContactPolicyRequest class provides an interface for SSMContacts GetContactPolicy requests.
+ * \class QtAws::SsmContacts::GetContactPolicyRequest
+ * \brief The GetContactPolicyRequest class provides an interface for SsmContacts GetContactPolicy requests.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::getContactPolicy
+ * \sa SsmContactsClient::getContactPolicy
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetContactPolicyRequest::GetContactPolicyRequest(const GetContactPolicyRequest &other)
-    : SSMContactsRequest(new GetContactPolicyRequestPrivate(*other.d_func(), this))
+    : SsmContactsRequest(new GetContactPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +58,7 @@ GetContactPolicyRequest::GetContactPolicyRequest(const GetContactPolicyRequest &
  * Constructs a GetContactPolicyRequest object.
  */
 GetContactPolicyRequest::GetContactPolicyRequest()
-    : SSMContactsRequest(new GetContactPolicyRequestPrivate(SSMContactsRequest::GetContactPolicyAction, this))
+    : SsmContactsRequest(new GetContactPolicyRequestPrivate(SsmContactsRequest::GetContactPolicyAction, this))
 {
 
 }
@@ -73,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * GetContactPolicyRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SSMContacts::GetContactPolicyRequestPrivate
+ * \class QtAws::SsmContacts::GetContactPolicyRequestPrivate
  * \brief The GetContactPolicyRequestPrivate class provides private implementation for GetContactPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
- * Constructs a GetContactPolicyRequestPrivate object for SSMContacts \a action,
+ * Constructs a GetContactPolicyRequestPrivate object for SsmContacts \a action,
  * with public implementation \a q.
  */
 GetContactPolicyRequestPrivate::GetContactPolicyRequestPrivate(
-    const SSMContactsRequest::Action action, GetContactPolicyRequest * const q)
-    : SSMContactsRequestPrivate(action, q)
+    const SsmContactsRequest::Action action, GetContactPolicyRequest * const q)
+    : SsmContactsRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +109,10 @@ GetContactPolicyRequestPrivate::GetContactPolicyRequestPrivate(
  */
 GetContactPolicyRequestPrivate::GetContactPolicyRequestPrivate(
     const GetContactPolicyRequestPrivate &other, GetContactPolicyRequest * const q)
-    : SSMContactsRequestPrivate(other, q)
+    : SsmContactsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

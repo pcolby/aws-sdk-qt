@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::DescribeBrokerResponse
- * \brief The DescribeBrokerResponse class provides an interace for MQ DescribeBroker responses.
+ * \class QtAws::Mq::DescribeBrokerResponse
+ * \brief The DescribeBrokerResponse class provides an interace for Mq DescribeBroker responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::describeBroker
  */
@@ -63,7 +64,7 @@ const DescribeBrokerRequest * DescribeBrokerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ DescribeBroker \a response.
+ * Parses a successful Mq DescribeBroker \a response.
  */
 void DescribeBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void DescribeBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::DescribeBrokerResponsePrivate
+ * \class QtAws::Mq::DescribeBrokerResponsePrivate
  * \brief The DescribeBrokerResponsePrivate class provides private implementation for DescribeBrokerResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
 }
 
 /*!
- * Parses a MQ DescribeBroker response element from \a xml.
+ * Parses a Mq DescribeBroker response element from \a xml.
  */
 void DescribeBrokerResponsePrivate::parseDescribeBrokerResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void DescribeBrokerResponsePrivate::parseDescribeBrokerResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

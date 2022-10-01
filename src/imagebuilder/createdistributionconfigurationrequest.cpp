@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CreateDistributionConfigurationRequest
- * \brief The CreateDistributionConfigurationRequest class provides an interface for imagebuilder CreateDistributionConfiguration requests.
+ * \class QtAws::ImageBuilder::CreateDistributionConfigurationRequest
+ * \brief The CreateDistributionConfigurationRequest class provides an interface for ImageBuilder CreateDistributionConfiguration requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::createDistributionConfiguration
+ * \sa ImageBuilderClient::createDistributionConfiguration
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateDistributionConfigurationRequest::CreateDistributionConfigurationRequest(const CreateDistributionConfigurationRequest &other)
-    : imagebuilderRequest(new CreateDistributionConfigurationRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new CreateDistributionConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ CreateDistributionConfigurationRequest::CreateDistributionConfigurationRequest(c
  * Constructs a CreateDistributionConfigurationRequest object.
  */
 CreateDistributionConfigurationRequest::CreateDistributionConfigurationRequest()
-    : imagebuilderRequest(new CreateDistributionConfigurationRequestPrivate(imagebuilderRequest::CreateDistributionConfigurationAction, this))
+    : ImageBuilderRequest(new CreateDistributionConfigurationRequestPrivate(ImageBuilderRequest::CreateDistributionConfigurationAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionConfigurationRequest::respo
 }
 
 /*!
- * \class QtAws::imagebuilder::CreateDistributionConfigurationRequestPrivate
+ * \class QtAws::ImageBuilder::CreateDistributionConfigurationRequestPrivate
  * \brief The CreateDistributionConfigurationRequestPrivate class provides private implementation for CreateDistributionConfigurationRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a CreateDistributionConfigurationRequestPrivate object for imagebuilder \a action,
+ * Constructs a CreateDistributionConfigurationRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 CreateDistributionConfigurationRequestPrivate::CreateDistributionConfigurationRequestPrivate(
-    const imagebuilderRequest::Action action, CreateDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, CreateDistributionConfigurationRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ CreateDistributionConfigurationRequestPrivate::CreateDistributionConfigurationRe
  */
 CreateDistributionConfigurationRequestPrivate::CreateDistributionConfigurationRequestPrivate(
     const CreateDistributionConfigurationRequestPrivate &other, CreateDistributionConfigurationRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

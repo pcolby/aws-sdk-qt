@@ -23,7 +23,7 @@
 #include "ssmrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

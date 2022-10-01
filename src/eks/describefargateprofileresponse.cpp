@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::DescribeFargateProfileResponse
- * \brief The DescribeFargateProfileResponse class provides an interace for EKS DescribeFargateProfile responses.
+ * \class QtAws::Eks::DescribeFargateProfileResponse
+ * \brief The DescribeFargateProfileResponse class provides an interace for Eks DescribeFargateProfile responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const DescribeFargateProfileRequest * DescribeFargateProfileResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful EKS DescribeFargateProfile \a response.
+ * Parses a successful Eks DescribeFargateProfile \a response.
  */
 void DescribeFargateProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void DescribeFargateProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::DescribeFargateProfileResponsePrivate
+ * \class QtAws::Eks::DescribeFargateProfileResponsePrivate
  * \brief The DescribeFargateProfileResponsePrivate class provides private implementation for DescribeFargateProfileResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ DescribeFargateProfileResponsePrivate::DescribeFargateProfileResponsePrivate(
 }
 
 /*!
- * Parses a EKS DescribeFargateProfile response element from \a xml.
+ * Parses a Eks DescribeFargateProfile response element from \a xml.
  */
 void DescribeFargateProfileResponsePrivate::parseDescribeFargateProfileResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void DescribeFargateProfileResponsePrivate::parseDescribeFargateProfileResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

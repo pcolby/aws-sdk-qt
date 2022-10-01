@@ -24,11 +24,11 @@
 #include "getpermissionpolicyrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetPermissionPolicyResponsePrivate;
 
-class QTAWSWAFREGIONAL_EXPORT GetPermissionPolicyResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetPermissionPolicyResponse : public WafRegionalResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

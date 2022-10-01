@@ -24,11 +24,11 @@
 #include "stopdatasourcesyncjobrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class StopDataSourceSyncJobResponsePrivate;
 
-class QTAWSKENDRA_EXPORT StopDataSourceSyncJobResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT StopDataSourceSyncJobResponse : public KendraResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

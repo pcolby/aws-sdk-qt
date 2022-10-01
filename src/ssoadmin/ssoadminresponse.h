@@ -26,31 +26,31 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
-class SSOAdminResponsePrivate;
+class SsoAdminResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT SSOAdminResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSOADMIN_EXPORT SsoAdminResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SSOAdminResponse(QObject * const parent = 0);
+    SsoAdminResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SSOAdminResponse(SSOAdminResponsePrivate * const d, QObject * const parent);
+    SsoAdminResponse(SsoAdminResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
-    Q_DECLARE_PRIVATE(SSOAdminResponse)
-    Q_DISABLE_COPY(SSOAdminResponse)
+    Q_DECLARE_PRIVATE(SsoAdminResponse)
+    Q_DISABLE_COPY(SsoAdminResponse)
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

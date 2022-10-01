@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyTargetGroupResponse
- * \brief The ModifyDBProxyTargetGroupResponse class provides an interace for RDS ModifyDBProxyTargetGroup responses.
+ * \class QtAws::Rds::ModifyDBProxyTargetGroupResponse
+ * \brief The ModifyDBProxyTargetGroupResponse class provides an interace for Rds ModifyDBProxyTargetGroup responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ModifyDBProxyTargetGroupRequest * ModifyDBProxyTargetGroupResponse::reques
 
 /*!
  * \reimp
- * Parses a successful RDS ModifyDBProxyTargetGroup \a response.
+ * Parses a successful Rds ModifyDBProxyTargetGroup \a response.
  */
 void ModifyDBProxyTargetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ModifyDBProxyTargetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyTargetGroupResponsePrivate
+ * \class QtAws::Rds::ModifyDBProxyTargetGroupResponsePrivate
  * \brief The ModifyDBProxyTargetGroupResponsePrivate class provides private implementation for ModifyDBProxyTargetGroupResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ModifyDBProxyTargetGroupResponsePrivate::ModifyDBProxyTargetGroupResponsePrivate
 }
 
 /*!
- * Parses a RDS ModifyDBProxyTargetGroup response element from \a xml.
+ * Parses a Rds ModifyDBProxyTargetGroup response element from \a xml.
  */
 void ModifyDBProxyTargetGroupResponsePrivate::parseModifyDBProxyTargetGroupResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ModifyDBProxyTargetGroupResponsePrivate::parseModifyDBProxyTargetGroupRespo
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMResponse
- * \brief The OpsWorksCMResponse class provides an interface for OpsWorksCM responses.
+ * \class QtAws::OpsWorksCm::OpsWorksCmResponse
+ * \brief The OpsWorksCmResponse class provides an interface for OpsWorksCm responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a OpsWorksCMResponse object with parent \a parent.
+ * Constructs a OpsWorksCmResponse object with parent \a parent.
  */
-OpsWorksCMResponse::OpsWorksCMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new OpsWorksCMResponsePrivate(this), parent)
+OpsWorksCmResponse::OpsWorksCmResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new OpsWorksCmResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a OpsWorksCMResponse object with private implementation \a d,
+ * Constructs a OpsWorksCmResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from OpsWorksCMResponsePrivate.
+ * implementation that inherits from OpsWorksCmResponsePrivate.
  */
-OpsWorksCMResponse::OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent)
+OpsWorksCmResponse::OpsWorksCmResponse(OpsWorksCmResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ OpsWorksCMResponse::OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObj
 /*!
  * \reimp
  */
-void OpsWorksCMResponse::parseFailure(QIODevice &response)
+void OpsWorksCmResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(OpsWorksCMResponse);
+    //Q_D(OpsWorksCmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void OpsWorksCMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::OpsWorksCMResponsePrivate
- * \brief The OpsWorksCMResponsePrivate class provides private implementation for OpsWorksCMResponse.
+ * \class QtAws::OpsWorksCm::OpsWorksCmResponsePrivate
+ * \brief The OpsWorksCmResponsePrivate class provides private implementation for OpsWorksCmResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a OpsWorksCMResponsePrivate object with public implementation \a q.
+ * Constructs a OpsWorksCmResponsePrivate object with public implementation \a q.
  */
-OpsWorksCMResponsePrivate::OpsWorksCMResponsePrivate(
-    OpsWorksCMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+OpsWorksCmResponsePrivate::OpsWorksCmResponsePrivate(
+    OpsWorksCmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

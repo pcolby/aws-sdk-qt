@@ -24,11 +24,11 @@
 #include "putaccountdedicatedipwarmupattributesrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutAccountDedicatedIpWarmupAttributesResponsePrivate;
 
-class QTAWSSESV2_EXPORT PutAccountDedicatedIpWarmupAttributesResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutAccountDedicatedIpWarmupAttributesResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

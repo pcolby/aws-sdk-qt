@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::UpdateLoginProfileResponse
- * \brief The UpdateLoginProfileResponse class provides an interace for IAM UpdateLoginProfile responses.
+ * \class QtAws::Iam::UpdateLoginProfileResponse
+ * \brief The UpdateLoginProfileResponse class provides an interace for Iam UpdateLoginProfile responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::updateLoginProfile
  */
@@ -68,7 +68,7 @@ const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM UpdateLoginProfile \a response.
+ * Parses a successful Iam UpdateLoginProfile \a response.
  */
 void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::UpdateLoginProfileResponsePrivate
+ * \class QtAws::Iam::UpdateLoginProfileResponsePrivate
  * \brief The UpdateLoginProfileResponsePrivate class provides private implementation for UpdateLoginProfileResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
 }
 
 /*!
- * Parses a IAM UpdateLoginProfile response element from \a xml.
+ * Parses a Iam UpdateLoginProfile response element from \a xml.
  */
 void UpdateLoginProfileResponsePrivate::parseUpdateLoginProfileResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void UpdateLoginProfileResponsePrivate::parseUpdateLoginProfileResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

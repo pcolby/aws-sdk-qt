@@ -24,14 +24,14 @@
 #include "getblacklistreportsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetBlacklistReportsRequest;
 
-class GetBlacklistReportsRequestPrivate : public Sesv2RequestPrivate {
+class GetBlacklistReportsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    GetBlacklistReportsRequestPrivate(const Sesv2Request::Action action,
+    GetBlacklistReportsRequestPrivate(const SESv2Request::Action action,
                                    GetBlacklistReportsRequest * const q);
     GetBlacklistReportsRequestPrivate(const GetBlacklistReportsRequestPrivate &other,
                                    GetBlacklistReportsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

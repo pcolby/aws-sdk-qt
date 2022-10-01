@@ -24,14 +24,14 @@
 #include "deletevpclinkrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteVpcLinkRequest;
 
-class DeleteVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteVpcLinkRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteVpcLinkRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteVpcLinkRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteVpcLinkRequest * const q);
     DeleteVpcLinkRequestPrivate(const DeleteVpcLinkRequestPrivate &other,
                                    DeleteVpcLinkRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

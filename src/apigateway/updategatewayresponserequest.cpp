@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateGatewayResponseRequest
- * \brief The UpdateGatewayResponseRequest class provides an interface for APIGateway UpdateGatewayResponse requests.
+ * \class QtAws::ApiGateway::UpdateGatewayResponseRequest
+ * \brief The UpdateGatewayResponseRequest class provides an interface for ApiGateway UpdateGatewayResponse requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateGatewayResponse
+ * \sa ApiGatewayClient::updateGatewayResponse
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateGatewayResponseRequest::UpdateGatewayResponseRequest(const UpdateGatewayResponseRequest &other)
-    : APIGatewayRequest(new UpdateGatewayResponseRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateGatewayResponseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateGatewayResponseRequest::UpdateGatewayResponseRequest(const UpdateGatewayRe
  * Constructs a UpdateGatewayResponseRequest object.
  */
 UpdateGatewayResponseRequest::UpdateGatewayResponseRequest()
-    : APIGatewayRequest(new UpdateGatewayResponseRequestPrivate(APIGatewayRequest::UpdateGatewayResponseAction, this))
+    : ApiGatewayRequest(new UpdateGatewayResponseRequestPrivate(ApiGatewayRequest::UpdateGatewayResponseAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayResponseRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateGatewayResponseRequestPrivate
+ * \class QtAws::ApiGateway::UpdateGatewayResponseRequestPrivate
  * \brief The UpdateGatewayResponseRequestPrivate class provides private implementation for UpdateGatewayResponseRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateGatewayResponseRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateGatewayResponseRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateGatewayResponseRequestPrivate::UpdateGatewayResponseRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateGatewayResponseRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateGatewayResponseRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateGatewayResponseRequestPrivate::UpdateGatewayResponseRequestPrivate(
  */
 UpdateGatewayResponseRequestPrivate::UpdateGatewayResponseRequestPrivate(
     const UpdateGatewayResponseRequestPrivate &other, UpdateGatewayResponseRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

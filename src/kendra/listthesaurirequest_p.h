@@ -24,14 +24,14 @@
 #include "listthesaurirequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class ListThesauriRequest;
 
-class ListThesauriRequestPrivate : public kendraRequestPrivate {
+class ListThesauriRequestPrivate : public KendraRequestPrivate {
 
 public:
-    ListThesauriRequestPrivate(const kendraRequest::Action action,
+    ListThesauriRequestPrivate(const KendraRequest::Action action,
                                    ListThesauriRequest * const q);
     ListThesauriRequestPrivate(const ListThesauriRequestPrivate &other,
                                    ListThesauriRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

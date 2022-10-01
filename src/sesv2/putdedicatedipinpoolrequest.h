@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutDedicatedIpInPoolRequestPrivate;
 
-class QTAWSSESV2_EXPORT PutDedicatedIpInPoolRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutDedicatedIpInPoolRequest : public SESv2Request {
 
 public:
     PutDedicatedIpInPoolRequest(const PutDedicatedIpInPoolRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

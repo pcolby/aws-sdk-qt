@@ -24,14 +24,14 @@
 #include "getwebaclrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetWebACLRequest;
 
-class GetWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class GetWebACLRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    GetWebACLRequestPrivate(const WAFRegionalRequest::Action action,
+    GetWebACLRequestPrivate(const WafRegionalRequest::Action action,
                                    GetWebACLRequest * const q);
     GetWebACLRequestPrivate(const GetWebACLRequestPrivate &other,
                                    GetWebACLRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

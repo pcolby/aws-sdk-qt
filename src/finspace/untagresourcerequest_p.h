@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public finspaceRequestPrivate {
+class UntagResourceRequestPrivate : public FinspaceRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const finspaceRequest::Action action,
+    UntagResourceRequestPrivate(const FinspaceRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

@@ -24,14 +24,14 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class UntagResourceRequest;
 
-class UntagResourceRequestPrivate : public SSMContactsRequestPrivate {
+class UntagResourceRequestPrivate : public SsmContactsRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const SSMContactsRequest::Action action,
+    UntagResourceRequestPrivate(const SsmContactsRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

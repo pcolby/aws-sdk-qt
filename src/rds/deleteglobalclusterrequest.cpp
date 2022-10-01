@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DeleteGlobalClusterRequest
- * \brief The DeleteGlobalClusterRequest class provides an interface for RDS DeleteGlobalCluster requests.
+ * \class QtAws::Rds::DeleteGlobalClusterRequest
+ * \brief The DeleteGlobalClusterRequest class provides an interface for Rds DeleteGlobalCluster requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DeleteGlobalClusterRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::RDS::DeleteGlobalClusterRequestPrivate
+ * \class QtAws::Rds::DeleteGlobalClusterRequestPrivate
  * \brief The DeleteGlobalClusterRequestPrivate class provides private implementation for DeleteGlobalClusterRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DeleteGlobalClusterRequestPrivate::DeleteGlobalClusterRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

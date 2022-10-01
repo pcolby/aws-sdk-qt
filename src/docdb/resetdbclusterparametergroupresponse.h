@@ -24,11 +24,11 @@
 #include "resetdbclusterparametergrouprequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class ResetDBClusterParameterGroupResponsePrivate;
 
-class QTAWSDOCDB_EXPORT ResetDBClusterParameterGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT ResetDBClusterParameterGroupResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::CancelSigningProfileResponse
- * \brief The CancelSigningProfileResponse class provides an interace for signer CancelSigningProfile responses.
+ * \class QtAws::Signer::CancelSigningProfileResponse
+ * \brief The CancelSigningProfileResponse class provides an interace for Signer CancelSigningProfile responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::cancelSigningProfile
+ * \sa SignerClient::cancelSigningProfile
  */
 
 /*!
@@ -69,7 +71,7 @@ CancelSigningProfileResponse::CancelSigningProfileResponse(
         const CancelSigningProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new CancelSigningProfileResponsePrivate(this), parent)
+    : SignerResponse(new CancelSigningProfileResponsePrivate(this), parent)
 {
     setRequest(new CancelSigningProfileRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const CancelSigningProfileRequest * CancelSigningProfileResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful signer CancelSigningProfile \a response.
+ * Parses a successful Signer CancelSigningProfile \a response.
  */
 void CancelSigningProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void CancelSigningProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::CancelSigningProfileResponsePrivate
+ * \class QtAws::Signer::CancelSigningProfileResponsePrivate
  * \brief The CancelSigningProfileResponsePrivate class provides private implementation for CancelSigningProfileResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a CancelSigningProfileResponsePrivate object with public implementation \a q.
  */
 CancelSigningProfileResponsePrivate::CancelSigningProfileResponsePrivate(
-    CancelSigningProfileResponse * const q) : signerResponsePrivate(q)
+    CancelSigningProfileResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer CancelSigningProfile response element from \a xml.
+ * Parses a Signer CancelSigningProfile response element from \a xml.
  */
 void CancelSigningProfileResponsePrivate::parseCancelSigningProfileResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void CancelSigningProfileResponsePrivate::parseCancelSigningProfileResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

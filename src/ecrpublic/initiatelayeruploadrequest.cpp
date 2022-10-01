@@ -23,13 +23,13 @@
 #include "ecrpublicrequest_p.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::InitiateLayerUploadRequest
- * \brief The InitiateLayerUploadRequest class provides an interface for ECRPublic InitiateLayerUpload requests.
+ * \class QtAws::EcrPublic::InitiateLayerUploadRequest
+ * \brief The InitiateLayerUploadRequest class provides an interface for EcrPublic InitiateLayerUpload requests.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -40,14 +40,14 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::initiateLayerUpload
+ * \sa EcrPublicClient::initiateLayerUpload
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUploadRequest &other)
-    : ECRPublicRequest(new InitiateLayerUploadRequestPrivate(*other.d_func(), this))
+    : EcrPublicRequest(new InitiateLayerUploadRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -56,7 +56,7 @@ InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUpload
  * Constructs a InitiateLayerUploadRequest object.
  */
 InitiateLayerUploadRequest::InitiateLayerUploadRequest()
-    : ECRPublicRequest(new InitiateLayerUploadRequestPrivate(ECRPublicRequest::InitiateLayerUploadAction, this))
+    : EcrPublicRequest(new InitiateLayerUploadRequestPrivate(EcrPublicRequest::InitiateLayerUploadAction, this))
 {
 
 }
@@ -81,20 +81,20 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ECRPublic::InitiateLayerUploadRequestPrivate
+ * \class QtAws::EcrPublic::InitiateLayerUploadRequestPrivate
  * \brief The InitiateLayerUploadRequestPrivate class provides private implementation for InitiateLayerUploadRequest.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
- * Constructs a InitiateLayerUploadRequestPrivate object for ECRPublic \a action,
+ * Constructs a InitiateLayerUploadRequestPrivate object for EcrPublic \a action,
  * with public implementation \a q.
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
-    const ECRPublicRequest::Action action, InitiateLayerUploadRequest * const q)
-    : ECRPublicRequestPrivate(action, q)
+    const EcrPublicRequest::Action action, InitiateLayerUploadRequest * const q)
+    : EcrPublicRequestPrivate(action, q)
 {
 
 }
@@ -107,10 +107,10 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
     const InitiateLayerUploadRequestPrivate &other, InitiateLayerUploadRequest * const q)
-    : ECRPublicRequestPrivate(other, q)
+    : EcrPublicRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

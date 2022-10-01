@@ -23,13 +23,13 @@
 #include "emrcontainersrequest_p.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::ListJobRunsRequest
- * \brief The ListJobRunsRequest class provides an interface for EMRContainers ListJobRuns requests.
+ * \class QtAws::Emrcontainers::ListJobRunsRequest
+ * \brief The ListJobRunsRequest class provides an interface for Emrcontainers ListJobRuns requests.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -60,14 +60,14 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::listJobRuns
+ * \sa EmrcontainersClient::listJobRuns
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListJobRunsRequest::ListJobRunsRequest(const ListJobRunsRequest &other)
-    : EMRContainersRequest(new ListJobRunsRequestPrivate(*other.d_func(), this))
+    : EmrcontainersRequest(new ListJobRunsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +76,7 @@ ListJobRunsRequest::ListJobRunsRequest(const ListJobRunsRequest &other)
  * Constructs a ListJobRunsRequest object.
  */
 ListJobRunsRequest::ListJobRunsRequest()
-    : EMRContainersRequest(new ListJobRunsRequestPrivate(EMRContainersRequest::ListJobRunsAction, this))
+    : EmrcontainersRequest(new ListJobRunsRequestPrivate(EmrcontainersRequest::ListJobRunsAction, this))
 {
 
 }
@@ -101,20 +101,20 @@ QtAws::Core::AwsAbstractResponse * ListJobRunsRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::EMRContainers::ListJobRunsRequestPrivate
+ * \class QtAws::Emrcontainers::ListJobRunsRequestPrivate
  * \brief The ListJobRunsRequestPrivate class provides private implementation for ListJobRunsRequest.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
- * Constructs a ListJobRunsRequestPrivate object for EMRContainers \a action,
+ * Constructs a ListJobRunsRequestPrivate object for Emrcontainers \a action,
  * with public implementation \a q.
  */
 ListJobRunsRequestPrivate::ListJobRunsRequestPrivate(
-    const EMRContainersRequest::Action action, ListJobRunsRequest * const q)
-    : EMRContainersRequestPrivate(action, q)
+    const EmrcontainersRequest::Action action, ListJobRunsRequest * const q)
+    : EmrcontainersRequestPrivate(action, q)
 {
 
 }
@@ -127,10 +127,10 @@ ListJobRunsRequestPrivate::ListJobRunsRequestPrivate(
  */
 ListJobRunsRequestPrivate::ListJobRunsRequestPrivate(
     const ListJobRunsRequestPrivate &other, ListJobRunsRequest * const q)
-    : EMRContainersRequestPrivate(other, q)
+    : EmrcontainersRequestPrivate(other, q)
 {
 
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

@@ -24,14 +24,14 @@
 #include "getratebasedrulemanagedkeysrequest.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 class GetRateBasedRuleManagedKeysRequest;
 
-class GetRateBasedRuleManagedKeysRequestPrivate : public WAFRegionalRequestPrivate {
+class GetRateBasedRuleManagedKeysRequestPrivate : public WafRegionalRequestPrivate {
 
 public:
-    GetRateBasedRuleManagedKeysRequestPrivate(const WAFRegionalRequest::Action action,
+    GetRateBasedRuleManagedKeysRequestPrivate(const WafRegionalRequest::Action action,
                                    GetRateBasedRuleManagedKeysRequest * const q);
     GetRateBasedRuleManagedKeysRequestPrivate(const GetRateBasedRuleManagedKeysRequestPrivate &other,
                                    GetRateBasedRuleManagedKeysRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws
 
 #endif

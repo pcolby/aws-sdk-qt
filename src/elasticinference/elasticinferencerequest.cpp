@@ -249,7 +249,7 @@ QNetworkRequest ElasticInferenceRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ElasticInferenceRequestPrivate::ElasticInferenceRequestPrivate(const ElasticInferenceRequest::Action action, ElasticInferenceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-25"))
 {
 
 }

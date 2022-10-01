@@ -1,0 +1,90 @@
+add_compile_definitions(QTAWSKAFKACONNECT_LIBRARY)
+
+add_library(QtAwsKafkaConnect
+  qtawskafkaconnectglobal.h
+  kafkaconnectclient.h
+  kafkaconnectclient_p.h
+  kafkaconnectrequest.h
+  kafkaconnectrequest_p.h
+  kafkaconnectresponse.h
+  kafkaconnectresponse_p.h
+  createconnectorrequest.h
+  createconnectorrequest_p.h
+  createconnectorresponse.h
+  createconnectorresponse_p.h
+  createcustompluginrequest.h
+  createcustompluginrequest_p.h
+  createcustompluginresponse.h
+  createcustompluginresponse_p.h
+  createworkerconfigurationrequest.h
+  createworkerconfigurationrequest_p.h
+  createworkerconfigurationresponse.h
+  createworkerconfigurationresponse_p.h
+  deleteconnectorrequest.h
+  deleteconnectorrequest_p.h
+  deleteconnectorresponse.h
+  deleteconnectorresponse_p.h
+  deletecustompluginrequest.h
+  deletecustompluginrequest_p.h
+  deletecustompluginresponse.h
+  deletecustompluginresponse_p.h
+  describeconnectorrequest.h
+  describeconnectorrequest_p.h
+  describeconnectorresponse.h
+  describeconnectorresponse_p.h
+  describecustompluginrequest.h
+  describecustompluginrequest_p.h
+  describecustompluginresponse.h
+  describecustompluginresponse_p.h
+  describeworkerconfigurationrequest.h
+  describeworkerconfigurationrequest_p.h
+  describeworkerconfigurationresponse.h
+  describeworkerconfigurationresponse_p.h
+  listconnectorsrequest.h
+  listconnectorsrequest_p.h
+  listconnectorsresponse.h
+  listconnectorsresponse_p.h
+  listcustompluginsrequest.h
+  listcustompluginsrequest_p.h
+  listcustompluginsresponse.h
+  listcustompluginsresponse_p.h
+  listworkerconfigurationsrequest.h
+  listworkerconfigurationsrequest_p.h
+  listworkerconfigurationsresponse.h
+  listworkerconfigurationsresponse_p.h
+  updateconnectorrequest.h
+  updateconnectorrequest_p.h
+  updateconnectorresponse.h
+  updateconnectorresponse_p.h
+  kafkaconnectclient.cpp
+  kafkaconnectrequest.cpp
+  kafkaconnectresponse.cpp
+  createconnectorrequest.cpp
+  createconnectorresponse.cpp
+  createcustompluginrequest.cpp
+  createcustompluginresponse.cpp
+  createworkerconfigurationrequest.cpp
+  createworkerconfigurationresponse.cpp
+  deleteconnectorrequest.cpp
+  deleteconnectorresponse.cpp
+  deletecustompluginrequest.cpp
+  deletecustompluginresponse.cpp
+  describeconnectorrequest.cpp
+  describeconnectorresponse.cpp
+  describecustompluginrequest.cpp
+  describecustompluginresponse.cpp
+  describeworkerconfigurationrequest.cpp
+  describeworkerconfigurationresponse.cpp
+  listconnectorsrequest.cpp
+  listconnectorsresponse.cpp
+  listcustompluginsrequest.cpp
+  listcustompluginsresponse.cpp
+  listworkerconfigurationsrequest.cpp
+  listworkerconfigurationsresponse.cpp
+  updateconnectorrequest.cpp
+  updateconnectorresponse.cpp)
+
+target_link_libraries(QtAwsKafkaConnect
+  PRIVATE QtAwsCore
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

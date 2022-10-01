@@ -24,11 +24,11 @@
 #include "describedbengineversionsrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DescribeDBEngineVersionsResponsePrivate;
 
-class QTAWSDOCDB_EXPORT DescribeDBEngineVersionsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeDBEngineVersionsResponse : public DocDbResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

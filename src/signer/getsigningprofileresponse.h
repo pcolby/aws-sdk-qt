@@ -24,11 +24,11 @@
 #include "getsigningprofilerequest.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 class GetSigningProfileResponsePrivate;
 
-class QTAWSSIGNER_EXPORT GetSigningProfileResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT GetSigningProfileResponse : public SignerResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws
 
 #endif

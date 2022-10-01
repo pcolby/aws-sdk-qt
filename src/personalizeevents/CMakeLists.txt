@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSPERSONALIZEEVENTS_LIBRARY)
 
 add_library(QtAwsPersonalizeEvents
+  qtawspersonalizeeventsglobal.h
   personalizeeventsclient.h
   personalizeeventsclient_p.h
   personalizeeventsrequest.h
@@ -19,7 +20,6 @@ add_library(QtAwsPersonalizeEvents
   putusersrequest_p.h
   putusersresponse.h
   putusersresponse_p.h
-  qtawspersonalizeeventsglobal.h
   personalizeeventsclient.cpp
   personalizeeventsrequest.cpp
   personalizeeventsresponse.cpp

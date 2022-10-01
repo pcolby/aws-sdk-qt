@@ -23,11 +23,11 @@
 #include "mgnrequest.h"
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSMGN_EXPORT UntagResourceRequest : public mgnRequest {
+class QTAWSMGN_EXPORT UntagResourceRequest : public MgnRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

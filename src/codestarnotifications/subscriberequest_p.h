@@ -24,14 +24,14 @@
 #include "subscriberequest.h"
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 class SubscribeRequest;
 
-class SubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class SubscribeRequestPrivate : public CodestarNotificationsRequestPrivate {
 
 public:
-    SubscribeRequestPrivate(const CodeStarNotificationsRequest::Action action,
+    SubscribeRequestPrivate(const CodestarNotificationsRequest::Action action,
                                    SubscribeRequest * const q);
     SubscribeRequestPrivate(const SubscribeRequestPrivate &other,
                                    SubscribeRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

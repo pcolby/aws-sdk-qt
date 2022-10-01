@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class UntagResourceRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT UntagResourceRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT UntagResourceRequest : public OpsWorksCmRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

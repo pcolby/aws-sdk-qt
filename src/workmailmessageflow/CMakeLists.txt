@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSWORKMAILMESSAGEFLOW_LIBRARY)
 
 add_library(QtAwsWorkMailMessageFlow
+  qtawsworkmailmessageflowglobal.h
+  workmailmessageflowclient.h
+  workmailmessageflowclient_p.h
+  workmailmessageflowrequest.h
+  workmailmessageflowrequest_p.h
+  workmailmessageflowresponse.h
+  workmailmessageflowresponse_p.h
   getrawmessagecontentrequest.h
   getrawmessagecontentrequest_p.h
   getrawmessagecontentresponse.h
@@ -9,20 +16,13 @@ add_library(QtAwsWorkMailMessageFlow
   putrawmessagecontentrequest_p.h
   putrawmessagecontentresponse.h
   putrawmessagecontentresponse_p.h
-  qtawsworkmailmessageflowglobal.h
-  workmailmessageflowclient.h
-  workmailmessageflowclient_p.h
-  workmailmessageflowrequest.h
-  workmailmessageflowrequest_p.h
-  workmailmessageflowresponse.h
-  workmailmessageflowresponse_p.h
+  workmailmessageflowclient.cpp
+  workmailmessageflowrequest.cpp
+  workmailmessageflowresponse.cpp
   getrawmessagecontentrequest.cpp
   getrawmessagecontentresponse.cpp
   putrawmessagecontentrequest.cpp
-  putrawmessagecontentresponse.cpp
-  workmailmessageflowclient.cpp
-  workmailmessageflowrequest.cpp
-  workmailmessageflowresponse.cpp)
+  putrawmessagecontentresponse.cpp)
 
 target_link_libraries(QtAwsWorkMailMessageFlow
   PRIVATE QtAwsCore

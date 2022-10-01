@@ -21,36 +21,36 @@
 #include "pinpointsmsvoicerequest_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceRequest
- * \brief The PinpointSMSVoiceRequest class provides an interface for PinpointSMSVoice requests.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceRequest
+ * \brief The PinpointSmsVoiceRequest class provides an interface for PinpointSmsVoice requests.
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * \enum PinpointSMSVoiceRequest::Action
+ * \enum PinpointSmsVoiceRequest::Action
  *
- * This enum describes the actions that can be performed as PinpointSMSVoice
+ * This enum describes the actions that can be performed as PinpointSmsVoice
  * requests.
  *
- * \value CreateConfigurationSetAction PinpointSMSVoice CreateConfigurationSet action.
- * \value CreateConfigurationSetEventDestinationAction PinpointSMSVoice CreateConfigurationSetEventDestination action.
- * \value DeleteConfigurationSetAction PinpointSMSVoice DeleteConfigurationSet action.
- * \value DeleteConfigurationSetEventDestinationAction PinpointSMSVoice DeleteConfigurationSetEventDestination action.
- * \value GetConfigurationSetEventDestinationsAction PinpointSMSVoice GetConfigurationSetEventDestinations action.
- * \value ListConfigurationSetsAction PinpointSMSVoice ListConfigurationSets action.
- * \value SendVoiceMessageAction PinpointSMSVoice SendVoiceMessage action.
- * \value UpdateConfigurationSetEventDestinationAction PinpointSMSVoice UpdateConfigurationSetEventDestination action.
+ * \value CreateConfigurationSetAction PinpointSmsVoice CreateConfigurationSet action.
+ * \value CreateConfigurationSetEventDestinationAction PinpointSmsVoice CreateConfigurationSetEventDestination action.
+ * \value DeleteConfigurationSetAction PinpointSmsVoice DeleteConfigurationSet action.
+ * \value DeleteConfigurationSetEventDestinationAction PinpointSmsVoice DeleteConfigurationSetEventDestination action.
+ * \value GetConfigurationSetEventDestinationsAction PinpointSmsVoice GetConfigurationSetEventDestinations action.
+ * \value ListConfigurationSetsAction PinpointSmsVoice ListConfigurationSets action.
+ * \value SendVoiceMessageAction PinpointSmsVoice SendVoiceMessage action.
+ * \value UpdateConfigurationSetEventDestinationAction PinpointSmsVoice UpdateConfigurationSetEventDestination action.
  */
 
 /*!
- * Constructs a PinpointSMSVoiceRequest object for PinpointSMSVoice \a action.
+ * Constructs a PinpointSmsVoiceRequest object for PinpointSmsVoice \a action.
  */
-PinpointSMSVoiceRequest::PinpointSMSVoiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new PinpointSMSVoiceRequestPrivate(action, this))
+PinpointSmsVoiceRequest::PinpointSmsVoiceRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new PinpointSmsVoiceRequestPrivate(action, this))
 {
 
 }
@@ -58,18 +58,18 @@ PinpointSMSVoiceRequest::PinpointSMSVoiceRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-PinpointSMSVoiceRequest::PinpointSMSVoiceRequest(const PinpointSMSVoiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new PinpointSMSVoiceRequestPrivate(*other.d_func(), this))
+PinpointSmsVoiceRequest::PinpointSmsVoiceRequest(const PinpointSmsVoiceRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new PinpointSmsVoiceRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the PinpointSMSVoiceRequest object to be equal to \a other.
+ * Sets the PinpointSmsVoiceRequest object to be equal to \a other.
  */
-PinpointSMSVoiceRequest& PinpointSMSVoiceRequest::operator=(const PinpointSMSVoiceRequest &other)
+PinpointSmsVoiceRequest& PinpointSmsVoiceRequest::operator=(const PinpointSmsVoiceRequest &other)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -77,57 +77,57 @@ PinpointSMSVoiceRequest& PinpointSMSVoiceRequest::operator=(const PinpointSMSVoi
 }
 
 /*!
- * Constructs aa PinpointSMSVoiceRequest object with private implementation \a d.
+ * Constructs aa PinpointSmsVoiceRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from PinpointSMSVoiceRequestPrivate.
+ * implementation that inherits from PinpointSmsVoiceRequestPrivate.
  */
-PinpointSMSVoiceRequest::PinpointSMSVoiceRequest(PinpointSMSVoiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+PinpointSmsVoiceRequest::PinpointSmsVoiceRequest(PinpointSmsVoiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the PinpointSMSVoice action to be performed by this request.
+ * Returns the PinpointSmsVoice action to be performed by this request.
  */
-PinpointSMSVoiceRequest::Action PinpointSMSVoiceRequest::action() const
+PinpointSmsVoiceRequest::Action PinpointSmsVoiceRequest::action() const
 {
-    Q_D(const PinpointSMSVoiceRequest);
+    Q_D(const PinpointSmsVoiceRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the PinpointSMSVoice action to be performed by this request.
+ * Returns the name of the PinpointSmsVoice action to be performed by this request.
  */
-QString PinpointSMSVoiceRequest::actionString() const
+QString PinpointSmsVoiceRequest::actionString() const
 {
-    return PinpointSMSVoiceRequestPrivate::toString(action());
+    return PinpointSmsVoiceRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the PinpointSMSVoice API version implemented by this request.
+ * Returns the PinpointSmsVoice API version implemented by this request.
  */
-QString PinpointSMSVoiceRequest::apiVersion() const
+QString PinpointSmsVoiceRequest::apiVersion() const
 {
-    Q_D(const PinpointSMSVoiceRequest);
+    Q_D(const PinpointSmsVoiceRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the PinpointSMSVoice action to be performed by this request to \a action.
+ * Sets the PinpointSmsVoice action to be performed by this request to \a action.
  */
-void PinpointSMSVoiceRequest::setAction(const Action action)
+void PinpointSmsVoiceRequest::setAction(const Action action)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->action = action;
 }
 
 /*!
- * Sets the PinpointSMSVoice API version to include in this request to \a version.
+ * Sets the PinpointSmsVoice API version to include in this request to \a version.
  */
-void PinpointSMSVoiceRequest::setApiVersion(const QString &version)
+void PinpointSmsVoiceRequest::setApiVersion(const QString &version)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->apiVersion = version;
 }
 
@@ -139,7 +139,7 @@ void PinpointSMSVoiceRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool PinpointSMSVoiceRequest::operator==(const PinpointSMSVoiceRequest &other) const
+bool PinpointSmsVoiceRequest::operator==(const PinpointSmsVoiceRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -148,19 +148,19 @@ bool PinpointSMSVoiceRequest::operator==(const PinpointSMSVoiceRequest &other) c
 }
 
 /*
- * Returns \c tue if \a queueName is a valid PinpointSMSVoice queue name.
+ * Returns \c tue if \a queueName is a valid PinpointSmsVoice queue name.
  *
- * @par From PinpointSMSVoice FAQs:
+ * @par From PinpointSmsVoice FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid PinpointSMSVoice queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid PinpointSmsVoice queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool PinpointSMSVoiceRequest::isValidQueueName(const QString &queueName)
+/*bool PinpointSmsVoiceRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -170,45 +170,45 @@ bool PinpointSMSVoiceRequest::operator==(const PinpointSMSVoiceRequest &other) c
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int PinpointSMSVoiceRequest::clearParameter(const QString &name)
+int PinpointSmsVoiceRequest::clearParameter(const QString &name)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void PinpointSMSVoiceRequest::clearParameters()
+void PinpointSmsVoiceRequest::clearParameters()
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant PinpointSMSVoiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant PinpointSmsVoiceRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const PinpointSMSVoiceRequest);
+    Q_D(const PinpointSmsVoiceRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &PinpointSMSVoiceRequest::parameters() const
+const QVariantMap &PinpointSmsVoiceRequest::parameters() const
 {
-    Q_D(const PinpointSMSVoiceRequest);
+    Q_D(const PinpointSmsVoiceRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void PinpointSMSVoiceRequest::setParameter(const QString &name, const QVariant &value)
+void PinpointSmsVoiceRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->parameters.insert(name, value);
 }
 
@@ -216,42 +216,42 @@ void PinpointSMSVoiceRequest::setParameter(const QString &name, const QVariant &
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void PinpointSMSVoiceRequest::setParameters(const QVariantMap &parameters)
+void PinpointSmsVoiceRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(PinpointSMSVoiceRequest);
+    Q_D(PinpointSmsVoiceRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the PinpointSMSVoice request using the given
+ * Returns a network request for the PinpointSmsVoice request using the given
  * \a endpoint.
  *
- * This PinpointSMSVoice implementation builds request URLs by combining the
+ * This PinpointSmsVoice implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest PinpointSMSVoiceRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest PinpointSmsVoiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const PinpointSMSVoiceRequest);
+    //Q_D(const PinpointSmsVoiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::PinpointSMSVoice::PinpointSMSVoiceRequestPrivate
- * \brief The PinpointSMSVoiceRequestPrivate class provides private implementation for PinpointSMSVoiceRequest.
+ * \class QtAws::PinpointSmsVoice::PinpointSmsVoiceRequestPrivate
+ * \brief The PinpointSmsVoiceRequestPrivate class provides private implementation for PinpointSmsVoiceRequest.
  * \internal
  *
- * \inmodule QtAwsPinpointSMSVoice
+ * \inmodule QtAwsPinpointSmsVoice
  */
 
 /*!
- * Constructs a PinpointSMSVoiceRequestPrivate object for PinpointSMSVoice \a action,
+ * Constructs a PinpointSmsVoiceRequestPrivate object for PinpointSmsVoice \a action,
  * with public implementation \a q.
  */
-PinpointSMSVoiceRequestPrivate::PinpointSMSVoiceRequestPrivate(const PinpointSMSVoiceRequest::Action action, PinpointSMSVoiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+PinpointSmsVoiceRequestPrivate::PinpointSmsVoiceRequestPrivate(const PinpointSmsVoiceRequest::Action action, PinpointSmsVoiceRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2018-09-05"))
 {
 
 }
@@ -262,10 +262,10 @@ PinpointSMSVoiceRequestPrivate::PinpointSMSVoiceRequestPrivate(const PinpointSMS
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the PinpointSMSVoiceRequest class's copy constructor.
+ * This is required to support the PinpointSmsVoiceRequest class's copy constructor.
  */
-PinpointSMSVoiceRequestPrivate::PinpointSMSVoiceRequestPrivate(const PinpointSMSVoiceRequestPrivate &other,
-                                     PinpointSMSVoiceRequest * const q)
+PinpointSmsVoiceRequestPrivate::PinpointSmsVoiceRequestPrivate(const PinpointSmsVoiceRequestPrivate &other,
+                                     PinpointSmsVoiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -276,14 +276,14 @@ PinpointSMSVoiceRequestPrivate::PinpointSMSVoiceRequestPrivate(const PinpointSMS
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts PinpointSMSVoiceRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the PinpointSMSVoice service's Action
+ * This function converts PinpointSmsVoiceRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the PinpointSmsVoice service's Action
  * query parameters.
  */
-QString PinpointSMSVoiceRequestPrivate::toString(const PinpointSMSVoiceRequest::Action &action)
+QString PinpointSmsVoiceRequestPrivate::toString(const PinpointSmsVoiceRequest::Action &action)
 {
     #define ActionToString(action) \
-        case PinpointSMSVoiceRequest::action##Action: return QStringLiteral(#action)
+        case PinpointSmsVoiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateConfigurationSet);
         ActionToString(CreateConfigurationSetEventDestination);
@@ -300,5 +300,5 @@ QString PinpointSMSVoiceRequestPrivate::toString(const PinpointSMSVoiceRequest::
     return QString();
 }
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws

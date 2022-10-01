@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDomainNameResponse
- * \brief The DeleteDomainNameResponse class provides an interace for APIGateway DeleteDomainName responses.
+ * \class QtAws::ApiGateway::DeleteDomainNameResponse
+ * \brief The DeleteDomainNameResponse class provides an interace for ApiGateway DeleteDomainName responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDomainName
+ * \sa ApiGatewayClient::deleteDomainName
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteDomainNameResponse::DeleteDomainNameResponse(
         const DeleteDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteDomainNameResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteDomainNameResponsePrivate(this), parent)
 {
     setRequest(new DeleteDomainNameRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteDomainName \a response.
+ * Parses a successful ApiGateway DeleteDomainName \a response.
  */
 void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDomainNameResponsePrivate
+ * \class QtAws::ApiGateway::DeleteDomainNameResponsePrivate
  * \brief The DeleteDomainNameResponsePrivate class provides private implementation for DeleteDomainNameResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteDomainNameResponsePrivate object with public implementation \a q.
  */
 DeleteDomainNameResponsePrivate::DeleteDomainNameResponsePrivate(
-    DeleteDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteDomainNameResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteDomainName response element from \a xml.
+ * Parses a ApiGateway DeleteDomainName response element from \a xml.
  */
 void DeleteDomainNameResponsePrivate::parseDeleteDomainNameResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteDomainNameResponsePrivate::parseDeleteDomainNameResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

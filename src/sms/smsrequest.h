@@ -30,14 +30,14 @@
 class QNetworkRequest;
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class SmsRequestPrivate;
 
 class QTAWSSMS_EXPORT SmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
-    /// Actions supported by SMS.
+    /// Actions supported by Sms.
     enum Action {
         CreateAppAction,
         CreateReplicationJobAction,
@@ -110,7 +110,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

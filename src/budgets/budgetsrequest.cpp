@@ -49,6 +49,7 @@ namespace Budgets {
  * \value DescribeBudgetActionHistoriesAction Budgets DescribeBudgetActionHistories action.
  * \value DescribeBudgetActionsForAccountAction Budgets DescribeBudgetActionsForAccount action.
  * \value DescribeBudgetActionsForBudgetAction Budgets DescribeBudgetActionsForBudget action.
+ * \value DescribeBudgetNotificationsForAccountAction Budgets DescribeBudgetNotificationsForAccount action.
  * \value DescribeBudgetPerformanceHistoryAction Budgets DescribeBudgetPerformanceHistory action.
  * \value DescribeBudgetsAction Budgets DescribeBudgets action.
  * \value DescribeNotificationsForBudgetAction Budgets DescribeNotificationsForBudget action.
@@ -265,7 +266,7 @@ QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action, BudgetsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-10-20"))
 {
 
 }
@@ -312,6 +313,7 @@ QString BudgetsRequestPrivate::toString(const BudgetsRequest::Action &action)
         ActionToString(DescribeBudgetActionHistories);
         ActionToString(DescribeBudgetActionsForAccount);
         ActionToString(DescribeBudgetActionsForBudget);
+        ActionToString(DescribeBudgetNotificationsForAccount);
         ActionToString(DescribeBudgetPerformanceHistory);
         ActionToString(DescribeBudgets);
         ActionToString(DescribeNotificationsForBudget);

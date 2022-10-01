@@ -42,6 +42,8 @@ class CreateEventSourceMappingRequest;
 class CreateEventSourceMappingResponse;
 class CreateFunctionRequest;
 class CreateFunctionResponse;
+class CreateFunctionUrlConfigRequest;
+class CreateFunctionUrlConfigResponse;
 class DeleteAliasRequest;
 class DeleteAliasResponse;
 class DeleteCodeSigningConfigRequest;
@@ -56,6 +58,8 @@ class DeleteFunctionConcurrencyRequest;
 class DeleteFunctionConcurrencyResponse;
 class DeleteFunctionEventInvokeConfigRequest;
 class DeleteFunctionEventInvokeConfigResponse;
+class DeleteFunctionUrlConfigRequest;
+class DeleteFunctionUrlConfigResponse;
 class DeleteLayerVersionRequest;
 class DeleteLayerVersionResponse;
 class DeleteProvisionedConcurrencyConfigRequest;
@@ -78,6 +82,8 @@ class GetFunctionConfigurationRequest;
 class GetFunctionConfigurationResponse;
 class GetFunctionEventInvokeConfigRequest;
 class GetFunctionEventInvokeConfigResponse;
+class GetFunctionUrlConfigRequest;
+class GetFunctionUrlConfigResponse;
 class GetLayerVersionRequest;
 class GetLayerVersionResponse;
 class GetLayerVersionByArnRequest;
@@ -100,6 +106,8 @@ class ListEventSourceMappingsRequest;
 class ListEventSourceMappingsResponse;
 class ListFunctionEventInvokeConfigsRequest;
 class ListFunctionEventInvokeConfigsResponse;
+class ListFunctionUrlConfigsRequest;
+class ListFunctionUrlConfigsResponse;
 class ListFunctionsRequest;
 class ListFunctionsResponse;
 class ListFunctionsByCodeSigningConfigRequest;
@@ -146,6 +154,8 @@ class UpdateFunctionConfigurationRequest;
 class UpdateFunctionConfigurationResponse;
 class UpdateFunctionEventInvokeConfigRequest;
 class UpdateFunctionEventInvokeConfigResponse;
+class UpdateFunctionUrlConfigRequest;
+class UpdateFunctionUrlConfigResponse;
 
 class QTAWSLAMBDA_EXPORT LambdaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -169,6 +179,7 @@ public slots:
     CreateCodeSigningConfigResponse * createCodeSigningConfig(const CreateCodeSigningConfigRequest &request);
     CreateEventSourceMappingResponse * createEventSourceMapping(const CreateEventSourceMappingRequest &request);
     CreateFunctionResponse * createFunction(const CreateFunctionRequest &request);
+    CreateFunctionUrlConfigResponse * createFunctionUrlConfig(const CreateFunctionUrlConfigRequest &request);
     DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
     DeleteCodeSigningConfigResponse * deleteCodeSigningConfig(const DeleteCodeSigningConfigRequest &request);
     DeleteEventSourceMappingResponse * deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request);
@@ -176,6 +187,7 @@ public slots:
     DeleteFunctionCodeSigningConfigResponse * deleteFunctionCodeSigningConfig(const DeleteFunctionCodeSigningConfigRequest &request);
     DeleteFunctionConcurrencyResponse * deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request);
     DeleteFunctionEventInvokeConfigResponse * deleteFunctionEventInvokeConfig(const DeleteFunctionEventInvokeConfigRequest &request);
+    DeleteFunctionUrlConfigResponse * deleteFunctionUrlConfig(const DeleteFunctionUrlConfigRequest &request);
     DeleteLayerVersionResponse * deleteLayerVersion(const DeleteLayerVersionRequest &request);
     DeleteProvisionedConcurrencyConfigResponse * deleteProvisionedConcurrencyConfig(const DeleteProvisionedConcurrencyConfigRequest &request);
     GetAccountSettingsResponse * getAccountSettings(const GetAccountSettingsRequest &request);
@@ -187,6 +199,7 @@ public slots:
     GetFunctionConcurrencyResponse * getFunctionConcurrency(const GetFunctionConcurrencyRequest &request);
     GetFunctionConfigurationResponse * getFunctionConfiguration(const GetFunctionConfigurationRequest &request);
     GetFunctionEventInvokeConfigResponse * getFunctionEventInvokeConfig(const GetFunctionEventInvokeConfigRequest &request);
+    GetFunctionUrlConfigResponse * getFunctionUrlConfig(const GetFunctionUrlConfigRequest &request);
     GetLayerVersionResponse * getLayerVersion(const GetLayerVersionRequest &request);
     GetLayerVersionByArnResponse * getLayerVersionByArn(const GetLayerVersionByArnRequest &request);
     GetLayerVersionPolicyResponse * getLayerVersionPolicy(const GetLayerVersionPolicyRequest &request);
@@ -198,6 +211,7 @@ public slots:
     ListCodeSigningConfigsResponse * listCodeSigningConfigs(const ListCodeSigningConfigsRequest &request);
     ListEventSourceMappingsResponse * listEventSourceMappings(const ListEventSourceMappingsRequest &request);
     ListFunctionEventInvokeConfigsResponse * listFunctionEventInvokeConfigs(const ListFunctionEventInvokeConfigsRequest &request);
+    ListFunctionUrlConfigsResponse * listFunctionUrlConfigs(const ListFunctionUrlConfigsRequest &request);
     ListFunctionsResponse * listFunctions(const ListFunctionsRequest &request);
     ListFunctionsByCodeSigningConfigResponse * listFunctionsByCodeSigningConfig(const ListFunctionsByCodeSigningConfigRequest &request);
     ListLayerVersionsResponse * listLayerVersions(const ListLayerVersionsRequest &request);
@@ -221,6 +235,7 @@ public slots:
     UpdateFunctionCodeResponse * updateFunctionCode(const UpdateFunctionCodeRequest &request);
     UpdateFunctionConfigurationResponse * updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request);
     UpdateFunctionEventInvokeConfigResponse * updateFunctionEventInvokeConfig(const UpdateFunctionEventInvokeConfigRequest &request);
+    UpdateFunctionUrlConfigResponse * updateFunctionUrlConfig(const UpdateFunctionUrlConfigRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(LambdaClient)

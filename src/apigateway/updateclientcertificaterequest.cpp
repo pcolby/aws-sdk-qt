@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::UpdateClientCertificateRequest
- * \brief The UpdateClientCertificateRequest class provides an interface for APIGateway UpdateClientCertificate requests.
+ * \class QtAws::ApiGateway::UpdateClientCertificateRequest
+ * \brief The UpdateClientCertificateRequest class provides an interface for ApiGateway UpdateClientCertificate requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::updateClientCertificate
+ * \sa ApiGatewayClient::updateClientCertificate
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateClientCertificateRequest::UpdateClientCertificateRequest(const UpdateClientCertificateRequest &other)
-    : APIGatewayRequest(new UpdateClientCertificateRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new UpdateClientCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateClientCertificateRequest::UpdateClientCertificateRequest(const UpdateClien
  * Constructs a UpdateClientCertificateRequest object.
  */
 UpdateClientCertificateRequest::UpdateClientCertificateRequest()
-    : APIGatewayRequest(new UpdateClientCertificateRequestPrivate(APIGatewayRequest::UpdateClientCertificateAction, this))
+    : ApiGatewayRequest(new UpdateClientCertificateRequestPrivate(ApiGatewayRequest::UpdateClientCertificateAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNet
 }
 
 /*!
- * \class QtAws::APIGateway::UpdateClientCertificateRequestPrivate
+ * \class QtAws::ApiGateway::UpdateClientCertificateRequestPrivate
  * \brief The UpdateClientCertificateRequestPrivate class provides private implementation for UpdateClientCertificateRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a UpdateClientCertificateRequestPrivate object for APIGateway \a action,
+ * Constructs a UpdateClientCertificateRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
-    const APIGatewayRequest::Action action, UpdateClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, UpdateClientCertificateRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
  */
 UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
     const UpdateClientCertificateRequestPrivate &other, UpdateClientCertificateRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

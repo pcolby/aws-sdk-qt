@@ -41,10 +41,16 @@
 #include "listtablerowsresponse.h"
 #include "listtablesrequest.h"
 #include "listtablesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "querytablerowsrequest.h"
 #include "querytablerowsresponse.h"
 #include "starttabledataimportjobrequest.h"
 #include "starttabledataimportjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -285,6 +291,19 @@ ListTablesResponse * HoneycodeClient::listTables(const ListTablesRequest &reques
 
 /*!
  * Sends \a request to the HoneycodeClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The ListTagsForResource API allows you to return a resource's tags.
+ */
+ListTagsForResourceResponse * HoneycodeClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HoneycodeClient service, and returns a pointer to an
  * QueryTableRowsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -308,6 +327,34 @@ QueryTableRowsResponse * HoneycodeClient::queryTableRows(const QueryTableRowsReq
 StartTableDataImportJobResponse * HoneycodeClient::startTableDataImportJob(const StartTableDataImportJobRequest &request)
 {
     return qobject_cast<StartTableDataImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HoneycodeClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and
+ * screen-automation.
+ */
+TagResourceResponse * HoneycodeClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the HoneycodeClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen
+ * and screen-automation.
+ */
+UntagResourceResponse * HoneycodeClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -24,7 +24,7 @@
 #include "putaccountconfigurationrequest.h"
 
 namespace QtAws {
-namespace ACM {
+namespace Acm {
 
 class PutAccountConfigurationResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace ACM
+} // namespace Acm
 } // namespace QtAws
 
 #endif

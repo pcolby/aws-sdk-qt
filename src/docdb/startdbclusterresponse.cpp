@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::StartDBClusterResponse
- * \brief The StartDBClusterResponse class provides an interace for DocDB StartDBCluster responses.
+ * \class QtAws::DocDb::StartDBClusterResponse
+ * \brief The StartDBClusterResponse class provides an interace for DocDb StartDBCluster responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::startDBCluster
+ * \sa DocDbClient::startDBCluster
  */
 
 /*!
@@ -45,7 +45,7 @@ StartDBClusterResponse::StartDBClusterResponse(
         const StartDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new StartDBClusterResponsePrivate(this), parent)
+    : DocDbResponse(new StartDBClusterResponsePrivate(this), parent)
 {
     setRequest(new StartDBClusterRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const StartDBClusterRequest * StartDBClusterResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB StartDBCluster \a response.
+ * Parses a successful DocDb StartDBCluster \a response.
  */
 void StartDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void StartDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::StartDBClusterResponsePrivate
+ * \class QtAws::DocDb::StartDBClusterResponsePrivate
  * \brief The StartDBClusterResponsePrivate class provides private implementation for StartDBClusterResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a StartDBClusterResponsePrivate object with public implementation \a q.
  */
 StartDBClusterResponsePrivate::StartDBClusterResponsePrivate(
-    StartDBClusterResponse * const q) : DocDBResponsePrivate(q)
+    StartDBClusterResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB StartDBCluster response element from \a xml.
+ * Parses a DocDb StartDBCluster response element from \a xml.
  */
 void StartDBClusterResponsePrivate::parseStartDBClusterResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void StartDBClusterResponsePrivate::parseStartDBClusterResponse(QXmlStreamReader
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

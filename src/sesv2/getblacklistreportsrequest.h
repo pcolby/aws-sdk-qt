@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetBlacklistReportsRequestPrivate;
 
-class QTAWSSESV2_EXPORT GetBlacklistReportsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetBlacklistReportsRequest : public SESv2Request {
 
 public:
     GetBlacklistReportsRequest(const GetBlacklistReportsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

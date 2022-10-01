@@ -24,14 +24,14 @@
 #include "describebackupsrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class DescribeBackupsRequest;
 
-class DescribeBackupsRequestPrivate : public CloudHSMV2RequestPrivate {
+class DescribeBackupsRequestPrivate : public CloudHsmV2RequestPrivate {
 
 public:
-    DescribeBackupsRequestPrivate(const CloudHSMV2Request::Action action,
+    DescribeBackupsRequestPrivate(const CloudHsmV2Request::Action action,
                                    DescribeBackupsRequest * const q);
     DescribeBackupsRequestPrivate(const DescribeBackupsRequestPrivate &other,
                                    DescribeBackupsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

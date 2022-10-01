@@ -1,16 +1,17 @@
 add_compile_definitions(QTAWSEBS_LIBRARY)
 
 add_library(QtAwsEbs
-  completesnapshotrequest.h
-  completesnapshotrequest_p.h
-  completesnapshotresponse.h
-  completesnapshotresponse_p.h
+  qtawsebsglobal.h
   ebsclient.h
   ebsclient_p.h
   ebsrequest.h
   ebsrequest_p.h
   ebsresponse.h
   ebsresponse_p.h
+  completesnapshotrequest.h
+  completesnapshotrequest_p.h
+  completesnapshotresponse.h
+  completesnapshotresponse_p.h
   getsnapshotblockrequest.h
   getsnapshotblockrequest_p.h
   getsnapshotblockresponse.h
@@ -27,16 +28,15 @@ add_library(QtAwsEbs
   putsnapshotblockrequest_p.h
   putsnapshotblockresponse.h
   putsnapshotblockresponse_p.h
-  qtawsebsglobal.h
   startsnapshotrequest.h
   startsnapshotrequest_p.h
   startsnapshotresponse.h
   startsnapshotresponse_p.h
-  completesnapshotrequest.cpp
-  completesnapshotresponse.cpp
   ebsclient.cpp
   ebsrequest.cpp
   ebsresponse.cpp
+  completesnapshotrequest.cpp
+  completesnapshotresponse.cpp
   getsnapshotblockrequest.cpp
   getsnapshotblockresponse.cpp
   listchangedblocksrequest.cpp

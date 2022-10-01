@@ -23,11 +23,11 @@
 #include "pinpointsmsvoiceresponse_p.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class CreateConfigurationSetEventDestinationResponse;
 
-class CreateConfigurationSetEventDestinationResponsePrivate : public PinpointSMSVoiceResponsePrivate {
+class CreateConfigurationSetEventDestinationResponsePrivate : public PinpointSmsVoiceResponsePrivate {
 
 public:
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

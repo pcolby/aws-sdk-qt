@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetRegistryCatalogDataResponse
- * \brief The GetRegistryCatalogDataResponse class provides an interace for ECRPublic GetRegistryCatalogData responses.
+ * \class QtAws::EcrPublic::GetRegistryCatalogDataResponse
+ * \brief The GetRegistryCatalogDataResponse class provides an interace for EcrPublic GetRegistryCatalogData responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getRegistryCatalogData
+ * \sa EcrPublicClient::getRegistryCatalogData
  */
 
 /*!
@@ -52,7 +52,7 @@ GetRegistryCatalogDataResponse::GetRegistryCatalogDataResponse(
         const GetRegistryCatalogDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new GetRegistryCatalogDataResponsePrivate(this), parent)
+    : EcrPublicResponse(new GetRegistryCatalogDataResponsePrivate(this), parent)
 {
     setRequest(new GetRegistryCatalogDataRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const GetRegistryCatalogDataRequest * GetRegistryCatalogDataResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful ECRPublic GetRegistryCatalogData \a response.
+ * Parses a successful EcrPublic GetRegistryCatalogData \a response.
  */
 void GetRegistryCatalogDataResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void GetRegistryCatalogDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::GetRegistryCatalogDataResponsePrivate
+ * \class QtAws::EcrPublic::GetRegistryCatalogDataResponsePrivate
  * \brief The GetRegistryCatalogDataResponsePrivate class provides private implementation for GetRegistryCatalogDataResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a GetRegistryCatalogDataResponsePrivate object with public implementation \a q.
  */
 GetRegistryCatalogDataResponsePrivate::GetRegistryCatalogDataResponsePrivate(
-    GetRegistryCatalogDataResponse * const q) : ECRPublicResponsePrivate(q)
+    GetRegistryCatalogDataResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic GetRegistryCatalogData response element from \a xml.
+ * Parses a EcrPublic GetRegistryCatalogData response element from \a xml.
  */
 void GetRegistryCatalogDataResponsePrivate::parseGetRegistryCatalogDataResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void GetRegistryCatalogDataResponsePrivate::parseGetRegistryCatalogDataResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

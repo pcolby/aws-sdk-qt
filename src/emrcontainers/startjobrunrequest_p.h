@@ -24,14 +24,14 @@
 #include "startjobrunrequest.h"
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 class StartJobRunRequest;
 
-class StartJobRunRequestPrivate : public EMRContainersRequestPrivate {
+class StartJobRunRequestPrivate : public EmrcontainersRequestPrivate {
 
 public:
-    StartJobRunRequestPrivate(const EMRContainersRequest::Action action,
+    StartJobRunRequestPrivate(const EmrcontainersRequest::Action action,
                                    StartJobRunRequest * const q);
     StartJobRunRequestPrivate(const StartJobRunRequestPrivate &other,
                                    StartJobRunRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include "getexecutionhistoryrequest.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 class GetExecutionHistoryRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws
 
 #endif

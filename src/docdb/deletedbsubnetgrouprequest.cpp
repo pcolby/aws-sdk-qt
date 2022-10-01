@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DeleteDBSubnetGroupRequest
- * \brief The DeleteDBSubnetGroupRequest class provides an interface for DocDB DeleteDBSubnetGroup requests.
+ * \class QtAws::DocDb::DeleteDBSubnetGroupRequest
+ * \brief The DeleteDBSubnetGroupRequest class provides an interface for DocDb DeleteDBSubnetGroup requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::deleteDBSubnetGroup
+ * \sa DocDbClient::deleteDBSubnetGroup
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroupRequest &other)
-    : DocDBRequest(new DeleteDBSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DeleteDBSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroup
  * Constructs a DeleteDBSubnetGroupRequest object.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest()
-    : DocDBRequest(new DeleteDBSubnetGroupRequestPrivate(DocDBRequest::DeleteDBSubnetGroupAction, this))
+    : DocDbRequest(new DeleteDBSubnetGroupRequestPrivate(DocDbRequest::DeleteDBSubnetGroupAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::DocDB::DeleteDBSubnetGroupRequestPrivate
+ * \class QtAws::DocDb::DeleteDBSubnetGroupRequestPrivate
  * \brief The DeleteDBSubnetGroupRequestPrivate class provides private implementation for DeleteDBSubnetGroupRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DeleteDBSubnetGroupRequestPrivate object for DocDB \a action,
+ * Constructs a DeleteDBSubnetGroupRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
-    const DocDBRequest::Action action, DeleteDBSubnetGroupRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DeleteDBSubnetGroupRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const DeleteDBSubnetGroupRequestPrivate &other, DeleteDBSubnetGroupRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

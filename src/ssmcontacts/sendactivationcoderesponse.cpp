@@ -25,16 +25,26 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 /*!
- * \class QtAws::SSMContacts::SendActivationCodeResponse
- * \brief The SendActivationCodeResponse class provides an interace for SSMContacts SendActivationCode responses.
+ * \class QtAws::SsmContacts::SendActivationCodeResponse
+ * \brief The SendActivationCodeResponse class provides an interace for SsmContacts SendActivationCode responses.
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  *
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
+ * 
+ *  </p
+ * 
+ *  Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant troubleshooting
+ *  data, and providing collaboration tools to get services back up and running. To achieve the primary goal of reducing the
+ *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
+ *  escalation.
  *
- * \sa SSMContactsClient::sendActivationCode
+ * \sa SsmContactsClient::sendActivationCode
  */
 
 /*!
@@ -44,7 +54,7 @@ SendActivationCodeResponse::SendActivationCodeResponse(
         const SendActivationCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMContactsResponse(new SendActivationCodeResponsePrivate(this), parent)
+    : SsmContactsResponse(new SendActivationCodeResponsePrivate(this), parent)
 {
     setRequest(new SendActivationCodeRequest(request));
     setReply(reply);
@@ -61,7 +71,7 @@ const SendActivationCodeRequest * SendActivationCodeResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMContacts SendActivationCode \a response.
+ * Parses a successful SsmContacts SendActivationCode \a response.
  */
 void SendActivationCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -71,24 +81,24 @@ void SendActivationCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMContacts::SendActivationCodeResponsePrivate
+ * \class QtAws::SsmContacts::SendActivationCodeResponsePrivate
  * \brief The SendActivationCodeResponsePrivate class provides private implementation for SendActivationCodeResponse.
  * \internal
  *
- * \inmodule QtAwsSSMContacts
+ * \inmodule QtAwsSsmContacts
  */
 
 /*!
  * Constructs a SendActivationCodeResponsePrivate object with public implementation \a q.
  */
 SendActivationCodeResponsePrivate::SendActivationCodeResponsePrivate(
-    SendActivationCodeResponse * const q) : SSMContactsResponsePrivate(q)
+    SendActivationCodeResponse * const q) : SsmContactsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMContacts SendActivationCode response element from \a xml.
+ * Parses a SsmContacts SendActivationCode response element from \a xml.
  */
 void SendActivationCodeResponsePrivate::parseSendActivationCodeResponse(QXmlStreamReader &xml)
 {
@@ -96,5 +106,5 @@ void SendActivationCodeResponsePrivate::parseSendActivationCodeResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws

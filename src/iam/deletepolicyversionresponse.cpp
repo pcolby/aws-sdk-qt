@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeletePolicyVersionResponse
- * \brief The DeletePolicyVersionResponse class provides an interace for IAM DeletePolicyVersion responses.
+ * \class QtAws::Iam::DeletePolicyVersionResponse
+ * \brief The DeletePolicyVersionResponse class provides an interace for Iam DeletePolicyVersion responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deletePolicyVersion
  */
@@ -68,7 +68,7 @@ const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeletePolicyVersion \a response.
+ * Parses a successful Iam DeletePolicyVersion \a response.
  */
 void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeletePolicyVersionResponsePrivate
+ * \class QtAws::Iam::DeletePolicyVersionResponsePrivate
  * \brief The DeletePolicyVersionResponsePrivate class provides private implementation for DeletePolicyVersionResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeletePolicyVersion response element from \a xml.
+ * Parses a Iam DeletePolicyVersion response element from \a xml.
  */
 void DeletePolicyVersionResponsePrivate::parseDeletePolicyVersionResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeletePolicyVersionResponsePrivate::parseDeletePolicyVersionResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

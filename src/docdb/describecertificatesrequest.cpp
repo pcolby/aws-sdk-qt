@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeCertificatesRequest
- * \brief The DescribeCertificatesRequest class provides an interface for DocDB DescribeCertificates requests.
+ * \class QtAws::DocDb::DescribeCertificatesRequest
+ * \brief The DescribeCertificatesRequest class provides an interface for DocDb DescribeCertificates requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeCertificates
+ * \sa DocDbClient::describeCertificates
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertificatesRequest &other)
-    : DocDBRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertifica
  * Constructs a DescribeCertificatesRequest object.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest()
-    : DocDBRequest(new DescribeCertificatesRequestPrivate(DocDBRequest::DescribeCertificatesAction, this))
+    : DocDbRequest(new DescribeCertificatesRequestPrivate(DocDbRequest::DescribeCertificatesAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::DocDB::DescribeCertificatesRequestPrivate
+ * \class QtAws::DocDb::DescribeCertificatesRequestPrivate
  * \brief The DescribeCertificatesRequestPrivate class provides private implementation for DescribeCertificatesRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a DescribeCertificatesRequestPrivate object for DocDB \a action,
+ * Constructs a DescribeCertificatesRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
-    const DocDBRequest::Action action, DescribeCertificatesRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, DescribeCertificatesRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

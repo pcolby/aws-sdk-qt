@@ -24,14 +24,14 @@
 #include "deleteeventsubscriptionrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class DeleteEventSubscriptionRequest;
 
-class DeleteEventSubscriptionRequestPrivate : public DocDBRequestPrivate {
+class DeleteEventSubscriptionRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    DeleteEventSubscriptionRequestPrivate(const DocDBRequest::Action action,
+    DeleteEventSubscriptionRequestPrivate(const DocDbRequest::Action action,
                                    DeleteEventSubscriptionRequest * const q);
     DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
                                    DeleteEventSubscriptionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

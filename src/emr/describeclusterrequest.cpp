@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DescribeClusterRequest
- * \brief The DescribeClusterRequest class provides an interface for EMR DescribeCluster requests.
+ * \class QtAws::Emr::DescribeClusterRequest
+ * \brief The DescribeClusterRequest class provides an interface for Emr DescribeCluster requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::describeCluster
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::EMR::DescribeClusterRequestPrivate
+ * \class QtAws::Emr::DescribeClusterRequestPrivate
  * \brief The DescribeClusterRequestPrivate class provides private implementation for DescribeClusterRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

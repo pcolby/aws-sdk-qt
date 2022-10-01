@@ -24,11 +24,11 @@
 #include "untagresourcerequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class UntagResourceResponsePrivate;
 
-class QTAWSSESV2_EXPORT UntagResourceResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT UntagResourceResponse : public SESv2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

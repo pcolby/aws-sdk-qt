@@ -30,20 +30,36 @@ namespace QtAws {
 namespace Synthetics {
 
 class SyntheticsClientPrivate;
+class AssociateResourceRequest;
+class AssociateResourceResponse;
 class CreateCanaryRequest;
 class CreateCanaryResponse;
+class CreateGroupRequest;
+class CreateGroupResponse;
 class DeleteCanaryRequest;
 class DeleteCanaryResponse;
+class DeleteGroupRequest;
+class DeleteGroupResponse;
 class DescribeCanariesRequest;
 class DescribeCanariesResponse;
 class DescribeCanariesLastRunRequest;
 class DescribeCanariesLastRunResponse;
 class DescribeRuntimeVersionsRequest;
 class DescribeRuntimeVersionsResponse;
+class DisassociateResourceRequest;
+class DisassociateResourceResponse;
 class GetCanaryRequest;
 class GetCanaryResponse;
 class GetCanaryRunsRequest;
 class GetCanaryRunsResponse;
+class GetGroupRequest;
+class GetGroupResponse;
+class ListAssociatedGroupsRequest;
+class ListAssociatedGroupsResponse;
+class ListGroupResourcesRequest;
+class ListGroupResourcesResponse;
+class ListGroupsRequest;
+class ListGroupsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class StartCanaryRequest;
@@ -73,13 +89,21 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateResourceResponse * associateResource(const AssociateResourceRequest &request);
     CreateCanaryResponse * createCanary(const CreateCanaryRequest &request);
+    CreateGroupResponse * createGroup(const CreateGroupRequest &request);
     DeleteCanaryResponse * deleteCanary(const DeleteCanaryRequest &request);
+    DeleteGroupResponse * deleteGroup(const DeleteGroupRequest &request);
     DescribeCanariesResponse * describeCanaries(const DescribeCanariesRequest &request);
     DescribeCanariesLastRunResponse * describeCanariesLastRun(const DescribeCanariesLastRunRequest &request);
     DescribeRuntimeVersionsResponse * describeRuntimeVersions(const DescribeRuntimeVersionsRequest &request);
+    DisassociateResourceResponse * disassociateResource(const DisassociateResourceRequest &request);
     GetCanaryResponse * getCanary(const GetCanaryRequest &request);
     GetCanaryRunsResponse * getCanaryRuns(const GetCanaryRunsRequest &request);
+    GetGroupResponse * getGroup(const GetGroupRequest &request);
+    ListAssociatedGroupsResponse * listAssociatedGroups(const ListAssociatedGroupsRequest &request);
+    ListGroupResourcesResponse * listGroupResources(const ListGroupResourcesRequest &request);
+    ListGroupsResponse * listGroups(const ListGroupsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     StartCanaryResponse * startCanary(const StartCanaryRequest &request);
     StopCanaryResponse * stopCanary(const StopCanaryRequest &request);

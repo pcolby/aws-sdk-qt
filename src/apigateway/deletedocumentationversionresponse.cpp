@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationVersionResponse
- * \brief The DeleteDocumentationVersionResponse class provides an interace for APIGateway DeleteDocumentationVersion responses.
+ * \class QtAws::ApiGateway::DeleteDocumentationVersionResponse
+ * \brief The DeleteDocumentationVersionResponse class provides an interace for ApiGateway DeleteDocumentationVersion responses.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -39,7 +39,7 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteDocumentationVersion
+ * \sa ApiGatewayClient::deleteDocumentationVersion
  */
 
 /*!
@@ -49,7 +49,7 @@ DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
         const DeleteDocumentationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteDocumentationVersionResponsePrivate(this), parent)
+    : ApiGatewayResponse(new DeleteDocumentationVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentationVersionRequest(request));
     setReply(reply);
@@ -66,7 +66,7 @@ const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::re
 
 /*!
  * \reimp
- * Parses a successful APIGateway DeleteDocumentationVersion \a response.
+ * Parses a successful ApiGateway DeleteDocumentationVersion \a response.
  */
 void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,24 +76,24 @@ void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteDocumentationVersionResponsePrivate
+ * \class QtAws::ApiGateway::DeleteDocumentationVersionResponsePrivate
  * \brief The DeleteDocumentationVersionResponsePrivate class provides private implementation for DeleteDocumentationVersionResponse.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
  * Constructs a DeleteDocumentationVersionResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePrivate(
-    DeleteDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
+    DeleteDocumentationVersionResponse * const q) : ApiGatewayResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a APIGateway DeleteDocumentationVersion response element from \a xml.
+ * Parses a ApiGateway DeleteDocumentationVersion response element from \a xml.
  */
 void DeleteDocumentationVersionResponsePrivate::parseDeleteDocumentationVersionResponse(QXmlStreamReader &xml)
 {
@@ -101,5 +101,5 @@ void DeleteDocumentationVersionResponsePrivate::parseDeleteDocumentationVersionR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

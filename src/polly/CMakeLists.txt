@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSPOLLY_LIBRARY)
 
 add_library(QtAwsPolly
+  qtawspollyglobal.h
+  pollyclient.h
+  pollyclient_p.h
+  pollyrequest.h
+  pollyrequest_p.h
+  pollyresponse.h
+  pollyresponse_p.h
   deletelexiconrequest.h
   deletelexiconrequest_p.h
   deletelexiconresponse.h
@@ -25,17 +32,10 @@ add_library(QtAwsPolly
   listspeechsynthesistasksrequest_p.h
   listspeechsynthesistasksresponse.h
   listspeechsynthesistasksresponse_p.h
-  pollyclient.h
-  pollyclient_p.h
-  pollyrequest.h
-  pollyrequest_p.h
-  pollyresponse.h
-  pollyresponse_p.h
   putlexiconrequest.h
   putlexiconrequest_p.h
   putlexiconresponse.h
   putlexiconresponse_p.h
-  qtawspollyglobal.h
   startspeechsynthesistaskrequest.h
   startspeechsynthesistaskrequest_p.h
   startspeechsynthesistaskresponse.h
@@ -44,6 +44,9 @@ add_library(QtAwsPolly
   synthesizespeechrequest_p.h
   synthesizespeechresponse.h
   synthesizespeechresponse_p.h
+  pollyclient.cpp
+  pollyrequest.cpp
+  pollyresponse.cpp
   deletelexiconrequest.cpp
   deletelexiconresponse.cpp
   describevoicesrequest.cpp
@@ -56,9 +59,6 @@ add_library(QtAwsPolly
   listlexiconsresponse.cpp
   listspeechsynthesistasksrequest.cpp
   listspeechsynthesistasksresponse.cpp
-  pollyclient.cpp
-  pollyrequest.cpp
-  pollyresponse.cpp
   putlexiconrequest.cpp
   putlexiconresponse.cpp
   startspeechsynthesistaskrequest.cpp

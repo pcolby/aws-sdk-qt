@@ -24,7 +24,7 @@
 #include "putimagetagmutabilityrequest.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 class PutImageTagMutabilityRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws
 
 #endif

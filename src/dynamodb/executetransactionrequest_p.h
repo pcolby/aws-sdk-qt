@@ -24,14 +24,14 @@
 #include "executetransactionrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class ExecuteTransactionRequest;
 
-class ExecuteTransactionRequestPrivate : public DynamoDBRequestPrivate {
+class ExecuteTransactionRequestPrivate : public DynamoDbRequestPrivate {
 
 public:
-    ExecuteTransactionRequestPrivate(const DynamoDBRequest::Action action,
+    ExecuteTransactionRequestPrivate(const DynamoDbRequest::Action action,
                                    ExecuteTransactionRequest * const q);
     ExecuteTransactionRequestPrivate(const ExecuteTransactionRequestPrivate &other,
                                    ExecuteTransactionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

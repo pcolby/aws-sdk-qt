@@ -24,14 +24,14 @@
 #include "describeaccountassignmentcreationstatusrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DescribeAccountAssignmentCreationStatusRequest;
 
-class DescribeAccountAssignmentCreationStatusRequestPrivate : public SSOAdminRequestPrivate {
+class DescribeAccountAssignmentCreationStatusRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DescribeAccountAssignmentCreationStatusRequestPrivate(const SSOAdminRequest::Action action,
+    DescribeAccountAssignmentCreationStatusRequestPrivate(const SsoAdminRequest::Action action,
                                    DescribeAccountAssignmentCreationStatusRequest * const q);
     DescribeAccountAssignmentCreationStatusRequestPrivate(const DescribeAccountAssignmentCreationStatusRequestPrivate &other,
                                    DescribeAccountAssignmentCreationStatusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

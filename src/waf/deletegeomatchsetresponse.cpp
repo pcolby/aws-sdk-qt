@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteGeoMatchSetResponse
- * \brief The DeleteGeoMatchSetResponse class provides an interace for WAF DeleteGeoMatchSet responses.
+ * \class QtAws::Waf::DeleteGeoMatchSetResponse
+ * \brief The DeleteGeoMatchSetResponse class provides an interace for Waf DeleteGeoMatchSet responses.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -82,7 +82,7 @@ const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAF DeleteGeoMatchSet \a response.
+ * Parses a successful Waf DeleteGeoMatchSet \a response.
  */
 void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -92,11 +92,11 @@ void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::DeleteGeoMatchSetResponsePrivate
+ * \class QtAws::Waf::DeleteGeoMatchSetResponsePrivate
  * \brief The DeleteGeoMatchSetResponsePrivate class provides private implementation for DeleteGeoMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -109,7 +109,7 @@ DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
 }
 
 /*!
- * Parses a WAF DeleteGeoMatchSet response element from \a xml.
+ * Parses a Waf DeleteGeoMatchSet response element from \a xml.
  */
 void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -117,5 +117,5 @@ void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

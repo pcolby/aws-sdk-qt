@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSCODEGURUPROFILER_LIBRARY)
 
 add_library(QtAwsCodeGuruProfiler
+  qtawscodeguruprofilerglobal.h
+  codeguruprofilerclient.h
+  codeguruprofilerclient_p.h
+  codeguruprofilerrequest.h
+  codeguruprofilerrequest_p.h
+  codeguruprofilerresponse.h
+  codeguruprofilerresponse_p.h
   addnotificationchannelsrequest.h
   addnotificationchannelsrequest_p.h
   addnotificationchannelsresponse.h
@@ -9,12 +16,6 @@ add_library(QtAwsCodeGuruProfiler
   batchgetframemetricdatarequest_p.h
   batchgetframemetricdataresponse.h
   batchgetframemetricdataresponse_p.h
-  codeguruprofilerclient.h
-  codeguruprofilerclient_p.h
-  codeguruprofilerrequest.h
-  codeguruprofilerrequest_p.h
-  codeguruprofilerresponse.h
-  codeguruprofilerresponse_p.h
   configureagentrequest.h
   configureagentrequest_p.h
   configureagentresponse.h
@@ -75,7 +76,6 @@ add_library(QtAwsCodeGuruProfiler
   putpermissionrequest_p.h
   putpermissionresponse.h
   putpermissionresponse_p.h
-  qtawscodeguruprofilerglobal.h
   removenotificationchannelrequest.h
   removenotificationchannelrequest_p.h
   removenotificationchannelresponse.h
@@ -100,13 +100,13 @@ add_library(QtAwsCodeGuruProfiler
   updateprofilinggrouprequest_p.h
   updateprofilinggroupresponse.h
   updateprofilinggroupresponse_p.h
+  codeguruprofilerclient.cpp
+  codeguruprofilerrequest.cpp
+  codeguruprofilerresponse.cpp
   addnotificationchannelsrequest.cpp
   addnotificationchannelsresponse.cpp
   batchgetframemetricdatarequest.cpp
   batchgetframemetricdataresponse.cpp
-  codeguruprofilerclient.cpp
-  codeguruprofilerrequest.cpp
-  codeguruprofilerresponse.cpp
   configureagentrequest.cpp
   configureagentresponse.cpp
   createprofilinggrouprequest.cpp

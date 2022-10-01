@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
-class IoTDeviceAdvisorClient;
+class IotDeviceAdvisorClient;
 
-class IoTDeviceAdvisorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IotDeviceAdvisorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q);
+    explicit IotDeviceAdvisorClientPrivate(IotDeviceAdvisorClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(IoTDeviceAdvisorClient)
-    Q_DISABLE_COPY(IoTDeviceAdvisorClientPrivate)
+    Q_DECLARE_PUBLIC(IotDeviceAdvisorClient)
+    Q_DISABLE_COPY(IotDeviceAdvisorClientPrivate)
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

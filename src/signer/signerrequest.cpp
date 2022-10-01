@@ -21,45 +21,45 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::signerRequest
- * \brief The signerRequest class provides an interface for signer requests.
+ * \class QtAws::Signer::SignerRequest
+ * \brief The SignerRequest class provides an interface for Signer requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * \enum signerRequest::Action
+ * \enum SignerRequest::Action
  *
- * This enum describes the actions that can be performed as signer
+ * This enum describes the actions that can be performed as Signer
  * requests.
  *
- * \value AddProfilePermissionAction signer AddProfilePermission action.
- * \value CancelSigningProfileAction signer CancelSigningProfile action.
- * \value DescribeSigningJobAction signer DescribeSigningJob action.
- * \value GetSigningPlatformAction signer GetSigningPlatform action.
- * \value GetSigningProfileAction signer GetSigningProfile action.
- * \value ListProfilePermissionsAction signer ListProfilePermissions action.
- * \value ListSigningJobsAction signer ListSigningJobs action.
- * \value ListSigningPlatformsAction signer ListSigningPlatforms action.
- * \value ListSigningProfilesAction signer ListSigningProfiles action.
- * \value ListTagsForResourceAction signer ListTagsForResource action.
- * \value PutSigningProfileAction signer PutSigningProfile action.
- * \value RemoveProfilePermissionAction signer RemoveProfilePermission action.
- * \value RevokeSignatureAction signer RevokeSignature action.
- * \value RevokeSigningProfileAction signer RevokeSigningProfile action.
- * \value StartSigningJobAction signer StartSigningJob action.
- * \value TagResourceAction signer TagResource action.
- * \value UntagResourceAction signer UntagResource action.
+ * \value AddProfilePermissionAction Signer AddProfilePermission action.
+ * \value CancelSigningProfileAction Signer CancelSigningProfile action.
+ * \value DescribeSigningJobAction Signer DescribeSigningJob action.
+ * \value GetSigningPlatformAction Signer GetSigningPlatform action.
+ * \value GetSigningProfileAction Signer GetSigningProfile action.
+ * \value ListProfilePermissionsAction Signer ListProfilePermissions action.
+ * \value ListSigningJobsAction Signer ListSigningJobs action.
+ * \value ListSigningPlatformsAction Signer ListSigningPlatforms action.
+ * \value ListSigningProfilesAction Signer ListSigningProfiles action.
+ * \value ListTagsForResourceAction Signer ListTagsForResource action.
+ * \value PutSigningProfileAction Signer PutSigningProfile action.
+ * \value RemoveProfilePermissionAction Signer RemoveProfilePermission action.
+ * \value RevokeSignatureAction Signer RevokeSignature action.
+ * \value RevokeSigningProfileAction Signer RevokeSigningProfile action.
+ * \value StartSigningJobAction Signer StartSigningJob action.
+ * \value TagResourceAction Signer TagResource action.
+ * \value UntagResourceAction Signer UntagResource action.
  */
 
 /*!
- * Constructs a signerRequest object for signer \a action.
+ * Constructs a SignerRequest object for Signer \a action.
  */
-signerRequest::signerRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new signerRequestPrivate(action, this))
+SignerRequest::SignerRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SignerRequestPrivate(action, this))
 {
 
 }
@@ -67,18 +67,18 @@ signerRequest::signerRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-signerRequest::signerRequest(const signerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new signerRequestPrivate(*other.d_func(), this))
+SignerRequest::SignerRequest(const SignerRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SignerRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the signerRequest object to be equal to \a other.
+ * Sets the SignerRequest object to be equal to \a other.
  */
-signerRequest& signerRequest::operator=(const signerRequest &other)
+SignerRequest& SignerRequest::operator=(const SignerRequest &other)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -86,57 +86,57 @@ signerRequest& signerRequest::operator=(const signerRequest &other)
 }
 
 /*!
- * Constructs aa signerRequest object with private implementation \a d.
+ * Constructs aa SignerRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from signerRequestPrivate.
+ * implementation that inherits from SignerRequestPrivate.
  */
-signerRequest::signerRequest(signerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SignerRequest::SignerRequest(SignerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the signer action to be performed by this request.
+ * Returns the Signer action to be performed by this request.
  */
-signerRequest::Action signerRequest::action() const
+SignerRequest::Action SignerRequest::action() const
 {
-    Q_D(const signerRequest);
+    Q_D(const SignerRequest);
     return d->action;
 }
 
 /*!
- * Returns the name of the signer action to be performed by this request.
+ * Returns the name of the Signer action to be performed by this request.
  */
-QString signerRequest::actionString() const
+QString SignerRequest::actionString() const
 {
-    return signerRequestPrivate::toString(action());
+    return SignerRequestPrivate::toString(action());
 }
 
 /*!
- * Returns the signer API version implemented by this request.
+ * Returns the Signer API version implemented by this request.
  */
-QString signerRequest::apiVersion() const
+QString SignerRequest::apiVersion() const
 {
-    Q_D(const signerRequest);
+    Q_D(const SignerRequest);
     return d->apiVersion;
 }
 
 /*!
- * Sets the signer action to be performed by this request to \a action.
+ * Sets the Signer action to be performed by this request to \a action.
  */
-void signerRequest::setAction(const Action action)
+void SignerRequest::setAction(const Action action)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->action = action;
 }
 
 /*!
- * Sets the signer API version to include in this request to \a version.
+ * Sets the Signer API version to include in this request to \a version.
  */
-void signerRequest::setApiVersion(const QString &version)
+void SignerRequest::setApiVersion(const QString &version)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->apiVersion = version;
 }
 
@@ -148,7 +148,7 @@ void signerRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool signerRequest::operator==(const signerRequest &other) const
+bool SignerRequest::operator==(const SignerRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -157,19 +157,19 @@ bool signerRequest::operator==(const signerRequest &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid signer queue name.
+ * Returns \c tue if \a queueName is a valid Signer queue name.
  *
- * @par From signer FAQs:
+ * @par From Signer FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid signer queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid Signer queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool signerRequest::isValidQueueName(const QString &queueName)
+/*bool SignerRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -179,45 +179,45 @@ bool signerRequest::operator==(const signerRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int signerRequest::clearParameter(const QString &name)
+int SignerRequest::clearParameter(const QString &name)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void signerRequest::clearParameters()
+void SignerRequest::clearParameters()
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant signerRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SignerRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const signerRequest);
+    Q_D(const SignerRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &signerRequest::parameters() const
+const QVariantMap &SignerRequest::parameters() const
 {
-    Q_D(const signerRequest);
+    Q_D(const SignerRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void signerRequest::setParameter(const QString &name, const QVariant &value)
+void SignerRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->parameters.insert(name, value);
 }
 
@@ -225,42 +225,42 @@ void signerRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void signerRequest::setParameters(const QVariantMap &parameters)
+void SignerRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(signerRequest);
+    Q_D(SignerRequest);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the signer request using the given
+ * Returns a network request for the Signer request using the given
  * \a endpoint.
  *
- * This signer implementation builds request URLs by combining the
+ * This Signer implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest signerRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SignerRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const signerRequest);
+    //Q_D(const SignerRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::signer::signerRequestPrivate
- * \brief The signerRequestPrivate class provides private implementation for signerRequest.
+ * \class QtAws::Signer::SignerRequestPrivate
+ * \brief The SignerRequestPrivate class provides private implementation for SignerRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a signerRequestPrivate object for signer \a action,
+ * Constructs a SignerRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
-signerRequestPrivate::signerRequestPrivate(const signerRequest::Action action, signerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+SignerRequestPrivate::SignerRequestPrivate(const SignerRequest::Action action, SignerRequest * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-08-25"))
 {
 
 }
@@ -271,10 +271,10 @@ signerRequestPrivate::signerRequestPrivate(const signerRequest::Action action, s
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the signerRequest class's copy constructor.
+ * This is required to support the SignerRequest class's copy constructor.
  */
-signerRequestPrivate::signerRequestPrivate(const signerRequestPrivate &other,
-                                     signerRequest * const q)
+SignerRequestPrivate::SignerRequestPrivate(const SignerRequestPrivate &other,
+                                     SignerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -285,14 +285,14 @@ signerRequestPrivate::signerRequestPrivate(const signerRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts signerRequest::Action enumerator values to their respective
- * string representations, appropriate for use with the signer service's Action
+ * This function converts SignerRequest::Action enumerator values to their respective
+ * string representations, appropriate for use with the Signer service's Action
  * query parameters.
  */
-QString signerRequestPrivate::toString(const signerRequest::Action &action)
+QString SignerRequestPrivate::toString(const SignerRequest::Action &action)
 {
     #define ActionToString(action) \
-        case signerRequest::action##Action: return QStringLiteral(#action)
+        case SignerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(AddProfilePermission);
         ActionToString(CancelSigningProfile);
@@ -318,5 +318,5 @@ QString signerRequestPrivate::toString(const signerRequest::Action &action)
     return QString();
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

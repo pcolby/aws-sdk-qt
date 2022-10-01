@@ -24,7 +24,7 @@
 #include "getuserrequest.h"
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 class GetUserRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
 
 #endif

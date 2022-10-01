@@ -1,6 +1,7 @@
 add_compile_definitions(QTAWSAPPLICATIONDISCOVERYSERVICE_LIBRARY)
 
 add_library(QtAwsApplicationDiscoveryService
+  qtawsapplicationdiscoveryserviceglobal.h
   applicationdiscoveryserviceclient.h
   applicationdiscoveryserviceclient_p.h
   applicationdiscoveryservicerequest.h
@@ -79,7 +80,6 @@ add_library(QtAwsApplicationDiscoveryService
   listserverneighborsrequest_p.h
   listserverneighborsresponse.h
   listserverneighborsresponse_p.h
-  qtawsapplicationdiscoveryserviceglobal.h
   startcontinuousexportrequest.h
   startcontinuousexportrequest_p.h
   startcontinuousexportresponse.h

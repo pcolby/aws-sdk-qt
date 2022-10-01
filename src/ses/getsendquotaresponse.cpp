@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::GetSendQuotaResponse
- * \brief The GetSendQuotaResponse class provides an interace for SES GetSendQuota responses.
+ * \class QtAws::Ses::GetSendQuotaResponse
+ * \brief The GetSendQuotaResponse class provides an interace for Ses GetSendQuota responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const GetSendQuotaRequest * GetSendQuotaResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SES GetSendQuota \a response.
+ * Parses a successful Ses GetSendQuota \a response.
  */
 void GetSendQuotaResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void GetSendQuotaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::GetSendQuotaResponsePrivate
+ * \class QtAws::Ses::GetSendQuotaResponsePrivate
  * \brief The GetSendQuotaResponsePrivate class provides private implementation for GetSendQuotaResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
 }
 
 /*!
- * Parses a SES GetSendQuota response element from \a xml.
+ * Parses a Ses GetSendQuota response element from \a xml.
  */
 void GetSendQuotaResponsePrivate::parseGetSendQuotaResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void GetSendQuotaResponsePrivate::parseGetSendQuotaResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

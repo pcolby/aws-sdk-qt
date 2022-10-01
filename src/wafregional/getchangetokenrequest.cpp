@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenRequest
- * \brief The GetChangeTokenRequest class provides an interface for WAFRegional GetChangeToken requests.
+ * \class QtAws::WafRegional::GetChangeTokenRequest
+ * \brief The GetChangeTokenRequest class provides an interface for WafRegional GetChangeToken requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::getChangeToken
+ * \sa WafRegionalClient::getChangeToken
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
-    : WAFRegionalRequest(new GetChangeTokenRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new GetChangeTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
  * Constructs a GetChangeTokenRequest object.
  */
 GetChangeTokenRequest::GetChangeTokenRequest()
-    : WAFRegionalRequest(new GetChangeTokenRequestPrivate(WAFRegionalRequest::GetChangeTokenAction, this))
+    : WafRegionalRequest(new GetChangeTokenRequestPrivate(WafRegionalRequest::GetChangeTokenAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::WAFRegional::GetChangeTokenRequestPrivate
+ * \class QtAws::WafRegional::GetChangeTokenRequestPrivate
  * \brief The GetChangeTokenRequestPrivate class provides private implementation for GetChangeTokenRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a GetChangeTokenRequestPrivate object for WAFRegional \a action,
+ * Constructs a GetChangeTokenRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
-    const WAFRegionalRequest::Action action, GetChangeTokenRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, GetChangeTokenRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const GetChangeTokenRequestPrivate &other, GetChangeTokenRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

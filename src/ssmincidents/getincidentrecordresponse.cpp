@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::GetIncidentRecordResponse
- * \brief The GetIncidentRecordResponse class provides an interace for SSMIncidents GetIncidentRecord responses.
+ * \class QtAws::SsmIncidents::GetIncidentRecordResponse
+ * \brief The GetIncidentRecordResponse class provides an interace for SsmIncidents GetIncidentRecord responses.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -44,7 +44,7 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::getIncidentRecord
+ * \sa SsmIncidentsClient::getIncidentRecord
  */
 
 /*!
@@ -54,7 +54,7 @@ GetIncidentRecordResponse::GetIncidentRecordResponse(
         const GetIncidentRecordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMIncidentsResponse(new GetIncidentRecordResponsePrivate(this), parent)
+    : SsmIncidentsResponse(new GetIncidentRecordResponsePrivate(this), parent)
 {
     setRequest(new GetIncidentRecordRequest(request));
     setReply(reply);
@@ -71,7 +71,7 @@ const GetIncidentRecordRequest * GetIncidentRecordResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SSMIncidents GetIncidentRecord \a response.
+ * Parses a successful SsmIncidents GetIncidentRecord \a response.
  */
 void GetIncidentRecordResponse::parseSuccess(QIODevice &response)
 {
@@ -81,24 +81,24 @@ void GetIncidentRecordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSMIncidents::GetIncidentRecordResponsePrivate
+ * \class QtAws::SsmIncidents::GetIncidentRecordResponsePrivate
  * \brief The GetIncidentRecordResponsePrivate class provides private implementation for GetIncidentRecordResponse.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
  * Constructs a GetIncidentRecordResponsePrivate object with public implementation \a q.
  */
 GetIncidentRecordResponsePrivate::GetIncidentRecordResponsePrivate(
-    GetIncidentRecordResponse * const q) : SSMIncidentsResponsePrivate(q)
+    GetIncidentRecordResponse * const q) : SsmIncidentsResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a SSMIncidents GetIncidentRecord response element from \a xml.
+ * Parses a SsmIncidents GetIncidentRecord response element from \a xml.
  */
 void GetIncidentRecordResponsePrivate::parseGetIncidentRecordResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void GetIncidentRecordResponsePrivate::parseGetIncidentRecordResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

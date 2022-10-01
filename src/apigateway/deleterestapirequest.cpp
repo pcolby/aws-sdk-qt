@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteRestApiRequest
- * \brief The DeleteRestApiRequest class provides an interface for APIGateway DeleteRestApi requests.
+ * \class QtAws::ApiGateway::DeleteRestApiRequest
+ * \brief The DeleteRestApiRequest class provides an interface for ApiGateway DeleteRestApi requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteRestApi
+ * \sa ApiGatewayClient::deleteRestApi
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteRestApiRequest::DeleteRestApiRequest(const DeleteRestApiRequest &other)
-    : APIGatewayRequest(new DeleteRestApiRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteRestApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteRestApiRequest::DeleteRestApiRequest(const DeleteRestApiRequest &other)
  * Constructs a DeleteRestApiRequest object.
  */
 DeleteRestApiRequest::DeleteRestApiRequest()
-    : APIGatewayRequest(new DeleteRestApiRequestPrivate(APIGatewayRequest::DeleteRestApiAction, this))
+    : ApiGatewayRequest(new DeleteRestApiRequestPrivate(ApiGatewayRequest::DeleteRestApiAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteRestApiRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteRestApiRequestPrivate
+ * \class QtAws::ApiGateway::DeleteRestApiRequestPrivate
  * \brief The DeleteRestApiRequestPrivate class provides private implementation for DeleteRestApiRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteRestApiRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteRestApiRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteRestApiRequestPrivate::DeleteRestApiRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteRestApiRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteRestApiRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteRestApiRequestPrivate::DeleteRestApiRequestPrivate(
  */
 DeleteRestApiRequestPrivate::DeleteRestApiRequestPrivate(
     const DeleteRestApiRequestPrivate &other, DeleteRestApiRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

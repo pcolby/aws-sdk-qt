@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::DeleteIncidentRecordRequest
- * \brief The DeleteIncidentRecordRequest class provides an interface for SSMIncidents DeleteIncidentRecord requests.
+ * \class QtAws::SsmIncidents::DeleteIncidentRecordRequest
+ * \brief The DeleteIncidentRecordRequest class provides an interface for SsmIncidents DeleteIncidentRecord requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::deleteIncidentRecord
+ * \sa SsmIncidentsClient::deleteIncidentRecord
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteIncidentRecordRequest::DeleteIncidentRecordRequest(const DeleteIncidentRecordRequest &other)
-    : SSMIncidentsRequest(new DeleteIncidentRecordRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new DeleteIncidentRecordRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ DeleteIncidentRecordRequest::DeleteIncidentRecordRequest(const DeleteIncidentRec
  * Constructs a DeleteIncidentRecordRequest object.
  */
 DeleteIncidentRecordRequest::DeleteIncidentRecordRequest()
-    : SSMIncidentsRequest(new DeleteIncidentRecordRequestPrivate(SSMIncidentsRequest::DeleteIncidentRecordAction, this))
+    : SsmIncidentsRequest(new DeleteIncidentRecordRequestPrivate(SsmIncidentsRequest::DeleteIncidentRecordAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * DeleteIncidentRecordRequest::response(QNetwor
 }
 
 /*!
- * \class QtAws::SSMIncidents::DeleteIncidentRecordRequestPrivate
+ * \class QtAws::SsmIncidents::DeleteIncidentRecordRequestPrivate
  * \brief The DeleteIncidentRecordRequestPrivate class provides private implementation for DeleteIncidentRecordRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a DeleteIncidentRecordRequestPrivate object for SSMIncidents \a action,
+ * Constructs a DeleteIncidentRecordRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 DeleteIncidentRecordRequestPrivate::DeleteIncidentRecordRequestPrivate(
-    const SSMIncidentsRequest::Action action, DeleteIncidentRecordRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, DeleteIncidentRecordRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ DeleteIncidentRecordRequestPrivate::DeleteIncidentRecordRequestPrivate(
  */
 DeleteIncidentRecordRequestPrivate::DeleteIncidentRecordRequestPrivate(
     const DeleteIncidentRecordRequestPrivate &other, DeleteIncidentRecordRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

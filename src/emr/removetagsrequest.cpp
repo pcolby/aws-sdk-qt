@@ -23,17 +23,17 @@
 #include "emrrequest_p.h"
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::RemoveTagsRequest
- * \brief The RemoveTagsRequest class provides an interface for EMR RemoveTags requests.
+ * \class QtAws::Emr::RemoveTagsRequest
+ * \brief The RemoveTagsRequest class provides an interface for Emr RemoveTags requests.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::removeTags
  */
@@ -76,11 +76,11 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::EMR::RemoveTagsRequestPrivate
+ * \class QtAws::Emr::RemoveTagsRequestPrivate
  * \brief The RemoveTagsRequestPrivate class provides private implementation for RemoveTagsRequest.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -107,5 +107,5 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

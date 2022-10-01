@@ -249,7 +249,7 @@ QNetworkRequest ApplicationCostProfilerRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 ApplicationCostProfilerRequestPrivate::ApplicationCostProfilerRequestPrivate(const ApplicationCostProfilerRequest::Action action, ApplicationCostProfilerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2020-09-10"))
 {
 
 }

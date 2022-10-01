@@ -23,13 +23,13 @@
 #include "cloudhsmrequest_p.h"
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DeleteLunaClientRequest
- * \brief The DeleteLunaClientRequest class provides an interface for CloudHSM DeleteLunaClient requests.
+ * \class QtAws::CloudHsm::DeleteLunaClientRequest
+ * \brief The DeleteLunaClientRequest class provides an interface for CloudHsm DeleteLunaClient requests.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -44,14 +44,14 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::deleteLunaClient
+ * \sa CloudHsmClient::deleteLunaClient
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteLunaClientRequest::DeleteLunaClientRequest(const DeleteLunaClientRequest &other)
-    : CloudHSMRequest(new DeleteLunaClientRequestPrivate(*other.d_func(), this))
+    : CloudHsmRequest(new DeleteLunaClientRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -60,7 +60,7 @@ DeleteLunaClientRequest::DeleteLunaClientRequest(const DeleteLunaClientRequest &
  * Constructs a DeleteLunaClientRequest object.
  */
 DeleteLunaClientRequest::DeleteLunaClientRequest()
-    : CloudHSMRequest(new DeleteLunaClientRequestPrivate(CloudHSMRequest::DeleteLunaClientAction, this))
+    : CloudHsmRequest(new DeleteLunaClientRequestPrivate(CloudHsmRequest::DeleteLunaClientAction, this))
 {
 
 }
@@ -85,20 +85,20 @@ QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::CloudHSM::DeleteLunaClientRequestPrivate
+ * \class QtAws::CloudHsm::DeleteLunaClientRequestPrivate
  * \brief The DeleteLunaClientRequestPrivate class provides private implementation for DeleteLunaClientRequest.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
- * Constructs a DeleteLunaClientRequestPrivate object for CloudHSM \a action,
+ * Constructs a DeleteLunaClientRequestPrivate object for CloudHsm \a action,
  * with public implementation \a q.
  */
 DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
-    const CloudHSMRequest::Action action, DeleteLunaClientRequest * const q)
-    : CloudHSMRequestPrivate(action, q)
+    const CloudHsmRequest::Action action, DeleteLunaClientRequest * const q)
+    : CloudHsmRequestPrivate(action, q)
 {
 
 }
@@ -111,10 +111,10 @@ DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
  */
 DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
     const DeleteLunaClientRequestPrivate &other, DeleteLunaClientRequest * const q)
-    : CloudHSMRequestPrivate(other, q)
+    : CloudHsmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

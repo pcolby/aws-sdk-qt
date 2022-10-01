@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMRContainers {
+namespace Emrcontainers {
 
 /*!
- * \class QtAws::EMRContainers::CancelJobRunResponse
- * \brief The CancelJobRunResponse class provides an interace for EMRContainers CancelJobRun responses.
+ * \class QtAws::Emrcontainers::CancelJobRunResponse
+ * \brief The CancelJobRunResponse class provides an interace for Emrcontainers CancelJobRun responses.
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  *
  *  Amazon EMR on EKS provides a deployment option for Amazon EMR that allows you to run open-source big data frameworks on
  *  Amazon Elastic Kubernetes Service (Amazon EKS). With this deployment option, you can focus on running analytics
@@ -62,7 +62,7 @@ namespace EMRContainers {
  *  href="https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints">Amazon
  *  EMR on EKS Service
  *
- * \sa EMRContainersClient::cancelJobRun
+ * \sa EmrcontainersClient::cancelJobRun
  */
 
 /*!
@@ -72,7 +72,7 @@ CancelJobRunResponse::CancelJobRunResponse(
         const CancelJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRContainersResponse(new CancelJobRunResponsePrivate(this), parent)
+    : EmrcontainersResponse(new CancelJobRunResponsePrivate(this), parent)
 {
     setRequest(new CancelJobRunRequest(request));
     setReply(reply);
@@ -89,7 +89,7 @@ const CancelJobRunRequest * CancelJobRunResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMRContainers CancelJobRun \a response.
+ * Parses a successful Emrcontainers CancelJobRun \a response.
  */
 void CancelJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -99,24 +99,24 @@ void CancelJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMRContainers::CancelJobRunResponsePrivate
+ * \class QtAws::Emrcontainers::CancelJobRunResponsePrivate
  * \brief The CancelJobRunResponsePrivate class provides private implementation for CancelJobRunResponse.
  * \internal
  *
- * \inmodule QtAwsEMRContainers
+ * \inmodule QtAwsEmrcontainers
  */
 
 /*!
  * Constructs a CancelJobRunResponsePrivate object with public implementation \a q.
  */
 CancelJobRunResponsePrivate::CancelJobRunResponsePrivate(
-    CancelJobRunResponse * const q) : EMRContainersResponsePrivate(q)
+    CancelJobRunResponse * const q) : EmrcontainersResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EMRContainers CancelJobRun response element from \a xml.
+ * Parses a Emrcontainers CancelJobRun response element from \a xml.
  */
 void CancelJobRunResponsePrivate::parseCancelJobRunResponse(QXmlStreamReader &xml)
 {
@@ -124,5 +124,5 @@ void CancelJobRunResponsePrivate::parseCancelJobRunResponse(QXmlStreamReader &xm
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMRContainers
+} // namespace Emrcontainers
 } // namespace QtAws

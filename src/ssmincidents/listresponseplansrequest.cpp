@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::ListResponsePlansRequest
- * \brief The ListResponsePlansRequest class provides an interface for SSMIncidents ListResponsePlans requests.
+ * \class QtAws::SsmIncidents::ListResponsePlansRequest
+ * \brief The ListResponsePlansRequest class provides an interface for SsmIncidents ListResponsePlans requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::listResponsePlans
+ * \sa SsmIncidentsClient::listResponsePlans
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListResponsePlansRequest::ListResponsePlansRequest(const ListResponsePlansRequest &other)
-    : SSMIncidentsRequest(new ListResponsePlansRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new ListResponsePlansRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ ListResponsePlansRequest::ListResponsePlansRequest(const ListResponsePlansReques
  * Constructs a ListResponsePlansRequest object.
  */
 ListResponsePlansRequest::ListResponsePlansRequest()
-    : SSMIncidentsRequest(new ListResponsePlansRequestPrivate(SSMIncidentsRequest::ListResponsePlansAction, this))
+    : SsmIncidentsRequest(new ListResponsePlansRequestPrivate(SsmIncidentsRequest::ListResponsePlansAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListResponsePlansRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::SSMIncidents::ListResponsePlansRequestPrivate
+ * \class QtAws::SsmIncidents::ListResponsePlansRequestPrivate
  * \brief The ListResponsePlansRequestPrivate class provides private implementation for ListResponsePlansRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a ListResponsePlansRequestPrivate object for SSMIncidents \a action,
+ * Constructs a ListResponsePlansRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 ListResponsePlansRequestPrivate::ListResponsePlansRequestPrivate(
-    const SSMIncidentsRequest::Action action, ListResponsePlansRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, ListResponsePlansRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ ListResponsePlansRequestPrivate::ListResponsePlansRequestPrivate(
  */
 ListResponsePlansRequestPrivate::ListResponsePlansRequestPrivate(
     const ListResponsePlansRequestPrivate &other, ListResponsePlansRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

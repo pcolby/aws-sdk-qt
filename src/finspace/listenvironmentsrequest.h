@@ -23,11 +23,11 @@
 #include "finspacerequest.h"
 
 namespace QtAws {
-namespace finspace {
+namespace Finspace {
 
 class ListEnvironmentsRequestPrivate;
 
-class QTAWSFINSPACE_EXPORT ListEnvironmentsRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT ListEnvironmentsRequest : public FinspaceRequest {
 
 public:
     ListEnvironmentsRequest(const ListEnvironmentsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace finspace
+} // namespace Finspace
 } // namespace QtAws
 
 #endif

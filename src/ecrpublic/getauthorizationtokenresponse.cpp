@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 /*!
- * \class QtAws::ECRPublic::GetAuthorizationTokenResponse
- * \brief The GetAuthorizationTokenResponse class provides an interace for ECRPublic GetAuthorizationToken responses.
+ * \class QtAws::EcrPublic::GetAuthorizationTokenResponse
+ * \brief The GetAuthorizationTokenResponse class provides an interace for EcrPublic GetAuthorizationToken responses.
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  *
  *  <fullname>Amazon Elastic Container Registry Public</fullname>
  * 
@@ -42,7 +42,7 @@ namespace ECRPublic {
  *  the Amazon ECR API for private repositories, see <a
  *  href="https://docs.aws.amazon.com/AmazonECR/latest/APIReference/Welcome.html">Amazon Elastic Container Registry API
  *
- * \sa ECRPublicClient::getAuthorizationToken
+ * \sa EcrPublicClient::getAuthorizationToken
  */
 
 /*!
@@ -52,7 +52,7 @@ GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
         const GetAuthorizationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRPublicResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
+    : EcrPublicResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizationTokenRequest(request));
     setReply(reply);
@@ -69,7 +69,7 @@ const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() co
 
 /*!
  * \reimp
- * Parses a successful ECRPublic GetAuthorizationToken \a response.
+ * Parses a successful EcrPublic GetAuthorizationToken \a response.
  */
 void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -79,24 +79,24 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECRPublic::GetAuthorizationTokenResponsePrivate
+ * \class QtAws::EcrPublic::GetAuthorizationTokenResponsePrivate
  * \brief The GetAuthorizationTokenResponsePrivate class provides private implementation for GetAuthorizationTokenResponse.
  * \internal
  *
- * \inmodule QtAwsECRPublic
+ * \inmodule QtAwsEcrPublic
  */
 
 /*!
  * Constructs a GetAuthorizationTokenResponsePrivate object with public implementation \a q.
  */
 GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
-    GetAuthorizationTokenResponse * const q) : ECRPublicResponsePrivate(q)
+    GetAuthorizationTokenResponse * const q) : EcrPublicResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a ECRPublic GetAuthorizationToken response element from \a xml.
+ * Parses a EcrPublic GetAuthorizationToken response element from \a xml.
  */
 void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QXmlStreamReader &xml)
 {
@@ -104,5 +104,5 @@ void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QX
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws

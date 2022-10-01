@@ -21,109 +21,109 @@
 #include "sesv2request_p.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 /*!
- * \class QtAws::SESV2::Sesv2Request
- * \brief The Sesv2Request class provides an interface for SESV2 requests.
+ * \class QtAws::SESv2::SESv2Request
+ * \brief The SESv2Request class provides an interface for SESv2 requests.
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  */
 
 /*!
- * \enum Sesv2Request::Action
+ * \enum SESv2Request::Action
  *
- * This enum describes the actions that can be performed as SESV2
+ * This enum describes the actions that can be performed as SESv2
  * requests.
  *
- * \value CreateConfigurationSetAction SESV2 CreateConfigurationSet action.
- * \value CreateConfigurationSetEventDestinationAction SESV2 CreateConfigurationSetEventDestination action.
- * \value CreateContactAction SESV2 CreateContact action.
- * \value CreateContactListAction SESV2 CreateContactList action.
- * \value CreateCustomVerificationEmailTemplateAction SESV2 CreateCustomVerificationEmailTemplate action.
- * \value CreateDedicatedIpPoolAction SESV2 CreateDedicatedIpPool action.
- * \value CreateDeliverabilityTestReportAction SESV2 CreateDeliverabilityTestReport action.
- * \value CreateEmailIdentityAction SESV2 CreateEmailIdentity action.
- * \value CreateEmailIdentityPolicyAction SESV2 CreateEmailIdentityPolicy action.
- * \value CreateEmailTemplateAction SESV2 CreateEmailTemplate action.
- * \value CreateImportJobAction SESV2 CreateImportJob action.
- * \value DeleteConfigurationSetAction SESV2 DeleteConfigurationSet action.
- * \value DeleteConfigurationSetEventDestinationAction SESV2 DeleteConfigurationSetEventDestination action.
- * \value DeleteContactAction SESV2 DeleteContact action.
- * \value DeleteContactListAction SESV2 DeleteContactList action.
- * \value DeleteCustomVerificationEmailTemplateAction SESV2 DeleteCustomVerificationEmailTemplate action.
- * \value DeleteDedicatedIpPoolAction SESV2 DeleteDedicatedIpPool action.
- * \value DeleteEmailIdentityAction SESV2 DeleteEmailIdentity action.
- * \value DeleteEmailIdentityPolicyAction SESV2 DeleteEmailIdentityPolicy action.
- * \value DeleteEmailTemplateAction SESV2 DeleteEmailTemplate action.
- * \value DeleteSuppressedDestinationAction SESV2 DeleteSuppressedDestination action.
- * \value GetAccountAction SESV2 GetAccount action.
- * \value GetBlacklistReportsAction SESV2 GetBlacklistReports action.
- * \value GetConfigurationSetAction SESV2 GetConfigurationSet action.
- * \value GetConfigurationSetEventDestinationsAction SESV2 GetConfigurationSetEventDestinations action.
- * \value GetContactAction SESV2 GetContact action.
- * \value GetContactListAction SESV2 GetContactList action.
- * \value GetCustomVerificationEmailTemplateAction SESV2 GetCustomVerificationEmailTemplate action.
- * \value GetDedicatedIpAction SESV2 GetDedicatedIp action.
- * \value GetDedicatedIpsAction SESV2 GetDedicatedIps action.
- * \value GetDeliverabilityDashboardOptionsAction SESV2 GetDeliverabilityDashboardOptions action.
- * \value GetDeliverabilityTestReportAction SESV2 GetDeliverabilityTestReport action.
- * \value GetDomainDeliverabilityCampaignAction SESV2 GetDomainDeliverabilityCampaign action.
- * \value GetDomainStatisticsReportAction SESV2 GetDomainStatisticsReport action.
- * \value GetEmailIdentityAction SESV2 GetEmailIdentity action.
- * \value GetEmailIdentityPoliciesAction SESV2 GetEmailIdentityPolicies action.
- * \value GetEmailTemplateAction SESV2 GetEmailTemplate action.
- * \value GetImportJobAction SESV2 GetImportJob action.
- * \value GetSuppressedDestinationAction SESV2 GetSuppressedDestination action.
- * \value ListConfigurationSetsAction SESV2 ListConfigurationSets action.
- * \value ListContactListsAction SESV2 ListContactLists action.
- * \value ListContactsAction SESV2 ListContacts action.
- * \value ListCustomVerificationEmailTemplatesAction SESV2 ListCustomVerificationEmailTemplates action.
- * \value ListDedicatedIpPoolsAction SESV2 ListDedicatedIpPools action.
- * \value ListDeliverabilityTestReportsAction SESV2 ListDeliverabilityTestReports action.
- * \value ListDomainDeliverabilityCampaignsAction SESV2 ListDomainDeliverabilityCampaigns action.
- * \value ListEmailIdentitiesAction SESV2 ListEmailIdentities action.
- * \value ListEmailTemplatesAction SESV2 ListEmailTemplates action.
- * \value ListImportJobsAction SESV2 ListImportJobs action.
- * \value ListSuppressedDestinationsAction SESV2 ListSuppressedDestinations action.
- * \value ListTagsForResourceAction SESV2 ListTagsForResource action.
- * \value PutAccountDedicatedIpWarmupAttributesAction SESV2 PutAccountDedicatedIpWarmupAttributes action.
- * \value PutAccountDetailsAction SESV2 PutAccountDetails action.
- * \value PutAccountSendingAttributesAction SESV2 PutAccountSendingAttributes action.
- * \value PutAccountSuppressionAttributesAction SESV2 PutAccountSuppressionAttributes action.
- * \value PutConfigurationSetDeliveryOptionsAction SESV2 PutConfigurationSetDeliveryOptions action.
- * \value PutConfigurationSetReputationOptionsAction SESV2 PutConfigurationSetReputationOptions action.
- * \value PutConfigurationSetSendingOptionsAction SESV2 PutConfigurationSetSendingOptions action.
- * \value PutConfigurationSetSuppressionOptionsAction SESV2 PutConfigurationSetSuppressionOptions action.
- * \value PutConfigurationSetTrackingOptionsAction SESV2 PutConfigurationSetTrackingOptions action.
- * \value PutDedicatedIpInPoolAction SESV2 PutDedicatedIpInPool action.
- * \value PutDedicatedIpWarmupAttributesAction SESV2 PutDedicatedIpWarmupAttributes action.
- * \value PutDeliverabilityDashboardOptionAction SESV2 PutDeliverabilityDashboardOption action.
- * \value PutEmailIdentityConfigurationSetAttributesAction SESV2 PutEmailIdentityConfigurationSetAttributes action.
- * \value PutEmailIdentityDkimAttributesAction SESV2 PutEmailIdentityDkimAttributes action.
- * \value PutEmailIdentityDkimSigningAttributesAction SESV2 PutEmailIdentityDkimSigningAttributes action.
- * \value PutEmailIdentityFeedbackAttributesAction SESV2 PutEmailIdentityFeedbackAttributes action.
- * \value PutEmailIdentityMailFromAttributesAction SESV2 PutEmailIdentityMailFromAttributes action.
- * \value PutSuppressedDestinationAction SESV2 PutSuppressedDestination action.
- * \value SendBulkEmailAction SESV2 SendBulkEmail action.
- * \value SendCustomVerificationEmailAction SESV2 SendCustomVerificationEmail action.
- * \value SendEmailAction SESV2 SendEmail action.
- * \value TagResourceAction SESV2 TagResource action.
- * \value TestRenderEmailTemplateAction SESV2 TestRenderEmailTemplate action.
- * \value UntagResourceAction SESV2 UntagResource action.
- * \value UpdateConfigurationSetEventDestinationAction SESV2 UpdateConfigurationSetEventDestination action.
- * \value UpdateContactAction SESV2 UpdateContact action.
- * \value UpdateContactListAction SESV2 UpdateContactList action.
- * \value UpdateCustomVerificationEmailTemplateAction SESV2 UpdateCustomVerificationEmailTemplate action.
- * \value UpdateEmailIdentityPolicyAction SESV2 UpdateEmailIdentityPolicy action.
- * \value UpdateEmailTemplateAction SESV2 UpdateEmailTemplate action.
+ * \value CreateConfigurationSetAction SESv2 CreateConfigurationSet action.
+ * \value CreateConfigurationSetEventDestinationAction SESv2 CreateConfigurationSetEventDestination action.
+ * \value CreateContactAction SESv2 CreateContact action.
+ * \value CreateContactListAction SESv2 CreateContactList action.
+ * \value CreateCustomVerificationEmailTemplateAction SESv2 CreateCustomVerificationEmailTemplate action.
+ * \value CreateDedicatedIpPoolAction SESv2 CreateDedicatedIpPool action.
+ * \value CreateDeliverabilityTestReportAction SESv2 CreateDeliverabilityTestReport action.
+ * \value CreateEmailIdentityAction SESv2 CreateEmailIdentity action.
+ * \value CreateEmailIdentityPolicyAction SESv2 CreateEmailIdentityPolicy action.
+ * \value CreateEmailTemplateAction SESv2 CreateEmailTemplate action.
+ * \value CreateImportJobAction SESv2 CreateImportJob action.
+ * \value DeleteConfigurationSetAction SESv2 DeleteConfigurationSet action.
+ * \value DeleteConfigurationSetEventDestinationAction SESv2 DeleteConfigurationSetEventDestination action.
+ * \value DeleteContactAction SESv2 DeleteContact action.
+ * \value DeleteContactListAction SESv2 DeleteContactList action.
+ * \value DeleteCustomVerificationEmailTemplateAction SESv2 DeleteCustomVerificationEmailTemplate action.
+ * \value DeleteDedicatedIpPoolAction SESv2 DeleteDedicatedIpPool action.
+ * \value DeleteEmailIdentityAction SESv2 DeleteEmailIdentity action.
+ * \value DeleteEmailIdentityPolicyAction SESv2 DeleteEmailIdentityPolicy action.
+ * \value DeleteEmailTemplateAction SESv2 DeleteEmailTemplate action.
+ * \value DeleteSuppressedDestinationAction SESv2 DeleteSuppressedDestination action.
+ * \value GetAccountAction SESv2 GetAccount action.
+ * \value GetBlacklistReportsAction SESv2 GetBlacklistReports action.
+ * \value GetConfigurationSetAction SESv2 GetConfigurationSet action.
+ * \value GetConfigurationSetEventDestinationsAction SESv2 GetConfigurationSetEventDestinations action.
+ * \value GetContactAction SESv2 GetContact action.
+ * \value GetContactListAction SESv2 GetContactList action.
+ * \value GetCustomVerificationEmailTemplateAction SESv2 GetCustomVerificationEmailTemplate action.
+ * \value GetDedicatedIpAction SESv2 GetDedicatedIp action.
+ * \value GetDedicatedIpsAction SESv2 GetDedicatedIps action.
+ * \value GetDeliverabilityDashboardOptionsAction SESv2 GetDeliverabilityDashboardOptions action.
+ * \value GetDeliverabilityTestReportAction SESv2 GetDeliverabilityTestReport action.
+ * \value GetDomainDeliverabilityCampaignAction SESv2 GetDomainDeliverabilityCampaign action.
+ * \value GetDomainStatisticsReportAction SESv2 GetDomainStatisticsReport action.
+ * \value GetEmailIdentityAction SESv2 GetEmailIdentity action.
+ * \value GetEmailIdentityPoliciesAction SESv2 GetEmailIdentityPolicies action.
+ * \value GetEmailTemplateAction SESv2 GetEmailTemplate action.
+ * \value GetImportJobAction SESv2 GetImportJob action.
+ * \value GetSuppressedDestinationAction SESv2 GetSuppressedDestination action.
+ * \value ListConfigurationSetsAction SESv2 ListConfigurationSets action.
+ * \value ListContactListsAction SESv2 ListContactLists action.
+ * \value ListContactsAction SESv2 ListContacts action.
+ * \value ListCustomVerificationEmailTemplatesAction SESv2 ListCustomVerificationEmailTemplates action.
+ * \value ListDedicatedIpPoolsAction SESv2 ListDedicatedIpPools action.
+ * \value ListDeliverabilityTestReportsAction SESv2 ListDeliverabilityTestReports action.
+ * \value ListDomainDeliverabilityCampaignsAction SESv2 ListDomainDeliverabilityCampaigns action.
+ * \value ListEmailIdentitiesAction SESv2 ListEmailIdentities action.
+ * \value ListEmailTemplatesAction SESv2 ListEmailTemplates action.
+ * \value ListImportJobsAction SESv2 ListImportJobs action.
+ * \value ListSuppressedDestinationsAction SESv2 ListSuppressedDestinations action.
+ * \value ListTagsForResourceAction SESv2 ListTagsForResource action.
+ * \value PutAccountDedicatedIpWarmupAttributesAction SESv2 PutAccountDedicatedIpWarmupAttributes action.
+ * \value PutAccountDetailsAction SESv2 PutAccountDetails action.
+ * \value PutAccountSendingAttributesAction SESv2 PutAccountSendingAttributes action.
+ * \value PutAccountSuppressionAttributesAction SESv2 PutAccountSuppressionAttributes action.
+ * \value PutConfigurationSetDeliveryOptionsAction SESv2 PutConfigurationSetDeliveryOptions action.
+ * \value PutConfigurationSetReputationOptionsAction SESv2 PutConfigurationSetReputationOptions action.
+ * \value PutConfigurationSetSendingOptionsAction SESv2 PutConfigurationSetSendingOptions action.
+ * \value PutConfigurationSetSuppressionOptionsAction SESv2 PutConfigurationSetSuppressionOptions action.
+ * \value PutConfigurationSetTrackingOptionsAction SESv2 PutConfigurationSetTrackingOptions action.
+ * \value PutDedicatedIpInPoolAction SESv2 PutDedicatedIpInPool action.
+ * \value PutDedicatedIpWarmupAttributesAction SESv2 PutDedicatedIpWarmupAttributes action.
+ * \value PutDeliverabilityDashboardOptionAction SESv2 PutDeliverabilityDashboardOption action.
+ * \value PutEmailIdentityConfigurationSetAttributesAction SESv2 PutEmailIdentityConfigurationSetAttributes action.
+ * \value PutEmailIdentityDkimAttributesAction SESv2 PutEmailIdentityDkimAttributes action.
+ * \value PutEmailIdentityDkimSigningAttributesAction SESv2 PutEmailIdentityDkimSigningAttributes action.
+ * \value PutEmailIdentityFeedbackAttributesAction SESv2 PutEmailIdentityFeedbackAttributes action.
+ * \value PutEmailIdentityMailFromAttributesAction SESv2 PutEmailIdentityMailFromAttributes action.
+ * \value PutSuppressedDestinationAction SESv2 PutSuppressedDestination action.
+ * \value SendBulkEmailAction SESv2 SendBulkEmail action.
+ * \value SendCustomVerificationEmailAction SESv2 SendCustomVerificationEmail action.
+ * \value SendEmailAction SESv2 SendEmail action.
+ * \value TagResourceAction SESv2 TagResource action.
+ * \value TestRenderEmailTemplateAction SESv2 TestRenderEmailTemplate action.
+ * \value UntagResourceAction SESv2 UntagResource action.
+ * \value UpdateConfigurationSetEventDestinationAction SESv2 UpdateConfigurationSetEventDestination action.
+ * \value UpdateContactAction SESv2 UpdateContact action.
+ * \value UpdateContactListAction SESv2 UpdateContactList action.
+ * \value UpdateCustomVerificationEmailTemplateAction SESv2 UpdateCustomVerificationEmailTemplate action.
+ * \value UpdateEmailIdentityPolicyAction SESv2 UpdateEmailIdentityPolicy action.
+ * \value UpdateEmailTemplateAction SESv2 UpdateEmailTemplate action.
  */
 
 /*!
- * Constructs a Sesv2Request object for SESV2 \a action.
+ * Constructs a SESv2Request object for SESv2 \a action.
  */
-Sesv2Request::Sesv2Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new Sesv2RequestPrivate(action, this))
+SESv2Request::SESv2Request(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SESv2RequestPrivate(action, this))
 {
 
 }
@@ -131,18 +131,18 @@ Sesv2Request::Sesv2Request(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-Sesv2Request::Sesv2Request(const Sesv2Request &other)
-    : QtAws::Core::AwsAbstractRequest(new Sesv2RequestPrivate(*other.d_func(), this))
+SESv2Request::SESv2Request(const SESv2Request &other)
+    : QtAws::Core::AwsAbstractRequest(new SESv2RequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the Sesv2Request object to be equal to \a other.
+ * Sets the SESv2Request object to be equal to \a other.
  */
-Sesv2Request& Sesv2Request::operator=(const Sesv2Request &other)
+SESv2Request& SESv2Request::operator=(const SESv2Request &other)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -150,57 +150,57 @@ Sesv2Request& Sesv2Request::operator=(const Sesv2Request &other)
 }
 
 /*!
- * Constructs aa Sesv2Request object with private implementation \a d.
+ * Constructs aa SESv2Request object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from Sesv2RequestPrivate.
+ * implementation that inherits from SESv2RequestPrivate.
  */
-Sesv2Request::Sesv2Request(Sesv2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SESv2Request::SESv2Request(SESv2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
 
 /*!
- * Returns the SESV2 action to be performed by this request.
+ * Returns the SESv2 action to be performed by this request.
  */
-Sesv2Request::Action Sesv2Request::action() const
+SESv2Request::Action SESv2Request::action() const
 {
-    Q_D(const Sesv2Request);
+    Q_D(const SESv2Request);
     return d->action;
 }
 
 /*!
- * Returns the name of the SESV2 action to be performed by this request.
+ * Returns the name of the SESv2 action to be performed by this request.
  */
-QString Sesv2Request::actionString() const
+QString SESv2Request::actionString() const
 {
-    return Sesv2RequestPrivate::toString(action());
+    return SESv2RequestPrivate::toString(action());
 }
 
 /*!
- * Returns the SESV2 API version implemented by this request.
+ * Returns the SESv2 API version implemented by this request.
  */
-QString Sesv2Request::apiVersion() const
+QString SESv2Request::apiVersion() const
 {
-    Q_D(const Sesv2Request);
+    Q_D(const SESv2Request);
     return d->apiVersion;
 }
 
 /*!
- * Sets the SESV2 action to be performed by this request to \a action.
+ * Sets the SESv2 action to be performed by this request to \a action.
  */
-void Sesv2Request::setAction(const Action action)
+void SESv2Request::setAction(const Action action)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->action = action;
 }
 
 /*!
- * Sets the SESV2 API version to include in this request to \a version.
+ * Sets the SESv2 API version to include in this request to \a version.
  */
-void Sesv2Request::setApiVersion(const QString &version)
+void SESv2Request::setApiVersion(const QString &version)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->apiVersion = version;
 }
 
@@ -212,7 +212,7 @@ void Sesv2Request::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool Sesv2Request::operator==(const Sesv2Request &other) const
+bool SESv2Request::operator==(const SESv2Request &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -221,19 +221,19 @@ bool Sesv2Request::operator==(const Sesv2Request &other) const
 }
 
 /*
- * Returns \c tue if \a queueName is a valid SESV2 queue name.
+ * Returns \c tue if \a queueName is a valid SESv2 queue name.
  *
- * @par From SESV2 FAQs:
+ * @par From SESv2 FAQs:
  *      Queue names are limited to 80 characters. Alphanumeric characters plus
  *      hyphens (-) and underscores (_) are allowed.
  *
  * @param  queueName  Name to check for validity.
  *
- * @return \c true if \a queueName is a valid SESV2 queue name, \c false otherwise.
+ * @return \c true if \a queueName is a valid SESv2 queue name, \c false otherwise.
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool Sesv2Request::isValidQueueName(const QString &queueName)
+/*bool SESv2Request::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -243,45 +243,45 @@ bool Sesv2Request::operator==(const Sesv2Request &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int Sesv2Request::clearParameter(const QString &name)
+int SESv2Request::clearParameter(const QString &name)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void Sesv2Request::clearParameters()
+void SESv2Request::clearParameters()
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant Sesv2Request::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SESv2Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const Sesv2Request);
+    Q_D(const SESv2Request);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &Sesv2Request::parameters() const
+const QVariantMap &SESv2Request::parameters() const
 {
-    Q_D(const Sesv2Request);
+    Q_D(const SESv2Request);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void Sesv2Request::setParameter(const QString &name, const QVariant &value)
+void SESv2Request::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->parameters.insert(name, value);
 }
 
@@ -289,42 +289,42 @@ void Sesv2Request::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void Sesv2Request::setParameters(const QVariantMap &parameters)
+void SESv2Request::setParameters(const QVariantMap &parameters)
 {
-    Q_D(Sesv2Request);
+    Q_D(SESv2Request);
     d->parameters = parameters;
 }
 
 /*!
- * Returns a network request for the SESV2 request using the given
+ * Returns a network request for the SESv2 request using the given
  * \a endpoint.
  *
- * This SESV2 implementation builds request URLs by combining the
+ * This SESv2 implementation builds request URLs by combining the
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest Sesv2Request::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SESv2Request::unsignedRequest(const QUrl &endpoint) const
 {
-    //Q_D(const Sesv2Request);
+    //Q_D(const SESv2Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SESV2::Sesv2RequestPrivate
- * \brief The Sesv2RequestPrivate class provides private implementation for Sesv2Request.
+ * \class QtAws::SESv2::SESv2RequestPrivate
+ * \brief The SESv2RequestPrivate class provides private implementation for SESv2Request.
  * \internal
  *
- * \inmodule QtAwsSESV2
+ * \inmodule QtAwsSESv2
  */
 
 /*!
- * Constructs a Sesv2RequestPrivate object for SESV2 \a action,
+ * Constructs a SESv2RequestPrivate object for SESv2 \a action,
  * with public implementation \a q.
  */
-Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2Request::Action action, Sesv2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+SESv2RequestPrivate::SESv2RequestPrivate(const SESv2Request::Action action, SESv2Request * const q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2019-09-27"))
 {
 
 }
@@ -335,10 +335,10 @@ Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2Request::Action action, Sesv
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the Sesv2Request class's copy constructor.
+ * This is required to support the SESv2Request class's copy constructor.
  */
-Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2RequestPrivate &other,
-                                     Sesv2Request * const q)
+SESv2RequestPrivate::SESv2RequestPrivate(const SESv2RequestPrivate &other,
+                                     SESv2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -349,14 +349,14 @@ Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2RequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts Sesv2Request::Action enumerator values to their respective
- * string representations, appropriate for use with the SESV2 service's Action
+ * This function converts SESv2Request::Action enumerator values to their respective
+ * string representations, appropriate for use with the SESv2 service's Action
  * query parameters.
  */
-QString Sesv2RequestPrivate::toString(const Sesv2Request::Action &action)
+QString SESv2RequestPrivate::toString(const SESv2Request::Action &action)
 {
     #define ActionToString(action) \
-        case Sesv2Request::action##Action: return QStringLiteral(#action)
+        case SESv2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
         ActionToString(CreateConfigurationSet);
         ActionToString(CreateConfigurationSetEventDestination);
@@ -446,5 +446,5 @@ QString Sesv2RequestPrivate::toString(const Sesv2Request::Action &action)
     return QString();
 }
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws

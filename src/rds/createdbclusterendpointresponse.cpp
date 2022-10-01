@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CreateDBClusterEndpointResponse
- * \brief The CreateDBClusterEndpointResponse class provides an interace for RDS CreateDBClusterEndpoint responses.
+ * \class QtAws::Rds::CreateDBClusterEndpointResponse
+ * \brief The CreateDBClusterEndpointResponse class provides an interace for Rds CreateDBClusterEndpoint responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const CreateDBClusterEndpointRequest * CreateDBClusterEndpointResponse::request(
 
 /*!
  * \reimp
- * Parses a successful RDS CreateDBClusterEndpoint \a response.
+ * Parses a successful Rds CreateDBClusterEndpoint \a response.
  */
 void CreateDBClusterEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void CreateDBClusterEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::CreateDBClusterEndpointResponsePrivate
+ * \class QtAws::Rds::CreateDBClusterEndpointResponsePrivate
  * \brief The CreateDBClusterEndpointResponsePrivate class provides private implementation for CreateDBClusterEndpointResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ CreateDBClusterEndpointResponsePrivate::CreateDBClusterEndpointResponsePrivate(
 }
 
 /*!
- * Parses a RDS CreateDBClusterEndpoint response element from \a xml.
+ * Parses a Rds CreateDBClusterEndpoint response element from \a xml.
  */
 void CreateDBClusterEndpointResponsePrivate::parseCreateDBClusterEndpointResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void CreateDBClusterEndpointResponsePrivate::parseCreateDBClusterEndpointRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

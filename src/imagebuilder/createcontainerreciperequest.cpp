@@ -23,26 +23,26 @@
 #include "imagebuilderrequest_p.h"
 
 namespace QtAws {
-namespace imagebuilder {
+namespace ImageBuilder {
 
 /*!
- * \class QtAws::imagebuilder::CreateContainerRecipeRequest
- * \brief The CreateContainerRecipeRequest class provides an interface for imagebuilder CreateContainerRecipe requests.
+ * \class QtAws::ImageBuilder::CreateContainerRecipeRequest
+ * \brief The CreateContainerRecipeRequest class provides an interface for ImageBuilder CreateContainerRecipe requests.
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  *
- *  EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and
- *  deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with
- *  software and settings to meet specific IT
+ *  EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation,
+ *  management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and
+ *  pre-configured with software and settings to meet specific IT
  *
- * \sa imagebuilderClient::createContainerRecipe
+ * \sa ImageBuilderClient::createContainerRecipe
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateContainerRecipeRequest::CreateContainerRecipeRequest(const CreateContainerRecipeRequest &other)
-    : imagebuilderRequest(new CreateContainerRecipeRequestPrivate(*other.d_func(), this))
+    : ImageBuilderRequest(new CreateContainerRecipeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ CreateContainerRecipeRequest::CreateContainerRecipeRequest(const CreateContainer
  * Constructs a CreateContainerRecipeRequest object.
  */
 CreateContainerRecipeRequest::CreateContainerRecipeRequest()
-    : imagebuilderRequest(new CreateContainerRecipeRequestPrivate(imagebuilderRequest::CreateContainerRecipeAction, this))
+    : ImageBuilderRequest(new CreateContainerRecipeRequestPrivate(ImageBuilderRequest::CreateContainerRecipeAction, this))
 {
 
 }
@@ -76,20 +76,20 @@ QtAws::Core::AwsAbstractResponse * CreateContainerRecipeRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::imagebuilder::CreateContainerRecipeRequestPrivate
+ * \class QtAws::ImageBuilder::CreateContainerRecipeRequestPrivate
  * \brief The CreateContainerRecipeRequestPrivate class provides private implementation for CreateContainerRecipeRequest.
  * \internal
  *
- * \inmodule QtAwsimagebuilder
+ * \inmodule QtAwsImageBuilder
  */
 
 /*!
- * Constructs a CreateContainerRecipeRequestPrivate object for imagebuilder \a action,
+ * Constructs a CreateContainerRecipeRequestPrivate object for ImageBuilder \a action,
  * with public implementation \a q.
  */
 CreateContainerRecipeRequestPrivate::CreateContainerRecipeRequestPrivate(
-    const imagebuilderRequest::Action action, CreateContainerRecipeRequest * const q)
-    : imagebuilderRequestPrivate(action, q)
+    const ImageBuilderRequest::Action action, CreateContainerRecipeRequest * const q)
+    : ImageBuilderRequestPrivate(action, q)
 {
 
 }
@@ -102,10 +102,10 @@ CreateContainerRecipeRequestPrivate::CreateContainerRecipeRequestPrivate(
  */
 CreateContainerRecipeRequestPrivate::CreateContainerRecipeRequestPrivate(
     const CreateContainerRecipeRequestPrivate &other, CreateContainerRecipeRequest * const q)
-    : imagebuilderRequestPrivate(other, q)
+    : ImageBuilderRequestPrivate(other, q)
 {
 
 }
 
-} // namespace imagebuilder
+} // namespace ImageBuilder
 } // namespace QtAws

@@ -25,22 +25,22 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
-class CodeStarNotificationsClient;
+class CodestarNotificationsClient;
 
-class CodeStarNotificationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodestarNotificationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
-    explicit CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q);
+    explicit CodestarNotificationsClientPrivate(CodestarNotificationsClient * const q);
 
 private:
-    Q_DECLARE_PUBLIC(CodeStarNotificationsClient)
-    Q_DISABLE_COPY(CodeStarNotificationsClientPrivate)
+    Q_DECLARE_PUBLIC(CodestarNotificationsClient)
+    Q_DISABLE_COPY(CodestarNotificationsClientPrivate)
 
 };
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws
 
 #endif

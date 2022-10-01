@@ -23,11 +23,11 @@
 #include "ecrpublicrequest.h"
 
 namespace QtAws {
-namespace ECRPublic {
+namespace EcrPublic {
 
 class GetAuthorizationTokenRequestPrivate;
 
-class QTAWSECRPUBLIC_EXPORT GetAuthorizationTokenRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT GetAuthorizationTokenRequest : public EcrPublicRequest {
 
 public:
     GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace ECRPublic
+} // namespace EcrPublic
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::GetTopicAttributesRequest
- * \brief The GetTopicAttributesRequest class provides an interface for SNS GetTopicAttributes requests.
+ * \class QtAws::Sns::GetTopicAttributesRequest
+ * \brief The GetTopicAttributesRequest class provides an interface for Sns GetTopicAttributes requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::SNS::GetTopicAttributesRequestPrivate
+ * \class QtAws::Sns::GetTopicAttributesRequestPrivate
  * \brief The GetTopicAttributesRequestPrivate class provides private implementation for GetTopicAttributesRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

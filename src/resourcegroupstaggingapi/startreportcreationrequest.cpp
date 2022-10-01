@@ -23,23 +23,23 @@
 #include "resourcegroupstaggingapirequest_p.h"
 
 namespace QtAws {
-namespace ResourceGroupsTaggingAPI {
+namespace ResourceGroupsTaggingApi {
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::StartReportCreationRequest
- * \brief The StartReportCreationRequest class provides an interface for ResourceGroupsTaggingAPI StartReportCreation requests.
+ * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationRequest
+ * \brief The StartReportCreationRequest class provides an interface for ResourceGroupsTaggingApi StartReportCreation requests.
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  *
  *
- * \sa ResourceGroupsTaggingAPIClient::startReportCreation
+ * \sa ResourceGroupsTaggingApiClient::startReportCreation
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 StartReportCreationRequest::StartReportCreationRequest(const StartReportCreationRequest &other)
-    : ResourceGroupsTaggingAPIRequest(new StartReportCreationRequestPrivate(*other.d_func(), this))
+    : ResourceGroupsTaggingApiRequest(new StartReportCreationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ StartReportCreationRequest::StartReportCreationRequest(const StartReportCreation
  * Constructs a StartReportCreationRequest object.
  */
 StartReportCreationRequest::StartReportCreationRequest()
-    : ResourceGroupsTaggingAPIRequest(new StartReportCreationRequestPrivate(ResourceGroupsTaggingAPIRequest::StartReportCreationAction, this))
+    : ResourceGroupsTaggingApiRequest(new StartReportCreationRequestPrivate(ResourceGroupsTaggingApiRequest::StartReportCreationAction, this))
 {
 
 }
@@ -73,20 +73,20 @@ QtAws::Core::AwsAbstractResponse * StartReportCreationRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::ResourceGroupsTaggingAPI::StartReportCreationRequestPrivate
+ * \class QtAws::ResourceGroupsTaggingApi::StartReportCreationRequestPrivate
  * \brief The StartReportCreationRequestPrivate class provides private implementation for StartReportCreationRequest.
  * \internal
  *
- * \inmodule QtAwsResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingApi
  */
 
 /*!
- * Constructs a StartReportCreationRequestPrivate object for ResourceGroupsTaggingAPI \a action,
+ * Constructs a StartReportCreationRequestPrivate object for ResourceGroupsTaggingApi \a action,
  * with public implementation \a q.
  */
 StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
-    const ResourceGroupsTaggingAPIRequest::Action action, StartReportCreationRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(action, q)
+    const ResourceGroupsTaggingApiRequest::Action action, StartReportCreationRequest * const q)
+    : ResourceGroupsTaggingApiRequestPrivate(action, q)
 {
 
 }
@@ -99,10 +99,10 @@ StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
  */
 StartReportCreationRequestPrivate::StartReportCreationRequestPrivate(
     const StartReportCreationRequestPrivate &other, StartReportCreationRequest * const q)
-    : ResourceGroupsTaggingAPIRequestPrivate(other, q)
+    : ResourceGroupsTaggingApiRequestPrivate(other, q)
 {
 
 }
 
-} // namespace ResourceGroupsTaggingAPI
+} // namespace ResourceGroupsTaggingApi
 } // namespace QtAws

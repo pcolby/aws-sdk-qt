@@ -24,14 +24,14 @@
 #include "describeeventsrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class DescribeEventsRequest;
 
-class DescribeEventsRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeEventsRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    DescribeEventsRequestPrivate(const OpsWorksCMRequest::Action action,
+    DescribeEventsRequestPrivate(const OpsWorksCmRequest::Action action,
                                    DescribeEventsRequest * const q);
     DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
                                    DescribeEventsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
 /*!
- * \class QtAws::mgn::InitializeServiceResponse
- * \brief The InitializeServiceResponse class provides an interace for mgn InitializeService responses.
+ * \class QtAws::Mgn::InitializeServiceResponse
+ * \brief The InitializeServiceResponse class provides an interace for Mgn InitializeService responses.
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  *
  *  The Application Migration Service
  *
- * \sa mgnClient::initializeService
+ * \sa MgnClient::initializeService
  */
 
 /*!
@@ -45,7 +45,7 @@ InitializeServiceResponse::InitializeServiceResponse(
         const InitializeServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : mgnResponse(new InitializeServiceResponsePrivate(this), parent)
+    : MgnResponse(new InitializeServiceResponsePrivate(this), parent)
 {
     setRequest(new InitializeServiceRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const InitializeServiceRequest * InitializeServiceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful mgn InitializeService \a response.
+ * Parses a successful Mgn InitializeService \a response.
  */
 void InitializeServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void InitializeServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::mgn::InitializeServiceResponsePrivate
+ * \class QtAws::Mgn::InitializeServiceResponsePrivate
  * \brief The InitializeServiceResponsePrivate class provides private implementation for InitializeServiceResponse.
  * \internal
  *
- * \inmodule QtAwsmgn
+ * \inmodule QtAwsMgn
  */
 
 /*!
  * Constructs a InitializeServiceResponsePrivate object with public implementation \a q.
  */
 InitializeServiceResponsePrivate::InitializeServiceResponsePrivate(
-    InitializeServiceResponse * const q) : mgnResponsePrivate(q)
+    InitializeServiceResponse * const q) : MgnResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a mgn InitializeService response element from \a xml.
+ * Parses a Mgn InitializeService response element from \a xml.
  */
 void InitializeServiceResponsePrivate::parseInitializeServiceResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void InitializeServiceResponsePrivate::parseInitializeServiceResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws

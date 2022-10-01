@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ApplyPendingMaintenanceActionResponse
- * \brief The ApplyPendingMaintenanceActionResponse class provides an interace for RDS ApplyPendingMaintenanceAction responses.
+ * \class QtAws::Rds::ApplyPendingMaintenanceActionResponse
+ * \brief The ApplyPendingMaintenanceActionResponse class provides an interace for Rds ApplyPendingMaintenanceAction responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const ApplyPendingMaintenanceActionRequest * ApplyPendingMaintenanceActionRespon
 
 /*!
  * \reimp
- * Parses a successful RDS ApplyPendingMaintenanceAction \a response.
+ * Parses a successful Rds ApplyPendingMaintenanceAction \a response.
  */
 void ApplyPendingMaintenanceActionResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void ApplyPendingMaintenanceActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::ApplyPendingMaintenanceActionResponsePrivate
+ * \class QtAws::Rds::ApplyPendingMaintenanceActionResponsePrivate
  * \brief The ApplyPendingMaintenanceActionResponsePrivate class provides private implementation for ApplyPendingMaintenanceActionResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceActionRespo
 }
 
 /*!
- * Parses a RDS ApplyPendingMaintenanceAction response element from \a xml.
+ * Parses a Rds ApplyPendingMaintenanceAction response element from \a xml.
  */
 void ApplyPendingMaintenanceActionResponsePrivate::parseApplyPendingMaintenanceActionResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void ApplyPendingMaintenanceActionResponsePrivate::parseApplyPendingMaintenanceA
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -23,7 +23,7 @@
 #include "rdsresponse_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 class CreateDBClusterParameterGroupResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws
 
 #endif

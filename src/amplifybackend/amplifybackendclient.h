@@ -40,6 +40,8 @@ class CreateBackendAuthRequest;
 class CreateBackendAuthResponse;
 class CreateBackendConfigRequest;
 class CreateBackendConfigResponse;
+class CreateBackendStorageRequest;
+class CreateBackendStorageResponse;
 class CreateTokenRequest;
 class CreateTokenResponse;
 class DeleteBackendRequest;
@@ -48,6 +50,8 @@ class DeleteBackendAPIRequest;
 class DeleteBackendAPIResponse;
 class DeleteBackendAuthRequest;
 class DeleteBackendAuthResponse;
+class DeleteBackendStorageRequest;
+class DeleteBackendStorageResponse;
 class DeleteTokenRequest;
 class DeleteTokenResponse;
 class GenerateBackendAPIModelsRequest;
@@ -62,10 +66,18 @@ class GetBackendAuthRequest;
 class GetBackendAuthResponse;
 class GetBackendJobRequest;
 class GetBackendJobResponse;
+class GetBackendStorageRequest;
+class GetBackendStorageResponse;
 class GetTokenRequest;
 class GetTokenResponse;
+class ImportBackendAuthRequest;
+class ImportBackendAuthResponse;
+class ImportBackendStorageRequest;
+class ImportBackendStorageResponse;
 class ListBackendJobsRequest;
 class ListBackendJobsResponse;
+class ListS3BucketsRequest;
+class ListS3BucketsResponse;
 class RemoveAllBackendsRequest;
 class RemoveAllBackendsResponse;
 class RemoveBackendConfigRequest;
@@ -78,6 +90,8 @@ class UpdateBackendConfigRequest;
 class UpdateBackendConfigResponse;
 class UpdateBackendJobRequest;
 class UpdateBackendJobResponse;
+class UpdateBackendStorageRequest;
+class UpdateBackendStorageResponse;
 
 class QTAWSAMPLIFYBACKEND_EXPORT AmplifyBackendClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -100,10 +114,12 @@ public slots:
     CreateBackendAPIResponse * createBackendAPI(const CreateBackendAPIRequest &request);
     CreateBackendAuthResponse * createBackendAuth(const CreateBackendAuthRequest &request);
     CreateBackendConfigResponse * createBackendConfig(const CreateBackendConfigRequest &request);
+    CreateBackendStorageResponse * createBackendStorage(const CreateBackendStorageRequest &request);
     CreateTokenResponse * createToken(const CreateTokenRequest &request);
     DeleteBackendResponse * deleteBackend(const DeleteBackendRequest &request);
     DeleteBackendAPIResponse * deleteBackendAPI(const DeleteBackendAPIRequest &request);
     DeleteBackendAuthResponse * deleteBackendAuth(const DeleteBackendAuthRequest &request);
+    DeleteBackendStorageResponse * deleteBackendStorage(const DeleteBackendStorageRequest &request);
     DeleteTokenResponse * deleteToken(const DeleteTokenRequest &request);
     GenerateBackendAPIModelsResponse * generateBackendAPIModels(const GenerateBackendAPIModelsRequest &request);
     GetBackendResponse * getBackend(const GetBackendRequest &request);
@@ -111,14 +127,19 @@ public slots:
     GetBackendAPIModelsResponse * getBackendAPIModels(const GetBackendAPIModelsRequest &request);
     GetBackendAuthResponse * getBackendAuth(const GetBackendAuthRequest &request);
     GetBackendJobResponse * getBackendJob(const GetBackendJobRequest &request);
+    GetBackendStorageResponse * getBackendStorage(const GetBackendStorageRequest &request);
     GetTokenResponse * getToken(const GetTokenRequest &request);
+    ImportBackendAuthResponse * importBackendAuth(const ImportBackendAuthRequest &request);
+    ImportBackendStorageResponse * importBackendStorage(const ImportBackendStorageRequest &request);
     ListBackendJobsResponse * listBackendJobs(const ListBackendJobsRequest &request);
+    ListS3BucketsResponse * listS3Buckets(const ListS3BucketsRequest &request);
     RemoveAllBackendsResponse * removeAllBackends(const RemoveAllBackendsRequest &request);
     RemoveBackendConfigResponse * removeBackendConfig(const RemoveBackendConfigRequest &request);
     UpdateBackendAPIResponse * updateBackendAPI(const UpdateBackendAPIRequest &request);
     UpdateBackendAuthResponse * updateBackendAuth(const UpdateBackendAuthRequest &request);
     UpdateBackendConfigResponse * updateBackendConfig(const UpdateBackendConfigRequest &request);
     UpdateBackendJobResponse * updateBackendJob(const UpdateBackendJobRequest &request);
+    UpdateBackendStorageResponse * updateBackendStorage(const UpdateBackendStorageRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AmplifyBackendClient)

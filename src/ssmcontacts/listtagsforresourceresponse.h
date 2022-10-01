@@ -24,11 +24,11 @@
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
-namespace SSMContacts {
+namespace SsmContacts {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWSSSMCONTACTS_EXPORT ListTagsForResourceResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT ListTagsForResourceResponse : public SsmContactsResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSMContacts
+} // namespace SsmContacts
 } // namespace QtAws
 
 #endif

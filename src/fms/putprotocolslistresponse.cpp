@@ -25,20 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace FMS {
+namespace Fms {
 
 /*!
- * \class QtAws::FMS::PutProtocolsListResponse
- * \brief The PutProtocolsListResponse class provides an interace for FMS PutProtocolsList responses.
+ * \class QtAws::Fms::PutProtocolsListResponse
+ * \brief The PutProtocolsListResponse class provides an interace for Fms PutProtocolsList responses.
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
- *  <fullname>AWS Firewall Manager</fullname>
- * 
- *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
- *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
- *  Developer
+ *  This is the <i>Firewall Manager API Reference</i>. This guide is for developers who need detailed information about the
+ *  Firewall Manager API actions, data types, and errors. For detailed information about Firewall Manager features, see the
+ *  <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">Firewall Manager Developer
  * 
  *  Guide</a>>
  * 
@@ -73,7 +70,7 @@ const PutProtocolsListRequest * PutProtocolsListResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful FMS PutProtocolsList \a response.
+ * Parses a successful Fms PutProtocolsList \a response.
  */
 void PutProtocolsListResponse::parseSuccess(QIODevice &response)
 {
@@ -83,11 +80,11 @@ void PutProtocolsListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::PutProtocolsListResponsePrivate
+ * \class QtAws::Fms::PutProtocolsListResponsePrivate
  * \brief The PutProtocolsListResponsePrivate class provides private implementation for PutProtocolsListResponse.
  * \internal
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  */
 
 /*!
@@ -100,7 +97,7 @@ PutProtocolsListResponsePrivate::PutProtocolsListResponsePrivate(
 }
 
 /*!
- * Parses a FMS PutProtocolsList response element from \a xml.
+ * Parses a Fms PutProtocolsList response element from \a xml.
  */
 void PutProtocolsListResponsePrivate::parsePutProtocolsListResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +105,5 @@ void PutProtocolsListResponsePrivate::parsePutProtocolsListResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace FMS
+} // namespace Fms
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::DeleteUsagePlanKeyRequest
- * \brief The DeleteUsagePlanKeyRequest class provides an interface for APIGateway DeleteUsagePlanKey requests.
+ * \class QtAws::ApiGateway::DeleteUsagePlanKeyRequest
+ * \brief The DeleteUsagePlanKeyRequest class provides an interface for ApiGateway DeleteUsagePlanKey requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::deleteUsagePlanKey
+ * \sa ApiGatewayClient::deleteUsagePlanKey
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyRequest &other)
-    : APIGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyReq
  * Constructs a DeleteUsagePlanKeyRequest object.
  */
 DeleteUsagePlanKeyRequest::DeleteUsagePlanKeyRequest()
-    : APIGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(APIGatewayRequest::DeleteUsagePlanKeyAction, this))
+    : ApiGatewayRequest(new DeleteUsagePlanKeyRequestPrivate(ApiGatewayRequest::DeleteUsagePlanKeyAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanKeyRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::APIGateway::DeleteUsagePlanKeyRequestPrivate
+ * \class QtAws::ApiGateway::DeleteUsagePlanKeyRequestPrivate
  * \brief The DeleteUsagePlanKeyRequestPrivate class provides private implementation for DeleteUsagePlanKeyRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a DeleteUsagePlanKeyRequestPrivate object for APIGateway \a action,
+ * Constructs a DeleteUsagePlanKeyRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
-    const APIGatewayRequest::Action action, DeleteUsagePlanKeyRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, DeleteUsagePlanKeyRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
  */
 DeleteUsagePlanKeyRequestPrivate::DeleteUsagePlanKeyRequestPrivate(
     const DeleteUsagePlanKeyRequestPrivate &other, DeleteUsagePlanKeyRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

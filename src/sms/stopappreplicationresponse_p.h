@@ -23,7 +23,7 @@
 #include "smsresponse_p.h"
 
 namespace QtAws {
-namespace SMS {
+namespace Sms {
 
 class StopAppReplicationResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SMS
+} // namespace Sms
 } // namespace QtAws
 
 #endif

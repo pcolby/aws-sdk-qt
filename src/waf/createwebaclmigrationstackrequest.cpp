@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::CreateWebACLMigrationStackRequest
- * \brief The CreateWebACLMigrationStackRequest class provides an interface for WAF CreateWebACLMigrationStack requests.
+ * \class QtAws::Waf::CreateWebACLMigrationStackRequest
+ * \brief The CreateWebACLMigrationStackRequest class provides an interface for Waf CreateWebACLMigrationStack requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLMigrationStackRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAF::CreateWebACLMigrationStackRequestPrivate
+ * \class QtAws::Waf::CreateWebACLMigrationStackRequestPrivate
  * \brief The CreateWebACLMigrationStackRequestPrivate class provides private implementation for CreateWebACLMigrationStackRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ CreateWebACLMigrationStackRequestPrivate::CreateWebACLMigrationStackRequestPriva
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

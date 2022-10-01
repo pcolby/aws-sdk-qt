@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::RestoreServerResponse
- * \brief The RestoreServerResponse class provides an interace for OpsWorksCM RestoreServer responses.
+ * \class QtAws::OpsWorksCm::RestoreServerResponse
+ * \brief The RestoreServerResponse class provides an interace for OpsWorksCm RestoreServer responses.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -113,7 +113,7 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::restoreServer
+ * \sa OpsWorksCmClient::restoreServer
  */
 
 /*!
@@ -123,7 +123,7 @@ RestoreServerResponse::RestoreServerResponse(
         const RestoreServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new RestoreServerResponsePrivate(this), parent)
+    : OpsWorksCmResponse(new RestoreServerResponsePrivate(this), parent)
 {
     setRequest(new RestoreServerRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ const RestoreServerRequest * RestoreServerResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful OpsWorksCM RestoreServer \a response.
+ * Parses a successful OpsWorksCm RestoreServer \a response.
  */
 void RestoreServerResponse::parseSuccess(QIODevice &response)
 {
@@ -150,24 +150,24 @@ void RestoreServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::OpsWorksCM::RestoreServerResponsePrivate
+ * \class QtAws::OpsWorksCm::RestoreServerResponsePrivate
  * \brief The RestoreServerResponsePrivate class provides private implementation for RestoreServerResponse.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
  * Constructs a RestoreServerResponsePrivate object with public implementation \a q.
  */
 RestoreServerResponsePrivate::RestoreServerResponsePrivate(
-    RestoreServerResponse * const q) : OpsWorksCMResponsePrivate(q)
+    RestoreServerResponse * const q) : OpsWorksCmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a OpsWorksCM RestoreServer response element from \a xml.
+ * Parses a OpsWorksCm RestoreServer response element from \a xml.
  */
 void RestoreServerResponsePrivate::parseRestoreServerResponse(QXmlStreamReader &xml)
 {
@@ -175,5 +175,5 @@ void RestoreServerResponsePrivate::parseRestoreServerResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

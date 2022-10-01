@@ -44,6 +44,7 @@ public:
         ListTagsForResourceAction,
         ListTunnelsAction,
         OpenTunnelAction,
+        RotateTunnelAccessTokenAction,
         TagResourceAction,
         UntagResourceAction,
     };

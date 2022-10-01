@@ -24,14 +24,14 @@
 #include "startdbclusterrequest.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 class StartDBClusterRequest;
 
-class StartDBClusterRequestPrivate : public DocDBRequestPrivate {
+class StartDBClusterRequestPrivate : public DocDbRequestPrivate {
 
 public:
-    StartDBClusterRequestPrivate(const DocDBRequest::Action action,
+    StartDBClusterRequestPrivate(const DocDbRequest::Action action,
                                    StartDBClusterRequest * const q);
     StartDBClusterRequestPrivate(const StartDBClusterRequestPrivate &other,
                                    StartDBClusterRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws
 
 #endif

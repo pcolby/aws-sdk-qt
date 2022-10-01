@@ -24,7 +24,7 @@
 #include "createfilesystemrequest.h"
 
 namespace QtAws {
-namespace EFS {
+namespace Efs {
 
 class CreateFileSystemResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace EFS
+} // namespace Efs
 } // namespace QtAws
 
 #endif

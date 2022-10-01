@@ -24,14 +24,14 @@
 #include "deletededicatedippoolrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class DeleteDedicatedIpPoolRequest;
 
-class DeleteDedicatedIpPoolRequestPrivate : public Sesv2RequestPrivate {
+class DeleteDedicatedIpPoolRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    DeleteDedicatedIpPoolRequestPrivate(const Sesv2Request::Action action,
+    DeleteDedicatedIpPoolRequestPrivate(const SESv2Request::Action action,
                                    DeleteDedicatedIpPoolRequest * const q);
     DeleteDedicatedIpPoolRequestPrivate(const DeleteDedicatedIpPoolRequestPrivate &other,
                                    DeleteDedicatedIpPoolRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

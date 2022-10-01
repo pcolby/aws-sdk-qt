@@ -24,14 +24,14 @@
 #include "batchgetdocumentstatusrequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class BatchGetDocumentStatusRequest;
 
-class BatchGetDocumentStatusRequestPrivate : public kendraRequestPrivate {
+class BatchGetDocumentStatusRequestPrivate : public KendraRequestPrivate {
 
 public:
-    BatchGetDocumentStatusRequestPrivate(const kendraRequest::Action action,
+    BatchGetDocumentStatusRequestPrivate(const KendraRequest::Action action,
                                    BatchGetDocumentStatusRequest * const q);
     BatchGetDocumentStatusRequestPrivate(const BatchGetDocumentStatusRequestPrivate &other,
                                    BatchGetDocumentStatusRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

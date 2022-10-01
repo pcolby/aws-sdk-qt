@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListIPSetsResponse
- * \brief The ListIPSetsResponse class provides an interace for WAFRegional ListIPSets responses.
+ * \class QtAws::WafRegional::ListIPSetsResponse
+ * \brief The ListIPSetsResponse class provides an interace for WafRegional ListIPSets responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listIPSets
+ * \sa WafRegionalClient::listIPSets
  */
 
 /*!
@@ -67,7 +67,7 @@ ListIPSetsResponse::ListIPSetsResponse(
         const ListIPSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListIPSetsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListIPSetsResponsePrivate(this), parent)
 {
     setRequest(new ListIPSetsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListIPSets \a response.
+ * Parses a successful WafRegional ListIPSets \a response.
  */
 void ListIPSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListIPSetsResponsePrivate
+ * \class QtAws::WafRegional::ListIPSetsResponsePrivate
  * \brief The ListIPSetsResponsePrivate class provides private implementation for ListIPSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListIPSetsResponsePrivate object with public implementation \a q.
  */
 ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
-    ListIPSetsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListIPSetsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListIPSets response element from \a xml.
+ * Parses a WafRegional ListIPSets response element from \a xml.
  */
 void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

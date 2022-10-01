@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteGeoMatchSetResponse
- * \brief The DeleteGeoMatchSetResponse class provides an interace for WAFRegional DeleteGeoMatchSet responses.
+ * \class QtAws::WafRegional::DeleteGeoMatchSetResponse
+ * \brief The DeleteGeoMatchSetResponse class provides an interace for WafRegional DeleteGeoMatchSet responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteGeoMatchSet
+ * \sa WafRegionalClient::deleteGeoMatchSet
  */
 
 /*!
@@ -67,7 +67,7 @@ DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
         const DeleteGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
+    : WafRegionalResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteGeoMatchSetRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional DeleteGeoMatchSet \a response.
+ * Parses a successful WafRegional DeleteGeoMatchSet \a response.
  */
 void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteGeoMatchSetResponsePrivate
+ * \class QtAws::WafRegional::DeleteGeoMatchSetResponsePrivate
  * \brief The DeleteGeoMatchSetResponsePrivate class provides private implementation for DeleteGeoMatchSetResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a DeleteGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
-    DeleteGeoMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
+    DeleteGeoMatchSetResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional DeleteGeoMatchSet response element from \a xml.
+ * Parses a WafRegional DeleteGeoMatchSet response element from \a xml.
  */
 void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "sesrequest_p.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequest
- * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class provides an interface for SES UpdateConfigurationSetReputationMetricsEnabled requests.
+ * \class QtAws::Ses::UpdateConfigurationSetReputationMetricsEnabledRequest
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class provides an interface for Ses UpdateConfigurationSetReputationMetricsEnabled requests.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -84,11 +84,11 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
 }
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
+ * \class QtAws::Ses::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
  * \brief The UpdateConfigurationSetReputationMetricsEnabledRequestPrivate class provides private implementation for UpdateConfigurationSetReputationMetricsEnabledRequest.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -115,5 +115,5 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
 
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

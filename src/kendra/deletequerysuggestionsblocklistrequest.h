@@ -23,11 +23,11 @@
 #include "kendrarequest.h"
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 class DeleteQuerySuggestionsBlockListRequestPrivate;
 
-class QTAWSKENDRA_EXPORT DeleteQuerySuggestionsBlockListRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT DeleteQuerySuggestionsBlockListRequest : public KendraRequest {
 
 public:
     DeleteQuerySuggestionsBlockListRequest(const DeleteQuerySuggestionsBlockListRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws
 
 #endif

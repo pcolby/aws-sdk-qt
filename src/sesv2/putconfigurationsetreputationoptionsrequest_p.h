@@ -24,14 +24,14 @@
 #include "putconfigurationsetreputationoptionsrequest.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class PutConfigurationSetReputationOptionsRequest;
 
-class PutConfigurationSetReputationOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetReputationOptionsRequestPrivate : public SESv2RequestPrivate {
 
 public:
-    PutConfigurationSetReputationOptionsRequestPrivate(const Sesv2Request::Action action,
+    PutConfigurationSetReputationOptionsRequestPrivate(const SESv2Request::Action action,
                                    PutConfigurationSetReputationOptionsRequest * const q);
     PutConfigurationSetReputationOptionsRequestPrivate(const PutConfigurationSetReputationOptionsRequestPrivate &other,
                                    PutConfigurationSetReputationOptionsRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

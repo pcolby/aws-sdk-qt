@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::DeleteIPSetRequest
- * \brief The DeleteIPSetRequest class provides an interface for WAFRegional DeleteIPSet requests.
+ * \class QtAws::WafRegional::DeleteIPSetRequest
+ * \brief The DeleteIPSetRequest class provides an interface for WafRegional DeleteIPSet requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::deleteIPSet
+ * \sa WafRegionalClient::deleteIPSet
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
-    : WAFRegionalRequest(new DeleteIPSetRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new DeleteIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
  * Constructs a DeleteIPSetRequest object.
  */
 DeleteIPSetRequest::DeleteIPSetRequest()
-    : WAFRegionalRequest(new DeleteIPSetRequestPrivate(WAFRegionalRequest::DeleteIPSetAction, this))
+    : WafRegionalRequest(new DeleteIPSetRequestPrivate(WafRegionalRequest::DeleteIPSetAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
 }
 
 /*!
- * \class QtAws::WAFRegional::DeleteIPSetRequestPrivate
+ * \class QtAws::WafRegional::DeleteIPSetRequestPrivate
  * \brief The DeleteIPSetRequestPrivate class provides private implementation for DeleteIPSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a DeleteIPSetRequestPrivate object for WAFRegional \a action,
+ * Constructs a DeleteIPSetRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
-    const WAFRegionalRequest::Action action, DeleteIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, DeleteIPSetRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const DeleteIPSetRequestPrivate &other, DeleteIPSetRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

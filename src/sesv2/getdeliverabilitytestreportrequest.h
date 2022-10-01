@@ -23,11 +23,11 @@
 #include "sesv2request.h"
 
 namespace QtAws {
-namespace SESV2 {
+namespace SESv2 {
 
 class GetDeliverabilityTestReportRequestPrivate;
 
-class QTAWSSESV2_EXPORT GetDeliverabilityTestReportRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetDeliverabilityTestReportRequest : public SESv2Request {
 
 public:
     GetDeliverabilityTestReportRequest(const GetDeliverabilityTestReportRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace SESV2
+} // namespace SESv2
 } // namespace QtAws
 
 #endif

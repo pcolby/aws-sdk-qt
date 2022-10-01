@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace QLDB {
+namespace Qldb {
 
 /*!
- * \class QtAws::QLDB::GetDigestResponse
- * \brief The GetDigestResponse class provides an interace for QLDB GetDigest responses.
+ * \class QtAws::Qldb::GetDigestResponse
+ * \brief The GetDigestResponse class provides an interace for Qldb GetDigest responses.
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  *
  *  The control plane for Amazon
  *
@@ -62,7 +62,7 @@ const GetDigestRequest * GetDigestResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful QLDB GetDigest \a response.
+ * Parses a successful Qldb GetDigest \a response.
  */
 void GetDigestResponse::parseSuccess(QIODevice &response)
 {
@@ -72,11 +72,11 @@ void GetDigestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::QLDB::GetDigestResponsePrivate
+ * \class QtAws::Qldb::GetDigestResponsePrivate
  * \brief The GetDigestResponsePrivate class provides private implementation for GetDigestResponse.
  * \internal
  *
- * \inmodule QtAwsQLDB
+ * \inmodule QtAwsQldb
  */
 
 /*!
@@ -89,7 +89,7 @@ GetDigestResponsePrivate::GetDigestResponsePrivate(
 }
 
 /*!
- * Parses a QLDB GetDigest response element from \a xml.
+ * Parses a Qldb GetDigest response element from \a xml.
  */
 void GetDigestResponsePrivate::parseGetDigestResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void GetDigestResponsePrivate::parseGetDigestResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace QLDB
+} // namespace Qldb
 } // namespace QtAws

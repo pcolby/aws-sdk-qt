@@ -24,7 +24,7 @@
 #include "deletestreamkeyrequest.h"
 
 namespace QtAws {
-namespace IVS {
+namespace Ivs {
 
 class DeleteStreamKeyResponsePrivate;
 
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace IVS
+} // namespace Ivs
 } // namespace QtAws
 
 #endif

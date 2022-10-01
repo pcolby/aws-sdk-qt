@@ -23,11 +23,11 @@
 #include "opsworkscmrequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class AssociateNodeRequestPrivate;
 
-class QTAWSOPSWORKSCM_EXPORT AssociateNodeRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT AssociateNodeRequest : public OpsWorksCmRequest {
 
 public:
     AssociateNodeRequest(const AssociateNodeRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

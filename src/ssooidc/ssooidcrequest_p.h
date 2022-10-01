@@ -24,28 +24,28 @@
 #include "ssooidcrequest.h"
 
 namespace QtAws {
-namespace SSOOIDC {
+namespace SsoOidc {
 
-class SsooidcRequest;
+class SsoOidcRequest;
 
-class SsooidcRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsoOidcRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SsooidcRequest::Action action; ///< SSOOIDC action to be performed.
-    QString apiVersion;        ///< SSOOIDC API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< SSOOIDC request (query string) parameters. @todo?
+    SsoOidcRequest::Action action; ///< SsoOidc action to be performed.
+    QString apiVersion;        ///< SsoOidc API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< SsoOidc request (query string) parameters. @todo?
 
-    SsooidcRequestPrivate(const SsooidcRequest::Action action, SsooidcRequest * const q);
-    SsooidcRequestPrivate(const SsooidcRequestPrivate &other, SsooidcRequest * const q);
+    SsoOidcRequestPrivate(const SsoOidcRequest::Action action, SsoOidcRequest * const q);
+    SsoOidcRequestPrivate(const SsoOidcRequestPrivate &other, SsoOidcRequest * const q);
 
-    static QString toString(const SsooidcRequest::Action &action);
+    static QString toString(const SsoOidcRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SsooidcRequest)
+    Q_DECLARE_PUBLIC(SsoOidcRequest)
 
 };
 
-} // namespace SSOOIDC
+} // namespace SsoOidc
 } // namespace QtAws
 
 #endif

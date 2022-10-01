@@ -25,18 +25,18 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EC2InstanceConnect {
+namespace Ec2InstanceConnect {
 
 /*!
- * \class QtAws::EC2InstanceConnect::SendSSHPublicKeyResponse
- * \brief The SendSSHPublicKeyResponse class provides an interace for EC2InstanceConnect SendSSHPublicKey responses.
+ * \class QtAws::Ec2InstanceConnect::SendSSHPublicKeyResponse
+ * \brief The SendSSHPublicKeyResponse class provides an interace for Ec2InstanceConnect SendSSHPublicKey responses.
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  *
  *  Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing
  *  users a simple and secure way to connect to their
  *
- * \sa EC2InstanceConnectClient::sendSSHPublicKey
+ * \sa Ec2InstanceConnectClient::sendSSHPublicKey
  */
 
 /*!
@@ -46,7 +46,7 @@ SendSSHPublicKeyResponse::SendSSHPublicKeyResponse(
         const SendSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2InstanceConnectResponse(new SendSSHPublicKeyResponsePrivate(this), parent)
+    : Ec2InstanceConnectResponse(new SendSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new SendSSHPublicKeyRequest(request));
     setReply(reply);
@@ -63,7 +63,7 @@ const SendSSHPublicKeyRequest * SendSSHPublicKeyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EC2InstanceConnect SendSSHPublicKey \a response.
+ * Parses a successful Ec2InstanceConnect SendSSHPublicKey \a response.
  */
 void SendSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -73,24 +73,24 @@ void SendSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2InstanceConnect::SendSSHPublicKeyResponsePrivate
+ * \class QtAws::Ec2InstanceConnect::SendSSHPublicKeyResponsePrivate
  * \brief The SendSSHPublicKeyResponsePrivate class provides private implementation for SendSSHPublicKeyResponse.
  * \internal
  *
- * \inmodule QtAwsEC2InstanceConnect
+ * \inmodule QtAwsEc2InstanceConnect
  */
 
 /*!
  * Constructs a SendSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 SendSSHPublicKeyResponsePrivate::SendSSHPublicKeyResponsePrivate(
-    SendSSHPublicKeyResponse * const q) : EC2InstanceConnectResponsePrivate(q)
+    SendSSHPublicKeyResponse * const q) : Ec2InstanceConnectResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a EC2InstanceConnect SendSSHPublicKey response element from \a xml.
+ * Parses a Ec2InstanceConnect SendSSHPublicKey response element from \a xml.
  */
 void SendSSHPublicKeyResponsePrivate::parseSendSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +98,5 @@ void SendSSHPublicKeyResponsePrivate::parseSendSSHPublicKeyResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EC2InstanceConnect
+} // namespace Ec2InstanceConnect
 } // namespace QtAws

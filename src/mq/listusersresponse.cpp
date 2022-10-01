@@ -25,16 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace MQ {
+namespace Mq {
 
 /*!
- * \class QtAws::MQ::ListUsersResponse
- * \brief The ListUsersResponse class provides an interace for MQ ListUsers responses.
+ * \class QtAws::Mq::ListUsersResponse
+ * \brief The ListUsersResponse class provides an interace for Mq ListUsers responses.
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ and RabbitMQ that makes it easy to set up and operate
  *  message brokers in the cloud. A message broker allows software applications and components to communicate using various
+ *  programming languages, operating systems, and formal messaging
  *
  * \sa MqClient::listUsers
  */
@@ -63,7 +64,7 @@ const ListUsersRequest * ListUsersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful MQ ListUsers \a response.
+ * Parses a successful Mq ListUsers \a response.
  */
 void ListUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -73,11 +74,11 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::ListUsersResponsePrivate
+ * \class QtAws::Mq::ListUsersResponsePrivate
  * \brief The ListUsersResponsePrivate class provides private implementation for ListUsersResponse.
  * \internal
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  */
 
 /*!
@@ -90,7 +91,7 @@ ListUsersResponsePrivate::ListUsersResponsePrivate(
 }
 
 /*!
- * Parses a MQ ListUsers response element from \a xml.
+ * Parses a Mq ListUsers response element from \a xml.
  */
 void ListUsersResponsePrivate::parseListUsersResponse(QXmlStreamReader &xml)
 {
@@ -98,5 +99,5 @@ void ListUsersResponsePrivate::parseListUsersResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace MQ
+} // namespace Mq
 } // namespace QtAws

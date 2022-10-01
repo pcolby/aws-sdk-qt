@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteSqlInjectionMatchSetRequest
- * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for WAF DeleteSqlInjectionMatchSet requests.
+ * \class QtAws::Waf::DeleteSqlInjectionMatchSetRequest
+ * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for Waf DeleteSqlInjectionMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
 }
 
 /*!
- * \class QtAws::WAF::DeleteSqlInjectionMatchSetRequestPrivate
+ * \class QtAws::Waf::DeleteSqlInjectionMatchSetRequestPrivate
  * \brief The DeleteSqlInjectionMatchSetRequestPrivate class provides private implementation for DeleteSqlInjectionMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPriva
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

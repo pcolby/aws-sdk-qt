@@ -24,16 +24,16 @@
 #include "stsrequest.h"
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 class StsRequest;
 
 class StsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    StsRequest::Action action; ///< STS action to be performed.
-    QString apiVersion;        ///< STS API version string. @todo Should this be in the abstract base class?
-    QVariantMap parameters;    ///< STS request (query string) parameters. @todo?
+    StsRequest::Action action; ///< Sts action to be performed.
+    QString apiVersion;        ///< Sts API version string. @todo Should this be in the abstract base class?
+    QVariantMap parameters;    ///< Sts request (query string) parameters. @todo?
 
     StsRequestPrivate(const StsRequest::Action action, StsRequest * const q);
     StsRequestPrivate(const StsRequestPrivate &other, StsRequest * const q);
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws
 
 #endif

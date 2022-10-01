@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EKS {
+namespace Eks {
 
 /*!
- * \class QtAws::EKS::ListFargateProfilesResponse
- * \brief The ListFargateProfilesResponse class provides an interace for EKS ListFargateProfiles responses.
+ * \class QtAws::Eks::ListFargateProfilesResponse
+ * \brief The ListFargateProfilesResponse class provides an interace for Eks ListFargateProfiles responses.
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  *
- *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
- *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
- *  automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on
+ *  Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
+ *  open-source system for automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -71,7 +71,7 @@ const ListFargateProfilesRequest * ListFargateProfilesResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EKS ListFargateProfiles \a response.
+ * Parses a successful Eks ListFargateProfiles \a response.
  */
 void ListFargateProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,11 +81,11 @@ void ListFargateProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EKS::ListFargateProfilesResponsePrivate
+ * \class QtAws::Eks::ListFargateProfilesResponsePrivate
  * \brief The ListFargateProfilesResponsePrivate class provides private implementation for ListFargateProfilesResponse.
  * \internal
  *
- * \inmodule QtAwsEKS
+ * \inmodule QtAwsEks
  */
 
 /*!
@@ -98,7 +98,7 @@ ListFargateProfilesResponsePrivate::ListFargateProfilesResponsePrivate(
 }
 
 /*!
- * Parses a EKS ListFargateProfiles response element from \a xml.
+ * Parses a Eks ListFargateProfiles response element from \a xml.
  */
 void ListFargateProfilesResponsePrivate::parseListFargateProfilesResponse(QXmlStreamReader &xml)
 {
@@ -106,5 +106,5 @@ void ListFargateProfilesResponsePrivate::parseListFargateProfilesResponse(QXmlSt
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EKS
+} // namespace Eks
 } // namespace QtAws

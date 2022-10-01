@@ -39,7 +39,7 @@
 
 /*!
  * \namespace QtAws::ElasticInference
- * \brief Contains classess for accessing Amazon Elastic  Inference ( Elastic Inference).
+ * \brief Contains classess for accessing Amazon Elastic  Inference.
  *
  * \inmodule QtAwsElasticInference
  *
@@ -51,7 +51,7 @@ namespace ElasticInference {
 
 /*!
  * \class QtAws::ElasticInference::ElasticInferenceClient
- * \brief The ElasticInferenceClient class provides access to the Amazon Elastic  Inference ( Elastic Inference) service.
+ * \brief The ElasticInferenceClient class provides access to the Amazon Elastic  Inference service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsElasticInference

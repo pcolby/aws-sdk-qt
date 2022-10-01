@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSSFN_LIBRARY)
 
 add_library(QtAwsSfn
+  qtawssfnglobal.h
+  sfnclient.h
+  sfnclient_p.h
+  sfnrequest.h
+  sfnrequest_p.h
+  sfnresponse.h
+  sfnresponse_p.h
   createactivityrequest.h
   createactivityrequest_p.h
   createactivityresponse.h
@@ -25,14 +32,14 @@ add_library(QtAwsSfn
   describeexecutionrequest_p.h
   describeexecutionresponse.h
   describeexecutionresponse_p.h
-  describestatemachineforexecutionrequest.h
-  describestatemachineforexecutionrequest_p.h
-  describestatemachineforexecutionresponse.h
-  describestatemachineforexecutionresponse_p.h
   describestatemachinerequest.h
   describestatemachinerequest_p.h
   describestatemachineresponse.h
   describestatemachineresponse_p.h
+  describestatemachineforexecutionrequest.h
+  describestatemachineforexecutionrequest_p.h
+  describestatemachineforexecutionresponse.h
+  describestatemachineforexecutionresponse_p.h
   getactivitytaskrequest.h
   getactivitytaskrequest_p.h
   getactivitytaskresponse.h
@@ -57,7 +64,6 @@ add_library(QtAwsSfn
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  qtawssfnglobal.h
   sendtaskfailurerequest.h
   sendtaskfailurerequest_p.h
   sendtaskfailureresponse.h
@@ -70,12 +76,6 @@ add_library(QtAwsSfn
   sendtasksuccessrequest_p.h
   sendtasksuccessresponse.h
   sendtasksuccessresponse_p.h
-  sfnclient.h
-  sfnclient_p.h
-  sfnrequest.h
-  sfnrequest_p.h
-  sfnresponse.h
-  sfnresponse_p.h
   startexecutionrequest.h
   startexecutionrequest_p.h
   startexecutionresponse.h
@@ -100,6 +100,9 @@ add_library(QtAwsSfn
   updatestatemachinerequest_p.h
   updatestatemachineresponse.h
   updatestatemachineresponse_p.h
+  sfnclient.cpp
+  sfnrequest.cpp
+  sfnresponse.cpp
   createactivityrequest.cpp
   createactivityresponse.cpp
   createstatemachinerequest.cpp
@@ -112,10 +115,10 @@ add_library(QtAwsSfn
   describeactivityresponse.cpp
   describeexecutionrequest.cpp
   describeexecutionresponse.cpp
-  describestatemachineforexecutionrequest.cpp
-  describestatemachineforexecutionresponse.cpp
   describestatemachinerequest.cpp
   describestatemachineresponse.cpp
+  describestatemachineforexecutionrequest.cpp
+  describestatemachineforexecutionresponse.cpp
   getactivitytaskrequest.cpp
   getactivitytaskresponse.cpp
   getexecutionhistoryrequest.cpp
@@ -134,9 +137,6 @@ add_library(QtAwsSfn
   sendtaskheartbeatresponse.cpp
   sendtasksuccessrequest.cpp
   sendtasksuccessresponse.cpp
-  sfnclient.cpp
-  sfnrequest.cpp
-  sfnresponse.cpp
   startexecutionrequest.cpp
   startexecutionresponse.cpp
   startsyncexecutionrequest.cpp

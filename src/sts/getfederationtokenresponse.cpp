@@ -25,19 +25,19 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace STS {
+namespace Sts {
 
 /*!
- * \class QtAws::STS::GetFederationTokenResponse
- * \brief The GetFederationTokenResponse class provides an interace for STS GetFederationToken responses.
+ * \class QtAws::Sts::GetFederationTokenResponse
+ * \brief The GetFederationTokenResponse class provides an interace for Sts GetFederationToken responses.
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
- *  <fullname>AWS Security Token Service</fullname>
+ *  <fullname>Security Token Service</fullname>
  * 
- *  AWS Security Token Service (STS) enables you to request temporary, limited-privilege credentials for AWS Identity and
- *  Access Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of
- *  the STS API. For more information about using this service, see <a
+ *  Security Token Service (STS) enables you to request temporary, limited-privilege credentials for Identity and Access
+ *  Management (IAM) users or for users that you authenticate (federated users). This guide provides descriptions of the STS
+ *  API. For more information about using this service, see <a
  *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security
  *
  * \sa StsClient::getFederationToken
@@ -67,7 +67,7 @@ const GetFederationTokenRequest * GetFederationTokenResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful STS GetFederationToken \a response.
+ * Parses a successful Sts GetFederationToken \a response.
  */
 void GetFederationTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -77,11 +77,11 @@ void GetFederationTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::GetFederationTokenResponsePrivate
+ * \class QtAws::Sts::GetFederationTokenResponsePrivate
  * \brief The GetFederationTokenResponsePrivate class provides private implementation for GetFederationTokenResponse.
  * \internal
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  */
 
 /*!
@@ -94,7 +94,7 @@ GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
 }
 
 /*!
- * Parses a STS GetFederationToken response element from \a xml.
+ * Parses a Sts GetFederationToken response element from \a xml.
  */
 void GetFederationTokenResponsePrivate::parseGetFederationTokenResponse(QXmlStreamReader &xml)
 {
@@ -102,5 +102,5 @@ void GetFederationTokenResponsePrivate::parseGetFederationTokenResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace STS
+} // namespace Sts
 } // namespace QtAws

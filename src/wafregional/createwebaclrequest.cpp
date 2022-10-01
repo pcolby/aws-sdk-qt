@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLRequest
- * \brief The CreateWebACLRequest class provides an interface for WAFRegional CreateWebACL requests.
+ * \class QtAws::WafRegional::CreateWebACLRequest
+ * \brief The CreateWebACLRequest class provides an interface for WafRegional CreateWebACL requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::createWebACL
+ * \sa WafRegionalClient::createWebACL
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
-    : WAFRegionalRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
  * Constructs a CreateWebACLRequest object.
  */
 CreateWebACLRequest::CreateWebACLRequest()
-    : WAFRegionalRequest(new CreateWebACLRequestPrivate(WAFRegionalRequest::CreateWebACLAction, this))
+    : WafRegionalRequest(new CreateWebACLRequestPrivate(WafRegionalRequest::CreateWebACLAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
 }
 
 /*!
- * \class QtAws::WAFRegional::CreateWebACLRequestPrivate
+ * \class QtAws::WafRegional::CreateWebACLRequestPrivate
  * \brief The CreateWebACLRequestPrivate class provides private implementation for CreateWebACLRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a CreateWebACLRequestPrivate object for WAFRegional \a action,
+ * Constructs a CreateWebACLRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
-    const WAFRegionalRequest::Action action, CreateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, CreateWebACLRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

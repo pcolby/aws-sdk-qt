@@ -25,12 +25,20 @@
 #include "createdatasetresponse.h"
 #include "createinferenceschedulerrequest.h"
 #include "createinferenceschedulerresponse.h"
+#include "createlabelrequest.h"
+#include "createlabelresponse.h"
+#include "createlabelgrouprequest.h"
+#include "createlabelgroupresponse.h"
 #include "createmodelrequest.h"
 #include "createmodelresponse.h"
 #include "deletedatasetrequest.h"
 #include "deletedatasetresponse.h"
 #include "deleteinferenceschedulerrequest.h"
 #include "deleteinferenceschedulerresponse.h"
+#include "deletelabelrequest.h"
+#include "deletelabelresponse.h"
+#include "deletelabelgrouprequest.h"
+#include "deletelabelgroupresponse.h"
 #include "deletemodelrequest.h"
 #include "deletemodelresponse.h"
 #include "describedataingestionjobrequest.h"
@@ -39,18 +47,30 @@
 #include "describedatasetresponse.h"
 #include "describeinferenceschedulerrequest.h"
 #include "describeinferenceschedulerresponse.h"
+#include "describelabelrequest.h"
+#include "describelabelresponse.h"
+#include "describelabelgrouprequest.h"
+#include "describelabelgroupresponse.h"
 #include "describemodelrequest.h"
 #include "describemodelresponse.h"
 #include "listdataingestionjobsrequest.h"
 #include "listdataingestionjobsresponse.h"
 #include "listdatasetsrequest.h"
 #include "listdatasetsresponse.h"
+#include "listinferenceeventsrequest.h"
+#include "listinferenceeventsresponse.h"
 #include "listinferenceexecutionsrequest.h"
 #include "listinferenceexecutionsresponse.h"
 #include "listinferenceschedulersrequest.h"
 #include "listinferenceschedulersresponse.h"
+#include "listlabelgroupsrequest.h"
+#include "listlabelgroupsresponse.h"
+#include "listlabelsrequest.h"
+#include "listlabelsresponse.h"
 #include "listmodelsrequest.h"
 #include "listmodelsresponse.h"
+#include "listsensorstatisticsrequest.h"
+#include "listsensorstatisticsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "startdataingestionjobrequest.h"
@@ -65,13 +85,15 @@
 #include "untagresourceresponse.h"
 #include "updateinferenceschedulerrequest.h"
 #include "updateinferenceschedulerresponse.h"
+#include "updatelabelgrouprequest.h"
+#include "updatelabelgroupresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
 /*!
  * \namespace QtAws::LookoutEquipment
- * \brief Contains classess for accessing Amazon Lookout for Equipment (LookoutEquipment).
+ * \brief Contains classess for accessing Amazon Lookout for Equipment.
  *
  * \inmodule QtAwsLookoutEquipment
  *
@@ -83,7 +105,7 @@ namespace LookoutEquipment {
 
 /*!
  * \class QtAws::LookoutEquipment::LookoutEquipmentClient
- * \brief The LookoutEquipmentClient class provides access to the Amazon Lookout for Equipment (LookoutEquipment) service.
+ * \brief The LookoutEquipmentClient class provides access to the Amazon Lookout for Equipment service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsLookoutEquipment
@@ -178,6 +200,32 @@ CreateInferenceSchedulerResponse * LookoutEquipmentClient::createInferenceSchedu
 
 /*!
  * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * CreateLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a label for an event.
+ */
+CreateLabelResponse * LookoutEquipmentClient::createLabel(const CreateLabelRequest &request)
+{
+    return qobject_cast<CreateLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * CreateLabelGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a group of labels.
+ */
+CreateLabelGroupResponse * LookoutEquipmentClient::createLabelGroup(const CreateLabelGroupRequest &request)
+{
+    return qobject_cast<CreateLabelGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
  * CreateModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -233,6 +281,32 @@ DeleteInferenceSchedulerResponse * LookoutEquipmentClient::deleteInferenceSchedu
 
 /*!
  * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * DeleteLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a label.
+ */
+DeleteLabelResponse * LookoutEquipmentClient::deleteLabel(const DeleteLabelRequest &request)
+{
+    return qobject_cast<DeleteLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * DeleteLabelGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a group of labels.
+ */
+DeleteLabelGroupResponse * LookoutEquipmentClient::deleteLabelGroup(const DeleteLabelGroupRequest &request)
+{
+    return qobject_cast<DeleteLabelGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
  * DeleteModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -251,7 +325,7 @@ DeleteModelResponse * LookoutEquipmentClient::deleteModel(const DeleteModelReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information on a specific data ingestion job such as creation time, dataset ARN, status, and so on.
+ * Provides information on a specific data ingestion job such as creation time, dataset ARN, and
  */
 DescribeDataIngestionJobResponse * LookoutEquipmentClient::describeDataIngestionJob(const DescribeDataIngestionJobRequest &request)
 {
@@ -264,7 +338,7 @@ DescribeDataIngestionJobResponse * LookoutEquipmentClient::describeDataIngestion
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides information on a specified dataset such as the schema location, status, and so
+ * Provides a JSON description of the data in each time series dataset, including names, column names, and data
  */
 DescribeDatasetResponse * LookoutEquipmentClient::describeDataset(const DescribeDatasetRequest &request)
 {
@@ -286,12 +360,38 @@ DescribeInferenceSchedulerResponse * LookoutEquipmentClient::describeInferenceSc
 
 /*!
  * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * DescribeLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the name of the label.
+ */
+DescribeLabelResponse * LookoutEquipmentClient::describeLabel(const DescribeLabelRequest &request)
+{
+    return qobject_cast<DescribeLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * DescribeLabelGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the label group.
+ */
+DescribeLabelGroupResponse * LookoutEquipmentClient::describeLabelGroup(const DescribeLabelGroupRequest &request)
+{
+    return qobject_cast<DescribeLabelGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
  * DescribeModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides overall information about a specific ML model, including model name and ARN, dataset, training and evaluation
- * information, status, and so on.
+ * Provides a JSON containing the overall information about a specific ML model, including model name and ARN, dataset,
+ * training and evaluation information, status, and so on.
  */
 DescribeModelResponse * LookoutEquipmentClient::describeModel(const DescribeModelRequest &request)
 {
@@ -327,6 +427,19 @@ ListDatasetsResponse * LookoutEquipmentClient::listDatasets(const ListDatasetsRe
 
 /*!
  * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * ListInferenceEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all inference events that have been found for the specified inference scheduler.
+ */
+ListInferenceEventsResponse * LookoutEquipmentClient::listInferenceEvents(const ListInferenceEventsRequest &request)
+{
+    return qobject_cast<ListInferenceEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
  * ListInferenceExecutionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -353,6 +466,32 @@ ListInferenceSchedulersResponse * LookoutEquipmentClient::listInferenceScheduler
 
 /*!
  * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * ListLabelGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the label groups.
+ */
+ListLabelGroupsResponse * LookoutEquipmentClient::listLabelGroups(const ListLabelGroupsRequest &request)
+{
+    return qobject_cast<ListLabelGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * ListLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of labels.
+ */
+ListLabelsResponse * LookoutEquipmentClient::listLabels(const ListLabelsRequest &request)
+{
+    return qobject_cast<ListLabelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
  * ListModelsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -362,6 +501,20 @@ ListInferenceSchedulersResponse * LookoutEquipmentClient::listInferenceScheduler
 ListModelsResponse * LookoutEquipmentClient::listModels(const ListModelsRequest &request)
 {
     return qobject_cast<ListModelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * ListSensorStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists statistics about the data collected for each of the sensors that have been successfully ingested in the particular
+ * dataset. Can also be used to retreive Sensor Statistics for a previous ingestion job.
+ */
+ListSensorStatisticsResponse * LookoutEquipmentClient::listSensorStatistics(const ListSensorStatisticsRequest &request)
+{
+    return qobject_cast<ListSensorStatisticsResponse *>(send(request));
 }
 
 /*!
@@ -456,6 +609,19 @@ UntagResourceResponse * LookoutEquipmentClient::untagResource(const UntagResourc
 UpdateInferenceSchedulerResponse * LookoutEquipmentClient::updateInferenceScheduler(const UpdateInferenceSchedulerRequest &request)
 {
     return qobject_cast<UpdateInferenceSchedulerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LookoutEquipmentClient service, and returns a pointer to an
+ * UpdateLabelGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the label group.
+ */
+UpdateLabelGroupResponse * LookoutEquipmentClient::updateLabelGroup(const UpdateLabelGroupRequest &request)
+{
+    return qobject_cast<UpdateLabelGroupResponse *>(send(request));
 }
 
 /*!

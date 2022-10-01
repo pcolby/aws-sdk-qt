@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::ListRateBasedRulesRequest
- * \brief The ListRateBasedRulesRequest class provides an interface for WAF ListRateBasedRules requests.
+ * \class QtAws::Waf::ListRateBasedRulesRequest
+ * \brief The ListRateBasedRulesRequest class provides an interface for Waf ListRateBasedRules requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::WAF::ListRateBasedRulesRequestPrivate
+ * \class QtAws::Waf::ListRateBasedRulesRequestPrivate
  * \brief The ListRateBasedRulesRequestPrivate class provides private implementation for ListRateBasedRulesRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

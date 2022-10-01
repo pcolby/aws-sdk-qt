@@ -24,11 +24,11 @@
 #include "importapikeysrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class ImportApiKeysResponsePrivate;
 
-class QTAWSAPIGATEWAY_EXPORT ImportApiKeysResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT ImportApiKeysResponse : public ApiGatewayResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

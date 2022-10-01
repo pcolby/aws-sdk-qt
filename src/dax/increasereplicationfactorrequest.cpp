@@ -23,13 +23,13 @@
 #include "daxrequest_p.h"
 
 namespace QtAws {
-namespace DAX {
+namespace Dax {
 
 /*!
- * \class QtAws::DAX::IncreaseReplicationFactorRequest
- * \brief The IncreaseReplicationFactorRequest class provides an interface for DAX IncreaseReplicationFactor requests.
+ * \class QtAws::Dax::IncreaseReplicationFactorRequest
+ * \brief The IncreaseReplicationFactorRequest class provides an interface for Dax IncreaseReplicationFactor requests.
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -77,11 +77,11 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
 }
 
 /*!
- * \class QtAws::DAX::IncreaseReplicationFactorRequestPrivate
+ * \class QtAws::Dax::IncreaseReplicationFactorRequestPrivate
  * \brief The IncreaseReplicationFactorRequestPrivate class provides private implementation for IncreaseReplicationFactorRequest.
  * \internal
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  */
 
 /*!
@@ -108,5 +108,5 @@ IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate
 
 }
 
-} // namespace DAX
+} // namespace Dax
 } // namespace QtAws

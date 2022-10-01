@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeleteGeoMatchSetRequest
- * \brief The DeleteGeoMatchSetRequest class provides an interface for WAF DeleteGeoMatchSet requests.
+ * \class QtAws::Waf::DeleteGeoMatchSetRequest
+ * \brief The DeleteGeoMatchSetRequest class provides an interface for Waf DeleteGeoMatchSet requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
 }
 
 /*!
- * \class QtAws::WAF::DeleteGeoMatchSetRequestPrivate
+ * \class QtAws::Waf::DeleteGeoMatchSetRequestPrivate
  * \brief The DeleteGeoMatchSetRequestPrivate class provides private implementation for DeleteGeoMatchSetRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

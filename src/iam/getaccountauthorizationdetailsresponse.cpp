@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::GetAccountAuthorizationDetailsResponse
- * \brief The GetAccountAuthorizationDetailsResponse class provides an interace for IAM GetAccountAuthorizationDetails responses.
+ * \class QtAws::Iam::GetAccountAuthorizationDetailsResponse
+ * \brief The GetAccountAuthorizationDetailsResponse class provides an interace for Iam GetAccountAuthorizationDetails responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::getAccountAuthorizationDetails
  */
@@ -68,7 +68,7 @@ const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResp
 
 /*!
  * \reimp
- * Parses a successful IAM GetAccountAuthorizationDetails \a response.
+ * Parses a successful Iam GetAccountAuthorizationDetails \a response.
  */
 void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::GetAccountAuthorizationDetailsResponsePrivate
+ * \class QtAws::Iam::GetAccountAuthorizationDetailsResponsePrivate
  * \brief The GetAccountAuthorizationDetailsResponsePrivate class provides private implementation for GetAccountAuthorizationDetailsResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsRes
 }
 
 /*!
- * Parses a IAM GetAccountAuthorizationDetails response element from \a xml.
+ * Parses a Iam GetAccountAuthorizationDetails response element from \a xml.
  */
 void GetAccountAuthorizationDetailsResponsePrivate::parseGetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void GetAccountAuthorizationDetailsResponsePrivate::parseGetAccountAuthorization
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -23,11 +23,11 @@
 #include "dynamodbrequest.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 class QueryRequestPrivate;
 
-class QTAWSDYNAMODB_EXPORT QueryRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT QueryRequest : public DynamoDbRequest {
 
 public:
     QueryRequest(const QueryRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws
 
 #endif

@@ -23,13 +23,13 @@
 #include "signerrequest_p.h"
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::DescribeSigningJobRequest
- * \brief The DescribeSigningJobRequest class provides an interface for signer DescribeSigningJob requests.
+ * \class QtAws::Signer::DescribeSigningJobRequest
+ * \brief The DescribeSigningJobRequest class provides an interface for Signer DescribeSigningJob requests.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -56,15 +56,17 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::describeSigningJob
+ * \sa SignerClient::describeSigningJob
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeSigningJobRequest::DescribeSigningJobRequest(const DescribeSigningJobRequest &other)
-    : signerRequest(new DescribeSigningJobRequestPrivate(*other.d_func(), this))
+    : SignerRequest(new DescribeSigningJobRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -73,7 +75,7 @@ DescribeSigningJobRequest::DescribeSigningJobRequest(const DescribeSigningJobReq
  * Constructs a DescribeSigningJobRequest object.
  */
 DescribeSigningJobRequest::DescribeSigningJobRequest()
-    : signerRequest(new DescribeSigningJobRequestPrivate(signerRequest::DescribeSigningJobAction, this))
+    : SignerRequest(new DescribeSigningJobRequestPrivate(SignerRequest::DescribeSigningJobAction, this))
 {
 
 }
@@ -98,20 +100,20 @@ QtAws::Core::AwsAbstractResponse * DescribeSigningJobRequest::response(QNetworkR
 }
 
 /*!
- * \class QtAws::signer::DescribeSigningJobRequestPrivate
+ * \class QtAws::Signer::DescribeSigningJobRequestPrivate
  * \brief The DescribeSigningJobRequestPrivate class provides private implementation for DescribeSigningJobRequest.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
- * Constructs a DescribeSigningJobRequestPrivate object for signer \a action,
+ * Constructs a DescribeSigningJobRequestPrivate object for Signer \a action,
  * with public implementation \a q.
  */
 DescribeSigningJobRequestPrivate::DescribeSigningJobRequestPrivate(
-    const signerRequest::Action action, DescribeSigningJobRequest * const q)
-    : signerRequestPrivate(action, q)
+    const SignerRequest::Action action, DescribeSigningJobRequest * const q)
+    : SignerRequestPrivate(action, q)
 {
 
 }
@@ -124,10 +126,10 @@ DescribeSigningJobRequestPrivate::DescribeSigningJobRequestPrivate(
  */
 DescribeSigningJobRequestPrivate::DescribeSigningJobRequestPrivate(
     const DescribeSigningJobRequestPrivate &other, DescribeSigningJobRequest * const q)
-    : signerRequestPrivate(other, q)
+    : SignerRequestPrivate(other, q)
 {
 
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

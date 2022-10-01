@@ -24,14 +24,14 @@
 #include "updatedeploymentrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class UpdateDeploymentRequest;
 
-class UpdateDeploymentRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateDeploymentRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    UpdateDeploymentRequestPrivate(const APIGatewayRequest::Action action,
+    UpdateDeploymentRequestPrivate(const ApiGatewayRequest::Action action,
                                    UpdateDeploymentRequest * const q);
     UpdateDeploymentRequestPrivate(const UpdateDeploymentRequestPrivate &other,
                                    UpdateDeploymentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

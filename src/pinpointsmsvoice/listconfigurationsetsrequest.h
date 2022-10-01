@@ -23,11 +23,11 @@
 #include "pinpointsmsvoicerequest.h"
 
 namespace QtAws {
-namespace PinpointSMSVoice {
+namespace PinpointSmsVoice {
 
 class ListConfigurationSetsRequestPrivate;
 
-class QTAWSPINPOINTSMSVOICE_EXPORT ListConfigurationSetsRequest : public PinpointSMSVoiceRequest {
+class QTAWSPINPOINTSMSVOICE_EXPORT ListConfigurationSetsRequest : public PinpointSmsVoiceRequest {
 
 public:
     ListConfigurationSetsRequest(const ListConfigurationSetsRequest &other);
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace PinpointSMSVoice
+} // namespace PinpointSmsVoice
 } // namespace QtAws
 
 #endif

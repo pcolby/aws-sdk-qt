@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::SetReceiptRulePositionResponse
- * \brief The SetReceiptRulePositionResponse class provides an interace for SES SetReceiptRulePosition responses.
+ * \class QtAws::Ses::SetReceiptRulePositionResponse
+ * \brief The SetReceiptRulePositionResponse class provides an interace for Ses SetReceiptRulePosition responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SES SetReceiptRulePosition \a response.
+ * Parses a successful Ses SetReceiptRulePosition \a response.
  */
 void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SetReceiptRulePositionResponsePrivate
+ * \class QtAws::Ses::SetReceiptRulePositionResponsePrivate
  * \brief The SetReceiptRulePositionResponsePrivate class provides private implementation for SetReceiptRulePositionResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
 }
 
 /*!
- * Parses a SES SetReceiptRulePosition response element from \a xml.
+ * Parses a Ses SetReceiptRulePosition response element from \a xml.
  */
 void SetReceiptRulePositionResponsePrivate::parseSetReceiptRulePositionResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void SetReceiptRulePositionResponsePrivate::parseSetReceiptRulePositionResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

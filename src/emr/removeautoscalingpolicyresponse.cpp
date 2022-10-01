@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::RemoveAutoScalingPolicyResponse
- * \brief The RemoveAutoScalingPolicyResponse class provides an interace for EMR RemoveAutoScalingPolicy responses.
+ * \class QtAws::Emr::RemoveAutoScalingPolicyResponse
+ * \brief The RemoveAutoScalingPolicyResponse class provides an interace for Emr RemoveAutoScalingPolicy responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::removeAutoScalingPolicy
  */
@@ -64,7 +64,7 @@ const RemoveAutoScalingPolicyRequest * RemoveAutoScalingPolicyResponse::request(
 
 /*!
  * \reimp
- * Parses a successful EMR RemoveAutoScalingPolicy \a response.
+ * Parses a successful Emr RemoveAutoScalingPolicy \a response.
  */
 void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::RemoveAutoScalingPolicyResponsePrivate
+ * \class QtAws::Emr::RemoveAutoScalingPolicyResponsePrivate
  * \brief The RemoveAutoScalingPolicyResponsePrivate class provides private implementation for RemoveAutoScalingPolicyResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponsePrivate(
 }
 
 /*!
- * Parses a EMR RemoveAutoScalingPolicy response element from \a xml.
+ * Parses a Emr RemoveAutoScalingPolicy response element from \a xml.
  */
 void RemoveAutoScalingPolicyResponsePrivate::parseRemoveAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void RemoveAutoScalingPolicyResponsePrivate::parseRemoveAutoScalingPolicyRespons
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

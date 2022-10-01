@@ -44,6 +44,8 @@ namespace Lightsail {
  * \value AttachStaticIpAction Lightsail AttachStaticIp action.
  * \value CloseInstancePublicPortsAction Lightsail CloseInstancePublicPorts action.
  * \value CopySnapshotAction Lightsail CopySnapshot action.
+ * \value CreateBucketAction Lightsail CreateBucket action.
+ * \value CreateBucketAccessKeyAction Lightsail CreateBucketAccessKey action.
  * \value CreateCertificateAction Lightsail CreateCertificate action.
  * \value CreateCloudFormationStackAction Lightsail CreateCloudFormationStack action.
  * \value CreateContactMethodAction Lightsail CreateContactMethod action.
@@ -67,6 +69,8 @@ namespace Lightsail {
  * \value CreateRelationalDatabaseSnapshotAction Lightsail CreateRelationalDatabaseSnapshot action.
  * \value DeleteAlarmAction Lightsail DeleteAlarm action.
  * \value DeleteAutoSnapshotAction Lightsail DeleteAutoSnapshot action.
+ * \value DeleteBucketAction Lightsail DeleteBucket action.
+ * \value DeleteBucketAccessKeyAction Lightsail DeleteBucketAccessKey action.
  * \value DeleteCertificateAction Lightsail DeleteCertificate action.
  * \value DeleteContactMethodAction Lightsail DeleteContactMethod action.
  * \value DeleteContainerImageAction Lightsail DeleteContainerImage action.
@@ -96,6 +100,10 @@ namespace Lightsail {
  * \value GetAlarmsAction Lightsail GetAlarms action.
  * \value GetAutoSnapshotsAction Lightsail GetAutoSnapshots action.
  * \value GetBlueprintsAction Lightsail GetBlueprints action.
+ * \value GetBucketAccessKeysAction Lightsail GetBucketAccessKeys action.
+ * \value GetBucketBundlesAction Lightsail GetBucketBundles action.
+ * \value GetBucketMetricDataAction Lightsail GetBucketMetricData action.
+ * \value GetBucketsAction Lightsail GetBuckets action.
  * \value GetBundlesAction Lightsail GetBundles action.
  * \value GetCertificatesAction Lightsail GetCertificates action.
  * \value GetCloudFormationStackRecordsAction Lightsail GetCloudFormationStackRecords action.
@@ -131,6 +139,7 @@ namespace Lightsail {
  * \value GetLoadBalancerAction Lightsail GetLoadBalancer action.
  * \value GetLoadBalancerMetricDataAction Lightsail GetLoadBalancerMetricData action.
  * \value GetLoadBalancerTlsCertificatesAction Lightsail GetLoadBalancerTlsCertificates action.
+ * \value GetLoadBalancerTlsPoliciesAction Lightsail GetLoadBalancerTlsPolicies action.
  * \value GetLoadBalancersAction Lightsail GetLoadBalancers action.
  * \value GetOperationAction Lightsail GetOperation action.
  * \value GetOperationsAction Lightsail GetOperations action.
@@ -163,6 +172,7 @@ namespace Lightsail {
  * \value ResetDistributionCacheAction Lightsail ResetDistributionCache action.
  * \value SendContactMethodVerificationAction Lightsail SendContactMethodVerification action.
  * \value SetIpAddressTypeAction Lightsail SetIpAddressType action.
+ * \value SetResourceAccessForBucketAction Lightsail SetResourceAccessForBucket action.
  * \value StartInstanceAction Lightsail StartInstance action.
  * \value StartRelationalDatabaseAction Lightsail StartRelationalDatabase action.
  * \value StopInstanceAction Lightsail StopInstance action.
@@ -171,6 +181,8 @@ namespace Lightsail {
  * \value TestAlarmAction Lightsail TestAlarm action.
  * \value UnpeerVpcAction Lightsail UnpeerVpc action.
  * \value UntagResourceAction Lightsail UntagResource action.
+ * \value UpdateBucketAction Lightsail UpdateBucket action.
+ * \value UpdateBucketBundleAction Lightsail UpdateBucketBundle action.
  * \value UpdateContainerServiceAction Lightsail UpdateContainerService action.
  * \value UpdateDistributionAction Lightsail UpdateDistribution action.
  * \value UpdateDistributionBundleAction Lightsail UpdateDistributionBundle action.
@@ -385,7 +397,7 @@ QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action action, LightsailRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2016-11-28"))
 {
 
 }
@@ -427,6 +439,8 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(AttachStaticIp);
         ActionToString(CloseInstancePublicPorts);
         ActionToString(CopySnapshot);
+        ActionToString(CreateBucket);
+        ActionToString(CreateBucketAccessKey);
         ActionToString(CreateCertificate);
         ActionToString(CreateCloudFormationStack);
         ActionToString(CreateContactMethod);
@@ -450,6 +464,8 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(CreateRelationalDatabaseSnapshot);
         ActionToString(DeleteAlarm);
         ActionToString(DeleteAutoSnapshot);
+        ActionToString(DeleteBucket);
+        ActionToString(DeleteBucketAccessKey);
         ActionToString(DeleteCertificate);
         ActionToString(DeleteContactMethod);
         ActionToString(DeleteContainerImage);
@@ -479,6 +495,10 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(GetAlarms);
         ActionToString(GetAutoSnapshots);
         ActionToString(GetBlueprints);
+        ActionToString(GetBucketAccessKeys);
+        ActionToString(GetBucketBundles);
+        ActionToString(GetBucketMetricData);
+        ActionToString(GetBuckets);
         ActionToString(GetBundles);
         ActionToString(GetCertificates);
         ActionToString(GetCloudFormationStackRecords);
@@ -514,6 +534,7 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(GetLoadBalancer);
         ActionToString(GetLoadBalancerMetricData);
         ActionToString(GetLoadBalancerTlsCertificates);
+        ActionToString(GetLoadBalancerTlsPolicies);
         ActionToString(GetLoadBalancers);
         ActionToString(GetOperation);
         ActionToString(GetOperations);
@@ -546,6 +567,7 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(ResetDistributionCache);
         ActionToString(SendContactMethodVerification);
         ActionToString(SetIpAddressType);
+        ActionToString(SetResourceAccessForBucket);
         ActionToString(StartInstance);
         ActionToString(StartRelationalDatabase);
         ActionToString(StopInstance);
@@ -554,6 +576,8 @@ QString LightsailRequestPrivate::toString(const LightsailRequest::Action &action
         ActionToString(TestAlarm);
         ActionToString(UnpeerVpc);
         ActionToString(UntagResource);
+        ActionToString(UpdateBucket);
+        ActionToString(UpdateBucketBundle);
         ActionToString(UpdateContainerService);
         ActionToString(UpdateDistribution);
         ActionToString(UpdateDistributionBundle);

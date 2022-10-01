@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeDBEngineVersionsRequest
- * \brief The DescribeDBEngineVersionsRequest class provides an interface for RDS DescribeDBEngineVersions requests.
+ * \class QtAws::Rds::DescribeDBEngineVersionsRequest
+ * \brief The DescribeDBEngineVersionsRequest class provides an interface for Rds DescribeDBEngineVersions requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::RDS::DescribeDBEngineVersionsRequestPrivate
+ * \class QtAws::Rds::DescribeDBEngineVersionsRequestPrivate
  * \brief The DescribeDBEngineVersionsRequestPrivate class provides private implementation for DescribeDBEngineVersionsRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListOriginationNumbersResponse
- * \brief The ListOriginationNumbersResponse class provides an interace for SNS ListOriginationNumbers responses.
+ * \class QtAws::Sns::ListOriginationNumbersResponse
+ * \brief The ListOriginationNumbersResponse class provides an interace for Sns ListOriginationNumbers responses.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -81,7 +81,7 @@ const ListOriginationNumbersRequest * ListOriginationNumbersResponse::request() 
 
 /*!
  * \reimp
- * Parses a successful SNS ListOriginationNumbers \a response.
+ * Parses a successful Sns ListOriginationNumbers \a response.
  */
 void ListOriginationNumbersResponse::parseSuccess(QIODevice &response)
 {
@@ -91,11 +91,11 @@ void ListOriginationNumbersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::ListOriginationNumbersResponsePrivate
+ * \class QtAws::Sns::ListOriginationNumbersResponsePrivate
  * \brief The ListOriginationNumbersResponsePrivate class provides private implementation for ListOriginationNumbersResponse.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -108,7 +108,7 @@ ListOriginationNumbersResponsePrivate::ListOriginationNumbersResponsePrivate(
 }
 
 /*!
- * Parses a SNS ListOriginationNumbers response element from \a xml.
+ * Parses a Sns ListOriginationNumbers response element from \a xml.
  */
 void ListOriginationNumbersResponsePrivate::parseListOriginationNumbersResponse(QXmlStreamReader &xml)
 {
@@ -116,5 +116,5 @@ void ListOriginationNumbersResponsePrivate::parseListOriginationNumbersResponse(
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

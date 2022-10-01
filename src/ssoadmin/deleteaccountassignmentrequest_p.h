@@ -24,14 +24,14 @@
 #include "deleteaccountassignmentrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class DeleteAccountAssignmentRequest;
 
-class DeleteAccountAssignmentRequestPrivate : public SSOAdminRequestPrivate {
+class DeleteAccountAssignmentRequestPrivate : public SsoAdminRequestPrivate {
 
 public:
-    DeleteAccountAssignmentRequestPrivate(const SSOAdminRequest::Action action,
+    DeleteAccountAssignmentRequestPrivate(const SsoAdminRequest::Action action,
                                    DeleteAccountAssignmentRequest * const q);
     DeleteAccountAssignmentRequestPrivate(const DeleteAccountAssignmentRequestPrivate &other,
                                    DeleteAccountAssignmentRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

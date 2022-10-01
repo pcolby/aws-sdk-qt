@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::ListExportsResponse
- * \brief The ListExportsResponse class provides an interace for DynamoDB ListExports responses.
+ * \class QtAws::DynamoDb::ListExportsResponse
+ * \brief The ListExportsResponse class provides an interace for DynamoDb ListExports responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -44,16 +44,16 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::listExports
+ * \sa DynamoDbClient::listExports
  */
 
 /*!
@@ -63,7 +63,7 @@ ListExportsResponse::ListExportsResponse(
         const ListExportsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ListExportsResponsePrivate(this), parent)
+    : DynamoDbResponse(new ListExportsResponsePrivate(this), parent)
 {
     setRequest(new ListExportsRequest(request));
     setReply(reply);
@@ -80,7 +80,7 @@ const ListExportsRequest * ListExportsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DynamoDB ListExports \a response.
+ * Parses a successful DynamoDb ListExports \a response.
  */
 void ListExportsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,24 +90,24 @@ void ListExportsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::ListExportsResponsePrivate
+ * \class QtAws::DynamoDb::ListExportsResponsePrivate
  * \brief The ListExportsResponsePrivate class provides private implementation for ListExportsResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
  * Constructs a ListExportsResponsePrivate object with public implementation \a q.
  */
 ListExportsResponsePrivate::ListExportsResponsePrivate(
-    ListExportsResponse * const q) : DynamoDBResponsePrivate(q)
+    ListExportsResponse * const q) : DynamoDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DynamoDB ListExports response element from \a xml.
+ * Parses a DynamoDb ListExports response element from \a xml.
  */
 void ListExportsResponsePrivate::parseListExportsResponse(QXmlStreamReader &xml)
 {
@@ -115,5 +115,5 @@ void ListExportsResponsePrivate::parseListExportsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

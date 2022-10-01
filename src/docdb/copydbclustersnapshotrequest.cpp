@@ -23,24 +23,24 @@
 #include "docdbrequest_p.h"
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterSnapshotRequest
- * \brief The CopyDBClusterSnapshotRequest class provides an interface for DocDB CopyDBClusterSnapshot requests.
+ * \class QtAws::DocDb::CopyDBClusterSnapshotRequest
+ * \brief The CopyDBClusterSnapshotRequest class provides an interface for DocDb CopyDBClusterSnapshot requests.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::copyDBClusterSnapshot
+ * \sa DocDbClient::copyDBClusterSnapshot
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest(const CopyDBClusterSnapshotRequest &other)
-    : DocDBRequest(new CopyDBClusterSnapshotRequestPrivate(*other.d_func(), this))
+    : DocDbRequest(new CopyDBClusterSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -49,7 +49,7 @@ CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest(const CopyDBClusterSn
  * Constructs a CopyDBClusterSnapshotRequest object.
  */
 CopyDBClusterSnapshotRequest::CopyDBClusterSnapshotRequest()
-    : DocDBRequest(new CopyDBClusterSnapshotRequestPrivate(DocDBRequest::CopyDBClusterSnapshotAction, this))
+    : DocDbRequest(new CopyDBClusterSnapshotRequestPrivate(DocDbRequest::CopyDBClusterSnapshotAction, this))
 {
 
 }
@@ -74,20 +74,20 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetwo
 }
 
 /*!
- * \class QtAws::DocDB::CopyDBClusterSnapshotRequestPrivate
+ * \class QtAws::DocDb::CopyDBClusterSnapshotRequestPrivate
  * \brief The CopyDBClusterSnapshotRequestPrivate class provides private implementation for CopyDBClusterSnapshotRequest.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
- * Constructs a CopyDBClusterSnapshotRequestPrivate object for DocDB \a action,
+ * Constructs a CopyDBClusterSnapshotRequestPrivate object for DocDb \a action,
  * with public implementation \a q.
  */
 CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
-    const DocDBRequest::Action action, CopyDBClusterSnapshotRequest * const q)
-    : DocDBRequestPrivate(action, q)
+    const DocDbRequest::Action action, CopyDBClusterSnapshotRequest * const q)
+    : DocDbRequestPrivate(action, q)
 {
 
 }
@@ -100,10 +100,10 @@ CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
  */
 CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
     const CopyDBClusterSnapshotRequestPrivate &other, CopyDBClusterSnapshotRequest * const q)
-    : DocDBRequestPrivate(other, q)
+    : DocDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::AddTagsToResourceResponse
- * \brief The AddTagsToResourceResponse class provides an interace for CloudHSM AddTagsToResource responses.
+ * \class QtAws::CloudHsm::AddTagsToResourceResponse
+ * \brief The AddTagsToResourceResponse class provides an interace for CloudHsm AddTagsToResource responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::addTagsToResource
+ * \sa CloudHsmClient::addTagsToResource
  */
 
 /*!
@@ -56,7 +56,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new AddTagsToResourceResponsePrivate(this), parent)
+    : CloudHsmResponse(new AddTagsToResourceResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToResourceRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM AddTagsToResource \a response.
+ * Parses a successful CloudHsm AddTagsToResource \a response.
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::AddTagsToResourceResponsePrivate
+ * \class QtAws::CloudHsm::AddTagsToResourceResponsePrivate
  * \brief The AddTagsToResourceResponsePrivate class provides private implementation for AddTagsToResourceResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a AddTagsToResourceResponsePrivate object with public implementation \a q.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
-    AddTagsToResourceResponse * const q) : CloudHSMResponsePrivate(q)
+    AddTagsToResourceResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM AddTagsToResource response element from \a xml.
+ * Parses a CloudHsm AddTagsToResource response element from \a xml.
  */
 void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

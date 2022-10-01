@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CloudHSM {
+namespace CloudHsm {
 
 /*!
- * \class QtAws::CloudHSM::DeleteLunaClientResponse
- * \brief The DeleteLunaClientResponse class provides an interace for CloudHSM DeleteLunaClient responses.
+ * \class QtAws::CloudHsm::DeleteLunaClientResponse
+ * \brief The DeleteLunaClientResponse class provides an interace for CloudHsm DeleteLunaClient responses.
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -46,7 +46,7 @@ namespace CloudHSM {
  *  CloudHSM</a>, the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User Guide</a>, and the
  *  <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/">AWS CloudHSM API
  *
- * \sa CloudHSMClient::deleteLunaClient
+ * \sa CloudHsmClient::deleteLunaClient
  */
 
 /*!
@@ -56,7 +56,7 @@ DeleteLunaClientResponse::DeleteLunaClientResponse(
         const DeleteLunaClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new DeleteLunaClientResponsePrivate(this), parent)
+    : CloudHsmResponse(new DeleteLunaClientResponsePrivate(this), parent)
 {
     setRequest(new DeleteLunaClientRequest(request));
     setReply(reply);
@@ -73,7 +73,7 @@ const DeleteLunaClientRequest * DeleteLunaClientResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful CloudHSM DeleteLunaClient \a response.
+ * Parses a successful CloudHsm DeleteLunaClient \a response.
  */
 void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
 {
@@ -83,24 +83,24 @@ void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CloudHSM::DeleteLunaClientResponsePrivate
+ * \class QtAws::CloudHsm::DeleteLunaClientResponsePrivate
  * \brief The DeleteLunaClientResponsePrivate class provides private implementation for DeleteLunaClientResponse.
  * \internal
  *
- * \inmodule QtAwsCloudHSM
+ * \inmodule QtAwsCloudHsm
  */
 
 /*!
  * Constructs a DeleteLunaClientResponsePrivate object with public implementation \a q.
  */
 DeleteLunaClientResponsePrivate::DeleteLunaClientResponsePrivate(
-    DeleteLunaClientResponse * const q) : CloudHSMResponsePrivate(q)
+    DeleteLunaClientResponse * const q) : CloudHsmResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a CloudHSM DeleteLunaClient response element from \a xml.
+ * Parses a CloudHsm DeleteLunaClient response element from \a xml.
  */
 void DeleteLunaClientResponsePrivate::parseDeleteLunaClientResponse(QXmlStreamReader &xml)
 {
@@ -108,5 +108,5 @@ void DeleteLunaClientResponsePrivate::parseDeleteLunaClientResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace CloudHSM
+} // namespace CloudHsm
 } // namespace QtAws

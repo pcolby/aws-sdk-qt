@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSEKS_LIBRARY)
 
 add_library(QtAwsEks
+  qtawseksglobal.h
+  eksclient.h
+  eksclient_p.h
+  eksrequest.h
+  eksrequest_p.h
+  eksresponse.h
+  eksresponse_p.h
   associateencryptionconfigrequest.h
   associateencryptionconfigrequest_p.h
   associateencryptionconfigresponse.h
@@ -41,6 +48,10 @@ add_library(QtAwsEks
   deletenodegrouprequest_p.h
   deletenodegroupresponse.h
   deletenodegroupresponse_p.h
+  deregisterclusterrequest.h
+  deregisterclusterrequest_p.h
+  deregisterclusterresponse.h
+  deregisterclusterresponse_p.h
   describeaddonrequest.h
   describeaddonrequest_p.h
   describeaddonresponse.h
@@ -73,12 +84,6 @@ add_library(QtAwsEks
   disassociateidentityproviderconfigrequest_p.h
   disassociateidentityproviderconfigresponse.h
   disassociateidentityproviderconfigresponse_p.h
-  eksclient.h
-  eksclient_p.h
-  eksrequest.h
-  eksrequest_p.h
-  eksresponse.h
-  eksresponse_p.h
   listaddonsrequest.h
   listaddonsrequest_p.h
   listaddonsresponse.h
@@ -107,7 +112,10 @@ add_library(QtAwsEks
   listupdatesrequest_p.h
   listupdatesresponse.h
   listupdatesresponse_p.h
-  qtawseksglobal.h
+  registerclusterrequest.h
+  registerclusterrequest_p.h
+  registerclusterresponse.h
+  registerclusterresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -136,6 +144,9 @@ add_library(QtAwsEks
   updatenodegroupversionrequest_p.h
   updatenodegroupversionresponse.h
   updatenodegroupversionresponse_p.h
+  eksclient.cpp
+  eksrequest.cpp
+  eksresponse.cpp
   associateencryptionconfigrequest.cpp
   associateencryptionconfigresponse.cpp
   associateidentityproviderconfigrequest.cpp
@@ -156,6 +167,8 @@ add_library(QtAwsEks
   deletefargateprofileresponse.cpp
   deletenodegrouprequest.cpp
   deletenodegroupresponse.cpp
+  deregisterclusterrequest.cpp
+  deregisterclusterresponse.cpp
   describeaddonrequest.cpp
   describeaddonresponse.cpp
   describeaddonversionsrequest.cpp
@@ -172,9 +185,6 @@ add_library(QtAwsEks
   describeupdateresponse.cpp
   disassociateidentityproviderconfigrequest.cpp
   disassociateidentityproviderconfigresponse.cpp
-  eksclient.cpp
-  eksrequest.cpp
-  eksresponse.cpp
   listaddonsrequest.cpp
   listaddonsresponse.cpp
   listclustersrequest.cpp
@@ -189,6 +199,8 @@ add_library(QtAwsEks
   listtagsforresourceresponse.cpp
   listupdatesrequest.cpp
   listupdatesresponse.cpp
+  registerclusterrequest.cpp
+  registerclusterresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

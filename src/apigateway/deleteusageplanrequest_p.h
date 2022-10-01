@@ -24,14 +24,14 @@
 #include "deleteusageplanrequest.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 class DeleteUsagePlanRequest;
 
-class DeleteUsagePlanRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteUsagePlanRequestPrivate : public ApiGatewayRequestPrivate {
 
 public:
-    DeleteUsagePlanRequestPrivate(const APIGatewayRequest::Action action,
+    DeleteUsagePlanRequestPrivate(const ApiGatewayRequest::Action action,
                                    DeleteUsagePlanRequest * const q);
     DeleteUsagePlanRequestPrivate(const DeleteUsagePlanRequestPrivate &other,
                                    DeleteUsagePlanRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws
 
 #endif

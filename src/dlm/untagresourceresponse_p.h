@@ -23,7 +23,7 @@
 #include "dlmresponse_p.h"
 
 namespace QtAws {
-namespace DLM {
+namespace Dlm {
 
 class UntagResourceResponse;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace DLM
+} // namespace Dlm
 } // namespace QtAws
 
 #endif

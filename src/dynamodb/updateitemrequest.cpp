@@ -23,13 +23,13 @@
 #include "dynamodbrequest_p.h"
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::UpdateItemRequest
- * \brief The UpdateItemRequest class provides an interface for DynamoDB UpdateItem requests.
+ * \class QtAws::DynamoDb::UpdateItemRequest
+ * \brief The UpdateItemRequest class provides an interface for DynamoDb UpdateItem requests.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -42,23 +42,23 @@ namespace DynamoDB {
  * 
  *  With DynamoDB, you can create database tables that can store and retrieve any amount of data, and serve any level of
  *  request traffic. You can scale up or scale down your tables' throughput capacity without downtime or performance
- *  degradation, and use the AWS Management Console to monitor resource utilization and performance
+ *  degradation, and use the Amazon Web Services Management Console to monitor resource utilization and performance
  * 
  *  metrics>
  * 
  *  DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your
  *  throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on
- *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an AWS region, providing
- *  built-in high availability and data durability.
+ *  solid state disks (SSDs) and automatically replicated across multiple Availability Zones in an Amazon Web Services
+ *  Region, providing built-in high availability and data
  *
- * \sa DynamoDBClient::updateItem
+ * \sa DynamoDbClient::updateItem
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UpdateItemRequest::UpdateItemRequest(const UpdateItemRequest &other)
-    : DynamoDBRequest(new UpdateItemRequestPrivate(*other.d_func(), this))
+    : DynamoDbRequest(new UpdateItemRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ UpdateItemRequest::UpdateItemRequest(const UpdateItemRequest &other)
  * Constructs a UpdateItemRequest object.
  */
 UpdateItemRequest::UpdateItemRequest()
-    : DynamoDBRequest(new UpdateItemRequestPrivate(DynamoDBRequest::UpdateItemAction, this))
+    : DynamoDbRequest(new UpdateItemRequestPrivate(DynamoDbRequest::UpdateItemAction, this))
 {
 
 }
@@ -92,20 +92,20 @@ QtAws::Core::AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * c
 }
 
 /*!
- * \class QtAws::DynamoDB::UpdateItemRequestPrivate
+ * \class QtAws::DynamoDb::UpdateItemRequestPrivate
  * \brief The UpdateItemRequestPrivate class provides private implementation for UpdateItemRequest.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a UpdateItemRequestPrivate object for DynamoDB \a action,
+ * Constructs a UpdateItemRequestPrivate object for DynamoDb \a action,
  * with public implementation \a q.
  */
 UpdateItemRequestPrivate::UpdateItemRequestPrivate(
-    const DynamoDBRequest::Action action, UpdateItemRequest * const q)
-    : DynamoDBRequestPrivate(action, q)
+    const DynamoDbRequest::Action action, UpdateItemRequest * const q)
+    : DynamoDbRequestPrivate(action, q)
 {
 
 }
@@ -118,10 +118,10 @@ UpdateItemRequestPrivate::UpdateItemRequestPrivate(
  */
 UpdateItemRequestPrivate::UpdateItemRequestPrivate(
     const UpdateItemRequestPrivate &other, UpdateItemRequest * const q)
-    : DynamoDBRequestPrivate(other, q)
+    : DynamoDbRequestPrivate(other, q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

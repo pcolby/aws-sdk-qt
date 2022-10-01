@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::CopyOptionGroupRequest
- * \brief The CopyOptionGroupRequest class provides an interface for RDS CopyOptionGroup requests.
+ * \class QtAws::Rds::CopyOptionGroupRequest
+ * \brief The CopyOptionGroupRequest class provides an interface for Rds CopyOptionGroup requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::RDS::CopyOptionGroupRequestPrivate
+ * \class QtAws::Rds::CopyOptionGroupRequestPrivate
  * \brief The CopyOptionGroupRequestPrivate class provides private implementation for CopyOptionGroupRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

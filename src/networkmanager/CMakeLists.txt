@@ -1,6 +1,21 @@
 add_compile_definitions(QTAWSNETWORKMANAGER_LIBRARY)
 
 add_library(QtAwsNetworkManager
+  qtawsnetworkmanagerglobal.h
+  networkmanagerclient.h
+  networkmanagerclient_p.h
+  networkmanagerrequest.h
+  networkmanagerrequest_p.h
+  networkmanagerresponse.h
+  networkmanagerresponse_p.h
+  acceptattachmentrequest.h
+  acceptattachmentrequest_p.h
+  acceptattachmentresponse.h
+  acceptattachmentresponse_p.h
+  associateconnectpeerrequest.h
+  associateconnectpeerrequest_p.h
+  associateconnectpeerresponse.h
+  associateconnectpeerresponse_p.h
   associatecustomergatewayrequest.h
   associatecustomergatewayrequest_p.h
   associatecustomergatewayresponse.h
@@ -13,10 +28,22 @@ add_library(QtAwsNetworkManager
   associatetransitgatewayconnectpeerrequest_p.h
   associatetransitgatewayconnectpeerresponse.h
   associatetransitgatewayconnectpeerresponse_p.h
+  createconnectattachmentrequest.h
+  createconnectattachmentrequest_p.h
+  createconnectattachmentresponse.h
+  createconnectattachmentresponse_p.h
+  createconnectpeerrequest.h
+  createconnectpeerrequest_p.h
+  createconnectpeerresponse.h
+  createconnectpeerresponse_p.h
   createconnectionrequest.h
   createconnectionrequest_p.h
   createconnectionresponse.h
   createconnectionresponse_p.h
+  createcorenetworkrequest.h
+  createcorenetworkrequest_p.h
+  createcorenetworkresponse.h
+  createcorenetworkresponse_p.h
   createdevicerequest.h
   createdevicerequest_p.h
   createdeviceresponse.h
@@ -33,10 +60,42 @@ add_library(QtAwsNetworkManager
   createsiterequest_p.h
   createsiteresponse.h
   createsiteresponse_p.h
+  createsitetositevpnattachmentrequest.h
+  createsitetositevpnattachmentrequest_p.h
+  createsitetositevpnattachmentresponse.h
+  createsitetositevpnattachmentresponse_p.h
+  createtransitgatewaypeeringrequest.h
+  createtransitgatewaypeeringrequest_p.h
+  createtransitgatewaypeeringresponse.h
+  createtransitgatewaypeeringresponse_p.h
+  createtransitgatewayroutetableattachmentrequest.h
+  createtransitgatewayroutetableattachmentrequest_p.h
+  createtransitgatewayroutetableattachmentresponse.h
+  createtransitgatewayroutetableattachmentresponse_p.h
+  createvpcattachmentrequest.h
+  createvpcattachmentrequest_p.h
+  createvpcattachmentresponse.h
+  createvpcattachmentresponse_p.h
+  deleteattachmentrequest.h
+  deleteattachmentrequest_p.h
+  deleteattachmentresponse.h
+  deleteattachmentresponse_p.h
+  deleteconnectpeerrequest.h
+  deleteconnectpeerrequest_p.h
+  deleteconnectpeerresponse.h
+  deleteconnectpeerresponse_p.h
   deleteconnectionrequest.h
   deleteconnectionrequest_p.h
   deleteconnectionresponse.h
   deleteconnectionresponse_p.h
+  deletecorenetworkrequest.h
+  deletecorenetworkrequest_p.h
+  deletecorenetworkresponse.h
+  deletecorenetworkresponse_p.h
+  deletecorenetworkpolicyversionrequest.h
+  deletecorenetworkpolicyversionrequest_p.h
+  deletecorenetworkpolicyversionresponse.h
+  deletecorenetworkpolicyversionresponse_p.h
   deletedevicerequest.h
   deletedevicerequest_p.h
   deletedeviceresponse.h
@@ -49,6 +108,14 @@ add_library(QtAwsNetworkManager
   deletelinkrequest_p.h
   deletelinkresponse.h
   deletelinkresponse_p.h
+  deletepeeringrequest.h
+  deletepeeringrequest_p.h
+  deletepeeringresponse.h
+  deletepeeringresponse_p.h
+  deleteresourcepolicyrequest.h
+  deleteresourcepolicyrequest_p.h
+  deleteresourcepolicyresponse.h
+  deleteresourcepolicyresponse_p.h
   deletesiterequest.h
   deletesiterequest_p.h
   deletesiteresponse.h
@@ -61,6 +128,10 @@ add_library(QtAwsNetworkManager
   describeglobalnetworksrequest_p.h
   describeglobalnetworksresponse.h
   describeglobalnetworksresponse_p.h
+  disassociateconnectpeerrequest.h
+  disassociateconnectpeerrequest_p.h
+  disassociateconnectpeerresponse.h
+  disassociateconnectpeerresponse_p.h
   disassociatecustomergatewayrequest.h
   disassociatecustomergatewayrequest_p.h
   disassociatecustomergatewayresponse.h
@@ -73,10 +144,42 @@ add_library(QtAwsNetworkManager
   disassociatetransitgatewayconnectpeerrequest_p.h
   disassociatetransitgatewayconnectpeerresponse.h
   disassociatetransitgatewayconnectpeerresponse_p.h
+  executecorenetworkchangesetrequest.h
+  executecorenetworkchangesetrequest_p.h
+  executecorenetworkchangesetresponse.h
+  executecorenetworkchangesetresponse_p.h
+  getconnectattachmentrequest.h
+  getconnectattachmentrequest_p.h
+  getconnectattachmentresponse.h
+  getconnectattachmentresponse_p.h
+  getconnectpeerrequest.h
+  getconnectpeerrequest_p.h
+  getconnectpeerresponse.h
+  getconnectpeerresponse_p.h
+  getconnectpeerassociationsrequest.h
+  getconnectpeerassociationsrequest_p.h
+  getconnectpeerassociationsresponse.h
+  getconnectpeerassociationsresponse_p.h
   getconnectionsrequest.h
   getconnectionsrequest_p.h
   getconnectionsresponse.h
   getconnectionsresponse_p.h
+  getcorenetworkrequest.h
+  getcorenetworkrequest_p.h
+  getcorenetworkresponse.h
+  getcorenetworkresponse_p.h
+  getcorenetworkchangeeventsrequest.h
+  getcorenetworkchangeeventsrequest_p.h
+  getcorenetworkchangeeventsresponse.h
+  getcorenetworkchangeeventsresponse_p.h
+  getcorenetworkchangesetrequest.h
+  getcorenetworkchangesetrequest_p.h
+  getcorenetworkchangesetresponse.h
+  getcorenetworkchangesetresponse_p.h
+  getcorenetworkpolicyrequest.h
+  getcorenetworkpolicyrequest_p.h
+  getcorenetworkpolicyresponse.h
+  getcorenetworkpolicyresponse_p.h
   getcustomergatewayassociationsrequest.h
   getcustomergatewayassociationsrequest_p.h
   getcustomergatewayassociationsresponse.h
@@ -93,6 +196,38 @@ add_library(QtAwsNetworkManager
   getlinksrequest_p.h
   getlinksresponse.h
   getlinksresponse_p.h
+  getnetworkresourcecountsrequest.h
+  getnetworkresourcecountsrequest_p.h
+  getnetworkresourcecountsresponse.h
+  getnetworkresourcecountsresponse_p.h
+  getnetworkresourcerelationshipsrequest.h
+  getnetworkresourcerelationshipsrequest_p.h
+  getnetworkresourcerelationshipsresponse.h
+  getnetworkresourcerelationshipsresponse_p.h
+  getnetworkresourcesrequest.h
+  getnetworkresourcesrequest_p.h
+  getnetworkresourcesresponse.h
+  getnetworkresourcesresponse_p.h
+  getnetworkroutesrequest.h
+  getnetworkroutesrequest_p.h
+  getnetworkroutesresponse.h
+  getnetworkroutesresponse_p.h
+  getnetworktelemetryrequest.h
+  getnetworktelemetryrequest_p.h
+  getnetworktelemetryresponse.h
+  getnetworktelemetryresponse_p.h
+  getresourcepolicyrequest.h
+  getresourcepolicyrequest_p.h
+  getresourcepolicyresponse.h
+  getresourcepolicyresponse_p.h
+  getrouteanalysisrequest.h
+  getrouteanalysisrequest_p.h
+  getrouteanalysisresponse.h
+  getrouteanalysisresponse_p.h
+  getsitetositevpnattachmentrequest.h
+  getsitetositevpnattachmentrequest_p.h
+  getsitetositevpnattachmentresponse.h
+  getsitetositevpnattachmentresponse_p.h
   getsitesrequest.h
   getsitesrequest_p.h
   getsitesresponse.h
@@ -101,25 +236,78 @@ add_library(QtAwsNetworkManager
   gettransitgatewayconnectpeerassociationsrequest_p.h
   gettransitgatewayconnectpeerassociationsresponse.h
   gettransitgatewayconnectpeerassociationsresponse_p.h
+  gettransitgatewaypeeringrequest.h
+  gettransitgatewaypeeringrequest_p.h
+  gettransitgatewaypeeringresponse.h
+  gettransitgatewaypeeringresponse_p.h
   gettransitgatewayregistrationsrequest.h
   gettransitgatewayregistrationsrequest_p.h
   gettransitgatewayregistrationsresponse.h
   gettransitgatewayregistrationsresponse_p.h
+  gettransitgatewayroutetableattachmentrequest.h
+  gettransitgatewayroutetableattachmentrequest_p.h
+  gettransitgatewayroutetableattachmentresponse.h
+  gettransitgatewayroutetableattachmentresponse_p.h
+  getvpcattachmentrequest.h
+  getvpcattachmentrequest_p.h
+  getvpcattachmentresponse.h
+  getvpcattachmentresponse_p.h
+  listattachmentsrequest.h
+  listattachmentsrequest_p.h
+  listattachmentsresponse.h
+  listattachmentsresponse_p.h
+  listconnectpeersrequest.h
+  listconnectpeersrequest_p.h
+  listconnectpeersresponse.h
+  listconnectpeersresponse_p.h
+  listcorenetworkpolicyversionsrequest.h
+  listcorenetworkpolicyversionsrequest_p.h
+  listcorenetworkpolicyversionsresponse.h
+  listcorenetworkpolicyversionsresponse_p.h
+  listcorenetworksrequest.h
+  listcorenetworksrequest_p.h
+  listcorenetworksresponse.h
+  listcorenetworksresponse_p.h
+  listorganizationserviceaccessstatusrequest.h
+  listorganizationserviceaccessstatusrequest_p.h
+  listorganizationserviceaccessstatusresponse.h
+  listorganizationserviceaccessstatusresponse_p.h
+  listpeeringsrequest.h
+  listpeeringsrequest_p.h
+  listpeeringsresponse.h
+  listpeeringsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
-  networkmanagerclient.h
-  networkmanagerclient_p.h
-  networkmanagerrequest.h
-  networkmanagerrequest_p.h
-  networkmanagerresponse.h
-  networkmanagerresponse_p.h
-  qtawsnetworkmanagerglobal.h
+  putcorenetworkpolicyrequest.h
+  putcorenetworkpolicyrequest_p.h
+  putcorenetworkpolicyresponse.h
+  putcorenetworkpolicyresponse_p.h
+  putresourcepolicyrequest.h
+  putresourcepolicyrequest_p.h
+  putresourcepolicyresponse.h
+  putresourcepolicyresponse_p.h
   registertransitgatewayrequest.h
   registertransitgatewayrequest_p.h
   registertransitgatewayresponse.h
   registertransitgatewayresponse_p.h
+  rejectattachmentrequest.h
+  rejectattachmentrequest_p.h
+  rejectattachmentresponse.h
+  rejectattachmentresponse_p.h
+  restorecorenetworkpolicyversionrequest.h
+  restorecorenetworkpolicyversionrequest_p.h
+  restorecorenetworkpolicyversionresponse.h
+  restorecorenetworkpolicyversionresponse_p.h
+  startorganizationserviceaccessupdaterequest.h
+  startorganizationserviceaccessupdaterequest_p.h
+  startorganizationserviceaccessupdateresponse.h
+  startorganizationserviceaccessupdateresponse_p.h
+  startrouteanalysisrequest.h
+  startrouteanalysisrequest_p.h
+  startrouteanalysisresponse.h
+  startrouteanalysisresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -132,6 +320,10 @@ add_library(QtAwsNetworkManager
   updateconnectionrequest_p.h
   updateconnectionresponse.h
   updateconnectionresponse_p.h
+  updatecorenetworkrequest.h
+  updatecorenetworkrequest_p.h
+  updatecorenetworkresponse.h
+  updatecorenetworkresponse_p.h
   updatedevicerequest.h
   updatedevicerequest_p.h
   updatedeviceresponse.h
@@ -144,18 +336,39 @@ add_library(QtAwsNetworkManager
   updatelinkrequest_p.h
   updatelinkresponse.h
   updatelinkresponse_p.h
+  updatenetworkresourcemetadatarequest.h
+  updatenetworkresourcemetadatarequest_p.h
+  updatenetworkresourcemetadataresponse.h
+  updatenetworkresourcemetadataresponse_p.h
   updatesiterequest.h
   updatesiterequest_p.h
   updatesiteresponse.h
   updatesiteresponse_p.h
+  updatevpcattachmentrequest.h
+  updatevpcattachmentrequest_p.h
+  updatevpcattachmentresponse.h
+  updatevpcattachmentresponse_p.h
+  networkmanagerclient.cpp
+  networkmanagerrequest.cpp
+  networkmanagerresponse.cpp
+  acceptattachmentrequest.cpp
+  acceptattachmentresponse.cpp
+  associateconnectpeerrequest.cpp
+  associateconnectpeerresponse.cpp
   associatecustomergatewayrequest.cpp
   associatecustomergatewayresponse.cpp
   associatelinkrequest.cpp
   associatelinkresponse.cpp
   associatetransitgatewayconnectpeerrequest.cpp
   associatetransitgatewayconnectpeerresponse.cpp
+  createconnectattachmentrequest.cpp
+  createconnectattachmentresponse.cpp
+  createconnectpeerrequest.cpp
+  createconnectpeerresponse.cpp
   createconnectionrequest.cpp
   createconnectionresponse.cpp
+  createcorenetworkrequest.cpp
+  createcorenetworkresponse.cpp
   createdevicerequest.cpp
   createdeviceresponse.cpp
   createglobalnetworkrequest.cpp
@@ -164,28 +377,66 @@ add_library(QtAwsNetworkManager
   createlinkresponse.cpp
   createsiterequest.cpp
   createsiteresponse.cpp
+  createsitetositevpnattachmentrequest.cpp
+  createsitetositevpnattachmentresponse.cpp
+  createtransitgatewaypeeringrequest.cpp
+  createtransitgatewaypeeringresponse.cpp
+  createtransitgatewayroutetableattachmentrequest.cpp
+  createtransitgatewayroutetableattachmentresponse.cpp
+  createvpcattachmentrequest.cpp
+  createvpcattachmentresponse.cpp
+  deleteattachmentrequest.cpp
+  deleteattachmentresponse.cpp
+  deleteconnectpeerrequest.cpp
+  deleteconnectpeerresponse.cpp
   deleteconnectionrequest.cpp
   deleteconnectionresponse.cpp
+  deletecorenetworkrequest.cpp
+  deletecorenetworkresponse.cpp
+  deletecorenetworkpolicyversionrequest.cpp
+  deletecorenetworkpolicyversionresponse.cpp
   deletedevicerequest.cpp
   deletedeviceresponse.cpp
   deleteglobalnetworkrequest.cpp
   deleteglobalnetworkresponse.cpp
   deletelinkrequest.cpp
   deletelinkresponse.cpp
+  deletepeeringrequest.cpp
+  deletepeeringresponse.cpp
+  deleteresourcepolicyrequest.cpp
+  deleteresourcepolicyresponse.cpp
   deletesiterequest.cpp
   deletesiteresponse.cpp
   deregistertransitgatewayrequest.cpp
   deregistertransitgatewayresponse.cpp
   describeglobalnetworksrequest.cpp
   describeglobalnetworksresponse.cpp
+  disassociateconnectpeerrequest.cpp
+  disassociateconnectpeerresponse.cpp
   disassociatecustomergatewayrequest.cpp
   disassociatecustomergatewayresponse.cpp
   disassociatelinkrequest.cpp
   disassociatelinkresponse.cpp
   disassociatetransitgatewayconnectpeerrequest.cpp
   disassociatetransitgatewayconnectpeerresponse.cpp
+  executecorenetworkchangesetrequest.cpp
+  executecorenetworkchangesetresponse.cpp
+  getconnectattachmentrequest.cpp
+  getconnectattachmentresponse.cpp
+  getconnectpeerrequest.cpp
+  getconnectpeerresponse.cpp
+  getconnectpeerassociationsrequest.cpp
+  getconnectpeerassociationsresponse.cpp
   getconnectionsrequest.cpp
   getconnectionsresponse.cpp
+  getcorenetworkrequest.cpp
+  getcorenetworkresponse.cpp
+  getcorenetworkchangeeventsrequest.cpp
+  getcorenetworkchangeeventsresponse.cpp
+  getcorenetworkchangesetrequest.cpp
+  getcorenetworkchangesetresponse.cpp
+  getcorenetworkpolicyrequest.cpp
+  getcorenetworkpolicyresponse.cpp
   getcustomergatewayassociationsrequest.cpp
   getcustomergatewayassociationsresponse.cpp
   getdevicesrequest.cpp
@@ -194,33 +445,82 @@ add_library(QtAwsNetworkManager
   getlinkassociationsresponse.cpp
   getlinksrequest.cpp
   getlinksresponse.cpp
+  getnetworkresourcecountsrequest.cpp
+  getnetworkresourcecountsresponse.cpp
+  getnetworkresourcerelationshipsrequest.cpp
+  getnetworkresourcerelationshipsresponse.cpp
+  getnetworkresourcesrequest.cpp
+  getnetworkresourcesresponse.cpp
+  getnetworkroutesrequest.cpp
+  getnetworkroutesresponse.cpp
+  getnetworktelemetryrequest.cpp
+  getnetworktelemetryresponse.cpp
+  getresourcepolicyrequest.cpp
+  getresourcepolicyresponse.cpp
+  getrouteanalysisrequest.cpp
+  getrouteanalysisresponse.cpp
+  getsitetositevpnattachmentrequest.cpp
+  getsitetositevpnattachmentresponse.cpp
   getsitesrequest.cpp
   getsitesresponse.cpp
   gettransitgatewayconnectpeerassociationsrequest.cpp
   gettransitgatewayconnectpeerassociationsresponse.cpp
+  gettransitgatewaypeeringrequest.cpp
+  gettransitgatewaypeeringresponse.cpp
   gettransitgatewayregistrationsrequest.cpp
   gettransitgatewayregistrationsresponse.cpp
+  gettransitgatewayroutetableattachmentrequest.cpp
+  gettransitgatewayroutetableattachmentresponse.cpp
+  getvpcattachmentrequest.cpp
+  getvpcattachmentresponse.cpp
+  listattachmentsrequest.cpp
+  listattachmentsresponse.cpp
+  listconnectpeersrequest.cpp
+  listconnectpeersresponse.cpp
+  listcorenetworkpolicyversionsrequest.cpp
+  listcorenetworkpolicyversionsresponse.cpp
+  listcorenetworksrequest.cpp
+  listcorenetworksresponse.cpp
+  listorganizationserviceaccessstatusrequest.cpp
+  listorganizationserviceaccessstatusresponse.cpp
+  listpeeringsrequest.cpp
+  listpeeringsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
-  networkmanagerclient.cpp
-  networkmanagerrequest.cpp
-  networkmanagerresponse.cpp
+  putcorenetworkpolicyrequest.cpp
+  putcorenetworkpolicyresponse.cpp
+  putresourcepolicyrequest.cpp
+  putresourcepolicyresponse.cpp
   registertransitgatewayrequest.cpp
   registertransitgatewayresponse.cpp
+  rejectattachmentrequest.cpp
+  rejectattachmentresponse.cpp
+  restorecorenetworkpolicyversionrequest.cpp
+  restorecorenetworkpolicyversionresponse.cpp
+  startorganizationserviceaccessupdaterequest.cpp
+  startorganizationserviceaccessupdateresponse.cpp
+  startrouteanalysisrequest.cpp
+  startrouteanalysisresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
   updateconnectionrequest.cpp
   updateconnectionresponse.cpp
+  updatecorenetworkrequest.cpp
+  updatecorenetworkresponse.cpp
   updatedevicerequest.cpp
   updatedeviceresponse.cpp
   updateglobalnetworkrequest.cpp
   updateglobalnetworkresponse.cpp
   updatelinkrequest.cpp
   updatelinkresponse.cpp
+  updatenetworkresourcemetadatarequest.cpp
+  updatenetworkresourcemetadataresponse.cpp
   updatesiterequest.cpp
-  updatesiteresponse.cpp)
+  updatesiteresponse.cpp
+  updatevpcattachmentrequest.cpp
+  updatevpcattachmentresponse.cpp)
 
 target_link_libraries(QtAwsNetworkManager
   PRIVATE QtAwsCore

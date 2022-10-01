@@ -46,6 +46,7 @@ public:
         GetParallelDataAction,
         GetTerminologyAction,
         ImportTerminologyAction,
+        ListLanguagesAction,
         ListParallelDataAction,
         ListTerminologiesAction,
         ListTextTranslationJobsAction,

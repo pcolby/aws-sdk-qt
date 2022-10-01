@@ -23,13 +23,13 @@
 #include "sfnrequest_p.h"
 
 namespace QtAws {
-namespace SFN {
+namespace Sfn {
 
 /*!
- * \class QtAws::SFN::DescribeActivityRequest
- * \brief The DescribeActivityRequest class provides an interface for SFN DescribeActivity requests.
+ * \class QtAws::Sfn::DescribeActivityRequest
+ * \brief The DescribeActivityRequest class provides an interface for Sfn DescribeActivity requests.
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -92,11 +92,11 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityRequest::response(QNetworkRep
 }
 
 /*!
- * \class QtAws::SFN::DescribeActivityRequestPrivate
+ * \class QtAws::Sfn::DescribeActivityRequestPrivate
  * \brief The DescribeActivityRequestPrivate class provides private implementation for DescribeActivityRequest.
  * \internal
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  */
 
 /*!
@@ -123,5 +123,5 @@ DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
 
 }
 
-} // namespace SFN
+} // namespace Sfn
 } // namespace QtAws

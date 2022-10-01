@@ -33,9 +33,9 @@ namespace CostExplorer {
  *
  * \inmodule QtAwsCostExplorer
  *
- *  The Cost Explorer API enables you to programmatically query your cost and usage data. You can query for aggregated data
- *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
- *  write operations for Amazon DynamoDB database tables in your production environment.
+ *  You can use the Cost Explorer API to programmatically query your cost and usage data. You can query for aggregated data
+ *  such as total monthly costs or total daily usage. You can also query for granular data. This might include the number of
+ *  daily write operations for Amazon DynamoDB database tables in your production environment.
  * 
  *  </p
  * 
@@ -51,8 +51,8 @@ namespace CostExplorer {
  * 
  *  </p </li> </ul>
  * 
- *  For information about costs associated with the Cost Explorer API, see <a
- *  href="http://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
+ *  For information about the costs that are associated with the Cost Explorer API, see <a
+ *  href="http://aws.amazon.com/aws-cost-management/pricing/">Amazon Web Services Cost Management
  *
  * \sa CostExplorerClient::updateAnomalyMonitor
  */

@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SSO {
+namespace Sso {
 
 /*!
- * \class QtAws::SSO::SsoResponse
- * \brief The SsoResponse class provides an interface for SSO responses.
+ * \class QtAws::Sso::SsoResponse
+ * \brief The SsoResponse class provides an interface for Sso responses.
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
@@ -76,11 +76,11 @@ void SsoResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSO::SsoResponsePrivate
+ * \class QtAws::Sso::SsoResponsePrivate
  * \brief The SsoResponsePrivate class provides private implementation for SsoResponse.
  * \internal
  *
- * \inmodule QtAwsSSO
+ * \inmodule QtAwsSso
  */
 
 /*!
@@ -92,5 +92,5 @@ SsoResponsePrivate::SsoResponsePrivate(
 
 }
 
-} // namespace SSO
+} // namespace Sso
 } // namespace QtAws

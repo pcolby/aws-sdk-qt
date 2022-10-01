@@ -49,8 +49,11 @@ public:
         ListTableColumnsAction,
         ListTableRowsAction,
         ListTablesAction,
+        ListTagsForResourceAction,
         QueryTableRowsAction,
         StartTableDataImportJobAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

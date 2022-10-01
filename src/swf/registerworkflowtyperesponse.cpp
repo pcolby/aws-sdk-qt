@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::RegisterWorkflowTypeResponse
- * \brief The RegisterWorkflowTypeResponse class provides an interace for SWF RegisterWorkflowType responses.
+ * \class QtAws::Swf::RegisterWorkflowTypeResponse
+ * \brief The RegisterWorkflowTypeResponse class provides an interace for Swf RegisterWorkflowType responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() cons
 
 /*!
  * \reimp
- * Parses a successful SWF RegisterWorkflowType \a response.
+ * Parses a successful Swf RegisterWorkflowType \a response.
  */
 void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::RegisterWorkflowTypeResponsePrivate
+ * \class QtAws::Swf::RegisterWorkflowTypeResponsePrivate
  * \brief The RegisterWorkflowTypeResponsePrivate class provides private implementation for RegisterWorkflowTypeResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
 }
 
 /*!
- * Parses a SWF RegisterWorkflowType response element from \a xml.
+ * Parses a Swf RegisterWorkflowType response element from \a xml.
  */
 void RegisterWorkflowTypeResponsePrivate::parseRegisterWorkflowTypeResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void RegisterWorkflowTypeResponsePrivate::parseRegisterWorkflowTypeResponse(QXml
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

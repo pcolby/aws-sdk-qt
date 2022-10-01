@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::UndeprecateDomainResponse
- * \brief The UndeprecateDomainResponse class provides an interace for SWF UndeprecateDomain responses.
+ * \class QtAws::Swf::UndeprecateDomainResponse
+ * \brief The UndeprecateDomainResponse class provides an interace for Swf UndeprecateDomain responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const UndeprecateDomainRequest * UndeprecateDomainResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF UndeprecateDomain \a response.
+ * Parses a successful Swf UndeprecateDomain \a response.
  */
 void UndeprecateDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void UndeprecateDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::UndeprecateDomainResponsePrivate
+ * \class QtAws::Swf::UndeprecateDomainResponsePrivate
  * \brief The UndeprecateDomainResponsePrivate class provides private implementation for UndeprecateDomainResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ UndeprecateDomainResponsePrivate::UndeprecateDomainResponsePrivate(
 }
 
 /*!
- * Parses a SWF UndeprecateDomain response element from \a xml.
+ * Parses a Swf UndeprecateDomain response element from \a xml.
  */
 void UndeprecateDomainResponsePrivate::parseUndeprecateDomainResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void UndeprecateDomainResponsePrivate::parseUndeprecateDomainResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

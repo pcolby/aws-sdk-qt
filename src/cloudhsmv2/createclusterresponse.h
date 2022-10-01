@@ -24,11 +24,11 @@
 #include "createclusterrequest.h"
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
 class CreateClusterResponsePrivate;
 
-class QTAWSCLOUDHSMV2_EXPORT CreateClusterResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT CreateClusterResponse : public CloudHsmV2Response {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace kendra {
+namespace Kendra {
 
 /*!
- * \class QtAws::kendra::DescribeIndexResponse
- * \brief The DescribeIndexResponse class provides an interace for kendra DescribeIndex responses.
+ * \class QtAws::Kendra::DescribeIndexResponse
+ * \brief The DescribeIndexResponse class provides an interace for Kendra DescribeIndex responses.
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  *
  *  Amazon Kendra is a service for indexing large document
  *
- * \sa kendraClient::describeIndex
+ * \sa KendraClient::describeIndex
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeIndexResponse::DescribeIndexResponse(
         const DescribeIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : kendraResponse(new DescribeIndexResponsePrivate(this), parent)
+    : KendraResponse(new DescribeIndexResponsePrivate(this), parent)
 {
     setRequest(new DescribeIndexRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeIndexRequest * DescribeIndexResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful kendra DescribeIndex \a response.
+ * Parses a successful Kendra DescribeIndex \a response.
  */
 void DescribeIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::kendra::DescribeIndexResponsePrivate
+ * \class QtAws::Kendra::DescribeIndexResponsePrivate
  * \brief The DescribeIndexResponsePrivate class provides private implementation for DescribeIndexResponse.
  * \internal
  *
- * \inmodule QtAwskendra
+ * \inmodule QtAwsKendra
  */
 
 /*!
  * Constructs a DescribeIndexResponsePrivate object with public implementation \a q.
  */
 DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
-    DescribeIndexResponse * const q) : kendraResponsePrivate(q)
+    DescribeIndexResponse * const q) : KendraResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a kendra DescribeIndex response element from \a xml.
+ * Parses a Kendra DescribeIndex response element from \a xml.
  */
 void DescribeIndexResponsePrivate::parseDescribeIndexResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeIndexResponsePrivate::parseDescribeIndexResponse(QXmlStreamReader &
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace kendra
+} // namespace Kendra
 } // namespace QtAws

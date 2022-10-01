@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::GetStageRequest
- * \brief The GetStageRequest class provides an interface for APIGateway GetStage requests.
+ * \class QtAws::ApiGateway::GetStageRequest
+ * \brief The GetStageRequest class provides an interface for ApiGateway GetStage requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::getStage
+ * \sa ApiGatewayClient::getStage
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 GetStageRequest::GetStageRequest(const GetStageRequest &other)
-    : APIGatewayRequest(new GetStageRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new GetStageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetStageRequest::GetStageRequest(const GetStageRequest &other)
  * Constructs a GetStageRequest object.
  */
 GetStageRequest::GetStageRequest()
-    : APIGatewayRequest(new GetStageRequestPrivate(APIGatewayRequest::GetStageAction, this))
+    : ApiGatewayRequest(new GetStageRequestPrivate(ApiGatewayRequest::GetStageAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * GetStageRequest::response(QNetworkReply * con
 }
 
 /*!
- * \class QtAws::APIGateway::GetStageRequestPrivate
+ * \class QtAws::ApiGateway::GetStageRequestPrivate
  * \brief The GetStageRequestPrivate class provides private implementation for GetStageRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a GetStageRequestPrivate object for APIGateway \a action,
+ * Constructs a GetStageRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 GetStageRequestPrivate::GetStageRequestPrivate(
-    const APIGatewayRequest::Action action, GetStageRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, GetStageRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ GetStageRequestPrivate::GetStageRequestPrivate(
  */
 GetStageRequestPrivate::GetStageRequestPrivate(
     const GetStageRequestPrivate &other, GetStageRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

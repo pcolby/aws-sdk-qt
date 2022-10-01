@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::DeleteRolePolicyResponse
- * \brief The DeleteRolePolicyResponse class provides an interace for IAM DeleteRolePolicy responses.
+ * \class QtAws::Iam::DeleteRolePolicyResponse
+ * \brief The DeleteRolePolicyResponse class provides an interace for Iam DeleteRolePolicy responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::deleteRolePolicy
  */
@@ -68,7 +68,7 @@ const DeleteRolePolicyRequest * DeleteRolePolicyResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM DeleteRolePolicy \a response.
+ * Parses a successful Iam DeleteRolePolicy \a response.
  */
 void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::DeleteRolePolicyResponsePrivate
+ * \class QtAws::Iam::DeleteRolePolicyResponsePrivate
  * \brief The DeleteRolePolicyResponsePrivate class provides private implementation for DeleteRolePolicyResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
 }
 
 /*!
- * Parses a IAM DeleteRolePolicy response element from \a xml.
+ * Parses a Iam DeleteRolePolicy response element from \a xml.
  */
 void DeleteRolePolicyResponsePrivate::parseDeleteRolePolicyResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void DeleteRolePolicyResponsePrivate::parseDeleteRolePolicyResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::TerminateJobFlowsResponse
- * \brief The TerminateJobFlowsResponse class provides an interace for EMR TerminateJobFlows responses.
+ * \class QtAws::Emr::TerminateJobFlowsResponse
+ * \brief The TerminateJobFlowsResponse class provides an interace for Emr TerminateJobFlows responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::terminateJobFlows
  */
@@ -64,7 +64,7 @@ const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful EMR TerminateJobFlows \a response.
+ * Parses a successful Emr TerminateJobFlows \a response.
  */
 void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::TerminateJobFlowsResponsePrivate
+ * \class QtAws::Emr::TerminateJobFlowsResponsePrivate
  * \brief The TerminateJobFlowsResponsePrivate class provides private implementation for TerminateJobFlowsResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
 }
 
 /*!
- * Parses a EMR TerminateJobFlows response element from \a xml.
+ * Parses a Emr TerminateJobFlows response element from \a xml.
  */
 void TerminateJobFlowsResponsePrivate::parseTerminateJobFlowsResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void TerminateJobFlowsResponsePrivate::parseTerminateJobFlowsResponse(QXmlStream
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "apigatewayrequest_p.h"
 
 namespace QtAws {
-namespace APIGateway {
+namespace ApiGateway {
 
 /*!
- * \class QtAws::APIGateway::ImportApiKeysRequest
- * \brief The ImportApiKeysRequest class provides an interface for APIGateway ImportApiKeys requests.
+ * \class QtAws::ApiGateway::ImportApiKeysRequest
+ * \brief The ImportApiKeysRequest class provides an interface for ApiGateway ImportApiKeys requests.
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -37,14 +37,14 @@ namespace APIGateway {
  *  Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or
  *  other publicly addressable web services that are hosted outside of
  *
- * \sa APIGatewayClient::importApiKeys
+ * \sa ApiGatewayClient::importApiKeys
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ImportApiKeysRequest::ImportApiKeysRequest(const ImportApiKeysRequest &other)
-    : APIGatewayRequest(new ImportApiKeysRequestPrivate(*other.d_func(), this))
+    : ApiGatewayRequest(new ImportApiKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ImportApiKeysRequest::ImportApiKeysRequest(const ImportApiKeysRequest &other)
  * Constructs a ImportApiKeysRequest object.
  */
 ImportApiKeysRequest::ImportApiKeysRequest()
-    : APIGatewayRequest(new ImportApiKeysRequestPrivate(APIGatewayRequest::ImportApiKeysAction, this))
+    : ApiGatewayRequest(new ImportApiKeysRequestPrivate(ApiGatewayRequest::ImportApiKeysAction, this))
 {
 
 }
@@ -78,20 +78,20 @@ QtAws::Core::AwsAbstractResponse * ImportApiKeysRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::APIGateway::ImportApiKeysRequestPrivate
+ * \class QtAws::ApiGateway::ImportApiKeysRequestPrivate
  * \brief The ImportApiKeysRequestPrivate class provides private implementation for ImportApiKeysRequest.
  * \internal
  *
- * \inmodule QtAwsAPIGateway
+ * \inmodule QtAwsApiGateway
  */
 
 /*!
- * Constructs a ImportApiKeysRequestPrivate object for APIGateway \a action,
+ * Constructs a ImportApiKeysRequestPrivate object for ApiGateway \a action,
  * with public implementation \a q.
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
-    const APIGatewayRequest::Action action, ImportApiKeysRequest * const q)
-    : APIGatewayRequestPrivate(action, q)
+    const ApiGatewayRequest::Action action, ImportApiKeysRequest * const q)
+    : ApiGatewayRequestPrivate(action, q)
 {
 
 }
@@ -104,10 +104,10 @@ ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
  */
 ImportApiKeysRequestPrivate::ImportApiKeysRequestPrivate(
     const ImportApiKeysRequestPrivate &other, ImportApiKeysRequest * const q)
-    : APIGatewayRequestPrivate(other, q)
+    : ApiGatewayRequestPrivate(other, q)
 {
 
 }
 
-} // namespace APIGateway
+} // namespace ApiGateway
 } // namespace QtAws

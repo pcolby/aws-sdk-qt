@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DynamoDB {
+namespace DynamoDb {
 
 /*!
- * \class QtAws::DynamoDB::DynamoDBResponse
- * \brief The DynamoDBResponse class provides an interface for DynamoDB responses.
+ * \class QtAws::DynamoDb::DynamoDbResponse
+ * \brief The DynamoDbResponse class provides an interface for DynamoDb responses.
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DynamoDBResponse object with parent \a parent.
+ * Constructs a DynamoDbResponse object with parent \a parent.
  */
-DynamoDBResponse::DynamoDBResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DynamoDBResponsePrivate(this), parent)
+DynamoDbResponse::DynamoDbResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new DynamoDbResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a DynamoDBResponse object with private implementation \a d,
+ * Constructs a DynamoDbResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DynamoDBResponsePrivate.
+ * implementation that inherits from DynamoDbResponsePrivate.
  */
-DynamoDBResponse::DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * const parent)
+DynamoDbResponse::DynamoDbResponse(DynamoDbResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ DynamoDBResponse::DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * 
 /*!
  * \reimp
  */
-void DynamoDBResponse::parseFailure(QIODevice &response)
+void DynamoDbResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(DynamoDBResponse);
+    //Q_D(DynamoDbResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void DynamoDBResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DynamoDB::DynamoDBResponsePrivate
- * \brief The DynamoDBResponsePrivate class provides private implementation for DynamoDBResponse.
+ * \class QtAws::DynamoDb::DynamoDbResponsePrivate
+ * \brief The DynamoDbResponsePrivate class provides private implementation for DynamoDbResponse.
  * \internal
  *
- * \inmodule QtAwsDynamoDB
+ * \inmodule QtAwsDynamoDb
  */
 
 /*!
- * Constructs a DynamoDBResponsePrivate object with public implementation \a q.
+ * Constructs a DynamoDbResponsePrivate object with public implementation \a q.
  */
-DynamoDBResponsePrivate::DynamoDBResponsePrivate(
-    DynamoDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+DynamoDbResponsePrivate::DynamoDbResponsePrivate(
+    DynamoDbResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace DynamoDB
+} // namespace DynamoDb
 } // namespace QtAws

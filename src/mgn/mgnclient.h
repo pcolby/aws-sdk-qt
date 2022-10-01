@@ -27,27 +27,37 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace mgn {
+namespace Mgn {
 
-class mgnClientPrivate;
+class MgnClientPrivate;
 class ChangeServerLifeCycleStateRequest;
 class ChangeServerLifeCycleStateResponse;
+class CreateLaunchConfigurationTemplateRequest;
+class CreateLaunchConfigurationTemplateResponse;
 class CreateReplicationConfigurationTemplateRequest;
 class CreateReplicationConfigurationTemplateResponse;
 class DeleteJobRequest;
 class DeleteJobResponse;
+class DeleteLaunchConfigurationTemplateRequest;
+class DeleteLaunchConfigurationTemplateResponse;
 class DeleteReplicationConfigurationTemplateRequest;
 class DeleteReplicationConfigurationTemplateResponse;
 class DeleteSourceServerRequest;
 class DeleteSourceServerResponse;
+class DeleteVcenterClientRequest;
+class DeleteVcenterClientResponse;
 class DescribeJobLogItemsRequest;
 class DescribeJobLogItemsResponse;
 class DescribeJobsRequest;
 class DescribeJobsResponse;
+class DescribeLaunchConfigurationTemplatesRequest;
+class DescribeLaunchConfigurationTemplatesResponse;
 class DescribeReplicationConfigurationTemplatesRequest;
 class DescribeReplicationConfigurationTemplatesResponse;
 class DescribeSourceServersRequest;
 class DescribeSourceServersResponse;
+class DescribeVcenterClientsRequest;
+class DescribeVcenterClientsResponse;
 class DisconnectFromServiceRequest;
 class DisconnectFromServiceResponse;
 class FinalizeCutoverRequest;
@@ -66,6 +76,8 @@ class RetryDataReplicationRequest;
 class RetryDataReplicationResponse;
 class StartCutoverRequest;
 class StartCutoverResponse;
+class StartReplicationRequest;
+class StartReplicationResponse;
 class StartTestRequest;
 class StartTestResponse;
 class TagResourceRequest;
@@ -76,36 +88,45 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateLaunchConfigurationRequest;
 class UpdateLaunchConfigurationResponse;
+class UpdateLaunchConfigurationTemplateRequest;
+class UpdateLaunchConfigurationTemplateResponse;
 class UpdateReplicationConfigurationRequest;
 class UpdateReplicationConfigurationResponse;
 class UpdateReplicationConfigurationTemplateRequest;
 class UpdateReplicationConfigurationTemplateResponse;
+class UpdateSourceServerReplicationTypeRequest;
+class UpdateSourceServerReplicationTypeResponse;
 
-class QTAWSMGN_EXPORT mgnClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMGN_EXPORT MgnClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    mgnClient(
+    MgnClient(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit mgnClient(
+    explicit MgnClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
 public slots:
     ChangeServerLifeCycleStateResponse * changeServerLifeCycleState(const ChangeServerLifeCycleStateRequest &request);
+    CreateLaunchConfigurationTemplateResponse * createLaunchConfigurationTemplate(const CreateLaunchConfigurationTemplateRequest &request);
     CreateReplicationConfigurationTemplateResponse * createReplicationConfigurationTemplate(const CreateReplicationConfigurationTemplateRequest &request);
     DeleteJobResponse * deleteJob(const DeleteJobRequest &request);
+    DeleteLaunchConfigurationTemplateResponse * deleteLaunchConfigurationTemplate(const DeleteLaunchConfigurationTemplateRequest &request);
     DeleteReplicationConfigurationTemplateResponse * deleteReplicationConfigurationTemplate(const DeleteReplicationConfigurationTemplateRequest &request);
     DeleteSourceServerResponse * deleteSourceServer(const DeleteSourceServerRequest &request);
+    DeleteVcenterClientResponse * deleteVcenterClient(const DeleteVcenterClientRequest &request);
     DescribeJobLogItemsResponse * describeJobLogItems(const DescribeJobLogItemsRequest &request);
     DescribeJobsResponse * describeJobs(const DescribeJobsRequest &request);
+    DescribeLaunchConfigurationTemplatesResponse * describeLaunchConfigurationTemplates(const DescribeLaunchConfigurationTemplatesRequest &request);
     DescribeReplicationConfigurationTemplatesResponse * describeReplicationConfigurationTemplates(const DescribeReplicationConfigurationTemplatesRequest &request);
     DescribeSourceServersResponse * describeSourceServers(const DescribeSourceServersRequest &request);
+    DescribeVcenterClientsResponse * describeVcenterClients(const DescribeVcenterClientsRequest &request);
     DisconnectFromServiceResponse * disconnectFromService(const DisconnectFromServiceRequest &request);
     FinalizeCutoverResponse * finalizeCutover(const FinalizeCutoverRequest &request);
     GetLaunchConfigurationResponse * getLaunchConfiguration(const GetLaunchConfigurationRequest &request);
@@ -115,21 +136,24 @@ public slots:
     MarkAsArchivedResponse * markAsArchived(const MarkAsArchivedRequest &request);
     RetryDataReplicationResponse * retryDataReplication(const RetryDataReplicationRequest &request);
     StartCutoverResponse * startCutover(const StartCutoverRequest &request);
+    StartReplicationResponse * startReplication(const StartReplicationRequest &request);
     StartTestResponse * startTest(const StartTestRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     TerminateTargetInstancesResponse * terminateTargetInstances(const TerminateTargetInstancesRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateLaunchConfigurationResponse * updateLaunchConfiguration(const UpdateLaunchConfigurationRequest &request);
+    UpdateLaunchConfigurationTemplateResponse * updateLaunchConfigurationTemplate(const UpdateLaunchConfigurationTemplateRequest &request);
     UpdateReplicationConfigurationResponse * updateReplicationConfiguration(const UpdateReplicationConfigurationRequest &request);
     UpdateReplicationConfigurationTemplateResponse * updateReplicationConfigurationTemplate(const UpdateReplicationConfigurationTemplateRequest &request);
+    UpdateSourceServerReplicationTypeResponse * updateSourceServerReplicationType(const UpdateSourceServerReplicationTypeRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(mgnClient)
-    Q_DISABLE_COPY(mgnClient)
+    Q_DECLARE_PRIVATE(MgnClient)
+    Q_DISABLE_COPY(MgnClient)
 
 };
 
-} // namespace mgn
+} // namespace Mgn
 } // namespace QtAws
 
 #endif

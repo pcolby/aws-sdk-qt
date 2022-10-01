@@ -24,7 +24,7 @@
 #include "getidentitydkimattributesrequest.h"
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 class GetIdentityDkimAttributesRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws
 
 #endif

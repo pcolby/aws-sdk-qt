@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace EMR {
+namespace Emr {
 
 /*!
- * \class QtAws::EMR::DeleteStudioSessionMappingResponse
- * \brief The DeleteStudioSessionMappingResponse class provides an interace for EMR DeleteStudioSessionMapping responses.
+ * \class QtAws::Emr::DeleteStudioSessionMappingResponse
+ * \brief The DeleteStudioSessionMappingResponse class provides an interace for Emr DeleteStudioSessionMapping responses.
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data warehouse
+ *  processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ *  analysis, machine learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::deleteStudioSessionMapping
  */
@@ -64,7 +64,7 @@ const DeleteStudioSessionMappingRequest * DeleteStudioSessionMappingResponse::re
 
 /*!
  * \reimp
- * Parses a successful EMR DeleteStudioSessionMapping \a response.
+ * Parses a successful Emr DeleteStudioSessionMapping \a response.
  */
 void DeleteStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,11 +74,11 @@ void DeleteStudioSessionMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::DeleteStudioSessionMappingResponsePrivate
+ * \class QtAws::Emr::DeleteStudioSessionMappingResponsePrivate
  * \brief The DeleteStudioSessionMappingResponsePrivate class provides private implementation for DeleteStudioSessionMappingResponse.
  * \internal
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  */
 
 /*!
@@ -91,7 +91,7 @@ DeleteStudioSessionMappingResponsePrivate::DeleteStudioSessionMappingResponsePri
 }
 
 /*!
- * Parses a EMR DeleteStudioSessionMapping response element from \a xml.
+ * Parses a Emr DeleteStudioSessionMapping response element from \a xml.
  */
 void DeleteStudioSessionMappingResponsePrivate::parseDeleteStudioSessionMappingResponse(QXmlStreamReader &xml)
 {
@@ -99,5 +99,5 @@ void DeleteStudioSessionMappingResponsePrivate::parseDeleteStudioSessionMappingR
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace EMR
+} // namespace Emr
 } // namespace QtAws

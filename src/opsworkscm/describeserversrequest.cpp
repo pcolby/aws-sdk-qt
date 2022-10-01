@@ -23,13 +23,13 @@
 #include "opsworkscmrequest_p.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeServersRequest
- * \brief The DescribeServersRequest class provides an interface for OpsWorksCM DescribeServers requests.
+ * \class QtAws::OpsWorksCm::DescribeServersRequest
+ * \brief The DescribeServersRequest class provides an interface for OpsWorksCm DescribeServers requests.
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -111,14 +111,14 @@ namespace OpsWorksCM {
  * 
  *  All API operations allow for five requests per second with a burst of 10 requests per
  *
- * \sa OpsWorksCMClient::describeServers
+ * \sa OpsWorksCmClient::describeServers
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 DescribeServersRequest::DescribeServersRequest(const DescribeServersRequest &other)
-    : OpsWorksCMRequest(new DescribeServersRequestPrivate(*other.d_func(), this))
+    : OpsWorksCmRequest(new DescribeServersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +127,7 @@ DescribeServersRequest::DescribeServersRequest(const DescribeServersRequest &oth
  * Constructs a DescribeServersRequest object.
  */
 DescribeServersRequest::DescribeServersRequest()
-    : OpsWorksCMRequest(new DescribeServersRequestPrivate(OpsWorksCMRequest::DescribeServersAction, this))
+    : OpsWorksCmRequest(new DescribeServersRequestPrivate(OpsWorksCmRequest::DescribeServersAction, this))
 {
 
 }
@@ -152,20 +152,20 @@ QtAws::Core::AwsAbstractResponse * DescribeServersRequest::response(QNetworkRepl
 }
 
 /*!
- * \class QtAws::OpsWorksCM::DescribeServersRequestPrivate
+ * \class QtAws::OpsWorksCm::DescribeServersRequestPrivate
  * \brief The DescribeServersRequestPrivate class provides private implementation for DescribeServersRequest.
  * \internal
  *
- * \inmodule QtAwsOpsWorksCM
+ * \inmodule QtAwsOpsWorksCm
  */
 
 /*!
- * Constructs a DescribeServersRequestPrivate object for OpsWorksCM \a action,
+ * Constructs a DescribeServersRequestPrivate object for OpsWorksCm \a action,
  * with public implementation \a q.
  */
 DescribeServersRequestPrivate::DescribeServersRequestPrivate(
-    const OpsWorksCMRequest::Action action, DescribeServersRequest * const q)
-    : OpsWorksCMRequestPrivate(action, q)
+    const OpsWorksCmRequest::Action action, DescribeServersRequest * const q)
+    : OpsWorksCmRequestPrivate(action, q)
 {
 
 }
@@ -178,10 +178,10 @@ DescribeServersRequestPrivate::DescribeServersRequestPrivate(
  */
 DescribeServersRequestPrivate::DescribeServersRequestPrivate(
     const DescribeServersRequestPrivate &other, DescribeServersRequest * const q)
-    : OpsWorksCMRequestPrivate(other, q)
+    : OpsWorksCmRequestPrivate(other, q)
 {
 
 }
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws

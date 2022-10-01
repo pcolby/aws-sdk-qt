@@ -23,13 +23,13 @@
 #include "ecrrequest_p.h"
 
 namespace QtAws {
-namespace ECR {
+namespace Ecr {
 
 /*!
- * \class QtAws::ECR::DescribeImagesRequest
- * \brief The DescribeImagesRequest class provides an interface for ECR DescribeImages requests.
+ * \class QtAws::Ecr::DescribeImagesRequest
+ * \brief The DescribeImagesRequest class provides an interface for Ecr DescribeImages requests.
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  *  <fullname>Amazon Elastic Container Registry</fullname>
  * 
@@ -38,6 +38,12 @@ namespace ECR {
  *  scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports private
  *  repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access
  *  repositories and
+ * 
+ *  images>
+ * 
+ *  Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ *  General
  *
  * \sa EcrClient::describeImages
  */
@@ -80,11 +86,11 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
 }
 
 /*!
- * \class QtAws::ECR::DescribeImagesRequestPrivate
+ * \class QtAws::Ecr::DescribeImagesRequestPrivate
  * \brief The DescribeImagesRequestPrivate class provides private implementation for DescribeImagesRequest.
  * \internal
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  */
 
 /*!
@@ -111,5 +117,5 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 
 }
 
-} // namespace ECR
+} // namespace Ecr
 } // namespace QtAws

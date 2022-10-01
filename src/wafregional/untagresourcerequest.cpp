@@ -23,13 +23,13 @@
 #include "wafregionalrequest_p.h"
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::UntagResourceRequest
- * \brief The UntagResourceRequest class provides an interface for WAFRegional UntagResource requests.
+ * \class QtAws::WafRegional::UntagResourceRequest
+ * \brief The UntagResourceRequest class provides an interface for WafRegional UntagResource requests.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -55,14 +55,14 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::untagResource
+ * \sa WafRegionalClient::untagResource
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : WAFRegionalRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : WafRegionalRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -71,7 +71,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : WAFRegionalRequest(new UntagResourceRequestPrivate(WAFRegionalRequest::UntagResourceAction, this))
+    : WafRegionalRequest(new UntagResourceRequestPrivate(WafRegionalRequest::UntagResourceAction, this))
 {
 
 }
@@ -96,20 +96,20 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::WAFRegional::UntagResourceRequestPrivate
+ * \class QtAws::WafRegional::UntagResourceRequestPrivate
  * \brief The UntagResourceRequestPrivate class provides private implementation for UntagResourceRequest.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for WAFRegional \a action,
+ * Constructs a UntagResourceRequestPrivate object for WafRegional \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const WAFRegionalRequest::Action action, UntagResourceRequest * const q)
-    : WAFRegionalRequestPrivate(action, q)
+    const WafRegionalRequest::Action action, UntagResourceRequest * const q)
+    : WafRegionalRequestPrivate(action, q)
 {
 
 }
@@ -122,10 +122,10 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : WAFRegionalRequestPrivate(other, q)
+    : WafRegionalRequestPrivate(other, q)
 {
 
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

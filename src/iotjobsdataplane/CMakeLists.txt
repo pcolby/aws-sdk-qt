@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSIOTJOBSDATAPLANE_LIBRARY)
 
 add_library(QtAwsIoTJobsDataPlane
+  qtawsiotjobsdataplaneglobal.h
+  iotjobsdataplaneclient.h
+  iotjobsdataplaneclient_p.h
+  iotjobsdataplanerequest.h
+  iotjobsdataplanerequest_p.h
+  iotjobsdataplaneresponse.h
+  iotjobsdataplaneresponse_p.h
   describejobexecutionrequest.h
   describejobexecutionrequest_p.h
   describejobexecutionresponse.h
@@ -9,13 +16,6 @@ add_library(QtAwsIoTJobsDataPlane
   getpendingjobexecutionsrequest_p.h
   getpendingjobexecutionsresponse.h
   getpendingjobexecutionsresponse_p.h
-  iotjobsdataplaneclient.h
-  iotjobsdataplaneclient_p.h
-  iotjobsdataplanerequest.h
-  iotjobsdataplanerequest_p.h
-  iotjobsdataplaneresponse.h
-  iotjobsdataplaneresponse_p.h
-  qtawsiotjobsdataplaneglobal.h
   startnextpendingjobexecutionrequest.h
   startnextpendingjobexecutionrequest_p.h
   startnextpendingjobexecutionresponse.h
@@ -24,13 +24,13 @@ add_library(QtAwsIoTJobsDataPlane
   updatejobexecutionrequest_p.h
   updatejobexecutionresponse.h
   updatejobexecutionresponse_p.h
+  iotjobsdataplaneclient.cpp
+  iotjobsdataplanerequest.cpp
+  iotjobsdataplaneresponse.cpp
   describejobexecutionrequest.cpp
   describejobexecutionresponse.cpp
   getpendingjobexecutionsrequest.cpp
   getpendingjobexecutionsresponse.cpp
-  iotjobsdataplaneclient.cpp
-  iotjobsdataplanerequest.cpp
-  iotjobsdataplaneresponse.cpp
   startnextpendingjobexecutionrequest.cpp
   startnextpendingjobexecutionresponse.cpp
   updatejobexecutionrequest.cpp

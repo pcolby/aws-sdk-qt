@@ -53,6 +53,8 @@
 #include "deletebotlocaleresponse.h"
 #include "deletebotversionrequest.h"
 #include "deletebotversionresponse.h"
+#include "deletecustomvocabularyrequest.h"
+#include "deletecustomvocabularyresponse.h"
 #include "deleteexportrequest.h"
 #include "deleteexportresponse.h"
 #include "deleteimportrequest.h"
@@ -67,14 +69,20 @@
 #include "deleteslotresponse.h"
 #include "deleteslottyperequest.h"
 #include "deleteslottyperesponse.h"
+#include "deleteutterancesrequest.h"
+#include "deleteutterancesresponse.h"
 #include "describebotrequest.h"
 #include "describebotresponse.h"
 #include "describebotaliasrequest.h"
 #include "describebotaliasresponse.h"
 #include "describebotlocalerequest.h"
 #include "describebotlocaleresponse.h"
+#include "describebotrecommendationrequest.h"
+#include "describebotrecommendationresponse.h"
 #include "describebotversionrequest.h"
 #include "describebotversionresponse.h"
+#include "describecustomvocabularymetadatarequest.h"
+#include "describecustomvocabularymetadataresponse.h"
 #include "describeexportrequest.h"
 #include "describeexportresponse.h"
 #include "describeimportrequest.h"
@@ -87,10 +95,14 @@
 #include "describeslotresponse.h"
 #include "describeslottyperequest.h"
 #include "describeslottyperesponse.h"
+#include "listaggregatedutterancesrequest.h"
+#include "listaggregatedutterancesresponse.h"
 #include "listbotaliasesrequest.h"
 #include "listbotaliasesresponse.h"
 #include "listbotlocalesrequest.h"
 #include "listbotlocalesresponse.h"
+#include "listbotrecommendationsrequest.h"
+#include "listbotrecommendationsresponse.h"
 #include "listbotversionsrequest.h"
 #include "listbotversionsresponse.h"
 #include "listbotsrequest.h"
@@ -105,14 +117,22 @@
 #include "listimportsresponse.h"
 #include "listintentsrequest.h"
 #include "listintentsresponse.h"
+#include "listrecommendedintentsrequest.h"
+#include "listrecommendedintentsresponse.h"
 #include "listslottypesrequest.h"
 #include "listslottypesresponse.h"
 #include "listslotsrequest.h"
 #include "listslotsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "searchassociatedtranscriptsrequest.h"
+#include "searchassociatedtranscriptsresponse.h"
+#include "startbotrecommendationrequest.h"
+#include "startbotrecommendationresponse.h"
 #include "startimportrequest.h"
 #include "startimportresponse.h"
+#include "stopbotrecommendationrequest.h"
+#include "stopbotrecommendationresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -123,6 +143,8 @@
 #include "updatebotaliasresponse.h"
 #include "updatebotlocalerequest.h"
 #include "updatebotlocaleresponse.h"
+#include "updatebotrecommendationrequest.h"
+#include "updatebotrecommendationresponse.h"
 #include "updateexportrequest.h"
 #include "updateexportresponse.h"
 #include "updateintentrequest.h"
@@ -139,7 +161,7 @@
 
 /*!
  * \namespace QtAws::LexModelsV2
- * \brief Contains classess for accessing Amazon Lex Model Building V2 (Lex Models V2).
+ * \brief Contains classess for accessing Amazon Lex Model Building V2.
  *
  * \inmodule QtAwsLexModelsV2
  *
@@ -151,7 +173,7 @@ namespace LexModelsV2 {
 
 /*!
  * \class QtAws::LexModelsV2::LexModelsV2Client
- * \brief The LexModelsV2Client class provides access to the Amazon Lex Model Building V2 (Lex Models V2) service.
+ * \brief The LexModelsV2Client class provides access to the Amazon Lex Model Building V2 service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsLexModelsV2
@@ -501,11 +523,25 @@ DeleteBotLocaleResponse * LexModelsV2Client::deleteBotLocale(const DeleteBotLoca
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specific version of a bot. To delete all version of a bot, use the <a>DeleteBot</a>
+ * Deletes a specific version of a bot. To delete all version of a bot, use the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DeleteBot.html">DeleteBot</a>
  */
 DeleteBotVersionResponse * LexModelsV2Client::deleteBotVersion(const DeleteBotVersionRequest &request)
 {
     return qobject_cast<DeleteBotVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * DeleteCustomVocabularyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a custom vocabulary from the specified locale in the specified
+ */
+DeleteCustomVocabularyResponse * LexModelsV2Client::deleteCustomVocabulary(const DeleteCustomVocabularyRequest &request)
+{
+    return qobject_cast<DeleteCustomVocabularyResponse *>(send(request));
 }
 
 /*!
@@ -613,6 +649,32 @@ DeleteSlotTypeResponse * LexModelsV2Client::deleteSlotType(const DeleteSlotTypeR
 
 /*!
  * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * DeleteUtterancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes stored
+ *
+ * utterances>
+ *
+ * Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListAggregatedUtterances.html">ListAggregatedUtterances</a>
+ * operation, and then stored indefinitely for use in improving the ability of your bot to respond to user
+ *
+ * input.>
+ *
+ * Use the <code>DeleteUtterances</code> operation to manually delete utterances for a specific session. When you use the
+ * <code>DeleteUtterances</code> operation, utterances stored for improving your bot's ability to respond to user input are
+ * deleted immediately. Utterances stored for use with the <code>ListAggregatedUtterances</code> operation are deleted
+ * after 15
+ */
+DeleteUtterancesResponse * LexModelsV2Client::deleteUtterances(const DeleteUtterancesRequest &request)
+{
+    return qobject_cast<DeleteUtterancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
  * DescribeBotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -652,6 +714,21 @@ DescribeBotLocaleResponse * LexModelsV2Client::describeBotLocale(const DescribeB
 
 /*!
  * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * DescribeBotRecommendationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides metadata information about a bot recommendation. This information will enable you to get a description on the
+ * request inputs, to download associated transcripts after processing is complete, and to download intents and slot-types
+ * generated by the bot
+ */
+DescribeBotRecommendationResponse * LexModelsV2Client::describeBotRecommendation(const DescribeBotRecommendationRequest &request)
+{
+    return qobject_cast<DescribeBotRecommendationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
  * DescribeBotVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -661,6 +738,19 @@ DescribeBotLocaleResponse * LexModelsV2Client::describeBotLocale(const DescribeB
 DescribeBotVersionResponse * LexModelsV2Client::describeBotVersion(const DescribeBotVersionRequest &request)
 {
     return qobject_cast<DescribeBotVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * DescribeCustomVocabularyMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides metadata information about a custom
+ */
+DescribeCustomVocabularyMetadataResponse * LexModelsV2Client::describeCustomVocabularyMetadata(const DescribeCustomVocabularyMetadataRequest &request)
+{
+    return qobject_cast<DescribeCustomVocabularyMetadataResponse *>(send(request));
 }
 
 /*!
@@ -743,6 +833,50 @@ DescribeSlotTypeResponse * LexModelsV2Client::describeSlotType(const DescribeSlo
 
 /*!
  * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * ListAggregatedUtterancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of utterances that users have sent to the
+ *
+ * bot>
+ *
+ * Utterances are aggregated by the text of the utterance. For example, all instances where customers used the phrase "I
+ * want to order pizza" are aggregated into the same line in the
+ *
+ * response>
+ *
+ * You can see both detected utterances and missed utterances. A detected utterance is where the bot properly recognized
+ * the utterance and activated the associated intent. A missed utterance was not recognized by the bot and didn't activate
+ * an
+ *
+ * intent>
+ *
+ * Utterances can be aggregated for a bot alias or for a bot version, but not both at the same
+ *
+ * time>
+ *
+ * Utterances statistics are not generated under the following
+ *
+ * conditions> <ul> <li>
+ *
+ * The <code>childDirected</code> field was set to true when the bot was
+ *
+ * created> </li> <li>
+ *
+ * You are using slot obfuscation with one or more
+ *
+ * slots> </li> <li>
+ *
+ * You opted out of participating in improving Amazon
+ */
+ListAggregatedUtterancesResponse * LexModelsV2Client::listAggregatedUtterances(const ListAggregatedUtterancesRequest &request)
+{
+    return qobject_cast<ListAggregatedUtterancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
  * ListBotAliasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -765,6 +899,19 @@ ListBotAliasesResponse * LexModelsV2Client::listBotAliases(const ListBotAliasesR
 ListBotLocalesResponse * LexModelsV2Client::listBotLocales(const ListBotLocalesRequest &request)
 {
     return qobject_cast<ListBotLocalesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * ListBotRecommendationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get a list of bot recommendations that meet the specified
+ */
+ListBotRecommendationsResponse * LexModelsV2Client::listBotRecommendations(const ListBotRecommendationsRequest &request)
+{
+    return qobject_cast<ListBotRecommendationsResponse *>(send(request));
 }
 
 /*!
@@ -815,7 +962,7 @@ ListBotsResponse * LexModelsV2Client::listBots(const ListBotsRequest &request)
  *
  * To use a built-in intent as a the base for your own intent, include the built-in intent signature in the
  * <code>parentIntentSignature</code> parameter when you call the <code>CreateIntent</code> operation. For more
- * information, see
+ * information, see <a
  */
 ListBuiltInIntentsResponse * LexModelsV2Client::listBuiltInIntents(const ListBuiltInIntentsRequest &request)
 {
@@ -841,7 +988,7 @@ ListBuiltInSlotTypesResponse * LexModelsV2Client::listBuiltInSlotTypes(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the exports for a bot or bot locale. Exports are kept in the list for 7
+ * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7
  */
 ListExportsResponse * LexModelsV2Client::listExports(const ListExportsRequest &request)
 {
@@ -854,7 +1001,7 @@ ListExportsResponse * LexModelsV2Client::listExports(const ListExportsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the imports for a bot or bot locale. Imports are kept in the list for 7
+ * Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7
  */
 ListImportsResponse * LexModelsV2Client::listImports(const ListImportsRequest &request)
 {
@@ -872,6 +1019,19 @@ ListImportsResponse * LexModelsV2Client::listImports(const ListImportsRequest &r
 ListIntentsResponse * LexModelsV2Client::listIntents(const ListIntentsRequest &request)
 {
     return qobject_cast<ListIntentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * ListRecommendedIntentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of recommended intents provided by the bot recommendation that you can use in your
+ */
+ListRecommendedIntentsResponse * LexModelsV2Client::listRecommendedIntents(const ListRecommendedIntentsRequest &request)
+{
+    return qobject_cast<ListRecommendedIntentsResponse *>(send(request));
 }
 
 /*!
@@ -915,15 +1075,54 @@ ListTagsForResourceResponse * LexModelsV2Client::listTagsForResource(const ListT
 
 /*!
  * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * SearchAssociatedTranscriptsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Search for associated transcripts that meet the specified
+ */
+SearchAssociatedTranscriptsResponse * LexModelsV2Client::searchAssociatedTranscripts(const SearchAssociatedTranscriptsRequest &request)
+{
+    return qobject_cast<SearchAssociatedTranscriptsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * StartBotRecommendationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this to provide your transcript data, and to start the bot recommendation
+ */
+StartBotRecommendationResponse * LexModelsV2Client::startBotRecommendation(const StartBotRecommendationRequest &request)
+{
+    return qobject_cast<StartBotRecommendationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
  * StartImportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts importing a bot or bot locale from a zip archive that you uploaded to an S3
+ * Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3
  */
 StartImportResponse * LexModelsV2Client::startImport(const StartImportRequest &request)
 {
     return qobject_cast<StartImportResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * StopBotRecommendationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stop an already running Bot Recommendation
+ */
+StopBotRecommendationResponse * LexModelsV2Client::stopBotRecommendation(const StopBotRecommendationRequest &request)
+{
+    return qobject_cast<StopBotRecommendationResponse *>(send(request));
 }
 
 /*!
@@ -994,6 +1193,19 @@ UpdateBotLocaleResponse * LexModelsV2Client::updateBotLocale(const UpdateBotLoca
 
 /*!
  * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
+ * UpdateBotRecommendationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing bot recommendation
+ */
+UpdateBotRecommendationResponse * LexModelsV2Client::updateBotRecommendation(const UpdateBotRecommendationRequest &request)
+{
+    return qobject_cast<UpdateBotRecommendationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelsV2Client service, and returns a pointer to an
  * UpdateExportResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1003,7 +1215,8 @@ UpdateBotLocaleResponse * LexModelsV2Client::updateBotLocale(const UpdateBotLoca
  * archive>
  *
  * The password is not required. If you don't supply a password, Amazon Lex generates a zip file that is not protected by a
- * password. This is the archive that is available at the pre-signed S3 URL provided by the
+ * password. This is the archive that is available at the pre-signed S3 URL provided by the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a>
  */
 UpdateExportResponse * LexModelsV2Client::updateExport(const UpdateExportRequest &request)
 {

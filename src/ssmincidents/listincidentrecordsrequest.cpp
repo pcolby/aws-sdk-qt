@@ -23,17 +23,17 @@
 #include "ssmincidentsrequest_p.h"
 
 namespace QtAws {
-namespace SSMIncidents {
+namespace SsmIncidents {
 
 /*!
- * \class QtAws::SSMIncidents::ListIncidentRecordsRequest
- * \brief The ListIncidentRecordsRequest class provides an interface for SSMIncidents ListIncidentRecords requests.
+ * \class QtAws::SsmIncidents::ListIncidentRecordsRequest
+ * \brief The ListIncidentRecordsRequest class provides an interface for SsmIncidents ListIncidentRecords requests.
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  *
- *  AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
- *  incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in quality of
- *  services.
+ *  Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ *  incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ *  reduction in quality of services.
  * 
  *  </p
  * 
@@ -42,14 +42,14 @@ namespace SSMIncidents {
  *  time-to-resolution of critical incidents, Incident Manager automates response plans and enables responder team
  *  escalation.
  *
- * \sa SSMIncidentsClient::listIncidentRecords
+ * \sa SsmIncidentsClient::listIncidentRecords
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 ListIncidentRecordsRequest::ListIncidentRecordsRequest(const ListIncidentRecordsRequest &other)
-    : SSMIncidentsRequest(new ListIncidentRecordsRequestPrivate(*other.d_func(), this))
+    : SsmIncidentsRequest(new ListIncidentRecordsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -58,7 +58,7 @@ ListIncidentRecordsRequest::ListIncidentRecordsRequest(const ListIncidentRecords
  * Constructs a ListIncidentRecordsRequest object.
  */
 ListIncidentRecordsRequest::ListIncidentRecordsRequest()
-    : SSMIncidentsRequest(new ListIncidentRecordsRequestPrivate(SSMIncidentsRequest::ListIncidentRecordsAction, this))
+    : SsmIncidentsRequest(new ListIncidentRecordsRequestPrivate(SsmIncidentsRequest::ListIncidentRecordsAction, this))
 {
 
 }
@@ -83,20 +83,20 @@ QtAws::Core::AwsAbstractResponse * ListIncidentRecordsRequest::response(QNetwork
 }
 
 /*!
- * \class QtAws::SSMIncidents::ListIncidentRecordsRequestPrivate
+ * \class QtAws::SsmIncidents::ListIncidentRecordsRequestPrivate
  * \brief The ListIncidentRecordsRequestPrivate class provides private implementation for ListIncidentRecordsRequest.
  * \internal
  *
- * \inmodule QtAwsSSMIncidents
+ * \inmodule QtAwsSsmIncidents
  */
 
 /*!
- * Constructs a ListIncidentRecordsRequestPrivate object for SSMIncidents \a action,
+ * Constructs a ListIncidentRecordsRequestPrivate object for SsmIncidents \a action,
  * with public implementation \a q.
  */
 ListIncidentRecordsRequestPrivate::ListIncidentRecordsRequestPrivate(
-    const SSMIncidentsRequest::Action action, ListIncidentRecordsRequest * const q)
-    : SSMIncidentsRequestPrivate(action, q)
+    const SsmIncidentsRequest::Action action, ListIncidentRecordsRequest * const q)
+    : SsmIncidentsRequestPrivate(action, q)
 {
 
 }
@@ -109,10 +109,10 @@ ListIncidentRecordsRequestPrivate::ListIncidentRecordsRequestPrivate(
  */
 ListIncidentRecordsRequestPrivate::ListIncidentRecordsRequestPrivate(
     const ListIncidentRecordsRequestPrivate &other, ListIncidentRecordsRequest * const q)
-    : SSMIncidentsRequestPrivate(other, q)
+    : SsmIncidentsRequestPrivate(other, q)
 {
 
 }
 
-} // namespace SSMIncidents
+} // namespace SsmIncidents
 } // namespace QtAws

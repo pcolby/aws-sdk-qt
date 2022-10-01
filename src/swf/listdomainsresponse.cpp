@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SWF {
+namespace Swf {
 
 /*!
- * \class QtAws::SWF::ListDomainsResponse
- * \brief The ListDomainsResponse class provides an interace for SWF ListDomains responses.
+ * \class QtAws::Swf::ListDomainsResponse
+ * \brief The ListDomainsResponse class provides an interace for Swf ListDomains responses.
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -77,7 +77,7 @@ const ListDomainsRequest * ListDomainsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful SWF ListDomains \a response.
+ * Parses a successful Swf ListDomains \a response.
  */
 void ListDomainsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,11 +87,11 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::ListDomainsResponsePrivate
+ * \class QtAws::Swf::ListDomainsResponsePrivate
  * \brief The ListDomainsResponsePrivate class provides private implementation for ListDomainsResponse.
  * \internal
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  */
 
 /*!
@@ -104,7 +104,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 }
 
 /*!
- * Parses a SWF ListDomains response element from \a xml.
+ * Parses a Swf ListDomains response element from \a xml.
  */
 void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
 {
@@ -112,5 +112,5 @@ void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SWF
+} // namespace Swf
 } // namespace QtAws

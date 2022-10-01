@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace WAFRegional {
+namespace WafRegional {
 
 /*!
- * \class QtAws::WAFRegional::ListGeoMatchSetsResponse
- * \brief The ListGeoMatchSetsResponse class provides an interace for WAFRegional ListGeoMatchSets responses.
+ * \class QtAws::WafRegional::ListGeoMatchSetsResponse
+ * \brief The ListGeoMatchSetsResponse class provides an interace for WafRegional ListGeoMatchSets responses.
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  *
  *  <note>
  * 
@@ -57,7 +57,7 @@ namespace WAFRegional {
  *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
  *  developer
  *
- * \sa WAFRegionalClient::listGeoMatchSets
+ * \sa WafRegionalClient::listGeoMatchSets
  */
 
 /*!
@@ -67,7 +67,7 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
         const ListGeoMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
+    : WafRegionalResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListGeoMatchSetsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful WAFRegional ListGeoMatchSets \a response.
+ * Parses a successful WafRegional ListGeoMatchSets \a response.
  */
 void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,24 +94,24 @@ void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAFRegional::ListGeoMatchSetsResponsePrivate
+ * \class QtAws::WafRegional::ListGeoMatchSetsResponsePrivate
  * \brief The ListGeoMatchSetsResponsePrivate class provides private implementation for ListGeoMatchSetsResponse.
  * \internal
  *
- * \inmodule QtAwsWAFRegional
+ * \inmodule QtAwsWafRegional
  */
 
 /*!
  * Constructs a ListGeoMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
-    ListGeoMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
+    ListGeoMatchSetsResponse * const q) : WafRegionalResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a WAFRegional ListGeoMatchSets response element from \a xml.
+ * Parses a WafRegional ListGeoMatchSets response element from \a xml.
  */
 void ListGeoMatchSetsResponsePrivate::parseListGeoMatchSetsResponse(QXmlStreamReader &xml)
 {
@@ -119,5 +119,5 @@ void ListGeoMatchSetsResponsePrivate::parseListGeoMatchSetsResponse(QXmlStreamRe
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace WAFRegional
+} // namespace WafRegional
 } // namespace QtAws

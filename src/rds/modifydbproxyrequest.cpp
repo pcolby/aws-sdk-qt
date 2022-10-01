@@ -23,16 +23,15 @@
 #include "rdsrequest_p.h"
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyRequest
- * \brief The ModifyDBProxyRequest class provides an interface for RDS ModifyDBProxy requests.
+ * \class QtAws::Rds::ModifyDBProxyRequest
+ * \brief The ModifyDBProxyRequest class provides an interface for Rds ModifyDBProxy requests.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -137,11 +136,11 @@ QtAws::Core::AwsAbstractResponse * ModifyDBProxyRequest::response(QNetworkReply 
 }
 
 /*!
- * \class QtAws::RDS::ModifyDBProxyRequestPrivate
+ * \class QtAws::Rds::ModifyDBProxyRequestPrivate
  * \brief The ModifyDBProxyRequestPrivate class provides private implementation for ModifyDBProxyRequest.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -168,5 +167,5 @@ ModifyDBProxyRequestPrivate::ModifyDBProxyRequestPrivate(
 
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

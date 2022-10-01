@@ -24,11 +24,11 @@
 #include "getinlinepolicyforpermissionsetrequest.h"
 
 namespace QtAws {
-namespace SSOAdmin {
+namespace SsoAdmin {
 
 class GetInlinePolicyForPermissionSetResponsePrivate;
 
-class QTAWSSSOADMIN_EXPORT GetInlinePolicyForPermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT GetInlinePolicyForPermissionSetResponse : public SsoAdminResponse {
     Q_OBJECT
 
 public:
@@ -45,7 +45,7 @@ private:
 
 };
 
-} // namespace SSOAdmin
+} // namespace SsoAdmin
 } // namespace QtAws
 
 #endif

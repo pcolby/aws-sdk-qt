@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSEMRCONTAINERS_LIBRARY)
 
-add_library(QtAwsEMRContainers
+add_library(QtAwsEmrcontainers
+  qtawsemrcontainersglobal.h
+  emrcontainersclient.h
+  emrcontainersclient_p.h
+  emrcontainersrequest.h
+  emrcontainersrequest_p.h
+  emrcontainersresponse.h
+  emrcontainersresponse_p.h
   canceljobrunrequest.h
   canceljobrunrequest_p.h
   canceljobrunresponse.h
@@ -33,12 +40,6 @@ add_library(QtAwsEMRContainers
   describevirtualclusterrequest_p.h
   describevirtualclusterresponse.h
   describevirtualclusterresponse_p.h
-  emrcontainersclient.h
-  emrcontainersclient_p.h
-  emrcontainersrequest.h
-  emrcontainersrequest_p.h
-  emrcontainersresponse.h
-  emrcontainersresponse_p.h
   listjobrunsrequest.h
   listjobrunsrequest_p.h
   listjobrunsresponse.h
@@ -55,7 +56,6 @@ add_library(QtAwsEMRContainers
   listvirtualclustersrequest_p.h
   listvirtualclustersresponse.h
   listvirtualclustersresponse_p.h
-  qtawsemrcontainersglobal.h
   startjobrunrequest.h
   startjobrunrequest_p.h
   startjobrunresponse.h
@@ -68,6 +68,9 @@ add_library(QtAwsEMRContainers
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  emrcontainersclient.cpp
+  emrcontainersrequest.cpp
+  emrcontainersresponse.cpp
   canceljobrunrequest.cpp
   canceljobrunresponse.cpp
   createmanagedendpointrequest.cpp
@@ -84,9 +87,6 @@ add_library(QtAwsEMRContainers
   describemanagedendpointresponse.cpp
   describevirtualclusterrequest.cpp
   describevirtualclusterresponse.cpp
-  emrcontainersclient.cpp
-  emrcontainersrequest.cpp
-  emrcontainersresponse.cpp
   listjobrunsrequest.cpp
   listjobrunsresponse.cpp
   listmanagedendpointsrequest.cpp
@@ -102,7 +102,7 @@ add_library(QtAwsEMRContainers
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-target_link_libraries(QtAwsEMRContainers
+target_link_libraries(QtAwsEmrcontainers
   PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

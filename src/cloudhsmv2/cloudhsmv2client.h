@@ -27,9 +27,9 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace CloudHSMV2 {
+namespace CloudHsmV2 {
 
-class CloudHSMV2ClientPrivate;
+class CloudHsmV2ClientPrivate;
 class CopyBackupToRegionRequest;
 class CopyBackupToRegionResponse;
 class CreateClusterRequest;
@@ -61,17 +61,17 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDHSMV2_EXPORT CloudHsmV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:
-    CloudHSMV2Client(
+    CloudHsmV2Client(
         const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
         QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    explicit CloudHSMV2Client(
+    explicit CloudHsmV2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -94,12 +94,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
-    Q_DECLARE_PRIVATE(CloudHSMV2Client)
-    Q_DISABLE_COPY(CloudHSMV2Client)
+    Q_DECLARE_PRIVATE(CloudHsmV2Client)
+    Q_DISABLE_COPY(CloudHsmV2Client)
 
 };
 
-} // namespace CloudHSMV2
+} // namespace CloudHsmV2
 } // namespace QtAws
 
 #endif

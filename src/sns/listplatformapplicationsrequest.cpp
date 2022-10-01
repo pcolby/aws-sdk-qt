@@ -23,13 +23,13 @@
 #include "snsrequest_p.h"
 
 namespace QtAws {
-namespace SNS {
+namespace Sns {
 
 /*!
- * \class QtAws::SNS::ListPlatformApplicationsRequest
- * \brief The ListPlatformApplicationsRequest class provides an interface for SNS ListPlatformApplications requests.
+ * \class QtAws::Sns::ListPlatformApplicationsRequest
+ * \brief The ListPlatformApplicationsRequest class provides an interface for Sns ListPlatformApplications requests.
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -93,11 +93,11 @@ QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNe
 }
 
 /*!
- * \class QtAws::SNS::ListPlatformApplicationsRequestPrivate
+ * \class QtAws::Sns::ListPlatformApplicationsRequestPrivate
  * \brief The ListPlatformApplicationsRequestPrivate class provides private implementation for ListPlatformApplicationsRequest.
  * \internal
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  */
 
 /*!
@@ -124,5 +124,5 @@ ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
 
 }
 
-} // namespace SNS
+} // namespace Sns
 } // namespace QtAws

@@ -1,6 +1,13 @@
 add_compile_definitions(QTAWSDAX_LIBRARY)
 
 add_library(QtAwsDax
+  qtawsdaxglobal.h
+  daxclient.h
+  daxclient_p.h
+  daxrequest.h
+  daxrequest_p.h
+  daxresponse.h
+  daxresponse_p.h
   createclusterrequest.h
   createclusterrequest_p.h
   createclusterresponse.h
@@ -13,12 +20,6 @@ add_library(QtAwsDax
   createsubnetgrouprequest_p.h
   createsubnetgroupresponse.h
   createsubnetgroupresponse_p.h
-  daxclient.h
-  daxclient_p.h
-  daxrequest.h
-  daxrequest_p.h
-  daxresponse.h
-  daxresponse_p.h
   decreasereplicationfactorrequest.h
   decreasereplicationfactorrequest_p.h
   decreasereplicationfactorresponse.h
@@ -67,7 +68,6 @@ add_library(QtAwsDax
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
-  qtawsdaxglobal.h
   rebootnoderequest.h
   rebootnoderequest_p.h
   rebootnoderesponse.h
@@ -92,15 +92,15 @@ add_library(QtAwsDax
   updatesubnetgrouprequest_p.h
   updatesubnetgroupresponse.h
   updatesubnetgroupresponse_p.h
+  daxclient.cpp
+  daxrequest.cpp
+  daxresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
   createparametergrouprequest.cpp
   createparametergroupresponse.cpp
   createsubnetgrouprequest.cpp
   createsubnetgroupresponse.cpp
-  daxclient.cpp
-  daxrequest.cpp
-  daxresponse.cpp
   decreasereplicationfactorrequest.cpp
   decreasereplicationfactorresponse.cpp
   deleteclusterrequest.cpp

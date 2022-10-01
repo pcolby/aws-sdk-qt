@@ -24,14 +24,14 @@
 #include "createsuitedefinitionrequest.h"
 
 namespace QtAws {
-namespace IoTDeviceAdvisor {
+namespace IotDeviceAdvisor {
 
 class CreateSuiteDefinitionRequest;
 
-class CreateSuiteDefinitionRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class CreateSuiteDefinitionRequestPrivate : public IotDeviceAdvisorRequestPrivate {
 
 public:
-    CreateSuiteDefinitionRequestPrivate(const IoTDeviceAdvisorRequest::Action action,
+    CreateSuiteDefinitionRequestPrivate(const IotDeviceAdvisorRequest::Action action,
                                    CreateSuiteDefinitionRequest * const q);
     CreateSuiteDefinitionRequestPrivate(const CreateSuiteDefinitionRequestPrivate &other,
                                    CreateSuiteDefinitionRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace IoTDeviceAdvisor
+} // namespace IotDeviceAdvisor
 } // namespace QtAws
 
 #endif

@@ -25,16 +25,15 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace RDS {
+namespace Rds {
 
 /*!
- * \class QtAws::RDS::DescribeReservedDBInstancesResponse
- * \brief The DescribeReservedDBInstancesResponse class provides an interace for RDS DescribeReservedDBInstances responses.
+ * \class QtAws::Rds::DescribeReservedDBInstancesResponse
+ * \brief The DescribeReservedDBInstancesResponse class provides an interace for Rds DescribeReservedDBInstances responses.
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  *  <fullname>Amazon Relational Database Service</fullname>
- * 
  * 
  *  </p
  * 
@@ -125,7 +124,7 @@ const DescribeReservedDBInstancesRequest * DescribeReservedDBInstancesResponse::
 
 /*!
  * \reimp
- * Parses a successful RDS DescribeReservedDBInstances \a response.
+ * Parses a successful Rds DescribeReservedDBInstances \a response.
  */
 void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,11 +134,11 @@ void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::DescribeReservedDBInstancesResponsePrivate
+ * \class QtAws::Rds::DescribeReservedDBInstancesResponsePrivate
  * \brief The DescribeReservedDBInstancesResponsePrivate class provides private implementation for DescribeReservedDBInstancesResponse.
  * \internal
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  */
 
 /*!
@@ -152,7 +151,7 @@ DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponseP
 }
 
 /*!
- * Parses a RDS DescribeReservedDBInstances response element from \a xml.
+ * Parses a Rds DescribeReservedDBInstances response element from \a xml.
  */
 void DescribeReservedDBInstancesResponsePrivate::parseDescribeReservedDBInstancesResponse(QXmlStreamReader &xml)
 {
@@ -160,5 +159,5 @@ void DescribeReservedDBInstancesResponsePrivate::parseDescribeReservedDBInstance
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace RDS
+} // namespace Rds
 } // namespace QtAws

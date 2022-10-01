@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace SES {
+namespace Ses {
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetSendingEnabledResponse
- * \brief The UpdateConfigurationSetSendingEnabledResponse class provides an interace for SES UpdateConfigurationSetSendingEnabled responses.
+ * \class QtAws::Ses::UpdateConfigurationSetSendingEnabledResponse
+ * \brief The UpdateConfigurationSetSendingEnabledResponse class provides an interace for Ses UpdateConfigurationSetSendingEnabled responses.
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -72,7 +72,7 @@ const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendin
 
 /*!
  * \reimp
- * Parses a successful SES UpdateConfigurationSetSendingEnabled \a response.
+ * Parses a successful Ses UpdateConfigurationSetSendingEnabled \a response.
  */
 void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -82,11 +82,11 @@ void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
- * \class QtAws::SES::UpdateConfigurationSetSendingEnabledResponsePrivate
+ * \class QtAws::Ses::UpdateConfigurationSetSendingEnabledResponsePrivate
  * \brief The UpdateConfigurationSetSendingEnabledResponsePrivate class provides private implementation for UpdateConfigurationSetSendingEnabledResponse.
  * \internal
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  */
 
 /*!
@@ -99,7 +99,7 @@ UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendi
 }
 
 /*!
- * Parses a SES UpdateConfigurationSetSendingEnabled response element from \a xml.
+ * Parses a Ses UpdateConfigurationSetSendingEnabled response element from \a xml.
  */
 void UpdateConfigurationSetSendingEnabledResponsePrivate::parseUpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml)
 {
@@ -107,5 +107,5 @@ void UpdateConfigurationSetSendingEnabledResponsePrivate::parseUpdateConfigurati
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace SES
+} // namespace Ses
 } // namespace QtAws

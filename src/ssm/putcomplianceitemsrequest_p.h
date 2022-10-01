@@ -24,7 +24,7 @@
 #include "putcomplianceitemsrequest.h"
 
 namespace QtAws {
-namespace SSM {
+namespace Ssm {
 
 class PutComplianceItemsRequest;
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace SSM
+} // namespace Ssm
 } // namespace QtAws
 
 #endif

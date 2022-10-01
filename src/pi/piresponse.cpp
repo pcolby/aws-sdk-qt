@@ -24,13 +24,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace PI {
+namespace Pi {
 
 /*!
- * \class QtAws::PI::PiResponse
- * \brief The PiResponse class provides an interface for PI responses.
+ * \class QtAws::Pi::PiResponse
+ * \brief The PiResponse class provides an interface for Pi responses.
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
@@ -76,11 +76,11 @@ void PiResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::PI::PiResponsePrivate
+ * \class QtAws::Pi::PiResponsePrivate
  * \brief The PiResponsePrivate class provides private implementation for PiResponse.
  * \internal
  *
- * \inmodule QtAwsPI
+ * \inmodule QtAwsPi
  */
 
 /*!
@@ -92,5 +92,5 @@ PiResponsePrivate::PiResponsePrivate(
 
 }
 
-} // namespace PI
+} // namespace Pi
 } // namespace QtAws

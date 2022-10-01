@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderResponse
- * \brief The AddClientIDToOpenIDConnectProviderResponse class provides an interace for IAM AddClientIDToOpenIDConnectProvider responses.
+ * \class QtAws::Iam::AddClientIDToOpenIDConnectProviderResponse
+ * \brief The AddClientIDToOpenIDConnectProviderResponse class provides an interace for Iam AddClientIDToOpenIDConnectProvider responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::addClientIDToOpenIDConnectProvider
  */
@@ -68,7 +68,7 @@ const AddClientIDToOpenIDConnectProviderRequest * AddClientIDToOpenIDConnectProv
 
 /*!
  * \reimp
- * Parses a successful IAM AddClientIDToOpenIDConnectProvider \a response.
+ * Parses a successful Iam AddClientIDToOpenIDConnectProvider \a response.
  */
 void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
- * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderResponsePrivate
+ * \class QtAws::Iam::AddClientIDToOpenIDConnectProviderResponsePrivate
  * \brief The AddClientIDToOpenIDConnectProviderResponsePrivate class provides private implementation for AddClientIDToOpenIDConnectProviderResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectPro
 }
 
 /*!
- * Parses a IAM AddClientIDToOpenIDConnectProvider response element from \a xml.
+ * Parses a Iam AddClientIDToOpenIDConnectProvider response element from \a xml.
  */
 void AddClientIDToOpenIDConnectProviderResponsePrivate::parseAddClientIDToOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void AddClientIDToOpenIDConnectProviderResponsePrivate::parseAddClientIDToOpenID
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws

@@ -23,13 +23,13 @@
 #include "wafrequest_p.h"
 
 namespace QtAws {
-namespace WAF {
+namespace Waf {
 
 /*!
- * \class QtAws::WAF::DeletePermissionPolicyRequest
- * \brief The DeletePermissionPolicyRequest class provides an interface for WAF DeletePermissionPolicy requests.
+ * \class QtAws::Waf::DeletePermissionPolicyRequest
+ * \brief The DeletePermissionPolicyRequest class provides an interface for Waf DeletePermissionPolicy requests.
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  *  <note>
  * 
@@ -94,11 +94,11 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
 }
 
 /*!
- * \class QtAws::WAF::DeletePermissionPolicyRequestPrivate
+ * \class QtAws::Waf::DeletePermissionPolicyRequestPrivate
  * \brief The DeletePermissionPolicyRequestPrivate class provides private implementation for DeletePermissionPolicyRequest.
  * \internal
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  */
 
 /*!
@@ -125,5 +125,5 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
 
 }
 
-} // namespace WAF
+} // namespace Waf
 } // namespace QtAws

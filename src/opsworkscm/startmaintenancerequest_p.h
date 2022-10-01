@@ -24,14 +24,14 @@
 #include "startmaintenancerequest.h"
 
 namespace QtAws {
-namespace OpsWorksCM {
+namespace OpsWorksCm {
 
 class StartMaintenanceRequest;
 
-class StartMaintenanceRequestPrivate : public OpsWorksCMRequestPrivate {
+class StartMaintenanceRequestPrivate : public OpsWorksCmRequestPrivate {
 
 public:
-    StartMaintenanceRequestPrivate(const OpsWorksCMRequest::Action action,
+    StartMaintenanceRequestPrivate(const OpsWorksCmRequest::Action action,
                                    StartMaintenanceRequest * const q);
     StartMaintenanceRequestPrivate(const StartMaintenanceRequestPrivate &other,
                                    StartMaintenanceRequest * const q);
@@ -41,7 +41,7 @@ private:
 
 };
 
-} // namespace OpsWorksCM
+} // namespace OpsWorksCm
 } // namespace QtAws
 
 #endif

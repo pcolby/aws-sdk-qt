@@ -24,33 +24,33 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace CodeStarNotifications {
+namespace CodestarNotifications {
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsResponse
- * \brief The CodeStarNotificationsResponse class provides an interface for CodeStarNotifications responses.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsResponse
+ * \brief The CodestarNotificationsResponse class provides an interface for CodestarNotifications responses.
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a CodeStarNotificationsResponse object with parent \a parent.
+ * Constructs a CodestarNotificationsResponse object with parent \a parent.
  */
-CodeStarNotificationsResponse::CodeStarNotificationsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CodeStarNotificationsResponsePrivate(this), parent)
+CodestarNotificationsResponse::CodestarNotificationsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new CodestarNotificationsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a CodeStarNotificationsResponse object with private implementation \a d,
+ * Constructs a CodestarNotificationsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from CodeStarNotificationsResponsePrivate.
+ * implementation that inherits from CodestarNotificationsResponsePrivate.
  */
-CodeStarNotificationsResponse::CodeStarNotificationsResponse(CodeStarNotificationsResponsePrivate * const d, QObject * const parent)
+CodestarNotificationsResponse::CodestarNotificationsResponse(CodestarNotificationsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ CodeStarNotificationsResponse::CodeStarNotificationsResponse(CodeStarNotificatio
 /*!
  * \reimp
  */
-void CodeStarNotificationsResponse::parseFailure(QIODevice &response)
+void CodestarNotificationsResponse::parseFailure(QIODevice &response)
 {
-    //Q_D(CodeStarNotificationsResponse);
+    //Q_D(CodestarNotificationsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,21 +76,21 @@ void CodeStarNotificationsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::CodeStarNotifications::CodeStarNotificationsResponsePrivate
- * \brief The CodeStarNotificationsResponsePrivate class provides private implementation for CodeStarNotificationsResponse.
+ * \class QtAws::CodestarNotifications::CodestarNotificationsResponsePrivate
+ * \brief The CodestarNotificationsResponsePrivate class provides private implementation for CodestarNotificationsResponse.
  * \internal
  *
- * \inmodule QtAwsCodeStarNotifications
+ * \inmodule QtAwsCodestarNotifications
  */
 
 /*!
- * Constructs a CodeStarNotificationsResponsePrivate object with public implementation \a q.
+ * Constructs a CodestarNotificationsResponsePrivate object with public implementation \a q.
  */
-CodeStarNotificationsResponsePrivate::CodeStarNotificationsResponsePrivate(
-    CodeStarNotificationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+CodestarNotificationsResponsePrivate::CodestarNotificationsResponsePrivate(
+    CodestarNotificationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
 
-} // namespace CodeStarNotifications
+} // namespace CodestarNotifications
 } // namespace QtAws

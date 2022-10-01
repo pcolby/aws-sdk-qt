@@ -25,17 +25,17 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace DocDB {
+namespace DocDb {
 
 /*!
- * \class QtAws::DocDB::DescribeDBClustersResponse
- * \brief The DescribeDBClustersResponse class provides an interace for DocDB DescribeDBClusters responses.
+ * \class QtAws::DocDb::DescribeDBClustersResponse
+ * \brief The DescribeDBClustersResponse class provides an interace for DocDb DescribeDBClusters responses.
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  *
  *  Amazon DocumentDB API
  *
- * \sa DocDBClient::describeDBClusters
+ * \sa DocDbClient::describeDBClusters
  */
 
 /*!
@@ -45,7 +45,7 @@ DescribeDBClustersResponse::DescribeDBClustersResponse(
         const DescribeDBClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DocDBResponse(new DescribeDBClustersResponsePrivate(this), parent)
+    : DocDbResponse(new DescribeDBClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClustersRequest(request));
     setReply(reply);
@@ -62,7 +62,7 @@ const DescribeDBClustersRequest * DescribeDBClustersResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful DocDB DescribeDBClusters \a response.
+ * Parses a successful DocDb DescribeDBClusters \a response.
  */
 void DescribeDBClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -72,24 +72,24 @@ void DescribeDBClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DocDB::DescribeDBClustersResponsePrivate
+ * \class QtAws::DocDb::DescribeDBClustersResponsePrivate
  * \brief The DescribeDBClustersResponsePrivate class provides private implementation for DescribeDBClustersResponse.
  * \internal
  *
- * \inmodule QtAwsDocDB
+ * \inmodule QtAwsDocDb
  */
 
 /*!
  * Constructs a DescribeDBClustersResponsePrivate object with public implementation \a q.
  */
 DescribeDBClustersResponsePrivate::DescribeDBClustersResponsePrivate(
-    DescribeDBClustersResponse * const q) : DocDBResponsePrivate(q)
+    DescribeDBClustersResponse * const q) : DocDbResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a DocDB DescribeDBClusters response element from \a xml.
+ * Parses a DocDb DescribeDBClusters response element from \a xml.
  */
 void DescribeDBClustersResponsePrivate::parseDescribeDBClustersResponse(QXmlStreamReader &xml)
 {
@@ -97,5 +97,5 @@ void DescribeDBClustersResponsePrivate::parseDescribeDBClustersResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace DocDB
+} // namespace DocDb
 } // namespace QtAws

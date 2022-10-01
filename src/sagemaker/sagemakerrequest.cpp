@@ -39,6 +39,7 @@ namespace SageMaker {
  * \value AddAssociationAction SageMaker AddAssociation action.
  * \value AddTagsAction SageMaker AddTags action.
  * \value AssociateTrialComponentAction SageMaker AssociateTrialComponent action.
+ * \value BatchDescribeModelPackageAction SageMaker BatchDescribeModelPackage action.
  * \value CreateActionAction SageMaker CreateAction action.
  * \value CreateAlgorithmAction SageMaker CreateAlgorithm action.
  * \value CreateAppAction SageMaker CreateApp action.
@@ -51,6 +52,8 @@ namespace SageMaker {
  * \value CreateDataQualityJobDefinitionAction SageMaker CreateDataQualityJobDefinition action.
  * \value CreateDeviceFleetAction SageMaker CreateDeviceFleet action.
  * \value CreateDomainAction SageMaker CreateDomain action.
+ * \value CreateEdgeDeploymentPlanAction SageMaker CreateEdgeDeploymentPlan action.
+ * \value CreateEdgeDeploymentStageAction SageMaker CreateEdgeDeploymentStage action.
  * \value CreateEdgePackagingJobAction SageMaker CreateEdgePackagingJob action.
  * \value CreateEndpointAction SageMaker CreateEndpoint action.
  * \value CreateEndpointConfigAction SageMaker CreateEndpointConfig action.
@@ -61,6 +64,7 @@ namespace SageMaker {
  * \value CreateHyperParameterTuningJobAction SageMaker CreateHyperParameterTuningJob action.
  * \value CreateImageAction SageMaker CreateImage action.
  * \value CreateImageVersionAction SageMaker CreateImageVersion action.
+ * \value CreateInferenceRecommendationsJobAction SageMaker CreateInferenceRecommendationsJob action.
  * \value CreateLabelingJobAction SageMaker CreateLabelingJob action.
  * \value CreateModelAction SageMaker CreateModel action.
  * \value CreateModelBiasJobDefinitionAction SageMaker CreateModelBiasJobDefinition action.
@@ -76,6 +80,7 @@ namespace SageMaker {
  * \value CreatePresignedNotebookInstanceUrlAction SageMaker CreatePresignedNotebookInstanceUrl action.
  * \value CreateProcessingJobAction SageMaker CreateProcessingJob action.
  * \value CreateProjectAction SageMaker CreateProject action.
+ * \value CreateStudioLifecycleConfigAction SageMaker CreateStudioLifecycleConfig action.
  * \value CreateTrainingJobAction SageMaker CreateTrainingJob action.
  * \value CreateTransformJobAction SageMaker CreateTransformJob action.
  * \value CreateTrialAction SageMaker CreateTrial action.
@@ -94,6 +99,8 @@ namespace SageMaker {
  * \value DeleteDataQualityJobDefinitionAction SageMaker DeleteDataQualityJobDefinition action.
  * \value DeleteDeviceFleetAction SageMaker DeleteDeviceFleet action.
  * \value DeleteDomainAction SageMaker DeleteDomain action.
+ * \value DeleteEdgeDeploymentPlanAction SageMaker DeleteEdgeDeploymentPlan action.
+ * \value DeleteEdgeDeploymentStageAction SageMaker DeleteEdgeDeploymentStage action.
  * \value DeleteEndpointAction SageMaker DeleteEndpoint action.
  * \value DeleteEndpointConfigAction SageMaker DeleteEndpointConfig action.
  * \value DeleteExperimentAction SageMaker DeleteExperiment action.
@@ -114,6 +121,7 @@ namespace SageMaker {
  * \value DeleteNotebookInstanceLifecycleConfigAction SageMaker DeleteNotebookInstanceLifecycleConfig action.
  * \value DeletePipelineAction SageMaker DeletePipeline action.
  * \value DeleteProjectAction SageMaker DeleteProject action.
+ * \value DeleteStudioLifecycleConfigAction SageMaker DeleteStudioLifecycleConfig action.
  * \value DeleteTagsAction SageMaker DeleteTags action.
  * \value DeleteTrialAction SageMaker DeleteTrial action.
  * \value DeleteTrialComponentAction SageMaker DeleteTrialComponent action.
@@ -134,17 +142,21 @@ namespace SageMaker {
  * \value DescribeDeviceAction SageMaker DescribeDevice action.
  * \value DescribeDeviceFleetAction SageMaker DescribeDeviceFleet action.
  * \value DescribeDomainAction SageMaker DescribeDomain action.
+ * \value DescribeEdgeDeploymentPlanAction SageMaker DescribeEdgeDeploymentPlan action.
  * \value DescribeEdgePackagingJobAction SageMaker DescribeEdgePackagingJob action.
  * \value DescribeEndpointAction SageMaker DescribeEndpoint action.
  * \value DescribeEndpointConfigAction SageMaker DescribeEndpointConfig action.
  * \value DescribeExperimentAction SageMaker DescribeExperiment action.
  * \value DescribeFeatureGroupAction SageMaker DescribeFeatureGroup action.
+ * \value DescribeFeatureMetadataAction SageMaker DescribeFeatureMetadata action.
  * \value DescribeFlowDefinitionAction SageMaker DescribeFlowDefinition action.
  * \value DescribeHumanTaskUiAction SageMaker DescribeHumanTaskUi action.
  * \value DescribeHyperParameterTuningJobAction SageMaker DescribeHyperParameterTuningJob action.
  * \value DescribeImageAction SageMaker DescribeImage action.
  * \value DescribeImageVersionAction SageMaker DescribeImageVersion action.
+ * \value DescribeInferenceRecommendationsJobAction SageMaker DescribeInferenceRecommendationsJob action.
  * \value DescribeLabelingJobAction SageMaker DescribeLabelingJob action.
+ * \value DescribeLineageGroupAction SageMaker DescribeLineageGroup action.
  * \value DescribeModelAction SageMaker DescribeModel action.
  * \value DescribeModelBiasJobDefinitionAction SageMaker DescribeModelBiasJobDefinition action.
  * \value DescribeModelExplainabilityJobDefinitionAction SageMaker DescribeModelExplainabilityJobDefinition action.
@@ -159,6 +171,7 @@ namespace SageMaker {
  * \value DescribePipelineExecutionAction SageMaker DescribePipelineExecution action.
  * \value DescribeProcessingJobAction SageMaker DescribeProcessingJob action.
  * \value DescribeProjectAction SageMaker DescribeProject action.
+ * \value DescribeStudioLifecycleConfigAction SageMaker DescribeStudioLifecycleConfig action.
  * \value DescribeSubscribedWorkteamAction SageMaker DescribeSubscribedWorkteam action.
  * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
  * \value DescribeTransformJobAction SageMaker DescribeTransformJob action.
@@ -171,6 +184,7 @@ namespace SageMaker {
  * \value DisassociateTrialComponentAction SageMaker DisassociateTrialComponent action.
  * \value EnableSagemakerServicecatalogPortfolioAction SageMaker EnableSagemakerServicecatalogPortfolio action.
  * \value GetDeviceFleetReportAction SageMaker GetDeviceFleetReport action.
+ * \value GetLineageGroupPolicyAction SageMaker GetLineageGroupPolicy action.
  * \value GetModelPackageGroupPolicyAction SageMaker GetModelPackageGroupPolicy action.
  * \value GetSagemakerServicecatalogPortfolioStatusAction SageMaker GetSagemakerServicecatalogPortfolioStatus action.
  * \value GetSearchSuggestionsAction SageMaker GetSearchSuggestions action.
@@ -189,6 +203,7 @@ namespace SageMaker {
  * \value ListDeviceFleetsAction SageMaker ListDeviceFleets action.
  * \value ListDevicesAction SageMaker ListDevices action.
  * \value ListDomainsAction SageMaker ListDomains action.
+ * \value ListEdgeDeploymentPlansAction SageMaker ListEdgeDeploymentPlans action.
  * \value ListEdgePackagingJobsAction SageMaker ListEdgePackagingJobs action.
  * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
  * \value ListEndpointsAction SageMaker ListEndpoints action.
@@ -199,10 +214,13 @@ namespace SageMaker {
  * \value ListHyperParameterTuningJobsAction SageMaker ListHyperParameterTuningJobs action.
  * \value ListImageVersionsAction SageMaker ListImageVersions action.
  * \value ListImagesAction SageMaker ListImages action.
+ * \value ListInferenceRecommendationsJobsAction SageMaker ListInferenceRecommendationsJobs action.
  * \value ListLabelingJobsAction SageMaker ListLabelingJobs action.
  * \value ListLabelingJobsForWorkteamAction SageMaker ListLabelingJobsForWorkteam action.
+ * \value ListLineageGroupsAction SageMaker ListLineageGroups action.
  * \value ListModelBiasJobDefinitionsAction SageMaker ListModelBiasJobDefinitions action.
  * \value ListModelExplainabilityJobDefinitionsAction SageMaker ListModelExplainabilityJobDefinitions action.
+ * \value ListModelMetadataAction SageMaker ListModelMetadata action.
  * \value ListModelPackageGroupsAction SageMaker ListModelPackageGroups action.
  * \value ListModelPackagesAction SageMaker ListModelPackages action.
  * \value ListModelQualityJobDefinitionsAction SageMaker ListModelQualityJobDefinitions action.
@@ -217,6 +235,8 @@ namespace SageMaker {
  * \value ListPipelinesAction SageMaker ListPipelines action.
  * \value ListProcessingJobsAction SageMaker ListProcessingJobs action.
  * \value ListProjectsAction SageMaker ListProjects action.
+ * \value ListStageDevicesAction SageMaker ListStageDevices action.
+ * \value ListStudioLifecycleConfigsAction SageMaker ListStudioLifecycleConfigs action.
  * \value ListSubscribedWorkteamsAction SageMaker ListSubscribedWorkteams action.
  * \value ListTagsAction SageMaker ListTags action.
  * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
@@ -228,18 +248,23 @@ namespace SageMaker {
  * \value ListWorkforcesAction SageMaker ListWorkforces action.
  * \value ListWorkteamsAction SageMaker ListWorkteams action.
  * \value PutModelPackageGroupPolicyAction SageMaker PutModelPackageGroupPolicy action.
+ * \value QueryLineageAction SageMaker QueryLineage action.
  * \value RegisterDevicesAction SageMaker RegisterDevices action.
  * \value RenderUiTemplateAction SageMaker RenderUiTemplate action.
+ * \value RetryPipelineExecutionAction SageMaker RetryPipelineExecution action.
  * \value SearchAction SageMaker Search action.
  * \value SendPipelineExecutionStepFailureAction SageMaker SendPipelineExecutionStepFailure action.
  * \value SendPipelineExecutionStepSuccessAction SageMaker SendPipelineExecutionStepSuccess action.
+ * \value StartEdgeDeploymentStageAction SageMaker StartEdgeDeploymentStage action.
  * \value StartMonitoringScheduleAction SageMaker StartMonitoringSchedule action.
  * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
  * \value StartPipelineExecutionAction SageMaker StartPipelineExecution action.
  * \value StopAutoMLJobAction SageMaker StopAutoMLJob action.
  * \value StopCompilationJobAction SageMaker StopCompilationJob action.
+ * \value StopEdgeDeploymentStageAction SageMaker StopEdgeDeploymentStage action.
  * \value StopEdgePackagingJobAction SageMaker StopEdgePackagingJob action.
  * \value StopHyperParameterTuningJobAction SageMaker StopHyperParameterTuningJob action.
+ * \value StopInferenceRecommendationsJobAction SageMaker StopInferenceRecommendationsJob action.
  * \value StopLabelingJobAction SageMaker StopLabelingJob action.
  * \value StopMonitoringScheduleAction SageMaker StopMonitoringSchedule action.
  * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
@@ -258,6 +283,8 @@ namespace SageMaker {
  * \value UpdateEndpointAction SageMaker UpdateEndpoint action.
  * \value UpdateEndpointWeightsAndCapacitiesAction SageMaker UpdateEndpointWeightsAndCapacities action.
  * \value UpdateExperimentAction SageMaker UpdateExperiment action.
+ * \value UpdateFeatureGroupAction SageMaker UpdateFeatureGroup action.
+ * \value UpdateFeatureMetadataAction SageMaker UpdateFeatureMetadata action.
  * \value UpdateImageAction SageMaker UpdateImage action.
  * \value UpdateModelPackageAction SageMaker UpdateModelPackage action.
  * \value UpdateMonitoringScheduleAction SageMaker UpdateMonitoringSchedule action.
@@ -265,6 +292,7 @@ namespace SageMaker {
  * \value UpdateNotebookInstanceLifecycleConfigAction SageMaker UpdateNotebookInstanceLifecycleConfig action.
  * \value UpdatePipelineAction SageMaker UpdatePipeline action.
  * \value UpdatePipelineExecutionAction SageMaker UpdatePipelineExecution action.
+ * \value UpdateProjectAction SageMaker UpdateProject action.
  * \value UpdateTrainingJobAction SageMaker UpdateTrainingJob action.
  * \value UpdateTrialAction SageMaker UpdateTrial action.
  * \value UpdateTrialComponentAction SageMaker UpdateTrialComponent action.
@@ -478,7 +506,7 @@ QNetworkRequest SageMakerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequest::Action action, SageMakerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2017-07-24"))
 {
 
 }
@@ -515,6 +543,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(AddAssociation);
         ActionToString(AddTags);
         ActionToString(AssociateTrialComponent);
+        ActionToString(BatchDescribeModelPackage);
         ActionToString(CreateAction);
         ActionToString(CreateAlgorithm);
         ActionToString(CreateApp);
@@ -527,6 +556,8 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(CreateDataQualityJobDefinition);
         ActionToString(CreateDeviceFleet);
         ActionToString(CreateDomain);
+        ActionToString(CreateEdgeDeploymentPlan);
+        ActionToString(CreateEdgeDeploymentStage);
         ActionToString(CreateEdgePackagingJob);
         ActionToString(CreateEndpoint);
         ActionToString(CreateEndpointConfig);
@@ -537,6 +568,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(CreateHyperParameterTuningJob);
         ActionToString(CreateImage);
         ActionToString(CreateImageVersion);
+        ActionToString(CreateInferenceRecommendationsJob);
         ActionToString(CreateLabelingJob);
         ActionToString(CreateModel);
         ActionToString(CreateModelBiasJobDefinition);
@@ -552,6 +584,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(CreatePresignedNotebookInstanceUrl);
         ActionToString(CreateProcessingJob);
         ActionToString(CreateProject);
+        ActionToString(CreateStudioLifecycleConfig);
         ActionToString(CreateTrainingJob);
         ActionToString(CreateTransformJob);
         ActionToString(CreateTrial);
@@ -570,6 +603,8 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(DeleteDataQualityJobDefinition);
         ActionToString(DeleteDeviceFleet);
         ActionToString(DeleteDomain);
+        ActionToString(DeleteEdgeDeploymentPlan);
+        ActionToString(DeleteEdgeDeploymentStage);
         ActionToString(DeleteEndpoint);
         ActionToString(DeleteEndpointConfig);
         ActionToString(DeleteExperiment);
@@ -590,6 +625,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(DeleteNotebookInstanceLifecycleConfig);
         ActionToString(DeletePipeline);
         ActionToString(DeleteProject);
+        ActionToString(DeleteStudioLifecycleConfig);
         ActionToString(DeleteTags);
         ActionToString(DeleteTrial);
         ActionToString(DeleteTrialComponent);
@@ -610,17 +646,21 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(DescribeDevice);
         ActionToString(DescribeDeviceFleet);
         ActionToString(DescribeDomain);
+        ActionToString(DescribeEdgeDeploymentPlan);
         ActionToString(DescribeEdgePackagingJob);
         ActionToString(DescribeEndpoint);
         ActionToString(DescribeEndpointConfig);
         ActionToString(DescribeExperiment);
         ActionToString(DescribeFeatureGroup);
+        ActionToString(DescribeFeatureMetadata);
         ActionToString(DescribeFlowDefinition);
         ActionToString(DescribeHumanTaskUi);
         ActionToString(DescribeHyperParameterTuningJob);
         ActionToString(DescribeImage);
         ActionToString(DescribeImageVersion);
+        ActionToString(DescribeInferenceRecommendationsJob);
         ActionToString(DescribeLabelingJob);
+        ActionToString(DescribeLineageGroup);
         ActionToString(DescribeModel);
         ActionToString(DescribeModelBiasJobDefinition);
         ActionToString(DescribeModelExplainabilityJobDefinition);
@@ -635,6 +675,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(DescribePipelineExecution);
         ActionToString(DescribeProcessingJob);
         ActionToString(DescribeProject);
+        ActionToString(DescribeStudioLifecycleConfig);
         ActionToString(DescribeSubscribedWorkteam);
         ActionToString(DescribeTrainingJob);
         ActionToString(DescribeTransformJob);
@@ -647,6 +688,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(DisassociateTrialComponent);
         ActionToString(EnableSagemakerServicecatalogPortfolio);
         ActionToString(GetDeviceFleetReport);
+        ActionToString(GetLineageGroupPolicy);
         ActionToString(GetModelPackageGroupPolicy);
         ActionToString(GetSagemakerServicecatalogPortfolioStatus);
         ActionToString(GetSearchSuggestions);
@@ -665,6 +707,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(ListDeviceFleets);
         ActionToString(ListDevices);
         ActionToString(ListDomains);
+        ActionToString(ListEdgeDeploymentPlans);
         ActionToString(ListEdgePackagingJobs);
         ActionToString(ListEndpointConfigs);
         ActionToString(ListEndpoints);
@@ -675,10 +718,13 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(ListHyperParameterTuningJobs);
         ActionToString(ListImageVersions);
         ActionToString(ListImages);
+        ActionToString(ListInferenceRecommendationsJobs);
         ActionToString(ListLabelingJobs);
         ActionToString(ListLabelingJobsForWorkteam);
+        ActionToString(ListLineageGroups);
         ActionToString(ListModelBiasJobDefinitions);
         ActionToString(ListModelExplainabilityJobDefinitions);
+        ActionToString(ListModelMetadata);
         ActionToString(ListModelPackageGroups);
         ActionToString(ListModelPackages);
         ActionToString(ListModelQualityJobDefinitions);
@@ -693,6 +739,8 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(ListPipelines);
         ActionToString(ListProcessingJobs);
         ActionToString(ListProjects);
+        ActionToString(ListStageDevices);
+        ActionToString(ListStudioLifecycleConfigs);
         ActionToString(ListSubscribedWorkteams);
         ActionToString(ListTags);
         ActionToString(ListTrainingJobs);
@@ -704,18 +752,23 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(ListWorkforces);
         ActionToString(ListWorkteams);
         ActionToString(PutModelPackageGroupPolicy);
+        ActionToString(QueryLineage);
         ActionToString(RegisterDevices);
         ActionToString(RenderUiTemplate);
+        ActionToString(RetryPipelineExecution);
         ActionToString(Search);
         ActionToString(SendPipelineExecutionStepFailure);
         ActionToString(SendPipelineExecutionStepSuccess);
+        ActionToString(StartEdgeDeploymentStage);
         ActionToString(StartMonitoringSchedule);
         ActionToString(StartNotebookInstance);
         ActionToString(StartPipelineExecution);
         ActionToString(StopAutoMLJob);
         ActionToString(StopCompilationJob);
+        ActionToString(StopEdgeDeploymentStage);
         ActionToString(StopEdgePackagingJob);
         ActionToString(StopHyperParameterTuningJob);
+        ActionToString(StopInferenceRecommendationsJob);
         ActionToString(StopLabelingJob);
         ActionToString(StopMonitoringSchedule);
         ActionToString(StopNotebookInstance);
@@ -734,6 +787,8 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(UpdateEndpoint);
         ActionToString(UpdateEndpointWeightsAndCapacities);
         ActionToString(UpdateExperiment);
+        ActionToString(UpdateFeatureGroup);
+        ActionToString(UpdateFeatureMetadata);
         ActionToString(UpdateImage);
         ActionToString(UpdateModelPackage);
         ActionToString(UpdateMonitoringSchedule);
@@ -741,6 +796,7 @@ QString SageMakerRequestPrivate::toString(const SageMakerRequest::Action &action
         ActionToString(UpdateNotebookInstanceLifecycleConfig);
         ActionToString(UpdatePipeline);
         ActionToString(UpdatePipelineExecution);
+        ActionToString(UpdateProject);
         ActionToString(UpdateTrainingJob);
         ActionToString(UpdateTrial);
         ActionToString(UpdateTrialComponent);

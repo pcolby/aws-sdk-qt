@@ -25,13 +25,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace signer {
+namespace Signer {
 
 /*!
- * \class QtAws::signer::DescribeSigningJobResponse
- * \brief The DescribeSigningJobResponse class provides an interace for signer DescribeSigningJob responses.
+ * \class QtAws::Signer::DescribeSigningJobResponse
+ * \brief The DescribeSigningJobResponse class provides an interace for Signer DescribeSigningJob responses.
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  *
  *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
  * 
@@ -58,8 +58,10 @@ namespace signer {
  * 
  *  For more information about AWS Signer, see the <a
  *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
+ * 
+ *  Guide</a>>
  *
- * \sa signerClient::describeSigningJob
+ * \sa SignerClient::describeSigningJob
  */
 
 /*!
@@ -69,7 +71,7 @@ DescribeSigningJobResponse::DescribeSigningJobResponse(
         const DescribeSigningJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : signerResponse(new DescribeSigningJobResponsePrivate(this), parent)
+    : SignerResponse(new DescribeSigningJobResponsePrivate(this), parent)
 {
     setRequest(new DescribeSigningJobRequest(request));
     setReply(reply);
@@ -86,7 +88,7 @@ const DescribeSigningJobRequest * DescribeSigningJobResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful signer DescribeSigningJob \a response.
+ * Parses a successful Signer DescribeSigningJob \a response.
  */
 void DescribeSigningJobResponse::parseSuccess(QIODevice &response)
 {
@@ -96,24 +98,24 @@ void DescribeSigningJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::signer::DescribeSigningJobResponsePrivate
+ * \class QtAws::Signer::DescribeSigningJobResponsePrivate
  * \brief The DescribeSigningJobResponsePrivate class provides private implementation for DescribeSigningJobResponse.
  * \internal
  *
- * \inmodule QtAwssigner
+ * \inmodule QtAwsSigner
  */
 
 /*!
  * Constructs a DescribeSigningJobResponsePrivate object with public implementation \a q.
  */
 DescribeSigningJobResponsePrivate::DescribeSigningJobResponsePrivate(
-    DescribeSigningJobResponse * const q) : signerResponsePrivate(q)
+    DescribeSigningJobResponse * const q) : SignerResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a signer DescribeSigningJob response element from \a xml.
+ * Parses a Signer DescribeSigningJob response element from \a xml.
  */
 void DescribeSigningJobResponsePrivate::parseDescribeSigningJobResponse(QXmlStreamReader &xml)
 {
@@ -121,5 +123,5 @@ void DescribeSigningJobResponsePrivate::parseDescribeSigningJobResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace signer
+} // namespace Signer
 } // namespace QtAws

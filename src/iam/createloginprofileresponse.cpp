@@ -25,21 +25,21 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace IAM {
+namespace Iam {
 
 /*!
- * \class QtAws::IAM::CreateLoginProfileResponse
- * \brief The CreateLoginProfileResponse class provides an interace for IAM CreateLoginProfile responses.
+ * \class QtAws::Iam::CreateLoginProfileResponse
+ * \brief The CreateLoginProfileResponse class provides an interace for Iam CreateLoginProfile responses.
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
- *  <fullname>AWS Identity and Access Management</fullname>
+ *  <fullname>Identity and Access Management</fullname>
  * 
- *  AWS Identity and Access Management (IAM) is a web service for securely controlling access to AWS services. With IAM, you
- *  can centrally manage users, security credentials such as access keys, and permissions that control which AWS resources
- *  users and applications can access. For more information about IAM, see <a href="http://aws.amazon.com/iam/">AWS Identity
- *  and Access Management (IAM)</a> and the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">AWS Identity and
- *  Access Management User
+ *  Identity and Access Management (IAM) is a web service for securely controlling access to Amazon Web Services services.
+ *  With IAM, you can centrally manage users, security credentials such as access keys, and permissions that control which
+ *  Amazon Web Services resources users and applications can access. For more information about IAM, see <a
+ *  href="http://aws.amazon.com/iam/">Identity and Access Management (IAM)</a> and the <a
+ *  href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">Identity and Access Management User
  *
  * \sa IamClient::createLoginProfile
  */
@@ -68,7 +68,7 @@ const CreateLoginProfileRequest * CreateLoginProfileResponse::request() const
 
 /*!
  * \reimp
- * Parses a successful IAM CreateLoginProfile \a response.
+ * Parses a successful Iam CreateLoginProfile \a response.
  */
 void CreateLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,11 +78,11 @@ void CreateLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::CreateLoginProfileResponsePrivate
+ * \class QtAws::Iam::CreateLoginProfileResponsePrivate
  * \brief The CreateLoginProfileResponsePrivate class provides private implementation for CreateLoginProfileResponse.
  * \internal
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  */
 
 /*!
@@ -95,7 +95,7 @@ CreateLoginProfileResponsePrivate::CreateLoginProfileResponsePrivate(
 }
 
 /*!
- * Parses a IAM CreateLoginProfile response element from \a xml.
+ * Parses a Iam CreateLoginProfile response element from \a xml.
  */
 void CreateLoginProfileResponsePrivate::parseCreateLoginProfileResponse(QXmlStreamReader &xml)
 {
@@ -103,5 +103,5 @@ void CreateLoginProfileResponsePrivate::parseCreateLoginProfileResponse(QXmlStre
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace IAM
+} // namespace Iam
 } // namespace QtAws
