@@ -16,10 +16,14 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: cpp
-    - name: Build
-      run: |
-        cmake -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+    - name: Configure
+      run: cmake -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+    - name: Build A-I
+      run: make $(make help | grep -v '_autogen$' | sed -Ene 's/^\.\.\. (QtAws[A-I])/\1/p')
+      working-directory: ${{ runner.temp }}
+    - name: Build J-Z
+      run: make $(make help | grep -v '_autogen$' | sed -Ene 's/^\.\.\. (QtAws[J-Z])/\1/p')
+      working-directory: ${{ runner.temp }}
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
 
